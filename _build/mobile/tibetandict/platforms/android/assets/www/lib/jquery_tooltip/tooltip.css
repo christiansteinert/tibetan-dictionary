@@ -1,0 +1,61 @@
+/* Tooltip */
+
+#tooltip {
+    position:absolute;
+    z-index:9999;
+    color:#fff;
+    font-size:0.9em;
+    max-width:30em;
+    min-width:100px;
+    background-color:rgba(0,0,0,0.95);
+    opacity:0.7;
+    border-radius:5px;
+    padding:5px;
+}
+
+.tooltip{
+    border-bottom:1px dashed #888;
+}
+
+
+#tooltip-container a{
+    color:#fff;
+    background:#666;
+    border: 2px solid #bbb;
+    text-decoration:none;
+    padding:0.3em 0.4em 0 0.3em;
+}
+
+#tooltip-background {
+   padding-top:1em;
+   position:fixed;
+   left:0;
+   right:0;
+   top:0;
+   bottom:0;
+   background-color:rgba(0,0,0,0.5);
+   z-index:99;
+   text-align:center;
+}
+
+
+#tooltip-fullscreen {
+   position:absolute;
+   left:0;
+   right:0;
+   height:100%;
+   z-index:100;
+   text-align:center;
+}
+
+#tooltip-fullscreen-text {
+  background-color: #000;
+  border-radius: 7px;
+  color: #fff;
+  display: inline-block;
+  margin: auto;
+  max-width: 30em;
+  padding: 0.7em 0.2em;
+  vertical-align: middle;
+  width: 90%;
+}

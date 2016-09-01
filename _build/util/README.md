@@ -1,0 +1,1 @@
+This folder contains the BO-Lingua-Wylie Package for Perl and Java from http://www.digitaltibetan.org/cgi-bin/wylie.pl

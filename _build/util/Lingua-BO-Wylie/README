@@ -1,0 +1,21 @@
+This is a preliminary version, not a proper release.  
+
+It will eventually get fleshed out, packaged properly as a module, and
+submitted to CPAN.
+
+Meanwhile, you need to create the directories "Lingua" and "Lingua/BO"
+somewhere in your perl @LIB, and copy the files there: 
+
+- Wylie.pm
+- Phonetics.pm
+- word_list.txt
+- exceptions.txt
+
+The files wylie.pl and phonetics.pl are CGI scripts that provide a user
+interface to these modules; they can be copied to the cgi-bin of your
+web server.
+
+The files bin/wylie.pl and bin/pronounce.pl provide a command-line 
+interface to the conversion between Wylie and Unicode, and to the phonetics
+generation.
+
