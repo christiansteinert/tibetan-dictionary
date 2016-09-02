@@ -17,8 +17,10 @@ export DICTLIST=data/dictionaries.js
 export SYLLABLELIST=data/syllablelist.js
 export DB=TibetanDictionary.db
 export CSV_INPUT=`pwd`/_input/dictionaries/public
+export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 
-if [ -d $CSV_INPUT ]
+
+if [ -d $CSV_INPUT_PRIVATE ]
 then
 rm _input/dictionaries/public/*
 DIR=`pwd`
@@ -41,7 +43,6 @@ export WORDLIST=data/wordlist.js
 export DICTLIST=data/dictionaries.js
 export SYLLABLELIST=data/syllablelist.js
 export DB=TibetanDictionary_private.db
-export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 export CSV_INPUT=$CSV_INPUT_PRIVATE
 
 if [ -d $CSV_INPUT ]
