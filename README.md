@@ -9,6 +9,7 @@ Both the web application and the android app use an SQLite database for data sto
 
 Any code that is my own is licensed under GPL v2 and GPL v3 (you can choose whichever you prefer). Note that the dictionary data is not my own and thus *THE COPYRIGHT OF THE DICTIONARY DATA IS WITH THE RESPECTIVE AUTHORS*. Also note that that some of the contained code (e.g. some of the javascript libraries) is licensed unter different licenses, e.g. Apache License 2.0).
 
+You may also be interested in my homepage www.christian-steinert.de where you can find a running version of the web application.
 
 # Build process
 The build process is somewhat messy and will only run in a Linux environment. The main build scripts are buildDictionaries.sh which generates the dictionary database file and buildAndroid.sh which expects the database file to be present already and generates an android APK file containing the Android app.
