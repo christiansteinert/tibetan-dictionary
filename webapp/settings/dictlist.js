@@ -227,13 +227,14 @@ DICTLIST={
   containsOnlyTibetan:true,
   label:'bod-rgya tshig-mdzod chen-mo (Tibetan)',
   about:'Bod rgya tshig mdzod chen mo|1985, Mi dmangs dpe skrun khang, Beijing.',
-  public:"true",
+  public:"false",
   listCredits:"true"
 },
 "dung-dkar-tshig-mdzod-chen-mo-Tib":{
   containsOnlyTibetan:true,
   label:'dung-dkar tshig-mdzod chen-mo (Tibetan)',
   about:'Dung dkar tshig mdzod chen mo|Dung dkar blo bzang \'phrin las|Beijing: Krung go\'i bod rig pa dpe skrun khang 2002',
+  public:"true",
   listCredits:"true"
 },
 "dag_tshig_gsar_bsgrigs-Tib":{
