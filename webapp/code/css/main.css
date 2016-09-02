@@ -389,8 +389,9 @@ dt {
     margin-top:0.75em;
 }
 dd {
-    padding-left:2em;
-    margin-left:0em;
+    margin-left: 0em;
+    box-sizing: border-box;
+    border-left: 2em solid rgba(0,0,0,0);
 }
 
 
