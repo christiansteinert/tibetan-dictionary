@@ -10,7 +10,7 @@ DICTLIST={
 "Gaeng,Wetzel":{
   label:'Gäng / Wetzel',
   about:'Buddhist Terms|Multilingual Version|Edited by Peter Gäng and Sylvia Wetzel|Buddhist Academy Berlin Brandenburg|June 2004|Source:  http://www.buddhistische-akademie-bb.de/pdf/BuddhistTerms.pdf',
-  public:"false",
+  public:"true",
   listCredits:"true"
 },
 "Drungtso":{
@@ -132,7 +132,7 @@ DICTLIST={
 "GatewayToKnowledge":{
   label:'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1 (Rangjung Yeshe)',
   mergeLines:true,
-  about:'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1|Rangjung Yeshe Publications|Source:  www.rangjung.com/gateway/KJ-main.htm',
+  about:'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1|Rangjung Yeshe Publications|Source: www.rangjung.com/gateway/KJ-main.htm',
   public:"true",
   listCredits:"true"
 },
@@ -171,8 +171,8 @@ DICTLIST={
   label:'Verbinator Verb Dictionary (Tibetan)',
   highlight:'((?:Past|Present|Future|Imperative|Meaning): )',
   abbreviations:'Verbinator',
-  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition. Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)',
-  public:"false",
+  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition. Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)|ISBN 978-3-7696-1004-8|If you want to support the author and the publisher please consider buying this book (regular price: 58 EUR plus shipping). If you have trouble with ordering it, feel free send a mail to dictionary@christian-steinert.de and I will try to help you.',
+  public:"true",
   listCredits:"true"
 },
 "Hopkins-TibetanTenses2015":{
@@ -198,7 +198,7 @@ DICTLIST={
 },
 "Sera-Textbook-Definitions":{
   label:'Sera Textbook Definitions (Tibetan)',
-  about:'This is a collection of various definitions from major textbook authors of Sera Monastery|The definitions are extracted from material of the Asian Classics Input Project so there will likely be typos and mistakes',
+  about:'Sera Textbook Definitions (Tibetan)|This is a collection of various definitions from major textbook authors of Sera Monastery|The definitions are extracted from material of the Asian Classics Input Project so there will likely be typos and mistakes',
   public:"true",
   listCredits:"true"
 },
@@ -274,7 +274,7 @@ DICTLIST={
 "Mahavyutpatti-Skt":{
   containsOnlySkt:true, 
   label:'Maha&shy;vyutpatti (Tibetan-Sanskrit)',
-  about:'Mahavyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics.&zwnj;ddbc.edu.tw/glossaries/ for more information.',
+  about:'Mahavyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
   public:"true",
   listCredits:"true"
 },

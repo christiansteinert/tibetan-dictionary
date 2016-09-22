@@ -383,15 +383,31 @@ body{
   }
 }
 
+#aboutInfo {
+    width:95%;
+    overflow-x:hidden;
+}
 
 dt {
+    max-width:100%;        
     font-weight:bold;
     margin-top:0.75em;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 dd {
+    max-width:100%;
     margin-left: 0em;
     box-sizing: border-box;
     border-left: 2em solid rgba(0,0,0,0);
+    word-wrap:break-word;
+    overflow-wrap:break-word;
+}
+
+* {
+    max-width:100%;
+    word-wrap:break-word;
+    overflow-wrap:break-word;
 }
 
 
