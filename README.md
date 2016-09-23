@@ -76,7 +76,7 @@ Since the application is implemented almost exclusively in Javascript, the appli
 
 
 # Public and private version
-In the build script you will see that two versions of the dictionary are built on my machine - a private version and a public version. The private version contains additional dictionary data that I cannot distribute publically. The build script should recognize if only the public data is available and should then only build the public version of the app that contains fewer dictionaries. 
+In the build script you will see that two versions of the dictionary are built on my machine - a private version and a public version. The private version contains additional dictionary data that I, sadly, cannot distribute publically. The build script should recognize if only the public data is available and should then only build the public version of the app that contains fewer dictionaries. 
 
-So as far as the build process is concerned everything should be fine even if you don't have the data for the additional versions. Just don't be surprised when you read the commands in the build script and see that some files that are referenced are not missing and that due to that some steps in the build process are skipped.
+So as far as the build process is concerned everything should be fine even if you don't have the data for the additional private version of the application. Just don't be surprised when you read the commands in the build script and see that some files that are referenced are missing and that due to that some steps in the build process are skipped.
 

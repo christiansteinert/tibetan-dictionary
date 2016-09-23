@@ -178,7 +178,7 @@ DICTLIST={
 "Hopkins-TibetanTenses2015":{
   containsOnlyTibetan:true,
   label:'Hopkins Tenses 2015 (Tibetan)',
-  about:'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
+  about:'The order of the verb tenses in this dictionary is: future, present, past, imperative|Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
   abbreviations:'Hopkins',
   public:"true"
 },

@@ -47,6 +47,13 @@ ABBREVIATIONS={
       'DK' : 'Kharto, Dorrje Wangchuk|Mkhar stod, Rdo rje dbaṅ phyug.|Thumi dgongs gter: the complete Tibetan verb forms|Dus gsum reḥu mig Thu-miḥi dgoṅs gter.|Delhi: C.T. Charto, 1979.',
       'DS' : 'Bsam gtan. Dag yig gsar bsgrigs.|Xining: Mtsho sṅon mi rigs dpe skrun khan, 1979.',
       'TC' : 'Zhang Yisun.|Bod rgya tshig mdzod chen mo|Zang Han Da|Cidian. Beijing: Mi rigs dpe skrun kaṅ|Minzu Chubanshe, 1985.',
+      'Erg.': 'ergative',
+      'Abs.': 'absolutive',
+      'Instr.': 'instrumental',
+      'Ela.': 'elative',
+      'Abl.': 'ablative',
+      'Obl.': 'dative',
+      'Ass.': 'associative',
     }
   },
   'Hopkins': {
