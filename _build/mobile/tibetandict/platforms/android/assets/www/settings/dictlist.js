@@ -4,7 +4,7 @@ DICTLIST={
   label:'Tsepak Rigdzin',
   highlight:'\\[([^\\]]*)\\]',
   about:'Tibetan-English Dictionary of Buddhist Terms|Revised and Enlarged Edition|Tsepak Rigdzin|Library of Tibetan Works and Archives|ISBN: 81-85102-88-0',
-  public:"false",
+  public:"true",
   listCredits:"true"
 },
 "Gaeng,Wetzel":{

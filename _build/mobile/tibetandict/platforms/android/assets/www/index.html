@@ -485,7 +485,7 @@
         //prevent spaces after certain character combinations (this is a cleanup rule that removes some spaces 
         // that may have been introduced by one of the previous rules but are not desired)
         text = text.replace(/(\/)[ _]([\]\)}])/mg,'$1$2');
-        
+
         return text;
       },
     
@@ -661,9 +661,17 @@
       },
       
       setTibetanOutput:function(value) {
+        if(value==="true")
+          value = true;
+        if(value==="false")
+          value = false;
+          
         this.useUnicodeTibetan = value;
-        if(this.useUnicodeTibetan) {
+        if(this.useUnicodeTibetan===true||this.useUnicodeTibetan==='output') {
           $('body').addClass('unicodeTib');
+        }
+        if(this.useUnicodeTibetan===true) {
+          $('body').addClass('unicodeTibInput');
         }
       },
       
@@ -782,11 +790,12 @@
                 emptyTable: " "
               }
           });
-          
+
           $('#searchTerm').on('focus click',function(e) {
-            $('#searchTerm').val('');
-            DICT.scrollToTop();
-            DICT.search(false,true,0);
+            if(DICT.useUnicodeTibetan === true) {
+              
+              $('#searchTerm').selectRange($('#searchTerm').val().length);
+            }
           });
 
           $('#searchTerm').on('keypress',function(event){
@@ -795,10 +804,15 @@
               // if enter is pressed in the input field then convert all syllables to unicode
               var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
               
-              var newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
-              var inputText = DICT.tibetanOutput( newInput );
+              if(DICT.useUnicodeTibetan===true) {
+                 var newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
+                 var inputText = DICT.tibetanOutput( newInput );
+              } else {
+                 var newInput = uniInput;
+                 var inputText = newInput;
+              }
               
-              $('#searchTerm').val(inputText);
+              $('#searchTerm').val(inputText).blur();
               DICT.scrollToTop(),
               DICT.search(true,true,0);
             }
@@ -810,22 +824,24 @@
                 currentInput = DICT.currentInput;
             if(event.keyCode == 8 ||(newInput.length < currentInput.length && currentInput.indexOf(newInput)===0)
                                   ||(uniInput.length < lastUniInput.length && lastUniInput.indexOf(uniInput)===0)){ // backspace
-              if(false && DICT._touch && /[^a-zA-Z'་_ ]$/.test(uniInput)) {
-                // workaround für Android-bug
-                $('#searchTerm').val('');
-                DICT.search(false,true,0);
-              } else if(DICT.useUnicodeTibetan) {
+              if(DICT.useUnicodeTibetan===true) {
                 if(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput)) { 
                   // if the input field ends with a tseg or shad, then clear the last syllable
                   var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/,'$1');
                   $('#searchTerm').val(adjusted);
                   DICT.search(false,true,0);
                 }
+              } else {
+                DICT.search(false,true,0);
               }
 
             } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput))) { //space at the end of the text
               // => convert all syllables to unicode and fill the word list
-              var inputText = DICT.tibetanOutput( newInput );
+              if(DICT.useUnicodeTibetan===true) {
+                var inputText = DICT.tibetanOutput( newInput );
+              } else {
+                var inputText = newInput;
+              }
               $('#searchTerm').val(inputText);
               DICT.search(false,true,0);
             }
@@ -892,7 +908,11 @@
       
         if(DICT._offset > 0) {
           if($('#searchTerm').val() === '' ) {
-            $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+            if( DICT.useUnicodeTibetan === true ) {
+              $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+            } else {
+              $('#searchTerm').val(this.currentListTerm);
+            }
           }
           var settings = SETTINGS.getSettings();
           DICT.search(false,true,DICT._offset - settings.listSize);
@@ -905,11 +925,22 @@
         }
 
         if($('#searchTerm').val() === '' ) {
-          $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+            if( DICT.useUnicodeTibetan === true ) {
+              $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+            } else {
+              $('#searchTerm').val(this.currentListTerm);
+            }
         }
         
         var settings = SETTINGS.getSettings();
         DICT.search(false,true,DICT._offset + settings.listSize);
+      },
+      
+      clearInput:function() {
+        $('#searchTerm').val('');
+        DICT.scrollToTop();
+        DICT.search(false,true,0);
+        $('#searchTerm').focus();
       },
       
       updateButtonState:function(disablePrev,disableNext) {
@@ -939,6 +970,9 @@
         var inputText = this.uniToWylie( $('#searchTerm').val() );
         inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
         inputText = inputText.replace(/\s+/g, ' ');
+        inputText = inputText.replace(/_/g, ' ');
+        inputText = inputText.replace(/ $/g, '');
+        
         var settings = SETTINGS.getSettings();
 
         if(offset<0) {
@@ -1068,7 +1102,13 @@
               return;
             
             var stateInfo = JSON.parse(state);
-            $('#searchTerm').val(this.tibetanOutput(stateInfo.currentListTerm));
+
+            if( DICT.useUnicodeTibetan === true ) {
+              $('#searchTerm').val(this.tibetanOutput(stateInfo.currentListTerm));
+            } else {
+              $('#searchTerm').val(stateInfo.currentListTerm);
+            }
+            
             $('.selected').removeClass('selected');
 
             if(stateInfo.offset)
@@ -1151,11 +1191,9 @@
 
           }
         }
-console.log('aa4'+definition);
         if(sectionCount>0) {
           DICT.getDataAccess().checkTibetanSectionsForLinks(sections);
         }
-console.log('aa5'+definition);
 
         return definition;
       },
@@ -1177,7 +1215,7 @@ console.log('aa5'+definition);
       },
 
       breakDefinitionIntoSections:function(definition) {
-        if(definition.match(/[^0-9][12][\.)]/)) {
+        if(definition.match(/([^0-9]|^)1[\.)]/)&&definition.match(/([^0-9]|^)2[\.)]/)) {
           // break before numbers like "1." or "1)"
           definition = definition.replace(/([^-0-9(])([(]?[1-9][0-9]?[\.)] ?)([^0-9])/mg,'$1\n$2 $3');
           definition = definition.replace(/^([(]?[1-9][0-9]?[\.)] ?)([^0-9])/mg,'$1 $2');
@@ -1352,10 +1390,17 @@ console.log('aa5'+definition);
 
           var settings = SETTINGS.getSettings();
           $('#setting_layout #'+settings.layout).prop('selected',true);
-          if(!settings.unicode) {
+          
+          if(settings.unicode===true || settings.unicode==='true') {
+            $('#setting_unicode #setting_unicode_true').prop('selected',true);
+          }
+          else if(settings.unicode===false || settings.unicode==='false') {
             $('#setting_unicode #setting_unicode_false').prop('selected',true);
           }
-
+          else if(settings.unicode==='output') {
+            $('#setting_unicode #setting_unicode_output').prop('selected',true);
+          }
+          
           if(settings.lowercase) {
             $('#setting_lowercase #setting_lowercase_true').prop('selected',true);
           }
@@ -1411,7 +1456,7 @@ console.log('aa5'+definition);
       btnSaveSettings:function() {
         var settings={
           layout:$('#setting_layout option:selected').attr('name'),
-          unicode:$('#setting_unicode option:selected').attr('name') == 'setting_unicode_true',
+          unicode:false,
           lowercase:$('#setting_lowercase option:selected').attr('name') == 'setting_lowercase_true',
           listSize:Number($('#setting_list_size').val()),
           activeDictionaries:[],
@@ -1424,6 +1469,12 @@ console.log('aa5'+definition);
           settings.inactiveDictionaries.push($(item).attr('id').replace('dict_',''));
         });
         
+        if($('#setting_unicode option:selected').attr('name') == 'setting_unicode_true')
+          settings.unicode = 'true';
+        else if($('#setting_unicode option:selected').attr('name') == 'setting_unicode_output')
+          settings.unicode = 'output';
+        else
+          settings.unicode = 'false';
 
         this.storeSettings(settings);
         history.back();
@@ -1454,7 +1505,27 @@ console.log('aa5'+definition);
     if(window.cordova) {
       //phonegap-based initialization
       document.addEventListener("deviceready", function(){
-        jQuery(function($){
+          jQuery(function($){
+          $.fn.selectRange = function(start, end) {
+            if(end === undefined) {
+                end = start;
+            }
+            return this.each(function() {
+                if('selectionStart' in this) {
+                    this.selectionStart = start;
+                    this.selectionEnd = end;
+                } else if(this.setSelectionRange) {
+                    this.setSelectionRange(start, end);
+                } else if(this.createTextRange) {
+                    var range = this.createTextRange();
+                    range.collapse(true);
+                    range.moveEnd('character', end);
+                    range.moveStart('character', start);
+                    range.select();
+                }
+            });
+          };
+        
           DICT.init($);
         });
       }, false);
@@ -1478,7 +1549,8 @@ console.log('aa5'+definition);
   <div id="mainScreen" style="display:none">
     <div class="textInput">
       <div class="textInputWrap"><input type="text" id="searchTerm" placeholder="Enter a Tibetan term..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
-      <a id="settingsBtn" href="javascript:SETTINGS.btnShowSettings();"><img title="Settings" src="code/css/settings.png" width="45" height="45"></a>
+      <a id="clearBtn"    href="javascript:DICT.clearInput();"><img title="Clear input" src="code/css/clear.png" width="32" height="43"></a>
+      <a id="settingsBtn" href="javascript:SETTINGS.btnShowSettings();"><img title="Settings" src="code/css/settings.png" width="32" height="43"></a>
     </div>
     <div class="page">
       <div class="contentArea">
@@ -1526,7 +1598,9 @@ console.log('aa5'+definition);
         <span>
           <select name="setting_unicode" id="setting_unicode" size="1">
             <option name="setting_unicode_true" id="setting_unicode_true">Show Tibetan text in Tibetan script</option>
-            <option name="setting_unicodefalse" id="setting_unicode_false">Show Tibetan text in Wylie transliteration</option>
+            <option name="setting_unicode_output" id="setting_unicode_output">Show Tibetan text in Tibetan script but leave input in Wylie transliteration</option>
+            <option name="setting_unicode_false" id="setting_unicode_false">Show all Tibetan text in Wylie transliteration</option>
+            
           </select>
         </span>
       </div>

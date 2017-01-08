@@ -58,7 +58,7 @@ a{
   text-decoration:underline;
 }
 .even{
-  background-color: #e0e0ff;
+  background-color: #e0e0ff;    
 }
 .selected{
   background-color:#558;
@@ -138,26 +138,36 @@ a{
   width:100%;
 }
 .textInputWrap{
-  margin-right:55px 
+  padding-right:95px;
 }
 #settingsBtn{
   position:absolute;
   top:0.4em;
   right:0;
 }
-.unicodeTib #settingsBtn{
+.unicodeTibInput #settingsBtn{
   top:0.8em;
 }
-.unicodeTib .leftSideBar,.unicodeTib .mainWrap{
+#clearBtn{
+  position:absolute;
+  top:0.4em;
+  right:35px;
+}
+.unicodeTibInput #clearBtn{
+  top:0.8em;
+  right:35px;
+}
+
+.unicodeTibInput .leftSideBar,.unicodeTibInput .mainWrap{
   padding-top:5em;
 }
 
-.desktop.unicodeTib #wordList, .desktop.unicodeTib #searchTerm, .desktop.unicodeTib .definitionHead,.desktop.unicodeTib .tib{
+.desktop.unicodeTib #wordList, .desktop.unicodeTibInput #searchTerm, .desktop.unicodeTib .definitionHead,.desktop.unicodeTib .tib{
   font-family: sans-serif,"Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
   text-rendering: optimizeLegibility;
 }
 
-.mobile.unicodeTib #wordList, .mobile.unicodeTib #searchTerm, .mobile.unicodeTib .definitionHead,.mobile.unicodeTib  .tib{
+.mobile.unicodeTib #wordList, .mobile.unicodeTibInput #searchTerm, .mobile.unicodeTib .definitionHead,.mobile.unicodeTib  .tib{
   font-family:"DDC Uchen";
 /*  text-rendering: optimizeLegibility;*/
 }
@@ -188,7 +198,7 @@ a{
 #wordList{
   font-size: 1.1em;
 }
-.unicodeTib #wordList, .unicodeTib #searchTerm, .unicodeTib .tib{
+.unicodeTib #wordList, .unicodeTibInput #searchTerm, .unicodeTib .tib{
   font-size: 1.5em;
   line-height: 180%;
 }
@@ -207,7 +217,7 @@ a{
   margin:0;
 }
 
-.unicodeTib #searchTerm{
+.unicodeTibInput #searchTerm{
   padding: 0.2em 0 0 0.2em;
 }
 
@@ -374,13 +384,18 @@ body{
     text-align:center;
   }
 
-  #settingsBtn{
+  #settingsBtn, #clearBtn{
     top:-0.2em;
   }
 
-  .unicodeTib #settingsBtn{
+  .unicodeTibInput #settingsBtn, .unicodeTibInput #clearBtn{
     top:0.2em;
   }
+
+  .textInputWrap{
+    padding-right:80px;
+  }
+
 }
 
 #aboutInfo {
@@ -409,7 +424,9 @@ dd {
     word-wrap:break-word;
     overflow-wrap:break-word;
 }
-
+a img {
+    max-width:none;
+}
 
 /*dark layout*/
 body.dark,.dark .textInput{background-color:#000 !important;color:#eee}
