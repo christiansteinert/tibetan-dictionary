@@ -265,7 +265,7 @@ DICTLIST={
   listCredits:"true"
 },
 "Hopkins-Skt2015":{
-  containsOnlySkt:false, // a few entries contain Tibetan and since the 2015 edition the Sanskrit has diacritical marks anyway without post-processing
+  containsOnlySkt:true, // a few entries contain Tibetan and since the 2015 edition the Sanskrit has diacritical marks anyway without post-processing but still the setting 'true' gives better results
   label:'Hopkins Sans&shy;krit 2015 (Tibetan-Sanskrit)',
   about:'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
   abbreviations:'Hopkins',

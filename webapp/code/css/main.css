@@ -138,7 +138,7 @@ a{
   width:100%;
 }
 .textInputWrap{
-  padding-right:95px;
+  padding-right:130px;
 }
 #settingsBtn{
   position:absolute;
@@ -151,11 +151,20 @@ a{
 #clearBtn{
   position:absolute;
   top:0.4em;
-  right:35px;
+  right:70px;
 }
 .unicodeTibInput #clearBtn{
   top:0.8em;
-  right:35px;
+  right:70px;
+}
+
+.switchBtn {
+  position:absolute;
+  top:0.4em;
+  right:40px;
+}
+.unicodeTibInput .switchBtn {
+  top:0.8em;
 }
 
 .unicodeTibInput .leftSideBar,.unicodeTibInput .mainWrap{
@@ -384,16 +393,16 @@ body{
     text-align:center;
   }
 
-  #settingsBtn, #clearBtn{
+  #settingsBtn, #clearBtn, .switchBtn{
     top:-0.2em;
   }
 
-  .unicodeTibInput #settingsBtn, .unicodeTibInput #clearBtn{
+  .unicodeTibInput #settingsBtn, .unicodeTibInput #clearBtn, .unicodeTibInput .switchBtn{
     top:0.2em;
   }
 
   .textInputWrap{
-    padding-right:80px;
+    padding-right:115px;
   }
 
 }

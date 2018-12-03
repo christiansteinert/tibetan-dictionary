@@ -23,13 +23,14 @@
   <script>
   
     var PhpDataAccess={
-      readTerm:function(term,dictionaries,saveState) {
+      readTerm:function(term, lang, dictionaries, saveState) {
         $.ajax({
           type: 'POST',
           url: "dict.php",
           dataType: 'json',
           data: {
             term:term,
+            lang:lang,
             dictionaries:dictionaries
           },
           cache: true,
@@ -40,13 +41,14 @@
         });
       },
       
-      readTermList:function(inputText, offset, maxResults, dictionaries, callback){
+      readTermList:function(inputText, lang, offset, maxResults, dictionaries, callback){
         $.ajax({
           type: 'POST',
           url: 'dict.php',
           dataType: 'json',
           data: {
             search:inputText,
+            lang:lang,
             offset:offset,
             maxresults:maxResults,
             dictionaries:dictionaries
@@ -120,11 +122,11 @@
           return '('+clauses.join(' OR ')+')';
       },
       
-      readTerm:function(term, dictionaries, saveState) {
+      readTerm:function(term, lang, dictionaries, saveState) {
         var db = this._openDB();
         db.transaction(function(tx) {
           try{
-            tx.executeSql('SELECT * FROM DICT WHERE term=?', [term], function(tx, results) {
+            tx.executeSql('SELECT * FROM '+this.getTabName(lang)+' WHERE term=?', [term], function(tx, results) {
               var len=results.rows.length;
               var definitions={};
               for(var i=0; i<len; i++) {
@@ -218,7 +220,14 @@
         },100);
       },
       
-      readTermList:function(term, offset, maxResults, dictionaries, callback) {
+      getTabName:function(lang) {
+        if (lang === 'en' )
+            return 'DICT_EN';
+        else 
+            return 'DICT';      
+      },
+      
+      readTermList:function(term, lang, offset, maxResults, dictionaries, callback) {
         var db = this._openDB();
         var term = term.replace(/[^ /]+[ /]+$/);
         var termSearch1 = term + ' ';
@@ -227,7 +236,8 @@
         db.transaction(function(tx) {
           try{          
             var dictQuery = CordovaDataAccess._mergeOrClauses('dictionary',dictionaries);
-            tx.executeSql('SELECT DISTINCT term FROM DICT WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset, [term,termSearch1,termSearch2], function(tx, results) {
+            
+            tx.executeSql('SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset, [term,termSearch1,termSearch2], function(tx, results) {
               var result = [];
               var len=results.rows.length;
                for(var i=0; i<len; i++) {
@@ -251,6 +261,7 @@
       }
     };
   
+    var DICT={};
     var DICT={
       _touch:false,
       _offset:0,
@@ -266,6 +277,8 @@
       dataTable:{},
       activeTerm:"",
       currentInput:"",
+      lang:"tib",
+      inputLang:"tib",
       lastUniInput:"",
       currentListTerm:"",
 
@@ -665,13 +678,21 @@
           value = true;
         if(value==="false")
           value = false;
+        if(value)
+          this.useUnicodeTibetan = value;
           
-        this.useUnicodeTibetan = value;
         if(this.useUnicodeTibetan===true||this.useUnicodeTibetan==='output') {
           $('body').addClass('unicodeTib');
+        } else {
+          $('body').removeClass('unicodeTib');
         }
-        if(this.useUnicodeTibetan===true) {
+        
+        if(DICT.getInputLang()=="tib") {
           $('body').addClass('unicodeTibInput');
+          $('body').removeClass('enInput');
+        } else {
+          $('body').addClass('enInput');
+          $('body').removeClass('unicodeTibInput');
         }
       },
       
@@ -792,9 +813,9 @@
           });
 
           $('#searchTerm').on('focus click',function(e) {
-            if(DICT.useUnicodeTibetan === true) {
-              
-              $('#searchTerm').selectRange($('#searchTerm').val().length);
+            if(DICT.useUnicodeTibetan === true && (DICT.getInputLang() === "tib")) {
+              if($('#searchTerm').selectRange)
+                $('#searchTerm').selectRange($('#searchTerm').val().length);
             }
           });
 
@@ -802,9 +823,10 @@
             if(event.keyCode == 13){ //enter
             
               // if enter is pressed in the input field then convert all syllables to unicode
+              DICT.lang = DICT.getInputLang();
               var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
               
-              if(DICT.useUnicodeTibetan===true) {
+              if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
                  var newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
                  var inputText = DICT.tibetanOutput( newInput );
               } else {
@@ -824,7 +846,7 @@
                 currentInput = DICT.currentInput;
             if(event.keyCode == 8 ||(newInput.length < currentInput.length && currentInput.indexOf(newInput)===0)
                                   ||(uniInput.length < lastUniInput.length && lastUniInput.indexOf(uniInput)===0)){ // backspace
-              if(DICT.useUnicodeTibetan===true) {
+              if(DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") ) {
                 if(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput)) { 
                   // if the input field ends with a tseg or shad, then clear the last syllable
                   var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/,'$1');
@@ -837,7 +859,7 @@
 
             } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput))) { //space at the end of the text
               // => convert all syllables to unicode and fill the word list
-              if(DICT.useUnicodeTibetan===true) {
+              if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
                 var inputText = DICT.tibetanOutput( newInput );
               } else {
                 var inputText = newInput;
@@ -961,11 +983,57 @@
       
       highlightListItem:function() {
         $('.selected').removeClass('selected');
-        var searchValue = this.tibetanOutput(this.activeTerm);
+        if(DICT.getInputLang() == "en")
+          var searchValue = this.activeTerm;
+        else
+          var searchValue = this.tibetanOutput(this.activeTerm);
+          
         $('#wordList td').filter(function(){ return $(this).text() === searchValue; }).addClass('selected');
         console.log(searchValue);
       },
 
+      setInputLang:function(targetLang){
+        if(targetLang)
+            DICT.inputLang = targetLang;
+        else if(DICT.getInputLang() == "tib")
+            DICT.inputLang = "en";
+        else 
+            DICT.inputLang = "tib";
+
+        DICT.setTibetanOutput(DICT.useUnicodeTibetan);
+        DICT.clearInput();
+
+        if(DICT.getInputLang()==="en") {
+            $("#searchTerm").attr("placeholder","Enter an English term...")
+            $("#switchBtnEnTib").show();
+            $("#switchBtnTibEn").hide();
+        } else {
+            $("#searchTerm").attr("placeholder","Enter a Tibetan term...")
+            $("#switchBtnEnTib").hide();
+            $("#switchBtnTibEn").show();
+        }
+        
+      },
+      
+      switchInputLang:function() {
+        DICT.setState(DICT.getCurrentState());
+        DICT.setInputLang();
+        DICT.setSidebarState(false);
+        $('.leftSideBar').css('display','none');
+      },
+      
+      getLang:function(){
+        if(DICT.lang)
+            return DICT.lang;
+        return "tib";
+      },
+
+      getInputLang:function(){
+        if(DICT.inputLang)
+            return DICT.inputLang;
+        return "tib";
+      },
+      
       search:function(loadFirstItem,saveState,offset) {
         var inputText = this.uniToWylie( $('#searchTerm').val() );
         inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
@@ -985,10 +1053,14 @@
           return;
         }
         
+        var lang = DICT.getInputLang();
+          
         if(this.currentListTerm != inputText   //this term wasn't loaded yet
            || this._offset != offset           //jumping to a different offset in the result list
           ) {
-          this.getDataAccess().readTermList(inputText, offset, settings.listSize + 1, this.settings.activeDictionaries, function(result) {
+          
+          this.getDataAccess().readTermList(inputText, lang, offset, settings.listSize + 1, this.settings.activeDictionaries, function(result) {
+            var lang = DICT.getInputLang();        
             var tableRows = [];
             if(result.length === 0 && offset > 0 )
               return;
@@ -996,7 +1068,10 @@
             for(var i=0;i<result.length && i<settings.listSize;i++) {
               //result[i][0] = DICT.tibetanOutput(result[i][0]);
               tableRows[i]=[];
-              tableRows[i][0]='<span data-wylie="'+result[i][0]+'">'+DICT.tibetanOutput(result[i][0])+'</span>';
+              if(lang === "en")
+                tableRows[i][0]='<span data-wylie="'+result[i][0]+'">'+result[i][0]+'</span>';
+              else
+                tableRows[i][0]='<span data-wylie="'+result[i][0]+'">'+DICT.tibetanOutput(result[i][0])+'</span>';
             }
             
             DICT.dataTable.clear();
@@ -1016,7 +1091,8 @@
                 $(this).addClass('selected');
                 
                 var wylie = $(this).children('span').attr('data-wylie');
-                DICT.readTerm(wylie, true);
+                DICT.lang=DICT.getInputLang();
+                DICT.readTerm(wylie, DICT.getInputLang(), true);
               });
               DICT._offset = offset;
               $('.paginate_info').text('Showing results ' + (offset+1) + ' to ' + (offset+(result.length>settings.listSize?settings.listSize:result.length)) + '.');
@@ -1031,7 +1107,7 @@
             
             if(loadFirstItem) {
               if(result.length>0 && result[0][0] === inputText) {
-                DICT.readTerm(inputText, saveState);
+                DICT.readTerm(inputText, DICT.getInputLang(), saveState);
                 $('#wordList tr:first-child').addClass('selected');               
               } else {
                 $('#definitions').html('');
@@ -1047,7 +1123,7 @@
             var firstResult = $firstRow.attr('data-wylie');
             if(firstResult === inputText) {
               $('#wordList tr:first-child').addClass('selected');
-              DICT.readTerm(inputText, saveState);
+              DICT.readTerm(inputText, lang, saveState);
             }
           } else {
             $('#definitions').html('');
@@ -1074,6 +1150,8 @@
       getCurrentState:function() {
         var state = {
           activeTerm:this.activeTerm,
+          lang:this.getLang(),
+          inputLang:this.getInputLang(),
           currentListTerm:this.currentListTerm,
           forceLeftSideVisible:this.getSidebarState(),
           offset:this._offset
@@ -1103,7 +1181,15 @@
             
             var stateInfo = JSON.parse(state);
 
-            if( DICT.useUnicodeTibetan === true ) {
+            if(state.lang)
+                DICT.lang = state.lang;
+
+            if(state.inputLang)
+                DICT.inputLang = state.inputLang;
+            
+            DICT.setInputLang( DICT.inputLang );
+                        
+            if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
               $('#searchTerm').val(this.tibetanOutput(stateInfo.currentListTerm));
             } else {
               $('#searchTerm').val(stateInfo.currentListTerm);
@@ -1118,7 +1204,7 @@
 
             
             if((!stateInfo.forceLeftSideVisible) || (!this.isSmallScreen()))
-              this.readTerm(stateInfo.activeTerm,false);
+              this.readTerm(stateInfo.activeTerm,DICT.getLang(), false);
               
             this.setSidebarState(stateInfo.forceLeftSideVisible);
             this.currentInput = stateInfo.currentListTerm;
@@ -1130,7 +1216,7 @@
         this.scrollToTop();
         term = unescape(term).replace(/^\s+|\s+$/g, '');
         if(this.activeTerm != term) {
-          this.getDataAccess().readTerm(term, this.settings.activeDictionaries, saveState);
+          this.getDataAccess().readTerm(term, DICT.getLang(), this.settings.activeDictionaries, saveState);
           this.activeTerm = term;
         } else {
           if(this.isSmallScreen() && this.getSidebarState()) {
@@ -1208,7 +1294,8 @@
               .addClass('link')
               .attr('data-wylie',sectionInfo.wylie)
               .click( function() { 
-                DICT.readTerm( $(this).attr('data-wylie'), true );
+                DICT.lang="tib";
+                DICT.readTerm( $(this).attr('data-wylie'), "tib", true );
               });
           }
         });
@@ -1258,7 +1345,10 @@
       
       loadTerm:function(term,dictEntries,saveState) {
         $('#definitions *').remove();
-        var termUni = this.tibetanOutput( term );
+        if(DICT.getLang()==="en")
+          var termUni = term;
+        else
+          var termUni = this.tibetanOutput( term );
         var definitionTab = '<h1 class="definitionHead" title="'+this.htmlEscapeTitle(term)+'">'+termUni+'</h1><table id="definitionList">';
         var definitionNr = 0;
         var dictList = this.settings.activeDictionaries;
@@ -1545,12 +1635,14 @@
       <p>When you start this program for the first time, this can take several minutes depending on your device. This will only happen when you run the program for the first time. Please be patient...</p>
       <!-- <img class="loader" src="code/css/loader.gif"> -->
     </div>
-  </div>
+  </div>  
   <div id="mainScreen" style="display:none">
     <div class="textInput">
       <div class="textInputWrap"><input type="text" id="searchTerm" placeholder="Enter a Tibetan term..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"></div>
-      <a id="clearBtn"    href="javascript:DICT.clearInput();"><img title="Clear input" src="code/css/clear.png" width="32" height="43"></a>
-      <a id="settingsBtn" href="javascript:SETTINGS.btnShowSettings();"><img title="Settings" src="code/css/settings.png" width="32" height="43"></a>
+      <a id="clearBtn"       href="javascript:DICT.clearInput();"><img title="Clear input" src="code/css/clear.png" width="32" height="43"></a>
+      <a id="switchBtnTibEn" href="javascript:DICT.switchInputLang();" class="switchBtn"><img title="Switch input language" src="code/css/tib-en.png" width="23" height="43"></a>
+      <a id="switchBtnEnTib" href="javascript:DICT.switchInputLang();" style="display:none" class="switchBtn"><img title="Switch input language" src="code/css/en-tib.png" width="23" height="43"></a>
+      <a id="settingsBtn"    href="javascript:SETTINGS.btnShowSettings();"><img title="Settings" src="code/css/settings.png" width="32" height="43"></a>
     </div>
     <div class="page">
       <div class="contentArea">

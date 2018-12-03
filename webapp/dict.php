@@ -18,6 +18,12 @@
     $dictQuery = 'false';
   }
   
+  $lang = trim($_POST['lang']);
+  if($lang == "en") {
+    $table = "DICT_EN";
+  } else {
+    $table = "DICT";
+  }
   
   if(isset($_POST['term'])) { // search for the definition of a term
     header("Content-type: application/json");
@@ -25,7 +31,7 @@
     $term = trim($_POST['term']);
     $prevTerm = '';
     print('{');
-    $statement = $db->prepare('SELECT * FROM DICT WHERE ( term=:term ) AND ( '.$dictQuery.' ) ORDER BY dictionary;');
+    $statement = $db->prepare('SELECT * FROM '.$table.' WHERE ( term=:term ) AND ( '.$dictQuery.' ) ORDER BY dictionary;');
     $statement->bindValue(':term', $term, SQLITE3_TEXT);
     $results = $statement->execute();
     
@@ -49,6 +55,7 @@
       $prevTerm = $row['term'];
       $entriesFound = true;
     }
+    
     if($entriesFound == true) {
       print('"');
     }
@@ -63,7 +70,7 @@
       $maxresults = 500;
     }
     $offset = preg_replace('[^0-9]','',$_POST['offset']); 
-    $statement = $db->prepare('SELECT DISTINCT term FROM DICT WHERE ((( term = :word ) OR ( term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
+    $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
     $statement->bindValue(':word', $search, SQLITE3_TEXT);
     $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
     $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
@@ -92,7 +99,7 @@
     $result = array();
     foreach ($termInfo as $sectionId => $sectionInfo) {
       $term = $sectionInfo['wylie'];
-      $statement = $db->prepare('SELECT term FROM DICT WHERE term=:word LIMIT 1;');
+      $statement = $db->prepare('SELECT term FROM '.$table.' WHERE term=:word LIMIT 1;');
       $statement->bindValue(':word', $term, SQLITE3_TEXT);
       $results = $statement->execute();
       $found = false;

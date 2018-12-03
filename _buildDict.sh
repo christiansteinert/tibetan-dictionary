@@ -14,6 +14,7 @@
 #SYLLABLELIST=data/syllablelist.js
 #DB=TibetanDictionary.db
 #CSV_INPUT=../_input/dictionaries
+#CSV_INPUT_EN=../_input/dictionaries-en
 
 #./_adjustTransliteration.sh
 ./_getTibetanSyllablesFromText.sh
@@ -54,7 +55,50 @@ echo '};' >> $SYLLABLELIST
 #echo '];' >> $DICTLIST
 
 rm data/DICT.dbcmd~;
-echo "- Processing Dictionaries"
+
+
+
+echo "- Processing English-Tibetan Dictionaries"
+
+
+for f in $CSV_INPUT_EN/*
+do
+  dictName=`echo $f|sed 's/^[^-]*-//g'`
+  lastTerm=""
+
+  echo en: $dictName
+
+  cat "$f" |grep -v "^#" |sort |uniq >/tmp/dict-sorted.txt
+  while read -r line; do
+    IFS='|' read -ra line_parts <<< "$line"
+
+    term="${line_parts[0]}"
+    fileName=`echo "$term"|sed "s/\([A-Z]\)/\1_/g"`
+    definition="${line_parts[1]//\"/\\\"}"
+    definition=`echo "$definition"|echo "\n"|sed "s/[\\]n/\\\\\\\\n/g"`
+
+    IFS=' ' read -a term_parts <<< "$term"
+    termLc="${term,,}"
+
+    if(( ${#term} == 0 ))
+    then
+      definition=""
+    fi
+
+    if(( ${#definition} > 0 ))
+    then
+      echo "insert into DICT_EN values(\"${term//\"/\"\"}\",\"${dictName//\"/\"\"}\",\"${line_parts[1]//\"/\"\"}\");" >> data/DICT.dbcmd~
+#      echo "insert or replace into WORDLIST(term) values(\"${term//\"/\"\"}\"\");" >> data/DICT.dbcmd~
+    fi
+    lastTerm="$term"
+  done </tmp/dict-sorted.txt
+done
+
+
+
+
+
+echo "- Processing Tibetan-English Dictionaries"
 
 echo "INSERT INTO \"android_metadata\" VALUES ('en_US');"  >>  data/DICT.dbcmd~
 
@@ -113,15 +157,23 @@ do
   done </tmp/dict-sorted.txt
 done
 
+
+
+
+
+
+
 rm $DB
 #echo "create table WORDLIST(term text);" |sqlite3 $DB
 echo "create table DICT(term text, dictionary text, definition text);" |sqlite3 $DB
+echo "create table DICT_EN(term text, dictionary text, definition text);" |sqlite3 $DB
 echo "create table \"android_metadata\" (\"locale\" TEXT DEFAULT 'en_US');" |sqlite3 $DB
 
 echo "begin;" > data/DICT.dbcmd~~
 cat data/DICT.dbcmd~ |sort -s -k2,2 -k4,4  --field-separator='"' >>  data/DICT.dbcmd~~
 #echo "end;create index i1 on WORDLIST(term); " >> data/DICT.dbcmd~~
 echo "end;create index i2 on DICT(term); " >> data/DICT.dbcmd~~
+echo "create index i3 on DICT_EN(term); " >> data/DICT.dbcmd~~
 
 cat data/DICT.dbcmd~~ |sqlite3 $DB
 echo 'analyze;' |sqlite3 $DB
