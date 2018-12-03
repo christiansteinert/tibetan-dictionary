@@ -1,6 +1,9 @@
 <?php
   
-  $db = new SQLite3('TibetanDictionary.db');
+  if(file_exists('TibetanDictionary_private.db'))
+    $db = new SQLite3('TibetanDictionary_private.db');
+  else
+    $db = new SQLite3('TibetanDictionary.db');
   
   $expire = 'Expires: ' . gmdate('D, d M Y H:i:s', strtotime('+1 hours')) . ' GMT';
   header($expire);
@@ -70,11 +73,18 @@
       $maxresults = 500;
     }
     $offset = preg_replace('[^0-9]','',$_POST['offset']); 
-    $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
-    $statement->bindValue(':word', $search, SQLITE3_TEXT);
-    $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
-    $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
-    $statement->bindValue(':dictionaries', $dictionaries);    
+    if($lang == 'tib') {
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement->bindValue(':word', $search, SQLITE3_TEXT);
+        $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
+        $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
+        $statement->bindValue(':dictionaries', $dictionaries);    
+    } else {
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term like :wordSearch )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement->bindValue(':word', $search, SQLITE3_TEXT);
+        $statement->bindValue(':wordSearch',  $search . '%', SQLITE3_TEXT);
+        $statement->bindValue(':dictionaries', $dictionaries);    
+    }
 
     $results = $statement->execute();
     $firstRow = true;

@@ -188,6 +188,7 @@ def cleanupValue(value):
 
 def main():
     with open(sys.argv[1], 'r') as inp:
+        print(sys.argv[1])
         with open(sys.argv[2], 'w') as out:
             for line in inp:
                 #line = cleanupValue(line)

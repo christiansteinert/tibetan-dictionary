@@ -7,6 +7,7 @@
 #   * bash, grep, sed, cat, paste, sort, uniq, etc.
 #   * sqlite 3
 #   * perl 5
+#   * python 3
 # - java and a current version of the Android SDK
 
 
@@ -21,6 +22,7 @@ export DB=TibetanDictionary.db
 export CSV_INPUT=`pwd`/_input/dictionaries/public
 export CSV_INPUT_EN=`pwd`/_input/dictionaries/public_en
 export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
+export CSV_INPUT_PRIVATE_EN=`pwd`/_input/dictionaries/private
 
 
 if [ -d $CSV_INPUT_PRIVATE ]
@@ -49,6 +51,8 @@ export DICTLIST=data/dictionaries.js
 export SYLLABLELIST=data/syllablelist.js
 export DB=TibetanDictionary_private.db
 export CSV_INPUT=$CSV_INPUT_PRIVATE
+export CSV_INPUT_EN=CSV_INPUT_PRIVATE_EN
+
 
 if [ -d $CSV_INPUT ]
 then

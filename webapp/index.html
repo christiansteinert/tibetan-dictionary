@@ -230,6 +230,7 @@
       readTermList:function(term, lang, offset, maxResults, dictionaries, callback) {
         var db = this._openDB();
         var term = term.replace(/[^ /]+[ /]+$/);
+        var termSearch = term + '&';
         var termSearch1 = term + ' ';
         var termSearch2 = term + ' zzzzz';
         
@@ -237,7 +238,15 @@
           try{          
             var dictQuery = CordovaDataAccess._mergeOrClauses('dictionary',dictionaries);
             
-            tx.executeSql('SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset, [term,termSearch1,termSearch2], function(tx, results) {
+            if ( lang === "tib" ) {
+              query = 'SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              queryParams = [term,termSearch1,termSearch2];
+            } else {
+              query = 'SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              queryParams = [term,termSearch];
+            }
+            
+            tx.executeSql(query, queryParams, function(tx, results) {
               var result = [];
               var len=results.rows.length;
                for(var i=0; i<len; i++) {
@@ -584,11 +593,15 @@
         var result = "";
         var separators = ['{','}','[',']', ' ', '='];
         var bracketActive;
+        var currentTibChunk = "";
+        
         tokenizer = new jQuery.tokenizer( separators, function( chunk, isSeparator ) {
-          if(isSeparator && chunk === '{' )
+          if(isSeparator && chunk === '{' ) {
             bracketActive = true;
-          if(isSeparator && chunk === '}' )
+          }
+          if(isSeparator && chunk === '}' ) {
             bracketActive = false;
+          }
             
           if(bracketActive)
             result += chunk;
@@ -857,7 +870,8 @@
                 DICT.search(false,true,0);
               }
 
-            } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput))) { //space at the end of the text
+            } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) { 
+               //space at the end of the text or typing in English
               // => convert all syllables to unicode and fill the word list
               if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
                 var inputText = DICT.tibetanOutput( newInput );
@@ -1181,11 +1195,11 @@
             
             var stateInfo = JSON.parse(state);
 
-            if(state.lang)
-                DICT.lang = state.lang;
+            if(stateInfo.lang)
+                DICT.lang = stateInfo.lang;
 
-            if(state.inputLang)
-                DICT.inputLang = state.inputLang;
+            if(stateInfo.inputLang)
+                DICT.inputLang = stateInfo.inputLang;
             
             DICT.setInputLang( DICT.inputLang );
                         
@@ -1369,7 +1383,7 @@
               if(currentDict.containsOnlyTibetan)
                 definition = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">' + DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) ) + '</div>';
               else if(currentDict.containsOnlySkt)
-                definition = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">' + DICT.htmlEscapeDefinition( DICT.sktToUni( definition ) ) + '</div>';
+                definition = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">' + DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( DICT.sktToUni( definition ) ) ) + '</div>';
               else
                 definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++ );
 
