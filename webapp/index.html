@@ -596,10 +596,10 @@
         var currentTibChunk = "";
         
         tokenizer = new jQuery.tokenizer( separators, function( chunk, isSeparator ) {
-          if(isSeparator && chunk === '{' ) {
+          if(isSeparator && ( chunk === '{' || chunk === '[' ) ) {
             bracketActive = true;
           }
-          if(isSeparator && chunk === '}' ) {
+          if(isSeparator && ( chunk === '}' || chunk === ']' ) ) {
             bracketActive = false;
           }
             
@@ -1374,19 +1374,25 @@
                 console.log("received result for unknown dictionary '" +dictName+ "'. skipping");
                 return;
               } 
+              var defStart = "", defEnd = "";
               
               if(currentDict.mergeLines) {
                   definition = definition.replace(/\n/gm,'; ');
                   definition = definition.replace(/\\n/gm,'; ');
               }
               definition = DICT.breakDefinitionIntoSections( definition );
-              if(currentDict.containsOnlyTibetan)
-                definition = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">' + DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) ) + '</div>';
-              else if(currentDict.containsOnlySkt)
-                definition = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">' + DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( DICT.sktToUni( definition ) ) ) + '</div>';
-              else
+              if(currentDict.containsOnlyTibetan) {
+                defStart = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">';
+                definition =  DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+                defEnd = '</div>';
+              } else if(currentDict.containsOnlySkt) {
+                defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
+                definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ) );
+                defEnd = '</div>';
+              } else {
                 definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++ );
-
+              }
+                
               definition = definition.replace(/\n/g,'</p>\n<p>');
               definition = definition.replace(/\\n/g,'</p>\n<p>');
 
@@ -1397,6 +1403,8 @@
               if(currentDict.abbreviations) {             
                 definition = DICT.processAbbreviations(currentDict.abbreviations,definition);
               }
+              
+              definition = defStart + definition + defEnd;
 
               var tooltipStart = "", tooltipEnd = ""; 
               if(currentDict.about) {
@@ -1517,7 +1525,8 @@
           var inactiveDicts = [];
           $.each(settings.activeDictionaries,function(index,currentDictName) {
             var dictInfo = DICTLIST[currentDictName];
-            activeDicts.push(dictInfo);
+            if(dictInfo)
+                activeDicts.push(dictInfo);
           });
           
           $.each(this.getAllDictionaries(),function(index,currentDictName) {

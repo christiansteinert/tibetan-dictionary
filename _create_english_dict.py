@@ -116,9 +116,12 @@ def cleanupValueMinimal(value):
     value = value.rstrip("\r\n")
     value = value.rstrip("\r")
     value = value.rstrip("\n")
+    value = value.replace("-"," ")
     value = re.sub(r"\s+"," ",value)
     value = re.sub(r"^\s+","",value)
     value = re.sub(r"\s+$","",value)
+    value = value.replace("\\n",";")
+
     return value
 
 
@@ -131,10 +134,16 @@ def cleanupValue(value):
     value = re.sub(r"\(.*?\)","",value)
     value = re.sub(r"\"","",value)
     value = re.sub(r"″","",value)
+    value = re.sub(r"^\s*as verb\s*:\s*","",value)
+    value = re.sub(r"^\s*verb\s*:\s*","",value)
+    value = re.sub(r"^\s*as noun\s*:\s*","",value)
+    value = re.sub(r"^\s*noun\s*:\s*","",value)
+    value = re.sub(r"^\s*as adjective\s*:\s*","",value)
+    value = re.sub(r"^\s*adjective\s*:\s*","",value)
+    value = re.sub(r"^\s*adj\.\s*:\s*","",value)
     value = re.sub(r"\.\.\.","",value)
     value = value.replace("?","")
     value = value.replace("*","")
-    value = value.replace("-"," ")
     value = value.replace("—"," ")
     value = value.replace("'","")
     value = re.sub(r"^\s+","",value)
@@ -181,17 +190,18 @@ def cleanupValue(value):
     value = value.replace("ṣ","S")
     value = value.replace("Ṣ","S")
 
+    value = value.replace("­","") # delete zero-width non-joiner
+
     value = re.sub(r"\s+"," ",value)
 
     return value
 
 
 def main():
-    with open(sys.argv[1], 'r') as inp:
+    with open(sys.argv[1], 'r') as inp:        
         print(sys.argv[1])
         with open(sys.argv[2], 'w') as out:
             for line in inp:
-                #line = cleanupValue(line)
                 if ( not line.startswith("#") ) and ( "|" in line ):
                     tibetanOriginal, englishOriginal = line.split("|");
                     tibetan = cleanupValueMinimal(tibetanOriginal)
