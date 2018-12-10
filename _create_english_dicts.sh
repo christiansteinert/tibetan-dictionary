@@ -13,7 +13,7 @@ export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 ./_create_english_dict.py _input/dictionaries/public/23-GatewayToKnowledge _input/dictionaries/public_en/23-GatewayToKnowledge
 ./_create_english_dict.py _input/dictionaries/public/35-ThomasDoctor _input/dictionaries/public_en/35-ThomasDoctor
 ./_create_english_dict.py _input/dictionaries/public/36-ComputerTerms _input/dictionaries/public_en/36-ComputerTerms
-./_create_english_dict.py _input/dictionaries/public/43-84000 _input/dictionaries/public_en/43-84000
+./_create_english_dict.py _input/dictionaries/public/43-84000Dict _input/dictionaries/public_en/43-84000Dict
 ./_create_english_dict.py _input/dictionaries/public/46-84000Skt _input/dictionaries/public_en/46-84000Skt
 ./_create_english_dict.py _input/dictionaries/en_input/38-Gaeng,Wetzel _input/dictionaries/public_en/38-Gaeng,Wetzel
 
@@ -32,7 +32,7 @@ then
 ./_create_english_dict.py _input/dictionaries/private/28-FPMT-middling-lamrim _input/dictionaries/private_en/28-FPMT-middling-lamrim
 ./_create_english_dict.py _input/dictionaries/private/35-ThomasDoctor _input/dictionaries/private_en/35-ThomasDoctor
 ./_create_english_dict.py _input/dictionaries/private/36-ComputerTerms _input/dictionaries/private_en/36-ComputerTerms
-./_create_english_dict.py _input/dictionaries/private/43-84000 _input/dictionaries/private_en/43-84000
+./_create_english_dict.py _input/dictionaries/private/43-84000Dict _input/dictionaries/private_en/43-84000Dict
 ./_create_english_dict.py _input/dictionaries/private/46-84000Skt _input/dictionaries/private_en/46-84000Skt
 ./_create_english_dict.py _input/dictionaries/en_input/38-Gaeng,Wetzel _input/dictionaries/private_en/38-Gaeng,Wetzel
 ./_create_english_dict.py _input/dictionaries/en_input_private/30-Illuminator_x _input/dictionaries/private_en/30-Illuminator_x

@@ -14,14 +14,14 @@
 
 
 # Publically available dictionaries
-export WORDLIST=data/wordlist.js
-export DICTLIST=data/dictionaries.js
-export SYLLABLELIST=data/syllablelist.js
-export DB=TibetanDictionary.db
-export CSV_INPUT=`pwd`/_input/dictionaries/public
-export CSV_INPUT_EN=`pwd`/_input/dictionaries/public_en
+#export WORDLIST=data/wordlist.js
+#export DICTLIST=data/dictionaries.js
+#export SYLLABLELIST=data/syllablelist.js
+#export DB=TibetanDictionary.db
+#export CSV_INPUT=`pwd`/_input/dictionaries/public
+#export CSV_INPUT_EN=`pwd`/_input/dictionaries/public_en
 export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
-export CSV_INPUT_PRIVATE_EN=`pwd`/_input/dictionaries/private_en
+#export CSV_INPUT_PRIVATE_EN=`pwd`/_input/dictionaries/private_en
 
 
 if [ -d $CSV_INPUT_PRIVATE ]
@@ -41,29 +41,29 @@ fi
 cd "$DIR"
 
 ./_create_english_dicts.sh
+./_buildDict.py
 
-
-echo ===== Public Dictionaries =====
-./_buildDict.sh
+#echo ===== Public Dictionaries =====
+#./_buildDict.sh
 
 
 
 
 
 # Private Dictionaries - (Not all of these can be made available on github. Sorry.)
-export WORDLIST=data/wordlist.js
-export DICTLIST=data/dictionaries.js
-export SYLLABLELIST=data/syllablelist.js
-export DB=TibetanDictionary_private.db
-export CSV_INPUT=$CSV_INPUT_PRIVATE
-export CSV_INPUT_EN=$CSV_INPUT_PRIVATE_EN
+#export WORDLIST=data/wordlist.js
+#export DICTLIST=data/dictionaries.js
+#export SYLLABLELIST=data/syllablelist.js
+#export DB=TibetanDictionary_private.db
+#export CSV_INPUT=$CSV_INPUT_PRIVATE
+#export CSV_INPUT_EN=$CSV_INPUT_PRIVATE_EN
 
 
-if [ -d $CSV_INPUT ]
-then
-  echo ===== PRIVATE Dictionaries  =====
-
-  ./_buildDict.sh
-fi
+#if [ -d $CSV_INPUT ]
+#then
+#  echo ===== PRIVATE Dictionaries  =====
+#
+#  ./_buildDict.sh
+#fi
 
 

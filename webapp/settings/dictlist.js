@@ -78,7 +78,7 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
-"84000":{
+"84000Dict":{
   label:'84000 Glossary',
   about:'English terms from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true"

@@ -15,7 +15,7 @@
       if($dictQuery != '') {
         $dictQuery .= ' OR ';
       }
-      $dictQuery .= ' dictionary="'.$db->escapeString($dict).'"';
+      $dictQuery .= ' DICTNAMES.name="'.$db->escapeString($dict).'"';
     }
   } else {
     $dictQuery = 'false';
@@ -24,8 +24,10 @@
   $lang = trim($_POST['lang']);
   if($lang == "en") {
     $table = "DICT_EN";
+    $lang = "en";
   } else {
     $table = "DICT";
+    $lang = "bo";
   }
   
   if(isset($_POST['term'])) { // search for the definition of a term
@@ -34,7 +36,8 @@
     $term = trim($_POST['term']);
     $prevTerm = '';
     print('{');
-    $statement = $db->prepare('SELECT * FROM '.$table.' WHERE ( term=:term ) AND ( '.$dictQuery.' ) ORDER BY dictionary;');
+
+    $statement = $db->prepare('SELECT '.$table.'.term as term, '.$table.'.definition as definition, DICTNAMES.name as dictionary FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ( '.$table.'.term=:term ) AND ( '.$dictQuery.' ) ORDER BY DICTNAMES.name;');
     $statement->bindValue(':term', $term, SQLITE3_TEXT);
     $results = $statement->execute();
     
@@ -76,16 +79,16 @@
     }  
     $offset = preg_replace('[^0-9]','',$_POST['offset']); 
     if($lang == 'tib') {
-        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY term LIMIT '.$maxresults.' OFFSET '.$offset.';');
         $statement->bindValue(':word', $search, SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
-        $statement->bindValue(':dictionaries', $dictionaries);    
+        //$statement->bindValue(':dictionaries', $dictionaries);    
     } else {
-        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' WHERE ((( term = :word ) OR ( term LIKE :wordSearch )) AND ('.$dictQuery.')) GROUP BY term ORDER BY rowid LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term LIKE :wordSearch )) AND ('.$dictQuery.')) GROUP BY term ORDER BY term LIMIT '.$maxresults.' OFFSET '.$offset.';');
         $statement->bindValue(':word', $search, SQLITE3_TEXT);
         $statement->bindValue(':wordSearch',  $search . '%', SQLITE3_TEXT);
-        $statement->bindValue(':dictionaries', $dictionaries);    
+        //$statement->bindValue(':dictionaries', $dictionaries);    
     }
 
     $results = $statement->execute();

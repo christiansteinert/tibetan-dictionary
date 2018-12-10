@@ -126,7 +126,14 @@
         var db = this._openDB();
         db.transaction(function(tx) {
           try{
-            tx.executeSql('SELECT * FROM '+this.getTabName(lang)+' WHERE term=?', [term], function(tx, results) {
+            var tab = this.getTabName(lang);
+            var tabLang = "";
+            if(lang=="en")
+                tabLang = "en";
+            else 
+                tabLang = "bo";
+            
+            tx.executeSql('SELECT '+tab+'.term as term, '+tab+'.definition as definition, DICTNAMES.name as dictionary FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "'+tabLang+'" WHERE term=?', [term], function(tx, results) {
               var len=results.rows.length;
               var definitions={};
               for(var i=0; i<len; i++) {
@@ -236,13 +243,14 @@
         
         db.transaction(function(tx) {
           try{          
-            var dictQuery = CordovaDataAccess._mergeOrClauses('dictionary',dictionaries);
+            var dictQuery = CordovaDataAccess._mergeOrClauses('DICTNAMES.name',dictionaries);
+            var tab = this.getTabName(lang);
             
             if ( lang === "tib" ) {
-              query = 'SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch1,termSearch2];
             } else {
-              query = 'SELECT DISTINCT term FROM '+this.getTabName(lang)+' WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "en"  WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch];
             }
             
@@ -696,12 +704,23 @@
           
         if(this.useUnicodeTibetan===true||this.useUnicodeTibetan==='output') {
           $('body').addClass('unicodeTib');
+          if(DICT.getInputLang()=="tib") {
+            $('body').addClass('sidebarTib');
+          } else {
+            $('body').removeClass('sidebarTib');
+          }
         } else {
           $('body').removeClass('unicodeTib');
+          $('body').removeClass('sidebarTib');
         }
         
         if(DICT.getInputLang()=="tib") {
-          $('body').addClass('unicodeTibInput');
+          if(this.useUnicodeTibetan===true) {
+            $('body').addClass('unicodeTibInput');
+          } else {
+            $('body').removeClass('unicodeTibInput');
+          }
+          
           $('body').removeClass('enInput');
         } else {
           $('body').addClass('enInput');

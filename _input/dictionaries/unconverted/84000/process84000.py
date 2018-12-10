@@ -95,7 +95,7 @@ def getDefinitionTxt(rootItem, xmlNode):
 
 def main():
     glossary = ET.parse("cumulative-glossary.xml").getroot()
-    dictEn = open("out/43-84000", 'w') 
+    dictEn = open("out/43-84000Dict", 'w') 
     dictEnDefinitions = open("out/44-84000Definitions", 'w') 
     dictTibSynonyms = open("out/45-84000Synonyms", 'w') 
     dictSkt = open("out/46-84000Skt", 'w') 
