@@ -1139,7 +1139,14 @@
             }
             
             if(loadFirstItem) {
-              if(result.length>0 && result[0][0].toLowerCase() === inputText.toLowerCase()) {
+              var termFound = false;
+            
+              for(var i=0;i<result.length;i++)
+                for(var j=0;j<result[i].length;j++)
+                  if (result[i][j] === inputText)
+                    termFound = true;
+              
+              if(result.length>0 && termFound) {
                 DICT.readTerm(inputText, DICT.getInputLang(), saveState);
                 $('#wordList tr:first-child').addClass('selected');               
               } else {
@@ -1151,8 +1158,13 @@
           });
         } else if(loadFirstItem) {
           //the list in the sidebar was already loaded before but we need to activate the first term
-          var $firstRow = $('#wordList tr:first-child td span');
-          if($firstRow.length) {
+          var $firstRow;
+          $('#wordList tr td span').each(function(count, elem) {
+            if($(elem).attr('data-wylie') === inputText)
+              $firstRow = $(elem)
+          });
+          
+          if($firstRow && $firstRow.length) {
             var firstResult = $firstRow.attr('data-wylie');
             if(firstResult.toLowerCase() === inputText.toLowerCase()) {
               $('#wordList tr:first-child').addClass('selected');
