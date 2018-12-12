@@ -126,7 +126,7 @@
         var db = this._openDB();
         db.transaction(function(tx) {
           try{
-            var tab = this.getTabName(lang);
+            var tab = CordovaDataAccess.getTabName(lang);
             var tabLang = "";
             if(lang=="en")
                 tabLang = "en";
@@ -237,20 +237,20 @@
       readTermList:function(term, lang, offset, maxResults, dictionaries, callback) {
         var db = this._openDB();
         var term = term.replace(/[^ /]+[ /]+$/);
-        var termSearch = term + '&';
+        var termSearch = term + '%';
         var termSearch1 = term + ' ';
         var termSearch2 = term + ' zzzzz';
         
         db.transaction(function(tx) {
           try{          
             var dictQuery = CordovaDataAccess._mergeOrClauses('DICTNAMES.name',dictionaries);
-            var tab = this.getTabName(lang);
+            var tab = CordovaDataAccess.getTabName(lang);
             
             if ( lang === "tib" ) {
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch1,termSearch2];
             } else {
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "en"  WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY rowid LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "en"  WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch];
             }
             
@@ -1139,7 +1139,7 @@
             }
             
             if(loadFirstItem) {
-              if(result.length>0 && result[0][0] === inputText) {
+              if(result.length>0 && result[0][0].toLowerCase() === inputText.toLowerCase()) {
                 DICT.readTerm(inputText, DICT.getInputLang(), saveState);
                 $('#wordList tr:first-child').addClass('selected');               
               } else {
@@ -1154,7 +1154,7 @@
           var $firstRow = $('#wordList tr:first-child td span');
           if($firstRow.length) {
             var firstResult = $firstRow.attr('data-wylie');
-            if(firstResult === inputText) {
+            if(firstResult.toLowerCase() === inputText.toLowerCase()) {
               $('#wordList tr:first-child').addClass('selected');
               DICT.readTerm(inputText, lang, saveState);
             }

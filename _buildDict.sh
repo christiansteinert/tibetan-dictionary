@@ -1,5 +1,8 @@
 #!/bin/bash
 
+### THIS SCRIPT IS OUTDATED AND NOT USED ANYMORE. INSTEAD A PYTHON SCRIPT OF THE SAME NAME IS DOING THIS JOB ###
+
+
 # Requirements for the build process (all programs must be in the PATH):
 # - node JS and npm and the following node.js modules:
 #   * ...
@@ -17,22 +20,22 @@
 #CSV_INPUT_EN=../_input/dictionaries-en
 
 #./_adjustTransliteration.sh
-./_getTibetanSyllablesFromText.sh
 
-cd webapp
+#./_getTibetanSyllablesFromText.sh
 
-rm data/* 2>/dev/null
-mkdir data 2>/dev/null
+#cd webapp
+
+#rm data/* 2>/dev/null
+#mkdir data 2>/dev/null
 #mkdir data/dict 2>/dev/null
 
 
 
-echo bulding syllable list
-echo 'SYLLABLELIST={' > $SYLLABLELIST
-cat ../_input/tibetan-punctuation ../_input/tibetan-syllables |grep "\|" | sed "s/\(.*\)[\|]\(.*\)/\"\1\":\"\2\",/g" >> $SYLLABLELIST
+#echo bulding syllable list
+#echo 'SYLLABLELIST={' > $SYLLABLELIST
+#cat ../_input/tibetan-punctuation ../_input/tibetan-syllables |grep "\|" | sed "s/\(.*\)[\|]\(.*\)/\"\1\":\"\2\",/g" >> $SYLLABLELIST
 
-
-echo '};' >> $SYLLABLELIST
+#echo '};' >> $SYLLABLELIST
 
 #echo building word list
 #cat ../_input/dictionaries/* |grep "|" | sed "s/[\|].*//g" |grep . |sort| uniq  >> $WORDLIST.tmp~

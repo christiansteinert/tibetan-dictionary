@@ -11,7 +11,7 @@ CSV_INPUT="_input/dictionaries/public"
 CSV_INPUT_EN="_input/dictionaries/public_en"
 CSV_INPUT_PRIVATE="_input/dictionaries/private"
 CSV_INPUT_PRIVATE_EN="_input/dictionaries/private_en"
-     
+
 
 def createDb(path):
 

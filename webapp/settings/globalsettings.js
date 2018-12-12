@@ -1,1 +1,1 @@
-GLOBAL_SETTINGS={ publicOnly: false }
+GLOBAL_SETTINGS={ publicOnly: true }

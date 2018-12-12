@@ -79,13 +79,13 @@
     }  
     $offset = preg_replace('[^0-9]','',$_POST['offset']); 
     if($lang == 'tib') {
-        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY term LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY lower(term), term LIMIT '.$maxresults.' OFFSET '.$offset.';');
         $statement->bindValue(':word', $search, SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
         //$statement->bindValue(':dictionaries', $dictionaries);    
     } else {
-        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term LIKE :wordSearch )) AND ('.$dictQuery.')) GROUP BY term ORDER BY term LIMIT '.$maxresults.' OFFSET '.$offset.';');
+        $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term LIKE :wordSearch )) AND ('.$dictQuery.')) GROUP BY term ORDER BY lower(term), term LIMIT '.$maxresults.' OFFSET '.$offset.';');
         $statement->bindValue(':word', $search, SQLITE3_TEXT);
         $statement->bindValue(':wordSearch',  $search . '%', SQLITE3_TEXT);
         //$statement->bindValue(':dictionaries', $dictionaries);    

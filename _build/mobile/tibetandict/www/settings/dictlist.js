@@ -34,7 +34,6 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true",
   listCredits:"true"
-    
 },
 "CommonTerms-Lin":{
   label:'Chung-An Lin',
@@ -77,6 +76,16 @@ DICTLIST={
   label:'Hopkins Comment 1992',
   about:'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
   abbreviations:'Hopkins',
+  public:"true"
+},
+"84000Dict":{
+  label:'84000 Glossary',
+  about:'English terms from the Glossary of the 84000 translation project. http://www.84000.co/',
+  public:"true"
+},
+"84000Definitions":{
+  label:'84000 Glossary-Definitions',
+  about:'English definitions from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true"
 },
 "ChandraDas_x":{
@@ -196,6 +205,11 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
+"84000Synonyms":{
+  label:'84000 Tibetan Synonyms (Tibetan)',
+  about:'Synonymous Tibetan terms from the Glossary of the 84000 translation project. http://www.84000.co/',
+  public:"true"
+},
 "Sera-Textbook-Definitions":{
   label:'Sera Textbook Definitions (Tibetan)',
   about:'Sera Textbook Definitions (Tibetan)|This is a collection of various definitions from major textbook authors of Sera Monastery|The definitions are extracted from material of the Asian Classics Input Project so there will likely be typos and mistakes',
@@ -259,16 +273,28 @@ DICTLIST={
   listCredits:"true"
 },
 "FPMT-middling-lamrim-Def":{
-  label:'FPMT Glossary for Middling Lamrim (work in progress): Definitions',
+  label:'FPMT Glossary for Middling Lamrim (work in progress): Definitions (Tibetan)',
   about:'FPMT Glossary for Middling Lamrim|This glossary was compiled by the FPMT and includes key technical terms for Tsong-kha-pa\'s Middling Lamrim',
   public:"false",
   listCredits:"true"
 },
 "Hopkins-Skt2015":{
-  containsOnlySkt:false, // a few entries contain Tibetan and since the 2015 edition the Sanskrit has diacritical marks anyway without post-processing
+  containsOnlySkt:true, 
   label:'Hopkins Sans&shy;krit 2015 (Tibetan-Sanskrit)',
   about:'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
   abbreviations:'Hopkins',
+  public:"true"
+},
+"Hopkins-Skt":{
+  containsOnlySkt:true, 
+  label:'Hopkins Sans&shy;krit 1992 (Tibetan-Sanskrit)',
+  about:'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
+  abbreviations:'Hopkins',
+  public:"true"
+},
+"84000Skt":{
+  label:'84000 Glossary, Sans&shy;krit (Tibetan-Sanskrit)',
+  about:'Sanskrit terms from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true"
 },
 "Mahavyutpatti-Skt":{
