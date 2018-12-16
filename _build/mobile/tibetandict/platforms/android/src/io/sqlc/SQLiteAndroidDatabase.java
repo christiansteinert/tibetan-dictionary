@@ -464,11 +464,11 @@ class SQLiteAndroidDatabase
             case Cursor.FIELD_TYPE_FLOAT:
                 row.put(key, cur.getDouble(i));
                 break;
-            /* ** Read BLOB as Base-64 DISABLED in this branch:
+            /* ** Read BLOB -> decompress directly */
             case Cursor.FIELD_TYPE_BLOB:
-                row.put(key, new String(Base64.encode(cur.getBlob(i), Base64.DEFAULT)));
+                row.put(key, DictDecompress.inflateText(cur.getBlob(i)));
                 break;
-            // ** Read BLOB as Base-64 DISABLED to HERE. */
+            // ** Read BLOB <- decompress directly. */
             case Cursor.FIELD_TYPE_STRING:
             default: /* (not expected) */
                 row.put(key, cur.getString(i));
@@ -489,10 +489,11 @@ class SQLiteAndroidDatabase
             row.put(key, cursor.getLong(i));
         } else if (cursorWindow.isFloat(pos, i)) {
             row.put(key, cursor.getDouble(i));
-        /* ** Read BLOB as Base-64 DISABLED in this branch:
+
         } else if (cursorWindow.isBlob(pos, i)) {
-            row.put(key, new String(Base64.encode(cursor.getBlob(i), Base64.DEFAULT)));
-        // ** Read BLOB as Base-64 DISABLED to HERE. */
+             /* ** Read BLOB -> decompress directly */
+            row.put(key, DictDecompress.inflateText(cursor.getBlob(i)));
+            // ** Read BLOB <- decompress directly. */
         } else { // string
             row.put(key, cursor.getString(i));
         }

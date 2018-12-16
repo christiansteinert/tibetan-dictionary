@@ -1,0 +1,3 @@
+#!/bin/bash
+# build a zlib compression "dictonary" by extracting the most frequent words from all input files
+cat ../../../_input/dictionaries/public/* |sed "s/.*[|]//g" |sed "s/ /\\n/g" |grep .. | sort |uniq -c  | sort -n |tail -20000 | awk '{ print $2 }' | tr '\n' ' ' | tail -c 32768 > frequent-words.txt

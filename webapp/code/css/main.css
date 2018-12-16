@@ -42,7 +42,7 @@ a{
 }
 
 #wordList {
-  font-family: "DejaVu Sans", LiberationSans, Arial, Sans-serif;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   border:1px solid #ccc;
   width:100%;
   cursor:pointer;
@@ -69,7 +69,7 @@ a{
   font-size:1.2em;
   padding: 0.3em 0.2em;
   width:100%;
-  font-family:sans-serif;
+  font-family:"Droid Sans", sans-serif;
 }
 
 #definitions{
@@ -81,6 +81,7 @@ a{
   border:1px solid #ccc;
   border-collapse:collapse;
   width:100%;
+  max-width: 98vw;
 }
 
 #definitionList td{
@@ -88,14 +89,14 @@ a{
   vertical-align:top;
 }
 .definitionHead{
-  font-family: "DejaVu Sans", LiberationSans, Arial, Sans-serif;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   margin:0 0 0.5em 0;
   font-size:2em;
 }
 .dictName {
   color:#666;
   font-weight:bold;
-  font-family: "DejaVu Sans", LiberationSans, Arial, Sans-serif;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   padding:0.6em 0.9em 0.6em 0.3em ;
   border-right:1px solid #eee;
   width:12em;
@@ -172,7 +173,7 @@ a{
 }
 
 .desktop.sidebarTib #wordList, .desktop.unicodeTibInput #searchTerm, .desktop.unicodeTib .definitionHead,.desktop.unicodeTib .tib{
-  font-family: sans-serif,"Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
+  font-family: "Droid Sans", sans-serif,"Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
   text-rendering: optimizeLegibility;
 }
 
@@ -216,10 +217,17 @@ a{
   line-height: 170%;
 }
 .unicodeTib .tib .paren{
-  font-family:sans-serif;
+  font-family:"Droid Sans", sans-serif;
 }
 
-.unicodeTib .definitionHead{
+.unicodeTib .definitionHeaden{
+  font-weight:normal;
+  font-size: 1.6em;
+  line-height:130%;
+  margin:0;
+}
+
+.unicodeTib .definitionHeadtib{
   font-weight:normal;
   font-size: 2.2em;
   line-height:160%;
@@ -303,11 +311,11 @@ a{
 
 h1{
   font-size:1.3em;
-  font-family:sans-serif;
+  font-family:"Droid Sans", sans-serif;
 }
 
 body{
-  font-family:sans-serif;
+  font-family:"Droid Sans", sans-serif;
 }
 
 /*medium screens*/

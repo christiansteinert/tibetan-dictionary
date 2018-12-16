@@ -209,7 +209,7 @@ def main():
                     englishTermList = englishTerms.split(";")
                     for english in englishTermList:
                         english = cleanupValue(english)
-                        if english != "" and tibetan != "" and ( "/" not in english ) and ("." not in english) and ("," not in english) and (")" not in english) and ("=" not in english):
+                        if english != "" and tibetan != "" and ( "/" not in english ) and ("." not in english) and ("," not in english) and (")" not in english) and ("(" not in english) and ("=" not in english):
                             #print(r"{0}|{{{1}}}: {2}".format(english,tibetan,englishOriginal))
                             out.write(r"{0}|{{{1}}}: {2}".format(english,tibetan,englishOriginal))
                             english2 = getAlternativeValue(english)

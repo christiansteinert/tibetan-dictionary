@@ -80,8 +80,9 @@ DICTLIST={
 },
 "84000Dict":{
   label:'84000 Glossary',
-  about:'English terms from the Glossary of the 84000 translation project. http://www.84000.co/',
-  public:"true"
+  about:'84000 Glossary|English terms from the Glossary of the 84000 translation project. http://www.84000.co/',
+  public:"true",
+  listCredits:"true"
 },
 "84000Definitions":{
   label:'84000 Glossary-Definitions',
@@ -230,6 +231,11 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
+"LobsangMonlam":{
+  label:'Lobsang Monlam (English)',
+  about:'Lobsang Monlam Dictionary (English)|These entries were taken from the (Tibetan) portion Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database.',
+  public:"false",
+},
 "GesheChodrak-Tib_x":{
   containsOnlyTibetan:true,
   label:'Geshe Chödrak (Tibetan) - Please only use this dictionary if you bought the original version from www.pktc.org!',
@@ -268,7 +274,7 @@ DICTLIST={
 "LobsangMonlam-Tibetan":{
   containsOnlyTibetan:true,
   label:'Lobsang Monlam (Tibetan)',
-  about:'Lobsang Monlam Dictionary|These entries were taken from the (Tibetan) portion Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program.',
+  about:'Lobsang Monlam Dictionary|These entries were taken from the Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database..',
   public:"false",
   listCredits:"true"
 },

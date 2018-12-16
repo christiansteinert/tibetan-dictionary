@@ -237,21 +237,33 @@
       readTermList:function(term, lang, offset, maxResults, dictionaries, callback) {
         var db = this._openDB();
         var term = term.replace(/[^ /]+[ /]+$/);
-        var termSearch = term + '%';
-        var termSearch1 = term + ' ';
-        var termSearch2 = term + ' zzzzz';
         
         db.transaction(function(tx) {
           try{          
             var dictQuery = CordovaDataAccess._mergeOrClauses('DICTNAMES.name',dictionaries);
             var tab = CordovaDataAccess.getTabName(lang);
             
-            if ( lang === "tib" ) {
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY term LIMIT '+ maxResults +' OFFSET ' + offset;
+            if(term.indexOf("*") >= 0) { // wildcard search
+              if ( lang === "tib" )
+                var langId = "bo";
+              else 
+                var langId = "en";
+            
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "'+langId+'" WHERE ( term LIKE ? ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
+              queryParams = [term + "%"];
+            
+            } else if ( lang === "tib" ) { // regular Tibetan search
+              var termSearch1 = term + ' ';
+              var termSearch2 = term + ' zzzzz';
+
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch1,termSearch2];
-            } else {
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "en"  WHERE (( term = ? ) OR ( term LIKE ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY term LIMIT '+ maxResults +' OFFSET ' + offset;
-              queryParams = [term,termSearch];
+            } else { // regular English search
+              var termSearch1 = term;
+              var termSearch2 = term + 'zzzzz';
+
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
+              queryParams = [term,termSearch1,termSearch2];
             }
             
             tx.executeSql(query, queryParams, function(tx, results) {
@@ -753,7 +765,7 @@
       },
       
       inputToLowerIfNeeded:function(input) {
-        if(SETTINGS.getSettings().lowercase) {
+        if(SETTINGS.getSettings().lowercase && DICT.getInputLang() === "tib") {
           input = input.toLowerCase();
         }
         return input;
@@ -1021,7 +1033,7 @@
         else
           var searchValue = this.tibetanOutput(this.activeTerm);
           
-        $('#wordList td').filter(function(){ return $(this).text() === searchValue; }).addClass('selected');
+        $('#wordList td').filter(function(){ return $(this).text() === searchValue || (DICT.getInputLang()=="en" && $(this).text().toLowerCase() === searchValue.toLowerCase() ); }).addClass('selected');
         console.log(searchValue);
       },
 
@@ -1139,7 +1151,14 @@
             }
             
             if(loadFirstItem) {
-              if(result.length>0 && result[0][0] === inputText) {
+              var termFound = false;
+            
+              for(var i=0;i<result.length;i++)
+                for(var j=0;j<result[i].length;j++)
+                  if (result[i][j] === inputText || ( DICT.getInputLang()=="en" && result[i][j].toLowerCase() === inputText.toLowerCase() ) )
+                    termFound = true;
+              
+              if(result.length>0 && termFound) {
                 DICT.readTerm(inputText, DICT.getInputLang(), saveState);
                 $('#wordList tr:first-child').addClass('selected');               
               } else {
@@ -1151,10 +1170,15 @@
           });
         } else if(loadFirstItem) {
           //the list in the sidebar was already loaded before but we need to activate the first term
-          var $firstRow = $('#wordList tr:first-child td span');
-          if($firstRow.length) {
+          var $firstRow;
+          $('#wordList tr td span').each(function(count, elem) {
+            if($(elem).attr('data-wylie') === inputText  || ( DICT.getInputLang()=="en" && $(elem).attr('data-wylie').toLowerCase() === inputText.toLowerCase() )  )
+              $firstRow = $(elem)
+          });
+          
+          if($firstRow && $firstRow.length) {
             var firstResult = $firstRow.attr('data-wylie');
-            if(firstResult === inputText) {
+            if(firstResult.toLowerCase() === inputText.toLowerCase()) {
               $('#wordList tr:first-child').addClass('selected');
               DICT.readTerm(inputText, lang, saveState);
             }
@@ -1453,8 +1477,9 @@
     
       getAllDictionaries:function() {
         var result = [];
+        var publicOnly = GLOBAL_SETTINGS.publicOnly || (window.location && window.location.hostname && (window.location.hostname.indexOf("local")>=0));
         $.each(DICTLIST,function(currentDictName,dictInfo) {
-          if((!GLOBAL_SETTINGS.publicOnly)||(GLOBAL_SETTINGS.publicOnly && dictInfo.public == "true")) {
+          if((!publicOnly)||(publicOnly && dictInfo.public == "true")) {
             result.push(currentDictName);
           }
         });

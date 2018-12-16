@@ -1,4 +1,6 @@
 echo === deriving English-Tibetan dictionaries ===
+cp _input/dictionaries/en_input_prepared/* _input/dictionaries/public_en/
+
 
 export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 
@@ -19,6 +21,8 @@ export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 
 if [ -d $CSV_INPUT_PRIVATE ]
 then
+cp _input/dictionaries/en_input_prepared/* _input/dictionaries/private_en/
+cp _input/dictionaries/en_input_prepared_private/* _input/dictionaries/private_en/
 
 ./_create_english_dict.py _input/dictionaries/private/01-Hopkins2015 _input/dictionaries/private_en/01-Hopkins2015
 ./_create_english_dict.py _input/dictionaries/private/21-Mahavyutpatti-Skt _input/dictionaries/private_en/21-Mahavyutpatti-Skt
