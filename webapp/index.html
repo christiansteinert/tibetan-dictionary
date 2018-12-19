@@ -236,7 +236,7 @@
       
       readTermList:function(term, lang, offset, maxResults, dictionaries, callback) {
         var db = this._openDB();
-        var term = term.replace(/[^ /]+[ /]+$/);
+        var term = term.replace(/\s*[/]\s*$/,'');
         
         db.transaction(function(tx) {
           try{          
@@ -244,25 +244,28 @@
             var tab = CordovaDataAccess.getTabName(lang);
             
             if(term.indexOf("*") >= 0) { // wildcard search
+              var likeSearch = term.replace(/[*]/g,'%') + '%';
+
               if ( lang === "tib" )
                 var langId = "bo";
               else 
                 var langId = "en";
             
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "'+langId+'" WHERE ( term LIKE ? ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
-              queryParams = [term + "%"];
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "'+langId+'" WHERE ( ( term LIKE ? ) AND ( '+dictQuery+' ) ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
+              
+              queryParams = [likeSearch];
             
             } else if ( lang === "tib" ) { // regular Tibetan search
               var termSearch1 = term + ' ';
               var termSearch2 = term + ' zzzzz';
 
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? ) OR ( term > ? AND term < ? ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE ( (( term = ? ) OR ( term > ? AND term < ? )) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch1,termSearch2];
             } else { // regular English search
               var termSearch1 = term;
               var termSearch2 = term + 'zzzzz';
 
-              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE ) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
+              query = 'SELECT DISTINCT '+tab+'.term as term FROM '+tab+' inner join DICTNAMES on '+tab+'.dictionary = DICTNAMES.id and DICTNAMES.language = "en" WHERE ( (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE )) AND '+dictQuery+' ) GROUP BY term ORDER BY lower(term), term LIMIT '+ maxResults +' OFFSET ' + offset;
               queryParams = [term,termSearch1,termSearch2];
             }
             
@@ -1082,9 +1085,9 @@
       search:function(loadFirstItem,saveState,offset) {
         var inputText = this.uniToWylie( $('#searchTerm').val() );
         inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
-        inputText = inputText.replace(/\s+/g, ' ');
         inputText = inputText.replace(/_/g, ' ');
-        inputText = inputText.replace(/ $/g, '');
+        inputText = inputText.replace(/\s+/g, ' ');
+        inputText = inputText.replace(/[ /]+$/g, '');
         
         var settings = SETTINGS.getSettings();
 

@@ -1,18 +1,18 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
     },
-    "config_munge": {
-        "files": {}
-    },
-    "installed_plugins": {
-        "cordova-plugin-inappbrowser": {
-            "PACKAGE_NAME": "de.christian_steinert.tibetandict"
-        },
-        "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "de.christian_steinert.tibetandict"
-        }
-    },
-    "dependent_plugins": {}
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
+    }
+  },
+  "dependent_plugins": {}
 }
