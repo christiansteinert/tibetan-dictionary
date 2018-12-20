@@ -1433,10 +1433,10 @@
                 defEnd = '</div>';
               } else if(currentDict.containsOnlySkt) {
                 defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
-                definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ) );
+                definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
                 defEnd = '</div>';
               } else {
-                definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++ );
+                definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);
               }
                 
               definition = definition.replace(/\n/g,'</p>\n<p>');

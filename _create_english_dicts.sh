@@ -8,7 +8,7 @@ export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 ./_create_english_dict.py _input/dictionaries/public/21-Mahavyutpatti-Skt _input/dictionaries/public_en/21-Mahavyutpatti-Skt
 ./_create_english_dict.py _input/dictionaries/public/23-GatewayToKnowledge _input/dictionaries/public_en/23-GatewayToKnowledge
 ./_create_english_dict.py _input/dictionaries/public/40-CommonTerms-Lin _input/dictionaries/public_en/40-CommonTerms-Lin
-./_create_english_dict.py _input/dictionaries/public/15-Hopkins-Skt _input/dictionaries/public_en/15-Hopkins-Skt
+./_create_english_dict.py _input/dictionaries/public/15-Hopkins-Skt1992 _input/dictionaries/public_en/15-Hopkins-Skt1992
 ./_create_english_dict.py _input/dictionaries/public/15-Hopkins-Skt2015 _input/dictionaries/public_en/15-Hopkins-Skt2015
 ./_create_english_dict.py _input/dictionaries/public/03-Berzin _input/dictionaries/public_en/03-Berzin
 ./_create_english_dict.py _input/dictionaries/public/05-Hackett-Def2015 _input/dictionaries/public_en/05-Hackett-Def2015
@@ -28,7 +28,7 @@ cp _input/dictionaries/en_input_prepared_private/* _input/dictionaries/private_e
 ./_create_english_dict.py _input/dictionaries/private/21-Mahavyutpatti-Skt _input/dictionaries/private_en/21-Mahavyutpatti-Skt
 ./_create_english_dict.py _input/dictionaries/private/23-GatewayToKnowledge _input/dictionaries/private_en/23-GatewayToKnowledge
 ./_create_english_dict.py _input/dictionaries/private/40-CommonTerms-Lin _input/dictionaries/private_en/40-CommonTerms-Lin
-./_create_english_dict.py _input/dictionaries/private/15-Hopkins-Skt _input/dictionaries/private_en/15-Hopkins-Skt
+./_create_english_dict.py _input/dictionaries/private/15-Hopkins-Skt1992 _input/dictionaries/private_en/15-Hopkins-Skt1992
 ./_create_english_dict.py _input/dictionaries/private/15-Hopkins-Skt2015 _input/dictionaries/private_en/15-Hopkins-Skt2015
 ./_create_english_dict.py _input/dictionaries/private/03-Berzin _input/dictionaries/private_en/03-Berzin
 ./_create_english_dict.py _input/dictionaries/private/05-Hackett-Def2015 _input/dictionaries/private_en/05-Hackett-Def2015

@@ -1,2 +1,2 @@
 package de.christian_steinert.tibetandict;
-public class Constants{ public static long DICT_SIZE() { return 47816704; } }
+public class Constants{ public static long DICT_SIZE() { return 47820800; } }

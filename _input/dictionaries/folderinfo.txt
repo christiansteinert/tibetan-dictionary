@@ -1,0 +1,9 @@
+The subfolders contain the following data:
+
+en_input: Tibetan-English files that serve as input for converting to English-Tibetan files (these files have been manually adjusted so that they can be used as basis for English->Tibetan lookup but the two sides of the file still need to be flipped)
+en_input_prepared: English->Tibetan files that are fully prepared and require no further adjustmends to be imported into the dictionary. These files were created manually rather than being programmatically derived by reverting the data of Tibetan->English sources.
+public: Tibetan-English files that are fully prepared and require no further adjustmends to be imported into the dictionary. This folder is used by the dictionary creation script to generate the Tibetan->English/Tibetan->Tibetan entries.
+public_en: English-Tibetan files that have generated or manually created and that require no further adjustmends to be imported into the dictionary. This folder is used by the dictionary creation script to generate the English->Tibetan/English->English entries.
+unconverted: dictionaries in other data formats that first need to be converted in order to be importable
+
+The dictionary creation script will only read from public/ and public_en/

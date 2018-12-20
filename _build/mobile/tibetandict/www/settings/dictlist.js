@@ -152,7 +152,7 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
-"Hopkins-Synonyms":{
+"Hopkins-Synonyms1992":{
   label:'Hopkins Synonyms 1992',
   about:'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
   abbreviations:'Hopkins',
@@ -192,7 +192,7 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
-"Hopkins-TibetanSynonyms":{
+"Hopkins-TibetanSynonyms1992":{
   containsOnlyTibetan:true,
   label:'Hopkins Synonyms 1992 (Tibetan)',
   about:'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
@@ -291,7 +291,7 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
-"Hopkins-Skt":{
+"Hopkins-Skt1992":{
   containsOnlySkt:true, 
   label:'Hopkins Sans&shy;krit 1992 (Tibetan-Sanskrit)',
   about:'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
