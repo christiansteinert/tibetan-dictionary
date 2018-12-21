@@ -379,11 +379,22 @@ public class SQLitePlugin extends CordovaPlugin {
             }
             
             
-            // DB Location 1: Try to determine the location of the external SD card and write there directly if possible (allowed until Android 4.3)
+            // DB Location 1 (outdated): Try to determine the location of the external SD card and write there directly if possible (allowed until Android 4.3)
             Map<String, File> externalLocations = ExternalStorage.getAllStorageLocations(this.cordova.getActivity());
             File externalSdCard = externalLocations.get(ExternalStorage.EXTERNAL_SD_CARD);
             File customPath = new File(externalSdCard, dbname);
             File dbfile1 = new File(customPath, completeDBName);
+
+            try {
+		// delete old DB file from a location where previous versions of the app put it - it is better to use the app-specific folders rather than going to the external SD card directly
+		if(dbfile1.exists()) {
+		    dbfile1.delete();
+		    logInfo("Deleted old DB file from external memory card location");
+		}
+            } catch (Exception e) {
+		logError("Error while trying to delete file from old file location");
+            }
+
 
             // DB Location 2: Use external data directory (MIGHT be on external SD card or on emulated SD card)
             File externalAppFolder = this.cordova.getActivity().getExternalFilesDir(null);
@@ -398,14 +409,14 @@ public class SQLitePlugin extends CordovaPlugin {
             File dbfile3 = this.cordova.getActivity().getDatabasePath(completeDBName);
 
             
-            
             // --- CHECK IF THE DB FILE WAS ALREADY EXTRACTED ---
-            dbfile = searchForExistingDbFile(expectedDbSize, dbfile1, dbfile2, dbfile3);
+            dbfile = searchForExistingDbFile(expectedDbSize, dbfile2, dbfile3);
+	    
             if(dbfile != null) {
                 externalCardOk = true; // DB found - no more copying necessary
             }
             
-            
+            /*
             // --- COPY DB FILE IF NECESSARY ---
             if(dbfile1 != null && !externalCardOk) {
                 try {
@@ -422,7 +433,10 @@ public class SQLitePlugin extends CordovaPlugin {
                         logError("Caught exception while trying to copy file. Trying other locations.");
                 }
             }
-            
+            */
+
+
+
             // if write failed silently -> continue trying
             // for Android 4.4 and higher: application directory which MIGHT be on external SD
             if(dbfile2 != null && !externalCardOk) {
