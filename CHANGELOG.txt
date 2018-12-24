@@ -6,7 +6,8 @@ Version 0.0.11:
 * Added an additional older version of Jefrey Hopkins' Tibetan-Sanskrit dictionary from 1992 because in the newer version from 2015 some Sanskrit entries are cut off.
 * Corrected problems in Rangjung Yeshe dictionary data that prevented a result from being shown. Only very few terms were affected by this.
 * Reduced the size of the database file by compressing the entries and optimizing the database structure
-* Updated to the latest development tools in order to support the latest Android versions up to 9.0 (Sadly, Android versions older than 4.4 are not supported anymore)
+* Updated to the latest development tools in order to support the latest Android versions up to 9.0 (Sadly, Android versions 4.0 to 4.3 are not supported anymore)
+* Removed dictionary database from the external SD card and placed it into app-internal folder instead for more complete uninstall behavior
 
 Version 0.0.10:
 * Added new dictionary: Tsepak Rigdzin - Tibetan-English Dictionary of Buddhist Terms
@@ -21,7 +22,7 @@ Version 0.0.9:
 
 Version 0.0.8:
 * Layout fix: reduce horizontal scrolling in the about-section
-* new verb dictionary added: "Verbinator" Tibetan Verb Dictionary (Verbinator 2000). Taken from: Hill, Nathan (2010) "A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition" (Munich: Bayerische Akademie der Wissenschaften).
+* new verb dictionary added: "Verbinator" Tibetan Verb Dictionary (Verbinator 2000). Taken from: Hill, Nathan (2010) "A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition" (Munich: Bayerische Akademie der Wissenschaften). If you find this dictionary helpful, please buy the book version.
 * new glossary added - Tibetan and English terms from: "Buddhist Terms - Multilingual Version", Edited by Peter Gäng and Sylvia Wetzel, Buddhist Academy Berlin Brandenburg (June 2004)
 
 Version 0.0.7:

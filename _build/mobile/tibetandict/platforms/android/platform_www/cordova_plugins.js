@@ -22,7 +22,9 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-plugin-inappbrowser": "1.2.1",
-  "cordova-sqlite-storage": "1.4.5"
+  "cordova-sqlite-storage": "1.4.5",
+  "cordova-android-support-gradle-release": "2.0.1",
+  "cordova-plugin-android-support-v4": "21.0.1"
 };
 // BOTTOM OF METADATA
 });

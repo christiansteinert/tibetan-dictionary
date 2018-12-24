@@ -8,7 +8,7 @@ import android.util.Log;
 import android.content.*;
 import android.app.*;
 
-public class ExternalStorage {
+public class ExternalStorage {    
 
     public static final String SD_CARD = "sdCard";
     public static final String EXTERNAL_SD_CARD = "externalSdCard";

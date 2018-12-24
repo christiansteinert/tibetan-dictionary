@@ -1,4 +1,4 @@
-/*
+ /*
  * Copyright (c) 2012-2016: Christopher J. Brody (aka Chris Brody)
  * Copyright (c) 2005-2010, Nitobi Software Inc.
  * Copyright (c) 2010, IBM Corporation
@@ -35,6 +35,12 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.IOException;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
+
+
+
 public class SQLitePlugin extends CordovaPlugin {
     static StringBuilder log = new StringBuilder();
 
@@ -58,6 +64,56 @@ public class SQLitePlugin extends CordovaPlugin {
       Log.v(SQLitePlugin.class.getSimpleName(), msg);
       log.append(msg + "\n");
     }
+    
+    String completeDBName;
+    String dbname;
+    
+
+    public boolean isWriteStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (cordova.hasPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                return true;
+            } else {
+                cordova.requestPermissions(this, 1, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            return true;
+        }
+    }
+
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        onRequestPermissionResult(requestCode, permissions, grantResults);
+    }
+
+    public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) {
+        if (requestCode ==1 ) {
+            //resume tasks needing this permission
+            deleteOldDbFile();
+        }
+    }    
+    
+    void deleteOldDbFile() {
+        // DB Location 1 (outdated): Try to determine the location of the external SD card and write there directly if possible (allowed until Android 4.3)
+
+        try {
+            Map<String, File> externalLocations = ExternalStorage.getAllStorageLocations(this.cordova.getActivity());
+            File externalSdCard = externalLocations.get(ExternalStorage.EXTERNAL_SD_CARD);
+            File customPath = new File(externalSdCard, dbname);
+            File dbfile1 = new File(customPath, completeDBName);
+            // delete old DB file from a location where previous versions of the app put it - it is better to use the app-specific folders rather than going to the external SD card directly
+            if(dbfile1.exists()) {
+                dbfile1.delete();
+                logInfo("Deleted old DB file from external memory card location");
+            }
+        } catch (Exception e) {
+            logError("Error while trying to delete file from old file location");
+        }
+
+
+    }    
+    
     
     
     /**
@@ -358,6 +414,8 @@ public class SQLitePlugin extends CordovaPlugin {
             // [should be true according to the code in DBRunner.run()]
 
             String completeDBName = dbname + ".db";
+            this.completeDBName = completeDBName;
+            this.dbname = dbname;
 
             long expectedDbSize = de.christian_steinert.tibetandict.Constants.DICT_SIZE();
             boolean externalCardOk = false;
@@ -378,23 +436,10 @@ public class SQLitePlugin extends CordovaPlugin {
             } catch(Exception e) {
             }
             
-            
-            // DB Location 1 (outdated): Try to determine the location of the external SD card and write there directly if possible (allowed until Android 4.3)
-            Map<String, File> externalLocations = ExternalStorage.getAllStorageLocations(this.cordova.getActivity());
-            File externalSdCard = externalLocations.get(ExternalStorage.EXTERNAL_SD_CARD);
-            File customPath = new File(externalSdCard, dbname);
-            File dbfile1 = new File(customPath, completeDBName);
-
-            try {
-		// delete old DB file from a location where previous versions of the app put it - it is better to use the app-specific folders rather than going to the external SD card directly
-		if(dbfile1.exists()) {
-		    dbfile1.delete();
-		    logInfo("Deleted old DB file from external memory card location");
-		}
-            } catch (Exception e) {
-		logError("Error while trying to delete file from old file location");
+            // delete DB file from original old location
+            if(isWriteStoragePermissionGranted()) {
+              deleteOldDbFile();
             }
-
 
             // DB Location 2: Use external data directory (MIGHT be on external SD card or on emulated SD card)
             File externalAppFolder = this.cordova.getActivity().getExternalFilesDir(null);
