@@ -39,6 +39,7 @@ The respective tools must all be included in the PATH variable
 * Apache Cordova which itself again requires node JS and npm to be installed
 * java and a current version of the Android SDK
 * sqlite 3 (more specifically, the sqlite3 commandline program)
+* python 3
 
 Furthermore, the JAVA_HOME and ANDROID_HOME environment variables should be set.
 
@@ -49,6 +50,7 @@ Furthermore, the JAVA_HOME and ANDROID_HOME environment variables should be set.
 * _assets: a few images that have been created for this project
 * _build/util/Lingua-BO-Wylie perl library for converting Tibetan text with Wylie transliteration into Unicode. This library is used to generate the lookup table that is used for converting from Wylie to Unicode
 * _build/mobile This folder contains the Cordova project for generating the Android app. As usual with Cordova projects this folder is a mix of source code, configuration and intermediate build artifacts. The buildAndroid.sh script automatically copies the web application files and the dictionary database from the webapp/ folder into the correct location inside of the Cordova project folder so that these resources are packaged into the Android application
+* _input This folder contains dictionary data that serves as basis for generating the dictionary DB
 
 # Application structure (folder webapp/)
 Since the application is implemented almost exclusively in Javascript, the application code for the web application and the android application is identical.
