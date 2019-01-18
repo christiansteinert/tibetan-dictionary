@@ -1480,7 +1480,8 @@
     
       getAllDictionaries:function() {
         var result = [];
-        var publicOnly = GLOBAL_SETTINGS.publicOnly || (window.location && window.location.hostname && (window.location.hostname.indexOf("local")>=0));
+        var isLocalhost = window.location && window.location.hostname && (window.location.hostname.indexOf("localhost")==0);
+        var publicOnly = GLOBAL_SETTINGS.publicOnly && (!isLocalhost);
         $.each(DICTLIST,function(currentDictName,dictInfo) {
           if((!publicOnly)||(publicOnly && dictInfo.public == "true")) {
             result.push(currentDictName);
