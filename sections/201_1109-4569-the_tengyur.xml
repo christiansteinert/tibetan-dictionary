@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">The Tengyur</title>
+                <title type="mainTitle" xml:lang="bo">བསྟན་འགྱུར།</title>
+                <title type="otherTitle" xml:lang="">bstan 'gyur (sde dge)</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC7630"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W23703" sort-index="2">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="LOBBY"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 11/01/2019 at 13:27:37 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">The collected treatises: the Tibetan translations of scriptural works by the great Indian Buddhist masters.</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about" tid="4">The Tengyur</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="O1JC7630-1"/>
+                    <p tid="2">Brief guides to the Tengyur and its subdivisions will be added to this “Learn more...” button, and those
+                        within the various section views, over the coming months.</p>
+                    <milestone unit="chunk" xml:id="O1JC7630-2"/>
+                    <p tid="3">As noted above, the Tengyur is included in this version of the Reading Room “lobby” for preliminary
+                        reference and gradual development, although 84000 (with the exception of a single project) has not yet
+                        started to focus resources on Tengyur translations. Even the “lobby” details of this Tengyur section—the
+                        titles, etc.—require extensive editing.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

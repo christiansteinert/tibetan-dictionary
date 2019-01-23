@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">Guhyasamāja and related tantras</title>
+                <title type="otherTitle" xml:lang="">thabs rgyud gsang 'dus skor/</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC76301JC21621"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W23703" sort-index="10">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC76301JC21616"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:22:15 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Commentaries and liturgical works related to father tantras centered on Guhyasamaja (Toh 1784-1917)</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about">Guhyasamāja and related tantras</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-1"/>
+                    <p tid="2">The 135 works in this subsection (Toh 1784-1917), filling 18 volumes of the Degé Tengyur, are all related
+                        to the tantras of the Guhyasamāja cycle.</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-2"/>
+                    <p tid="3">The <foreign xml:lang="Bo-Ltn">dkar chag</foreign> classifies them in terms of the several Indian
+                        commentarial schools, notably those following Nāgārjuna (and Āryadeva), and those following Jñānapāda
+                        (also known as Buddhaśrījñāna).</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-3"/>
+                    <p tid="4">I. The 59 works representing those who follow Lord Nāgārjuna (<foreign xml:lang="Bo-Ltn">mgon po klu sgrub
+                            kyi rjes su ’brang ba’i skor</foreign>), also known as the tradition of the Ārya or Noble Ones
+                            (<foreign xml:lang="Bo-Ltn">’phags lugs</foreign>) include:</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-4"/>
+                    <p tid="5">a) The 12 principal commentaries themselves (Toh 1784-1795). </p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-5"/>
+                    <p tid="6">b) The 30 liturgies, maṇḍala rituals, instructions, and so forth related to them (Toh 1796-1825); Toh 1796
+                        and 1797, both by Nāgārjuna, are the best known works explaining the generation stage practices, while
+                        Nāgārjuna’s works Toh 1800 and 1801 (the verse and prose versions of his <title xml:lang="Sa-Ltn">Bodhicittavivaraṇa</title>) and 1802 (the <title xml:lang="Sa-Ltn">Pañcakrama</title>), and
+                        Āryadeva’s Toh 1803 (<title xml:lang="Sa-Ltn">Caryāmelāpakapradīpa</title>, a commentary on the <title xml:lang="Sa-Ltn">Pañcakrama</title>), are important texts on the perfection stage yogas.</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-6"/>
+                    <p tid="7">c) The 17 commentaries on these liturgies, etc. (Toh 1826-1842).</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-7"/>
+                    <p tid="8">II. The 65 works representing those who follow Master Jñānapāda (<foreign type="person" xml:lang="Bo-Ltn">slob dpon ye shes zhabs kyi rjes su ’brang ba’i skor</foreign>, the school being known as <foreign xml:lang="Bo-Ltn">ye shes zhabs lugs</foreign>; the <foreign xml:lang="Bo-Ltn">dkar chag</foreign>
+                        counts 67) include:</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-8"/>
+                    <p tid="9">a) The 10 commentaries on the individual tantras (Toh 1843-1852);</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-9"/>
+                    <p tid="10">b) The 13 general instructions, etc. (Toh 1853-1865);</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-10"/>
+                    <p tid="11">c) The 2 commentaries on those general instructions (Toh 1867-1868);</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-11"/>
+                    <p tid="12">d) The 40 liturgies, maṇḍala rituals, instructions, and so forth related to them (Toh 1869-1908).</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-12"/>
+                    <p tid="13">III. The 5 works representing those who follow Master Vajrahasa and others (<foreign type="person" xml:lang="Bo-Ltn">slob dpon rdo rje bzhad pa la sogs pa’i skor</foreign>, the school being known as
+                            <foreign xml:lang="Bo-Ltn">bzhad pa’i lugs</foreign>, Toh 1909-1913). The <foreign xml:lang="Bo-Ltn">dkar chag</foreign> states that the first four were, in the past, often attributed to the Jñānapāda
+                        tradition, but are incompatible with it.</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-13"/>
+                    <p tid="14">IV. The 3 works representing those who follow Bhadrapāda (<foreign type="person" xml:lang="Bo-Ltn">bzang po
+                            zhabs kyi rjes su ’brang ba’i skor</foreign>, Toh 1914-1916). The <foreign xml:lang="Bo-Ltn">dkar
+                            chag</foreign> again notes that these works were, in the past, included in the Jñānapāda tradition,
+                        but that Smṛtijñānakīrti, who translated all three and authored the first two, followed Bhadrapāda’s
+                        school.</p>
+                    <milestone unit="chunk" xml:id="O1JC76301JC21621-14"/>
+                    <p tid="15">V. The single work from Ānandagarbha’s tradition (<title xml:lang="Bo-Ltn">kun dga’ snying po’i
+                            lugs</title>, Toh 1917), a commentary on the difficult points of the tantra.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

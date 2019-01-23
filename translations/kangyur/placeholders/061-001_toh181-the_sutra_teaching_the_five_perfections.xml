@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">phar phyin lnga bstan pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">pañcapāramitānirdeśasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra Teaching the Five Perfections</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa pha rol tu phyin pa lnga bstan pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryapañca­pāramitānirdeśa­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh">佛說五波羅蜜多經 (大般若波羅密多經第十一分至第十五分)</title>
+                <author role="translatorMain" sameAs=""/>
+            <sponsor sameAs="sponsors.xml#sponsor-30">Liu Fan and family</sponsor>
+            </titleStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-061-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh181" type="text">
+                    <ref>Toh 181</ref>
+                    <biblScope>vol.61, ff.1r-(pp.1-152)</biblScope>
+                    <location count-pages="151">
+                        <start volume="61" page="4"/>
+                        <end volume="61" page="154"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11796" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 14/09/2018 at 14:13:24 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Liu Fan and family.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

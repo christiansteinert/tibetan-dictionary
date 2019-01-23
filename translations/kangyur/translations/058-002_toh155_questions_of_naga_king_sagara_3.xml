@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">klu’i rgyal po rgya mtshos zhus pa</title>
+                <title type="mainTitle" xml:lang="bo">ཀླུའི་རྒྱལ་པོ་རྒྱ་མཚོས་ཞུས་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Questions of the Nāga King Sāgara</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Sāgara­nāga­rāja­paripṛcchā</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ཀླུའི་རྒྱལ་པོ་རྒྱ་མཚོས་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa klu’i rgyal po rgya mtshos zhus pa zhes bya ba theg pa chen
+                    po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The Questions of the Nāga King Sāgara”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­sāgara­nāga­rāja­paripṛcchā­nāma­mahā­yana­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author sameAs="contributors.xml#team-27" role="translatorMain">Translated by the Sakya Pandita Translation Group (Tsechen Kunchab Ling
+                    Division)<lb/> under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-173">Venerable Khenpo Kalsang Gyaltsen</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-175">Dr. Chodrung Kunga Chodron</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.1 <date>2011 - 2016</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-058-002"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+                <date>2011-12-16</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh155" type="text">
+                    <ref>Toh 155</ref>
+                    <biblScope>Degé Kangyur, vol. 58 (mdo sde, pa), folios 205.a-205.b</biblScope>
+                    <author role="translatorTib">Surendrabodhi</author>
+                    <author role="translatorTib">Yeshé Dé</author>
+                    <location count-pages="2">
+                        <start volume="58" page="411"/>
+                        <end volume="58" page="412"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11751" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 16/01/2019 at 10:35:11 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <!--Contents 
+            Summary Acknowledgments Introduction 
+            THE TRANSLATION 
+            The Questions of the Nāga King Sāgara 
+            Bibliography Notes -->
+            <div type="summary">
+                <head type="summary" tid="22">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-058-002-1"/>
+                <p tid="1"> In this very short sūtra, the Buddha explains to a nāga king and an assembly of monks that reciting
+                    the four aphorisms of the Dharma is equivalent to recitation of all of the 84,000 articles of the Dharma. He
+                    urges them to make diligent efforts to engage in understanding the four aphorisms (also called the four
+                    seals), which are the defining philosophical tenets of the Buddhist doctrine: (1) all compounded phenomena are
+                    impermanent; (2) all contaminated phenomena are suffering; (3) all phenomena are without self; (4) nirvāṇa is
+                    peace. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="23">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-058-002-2"/>
+                <p tid="2"> Translated by the Sakya Pandita Translation Group (Tsechen Kunchab Ling Division), comprising
+                    Venerable Khenpo Kalsang Gyaltsen and Reverend Dr. Chodrung Kunga Chodron. </p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="24">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-058-002-3"/>
+                    <p tid="4"> In the Tibetan canon there are three sūtras entitled <title xml:lang="en">The Questions of the
+                            Nāga King Sāgara</title> (<title xml:lang="Sa-Ltn">Sāgara­nāga­rāja­paripṛcchā</title>): a long
+                        version (Toh 153), one of middle length (Toh 154), and a short sūtra (Toh 155).<note place="end" index="1" xml:id="UT22084-058-002-53">They correspond respectively to the Chinese translations T. 598, 601, 599.
+                        </note> They have quite different contents and are all to be found in a group of sūtras in the Kangyur
+                        entitled “The Questions of …” (… <foreign type="term" xml:lang="Sa-Ltn">paripṛcchā</foreign>), including
+                            <title xml:lang="en">The Questions of Brahmā</title>, <title xml:lang="en">The Questions of
+                            Mañjuśrī</title>, <title xml:lang="en">The Questions of an Old Lady</title>, and several others. There
+                        is also another nāga king whose questions were the occasion for a sūtra in this group entitled <title xml:lang="en">The Questions of the Nāga King Anavatapta</title> (<title xml:lang="Sa-Ltn">Anavatapta­nāga­rāja­paripṛcchā</title>), Toh 156. </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-4"/>
+                    <p tid="5">The text translated here is the shortest of the three <title xml:lang="Sa-Ltn">Sāgara­nāga­rāja­paripṛcchā</title> sūtras. The Buddha’s teaching of this very brief sūtra to an
+                        assembly of monks is presumed—from the title—to be in response to a question or questions put to him by a
+                        king of the supernatural beings known as nāgas, serpents who guard the Dharma, although in this sūtra the
+                        questions themselves are not explicitly stated. The Buddha explains that recitation of the four aphorisms
+                        of the Dharma is equivalent to recitation of the entire 84,000 articles of the Dharma, and that they
+                        constitute the inexhaustible doctrine of the bodhisattvas. The four are: </p>
+                    <q>
+                        <lg tid="6">
+                            <milestone unit="chunk" xml:id="UT22084-058-002-5"/>
+                            <l>all compounded phenomena are impermanent (<foreign type="term" xml:lang="Sa-Ltn">anitya</foreign>);</l>
+                            <l>all contaminated phenomena are suffering (<foreign type="term" xml:lang="Sa-Ltn">duḥkha</foreign>);</l>
+                            <l>all phenomena are without self (<foreign type="term" xml:lang="Sa-Ltn">anātman</foreign>);</l>
+                            <l>nirvāṇa is peaceful/peace (<foreign type="term" xml:lang="Sa-Ltn">śānta/śānti</foreign>).</l>
+                        </lg>
+                    </q>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-6"/>
+                    <p tid="7">These four aphorisms, or tenets—also called the four seals—are central to Buddhist philosophy and
+                        characterize the Buddhist view of the nature of reality. The Buddha stated that any doctrine characterized
+                        by these four seals is genuinely in accord with the philosophical view of Buddhism, just as a document
+                        purportedly written by a king that has the proper seals is known as genuine. Because the concepts of
+                            <foreign type="term" xml:lang="Sa-Ltn">anitya(tva)</foreign>, <foreign type="term" xml:lang="Sa-Ltn">duḥkha</foreign>, <foreign type="term" xml:lang="Sa-Ltn">anātman</foreign>, and <foreign type="term" xml:lang="Sa-Ltn">nirvāṇa</foreign> are central to the Buddhist philosophical view, over the
+                        centuries, countless commentaries and elaborations on these concepts have been written by scholars from
+                        every Buddhist tradition.<note place="end" index="2" xml:id="UT22084-058-002-54">For a modern presentation
+                            in English, see Khyentse 2007.</note> Various sūtras and commentaries focus on one, two, three or all
+                        four of the concepts.<note place="end" index="3" xml:id="UT22084-058-002-55">Stanley 2009, p.
+                            149-154.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-7"/>
+                    <p tid="8">Indian texts speak of the four aphorisms of the Dharma as well as of the four seals. The Sanskrit
+                        of the four aphorisms can be extracted from Vasubandhu’s commentary to verse XVIII.80 of the <title xml:lang="Sa-Ltn">Mahā­yāna­sūtrālaṃkāra</title> of Asaṅga (fifth century C.E.):</p>
+                    <q>
+                        <lg tid="9">
+                            <milestone unit="chunk" xml:id="UT22084-058-002-8"/>
+                            <l>
+                                <foreign type="term" xml:lang="Sa-Ltn">sarvasaṃskārā anityāḥ</foreign> (all compounded phenomena
+                                are impermanent);</l>
+                            <l>
+                                <foreign type="term" xml:lang="Sa-Ltn">sarvasaṃskārā duḥkhāḥ</foreign> (all compounded phenomena
+                                are suffering);</l>
+                            <l>
+                                <foreign type="term" xml:lang="Sa-Ltn">sarvadharmā anātmānaḥ</foreign> (all phenomena are without
+                                self);</l>
+                            <l>
+                                <foreign type="term" xml:lang="Sa-Ltn">śāntaṃ nirvāṇaṃ</foreign> (peaceful is nirvāṇa).<note place="end" index="4" xml:id="UT22084-058-002-56">Sanskrit in Lévi 1907, 1911, tome I, p. 149.
+                                    For an English translation, see Jamspal et al. 2004 (the commentary is to verse XVIII.81 in
+                                    that translation). Note that <foreign xml:lang="Sa-Ltn">saṃskāra</foreign> / <foreign xml:lang="Bo-Ltn">’du byed</foreign> in these contexts and in the four seals is not being
+                                    used to mean “formative factors” or “karmic conditioning,” but seems to be used in the same
+                                    sense as <foreign xml:lang="Sa-Ltn">saṃskṛta</foreign> / <foreign xml:lang="Bo-Ltn">’dus
+                                        byas</foreign>, i.e. “compounded phenomena.” Edgerton had noticed this usage of <foreign xml:lang="Sa-Ltn">saṃskāra</foreign>. See Edgerton 1985, s.v. <foreign xml:lang="Sa-Ltn">saṃskāra, saṃskṛta</foreign>. Cf. also Jamspal et al. 2004, who translate the term as
+                                    “creations.”</note>
+                            </l>
+                        </lg>
+                    </q>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-9"/>
+                    <p tid="10">The same four aphorisms are listed and described in chapter 17 of Asaṅga’s <title xml:lang="Sa-Ltn">Bodhi­sattva­bhūmi</title>.<note place="end" index="5" xml:id="UT22084-058-002-57">Sanskrit in Dutt 1978 and Wogihara 1978. For a recent English translation, see Engle 2016, pp
+                            454-463.</note> The only minor difference in these formulations of them, compared to the four
+                        aphorisms as set out in the present sūtra, is that here the second aphorism does not speak of “all
+                        contaminated phenomena,” but simply “all compounded phenomena.”<note place="end" index="6" xml:id="UT22084-058-002-58">Note that the Pāli Dhammapada includes the first three concepts in verses
+                            277, 278, and 279: <foreign xml:lang="fr">sabbe saṅkhārā aniccā’ ti...sabbe saṅkhārādukkhā’ ti...sabbe
+                                saṅkhārā anattā’ ti...</foreign>
+                        </note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-10"/>
+                    <p tid="11">Although this sūtra’s Sanskrit original is no longer extant, the colophon to the Tibetan
+                        translation of the sūtra tells us that it was translated from Sanskrit to Tibetan by the Indian abbot
+                        Surendrabodhi and the Tibetan editor-translator Yeshé Dé (<foreign type="term" xml:lang="Sa-Ltn">ye shes
+                            sde</foreign>). We can thus infer that this sūtra was translated from Sanskrit to Tibetan sometime
+                        during the late eighth to early ninth century. </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-11"/>
+                    <p tid="12">This sūtra is also included in the Chinese Buddhist canon (T. 599).<note place="end" index="7" xml:id="UT22084-058-002-59">The Chinese version was translated during the Tang dynasty by Yijing
+                            (635-713; his name is also variously transliterated as I-Tsing, I-Ching, Yi-Tzing). An English
+                            translation of the Chinese version by an unattributed translator is posted on the internet by Fodian
+                            (see bibliography).</note> Both the Tibetan and Chinese versions of the sūtra are very similar in
+                        their brevity, meaning and story line, although there are a few minor differences between them.<note place="end" index="8" xml:id="UT22084-058-002-60">On Yijing, see Keown 2004.</note> A twelfth-century
+                        fragment containing this sūtra in the Tangut, or Xixia,<note place="end" index="9" xml:id="UT22084-058-002-61">The Western Xia (Xixia), or Tangut Empire (1038-1227), was a Buddhist
+                            empire located in what are now the Chinese provinces of Ningxia, Gansu, Eastern Qinghai, Northern
+                            Shaanxi as well as parts of Xinjiang and Inner Mongolia. It was known as Minyak (<foreign xml:lang="Bo-Ltn">mi nyag</foreign>) in Tibetan. The Tanguts adopted Buddhism from both Chinese
+                            and Tibetan sources. The language, which has its own very elaborate script, has been partially
+                            deciphered by modern scholarship.</note> language was discovered, among other pieces of the Tangut
+                        canon, at Khara-khoto along the ancient Silk Road by the British explorer Sir Aurel Stein during his
+                        1913-1916 journey.<note place="end" index="10" xml:id="UT22084-058-002-62">Grinstead 1967.</note> Now in
+                        the British Museum, the Tangut version is very close to the Chinese version, indicating that it was likely
+                        translated from the Chinese.<note place="end" index="11" xml:id="UT22084-058-002-63">Nie 2007.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-12"/>
+                    <p tid="13">The present translation from Tibetan<note place="end" index="12" xml:id="UT22084-058-002-64">In
+                            the process of research on this sūtra, another translation from the Tibetan was found; it was done by
+                            Geshe Lhakdor in 2010 for a workshop presented at the India Habitat Centre in Delhi under the auspices
+                            of the Foundation for Universal Responsibility (see bibliography).</note> is based on the version in
+                        the Degé (<foreign type="term" xml:lang="Bo-Ltn">sde dge</foreign>) Kangyur, with reference to the
+                        differences between this and various other versions noted in the Pedurma (<foreign type="term" xml:lang="Bo-Ltn">dpe sdur ma</foreign>) comparative edition of the Degé Kangyur. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="25">THE TRANSLATION </head>
+                <head type="titleHon" tid="26">The Noble Māhayāna Sūtra</head>
+                <head type="titleMain" tid="27">The Questions of the Nāga King Sāgara </head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-058-002-13"/>
+                    <p tid="14">
+                        <!--<modularPassage type="homage">-->
+                        <ref cRef="F.205.a"/> Prostrations to all buddhas and bodhisattvas.<!--</modularPassage>-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-14"/>
+                    <p tid="15">
+                        <!--<modularPassage type="thusDid">-->Thus did I hear at one time. The Bhagavān <ref cRef="F.205.b"/> was
+                        dwelling at the place of the nāga king Sāgara together with a great assembly of
+                        1,250<!--</modularPassage>--> bhikṣus as well as a multitude of bodhisattvas and mahāsattvas. At that time
+                        the Bhagavān said to the nāga king Sāgara: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-15"/>
+                    <p tid="16">“Lord of the nāgas, if one utters these four aphorisms of the Dharma, in uttering them one is
+                        expressing all 84,000 articles of the Dharma. What are the four? They are as follows. </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-16"/>
+                    <p tid="17">“To fully engage in understanding the inexhaustible doctrine of the bodhisattva mahāsattvas that
+                        all compounded phenomena are impermanent; to fully engage in understanding the inexhaustible doctrine of
+                        the bodhisattva mahāsattvas that all contaminated phenomena are suffering; to fully engage in
+                        understanding the inexhaustible doctrine of the bodhisattva mahāsattvas that all phenomena are without
+                        self; and to fully engage in understanding the inexhaustible doctrine of the bodhisattva mahāsattvas that
+                        nirvāṇa is peace.<note place="end" index="13" xml:id="UT22084-058-002-65">DNQ: <foreign type="term" xml:lang="Bo-Ltn">zhi ba</foreign> (peace/peaceful) C: <foreign type="term" xml:lang="Bo-Ltn">zhes
+                                bya</foreign> (known as). </note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-17"/>
+                    <p tid="18">“Lord of the nāgas, if one utters these four aphorisms of the Dharma, in uttering them one is
+                        expressing all 84,000 articles of the Dharma.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-18"/>
+                    <p tid="19">When the Bhagavān had spoken in this way, the bhikṣus and bodhisattvas rejoiced and greatly
+                        praised the teachings of the Bhagavān.</p>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="28">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-058-002-19"/>
+                    <p tid="20">This completes the Noble Mahāyāna Sūtra, <title xml:lang="en">The Questions of the Nāga King
+                            Sāgara</title>. </p>
+                    <p tid="21">Translated and finalized by the Indian abbot Surendrabodhi and the senior editor-translator, the
+                        monk Yeshé Dé.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="29">Notes</head>
+                <list type="abbreviations">
+                    <head type="abbreviations" tid="30">Abbreviations:</head>
+                    <item xml:id="UT22084-058-002-20">
+                        <abbr>C</abbr>
+                        <expan>Coné Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-058-002-21">
+                        <abbr>D</abbr>
+                        <expan>Degé Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-058-002-22">
+                        <abbr>N</abbr>
+                        <expan>Narthang Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-058-002-23">
+                        <abbr>Q</abbr>
+                        <expan>Peking Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-058-002-24">
+                        <abbr>T</abbr>
+                        <expan>Taishō Tripiṭaka (Chinese Buddhist canon)</expan>
+                    </item>
+                </list>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="31">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-058-002-25">
+                        <title xml:lang="Bo-Ltn">’phags pa klu’i rgyal po rgya mtshos zhus pa zhes bya ba theg pa chen po’i
+                            mdo</title> (<title xml:lang="Sa-Ltn">Ārya­sāgara­nāga­rāja­paripṛcchā­nāma­mahā­yana­sūtra</title>),
+                        Toh 155, Degé Kangyur, vol. 58 (mdo sde, pha), folios 205.a-205.b.</bibl>
+                    <bibl xml:id="UT22084-058-002-26">
+                        <title xml:lang="Bo-Ltn">’phags pa klu’i rgyal po rgya mtshos zhus pa zhes bya ba theg pa chen po’i
+                            mdo</title>, Toh 155, Vol 58, pp 557-558, bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the
+                        Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka
+                        Collation Bureau of the China Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe
+                        skrun khang (China Tibetology Publishing House), 2006-2009. </bibl>
+                    <bibl xml:id="UT22084-058-002-27">
+                        <title xml:lang="Sa-Ltn">Sāgara­nāga­rāja­paripṛcchā­nāma­mahā­yāna­sūtra</title>, <title xml:lang="zh">Fo
+                            wei hai long wang shuo fa yin jing</title> (佛為海龍王說法, “The Dharma-Seal Sūtra Spoken by the Buddha for
+                        the Nāga King Sāgara”). T. 599. In <title xml:lang="en">CBETA Chinese Electronic Tripiṭaka</title>.
+                        Retrieved October 12, 2011, from <ref target="http://tripitaka.cbeta.org/T15n0599 ">cbeta.org.</ref>
+                        <!-- http://www.cbeta.org/result/normal/T15/0599_001.htm.-->
+                    </bibl>
+                    <bibl xml:id="UT22084-058-002-28">
+                        <title xml:lang="en">The Dharma-Seal Sutra Spoken by the Buddha for Ocean Dragon King</title>. (English
+                        translation from Chinese). Retrieved October 12, 2011, from <ref target="http://www.fodian.net/world/0599.html">fodian.net.</ref>
+                        <!-- http://www.fodian.net/world/0599.html.-->
+                    </bibl>
+                    <bibl xml:id="UT22084-058-002-29">
+                        <title xml:lang="Sa-Ltn">Dhammapada</title>. Kuala Lumpur, Malaysia: Selangor Buddhist Vipassana Society,
+                        2004. </bibl>
+                    <bibl xml:id="UT22084-058-002-30">Dutt, Nalinaksha, ed. (1978). <title xml:lang="fr">Bodhisattvabhūmiḥ</title>. Patna: K. P. Jayaswal Research Institute, 1978.</bibl>
+                    <bibl xml:id="UT22084-058-002-31">Edgerton, F. <title xml:lang="en">Buddhist Hybrid Sanskrit
+                            Dictionary</title>. Delhi: Motilal Banarsidass, 1985. </bibl>
+                    <bibl xml:id="UT22084-058-002-32">Engle, Artemus B., trans. (2016). <title xml:lang="fr">The Bodhisattva Path
+                            to Unsurpassed Enlightenment: A Complete Translation of the Bodhisattvabhūmi</title>. Tsadra
+                        Foundation Series. Boston: Snow Lion, 2016.</bibl>
+                    <bibl xml:id="UT22084-058-002-33">Grinstead, E.D. (1967). “The Dragon King of the Sea.” <title xml:lang="en">The British Museum Quarterly</title> 31 (3/4), 96-100. </bibl>
+                    <bibl xml:id="UT22084-058-002-34">Jamspal, L. et al. (2004). <title xml:lang="en">The Universal Vehicle
+                            Discourse Literature (Mahāyānasūtrālaṃkāra) by Maitreyanātha/Āryāsaṅga Together with its Commentary
+                            (Bhāṣya) by Vasubandhu</title>. Translated from the Sanskrit, Tibetan, and Chinese by L. Jamspal, R.
+                        Clark, J. Wilson, L. Zwilling, M. Sweet, R. Thurman. Tanjur Translation Initiative. Treasury of Buddhist
+                        Sciences Series. New York: American Institute of Buddhist Studies at Columbia University, 2004.</bibl>
+                    <bibl xml:id="UT22084-058-002-35">Keown, D. (2004). “I-Ching.” In <title xml:lang="en">A Dictionary of
+                            Buddhism</title>. Retrieved 12, 2011, from <ref target="http://www.encyclopedia.com/topic/I-Ching.aspx#1-1O108:Iching-full">encyclopedia.com.</ref>
+                        <!-- http://www.encyclopedia.com/topic/I-Ching.aspx#1-1O108:Iching-full-->
+                    </bibl>
+                    <bibl xml:id="UT22084-058-002-36">Khyentse, Dzongsar Jamyang (2007). <title xml:lang="fr">What Makes You Not a
+                            Buddhist</title>. Boston: Shambhala Publications, 2007. </bibl>
+                    <bibl xml:id="UT22084-058-002-37">Lévi, Sylvain (1907, 1911). <title xml:lang="fr">Asaṅga.
+                            Mahāyāna-Sūtrālaṃkāra, Exposé de la doctrine du grand véhicule selon le système Yogācāra, édité et
+                            traduit par Sylvain Lévi</title>. Bibliothèque de l’École des Hautes Études, sciences historiques et
+                        philologiques, fascicules 159 et 190, Tome I - Texte (1907), Tome II - Traduction, introduction, index
+                        (1911). Paris: Librairie Honoré Champion, 1907, 1911. </bibl>
+                    <bibl xml:id="UT22084-058-002-38">Lhakdor, Geshe. (2010). <title xml:lang="en">Short Sutra on the Four
+                            Seals</title>. The Foundation for Universal Responsibility of His Holiness the Dalai Lama
+                        (www.furhhdl.org). Retrieved October 12, 2011, from <ref target="http://www.furhhdl.org/files/Short%20Sutra%20on%20the%20Four%20Seals.pdf">furhhdl.org.</ref>
+                        <!--http://www.furhhdl.org/files/Short%20Sutra%20on%20t he%20Four%20Seals.pdf.-->
+                    </bibl>
+                    <bibl xml:id="UT22084-058-002-39">Nie Hongyin 聂鸿. (2007). “Ying zang xixiawen ‘Hai long wang jing’ kaobu”
+                        (英藏西夏文《海龙王经》考补). In <title xml:lang="Zh-Ltn">Ningxia Shehui Kexue</title> 宁夏社会科学, <title xml:lang="en">Social Sciences in Ningxia</title>, 1, 90-92. Retrieved October 12, 2011, from <ref target="http://hk.plm.org.cn/e_book/xz-5439.pdf">Social Sciences in Ningxia.</ref>
+                        <!-- http://hk.plm.org.cn/e_book/xz-5439.pdf-->
+                    </bibl>
+                    <bibl xml:id="UT22084-058-002-40">Stanley, D. P. (2009). <title xml:lang="en">The Threefold Formal, Practical,
+                            and Inclusive Canons of Tibetan Buddhism in the Context of a Pan-Asian Paradigm</title> (Unpublished
+                        doctoral dissertation). University of Virginia, 2009. </bibl>
+                    <bibl xml:id="UT22084-058-002-41">Wogihara, Unrai, ed. (1978). <title xml:lang="fr">Bodhisattvabhūmiḥ</title>.
+                        Reprint edition. Tokyo: Sankibo Buddhist Book Store, 1978.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-42">
+                            <term>bhikṣu</term>
+                            <term xml:lang="Bo-Ltn">dge slong </term>
+                            <term xml:lang="bo">དགེ་སློང་།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣu</term>
+                            <term type="definition">A fully ordained monk of the Buddhist Saṅgha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-43">
+                            <term>compounded phenomena</term>
+                            <term xml:lang="Bo-Ltn">’du byed </term>
+                            <term xml:lang="bo">འདུ་བྱེད།</term>
+                            <term xml:lang="Sa-Ltn">saṃskāra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-44">
+                            <term>impermanent</term>
+                            <term xml:lang="Bo-Ltn">mi rtag pa </term>
+                            <term xml:lang="bo">མི་རྟག་པ།</term>
+                            <term xml:lang="Sa-Ltn">anitya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-45">
+                            <term>contaminated phenomena</term>
+                            <term xml:lang="Bo-Ltn">zag pa dang bcas pa </term>
+                            <term xml:lang="bo">ཟག་པ་དང་བཅས་པ།</term>
+                            <term xml:lang="Sa-Ltn">sāsrava</term>
+                            <term type="definition">The phenomena of saṃsāra. <term type="ignore">Contaminated phenomena</term> are those influenced by the
+                                defilements (<foreign type="term" xml:lang="Sa-Ltn">kleśa</foreign>, <foreign type="term" xml:lang="Bo-Ltn">nyon mongs</foreign>) and karma. Thus, e.g., even virtues that are under the
+                                influence of defilements like ignorance are categorized as contaminated in this way.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-46">
+                            <term>suffering</term>
+                            <term xml:lang="Bo-Ltn">sdug bsngal ba </term>
+                            <term xml:lang="bo">སྡུག་བསྔལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">duḥkha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-47">
+                            <term>without self</term>
+                            <term xml:lang="Bo-Ltn">bdag med pa </term>
+                            <term xml:lang="bo">བདག་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">anātman</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-48">
+                            <term>nirvāṇa</term>
+                            <term xml:lang="Bo-Ltn">mya ngan las ’das pa </term>
+                            <term xml:lang="bo">མྱ་ངན་ལས་འདས་པ།</term>
+                            <term xml:lang="Sa-Ltn">nirvāṇa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-49">
+                            <term>peaceful</term>
+                            <term xml:lang="Bo-Ltn">zhi ba </term>
+                            <term xml:lang="bo">ཞི་བ།</term>
+                            <term xml:lang="Sa-Ltn">śānta</term>
+                            <term xml:lang="Sa-Ltn">śānti</term>
+                            <term type="alternative" xml:lang="en">peace</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-50">
+                            <term>four aphorisms of the Dharma</term>
+                            <term xml:lang="Bo-Ltn">chos kyi mdo bzhi </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་མདོ་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">dharmoddāna­catuṣṭaya</term>
+                            <term type="definition">The main topic of this sūtra; known also in Tibetan by the synonym <foreign type="term" xml:lang="Bo-Ltn">bka’ rtags kyi phyag rgya bzhi</foreign> (“the four seals of the
+                                [Buddha’s] teaching”), in Sanskrit <foreign type="term" xml:lang="Sa-Ltn">caturmudrā</foreign>
+                                (“the four seals”) or <foreign type="term" xml:lang="Sa-Ltn">dṛṣṭi­nimitta­mudrā</foreign> (“the
+                                seals that are the marks of the [Buddhist] view”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-058-002-51">
+                            <term>four seals</term>
+                            <term xml:lang="Bo-Ltn">phyag rgya bzhi </term>
+                            <term xml:lang="bo">ཕྱག་རྒྱ་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">caturmudrā</term>
+                            <term type="definition">A synonym for the “four aphorisms of the Dharma,” q.v. Often seen in Tibetan
+                                in the expanded form <foreign type="term" xml:lang="Bo-Ltn">bka’ rtags kyi phyag rgya
+                                    bzhi</foreign> (“the <term type="ignore">four seals</term> of the [Buddha’s] teaching”), the nearest Sanskrit equivalent
+                                being <foreign type="term" xml:lang="Sa-Ltn">dṛṣṭi­nimitta­mudrā</foreign> (“the seals that are
+                                the marks of the [Buddhist] view”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-058-002-52">
+                            <term>Nāga King Sāgara</term>
+                            <term xml:lang="Bo-Ltn">klu’i rgyal po rgya mtsho </term>
+                            <term xml:lang="bo">ཀླུའི་རྒྱལ་པོ་རྒྱ་མཚོ།</term>
+                            <term xml:lang="Sa-Ltn">Sāgaranāgarāja</term>
+                            <term type="definition">Name of a king of a race of supernatural serpents who protect the
+                                doctrine.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

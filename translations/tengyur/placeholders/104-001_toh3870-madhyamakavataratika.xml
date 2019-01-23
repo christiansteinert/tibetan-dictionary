@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dbu ma la 'jug pa'i 'grel bshad</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">madhyamakavataratika</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-104-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh3870" type="text">
+                    <ref>Toh 3870</ref>
+                    <biblScope>ff. 1v-365r</biblScope>
+                    <author role="translatorTib">a. jayananda</author>
+                    <author role="translatorTib">t. jayananda</author>
+                    <author role="translatorTib">kun dga' grags</author>
+                    <location count-pages="">
+                        <start volume="104" page="4"/>
+                        <end volume="104" page="731"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10474" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10532" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:24:40 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

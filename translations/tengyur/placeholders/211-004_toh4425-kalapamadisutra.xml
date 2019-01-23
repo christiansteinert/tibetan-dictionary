@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ka lA pa'i uN la sogs pa'i mdo</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">kalapamadisutra</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-211-004"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4425" type="text">
+                    <ref>Toh 4425</ref>
+                    <biblScope>ff. 31v-34v</biblScope>
+                    <author role="translatorTib">a. durgasimha</author>
+                    <author role="translatorTib">t. nam mkha' bzang po</author>
+                    <location count-pages="">
+                        <start volume="211" page="64"/>
+                        <end volume="211" page="70"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21686" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC112371JC21770" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:14:34 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

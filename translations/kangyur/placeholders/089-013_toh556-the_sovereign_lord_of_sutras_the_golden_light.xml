@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">gser 'od mdo sde'i dbang po'i rgyal po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">suvarṇaprabhāsottamasūtrendrarāja</title>
+                <title type="mainTitle" xml:lang="en">The Sovereign Lord of Sūtras, The Golden Light</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa gser 'od dam pa mdo sde'i dbang po'i rgyal po zhes bya ba theg pa chen po'i mdo/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasuvarṇaprabhāsottama­sūtrendrarāja­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh">金光​明​尊勝​王​經</title>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-089-013"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh556" type="text">
+                    <ref>Toh 556</ref>
+                    <biblScope>vol.89, ff.151v-273r(pp.302-545)</biblScope>
+                    <location count-pages="244">
+                        <start volume="89" page="304"/>
+                        <end volume="89" page="547"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12283" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 14/09/2018 at 14:24:34 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">
+                    Sponsored by E E, May-E, Minda, Chung-Da Ho.
+                </p>
+            </div>
+        </front>
+    </text>
+</TEI>

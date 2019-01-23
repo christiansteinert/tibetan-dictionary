@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dpal mchog dang po'i rgya cher bshad pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">sriparamaditika</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-059-002"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh2512" type="text">
+                    <ref>Toh 2512</ref>
+                    <biblScope>vol 59 ff. 49v-242r, vol 60 ff. 1v-352r, vol 61 ff. 1v-192v</biblScope>
+                    <author role="translatorTib">a. kun dga' snying po</author>
+                    <author role="translatorTib">t. sraddhakaravarma</author>
+                    <author role="translatorTib">kamalagupta</author>
+                    <author role="translatorTib">rin chen bzang po</author>
+                    <author role="translatorTib">r. mantrakalasa</author>
+                    <author role="translatorTib">zhi ba 'od</author>
+                    <location count-pages="">
+                        <start volume="59" page="100"/>
+                        <end volume="61" page="386"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21610" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC9104" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:25:10 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

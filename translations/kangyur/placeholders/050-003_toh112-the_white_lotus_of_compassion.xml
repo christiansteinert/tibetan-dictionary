@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">snying rje pad+ma dkar po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">karuṇāpuṇḍarīkasūtra</title>
+                <title type="mainTitle" xml:lang="en">The White Lotus of Compassion</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa snying rje pad+ma dkar po zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryakaruṇāpuṇḍarīka­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh">大悲白蓮經</title>
+                <author sameAs="contributors.xml#team-22" role="translatorMain">Dr Peter Alan Robert</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-143"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-145">Yeshi Tulku</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-142">Dr Peter Alan Robert</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-52"/>
+            <sponsor sameAs="sponsors.xml#sponsor-8">anonymous</sponsor>
+            </titleStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-050-003"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh112" type="text">
+                    <ref>Toh 112</ref>
+                    <biblScope>vol.50, ff.129r-297r(pp.257-591)</biblScope>
+                    <location count-pages="335">
+                        <start volume="50" page="259"/>
+                        <end volume="50" page="593"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11675" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 29/11/2018 at 10:08:13 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <p tid="2">
+                    The sūtra describes a previous life of Śākyamuni Buddha when he was a court priest to a king. He makes his prayer to become a buddha and causes the king, his princes, his own sons and pupils, and others, to also take the same vow. This is revealed to be the major event that is the origin of buddhas and bodhisattvas such as Amitābha, Akṣobhya, Avalokiteśvara, Mañjuśrī, and the thousand buddhas of our eon.
+                </p>
+                <p tid="3">
+                    The “white lotus of compassion” in the title refers to Śākyamuni himself, emphasizing his superiority over all other buddhas, like a fragrant, healing white lotus among a bed of ordinary flowers. He chose to be reborn in an impure realm during the degenerate times. Because of this courageous vow of great compassion, Śākyamuni is considered one of the greatest buddhas.
+                </p>
+            </div>
+            <div type="acknowledgment">
+                <p tid="1">The sponsor wishes to remain anonymous.</p>
+                <p tid="4">
+                    Translators Dr Peter Alan Robert, Emily Bower, Yeshi Tulku, Tracy Davis.
+                </p>
+            </div>
+        </front>
+    </text>
+</TEI>

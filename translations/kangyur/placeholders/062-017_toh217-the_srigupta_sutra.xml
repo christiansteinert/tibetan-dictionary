@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dpal sbas kyi mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">śrīguptasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Śrīgupta Sūtra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa dpal sbas zhes bya ba'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryaśrīguptanāmasūtra</title>
+                <title type="otherTitle" xml:lang="en">The Sūtra of Śrīgupta</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Śrīguptasūtra</title>
+            </titleStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-062-017"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh217" type="text">
+                    <ref>Toh 217</ref>
+                    <biblScope>vol.62, ff. 269r-284r(pp.537-567)</biblScope>
+                    <location count-pages="31">
+                        <start volume="62" page="539"/>
+                        <end volume="62" page="569"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11856" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:35:26 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">me kha la'i gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mekhalādhāraṇī</title>
+                <title type="mainTitle" xml:lang="en">The Incantation of Mekhalā</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa me kha la zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamekhalānāmadhāraṇī</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">mekhaladhāraṇī</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa me kha la zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamekhalanāmadhāraṇī</title>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT22084-096-021"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh772" type="text">
+                    <ref>Toh 772</ref>
+                    <biblScope>vol.96, ff.105v-111v(pp.210-222)</biblScope>
+                    <location count-pages="13">
+                        <start volume="96" page="212"/>
+                        <end volume="96" page="224"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12518" work="W22084"/>
+                </bibl>
+                <bibl key="toh907" type="text">
+                    <ref>Toh 907</ref>
+                    <biblScope>vol.100, ff.233r-239r(pp.465-477)</biblScope>
+                    <location count-pages="13">
+                        <start volume="100" page="467"/>
+                        <end volume="100" page="479"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12669" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 23/01/2019 at 09:05:48 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

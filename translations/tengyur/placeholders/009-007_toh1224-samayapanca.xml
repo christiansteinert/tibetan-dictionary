@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dam tshig lnga pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">samayapanca</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-009-007"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1224" type="text">
+                    <ref>Toh 1224</ref>
+                    <biblScope>ff. 26v-28v</biblScope>
+                    <author role="translatorTib">a. padma 'byung gnas</author>
+                    <author role="translatorTib">t. vari-dharmakirti</author>
+                    <location count-pages="">
+                        <start volume="9" page="54"/>
+                        <end volume="9" page="58"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21614" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC7757" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:23:22 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

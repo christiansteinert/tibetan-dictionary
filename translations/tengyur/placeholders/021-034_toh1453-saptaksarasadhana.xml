@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">yi ge bdun pa'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">saptaksarasadhana</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-021-034"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1453" type="text">
+                    <ref>Toh 1453</ref>
+                    <biblScope>ff. 367v-371r</biblScope>
+                    <author role="translatorTib">a. nag po pa</author>
+                    <author role="translatorTib">t. ngag gi dbang phyug</author>
+                    <author role="translatorTib">klog skya shes rab brtsegs</author>
+                    <author role="translatorTib">r. mar pa chos kyi dbang phyug</author>
+                    <location count-pages="">
+                        <start volume="21" page="736"/>
+                        <end volume="21" page="744"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21619" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC7999" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:10:13 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

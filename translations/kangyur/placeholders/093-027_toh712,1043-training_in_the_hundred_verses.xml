@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sh+lo ka brgya lobs pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">Training in the Hundred Verses</title>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT22084-093-027"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh712" type="text">
+                    <ref>Toh 712</ref>
+                    <biblScope>vol.93, ff.178v178v(pp.356-356)</biblScope>
+                    <location count-pages="1">
+                        <start volume="93" page="358"/>
+                        <end volume="93" page="358"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12452" work="W22084"/>
+                </bibl>
+                <bibl key="toh1043" type="text">
+                    <ref>Toh 1043</ref>
+                    <biblScope>vol.101, ff.187r-187v(pp.373-374)</biblScope>
+                    <location count-pages="2">
+                        <start volume="101" page="375"/>
+                        <end volume="101" page="376"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12806" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 23/01/2019 at 09:08:14 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

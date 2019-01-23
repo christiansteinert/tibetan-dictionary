@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dben pa'i gtam</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vivekakatha</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-172-016"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4171" type="text">
+                    <ref>Toh 4171</ref>
+                    <biblScope>ff. 193r-195r</biblScope>
+                    <author role="translatorTib">a. sa 'tsho byin</author>
+                    <author role="translatorTib">t. dipamkara</author>
+                    <author role="translatorTib">dge ba'i blo gros</author>
+                    <location count-pages="">
+                        <start volume="172" page="387"/>
+                        <end volume="172" page="391"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10908" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10923" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:33:28 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

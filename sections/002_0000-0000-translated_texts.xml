@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">Translated Texts</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="ALL-TRANSLATED"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W" sort-index="1">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id=""/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:21:05 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">For quick and easy access, this list gathers into a single page the texts completed and published so far, as well as showing which sections of the Kangyur they are found in.</p>
+            </div>
+        </front>
+        <body/>
+    </text>
+</TEI>

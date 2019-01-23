@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">dri med 'od kyis zhus pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vimalaprabhaparipṛcchā</title>
+                <title type="mainTitle" xml:lang="en">The Questions of Vimalaprabha</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">dri ma med pa'i 'od kyis zhus pa</title>
+                <title type="otherTitle" xml:lang="zh">無垢光所問經</title>
+                <author role="translatorMain" sameAs=""/>
+            <sponsor sameAs="sponsors.xml#sponsor-33">Huizi Zuo</sponsor>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-059-011"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh168" type="text">
+                    <ref>Toh 168</ref>
+                    <biblScope>vol.59, ff. 211r-259v(pp.421-518)</biblScope>
+                    <location count-pages="98">
+                        <start volume="59" page="423"/>
+                        <end volume="59" page="520"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11773" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 17/09/2018 at 12:07:27 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Huizi Zuo and family.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

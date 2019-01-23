@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">gso sbyong gi gzhi/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">poṣadhavastu</title>
+                <title type="mainTitle" xml:lang="en">Chapter 2: On the Rite of Restoration</title>
+            </titleStmt>
+            <publicationStmt status="2.f">
+                <idno xml:id="UT22084-001-002"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1-2" type="chapter">
+                    <ref>Toh 1-2</ref>
+                    <biblScope>vol:1,ff.131r-221v(pp.261-442)</biblScope>
+                    <location count-pages="182">
+                        <start volume="1" page="263"/>
+                        <end volume="1" page="444"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11497" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12906" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:23:45 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary">Summary</head>
+                <p tid="1">Describes the twice-monthly poṣadha ceremony performed by monks, nuns, and novices in which the ordained confess infractions against their vows, thereby purifying and restoring them.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">a ra pa tsa na'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">arapacanasadhana</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-073-022"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh2715" type="text">
+                    <ref>Toh 2715</ref>
+                    <biblScope>ff. 81v-82v</biblScope>
+                    <location count-pages="">
+                        <start volume="73" page="164"/>
+                        <end volume="73" page="166"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21612" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC9328" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:12:18 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

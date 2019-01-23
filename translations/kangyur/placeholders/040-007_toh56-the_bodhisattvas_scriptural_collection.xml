@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">byang chub sems dpa'i sde snod kyi mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">bodhisattvapiṭakasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Bodhisattva’s Scriptural Collection</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa byang chub sems dpa'i sde snod ces bya ba thegs pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryabodhisattva­piṭaka­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh">菩薩藏經</title>
+                <author role="translatorMain" sameAs="contributors.xml#team-32">The Norwegian Institute of Palaeography and Historical Philology (PHI)</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-195"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-196"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-197"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-198"/>
+            <sponsor sameAs="sponsors.xml#sponsor-6">Chang, Tai Kwang</sponsor>
+            </titleStmt>
+            <publicationStmt status="2.e">
+                <idno xml:id="UT22084-040-007"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh56" type="text">
+                    <ref>Toh 56</ref>
+                    <biblScope/>
+                    <author role="translatorTib">Surendrabodhi, Śīlendra, Dharmatāśīla</author>
+                    <location count-pages="487">
+                        <start volume="40" page="512"/>
+                        <end volume="41" page="414"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11587" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 29/11/2018 at 10:08:11 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <p tid="2">
+                    An important sūtra from the Ratnakuta (“Heap of Jewels”) collection that sets out in detail the stages and practices of the path of the Bodhisattva vehicle. It contains extensive explanations on key Mahāyāna practices, including the Four Immeasurable Thoughts, Six Perfections, and more.
+                </p>
+            </div>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Chang, Tai Kwang.</p>
+                <p tid="3">Translators: The Norwegian Institute of Palaeography and Historical Philology (PHI): Jens Braarvig, David Welsh, Fredrik Liland, Andrew Skilton.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

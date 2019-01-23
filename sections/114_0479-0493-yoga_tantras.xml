@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Yogatantra</title>
+                <title type="mainTitle" xml:lang="en">Yoga tantras</title>
+                <title type="otherTitle" xml:lang="">rnal ’byor gyi rgyud/</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC114941JC21413"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W22084" sort-index="14">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC114941JC20565"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:21:18 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Tantras of the Yoga class based mainly on meditational practices, including those emphasizing skillful means
+                    followed by those emphasizing wisdom (Toh 479-493).</p>
+            </div>
+            <div type="warning">
+                <p tid="2">
+                    <emph rend="bold">Warning:</emph> Readers are reminded that according to Vajrayāna Buddhist tradition there
+                    are restrictions and commitments concerning tantra. Practitioners who are not sure if they should read this
+                    translation are advised to consult the authorities of their lineage. The responsibility for reading this text
+                    or sharing it with others who may or may not fulfill the requirements lies in the hands of readers.</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about">Yoga tantras</head>
+                <div type="section">
+                    <p tid="3">The Yoga tantras are the highest of the three groups of so-called “outer” tantras. Compared to the two
+                        lower groups, they place more emphasis on the cultivation of internal meditative practices than on
+                        external, ritual purity. These internal practices are characterized by the combination of the relative,
+                        the method or skillful means (<foreign type="term" xml:lang="Sa-Ltn">upāya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">thabs</foreign>) of the practice of visualizing oneself as the deity, with the
+                        ultimate, the state of non-conceptual wisdom (<foreign type="term" xml:lang="Sa-Ltn">prajñā</foreign>,
+                            <foreign type="term" xml:lang="Bo-Ltn">shes rab</foreign>) inseparable from the deity’s appearances.
+                        The principal deity here is Vairocana.</p>
+                    <p tid="4">The relatively small number of tantras of this class (fifteen, Toh 479-493) are subdivided into two main
+                        groups: those emphasizing method or skillful means, and those emphasizing wisdom.</p>
+                    <p tid="5">
+                        <label>I. The 8 tantras emphasizing skillful means</label> (<title xml:lang="Bo-Ltn">thabs gtso bor ston
+                            pa’i rgyud</title>):</p>
+                    <list>
+                        <item>
+                            <p tid="6">(a) The root tantra, the <title xml:lang="Sa-Ltn">Tattvasaṃgraha</title> (Toh 479), the main tantra
+                                of this group and an important early tantric work very influential in the development of tantra in
+                                China and Japan as well as in Tibet.</p>
+                        </item>
+                        <item>
+                            <p tid="7">(b) Three explanatory tantras (Toh 480-482).</p>
+                        </item>
+                        <item>
+                            <p tid="8">(c) Four supporting (<title xml:lang="Bo-Ltn">cha mthun</title>) tantras (Toh 483-486). </p>
+                        </item>
+                    </list>
+                    <p tid="9">
+                        <label>II. The 7 tantras emphasizing wisdom</label> (<title xml:lang="Bo-Ltn">shes rab gtso bor ston pa’i
+                            rgyud</title>, Toh 487-493). Among these are duplicates of two of the “tantric” Prajñāpāramitā works
+                        (Toh 489 and 491).</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

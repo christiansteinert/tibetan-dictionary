@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">lha'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">devatāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the God</title>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-072-029"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh329" type="text">
+                    <ref>Toh 329</ref>
+                    <biblScope>vol.72, ff.257r-258v(pp.513-516)</biblScope>
+                    <location count-pages="4">
+                        <start volume="72" page="515"/>
+                        <end volume="72" page="518"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12007" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:29:59 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

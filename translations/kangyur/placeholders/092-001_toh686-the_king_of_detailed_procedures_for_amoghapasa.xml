@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">don yod zhags pa'i cho ga zhib mo'i rgyal po/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">amoghapāśakalpa</title>
+                <title type="mainTitle" xml:lang="en">The King of Detailed Procedures for Amoghapāśa</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa don yod pa'i zhags pa'i cho ga zhib mo'i rgyal po/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryāmoghapāśakalparājā</title>
+                <title type="otherTitle" xml:lang="zh">不空羂索神變真言經</title>
+                <author role="translatorMain" sameAs=""/>
+            <sponsor sameAs="sponsors.xml#sponsor-38"/>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-092-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh686" type="text">
+                    <ref>Toh 686</ref>
+                    <biblScope>vol.92, ff.1r-316r(pp.1-631) and vol.93, ff.1r-57v(pp.1-114)</biblScope>
+                    <location count-pages="741">
+                        <start volume="92" page="4"/>
+                        <end volume="93" page="116"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12425" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 17/09/2018 at 12:17:35 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Sun Ping, Tian Xingwen, and Sun Fanglin.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

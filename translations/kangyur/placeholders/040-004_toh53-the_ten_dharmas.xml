@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos bcu pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">daśadharmakasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Ten Dharmas</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa chos bcu pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryadaśadharmakanāmamahāyānasūtra</title>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-040-004"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh53" type="text">
+                    <ref>Toh 53</ref>
+                    <biblScope>vol:40, ff.164r-184v(pp.327-368)</biblScope>
+                    <location count-pages="42">
+                        <start volume="40" page="329"/>
+                        <end volume="40" page="370"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11583" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:27:08 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

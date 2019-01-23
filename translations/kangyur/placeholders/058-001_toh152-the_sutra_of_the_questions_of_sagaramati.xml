@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">blo gros rgya mtshos zhus pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">sāgaramatiparipṛcchāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Questions of Sāgaramati</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa blo gros rgya mtshos zhus pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasāgaramati­paripṛcchā­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">blo gros rgya mtshos zhus pa/</title>
+                <title type="otherTitle" xml:lang="en">The Questions of Sāgaramati</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Sāgaramatiparipṛcchā</title>
+                <title type="otherTitle" xml:lang="zh">海意菩薩所問淨印法門經</title>
+                <author role="translatorMain" sameAs=""/>
+            <sponsor sameAs="sponsors.xml#sponsor-158"/>
+            </titleStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-058-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh152" type="text">
+                    <ref>Toh 152</ref>
+                    <biblScope>vol.58,ff. 1r-115v(pp.1-230)</biblScope>
+                    <author role="translatorTib">t. Jinamitra</author>
+                    <author role="translatorTib">Dānaśīla</author>
+                    <author role="translatorTib">Buddhaprabha</author>
+                    <author role="translatorTib">ye shes sde</author>
+                    <location count-pages="229">
+                        <start volume="58" page="4"/>
+                        <end volume="58" page="232"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11746" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 17/09/2018 at 12:06:59 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Zhou Tian Yu, Chen Yi Qin, Irene Tillman, Archie Kao, Zhou Xun, Zhao Xuan.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

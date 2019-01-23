@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ral gcig ma dkar mo'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">suklaikajatisadhana</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-028-050"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1732" type="text">
+                    <ref>Toh 1732</ref>
+                    <biblScope>ff. 97v-99r</biblScope>
+                    <author role="translatorTib">a. rol pa'i sbas pa</author>
+                    <author role="translatorTib">t. danasila</author>
+                    <location count-pages="">
+                        <start volume="28" page="196"/>
+                        <end volume="28" page="199"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21620" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC8285" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:55:19 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

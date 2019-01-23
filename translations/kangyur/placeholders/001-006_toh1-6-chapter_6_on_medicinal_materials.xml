@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="part">
+                <title type="mainTitle" xml:lang="Bo-Ltn">sman gyi gzhi/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">bhaiṣajyavastu</title>
+                <title type="mainTitle" xml:lang="en">Chapter 6: On Medicinal Materials</title>
+                <title type="otherTitle" xml:lang="zh">1) 宣說如來不可思議秘密 2) 200 pages of「律儀根本」之《藥事》</title>
+                <author sameAs="contributors.xml#team-4" role="translatorMain">Bhaisajyavstu Translation Team</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-167"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-16"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-17"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-18"/>
+                <sponsor sameAs="sponsors.xml#sponsor-7">Leo Tong Chen and his family</sponsor>
+            </titleStmt>
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-001-006"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1-6" type="chapter">
+                    <ref>Toh 1-6</ref>
+                    <biblScope/>
+                    <location count-pages="794">
+                        <start volume="1" page="556"/>
+                        <end volume="3" page="101"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11497" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12910" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 30/11/2018 at 17:01:35 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="4">Summary</head>
+                <p tid="1">Discusses the medicines allowed to monastics, such as ghee, oil, honey, and molasses; what monastics should not consume, such as human flesh; and related subjects such as how medicine should be stored, under what circumstances monastics are allowed to cook for themselves, and how to respond to a hostile doctor.</p>
+            </div>
+            <div type="acknowledgment">
+                <p tid="2">Sponsored by Leo Tong Chen and his family. (Chi Xian Ren) Mao Gui Rong, Chi Mei. Zhang Wei, Li Mo, Zhang Mo Tong, Zhang Mo Lin.</p>
+                <p tid="3">Translators: Bhaisajyavstu Translation Team: Dr. Fumi Yao, Shayne Clarke, Gregory Schopen, Masahiro Shimoda.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

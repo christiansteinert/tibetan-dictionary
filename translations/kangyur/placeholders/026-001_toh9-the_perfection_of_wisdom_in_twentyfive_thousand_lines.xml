@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">sher phyin stong phrag nyi shu lnga pa/ \(nyi khri/\)</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">pañcaviṃśatisāhasrikā­prajñāpāramitā</title>
+                <title type="mainTitle" xml:lang="en">The Perfection of Wisdom in Twenty-five Thousand Lines</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">shes rab kyi pha rol tu phyin pa stong phrag nyi shu lnga pa/</title>
+                <title type="otherTitle" xml:lang="zh">般若波羅密多二萬五千頌</title>
+                <author role="translatorMain" sameAs="contributors.xml#team-21">Padmakara Translation Group</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-140">Gyurme Dorje</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-138">Jigme Khyentse Rinpoche</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-141">Charles Hastings</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-137"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-53"/>
+                <sponsor sameAs="sponsors.xml#sponsor-1">Kris Yao and Xiang-Jen Yao</sponsor>
+            </titleStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-026-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh9" type="text">
+                    <ref>Toh 9</ref>
+                    <biblScope/>
+                    <location count-pages="2302">
+                        <start volume="26" page="4"/>
+                        <end volume="28" page="763"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14665" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11521" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 22/01/2019 at 21:12:04 by laura</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <p tid="2">The Perfection of Wisdom in 25,000 Lines is the second longest of the six ‘mother’ Prajñāpāramitā texts (yum drug). It comprises three entire volumes of the Kangyur (vols. 26-28) and is divided into 76 chapters relating dialogues between the Buddha and senior disciples, notably Śāriputra, Subhūti and Ānanda.</p>
+                <p tid="3">With some exceptions, the text parallels the structure of the other Perfection of Wisdom sūtras, especially the Prajñāpāramitā in 10,000 Lines, yet it has traditionally been regarded as more influential, analyzing the bodhisattvas’ transcendent perfections in considerably greater detail, and showing how bodhisattvas should practise them without ever considering either their practice, or any other phenomena whatsoever, as truly existing.</p>
+                <p tid="4">An original Sanskrit version found in Gilgit exists, as well as four distinct Chinese translations. There is also an important recast Sanskrit manuscript, possibly of 5th century origin, which divides the text according to the eight sections of Asaṅga-Maitreya’s famous treatise, the Abhisamayālaṃkāra. The Tibetan text dates from the 9th century. There are several important commentaries on the text in the Tengyur, by Haribhadra, Smṛtijñānakīrti, Vimuktasena and others.</p>
+                <p tid="5">Estimated to be completed in 8 years.</p>
+            </div>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Kris Yao and Xiang-Jen Yao.</p>
+                <p tid="6">
+                    Translated by Padmakara Translation Group: Gyurme Dorje, Pema Wangyal Rinpoche, Jigme Khyentse Rinpoche, Khenpo Pema Sherab, Charles Hastings.
+                </p>
+            </div>
+        </front>
+    </text>
+</TEI>

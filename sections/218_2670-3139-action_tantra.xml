@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Kriyātantra</title>
+                <title type="mainTitle" xml:lang="en">Action tantra</title>
+                <title type="otherTitle" xml:lang="">bya ba'i rgyud/</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC76301JC21612"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W23703" sort-index="18">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC76301JC7704"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:21:08 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Commentaries on tantras of the Action class, mainly emphasizing external worship and ritual, and classified into six “families” of principal deities (Toh 2670-3139).</p>
+            </div>
+        </front>
+        <body/>
+    </text>
+</TEI>
