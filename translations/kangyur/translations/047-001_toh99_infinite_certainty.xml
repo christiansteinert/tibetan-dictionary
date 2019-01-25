@@ -21,6 +21,15 @@
                 <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by Dharmachakra Translation Committee<lb/>
                     under the patronage and supervision of 84000: Translating the Words of the
                     Buddha.</author>
+            <consultant role="advisor" sameAs="contributors.xml#person-40"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-50">Andreas Doctor</author>
+                <author role="translatorEng" sameAs="contributors.xml#person-78"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-54">Thomas Doctor</author>
+                <editor role="mainEditor" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="externalReviewer" sameAs="contributors.xml#person-51"/>
+                <editor role="copyEditor" sameAs="contributors.xml#person-249"/>
+                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-255"/>
+                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-92"/>
             </titleStmt>
             <editionStmt>
                 <edition>v 1.0 <date>2018</date>
@@ -59,14 +68,14 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 15/10/2018 at 15:51:45 by andre</note>
+                <note type="lastUpdated">Last updated at 24/01/2019 at 15:27:04 by laura</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
     <text>
         <front>
             <div type="summary">
-                <head type="summary">Summary</head>
+                <head type="summary" tid="1968">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-047-001-1"/>
                 <p tid="1">The Buddha’s renowned disciple, the monk Pūrṇa Maitrāyaṇīputra, oversees
                     the construction of a temple dedicated to the Buddha. When the project’s sponsor
@@ -87,7 +96,7 @@
                     wisdom.</p>
             </div>
             <div type="acknowledgment">
-                <head type="acknowledgment">Acknowledgements</head>
+                <head type="acknowledgment" tid="1969">Acknowledgements</head>
                 <milestone unit="chunk" xml:id="UT22084-047-001-3"/>
                 <p tid="3">Translated by the Dharmachakra Translation Committee under the guidance
                     of Chökyi Nyima Rinpoche. The translation was produced by Andreas Doctor,
@@ -96,7 +105,7 @@
                     patronage and supervision of 84000: Translating the Words of the Buddha.</p>
             </div>
             <div type="introduction">
-                <head type="introduction">Introduction</head>
+                <head type="introduction" tid="1970">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-047-001-4"/>
                     <p tid="4">
@@ -411,9 +420,9 @@
         </front>
         <body>
             <div type="translation">
-                <head type="translation"> The Translation </head>
-                <head type="titleHon">The Noble Great Vehicle Sūtra Entitled:</head>
-                <head type="titleMain">The Precious Discourse on the Blessed One’s Extensive Wisdom
+                <head type="translation" tid="1971"> The Translation </head>
+                <head type="titleHon" tid="1972">The Noble Great Vehicle Sūtra Entitled:</head>
+                <head type="titleMain" tid="1973">The Precious Discourse on the Blessed One’s Extensive Wisdom
                     That Leads to Infinite Certainty</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-047-001-29"/>
@@ -7102,7 +7111,7 @@
                         enjoy this temple with its sandalwood courtyard.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">The Songs of the Nāga Kings</head>
+                    <head type="section" tid="1974">The Songs of the Nāga Kings</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-486"/>
                     <p tid="480">The householder master builder then asked the superintendent,
                         venerable Pūrṇa, “Pūrṇa, where does the Blessed One presently reside?”</p>
@@ -9558,7 +9567,7 @@
                         heart what I am about to say.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of What Is Possible</head>
+                    <head type="section" tid="1975">Knowledge of What Is Possible</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-811"/>
                     <p tid="839">Venerable Mahā­maudgalyāyana replied to the Blessed One, “Of
                         course.” He listened attentively to the Blessed One, who proceeded:
@@ -9640,7 +9649,7 @@
                     </lg>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of What Is Impossible</head>
+                    <head type="section" tid="1976">Knowledge of What Is Impossible</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-821"/>
                     <p tid="852">“Maudgalyāyana, I also created an unfathomable amount of roots of
                         virtue for the purpose of knowledge of what is impossible. <ref cRef="F.133.a"/> Long ago in the limitless cycle of existence,
@@ -9781,7 +9790,7 @@
                     </lg>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Past</head>
+                    <head type="section" tid="1977">Knowledge of the Past</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-834"/>
                     <p tid="867">“Maudgalyāyana, <ref cRef="F.135.a"/> when I, the Thus-Gone One,
                         was training in the practices of a bodhisattva, I always maintained utter
@@ -9815,7 +9824,7 @@
                         cessation as related to knowledge of the past.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Future</head>
+                    <head type="section" tid="1978">Knowledge of the Future</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-836"/>
                     <p tid="869">“Maudgalyāyana, in the past when I was training as a bodhisattva, I
                         underwent many hardships in order to understand the future. <ref cRef="F.135.b"/> While doing so, I thought, ‘By facing these hardships
@@ -9842,7 +9851,7 @@
                         cessation as related to knowledge of the future.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Present</head>
+                    <head type="section" tid="1979">Knowledge of the Present</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-837"/>
                     <p tid="870">“Furthermore, Maudgalyāyana, I also created numerous roots of
                         virtue in order to achieve knowledge of the present. Long ago in limitless
@@ -10788,7 +10797,7 @@
                     </p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Karma</head>
+                    <head type="section" tid="1980">Knowledge of Karma</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-949"/>
                     <p tid="993">“Maudgalyāyana, I also underwent countless trials and deprivations
                         in order to understand karma. Long ago in limitless cyclic existence,
@@ -11266,7 +11275,7 @@
                         are.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Paths That Lead to All Destinations</head>
+                    <head type="section" tid="1981">Knowledge of the Paths That Lead to All Destinations</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-992"/>
                     <p tid="1043">“Long ago in limitless cyclic existence, Maudgalyāyana, long
                         before even the far distant past there was an impressive sage named
@@ -11537,7 +11546,7 @@
                         days I was King Unfathomable Banner.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Several Elements</head>
+                    <head type="section" tid="1982">Knowledge of the Several Elements</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1014"/>
                     <p tid="1064">“Maudgalyāyana, in the past when I was training in the practices
                         of a bodhisattva, I created countless roots of virtue for the sake of
@@ -12127,7 +12136,7 @@
                         and exert themselves diligently.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Various Elements</head>
+                    <head type="section" tid="1983">Knowledge of the Various Elements</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1066"/>
                     <p tid="1122">“Maudgalyāyana, in order to understand the various elements, when
                         I was training as a bodhisattva in the past, I gathered understanding of the
@@ -12454,7 +12463,7 @@
                         various elements should train in the non-origination of everything.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the World</head>
+                    <head type="section" tid="1984">Knowledge of the World</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1101"/>
                     <p tid="1157">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, in order to understand the world, I decided to
@@ -12913,7 +12922,7 @@
                         unsurpassed and perfect awakening.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Concentration</head>
+                    <head type="section" tid="1985">Knowledge of Concentration</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1146"/>
                     <p tid="1203">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva, I created numerous different roots of virtue in order to
@@ -13131,7 +13140,7 @@
                         should apply themselves to the phenomena that arise and cease.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Liberation</head>
+                    <head type="section" tid="1986">Knowledge of Liberation</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1164"/>
                     <p tid="1218">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created <term type="ignore">innumerable</term>
@@ -13505,7 +13514,7 @@
                         that one can fully awaken to buddhahood, not through laziness.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Absorption</head>
+                    <head type="section" tid="1987">Knowledge of Absorption</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1206"/>
                     <p tid="1259">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -13827,7 +13836,7 @@
                         the Dharma in order to bring an end to beings’ suffering.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Equilibrium</head>
+                    <head type="section" tid="1988">Knowledge of Equilibrium</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1242"/>
                     <p tid="1293">“Furthermore, Maudgalyāyana, when I was training in the practices
                         of a bodhisattva in the past, I created numerous different roots of virtue
@@ -14208,7 +14217,7 @@
                         cultivate inquisitiveness.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Affliction </head>
+                    <head type="section" tid="1989">Knowledge of Affliction </head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1270"/>
                     <p tid="1323">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created <term type="ignore">innumerable</term>
@@ -14445,7 +14454,7 @@
                         afflictions will possess no malice.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Purification</head>
+                    <head type="section" tid="1990">Knowledge of Purification</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1294"/>
                     <p tid="1345">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created unfathomably numerous roots of virtue in
@@ -14816,7 +14825,7 @@
                         beings. Maudgalyāyana, it is in that way that bodhisattva great beings <ref cRef="F.205.b"/> should complete and perfect their aspirations.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Abiding</head>
+                    <head type="section" tid="1991">Knowledge of Abiding</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1334"/>
                     <p tid="1384">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created unfathomably numerous roots of virtue in
@@ -15485,7 +15494,7 @@
                     </p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the World</head>
+                    <head type="section" tid="1992">Knowledge of the World</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1421"/>
                     <p tid="1481">“Maudgalyāyana, <ref cRef="F.213.b"/> when I was training in the
                         practices of a bodhisattva in the past, I created numerous different roots
@@ -15576,7 +15585,7 @@
                     </p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Several Inclinations</head>
+                    <head type="section" tid="1993">Knowledge of Several Inclinations</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1433"/>
                     <p tid="1491">“Long ago in limitless cyclic existence, Maudgalyāyana, long
                         before even the distant past, there was a captain named Loving All Beings
@@ -15748,7 +15757,7 @@
                         sentient beings who remain within the vehicle of the bodhisattvas.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Various Inclinations</head>
+                    <head type="section" tid="1994">Knowledge of the Various Inclinations</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1453"/>
                     <p tid="1511">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -16164,7 +16173,7 @@
                         must endeavor to realize omniscient wisdom.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Faculties</head>
+                    <head type="section" tid="1995">Knowledge of the Faculties</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1503"/>
                     <p tid="1562">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -16419,7 +16428,7 @@
                         eons, and also accomplish awakening.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Powers</head>
+                    <head type="section" tid="1996">Knowledge of the Powers</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1531"/>
                     <p tid="1592">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, <ref cRef="F.227.b"/> I created boundless roots of
@@ -16632,7 +16641,7 @@
                         light of wisdom, and relinquish mundane possessions.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Diligence</head>
+                    <head type="section" tid="1997">Knowledge of Diligence</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1558"/>
                     <p tid="1616">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -16998,7 +17007,7 @@
                         of diligence their deeds will become weighty.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Levels</head>
+                    <head type="section" tid="1998">Knowledge of the Levels</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1608"/>
                     <p tid="1661">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -17167,7 +17176,7 @@
                         all phenomena.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Past </head>
+                    <head type="section" tid="1999">Knowledge of the Past </head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1624"/>
                     <p tid="1676">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -17303,7 +17312,7 @@
                         of irreversibility.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of What Is Possible</head>
+                    <head type="section" tid="2000">Knowledge of What Is Possible</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1640"/>
                     <p tid="1690">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -17480,7 +17489,7 @@
                         reaches the irreversible stage.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Future</head>
+                    <head type="section" tid="2001">Knowledge of the Future</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1658"/>
                     <p tid="1708">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -17676,7 +17685,7 @@
                         gatherings of beings.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Death</head>
+                    <head type="section" tid="2002">Knowledge of Death</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1681"/>
                     <p tid="1731">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -18102,7 +18111,7 @@
                         qualities of the irreversible stage.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of Birth</head>
+                    <head type="section" tid="2003">Knowledge of Birth</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1726"/>
                     <p tid="1781">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -18469,7 +18478,7 @@
                         in the future.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Defilement of Desire</head>
+                    <head type="section" tid="2004">Knowledge of the Defilement of Desire</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1770"/>
                     <p tid="1825">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -18637,7 +18646,7 @@
                         five superknowledges will benefit all beings.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Defilement of Existence</head>
+                    <head type="section" tid="2005">Knowledge of the Defilement of Existence</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1792"/>
                     <p tid="1844">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created boundless roots of virtue in order to
@@ -18794,7 +18803,7 @@
                         bodhisattvas must train in non-action with respect to all phenomena.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Defilement of Views</head>
+                    <head type="section" tid="2006">Knowledge of the Defilement of Views</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1814"/>
                     <p tid="1866">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created vast and boundless roots of virtue in
@@ -19344,7 +19353,7 @@
                         sentient beings have no essential nature.”</p>
                 </div>
                 <div type="section">
-                    <head type="section">Knowledge of the Defilement of Ignorance</head>
+                    <head type="section" tid="2007">Knowledge of the Defilement of Ignorance</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1871"/>
                     <p tid="1919">“Maudgalyāyana, when I was training in the practices of a
                         bodhisattva in the past, I created numerous different roots of virtue in
@@ -19626,7 +19635,7 @@
                             Wisdom That Leads to Infinite Certainty</title>. </p>
                 </div>
                 <div type="colophon">
-                    <head type="colophon">Colophon</head>
+                    <head type="colophon" tid="2008">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1909"/>
                     <p tid="1957">This was translated by the Indian preceptor, Prajñāvarman, and the
                         translator, venerable Yeshe Nyingpo. The text was later edited and finalized
@@ -19637,12 +19646,12 @@
         </body>
         <back>
             <div type="notes">
-                <head type="notes">Notes</head>
+                <head type="notes" tid="2009">Notes</head>
             </div>
             <div type="listBibl">
-                <head type="listBibl">Bibliography</head>
+                <head type="listBibl" tid="2010">Bibliography</head>
                 <div type="section">
-                    <head type="section">The Translated Text</head>
+                    <head type="section" tid="2011">The Translated Text</head>
                     <bibl xml:id="UT22084-047-001-2331">
                         <title xml:lang="Bo-Ltn">’phags pa bcom ldan ’das kyi ye shes rgyas pa’i mdo
                             sde rin po che mtha’ yas pa mthar phyin pa zhes bya ba theg pa chen po’i
@@ -19659,9 +19668,9 @@
                         1–725.</bibl>
                 </div>
                 <div type="section">
-                    <head type="section">Works Cited in Introduction and Endnotes</head>
+                    <head type="section" tid="2012">Works Cited in Introduction and Endnotes</head>
                     <div type="section">
-                        <head type="section">Tibetan Reference Works</head>
+                        <head type="section" tid="2013">Tibetan Reference Works</head>
                         <bibl xml:id="UT22084-047-001-2333">Butön Rinchen Drub (<foreign xml:lang="Bo-Ltn">bu ston rin chen grub</foreign>). <title xml:lang="Bo-Ltn">bde bar gshegs pa’i bstan pa’i gsal byed chos kyi
                                 ’byung gnas gsung rab rin po che’i mdzod</title>. In <title xml:lang="Bo-Ltn">sa skya’i chos ’byung gces bsdus</title>, vol. 2.
                             Beijing: krung go’i bod rig pa dpe skrun khang, 2009.</bibl>
@@ -19698,7 +19707,7 @@
                             Tibetology Publishing House), 2006–9, vol. 107, pp. 17–852.</bibl>
                     </div>
                     <div type="section">
-                        <head type="section">Works Cited in English and Other Languages</head>
+                        <head type="section" tid="2014">Works Cited in English and Other Languages</head>
                         <bibl xml:id="UT22084-047-001-2341">Csoma de Körös, Alexander. “Analysis of
                             the Mdo.” <title xml:lang="en">Asiatic Researches</title> 20 (1836):
                             426–428.</bibl>

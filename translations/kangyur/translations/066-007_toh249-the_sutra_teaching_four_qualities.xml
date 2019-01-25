@@ -12,13 +12,18 @@
                 <title type="longTitle" xml:lang="Sa-Ltn">ārya­catur­dharma­nirdeśa­nāma­mahāyāna­sūtra</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་ཆོས་བཞི་བསྟན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
                 <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra Entitled Teaching the Four Factors</title>
-                <author role="translatorMain">Translated by Dharmachakra Translation Committee
+                <author sameAs="" role="translatorMain">Translated by Dharmachakra Translation Committee
                     <lb/>under the patronage and supervision of 84000: Translating the Words of the Buddha </author>
+            <author role="translatorEng" sameAs="contributors.xml#person-258"/>
+                <consultant role="advisor" sameAs="contributors.xml#person-259"/>
+                <editor role="externalReviewer" sameAs="contributors.xml#person-250"/>
+                <editor role="copyEditor" sameAs="contributors.xml#person-249"/>
+                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-255"/>
             </titleStmt>
             <editionStmt>
-            <edition>v 1.02 <date>2018</date>
-            </edition>
-           </editionStmt>
+                <edition>v 1.02 <date>2018</date>
+                </edition>
+            </editionStmt>
            <publicationStmt status="2.a">
                <publisher>
                    <name>84000: Translating the Words of the Buddha</name> is a global
@@ -51,24 +56,24 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 09:34:05 by admin</note>
+                <note type="lastUpdated">Last updated at 24/01/2019 at 16:11:10 by laura</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
   <text>
         <front>
             <div type="summary">
-                <head type="summary">Summary</head>
+                <head type="summary" tid="21">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-066-007-1"/>
                 <p tid="1">While Buddha Śākyamuni is residing in the Sudharmā assembly hall in the Heaven of the Thirty-Three, he explains to the great bodhisattva Maitreya four factors that make it possible to overcome the effects of any negative deeds one has committed. These four are: the action of repentance, which involves feeling remorse; antidotal action, which is to practice virtue as a remedy to non-virtue; the power of restraint, which involves vowing not to repeat a negative act; and the power of support, which means taking refuge in the Buddha, Dharma, and Saṅgha, and never forsaking mind of awakening. The Buddha concludes by recommending that bodhisattvas regularly recite this sūtra and reflect on its meaning as an antidote to any further wrongdoing.</p>
             </div>
             <div type="acknowledgment">
-                <head type="acknowledgment">Acknowledgements</head>
+                <head type="acknowledgment" tid="22">Acknowledgements</head>
                 <milestone unit="chunk" xml:id="UT22084-066-007-2"/>
                 <p tid="2">Translated by Adam Pearcey, with the assistance of Alak Zenkar Rinpoche. An earlier draft of this translation was published on Lotsawa House (<ref target="https://www.lotsawahouse.org/">lotsawahouse.org</ref>) in 2013. The following updated version was then completed in 2017 under the patronage and supervision of 84000: Translating the Words of the Buddha.</p>
             </div>
             <div type="introduction">
-                <head type="introduction">Introduction</head>
+                <head type="introduction" tid="23">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-066-007-3"/>
                     <p tid="3">As its name suggests, <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> (<title xml:lang="en">The Sūtra Teaching the Four Factors</title>) is an explanation of four <foreign xml:lang="Sa-Ltn" type="term">dharmas</foreign>, here meaning <distinct>factors</distinct> or <distinct>qualities</distinct>.<note place="end" xml:id="UT22084-066-007-4" index="1"> The <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> is followed in the Degé Kangyur by two very similarly titled sūtras, the <title xml:lang="Sa-Ltn">Ārya­catur­dharmaka</title> (Toh 250), which describes four dharmas (the mind of awakening, spiritual guides, patience, and living in solitude) that bodhisattvas must never relinquish throughout their lives, and the <title xml:lang="Sa-Ltn">Caturdharmaka</title> (Toh 251), which lists four concerns (for sexual partners, the royal court, attractiveness, and wealth) to be avoided at all costs.</note> These factors relate to the practice of confession (even though no equivalent of that word occurs in the sūtra itself) and the purification of misdeeds or negative, harmful actions (<foreign xml:lang="Sa-Ltn" type="term">pāpa</foreign>). The four are: (1) the action (or correct approach) of repentance or self-reproach (<foreign xml:lang="Sa-Ltn" type="term">vidūṣaṇā­samudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rnam par sun ’byin pa kun tu spyod pa</foreign>), which involves feeling remorse for past negative actions; (2) antidotal or remedial action (<foreign xml:lang="Sa-Ltn" type="term">pratipa­ṣasamudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">gnyen po kun tu spyod pa</foreign>), which means cultivating virtuous actions as an antidote to misdeeds; (3) the power of restraint (<foreign xml:lang="Sa-Ltn" type="term">pratyāpattibala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">sor chud par byed pa’i stobs</foreign>), which means vowing not to repeat a negative action; and (4) the power of support (<foreign xml:lang="Sa-Ltn" type="term">āśrayabala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rten gyi stobs</foreign>), which means taking refuge in the Buddha, Dharma, and Saṅgha, and never forsaking the mind of awakening. Through employing these four factors, the sūtra says, any negative act, no matter how grave, can be “overcome” in the sense that its karmic consequences can be transformed. This became a crucial idea for Mahāyāna ethics, both in theory and in practice.</p>
@@ -97,9 +102,9 @@
         </front>
         <body>
             <div type="translation">
-                <head type="translation"> The Translation </head>
-                <head type="titleHon">The Noble Mahāyāna Sūtra Entitled</head>
-                <head type="titleMain">Teaching the Four Factors</head>
+                <head type="translation" tid="24"> The Translation </head>
+                <head type="titleHon" tid="25">The Noble Mahāyāna Sūtra Entitled</head>
+                <head type="titleMain" tid="26">Teaching the Four Factors</head>
                 <div type="section">
                    <milestone unit="chunk" xml:id="UT22084-066-007-16"/>
                   <p tid="9">Homage to all the buddhas and bodhisattvas!</p>
@@ -128,7 +133,7 @@
                     </p>
                 </div>
                <div type="colophon">
-                <head type="colophon">Colophon</head>
+                <head type="colophon" tid="27">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-066-007-24"/>
                     <p tid="20">Translated, edited, and corrected by the Indian preceptor Surendrabodhi and the principal editor and translator venerable Yeshé Dé.</p>
                 </div>
@@ -136,12 +141,12 @@
         </body>
         <back>
             <div type="notes">
-                <head type="notes">Notes</head>
+                <head type="notes" tid="28">Notes</head>
             </div>
           <div type="listBibl">
-                <head type="listBibl">Bibliography</head>
+                <head type="listBibl" tid="29">Bibliography</head>
                 <div type="section">
-                    <head type="section">Tibetan Texts</head>
+                    <head type="section" tid="30">Tibetan Texts</head>
                     <bibl xml:id="UT22084-066-007-25">Bhāviveka. <title xml:lang="Bo-Ltn">dbu ma’i snying po’i ’grel pa rtog ge ’bar ba </title>(<title xml:lang="Sa-Ltn">Madhyamaka­hṛdaya­tarka­jvālā</title>). Toh 3856. Degé Tengyur vol. 98 (dbu ma, dza), folios 40b–329b.</bibl>
                     <bibl xml:id="UT22084-066-007-26">Gampopa Sönam Rinchen (<foreign xml:lang="Bo-Ltn">sgam po pa bsod nams rin chen</foreign>). <title xml:lang="Bo-Ltn">dam chos yid bzhin gyi nor bu thar pa rin po che’i rgyan</title>. In <title xml:lang="Bo-Ltn">bstan rim gces btus</title> (Institute of Tibetan Classics vol. 10). Delhi: bod kyi gtsug lag zhib ’jug khang, 2009, pp. 45–243.</bibl>
                     <bibl xml:id="UT22084-066-007-27">Lobzang Chökyi Gyaltsen (<foreign xml:lang="Bo-Ltn">blo bzang chos kyi rgyal mtshan</foreign>). <title xml:lang="Bo-Ltn">stobs bzhi’i bshags bsdoms bya tshul</title>. In <title xml:lang="Bo-Ltn">blo bzang chos kyi rgyi mtshan dpal bzang po’i gsung ’bum</title>, 5 volumes, bkra shis lhun po’i par khang. 199? vol. 4, pp. 527–32. (Cf. vol. 5, pp. 293–6).</bibl>
@@ -155,7 +160,7 @@
                     <bibl xml:id="UT22084-066-007-33">Tsongkhapa Lobzang Drakpa (<foreign xml:lang="Bo-Ltn">tsong kha pa blo bzang grags pa</foreign>). <title xml:lang="Bo-Ltn">skyes bu gsum gyi nyams su blang ba’i rim pa thams cad tshang bar ston pa’i byang chub lam gyi rim pa</title> in <title xml:lang="Bo-Ltn">rje tsong kha pa’i gsung ’bum</title>. 18 volumes. Dharamsala: Sherig Parkhang, 1997, vol. 13, folios 1–521.</bibl>
                 </div>
                 <div type="section">
-                    <head type="section">Western Language Sources and Translations</head>
+                    <head type="section" tid="31">Western Language Sources and Translations</head>
                     <bibl xml:id="UT22084-066-007-34">Bendall, Cecil and W.H.D. Rouse. <title xml:lang="en">Śikshā­Samuccaya: A Compendium of Buddhist Doctrine Compiled by Śāntideva</title>. London: John Murray, 1922.</bibl>
                     <bibl xml:id="UT22084-066-007-35">Feer, Henri Léon. “Le Sūtra des Quatre Préceptes.” <title xml:lang="fr">Journal Asiatique</title>, sér. 6, tome 8 (1866): 269–357.</bibl>
                     <bibl xml:id="UT22084-066-007-36">Gampopa. <title xml:lang="en">The Jewel Ornament of Liberation: The Wish-fulfilling Gem of the Noble Teachings</title>. Translated by Khenpo Konchog Gyaltsen Rinpoche. Ithaca: Snow Lion Publications, 1998.</bibl>
@@ -175,6 +180,7 @@
                         <gloss type="term" xml:id="UT22084-066-007-45">
                             <term>action of repentance </term>
                             <term xml:lang="Bo-Ltn">rnam par sun ’byin pa kun tu spyod pa </term>
+                            <term xml:lang="bo">རྣམ་པར་སུན་འབྱིན་པ་ཀུན་ཏུ་སྤྱོད་པ།</term>
                             
                             <term xml:lang="Sa-Ltn">vidūṣaṇā­samudācāra</term>
                             <term type="definition">Feeling remorse for past negative actions.</term>
@@ -184,6 +190,7 @@
                         <gloss type="term" xml:id="UT22084-066-007-46">
                             <term>power of support </term>
                             <term xml:lang="Bo-Ltn">rten gyi stobs </term>
+                            <term xml:lang="bo">རྟེན་གྱི་སྟོབས།</term>
                             
                             <term xml:lang="Sa-Ltn">āśrayabala</term>
                             <term type="definition">Calling upon the Buddha, Dharma, and Saṅgha and vowing not to
@@ -194,6 +201,7 @@
                         <gloss type="term" xml:id="UT22084-066-007-47">
                             <term>power of restraint </term>
                             <term xml:lang="Bo-Ltn">sor chud par byed pa’i stobs </term>
+                            <term xml:lang="bo">སོར་ཆུད་པར་བྱེད་པའི་སྟོབས།</term>
                             
                             <term xml:lang="Sa-Ltn">pratyāpattibala</term>
                             <term type="definition">Pledging not to repeat past negative actions.</term>
@@ -203,6 +211,7 @@
                         <gloss type="term" xml:id="UT22084-066-007-48">
                             <term>antidotal action </term>
                             <term xml:lang="Bo-Ltn">gnyen po kun tu spyod pa </term>
+                            <term xml:lang="bo">གཉེན་པོ་ཀུན་ཏུ་སྤྱོད་པ།</term>
                             
                             <term xml:lang="Sa-Ltn">pratipa­ṣasamudācāra</term>
                             <term type="definition">Carrying out virtuous actions as an antidote to past negative
@@ -213,6 +222,7 @@
                         <gloss type="person" xml:id="UT22084-066-007-49">
                             <term>Maitreya</term>
                             <term xml:lang="Bo-Ltn">byams pa </term>
+                            <term xml:lang="bo">བྱམས་པ།</term>
                             
                             <term xml:lang="Sa-Ltn">Maitreya</term>
                             <term type="definition">Bodhisattva of loving kindness; the next buddha to follow
@@ -223,6 +233,7 @@
                         <gloss type="person" xml:id="UT22084-066-007-50">
                             <term>Mañjuśrī</term>
                             <term xml:lang="Bo-Ltn">’jam dpal </term>
+                            <term xml:lang="bo">འཇམ་དཔལ།</term>
                             
                             <term xml:lang="Sa-Ltn">Mañjuśrī</term>
                             <term type="definition">Bodhisattva of wisdom.</term>
@@ -232,6 +243,7 @@
                         <gloss type="person" xml:id="UT22084-066-007-51">
                             <term>Śakra</term>
                             <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
                             
                             <term xml:lang="Sa-Ltn">Śakra</term>
                             <term type="definition">An alternative name for Indra, lord of the gods, who, according to
@@ -242,6 +254,7 @@
                         <gloss type="person" xml:id="UT22084-066-007-52">
                             <term>Surendrabodhi</term>
                             <term xml:lang="Bo-Ltn">su ren dra bo dhi </term>
+                            <term xml:lang="bo">སུ་རེན་དྲ་བོ་དྷི།</term>
                             
                             <term xml:lang="Sa-Ltn">Surendrabodhi</term>
                             <term type="definition">An Indian paṇḍiṭa resident in Tibet during the late eighth and early
@@ -252,6 +265,7 @@
                         <gloss type="person" xml:id="UT22084-066-007-53">
                             <term>Yeshé Dé</term>
                             <term xml:lang="Bo-Ltn">ye shes sde </term>
+                            <term xml:lang="bo">ཡེ་ཤེས་སྡེ།</term>
                             
                             <term xml:lang="Sa-Ltn"/>
                             <term type="definition">A prolific Tibetan translator active during the late eighth and
@@ -262,6 +276,7 @@
                         <gloss type="place" xml:id="UT22084-066-007-54">
                             <term>Sudharmā </term>
                             <term xml:lang="Bo-Ltn">chos bzang </term>
+                            <term xml:lang="bo">ཆོས་བཟང་།</term>
                             
                             <term xml:lang="Sa-Ltn">Sudharmā</term>
                             <term type="definition">An assembly hall located in the southwest of the Heaven of the
@@ -272,6 +287,7 @@
                         <gloss type="place" xml:id="UT22084-066-007-55">
                             <term>Heaven of the Thirty-Three</term>
                             <term xml:lang="Bo-Ltn">sum cu rtsa gsum </term>
+                            <term xml:lang="bo">སུམ་ཅུ་རྩ་གསུམ།</term>
                             
                             <term xml:lang="Sa-Ltn">Trāyastriṃśa</term>
                             <term type="definition">The second heaven of the desire realm located above Mount
