@@ -16,13 +16,13 @@
                 <title type="otherTitle" xml:lang="zh"/>
                 <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
                     supervision of 84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-76"/>
-                <editor role="mainEditor" sameAs="contributors.xml#person-51">James Gentry</editor>
-                <editor role="mainEditor" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-40"/>
+                <author role="translatorEng" sameAs="contributors.xml#person-76">Wiesiek Mical</author>
+                <editor role="reviser" sameAs="contributors.xml#person-51">James Gentry</editor>
+                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
+                <consultant role="advisor" sameAs="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.12 <date>2016</date>
+                <edition>v 2.13 <date>2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -60,7 +60,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 16/01/2019 at 10:35:39 by admin</note>
+                <note type="lastUpdated">Last updated at 06/02/2019 at 01:11:30 by celso</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -128,7 +128,7 @@ Appendix: Sanskrit text-->
                     of the Buddha.</p>
             </div>
             <div type="introduction">
-                <head type="introduction" tid="1966">Introduction**</head>
+                <head type="introduction" tid="1966">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-080-015-3"/>
                     <p tid="5">Like most Buddhist tantras, the <title xml:lang="Sa-Ltn">Caṇḍa­mahā­roṣaṇa­tantra</title> (CMT) is
@@ -432,7 +432,7 @@ Appendix: Sanskrit text-->
                         <l>“Inseparable from emptiness and compassion,</l>
                         <l>Abiding in pleasure with divine lust,</l>
                         <l>Devoid of all mental constructs am I,</l>
-                        <l> Free from mental elaboration and undistracted. <!--[I.4]--></l>
+                        <l>Free from mental elaboration and undistracted. <!--[I.4]--></l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-29"/>
                     <lg tid="38">
@@ -681,48 +681,65 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-63"/>
                     <p tid="74">“Now comes the maṇḍala tutelage mantra:</p>
-                    <ab type="mantra" tid="1884">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Blessed
+                    <p rend="mantra" tid="1884">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Blessed
                         Caṇḍa­mahā­roṣaṇa, together with your retinue, come, come! <foreign type="mantra" xml:lang="Sa-Ltn">Jaḥ
                             hūṁ vaṁ hoḥ</foreign>! Assume tutelage over this maṇḍala! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ
                             phaṭ! Svāhā</foreign>!<note place="end" xml:id="UT22084-080-015-2154" index="13">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ śrīcaṇḍa­mahāroṣaṇa sarva­parivārasahita āgaccha āgaccha jaḥ
                                 hūṁ vaṁ hoḥ atra maṇḍale adhiṣṭhānaṃ kuru hūṁ phaṭ svāhā</foreign>.</note>
-                    </ab>
+                        </seg>
+                    </p>
                     <p tid="76">“With this mantra, one should summon, induct, bind, and enthrall Caṇḍa­mahā­roṣaṇa, and then
                         worship him. <!--[II.19]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-64"/>
                     <p tid="77">“Now comes the worship mantra:</p>
-                    <ab type="mantra" tid="1885">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Black Acala, accept this
+                    <p rend="mantra" tid="1885">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Black Acala, accept this
                         flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2155" index="14">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ kṛṣṇācala puṣpaṃ
                                 pratīccha hūṁ phaṭ</foreign>, and so on.</note>
-                    </ab>
-                    <ab type="mantra" tid="1886">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</ab>
-                    <ab type="mantra" tid="1887">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Yellow Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</ab>
-                    <ab type="mantra" tid="1888">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Red Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</ab>
-                    <ab type="mantra" tid="1889">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Green Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>! <!--[II.20]-->
-                    </ab>
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1886">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1887">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Yellow Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1888">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Red Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1889">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Green Acala, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg> <!--[II.20]-->
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-65"/>
-                    <ab type="mantra" tid="1890">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Hatred Vajrī, accept this
+                    <p rend="mantra" tid="1890">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Hatred Vajrī, accept this
                         flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2156" index="15"> Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ dveṣavajri puṣpaṃ
                                 pratīccha hūṁ phaṭ</foreign>, and so on.</note>
-                    </ab>
-                    <ab type="mantra" tid="1891">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Delusion Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!<lb/>
-                    </ab>
-                    <ab type="mantra" tid="1892">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Calumny Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!<lb/>
-                    </ab>
-                    <ab type="mantra" tid="1893">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Passion Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!<lb/>
-                    </ab>
-                    <ab type="mantra" tid="1894">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Envy Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>! <!--[II.21]-->
-                    </ab>
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1891">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Delusion Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1892">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Calumny Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1893">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Passion Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>
+                    </p>
+                    <p rend="mantra" tid="1894">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Envy Vajrī, accept this flower! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg> <!--[II.21]-->
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-66"/>
                     <lg tid="80">
                         <l>“The flowers, and likewise the light, the incense,</l>
@@ -854,71 +871,81 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-82"/>
                     <p tid="100">“This is the water empowerment:</p>
-                    <p type="mantra" tid="101">“Visualizing the disciple to be pure and spotless like a crystal, one should draw some water from
-                        the victory jar with a mango blossom and sprinkle the disciple with it, with the words ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ āḥ</foreign>, for the one possessed of the glory of the pledge of
+                    <p tid="101">“Visualizing the disciple to be pure and spotless like a crystal, one should draw some water from
+                        the victory jar with a mango blossom and sprinkle the disciple with it, with the words <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ āḥ</foreign>, for the one possessed of the glory of the pledge of
                         the empowerment of all the tathāgatas, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ</foreign>.’<note place="end" xml:id="UT22084-080-015-2159" index="18">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
                                 āḥ sarva­tathāgatābhiṣeka­samaya­śriye hūṁ.</foreign>
                         </note>
+                        </seg>
                         <!--[III.12]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-83"/>
                     <p tid="102">“This is the crown empowerment:</p>
-                    <p type="mantra" tid="103">“One should first fashion a cloth crown that resembles a crown with many gems. Then one should
+                    <p tid="103">“One should first fashion a cloth crown that resembles a crown with many gems. Then one should
                         visualize the disciple as a universal emperor, place the crown on his head, and sprinkle him as before.
-                        The mantra is ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, enter, enter into
+                        The mantra is <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, enter, enter into
                         his heart! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2160" index="19">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa āviśa
                                 āviśa asya hṛdaye hūṁ phaṭ.</foreign>
                         </note>
+                        </seg>
                         <!--[III.13]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-84"/>
                     <p tid="104">“This is the sword empowerment:</p>
-                    <p type="mantra" tid="105">“One should place a sword made of iron or the like in the disciple’s right hand and sprinkle him
-                        as before. ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, strike, strike! Kill, kill all the
+                    <p tid="105">“One should place a sword made of iron or the like in the disciple’s right hand and sprinkle him
+                        as before. <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, strike, strike! Kill, kill all the
                         enemies! O sword of knowledge! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2161" index="20">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
                                 hana hana māraya māraya sarva­śatrūñ jñāna­khaḍga hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[III.14]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-85"/>
                     <p tid="106">“This is the noose empowerment:</p>
-                    <p type="mantra" tid="107">“One should place a noose made of copper or the like in his left hand, which should display the
-                        threatening gesture. Then sprinkle him as before. ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
+                    <p tid="107">“One should place a noose made of copper or the like in his left hand, which should display the
+                        threatening gesture. Then sprinkle him as before. ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
                         seize, seize! Pull, pull all the evildoers with the noose! Bind, bind! To you, O great truth,<note place="end" xml:id="UT22084-080-015-2162" index="21">“Great Truth” is an epithet of Yama.</note> to
                         you, O Dharma,<note place="end" xml:id="UT22084-080-015-2163" index="22">“Dharma” is an epithet of
                             Amitābha.</note>
                         <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2164" index="23">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ gṛhṇa gṛhṇa kaṭṭa kaṭṭa
                                 sarvaduṣṭān pāśena bandha bandha mahā­satya te dharma te svāhā</foreign>.</note>
+                        </seg>
                         <!--[III.15]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-86"/>
                     <p tid="108">“This is the name empowerment:</p>
-                    <p type="mantra" tid="109">“One should invite the disciple, crowned with the <term>seal</term> of Caṇḍa­mahā­roṣaṇa, to sit
-                        down, visualizing him in Caṇḍa­mahā­roṣaṇa’s form. One should recite, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, blessed lord Black Acala, you are an accomplished being! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2165" index="24">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ he śrī­bhagavan
-                                kṛṣṇācala siddhas tvaṃ hūṁ phaṭ</foreign>.</note> Then one should anoint him as before. In this
+                    <p tid="109">“One should invite the disciple, crowned with the <term>seal</term> of Caṇḍa­mahā­roṣaṇa, to sit
+                        down, visualizing him in Caṇḍa­mahā­roṣaṇa’s form. One should recite, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, blessed lord Black Acala, you are an accomplished being! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2165" index="24">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ he śrī­bhagavan
+                                kṛṣṇācala siddhas tvaṃ hūṁ phaṭ</foreign>.</note>
+                        </seg> Then one should anoint him as before. In this
                         way, the name empowerment of the five Acalas, according to the color division of black and so forth,
                         should be given to the sādhaka. This is the fivefold empowerment. <!--[III.16]-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-87"/>
                     <p tid="110">“To women, however, instead of the crown empowerment, a vermillion empowerment should be given: </p>
-                    <p type="mantra" tid="111">“Visualizing the disciple in the form of the fierce great goddess, one should recite, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, goddess, enter, enter into her heart! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2166" index="25">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ bhagavati āviśa āviśa
+                    <p tid="111">“Visualizing the disciple in the form of the fierce great goddess, one should recite, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, goddess, enter, enter into her heart! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2166" index="25">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ bhagavati āviśa āviśa
                                 asyā hṛdaye hūṁ phaṭ.</foreign>
-                        </note> One should place in her right hand a knife of iron or other material, and recite, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, knife, cut, cut the flesh of all the māras! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2167" index="26">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ karttike sarvamārāṇāṃ
+                        </note>
+                        </seg> One should place in her right hand a knife of iron or other material, and recite, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, knife, cut, cut the flesh of all the māras! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2167" index="26">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ karttike sarvamārāṇāṃ
                                 māṃsaṃ kartaya kartaya hūṁ phaṭ.</foreign>
                         </note>
+                        </seg>
                         <ref cRef="F.307.b"/> In her left hand, one should place a human skull, or one made of wood, and so on,
-                        and recite, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, skull, hold, hold the blood of all the
+                        and recite, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, skull, hold, hold the blood of all the
                         enemies! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ!</foreign>’<note place="end" xml:id="UT22084-080-015-2168" index="27">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ kapāla sarvaśatrūṇāṃ raktaṃ dhāraya
                                 dhāraya hūṁ phaṭ.</foreign>
-                        </note> Then one should invite her to assume the goddess’s posture, and visualize her in the goddess’s
-                        form. One should recite, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, blessed Hatred Vajrī, you
+                        </note>
+                        </seg> Then one should invite her to assume the goddess’s posture, and visualize her in the goddess’s
+                        form. One should recite, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, blessed Hatred Vajrī, you
                         are an accomplished being! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2169" index="28">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ he
                                 śrīdveṣavajri siddhā tvaṃ hūṁ phaṭ.</foreign>
-                        </note> In this way, with the names of the five yoginīs according to the division of colors starting with
+                        </note>
+                        </seg> In this way, with the names of the five yoginīs according to the division of colors starting with
                         the black, one should anoint women. To them, however, in place of the <term>wisdom empowerment</term>, the
                         skillful means empowerment should be given. <!--[III.17]-->
                     </p>
@@ -934,14 +961,15 @@ Appendix: Sanskrit text-->
                         <l>Please have compassion, O lord.’ <!--[III.18]--></l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-89"/>
-                    <p type="mantra" tid="115">“The disciple should then bow to the teacher, leave the room, and recite the mantra, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’ </p>
+                    <p tid="115">“The disciple should then bow to the teacher, leave the room, and recite the mantra, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’</seg> </p>
                     <p tid="116">“The teacher should make offerings to himself with wine, meat, and so forth, and then satiate the
                         wisdom consort. He should unite with her and place the semen and blood obtained from this in the fold of a
                         leaf or such. He should then summon the disciple. Using his ring finger and thumb, the teacher should take
                         the substance and use it to write the syllables <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ</foreign> and
                             <foreign type="mantra" xml:lang="Sa-Ltn">phaṭ</foreign> on the disciple’s tongue. He should then ask
-                        the disciple to recite, ‘Ah, pleasure.’<note place="end" xml:id="UT22084-080-015-2170" index="29">Skt.
+                        the disciple to recite, <seg type="mantra">‘Ah, pleasure.’<note place="end" xml:id="UT22084-080-015-2170" index="29">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">aho sukham</foreign>.</note>
+                        </seg>
                     </p>
                     <p tid="117">“Then the teacher should say, ‘Today I will cause the buddha-knowledge to arise, through which
                         lord buddhas of the past, future, and present attain nonabiding nirvāṇa. But you must not speak of this in
@@ -1090,11 +1118,13 @@ Appendix: Sanskrit text-->
                         <l>“Reciting the following mantra,</l>
                         <l>One should meditate on emptiness. <!--[IV.8]--></l>
                     </lg>
-                    <ab type="mantra" tid="1895">“ ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, I am of the nature of
+                    <p rend="mantra" tid="1895">“ ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, I am of the nature of
                         vajra, which is the wisdom of emptiness.’<note place="end" xml:id="UT22084-080-015-2171" index="30">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ śūnyatā­jñāna­vajra­svabhāvātmako 'ham.</foreign>
                         </note>
-                    </ab>
+                        </seg>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-109"/>
                     <lg tid="144">
                         <l>“One should carefully visualize</l>
@@ -1421,27 +1451,40 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-152"/>
                     <p tid="190">“Now I will teach the complete collection of mantras.” So saying, the lord entered the absorption
                         called Victory over All Māras, and presented the collection of mantras.</p>
-                    <lg type="mantra" tid="191">
-                        <l>“The root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
+                    <lg tid="191">
+                        <l>“The root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
                             <note place="end" xml:id="UT22084-080-015-2177" index="36">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍamahāroṣaṇa hūṁ phaṭ.</foreign>
                             </note>
+                            </seg>
                         </l>
-                        <l>The second root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
+                        <l>The second root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
                             <note place="end" xml:id="UT22084-080-015-2178" index="37">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ acala hūṁ phaṭ.</foreign>
                             </note>
+                            </seg>
                         </l>
-                        <l>The third root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hūṁ phaṭ!</foreign>
+                        <l>The third root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hūṁ phaṭ!</foreign>
+                            </seg>
                         </l>
-                        <l>The heart mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ</foreign>
+                        <l>The heart mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ</foreign>
+                            </seg>
                         </l>
-                        <l>The second heart mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Āṁ</foreign>
+                        <l>The second heart mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Āṁ</foreign>
+                            </seg>
                         </l>
-                        <l>The third heart mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Haṁ</foreign>.”<!--[V.1]-->
+                        <l>The third heart mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Haṁ</foreign>
+                            </seg>.”<!--[V.1]-->
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-153"/>
                     <p tid="192">“The garland mantra:</p>
-                    <ab type="mantra" tid="1896">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrāṁ hrīṁ hrauṁ</foreign>, in your
+                    <p rend="mantra" tid="1896">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrāṁ hrīṁ hrauṁ</foreign>, in your
                         fierce form, expel, expel! Drive away, drive away! Pull, pull! Shake, shake! Blow up, blow up! Strike,
                         strike! Swallow, swallow! Bind, bind! Crush, crush! Paralyze, paralyze! Delude, delude! Bind the mouths of
                         all the enemies, bind! Frighten off all the ḍākinīs, grahas, bhūtas, piśācas, vyādhis, yakṣas, frighten!
@@ -1453,11 +1496,13 @@ Appendix: Sanskrit text-->
                                 mara māraya māraya rurucaṇḍaruk rakṣa rakṣa devadattaṃ caṇḍa­mahāsenaḥ sarvam ājñāpayati. oṁ
                                 caṇḍa­mahā­roṣaṇa hūṁ phaṭ.</foreign>
                         </note>
+                        </seg>
                         <!--[V.2]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-154"/>
                     <p tid="194">“The second garland mantra:</p>
-                    <ab type="mantra" tid="1897">“Homage to all the tathāgatas, the fulfillers of all wishes! You whose faces are
+                    <p rend="mantra" tid="1897">
+                        <seg type="mantra">“Homage to all the tathāgatas, the fulfillers of all wishes! You whose faces are
                         completely motionless, <foreign type="mantra" xml:lang="Sa-Ltn">naṭṭa, naṭṭa! Moṭṭa, moṭṭa! Saṭṭa, saṭṭa!
                             Tuṭṭa, tuṭṭa!</foreign> Remain, remain! Enter, enter! <foreign type="mantra" xml:lang="Sa-Ltn">Āḥ</foreign>, great crazed youth, <foreign type="mantra" xml:lang="Sa-Ltn">dhūṇa, dhūṇa! Tiṇa,
                             tiṇa!</foreign> Eat, eat! Kill the obstacle makers, kill! Devour the rogues, devour! Accomplish
@@ -1473,86 +1518,118 @@ Appendix: Sanskrit text-->
                                 sphāṭaya hūṁ hūṁ asamantike trāṭ mahābala sāṭaya samānaya trāṁ māṁ hāṁ śuddhyantu lokāḥ. tuṣyatu
                                 vajrī namo 'stv apratihata­balebhyaḥ. jvālaya trāṭ asaha namaḥ svāhā.</foreign>
                         </note>
+                        </seg>
                         <!--[V.3]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-155"/>
                     <p tid="196">“The third garland mantra: <ref cRef="F.311.a"/>
                     </p>
-                    <ab type="mantra" tid="1898">“Homage to all the tathāgatas, the fulfillers of all wishes in every way,
+                    <p rend="mantra" tid="1898">
+                        <seg type="mantra">“Homage to all the tathāgatas, the fulfillers of all wishes in every way,
                             <foreign type="mantra" xml:lang="Sa-Ltn">trāṭ</foreign>! Unfailing Caṇḍa­mahā­roṣaṇa, split, split,
                             <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ</foreign>! Confuse, confuse, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, trāṭ, hāṁ, māṁ</foreign>!”<note place="end" xml:id="UT22084-080-015-2181" index="40">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namaḥ
                                 sarvāśāpari­pūrakebhyaḥ sarva­tathāgatebhyaḥ sarvathā trāṭ. amogha­caṇḍa­mahā­roṣaṇa sphāṭaya
                                 sphāṭaya hūṁ. bhramaya bhramaya hūṁ trāṭ hāṁ māṁ.</foreign>
                         </note>
+                        </seg>
                         <!--[V.4]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-156"/>
                     <p tid="198">“These were the mantras common to the five Acalas. There are, however, mantras specific to each
                         of them: </p>
-                    <ab type="mantra" tid="1899">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Black Acala, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2182" index="41">Skt.
+                    <p rend="mantra" tid="1899">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Black Acala, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2182" index="41">Skt.
                                 <foreign xml:lang="Sa-Ltn" type="mantra">oṁ kṛṣṇācala hūṁ phaṭ</foreign>. </note>
-                    </ab>
-                    <ab type="mantra" tid="1900">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2183" index="42">Skt.
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1900">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2183" index="42">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ śvetācala hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1901">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Yellow Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1901">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Yellow Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2184" index="43">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ pītācala hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1902">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Red Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1902">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Red Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2185" index="44">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ raktācala hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1903">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Green Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1903">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Green Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
                             phaṭ</foreign>!”<note place="end" xml:id="UT22084-080-015-2186" index="45">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ śyāmācala hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[V.5]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-157"/>
                     <p tid="200">“There are also mantras common to the goddesses:</p>
-                    <lg type="mantra" tid="1921">
-                        <l> “The root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajrayoginī, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2187" index="46">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vajrayogini hūṁ
+                    <lg tid="1921">
+                        <l> “The root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajrayoginī, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2187" index="46">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vajrayogini hūṁ
                                     phaṭ</foreign>.</note>
+                            </seg>
                         </l>
-                        <l>The second root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Prajñāpāramitā, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2188" index="47">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ prajñā­pāramite hūṁ
+                        <l>The second root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Prajñāpāramitā, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2188" index="47">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ prajñā­pāramite hūṁ
                                     phaṭ</foreign>.</note>
+                            </seg>
                         </l>
-                        <l>The third root mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vauherī, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2189" index="48">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vauheri hūṁ
+                        <l>The third root mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vauherī, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2189" index="48">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vauheri hūṁ
                                     phaṭ</foreign>.</note>
+                            </seg>
                         </l>
-                        <l>The garland mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, Picu, Picu</foreign>! Increaser of
+                        <seg type="mantra">
+                            <l>The garland mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, Picu, Picu</foreign>! Increaser of
                             wisdom, burn, burn! </l>
                         <l>Increaser of knowledge, <foreign type="mantra" xml:lang="Sa-Ltn">dhiri, dhiri</foreign>! Increaser of
                             Intelligence, <foreign xml:lang="Sa-Ltn" type="mantra">svāhā</foreign>!”<note place="end" xml:id="UT22084-080-015-2190" index="49">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ picu picu prajñāvardhani jvala jvala
                                     medhāvardhani dhiri dhiri buddhivardhani svāhā</foreign>.</note>
                             <!--[V.6]-->
                         </l>
-                    </lg>
+                        </seg>                    
+                    </lg>   
                     <milestone unit="chunk" xml:id="UT22084-080-015-158"/>
                     <p tid="202">“There are also individual mantras: </p>
-                    <ab type="mantra" tid="1909">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Hatred Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2191" index="50">Skt.
+                    <p rend="mantra" tid="1909">“<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Hatred Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ, phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2191" index="50">Skt.
                                 <foreign xml:lang="Sa-Ltn" type="mantra">oṁ dveṣavajri hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1910">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Delusion Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1910">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Delusion Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2192" index="51">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ mohavajri hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1911">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Calumny Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1911">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Calumny Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2193" index="52">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ piśunavajri hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1912">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Passion Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1912">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Passion Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2194" index="53">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ rāgavajri hūṁ phaṭ</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1913">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Envy Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
-                            phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2195" index="54">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ īrṣyāvajri hūṁ phaṭ</foreign>.</note>” <!--[V.7]-->
-                    </ab>
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1913">
+                        <seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Envy Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
+                            phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2195" index="54">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ īrṣyāvajri hūṁ phaṭ</foreign>.</note>
+                        </seg>” <!--[V.7]-->
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-159"/>
                     <p tid="204">“This is the common mantra of the oblation offering:</p>
-                    <ab type="mantra" tid="1914">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, homage to the blessed
+                    <p rend="mantra" tid="1914">
+                        <seg type="mantra">“<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, homage to the blessed
                         lord Caṇḍa­mahā­roṣaṇa, to him who frightens the gods, demigods, and humans, to him who destroys the
                         entire army of māras, to him whose head is adorned with a jewel crest! Take this oblation, take! Kill all
                         my obstacle makers, kill! Restrain the Four Māras, restrain! Frighten, frighten! Shake, shake! Chop, chop!
@@ -1564,8 +1641,9 @@ Appendix: Sanskrit text-->
                                 chinda bhinda bhinda nāśa nāśa tāpa tāpa śoṣa śoṣa cheda cheda bheda bheda duṣṭa­sattvān mama
                                 viruddha­cittakān bhasmī­kuru kuru phaṭ phaṭ svāhā.</foreign>
                         </note>
+                        </seg>
                         <!--[V.8]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-160"/>
                     <trailer tid="1942">This concludes the chapter on mantras, the fifth in the glorious Caṇḍa­mahā­roṣaṇa tantra
                         called the <title xml:lang="en">Sole Hero</title>.</trailer>
@@ -3477,125 +3555,147 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-413"/>
                     <p tid="480">“For the above practices of Caṇḍa­mahā­roṣaṇa, the following mantras apply: </p>
-                    <ab type="mantra" tid="1915">“ ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa,
+                    <p rend="mantra" tid="1915">“ <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa,
                         come, come! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2226" index="85">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa
                                 āgaccha āgaccha hūṃ phaṭ</foreign>.</note>
-                    </ab>
-                    <p tid="482">“If practicing with the sword and so on, one should add: ‘Make such and such respond to my
-                            practice!’<note place="end" xml:id="UT22084-080-015-2227" index="86">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ me sādhaya</foreign>.</note>
+                        </seg>
                     </p>
-                    <p type="mantra" tid="483">“When placing the feet astride, one should add: ‘Kill such and such, kill!’<note place="end" xml:id="UT22084-080-015-2228" index="87">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ hana
+                    <p tid="482">“If practicing with the sword and so on, one should add: <seg type="mantra">‘Make such and such respond to my
+                            practice!’<note place="end" xml:id="UT22084-080-015-2227" index="86">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ me sādhaya</foreign>.</note>
+                        </seg>
+                    </p>
+                    <p tid="483">“When placing the feet astride, one should add: <seg type="mantra">‘Kill such and such, kill!’<note place="end" xml:id="UT22084-080-015-2228" index="87">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ hana
                                 hana</foreign>. </note>
+                        </seg>
                         <!--[XII.21]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-414"/>
-                    <p type="mantra" tid="484">“In this way, with a single recitation, one burns even the five inexpiable actions. One should
-                        add: ‘Destroy all my evil!’<note place="end" xml:id="UT22084-080-015-2229" index="88">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarvapāpaṃ me nāśaya</foreign>.</note>
+                    <p tid="484">“In this way, with a single recitation, one burns even the five inexpiable actions. One should
+                        add: <seg type="mantra">‘Destroy all my evil!’<note place="end" xml:id="UT22084-080-015-2229" index="88">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarvapāpaṃ me nāśaya</foreign>.</note>
+                        </seg>
                     </p>
-                    <p type="mantra" tid="485">“In this way, by a mere utterance, one effects the protection from all fears. One should add:
-                        ‘Protect me, protect!’<note place="end" xml:id="UT22084-080-015-2230" index="89">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">rakṣa rakṣa mām.</foreign>
+                    <p tid="485">“In this way, by a mere utterance, one effects the protection from all fears. One should add:
+                        <seg type="mantra">‘Protect me, protect!’<note place="end" xml:id="UT22084-080-015-2230" index="89">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">rakṣa rakṣa mām.</foreign>
                         </note>
+                        </seg>
                         <ref cRef="F.322.b"/> In this way, one effects protection in every respect.<note place="end" xml:id="UT22084-080-015-2231" index="90">Instead of “one effects protection,” the Tibetan has “one burns rākṣasas
                             in all cases.” </note>
                         <!--[XII.22]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-415"/>
-                    <p type="mantra" tid="486">“Then, visualizing the iron as if ablaze, one should incant mustard seeds, mung beans, or māṣa
+                    <p tid="486">“Then, visualizing the iron as if ablaze, one should incant mustard seeds, mung beans, or māṣa
                         pulses with one’s personal mantra 108 times. One should then strike them as they are being seized by
                         ḍākinīs and other beings.<note place="end" xml:id="UT22084-080-015-2232" index="91">The Tibetan has: “One
                             should strike the ḍākinīs and so forth” (<foreign xml:lang="Bo-Ltn">mkha’ ’gro ma la sogs pa rnams la
                                 brab par bya’o</foreign>).</note> They will all flee. At the time of striking, one should add the
-                        mantra: ‘Make the ḍākinīs and the rest go away!’<note place="end" xml:id="UT22084-080-015-2233" index="92">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">ḍākinyādikam apasāraya</foreign>.</note>
+                        mantra: <seg type="mantra">‘Make the ḍākinīs and the rest go away!’<note place="end" xml:id="UT22084-080-015-2233" index="92">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">ḍākinyādikam apasāraya</foreign>.</note>
+                        </seg>
                         <!--[XII.23]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-416"/>
-                    <p type="mantra" tid="487">“Then one should write the mantra with chalk inside an eight-petaled lotus and cover it with a
+                    <p tid="487">“Then one should write the mantra with chalk inside an eight-petaled lotus and cover it with a
                         lid in a pair of vessels of unbaked clay. One should wrap this in a fisherman’s net and have it suspended
-                        in a doorway—this effects protection of children. One should add the mantra: ‘Protect the child,
+                        in a doorway—this effects protection of children. One should add the mantra: <seg type="mantra">‘Protect the child,
                             protect!’<note place="end" xml:id="UT22084-080-015-2234" index="93">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">rakṣa rakṣa bālakam</foreign>.</note>
+                        </seg>
                         <!--[XII.24]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-417"/>
-                    <p type="mantra" tid="488">“One should make a beeswax effigy of the target, four finger-widths high. One should inscribe the
+                    <p tid="488">“One should make a beeswax effigy of the target, four finger-widths high. One should inscribe the
                         mantra on birch bark, place it in the effigy’s heart, and strike the spot with black mustard seeds or
                         similar substances. One should then nail the mouth with a thorn—the mouth of the opponent will be sealed.
-                        One should then add the mantra: ‘Nail the mouth of such and such!’<note place="end" xml:id="UT22084-080-015-2235" index="94">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya mukhaṃ
+                        One should then add the mantra: <seg type="mantra">‘Nail the mouth of such and such!’<note place="end" xml:id="UT22084-080-015-2235" index="94">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya mukhaṃ
                                 kīlaya</foreign>.</note>
+                        </seg>
                         <!--[XII.25]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-418"/>
-                    <p type="mantra" tid="489">“One should bury the effigy at a crossroads. Similarly one should nail the feet, which will stop
-                        the target from moving about. One should add the mantra: ‘Nail the feet of such and such!’<note place="end" xml:id="UT22084-080-015-2236" index="95">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya pādau kīlaya</foreign>.</note> One should nail the heart, as this will immobilize
-                        the target’s body. One should then add the mantra: ‘Nail the heart of such and such!’<note place="end" xml:id="UT22084-080-015-2237" index="96">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya
+                    <p tid="489">“One should bury the effigy at a crossroads. Similarly one should nail the feet, which will stop
+                        the target from moving about. One should add the mantra: <seg type="mantra">‘Nail the feet of such and such!’<note place="end" xml:id="UT22084-080-015-2236" index="95">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya pādau kīlaya</foreign>.</note>
+                        </seg> One should nail the heart, as this will immobilize
+                        the target’s body. One should then add the mantra: <seg type="mantra">‘Nail the heart of such and such!’<note place="end" xml:id="UT22084-080-015-2237" index="96">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya
                                 hṛdayaṃ kīlaya</foreign>.</note>
+                        </seg>
                         <!--[XII.26]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-419"/>
-                    <p type="mantra" tid="490">“Whichever limbs one nails with a nail of human bone, or an iron one, or a withered thorn,<note place="end" xml:id="UT22084-080-015-2238" index="97">“Withered thorn” is a translation of <foreign type="term" xml:lang="Sa-Ltn">saṃkoca­kaṇṭaka</foreign>. The meaning of <foreign type="term" xml:lang="Sa-Ltn">saṃkoca</foreign> is unclear. It is one of several possible names for saffron,
+                    <p tid="490">“Whichever limbs one nails with a nail of human bone, or an iron one, or a withered thorn,<note place="end" xml:id="UT22084-080-015-2238" index="97">“Withered thorn” is a translation of <foreign type="term" xml:lang="Sa-Ltn">saṃkoca­kaṇṭaka</foreign>. The meaning of <foreign type="term" xml:lang="Sa-Ltn">saṃkoca</foreign> is unclear. It is one of several possible names for saffron,
                             but the saffron plant does not have thorns, as in this context. The Tibetan for this term (<foreign type="term" xml:lang="Bo-Ltn">mtshon sbal</foreign>) was in none of the available
-                            dictionaries.</note> those limbs will become weak and in great pain. One should add the mantra: ‘Nail
+                            dictionaries.</note> those limbs will become weak and in great pain. One should add the mantra: <seg type="mantra">‘Nail
                         such and such body part of such and such a person!’<note place="end" xml:id="UT22084-080-015-2239" index="98">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasyāṅgaṃ
                                 kīlaya</foreign>.</note>
+                        </seg>
                         <!--[XII.27]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-420"/>
-                    <p type="mantra" tid="491">“By burying the effigy at someone’s entrance door, one will make the resident homeless. One
-                        should add the mantra: ‘Make such and such homeless!’<note place="end" xml:id="UT22084-080-015-2240" index="99">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattam
-                                uccāṭaya</foreign>.</note> By throwing incanted ashes from a charnel ground at someone’s doorway,
-                        one will expel him. One should add the mantra: ‘Expel such and such!’<note place="end" xml:id="UT22084-080-015-2241" index="100">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattam
+                    <p tid="491">“By burying the effigy at someone’s entrance door, one will make the resident homeless. One
+                        should add the mantra: <seg type="mantra">‘Make such and such homeless!’<note place="end" xml:id="UT22084-080-015-2240" index="99">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattam
+                                uccāṭaya</foreign>.</note>
+                        </seg> By throwing incanted ashes from a charnel ground at someone’s doorway,
+                        one will expel him. One should add the mantra: <seg type="mantra">‘Expel such and such!’<note place="end" xml:id="UT22084-080-015-2241" index="100">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattam
                                 uccāṭaya</foreign>. </note>
+                        </seg>
                         <!--[XII.28]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-421"/>
-                    <p type="mantra" tid="492">“Having incapacitated the effigy with thorns, one should recite the mantra. One should add the
-                        mantra: ‘Kill such and such!’<note place="end" xml:id="UT22084-080-015-2242" index="101">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattaṃ māraya</foreign>. The Tibetan adds here: “If you add
-                            it, it will kill him.”</note>[XII.29]</p>
+                    <p tid="492">“Having incapacitated the effigy with thorns, one should recite the mantra. One should add the
+                        mantra: <seg type="mantra">‘Kill such and such!’<note place="end" xml:id="UT22084-080-015-2242" index="101">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattaṃ māraya</foreign>. The Tibetan adds here: “If you add
+                            it, it will kill him.”</note>
+                        </seg><!--[XII.29]-->
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-422"/>
                     <p tid="493">“Having used one’s personal mantra to incant a sword or the like 108 times, one should engage in
                         battle. One will meet with victory. <ref cRef="F.323.a"/> For whatever purpose one dedicates an oblation,
                         that purpose will have a successful outcome. <!--[XII.30]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-423"/>
-                    <p type="mantra" tid="494">“Having incanted a peacock’s feather with 108 recitations of one’s personal mantra, one should
-                        brush the place affected by a bad disease or sickness. One should add the mantra: ‘Destroy such and such
+                    <p tid="494">“Having incanted a peacock’s feather with 108 recitations of one’s personal mantra, one should
+                        brush the place affected by a bad disease or sickness. One should add the mantra: <seg type="mantra">‘Destroy such and such
                         disease of such and such a person!’<note place="end" xml:id="UT22084-080-015-2243" index="102">Skt.
-                                <foreign type="mantra" xml:lang="Sa-Ltn">amuka­syāmuka­rogaṃ nāśaya</foreign>.</note> There will
+                                <foreign type="mantra" xml:lang="Sa-Ltn">amuka­syāmuka­rogaṃ nāśaya</foreign>.</note>
+                        </seg> There will
                         be an appeasement of all ailments. <!--[XII.31]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-424"/>
-                    <p type="mantra" tid="495">“In the same way, one should rub a snakebite wound with the palms of the hands. One should add
-                        the mantra: ‘Destroy the poison in such and such!’<note place="end" xml:id="UT22084-080-015-2244" index="103">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya viṣaṃ
-                                nāśaya</foreign>.</note> This will destroy the poison. <!--[XII.32]-->
+                    <p tid="495">“In the same way, one should rub a snakebite wound with the palms of the hands. One should add
+                        the mantra: <seg type="mantra">‘Destroy the poison in such and such!’<note place="end" xml:id="UT22084-080-015-2244" index="103">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">deva­dattasya viṣaṃ
+                                nāśaya</foreign>.</note>
+                        </seg> This will destroy the poison. <!--[XII.32]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-425"/>
-                    <p type="mantra" tid="496">“Likewise one should contemplate a person who is one’s target as enthralled, being at one’s
+                    <p tid="496">“Likewise one should contemplate a person who is one’s target as enthralled, being at one’s
                         service, paying a visit at one’s own place, naked, with disheveled hair, in front of oneself. Visualizing
                         him as fallen to one’s feet, one should recite the mantra. Then the enthrallment will take place. One
-                        should add the mantra: ‘Bring such and such to the state of enthrallment!’<note place="end" xml:id="UT22084-080-015-2245" index="104">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ vaśam
+                        should add the mantra: <seg type="mantra">‘Bring such and such to the state of enthrallment!’<note place="end" xml:id="UT22084-080-015-2245" index="104">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukaṃ vaśam
                                 ānaya</foreign>.</note>
+                        </seg>
                         <!--[XII.33]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-426"/>
-                    <p type="mantra" tid="497">“In the same way as before, one should recite the mantra while contemplating him as being drawn
-                        toward oneself. The target will be brought into one’s presence. One should add the mantra: ‘Draw such and
+                    <p tid="497">“In the same way as before, one should recite the mantra while contemplating him as being drawn
+                        toward oneself. The target will be brought into one’s presence. One should add the mantra: <seg type="mantra">‘Draw such and
                         such into my presence!’<note place="end" xml:id="UT22084-080-015-2246" index="105">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">amukam ākarṣaya</foreign>.</note>
+                        </seg>
                         <!--[XII.34]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-427"/>
-                    <p type="mantra" tid="498">“Visualizing oneself as being completely flush with valuables and grain, one should recite the
-                        mantra. One should add the mantra: ‘Bring prosperity to me!’<note place="end" xml:id="UT22084-080-015-2247" index="106">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">puṣṭiṃ me kuru</foreign>.
+                    <p tid="498">“Visualizing oneself as being completely flush with valuables and grain, one should recite the
+                        mantra. One should add the mantra: <seg type="mantra">‘Bring prosperity to me!’<note place="end" xml:id="UT22084-080-015-2247" index="106">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">puṣṭiṃ me kuru</foreign>.
                             The Tibetan adds here: “One will become enriched” (<foreign type="mantra" xml:lang="Bo-Ltn">rgyas par
                                 ’gyur ro</foreign>). </note>
+                        </seg>
                         <!--[XII.35]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-428"/>
-                    <p type="mantra" tid="499">“One should write this mantra<note place="end" xml:id="UT22084-080-015-2248" index="107">This
-                            could be the mantra given above: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa āgaccha
+                    <p tid="499">“One should write this mantra<note place="end" xml:id="UT22084-080-015-2248" index="107">This
+                            could be the mantra given above: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa āgaccha
                                 āgaccha hūṃ phaṭ</foreign> (<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ,
                                 Caṇḍa­mahā­roṣaṇa</foreign>, come, come, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ
-                                phaṭ</foreign>!).</note> with a thorn on a betel leaf, in the center of a space delimited by two
+                                    phaṭ</foreign>!)</seg>.</note> with a thorn on a betel leaf, in the center of a space delimited by two
                         intersecting triangles, and chew the betel together with five grains of black pepper. One should add the
-                        mantra: ‘Destroy all the fevers!’<note place="end" xml:id="UT22084-080-015-2249" index="108">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarva­jvarāṇi nāśaya</foreign>.</note>
+                        mantra: <seg type="mantra">‘Destroy all the fevers!’<note place="end" xml:id="UT22084-080-015-2249" index="108">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarva­jvarāṇi nāśaya</foreign>.</note>
+                        </seg>
                         <!--[XII.36]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-429"/>
@@ -3611,18 +3711,21 @@ Appendix: Sanskrit text-->
                         invisibility. If it releases heat, an enthrallment will take place. <!--[XII.38]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-431"/>
-                    <p type="mantra" tid="502">“Alternatively one should commission someone to make, from the wood of cobra’s saffron, the king
+                    <p tid="502">“Alternatively one should commission someone to make, from the wood of cobra’s saffron, the king
                         of nāgas, Ananta. Having submerged him, face down, in water, one should recite the mantra while looking
-                        into the sky. One should employ the mantra: ‘Seize Ananta, seize! Cause him to send rain!’<note place="end" xml:id="UT22084-080-015-2250" index="109">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">hara harānantaṃ śīghraṃ varṣāpaya</foreign>.</note>
+                        into the sky. One should employ the mantra: <seg type="mantra">‘Seize Ananta, seize! Cause him to send rain!’<note place="end" xml:id="UT22084-080-015-2250" index="109">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">hara harānantaṃ śīghraṃ varṣāpaya</foreign>.</note>
+                        </seg>
                         <ref cRef="F.323.b"/> The god will then send rain. <!--[XII.39]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-432"/>
-                    <p type="mantra" tid="503">“Then one should take Ananta out of the water, bathe him in milk, and release him. Then, gazing
-                        at the clouds, one should recite the mantra.<note place="end" xml:id="UT22084-080-015-2251" index="110">This could be: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa āgaccha āgaccha hūṃ
+                    <p tid="503">“Then one should take Ananta out of the water, bathe him in milk, and release him. Then, gazing
+                        at the clouds, one should recite the mantra.<note place="end" xml:id="UT22084-080-015-2251" index="110">This could be: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa āgaccha āgaccha hūṃ
                                 phaṭ</foreign> (<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, Caṇḍa­mahā­roṣaṇa</foreign>, come,
-                            come, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!).</note> One should add the mantra:
-                        ‘Stop all the wind and rain!’<note place="end" xml:id="UT22084-080-015-2252" index="111">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarva­vāta­vṛṣṭiṃ stambhaya</foreign>. The Tibetan adds: “Then the
+                            come, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!)</seg>.</note> One should add the mantra:
+                        <seg type="mantra">‘Stop all the wind and rain!’<note place="end" xml:id="UT22084-080-015-2252" index="111">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">sarva­vāta­vṛṣṭiṃ stambhaya</foreign>. The Tibetan adds: “Then the
                             rain will stop.”</note>
+                        </seg>
                         <!--[XII.40]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-433"/>
@@ -3632,11 +3735,11 @@ Appendix: Sanskrit text-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-434"/>
-                    <p type="mantra" tid="505">“One should write the first garland mantra with a thorn on an umbrella tree leaf and wrap it
+                    <p tid="505">“One should write the first garland mantra with a thorn on an umbrella tree leaf and wrap it
                         using blue cloth and blue string. Placing one’s left foot on the head, arm, throat, or shoulder of a
                         person suffering from fever, one should tie this amulet there,<note place="end" xml:id="UT22084-080-015-2253" index="112">The Tibetan says: “One should tie it to the head, forearm, back of the
-                            neck, or the left leg.”</note> saying, ‘With my angry mind, I will destroy the fever of such and such
-                        a person.’ This will destroy all fevers. <!--[XII.42]-->
+                            neck, or the left leg.”</note> saying, <seg type="mantra">‘With my angry mind, I will destroy the fever of such and such
+                        a person.’</seg> This will destroy all fevers. <!--[XII.42]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-435"/>
                     <p tid="506">“At the time of tying the amulet, one should make the sick person face east and lustrate him with
@@ -3644,7 +3747,8 @@ Appendix: Sanskrit text-->
                         and diseases quickly go away. Lord Caṇḍa­mahā­roṣaṇa is ordering this. If you don’t go away, then the
                         lord, angered, will chop you up with a sharp sword into smithereens as small as sesame seeds.’<note place="end" xml:id="UT22084-080-015-2254" index="113">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">idaṃ bhuktvā sarve jvarādayo 'pasarantu śīghraṃ bhagavān caṇḍa­mahā­roṣaṇa evaṃ ājñāpayati. yadi
                                 nāpasariṣyatha tadā bhagavān kruddhas tīkṣṇena khaḍgena tila­pramāṇaṃ kṛtvā
-                            chetsyati</foreign>.</note> After saying this, one should offer an oblation in the southwestern
+                            chetsyati</foreign>.</note>
+                         After saying this, one should offer an oblation in the southwestern
                         quarter. The sick person will then become well. <!--[XII.43]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-436"/>
@@ -3669,9 +3773,10 @@ Appendix: Sanskrit text-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-439"/>
-                    <p type="mantra" tid="510">“Now comes the ritual involving the third root mantra. One should climb on to one’s bed and,
+                    <p tid="510">“Now comes the ritual involving the third root mantra. One should climb on to one’s bed and,
                         holding one’s penis with the left hand, recite 108 times. Whoever’s name one includes in the mantra, she
-                        will arrive. One should make love to her. The mantra to recite is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vauherī, may such and such come to me! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’ <!--[XII.47]-->
+                        will arrive. One should make love to her. The mantra to recite is: ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vauherī, may such and such come to me! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</seg>’ <!--[XII.47]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-440"/>
                     <p tid="511">“Having drawn a vulva on the ground with red chalk, one should cover the drawing with one’s left
@@ -3696,7 +3801,9 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-443"/>
                     <p tid="514">“In this way, with whoever’s hair the rope is made, the target will turn into that respective
                         form. Whoever’s name one should recite, one will draw that person’s blood. Whoever one looks at with
-                        unblinking eyes while reciting the mantra, that person will become enthralled.<note place="end" xml:id="UT22084-080-015-2256" index="115">The third root mantra must be meant here: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vauheri hūṁ phaṭ</foreign>. This is where one inserts the
+                        unblinking eyes while reciting the mantra, that person will become enthralled.<note place="end" xml:id="UT22084-080-015-2256" index="115">The third root mantra must be meant here: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vauheri hūṁ phaṭ</foreign>
+                            </seg>. This is where one inserts the
                             target’s name, with instructions, between <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vauheri and hūṁ
                                 phaṭ</foreign>.</note>
                     </p>
@@ -3705,13 +3812,14 @@ Appendix: Sanskrit text-->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-444"/>
-                    <p type="mantra" tid="516">“One should offer an oblation with the oblation mantra. All the obstacles in the form of
+                    <p tid="516">“One should offer an oblation with the oblation mantra. All the obstacles in the form of
                         calamities, disease, and the like, will be pacified. In whatever endeavor one may be involved, one should
                         offer an oblation, and one will succeed in it. A bowl with white flowers, another one with milk, another
                         with perfumed water, and another with rice—these four bowls and an offering of the main and auxiliary
-                        fruits—one should incant them in the quiet of the night by reciting 108 times, ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, take this oblation, take! Accomplish my task!
+                        fruits—one should incant them in the quiet of the night by reciting 108 times, <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, take this oblation, take! Accomplish my task!
                             <foreign type="mantra" xml:lang="Sa-Ltn">Hūṃ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2257" index="116">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa imaṃ
-                                baliṃ gṛhṇa gṛhṇa amukakāryaṃ me sādhaya hūṃ phaṭ</foreign>.</note> Having incanted, one should
+                                baliṃ gṛhṇa gṛhṇa amukakāryaṃ me sādhaya hūṃ phaṭ</foreign>.</note>
+                        </seg> Having incanted, one should
                         offer them in solitude. One’s wishes will come true. <!--[XII.52]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-445"/>
@@ -4553,10 +4661,11 @@ Appendix: Sanskrit text-->
                         </l>
                         <l>Will increase one’s semen or blood. <!--[XVII.12]--></l>
                     </lg>
-                    <lg type="mantra" tid="640">
-                        <l>“The mantra is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, prepare this
+                    <lg tid="640">
+                        <l>“The mantra is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, prepare this
                             divine nectar for me! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2277" index="136">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
                                     caṇda­mahā­roṣaṇa idaṃ divyāmṛtaṃ me kuru hūṁ phaṭ</foreign>.</note>
+                            </seg>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-549"/>
@@ -5113,19 +5222,21 @@ Appendix: Sanskrit text-->
                         the threefold universe to a state of enthrallment. <!--[XIX.15]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-655"/>
-                    <p type="mantra" tid="748">“Having placed on one’s penis red flowers of Indian oleander, one should recite one thousand
-                        times the mantra: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, O fickle-minded<note place="end" xml:id="UT22084-080-015-2306" index="164">A play on words may be intended here, as the word <foreign type="term" xml:lang="Sa-Ltn">citta</foreign>, which normally means “thought,” can also have the
+                    <p tid="748">“Having placed on one’s penis red flowers of Indian oleander, one should recite one thousand
+                        times the mantra: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, O fickle-minded<note place="end" xml:id="UT22084-080-015-2306" index="164">A play on words may be intended here, as the word <foreign type="term" xml:lang="Sa-Ltn">citta</foreign>, which normally means “thought,” can also have the
                             technical meaning of “semen.”</note> one! <foreign type="mantra" xml:lang="Sa-Ltn">Cili, cili! Culu,
                             culu!</foreign> Release your fluid, release! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2307" index="165">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ calacitte cili cili culu culu reto muñca muñca svāhā.</foreign>
                         </note>
+                        </seg>
                     </p>
                     <p tid="749">“To make a woman confused and enthralled, make an effigy of her; in front of it recite the
                         mantra, including her name; and pierce the effigy with a copper needle. <!--[XIX.16]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-656"/>
-                    <p type="mantra" tid="750">“First one should do ten thousand recitations of the mantra without the name as the preliminary
-                        practice. Then, adding the name, one should recite: ‘Hail, Caṇḍālī! Enthrall such and such! Svāhā!’<note place="end" xml:id="UT22084-080-015-2308" index="166">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namaḥ caṇḍālī amukīṃ vaśīkuru svāhā.</foreign>
+                    <p tid="750">“First one should do ten thousand recitations of the mantra without the name as the preliminary
+                        practice. Then, adding the name, one should recite: <seg type="mantra">‘Hail, Caṇḍālī! Enthrall such and such! Svāhā!’<note place="end" xml:id="UT22084-080-015-2308" index="166">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namaḥ caṇḍālī amukīṃ vaśīkuru svāhā.</foreign>
                         </note>
+                        </seg>
                     </p>
                     <p tid="751">“That practice should number ten thousand recitations. One should then incant, on the fourteenth
                         day of the dark fortnight, the ashes from a charnel ground with 108 recitations of this mantra, and place
@@ -5310,147 +5421,167 @@ Appendix: Sanskrit text-->
                         <l>A complete summary of the disciplines. <!--[XX.3]--></l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-684"/>
-                    <p type="mantra" tid="780">“ ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you with a flaming mouth and fangs
+                    <p tid="780">“ <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you with a flaming mouth and fangs
                         bared, laugh, laugh! The vajra of the <foreign xml:lang="Sa-Ltn" type="term">halāhala</foreign> poison, the good vajra,
                         break forth, break! Disperse, disperse! Stop all the rain and wind, stop! Rent asunder, rent! <foreign type="mantra" xml:lang="Sa-Ltn">Yaḥ, yaḥ, yaḥ</foreign>, dry up all the water, dry! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2326" index="184">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ jvālā­karāla­vadane
                                 hasa hasa halāhala­vajre suvajre sphara sphara sphāraya sphāraya sarva­megha­vātavṛṣṭiṃ stambhaya
                                 stambhaya sphoṭaya sphoṭaya yaḥ yaḥ yaḥ sarva­pānīyam śoṣaya śoṣaya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         While reciting this mantra, one should direct one’s angry gaze into the sky. One will stop the wind and
                         disperse the clouds. <!--[XX.4]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-685"/>
-                    <p type="mantra" tid="781">“Here is the mantra of playing in the cemetery: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you who shout <foreign type="mantra" xml:lang="Sa-Ltn">pheṭ! Pheṁ pheṁ, ha ha, hā hā,
+                    <p tid="781">“Here is the mantra of playing in the cemetery: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you who shout <foreign type="mantra" xml:lang="Sa-Ltn">pheṭ! Pheṁ pheṁ, ha ha, hā hā,
                             pheṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2327" index="185">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ phetkāra pheṁ pheṁ ha ha hā hā pheṭ.</foreign>
                         </note>
+                        </seg>
                         <!--[XX.5]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-686"/>
-                    <p type="mantra" tid="782">“Here is the mantra for entering a city area: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, O lord of all magical powers for nullifying opposing yantras and mantras! Frighten off
+                    <p tid="782">“Here is the mantra for entering a city area: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, O lord of all magical powers for nullifying opposing yantras and mantras! Frighten off
                         all the ḍākinīs, frighten! Bind, bind! Nail swiftly, nail!’<note place="end" xml:id="UT22084-080-015-2328" index="186">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ sarva­vidyādhipataye
                                 para­yantra­mantra­nāśane sarva­aḍākinīnāṃ trāsaya trāsaya bandha bandha sukhaṃ kīlaya kīlaya hūṁ
                                 phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.6]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-687"/>
-                    <p type="mantra" tid="783">“To make snakes flee, one should incant some clay with this mantra and place it on the ground:
-                            ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, hili hili, phuḥ phuḥ</foreign>!’<note place="end" xml:id="UT22084-080-015-2329" index="187">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hili hili
+                    <p tid="783">“To make snakes flee, one should incant some clay with this mantra and place it on the ground:
+                            <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, hili hili, phuḥ phuḥ</foreign>!’<note place="end" xml:id="UT22084-080-015-2329" index="187">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hili hili
                                 phuḥ phuḥ</foreign>.</note>
+                        </seg>
                         <!--[XX.7]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-688"/>
-                    <p type="mantra" tid="784">“With this mantra, tigers will flee: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Mammā,
-                            mammā</foreign>!’ </p>
-                    <p type="mantra" tid="785">“With this mantra, elephants will flee: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Vedu ā, vedu
-                            ā</foreign>!’ </p>
-                    <p type="mantra" tid="786">“With this mantra, rhinoceros will flee: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Terli ā, terli
-                            ā</foreign>!’ <!--[XX.8]-->
+                    <p tid="784">“With this mantra, tigers will flee: ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Mammā,
+                            mammā</foreign>!</seg>’ </p>
+                    <p tid="785">“With this mantra, elephants will flee: ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Vedu ā, vedu
+                            ā</foreign>!</seg>’ </p>
+                    <p tid="786">“With this mantra, rhinoceros will flee: ‘<seg type="mantra">
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Terli ā, terli
+                            ā</foreign>!</seg>’ <!--[XX.8]-->
                         <ref cRef="F.336.b"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-689"/>
-                    <p type="mantra" tid="787">“With this mantra, dogs will flee when threatened with one’s left index finger: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrīṁ</foreign>, protector Baṭuka, Caṇḍa­mahā­roṣaṇa! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2330" index="188">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hrīṁ baṭukanātha
+                    <p tid="787">“With this mantra, dogs will flee when threatened with one’s left index finger: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrīṁ</foreign>, protector Baṭuka, Caṇḍa­mahā­roṣaṇa! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2330" index="188">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hrīṁ baṭukanātha
                                 caṇḍa­mahā­roṣaṇa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.9]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-690"/>
-                    <p type="mantra" tid="788">“With this mantra, buffalos will flee: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
+                    <p tid="788">“With this mantra, buffalos will flee: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
                         Yamāntaka, <foreign type="mantra" xml:lang="Sa-Ltn">hrīḥ strīḥ, hūṁ hūṁ hūṁ, phaṭ phaṭ</foreign>! Frighten
                         away, frighten away! O fierce one, very fierce! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ
                             phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2331" index="189">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ yamāntaka hrīḥ strīḥ hūṁ hūṁ hūṁ phaṭ phaṭ trāsaya trāsaya
                                 caṇḍa pracaṇḍa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.10]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-691"/>
-                    <p type="mantra" tid="789">“With this mantra, any serious diseases will go away: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when crushing Yama, crush, crush! Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2332" index="190">Skt.
+                    <p tid="789">“With this mantra, any serious diseases will go away: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when crushing Yama, crush, crush! Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2332" index="190">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ yama­mardane mardaya mardaya caṇḍa­mahā­roṣaṇa hūṁ
                                 phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.11]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-692"/>
-                    <p type="mantra" tid="790">“To make pain go away, one should administer water incanted with this mantra: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when there is crying or wailing, this is for removing
+                    <p tid="790">“To make pain go away, one should administer water incanted with this mantra: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when there is crying or wailing, this is for removing
                         it. <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2333" index="191">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ krośaṇe saṃkrośaṇe
                                 bhedanāya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.12]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-693"/>
-                    <p type="mantra" tid="791">“By tying this mantra into one’s knotted hair, one will be protected: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when there is terror, this is for confusing. <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2334" index="192">Skt.
+                    <p tid="791">“By tying this mantra into one’s knotted hair, one will be protected: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when there is terror, this is for confusing. <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2334" index="192">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ trāsane mohanāya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.13]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-694"/>
-                    <p type="mantra" tid="792">“To nail the mouth of the adversary, one should make an effigy from beeswax, four fingers in
+                    <p tid="792">“To nail the mouth of the adversary, one should make an effigy from beeswax, four fingers in
                         size, write this mantra on birch bark with yellow orpiment, and stuff it into the effigy’s mouth. One
-                        should then nail the effigy and bury it at a crossroad. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, whether he is moving or not, nail the mouth of such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2335" index="193">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ acale saṃcale amukasya
+                        should then nail the effigy and bury it at a crossroad. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, whether he is moving or not, nail the mouth of such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2335" index="193">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ acale saṃcale amukasya
                                 mukhaṃ kīlaya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.14]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-695"/>
-                    <p type="mantra" tid="793">“To stop the target from moving about, proceed as before and stick this mantra into the effigy’s
-                        heart, and nail its feet: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when destroying all the
+                    <p tid="793">“To stop the target from moving about, proceed as before and stick this mantra into the effigy’s
+                        heart, and nail its feet: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, when destroying all the
                         Māras, nail the feet of such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2336" index="194">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
                                 sarva­māra­bhañjane amukasya pādau kīlaya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.15]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-696"/>
-                    <p type="mantra" tid="794">“To stop a hostile army from advancing, stuff this mantra into the effigy as before. Then nail
+                    <p tid="794">“To stop a hostile army from advancing, stuff this mantra into the effigy as before. Then nail
                         the eight limbs of the general of the hostile army. One should bury the effigy with its face down in the
-                        middle of a hearth and say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you with contorted
+                        middle of a hearth and say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, you with contorted
                         face, when breaking the enemy’s army, break, break! Immobilize, immobilize! Bind such and such together
                         with his army with a noose, bind! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ! Khaḥ gaḥ, ha hā, hi
                             hī, pheṁ pheṁ! Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ
                             phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2337" index="195">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vikṛtānana para­bala­bhañjane bhañjaya bhañjaya stambhaya
                                 stambhaya vajra­pāśena amukaṃ sasainyaṃ bandha bandha hūṁ phaṭ khaḥ gaḥ hā hā hī hī pheṁ pheṁ. oṁ
                                 caṇḍamahāroṣaṇa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.16]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-697"/>
-                    <p type="mantra" tid="795">“To cause the enemy to burn with fever, one should draw the target, eight fingers tall on a cloth
+                    <p tid="795">“To cause the enemy to burn with fever, one should draw the target, eight fingers tall on a cloth
                         from a cemetery, with poison and mustard, encircle the drawing with the garland mantra, and stuff it into
                         the heart of a beeswax effigy. One should then place the effigy inside a piece of common milk hedge wood.
-                        The mantra is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, burn, burn! Cook, cook! Torment,
+                        The mantra is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, burn, burn! Cook, cook! Torment,
                         torment! Send the fever, send! Make them burn, do! Dry up, dry! Seize, seize! Burn, burn! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ! Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2338" index="196">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ daha daha paca paca
                                 matha matha jvara jvara jvālaya jvālaya śoṣaya śoṣaya gṛhṇa gṛhṇa jvala jvala. oṁ caṇḍamahāroṣaṇa
-                                hūṁ phaṭ svāhā</foreign>.</note> And further: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, let the fever seize such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2339" index="197">Skt.
+                                hūṁ phaṭ svāhā</foreign>.</note>
+                        </seg> And further: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, let the fever seize such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2339" index="197">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa amukaṃ jvareṇa gṛhṇāpaya hūṁ
-                                phaṭ</foreign>.</note> Reciting this, one should burn the effigy in the charnel ground fire, or in
+                                phaṭ</foreign>.</note>
+                        </seg> Reciting this, one should burn the effigy in the charnel ground fire, or in
                         a fire of cutch tree or jujube wood. One will cause the enemy to burn with fever. <!--[XX.17]-->
                         <ref cRef="F.337.a"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-698"/>
-                    <p type="mantra" tid="796">“To obliterate the yantra of an enemy, one should write this mantra on a rag from a cemetery,
-                        wrap a blue string around it, and wear it on one’s arm, neck, head, or hips. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, conquer, conquer and vanquish! Defeat the yantra!
+                    <p tid="796">“To obliterate the yantra of an enemy, one should write this mantra on a rag from a cemetery,
+                        wrap a blue string around it, and wear it on one’s arm, neck, head, or hips. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, conquer, conquer and vanquish! Defeat the yantra!
                             <foreign type="mantra" xml:lang="Sa-Ltn">Hī hī, hā hā</foreign>, break, break! Remove, remove! Act
                         quickly, act! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2340" index="198">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ jaya jaya parājaya
                                 nirjita­yantre hī hī hā hā sphoṭaya sphoṭaya ucchādaya ucchādaya śīghraṃ karma kuru kuru. oṁ
                                 caṇḍa­mahā­roṣaṇa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.18]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-699"/>
-                    <p type="mantra" tid="797">“To kill the target within a week, one should write this mantra on a rag from a cemetery as
+                    <p tid="797">“To kill the target within a week, one should write this mantra on a rag from a cemetery as
                         before, put it inside the effigy, and nail it with a peg one finger long, made of bone or iron. One should
-                        then bury the effigy face down in a cemetery and say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, swallow, swallow! <foreign type="mantra" xml:lang="Sa-Ltn">Kha
+                        then bury the effigy face down in a cemetery and say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, swallow, swallow! <foreign type="mantra" xml:lang="Sa-Ltn">Kha
                             kha</foreign>! Eat, eat! Make such and such wither, do! <foreign type="mantra" xml:lang="Sa-Ltn">Mara
                             mara</foreign>! Kill such and such, kill! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ
                             phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2341" index="199">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa grasa grasa kha kha khāhi khāhi śoṣaya śoṣaya
                                 mara mara māraya māraya amukaṃ hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.19]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-700"/>
-                    <p type="mantra" tid="798">“To banish the target, one should take a crow’s nest from a nimb tree and burn the nest in a fire
+                    <p tid="798">“To banish the target, one should take a crow’s nest from a nimb tree and burn the nest in a fire
                         from the charnel ground. One should incant the nest’s ashes with 108 repetitions of the above mantra, and
                         throw the ashes at the door of the target’s house. One should visualize the target mounted on a camel,
-                        fettered in shackles, and tied up with lassos, being led in the southern direction. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa! Banish such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2342" index="200">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa
+                        fettered in shackles, and tied up with lassos, being led in the southern direction. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa! Banish such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2342" index="200">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa
                                 amukam uccāṭaya hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.20]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-701"/>
-                    <p type="mantra" tid="799">“To sow hatred among others, one should take some dust from where two dogs are fighting and
-                        strike the effigies of the two targets. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
+                    <p tid="799">“To sow hatred among others, one should take some dust from where two dogs are fighting and
+                        strike the effigies of the two targets. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
                         when causing hate, Vajra of Hatred, sow hatred between such-and-such and such-and-such! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>
                         <note place="end" xml:id="UT22084-080-015-2343" index="201">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ dveṣaṇe dveṣa­vajre amukaṃ amukena vidveṣaya. oṁ caṇḍa­mahā­roṣaṇa hūṁ phaṭ.</foreign>
-                        </note>!’ <!--[XX.21]-->
+                        </note>!’</seg> <!--[XX.21]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-702"/>
-                    <p type="mantra" tid="800">“To immobilize the enemy with ease, one should draw on birch bark a tortoise, six fingers in
+                    <p tid="800">“To immobilize the enemy with ease, one should draw on birch bark a tortoise, six fingers in
                         size, with yellow orpiment, and write the syllable <foreign type="mantra" xml:lang="Sa-Ltn">hrī</foreign>
                         on its four feet, the syllable <foreign type="mantra" xml:lang="Sa-Ltn">plī</foreign> in the center of its
                         face, and the syllable <foreign type="mantra" xml:lang="Sa-Ltn">hri</foreign> at its navel. One should
@@ -5461,7 +5592,7 @@ Appendix: Sanskrit text-->
                         wrap a red string around the whole thing and throw it down by one’s feet.<note place="end" xml:id="UT22084-080-015-2345" index="203">Instead of “throw it down at one’s feet,” the Tibetan has “wrap it in a
                             rag with which one has washed one’s feet.”</note>
                         <ref cRef="F.337.b"/> One should kick it with one’s left foot while repeating ‘Please bring such and such
-                        under my control’ seven times. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
+                        under my control’ seven times. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
                         Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hrīṁ hrīṁ hroṁ</foreign>! In your wrathful
                         form, kill! Slay, slay! Strike, strike! Smash, smash! <foreign type="mantra" xml:lang="Sa-Ltn">Haha,
                             haha</foreign>! Lunge forward, lunge! Disperse, disperse! Nail, nail! Crush, crush! Immobilize such
@@ -5469,30 +5600,34 @@ Appendix: Sanskrit text-->
                                 caṇḍa­mahā­roṣaṇa hrīṁ hrīṁ hroṁ ghorarūpe caṭa pracaṭa pracaṭa hana hana ghāṭaya ghāṭaya haha
                                 haha prasphura prasphura prasphāraya prasphāraya kīlaya kīlaya jambhaya jambhaya stambhaya
                                 stambhaya amukaṃ hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.22]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-703"/>
-                    <p type="mantra" tid="801">“This mantra cures the closing of the eyes: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, cili,
+                    <p tid="801">“This mantra cures the closing of the eyes: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, cili,
                             mili</foreign>, when playing, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2347" index="205">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
                                 cili mili lalite hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.23]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-704"/>
-                    <p type="mantra" tid="802">“To stop the milk from flowing in cows, one should incant a peg made of cow’s bone, seven fingers
-                        long, with 108 recitations of this mantra, and bury it in a cow pen. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ cchrīṁ cchrīṁ cchrīṁ</foreign>! Parch, parch! Stop the flow, stop! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2348" index="206">Skt.
+                    <p tid="802">“To stop the milk from flowing in cows, one should incant a peg made of cow’s bone, seven fingers
+                        long, with 108 recitations of this mantra, and bury it in a cow pen. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ cchrīṁ cchrīṁ cchrīṁ</foreign>! Parch, parch! Stop the flow, stop! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2348" index="206">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ cchrīṁ cchrīṁ cchrīṁ śoṣaya śoṣaya dhāraā?ṃ bandha
                                 bandha. oṁ caṇḍamahāroṣaṇa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.24]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-705"/>
-                    <p type="mantra" tid="803">“To destroy merchandise, one should incant a vajra made of clay from an anthill with 108
-                        recitations of this mantra and bury it in a shop. Then say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajriṇī, let your vajra fly!—so commands the master of gods. Set alight, set! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2349" index="207">Skt.
+                    <p tid="803">“To destroy merchandise, one should incant a vajra made of clay from an anthill with 108
+                        recitations of this mantra and bury it in a shop. Then say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajriṇī, let your vajra fly!—so commands the master of gods. Set alight, set! <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2349" index="207">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vajriṇi vajraṃ pātaya surapatir ājñāpayati. jvālaya
                                 jvālaya. oṁ caṇḍa­mahā­roṣaṇa hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.25]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-706"/>
-                    <p type="mantra" tid="804">“To make a city shake, one should draw the lord on birch bark. He has two arms, is red in color,
+                    <p tid="804">“To make a city shake, one should draw the lord on birch bark. He has two arms, is red in color,
                         holds in his hands a noose and a goad, is intoxicated with lust, and terrifying. One should inscribe the
                         letters of the mantra with elephant’s rut fluid, wine, lac, blood, menstrual blood, or saffron, arranged
                         as follows: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ</foreign> on the head, <foreign type="mantra" xml:lang="Sa-Ltn">hrīṁ</foreign> in the heart, <foreign type="mantra" xml:lang="Sa-Ltn">klīṁ</foreign>
@@ -5500,20 +5635,22 @@ Appendix: Sanskrit text-->
                         surround the drawing with the garland mantra and wrap everything with a red string. One should then throw
                         it into a hollow filled with clarified butter and honey between the skulls of a woman and a man. Then
                         enclose the whole thing in beeswax, wrap a red string around it, and bury it at a central location.
-                        Stepping on it with one’s left foot, one should recite the mantra 25,000 times. The mantra is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrīṁ klīṁ traṁ yūṁ</foreign>, when crushing Yama, be harsh, be!
+                        Stepping on it with one’s left foot, one should recite the mantra 25,000 times. The mantra is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hrīṁ klīṁ traṁ yūṁ</foreign>, when crushing Yama, be harsh, be!
                         Shake, shake! For the consummation of all sense pleasures, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ
                             hūṁ phaṭ phaṭ! Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2350" index="208">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hrīṁ klīṁ traṁ yūṁ yama­mathane ākaḍḍa ākaḍḍa kṣobhaya
                                 kṣobhaya sarva­kāma­prasādhane hūṁ hūṁ phaṭ phaṭ svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.26]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-707"/>
-                    <p type="mantra" tid="805">“To enthrall a woman, one should pulverize intestinal worms into a fine powder and make it into a
+                    <p tid="805">“To enthrall a woman, one should pulverize intestinal worms into a fine powder and make it into a
                         pill by adding semen and blood from the ring finger. One should incant the pill with the mantra and put it
-                        into the target’s food or drink. The mantra is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
+                        into the target’s food or drink. The mantra is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>,
                         summon, summon! Bewilder, bewilder! Enthrall such and such, enthrall! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2351" index="209">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ ākarṣa ākarṣa mohaya mohaya amukīṃ me vaśīkuru
                                 svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.27]-->
                     </p>
                     <lb/>
@@ -5531,67 +5668,79 @@ Appendix: Sanskrit text-->
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-709"/>
-                    <p type="mantra" tid="807">“To destroy any poison, say: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White
+                    <p tid="807">“To destroy any poison, say: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, White
                         Vulture, devour the poison and the harmful anger! <foreign type="mantra" xml:lang="Sa-Ltn">Khaḥ khaḥ, ha
                             ha, saḥ saḥ! Oṁ</foreign>, the general of the great, fierce army commands. <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note xml:id="UT22084-080-015-2354" index="212">The Sanskrit has
                             amended the Tibetan reading: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ śveta­gṛdhṛṇi khāhi viṣaṃ ca
                                 ruṣaṃ ca khaḥ khaḥ ha ha saḥ saḥ. oṁ caṇḍa­mahā­sena ājñāpayati svāhā</foreign>. The Sanskrit
                             manuscript B reads: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ śveta­gṛṣiṇi gridhini khāhi viṣa ca
-                                ruṣiṇi khaḥ</foreign>…, and so on.</note> Alternatively one can recite the mantra: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Śaṃkāriṇī, <foreign type="mantra" xml:lang="Sa-Ltn">dhraṁ hāṁ hūṁ haṁ haḥ</foreign>!’<note place="end" xml:id="UT22084-080-015-2355" index="213">Skt.
+                                ruṣiṇi khaḥ</foreign>…, and so on.</note>
+                        </seg> Alternatively one can recite the mantra: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Śaṃkāriṇī, <foreign type="mantra" xml:lang="Sa-Ltn">dhraṁ hāṁ hūṁ haṁ haḥ</foreign>!’<note place="end" xml:id="UT22084-080-015-2355" index="213">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ saṃkāriṇi dhraṁ hāṁ hūṁ haṁ haḥ</foreign>.</note>
+                        </seg>
                         <!--[XX.29]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-710"/>
-                    <p type="mantra" tid="808">“To stop snakes from entering one’s residence, place clay incanted with this mantra, or a piece
+                    <p tid="808">“To stop snakes from entering one’s residence, place clay incanted with this mantra, or a piece
                         of paper with this mantra, at the door.<note place="end" xml:id="UT22084-080-015-2356" index="214">Instead
                             of “a piece of paper placed at the door,” the Tibetan has: “if one ties an incanted piece of garment
-                            silk above the door of one’s house.”</note> The mantra is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, enemy of snakes! Destroyer of Vāmana, <foreign type="mantra" xml:lang="Sa-Ltn">phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2357" index="215">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ nāgāri vāmana­haraḥ phaṭ</foreign>.</note>
+                            silk above the door of one’s house.”</note> The mantra is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, enemy of snakes! Destroyer of Vāmana, <foreign type="mantra" xml:lang="Sa-Ltn">phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2357" index="215">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ nāgāri vāmana­haraḥ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XX.30]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-711"/>
-                    <p type="mantra" tid="809">“Giving a woman fragrant white flowers incanted with this mantra will enthrall her: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Āṇā, blind in one eye,<note place="end" xml:id="UT22084-080-015-2358" index="216">The meaning of the phrase <foreign type="mantra" xml:lang="Sa-Ltn">āṇe
+                    <p tid="809">“Giving a woman fragrant white flowers incanted with this mantra will enthrall her: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Āṇā, blind in one eye,<note place="end" xml:id="UT22084-080-015-2358" index="216">The meaning of the phrase <foreign type="mantra" xml:lang="Sa-Ltn">āṇe
                                 kāṇe</foreign> is uncertain.</note> enthrall such and such! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2359" index="217">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ āṇe kāṇe amukiṃ vaśīkuru svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.31]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-712"/>
-                    <p type="mantra" tid="810">“By rinsing the eyes with water incanted with this mantra, one will cure blindness: ‘Homage to
+                    <p tid="810">“By rinsing the eyes with water incanted with this mantra, one will cure blindness: <seg type="mantra">‘Homage to
                         Vītarāga, O Maitreya­siṃha­locanī, <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2360" index="218">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namo vītarāgāya maitreya­siṃha­locani</foreign> (?) <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>. This reading seems corrupt.</note>
+                        </seg>
                         <!--[XX.32]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-713"/>
-                    <p type="mantra" tid="811">“With this mantra, a saphara fish will not be able to approach: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, saphara, khaḥ</foreign>! Eat the powder!’<note place="end" xml:id="UT22084-080-015-2361" index="219">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ saphara khaḥ</foreign>.
+                    <p tid="811">“With this mantra, a saphara fish will not be able to approach: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, saphara, khaḥ</foreign>! Eat the powder!’<note place="end" xml:id="UT22084-080-015-2361" index="219">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ saphara khaḥ</foreign>.
                             The meaning of this is uncertain. In the Tibetan, the whole paragraph is transliterated.</note>
+                        </seg>
                         <!--[XX.33]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-714"/>
-                    <p type="mantra" tid="812">“With this mantra, one will destroy the poison of snakes, scorpions, crabs, and the like: ‘May
+                    <p tid="812">“With this mantra, one will destroy the poison of snakes, scorpions, crabs, and the like: <seg type="mantra">‘May
                         the poison sink into the earth with the speed of the sun’s chariot, the power of Vāsudeva, and the
                         flapping of garuḍa’s wings!’<note place="end" xml:id="UT22084-080-015-2362" index="220">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">ādityasya ratha­vegena vāsudeva­balena ca garuḍa­pakṣa­pātena
                                 bhūmyāṃ gacchatu viṣaṃ svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.34]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-715"/>
-                    <p type="mantra" tid="813">“To prevent theft, one should cast a clod of earth incanted with this mantra seven times into the
-                        four directions: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Cāmuṇḍā, the unconquered, never
+                    <p tid="813">“To prevent theft, one should cast a clod of earth incanted with this mantra seven times into the
+                        four directions: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Cāmuṇḍā, the unconquered, never
                         conquered by another! Protect, protect! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2363" index="221">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
-                                cāmuṇḍe 'jite 'parājite rakṣa rakṣa svāhā</foreign>.</note> One should then place one clod in
-                        one’s own home and recite: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, the snapping one, the
+                                cāmuṇḍe 'jite 'parājite rakṣa rakṣa svāhā</foreign>.</note>
+                        </seg> One should then place one clod in
+                        one’s own home and recite: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, the snapping one, the
                         immobilizing one, the bewildering one, the one who suppresses all rogues! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2364" index="222">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ jambhanī stambhanī mohanī sarva­duṣṭa­praśamanī
                                 svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.35]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-716"/>
-                    <p type="mantra" tid="814">“Giving a flower, or something similar, incanted with this mantra will enthrall the target:
-                        ‘Homage to Fierce Great Anger. Kill, kill! <foreign type="mantra" xml:lang="Sa-Ltn">Culu, culu</foreign>!
+                    <p tid="814">“Giving a flower, or something similar, incanted with this mantra will enthrall the target:
+                        <seg type="mantra">‘Homage to Fierce Great Anger. Kill, kill! <foreign type="mantra" xml:lang="Sa-Ltn">Culu, culu</foreign>!
                         Remain, remain! Bind, bind! Bewilder, bewilder! Strike to kill, strike! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2365" index="223">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">namaś caṇḍa­mahā­krodhāya hulu hulu culu culu tiṣṭha
-                                tiṣṭha bandha bandha moha moha hana hana amṛte hūṁ phaṭ</foreign>.</note>[XX.36]</p>
+                                tiṣṭha bandha bandha moha moha hana hana amṛte hūṁ phaṭ</foreign>.</note>
+                        </seg><!--[XX.36]-->
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-717"/>
-                    <p type="mantra" tid="815">“With this mantra written on a leaf of umbrella tree, one will destroy all fever: ‘Homage to the
+                    <p tid="815">“With this mantra written on a leaf of umbrella tree, one will destroy all fever: <seg type="mantra">‘Homage to the
                         Three Jewels, <foreign type="mantra" xml:lang="Sa-Ltn">oṁ ṭaḥ</foreign>! When one is delirious, <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>!’”<note place="end" xml:id="UT22084-080-015-2366" index="224">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namo ratna­trayāya. oṁ ṭaḥ
                                 suvismare svāhā</foreign>.</note>
+                        </seg>
                         <!--[XX.37]-->
                     </p>
                     <lb/>
@@ -5605,11 +5754,12 @@ Appendix: Sanskrit text-->
                     <head type="chapterTitle" tid="2010">Magical Practices</head>
                     <milestone unit="chunk" xml:id="UT22084-080-015-719"/>
                     <p tid="816">Then the lord said:</p>
-                    <p type="mantra" tid="817">“One should perform all the following rituals with this mantra while visualizing
-                        Caṇḍa­mahā­roṣaṇa: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, you who are
+                    <p tid="817">“One should perform all the following rituals with this mantra while visualizing
+                        Caṇḍa­mahā­roṣaṇa: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, you who are
                         a teacher of all magic! Teach all the magical methods to remove obstacles! <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!’<note place="end" xml:id="UT22084-080-015-2367" index="225">Skt.
                                 <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa sarva­māyā­darśaka sarva­māyāṃ
                                 nidarśaya nirvighne hūṁ phaṭ</foreign>.</note>
+                        </seg>
                         <!--[XXI.1]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-720"/>
@@ -5654,12 +5804,13 @@ Appendix: Sanskrit text-->
                             (vitiligo).</note> This can be undone if it is rotated to the left. <!--[XXI.9]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-728"/>
-                    <p type="mantra" tid="826">“One should write the mantra with blood from the heart of a crow, on a leaf of a mango tree, with
+                    <p tid="826">“One should write the mantra with blood from the heart of a crow, on a leaf of a mango tree, with
                         a stylus made from the crow’s pinion. The person into whose excrement one throws this leaf will be eaten
-                        by a crow. The mantra to say is ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, the deceitful
+                        by a crow. The mantra to say is <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, the deceitful
                         angry crow hen! Cause such and such to be eaten by a crow! <foreign type="mantra" xml:lang="Sa-Ltn">Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2371" index="229">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ kāka­kuhanī kruddhanī deva­dattaṃ kākena bhakṣāpaya
                                 svāhā.</foreign>
                         </note>
+                        </seg>
                         <!--[XXI.10]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-729"/>
@@ -5792,14 +5943,15 @@ Appendix: Sanskrit text-->
                         <!--[XXI.35]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-754"/>
-                    <p type="mantra" tid="852">“One should draw, on a human skull, the figure of the target with the pigment of bovine
+                    <p tid="852">“One should draw, on a human skull, the figure of the target with the pigment of bovine
                         gallstones and blood. One should enclose there, using a second skull, her name written in combination with
                         the mantra and anointed with perfumed water. One should wrap the sacred cord of a deceased Brahmin around
                         the two skulls, seal this with beeswax, and recite the mantra. One should heat it up at night in the
                         embers of a funeral pyre until the wax has melted. Then one will summon even a celestial girl. The mantra
-                        to recite is: ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, pull, pull! Bewilder, bewilder!
+                        to recite is: <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, pull, pull! Bewilder, bewilder!
                         Bring such and such, <foreign type="mantra" xml:lang="Sa-Ltn">jaḥ! Svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2381" index="239">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ ākaṭṭa
                                 ākaṭṭa mohaya mohaya amukīm ākarṣaya jaḥ svāhā</foreign>.</note>
+                        </seg>
                         <!--[XXI.36]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-755"/>
@@ -6319,30 +6471,39 @@ Appendix: Sanskrit text-->
                     <lg tid="926">
                         <l>“And these are the respective mantras to be recited:</l>
                     </lg>
-                    <ab type="mantra" tid="1916">“ ‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Viśvavajrī, come, come!
+                    <p rend="mantra" tid="1916">“ <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Viśvavajrī, come, come!
                             <foreign type="mantra" xml:lang="Sa-Ltn">Hūṁ svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2394" index="252">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ viśvavajri āgaccha
                                 āgaccha hūṁ svāhā</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1917">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajrasarasvatī, come,
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1917">
+                        <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajrasarasvatī, come,
                         come! <foreign type="mantra" xml:lang="Sa-Ltn">Dhīḥ svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2395" index="253">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vajra­sarasvatī āgaccga
                                 āgaccha dhīḥ svāhā</foreign>.</note>
+                        </seg>
                         <ref cRef="F.342.b"/>
-                    </ab>
-                    <ab type="mantra" tid="1918">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajra­dhātvīśvarī, come,
+                    </p>
+                    <p rend="mantra" tid="1918">
+                        <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Vajra­dhātvīśvarī, come,
                         come! <foreign type="mantra" xml:lang="Sa-Ltn">Vaṁ svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2396" index="254">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ vajra­dhātvīśvarī
                                 āgaccha āgaccha vaṁ svāhā</foreign>.</note>
-                    </ab>
-                    <ab type="mantra" tid="1919">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Kurukullā, come, come!
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1919">
+                        <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Kurukullā, come, come!
                             <foreign type="mantra" xml:lang="Sa-Ltn">Hrīṁ svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2397" index="255">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ kurukulle āgaccha
                                 āgaccha hrīṁ svāhā.</foreign>
                         </note>
-                    </ab>
-                    <ab type="mantra" tid="1920">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Tārā, come, come!
+                        </seg>
+                    </p>
+                    <p rend="mantra" tid="1920">
+                        <seg type="mantra">‘<foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Tārā, come, come!
                             <foreign type="mantra" xml:lang="Sa-Ltn">Tāṁ svāhā</foreign>!’<note place="end" xml:id="UT22084-080-015-2398" index="256">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ tāre āgaccha āgaccha
                                 tāṁ svāhā.</foreign>
                         </note>
+                        </seg>
                         <!--[XXV.13]-->
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-828"/>
                     <lg tid="928">
                         <l>“Now I will teach</l>
@@ -6424,7 +6585,8 @@ Appendix: Sanskrit text-->
                         <l>And standing on yellow Kubera.<note place="end" xml:id="UT22084-080-015-2400" index="258">Translation
                                 based on the Tibetan. This verse is missing in the Sanskrit. From this point on until the end of
                                 this chapter, the verse numbers given here are out of step with the numbers in the Sanskrit
-                                text.</note>[XXV.24]</l>
+                                text.</note><!--[XXV.24]-->
+                        </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-839"/>
                     <p tid="939">“Standing on seats of sun disks,<note place="end" xml:id="UT22084-080-015-2401" index="259">The
@@ -6474,7 +6636,9 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-845"/>
                     <p tid="945">“By meditating on just that and offering grilled fish and so on, one can hold all the gods
                             captive.<note place="end" xml:id="UT22084-080-015-2403" index="261">The Tibetan adds: “So what need is
-                            there to mention other humans. The mantra for this is as follows: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa bhandha bhandha name hūṁ phaṭ</foreign>.”</note>
+                            there to mention other humans. The mantra for this is as follows: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍa­mahā­roṣaṇa bhandha bhandha name hūṁ phaṭ</foreign>
+                            </seg>.”</note>
                         <!--[XXV.31]-->
                     </p>
                     <lb/>

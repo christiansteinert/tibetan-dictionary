@@ -3,17 +3,24 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt>
+            <titleStmt sponsored="full">
                 <title type="mainTitle" xml:lang="Bo-Ltn">gser 'od mchog tu rnam par rgyal ba'i mdo/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn"/>
                 <title type="mainTitle" xml:lang="en">The Sūtra, The Supremely Victorious Golden Light</title>
                 <title type="otherTitle" xml:lang="zh">金光明最勝王經</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa gser 'od dam pa mchog tu rnam par rgyal ba'i mdo sde'i rgyal po zhes bya ba theg pa chen po'i mdo/</title>
                 <title type="otherTitle" xml:lang="en">[Translated from the Chinese]</title>
+                <author role="translatorMain" sameAs="contributors.xml#team-22"/>
             <sponsor sameAs="sponsors.xml#sponsor-181">Zhang Dada</sponsor>
+                <author role="translatorEng" sameAs="contributors.xml#person-142">Dr. Peter Alan Roberts</author>
+                <editor role="reviser" sameAs="contributors.xml#person-143">Emily Bower</editor>
             </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
             <publicationStmt status="3">
                 <idno xml:id="UT22084-089-012"/>
+                <date/>
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh555" type="text">
@@ -28,7 +35,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 23/01/2019 at 16:45:09 by laura</note>
+                <note type="lastUpdated">Last updated at 06/02/2019 at 20:46:31 by laura</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>

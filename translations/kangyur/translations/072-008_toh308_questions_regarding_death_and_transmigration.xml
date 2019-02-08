@@ -18,15 +18,14 @@
                 <title type="longTitle" xml:lang="Sa-Ltn"/>
                 <author sameAs="" role="translatorMain">Translated by Tom Tillemans<lb/> under the patronage
                     and supervision of 84000: Translating the Words of the Buddha.</author>
-            <author role="translatorEng" sameAs="contributors.xml#person-84"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-260"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-87"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-230"/>
+            <consultant role="advisor" sameAs="contributors.xml#person-84">David Rawson</consultant>
+                <consultant role="advisor" sameAs="contributors.xml#person-260">Seth Davis</consultant>
+                <consultant role="advisor" sameAs="contributors.xml#person-87">Russell Shipman</consultant>
+                <author role="translatorEng" sameAs="contributors.xml#person-230">Tom Tillemans</author>
                 <consultant role="advisor" sameAs="contributors.xml#person-51">James Gentry</consultant>
                 <editor role="externalReviewer" sameAs="contributors.xml#person-51">James Gentry</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-257"/>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-230"/>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-92"/>
+                <editor role="copyEditor" sameAs="contributors.xml#person-257">Raynald Prévèreau</editor>
+                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-92">Laura Goetz</editor>
             </titleStmt>
             <editionStmt>
                 <edition>v 1.01 <date>2018</date>
@@ -65,14 +64,14 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 16/10/2018 at 17:03:29 by andre</note>
+                <note type="lastUpdated">Last updated at 07/02/2019 at 21:54:07 by laura</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
     <text>
         <front>
             <div type="summary">
-                <head type="summary">Summary</head>
+                <head type="summary" tid="94">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-072-008-1"/>
                 <p tid="1">
                     <title xml:lang="en">Questions Regarding Death and Transmigration</title>
@@ -88,7 +87,7 @@
                     complex array of similes.</p>
             </div>
             <div type="acknowledgment">
-                <head type="acknowledgment">Acknowledgements</head>
+                <head type="acknowledgment" tid="95">Acknowledgements</head>
                 <milestone unit="chunk" xml:id="UT22084-072-008-2"/>
                 <p tid="2">An initial draft translation of this sūtra was done by Four Reliances
                     Translations (David Rawson, Seth Davis, and Russell Shipman) of Se ra Monastery
@@ -99,7 +98,7 @@
                     valuable feedback.</p>
             </div>
             <div type="introduction">
-                <head type="introduction">Introduction</head>
+                <head type="introduction" tid="96">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-072-008-3"/>
                     <p tid="3">
@@ -431,9 +430,9 @@
         </front>
         <body>
             <div type="translation">
-                <head type="translation">The Translation</head>
-                <head type="titleHon">The Sūtra</head>
-                <head type="titleMain">Questions Regarding Death and Transmigration</head>
+                <head type="translation" tid="97">The Translation</head>
+                <head type="titleHon" tid="98">The Sūtra</head>
+                <head type="titleMain" tid="99">Questions Regarding Death and Transmigration</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-072-008-29"/>
                     <p tid="19">
@@ -1210,7 +1209,7 @@
                             Death and Transmigration</title>.</p>
                 </div>
                 <div type="colophon">
-                    <head type="colophon">Colophon</head>
+                    <head type="colophon" tid="100">Colophon</head>
                     <p tid="93">The translation done at the time of the earlier dissemination of the
                         teaching has not been modified at all with revised terminology.</p>
                 </div>
@@ -1218,9 +1217,9 @@
         </body>
         <back>
             <div type="notes">
-                <head type="notes">Notes</head>
+                <head type="notes" tid="101">Notes</head>
                 <list type="abbreviations">
-                    <head type="abbreviations">Abbreviations</head>
+                    <head type="abbreviations" tid="102">Abbreviations</head>
                     <!-- In this section, markup editors need to move the expanded form of the
                             abbreviation out of the "abbr" element and put it into the "expan" element. Delete
                            this comment and the "fix" tag when you are done. If there are no abbreviations in 
@@ -1266,9 +1265,9 @@
                 </list>
             </div>
             <div type="listBibl">
-                <head type="listBibl">Bibliography</head>
+                <head type="listBibl" tid="103">Bibliography</head>
                 <div type="section">
-                    <head type="section">Source Texts in Tibetan</head>
+                    <head type="section" tid="104">Source Texts in Tibetan</head>
                     <bibl xml:id="UT22084-072-008-119">Choné Drakpa Shedrup (<foreign xml:lang="Bo-Ltn">co ne grags pa bshad sgrub</foreign>). <title xml:lang="Bo-Ltn">Lho sgo’i cho ga’i rgyas ’grel gzhan phan nyi
                             ’od</title>. In <title xml:lang="Bo-Ltn">rje btsun grags pa bshad sgrub
                             kyi gsung ’bum (glog klad par ma)</title>, <title xml:lang="en">The
@@ -1309,7 +1308,7 @@
                         Publishing House), 2006–2009, vol. 72, pp. 408–29.</bibl>
                 </div>
                 <div type="section">
-                    <head type="section">Other Works</head>
+                    <head type="section" tid="105">Other Works</head>
                     <bibl xml:id="UT22084-072-008-125">Bodewitz, H.W. Yonder World in the <title xml:lang="Sa-Ltn">Atharvaveda</title>. <title xml:lang="en">Indo-Iranian
                             Journal</title> 42 (1999): 107–20.</bibl>
                     <bibl xml:id="UT22084-072-008-126">Damdul Namgyal, Geshé. “Sūtra in Response to

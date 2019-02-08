@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2018-12-18T20:02:56Z. .
-TEI Edition: Version 3.4.0. Last updated on
-	23rd July 2018, revision 1fa0b54
-TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
+Schema generated from ODD source 2019-01-31T17:29:32Z. .
+TEI Edition: Version 3.5.0. Last updated on
+	29th January 2019, revision 3c0c64ec4
+TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
   
 --><!---->
    <define name="macro.paraContent">
@@ -24,6 +24,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
          <choice>
             <text/>
             <ref name="model.gLike"/>
+            <ref name="model.qLike"/>
             <ref name="model.phrase"/>
             <ref name="model.global"/>
          </choice>
@@ -48,10 +49,12 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
          </attribute>
          <optional>
             <attribute name="type">
-               <choice>
-                  <value>sponsor</value>
-                  <value>mantra</value>
-               </choice>
+               <value>sponsor</value>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rend">
+               <value>mantra</value>
             </attribute>
          </optional>
          <oneOrMore>
@@ -86,6 +89,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="hi"/>
+               </zeroOrMore>
+               <zeroOrMore>
+                  <ref name="seg"/>
                </zeroOrMore>
                <zeroOrMore>
                   <element name="term">
@@ -653,7 +659,9 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
       </oneOrMore>
    </define>
    <define name="model.segLike">
-      <notAllowed/>
+      <choice>
+         <ref name="seg"/>
+      </choice>
    </define>
    <define name="model.hiLike">
       <notAllowed/>
@@ -1505,8 +1513,15 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This paragraph warns the reader that this text has a tantric restrition. Thie p should be stated in the text's availability in the publicationStmt</a:documentation>
                   <value>sponsor</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This paragraph details the sponsor for the publication of the text, and this should be placed in the "acknowledgements" found int he front of the text.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="rend">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
                   <value>mantra</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This paragraph contains a mantra, and will be included in the lexicon of mantras. If the mantra is not contained in a p element, this attribute and value may be applied to lg or ab elements in a similar manner.</a:documentation>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This p element contains a mantra. The mantra has been formally and clearly declared and so will set apart with indentation and vertical spacing in the 84000 web display. Not all p elements that contain mantras need to be rendered in this way, but generally we do so, when they are formally and clearly declared in the text.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -1704,8 +1719,10 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.4.0/
    </define>
    <define name="date">
       <element name="date">
-         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.6. Dates and Times]</a:documentation>
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">contains a date in any format. [3.5.4. Dates and Times 2.2.4. Publication, Distribution, Licensing, etc. 2.6. The Revision Description 3.11.2.4. Imprint, Size of a Document, and Reprint Information 15.2.3. The Setting Description 13.3.7. Dates and Times]</a:documentation>
          <text/>
+         <ref name="att.canonical.attributes"/>
+         <empty/>
       </element>
    </define>
    <define name="abbr">
@@ -2182,6 +2199,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <choice>
                <ref name="l"/>
                <ref name="milestone"/>
+               <ref name="seg"/>
             </choice>
          </oneOrMore>
          <pattern xmlns="http://purl.oclc.org/dsdl/schematron" id="NewODD-lg-atleast1oflggapl-constraint-assert-3">
@@ -2207,8 +2225,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                   <value>spyi_sdom</value>
                   <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
-                  <value>mantra</value>
-                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This paragraph contains a mantra, and will be included in the lexicon of mantras. If the mantra is not contained in a p element, this attribute and value may be applied to lg or ab elements in a similar manner.</a:documentation>
                </choice>
             </attribute>
          </optional>
@@ -2216,6 +2232,15 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Numbers paragraph and line groups in a particular text.</a:documentation>
             <text/>
          </attribute>
+         <optional>
+            <attribute name="rend">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <choice>
+                  <value>mantra</value>
+                  <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">This lg element contains a mantra. The mantra has been formally and clearly declared and so will set apart with indentation and vertical spacing in the 84000 web display. Not all lg elements that contain mantras need to be rendered in this way, but generally we do so, when they are formally and clearly declared in the text.</a:documentation>
+               </choice>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>
@@ -3496,6 +3521,34 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Numbers paragraph and line groups in a particular text. Also applicable to the ab element.</a:documentation>
             <text/>
          </attribute>
+         <empty/>
+      </element>
+   </define>
+   <define name="seg">
+      <element name="seg">
+         <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(arbitrary segment) represents any segmentation of text below the chunk level. [16.3. Blocks, Segments, and Anchors 6.2. Components of the Verse Line 7.2.5. Speech Contents]</a:documentation>
+         <ref name="macro.paraContent"/>
+         <attribute name="type">
+            <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
+            <choice>
+               <value>mantra</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>dharani</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+            </choice>
+         </attribute>
+         <optional>
+            <attribute name="deity">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="subtype">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
          <empty/>
       </element>
    </define>

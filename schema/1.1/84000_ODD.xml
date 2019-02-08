@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="SchemaToValidateODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://34.195.160.84:8080/exist/webdav/db/apps/84000-data/tei/schema/1.1/SchemaToValidateODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
@@ -14,7 +14,7 @@
         <note type="ns">http://84000.co/schemas/TEI</note>
       </notesStmt>
       <sourceDesc>
-        <p>v. 22 updated 12-3-2018 by celso</p>
+        <p>v. 27 updated 1-30-2019 by celso</p>
       </sourceDesc>
     </fileDesc>
   </teiHeader>
@@ -49,7 +49,7 @@
         <moduleRef key="tei" except=""/>
         <moduleRef key="header" include="availability edition editionStmt fileDesc idno licence notesStmt publicationStmt sourceDesc teiHeader titleStmt"/>
         <moduleRef key="textstructure" include="TEI back body div front text trailer"/>
-        <moduleRef key="linking" include="ab"/>
+        <moduleRef key="linking" include="ab seg"/>
         <classSpec type="atts" ident="att.breaking" mode="delete"/>
         <classSpec type="atts" ident="att.datable" mode="delete"/>
         <classSpec type="atts" ident="att.citing" mode="delete"/>
@@ -181,6 +181,12 @@
                 <attribute name="type">
                   <rng:choice>
                     <rng:value>sponsor</rng:value>
+                  </rng:choice>
+                </attribute>
+              </optional>
+              <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                <attribute name="rend">
+                  <rng:choice>
                     <rng:value>mantra</rng:value>
                   </rng:choice>
                 </attribute>
@@ -217,6 +223,9 @@
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="hi"/>
+                  </rng:zeroOrMore>
+                  <rng:zeroOrMore>
+                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="seg"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <rng:element name="term">
@@ -2679,6 +2688,7 @@
             <attDef ident="rend" usage="req">
               <valList type="closed">
                 <valItem ident="small-caps"/>
+                <valItem ident="subscript"/>
               </valList>
             </attDef>
           </attList>
@@ -2972,6 +2982,7 @@
             <alternate maxOccurs="unbounded">
               <elementRef key="l"/>
               <elementRef key="milestone"/>
+              <elementRef key="seg"/>
             </alternate>
           </content>
           <attList>
@@ -2985,14 +2996,19 @@
                 <valItem ident="sdom"/>
                 <valItem ident="bar_sdom"/>
                 <valItem ident="spyi_sdom"/>
-                <valItem ident="mantra">
-                    <desc>This paragraph contains a mantra, and will be included in the lexicon of mantras.
-                      If the mantra is not contained in a <gi>p</gi> element, this attribute and value
-                      may be applied to <gi>lg</gi> or <gi>ab</gi> elements in a similar manner.</desc>
-                </valItem>
               </valList>
             </attDef>
             <attDef ident="subtype" mode="delete"/>
+            <attDef ident="rend" mode="add" usage="opt">
+              <valList type="closed">
+                <valItem ident="mantra">
+                  <desc>This <gi>lg</gi> element contains a mantra. The mantra has been formally and clearly 
+                    declared and so will set apart with indentation and vertical spacing in the 84000 web display.
+                    Not all <gi>lg</gi> elements that contain mantras need to be rendered in this way, but generally 
+                    we do so, when they are formally and clearly declared in the text.</desc>
+                </valItem>
+              </valList>
+            </attDef>
           </attList>
           <exemplum>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -3433,10 +3449,15 @@
                     should be placed in the "acknowledgements" found int he front of the
                     text.</desc>
                 </valItem>
+              </valList>
+            </attDef>
+            <attDef ident="rend" mode="add" usage="opt">
+              <valList type="closed">
                 <valItem ident="mantra">
-                  <desc>This paragraph contains a mantra, and will be included in the lexicon of mantras.
-                  If the mantra is not contained in a <gi>p</gi> element, this attribute and value
-                    may be applied to <gi>lg</gi> or <gi>ab</gi> elements in a similar manner.</desc>
+                  <desc>This <gi>p</gi> element contains a mantra. The mantra has been formally and clearly 
+                  declared and so will set apart with indentation and vertical spacing in the 84000 web display.
+                  Not all <gi>p</gi> elements that contain mantras need to be rendered in this way, but generally 
+                  we do so, when they are formally and clearly declared in the text.</desc>
                 </valItem>
               </valList>
             </attDef>
@@ -3800,6 +3821,35 @@
           </exemplum>
           <remarks>
             <p>The are three uses for the <gi>ref</gi> element in 84000 texts:</p>
+          </remarks>
+        </elementSpec>
+        <elementSpec ident="seg" module="linking" mode="change">
+          <classes mode="change">
+            <memberOf key="att.global" mode="delete"/>
+            <memberOf key="att.notated" mode="delete"/>
+            <memberOf key="att.segLike" mode="delete"/>
+            <memberOf key="att.datcat" mode="delete"/>
+          </classes>
+          <attList>
+            <attDef ident="type" mode="change" usage="req">
+              <valList type="closed" mode="replace">
+                <valItem ident="mantra"/>
+                <valItem ident="dharani"/>
+              </valList>
+            </attDef>
+            <attDef ident="deity" mode="add" usage="opt"/>
+            <attDef ident="subtype" mode="add" usage="opt"/>
+          </attList>
+          <exemplum>
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <p>The sage taught the mendicant the following mantra:</p>
+              <p rend="mantra">"<seg type="mantra" deity="Caṇḍa­mahā­roṣaṇa">
+                                    <foreign xml:lang="Sa-Ltn">Oṁ hrāṁ hrīṁ hrauṁ</foreign>, in your fierce form, expel, expel!!"</seg>!"</p>
+            </egXML>
+          </exemplum>
+          <remarks>
+            <p>In 84000 texts the <gi>seg</gi> element is used to mark strings of mantra or dharani text and should likewise be marked
+            as such by the <att>type</att> attribute. These strings will be extracted to the mantra lexicon in the database.</p>
           </remarks>
         </elementSpec>
         <elementSpec ident="sourceDesc" module="header" mode="change">
@@ -4495,7 +4545,8 @@
               styles to outline the text. Make sure that the style “Heading 4” or higher isn’t used
               anywhere in the document, as that information will be lost in the conversion process.
               Any headings for fourth level subsections (or higher) written by the translator should
-              be set to the “Normal” style in the style set. </item>
+              be set to the “Normal” style in the style set and be tagged with &lt;level 4 header&gt; or similar tags.
+              These subsections will need to be manually created with <gi>div</gi> elements when you edit the XML. </item>
             <item>Apply all the various styles to the italics in the text.</item>
             <item>Apply the "verse" style to verses and format the verses (change the display
               settings to show paragraph marks and line breaks so you can see more clearly whether
@@ -4594,11 +4645,9 @@
               Kangyur and Tengyur texts. Go to 84000 Collaboration &gt; apps &gt; 84000-data &gt;
               tei &gt; translations, and you will see the "kangyur" and "tengyur" folders. Each of
               these folders in turn contain a "placeholders" folder and a "translations" folder.
-              Find the placeholder file for the text and move it into the sibling "translations"
-              folder. As the placeholder folder is quite large you may need to hold down the left
-              click and scroll all the way down until you see the translations folder, but you
-              should be able to move the file directly in the data source explorer from oXygen. You
-              can then begin pasting the text from the XML you just converted into the placeholder
+              Find the placeholder file right click and select "cut" then move it into the sibling "translations"
+              folder by right and select "paste" (don't use "copy" and "paste" as this will reset the files permissions). 
+              You can then begin pasting the text from the XML you just converted into the placeholder
               text. Most of the placeholder files contain only the <gi>teiHeader</gi>, but some may
               contain additional information. In general, try to preserve all the information from
               both sources, and if there is any data that is contradictory between the placeholder
@@ -4625,7 +4674,8 @@
             <head>
               <hi rend="bold">Apply the Schema:</hi>
             </head>
-            <item>Apply the Schema located in “84000 Collaboration &gt; apps &gt; 84000-data &gt;
+            <item>The schema should already be applied to the placeholder file, but if you need to 
+              apply the schema directly it is located in “84000 Collaboration &gt; apps &gt; 84000-data &gt;
               schema &gt; current &gt; translation.rng.” You will see any schema errors as red bars
               on the right column in the oXygen window. Checking the schema is the best way to see
               if the XML is going to work correctly in the parser. If later on you have trouble
@@ -4636,7 +4686,8 @@
               tags:<lb/> &lt;!-- --&gt; (or highlight and press Ctrl-Shift “,” on PC or
               Command-Shift "m" on mac). Then you will be able to temporarily block all the seeming
               schema errors to help identify the problem. </item>
-            <item>Note that all "xml:id" attributes, "tid" attributes in the <gi>p</gi> elements,
+            <item>You will initially see many schema errors for some missing attributes such as "xml:id"s and "tid"s. 
+              Note that all "xml:id" attributes, "tid" attributes in the <gi>p</gi> elements,
               and "index" attributes in the <gi>note</gi> elements will be added automatically when
               you save and reload the XML, so you don't need to worry about adding these. However,
               in the <gi>teiHeader</gi> within the <gi>publicationStmt</gi> there is an element for
@@ -4644,7 +4695,7 @@
               you will need to enter the number manually (you should be able to look up the text
               number as it is posted on the Trello board "UT22084-###-###"). Then the database will
               automatically generate the xml:id attributes throughout the text based on this.</item>
-            <item>In case there is an error in any of the "xml:id" or "tid" attributes, then you can
+            <item>In case there is an error in any of the "xml:id" or "tid" attributes due to duplicates, then you can
               regenerate them by deleting any problematic ones, saving the file, and then
               re-opening. The "xml:id" and "tid" will be generated wherever they are missing. If
               not, email the lead technician and they will make sure they are regenerated. It is
@@ -4669,12 +4720,58 @@
               divisions in the summary or acknowledgements, these sections may disappear. It is
               particularly good to check the front material and the bibliography for anything
               unusual.</item>
-            <item>Make sure all the elements are nested properly (it should give you errors if they
-              are not).</item>
+            <item>When you first get to the <gi>body</gi> of the text, you may notice that the title
+            has been repeated with two lines containing separate <gi>p</gi> and <gi>milestone</gi>
+              tags. For example:
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <body>
+                  <div type="translation">
+                  <head type="translation"> The Translation </head>
+                  <head type="titleHon">The Noble Great Vehicle Sūtra</head>
+                  <head type="titleMain">Distinguishing Between Phenomena and Reality</head>
+                  <milestone unit="chunk"/>
+                  <p>
+                    The Noble Great Vehicle Sūtra
+                  </p>
+                  <milestone unit="chunk"/>
+                  <p>
+                    Distinguishing Between Phenomena and Reality
+                  </p>
+                  
+                  <!--...body of the text...-->
+                  
+                 </div>
+                </body>
+              </egXML>
+              The reason for this, is the script has a safeguard to display any text within 
+              the first main <gi>div</gi> but not included in the first second level <gi>div</gi>.
+              A not ideal consequence of this safeguard results in this repetition of the first two lines,
+              which simply needed to be deleted manually. So the above example should 
+              be edited to look as follows:              
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <body>
+                <div type="translation">
+                <head type="translation"> The Translation </head>
+                <head type="titleHon">The Noble Great Vehicle Sūtra</head>
+                <head type="titleMain">Distinguishing Between Phenomena and Reality</head>
+              
+                <!--...body of the text...-->
+              
+                </div>
+              </body>
+            </egXML>
+            </item>
+            <item>If either one of the introduction, main translation, and/or bibliography have only one section you will probably
+              see this heading at the beginning of their second level <gi>div</gi> element: <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                <head>Main Section</head>
+              </egXML> This is actually a placeholder from the template and should be removed, as
+              the heading from the previous <gi>div</gi> element will provide the heading
+              "Introduction" or "The Translation." </item>
             <item>If there were any italics that were missed in the copy editing phase, they will
               appear with a schema error in an element called "fix." You will need to manually fix
               these and replace them with the appropriate element, whether it be <gi>foreign</gi>,
-                <gi>title</gi>, <gi>distinct</gi>, etc.</item>
+                <gi>title</gi>, <gi>distinct</gi>, etc. Sometimes these may be just italicized punctuation
+            that the copy editor or author made by mistake, in which case you can go ahead and remove these tags.</item>
             <item>Double check that the tag &lt;hi rend="small-caps"&gt; is used for any small capital
               letters that might be used in the text. This includes any abbreviations for CE ("Common Era") or
               BCE ("Before Common Era") in dates, and also this is used for some of the Kangyur sigla
@@ -4831,12 +4928,6 @@
               search for the character codes for angular brackets: &amp;lt; or &amp;gt; this might
               include <gi>q</gi> elements or level 4 headers that cannot be handled by the
               script.</item>
-            <item>If the introduction and main translation only have one section you will probably
-              see this heading at the beginning of their second level <gi>div</gi> element: <egXML xmlns="http://www.tei-c.org/ns/Examples">
-                <head>Main Section</head>
-              </egXML> This is actually a placeholder from the template and should be removed, as
-              the heading from the previous <gi>div</gi> element will provide the heading
-              "Introduction" or "The Translation." </item>
             <item>
               <gi>note</gi>s cannot be left in headers or titles. Move these notes to an appropriate
               place within the text itself.</item>
@@ -4865,7 +4956,7 @@
               by a <gi>head</gi> that has its own matching <att>type</att> attribute; however, there
               is one exception to this, &lt;div type="section"&gt; may be left without a
                 <gi>head</gi> if the author did not provide one, this will usually be the case in
-              the Introduction or Main Translation whenever there is just one section and by default
+              the Introduction, Main Translation, or Bibliography whenever there is just one section and by default
               it is placed into a second level &lt;div type="section"&gt; wrapped within a first
               level &lt;div type="introduction"&gt; or &lt;div type="translation"&gt;. In this case
               the parser will read the <gi>head</gi>s from the main first level <gi>div</gi> and the
@@ -4976,9 +5067,14 @@
           <list>
             <item>Before transforming the glossary in the Excel spreadsheet with the script, make
               sure that the spreadsheet is formatted properly. It should have three sheets labeled
-              "Terms," "People," and "Places." Each sheet needs to have five columns that are
-              arranged as follows: Tibetan Wylie, Sanskrit, Translation, Definition, and
-              Alternatives.</item>
+              "Terms", "People", and "Places" (if the names of the sheets don't say this exactly, 
+              the script won't apply the correct <att>type</att> to the <gi>gloss</gi> elements). Each sheet needs to have five columns that are
+              exactly arranged as follows: (A) Tibetan Wylie, (B) Sanskrit, (C) Translation, (D) Definition, and
+              (E) Alternatives.</item>
+            <item>Note that occasionally you may get a spreadsheet with an additional column of Chinese 
+            terms. If this is the case, there is a separate script for spreadsheets with Chinese. In
+            this case the six columns should be arranged exactly as follows: (A) Tibetan Wylie, (B) Chinese, (C) Sanskrit, (D) Translation, (E) Definition, and
+            (F) Alternatives.</item>
             <item>
               <hi rend="bold">Using a Macro to Correct Initial Apostrophes:</hi> When you receive a
               glossary file, in Excel, it’s likely there will be hidden apostrophes in the wylie
@@ -5028,9 +5124,10 @@
                 <item>B. Select “New” &gt; “XML transformation with XSLT.”</item>
                 <item>C. For the XSL URL: click on the drop-down menu next to the folder and select
                   “Browse Data Source Explorer.”</item>
-                <item>D. Select the file in 84000-data/xslt called "oxGto84000-gloss.xsl" (if you
+                <item>D. Select the file in 84000-data/xslt called "oxGto84000-gloss.xsl" (or use "oxGto84000-gloss.xsl-wChinese"
+                  if the glossary contains six columns with Chinese Terms). If you
                   get a permissions error email Dominic and ask him to give you permissions to open
-                  the file).</item>
+                  the file.</item>
                 <item>E. For the “Transformer”: select “Saxon-PE 9.6.0.7” from the drop-down
                   menu.</item>
                 <item>F. Click on the “Output” tab and check the box that says “Open in
@@ -5105,9 +5202,21 @@
               empty cells at the bottom of each sheet. Also remove entries that were converted from
               the spreadsheet's headings i.e., Tibetan, Sanskrit, Translation, Definition,
               etc.</item>
+            <item>If the script "oxGto84000-gloss.xsl-wChinese" was used, the script assumes that the Chinese terms will be typed in Chinese characters
+            and will be set to xml:lang="zh" by default.</item>
+            <item>Note that the database will also automatically generate Tibetan script and add it as a
+              &lt;term xml:lang="bo"/&gt; element based on the Wylie glossary entries. The
+              code should look within the glossary for any &lt;term xml:lang="Bo-Ltn"/&gt; and create the matching "bo" term
+              wherever there isn't one. So be sure to save the file, close it, reopen, and check that
+              the Tibetan entries have been properly added. 
+            </item>
             <item>Check for errors and make sure the tags are nested properly. Use a
               previously-edited 84000 TEI XML as a model. You might want to save it first so that it
               automatically adds all the attributes and so forth.</item>
+            <item>Note that any italics used in the definitions for glossary items need to be entered in manually. By default the script will place
+              all italics found in the definitions column into &lt;title xml:lang=""&gt; tags, but you
+            will need to go in and change some of these into <gi>foreign</gi> tags where appropriate and
+            add the proper <att>type</att> and <att>xml:lang</att> attributes as needed.</item>
           </list>
         </div>
         <div>
@@ -5130,10 +5239,13 @@
           <list>
             <item>Go through the text again in web display, making sure everything looks
               okay.</item>
-            <item>It is helpful at this point to put the web page in “editor mode.” All this does is
-              underline the linked glossary terms for you. Otherwise, in the regular display, it
+            <item>It is helpful at this point to put the web page in “editor mode.” This
+              underlines the linked glossary terms for you. Otherwise, in the regular display, it
               underlines them but then they will disappear after a few seconds, which will be
-              frustrating when your are checking the links. To put the page in editor mode, simply
+              frustrating when your are checking the links. An additional benefit of editor mode is that all of the collapsed sections
+              of the text (Intro, Translation, Notes, etc...) will be expanded by default, so that you can
+              more easily search for terms in the web display with CTRL-F.
+              To put the page in editor mode, simply
               add the following text to the end of the URL web address:
                 <code>?view-mode=editor</code>
             </item>
