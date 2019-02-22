@@ -9,26 +9,26 @@
                 <title type="mainTitle" xml:lang="bo">ཚེ་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་ཞུས་པའི་མདོ།</title>
                 <title type="mainTitle" xml:lang="en">Questions Regarding Death and
                     Transmigration</title>
-                <title type="mainTitle" xml:lang="Sa-Ltn">āyuṣpatti­yathākāra­paripṛcchā­sūtra</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Āyuṣpatti­yathākāra­paripṛcchā­sūtra</title>
                 <title type="longTitle" xml:lang="bo">ཚེ་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་ཞུས་པའི་མདོ།</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">tshe 'pho ba ji ltar 'gyur ba zhus pa'i
                     mdo</title>
                 <title type="longTitle" xml:lang="en">The Sūtra of Questions Regarding Death and
                     Transmigration</title>
                 <title type="longTitle" xml:lang="Sa-Ltn"/>
-                <author sameAs="" role="translatorMain">Translated by Tom Tillemans<lb/> under the patronage
+                <author role="translatorMain" ref="">Translated by Tom Tillemans<lb/> under the patronage
                     and supervision of 84000: Translating the Words of the Buddha.</author>
-            <consultant role="advisor" sameAs="contributors.xml#person-84">David Rawson</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-260">Seth Davis</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-87">Russell Shipman</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-230">Tom Tillemans</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-51">James Gentry</consultant>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-51">James Gentry</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-257">Raynald Prévèreau</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-92">Laura Goetz</editor>
+            <consultant role="advisor" ref="contributors.xml#person-84">David Rawson</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-260">Seth Davis</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-87">Russell Shipman</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-230">Tom Tillemans</author>
+                <consultant role="advisor" ref="contributors.xml#person-51">James Gentry</consultant>
+                <editor role="externalReviewer" ref="contributors.xml#person-51">James Gentry</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-257">Raynald Prévèreau</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.01 <date>2018</date>
+                <edition>v 0.5 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -47,14 +47,14 @@
                     </licence>
                 </availability>
                 <idno xml:id="UT22084-072-008"/>
-                <date>2018-10-08</date>
+                <date>2019-03-15</date>
             </publicationStmt>
 
             <sourceDesc>
                 <bibl key="toh308" type="text">
                     <ref>Toh 308</ref>
-                    <biblScope>Toh 308, Degé Kangyur, vol. 72 (mdo sde, sa); folios
-                        145.b.4–155.a.1</biblScope>
+                    <biblScope>Toh 308, Degé Kangyur vol. 72 (mdo sde, sa), folios
+                        145.b–155.a</biblScope>
                     <location count-pages="20">
                         <start volume="72" page="292"/>
                         <end volume="72" page="311"/>
@@ -64,7 +64,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/02/2019 at 21:54:07 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:59:20 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -90,7 +90,7 @@
                 <head type="acknowledgment" tid="95">Acknowledgements</head>
                 <milestone unit="chunk" xml:id="UT22084-072-008-2"/>
                 <p tid="2">An initial draft translation of this sūtra was done by Four Reliances
-                    Translations (David Rawson, Seth Davis, and Russell Shipman) of Se ra Monastery
+                    Translations (David Rawson, Seth Davis, and Russell Shipman) of Sera Monastery
                     in South India. An unpublished free translation, or paraphrase, was also
                     prepared by Geshé Damdul Namgyal. Tom Tillemans thoroughly retranslated the
                     sūtra in a seminar at the University of Vienna in 2014. He also wrote the
@@ -117,16 +117,16 @@
                         with humans being reborn as humans and so on? (2) Do beings become utterly
                         nonexistent after death? (3) Do beings, after their death, accompany their
                         dead ancestors and relatives in a <distinct>world of Death</distinct>? (4)
-                        Is wealth and poverty consistent from life to life? Do the wealthy continue
+                        Is wealth and poverty consistent from life to life, with the wealthy continuing
                         to be wealthy and the poor to be poor? (5) Is enjoyment of clothes, mounts,
-                        and so on consistent from life to life? Do people continue to have the same
+                        and so on consistent from life to life, with people continuing to have the same
                         clothes, horses, and so forth? (6) Can one dedicate food and other offerings
                         to the deceased and thus assure their perpetual welfare and nourishment? (7)
                         Do the dead show themselves to their relatives just as they were when
                         alive?</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-5"/>
-                    <p tid="4">To these seven questions, the Buddha’s answer is always “no.” Several
-                        beliefs that must have been current in India at that time are thus taken up
+                    <p tid="4">To each of these seven questions, the Buddha’s answer is always “no.” Several
+                        beliefs that must have been current in India at the time are thus taken up
                         and criticized, beginning with simple skepticism that anything can survive
                         after death at all. The main position being examined, however, seems to be
                         that the deceased survive in an afterlife which is essentially a
@@ -145,13 +145,14 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-7"/>
                     <p tid="5">This is a broadly Vedic eschatology, a conception of death and the
-                        afterlife that goes well back to the first millennium <hi rend="small-caps">bce</hi>, in the <title xml:lang="Sa-Ltn">Ṛgveda</title>, especially in the <title xml:lang="Sa-Ltn">Atharvaveda</title>, as well as in the <title xml:lang="Sa-Ltn">Brāhmanas</title>. When the sūtra says that the
+                        afterlife that goes well back to the first millennium <hi rend="small-caps">bce</hi>, in the <title xml:lang="Sa-Ltn">Ṛgveda</title>, especially in the <title xml:lang="Sa-Ltn">Atharvaveda</title>, as well as in the <title xml:lang="Sa-Ltn">Brāhmaṇas</title>. When the sūtra says that the
                         deceased is “befriended by his ancestors” after death, this is no doubt a
                         reference to the Vedic idea that the dead person transitions to the realm of
-                        his ancestors, or his <distinct>fathers</distinct> (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). Also the dead person
-                        comes to be in the presence of a lineage of ancestors all the way back to an
-                            <distinct>original ancestor</distinct> (<foreign xml:lang="Bo-Ltn" type="term">mes po dang po</foreign>), what seems an allusion to the
-                        idea of the pitṛ as including first ancestors, the founders of the human
+                        his ancestors, or his “fathers” (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). The dead person
+                        also comes to be in the presence of a lineage of ancestors all the way back to an
+                            “original ancestor” (<foreign xml:lang="Bo-Ltn" type="term">mes po dang po</foreign>), 
+                        which seems to be an allusion to the
+                        idea of the <foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign> as including first ancestors, the founders of the human
                             race.<note place="end" index="3" xml:id="UT22084-072-008-8">Note that
                             the Tibetan term <foreign xml:lang="Bo-Ltn" type="term">mes po</foreign>
                             is often used in the sūtra to simply mean “grandfather,” but in other
@@ -169,9 +170,10 @@
                         of limbo to the more secure status of an ancestor in heaven, i.e., in
                         Yamaloka, the world presided over by Death, the <term type="ignore">god</term> Yama. The brahmanical rites for Nandaja, the deceased person
                         mentioned at the start of the sūtra, seem to be <foreign xml:lang="Sa-Ltn" type="term">śrāddha</foreign>-rites, the ancestral offering rituals
-                        incumbent upon householders. One of those śrāddha-rites, the <foreign xml:lang="Sa-Ltn" type="term">sapiṇḍīkaraṇa</foreign> is performed by
+                        incumbent upon householders. One of those śrāddha-rites, 
+                        the <foreign xml:lang="Sa-Ltn" type="term">sapiṇḍīkaraṇa</foreign>, is performed by
                         the deceased’s son and is the postcremation offering of piṇḍa to complete
-                        transition to the afterworld.<note place="end" index="4" xml:id="UT22084-072-008-10">On the four śrāddha-rites, see <ptr target="#UT22084-072-008-140">Sayers (2013)</ptr>, chapter 4.
+                        his transition to the afterworld.<note place="end" index="4" xml:id="UT22084-072-008-10">On the four śrāddha-rites, see <ptr target="#UT22084-072-008-140">Sayers (2013)</ptr>, chapter 4.
                             Brahmanical texts, like the <title xml:lang="Sa-Ltn">Āpastamba
                                 Dharma­sūtra</title>, advocate other offerings too, such as beans,
                             barley, water, roots, fruits, beef, buffalo, fish, and even rhinoceros.
@@ -208,7 +210,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-12"/>
                     <p tid="7">The sūtra’s stance on the rites is complex, however, as offerings to
-                        the dead are not simply categorically dismissed as pointless. We find, for
+                        the dead are not just dismissed categorically as pointless. We find, for
                         example, the following passage allowing a nuanced acceptance:</p>
                     <q>
                         <p tid="8">The Great King then asked: “Blessed One, if this is the case,
@@ -227,22 +229,24 @@
                             more and more of the pleasures he wishes, as well as honor and respect
                             from all his other fellow beings. However, it is not so that the
                             deceased individual stays on in the <distinct>world of Death</distinct>,
-                            without rebirth <ref cRef="F.150.b"/>, and taking on food and drink,
-                            mounts, clothing, and ornaments. </p>
+                            without rebirth, and taking on food and drink,
+                            mounts, clothing, and ornaments. (<ptr target="#UT22084-072-008-70"/>) </p>
                     </q>
                     <milestone unit="chunk" xml:id="UT22084-072-008-13"/>
                     <p tid="10">This seems to be a recognizable Buddhist position, one also found in
-                        some Pāli texts. Indeed, as <ptr target="#UT22084-072-008-140">Sayers
-                            (2013)</ptr> pp. 86–99 shows, there are passages in texts like the
+                        some Pāli texts. Indeed, as Sayers 
+                        shows,<note place="end" index="5" xml:id="UT22084-072-008-186">
+                            <ptr target="#UT22084-072-008-140">Sayers</ptr> 
+                            (2013), pp. 86–99.</note> there are passages in texts like the
                             <title xml:lang="Sa-Ltn">Aṅguttara­nikāya</title> that do acknowledge
-                        efficacy to brahmanical śrāddha-rites—the approach of Pāli canon texts is
+                        brahmanical śrāddha-rites as having some efficacy. The approach of texts in the Pāli Canon is
                         typically to rationalize offerings and ancestor worship as a form of
                             <distinct>gifting</distinct>. The present sūtra also seems to follow
-                        this broad approach in many respects: gifting leads to merits, which can
+                        this broad approach in many respects: gifting leads to merit, which can
                         then be dedicated to the deceased and, <foreign xml:lang="la" type="term">qua</foreign> dedicated karmic merit, serve to benefit them. What is
                         being targeted, then, does not seem to be the efficacy of householders’
                         rites to benefit the dead <emph>in any way</emph>, but rather the efficacy
-                        of the offerings to nourish eternally the dead in an everlasting realm of
+                        of the offerings to nourish the dead eternally in an everlasting realm of
                         ancestors. It is especially <emph>that</emph> conception of the afterlife
                         that is being rejected.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-14"/>
@@ -257,13 +261,13 @@
                         with their relatives and ancestors in a <distinct>world of Death</distinct>,
                         they would be unable to recognize one another, for their usual physical form
                         is obviously destroyed in cremation or in the grave. At still other times
-                        the argumentation depends upon the supernatural. For example, dreams and
+                        the argument depends upon the supernatural. For example, dreams and
                         apparitions of the deceased turn out to be due to a very special type of
                         spirit that mimics the appearance of deceased in order to trick the living
                         into making offerings that the spirits can then appropriate.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-15"/>
                     <p tid="12">The sūtra itself hardly attempts to provide a positive proof for
-                        rebirth. It is almost exclusively devoted to refutation of what Buddhists
+                        rebirth. It is almost exclusively devoted to refuting what Buddhists
                         take to be wrong conceptions of death and the afterlife. After the Buddha’s
                         extensive refutation of the Vedic views, the renegade Devadatta challenges
                         the Buddha to prove the reliability and superiority of his own
@@ -340,7 +344,7 @@
                             5.</note> Skilling’s historical point would be important, because it
                         would tell against interpreting Nāgārjuna’s own term <foreign xml:lang="Sa-Ltn" type="term">asaṃkrama</foreign> as somehow indicating
                         an unqualified rejection of transmigration. The sūtra, in its extensive
-                        explanations of the eight analogies (see <ptr target="#UT22084-072-008-96">fol. 152.b</ptr> et seq.), makes it clear that “no transmigration” does
+                        explanations of the eight analogies (<ptr target="#UT22084-072-008-98"/>–<ptr target="#UT22084-072-008-115"/>), makes it clear that “no transmigration” does
                         not mean that there is <emph>no</emph> transmigration or rebirth, but rather
                         that nothing actually transmigrates; there is no transmigration from one
                         life to another of any entity whatsoever, be it permanent or extinguished. </p>

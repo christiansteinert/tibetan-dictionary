@@ -16,31 +16,31 @@
                     Thousand Lines”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­daśa­sāhasrikā­prajñā­pāramitā­nāma­mahā­yāna­sūtra</title>
                 <title type="otherTitle" xml:lang="zh">般若波羅密多萬頌</title>
-                <author sameAs="contributors.xml#team-21" role="translatorMain">
+                <author role="translatorMain" ref="contributors.xml#team-21">
                     Translated by the Padmakara Translation Group<lb/> under the patronage and
                     supervision of 84000: Translating the Words of the Buddha.</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-138">Jigme Khyentse Rinpoche</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-137">Pema Wangyal Rinpoche</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-140">Dr. Gyurme Dorje</author>
-                <editor role="reviser" sameAs="contributors.xml#person-141">Charles Hastings</editor>
-                <editor role="reviser" sameAs="contributors.xml#person-139">John Canti</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-228">Greg Seton</consultant>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-95">Celso Wilkinson</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-92">Laura Goetz</editor>
+                <consultant role="advisor" ref="contributors.xml#person-138">Jigme Khyentse Rinpoche</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-137">Pema Wangyal Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-140">Dr. Gyurme Dorje</author>
+                <editor role="reviser" ref="contributors.xml#person-141">Charles Hastings</editor>
+                <editor role="reviser" ref="contributors.xml#person-139">John Canti</editor>
+                <consultant role="advisor" ref="contributors.xml#person-228">Greg Seton</consultant>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
                 
                 
-                <sponsor sameAs="sponsors.xml#sponsor-1">Dzongsar Jamyang Khyentse Rinpoche, Kris Yao and Xiang-Jen Yao</sponsor>
-                <sponsor sameAs="sponsors.xml#sponsor-19">Wang Kang Wei and Zhao Yun Qi and family</sponsor>
-                <sponsor sameAs="sponsors.xml#sponsor-11">Judy Cole, William Tai, Jie Chi Tai and families</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-1">Dzongsar Jamyang Khyentse Rinpoche, Kris Yao and Xiang-Jen Yao</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-19">Wang Kang Wei and Zhao Yun Qi and family</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-11">Judy Cole, William Tai, Jie Chi Tai and families</sponsor>
                 
                 
                 
                 
-                <sponsor sameAs="sponsors.xml#sponsor-13">Shi Jing and family</sponsor>
-                <sponsor sameAs="sponsors.xml#sponsor-25">Matthew, Vivian, Ye Kong and family</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-13">Shi Jing and family</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-25">Matthew, Vivian, Ye Kong and family</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.22 <date>2018</date>
+                <edition>v 1.23 <date>2018</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -75,7 +75,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 05/02/2019 at 15:56:36 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:26:27 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -23281,12 +23281,12 @@
                             Perfection of Wisdom in Ten Thousand Lines</title>.</p>
                     <p tid="3178">This translation was edited and redacted by the Indian preceptors Jinamitra and Prajñāvarman,
                         along with the editor-in-chief and translator, the monk Yeshé Dé. </p>
-                    <ab type="mantra" tid="3179">
+                    <p rend="mantra" tid="3179">
                         <foreign xml:lang="Sa-Ltn" type="mantra">ye dharmā hetuprabhavā hetun teṣāṃ tathāgato bhavat āha teṣāṃ ca
                             yo nirodho evaṃ vādī mahāśramaṇaḥ [ye svāhā]</foreign>
-                    </ab>
-                    <ab type="mantra" tid="3229">“Whatever events arise from a cause, the Tathā­gata has told the cause thereof,
-                        and the great virtuous ascetic has also taught their cessation.”</ab>
+                    </p>
+                    <p rend="mantra" tid="3229">“Whatever events arise from a cause, the Tathā­gata has told the cause thereof,
+                        and the great virtuous ascetic has also taught their cessation.”</p>
                 </div>
             </div>
         </body>

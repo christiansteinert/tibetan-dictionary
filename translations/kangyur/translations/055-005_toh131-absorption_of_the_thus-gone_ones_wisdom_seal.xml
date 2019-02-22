@@ -18,17 +18,17 @@
                 <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra: The Absorption
                     of the Thus-Gone One’s Wisdom Seal</title>
 
-                <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by the
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
                     Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha.</author>
 
-            <consultant role="advisor" sameAs="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-66">Joseph McClellan</author>
-                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-261">Philippe Turenne</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-252">Dion Blundell</editor>
-                <editor role="proofreader" sameAs="contributors.xml#person-249">Konchog Norbu</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-108">André Rodrigues</editor>
+            <consultant role="advisor" ref="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-66">Joseph McClellan</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-261">Philippe Turenne</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-252">Dion Blundell</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
             </titleStmt>
             <editionStmt>
                 <edition>v 1.00 <date>2018</date>
@@ -65,7 +65,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/02/2019 at 20:20:37 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 09:01:52 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>

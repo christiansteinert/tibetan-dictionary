@@ -14,24 +14,24 @@
                 <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The Basket’s Display”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­kāraṇḍa­vyūha­nāma­mahāyāna­sūtra</title>
                 <title type="otherTitle" xml:lang="zh">大乘莊嚴寶王經</title>
-                <author sameAs="contributors.xml#team-22" role="translatorMain">
+                <author role="translatorMain" ref="contributors.xml#team-22">
                     Translated by Peter Alan Roberts with Tulku Yeshi<lb/> under the patronage and
                     supervision of 84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-142">Peter Alan Roberts</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-145">Tulku Yeshi</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-142">Peter Alan Roberts</author>
+                <consultant role="advisor" ref="contributors.xml#person-145">Tulku Yeshi</consultant>
                 
                 
-                <editor role="reviser" sameAs="contributors.xml#person-232">Ben Gleason</editor>
-                <editor role="reviser" sameAs="contributors.xml#person-143">Emily Bower</editor>
+                <editor role="reviser" ref="contributors.xml#person-232">Ben Gleason</editor>
+                <editor role="reviser" ref="contributors.xml#person-143">Emily Bower</editor>
                 
-                <consultant role="advisor" sameAs="contributors.xml#person-235">William Tuladhar-Douglas</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-236">Charles Manson</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-238">Sanjukta Gupta</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-237">Richard Gombrich</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-31">Tony Leung Chiu Wai and family</sponsor>
+                <consultant role="advisor" ref="contributors.xml#person-235">William Tuladhar-Douglas</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-236">Charles Manson</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-238">Sanjukta Gupta</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-237">Richard Gombrich</consultant>
+                <sponsor ref="sponsors.xml#sponsor-31">Tony Leung Chiu Wai and family</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.41 <date>2013 - 2016</date>
+                <edition>v 2.42 <date>2013 - 2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -67,7 +67,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 05/02/2019 at 16:17:31 by laura</note>
+                <note type="lastUpdated">Last updated at 18/02/2019 at 17:00:25 by celso</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -2757,10 +2757,10 @@
                         complete enlightenment.’</p>
                     <p tid="488">“Then Bodhisattva Mahāsattva Avalokiteśvara gave the six-syllable queen of mahāvidyās<note place="end" xml:id="UT22084-051-004-764" index="264">According to the Sanskrit. The Tibetan omits “queen
                             of.”</note> to the Tathāgata, the arhat, the Samyaksaṃbuddha Padmottama:</p>
-                    <ab type="mantra" tid="638">
+                    <p rend="mantra" tid="638">
                         <foreign type="mantra" xml:lang="Sa-Ltn">“Oṁ maṇipadme hūṁ</foreign>. <ref cRef="F.234.b"/>
                         <ref cRef="B4" type="bampo"/>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-051-004-194"/>
                     <p tid="490">“When Bodhisattva Mahāsattva Avalokiteśvara gave the six-syllable queen of mahāvidyās to the
                         tathāgata, the arhat, the Samyaksaṃbuddha Padmottama, everywhere from the four continents to the deva
@@ -2973,8 +2973,8 @@
                         given to you.”</p>
                     <milestone unit="chunk" xml:id="UT22084-051-004-212"/>
                     <p tid="525">Then Sarva­nīvaraṇa­viṣkambhin reverently placed his palms together to receive it.</p>
-                    <ab type="mantra" tid="639">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ maṇipadme hūṁ</foreign>.</ab>
+                    <p rend="mantra" tid="639">
+                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ maṇipadme hūṁ</foreign>.</p>
                     <p tid="527">As soon as this was given, the earth shook in six ways. </p>
                     <p tid="528">Sarva­nīvaraṇa­viṣkambhin attained these samādhis: the samādhi named Unceasing True Nature, the
                         samādhi named Love, Compassion, and Rejoicing, the samādhi named Practicing Yoga, the samādhi named
@@ -3004,7 +3004,7 @@
                             contradiction and is presumably stating that in this sūtra a greater number of buddhas are reciting
                             this mantra than did so in the Cundī sūtra. See also note 301.</note> samyaksaṃbuddhas gathered there,
                         and those tathāgatas recited this dhāraṇī:</p>
-                    <ab type="mantra" tid="640">
+                    <p rend="mantra" tid="640">
                         <foreign type="mantra" xml:lang="Sa-Ltn">Namaḥ saptanām saṃyak­saṃbuddha­koṭinām tadyathā Oṁ cale cule
                             cunde</foreign>
                         <note place="end" xml:id="UT22084-051-004-798" index="298">According to the Tibetan and Cambridge. The Vaidya and
@@ -3017,8 +3017,8 @@
                             her sūtra, which was not translated into Tibetan, but was translated into Chinese (<title xml:lang="en">The Dhāraṇī of Cundī</title>). This sūtra was evidently popular in India at the time
                             of the creation of the <title xml:lang="Sa-Ltn">Kāraṇḍa­vyūha­sūtra</title>, at least in its present
                             form.</note>
-                    </ab>
-                    <ab type="mantra" tid="641">[The homage by seven times ten million samyaksaṃbuddhas is like this: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ cale cule cunde svāhā</foreign>.]</ab>
+                    </p>
+                    <p rend="mantra" tid="641">[The homage by seven times ten million samyaksaṃbuddhas is like this: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ cale cule cunde svāhā</foreign>.]</p>
                     <p tid="538">That was the dhāraṇī recited by seventy-seven times ten million samyaksaṃbuddhas. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-051-004-216"/>

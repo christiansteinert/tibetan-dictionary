@@ -13,14 +13,14 @@
                 <title type="longTitle" xml:lang="en">The Practice Manual of Kurukullā</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Kurukullā­kalpa</title>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by the Dharmachakra Translation Committee<lb/>under the patronage and
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee<lb/>under the patronage and
                     supervision of 84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-54">Thomas Doctor</author>
-                <editor role="reviser" sameAs="contributors.xml#person-247">Gillian Parrish</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-76">Wieslaw Mical</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-54">Thomas Doctor</author>
+                <editor role="reviser" ref="contributors.xml#person-247">Gillian Parrish</editor>
+                <consultant role="advisor" ref="contributors.xml#person-76">Wieslaw Mical</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.21 <date>2011 - 2016</date>
+                <edition>v 2.22 <date>2011 - 2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -60,7 +60,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 16/01/2019 at 10:35:38 by admin</note>
+                <note type="lastUpdated">Last updated at 18/02/2019 at 17:07:17 by celso</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -481,9 +481,9 @@
                         beautiful features, and then consecrate her image. In front of the painting, from the eighth through the
                         full moon day, one should perform the eighteen-fold pūjā, and recite the mantra. This is the heart essence
                         of Tārā: </p>
-                    <ab type="mantra" tid="665">
+                    <p rend="mantra" tid="665">
                         <foreign type="mantra" xml:lang="Sa-Ltn">Oṃ kurukulle hrīḥ hūṃ svāhā</foreign>
-                    </ab>
+                    </p>
                     <p tid="55">This is the mantra. Having done the preliminary propitiation consisting of 100,000 recitations,
                         next, on a buddha-day in the month of Kārttika, Vaiśakha or Āṣāḍha, having bathed at dawn and observed the
                         restoration of vows ceremony, the practitioner should offer a complete pūjā.</p>
@@ -1653,7 +1653,7 @@
                     <lg tid="238">
                         <l>First one should train in the method of warding off the <foreign type="term" xml:lang="Sa-Ltn">nāgas</foreign>.</l>
                     </lg>
-                    <ab type="mantra" tid="632">
+                    <p rend="mantra" tid="632">
                         <foreign type="mantra" xml:lang="Sa-Ltn">namo ratna­trayāya. namaḥ sarva­buddha­bodhi­sattvebhyaḥ. namo
                             ˈṣṭasarpa­pudgalāya. namaḥ samastebhyo buddha­koṭibhyaḥ.. tadyathā. oṁ hrīḥ hrīḥ hrīḥ sarva­nāgānām
                             ananta­kulānāṃ vāsuki­kulānāṃ takṣaka­kulānāṃ śaṅkha­pāla­kulānāṃ karkoṭa­kulānāṃ padma­kulānāṃ
@@ -1665,7 +1665,7 @@
                         <note place="end" index="16" xml:id="UT22084-081-006-606">In the Tibetan text this passage at times
                             appears in a hardly intelligible, transliterated Sanskrit. Here the text has been reconstructed based
                             on the Sanskrit manuscripts.</note>
-                    </ab>
+                    </p>
                     <p tid="240">With this mantra, one should draw the maṇḍala with gaur dung. As prescribed, one should draw an
                         eight-petal lotus with sandalwood paste and place on its petals, starting from the eastern one, Ananta and
                         the others—the eight <foreign type="term" xml:lang="Sa-Ltn">nāgas</foreign>—using candied sugar and

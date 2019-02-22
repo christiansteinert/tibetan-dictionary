@@ -14,12 +14,12 @@
                 <title type="longTitle" xml:lang="en">The Glorious Caṇḍa­mahā­roṣaṇa Tantra “The Sole Hero”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ekalla­vīrākhya­śrī­caṇḍa­mahā­roṣaṇa­tantram</title>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
                     supervision of 84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-76">Wiesiek Mical</author>
-                <editor role="reviser" sameAs="contributors.xml#person-51">James Gentry</editor>
-                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-76">Wiesiek Mical</author>
+                <editor role="reviser" ref="contributors.xml#person-51">James Gentry</editor>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
             </titleStmt>
             <editionStmt>
                 <edition>v 2.13 <date>2016</date>
@@ -60,7 +60,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 06/02/2019 at 01:11:30 by celso</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:33:05 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -105,7 +105,7 @@ Appendix: Sanskrit text-->
             <div type="summary">
                 <head type="summary" tid="1964">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-080-015-1"/>
-                <p tid="1">Written around the tenth or the eleventh century C.E., in the late Mantra­yāna period, <title xml:lang="en">The Tantra of Caṇḍa­mahāroṣaṇa</title> represents the flowering of the Yoginī­tantra genre.
+                <p tid="1">Written around the tenth or the eleventh century <hi rend="small-caps">ce</hi>, in the late Mantra­yāna period, <title xml:lang="en">The Tantra of Caṇḍa­mahāroṣaṇa</title> represents the flowering of the Yoginī­tantra genre.
                     The tantra offers instructions on how to attain the wisdom state of Buddha Caṇḍa­mahāroṣaṇa through the
                     practice of the four joys. The tantra covers a range of practices and philosophical perspectives of late
                     tantric Buddhism, including the development stage, the completion stage, the use of mantras, and a number of
@@ -537,13 +537,13 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-43"/>
                     <lg tid="53">
                         <l>“In this, the well-guarded</l>
-                        <l>Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.” <!--[I.19]-->
+                        <l>Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.” <!--[I.19]-->
                             <ref cRef="F.305.b"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-44"/>
                     <trailer tid="1938">This concludes the first chapter, the introduction to the tantra, in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1971">Chapter 2</head>
@@ -771,7 +771,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-70"/>
                     <trailer tid="1939">This concludes the chapter on the maṇḍala, the second in the glorious Caṇḍa­mahā­roṣaṇa
-                        tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1973">Chapter 3</head>
@@ -1056,7 +1056,7 @@ Appendix: Sanskrit text-->
                     <p tid="132">“This was the <term>wisdom empowerment</term>.” <!--[III.30]-->
                     </p>
                     <trailer tid="1940">This concludes the chapter on empowerments, the third in the glorious Caṇḍa­mahā­roṣaṇa
-                        tantra called the <title xml:lang="en">Sole Hero</title>. <ref cRef="F.308.b"/>
+                        tantra called <title xml:lang="en">The Sole Hero</title>. <ref cRef="F.308.b"/>
                     </trailer>
                 </div>
                 <div type="chapter">
@@ -1443,7 +1443,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-151"/>
                     <trailer tid="1941">This concludes the deity chapter, the fourth in the glorious Caṇḍa­mahā­roṣaṇa tantra
-                        called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1977">Chapter 5</head>
@@ -1453,19 +1453,18 @@ Appendix: Sanskrit text-->
                         called Victory over All Māras, and presented the collection of mantras.</p>
                     <lg tid="191">
                         <l>“The root mantra: <seg type="mantra">
-                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
-                            <note place="end" xml:id="UT22084-080-015-2177" index="36">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍamahāroṣaṇa hūṁ phaṭ.</foreign>
+                            <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2177" index="36">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ caṇḍamahāroṣaṇa hūṁ phaṭ.</foreign>
                             </note>
                             </seg>
                         </l>
                         <l>The second root mantra: <seg type="mantra">
-                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!
                             <note place="end" xml:id="UT22084-080-015-2178" index="37">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ acala hūṁ phaṭ.</foreign>
                             </note>
                             </seg>
                         </l>
                         <l>The third root mantra: <seg type="mantra">
-                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hūṁ phaṭ!</foreign>
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ hūṁ phaṭ</foreign>!
                             </seg>
                         </l>
                         <l>The heart mantra: <seg type="mantra">
@@ -1478,7 +1477,7 @@ Appendix: Sanskrit text-->
                         </l>
                         <l>The third heart mantra: <seg type="mantra">
                                 <foreign type="mantra" xml:lang="Sa-Ltn">Haṁ</foreign>
-                            </seg>.”<!--[V.1]-->
+                            </seg>.<!--[V.1]-->
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-153"/>
@@ -1489,7 +1488,7 @@ Appendix: Sanskrit text-->
                         strike! Swallow, swallow! Bind, bind! Crush, crush! Paralyze, paralyze! Delude, delude! Bind the mouths of
                         all the enemies, bind! Frighten off all the ḍākinīs, grahas, bhūtas, piśācas, vyādhis, yakṣas, frighten!
                         Kill, kill! Order death, order! O Rurucaṇḍaruk, protect such and such, protect! The general of a fierce
-                        army orders all this. <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ!</foreign>”<note place="end" xml:id="UT22084-080-015-2179" index="38">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hrāṁ hrīṁ hrauṁ
+                        army orders all this. <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2179" index="38">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ hrāṁ hrīṁ hrauṁ
                                 caṇḍarūpe caṭa caṭa pracaṭa pracaṭa kaṭṭa kaṭṭa prasphura prasphura prasphāraya prasphāraya hana
                                 hana grasa grasa bandha bandha jambhaya jambhaya stambhaya stambhaya mohaya mohaya sarvaśatrūṇāṃ
                                 mukhabandhanaṃ kuru kuru sarvaḍākinīnāṃ graha­bhūta­piśāca­vyādhi­yakṣānāṃ trāsaya trāsaya mara
@@ -1511,7 +1510,7 @@ Appendix: Sanskrit text-->
                         threefold, ruddy curl between your eyebrows, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, hūṁ,
                             hūṁ</foreign>! Acala, <foreign type="mantra" xml:lang="Sa-Ltn">ceṭa! Phaṭ</foreign>! Injure, injure,
                             <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, hūṁ</foreign>! Asamantikā, <foreign xml:lang="Sa-Ltn" type="mantra">trāṭ</foreign>! Great Strength, <foreign xml:lang="Sa-Ltn" type="mantra">sāṭaya</foreign>! Bring near, <foreign type="mantra" xml:lang="Sa-Ltn">trāṁ, māṁ, hāṁ</foreign>! May the worlds be purified! May the <foreign xml:lang="Sa-Ltn" type="mantra">vajrin</foreign> be pleased! Homage be to those possessing an unassailable strength! Set
-                        ablaze, <foreign xml:lang="Sa-Ltn" type="mantra">trāṭ</foreign>! Impatient One, homage to you, <foreign xml:lang="Sa-Ltn" type="mantra">svāhā</foreign>!”<note place="end" xml:id="UT22084-080-015-2180" index="39">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">namaḥ sarvāśāpari­pūrakebhyaḥ sarva­tathāgatebhyaḥ. sarva­thācalakānanā naṭṭa naṭṭa
+                        ablaze, <foreign xml:lang="Sa-Ltn" type="mantra">trāṭ</foreign>! Impatient One, homage to you, <foreign xml:lang="Sa-Ltn" type="mantra">svāhā</foreign>!<note place="end" xml:id="UT22084-080-015-2180" index="39">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">namaḥ sarvāśāpari­pūrakebhyaḥ sarva­tathāgatebhyaḥ. sarva­thācalakānanā naṭṭa naṭṭa
                                 moṭṭa moṭṭa saṭṭa saṭṭa tuṭṭa tuṭṭa tiṣṭha tiṣṭha āviśa āviśa āḥ mahā­mattabālaka dhūṇa dhūna tiṇa
                                 tiṇa khāda khāda vighnān māraya māraya duṣṭān bhakṣa bhakṣa sarvaṃ kuru kuru kiri kiri
                                 mahāviṣavajra phaṭ hūṁ hūṁ hūṁ. trivali­taraṅgāvartaka hūṁ hūṁ hūṁ. acala ceṭa phaṭ sphāṭaya
@@ -1527,7 +1526,7 @@ Appendix: Sanskrit text-->
                     <p rend="mantra" tid="1898">
                         <seg type="mantra">“Homage to all the tathāgatas, the fulfillers of all wishes in every way,
                             <foreign type="mantra" xml:lang="Sa-Ltn">trāṭ</foreign>! Unfailing Caṇḍa­mahā­roṣaṇa, split, split,
-                            <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ</foreign>! Confuse, confuse, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, trāṭ, hāṁ, māṁ</foreign>!”<note place="end" xml:id="UT22084-080-015-2181" index="40">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namaḥ
+                            <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ</foreign>! Confuse, confuse, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ, trāṭ, hāṁ, māṁ</foreign>!<note place="end" xml:id="UT22084-080-015-2181" index="40">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">namaḥ
                                 sarvāśāpari­pūrakebhyaḥ sarva­tathāgatebhyaḥ sarvathā trāṭ. amogha­caṇḍa­mahā­roṣaṇa sphāṭaya
                                 sphāṭaya hūṁ. bhramaya bhramaya hūṁ trāṭ hāṁ māṁ.</foreign>
                         </note>
@@ -1563,7 +1562,7 @@ Appendix: Sanskrit text-->
                     <p rend="mantra" tid="1903">
                         <seg type="mantra">
                             <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Green Acala, <foreign type="mantra" xml:lang="Sa-Ltn">hūṁ,
-                            phaṭ</foreign>!”<note place="end" xml:id="UT22084-080-015-2186" index="45">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ śyāmācala hūṁ phaṭ</foreign>.</note>
+                            phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2186" index="45">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ śyāmācala hūṁ phaṭ</foreign>.</note>
                         </seg>
                         <!--[V.5]-->
                     </p>
@@ -1585,15 +1584,15 @@ Appendix: Sanskrit text-->
                                     phaṭ</foreign>.</note>
                             </seg>
                         </l>
-                        <seg type="mantra">
-                            <l>The garland mantra: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, Picu, Picu</foreign>! Increaser of
-                            wisdom, burn, burn! </l>
-                        <l>Increaser of knowledge, <foreign type="mantra" xml:lang="Sa-Ltn">dhiri, dhiri</foreign>! Increaser of
-                            Intelligence, <foreign xml:lang="Sa-Ltn" type="mantra">svāhā</foreign>!”<note place="end" xml:id="UT22084-080-015-2190" index="49">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ picu picu prajñāvardhani jvala jvala
+                        
+                        <l>The garland mantra: <seg type="mantra">
+                                <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ, picu, picu</foreign>! Increaser of
+                            wisdom, burn, burn! Increaser of knowledge, <foreign type="mantra" xml:lang="Sa-Ltn">dhiri, dhiri</foreign>! Increaser of
+                            intelligence, <foreign xml:lang="Sa-Ltn" type="mantra">svāhā</foreign>!<note place="end" xml:id="UT22084-080-015-2190" index="49">Skt. <foreign xml:lang="Sa-Ltn" type="mantra">oṁ picu picu prajñāvardhani jvala jvala
                                     medhāvardhani dhiri dhiri buddhivardhani svāhā</foreign>.</note>
-                            <!--[V.6]-->
+                                <!--[V.6]--> </seg>
                         </l>
-                        </seg>                    
+                                           
                     </lg>   
                     <milestone unit="chunk" xml:id="UT22084-080-015-158"/>
                     <p tid="202">“There are also individual mantras: </p>
@@ -1624,7 +1623,7 @@ Appendix: Sanskrit text-->
                         <seg type="mantra">
                             <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ</foreign>, Envy Vajrī, <foreign xml:lang="Sa-Ltn" type="mantra">hūṁ,
                             phaṭ</foreign>!<note place="end" xml:id="UT22084-080-015-2195" index="54">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">oṁ īrṣyāvajri hūṁ phaṭ</foreign>.</note>
-                        </seg>” <!--[V.7]-->
+                        </seg> <!--[V.7]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-159"/>
                     <p tid="204">“This is the common mantra of the oblation offering:</p>
@@ -1646,7 +1645,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-160"/>
                     <trailer tid="1942">This concludes the chapter on mantras, the fifth in the glorious Caṇḍa­mahā­roṣaṇa tantra
-                        called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1979">Chapter 6</head>
@@ -2368,7 +2367,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-256"/>
                     <trailer tid="1943">This concludes the chapter on the practice of the completion stage, the sixth in the
-                        glorious Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>. </trailer>
+                        glorious Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>. </trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1981">Chapter 7</head>
@@ -2520,7 +2519,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-276"/>
                     <trailer tid="1944">Thus concludes the chapter on revitalizing the body, the seventh in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1983"> Chapter 8</head>
@@ -2831,7 +2830,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-318"/>
                     <trailer tid="1945">Thus concludes the chapter on Caṇḍa­mahā­roṣaṇa’s nature, the eighth in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>. <ref cRef="F.317.b"/>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>. <ref cRef="F.317.b"/>
                     </trailer>
                 </div>
                 <div type="chapter">
@@ -3007,7 +3006,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-341"/>
                     <trailer tid="1946">This concludes the chapter on meditation, the ninth in the glorious Caṇḍa­mahā­roṣaṇa
-                        tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1987">Chapter 10</head>
@@ -3387,7 +3386,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-392"/>
                     <trailer tid="1948">Thus concludes the chapter of the universality of Caṇḍa­mahā­roṣaṇa, the eleventh in the
-                        glorious Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        glorious Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1991">Chapter 12</head>
@@ -3841,7 +3840,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-448"/>
                     <trailer tid="1949">Thus concludes the chapter on all the rites involving mantras, twelfth in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>. </trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>. </trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1993">Chapter 13</head>
@@ -4098,7 +4097,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-482"/>
                     <trailer tid="1950">This concludes the chapter on practice, the thirteenth in the glorious tantra of
-                        Caṇḍa­mahā­roṣaṇa called the <title xml:lang="en">Sole Hero</title>. </trailer>
+                        Caṇḍa­mahā­roṣaṇa called <title xml:lang="en">The Sole Hero</title>. </trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1995">Chapter 14</head>
@@ -4216,7 +4215,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-497"/>
                     <trailer tid="1951">This concludes the chapter on how to construe the name Acala, the fourteenth in the
-                        glorious Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        glorious Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1997">Chapter 15</head>
@@ -4346,7 +4345,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-513"/>
                     <trailer tid="1952">This concludes the chapter on purities, fifteenth in the glorious tantra of
-                        Caṇḍa­mahā­roṣaṇa called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="1999">Chapter 16</head>
@@ -4556,7 +4555,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-536"/>
                     <trailer tid="1953">This concludes the chapter on dependent origination, sixteenth in the glorious tantra of
-                        Caṇḍa­mahā­roṣaṇa called the <title xml:lang="en">Sole Hero</title>. </trailer>
+                        Caṇḍa­mahā­roṣaṇa called <title xml:lang="en">The Sole Hero</title>. </trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2001">Chapter 17</head>
@@ -4873,7 +4872,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-585"/>
                     <trailer tid="1954">This concludes the chapter on the increasing of semen, the seventeenth in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2003">Chapter 18</head>
@@ -5392,7 +5391,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-680"/>
                     <trailer tid="1956">This concludes the chapter on the retention of semen and related issues, the nineteenth in
-                        the glorious Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>. </trailer>
+                        the glorious Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>. </trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2007">Chapter 20</head>
@@ -5746,7 +5745,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-718"/>
                     <trailer tid="1957">This concludes the chapter on various yantras and mantras used for inserting in effigies,
-                        the twentieth in the glorious Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.
+                        the twentieth in the glorious Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.
                     </trailer>
                 </div>
                 <div type="chapter">
@@ -6021,7 +6020,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-768"/>
                     <trailer tid="1958">Thus concludes the chapter on magical marvels, the twenty-first in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2011">Chapter 22</head>
@@ -6270,7 +6269,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-801"/>
                     <trailer tid="1959">Thus concludes the chapter on prāṇa practices, twenty-second in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2013">Chapter 23</head>
@@ -6331,7 +6330,7 @@ Appendix: Sanskrit text-->
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-809"/>
                     <trailer tid="1960">This concludes the chapter on the signs of death, twenty-third in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2015">Chapter 24</head>
@@ -6366,7 +6365,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-814"/>
                     <trailer tid="1961">This concludes the chapter on the nature of the body, twenty-fourth in the glorious
-                        Caṇḍa­mahā­roṣaṇa tantra called the <title xml:lang="en">Sole Hero</title>.</trailer>
+                        Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole Hero</title>.</trailer>
                 </div>
                 <div type="chapter">
                     <head type="chapter" tid="2017">Chapter 25</head>

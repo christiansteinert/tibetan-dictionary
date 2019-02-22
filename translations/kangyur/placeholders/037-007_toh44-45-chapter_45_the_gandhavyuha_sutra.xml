@@ -11,12 +11,12 @@
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryagaṇḍavyūhasūtra</title>
                 <title type="otherTitle" xml:lang="en">The Gaṇḍhavyūha Sūtra</title>
                 <title type="otherTitle" xml:lang="zh">大方廣佛華嚴經第四十五品之「入法界品」</title>
-                <author sameAs="contributors.xml#team-22" role="translatorMain"/>
-            <sponsor sameAs="sponsors.xml#sponsor-29">anonymous</sponsor>
-                <sponsor sameAs="sponsors.xml#sponsor-16">Richard and Carol Weingarten</sponsor>
-                <sponsor sameAs="sponsors.xml#sponsor-35">Jamyang Sun, Manju Chandra Sun, Siqi Sun</sponsor>
-            <author role="translatorEng" sameAs="contributors.xml#person-142">Dr. Peter Alan Roberts</author>
-                <editor role="reviser" sameAs="contributors.xml#person-143">Emily Bower</editor>
+                <author role="translatorMain" ref="contributors.xml#team-22"/>
+            <sponsor ref="sponsors.xml#sponsor-29">anonymous</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-16">Richard and Carol Weingarten</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-35">Jamyang Sun, Manju Chandra Sun, Siqi Sun</sponsor>
+            <author role="translatorEng" ref="contributors.xml#person-142">Dr. Peter Alan Roberts</author>
+                <editor role="reviser" ref="contributors.xml#person-143">Emily Bower</editor>
             </titleStmt>
             <editionStmt>
                 <edition> </edition>
@@ -38,7 +38,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 23/01/2019 at 16:56:06 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:51:19 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>

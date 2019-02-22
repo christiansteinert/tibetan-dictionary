@@ -14,18 +14,18 @@
                 <title type="longTitle" xml:lang="Sa-Ltn">āryadrumakinnararāja­paripṛcchā­nāmamahāyānasūtra</title>
                 <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra: “The Questions
                     of the Kiṃnara King Druma”</title>
-                <author role="translatorMain" sameAs="contributors.xml#team-9">Translated by the
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
                     Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha.</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-59">Benjamin Collet-Cassart</author>
+                <author role="translatorEng" ref="contributors.xml#person-59">Benjamin Collet-Cassart</author>
                 
-                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
                 
-                <consultant role="advisor" sameAs="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-262">David Higgins</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-92">Laura Goetz</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-108">André Rodrigues</editor>
-                <sponsor sameAs="sponsors.xml#sponsor-185">Sharon Xu, Michael Pan</sponsor>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
+                <editor role="externalReviewer" ref="contributors.xml#person-262">David Higgins</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <sponsor ref="sponsors.xml#sponsor-185">Sharon Xu, Michael Pan</sponsor>
 
             </titleStmt>
             <editionStmt>
@@ -33,7 +33,6 @@
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
-                <idno xml:id="UT22084-058-006"/>
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
                     initiative that aims to translate all of the Buddha’s words into modern
@@ -48,6 +47,8 @@
                             For full details, see the Creative Commons license.</p>
                     </licence>
                 </availability>
+                <idno xml:id="UT22084-058-006"/>
+                <date>2019-01-30</date>
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh157" type="text">
@@ -65,7 +66,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/02/2019 at 22:06:49 by laura</note>
+                <note type="lastUpdated">Last updated at 16/02/2019 at 10:35:23 by andre</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -95,10 +96,13 @@
             <div type="introduction">
                 <head type="introduction" tid="5">Introduction</head>
                 <div type="section">
-                    <head tid="6">Main Section</head>
                     <milestone unit="chunk" xml:id="UT22084-058-006-3"/>
                     <p tid="7">
-                        <title xml:lang="en">The Questions of the Kiṃnara King Druma</title> is a
+                        <title xml:lang="en">The Questions of the Kiṃnara King Druma</title>
+                        <note place="end" xml:id="UT22084-058-006-28" index="1"> In the title and throughout the original text, T, S, F, and L read:
+                            <foreign xml:lang="Bo-Ltn" type="term">ljon pa</foreign> (Harrison
+                            1992, p. 3, no. 8). D: <foreign xml:lang="Bo-Ltn" type="term">sdong
+                                po</foreign> as the translation of <foreign xml:lang="Sa-Ltn">Druma</foreign>.</note> is a
                         scripture that belongs to the general sūtra section of the Tibetan Kangyur.
                         The sūtra presents a series of teachings focusing on the doctrine of
                         emptiness and the bodhisattvas’ perfections, presented in a rich narrative
@@ -110,11 +114,11 @@
                         sources, where he frequently appears, albeit mostly in minor roles, offering
                         musical worship to the Buddha. For example, King Druma appears in such a
                         role in the <title xml:lang="Sa-Ltn">Saddharmapuṇḍarīkasūtra</title> (Toh
-                        113)<note place="end" xml:id="UT22084-058-006-4" index="1"> See Peter Roberts, <ref target="http://read.84000.co/translation/toh113.html#UT22084-051-001-171">The White Lotus of the Good Dharma</ref>, 84000: Translating the Words of
+                        113)<note place="end" xml:id="UT22084-058-006-4" index="2"> See Peter Roberts, <ref target="http://read.84000.co/translation/toh113.html#UT22084-051-001-171">The White Lotus of the Good Dharma</ref>, 84000: Translating the Words of
                             the Buddha, 2018.</note>
                         where he is one of four kiṃnara kings (the other three are Mahādharma,
                         Sudharma, and Dharmadhara) attending the Buddha’s teaching. He is also
-                        included in the <title xml:lang="Sa-Ltn">Samādhirājasūtra</title> (Toh 127)<note place="end" xml:id="UT22084-058-006-5" index="2"> See Peter Roberts, <ref target="http://read.84000.co/translation/toh127.html#UT22084-055-001-1162">The King of
+                        included in the <title xml:lang="Sa-Ltn">Samādhirājasūtra</title> (Toh 127)<note place="end" xml:id="UT22084-058-006-5" index="3"> See Peter Roberts, <ref target="http://read.84000.co/translation/toh127.html#UT22084-055-001-1162">The King of
                             Samādhis Sūtra</ref>, 84000: Translating the Words of the Buddha,
                             2018,
                             .</note>
@@ -133,7 +137,7 @@
                         great detail. Music plays a central role throughout this sūtra. As Paul
                         Harrison has noted, music is presented in several episodes as a metaphor for
                         the ungraspable nature of reality—emptiness—as it serves as the basis for
-                        Druma’s teachings to Devamukuṭa and the rest of the assembly.<note place="end" xml:id="UT22084-058-006-7" index="3"> Harrison 1992, p. xv.</note> In one remarkable episode, the
+                        Druma’s teachings to Devamukuṭa and the rest of the assembly.<note place="end" xml:id="UT22084-058-006-7" index="4"> Harrison 1992, p. xv.</note> In one remarkable episode, the
                         power of Druma’s music is such that even the accomplished elders among the
                         monks lose control of their bodies and start to dance helplessly to the tune
                         of Druma’s lute, while only those who have reached the bodhisattva levels
@@ -144,7 +148,7 @@
                         of skillful means. The sūtra also contains a lengthy teaching on the ways in
                         which women can be reborn with a male body—something that, according to
                         several Great Vehicle sūtras, is a prerequisite for attaining awakening as a
-                        buddha.<note place="end" xml:id="UT22084-058-006-8" index="4"> For more on the theme of sexual transformation in
+                        buddha.<note place="end" xml:id="UT22084-058-006-8" index="5"> For more on the theme of sexual transformation in
                             Mahāyāna sūtras, as well as famous counterexamples, such as the <title xml:lang="Sa-Ltn">Vimalakīrtinirdeśa sūtra</title>  (<ref target="http://read.84000-translate.org/translation/toh176.html">The Teaching of Vimalakīrti</ref> 84000: Translating the Words of the Buddha, 2018), in which
                             Śāriputra is transformed into a woman, see Jan Nattier, “Gender and
                             Enlightenment: Sexual Transformation in Mahāyāna Sūtras” (unpublished
@@ -152,15 +156,15 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-9"/>
                     <p tid="9">In terms of traditional scholarship, several citations from this sūtra appear
-                        in the <title xml:lang="Sa-Ltn">Caryāmelāpakapradīpa</title>, an influential
-                        work attributed to the “tantric” Āryadeva.<note place="end" xml:id="UT22084-058-006-10" index="5"> The <title xml:lang="Sa-Ltn">Caryāmelāpakapradīpa</title> is a systematic
+                        in the <title xml:lang="Sa-Ltn">Caryāmelāpaka­pradīpa</title>, an influential
+                        work attributed to the “tantric” Āryadeva.<note place="end" xml:id="UT22084-058-006-10" index="6"> The <title xml:lang="Sa-Ltn">Caryāmelāpaka­pradīpa</title> is a systematic
                             presentation of the esoteric practices associated with the <title xml:lang="Sa-Ltn">Guhyasamājatantra</title>. For an English
                             translation of that text, see Wedemeyer 2007. In his book, Wedemeyer
                             demonstrates that the author of this text lived during the ninth century
                                 <hi rend="small-caps">ce</hi>, centuries after the famous Middle Way
                             philosopher Āryadeva.</note> The sūtra is also briefly cited in the
                             <title xml:lang="Sa-Ltn">Subhāṣitasaṃgraha</title>, an anonymous
-                        anthology of tantric works.<note place="end" xml:id="UT22084-058-006-11" index="6"> Edited by Cecil Bendall in
+                        anthology of tantric works.<note place="end" xml:id="UT22084-058-006-11" index="7"> Edited by Cecil Bendall in
                                 <title xml:lang="fr">Le muséon</title>, n.s., 4 (1903): pp.
                             400–401.</note> While no Sanskrit manuscript of <title xml:lang="en">The
                             Questions of the Kiṃnara King Druma</title> appears to be extant, we do
@@ -172,13 +176,13 @@
                         been produced while he was residing in the Han capital of Luoyang during the
                         years 170–190 <hi rend="small-caps">ce</hi>. Lokakṣema’s version is
                         therefore of great historical importance since it represents one of the
-                        earliest literary sources for the Great Vehicle available to us today.<note place="end" xml:id="UT22084-058-006-12" index="7"> On this see Harrison 1992, pp. xiii–xiv.</note> The second
+                        earliest literary sources for the Great Vehicle available to us today.<note place="end" xml:id="UT22084-058-006-12" index="8"> On this see Harrison 1992, pp. xiii–xiv.</note> The second
                         Chinese translation was produced by the renowned translator Kumārajīva
                         (334–413 <hi rend="small-caps">ce</hi>), who completed the translation in
                         the early fifth century, toward the end of his life, as he resided in the
                         then Chinese capital of Chang’an. According to Harrison, the two Chinese
                         versions are very similar, and they also do not differ substantially from
-                        the Tibetan.<note place="end" xml:id="UT22084-058-006-13" index="8"> Ibid<fix>.</fix>, p. xv. </note>
+                        the Tibetan.<note place="end" xml:id="UT22084-058-006-13" index="9"> Ibid., p. xv. </note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-14"/>
                     <p tid="10">The Tibetan translation was completed in the early translation period and is
@@ -187,7 +191,7 @@
                         translation, the sūtra was translated into Tibetan by the prolific
                         translators Kawa Paltsek (<foreign xml:lang="Bo-Ltn">ska ba dpal
                             brtsegs</foreign>) and Palgi Lhunpo (<foreign xml:lang="Bo-Ltn">dpal gyi
-                            lhun po</foreign>),<note place="end" xml:id="UT22084-058-006-15" index="9"> Interestingly, the colophon of
+                            lhun po</foreign>),<note place="end" xml:id="UT22084-058-006-15" index="10"> Interestingly, the colophon of
                             the Phukdrak MS edition says that the text was translated, revised,
                             updated in the light of new terminology (<foreign xml:lang="Bo-Ltn">skad
                                 gsar bcad kyis kyang bcos</foreign>), and finalized by two great
@@ -201,7 +205,7 @@
                         canonical texts, both sūtra and tantra, and became one of the most active
                         translators of his time. Some Tibetan translators, including Palgi Lhunpo,
                         are known to have translated certain Indian texts without the help of Indian
-                        teachers,<note place="end" xml:id="UT22084-058-006-16" index="10">On this see Pathak 1974, p. 92.</note> and this
+                        teachers,<note place="end" xml:id="UT22084-058-006-16" index="11">On this see Pathak 1974, p. 92.</note> and this
                         may well have been the case with <title xml:lang="en">The Questions of the
                             Kiṃnara King Druma,</title> as no Indian scholars are mentioned in the
                         colophon.</p>
@@ -210,20 +214,20 @@
                         (1992), who published a full critical edition of the Tibetan text based on
                         nine available witnesses—Stok Palace MS, London, Tokyo MS, Degé, Lithang,
                         Peking, and Narthang, as well as the Phukdrak MS independent Kangyur and
-                        extant portions of a Dunhuang manuscript.<note place="end" xml:id="UT22084-058-006-18" index="11"> Apart from the
+                        extant portions of a Dunhuang manuscript.<note place="end" xml:id="UT22084-058-006-18" index="12"> Apart from the
                             critical edition of the sūtra, Harrison’s monograph also includes a
                             brief introduction to the sūtra as well as a longer discussion of the
                             textual transmission of the Kangyur that likewise proved to be very
                             helpful for our work. His work also contains two appendices, one listing
                             all the single reading variants between the nine witnesses, and the
                             other presenting a transcription of the three citations from this sūtra
-                            that appear in the <foreign xml:lang="Sa-Ltn" type="term">Caryāmelāpakapradīpa</foreign>. 
+                            that appear in the <foreign xml:lang="Sa-Ltn" type="term">Caryāmelāpaka­pradīpa</foreign>. 
                         </note> In his work, the different versions of the text are grouped under
                         two recensions, representing the Tshalpa (<foreign xml:lang="Bo-Ltn">tshal
                             pa</foreign>) and Thempangma (<foreign xml:lang="Bo-Ltn">them spangs
                             ma</foreign>) lines and respectively referred to as “Recension A” and
                         “Recension B.” Stok Palace MS, London, and Tokyo MS are grouped under
-                        Recension A and Degé, Lithang, Peking, and Narthang<note place="end" xml:id="UT22084-058-006-19" index="12">
+                        Recension A and Degé, Lithang, Peking, and Narthang<note place="end" xml:id="UT22084-058-006-19" index="13">
                             Although it is known to include readings from both transmissions lines,
                             the Narthang edition seems to exclusively follow the texts of the
                             Tshalpa line in this case. </note> under Recension B. According to
@@ -235,23 +239,23 @@
                         alterations to the wording of the text and systematic substitution of
                         different terminology—and not just “transmissional variation.” Those groups
                         of texts are indeed quite different in ways that cannot be accounted for by
-                        scribal error or casual emendation.<note place="end" xml:id="UT22084-058-006-20" index="13"> On this, and for
+                        scribal error or casual emendation.<note place="end" xml:id="UT22084-058-006-20" index="14"> On this, and for
                             other related discussions, see Harrison 1992, pp. xii–xlix.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-21"/>
                     <p tid="12"> Harrison’s critical edition is of Recension A, which he takes to be “a fair
                         but possibly later reflection of the fully revised translation produced at
-                        the beginning of the ninth century.”<note place="end" xml:id="UT22084-058-006-22" index="14"> Ibid<fix>.</fix>, p.
+                        the beginning of the ninth century.”<note place="end" xml:id="UT22084-058-006-22" index="15"> Ibid., p.
                             liii.</note> He argues that the texts included in Recension A seem
                         closer to standard revised translations than the texts included in Recession
-                        B, since they accord more with the Mahāvyutpatti.<note place="end" xml:id="UT22084-058-006-23" index="15">
+                        B, since they accord more with the Mahāvyutpatti.<note place="end" xml:id="UT22084-058-006-23" index="16">
                             Although the texts of recension A still retain terms that were not
                             revised, and the texts from recension B did not completely escape
                             revision either. </note> Yet his conclusion, in the light of his
                         analysis of the available witnesses of the text, is that “no representative
                         . . ., no matter how venerable, may be given priority or regarded as
                         invariably the ‘best text.’ This means that variants between genuine
-                        witnesses . . . must be isolated and assessed on a case-by-case basis.”<note place="end" xml:id="UT22084-058-006-24" index="16"> Ibid., pp. xlvi–xlvii. </note>
+                        witnesses . . . must be isolated and assessed on a case-by-case basis.”<note place="end" xml:id="UT22084-058-006-24" index="17"> Ibid., pp. xlvi–xlvii. </note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-25"/>
                     <p tid="13">For this translation into English, which, as far as we are aware, is the
@@ -268,15 +272,15 @@
                         the translation of this text and to gain a fairly robust picture of the
                         transmissional and recensional issues associated with it. We have revised
                         the sigla used in Harrison’s edition (1992) to accord with those used by the
-                        University of Vienna’s Resources for Kanjur and Tanjur Studies<note place="end" index="17" xml:id="UT22084-058-006-814">
-                        https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/</note>, which were derived in
-                        large part from Harrison and Eimer (1997).<note place="end" xml:id="UT22084-058-006-26" index="18">Paul Harrison
+                        University of Vienna’s Resources for Kanjur and Tanjur Studies,<note place="end" xml:id="UT22084-058-006-814" index="18">Sigla webpage of the <ref target="https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/">University of Vienna’s Resources for Kanjur and Tanjur Studies</ref>.
+                        </note> which were derived in
+                        large part from Harrison and Eimer (1997).<note place="end" xml:id="UT22084-058-006-26" index="19">See bibliography. <!--Paul Harrison
                             and Helmut Eimer, “Kanjur and Tanjur Sigla: A Proposal for
                             Standardization,” in <title xml:lang="en">Transmission of the Tibetan
                                 Canon: Papers Presented at a Panel of the 7th Seminar of the
                                 International Association for Tibetan Studies, Graz 1995</title>
                             (Graz: Verlag der Österreichischen Akademie der Wissenschaften, 1995),
-                            xi–xiv.  </note>
+                            xi–xiv.-->  </note>
                     </p>
                 </div>
             </div>
@@ -288,12 +292,7 @@
                 <head type="titleMain" tid="16">The Questions of the Kiṃnara King Druma</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-058-006-27"/>
-                    <p tid="17">[B1] <ref cRef="F.254.a"/>
-                        <note place="end" xml:id="UT22084-058-006-28" index="19"> Here and throughout the text, T, S, F, and L read:
-                                <foreign xml:lang="Bo-Ltn" type="term">ljon pa</foreign>. Harrison
-                            1992, p. 3, no. 8. D: <foreign xml:lang="Bo-Ltn" type="term">sdong
-                                po.</foreign>
-                       </note> Homage to all buddhas and bodhisattvas!</p>
+                    <p tid="17">[B1] <ref cRef="F.254.a"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-058-006-29"/>
                     <p tid="18">Thus did I hear at one time: The Blessed One was residing at Vulture
@@ -332,9 +331,7 @@
                         without being asked, they acted as virtuous friends for all sentient beings,
                         always accompanying them until nirvāṇa.<note place="end" xml:id="UT22084-058-006-32" index="21"> Translated based
                             on S: <foreign xml:lang="Bo-Ltn" type="quote">yongs su mya ngan las ’da’
-                                ba’i bar du gtan du mdza’ ba</foreign>
-                            <fix>.</fix> Harrison 1992, p. 6, no. 15. D: <foreign xml:lang="Bo-Ltn" type="quote">yongs su mya ngan las ’da’ ba’i bshes gnyen byed
-                                pa</foreign>.</note> They uttered great lions’ roars, resounding
+                                ba’i bar du gtan du mdza’ ba</foreign>. Harrison 1992, p. 6, no. 15. D: <foreign xml:lang="Bo-Ltn" type="quote">yongs su mya ngan las ’da’ ba’i bshes gnyen byed pa</foreign>.</note> They uttered great lions’ roars, resounding
                         with the profound Dharma of the Buddha as well as with fearlessness. They
                         were marked by the seal of the thus-gone ones. They taught clearly<note place="end" xml:id="UT22084-058-006-33" index="22"> C and H: <foreign xml:lang="Bo-Ltn" type="term">phyad
                                 par</foreign>, F: <foreign xml:lang="Bo-Ltn" type="term">byed
@@ -345,8 +342,8 @@
                         directions, they contemplated all buddha qualities,<note place="end" xml:id="UT22084-058-006-34" index="23"> S, T,
                             and F: <foreign xml:lang="Bo-Ltn" type="quote">sangs rgyas thams cad kyi
                                 byin gyi rlabs kyis shin tu byin gyis brlabs pa</foreign> (“they
-                            were empowered by the blessings of all the buddhas”)<fix>.
-                            </fix>Harrison 1992, p. 7, no. 6.</note> and they upheld the treasury of
+                            were empowered by the blessings of all the buddhas”).
+                            Harrison 1992, p. 7, no. 6.</note> and they upheld the treasury of
                         the Dharma jewel. They had their minds focused on the unbroken lineage of
                         the Three Jewels. They were skilled in traveling to an infinity of buddha
                         realms. They had the intelligence that is grounded in the discernment of all
@@ -391,10 +388,10 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-38"/>
                     <p tid="21">Among the seventy-two thousand bodhisattvas were the bodhisattva great beings
                         Priyaṃkara, Source of Joy, Ratnapāṇi, Ratnakusuma, Ratnaketu, Priyadarśana,
-                        Delightful to Behold, Ruciramati, Pleasing and Delightful, Dharaṇīdhara,
-                        Avalokiteśvara, Mahāsthāmaprāpta, Great Glory, Mārajit, Mandāravagandha,
+                        Delightful to Behold, Ruciramati, Pleasing and Delightful, Dharaṇī­dhara,
+                        Avalokiteśvara, Mahāsthāmaprāpta, Great Glory, Mārajit, Mandārava­gandha,
                         Vāyu, Joy of Truth, View of Equality,<note place="end" xml:id="UT22084-058-006-39" index="26"> Harrison (p. 10)
-                            has: <foreign xml:lang="Bo-Ltn" type="quote">mnyam lha</foreign> (“God of Equality”).</note> Meruśikharadhara,
+                            has: <foreign xml:lang="Bo-Ltn" type="quote">mnyam lha</foreign> (“God of Equality”).</note> Meruśikhara­dhara,
                         Merukūṭa, Meruvara, Jālinīprabha, Jayamati, Soothing Birth, Jagatīṃdhara,
                         Worshiped by the King of Gods, Uttaramati, Asaṅgacitta, Dawn Intellect,
                         Protector of Men, Boundless Precious Treasure, Prabhāketu, Prabhāśrī,
@@ -408,10 +405,10 @@
                                     <foreign xml:lang="Bo-Ltn" type="quote">lag bzangs</foreign>. D: <foreign xml:lang="Bo-Ltn" type="quote">dpung bzang</foreign>.</note>
                         Sucintitacintī, Feet Consecrated with Wheels, Trampling with Unmoving Feet,
                         Trampling with Vajra Feet, Subjugating the Three Worlds under One’s Feet,
-                        Joyful Eloquence, Swift Eloquence, Anācchedyapratibhāna, Blessed Eloquence,
+                        Joyful Eloquence, Swift Eloquence, Anācchedya­pratibhāna, Blessed Eloquence,
                         Gentle Sounds, Provider of All Beings’ Satisfaction, Brahmaghoṣa,
-                        Bhadrapāla, Ratnākara, Susārthavāha, Agnidatta, Varuṇa, Maitreya,
-                        Mañjughoṣa, and Mañjuśrīkumārabhūta.<note place="end" xml:id="UT22084-058-006-44" index="31"> The number of names
+                        Bhadrapāla, <term>Ratnākara</term>, Susārthavāha, Agnidatta, Varuṇa, Maitreya,
+                        Mañjughoṣa, and Mañjuśrī­kumāra­bhūta.<note place="end" xml:id="UT22084-058-006-44" index="31"> The number of names
                             of bodhisattva great beings, and their sequence, vary in the different
                             editions (see Harrison 1992, pp. 10–12).</note>
                         <ref cRef="F.256.a"/>
@@ -499,7 +496,7 @@
                         <l>Protector, you defeat the lord of the gods and Māra.<note place="end" xml:id="UT22084-058-006-56" index="33">
                                 Here, we have preferred N, K, H, and S: <foreign xml:lang="Bo-Ltn" type="term">bdud</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">bdun</foreign>.</note>
                         </l>
-                        <l>You are revered<note place="end" xml:id="UT22084-058-006-57" index="34"> Here, we have preferred the N, K, KY,
+                        <l>You are revered<note place="end" xml:id="UT22084-058-006-57" index="34"> Here, we have preferred the N, K, K<hi rend="subscript">Y</hi>,
                                 and S: <foreign xml:lang="Bo-Ltn" type="term">mchod pa</foreign>. D:
                                     <foreign xml:lang="Bo-Ltn" type="term">mnod pa</foreign>.</note>
                             by hosts of humans, gods, and nāgas.</l>
@@ -519,7 +516,7 @@
                     <lg tid="33">
                         <l>“You speak in pure and delightful tones </l>
                         <l>And your voice is soft like the voice of Brahmā.</l>
-                        <l>Having perfected all the elements of speech,</l>
+                        <l>Having perfected all the <term type="ignore">elements</term> of speech,</l>
                         <l>You convey the truth in a melodious way; I pay homage to you!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-61"/>
@@ -592,7 +589,7 @@
                         bodhisattvas become experts in knowing the mental activity<note place="end" xml:id="UT22084-058-006-72" index="38"> Here, we have preferred L: <foreign xml:lang="Bo-Ltn" type="quote">sems kyi spyod pa</foreign>. D: <foreign xml:lang="Bo-Ltn" type="quote">sems kyi bsam pa mnyam zhing spyod pa</foreign>.
                         </note> of all beings? <ref cRef="F.257.b"/> How do bodhisattvas act without
                         forgetting the knowledge of how causes, deeds,<note place="end" xml:id="UT22084-058-006-73" index="39"> Here, we
-                            have preferred K, KY, and S: <foreign xml:lang="Bo-Ltn" type="term">bya
+                            have preferred K, K<hi rend="subscript">Y</hi>, and S: <foreign xml:lang="Bo-Ltn" type="term">bya
                                 ba</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">dbye
                                 ba</foreign>.</note> and actions ripen? How do bodhisattvas become
                         adorned with the ornament of generosity? How do bodhisattvas become adorned
@@ -610,7 +607,7 @@
                         the realm of phenomena? How do bodhisattvas not forsake their goal while
                         being of assistance? How do bodhisattvas possess wealth due to merit and how
                         are they without wealth due to skillful means? How do bodhisattvas enter the
-                        gate without attributes through the gateway of the syllable<fix> a</fix>?
+                        gate without attributes through the gateway of the syllable <foreign type="mantra" xml:lang="Sa-Ltn">a</foreign>?
                             <ref cRef="F.258.a"/> How do bodhisattvas actualize all buddha
                         qualities? How do bodhisattvas gain certainty about the Dharma and discern
                         its distinctions? How do bodhisattvas act in accord with the world while
@@ -717,7 +714,7 @@
                     <p tid="53">“Noble son, if bodhisattvas possess four qualities, they will be adorned with
                         the ornament of patience. What are those four? They are (1) having pleasing
                         voices and speech like that of Brahmā, (2) having voices like the song of
-                        kalaviṅka birds, or like music, (3) being pleasing and delightful to many
+                        kalaviṅka birds, or like music, (3) being <term type="ignore">pleasing and delightful</term> to many
                         beings when seen, and (4) being firmly committed to virtue. Noble son, you
                         should know that, if bodhisattvas possess those four qualities, they will be
                         adorned with the ornament of patience.</p>
@@ -831,14 +828,14 @@
                         merit and be without wealth due to skillful means.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-98"/>
                     <p tid="66">“Noble son, if bodhisattvas possess four qualities, they will enter the gate
-                        without attributes through the gateway of the syllable <fix>a</fix>. What
+                        without attributes through the gateway of the syllable <foreign xml:lang="Sa-Ltn" type="mantra">a</foreign>. What
                         are those four? They are (1) refining the understanding that ‘all formations
                         are impermanent,’ (2) having reached the understanding that ‘all formations
                         have always been suffering,’ (3) refining the view that ‘all phenomena are
                         selfless,’ and (4) gaining the wisdom that ‘nirvāṇa has always been
                         peaceful.’ Noble son, if bodhisattvas possess those four qualities, they
                         will enter the gate without attributes through the gateway of the syllable
-                            <fix>a</fix>.</p>
+                        <foreign xml:lang="Sa-Ltn" type="mantra">a</foreign>.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-99"/>
                     <p tid="67">“Noble son, if bodhisattvas possess four qualities, they will actualize all
                         buddha qualities. What are those four? They are (1) possessing the pure eye
@@ -1011,7 +1008,11 @@
                         richly?”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-116"/>
                     <p tid="83">“Śāriputra,” replied the Blessed One, “these are the signs of the arrival of
-                        Druma, the king of the kiṃnaras. He is coming from Mt. Gandhamādana with a
+                        Druma,<note place="end" xml:id="UT22084-058-006-900" index="42">Throughout the original text, T, S, F, and L read:
+                            <foreign xml:lang="Bo-Ltn" type="term">ljon pa</foreign>. Harrison
+                            1992, p. 3, no. 8. D: <foreign xml:lang="Bo-Ltn" type="term">sdong
+                                po.</foreign>
+                        </note> the king of the kiṃnaras. He is coming from Mt. Gandhamādana with a
                         retinue of many thousands of kiṃnaras, a retinue of many thousands of
                         gandharvas, and a retinue of many thousands of gods.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-117"/>
@@ -1024,7 +1025,7 @@
                         the presence of the Blessed One and accompanied by the eighty-four thousand
                         musicians, the kiṃnara king Druma then began to play his lute. Its body was
                         made of beryl and it had trim and veneer made of gold from the Jambū River.
-                           <note place="end" xml:id="UT22084-058-006-118" index="42"> Translated based on S and F. Harrison 1992, p.
+                           <note place="end" xml:id="UT22084-058-006-118" index="43"> Translated based on S and F. Harrison 1992, p.
                             53.</note> It was adorned with gold, jewels, and many precious
                         substances, and purified through the ripening of his previous actions. As
                         soon as the kiṃnara king Druma started to play, the tunes of his lute
@@ -1215,7 +1216,7 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-142"/>
                     <lg tid="108">
                         <l>“Those who eliminate the very beginning</l>
-                        <l>Engage with conditioned things for the sake of beings.<note place="end" xml:id="UT22084-058-006-143" index="43">
+                        <l>Engage with conditioned things for the sake of beings.<note place="end" xml:id="UT22084-058-006-143" index="44">
                                 S, L, and T read: <foreign xml:lang="Bo-Ltn" type="quote">grol ba’i
                                     don du</foreign> (“for the sake of liberation”). Harrison 1992,
                                 p. 64, no 5.</note>
@@ -1232,7 +1233,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-145"/>
                     <lg tid="110">
-                        <l>“This Dharma way is peaceful and detached.<note place="end" xml:id="UT22084-058-006-146" index="44"> S, L, and T
+                        <l>“This Dharma way is peaceful and detached.<note place="end" xml:id="UT22084-058-006-146" index="45"> S, L, and T
                                 read: <foreign xml:lang="Bo-Ltn" type="term">bden pa</foreign>
                                 (“true”). Harrison 1992, p. 64, no 10.</note>
                         </l>
@@ -1245,10 +1246,9 @@
                         <l>“The words here in the sky are beyond apprehension— </l>
                         <l>They are heard without anyone pronouncing them. </l>
                         <l>One who explains and those who listen—</l>
-                        <l>Those are all powerful falsities!”<note place="end" xml:id="UT22084-058-006-148" index="45"> S and F read:
+                        <l>Those are all powerful falsities!”<note place="end" xml:id="UT22084-058-006-148" index="46"> S and F read:
                                     <foreign xml:lang="Bo-Ltn" type="quote">de dag thams cad brdzun
-                                    pa ya ma brla</foreign>
-                                <fix>. </fix>L and T read: <foreign xml:lang="Bo-Ltn" type="quote">de dag thams cad brdzun pa ya ma rla</foreign> (“these are all
+                                    pa ya ma brla</foreign>. L and T read: <foreign xml:lang="Bo-Ltn" type="quote">de dag thams cad brdzun pa ya ma rla</foreign> (“these are all
                                 meaningless falsities”). Harrison 1992, p. 65, no 6.</note>
                         </l>
                     </lg>
@@ -1258,25 +1258,21 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-150"/>
                     <p tid="113">Then, the bodhisattva Devamukuṭa asked the Blessed One, “Blessed One, where
                         do these verses come from?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-151"/>
                     <p tid="114">“Noble son,” replied the Blessed One, “Ask the kiṃnara king Druma. He will
                         answer your question.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-152"/>
                     <p tid="115">The bodhisattva Devamukuṭa then asked the kiṃnara king Druma, “Lord of the
                         kiṃnaras, where did these manifested verses appear from?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-153"/>
                     <p tid="116">The kiṃnara king Druma replied, “Where do the words pronounced by all beings
                         come from?”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-154"/>
                     <p tid="117">“Lord of the kiṃnaras, where do the words pronounced by all beings come
                         from?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-155"/>
                     <p tid="118">“Noble son, the words pronounced by all beings come from space.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-156"/>
                     <p tid="119">“Lord of the kiṃnaras, is it not the case that the words pronounced by all
                         beings come from within themselves?” <ref cRef="F.268.a"/>
                     </p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-157"/>
                     <p tid="120">“Noble son, what do you think? Do the words pronounced by all beings come
                         from within their bodies, or do they come from within their minds?”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-158"/>
@@ -1288,12 +1284,10 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-159"/>
                     <p tid="122">“Noble son, apart from their bodies and minds, where else could these words
                         come from?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-160"/>
                     <p tid="123">“Lord of the kiṃnaras, it is said that the words of beings come from mental
                         engagement.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-161"/>
                     <p tid="124">“If there were no space, where would sounds come from?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-162"/>
                     <p tid="125">“Lord of the kiṃnaras, from where but space could sounds come?”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-163"/>
                     <p tid="126">“Noble son, you should understand through this line of thinking that all
@@ -1373,7 +1367,7 @@
                         solitude, (8) mastering all the perfections, (9) purifying and ripening
                         wisdom, (10) contemplating the Dharma and correctly putting it into
                         practice, (11) pursuing the accumulations of merit and wisdom, and (12)
-                        accomplishing all the factors of awakening. Noble son, when bodhisattvas are
+                        accomplishing all the <term type="ignore">factors of awakening</term>. Noble son, when bodhisattvas are
                         creating roots of virtue, those are the twelve activities they never tire
                         of. It is therefore said that bodhisattvas never grow tired of gathering the
                         accumulation of virtue.”</p>
@@ -1399,7 +1393,7 @@
                         precious mind of omniscience, (2) never abandoning the precious attitude of
                         good motivation, (3) never giving up the attitude of being inclined toward
                         all precious virtues, (4) never giving up the attitude of wanting to engage
-                        in all precious virtues,<note place="end" xml:id="UT22084-058-006-172" index="46"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="term">dge ba’i rtsa ba</foreign> (“roots of
+                        in all precious virtues,<note place="end" xml:id="UT22084-058-006-172" index="47"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="term">dge ba’i rtsa ba</foreign> (“roots of
                             virtue”). Harrison 1992, p. 78, no 16.</note> (5) never giving up the
                         precious attitude of keeping one’s commitments, (6) the precious attitude of
                         giving away all of one’s possessions and dedicating this toward awakening
@@ -1451,18 +1445,18 @@
                         all the medicines of the Dharma in order to pacify the diseases of all
                         beings’ afflictions, <ref cRef="F.271.a"/> (39) the precious attitude of not
                         expressing contempt for those who have not trained to actualize the
-                        greatness of wisdom,<note place="end" xml:id="UT22084-058-006-173" index="47"> Translated based on S, L, T, and F:
+                        greatness of wisdom,<note place="end" xml:id="UT22084-058-006-173" index="48"> Translated based on S, L, T, and F:
                                 <foreign xml:lang="Bo-Ltn" type="quote">ye shes kyi che ba nyid du
                                 ’gyur bar bya ba’i phyir</foreign>. Harrison 1992, p. 81, no. 3. D:
                                 <foreign xml:lang="Bo-Ltn" type="quote">chos kyi bdag nyid
                                 pas</foreign>.</note> (40) the precious attitude of being devoid of
                         pride because one is respectful toward all beings, (41) the precious
                         attitude of being honest and truthful that stems from being unpretentious,
-                           <note place="end" xml:id="UT22084-058-006-174" index="48"> Translated based on S, L, T, and F. Harrison 1992, p.
+                           <note place="end" xml:id="UT22084-058-006-174" index="49"> Translated based on S, L, T, and F. Harrison 1992, p.
                             81, no. 5. D: <foreign xml:lang="Bo-Ltn" type="quote">’chos pa med pa’i
                                 g.yo dang sgyu med pa’i sems rin po che</foreign>.</note> (42) the
                         precious attitude of taking pleasure in the Dharma by working to ensure that
-                        the sacred Dharma remains for a long time,<note place="end" xml:id="UT22084-058-006-175" index="49"> Translated
+                        the sacred Dharma remains for a long time,<note place="end" xml:id="UT22084-058-006-175" index="50"> Translated
                             based on S, L, and T. Harrison 1992, p. 81, no. 6. D: <foreign xml:lang="Bo-Ltn" type="quote">dam pa’i chos yun ring du gnas pas
                                 chos la dga’ ba’i sems rin po che</foreign>.</note> (43) the
                         precious attitude of upholding the sacred Dharma because of feeling
@@ -1478,7 +1472,7 @@
                         beings, (50) the precious attitude of having few desires and being content
                         due to being insatiable with regard to insight, (51) the precious attitude
                         of remaining detached from pleasure because one is physically and mentally
-                        disengaged,<note place="end" xml:id="UT22084-058-006-176" index="50"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="quote">lus dang sems dben pa spong zhing
+                        disengaged,<note place="end" xml:id="UT22084-058-006-176" index="51"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="quote">lus dang sems dben pa spong zhing
                                 dben pa’i sems rin po che</foreign> (“physical and mental isolation,
                             the precious attitude of abandonment and isolation”). Harrison 1992, p.
                             82, no 2.</note> (52) the precious attitude of being insatiable with
@@ -1527,8 +1521,8 @@
                         single vehicle, (78) the precious attitude of turning away from all forms of
                         conduct because one enters faultlessness, (79) the precious attitude of
                         discerning that all phenomena are truly beyond faults since they are
-                        sameness, and (80) the precious attitude of accomplishing all the factors of
-                        awakening, since all buddha qualities are unborn. Those are the eighty
+                        sameness, and (80) the precious attitude of accomplishing all the <term type="ignore">factors of
+                        awakening</term>, since all buddha qualities are unborn. Those are the eighty
                         precious qualities.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-177"/>
                     <p tid="135">“Lord of the kiṃnaras, engaging in those eighty attitudes, developing them,
@@ -1584,9 +1578,8 @@
                         darkness. Since it is free from stains, it is immaculate. Since it is free
                         from disrespect, it is devoid of arrogance. Since it transcends the path of
                         fear, it produces knowledge. Since it transcends inside and outside, it is
-                        devoid of object. Since it is devoid of the formulation of views,<note place="end" xml:id="UT22084-058-006-181" index="51"> Translated based on S: <foreign xml:lang="Bo-Ltn" type="quote">lta bar byed pa</foreign>. Harrison 1992, p. 88, no. 9.
-                            D: <foreign xml:lang="Bo-Ltn" type="quote">lta bas byas pa</foreign>
-                            <fix>.</fix>
+                        devoid of object. Since it is devoid of the formulation of views,<note place="end" xml:id="UT22084-058-006-181" index="52"> Translated based on S: <foreign xml:lang="Bo-Ltn" type="quote">lta bar byed pa</foreign>. Harrison 1992, p. 88, no. 9.
+                            D: <foreign xml:lang="Bo-Ltn" type="quote">lta bas byas pa</foreign>.
                         </note> it is liberating emptiness. Since it pacifies conceptuality, it is
                         characterized by the absence of marks. Since it transcends the three realms,
                         it has the characteristic of the absence of wishes. Since it is devoid of
@@ -1595,7 +1588,7 @@
                         conquered the movement of thoughts and conceptuality. It is nonconceptual
                         generosity, nonabiding discipline, nondwelling patience, diligence beyond
                         acceptance and rejection, concentration free from imputation, and the
-                        gateway<note place="end" xml:id="UT22084-058-006-182" index="52"> S, L, and T read: <foreign xml:lang="Bo-Ltn" type="quote">rnam par rig byed ma yin pa’i sgo’i shes rab</foreign>
+                        gateway<note place="end" xml:id="UT22084-058-006-182" index="53"> S, L, and T read: <foreign xml:lang="Bo-Ltn" type="quote">rnam par rig byed ma yin pa’i sgo’i shes rab</foreign>
                             (“insight which is the gateway to the imperceptible”). Harrison 1992, p.
                             89, no 2.</note> to the imperceptible. It is directed toward everything.
                         It is skillful. It is fully committed to the selflessness of all beings. It
@@ -1763,7 +1756,7 @@
                         as he threw those flowers, through the power of the Buddha a parasol made of
                         precious flowers covered this entire chiliocosm. Billions of pearl garlands
                         hung from it, and myriads of light rays radiated from each pearl in those
-                        pearl garlands.<note place="end" xml:id="UT22084-058-006-196" index="53"> Translated based on S, L, T, and F:
+                        pearl garlands.<note place="end" xml:id="UT22084-058-006-196" index="54"> Translated based on S, L, T, and F:
                                 <foreign xml:lang="Bo-Ltn" type="quote">mu tig gi rgyan ’phreng gi
                                 mu tig gi ’bru de thams cad las</foreign>. Harrison 1992, p. 101,
                             no. 4. D: <foreign xml:lang="Bo-Ltn" type="quote">me tog gi do shal
@@ -1907,7 +1900,7 @@
                         ointments, and prepared delicious food. Then, they gathered on the southern
                         slope of the majestic Mt. Gandhamādana and started playing music and singing
                         songs. In poetry accompanied by singing and the playing of lutes, they
-                        invoked<note place="end" xml:id="UT22084-058-006-214" index="54"> Here and throughout the following passage, S, L,
+                        invoked<note place="end" xml:id="UT22084-058-006-214" index="55"> Here and throughout the following passage, S, L,
                             T, and F read: <foreign xml:lang="Bo-Ltn" type="quote">gdugs tshod pha
                                 ba</foreign> (“invited for lunch”) instead of D: <foreign xml:lang="Bo-Ltn" type="quote">dus bskul ba</foreign>. Harrison
                             1992, pp. 110–117.</note> the Blessed One with these melodious
@@ -1924,8 +1917,7 @@
                         <l>“Possessor of the might of the ten powers, conqueror of all hostile
                             armies,</l>
                         <l>Vanquisher of hosts of enemies, benefactor of beings,</l>
-                        <l>Undisturbed and unsullied, you have abandoned all stains and harshness;
-                               <note place="end" xml:id="UT22084-058-006-217" index="55"> Translated based on S, F, L, and T: <foreign xml:lang="Bo-Ltn" type="quote">ma ’khrugs ma rnyog dri ma tha ba
+                        <l>Undisturbed and unsullied, you have abandoned all stains and harshness;<note place="end" xml:id="UT22084-058-006-217" index="56"> Translated based on S, F, L, and T: <foreign xml:lang="Bo-Ltn" type="quote">ma ’khrugs ma rnyog dri ma tha ba
                                     rab spangs pa</foreign>. Harrison 1992, p. 111, no. 7. D:
                                     <foreign xml:lang="Bo-Ltn" type="quote">’jo dang rnyog pa rnams
                                     dang dri ma tha spangs pa</foreign>.</note>
@@ -1949,7 +1941,7 @@
                         <l>As well as the light emitted by Śakra, Brahmā, and all the gods of the
                             three realms.</l>
                         <l>Sage, your splendorous and bright light benefits others,</l>
-                        <l>And so, Victorious One, you are radiant with your brilliant light.<note place="end" xml:id="UT22084-058-006-220" index="56"> Here, we have preferred K and KY: <foreign xml:lang="Bo-Ltn" type="term">gsal ba</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">bsa bal</foreign>.</note> .</l>
+                        <l>And so, Victorious One, you are radiant with your brilliant light.<note place="end" xml:id="UT22084-058-006-220" index="57"> Here, we have preferred K and K<hi rend="subscript">Y</hi>: <foreign xml:lang="Bo-Ltn" type="term">gsal ba</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">bsa bal</foreign>.</note> .</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-221"/>
                     <lg tid="173">
@@ -2083,16 +2075,12 @@
                         generosity after having abandoned the stains of inner afflictions. (7) They
                         practice generosity with a joyful attitude that is free from grasping but
                         endowed with faith and delight. (8) They practice generosity by delighting
-                        in open-handed munificence.<note place="end" xml:id="UT22084-058-006-234" index="57"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="term">lhug par</foreign> (“abundantly”).
-                            Harrison 1992, p. 121, no 19.er of the Dharma (see glossary)ase
-                            imperciptibleude of abandonment and isolation lags pa de bcom ldan
-                            'sary).</note> (9) They practice generosity with an attitude that is
+                        in open-handed munificence.<note place="end" xml:id="UT22084-058-006-234" index="58"> S, L, T, and F read: <foreign xml:lang="Bo-Ltn" type="term">lhug par</foreign> (“abundantly”).
+                            Harrison 1992, p. 121, no 19.</note> (9) They practice generosity with an attitude that is
                         drawn to the vast approach and never becomes discouraged. (10) They practice
-                        generosity without fixating on any recipient.<note place="end" xml:id="UT22084-058-006-235" index="58"> S, L, T,
+                        generosity without fixating on any recipient.<note place="end" xml:id="UT22084-058-006-235" index="59"> S, L, T,
                             and F read: <foreign xml:lang="Bo-Ltn" type="term">skye ba</foreign>
-                            (“birth”). Harrison 1992, p. 121, no 22. ter of the Dharma (see
-                            glossary)ase imperciptibleude of abandonment and isolation lags pa de
-                            bcom ldan 'sary).</note> (11) They practice generosity without hoping
+                            (“birth”). Harrison 1992, p. 121, no 22. </note> (11) They practice generosity without hoping
                         for karmic ripening. (12) They practice generosity without hoping for
                         reward. (13) They practice generosity with an attitude that pursues the
                         buddha qualities. (14) They practice generosity and dedicate it to
@@ -2113,7 +2101,7 @@
                         generosity while thinking, ‘May I abide by joy in the Dharma.’ (27) They
                         practice generosity while thinking, ‘May it not be rare for me to meet
                         virtuous friends.’ (28) They practice generosity while thinking, ‘May I
-                        develop the eye which is devoid of hostility toward all beings.’<note place="end" xml:id="UT22084-058-006-236" index="59"> Translated based on S, F, L, and T: <foreign xml:lang="Bo-Ltn" type="quote">zhe ’gras med pa’i mig</foreign>.
+                        develop the eye which is devoid of hostility toward all beings.’<note place="end" xml:id="UT22084-058-006-236" index="60"> Translated based on S, F, L, and T: <foreign xml:lang="Bo-Ltn" type="quote">zhe ’gras med pa’i mig</foreign>.
                             Harrison 1992, p. 124, no. 5. D: <foreign xml:lang="Bo-Ltn" type="term">dga’ ba’i mig</foreign>. </note> (29) They practice generosity
                         while thinking, ‘Through this generosity, may I achieve unsurpassed and
                         perfect awakening.’ (30) They practice generosity while thinking, ‘May I
@@ -2142,7 +2130,7 @@
                         discipline supported by love by being equally directed toward all beings.
                         (9) They protect all beings and therefore adhere to a discipline that
                         embraces great compassion. (10) Due to the power of their commitments, they
-                        adhere to a discipline that perfectly upholds their training.<note place="end" xml:id="UT22084-058-006-238" index="60"> Translated based on S, F, T, and L: <foreign xml:lang="Bo-Ltn" type="quote">bslab pa legs par rdzogs par yang dag
+                        adhere to a discipline that perfectly upholds their training.<note place="end" xml:id="UT22084-058-006-238" index="61"> Translated based on S, F, T, and L: <foreign xml:lang="Bo-Ltn" type="quote">bslab pa legs par rdzogs par yang dag
                                 par ’dzin pa’i tshul khrims</foreign>. Harrison 1992, p. 126, no.
                             10. D: <foreign xml:lang="Bo-Ltn" type="quote">bslab pa rdzogs pa med pa
                                 yang dag par ’dzin pa’i tshul khrims</foreign>. </note> (11) They
@@ -2161,14 +2149,14 @@
                         their own minds and so they adhere to a discipline that does not praise
                         oneself or criticize others. <ref cRef="F.281.b"/> (21) They are devoid of
                         afflictions and therefore adhere to the discipline of compassionate
-                        reflection. (22) They adhere to a discipline that engages in all the factors
-                        of awakening. (23) They adhere to a discipline that takes pleasure in
+                        reflection. (22) They adhere to a discipline that engages in all the <term type="ignore">factors
+                        of awakening</term>. (23) They adhere to a discipline that takes pleasure in
                         bringing joy to others. (24) They are devoid of desire and attachment and
                         therefore adhere to a discipline that brings contentment. (25) They act with
                         utmost determination and therefore adhere to a discipline that generates
                         immense accomplishments. (26) They have no consideration for the household
                         and therefore adhere to a discipline that is dedicated to the renunciant
-                        life. (27) They are delighted by the pleasure grove<note place="end" xml:id="UT22084-058-006-239" index="61">
+                        life. (27) They are delighted by the pleasure grove<note place="end" xml:id="UT22084-058-006-239" index="62">
                             Translated based on S, F, T, and L: <foreign xml:lang="Bo-Ltn" type="term">kun dga’</foreign>. Harrison 1992, p. 127, no. 13. D:
                                 <foreign xml:lang="Bo-Ltn" type="term">dga’ ba</foreign>. </note> of
                         Dharma and therefore adhere to the discipline of enjoying wilderness. (28)
@@ -2231,7 +2219,7 @@
                         countless buddhas. (7) They engender diligence to gather infinite roots of
                         virtue. (8) They engender diligence to acquire infinite learning. (9) They
                         engender diligence to speak to all beings using the right words. (10) They
-                        engender diligence to eliminate the distress of all beings.<note place="end" xml:id="UT22084-058-006-242" index="62"> Translated based on S, F, T, and L: <foreign xml:lang="Bo-Ltn" type="quote">sems can thams cad la rab tu gdung ba
+                        engender diligence to eliminate the distress of all beings.<note place="end" xml:id="UT22084-058-006-242" index="63"> Translated based on S, F, T, and L: <foreign xml:lang="Bo-Ltn" type="quote">sems can thams cad la rab tu gdung ba
                                 med pa’i phyir brtson ’grus rtsom pa</foreign>. Harrison 1992, p.
                             131, no. 9. D: <foreign xml:lang="Bo-Ltn" type="quote">sems can thams
                                 cad la rab tu gding bar byed pa’i phyir brtson ’grus rtsom
@@ -2301,7 +2289,7 @@
                         bodhisattvas’ perfection of concentration is pure.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-244"/>
                     <p tid="190">“Lord of the kiṃnaras, there are thirty-two ways in which the bodhisattvas’
-                        perfection of insight is pure. What are those thirty-two?<note place="end" xml:id="UT22084-058-006-245" index="63">
+                        perfection of insight is pure. What are those thirty-two?<note place="end" xml:id="UT22084-058-006-245" index="64">
                             The following list has thrirty-three entries.</note>
                         <ref cRef="F.284.a"/> (1) They have erudition acquired through insatiability
                         in the pursuit of learning. (2) They are experts in the knowledge that
@@ -2337,7 +2325,7 @@
                         training. (24) They have insight into the three gateways to
                         liberation—emptiness, the absence of marks, and the absence of wishes. (25)
                         They understand that all phenomena are naturally peaceful, calm, and
-                        tranquil, since they are primordially beyond meeting.<note place="end" xml:id="UT22084-058-006-246" index="64">
+                        tranquil, since they are primordially beyond meeting.<note place="end" xml:id="UT22084-058-006-246" index="65">
                             Translated based on S, F, L, and T: <foreign xml:lang="Bo-Ltn" type="term">’brel</foreign>. Harrison 1992, p. 138, no. 7. D:
                                 <foreign xml:lang="Bo-Ltn" type="term">’bral</foreign>. </note> (26)
                         They have attained the unobstructed vision of all phenomena by eliminating
@@ -2393,7 +2381,7 @@
                         (20) To ripen others with the Dharma in accordance with their individual
                         inclinations, they manifest within great gatherings and large groups where
                         they beautify whole areas with the music of their drums, kettle drums,
-                        flutes, and conch shells;<note place="end" xml:id="UT22084-058-006-248" index="65"> Translated based on S, T, and
+                        flutes, and conch shells;<note place="end" xml:id="UT22084-058-006-248" index="66"> Translated based on S, T, and
                             L: <foreign xml:lang="Bo-Ltn" type="quote">rnga bo che dang/ mkhar rnga
                                 dang/ gling bu dang/ dung</foreign>. Harrison 1992, p. 143, no.
                             13–18. D: <foreign xml:lang="Bo-Ltn" type="quote">rnga dang/ rnga mri
@@ -2669,7 +2657,7 @@
                     <p tid="233">The bodhisattva manifestations replied:</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-291"/>
                     <lg tid="234">
-                        <l>“Their love is a balanced attitude and outlook,<note place="end" xml:id="UT22084-058-006-292" index="66">
+                        <l>“Their love is a balanced attitude and outlook,<note place="end" xml:id="UT22084-058-006-292" index="67">
                                 Translated based on J, N, and K: <foreign xml:lang="Bo-Ltn" type="term">bsam snyoms</foreign>. Harrison 1992, p. 158, no.
                                 10. D: <foreign xml:lang="Bo-Ltn" type="term">btang
                                 snyoms</foreign>.</note>
@@ -2684,7 +2672,7 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-294"/>
                     <lg tid="236">
                         <l>“How do they behold buddhas</l>
-                        <l>And how are their minds pure?<note place="end" xml:id="UT22084-058-006-295" index="67"> Translated based on S,
+                        <l>And how are their minds pure?<note place="end" xml:id="UT22084-058-006-295" index="68"> Translated based on S,
                                 L, and T: <foreign xml:lang="Bo-Ltn" type="term">dang ba</foreign>.
                                 Harrison 1992, p. 159, no. 2. D: <foreign xml:lang="Bo-Ltn" type="term">mthong bar</foreign>.</note>
                         </l>
@@ -2860,7 +2848,7 @@
                     <lg tid="274">
                         <l>“They always possess the seven riches, </l>
                         <l>They have gained the acquisition of the Dharma, </l>
-                        <l>And their treasure is recall.<note place="end" xml:id="UT22084-058-006-334" index="68"> S, L, T, and F read:
+                        <l>And their treasure is recall.<note place="end" xml:id="UT22084-058-006-334" index="69"> S, L, T, and F read:
                                     <foreign xml:lang="Bo-Ltn" type="term">gzugs</foreign>
                                 (“body/form”). Harrison 1992, p. 164, no 10.</note>
                         </l>
@@ -3018,7 +3006,7 @@
                         acceptance of the unborn nature of phenomena. Then, having attained that
                         acceptance, they covered the Blessed One in their respective garments and
                         ornaments and said, “Blessed One, why has the Buddha manifested to us in the
-                        form of those verses we just heard?<note place="end" xml:id="UT22084-058-006-368" index="69"> Translated based on
+                        form of those verses we just heard?<note place="end" xml:id="UT22084-058-006-368" index="70"> Translated based on
                             S, L, T, and F: <foreign xml:lang="Bo-Ltn" type="quote">thos
                                 pas</foreign>. Harrison 1992, p. 170, no. 2. D: <foreign xml:lang="Bo-Ltn" type="quote">thob pas</foreign>.</note> Blessed
                         one, the music and song gave voice to these questions that expressed doubt
@@ -3099,7 +3087,7 @@
                         <l>You outshine all worldly qualities,</l>
                         <l>And you liberate beings from the ties and webs of attachment and
                             craving;</l>
-                        <l>Blessed One, protector of the world, we prostrate to you!</l>
+                        <l>Blessed One, <term type="ignore">protector of the world</term>, we prostrate to you!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-379"/>
                     <lg tid="318">
@@ -3185,7 +3173,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-390"/>
                     <lg tid="329">
-                        <l>“You have cleared away<note place="end" xml:id="UT22084-058-006-391" index="70"> Translated based on S, L, and
+                        <l>“You have cleared away<note place="end" xml:id="UT22084-058-006-391" index="71"> Translated based on S, L, and
                                 T: <foreign xml:lang="Bo-Ltn" type="term">bsal</foreign>. Harrison
                                 1992, p. 177, no. 8. D: <foreign xml:lang="Bo-Ltn" type="term">gsal</foreign>.</note> all torment and reached perfection.</l>
                         <l>Sage, you possess an inexhaustible treasury.</l>
@@ -3343,7 +3331,7 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-412"/>
                     <lg tid="350">
                         <l>“You have untied the tight knot in the rope of craving,</l>
-                        <l>Which is known as the web of existence.<note place="end" xml:id="UT22084-058-006-413" index="71"> S, L, T, and
+                        <l>Which is known as the web of existence.<note place="end" xml:id="UT22084-058-006-413" index="72"> S, L, T, and
                                 F: <foreign xml:lang="Bo-Ltn" type="term">sred pa</foreign>
                                 (“craving”). Harrison 1992, p. 183, no. 2.</note>
                         </l>
@@ -3388,10 +3376,8 @@
                         had directed. The Blessed One then said, “Sisters, if women possess this one
                         quality, they will leave behind their female bodies, acquire male bodies,
                             <ref cRef="F.293.b"/> and swiftly awaken to unsurpassed and perfect
-                        buddhahood.<note place="end" xml:id="UT22084-058-006-420" index="72"> This phrase repeats at the opening and
-                            closing of each list in S, L, T, and F. Harrison 1992, pp. 185–193. ter
-                            of the Dharma (see glossary)ase imperciptibleude of abandonment and
-                            isolation lags pa de bcom ldan 'sary).</note> What is this quality? It
+                        buddhahood.<note place="end" xml:id="UT22084-058-006-420" index="73"> This phrase repeats at the opening and
+                            closing of each list in S, L, T, and F. Harrison 1992, pp. 185–193.</note> What is this quality? It
                         is giving rise to the mind set on awakening with good motivation, giving
                         rise to the mind set on omniscience, giving rise to the unequaled attitude,
                         giving rise to the attitude that is more exalted than anything in the three
@@ -3433,7 +3419,7 @@
                     <p tid="361">“Furthermore, sisters, if women possess six qualities, they will leave behind
                         their female bodies and acquire male bodies. What are those six qualities?
                         They are (1) sincerity, (2) gentleness, (3) integrity, (4) honesty, (5)
-                        uprightness,<note place="end" xml:id="UT22084-058-006-426" index="73"> Translated based on S, L, T, and F: <foreign xml:lang="Bo-Ltn" type="term">gsal ba</foreign>. Harrison 1992, p.
+                        uprightness,<note place="end" xml:id="UT22084-058-006-426" index="74"> Translated based on S, L, T, and F: <foreign xml:lang="Bo-Ltn" type="term">gsal ba</foreign>. Harrison 1992, p.
                             189, no. 8. D: <foreign xml:lang="Bo-Ltn" type="term">bstsal ba med
                                 pa</foreign>.</note> and (6) genuineness. Sisters, if women possess
                         those six qualities, they will leave behind their female bodies and acquire
@@ -3574,7 +3560,7 @@
                         <l>“Possessor of the supreme marks, you confer the sacred Dharma to all
                             beings.</l>
                         <l>Great leader of beings, most sublime god,</l>
-                        <l>You are truly delighted by love,<note place="end" xml:id="UT22084-058-006-441" index="74"> S, L, T, and F read:
+                        <l>You are truly delighted by love,<note place="end" xml:id="UT22084-058-006-441" index="75"> S, L, T, and F read:
                                     <foreign xml:lang="Bo-Ltn" type="term">sems</foreign> (“mind”).
                                 Harrison 1992, p. 198, no 3.</note> the powers, and patience;</l>
                         <l>Blissful One worthy of praise, we prostrate to you!</l>
@@ -3750,7 +3736,6 @@
                         to the mind set on unsurpassed and perfect awakening, and how they
                         prostrated to my feet in order to leave behind their female bodies and
                         acquire male bodies?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-465"/>
                     <p tid="399">“Yes, Blessed One, I saw this.” <ref cRef="F.297.b"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-466"/>
@@ -3838,13 +3823,12 @@
                         surveyed the ten directions with his elephant’s gaze and then said to
                         venerable Ānanda, “Ānanda, did you see the manner, the greatness, and the
                         way in which the kiṃnara king Druma worshiped the Thus-Gone One?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-475"/>
                     <p tid="409">“Yes, Blessed One, I saw it. Blissful One, I saw it.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-476"/>
                     <p tid="410">“Ānanda, the kiṃnara king Druma will awaken to unsurpassed and perfect
                         buddhahood after sixty-eight billion eons, during the eon called Ratnākara,
                         in the universe called Candravimala. He will appear in the world as the
-                        Thus-Gone One, the worthy one, the perfect Buddha called Guṇarājaprabhāsa.
+                        Thus-Gone One, the worthy one, the perfect Buddha called Guṇarāja­prabhāsa.
                         He will be learned and virtuous, a blissful one, a knower of the world, a
                         charioteer who guides beings, an unsurpassed being, a teacher of gods and
                         humans, and a blessed buddha. Ānanda, that universe called Candravimala <ref cRef="F.299.a"/> will be smooth like the palm of the hand and made of
@@ -3854,7 +3838,7 @@
                         exception have reached the state of irreversibility and the inconceivable
                         level of liberation. Those bodhisattvas will enjoy celestial mansions and,
                         while residing there, the reflection of the Blessed One, the Thus-Gone One
-                        Guṇarājaprabhāsa will appear to them on the ground made of white beryl. As
+                        Guṇarāja­prabhāsa will appear to them on the ground made of white beryl. As
                         soon as they see his image, they will remember that all phenomena are
                         similar to reflections, and whenever doubts about the Dharma arise in their
                         minds, they will pose questions to that reflection of the Thus-Gone One.
@@ -3879,9 +3863,9 @@
                         same experience.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-477"/>
                     <p tid="411">“Ānanda, the Blessed One, the thus-gone one, the worthy one, the perfect
-                        Buddha Guṇarājaprabhāsa will remain for ten intermediate eons, to bring
+                        Buddha Guṇarāja­prabhāsa will remain for ten intermediate eons, to bring
                         benefit and happiness to many gods and humans. When the Blessed one, the
-                        Thus-Gone One Guṇarājaprabhāsa eventually decides to pass into nirvāṇa, he
+                        Thus-Gone One Guṇarāja­prabhāsa eventually decides to pass into nirvāṇa, he
                         will prophesy, ‘After me, the bodhisattva great being Uttaptavīrya will
                         awaken to unsurpassed and perfect buddhahood. He will be a thus-gone one, a
                         worthy one, a perfect buddha called Mahāvyūha. He will be learned and
@@ -4013,7 +3997,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-494"/>
                     <lg tid="428">
-                        <l>“The body is made of inanimate matter<note place="end" xml:id="UT22084-058-006-495" index="75"> Translated based
+                        <l>“The body is made of inanimate matter<note place="end" xml:id="UT22084-058-006-495" index="76"> Translated based
                                 on L, T, and F: <foreign xml:lang="Bo-Ltn" type="term">bems
                                     po</foreign>. Harrison 1992, p. 220, no. 5. D: <foreign xml:lang="Bo-Ltn" type="term">blun pa</foreign>.</note> and has
                             no master,</l>
@@ -4070,7 +4054,7 @@
                         <l>“Although being self-arisen is not the supreme mark,</l>
                         <l>It is distinguished in its nature by being mental phenomenon.</l>
                         <l>Because thoughts and the mind are the same in being void,</l>
-                        <l>And because all victors are equal in qualities, they are the same.<note place="end" xml:id="UT22084-058-006-503" index="76">Tentative translation. Tib. <foreign xml:lang="Bo-Ltn" type="quote">rang byung ba ni mtshan mchog ma yin yang/ sems kyi
+                        <l>And because all victors are equal in qualities, they are the same.<note place="end" xml:id="UT22084-058-006-503" index="77">Tentative translation. Tib. <foreign xml:lang="Bo-Ltn" type="quote">rang byung ba ni mtshan mchog ma yin yang/ sems kyi
                                     chos kyis gzugs kyis rab tu phye/ sems dang yid ni mtshungs
                                     pa[r] dben par gyur/ rgyal ba thams cad chos mtshungs nyid phyir
                                     mnyam</foreign>.</note>
@@ -4116,7 +4100,7 @@
                     <milestone unit="chunk" xml:id="UT22084-058-006-509"/>
                     <lg tid="441">
                         <l>“Since it is yet to be exhausted, exhaustion cannot be known; </l>
-                        <l>Since the inexhaustible is exhausted, it will not be exhausted.<note place="end" xml:id="UT22084-058-006-510" index="77"> Tentative translation. Tibetan: <foreign xml:lang="Bo-Ltn" type="quote">zad par bya phyir zad pa shes mi
+                        <l>Since the inexhaustible is exhausted, it will not be exhausted.<note place="end" xml:id="UT22084-058-006-510" index="78"> Tentative translation. Tibetan: <foreign xml:lang="Bo-Ltn" type="quote">zad par bya phyir zad pa shes mi
                                     nus/ mi zad pa ni zad pas zad mi ’gyur</foreign>. </note>
                         </l>
                         <l>Through the gateway of exhaustion, all phenomena are unborn;</l>
@@ -4192,7 +4176,7 @@
                         offerings of beautiful Dharma robes, food, bedding, medicine, provisions,
                         and every other type of pleasing article. Supported by those roots of
                         virtue, he gave rise to the mind set on unsurpassed and perfect awakening
-                        together with his forty thousand<note place="end" xml:id="UT22084-058-006-519" index="78"> All Tibetan witnesses
+                        together with his forty thousand<note place="end" xml:id="UT22084-058-006-519" index="79"> All Tibetan witnesses
                             consulted read “four thousand,” but we have translated “forty thousand”
                             as per the number given just above.</note> women, one thousand sons, and
                         eighty-four thousand other beings. Then, they venerated the Blessed One, the
@@ -4224,7 +4208,7 @@
                         interruption. For this reason, since he has swiftly and genuinely
                         accomplished the accumulations for perfect awakening, I have prophesied
                         today that, in the future, he will become the Thus-Gone One, the worthy one,
-                        the perfect Buddha called Guṇarājaprabhāsa.”</p>
+                        the perfect Buddha called Guṇarāja­prabhāsa.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-521"/>
                     <p tid="451">At that moment, the bodhisattva great being Devamukuṭa exclaimed, “Blessed
                         One, you possess the unimpeded wisdom of the thus-gone ones, the worthy
@@ -4236,7 +4220,7 @@
                         you have said, the Thus-Gone One, the worthy one, the perfect Buddha
                         possesses unimpeded wisdom vision. Why is it so? Because, noble son, the
                         Thus-Gone One clearly knows the exhaustion, cessation, separation, and
-                        transformation of the past mindstreams<note place="end" xml:id="UT22084-058-006-523" index="79"> Translated based
+                        transformation of the past mindstreams<note place="end" xml:id="UT22084-058-006-523" index="80"> Translated based
                             on S, L, T, and F: <foreign xml:lang="Bo-Ltn" type="term">rgyud</foreign>. Harrison 1992, p. 231, no. 10. D: <foreign xml:lang="Bo-Ltn" type="term">rgyu</foreign>.</note> of all beings;
                         he knows from which causes their mindstreams emerged and the absence of
                         causes through which they became exhausted, as well as all their virtuous,
@@ -4583,10 +4567,10 @@
                         that the bodhisattvas dedicate to omniscience will sustain all beings. Why?
                         Because, Your Majesty, the awakening of the bodhisattvas will support,
                         reach, and accompany all beings. Your Majesty this is the reason you have
-                        met those two virtuous friends—the Blessed One and Mañjuśrīkumārabhūta. You
+                        met those two virtuous friends—the Blessed One and Mañjuśrī­kumāra­bhūta. You
                         have heard the sacred Dharma from them, and it has cleared away the darkness
                         of your unknowing and the great cataracts of ignorance from which boundless
-                        regrets arose.<note place="end" xml:id="UT22084-058-006-559" index="80"> This refers to the story of the king
+                        regrets arose.<note place="end" xml:id="UT22084-058-006-559" index="81"> This refers to the story of the king
                             Ajātaśatru, who committed severe negative deeds during his life but,
                             later on, felt deep regret and became a fervent supporter of the
                             Dharma.</note> You have thus achieved the great light of Dharma that
@@ -4602,7 +4586,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-561"/>
                     <p tid="489">“Noble son,” replied the Blessed One, “if bodhisattva great beings possess
-                        thirty-two qualities,<note place="end" xml:id="UT22084-058-006-562" index="81"> The text actually lists
+                        thirty-two qualities,<note place="end" xml:id="UT22084-058-006-562" index="82"> The text actually lists
                             thirty-three qualities.</note> they will be vessels for the Dharma. What
                         are those thirty-two? Noble son, they are (1) the blessings of the
                         buddhas—the vessel of the bodhisattvas, (2) consideration—the vessel of pure
@@ -4684,7 +4668,7 @@
                     <p tid="496">“Furthermore, lord of the kiṃnaras, you should know that if bodhisattvas
                         adopt four attitudes they will not become weary. What are those four? They
                         are (1) never forsaking the mind set on awakening even if it puts them in
-                        grave danger, (2) never wishing<note place="end" xml:id="UT22084-058-006-570" index="82"> Translated based on S, L,
+                        grave danger, (2) never wishing<note place="end" xml:id="UT22084-058-006-570" index="83"> Translated based on S, L,
                             T, and F: <foreign xml:lang="Bo-Ltn" type="term">mi ’dod pa</foreign>.
                             Harrison 1992, p. 259, no. 15. D: <foreign xml:lang="Bo-Ltn" type="term">mi dbang ba</foreign>.</note> for the level of the hearers and the
                         solitary buddhas, (3) guarding the sacred Dharma even at the cost of their
@@ -4731,12 +4715,10 @@
                         on the fourfold attitudes, he asked King Ajātaśatru, “Your Majesty, did you
                         hear this teaching of fourfold attitudes that lead the bodhisattvas to
                         weariness and absence of weariness?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-576"/>
                     <p tid="502">“Yes, Blessed One, I heard it.”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-577"/>
                     <p tid="503">“Your Majesty, in that case you should practice bodhisattva conduct without
                         becoming weary!”</p>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-578"/>
                     <p tid="504">“Blessed One, what is the conduct of the bodhisattvas?”</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-579"/>
                     <p tid="505">Then, in order to perfect the bodhisattva conduct of King Ajātaśatru, the
@@ -4754,9 +4736,6 @@
                         <l>“Those who engage in help and benefit,</l>
                         <l>Those who earnestly apply themselves to listening to the Dharma, </l>
                         <l>And those who practice supreme awakening,</l>
-                    </lg>
-                    <milestone unit="chunk" xml:id="UT22084-058-006-582"/>
-                    <lg tid="508">
                         <l>Practice without becoming weary.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-058-006-583"/>
@@ -5024,7 +5003,7 @@
                     <p tid="545">At that moment, the son of Śakra, lord of the gods, the god Guardian of Light
                         Rays, who was present in the assembly, said to his father, “Father, with
                         regard to those phenomena that are not characterized as pertaining to the
-                        accomplishment of utter disengagement,<note place="end" xml:id="UT22084-058-006-620" index="83"> Tentative
+                        accomplishment of utter disengagement,<note place="end" xml:id="UT22084-058-006-620" index="84"> Tentative
                             translation. Tib. <foreign xml:lang="Bo-Ltn" type="quote">rab tu dben pa
                                 rnam par bsgrub par nye bar gnas pa’i mtshan nyid ma lags pa’i chos
                                 rnams la</foreign>.</note> those who do not give rise to the mind
@@ -5253,14 +5232,13 @@
                         kumbhāṇḍas, as well as humans, nonhumans, and all those who are hostile
                         toward the teaching of the Buddha:</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-639"/>
-                    <p tid="564">
+                    <p rend="mantra" tid="564">
                         <foreign xml:lang="Sa-Ltn" type="mantra">Tadyathā: tarave arave anope sarape
                             hulu mahāhulu hulu hulu avadṭe vikadṭe paricchedāni nigrīhṇite
-                            praghātani idṭi idṭi vidṭi vidṭi adche gadche māranigrahana
-                            sarvaparapravādinigrahana sarvamithyaprayātānannigrahana
-                            sarvabhutagrahāna buddhavarṇitadharmaniyataśāyabhūtāna buddhavarṇitāna
-                            caturmahārājanirdeśān mantrabalān avatāra prekṣiṇānigrahāya</foreign>.
-                           <note place="end" xml:id="UT22084-058-006-640" index="84"> The Tibetan text of this mantra seems corrupt in
+                            praghātani idṭi idṭi vidṭi vidṭi adche gadche māra­nigrahana
+                            sarva­parapravādini­grahana sarva­mithya­prayātānanni­grahana
+                            sarva­bhuta­grahāna buddha­varṇita­dharmaniyata­śāya­bhūtāna buddha­varṇitāna
+                            catur­mahārāja­nirdeśān mantra­balān avatāra prekṣiṇāni­grahāya</foreign>.<note place="end" xml:id="UT22084-058-006-640" index="85"> The Tibetan text of this mantra seems corrupt in
                             places, and might have been composed in Prakrit rather than Sanskrit.
                             Here, we have solely rendered the version found in the Degé
                             edition.</note>
@@ -5334,12 +5312,12 @@
                         demigods, rejoiced in the words of the Blessed One and were delighted.</p>
                 </div>
                 <div type="colophon">
-                    <head tid="574">Colophon</head>
+                    <head type="colophon" tid="574">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-058-006-650"/>
                     <p tid="575">This concludes the noble Great Vehicle sūtra entitled: <title xml:lang="en">The Questions of the Kiṃnara King Druma</title>.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-651"/>
                     <p tid="576">This was translated, edited, and finalized by the translator-editors
-                        venerable Palgi Lhunpo and venerable Paltsek Rakṣita.<note place="end" xml:id="UT22084-058-006-652" index="85">
+                        venerable Palgi Lhunpo and venerable Paltsek Rakṣita.<note place="end" xml:id="UT22084-058-006-652" index="86">
                             Translated based on S, L, and F: <foreign xml:lang="Bo-Ltn" type="quote">ban dhe dpal brtsegs rak+ṣi ta</foreign>. Harrison 1992, p. 303,
                             no. 4–5. D: <foreign xml:lang="Bo-Ltn" type="term">dpal
                                 brtsegs</foreign>.</note>
@@ -5351,67 +5329,60 @@
             <div type="notes">
                 <head type="notes" tid="577">Notes</head>
                 <list type="abbreviations">
-                    <head tid="578">Abbreviations</head>
-                    <fix/>
-                    <!-- In this section, markup editors need to move the expanded form of the
-                            abbreviation out of the "abbr" element and put it into the "expan" element. Delete
-                           this comment and the "fix" tag when you are done. If there are no abbreviations in 
-                            this text, then delete this entire "list" element, but leave the "div" and "head"
-                            entitled "notes"-->
+                    <head type="abbreviations" tid="578">Abbreviations</head>
                     <item xml:id="UT22084-058-006-653">
-                        <abbr>T Tokyo MS</abbr>
-                        <expan/>
+                        <abbr>T</abbr>
+                        <expan>Tokyo MS</expan>
                     </item>
                     <item xml:id="UT22084-058-006-654">
-                        <abbr>H Lhasa</abbr>
-                        <expan/>
+                        <abbr>H</abbr>
+                        <expan>Lhasa</expan>
                     </item>
                     <item xml:id="UT22084-058-006-655">
-                        <abbr>S Stok Palace MS</abbr>
-                        <expan/>
+                        <abbr>S</abbr>
+                        <expan>Stok Palace MS</expan>
                     </item>
                     <item xml:id="UT22084-058-006-656">
-                        <abbr>F Phukdrak MS </abbr>
-                        <expan/>
+                        <abbr>F</abbr>
+                        <expan>Phukdrak MS</expan>
                     </item>
                     <item xml:id="UT22084-058-006-657">
-                        <abbr>L London (Shelkar) MS</abbr>
-                        <expan/>
+                        <abbr>L</abbr>
+                        <expan>London (Shelkar) MS</expan>
                     </item>
                     <item xml:id="UT22084-058-006-658">
-                        <abbr>D Degé </abbr>
-                        <expan/>
+                        <abbr>D</abbr>
+                        <expan>Degé</expan>
                     </item>
                     <item xml:id="UT22084-058-006-659">
-                        <abbr>N Narthang</abbr>
-                        <expan/>
+                        <abbr>N</abbr>
+                        <expan>Narthang</expan>
                     </item>
                     <item xml:id="UT22084-058-006-660">
-                        <abbr>K Peking Kangxi</abbr>
-                        <expan/>
+                        <abbr>K</abbr>
+                        <expan>Peking Kangxi</expan>
                     </item>
                     <item xml:id="UT22084-058-006-661">
-                        <abbr>KY Peking Yongle </abbr>
-                        <expan/>
+                        <abbr>K<hi rend="subscript">Y</hi>
+                        </abbr>
+                        <expan>Peking Yongle</expan>
                     </item>
                     <item xml:id="UT22084-058-006-662">
-                        <abbr>C Choné </abbr>
-                        <expan/>
+                        <abbr>C</abbr>
+                        <expan>Choné</expan>
                     </item>
                 </list>
             </div>
             <div type="listBibl">
                 <head type="listBibl" tid="579">Bibliography</head>
                 <div type="section">
-                    <head tid="580">Main Section</head>
                     <bibl xml:id="UT22084-058-006-663">
                         <title xml:lang="Bo-Ltn">’phags pa mi ’am ci’i rgyal po sdong pos zhus pa
                             zhes bya ba theg pa chen po’i mdo</title>. Toh 157, Degé Kangyur vol. 58
                         (dkon brtsegs, pha), folios 254a.1–319a.7.</bibl>
                     <bibl xml:id="UT22084-058-006-664">
                         <title xml:lang="Bo-Ltn">’phags pa mi ’am ci’i rgyal po sdong pos zhus pa
-                            zhes bya ba theg pa chen po’i mdo</title>
-                        <fix>. </fix>bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur],
+                            zhes bya ba theg pa chen po’i mdo</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur],
                         krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The
                         Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center).
                         108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China
@@ -5437,10 +5408,9 @@
                             Tibet</title>. Delhi: Motilal Banarsidass, 1974.</bibl>
                     <bibl xml:id="UT22084-058-006-670">Roberts, Peter. <title xml:lang="en">The White Lotus of the Good
                             Dharma.</title> 84000: Translating the Words of the Buddha, 2018.
-                        http://read.84000.co/translation/toh113.html.</bibl>
-                    <bibl xml:id="UT22084-058-006-671">———. <title xml:lang="en">The King of Samādhis Sūtra</title>
-                        <fix>. </fix>84000: Translating the Words of the Buddha, 2018.
-                        http://read.84000.co/translation/toh127.html.</bibl>
+                        <ref target="http://read.84000.co/translation/toh113.html">http://read.84000.co/translation/toh113.html</ref>.</bibl>
+                    <bibl xml:id="UT22084-058-006-671">———. <title xml:lang="en">The King of Samādhis Sūtra</title>. 84000: Translating the Words of the Buddha, 2018.
+                        <ref target="http://read.84000.co/translation/toh127.html">http://read.84000.co/translation/toh127.html</ref>.</bibl>
                     <bibl xml:id="UT22084-058-006-672">Wedemeyer, Christian K. <title xml:lang="en">Āryadeva’s Lamp that
                             Integrates the Practices (Caryāmelāpakapradīpa): The Gradual Path of
                             Vajrayāna Buddhism According to the Esoteric Community Noble
@@ -5462,7 +5432,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-674">
-                            <term>the absence of marks</term>
+                            <term>absence of marks</term>
                             <term xml:lang="Bo-Ltn">mtshan ma med pa </term>
                             <term xml:lang="bo">མཚན་མ་མེད་པ།</term>
                             <term xml:lang="Sa-Ltn">animitta</term>
@@ -5471,7 +5441,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-675">
-                            <term>the absence of wishes</term>
+                            <term>absence of wishes</term>
                             <term xml:lang="Bo-Ltn">smon pa med pa </term>
                             <term xml:lang="bo">སྨོན་པ་མེད་པ།</term>
                             <term xml:lang="Sa-Ltn">apraṇihita</term>
@@ -5520,7 +5490,7 @@
                             <term xml:lang="bo">ཀླུ།</term>
                             <term xml:lang="Sa-Ltn">nāga</term>
                             <term type="definition">A semidivine class of beings who live in
-                                subterranean acquatic environments and who are known to hoard wealth
+                                subterranean aquatic environments and who are known to hoard wealth
                                 and esoteric teachings. They are associated with snakes and
                                 serpents.</term>
                         </gloss>
@@ -5563,7 +5533,7 @@
                             <term xml:lang="Sa-Ltn">kiṃnara</term>
                             <term type="definition">A class of semidivine beings that resemble
                                 humans to the degree that their very name—which means “Is that a
-                                man?”—suggests some confusion as to their divine status.</term>
+                                man?”—suggests some confusion as to their divine status. <term type="ignore">Kiṃnaras</term> are mythological beings found in both Buddhist and Hindu literature, where they are portrayed as creatures half human, half animal (horse or bird). They are also usually depicted as highly skilled celestial musicians.</term>
                         </gloss>
                     </item>
                     <item>
@@ -5601,12 +5571,13 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-686">
-                            <term>protectors of the world</term>
-                            <term xml:lang="Bo-Ltn">111 ’’jig rten skyong ba </term>
-                            <term xml:lang="bo">༡༡༡ འའཇིག་རྟེན་སྐྱོང་བ།</term>
+                            <term>protector of the world</term>
+                            <term xml:lang="Bo-Ltn">’jig rten skyong ba </term>
+                            <term xml:lang="bo">འཇིག་རྟེན་སྐྱོང་བ།</term>
                             <term xml:lang="Sa-Ltn">lokapāla</term>
                             <term type="definition">One category of Dharma protectors in
                                 Buddhism.</term>
+                            <term type="alternative">protectors of the world</term>
                         </gloss>
                     </item>
                     <item>
@@ -5649,7 +5620,7 @@
                             <term xml:lang="bo">སྐྱེ་མཆེད།</term>
                             <term xml:lang="Sa-Ltn">āyatana</term>
                             <term type="definition">One way of describing experience and the world
-                                in terms of twelve sense sources (eye and form, ear and sound, nose
+                                in terms of twelve <term type="ignore">sense sources</term> (eye and form, ear and sound, nose
                                 and odor, tongue and taste, body and touch, mind and mental
                                 objects).</term>
                         </gloss>
@@ -5672,7 +5643,7 @@
                             <term xml:lang="Bo-Ltn">stobs </term>
                             <term xml:lang="bo">སྟོབས།</term>
                             <term xml:lang="Sa-Ltn">bala</term>
-                            <term type="definition">The ten strengths of a buddha: reflection,
+                            <term type="definition">The ten <term type="ignore">strengths</term> of a buddha: reflection,
                                 intention, application, insight, aspiration, vehicle, conduct,
                                 manifestation, awakening, and turning the Dharma wheel.</term>
                         </gloss>
@@ -5753,8 +5724,11 @@
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-700">
                             <term>higher perception</term>
-                            <term xml:lang="Bo-Ltn">mngon par shes pa, mngon shes </term>
-                            <term xml:lang="bo">མངོན་པར་ཤེས་པ,་མངོན་ཤེས།</term>
+                            <term xml:lang="Bo-Ltn">mngon par shes pa</term>
+                            <term xml:lang="bo">མངོན་པར་ཤེས་པ།</term>
+                            <term xml:lang="Bo-Ltn">mngon shes</term>
+                            <term xml:lang="bo">མངོན་ཤེས།</term>
+                            
                             <term xml:lang="Sa-Ltn">abhijñā</term>
                             <term type="definition">A type of extrasensory perception gained through
                                 spiritual practice; in Buddhist presentation consisting of a list of
@@ -5813,7 +5787,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-706">
-                            <term>the four concentrations</term>
+                            <term>four concentrations</term>
                             <term xml:lang="Bo-Ltn">bsam gtan bzhi </term>
                             <term xml:lang="bo">བསམ་གཏན་བཞི།</term>
                             <term xml:lang="Sa-Ltn">caturdhyāna</term>
@@ -5823,7 +5797,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-707">
-                            <term>the four formless attainments</term>
+                            <term>four formless attainments</term>
                             <term xml:lang="Bo-Ltn">gzugs med pa’i snyoms par ’jug pa bzhi </term>
                             <term xml:lang="bo">གཟུགས་མེད་པའི་སྙོམས་པར་འཇུག་པ་བཞི།</term>
                             <term xml:lang="Sa-Ltn">caturārūpyasamāpatti</term>
@@ -5837,7 +5811,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-708">
-                            <term>the eight liberations</term>
+                            <term>eight liberations</term>
                             <term xml:lang="Bo-Ltn">rnam par thar pa brgyad </term>
                             <term xml:lang="bo">རྣམ་པར་ཐར་པ་བརྒྱད།</term>
                             <term xml:lang="Sa-Ltn">aṣṭavimokṣa</term>
@@ -5864,7 +5838,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-709">
-                            <term>the ten virtuous actions</term>
+                            <term>ten virtuous actions</term>
                             <term xml:lang="Bo-Ltn">dge ba bcu </term>
                             <term xml:lang="bo">དགེ་བ་བཅུ།</term>
                             <term xml:lang="Sa-Ltn">daśakuśala</term>
@@ -5876,18 +5850,18 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-710">
-                            <term>the seven riches</term>
+                            <term>seven riches</term>
                             <term xml:lang="Bo-Ltn">nor bdun </term>
                             <term xml:lang="bo">ནོར་བདུན།</term>
                             <term xml:lang="Sa-Ltn">saptadhana</term>
-                            <term type="definition">The seven riches of noble beings: faith,
+                            <term type="definition">The <term type="ignore">seven riches</term> of noble beings: faith,
                                 discipline, generosity, learning, modesty, humility, and
                                 insight.</term>
                         </gloss>
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-058-006-711">
-                            <term>the seven precious attributes</term>
+                            <term>seven precious attributes</term>
                             <term xml:lang="Bo-Ltn">rin po che sna bdun </term>
                             <term xml:lang="bo">རིན་པོ་ཆེ་སྣ་བདུན།</term>
                             <term xml:lang="Sa-Ltn">saptaratna</term>
@@ -5903,7 +5877,7 @@
                             <term xml:lang="Bo-Ltn">dkon mchog ’byung gnas </term>
                             <term xml:lang="bo">དཀོན་མཆོག་འབྱུང་གནས།</term>
                             <term xml:lang="Sa-Ltn">Ratnākara</term>
-                            <term type="definition">The name of a past eon.</term>
+                            <term type="definition">The name of a past eon. Also the name of a bodhisattva.</term>
                         </gloss>
                     </item>
                     <item>
@@ -5916,21 +5890,15 @@
                         </gloss>
                     </item>
                     <item>
-                        <gloss type="person" xml:id="UT22084-058-006-714">
-                            <term>Rendering in this translation</term>
-                            <term xml:lang="Bo-Ltn">Tibetan </term>
-                            <term xml:lang="bo">ཊིབེཏན།</term>
-                            <term xml:lang="Sa-Ltn">Sanskrit</term>
-                            <term type="definition">Definition</term>
-                        </gloss>
-                    </item>
-                    <item>
                         <gloss type="person" xml:id="UT22084-058-006-715">
                             <term>Druma</term>
-                            <term xml:lang="Bo-Ltn">sdong po </term>
+                            <term xml:lang="Bo-Ltn">sdong po</term>
                             <term xml:lang="bo">སྡོང་པོ།</term>
+                            <term xml:lang="Bo-Ltn">ljon pa</term>
+                            <term xml:lang="bo">ལྗོན་པ།</term>
                             <term xml:lang="Sa-Ltn">Druma</term>
-                            <term type="definition">King of the kiṃnaras.</term>
+                            <term type="definition">King of the kiṃnaras. See the introduction <ptr target="#UT22084-058-006-3"/>.</term>
+                            <term type="definition">His name has been translated into Tibetan both as “<foreign xml:lang="Bo-Ltn">sdong po</foreign>” and “<foreign xml:lang="Bo-Ltn">ljon pa</foreign>.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -6025,10 +5993,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-726">
-                            <term>Dharaṇīdhara</term>
+                            <term>Dharaṇī­dhara</term>
                             <term xml:lang="Bo-Ltn">sa ’dzin </term>
                             <term xml:lang="bo">ས་འཛིན།</term>
-                            <term xml:lang="Sa-Ltn">Dharaṇīdhara</term>
+                            <term xml:lang="Sa-Ltn">Dharaṇī­dhara</term>
                             <term type="definition">Name of a bodhisattva.</term>
                         </gloss>
                     </item>
@@ -6070,10 +6038,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-731">
-                            <term>Mandāravagandha</term>
+                            <term>Mandārava­gandha</term>
                             <term xml:lang="Bo-Ltn">me tog man dA ra ba’i dri </term>
                             <term xml:lang="bo">མེ་ཏོག་མན་དཱ་ར་བའི་དྲི།</term>
-                            <term xml:lang="Sa-Ltn">Mandāravagandha</term>
+                            <term xml:lang="Sa-Ltn">Mandārava­gandha</term>
                             <term type="definition">Name of a bodhisattva.</term>
                         </gloss>
                     </item>
@@ -6106,10 +6074,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-735">
-                            <term>Meruśikharadhara</term>
+                            <term>Meruśikhara­dhara</term>
                             <term xml:lang="Bo-Ltn">ri rab rtse ’dzin </term>
                             <term xml:lang="bo">རི་རབ་རྩེ་འཛིན།</term>
-                            <term xml:lang="Sa-Ltn">Meruśikharadhara</term>
+                            <term xml:lang="Sa-Ltn">Meruśikhara­dhara</term>
                             <term type="definition">Name of a bodhisattva.</term>
                         </gloss>
                     </item>
@@ -6367,10 +6335,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-764">
-                            <term>Anācchedyapratibhāna</term>
+                            <term>Anācchedya­pratibhāna</term>
                             <term xml:lang="Bo-Ltn">spobs pa mi ’chad pa </term>
                             <term xml:lang="bo">སྤོབས་པ་མི་འཆད་པ།</term>
-                            <term xml:lang="Sa-Ltn">Anācchedyapratibhāna</term>
+                            <term xml:lang="Sa-Ltn">Anācchedya­pratibhāna</term>
                             <term type="definition">Name of a bodhisattva.</term>
                         </gloss>
                     </item>
@@ -6420,12 +6388,12 @@
                         </gloss>
                     </item>
                     <item>
-                        <gloss type="person" xml:id="UT22084-058-006-770">
+                        <gloss type="person" xml:id="UT22084-058-006-770" mode="marked">
                             <term>Ratnākara</term>
                             <term xml:lang="Bo-Ltn">rin chen ’byung gnas </term>
                             <term xml:lang="bo">རིན་ཆེན་འབྱུང་གནས།</term>
                             <term xml:lang="Sa-Ltn">Ratnākara</term>
-                            <term type="definition">Name of a bodhisattva.</term>
+                            <term type="definition">Name of a bodhisattva. Also the name of a past eon.</term>
                         </gloss>
                     </item>
                     <item>
@@ -6475,10 +6443,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-776">
-                            <term>Mañjuśrīkumārabhūta</term>
+                            <term>Mañjuśrī­kumāra­bhūta</term>
                             <term xml:lang="Bo-Ltn">’jam dpal gzhon nur gyur pa </term>
                             <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ།</term>
-                            <term xml:lang="Sa-Ltn">Mañjuśrīkumārabhūta</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī­kumāra­bhūta</term>
                             <term type="definition">Name of a bodhisattva.</term>
                         </gloss>
                     </item>
@@ -6488,7 +6456,7 @@
                             <term xml:lang="Bo-Ltn">brgya byin </term>
                             <term xml:lang="bo">བརྒྱ་བྱིན།</term>
                             <term xml:lang="Sa-Ltn">Śakra</term>
-                            <term type="definition">The lord of the gods.</term>
+                            <term type="definition">The lord of the gods. Also called “Kauśika.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -6507,8 +6475,8 @@
                             <term xml:lang="bo">ལྷའི་ཅོད་པན།</term>
                             <term xml:lang="Sa-Ltn">Devamukuṭa</term>
                             <term type="definition">Name of a bodhisattva. Main interlocutor of the
-                                king of the kiṃnaras in <title xml:lang="en">The Questions of the
-                                    Kiṃnara King Druma sūtra</title>.</term>
+                                king of the kiṃnaras in the sūtra <title xml:lang="en">The Questions of the
+                                    Kiṃnara King Druma</title>.</term>
                         </gloss>
                     </item>
                     <item>
@@ -6571,10 +6539,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-786">
-                            <term>Guṇarājaprabhāsa</term>
+                            <term>Guṇarāja­prabhāsa</term>
                             <term xml:lang="Bo-Ltn">yon tan gyi rgyal por snang ba </term>
                             <term xml:lang="bo">ཡོན་ཏན་གྱི་རྒྱལ་པོར་སྣང་བ།</term>
-                            <term xml:lang="Sa-Ltn">Guṇarājaprabhāsa</term>
+                            <term xml:lang="Sa-Ltn">Guṇarāja­prabhāsa</term>
                             <term type="definition">Name of the kiṃnara king Druma when he awakens
                                 in the future, as prophecied by the Buddha.</term>
                         </gloss>
@@ -6685,17 +6653,20 @@
                             <term xml:lang="bo">དཔལ་གྱི་ལྷུན་པོ།</term>
                             <term xml:lang="Sa-Ltn"/>
                             <term type="definition">One of the greatest Tibetan translators. He
-                                lived in the eighth to ninth century.</term>
+                                lived in the eighth to ninth century. See also <ptr target="#UT22084-058-006-14"/>.</term>
                         </gloss>
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-058-006-798">
                             <term>Kawa Paltsek</term>
-                            <term xml:lang="Bo-Ltn">dpal brtsegs </term>
-                            <term xml:lang="bo">དཔལ་བརྩེགས།</term>
+                            <term xml:lang="Bo-Ltn">ska ba dpal brtsegs </term>
+                            <term xml:lang="bo">སྐ་བ་དཔལ་བརྩེགས།</term>
+                            <term xml:lang="Bo-Ltn">dpal brtsegs rak+Shi ta</term>
+                            <term xml:lang="bo">དཔལ་བརྩེགས་རཀྵི་ཏ།</term>
                             <term xml:lang="Sa-Ltn"/>
                             <term type="definition">One of the greatest Tibetan translators. He
-                                lived in the eighth to ninth century.</term>
+                                lived in the eighth to ninth century. Also known as <term type="ignore">Paltsek Rakṣita</term>. See also <ptr target="#UT22084-058-006-14"/>.</term>
+                            <term type="alternative">Paltsek Rakṣita</term>
                         </gloss>
                     </item>
                     <item>
@@ -6823,7 +6794,7 @@
                             <term xml:lang="bo">ཟླ་བ་དྲི་མ་མེད།</term>
                             <term xml:lang="Sa-Ltn">Candravimala</term>
                             <term type="definition">Name of the universe where the Buddha
-                                Guṇarājaprabhāsa will appear in the future.</term>
+                                Guṇarāja­prabhāsa will appear in the future.</term>
                         </gloss>
                     </item>
                     <item>

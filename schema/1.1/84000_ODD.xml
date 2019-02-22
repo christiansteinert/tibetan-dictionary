@@ -791,10 +791,9 @@
                 <valItem ident="preface"/>
               </valList>
             </attDef>
-            <attDef ident="sameAs" usage="opt" mode="add">
+            <attDef ident="ref" usage="opt" mode="change">
               <desc>Links the author to a profile in the database</desc>
             </attDef>
-            <attDef ident="ref" mode="delete"/>
             <attDef ident="key" mode="delete"/>
           </attList>
           <exemplum>
@@ -812,10 +811,10 @@
                   of Death”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Āryātyaya­jñāna­nāma­mahā­yāna­sūtra</title>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="" role="translatorMain">Translated by Tom Tillemans’ class in the
+                <author ref="contributors.xml#person-115" role="translatorMain">Translated by Tom Tillemans’ class in the
                   University of Vienna’s program of Buddhist Translation Studies<lb/> under the
                   patronage and supervision of 84000: Translating the Words of the Buddha.</author>
-                <author role="translatorEng" sameAs="translators.xml#translator-31"/>
+                <author role="translatorEng" ref="contributors.xml#person-116"/>
               </titleStmt>
             </egXML>
           </exemplum>
@@ -1690,7 +1689,7 @@
                 <valItem ident="advisor"/>
               </valList>
             </attDef>
-            <attDef ident="sameAs" usage="opt" mode="add">
+            <attDef ident="ref" usage="opt" mode="add">
               <desc>Links the consultant to a profile in the database</desc>
             </attDef>
           </attList>
@@ -1703,14 +1702,14 @@
                 <title type="mainTitle" xml:lang="en">The Absorption That Encapsulates All
                   Merit</title>
                 <!--...various titles...-->
-                <author sameAs="translators.xml#team-9" role="translatorMain">Translated by the
+                <author ref="translators.xml#team-9" role="translatorMain">Translated by the
                   Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                   84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="translators.xml#translator-46">Khenpo Trokpa
+                <author role="translatorEng" ref="translators.xml#translator-46">Khenpo Trokpa
                   Tulku</author>
                 <editor role="mainEditor">Andreas Doctor</editor>
                 <consultant role="advisor">Chokyi Nyima Rinpoche</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-999">anonymous</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-999">anonymous</sponsor>
               </titleStmt>
             </egXML>
           </exemplum>
@@ -1948,7 +1947,7 @@
                 <valItem ident="TEImarkupEditor"/>
               </valList>
             </attDef>
-            <attDef ident="sameAs" usage="opt" mode="add">
+            <attDef ident="ref" usage="opt" mode="change">
               <desc>Links the editor to a profile in the database</desc>
             </attDef>
           </attList>
@@ -1958,14 +1957,14 @@
                 <title type="mainTitle" xml:lang="Bo-Ltn">bsod nams thams cad bsdus pa’i ting nge
                   ’dzin</title>
                 <!--...list of other titles...-->
-                <author sameAs="translators.xml#team-9" role="translatorMain">Translated by the
+                <author ref="translators.xml#team-9" role="translatorMain">Translated by the
                   Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                   84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="translators.xml#translator-46">Khenpo Trokpa
+                <author role="translatorEng" ref="translators.xml#translator-46">Khenpo Trokpa
                   Tulku</author>
                 <editor role="mainEditor">Andreas Doctor</editor>
                 <consultant role="advisor">Chokyi Nyima Rinpoche</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-999">Anonymous</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-999">Anonymous</sponsor>
               </titleStmt>
             </egXML>
           </exemplum>
@@ -3887,8 +3886,8 @@
               <rng:text/>
             </optional>
           </content>
-          <attList>
-            <attDef ident="sameAs" mode="add" usage="opt">
+          <attList>        
+            <attDef ident="ref" mode="add" usage="opt">
               <desc>Matches the sponsor to the database</desc>
             </attDef>
           </attList>
@@ -3898,14 +3897,14 @@
                 <title type="mainTitle" xml:lang="Bo-Ltn">bsod nams thams cad bsdus pa’i ting nge
                   ’dzin</title>
                 <!--...list of other titles...-->
-                <author sameAs="translators.xml#team-9" role="translatorMain">Translated by the
+                <author ref="translators.xml#team-9" role="translatorMain">Translated by the
                   Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                   84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="translators.xml#translator-46">Khenpo Trokpa
+                <author role="translatorEng" ref="translators.xml#translator-46">Khenpo Trokpa
                   Tulku</author>
                 <editor role="mainEditor">Andreas Doctor</editor>
                 <consultant role="advisor">Chokyi Nyima Rinpoche</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-999">anonymous</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-999">anonymous</sponsor>
               </titleStmt>
             </egXML>
           </exemplum>
@@ -3976,7 +3975,7 @@
                       </rng:choice>
                     </attribute>
                     <optional>
-                      <attribute name="sameAs"/>
+                      <attribute name="ref"/>
                     </optional>
                     <rng:zeroOrMore>
                       <rng:choice>
@@ -3996,7 +3995,7 @@
                       </rng:choice>
                     </attribute>
                     <optional xmlns="http://relaxng.org/ns/structure/1.0">
-                      <attribute name="sameAs"/>
+                      <attribute name="ref"/>
                     </optional>
                     <rng:zeroOrMore>
                       <rng:text/>
@@ -4460,17 +4459,17 @@
                   Encapsulates All Merit”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­sarva­puṇya­samuccaya­samādhi­nāma­mahā­yāna­sūtra</title>
                 <title type="otherTitle" xml:lang="zh">集一切福德三昧經</title>
-                <author sameAs="translators.xml#team-9" role="translatorMain">Translated by the
+                <author ref="translators.xml#team-9" role="translatorMain">Translated by the
                   Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                   84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="translators.xml#translator-40"/>
-                <author role="translatorEng" sameAs="translators.xml#translator-78"/>
-                <author role="translatorEng" sameAs="translators.xml#translator-50"/>
-                <author role="translatorEng" sameAs="translators.xml#translator-46">Khenpo Trokpa
+                <author role="translatorEng" ref="translators.xml#translator-40"/>
+                <author role="translatorEng" ref="translators.xml#translator-78"/>
+                <author role="translatorEng" ref="translators.xml#translator-50"/>
+                <author role="translatorEng" ref="translators.xml#translator-46">Khenpo Trokpa
                   Tulku</author>
                 <editor role="mainEditor">Andreas Doctor</editor>
                 <consultant role="advisor">Chokyi Nyima Rinpoche</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-999">anonymous</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-999">anonymous</sponsor>
               </titleStmt>
             </egXML>
           </exemplum>

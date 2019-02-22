@@ -13,20 +13,20 @@
                 <title type="longTitle" xml:lang="en">The Noble Prophecy of Śrī Mahādevī</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­śrī­mahā­devī­vyākaraṇa</title>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="contributors.xml#team-27" role="translatorMain">Translated by the Sakya Pandita Translation Group (International Buddhist Academy
+                <author role="translatorMain" ref="contributors.xml#team-27">Translated by the Sakya Pandita Translation Group (International Buddhist Academy
                     Division)<lb/> under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-174">Khenpo Ngawang Jorden</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-240"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-241"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-242"/>
-                <author role="translatorEng" sameAs="contributors.xml#person-243"/>
+                <consultant role="advisor" ref="contributors.xml#person-174">Khenpo Ngawang Jorden</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-240"/>
+                <author role="translatorEng" ref="contributors.xml#person-241"/>
+                <author role="translatorEng" ref="contributors.xml#person-242"/>
+                <author role="translatorEng" ref="contributors.xml#person-243"/>
                 <!-- <author role="translatorEng">Jamyang Choesang</author>
                 <author role="translatorEng">Kunsang Choepel</author>
                 <author role="translatorEng">Boyce Teoh</author>
                 <author role="translatorEng">Solvej Nielsen</author> -->
             </titleStmt>
             <editionStmt>
-                <edition>v 2.12 <date>2011 - 2016</date>
+                <edition>v 2.13 <date>2011 - 2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -70,7 +70,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 16/01/2019 at 10:39:36 by admin</note>
+                <note type="lastUpdated">Last updated at 18/02/2019 at 17:02:46 by celso</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -495,7 +495,7 @@
                         <l> Dharmarājaśrī (Glory of the Dharma King):</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-013-88"/>
-                    <ab type="mantra" tid="27">
+                    <p rend="mantra" tid="27">
                         <foreign type="mantra" xml:lang="Sa-Ltn">“Oṃ!</foreign> Look at us, save us, and emancipate us from all
                         sufferings. Make us turn in the direction of all collections of merits, <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>.<note place="end" index="37" xml:id="UT22084-061-013-89">In the
                             Tibetan text, this first section of the dhāraṇī is in Tibetan. The Skt. of the second sentence should
@@ -514,7 +514,7 @@
                         <note place="end" index="39" xml:id="UT22084-061-013-91">The Sanskrit of the dhāraṇi as transcribed in the
                             Tibetan text appears unreliable; the dhāraṇi as presented here is transliterated from the Sanskrit
                             edition.</note>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-061-013-92"/>
                     <p tid="24">“Fearless Avalokiteśvara, anyone who is going to retain and recite these names of Śrī
                         Mahādevī—which eliminate all offenses, overcome all sins, accumulate all merits, eliminate<note place="end" index="40" xml:id="UT22084-061-013-93">Tib. <foreign type="term" xml:lang="Bo-Ltn">med par

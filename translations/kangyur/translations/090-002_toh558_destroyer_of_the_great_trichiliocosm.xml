@@ -13,14 +13,14 @@
                 <title type="longTitle" xml:lang="en">The Sūtra “Destroyer of the Great Trichiliocosm”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Mahā­sāhasra­pramardanī­nāma­sūtra</title>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="contributors.xml#team-9" role="translatorMain">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
                     supervision of 84000: Translating the Words of the Buddha.</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-51">James Gentry</author>
-                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-51">James Gentry</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.2 <date>2016</date>
+                <edition>v 1.21 <date>2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -56,7 +56,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 05/02/2019 at 16:51:56 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:27:32 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -340,11 +340,11 @@
                         <l>“There are mantra syllables for this,</l>
                         <l>So please listen to me, Lord of the World!</l>
                     </lg>
-                    <ab type="mantra" tid="464">
+                    <p rend="mantra" tid="464">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam siddhe susiddhe satve are araṇe bale mahābale
                             jambhe jaṭile akhane makhane khakhane kharaṭṭe kharaṅge haripiṅgale temiṅgile temiṅgile temiṅgile
                             temiṅgile nimaṃgalye svāhā | </foreign>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-30"/>
                     <p tid="32">“May my mantra syllables be fulfilled! May the name, power, sovereignty, and might of the great
                         king Vaiśravaṇa bring me well-being! <foreign xml:lang="Sa-Ltn" type="mantra">Svāhā</foreign>!”</p>
@@ -374,10 +374,10 @@
                         <l>“There are mantra syllables for this,</l>
                         <l>So please listen to me, Lord of the World!</l>
                     </lg>
-                    <ab type="mantra" tid="465">
+                    <p rend="mantra" tid="465">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam akhe nakhe vinakhe bhandhe varāṅge capale vakhe
                             vakhane akhiṇe nakhene vahule bhakhe bhagandale vaśe vaśavartīna svāhā | </foreign>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-35"/>
                     <p tid="38">“Through the name, power, sovereignty, and might of the great king Dhṛtarāṣṭra, may I be free of
                         all grahas and misfortunes! <foreign xml:lang="Sa-Ltn" type="mantra">Svāhā</foreign>!”</p>
@@ -406,9 +406,9 @@
                         <l>“There are mantra syllables for this,</l>
                         <l>So please listen to me, Lord of the World! </l>
                     </lg>
-                    <ab type="mantra" tid="466">
+                    <p rend="mantra" tid="466">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam khakhakhami khalane khalami kharāli kharali karakhe
-                            kaśani karaṭe kāli kāmini vivale vidheya­śayani­samavate śama śamini svāhā</foreign> | </ab>
+                            kaśani karaṭe kāli kāmini vivale vidheya­śayani­samavate śama śamini svāhā</foreign> | </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-40"/>
                     <p tid="44">“Through the name, power, sovereignty, and might of the great king Virūḍhaka, may all grahas and
                         misfortunes be pacified for me! <foreign xml:lang="Sa-Ltn" type="mantra">Svāhā</foreign>!”</p>
@@ -438,11 +438,11 @@
                         <l>“There are mantra syllables for this,</l>
                         <l>So please listen to me, Lord of the World! </l>
                     </lg>
-                    <ab type="mantra" tid="467">
+                    <p rend="mantra" tid="467">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam krakami kragamaṇi kragase krugraśe krakra śami
                             kruśrumi kruśrume krukka krukluma kruge agale nagale samagale kuhume gume alake kaluke kalamale galale
                             kalaṭake irimire dhire arugavati svāhā | </foreign>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-44"/>
                     <p tid="50">“Through the name, power, sovereignty, and might of the great king Virūpākṣa, may I have
                         well-being!” </p>
@@ -459,11 +459,11 @@
                         <l>Listen to me for all incantations!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-46"/>
-                    <ab type="mantra" tid="468">
+                    <p rend="mantra" tid="468">
                         <foreign type="mantra" xml:lang="Sa-Ltn">syād yathedam asaṅge khaṅgavate balavate balanirghoṣe śūre
                             śūravatve vajrasme vajragame vajradhare stambhe jambhe dṛḍhasāre viraje vighośe varāgraprāpte araṇe
                             araṇe dharmmayukte diśi vighuṣṭe svāhā | </foreign>
-                    </ab>
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-47"/>
                     <p tid="55">“May the name, power, sovereignty, and might of the Thus-Gone One bring me well-being! <foreign type="term" xml:lang="Sa-Ltn">Svāhā</foreign>!” </p>
                     <lb/>
@@ -1682,10 +1682,10 @@
                         <l>“In the presence of the Lord of the World,</l>
                         <l>I will pronounce their punishment:</l>
                     </lg>
-                    <ab type="mantra" tid="469">
+                    <p rend="mantra" tid="469">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam khaṅge khaṅge khaṅga garbhe vicakṣaṇe cakra rājane
                             candre capale pātāle bhīmavadavati kharāgre bhṛikuṭimukhe kuṭila­karāgre ekākṣi vargavati sāraṅgavati
-                            mārgavati gargavate citravati citrakānti</foreign> |</ab>
+                            mārgavati gargavate citravati citrakānti</foreign> |</p>
                     <lg tid="222">
                         <l>“May I have well-being in the north! <foreign type="mantra" xml:lang="Sa-Ltn">Svāha</foreign>!</l>
                     </lg>
@@ -1739,10 +1739,10 @@
                         <l>“In the presence of the Lord of the World</l>
                         <l>I will pronounce their punishment:</l>
                     </lg>
-                    <ab type="mantra" tid="470">
+                    <p rend="mantra" tid="470">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam dhāraṇi dhāraṇi pradhvaṃsani bhañjani prabhañjani
                             vidhamaṇi kiṃpuruṣe śakale sārethe sāravati śūladhare śūladhāriṇi śuddhacaraṇe ghoṣavati śārāgre
-                            śānte</foreign> | </ab>
+                            śānte</foreign> | </p>
                     <lg tid="231">
                         <l>“May I have well-being in the east! <foreign type="mantra" xml:lang="Sa-Ltn">Svāha</foreign>!</l>
                     </lg>
@@ -1796,9 +1796,9 @@
                         <l>I will pronounce their punishment: <ref cRef="F.74.a"/>
                         </l>
                     </lg>
-                    <ab type="mantra" tid="471">
+                    <p rend="mantra" tid="471">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam śānti śāravati kānti kāravati kiṃkarasi kiṃkarati
-                            kiṃkasikiriṇṭi kiṃrate kiṃvate dharaṇi dhavani bhūmi dhāriṇi himavati jyotiścaraṇe gālāgre</foreign> | </ab>
+                            kiṃkasikiriṇṭi kiṃrate kiṃvate dharaṇi dhavani bhūmi dhāriṇi himavati jyotiścaraṇe gālāgre</foreign> | </p>
                     <lg tid="240">
                         <l>“May I have well-being in the south! <foreign type="mantra" xml:lang="Sa-Ltn">Svāha</foreign>!</l>
                     </lg>
@@ -1850,9 +1850,9 @@
                         <l>“In the presence of the Lord of the World,</l>
                         <l>I will pronounce their punishment:</l>
                     </lg>
-                    <ab type="mantra" tid="472">
+                    <p rend="mantra" tid="472">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam dharmivarāgre balavate balini viśāṅge vicaśi sāgare
-                            khārī kapali caṇḍāli kiriṇi nīrañjane vidhāriṇi vallamati avarṇavati acale</foreign> | </ab>
+                            khārī kapali caṇḍāli kiriṇi nīrañjane vidhāriṇi vallamati avarṇavati acale</foreign> | </p>
                     <lg tid="249">
                         <l>“May I have well-being in the west! <foreign xml:lang="Sa-Ltn" type="mantra">Svāha</foreign>!</l>
                     </lg>
@@ -1903,9 +1903,9 @@
                         <l>Deep underground, on the earth,</l>
                         <l>In between, and in the sky:</l>
                     </lg>
-                    <ab type="mantra" tid="473">
+                    <p rend="mantra" tid="473">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam brahme brahma ghoṣe brahmasvare vajre vajraghoṣe
-                            vajradhare sthite sāre acale araṇe iṣaṇe arāṇete śūre varāgra prāpte sāgaravate</foreign> | </ab>
+                            vajradhare sthite sāre acale araṇe iṣaṇe arāṇete śūre varāgra prāpte sāgaravate</foreign> | </p>
                     <lg tid="257">
                         <l>“May I have well-being in all directions! <foreign xml:lang="Sa-Ltn" type="mantra">Svāha</foreign>!</l>
                     </lg>
@@ -2016,9 +2016,9 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-090-002-256"/>
                     <p tid="275">The Blessed One then said to him:</p>
-                    <ab type="mantra" tid="474">
+                    <p rend="mantra" tid="474">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedaṃ acale macale sāramacale prakṛtivarṇe
-                            pra­kṛti­nirghoṣe samantamukhe sthire sthāvare vighuṣṭe vighuṣṭaśabde pragalani sāraṅgame <ref cRef="F.76.b"/> sārāsute sāraṅgavate bale mahābale mahā­nirbhāse svāhā</foreign> |” </ab>
+                            pra­kṛti­nirghoṣe samantamukhe sthire sthāvare vighuṣṭe vighuṣṭaśabde pragalani sāraṅgame <ref cRef="F.76.b"/> sārāsute sāraṅgavate bale mahābale mahā­nirbhāse svāhā</foreign> |” </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-257"/>
                     <p tid="277">Concerning this he continued, “Bodily mindfulness, tranquility and insight, the three
                         absorptions, the four bases of supernatural power, the four thorough relinquishments, the four foundations
@@ -2035,10 +2035,10 @@
                         accomplishment of the path, and the accomplishment of dependent origination. It is the accomplishment of
                         the moon, the sun, the planets, and the stars. </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-258"/>
-                    <ab type="mantra" tid="475">
+                    <p rend="mantra" tid="475">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam sāle kasine vidharaṇi varāgra sāre āmarṣaṇi
                             amoghavati secanakāli nakāli kāśikavati bharaṇi bharakaśakhe samanta­prāpte sāraprāpte stambhani
-                            stambhana­prāpte vajradhare svāhā</foreign> |” </ab>
+                            stambhana­prāpte vajradhare svāhā</foreign> |” </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-259"/>
                     <p tid="279">Then, the Blessed One uttered these verses:</p>
                     <lg tid="280">
@@ -2180,10 +2180,10 @@
                         <l>And may all be delivered from grave perils! <foreign xml:lang="Sa-Ltn" type="mantra">Svāha</foreign>!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-275"/>
-                    <ab type="mantra" tid="476">
+                    <p rend="mantra" tid="476">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam dhire dhidhire bali­nirghoṣe balisvare sāravate
                             stuti prastuti­prāpte ārave aranirghoṣe āravati acyute <ref cRef="F.78.a"/> balavate śūraprāpte
-                            sāraṃgame sūryavale sūrya­nirghoṣe svāhā</foreign> | </ab>
+                            sāraṃgame sūryavale sūrya­nirghoṣe svāhā</foreign> | </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-276"/>
                     <p tid="297">“Brahmā, this queen of incantations called <title xml:lang="en">Destroyer of the Great
                             Trichiliocosm</title>, which delivers from all grahas, is the buddha seal of as many perfectly
@@ -2204,10 +2204,10 @@
                         entourage. It scatters Māra’s spit. It overcomes the army of afflictions. It inducts one into the city of
                         nirvāṇa. </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-277"/>
-                    <ab type="mantra" tid="477">
+                    <p rend="mantra" tid="477">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam khaṅge khaṅge khaṅgeghoṣe uṣodhane sārathi prabhede
                             vipulaprabhe saṃkarṭhaṇi vikarṭhaṇi viśagravate śuddhasādhani varuṇavate vāsa vibhūṣeṇe vesaṃgame
-                            paśupati puspagarbhe</foreign> | </ab>
+                            paśupati puspagarbhe</foreign> | </p>
                     <p tid="299">“May I and all sentient beings be safe from all perils, calamities, and misfortunes! <foreign xml:lang="Sa-Ltn" type="term">Svāha</foreign>! </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-278"/>
                     <p tid="300">“This queen of incantations called <title xml:lang="en">Destroyer of the Great
@@ -2247,10 +2247,10 @@
                         <l>And sealed by the guardians of the world:</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-282"/>
-                    <ab type="mantra" tid="478">
+                    <p rend="mantra" tid="478">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam kaliṅge bharade jautāgre jāmani siṃhavade
                             sārāgraprāpte haṃsagāmini malini hule sihule sihuli sihuleme haham haham sudani varāgravati hastini
-                            nevaramita caṇḍale carame carāme carā carāre svāhā</foreign> |” </ab>
+                            nevaramita caṇḍale carame carāme carā carāre svāhā</foreign> |” </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-283"/>
                     <p tid="306">When this queen of incantations called <title xml:lang="en">Destroyer of the Great
                             Trichiliocosm</title> was being expounded, this great trichiliocosm shook, rumbled, trembled, and
@@ -2436,9 +2436,9 @@
                         <l>Should be placed in the palm of his hand and chanted:</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-309"/>
-                    <ab type="mantra" tid="479">
+                    <p rend="mantra" tid="479">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam khaṭe khaṭe khaṭe khaṭevikhaṭi vimale vilambe bale
-                            balavati candre caraṇe amṛta­nirghoṣe svāhā</foreign> |</ab>
+                            balavati candre caraṇe amṛta­nirghoṣe svāhā</foreign> |</p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-310"/>
                     <lg tid="333">
                         <l>“ ‘May all illnesses—those born from wind, </l>
@@ -2496,10 +2496,10 @@
                         <l>All evil is surely vanquished! </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-316"/>
-                    <ab type="mantra" tid="480">
+                    <p rend="mantra" tid="480">
                         <foreign xml:lang="Sa-Ltn" type="mantra">tadyathā hume hume kakhali kakhali kharale juhvini javale harāgre
                             hariṇi śāvari śānti prasānti svāhā dhāvani svāhā pradhāvani svāhā gāndharve svāhā pralaṅgani svāhā
-                            sarvakākhordakṛtavetāḍacchedani svāhā</foreign> | </ab>
+                            sarvakākhordakṛtavetāḍacchedani svāhā</foreign> | </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-317"/>
                     <p tid="340">“ ‘These mantra syllables cause all the deities<note place="end" xml:id="UT22084-090-002-754" index="20">Yongle and Peking Kangyurs read <foreign xml:lang="Bo-Ltn">kyis</foreign>
                             (instrumental/agentive particle); Degé has <foreign xml:lang="Bo-Ltn">kyi</foreign> (genitive
@@ -2548,10 +2548,10 @@
                         <l>That remove and counteract poison:</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-324"/>
-                    <ab type="mantra" tid="481">
+                    <p rend="mantra" tid="481">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam harigiśinakili ehere amare aṇḍare paṇḍare kaṭake
                             keyūre hase hase hase khase khase khase kharaṅge marugahaṇe svāhā mumukṣa svāhā hile svāhā mile
-                            svāhā</foreign> | </ab>
+                            svāhā</foreign> | </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-325"/>
                     <lg tid="348">
                         <l>“ ‘Boils, white leprosy, herpes,</l>
@@ -2622,10 +2622,10 @@
                         <l>May truth reign! Not deception!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-335"/>
-                    <ab type="mantra" tid="482">
+                    <p rend="mantra" tid="482">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam amṛte agrapuṣpe bahuphale nivāriṇi sarvārthasādhani
                             aparājite varaṭe dharaṇi guhyāvarte gautame guptamati jambhani svāhā prajambhani svāha
-                            bala­prabhañjani svāhā jaye svāhā vijaye svāhā jaye vijaye svāhā</foreign> | </ab>
+                            bala­prabhañjani svāhā jaye svāhā vijaye svāhā jaye vijaye svāhā</foreign> | </p>
                     <lg tid="359">
                         <l>“ ‘All opponents are defeated! All evil is vanquished!’”</l>
                     </lg>
@@ -2919,10 +2919,10 @@
                         <l>Like the blossom of a basil shrub.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-376"/>
-                    <ab type="mantra" tid="483">
+                    <p rend="mantra" tid="483">
                         <foreign xml:lang="Sa-Ltn" type="term">syād yathedam aṅge vaṅge bhaṅgini bhavane inande vinande sarali
                             girigiri śavari garuṇi śaruṇi giri gavare locani roṣaṇi <ref cRef="F.84.a"/> lasani rocane alabhe
-                            agane alabhe talabhe prakarṣaṇe svāhā</foreign> | </ab>
+                            agane alabhe talabhe prakarṣaṇe svāhā</foreign> | </p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-377"/>
                     <lg tid="404">
                         <l>“May there be well-being in the womb!</l>
@@ -2946,10 +2946,10 @@
                         <l>May children have well-being!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-380"/>
-                    <ab type="mantra" tid="484">
+                    <p rend="mantra" tid="484">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedaṃ bodhi bodhi mahābodhi bodhanumate phalini bahuphale
                             śikṣa śikṣa sāravate sāgali durāsade dūrāgame śūraprāpte śūravate bhage bhagavate bhāgini nivāriṇi
-                            svāhā</foreign> |”</ab>
+                            svāhā</foreign> |”</p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-381"/>
                     <lg tid="409">
                         <l>Then, the fifteen grahas,</l>
@@ -3147,10 +3147,10 @@
                         <l>“Here are the secret mantra syllables,</l>
                         <l>Like the words of Indra:</l>
                     </lg>
-                    <ab type="mantra" tid="485">
+                    <p rend="mantra" tid="485">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam akrame vikrame bhūtaghoṣe bhūtaṃgame dahani
                             dhadhare dharavare dadhini nikhume khukhume khakha khakha sāraṃgame candre capale halime hale hāriṇi
-                            svāhā</foreign> | </ab>
+                            svāhā</foreign> | </p>
                     <lg tid="434">
                         <l>“May all my misfortunes from every quarter be pacified! <foreign xml:lang="Sa-Ltn" type="mantra">Svāhā</foreign>!”</l>
                     </lg>
@@ -3303,9 +3303,9 @@
                         <l>Be made unadulterated for me!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-424"/>
-                    <ab type="mantra" tid="486">
+                    <p rend="mantra" tid="486">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam khakhame khakha khakha khukhume śime śime śihume
-                            śime śime svasti svasti svasti svasti mama śānte sārāgre</foreign> |</ab>
+                            śime śime svasti svasti svasti svasti mama śānte sārāgre</foreign> |</p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-425"/>
                     <lg tid="456">
                         <l>“ ‘Just as what is mixed with the five impure foods</l>
@@ -3314,9 +3314,9 @@
                         <l>May this truth manifest!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-090-002-426"/>
-                    <ab type="mantra" tid="487">
+                    <p rend="mantra" tid="487">
                         <foreign xml:lang="Sa-Ltn" type="mantra">syād yathedam kalake kalale balani karuḍa ālāye agne saṃkrāmane
-                            svāhā</foreign> |</ab>
+                            svāhā</foreign> |</p>
                     <milestone unit="chunk" xml:id="UT22084-090-002-427"/>
                     <lg tid="458">
                         <l>“ ‘I go for refuge to Buddha Vipaśyin, Śikhin,</l>

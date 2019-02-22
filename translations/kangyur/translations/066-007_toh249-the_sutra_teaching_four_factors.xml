@@ -7,24 +7,27 @@
                 <title type="mainTitle" xml:lang="Bo-Ltn">chos bzhi bstan pa'i mdo/</title>
                 <title type="mainTitle" xml:lang="bo">ཆོས་བཞི་བསྟན་པའི་མདོ།</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title>
-                <title type="mainTitle" xml:lang="en">The Sūtra Teaching Four Factors</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra Teaching the Four Factors</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">'phags pa chos bzhi bstan pa zhes bya ba theg pa chen po'i mdo</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­catur­dharma­nirdeśa­nāma­mahāyāna­sūtra</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་ཆོས་བཞི་བསྟན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
                 <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “Teaching the Four Factors”</title>
-                <author sameAs="" role="translatorMain">Translated by Adam Pearcey
+                <author role="translatorMain" ref="">Translated by Adam Pearcey
                     <lb/>under the patronage and supervision of 84000: Translating the Words of the Buddha </author>
-            <author role="translatorEng" sameAs="contributors.xml#person-258">Adam Pearcey</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-259">Alak Zenkar Rinpoche</consultant>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-249">Konchog Norbu</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-255">Chandika Maharjan</editor>
+            <author role="translatorEng" ref="contributors.xml#person-258">Adam Pearcey</author>
+                <consultant role="advisor" ref="contributors.xml#person-259">Alak Zenkar Rinpoche</consultant>
+                <editor role="externalReviewer" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-255">Chandika Maharjan</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">James Gentry</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.5 <date>2019</date>
+                <edition>v 1.02 <date>2019</date>
                 </edition>
             </editionStmt>
-           <publicationStmt status="2.a">
+           <publicationStmt status="1">
                <publisher>
                    <name>84000: Translating the Words of the Buddha</name> is a global
                        non-profit initiative that aims to translate all the Buddha’s words
@@ -41,12 +44,12 @@
                    </licence>
                </availability>
                <idno xml:id="UT22084-066-007"/>
-               <date>2018-12-09</date>
+               <date>2019-02-18</date>
              </publicationStmt>
             <sourceDesc>
                 <bibl key="toh249" type="text">
                     <ref>Toh 249</ref>
-                    <biblScope>Degé Kangyur, vol.66 (mdo sde, za), folios 59.a-59.b</biblScope>
+                    <biblScope>Degé Kangyur, vol.66 (mdo sde, za), folios 59.a–59.b</biblScope>
                     <location count-pages="2">
                         <start volume="66" page="119"/>
                         <end volume="66" page="120"/>
@@ -56,7 +59,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/02/2019 at 21:51:19 by laura</note>
+                <note type="lastUpdated">Last updated at 18/02/2019 at 11:27:21 by john</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -70,13 +73,13 @@
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="22">Acknowledgements</head>
                 <milestone unit="chunk" xml:id="UT22084-066-007-2"/>
-                <p tid="2">Translated by Adam Pearcey, with the assistance of Alak Zenkar Rinpoche. An earlier draft of this translation was published on Lotsawa House (<ref target="https://www.lotsawahouse.org/">lotsawahouse.org</ref>) in 2013. The present updated version was then completed in 2017 under the patronage and supervision of 84000: Translating the Words of the Buddha.</p>
+                <p tid="2">Translated by Adam Pearcey, with the assistance of Alak Zenkar Rinpoche. An earlier draft of this translation was published on <ref target="https://www.lotsawahouse.org/">Lotsawa House</ref> in 2013. The present updated version was then completed in 2017 under the patronage and supervision of 84000: Translating the Words of the Buddha.</p>
             </div>
             <div type="introduction">
                 <head type="introduction" tid="23">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-066-007-3"/>
-                    <p tid="3">As its name suggests, the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> (<title xml:lang="en">Sūtra Teaching the Four Factors</title>) is an explanation of four <foreign xml:lang="Sa-Ltn" type="term">dharmas</foreign>, here meaning <distinct>factors</distinct> or <distinct>qualities</distinct>.<note place="end" xml:id="UT22084-066-007-4" index="1"> The <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> is placed in the Degé and other Kangyurs of predominantly Tshalpa (<foreign xml:lang="Bo-Ltn">tshal pa</foreign>) origin as the second of a group of five short sūtras (Toh 248–252) all with titles and themes involving four topics. It is followed by two very similarly titled sūtras: the <title xml:lang="Sa-Ltn">Catur­dharmaka</title> (<title xml:lang="Bo-Ltn">chos bzhi pa’i mdo</title>, Toh 250), which lists four concerns (for sexual partners, the royal court, attractiveness, and wealth) to be avoided at all costs; and another with the same short form title, <title xml:lang="Sa-Ltn">Caturdharmaka</title> (Toh 251) but also, as a Mahāyāna sūtra, the more elaborate long form title that Toh 250 lacks, <title xml:lang="Sa-Ltn">Ārya­catur­dharmaka­nāma­mahā­yāna­sūtra</title>, which describes four dharmas (the mind of awakening, spiritual guides, patience, and living in solitude) that bodhisattvas must never relinquish throughout their lives.</note> These factors relate to the practice of confession (even though no equivalent of that word occurs in the sūtra itself) and the purification of misdeeds or negative, harmful actions (<foreign xml:lang="Sa-Ltn" type="term">pāpa</foreign>). The four are: (1) the action (or correct approach) of repentance or self-reproach (<foreign xml:lang="Sa-Ltn" type="term">vidūṣaṇā­samudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rnam par sun ’byin pa kun tu spyod pa</foreign>), which involves feeling remorse for past negative actions; (2) antidotal or remedial action (<foreign xml:lang="Sa-Ltn" type="term">pratipa­ṣasamudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">gnyen po kun tu spyod pa</foreign>), which means cultivating virtuous actions as an antidote to misdeeds; (3) the power of restraint (<foreign xml:lang="Sa-Ltn" type="term">pratyāpattibala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">sor chud par byed pa’i stobs</foreign>), which means vowing not to repeat a negative action; and (4) the power of support (<foreign xml:lang="Sa-Ltn" type="term">āśrayabala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rten gyi stobs</foreign>), which means taking refuge in the Buddha, Dharma, and Saṅgha, and never forsaking the mind of awakening. Through employing these four factors, the sūtra says, any negative act, no matter how grave, can be “overcome” in the sense that its karmic consequences can be transformed. This became a crucial idea for Mahāyāna ethics, both in theory and in practice.</p>
+                    <p tid="3">As its name suggests, the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> (<title xml:lang="en">Sūtra Teaching the Four Factors</title>) is an explanation of four <foreign xml:lang="Sa-Ltn" type="term">dharmas</foreign>, here meaning factors or qualities.<note place="end" xml:id="UT22084-066-007-4" index="1"> The <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> is placed in the Degé and other Kangyurs of predominantly Tshalpa (<foreign xml:lang="Bo-Ltn">tshal pa</foreign>) origin as the second of a group of five short sūtras (Toh 248–52) all with titles and themes involving four topics. It is followed by two very similarly titled sūtras: the <title xml:lang="Sa-Ltn">Catur­dharmaka</title> (<title xml:lang="Bo-Ltn">chos bzhi pa’i mdo</title>, Toh 250), which lists four concerns (for sexual partners, the royal court, attractiveness, and wealth) to be avoided at all costs; and another with the same short-form title, <title xml:lang="Sa-Ltn">Caturdharmaka</title> (Toh 251) but also, as a Mahāyāna sūtra, the more elaborate long-form title that Toh 250 lacks, <title xml:lang="Sa-Ltn">Ārya­catur­dharmaka­nāma­mahā­yāna­sūtra</title>, which describes four dharmas (the mind of awakening, spiritual guides, patience, and living in solitude) that bodhisattvas must never relinquish throughout their lives.</note> These factors relate to the practice of confession (even though no equivalent of that word occurs in the sūtra itself) and the purification of misdeeds or negative, harmful actions (<foreign xml:lang="Sa-Ltn" type="term">pāpa</foreign>). The four are: (1) the action (or correct approach) of repentance or self-reproach (<foreign xml:lang="Sa-Ltn" type="term">vidūṣaṇā­samudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rnam par sun ’byin pa kun tu spyod pa</foreign>), which involves feeling remorse for past negative actions; (2) antidotal or remedial action (<foreign xml:lang="Sa-Ltn" type="term">pratipa­ṣasamudācāra</foreign>; <foreign xml:lang="Bo-Ltn" type="term">gnyen po kun tu spyod pa</foreign>), which means cultivating virtuous actions as an antidote to misdeeds; (3) the power of restraint (<foreign xml:lang="Sa-Ltn" type="term">pratyāpattibala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">sor chud par byed pa’i stobs</foreign>), which means vowing not to repeat a negative action; and (4) the power of support (<foreign xml:lang="Sa-Ltn" type="term">āśrayabala</foreign>; <foreign xml:lang="Bo-Ltn" type="term">rten gyi stobs</foreign>), which means taking refuge in the Buddha, Dharma, and Saṅgha, and never forsaking the mind of awakening. Through employing these four factors, the sūtra says, any negative act, no matter how grave, can be “overcome” in the sense that its karmic consequences can be transformed. This became a crucial idea for Mahāyāna ethics, both in theory and in practice.</p>
                     <milestone unit="chunk" xml:id="UT22084-066-007-5"/>
                     <p tid="4">The importance of the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> is evident from the numerous references to it that appear in Indian Mahāyāna literature. The <title xml:lang="Sa-Ltn">Bodhyā­patti­deśanā­vṛtti</title>
                         (<title xml:lang="en">Commentary on the Confession of Bodhisattva Downfalls</title>), for example, which is attributed to Nāgārjuna, cites the sūtra and elaborates on the four powers (<foreign xml:lang="Bo-Ltn" type="term">stobs bzhi</foreign>), as the four factors came to be known, despite the fact that only the final two are labeled “power” (<foreign xml:lang="Bo-Ltn" type="term">stobs</foreign>; <foreign xml:lang="Sa-Ltn" type="term">bala</foreign>) in the sūtra itself. Bhāviveka’s <title xml:lang="Sa-Ltn">Tarkajvālā</title>, too, refers to the sūtra in support of the view that even the very gravest of negative actions can be purified. And chapter eight of Śāntideva’s <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> (<title xml:lang="en">Compendium of Training</title>), on the purification of misdeeds (<foreign xml:lang="Sa-Ltn" type="term">pāpaśodhana</foreign>; <foreign xml:lang="Bo-Ltn" type="term">sdig pa sbyong ba</foreign>), not only quotes from the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title>, but even takes the four factors as its central theme.</p>
@@ -124,7 +127,7 @@
                     <milestone unit="chunk" xml:id="UT22084-066-007-57"/>
                     <p tid="14">“Antidotal action is to put great effort into virtuous actions once you have committed a non-virtuous action.</p>
                     <milestone unit="chunk" xml:id="UT22084-066-007-58"/>
-                    <p tid="15">“The power of restraint is to make a pledge and thereby refrain from any similar action.<note place="end" xml:id="UT22084-066-007-20" index="9"> Here the translation follows the Peking Kangxi and Yongle Kangyurs, as well as the Potala Sanskrit manuscript and the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>, by reading <foreign xml:lang="Bo-Ltn" type="term">mi phyed pa’i sdom pa</foreign> as <foreign xml:lang="Bo-Ltn" type="term">mi byed pa’i sdom pa</foreign> (<foreign xml:lang="Sa-Ltn" type="term">akaraṇasaṃvara</foreign>). This reading not only accords with the available Sanskrit, it also follows the definitions of the other powers in providing an instruction rather than a mere description. Moreover, the phrase <foreign xml:lang="Bo-Ltn" type="term">mi byed pa’i sdom pa</foreign> is also retained in the citations of the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> that appear in several treatises in the Tengyur, including Bhāviveka’s <title xml:lang="Sa-Ltn">Tarkajvālā</title>, Prajñākaramati’s <title xml:lang="Sa-Ltn">Bodhi­caryā­vatāra­pañjikā</title>, and Abhayākaragupta’s <title xml:lang="Sa-Ltn">Munimatālaṃkāra</title>. The alternative reading, which is to be found in the other Kangyurs, is translatable as: “The power of restraint is to make a pledge and thereby gain an inviolable vow.”</note>
+                    <p tid="15">“The power of restraint is to make a pledge and thereby refrain from any similar action.<note place="end" xml:id="UT22084-066-007-20" index="9"> Here the translation follows the Peking Kangxi and Yongle Kangyurs, as well as the Potala Sanskrit manuscript and the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>, in reading <foreign xml:lang="Bo-Ltn" type="term">mi phyed pa’i sdom pa</foreign> as <foreign xml:lang="Bo-Ltn" type="term">mi byed pa’i sdom pa</foreign> (<foreign xml:lang="Sa-Ltn" type="term">akaraṇasaṃvara</foreign>). This reading not only accords with the available Sanskrit, it also follows the definitions of the other powers in providing an instruction rather than a mere description. Moreover, the phrase <foreign xml:lang="Bo-Ltn" type="term">mi byed pa’i sdom pa</foreign> is also retained in the citations of the <title xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title> that appear in several treatises in the Tengyur, including Bhāviveka’s <title xml:lang="Sa-Ltn">Tarkajvālā</title>, Prajñākaramati’s <title xml:lang="Sa-Ltn">Bodhi­caryā­vatāra­pañjikā</title>, and Abhayākaragupta’s <title xml:lang="Sa-Ltn">Munimatālaṃkāra</title>. The alternative reading, which is to be found in the other Kangyurs, could be translated as: “The power of restraint is to make a pledge and thereby gain an inviolable vow.”</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-066-007-59"/>
                     <p tid="16">“The power of support is to take refuge in the Buddha, Dharma, and Saṅgha, and not to forsake the mind of awakening. By relying on such powerful forces, you will be immune to misdeeds.
@@ -221,7 +224,7 @@
                             <term xml:lang="Bo-Ltn">gnyen po kun tu spyod pa </term>
                             <term xml:lang="bo">གཉེན་པོ་ཀུན་ཏུ་སྤྱོད་པ།</term>
                             
-                            <term xml:lang="Sa-Ltn">pratipa­ṣasamudācāra</term>
+                            <term xml:lang="Sa-Ltn">prati­pakṣa­samudācāra</term>
                             <term type="definition">Carrying out virtuous actions as an antidote to past negative
                                 deeds.</term>
                         </gloss>

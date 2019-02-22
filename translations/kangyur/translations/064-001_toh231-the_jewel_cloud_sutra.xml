@@ -15,23 +15,23 @@
                     Cloud”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Āryaratnameghanāmamahāyānasūtra</title>
                 <title type="otherTitle" xml:lang="zh">寶雲經</title>
-                <author role="translatorMain" sameAs="contributors.xml#team-9">Translated by
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by
                     Dharmachakra Translation Committee <lb/>under the patronage and supervision of
                     84000: Translating the Words of the Buddha </author>
-                <consultant role="advisor" sameAs="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-54">Thomas Doctor</author>
-                <editor role="reviser" sameAs="contributors.xml#person-50">Andreas Doctor</editor>
-                <editor role="externalReviewer" sameAs="contributors.xml#person-256">Douglas Duckworth</editor>
-                <editor role="copyEditor" sameAs="contributors.xml#person-249">Konchog Norbu</editor>
-                <editor role="finalReviewer" sameAs="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
-                <editor role="finalReviewer" sameAs="contributors.xml#person-139">Dr. John Canti</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-138">Jigme Khyentse Rinpoche</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-43">Khenpo Pema Namgyal</consultant>
-                <consultant role="advisor" sameAs="contributors.xml#person-49">Karma Ozer</consultant>
-                <sponsor sameAs="sponsors.xml#sponsor-2">George Gu, May E. Ho Gu, Likai Gu, Tiffany Tai, Lillian Gu, Jerry Yen, E. E. Ho, Minda and Miin Ho, Chung Da, and Beiying Ho</sponsor>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-54">Thomas Doctor</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-256">Douglas Duckworth</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">Dr. John Canti</editor>
+                <consultant role="advisor" ref="contributors.xml#person-138">Jigme Khyentse Rinpoche</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-43">Khenpo Pema Namgyal</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-49">Karma Ozer</consultant>
+                <sponsor ref="sponsors.xml#sponsor-2">George Gu, May E. Ho Gu, Likai Gu, Tiffany Tai, Lillian Gu, Jerry Yen, E. E. Ho, Minda and Miin Ho, Chung Da, and Beiying Ho</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.11 <date>2019</date>
+                <edition>v 1.18 <date>2019</date>
                 </edition>
             </editionStmt>
 <publicationStmt status="1">
@@ -65,7 +65,7 @@
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated">Last updated at 07/02/2019 at 09:51:50 by john</note>
+               <note type="lastUpdated">Last updated at 20/02/2019 at 22:04:34 by john</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -74,7 +74,7 @@
             <div type="summary">
                 <head type="summary" tid="699">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-064-001-1"/>
-                <p tid="1">On Gayāśīrṣa Hill, the Buddha Śākyamuni is visited by a great gathering of bodhisattvas who have traveled miraculously there from a distant world, to venerate him as one who has vowed to liberate beings in a world much more afflicted than their own. The visiting bodhisattvas are led by Sarva­nīvaraṇa­viṣkam­bhin, who asks the Buddha a series of searching questions. In response, the Buddha gives a detailed and systematic account of the practices, qualities, and nature of bodhisattvas, the stages of their path, their realisation, and their activities. Many of the topics are structured into sets of ten aspects, expounded with reasoned explanations and illustrated with parables and analogies. This sūtra is said to have been one of the very first scriptures translated into Tibetan. Its doctrinal richness, profundity, and clarity are justly celebrated, and some of its key statements on meditation, the realisation of emptiness, and the fundamental nature of the mind have been widely quoted in the Indian treatises and Tibetan commentarial literature. </p>
+                <p tid="1">On Gayāśīrṣa Hill, Buddha Śākyamuni is visited by a great gathering of bodhisattvas who have traveled miraculously there from a distant world, to venerate him as one who has vowed to liberate beings in a world much more afflicted than their own. The visiting bodhisattvas are led by Sarva­nīvaraṇa­viṣkam­bhin, who asks the Buddha a series of searching questions. In response, the Buddha gives a detailed and systematic account of the practices, qualities, and nature of bodhisattvas, the stages of their path, their realization, and their activities. Many of the topics are structured into sets of ten aspects, expounded with reasoned explanations and illustrated with parables and analogies. This sūtra is said to have been one of the very first scriptures translated into Tibetan. Its doctrinal richness, profundity, and clarity are justly celebrated, and some of its key statements on meditation, the realization of emptiness, and the fundamental nature of the mind have been widely quoted in the Indian treatises and Tibetan commentarial literature. </p>
             </div>
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="700">Acknowledgements</head>
@@ -100,8 +100,8 @@
                         cited three times in the <title xml:lang="Sa-Ltn">Sūtrasamuccaya</title> (Toh 3934), which is attributed to Nāgārjuna,
                         and repeatedly throughout Śāntideva’s <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> (Toh 3940). Citations and references,
                         sometimes at central junctures, are also found in the works of authors such
-                        as Bhāviveka (circa 500–578), Candrakīrti (seventh century), Śāntarakṣita
-                        (725–788), and Kamalaśīla (eighth century).<note place="end" xml:id="UT22084-064-001-4" index="1"> For details
+                        as Bhāviveka (circa 500–78), Candrakīrti (seventh century), Śāntarakṣita
+                        (725–88), and Kamalaśīla (eighth century).<note place="end" xml:id="UT22084-064-001-4" index="1"> For details
                             and other examples, see Pagel 2007, pp. 156–57. </note> It is no surprise,
                         therefore, that throughout the centuries <title xml:lang="en">The Jewel
                             Cloud</title> has remained an important scriptural source for authors
@@ -117,9 +117,9 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-6"/>
                     <p tid="4">In several traditional Tibetan histories, <title xml:lang="en">The Jewel Cloud</title> is said to have
                         been among the first few sūtras translated into Tibetan, using the new script devised by Tönmi Sambhoṭa during the reign of King Songtsen Gampo (circa 617–50).<note place="end" xml:id="UT22084-064-001-7" index="3">Butön, F.124a (for English translations, see
-                            Obermiller 1999, p. 185, and Stein and Zangpo, p. 279); Zhonnu Pal, F.20b (for English, see Roerich, p. 39); De’u José, p. 117.</note> Some accounts add that the sūtra formed part of the collection
+                            Obermiller 1999, p. 185, and Stein and Zangpo, p. 279); Zhonnu Pal, F.20b (for English, see Roerich, p. 39); De’u José, p. 117. See also <ref target="http://read.84000.co/translation/toh267.html#UT22084-068-001-8">Sakya Pandita Translation Group 2011</ref>.</note> Some accounts add that the sūtra formed part of the collection
                         of scriptures that Tönmi Sambhoṭa carried with him upon his return to Tibet as gifts for the king from his Indian
-                        patron.<note place="end" xml:id="UT22084-064-001-963" index="4">For example, the <title xml:lang="Bo-Ltn">dba’ bzhed</title>, see Wangdu and Diemberger, p. 27; see also the “Treasury of Lives” <ref target="https://treasuryoflives.org/biographies/view/Tonmi-Sambhota/P5788">entry on Tönmi Sambhoṭa</ref>.</note> However, if a seventh century translation of this text did indeed exist,<note place="end" xml:id="UT22084-064-001-967" index="5">Few details of the history of the early Tibetan kings can be materially verified, and even the earliest traditional accounts were written several centuries later. However, as Cristina Scherrer-Schaub notes (2002, pp. 298–299), “[The <title xml:lang="Sa-Ltn">Ratnamegha</title> and <title xml:lang="Sa-Ltn">Laṅkāvatāra</title> sutras’] presence is attested during the <hi rend="small-caps">vii</hi>th and <hi rend="small-caps">viii</hi>th century in China and as far as Turfan, Khotan and North West India; the idea they might have been translated into Tibetan at an early date should not be hastily rejected.”</note> it has not survived as such, and has either been lost or must be assumed to have formed the basis of the revised version we have today, produced during the principal “early” translation period some two centuries later.</p>
+                        patron.<note place="end" xml:id="UT22084-064-001-963" index="4"> For example, the <title xml:lang="Bo-Ltn">dba’ bzhed</title>; see Wangdu and Diemberger, p. 27. See also the “Treasury of Lives” <ref target="https://treasuryoflives.org/biographies/view/Tonmi-Sambhota/P5788">entry on Tönmi Sambhoṭa</ref>.</note> However, if a seventh century translation of this text did indeed exist,<note place="end" xml:id="UT22084-064-001-967" index="5">Few details of the history of the early Tibetan kings can be materially verified, and even the earliest traditional accounts were written several centuries later. However, as Cristina Scherrer-Schaub notes (2002, pp. 298–9), “[The <title xml:lang="Sa-Ltn">Ratnamegha</title> and <title xml:lang="Sa-Ltn">Laṅkāvatāra</title> sutras’] presence is attested during the <hi rend="small-caps">vii</hi>th and <hi rend="small-caps">viii</hi>th century in China and as far as Turfan, Khotan and North West India; the idea they might have been translated into Tibetan at an early date should not be hastily rejected.”</note> it has not survived as such, and has either been lost or must be assumed to have formed the basis of the revised version we have today, produced during the principal “early” translation period some two centuries later.</p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-966"/>
                     <p tid="4">This surviving version of the <title xml:lang="en">The Jewel Cloud</title> in Tibetan translation can be dated to the late eighth or early ninth century by the translators and editors mentioned in its colophon. However, the identity of the translators and their exact role are recorded with some differences between the colophons of the available recensions. In Kangyurs of the
                         Tshalpa (<foreign xml:lang="Bo-Ltn" type="term">tshal pa</foreign>) group
@@ -138,7 +138,7 @@
                             (Toh 179); Rinchen Tso is credited as having translated, apart from <title xml:lang="en">The Jewel
                                 Cloud</title>, only one other sūtra, the <title xml:lang="Sa-Ltn">Sarva­dharma­pravṛtti­nirdeśa</title> (Toh
                             180).</note> while Kangyurs of the Thempangma (<foreign xml:lang="Bo-Ltn" type="term">them spangs ma</foreign>) line, instead of Rinchen Tso, name “the great editor and Lotsawa, Bandhe Vairocanarakṣita.”<note place="end" xml:id="UT22084-064-001-959" index="7">
-                            In this context, referring almost certainly to the great 8th–9th century Tibetan translator (<foreign xml:lang="Bo-Ltn">lo chen</foreign>) Vairotsana. There is another, later Vairocanarakṣita, a twelfth century Indian scholar and yogi who spent his later years in Tibet, introducing there and translating mainly tantric and Mahāmudrā texts. He was not a contemporary of Chönyi Tsultrim and as an Indian would not have been referred to as <foreign xml:lang="Bo-Ltn">zhu chen lo tsa ba</foreign>.</note> Moreover, whereas the colophons of the
+                            In this context, referring almost certainly to the great eighth–ninth century Tibetan translator (<foreign xml:lang="Bo-Ltn">lo chen</foreign>) Vairotsana. There is another, later Vairocanarakṣita, a twelfth century Indian scholar and yogi who spent his later years in Tibet, introducing there and translating mainly tantric and Mahāmudrā texts. He was not a contemporary of Chönyi Tsultrim and as an Indian would not have been referred to as <foreign xml:lang="Bo-Ltn">zhu chen lo tsa ba</foreign>.</note> Moreover, whereas the colophons of the
                                 Tshalpa group state that the translators “translated, edited, and finalized” the
                                 sūtra, the Thempangma witnesses only mention that they “edited,
                                 finalized, and revised” the translation. Some ambiguity therefore remains as to whether the translators 
@@ -148,7 +148,7 @@
                                 were revised—and the prominent role Rinchen Tso and Chönyi Tsultrim are said to have
                                 played in the revision process, discussed in the two paragraphs below—we concur with Cristina Scherrer-Schaub (2002) that
                                 the former hypothesis seems the most likely.<note place="end" xml:id="UT22084-064-001-12" index="8">
-                                    Scherrer-Schaub 2002, pp. 302–303, 317.</note> </p>
+                                    Scherrer-Schaub 2002, pp. 302–3, 317.</note> </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-968"/>
                     <p tid="4">As the great text translation project of the early period evolved, this sūtra’s dense, systematically arranged enumerations of doctrinal topics clearly made it an important work of reference. Scherrer-Schaub and, more extensively, Ulrich Pagel (2007)
                         have shown how it was most likely
@@ -156,11 +156,11 @@
                         dictionary of Sanskrit-Tibetan Buddhist terminology.<note place="end" xml:id="UT22084-064-001-8" index="9"> On the influence 
                             of <title xml:lang="en">The Jewel Cloud</title> in the compilation of 
                             the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, see Pagel 2007. See also Scherrer-Schaub
-                            2002, especially pp. 302–304. The
+                            2002, especially pp. 302–4. The
                                 <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> is included in the
                             Tibetan Tengyur (Toh 4346). </note> For several sets of qualities and names listed in the sūtra’s introduction (<ptr target="#UT22084-064-001-33"/> to <ptr target="#UT22084-064-001-35"/>) most of the items appear
                         in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> almost precisely
-                        according to sequence. Several other lists, too, of dhāraṇīs, samādhis, etc., in
+                        in the same sequence. Several other lists, too, of dhāraṇīs, samādhis, etc., in
                             <title xml:lang="en">The Jewel Cloud</title> correspond nearly verbatim
                         with lists in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, without
                         any other potential sources being identifiable.<note place="end" xml:id="UT22084-064-001-9" index="10"> In the
@@ -171,17 +171,17 @@
                         contributors to the terminological revision that culminated in the third 
                         imperial decree, in the year 814 <hi rend="small-caps">ce</hi>, and these translators’ work on <title xml:lang="en">The Jewel Cloud</title>—whether it was being translated for the first time or, more likely,
                         an earlier translation was being revised—is explicitly stated to have coincided with the preparation of 
-                        a companion text to the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> known as the Drajor Bampo Nyipa (<title xml:lang="Bo-Ltn">sgra sbyor bam po gnyis
-                            pa</title>, or <title xml:lang="Sa-Ltn">Madhyavyutpatti</title>).<note place="end" xml:id="UT22084-064-001-970" index="11">Along with its specific mention of the translation and revision of <title xml:lang="en">The Jewel Cloud</title>, the introduction to the Drajor Bampo Nyipa also mentions the <title xml:lang="Sa-Ltn">Laṅkāvātarasūtra</title>. The Drajor Bampo Nyipa is included in the
+                        a companion text to the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> known as the <title xml:lang="en">Drajor Bampo Nyipa</title> (<title xml:lang="Bo-Ltn">sgra sbyor bam po gnyis
+                            pa</title>, or <title xml:lang="Sa-Ltn">Madhyavyutpatti</title>).<note place="end" xml:id="UT22084-064-001-970" index="11">Along with its specific mention of the translation and revision of <title xml:lang="en">The Jewel Cloud</title>, the introduction to the <title xml:lang="en">Drajor Bampo Nyipa</title> also mentions the <title xml:lang="Sa-Ltn">Laṅkāvātarasūtra</title>. The <title xml:lang="en">Drajor Bampo Nyipa</title> is included in the
                                 Tibetan Tengyur (Toh 4347). </note> This was the manual of translation techniques and charter of officially sanctioned practice promulgated at the time, and in its
                         introduction both figures are listed by their Sanskrit names, Ratnarakṣita and Dharmatāśīla,
-                        along with the honorific title of “Tibetan preceptors” (<foreign xml:lang="Bo-Ltn" type="term">bod kyi mkhan po</foreign>).<note place="end" xml:id="UT22084-064-001-971" index="12"> The dating of the Drajor Bampo Nyipa is complex. Its final form corresponds to what is known as the third imperial decree, or “authoritative decision” (<foreign xml:lang="Bo-Ltn">bkas bcad</foreign>), of 814, but there were at least one (and probably two) earlier promulgations, the second probably between 783 and 795, and the first dating back as far as the middle of the eighth century or possibly even earlier. See Scherrer-Schaub 2002, pp. 292–293, 302–303, 327. </note> </p>
+                        along with the honorific title of “Tibetan preceptors” (<foreign xml:lang="Bo-Ltn" type="term">bod kyi mkhan po</foreign>).<note place="end" xml:id="UT22084-064-001-971" index="12"> The dating of the <title xml:lang="en">Drajor Bampo Nyipa</title> is complex. Its final form corresponds to what is known as the third imperial decree, or “authoritative decision” (<foreign xml:lang="Bo-Ltn">bkas bcad</foreign>), of 814, but there was at least one earlier promulgation, and probably two, the second most likely between 783 and 795, and the first dating back as far as the middle of the eighth century or possibly even earlier. See Scherrer-Schaub 2002, pp. 292–3, 302–3, 327. </note> </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-16"/>
                     <p tid="7">The sūtra’s rich doctrinal content is woven into a narrative structure
                         that opens with Buddha Śākyamuni 
                         on Gayā­śīrṣa Hill in Gayā, presiding over a great
-                        gathering of monks, bodhisattvas, gods, and other non-human beings. The Buddha
+                        gathering of monks, bodhisattvas, gods, and other nonhuman beings. The Buddha
                         radiates a miraculous light that illuminates the universes in the ten directions. 
                         In an extremely distant universe, the bodhisattva followers of the buddha
                         Padma­netra notice this light. When the great bodhisattva Sarva­nīvaraṇa­viṣkam­bhin asks
@@ -222,8 +222,7 @@
                         these topics focus firmly on the bodhisattva path 
                         in all its ramifications, the predominant theme of Sarva­nīvaraṇa­viṣkam­bin’s questions.
                         Indeed, the Buddha’s replies follow Sarva­nīvaraṇa­viṣkam­bhin’s initial questions so closely
-                        that the paragraphs containing those questions (<ptr target="#UT22084-064-001-107"/> – 
-                        <ptr target="#UT22084-064-001-113"/>) provide a concise and useful table of contents of the themes
+                        that the paragraphs containing those questions (<ptr target="#UT22084-064-001-107"/>–<ptr target="#UT22084-064-001-113"/>) provide a concise and useful table of contents of the themes
                         treated in the sūtra. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-19"/>
                     <p tid="10">In the course of the Buddha’s explanations, many beings are profoundly
@@ -286,7 +285,7 @@
                         rational inquiry, teach awakening through directly recognizing the mind’s
                         fundamental nature.<note place="end" xml:id="UT22084-064-001-27" index="17"> For example, this passage is cited in
                             the opening section of Dakpo Tashi Namgyal’s (Tib. <foreign xml:lang="Bo-Ltn" type="term">dwags po bkra shis rnam
-                                rgyal</foreign>. 1399–1458) renowned treatise, <title xml:lang="en">Mahāmudrā: The Moonlight</title> (p. 8). The same treatise also
+                                rgyal</foreign>, 1399–1458) renowned treatise, <title xml:lang="en">Mahāmudrā: The Moonlight</title> (p. 8). The same treatise also
                             cites (p. 26) <title xml:lang="en">The Jewel Cloud</title>’s definition
                             of <distinct>śamatha</distinct> and <distinct>vipaśyanā</distinct>
                             mentioned above. </note> With its detailed descriptions of the
@@ -306,7 +305,7 @@
                             opening line and the colophon, where a reading common to the Tshalpa
                             group is adopted. </note> We also occasionally compared these sources to
                         the available Dunhuang fragments of <title xml:lang="en">The Jewel
-                            Cloud</title>.<note place="end" xml:id="UT22084-064-001-15" index="19"> IOL Tib J 161–164, 233, and Pelliot
+                            Cloud</title>.<note place="end" xml:id="UT22084-064-001-15" index="19"> IOL Tib J 161–4, 233, and Pelliot
                                 tibétain 77 (see bibliography). </note> As for the Sanskrit sources, we made use of the
                         passages contained in Śāntideva’s <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> and the available entries in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. Due to constraints on resources
                         and our linguistic limitations we did not, however, make use of all the
@@ -354,7 +353,7 @@
                             (starting with “brought the defilements to exhaustion”) reflects the
                             terms and sequence at the beginning of the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> section, “terminology for the qualities of
                             hearers” (<foreign xml:lang="Bo-Ltn" type="quote">nyan thos kyi yon tan
-                                gyi ming la</foreign>), entries 1075–1095. </note> —all except for
+                                gyi ming la</foreign>), entries 1075–95. </note> —all except for
                         one: the venerable Ā­nanda.</p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-33"/>
                     <p tid="17">The Blessed One was also accompanied by a great gathering of eighty-four
@@ -377,12 +376,12 @@
                             the terms and sequence at the beginning of the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> section, “terminology expressing the
                             qualities of bodhisattvas that appears in the sūtras” (<foreign xml:lang="Bo-Ltn" type="quote">mdo sde las ’byung ba’i byang chub
                                 sems dpa’i yon tan thog thog smos pa’i ming la</foreign>), entries
-                            806–829. </note>
+                            806–29. </note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-35"/>
                     <p tid="18">Among them were the bodhisattva great beings<note place="end" xml:id="UT22084-064-001-36" index="24"> The following
                             list of bodhisattva names was likely the source for many of the entries
-                            654–692 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> as the
+                            654–92 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> as the
                             names appear there in almost identical order and with only a few
                             exceptions to their presentation in this sūtra. We have therefore given
                             priority to the Tibetan spellings and Sanskrit equivalents as listed in
@@ -400,7 +399,7 @@
                                 phyug</foreign>. D: <foreign xml:lang="Bo-Ltn" type="quote">spyan
                                 ras gzigs dbang po</foreign>. Here S reflects <title xml:lang="Sa-Ltn">Mahāvyutpatti </title> no. 645. </note>
                         Mahā­sthāma­prāpta, Sa­manta­bhadra, Sa­manta­netra, Padma­netra, Vi­mala­netra,
-                        Vi­śala­netra, Sa­manterya­patha, Sa­manta­prāsā­dika, Sa­manta­cāri­tra­mati,
+                        Vi­śāla­netra, Sa­manterya­patha, Sa­manta­prāsā­dika, Sa­manta­cāri­tra­mati,
                         Jñāna­mati, Dharma­mati, Jaya­mati, Uttara­mati, Vajra­mati, Vi­śeṣa­mati,
                         Siṁha­vi­krī­ḍita, Mahā­ghoṣa­svara­rāja, Siṁha­nāda­nādin,
                         Gambhī­raghoṣa­svaranā­dita,<note place="end" xml:id="UT22084-064-001-41" index="29"> Translated based on <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> no. 686: <foreign xml:lang="Bo-Ltn" type="quote">zab mo’i dbyangs kyi nga ro sgrogs
@@ -625,7 +624,7 @@
                     <p tid="45">“The Blessed One is amazing!” the bodhisattvas responded. “The Thus-Gone One
                         is amazing!” </p>
                     <p tid="46"> Sarva­nīvaraṇa­viṣkam­bhin and the other bodhisattvas then said, “Excellent,
-                        Blessed One.” And so, having bowed their heads to feet of the buddha who had
+                        Blessed One.” And so, having bowed their heads to the feet of the buddha who had
                         instructed them in this way, each of them rose from the place where they had
                         been sitting. </p>
                     <lb/>
@@ -992,9 +991,10 @@
                         kings and great ministers thoroughly, so also do they genuinely teach
                         outcasts and their offspring. Needless to mention that they also do so for
                         the inhabitants of foreign cities and lands. Through this giving of the Dharma
-                        they do not become arrogant.<note place="end" xml:id="UT22084-064-001-118" index="36"> This sentence seems to
-                            reflect the following citation from the sūtra presented in the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title> : <foreign xml:lang="Bo-Ltn" type="quote">tena ca dānena nonnato bhavati
-                            </foreign> Mahoney’s edition
+                        they do not become arrogant.<note place="end" xml:id="UT22084-064-001-118" index="36"> This sentence 
+                            seems to reflect the following citation from the sūtra presented in 
+                            the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title>: <foreign xml:lang="Bo-Ltn" type="quote">tena ca 
+                                dānena nonnato bhavati</foreign>. Mahoney’s edition
                             of the Sanskrit text of Śāntideva’s <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title> (see bibliography) is the source
                             of all the citations from the sūtra subsequently presented in notes.
                         </note> Noble son, such is the bodhisattvas’ perfect giving of the Dharma. </p>
@@ -1017,7 +1017,7 @@
                         they deliver those beings out of their unvirtuous ways and establish them in
                         goodness. They think to themselves, ‘The Blessed One has taught, “Generosity
                         is the bodhisattva’s awakening.<note place="end" xml:id="UT22084-064-001-121" index="37"> This famous statement is
-                            quoted in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">dānaṃ hi bodhisatvasya
+                            quoted in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">dānaṃ hi bodhisatvasya
                                 bodhir</foreign>. </note> A bodhisattva’s generosity is free of the
                         three unvirtuous qualities of envy, stinginess, and malice.” Therefore, I
                         too <ref cRef="F.12.b"/> shall follow the Thus-Gone One and practice
@@ -1125,7 +1125,7 @@
                         all the various bodhisattva practices and all the bodhisattva trainings as
                         they appear in the discourses of the Thus-Gone One.’<note place="end" xml:id="UT22084-064-001-133" index="39"> The
                             passage from the beginning of this paragraph to here is cited nearly
-                            verbatim in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> :
+                            verbatim in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>:
                                 <foreign xml:lang="Sa-Ltn" type="quote">kathaṃ ca kulaputra
                                 bodhisatvā bodhisatvaśikṣā saṃvara saṃvṛtā bhavanti | iha
                                 bodhisatvaḥ evaṃ vicārayati | na prātimokṣasaṃvaramātrakeṇa mayā
@@ -1144,7 +1144,7 @@
                         gently, avoid society, and turn toward complete seclusion with a bright
                         smile on their faces.<note place="end" xml:id="UT22084-064-001-134" index="40"> The passage from “What, then, are
                             the genuine bodhisattva practices” to here reflects with some minor
-                            variation a corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">yenā­samuccaḥ satvānāṃ tad yatnena
+                            variation a corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">yenā­samuccaḥ satvānāṃ tad yatnena
                                 vivarjayed iti || yath­samuccaḥ satvānāṃ tad yatnena vivarjayeḥ |
                                 yāvad iha bodhisatvo nāsthāne viharati nākāle | nākāla­bhāṇī bhavati
                                 nākālajño bhavati nādeśajño bhavati | yato nidānam asyāntike satvā
@@ -1181,7 +1181,7 @@
                         insightful person would not feel any desire either.’ In this way do
                         bodhisattvas contemplate the repulsive extensively.<note place="end" xml:id="UT22084-064-001-137" index="41"> This
                             paragraph from “They apply the remedy for desire” was rendered in
-                            consultation with a corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">sa rāsa­muccayathe sṣaṃ bhajate |
+                            consultation with a corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">sa rāsa­muccayathe sṣaṃ bhajate |
                                 rāgot­patti­pratyayāṃś ca varjayati | katamaś ca sa rāgasya
                                 pratipakṣaḥ | katame ca te rāgotpattipratyayāḥ |
                                 aśubhābhāva­nārāgasya pratipakṣaḥ |
@@ -1228,7 +1228,7 @@
                         engaged in plenty of social activity. So they have strayed from the
                         Dharma-Vinaya of the Thus-Gone One.’ Such is the bodhisattvas’ freedom from
                         incorrect mental engagements.<note place="end" xml:id="UT22084-064-001-142" index="42"> This paragraph closely
-                            corresponds to the citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">kathaṃ ca kulaputra bodhisatvo
+                            corresponds to the citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">kathaṃ ca kulaputra bodhisatvo
                                 ’yoniśomanaḥkārāpagato bhavati | iha bodhisatva ekākī rahogataḥ
                                 pravivekasthito naivaṃ cittam utpādayati | ahaṃ asaṃkīrṇavihārī |
                                 ahaṃ pravivekasthitaḥ | ahaṃ pratipannas tāthāgate dharmavinaye | ye
@@ -1307,7 +1307,7 @@
                         consists in. Noble son, bodhisattvas are continuously patient and accepting
                         in the face of any internal suffering, lamentation, pain, mental unease, or
                         disturbance. Such is the bodhisattvas’ excellent inner patience.<note place="end" xml:id="UT22084-064-001-151" index="43"> This passage corresponds closely to the citation from the
-                            sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">yae ime uccayacorrḥ
+                            sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">yae ime uccayacorrḥ
                                 śokaparidevaduṣkhadaurmanasyopāyāsās tān kṣamate
                                 ’dhivāsayat</foreign>. </note>
                         <ref cRef="F.17.a"/>
@@ -1522,7 +1522,7 @@
                         called the bodhisattvas’ continuous diligence and in this way bodhisattvas
                         have continuous diligence.<note place="end" xml:id="UT22084-064-001-174" index="45"> The passage from “Bodhisattvas
                             are diligent” to the end of the paragraph reflects the corresponding
-                            citation of the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">iha bodhisatvaḥ sarveryāpatheṣu vīryam ārabhate | tathā ca ārabhate
+                            citation of the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">iha bodhisatvaḥ sarveryāpatheṣu vīryam ārabhate | tathā ca ārabhate
                                 yathā na kāyakhedaṃ saṃjanayati | na cittakhedam | idam ucyate
                                 bodhisatvasya sāṃtatyavīryam iti |</foreign>. </note>
                     </p>
@@ -1568,7 +1568,7 @@
                         exactly that way by means of a diligence that extends to and focuses on all
                         sentient beings.<note place="end" xml:id="UT22084-064-001-178" index="46"> This paragraph from “In this regard, a
                             bodhisattva will never think” to here closely corresponds to a citation
-                            from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> :
+                            from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>:
                                 <foreign xml:lang="Sa-Ltn" type="quote">iha bodhisatvo naivaṃ cittam
                                 utpādayati | duṣprāpā bodhir manuṣyabhūtena satā | idaṃ ca me vīryaṃ
                                 parīttaṃ ca kusīdo ’haṃ bodhiś cādīptaśiraścailopamena bahūn kalpān
@@ -1592,7 +1592,7 @@
                         person would make their own diligent activity the grounds for looking down
                         on others?’ Noble son, such is the bodhisattvas’ diligence free of conceit.<note place="end" xml:id="UT22084-064-001-180" index="47"> This paragraph from “When bodhisattvas practice
                             diligence” to here reflects the source phrase from the sūtra cited as
-                            follows in the <title xml:lang="Sa-Ltn">Śiḳsāsamuccaya</title> :
+                            follows in the <title xml:lang="Sa-Ltn">Śiḳsāsamuccaya</title>:
                                 <foreign xml:lang="Sa-Ltn" type="quote">iha bodhisatvo vs practice
                                 dilṇo na tan mahad vīryam āsvādayati | na ca tena vīryeṇātmānam
                                 utkarṣayati | na parān paṃsayati | tasyaivaṃ bhavati | ko hi nāma
@@ -1936,7 +1936,7 @@
                         give up the subsidiary afflictions that are obstacles on the path to
                         awakening and instead they apply their remedies.<note place="end" xml:id="UT22084-064-001-209" index="48"> The
                             passage from the beginning of this paragraph to here is cited nearly
-                            verbatim from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">kathaṃ ca kulaputrātra bodhisatvo mārakarmaparihāropāyakuśalo
+                            verbatim from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">kathaṃ ca kulaputrātra bodhisatvo mārakarmaparihāropāyakuśalo
                                 bhavati | iha bodhisatvo ’kalyāṇamitraṃ sarveṇa sarvaṃ parivarjayati
                                 | apratirūpadeśavāsaṃ lokāyata­mantra­sevanabhāva­nāṃ
                                 lābhasatkārapūjo­pasthānabahumānaṃ sarveṇa sarvaṃ parivarjayati | ye
@@ -2000,7 +2000,7 @@
                         extensively to the vast discourses that are to be worshiped and venerated,
                         and from the bottom of their hearts they dedicate their studies to the
                         buddhas and bodhisattvas with a supreme and superior intent.<note place="end" xml:id="UT22084-064-001-215" index="50"> This sentence reflects, with some variation, the following
-                            citation of the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">sa
+                            citation of the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">sa
                                 yāni imāni sūtrānte­ṣūdārodārāṇi tathāgata­pūjopasthānāni śṛṇoti |
                                 tāny āśayatas tīvreṇādhyāśayena buddha­bodhi­satvebhyaḥ
                                 pariṇāmayati</foreign>.</note> From the bottom of their hearts they
@@ -2049,7 +2049,7 @@
                         including the gods, come to worship.’<note place="end" xml:id="UT22084-064-001-217" index="52"> This passage, from
                             “Shrines devoted to the thus-gone ones and statues of the thus-gone ones
                             they worship” to here, was rendered in consultation with the
-                            corresponding citation from the sūtra presented in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">sa tathāgatacaitye vā
+                            corresponding citation from the sūtra presented in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">sa tathāgatacaitye vā
                                 tathāgata­vigrahe vā puṣpaṃ vā dhūpaṃ vā gandhaṃ vā dadat
                                 sarvasatvānāṃ dauḥśīlya­daurgandhya­malāpanayanāya
                                 tathāgata­śīlapratilambhāya ca pariṇāmayati | sa sanmārjanopalepanaṃ
@@ -2224,7 +2224,7 @@
                         and to help those who suffer. Hence their benefactors feel uplifted and
                         utterly delighted.<note place="end" xml:id="UT22084-064-001-227" index="54"> This paragraph from “If bodhisattvas
                             obtain a heap of jewels” to here corresponds to a citation from the
-                            sūtra in the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">iha kulaputra bodhi­satvaḥ
+                            sūtra in the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">iha kulaputra bodhi­satvaḥ
                                 sumeru­mātram api ratnarāśiṃ labhamānaḥ pratigṛhṇāti | pratyavaram
                                 api vastu pratilabhamānaḥ | tat kasya hetoḥ | tasyaivaṃ bhavati |
                                 ete satvā matsariṇo lubdhā lobhābhibhūtāḥ | taddhetoḥ tatpratyayaṃ
@@ -2419,7 +2419,7 @@
                     <p tid="196"> “What, you may wonder, does the bodhisattvas’ excellent power of
                         invincibility consist in? This is the power that prevents any type of being
                         from overpowering those bodhisattvas.<note place="end" xml:id="UT22084-064-001-246" index="56"> This sentence
-                            corresponds to a citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">na
+                            corresponds to a citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">na
                                 sa satvaḥ satva­nikāye saṃvidyate yo bodhisatvasya balena balaṃ
                                 mardayed</foreign>. </note> Such is the bodhisattvas’ excellent
                         power of invincibility. </p>
@@ -3086,7 +3086,7 @@
                         the <term>Radiant</term>, the <term>Flaming</term>, the <term>Hard to Conquer</term>, the <term>Manifest</term>, the <term>Far Reaching</term>, the <term>Unshakable</term>, the <term>Excellent Intelligence</term>, the <term>Cloud of Dharma</term>,
                         and the buddhas’ ground of Universal Illumination.<note place="end" xml:id="UT22084-064-001-315" index="61"> The
                             last eleven entries in this list of bodhisattva grounds correspond to
-                            entries no. 886–896 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. </note> These are the twelve grounds. </p>
+                            entries no. 886–96 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. </note> These are the twelve grounds. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-316"/>
                     <p tid="261"> “What, you may wonder, does the ground where the mind of awakening has been
                         engendered consist in? Upon this ground bodhisattvas are truly beyond all
@@ -3150,7 +3150,7 @@
                     <p tid="264"> “In this regard, you may wonder, what are the absorptions? The following ten
                         constitute the absorptions of the bodhisattvas:<note place="end" xml:id="UT22084-064-001-321" index="63"> The first
                             nine entries in the following list of the bodhisattva’s absorptions were
-                            most likely the source for the entries 739–747 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  158.
+                            most likely the source for the entries 739–47 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  158.
                         </note> the universally superior jewel, the firm abode, the immovable, the
                         <term>irreversible</term>, the jewel mine, <ref cRef="F.47.b"/> the splendorous sunlight,
                         the accomplishment of all objectives, the <term>lamp of wisdom</term>, the direct
@@ -3158,7 +3158,7 @@
                         among the bodhisattvas’ limitless absorptions. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-322"/>
                     <p tid="265"> “The retentions number twelve. What are those twelve?<note place="end" xml:id="UT22084-064-001-323" index="64"> The following list of the bodhisattva’s twelve retentions was
-                            most likely the source for the entries 749–760 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  159.
+                            most likely the source for the entries 749–60 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  159.
                         </note> The anointment, the one with wisdom, the pure tune, the
                         inexhaustible casket, the infinite spinning, the ocean-like seal, the lotus
                         array, the entry to the unobstructed gate, the doubtless entry to the
@@ -3171,7 +3171,7 @@
                         miracles, and knowledge of the exhaustion of a person’s defilements. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-325"/>
                     <p tid="267"> “The ten masteries are as follows:<note place="end" xml:id="UT22084-064-001-326" index="65"> The following list of the bodhisattva’s ten masteries was most likely the source
-                            for the entries 773–782 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  159. </note> mastery of
+                            for the entries 773–82 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  159. </note> mastery of
                         life, as one’s lifespan is blessed to last for innumerable immeasurable
                         eons; mastery of the mind, as one comprehends and enters an ineffable number
                         of ineffable absorptions; mastery of material things, as one displays the
@@ -3194,13 +3194,13 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-327"/>
                     <p tid="268"> “What, you may wonder, are the bodhisattvas’ ten powers?<note place="end" xml:id="UT22084-064-001-328" index="66">
                             The following list of the bodhisattva’s ten powers was
-                            most likely the source for the entries 762–771 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  160.
+                            most likely the source for the entries 762–71 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  160.
                         </note> They are the powers of intent, superior intent, application,
                         insight, aspiration, action, vehicles, emanations, awakening, and the
                         turning of the wheel of Dharma. These are the bodhisattvas’ ten powers. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-329"/>
                     <p tid="269"> “What, you may wonder, are the bodhisattvas’ four fearlessnesses?<note place="end" xml:id="UT22084-064-001-330" index="67"> The following list of the bodhisattva’s
-                           four fearlessnesses was most likely the source for the entries 784–787 in the
+                           four fearlessnesses was most likely the source for the entries 784–87 in the
                                 <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p. 
                             160. </note> Through their retention, they are fearless in upholding and
                         teaching the meaning of what they have heard. They are fearless due to their
@@ -4972,7 +4972,7 @@
                         through their company, they are destroyed’—and they should think, ‘Thus, I
                         too will develop the determination to give up all such associations.’<note place="end" xml:id="UT22084-064-001-568" index="71"> This paragraph from “They understand” was rendered in
                             consultation with the corresponding citation from this sūtra in the
-                            <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">atraiva cccaya ṇa­mitra­lakṣaṇam uktaṃ
+                            <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">atraiva cccaya ṇa­mitra­lakṣaṇam uktaṃ
                                     | śīlavipanna­pudgala­vivarjanatayā pāpamitra­parivarjanā veditavyā |
                                     evaṃ dṛṣṭivipannācāra­vipannājīvavipanna­pudgalavivarjanatayā |
                                     saṅgaṇikārāma­pudgala­vivarjanatayā | kuśīdapudgalavivarjanatayā |
@@ -5249,7 +5249,7 @@
                         of all phenomena.<note place="end" xml:id="UT22084-064-001-600" index="73"> The pithy statement from “The mind
                             precedes all phenomena” to “With control of their own minds they gain
                             control of all phenomena” corresponds to the following passage from the
-                            sūtra cited in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> :
+                            sūtra cited in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>:
                                 <foreign xml:lang="Sa-Ltn" type="quote">cittapūrvaṅgamāś ca
                                     sarva­dharmāḥ | citte parijñāte sarva­dharmāḥ parijñātā bhavanti | api
                                 tu cittena nīyate lokaḥ cittaṃ cittaṃ na paśyati | cittena cīyate
@@ -5335,7 +5335,7 @@
                         bodhisattvas remain in the application of mindfulness with respect to
                         wealth, honor, fame, praise, and glory.<note place="end" xml:id="UT22084-064-001-606" index="74"> This passage from
                             “If they become famous” reflects a corresponding citation from the sūtra
-                            in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">yadi punar asya taddhetos
+                            in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">yadi punar asya taddhetos
                                 tatpratyayaṃ tannidānaṃ kīrtiśabda­śloko bhavati tatra nonnāmajāto
                                 bhavati na mānajāto na madajātaḥ | evaṃ cāsya bhavati | na cireṇa
                                 kālena yasya cāyaṃ kīrtiśloka­śabdaḥ samutthito yaiś ca samutthāpito
@@ -5504,7 +5504,7 @@
                         women, men, boys, or girls who are intent on causing harm. They avoid all
                         places of disgrace.<note place="end" xml:id="UT22084-064-001-625" index="75"> The passage from “Rather, they begin”
                             until here was rendered with reference to a corresponding passage from
-                            the sūtra cited in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> :
+                            the sūtra cited in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>:
                                 <foreign xml:lang="Sa-Ltn" type="quote">tāvat piṇḍāya carati yāvad
                                 asya kāryasya prāptir bhavati | anyatra yeṣu sthāneṣu caṇḍā vā
                                 kukkurās taruṇavatsā vā gāvaḥ prakṛtiduḥśīlā vā tiryagyonigatā |
@@ -5530,7 +5530,7 @@
                         virtue, and if they become too heavy they will become drowsy. Thus,
                         consuming their alms in this way they can pursue virtue.<note place="end" xml:id="UT22084-064-001-627" index="76">
                             The passage from “divide the alms” to here is cited from the sūtra, with
-                            some variation, in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> :
+                            some variation, in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>:
                             <foreign xml:lang="Sa-Ltn" type="quote">tasmāsa­muṇḍapātrād ekaṃ
                                 pratyaṃśaṃ sabrahma­cāriṇāṃ sthāpayati | dvitīyaṃ duṣkhitānāṃ tṛtīyaṃ
                                 vinipatitānāṃ caturtham ātmanā paribhuṅkte | paribhuñjāno na raktaḥ
@@ -5724,7 +5724,7 @@
                         the benefit of the sponsors, and not for the sake of maintaining our own
                         livelihood.’<note place="end" xml:id="UT22084-064-001-643" index="78"> The passage from “However, if shelterless
                             bodhisattvas are physically unable to endure that” to here reflects a
-                            corresponding citation from the sūtra that appears in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">yadi bhaved abhyavakāśiko bodhisatvo
+                            corresponding citation from the sūtra that appears in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">yadi bhaved abhyavakāśiko bodhisatvo
                                 glānakāyo apratibalakāyas tena vihārakṣitena evaṃ cittam
                                 utpādayitavyaṃ | kleśa­pratipakṣārthaṃ tathāgatena dhutaguṇāḥ
                                 prajñaptāḥ | tathāhaṃ kariṣyāmi yathā vihārasya eva kleśānāṃ
@@ -5791,7 +5791,7 @@
                         resting. Instead, they sleep for the sake of maintaining and replenishing
                         the great elements, while continuously aiming toward virtue. Noble son,
                         bodhisattvas who possess ten such qualities stay just where they are.<note place="end" xml:id="UT22084-064-001-650" index="80"> The passage from “When sleeping” to here corresponds
-                            closely to a citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">te
+                            closely to a citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣasamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">te
                                 ṣasamṃ kalpayanto dakṣiṇena pārśvena śayyāṃ kalpayanti | pādasyopari
                                 pādam ādhāya cīvaraiḥ asaṃ­vṛtakāyāḥ smṛtāḥ | saṃprajānānā
                                 utthāna­saṃjñina āloka­saṃjñinaḥ śayyāṃ kalpayanti | na ca nidrāsukham
@@ -6091,7 +6091,7 @@
                         gained.’ They crush pride as they think, ‘I shall be patient in the midst of
                         aggressive and hostile beings.’<note place="end" xml:id="UT22084-064-001-672" index="84"> This passage, from
                             “Bodhisattvas depart from their households” to here, was rendered in
-                            consultion with the following citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">iha kulaputryaconsṣkrāntagṛha­vāsaḥ
+                            consultion with the following citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">iha kulaputryaconsṣkrāntagṛha­vāsaḥ
                                 pravrajito bodhisatvo mṛtakasadṛśo ’haṃ mitrā­mātyajñātisālohitānām
                                 iti nihatamāno bhavati | vaironsṣṃ me 'bhyudgataṃ vivarṇāni ca me
                                 vāsāṃsi prāvṛtāny anyaś ca me ākalpaḥ saṃvṛtta iti nihatamāno
@@ -6509,7 +6509,7 @@
                         of virtue, may all beings be born without the stains of the womb.’ Noble
                         son, bodhisattvas who possess ten such qualities take birth free of any
                         stain of the womb.<note place="end" xml:id="UT22084-064-001-715" index="85"> This paragraph was rendered with
-                            reference to the corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">daśabhiḥ kulaputra dharmaiḥ
+                            reference to the corresponding citation from the sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">daśabhiḥ kulaputra dharmaiḥ
                                 samanvāgatā bodhisatvā ananuliptā garbhamalena jāyante | katamair
                                 daśabhiḥ | yad uta | tathāgata­pratimākaraṇatayā |
                                 jīrṇacaityasaṃskaraṇatayā | tathāgata­caityeṣu
@@ -6608,7 +6608,7 @@
                         become sad or despondent, and they do not lose faith in their donors or
                         benefactors.<note place="end" xml:id="UT22084-064-001-725" index="86"> The entire section from “When bodhisattvas
                             see a donor or a benefactor,” six paragraphs above, to here corresponds
-                            to a long citatation from the sūtra presented in the <title xml:lang="Sa-Ltn">Śīkṣāsamuccaya</title> : <foreign xml:lang="Sa-Ltn" type="quote">na bodhisatvo dion fṃ dānapatiṃ
+                            to a long citatation from the sūtra presented in the <title xml:lang="Sa-Ltn">Śīkṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">na bodhisatvo dion fṃ dānapatiṃ
                                 dṛṣṭveryāpatham āracayati | kathaṃ neryāpatham āracayati | na śanair
                                 mandaṃ mandaṃ kramān utkṣipati na nikṣipati yugamātraprekṣikayā
                                 saviśvastaprekṣikayānnābhogaprekṣikayā | evaṃ kāyakuhanāṃ na karoti
@@ -7181,10 +7181,42 @@
         </body>
         <back>
             <div type="notes">
-                <head type="notes" tid="706">Notes</head>
+                <head type="notes" tid="126">Notes</head>
                 <list type="abbreviations">
                     <head type="abbreviations" tid="707">Abbreviations</head>
-                    <item xml:id="UT22084-064-001-779"/>
+                    <item xml:id="UT22084-064-001-989">
+                        <abbr>C</abbr>
+                        <expan>Coné (co ne) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-990">
+                        <abbr>D</abbr>
+                        <expan>Degé (sde dge) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-991">
+                        <abbr>H</abbr>
+                        <expan>Lhasa (zhol) Kangyur </expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-992">
+                        <abbr>J</abbr>
+                        <expan>Lithang (’jang sa tham) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-993">
+                        <abbr>K</abbr>
+                        <expan>Peking (pe cin) Kangxi Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-994">
+                        <abbr>K<hi rend="small-caps">y</hi>
+                        </abbr>
+                        <expan>Peking Yonglé (g.yung lo) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-995">
+                        <abbr>N</abbr>
+                        <expan>Narthang (snar thang) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-064-001-996">
+                        <abbr>S</abbr>
+                        <expan>Stog Palace (stog pho brang) Manuscript Kangyur</expan>
+                    </item>
                 </list>
             </div>
             <div type="listBibl">
@@ -7248,14 +7280,14 @@
                     <bibl xml:id="UT22084-064-001-973">
                         <title xml:lang="en">Drajor Bampo Nyipa</title> (<title xml:lang="Bo-Ltn">sgra sbyor bam po gnyis pa</title>, Skt. <title xml:lang="Sa-Ltn">Madhavyutpatti</title>). Toh 4347. Degé Tengyur, vol.
                         204 (lugs kyi bstan bcos, co), folios 131.a–160.a. See also Braarvig, below.</bibl>
-                    <bibl xml:id="UT22084-064-001-794">Butön Rinchen Drup (<foreign xml:lang="Bo-Ltn">bu ston rin chen grub</foreign>). <title xml:lang="Bo-Ltn">chos kyi ’byung gnas gsung  rab rin po che’i gter mdzod</title> In: gsung ’bum (zhol par ma/ ldi lir bskyar par brgyab pa), vol 24 (ya), pp 633–1055. New Delhi: International Academy of Indian Culture, 1965-1971. English translations: see Obermiller, and Stein and Zangpo, below. </bibl>
+                    <bibl xml:id="UT22084-064-001-794">Butön Rinchen Drup (<foreign xml:lang="Bo-Ltn">bu ston rin chen grub</foreign>). <title xml:lang="Bo-Ltn">chos kyi ’byung gnas gsung  rab rin po che’i gter mdzod</title>. In: gsung ’bum (zhol par ma/ ldi lir bskyar par brgyab pa), vol 24 (ya), pp. 633–1055. New Delhi: International Academy of Indian Culture, 1965–1971. English translations: see Obermiller, and Stein and Zangpo, below. </bibl>
                     <bibl xml:id="UT22084-064-001-796">De’u José (<foreign xml:lang="Bo-Ltn">lde’u jo sras</foreign>). <title xml:lang="Bo-Ltn">lde’u chos ’byung</title>.
                         Lhasa: bod ljongs mi dmangs dpe skrun khang, 1987.</bibl>
                     <bibl xml:id="UT22084-064-001-792">Kamalaśīla. <title xml:lang="en">Stages of Meditation II</title> (Tib.
                             <title xml:lang="Bo-Ltn">sgom pa’i rim pa [bar ma]</title>, Skt. <title xml:lang="Sa-Ltn">Bhavanakrama</title>). Toh 3916. Degé Tengyur, vol.
                         119 (dbu ma, ki), folios 42.a–55.b.</bibl>
-                    <bibl xml:id="UT22084-064-001-793">Kamalaśīla. <title xml:lang="en">Stages of Meditation III</title>. (Tib.
-                            <title xml:lang="Bo-Ltn">sgom pa’i rim pa [tha ma]</title>, Skt. <title xml:lang="Sa-Ltn">Bhavanakrama</title>). Tōh 3916. Degé Tengyur vol. 110
+                    <bibl xml:id="UT22084-064-001-793">———. <title xml:lang="en">Stages of Meditation III</title>. (Tib.
+                            <title xml:lang="Bo-Ltn">sgom pa’i rim pa [tha ma]</title>, Skt. <title xml:lang="Sa-Ltn">Bhavanakrama</title>). Toh 3916. Degé Tengyur vol. 110
                         (dbu ma, ki), folios 55.b–68.b.</bibl>
                     <bibl xml:id="UT22084-064-001-958">Kongtrul Lodrö Thaye (kong sprul blo gros
                             mtha’ yas).  <title xml:lang="Bo-Ltn">theg pa chen po rgyud bla
@@ -7296,12 +7328,15 @@
                             <title xml:lang="en">Buddhist Studies Review</title> 24, no. 2 (2007):
                         151–91.</bibl>
                     <bibl xml:id="UT22084-064-001-965">Roerich, George N. <title xml:lang="en">The Blue Annals: Parts I and II</title>. Delhi: Motilal Banarsidass, 1949, reprinted 2007.</bibl>
-                    <bibl xml:id="UT22084-064-001-974">Sakaki, Ryōzaburo, ed. <title xml:lang="en">Mahāvyutpatti/Honyaku meigi daishū. Bonzō Kanwa.</title> Chibetto yaku-taikō, 2 vols. Originally published Tokyo: Shingonshū Kyōto Daigaku, 1916-1925.
+                    <bibl xml:id="UT22084-064-001-974">Sakaki, Ryōzaburo, ed. <title xml:lang="en">Mahāvyutpatti/Honyaku meigi daishū. Bonzō Kanwa.</title> Chibetto yaku-taikō, 2 vols. Originally published Tokyo: Shingonshū Kyōto Daigaku, 1916–1925.
                         Sanskrit index complied by Kyōo Nishio, 1936. Kyōto: Suzuki Research Foundation, reprint 1965.</bibl>                    
+                    <bibl xml:id="UT22084-064-001-997">Sakya Pandita Translation Group. <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/toh267.html">Calling Witness with a Hundred Prostrations</ref>
+                        </title>. 84000:Translating the Words of the Buddha, 2011.</bibl>
                     <bibl xml:id="UT22084-064-001-798">Scherrer-Schaub, Cristina. “Enacting Words. A Diplomatic Analysis of the
                         Imperial Decrees (bkas bcad) and their Application in the sGra sbyor bam po
                         gñis pa Tradition.” <title xml:lang="en">Journal of the International
-                            Association of Buddhist Studies</title>, vol. 25, nos. 1–2 (2002):
+                            Association of Buddhist Studies</title> 25, nos. 1–2 (2002):
                         263–340.</bibl>
                     <bibl xml:id="UT22084-064-001-799">Silk, J.A. “Test Sailing the Ship of the Teachings: Hesitant Notes on
                         Kāśyapaparivarta §§153–154.” <title xml:lang="en">From Turfan to Ajanta:
@@ -7312,8 +7347,8 @@
                         its Spread to Tibet: A Treasury of Priceless Scripture</title>. Boston: Snow Lion, 2013.</bibl>
                     <bibl xml:id="UT22084-064-001-801"> Tsong-kha-pa. <title xml:lang="en">The Great Treatise on the Stages of
                             the Path to Enlightenment</title>. Vol. 3. Ithaca: Snow Lion
-                        Publications, 2004.]</bibl>
-                    <bibl xml:id="UT22084-064-001-964">Wangdu, Pasang. and Diemberger, Hildegard. (2000) <title xml:lang="en">dBa bzhed. The Royal Narrative concerning the Bringing of the Buddha’s Doctrine to Tibet</title>. Vienna: Verlag de Österreichen Akadamie der Wissenschaften, 2000</bibl>
+                        Publications, 2004.</bibl>
+                    <bibl xml:id="UT22084-064-001-964">Wangdu, Pasang, and Hildegard Diemberger. <title xml:lang="en">dBa bzhed. The Royal Narrative concerning the Bringing of the Buddha’s Doctrine to Tibet</title>. Vienna: Verlag de Österreichen Akadamie der Wissenschaften, 2000.</bibl>
                 </div>
             </div>
             <div type="glossary">
@@ -8399,7 +8434,7 @@
                             <term xml:lang="Bo-Ltn">ded dpon </term>
                             <term xml:lang="bo">དེད་དཔོན།</term>
                             <term xml:lang="Sa-Ltn">Sārtha­vāha </term>
-                            <term type="definition">A māraputra, member of the māra type of non-human being often rendered 
+                            <term type="definition">A māraputra, member of the māra type of nonhuman being often rendered 
                                 as “demon” but in this case without a negative or harmful character.</term>
                         </gloss>
                     </item>
@@ -8637,10 +8672,10 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-064-001-939">
-                            <term>Vi­śala­netra</term>
+                            <term>Vi­śāla­netra</term>
                             <term xml:lang="Bo-Ltn">yangs pa’i mig </term>
                             <term xml:lang="bo">ཡངས་པའི་མིག</term>
-                            <term xml:lang="Sa-Ltn">Vi­śala­netra</term>
+                            <term xml:lang="Sa-Ltn">Vi­śāla­netra</term>
                             <term type="definition">A great bodhisattva.</term>
                         </gloss>
                     </item>

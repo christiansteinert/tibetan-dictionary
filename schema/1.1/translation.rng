@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-01-31T17:29:32Z. .
+Schema generated from ODD source 2019-02-13T17:40:31Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -1623,6 +1623,8 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
             <choice>
                <value>small-caps</value>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <value>subscript</value>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
          <empty/>
@@ -2003,12 +2005,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
             </choice>
          </attribute>
-         <optional>
-            <attribute name="sameAs">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Links the author to a profile in the database</a:documentation>
-               <text/>
-            </attribute>
-         </optional>
          <empty/>
       </element>
    </define>
@@ -2018,7 +2014,6 @@ Elements 7.2.5. Speech Contents]</a:documentation>
          <ref name="macro.phraseSeq"/>
          <ref name="att.global.attributes"/>
          <ref name="att.canonical.attribute.key"/>
-         <ref name="att.canonical.attribute.ref"/>
          <attribute name="role">
             <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">may be used to specify further information about the entity referenced by this name in the form of a set of whitespace-separated values, for example the occupation of a person, or the status of a place.</a:documentation>
             <list>
@@ -2047,9 +2042,13 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             </list>
          </attribute>
          <optional>
-            <attribute name="sameAs">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Links the editor to a profile in the database</a:documentation>
-               <text/>
+            <attribute name="ref">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">(reference) Links the editor to a profile in the database</a:documentation>
+               <list>
+                  <oneOrMore>
+                     <data type="anyURI"/>
+                  </oneOrMore>
+               </list>
             </attribute>
          </optional>
          <empty/>
@@ -2269,7 +2268,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                               <value>translatorMain</value>
                            </attribute>
                            <optional>
-                              <attribute name="sameAs"/>
+                              <attribute name="ref"/>
                            </optional>
                            <zeroOrMore>
                               <choice>
@@ -2289,7 +2288,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                               </choice>
                            </attribute>
                            <optional>
-                              <attribute name="sameAs"/>
+                              <attribute name="ref"/>
                            </optional>
                            <zeroOrMore>
                               <text/>
@@ -3566,7 +3565,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             </choice>
          </attribute>
          <optional>
-            <attribute name="sameAs">
+            <attribute name="ref">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Links the consultant to a profile in the database</a:documentation>
                <text/>
             </attribute>
@@ -3581,7 +3580,7 @@ Elements 7.2.5. Speech Contents]</a:documentation>
             <text/>
          </optional>
          <optional>
-            <attribute name="sameAs">
+            <attribute name="ref">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">Matches the sponsor to the database</a:documentation>
                <text/>
             </attribute>

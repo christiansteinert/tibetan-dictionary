@@ -13,11 +13,11 @@
                 <title type="longTitle" xml:lang="en"/>
                 <title type="longTitle" xml:lang="Sa-Ltn"/>
                 <title type="otherTitle" xml:lang="zh"/>
-                <author sameAs="contributors.xml#team-27" role="translatorMain">
+                <author role="translatorMain" ref="contributors.xml#team-27">
                     Translated by the Sakya Pandita Translation Group (International Buddhist Academy Division) 
                     <lb/>under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
-                <author role="translatorEng" sameAs="contributors.xml#person-182">Christian Bernert</author>
-                <editor role="reviser" sameAs="contributors.xml#person-246">Vivian Paganuzzi</editor>
+                <author role="translatorEng" ref="contributors.xml#person-182">Christian Bernert</author>
+                <editor role="reviser" ref="contributors.xml#person-246">Vivian Paganuzzi</editor>
             </titleStmt>
             <editionStmt>
                 <edition>v 1.1 <date>2015</date>
@@ -55,7 +55,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 05/02/2019 at 16:43:10 by laura</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:32:28 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>

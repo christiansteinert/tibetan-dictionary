@@ -15,16 +15,16 @@
                     of All Tantras, A Great Sovereign Compendium</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Saṃpuṭodbhavasarvatantranidānamahākalparājaḥ</title>
                 <title type="otherTitle" xml:lang="zh">大續「正相合」</title>
-                <author sameAs="contributors.xml#team-9" role="translatorMain"> Translated by the
+                <author role="translatorMain" ref="contributors.xml#team-9"> Translated by the
                     Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha.</author>
-                <consultant role="advisor" sameAs="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
-                <author role="translatorEng" sameAs="contributors.xml#person-76">Wiesiek Mical</author>
-                <editor role="reviser" sameAs="contributors.xml#person-51">James Gentry</editor>
-                <consultant role="advisor" sameAs="contributors.xml#person-2">Dr. Péter Szántó</consultant>
-                <editor role="copyEditor" sameAs="contributors.xml#person-249">Konchog Norbu</editor>
-                <editor role="TEImarkupEditor" sameAs="contributors.xml#person-108">André Rodrigues</editor>
-                <sponsor sameAs="sponsors.xml#sponsor-46">Chua Ah Mee, Alan Kuek, Cindy Tok, Adrian
+                <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-76">Wiesiek Mical</author>
+                <editor role="reviser" ref="contributors.xml#person-51">James Gentry</editor>
+                <consultant role="advisor" ref="contributors.xml#person-2">Dr. Péter Szántó</consultant>
+                <editor role="copyEditor" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <sponsor ref="sponsors.xml#sponsor-46">Chua Ah Mee, Alan Kuek, Cindy Tok, Adrian
                     Kuek, Andy Kuek, Tenzin Kuek, Peter Tok and in memory of late Kuek See
                     Chai</sponsor>
                 <!-- other sponsors, include here?-->
@@ -66,7 +66,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 31/01/2019 at 16:22:47 by andre</note>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 09:00:51 by admin</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -195,7 +195,7 @@
                     <p tid="15">In the case of the <title xml:lang="Sa-Ltn">Sampuṭa</title>,
                         however, no such act of a divinely inspired compilation is mentioned.
                         Instead, the tantra is introduced as having been delivered by a sambhogakāya
-                        deity residing in the realm of nonduality—more precisely, in the vaginas of
+                        deity residing in the realm of nonduality—more precisely, in the bhagas of
                         the goddesses of the vajra realm. The <title xml:lang="Sa-Ltn">Sampuṭa</title> starts with the usual words of an anonymous narrator,
                         “Thus have I heard at one time,” followed by the description of the
                         circumstances of this tantra’s original delivery. Since such an opening sets
@@ -579,7 +579,7 @@
                         <lb/>
                         <milestone unit="chunk" xml:id="UT22084-079-008-50"/>
                         <p tid="57">Thus have I heard at one time. The Blessed One was dwelling in
-                            the vaginas of vajra women, which are the essence of the body, speech,
+                            the bhagas of vajra goddesses {btsun mo}, which are the essence of the body, speech,
                             and mind of all tathāgatas. There, he noticed Vajragarbha in the midst
                             of eight hundred million lords of yogins and smiled. As the Blessed One
                             smiled, Vajragarbha immediately rose from his seat, draped his robe over
@@ -814,11 +814,11 @@
                                     cakra.</note> part alone, in its full form,</l>
                             <l>Is like the king of nāgas.</l>
                             <l>When this part expands,</l>
-                            <l>It emerges into the center of the penis. {1.1.29}</l>
+                            <l>It emerges into the center of the vajra. {1.1.29}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-91"/>
                         <lg tid="89">
-                            <l>“The seed that is inside the vagina</l>
+                            <l>“The seed that is inside the womb {skye gnas}</l>
                             <l>Is the liquefied sphere of phenomena.</l>
                             <l>Its gradual movement</l>
                             <l>Is always toward the nine doors.</l>
@@ -874,7 +874,7 @@
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-100"/>
                         <lg tid="95">
-                            <l>“It is said that the vagina is the home</l>
+                            <l>“It is said that the bhaga is the home</l>
                             <l>Where the lord dwells.</l>
                             <l>It will be the seat of action and inaction</l>
                             <l>For as long as one remains in the body. {1.1.35}</l>
@@ -929,7 +929,7 @@
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-108"/>
                         <lg tid="102">
-                            <l>“The female consorts (mudrā) are said to be of five types, <ref cRef="F.75.b"/>
+                            <l>“The female consorts (mudrā) are said to be of five types, <!--<ref cRef="F.75.b"/>-->
                             </l>
                             <l>Classified according to the division of families.<note place="end" xml:id="UT22084-079-008-109" index="17"> I.e., the buddha
                                     families.</note>
@@ -959,7 +959,8 @@
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-113"/>
                         <lg tid="106">
-                            <l>“Now that the five seals are ascertained,</l>
+                            <l>“Now that the five seals are ascertained, <ref cRef="F.75.b"/>
+                            </l>
                             <l>The one family of all tathāgatas</l>
                             <l>Will be briefly explained. {1.1.46}</l>
                         </lg>
@@ -1743,7 +1744,7 @@
                             <l>“In this delightful maṇḍala with its three corners</l>
                             <l>Emerges Vajrāralli.</l>
                             <l>This space is also called <emph>source of phenomena</emph>,</l>
-                            <l>And the <emph>vagina of all women</emph>. {1.4.17}</l>
+                            <l>And the <emph>bhaga of all goddesses {btsun mo}</emph>. {1.4.17}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-249"/>
                         <lg tid="214">
@@ -2021,34 +2022,33 @@
                                 and <foreign xml:lang="Sa-Ltn" type="term">bhagnavān</foreign> are
                                 different in meaning, but similar in sound.</note> Another
                             interpretation is that the body, speech, and mind of all tathāgatas are
-                            the essence, this essence is the vajra, this vajra is the woman, and in
-                            the vagina of this vajra woman dwelled the Blessed One. By addressing
+                            the essence, this essence is the vajra, this vajra is the goddess {btsun mo}, and in
+                            the bhaga of this vajra goddess {btsun mo} dwelled the Blessed One. By addressing
                             him <foreign xml:lang="Sa-Ltn" type="term">he bhagavan</foreign> (O
-                            Blessed One), one implies that he dwelled in the vagina (<foreign xml:lang="Sa-Ltn" type="term">bhaga</foreign>).” {1.4.49}</p>
+                            Blessed One), one implies that he dwelled in the <emph>bhaga</emph>.” {1.4.49}</p>
                         <milestone unit="chunk" xml:id="UT22084-079-008-288"/>
                         <p tid="248">The Blessed One continued, “This means that the minds of people
                             requiring guidance are captivated by various methods which, for every
                             tathāgata, are of equal taste. ‘I heard his teaching when the Blessed
                             One was dwelling in the <distinct>source of phenomena</distinct>, which
-                            has the nature of [the vagina of] vajra women,<note place="end" xml:id="UT22084-079-008-289" index="54"> The Tib. (82a.6) is missing
+                            has the nature of [the bhaga of] vajra goddess {btsun mo},<note place="end" xml:id="UT22084-079-008-289" index="54"> The Tib. (82a.6) is missing
                                 “women;” here it simply reads “vajra.”</note> who, in turn, are the
                             essence of the body, speech, and mind of all the tathāgatas.’ This is
                             how it is: since afflictions are destroyed by insight—afflictions which
-                            themselves are devoid of insight—the insight is called ‘vagina’
-                                (<foreign xml:lang="Sa-Ltn" type="term">bhaga</foreign>).<note place="end" xml:id="UT22084-079-008-290" index="55"> In the Tib.
+                            themselves are devoid of insight—the insight is called <emph>bhaga</emph>.<note place="end" xml:id="UT22084-079-008-290" index="55"> In the Tib.
                                 (82a.7) this sentence is, “Since it is insight that destroys primary
                                 and subsidiary afflictions, insight is called
-                                    <distinct>vagina</distinct>” (<foreign xml:lang="Bo-Ltn" type="quote">shes rab gang gis nyon mongs pa dang/ nye ba’i nyon
+                                    <distinct>bhaga</distinct>” (<foreign xml:lang="Bo-Ltn" type="quote">shes rab gang gis nyon mongs pa dang/ nye ba’i nyon
                                     mongs pa ’joms pa de’i phyir shes rab bha gar gsungs
-                                    te/</foreign>). </note> In this vagina dwells every tathāgata
-                            together with his <term>consort</term>. {1.4.50} <ref cRef="F.82.b"/>
+                                    te/</foreign>). </note> In this bhaga dwells every tathāgata
+                            together with his <term>consort</term> {btsun mo}. {1.4.50} <ref cRef="F.82.b"/>
                         </p>
                         <milestone unit="chunk" xml:id="UT22084-079-008-291"/>
                         <lg tid="249">
                             <l>“It is indeed due to the supreme omniscient </l>
                             <l>Wisdom of all the buddhas</l>
                             <l>That in order to experience the bliss of a tathāgata</l>
-                            <l>You should take a <term>consort</term> and pay homage to her.
+                            <l>You should take a <term>consort</term> {btsun mo} and pay homage to her.
                                 {1.4.51}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-292"/>
@@ -2226,7 +2226,7 @@
                         <p tid="266">“A brahmin’s daughter, a washerwoman, an outcast, a musician, a
                             high caste woman, a princess, a daughter of an artiste, or a
                             craftswoman. She should have the eyes of a doe, a slender waist, wide
-                            hips, and taut breasts. She should have a fine vagina, and be strict in
+                            hips, and taut breasts. She should have a fine bhaga, and be strict in
                             her observance of samaya, clever, honest, and conversant with mantra and
                             tantra. <ref cRef="F.83.b"/> These girls are said to be, in the whole
                             triple universe, invaluable to superior practitioners. With them, every
@@ -2820,7 +2820,7 @@
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-407"/>
                         <lg tid="337">
-                            <l>“In the inconceivable commingling of sexual union,</l>
+                            <l>“In the inconceivable commingling of union {sbyor ba},</l>
                             <l>Which is like the conjunction of a dream and subsequent
                                 awakening,</l>
                             <l>There is a meeting of two sex organs,</l>
@@ -2828,7 +2828,7 @@
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-408"/>
                         <lg tid="338">
-                            <l>“When one has placed the penis inside the vagina,</l>
+                            <l>“When one has placed the liṅga inside the bhaga,</l>
                             <l>This is the meditation of recollecting the buddhas—</l>
                             <l>A certain amount of wisdom will arise,</l>
                             <l>Stainless in the beginning, middle, and end. {2.2.18}</l>
@@ -3332,7 +3332,7 @@
                                     describes these light-clouds as the “nature of buddhas.”</note>
                             </l>
                             <l>The practitioner should then visualize</l>
-                            <l>Himself in the center of a vulva. {2.3.38}</l>
+                            <l>Himself in the center of a bhaga. {2.3.38}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-486"/>
                         <lg tid="400">
@@ -3489,7 +3489,7 @@
                         <milestone unit="chunk" xml:id="UT22084-079-008-515"/>
                         <lg tid="417">
                             <l>Then the practitioner should insert </l>
-                            <l>His vajra (i.e., penis) into the vagina. {2.3.55}</l>
+                            <l>His vajra into the bhaga. {2.3.55}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-516"/>
                         <lg tid="418">
@@ -3502,7 +3502,7 @@
                         <milestone unit="chunk" xml:id="UT22084-079-008-517"/>
                         <lg tid="419">
                             <l>“He should make offerings of flowers and fragrances</l>
-                            <l>To himself and also to the vulva.</l>
+                            <l>To himself and also to the bhaga.</l>
                             <l>At this point he should recite the mantra</l>
                             <l>If he wants to attain siddhi. {2.3.57}</l>
                         </lg>
@@ -3543,10 +3543,8 @@
                             <l>As required for individual rituals involving the circle. {2.4.2}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-524"/>
-                        <p rend="mantra" tid="426">“<seg type="mantra">
-                                <foreign xml:lang="Sa-Ltn">Oṁ tāre
-                                tuttāre ture svāhā</foreign>
-                            </seg>. {2.4.3} <ref cRef="F.90.a"/>
+                        <p rend="mantra" tid="426">“<seg type="mantra" xml:lang="Sa-Ltn" deity="tara" subtype="protection">Oṁ tāre
+                                tuttāre ture svāhā</seg>. {2.4.3} <ref cRef="F.90.a"/>
                         </p>
                         <milestone unit="chunk" xml:id="UT22084-079-008-525"/>
                         <lg tid="427">
@@ -3850,7 +3848,7 @@
                         <lg tid="465">
                             <l>“Next he should draw a secret maṇḍala </l>
                             <l>Adorned with all embellishments.</l>
-                            <l>In the center of the vulva,</l>
+                            <l>In the center of the bhaga,</l>
                             <l>He should visualize a full moon disk. {2.4.40}</l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-079-008-571"/>
@@ -6048,7 +6046,7 @@
                         <milestone unit="chunk" xml:id="UT22084-079-008-947"/>
                         <lg tid="755">
                             <l>“If she shows her secret part,</l>
-                            <l>One should show her one’s penis.</l>
+                            <l>One should show her one’s liṅga.</l>
                             <l>If she shows her knee,</l>
                             <l>One should point at one’s shin. {4.4.5}</l>
                         </lg>
@@ -18872,7 +18870,7 @@
                             <abbr>K</abbr>
                             <expan>Peking Kangxi</expan>
                         </item>
-                        <item sameAs="editions.xml#ky" xml:id="UT22084-079-008-3379">
+                        <item xml:id="UT22084-079-008-3379" ref="editions.xml#ky">
                             <abbr>K<hi rend="subscript">Y</hi>
                             </abbr>
                             <expan>Peking Yongle</expan>
