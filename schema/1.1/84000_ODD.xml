@@ -2701,29 +2701,36 @@
             <p>For marking Kangyur sigla</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <!--...in notes...-->
-              <note place="end" index="10" xml:id="UT22084-044-005-209">In K<hi rend="small-caps">q</hi> this title, 
+              <note place="end" index="10" xml:id="UT22084-044-005-209">In K<hi rend="subscript">Q</hi> this title, 
                 included within the text, is preceded by this introductory sentence: <!--...etc...-->
                             </note>
               <!--...in abbreviations section...-->
               <list type="abbreviations">
                 <head type="abbreviations" tid="135">Abbreviations</head>
                 <item xml:id="UT22084-044-005-111">
-                  <abbr>K<hi rend="small-caps">q</hi>
+                  <abbr>K<hi rend="small-caps">Q</hi>
                                     </abbr>
                   <expan>Peking 1737 Kangyur</expan>
+                  <item xml:id="UT22084-044-005-111">
+                    <abbr>G<hi rend="small-caps">bm</hi>
+                    </abbr>
+                    <expan>rnying rgyud bris ma</expan>
                 </item>
                 <item xml:id="UT22084-044-005-112">
                   <abbr>S</abbr>
                   <expan>Stok Palace (<foreign xml:lang="Bo-Ltn">stog pho brang bris ma</foreign>) Kangyur</expan>
                 </item>
+                </item>
               </list>
             </egXML>
           </exemplum>
           <remarks>
-            <p>In 84000 texts the <gi>hi</gi> element is only used to render small Latin capital letters 
-            to be used in the abbreviations for Current Era (CE) and Before Current Era (BCE). It is also
-            used for <ref target="https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/">the second letter used in Kangyur sigla</ref>. Note, in the XML markup use the lowercase
-            letter to be rendered as a small capital letter; the parser will render it properly. See examples
+            <p>In 84000 texts the <gi>hi</gi> element is only used to (1) render small Latin capital letters 
+            to be used in the abbreviations for Current Era (CE) and Before Current Era (BCE); and (2) for 
+              <ref target="https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/">the second letter used in Kangyur sigla</ref>,
+              which sometimes use subscript letters. Note, in the XML markup use the lowercase
+            letter to be rendered as a small capital letter; the parser will render it properly. However
+            the subscript should use lower case or upper case according the proper sigla. See examples
             below:</p>
           </remarks>
         </elementSpec>
@@ -3376,6 +3383,18 @@
               <remarks>
                 <p>Here the type attribute is only used for the one <gi>note</gi> element found in
                   the <gi>notesStmt</gi> to indicate that it shows when the file was last
+                  updated.</p>
+              </remarks>
+            </attDef>
+            <attDef ident="date-time" mode="add">
+              <remarks>
+                <p>Only used in the <gi>note</gi> in the <gi>notesStmt</gi> to indicate that it shows when the file was last
+                  updated.</p>
+              </remarks>
+            </attDef>
+            <attDef ident="user" mode="add">
+              <remarks>
+                <p>Only used in the <gi>note</gi> in the <gi>notesStmt</gi> to indicate that it shows by who the file was last
                   updated.</p>
               </remarks>
             </attDef>
@@ -4151,6 +4170,8 @@
                             <rng:value>lastUpdated</rng:value>
                           </rng:choice>
                         </attribute>
+                        <attribute name="date-time"/>
+                        <attribute name="user"/>                       
                       </optional>
                       <rng:text/>
                     </rng:ref>
@@ -4772,31 +4793,36 @@
                 <gi>title</gi>, <gi>distinct</gi>, etc. Sometimes these may be just italicized punctuation
             that the copy editor or author made by mistake, in which case you can go ahead and remove these tags.</item>
             <item>Double check that the tag &lt;hi rend="small-caps"&gt; is used for any small capital
-              letters that might be used in the text. This includes any abbreviations for CE ("Common Era") or
-              BCE ("Before Common Era") in dates, and also this is used for some of the Kangyur sigla
-              in the abbreviations and notes. For Kangyur sigla we use the Vienna system, which <ref target="https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/">you can check the spelling here.</ref>
-              Note that most of the sigla use a Capital letter followed by a lowercase one, but the sigla
-              from the Peking Group and Mongolian Kangyur use capital letter followed by a small capital letter, 
-              and this second letter should have the &lt;hi rend="small-caps"&gt; tag. Note that the lowercase letter 
-              needs to be used, for example:
+              letters in the text. This includes any abbreviations for CE ("Common Era") or
+              BCE ("Before Common Era") in dates. 
+              Note that the lowercase letter needs to be used for small-caps, for example:
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 In the year 2000 <hi rend="small-caps">bce</hi>
               </egXML>
-              Then the parser will render this as small capital "BCE".
-              Do not use any unicode for the small caps such as "ᴄᴇ" or "ʙᴄᴇ" as this won't display consistently in the
-              reading room for all browsers. The script should convert any small caps from the template with this proper tag, 
-              if "small caps" were applied in the template using MS Words Font dialog (Format &gt; Font &gt; "small caps" box), but
-              these should be double checked in the XML
+              Then the parser will render this as small capital "BCE".<lb/>
+              Also, some of the Kangyur sigla in the abbreviations and notes use subscript letters. 
+              For Kangyur sigla we use the Vienna system, which <ref target="https://www.istb.univie.ac.at/kanjur/rktsneu/sigla/">you can check the spelling here.</ref>
+              Note that most of the sigla use a Capital letter followed by a lowercase one, but the sigla
+              from the Peking Group, Mongolian, and Nyingma Kangyurs use a capital letter followed by subscript letters, 
+              and these second letters should have the &lt;hi rend="subscript"&gt; tag. Here either the lowercase or uppercase 
+              letter should be used according to the definitive sigla, for example:
+              <egXML xmlns="http://www.tei-c.org/ns/Examples">
+                Peking 1737 PK = K<hi rend="subscript">Q</hi>, rnying rgyud bris ma = G<hi rend="subscript">bm</hi>.
+              </egXML>
+              Do not use any unicode for the small caps or subscript such as "ʙᴄᴇ" or "ᵥ" as this won't display consistently in the
+              reading room for all browsers. The script should convert all small-caps and subscript from the template with the proper tag, 
+              if "small-caps" and "subscript" were applied in the template using MS Words Font dialog (Format &gt; Font), but
+              these should be double checked in the XML.
             </item>
             <item>Typically there will be many left over "<gi>hi</gi>" elements after the script has
-              converted the text. With the one exception of rendering small capital letters (as shown in the example above)
+              converted the text. With the one exception of rendering small capital and subscript letters (as shown in the example above)
               we don't really don't use any of these <gi>hi</gi> elements in our mark up. Most of these
               are just remnants of formatting from the word document, and the script should convert all of these to type="wordfile-remnant". 
               The refactoring tool is very helpful for removing them.
               In the oXygen menu go to "Tools" &gt; XML Refactoring, and then select "unwrap
               element." This operation removes the "<gi>hi</gi>" tags but leave the text within them
               untouched, however we only want to remove the &lt;hi type="wordfile-remnant"&gt; elements
-              but not the &lt;hi rend="small-caps"&gt; elements. To do this, after selecting the "unwrap element"
+              but not the &lt;hi rend="small-caps"&gt; and &lt;hi rend="subscript"&gt;elements. To do this, after selecting the "unwrap element"
               operation, it will ask us for the Target Elements (XPath). For this we should enter the XPath:
               <code>hi[@type="wordfile-remnant"]</code> This will only remove the <gi>hi</gi> elements with this attribute. 
               Now you can click on "Next" and then "Preview". Note that it will ask you to save all opened editors, 
