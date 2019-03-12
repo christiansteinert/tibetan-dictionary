@@ -6,15 +6,16 @@
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">tshe 'pho ba ji ltar 'gyur ba zhus pa</title>
                 <title type="mainTitle" xml:lang="bo">ཚེ་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་ཞུས་པ།</title>
-                <title type="mainTitle" xml:lang="en">Questions Regarding Death and
-                    Transmigration</title>
+                <title type="mainTitle" xml:lang="en">Questions Regarding Death and Transmigration</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Āyuṣpatti­yathākāra­paripṛcchā</title>
                 <title type="longTitle" xml:lang="bo">ཚེ་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་ཞུས་པའི་མདོ།</title>
-                <title type="longTitle" xml:lang="Bo-Ltn">tshe 'pho ba ji ltar 'gyur ba zhus pa'i
-                    mdo</title>
-                <title type="longTitle" xml:lang="en">The Sūtra of Questions Regarding Death and
-                    Transmigration</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">tshe 'pho ba ji ltar 'gyur ba zhus pa'i mdo</title>
+                <title type="longTitle" xml:lang="en">The Sūtra of Questions Regarding Death and Transmigration</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Āyuṣpatti­yathākāra­paripṛcchā­sūtra</title>
+                <title type="otherTitle" xml:lang="bo">འཆི་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་བསྟན་པ།</title>
+                <title type="otherTitle" xml:lang="bo">འཆི་འཕོ་བ་ཇི་ལྟར་འགྱུར་བ་ལུང་བསྟན་པ།</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'chi 'pho ba ji ltar 'gyur ba'i bstan pa</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'chi 'pho ba ji ltar 'gyur ba'i lung bstan pa</title>
                 <author role="translatorMain" ref="">Translated by Tom Tillemans<lb/> under the patronage
                     and supervision of 84000: Translating the Words of the Buddha.</author>
             <consultant role="advisor" ref="contributors.xml#person-84">David Rawson</consultant>
@@ -25,9 +26,10 @@
                 <editor role="externalReviewer" ref="contributors.xml#person-51">James Gentry</editor>
                 <editor role="copyEditor" ref="contributors.xml#person-257">Raynald Prévèreau</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.9 <date>2019</date>
+                <edition>v 0.91 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -63,7 +65,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-02T20:10:59.296Z" user="john">02/03/2019 20:10:59</note>
+                <note type="lastUpdated" date-time="2019-03-11T18:07:36.086Z" user="john">11/03/2019 18:07:36</note>
             <note type="updated" update="text-version" value="v 0.9" date-time="2019-03-02T20:14:42.638Z" user="john">v 0.9 2019</note>
             </notesStmt>
         </fileDesc>
@@ -83,7 +85,7 @@
                     family and asks the Buddha seven questions about current beliefs on death and
                     the afterlife. The Buddha answers each of the questions in turn. After two
                     interlocutors interrupt to test the Buddha’s omniscience, the discourse
-                    continues to present the Buddhist account of death and reincarnation through a
+                    continues to present the Buddhist account of death and rebirth using a
                     set of eight analogies, each of which complements the others in a detailed explanation.</p>
             </div>
             <div type="acknowledgment">
@@ -91,8 +93,8 @@
                 <milestone unit="chunk" xml:id="UT22084-072-008-2"/>
                 <p tid="2">An initial draft translation of this sūtra was done by Four Reliances
                     Translations (David Rawson, Seth Davis, and Russell Shipman) of Sera Monastery
-                    in South India. An unpublished free translation, or paraphrase, was also
-                    prepared by Geshé Damdul Namgyal. Tom Tillemans thoroughly retranslated the
+                    in South India. An unpublished paraphrase prepared by Geshé Damdul Namgyal was 
+                    a helpful resource. Tom Tillemans thoroughly retranslated the
                     sūtra in a seminar at the University of Vienna in 2014. He also wrote the
                     introduction, notes, and final version of the glossaries. James Gentry provided
                     valuable feedback.</p>
@@ -114,7 +116,7 @@
                         derived from the various rituals and offerings that are being performed for
                         the deceased by the family, King Śuddhodana asks the Buddha a number of
                         pertinent questions: (1) Are beings consistently reborn as their own kind,
-                        with humans being reborn as humans and so on? (2) Do beings become utterly
+                        with humans being reborn as humans, and so on? (2) Do beings become utterly
                         nonexistent after death? (3) Do beings, after their death, accompany their
                         dead ancestors and relatives in a “world of Death”? (4)
                         Is wealth and poverty consistent from life to life, with the wealthy continuing
@@ -133,10 +135,10 @@
                         continuation of the present one, in the company of the same friends,
                         relatives, ancestors, and possessions. The deceased are sustained by the
                         offerings dedicated to them by their living relatives; they remain forever
-                        in the “world of Death,” not taking rebirth and future
+                        in the “world of Death,” not taking rebirth in future
                             incarnations.<note place="end" xml:id="UT22084-072-008-6" index="2">The
                             sūtra regularly uses the term <foreign xml:lang="Bo-Ltn" type="term">gshin gyi ’jig rten</foreign>, which is not a usual term, but is
-                            probably the same as the more usual <foreign xml:lang="Bo-Ltn" type="term">gshin rje’i ’jig rten</foreign>, i.e. the Sanskrit
+                            probably the same as the more usual <foreign xml:lang="Bo-Ltn" type="term">gshin rje’i ’jig rten</foreign>, i.e., the Sanskrit
                                 <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>, the world
                             of Yama, Death, or the lord of death and ruler over the various departed
                             ancestors (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). Cf.
@@ -146,11 +148,11 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-7"/>
                     <p tid="5">This is a broadly Vedic eschatology, a conception of death and the
                         afterlife that goes well back to the first millennium <hi rend="small-caps">bce</hi>, in the <title xml:lang="Sa-Ltn">Ṛgveda</title>, especially in the <title xml:lang="Sa-Ltn">Atharvaveda</title>, as well as in the <title xml:lang="Sa-Ltn">Brāhmaṇas</title>. When the sūtra says that the
-                        deceased is “befriended by his ancestors” after death, this is no doubt a
-                        reference to the Vedic idea that the dead person transitions to the realm of
-                        his ancestors, or his “fathers” (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). The dead person
+                        deceased are “befriended by their ancestors” after death, this is no doubt a
+                        reference to the Vedic idea that the dead transition to the realm of
+                        their ancestors, or their “fathers” (Skt. <foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). The dead person
                         also comes to be in the presence of a lineage of ancestors all the way back to an
-                            “original ancestor” (<foreign xml:lang="Bo-Ltn" type="term">mes po dang po</foreign>), 
+                            “original ancestor” (Tib. <foreign xml:lang="Bo-Ltn" type="term">mes po dang po</foreign>), 
                         which seems to be an allusion to the
                         idea of the <foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign> as including first ancestors, the founders of the human
                             race.<note place="end" xml:id="UT22084-072-008-8" index="3">Note that
@@ -176,8 +178,8 @@
                         his transition to the afterworld.<note place="end" xml:id="UT22084-072-008-10" index="4">On the four śrāddha-rites, see <ptr target="#UT22084-072-008-140">Sayers (2013)</ptr>, chapter 4.
                             Brahmanical texts, like the <title xml:lang="Sa-Ltn">Āpastamba
                                 Dharma­sūtra</title>, advocate other offerings too, such as beans,
-                            barley, water, roots, fruits, beef, buffalo, fish, and even rhinoceros.
-                            See <ptr target="#UT22084-072-008-140">Sayers (2013)</ptr>, pp. 107–08.
+                            barley, water, roots, fruits, cattle, buffalo, fish, and even rhinoceros.
+                            See <ptr target="#UT22084-072-008-140">Sayers (2013)</ptr>, pp. 107–8.
                                 <title xml:lang="Sa-Ltn">Āpastamba</title>’s list does not, however,
                             seem to match the offerings of the family of Nandaja, viz., “horses,
                             elephants, clothes, and a variety of ornaments, gold and silver, pearls,
@@ -213,24 +215,24 @@
                         the dead are not just dismissed categorically as pointless. We find, for
                         example, the following passage allowing a nuanced acceptance:</p>
                     <q>
-                        <p tid="8">The Great King then asked: “Blessed One, if this is the case,
-                            then is it useless to offer a deceased individual the food, drink,
-                            mounts, clothes, and ornaments that were beneficial to him in the
+                        <p tid="8">The Great King then asked, “Blessed One, if that is the case,
+                            then is it useless to offer deceased individuals the food, drink,
+                            mounts, clothes, and ornaments that were beneficial to them in the
                             present world?”</p>
                         <p tid="9">The Blessed One replied, “O Great King, take the case where a
                             deceased person is being reborn in one of various different states of
                             being because actions he had done are ripening. And suppose people help
-                            him by dedicating to him all sorts of virtuous actions that will
-                            constitute a collection of merit without any non-virtue. In that case,
-                            the person will also be reborn in higher states or attain liberation. On
+                            that person by dedicating to him all sorts of virtuous actions that will
+                            constitute a collection of merit without any nonvirtue. In that case,
+                            the person will be reborn in higher states, or attain liberation. On
                             the other hand, when someone has already taken rebirth, then if one aids
-                            him through [dedication of] a virtuous action that constitutes merit,
+                            him through the dedication of a virtuous action that constitutes merit,
                             that will aid the already reborn person to gain wealth, have good crops,
                             more and more of the pleasures he wishes, as well as honor and respect
                             from all his other fellow beings. However, it is not so that the
-                            deceased individual stays on in the “world of Death,”
+                            deceased individual stays on in the ‘world of Death,’
                             without rebirth, and taking on food and drink,
-                            mounts, clothing, and ornaments. (<ptr target="#UT22084-072-008-70"/>) </p>
+                            mounts, clothing, and ornaments.” (<ptr target="#UT22084-072-008-70"/>) </p>
                     </q>
                     <milestone unit="chunk" xml:id="UT22084-072-008-13"/>
                     <p tid="10">This seems to be a recognizable Buddhist position, one also found in
@@ -243,7 +245,8 @@
                         typically to rationalize offerings and ancestor worship as a form of
                             <distinct>gifting</distinct>. The present sūtra also seems to follow
                         this broad approach in many respects: gifting leads to merit, which can
-                        then be dedicated to the deceased and, <foreign xml:lang="la" type="term">qua</foreign> dedicated karmic merit, serve to benefit them. What is
+                        then be dedicated to the deceased and, in the capacity of dedicated 
+                        karmic merit, serve to benefit them. What is
                         being targeted, then, does not seem to be the efficacy of householders’
                         rites to benefit the dead <emph>in any way</emph>, but rather the efficacy
                         of the offerings to nourish the dead eternally in an everlasting realm of
@@ -263,7 +266,7 @@
                         is obviously destroyed in cremation or in the grave. At still other times
                         the argument depends upon the supernatural. For example, dreams and
                         apparitions of the deceased turn out to be due to a very special type of
-                        spirit that mimics the appearance of deceased in order to trick the living
+                        spirit that mimics the appearance of the deceased in order to trick the living
                         into making offerings that the spirits can then appropriate.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-15"/>
                     <p tid="12">The sūtra itself hardly attempts to provide a positive proof for
@@ -292,10 +295,10 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-17"/>
                     <p tid="13">The last part of the sūtra takes up the non-Buddhist idea that a
                         permanent entity survives and transmigrates. A series of eight analogies are
-                        then presented in detail to show, <foreign type="term" xml:lang="la">inter
-                            alia</foreign>, that reincarnation needs no such a permanent entity. As
+                        then presented in detail to show, among other things, that 
+                        reincarnation needs no such permanent entity. As
                         pointed out in <ptr target="#UT22084-072-008-143">Skilling (1997)</ptr>,
-                        these eight analogies also figure in verse five of the <title xml:lang="en">Verses on the Essence of Dependent Origination</title> (<title xml:lang="Sa-Ltn">Pratītya­samutpāda­hṛdaya­kārikā</title>), a text
+                        these eight analogies also figure in verse 5 of the <title xml:lang="en">Verses on the Essence of Dependent Origination</title> (<title xml:lang="Sa-Ltn">Pratītya­samutpāda­hṛdaya­kārikā</title>), a text
                         credibly attributed to Nāgārjuna.</p>
                     <q>
                         <p tid="14">It is by means of [the analogies of] a recitation, a lamp, a
@@ -352,15 +355,15 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-21"/>
                     <p tid="16">A brief word on the title. The key Tibetan term that figures in the
                         title, and repeatedly in the body of the text, is <foreign xml:lang="Bo-Ltn" type="term">tshe ’pho ba</foreign>, which literally means “shifting
-                        lives.” Much like the English euphemism <distinct>passing on</distinct>,
+                        lives.” Much like the English euphemism “passing on,”
                             <foreign xml:lang="Bo-Ltn" type="term">tshe ’pho ba</foreign> too can
-                        have both the sense of “death” as well as “moving to another life,”
+                        have both the sense of “death” as well as “moving to another life” or
                         “transmigration.” In the sūtra most occurrences of the term can be
                         translated by “death” and “dying.” And elsewhere in Buddhist literature too
                         the term is generally used to mean simply “to die,” as we see in <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> 230 where the Sanskrit for
                             <foreign xml:lang="Bo-Ltn" type="term">tshe ’phos nas</foreign> is given
                         as <foreign xml:lang="Sa-Ltn" type="term">cyuta</foreign>.<note place="end" xml:id="UT22084-072-008-22" index="10">The other entry for <foreign xml:lang="Bo-Ltn" type="term">tshe ’phos pa</foreign> in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, i.e., 2980, gives the
-                            Sanskrit as <foreign xml:lang="Sa-Ltn" type="term">jāti­vyativṛttaḥ</foreign>, “one who has left birth”—the Tibetan
+                            Sanskrit as <foreign xml:lang="Sa-Ltn" type="term">jāti­vyativṛttaḥ</foreign>, “one who has left birth”; the Tibetan
                             given here is <foreign xml:lang="Bo-Ltn" type="quote">tshe ’phos pa’am
                                 tshe rjes pa</foreign>, “leaving life or changing lives.”</note>
                         Nonetheless, in the final sections of the sūtra there are passages where the
@@ -374,20 +377,20 @@
                             mdo</title>, with <foreign xml:lang="Bo-Ltn" type="term">’chi ’pho
                             ba</foreign> (“death and transmigration”) replacing the 
                             <foreign xml:lang="Bo-Ltn" type="term">tshe ’pho ba</foreign> in the title 
-                        at the beginning.<note place="end" xml:id="UT22084-072-008-24" index="12">Note too that in this version of the title found at the end of the 
-                            text, <foreign xml:lang="Bo-Ltn" type="term">bstan pa’i mdo</foreign> (“The Sūtra Teaching...”) 
+                        given at the beginning of the text.<note place="end" xml:id="UT22084-072-008-24" index="12">Note too that in this version of the title found at the end of the 
+                            text, <foreign xml:lang="Bo-Ltn" type="term">bstan pa’i mdo</foreign> (“The Sūtra Teaching . . .”) 
                             replaces <foreign xml:lang="Bo-Ltn" type="term">zhus pa’i mdo</foreign> (The Sūtra of Questions 
-                            Regarding...”). This final title is the one that figures in Butön’s list of canonical translations 
-                            (F.144.b), Situ Paṇchen’s catalogue 
+                            Regarding . . .”). This title given at the end of the text is the one that 
+                            figures in Butön’s list of canonical translations (F.144.b), Situ Paṇchen’s catalogue 
                             (<foreign xml:lang="Sa-Ltn" type="term">dkar chag</foreign>) of the Degé Kangyur (F.134.b), and 
                             quite frequently (or as the variant <title xml:lang="Bo-Ltn">’chi ’pho ba ji ltar ’gyur 
                                 ba lung bstan pa’i mdo</title>) in later commentarial literature 
                             citing the sūtra.</note> Finally, it should be noted that the
                         Sanskrit in the title, i.e., <foreign xml:lang="Sa-Ltn" type="term">āyuṣpatti</foreign> (or <foreign xml:lang="Sa-Ltn" type="term">āyuḥpatti</foreign>), is not well attested. Indeed the usual complete
-                        title <title xml:lang="Sa-Ltn">āyuṣpatti­yathākāra­paripṛcchā</title> is
-                        dubious and probably a back translation from the Tibetan.<note place="end" xml:id="UT22084-072-008-25" index="13">The <foreign xml:lang="Bo-Ltn">them spangs ma</foreign> recension Kangyurs have <title xml:lang="Sa-Ltn">āyuḥyathabhutāgraha­paripṛcchā­sūtra</title>
-                            (S, L: <title xml:lang="Sa-Ltn">āyuḥ­yatha­bhutāgraha­sūtra</title>), which also remains dubious
-                            even when corrected to <title xml:lang="Sa-Ltn">āyuḥ­yathābhūta­graha­paripṛcchā­sūtra</title> (S: <title xml:lang="Sa-Ltn">āyuḥ­yathābhūta­graha­sūtra</title>). Cf. <ptr target="#UT22084-072-008-143">Skilling (1997)</ptr>, p. 257: “Both
+                        title <title xml:lang="Sa-Ltn">Āyuṣpatti­yathākāra­paripṛcchā</title> is
+                        dubious and probably a back translation from the Tibetan.<note place="end" xml:id="UT22084-072-008-25" index="13">The <foreign xml:lang="Bo-Ltn">them spangs ma</foreign> recension Kangyurs have <title xml:lang="Sa-Ltn">Āyuḥyathabhutāgraha­paripṛcchā­sūtra</title>
+                            (S, L: <title xml:lang="Sa-Ltn">Āyuḥ­yatha­bhutāgraha­sūtra</title>), which also remains dubious
+                            even when corrected to <title xml:lang="Sa-Ltn">Āyuḥ­yathābhūta­graha­paripṛcchā­sūtra</title> (S: <title xml:lang="Sa-Ltn">Āyuḥ­yathābhūta­graha­sūtra</title>). Cf. <ptr target="#UT22084-072-008-143">Skilling (1997)</ptr>, p. 257: “Both
                             titles seem awkward and unlikely, and may be later concoctions.” </note>
                     </p>
                     <lb/>
@@ -399,8 +402,7 @@
                         modified with the “revised terminology” that we find in translations from the opening
                         decades of the ninth century on; nevertheless, the language does not seem to be
                         heavily reliant on so-called “ancient linguistic usage” either. No
-                        translator is mentioned, but we can surmise that if the translation was done relatively 
-                        early, it might perhaps, for some reason, have been outside the ninth century institutional
+                        translator is mentioned. This translation was clearly done outside the ninth century institutional
                             mainstream.<note place="end" xml:id="UT22084-072-008-27" index="14">The sūtra is absent from both
                                 early ninth century inventories, the Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar 
                                     ma</foreign>) and Phangthangma (<foreign xml:lang="Bo-Ltn">’phang thang ma</foreign>), but 
@@ -412,9 +414,9 @@
                       <p tid="17">Although the important theme
                         of reincarnation is treated here with a sophisticated argumentation much
                         more typical of the Tengyur (<foreign xml:lang="Bo-Ltn" type="term">bstan
-                            ’gyur</foreign>) than Kangyur (<foreign xml:lang="Bo-Ltn" type="term">bka’ ’gyur</foreign>) literature, the sūtra does not seem to have
+                            ’gyur</foreign>) than the Kangyur (<foreign xml:lang="Bo-Ltn" type="term">bka’ ’gyur</foreign>) literature, the sūtra does not seem to have
                         attracted notable attention in India, apart from possibly figuring as
-                        Nāgārjuna’s source for the eight analogies, and hardly in Tibet. A global
+                        Nāgārjuna’s source for the eight analogies, and not much in Tibet, either. A global
                         search of the Tibetan text input on the site of the Buddhist Digital
                         Resource Center (<ref target="http://www.tbrc.org">www.tbrc.org</ref>) shows
                         only relatively few references to this text in indigenous Tibetan
@@ -467,20 +469,20 @@
                         together his horses, elephants, clothes, and a variety of ornaments, gold
                         and silver, pearls, crystals, and other jewels, as well as a variety of
                         delicious and sweet food and drink. They offered them, wailing, “We give
-                        these to Nandaja.” </p>
+                        these to Nandaja!” </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-193"/>
                     <p tid="22">This made King Śuddhodana wish <ref cRef="F.146.a"/> to
                         ask the Blessed One what benefit<note place="end" xml:id="UT22084-072-008-31" index="16">We 
                             find <foreign xml:lang="Bo-Ltn" type="term">sman pa</foreign> in all editions. It clearly needs to
                             be read in its attested sense of <foreign xml:lang="Bo-Ltn" type="term">phan pa</foreign> 
-                            (benefit) and not in the sense of “a doctor.” See
+                            (“benefit”) and not in the sense of “a doctor.” See
                                 <ptr target="#UT22084-072-008-144">Zhang Yisun et alii (1985)</ptr>,
                             s.v. <foreign xml:lang="Bo-Ltn" type="term">sman pa</foreign>.</note>
                         and good would ensue if, in such a fashion, offerings, food,<note place="end" xml:id="UT22084-072-008-32" index="17">
                             <foreign xml:lang="Bo-Ltn" type="term">gsol ba</foreign> = honorific for
                                 <foreign xml:lang="Bo-Ltn" type="term">lto chas</foreign>.</note>
                         and honors to the deceased were presented according to the brahmins’
-                        formulae. He approached the Blessed One, prostrated, and asked: “Blessed
+                        formulae. He approached the Blessed One, prostrated, and asked, “Blessed
                         One, would you allow me to ask some questions about what it is like for
                         sentient beings to die?” </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-192"/>
@@ -500,10 +502,10 @@
                             <term type="ignore">god</term>s and so forth, as well?</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-34"/>
                     <p tid="23">“Or, Blessed One, when they pass from this life do sentient beings
-                        become utterly non-existent, becoming like the ashes of a fire that has died
+                        become utterly nonexistent, becoming like the ashes of a fire that has died
                         out, and not taking any rebirth at all?</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-195"/>
-                    <p tid="24">“Blessed One, is it really as the worldly say it is? Do all the
+                    <p tid="24">“Blessed One, is it really as the worldly say it is? Do all 
                         sentient beings live on after their deaths, befriending their kin<note place="end" xml:id="UT22084-072-008-35" index="18">
                             <foreign xml:lang="Bo-Ltn" type="term">ris ’thun pa</foreign>. The term
                             is later replaced by <foreign xml:lang="Bo-Ltn" type="term">mes
@@ -532,7 +534,7 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-197"/>
                     <p tid="28">“Blessed One, is it really as the worldly say it is? When sentient
                         beings pass on from this world, do they later, after death, tell their
-                        parents, siblings, children, etc. the same things, such as stories and so
+                        parents, siblings, children, and so forth the same things, such as stories and so
                         forth, that they had told them earlier before they died? And do they later
                         exhibit the same physical features to them as they had earlier before death?
                         Are they seen and heard to do this?”</p>
@@ -540,24 +542,24 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-39"/>
                     <p tid="29">After these queries, the Blessed One replied to the king Śuddhodana,
                         “O Great King, with regard to your question as to whether <term type="ignore">god</term>s are reborn as <term type="ignore">god</term>s
-                        and so forth, the answer is ‘no.’ Suppose that when <term type="ignore">god</term>s died they were reborn only as <term type="ignore">god</term>s and not reborn as other types of being, and the same for
+                        and so forth, the answer is ‘no.’ Suppose that when <term type="ignore">god</term>s died they were reborn only as <term type="ignore">god</term>s and not reborn as other types of beings, and the same for
                         humans and so forth. O Great King, initially humans come from <term type="ignore">god</term>s, and the three lower realms come from humans’
-                        engagement in non-virtue. Therefore, those <term type="ignore">god</term>s
+                        engagement in nonvirtue. Therefore, those <term type="ignore">god</term>s
                         and so forth who die <ref cRef="F.147.a"/> are reborn in various other types
                         of migrations.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-40"/>
-                    <p tid="30">“Suppose, moreover, O Great King, that the answer to this question
+                    <p tid="30">“O Great King, suppose, moreover, that the answer to this question
                         of yours were to be ‘yes.’ Then it would be logical that the quantities of
-                        the six types of beings would always be the same as what they are now. But
+                        the six types of beings would always be the same as they are now. But
                         notice how the three lower realms are more numerously repopulated<note place="end" xml:id="UT22084-072-008-41" index="20">
                             <foreign xml:lang="Bo-Ltn" type="quote">phyir zhing mang ba</foreign>,
                             literally, “once again many/more.”</note> due to the preponderance<note place="end" xml:id="UT22084-072-008-42" index="21">
                             <foreign xml:lang="Bo-Ltn" type="term">mang ba</foreign>, “more.”</note>
-                        of humans’ engagement in non-virtue! Moreover, O Great King, if the arhats
+                        of humans’ engagement in nonvirtue! Moreover, O Great King, if the arhats
                         of today come from the ranks of humans, then it cannot be right that beings
                         are consistently reborn in their own types. What is more, it would be
                         impossible for anyone to obtain the fruit of being an arhat. Therefore, O
-                        Great King, through virtuous and non-virtuous actions beings are reborn as
+                        Great King, through virtuous and nonvirtuous actions beings are reborn as
                         different types, such as those in the heavens and those in the lower
                         realms.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-43"/>
@@ -567,7 +569,7 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-194"/>
                     <p tid="32"> “O Great King, regarding your question as to whether sentient
                         beings die and become utterly nonexistent, like the ashes of a fire that has
-                        died out, and as to whether rebirth is utterly non-existent, the answer is
+                        died out, and as to whether rebirth is utterly nonexistent, the answer is
                         ‘no.’ O Great King, just as when you have a seed, a fruit will come forth,
                         so from the seed of this life the fruit of the next life comes about. O
                         Great King, just as the sun rises, slowly sets, becomes obscured, and then
@@ -617,9 +619,9 @@
                         relatives do or do not befriend present children, relatives, grandfathers,
                         and so forth? The offspring from this first ancestor, up to and including
                         the presently existing relatives and children, <ref cRef="F.148.a"/> would
-                        be alike in their respective affections [and antagonisms] for each other,
+                        be alike in their respective affections [and antagonisms] for one another,
                         just like the presently existing children and relatives. If this is so, who
-                        befriends whom and who fails to befriend whom?<note place="end" xml:id="UT22084-072-008-49" index="24">The argument seems to be as follows. Amongst
+                        befriends whom and who fails to befriend whom?<note place="end" xml:id="UT22084-072-008-49" index="24">The argument seems to be as follows. Among
                             our presently existing kin some are enemies (<foreign xml:lang="Bo-Ltn" type="term">dgra</foreign>), unfriendly to each other, while some
                             are not. If we take the collection of kinfolk from the first ancestor
                             on, the same would hold. We thus could not determine that our kinfolk
@@ -628,29 +630,29 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-50"/>
                     <p tid="36">“People who live now each apprehend their own factions and parties,
-                        saying, ‘So and so is our ancestor.’ And they determine the factions and
-                        parties, saying, ‘We are children of the same father as such and such.’
-                        Suppose too that they now each grasped as “our ancestors”
+                        saying, ‘So-and-so is our ancestor.’ And they determine the factions and
+                        parties, saying, ‘We are children of the same father as so-and-so.’
+                        Suppose, too, that they now each grasped as ‘our ancestors’
                         the lineage of all the fathers, grandfathers, great-grandfathers, and
-                        great-great-grandfathers all the way down to the first ancestor, i.e., the
+                        great-great-grandfathers all the way down to the first ancestor—that is, the
                         lineage of all those who respectively apprehend each other as
-                            “ancestors.” And suppose, following what the worldly
+                            ‘ancestors.’ And suppose, following what the worldly
                         say, these ancestors did not take rebirth after passing from this world, but
                         instead befriended children and relatives in an afterlife. Then they would
                         have to befriend as one unified faction<note place="end" xml:id="UT22084-072-008-51" index="25">
                             <foreign xml:lang="Bo-Ltn" type="quote">phyogs gcig nas</foreign>. The
-                            textual passage is long and difficult, and the translation is hence
+                            textual passage is long and difficult, and the translation is therefore
                             unsure. It appears that the argument is essentially an elaboration on
                             the argument of the previous paragraph. A collection of ancestors, some
                             of whom are very different from and even antagonistic to the others,
                             would have to be somehow apprehended and befriended as a unified
-                            harmonious party.</note> the presently different clans, castes,
-                        factions, as well as all those people that have become enemies too.</p>
+                            harmonious party.</note> the presently different clans, castes, and
+                        factions, as well as all those people that have become enemies, too.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-52"/>
                     <p tid="37">“O Great King, in this life, although people appear as embodied
                         entities, nonetheless when they are in the dark or hidden they do not see
-                        each other. Then, given that deceased beings do not have any bodies, how
-                        could they see and thus befriend each other? O Great King, if embodied
+                        one another. Then, given that deceased beings do not have any bodies, how
+                        could they see and thus befriend one another? O Great King, if embodied
                         sentient beings who are alive now cannot even make their bodies visible to
                         people in some other country or in the different places that they do not see,
                         then how could they ever make their bodies visible after death? O Great
@@ -665,23 +667,24 @@
                         humble in this life go on to be poor and humble in the next, or whether
                         people switch between the two. O Great King, just take sentient beings in
                         this life who have not yet died: some are wealthy and proud from the moment
-                        of birth, but are then poor and humble from fifty or sixty years old on
-                        until old age; <ref cRef="F.148.b"/> others are poor and humble from birth
-                        and throughout their youth, but are then wealthy and proud from fifty or
-                        sixty on until old age. If that is so, then it is all the more obvious that
+                        of birth, but are then poor and humble from the age of fifty or sixty onward
+                        into their old age; <ref cRef="F.148.b"/> others are poor and humble from birth
+                        and throughout their youth, but then, from the age of fifty or
+                        sixty up until their old age, they are wealthy and proud. If that is 
+                        so, then it is all the more obvious that
                         people’s riches and poverty are impermanent when they are dead! O Great
-                        King, to take an analogy, in this world when conditions like warmth and
+                        King, to use an analogy, in this world when conditions like warmth and
                         moisture are present, grass, trees, and other plants grow leaves, but when
-                        it is cold and dry they wither. Similarly, one will become wealthy and proud
+                        it is cold and dry they wither. Similarly, one becomes wealthy and proud
                         due to conditions such as generosity, but poor and humble from theft and
                         miserliness. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-55"/>
                     <p tid="39">“O Great King, some people are wealthy and proud from life to life
                         because they have always been generous. Others are poor and humble in some
-                        lives or at the beginning or end of certain lives because they were partial
+                        lives, or at the beginning or end of certain lives, because they were partial
                         or had regrets about giving. Some are poor and humble life after life
                         because they always stole or were miserly. Yet others are wealthy and proud
-                        in some lives or at the beginning or end of certain lives because they
+                        in some lives, or at the beginning or end of certain lives, because they
                         regretted their theft and miserliness. O Great King, being poor and humble
                         does not come about through generosity. Being wealthy and proud does not
                         come about through miserliness. One does not simply [arbitrarily] switch
@@ -694,7 +697,7 @@
                         drink, continue in future lives after their deaths to ride, dress, 
                         eat, and drink in the same ways. O Great King, when humans die, they take
                         rebirth in the heavens or in the lower realms in line with how they had
-                        practiced virtuous or non-virtuous actions. O Great King, it is not as the
+                        practiced virtuous or nonvirtuous actions. O Great King, it is not as the
                         worldly say it is.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-57"/>
                     <p tid="41">“What about an apparition of a deceased individual’s style of dress?
@@ -704,8 +707,8 @@
                             of death</distinct>.<note place="end" xml:id="UT22084-072-008-58" index="27">
                             <foreign xml:lang="Bo-Ltn" type="quote">dri za ’chi ka ma’i sems la nye
                                 bar ’jug pa zhes bya ba’i rigs</foreign>. We unfortunately have no
-                            information on this type of gandharva.</note> In search of food for
-                        gandharvas, they create an illusion of the body, clothes, ornaments, and
+                            information on this type of gandharva.</note> In search of the food that
+                        gandharvas eat, they create an illusion of the body, clothes, ornaments, and
                         style of dress of someone who lived previously. They thus create and display
                         illusions of the style of dress and the speech of a deceased person. But
                         there is more here, O Great King. Not only gandharvas, but other spirits,
@@ -722,14 +725,14 @@
                             undeceased<note place="end" xml:id="UT22084-072-008-60" index="28">Read
                             with D, A, S, L: <foreign xml:lang="Bo-Ltn" type="quote">da ltar
                                 tshe ma ’phos pa’i rang gi pha ma</foreign>. C<hi rend="small-caps">ds</hi>: <foreign xml:lang="Bo-Ltn" type="quote">da ltar tshe ’phos pa’i rang gi pha
-                                ma</foreign>. </note> parents, relatives, servants, and any others
+                                ma</foreign>. </note> parents, relatives, servants, or any others
                         who might befriend them, and as well dreamed of their pleasures coming from
                         various enjoyments, or their pleasures and pains from grappling with enemies
-                        or thieves. If the parents, relatives, and servants they dreamed of and any
-                        others appearing in their dream actually were to have the feelings in
+                        or thieves. If the parents, relatives, and servants they dreamed of, or any
+                        others appearing in their dream, actually were to have the feelings in
                         question, just as that person dreamed they did, then that of which they
                         dreamed would have been real. But how could the parents, relatives, and
-                        servants they dreamed of, and any others appearing in their dream ever be
+                        servants they dreamed of, or any others appearing in their dream, ever be
                         thought to be real?<note place="end" xml:id="UT22084-072-008-61" index="29">
                             <foreign xml:lang="Bo-Ltn" type="quote">mi des rmis pa bzhin du gang
                                 rmis pa’i pha ma’am / spun zla’am / bran khol lam gzhan su yang rung
@@ -740,8 +743,8 @@
                                 pa’i pha ma’am / spun zla’am / bral [<foreign xml:lang="la">sic</foreign>] khol lam / su yang rung ba rmi lam na snang ba
                                 des tshor ba yod na ni rmis pa de bden pa yin na / des rmis pa ltar
                                 med pas bden par ji ltar bzung</foreign>. “If the parents,
-                            relatives, and servants they dreamed of and any others appearing in
-                            their dream actually were to have the feelings in question, just as that
+                            relatives, and servants they dreamed of, or any others appearing in
+                            their dream, actually were to have the feelings in question, just as that
                             person dreamed they did, then that which they dreamed would have been
                             real. They do not exist as they dreamed them, so how could they be
                             thought to be real?”</note> O Great King, even among living people, that
@@ -753,14 +756,14 @@
                             by a non-deceased person ever be that deceased person?”</note> What is
                         involved is the maturation of habitual tendencies.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-63"/>
-                    <p tid="43">“O Great King, there is yet another analogy for it being habitual
+                    <p tid="43">“O Great King, there is yet another analogy for that being habitual
                         tendencies. Suppose that a person left whatever castles, houses, and cities
-                        they had been in during an earlier part of thier life, and that in the later
-                        part of their life <ref cRef="F.149.b"/>, when they lived elsewhere, the
-                        city they knew previously was even destroyed. This person dreams of the
+                        they had been in during an earlier part of their life, and that in the later
+                        part of their life, <ref cRef="F.149.b"/> when they lived elsewhere, the
+                        city they knew previously was destroyed. This person dreams of the
                         shape and size of their house as they were when it was neither destroyed nor
                         scattered about,<note place="end" xml:id="UT22084-072-008-64" index="31"> We
-                            read with the S and L: <foreign xml:lang="Bo-Ltn" type="term">’grams</foreign>. This is a variant of <foreign xml:lang="Bo-Ltn" type="term">gram</foreign>, the intransitive verb meaning “to be
+                            read with S and L: <foreign xml:lang="Bo-Ltn" type="term">’grams</foreign>. This is a variant of <foreign xml:lang="Bo-Ltn" type="term">gram</foreign>, the intransitive verb meaning “to be
                             spread, dispersed, scattered.” See <ptr target="#UT22084-072-008-128">Golstein (2004)</ptr>, s.v. <foreign xml:lang="Bo-Ltn" type="term">’grams</foreign>. The numerous implausible variants in editions (D,
                             A: <foreign xml:lang="Bo-Ltn" type="term">’drams</foreign>; K,
                             K<hi rend="subscript">Y</hi>: <foreign xml:lang="Bo-Ltn" type="term">’drangs</foreign>; C:
@@ -773,8 +776,8 @@
                                 ni khang pa de’i sems snang du rung na</foreign>. More literally,
                             “If the city and house had a mind” (<foreign xml:lang="Bo-Ltn" type="quote">sems yod 
                                 na ni</foreign>). All witnesses in A, as well as S and L, 
-                            have <foreign xml:lang="Bo-Ltn" type="term">sems</foreign> (mind), except for C as recorded in A, which
-                            has <foreign xml:lang="Bo-Ltn" type="term">sems can</foreign> (being).
+                            have <foreign xml:lang="Bo-Ltn" type="term">sems</foreign> (“mind”), except for C as recorded in A, which
+                            has <foreign xml:lang="Bo-Ltn" type="term">sems can</foreign> (“being”).
                             However, C does not have <foreign xml:lang="Bo-Ltn" type="term">sems can</foreign> in any of the subsequent text of this
                             argument.</note> then the mental nature of that house might have
                         actually appeared to them. But since their house and city are earth and
@@ -791,18 +794,18 @@
                         conclude, O Great King, that it is through the maturation of habitual
                         tendencies that people see and dream of distinctive signs and styles of
                         dress of now deceased individuals. Likewise, the appearances and
-                        occurrence in dreams of the deceased holding swords and other weapons,
+                        occurrences in dreams of the deceased holding swords and other weapons,
                         wearing clothes and other ornaments, and riding their horses and elephants,
                         and so forth are also just appearances due to habitual tendencies. You
                         should understand them along the lines of the analogy of the house.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-68"/>
-                    <p tid="44">“O Great King, you asked as to whether it is as the worldly say it
+                    <p tid="44">“O Great King, you asked whether it is as the worldly say it
                         is. You asked whether those who have passed on from this world can eat and
                         drink inexhaustibly for many eons the small portions of food and drink given
                         and dedicated to them by their parents, siblings and cousins, children, and
-                        other relatives. O Great King, anywhere, be it on the four continents, in
-                        the chiliocosms, the dichiliocosms, the trichiliocosms, or in the limitless,
+                        other relatives. O Great King, anywhere, be it on the four continents; in
+                        the chiliocosms, the dichiliocosms, or the trichiliocosms; or in the limitless,
                         unfathomable, unimaginable world systems, have you ever seen a sentient
                         being who consumes one small portion of food and drink all the time and over
                         many eons? Have you ever heard of such a sentient being? O Great King,
@@ -815,23 +818,23 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-69"/>
                     <p tid="45">“O Great King, suppose that some living parents, children, siblings,
                         and cousins, who have a mutual relationship and wish to be of benefit to
-                        each other, have not yet died and are still physically embodied. And suppose
-                        one went off to another country. Although any of the parents, children,
+                        one another, have not yet died and are still physically embodied. And suppose
+                        one of them went off to another country. Although any of the parents, children,
                         siblings, or cousins might resolve to give and offer a lot of food and drink
-                        to him, such would not happen even in the dreams of the one who had gone off
-                        to the other country. In that case, why bother to talk about food and drink
-                        in reality? Why bother to talk about food and drink dedicated to someone who
-                        has died and has no body? O Great King, how would that person, whose mind
-                        has separated from his body after death, use his immaterial and formless
-                        mind to take possession of the real items of food and drink provided to him
-                        by his children, siblings, and the like? Why would this be a problem? The
-                        answer is that eating and chewing depend on workings of body parts. In that
+                        to that person, none of that would appear to the person who had gone off
+                        to the other country, even in their dreams—let alone food and drink
+                        in reality. So why even mention food and drink dedicated to people who
+                        have died and have no body? O Great King, how would those people, whose minds
+                        have separated from their bodies after death, use their immaterial and formless
+                        minds to take possession of the real items of food and drink provided to them
+                        by their children, siblings, and the like? Why would this be a problem? The
+                        answer is that eating and chewing depend on the workings of body parts. In that
                         case, are the workings of the parts of the body to be found present in the
                         mind?” </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-70"/>
-                    <p tid="46">The Great King then asked: “Blessed One, if this is the case, then
-                        is it useless to offer a deceased individual the food, drink, mounts,
-                        clothes, and ornaments that were beneficial to him in the present
+                    <p tid="46">The Great King then asked, “Blessed One, if that is the case, then
+                        is it useless to offer deceased individuals the food, drink, mounts,
+                        clothes, and ornaments that were beneficial to them in the present
                         world?”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-200"/>
                     <p tid="47">The Blessed One replied, “O Great King, take the case where a
@@ -839,18 +842,18 @@
                         because actions he had done are ripening. And suppose people help<note place="end" xml:id="UT22084-072-008-71" index="35">We follow D, A:
                                 <foreign xml:lang="Bo-Ltn" type="term">bstangs</foreign>; S:
                                 <foreign xml:lang="Bo-Ltn" type="term">btang</foreign>; L:
-                                <foreign xml:lang="Bo-Ltn" type="term">gtang</foreign>
-                        </note> him by [dedicating to him] all sorts of virtuous actions that will
-                        constitute a collection of merit without any non-virtue. In that case, the
-                        person will also be reborn in higher states or attain liberation. On the
+                                <foreign xml:lang="Bo-Ltn" type="term">gtang</foreign>.
+                        </note> that person by [dedicating to him] all sorts of virtuous actions that will
+                        constitute a collection of merit without any nonvirtue. In that case, the
+                        person will be reborn in higher states, or attain liberation. On the
                         other hand, when someone has already taken rebirth, then if one aids<note place="end" xml:id="UT22084-072-008-72" index="36">D, A: <foreign xml:lang="Bo-Ltn" type="term">bstangs</foreign>; S, L:
-                                <foreign xml:lang="Bo-Ltn" type="term">btang</foreign>
-                        </note> him through [dedication of] a virtuous action that constitutes
+                                <foreign xml:lang="Bo-Ltn" type="term">btang</foreign>.
+                        </note> him through [the dedication of] a virtuous action that constitutes
                         merit, that will aid the already reborn person to gain wealth, have good
                         crops, more and more of the pleasures he wishes, as well as honor and
                         respect from all his other fellow beings. However, it is not so that the
-                        deceased individual stays on in the “world of
-                            Death,”<note place="end" xml:id="UT22084-072-008-73" index="37">
+                        deceased individual stays on in the ‘world of
+                            Death,’<note place="end" xml:id="UT22084-072-008-73" index="37">
                             <foreign xml:lang="Bo-Ltn" type="quote">gshin gyi 'jig rten</foreign> is
                             not a usual term, but is probably the same as the more usual <foreign xml:lang="Bo-Ltn">gshin rje’i ’jig rten</foreign>, i.e., the
                             Sanskrit <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>, the
@@ -858,28 +861,28 @@
                             ancestors (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). Cf.
                             Negi s.v. <foreign xml:lang="Bo-Ltn" type="term">gshin rje’i ’jig
                                 rten</foreign> (= <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>). On the Vedic afterlife, <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>, see <ptr target="#UT22084-072-008-125">Bodewitz (1999)</ptr>, <ptr target="#UT22084-072-008-142">Shushan (2011)</ptr>.</note> without
-                        rebirth <ref cRef="F.150.b"/>, and taking on food and drink, mounts,
+                        rebirth, <ref cRef="F.150.b"/> and taking on food and drink, mounts,
                         clothing, and ornaments. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-74"/>
                     <p tid="48">“O Great King, suppose people say that things seen by the worldly
-                        and dreamed of by parents and others are dedicated to the deceased,<note place="end" xml:id="UT22084-072-008-75" index="38">Read with with S,
+                        and dreamed of by parents and others are dedicated to the deceased,<note place="end" xml:id="UT22084-072-008-75" index="38">Read with S,
                             L, C<hi rend="small-caps">ds</hi>: <foreign xml:lang="Bo-Ltn" type="quote">tshe ’phos pa
                                 la</foreign>; D, A: <foreign xml:lang="Bo-Ltn" type="quote">tshe
                                 ’phos pa las</foreign>.</note> and that consequently the dead
-                        person is satisfied with the food and drink, rides mounts, and wears clothes
+                        person is satisfied with the food and drink, rides the mounts, and wears the clothes
                         and ornaments. While this might appear to be so,<note place="end" xml:id="UT22084-072-008-76" index="39">Read 
                             with S, L: <foreign xml:lang="Bo-Ltn" type="quote">… rgyan thogs so zhes smra na / de
                                 ltar snang ba de yang…</foreign>; D, A, C<hi rend="small-caps">ds</hi>: <foreign xml:lang="Bo-Ltn" type="quote">… rgyan thogs so // zhes smra zhing
                                 de ltar snang ba de yang…</foreign>.</note> there are demons and
-                        gandharvas who prey upon the minds of those on the verge of death that make
+                        gandharvas who prey upon the minds of those on the verge of death, and who make
                         such apparitions manifest in that way and [make them seem to be] saying they
-                        are unsatisfied with the food and drink, do not have mounts, and do not wear
-                        clothes and ornaments.<note place="end" xml:id="UT22084-072-008-77" index="40">We have translated on the basis of S and
+                        are unsatisfied with the food and drink, do not have the mounts, and do not wear
+                        the clothes and ornaments.<note place="end" xml:id="UT22084-072-008-77" index="40">We have translated on the basis of S and
                             L. Here is the whole passage in those editions: <foreign xml:lang="Bo-Ltn" type="quote">kye rgyal po chen po ’jig rten pa dag
                                 gang gis mthong ba dang / pha ma la sogs pas rmi lam du rmis te /
                                 tshe ’phos pa la bsngos pas gshin de bza’ btung gis mgu’o // bzhon
                                 pa zhon no // *gos gon no* // rgyan thogs so zhes smra na / de ltar
-                                snang ba de yang bza’ btung gis mi mgu’o / / zhon pa med do // **gos
+                                snang ba de yang bza’ btung gis mi mgu’o // zhon pa med do // **gos
                                 mi gon no** // rgyan mi thogs so zhes smra zhing de ltar snang ba
                                 dag dri za ’chi ka’i sems la nye bar ’jug pa dang / mi ma yin pa dag
                                 gis de ltar snang bar byed pa yod do //</foreign>. *…* omitted in
@@ -888,7 +891,7 @@
                             times in the same sentence. We have tried to take them into account as
                             best as possible, but the translation remains tentative. The basic
                             point, however, seems to be as earlier (see <ptr target="#UT22084-072-008-57"/>), viz., people think that
-                            offerings will enable the dead to eat, ride, be clothed etc., but what
+                            offerings will enable the dead to eat, ride, be clothed, etc., but what
                             actually happens is that certain sorts of gandharvas create an
                             apparition of a dissatisfied deceased person so that they themselves can
                             profit from the clothes, food, etc., offered by relatives to the
@@ -900,17 +903,17 @@
                         sentient beings say and stories they tell, and whatever physical
                         features they exhibit to their parents, siblings, and so forth when on the
                         verge of death, later, after death, they will tell the same stories and so
-                        forth to their parents, siblings, children that they had told earlier before
+                        forth to their parents, siblings, and children that they had told earlier before
                         they died, and they will exhibit the same physical features to them later as
                         they had earlier before their death—such visions and exhibitions supposedly
                         exist. The Great King has asked whether what the worldly say is true or not. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-79"/>
                     <p tid="50">“O Great King, take the case of speech. Speech depends upon the
-                        vocal tract of an embodied person. So, then, if the body of the dead person
-                        is left behind in this world, how could his incorporeal mind ever speak?
-                        Now, when we say that a dead person has a body, we mean that he has taken
-                        rebirth, for which parents were required. So there is no “world of
-                            Death” either.</p>
+                        vocal tract of an embodied person. So then, if the body of the dead person
+                        is left behind in this world, how could their incorporeal mind ever speak?
+                        Now, when we say that a dead person has a body, we mean that they have taken
+                        rebirth, for which parents were required. So there is no ‘world of
+                            Death’ either.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-80"/>
                     <p tid="51">“O Great King, what the worldly call characteristics and distinctive
                         signs of the living<note place="end" xml:id="UT22084-072-008-81" index="41">There are quite divergent readings of more or less equal plausibility.
@@ -920,7 +923,7 @@
                                 ’phos pa’i mtshan ma dang dan rtags ’jig rten pa gang dag smra ba
                                 ni</foreign>; S, L: <foreign xml:lang="Bo-Ltn" type="quote">tshe ma ’phos pa’i mtshan ma dang dan rtags dang bcas pa’i ’jig
                                 rten pa gang dag smra ba ni</foreign>. “What one calls worldlings
-                            who have characteristics and distinctive signs of the living...”</note>
+                            who have characteristics and distinctive signs of the living . . ..”</note>
                         are things fabricated by a type of gandharva called <distinct>the
                             pervader</distinct>. The so-called <foreign xml:lang="Sa-Ltn" type="term">vicana</foreign> sorts of gandharvas, the talkative sorts of
                         yakṣas, and the inquisitive <foreign xml:lang="Bo-Ltn" type="term">bar hi ni
@@ -939,14 +942,14 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-84"/>
                     <p tid="52">At that time Devadatta was present and, not believing what the Blessed One had said, he questioned him:
-                        “Gautama, you have explained whatever distinctive signs there are or are not
-                        in the afterlife after death. From whom did Gautama first hear about them?
+                        “Gautama, you have explained whatever distinctive signs there are, or are not,
+                        in the afterlife that follows death. From whom did you first hear about them, Gautama ?
                         When did you come to know about them? Who heard and knew about them along
                         with you?”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-85"/>
                     <p tid="53">The Blessed One replied, “Devadatta, for countless eons I practiced
                         numerous sorts of austerities, such as sacrificing my body; I purified all
-                        obstructions, perfectly accumulated a great collection of merit and thus
+                        obstructions, perfectly accumulated a great collection of merit, and thus
                         attained omniscient wisdom. There is nothing I do not know concerning any
                         knowable matter before me in the past or in the limitless ten directions in
                         the present, or concerning all knowable matters that will occur in the
@@ -961,7 +964,7 @@
                         order to test whether the Blessed One actually did possess omniscience, he
                         cut samples of a vast number<note place="end" xml:id="UT22084-072-008-87" index="44">
                             <foreign xml:lang="Bo-Ltn" type="quote">shing tha dad pa brgya stong bye
-                                ba dag</foreign>, literally “the one hundred thousand times ten
+                                ba dag</foreign>; literally, “the one hundred thousand times ten
                             billion different sorts of wood.”</note> of different sorts of wood,
                         that is, of all the types of trees here on Jambudvīpa, including sandalwood,
                         waved-leaf fig trees, catechu, and so forth. He burnt them and made small
@@ -978,7 +981,7 @@
                         praised him in the following terms:</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-88"/>
                     <lg tid="56">
-                        <l>“The Blessed One is omniscient,</l>
+                        <l>“The Blessed One is omniscient;</l>
                         <l>What he has said about death must be true.</l>
                         <l>Without previously seeing them or hearing of them,</l>
                         <l>He recognizes these different varieties of ashes of wood.”</l>
@@ -1003,7 +1006,7 @@
                         whose rice was whose, he wrote down the name of every Śākya he took them
                         from and put these names inside the small bags. When the rice bags came to
                         be a full load for an elephant, <ref cRef="F.152.a"/> he went to the Blessed
-                        One and asked, “Blessed One, if your buddha-eye sees all, then please
+                        One and requested of him, “Blessed One, if your buddha-eye sees all, then please
                         recognize, without opening them, which Śākyas’ small bags of rice are
                         which.” And he put down the elephant’s load of small bags in front of the
                         Buddha. </p>
@@ -1011,7 +1014,7 @@
                     <p tid="61">The Blessed One held up each small bag in turn and said, “This one
                         belongs to Śākya Nandaka, this one belongs to Śākya Kaya, this one belongs
                         to Śākya Desire,”<note place="end" xml:id="UT22084-072-008-92" index="45">
-                            <foreign xml:lang="Bo-Ltn" type="term">’dod sred</foreign>. The term has
+                            <foreign xml:lang="Bo-Ltn" type="term">’dod sred</foreign>. This term has
                             Sanskrit equivalents, but it is not sufficiently clear what the
                             equivalent would be if it is being used as a proper name.</note> and so
                         forth, assigning the appropriate Śākya to each bag of rice and thus
@@ -1028,23 +1031,23 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-072-008-94"/>
                     <lg tid="63">
-                        <l>“The world lies about beings’ death</l>
+                        <l>“The world lies about beings’ deaths</l>
                         <l>And how they appear in the beyond.</l>
                         <l>The Blessed One has spoken truly.</l>
-                        <l>Praise and homage to you who see all.”</l>
+                        <l>Praise and homage to you who sees all.”</l>
                     </lg>
                     <p tid="64">They were at a loss for words after offering such praises, and thus
                         remained silent.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-95"/>
                     <p tid="65">The father, the Great King, then spoke. “Blessed One, there are
-                        sentient beings who have committed non-virtues, such as the actions that bring
+                        sentient beings who have committed nonvirtues, such as the actions that bring
                         immediate retribution, on account of which they come to experience
-                        unbearable ripening of such actions. Please explain what sorts of things
+                        the unbearable ripening of such actions. Please explain what sorts of things
                         they should do to attain happiness.”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-96"/>
                     <p tid="66">The Blessed One replied, “O Great King, those sentient beings who
-                        have committed non-virtuous actions, like those actions that bring immediate
+                        have committed nonvirtuous actions, like those actions that bring immediate
                         retribution, will become pure if they sincerely believe in 
                         the <ref cRef="F.152.b"/> ripening of the actions and confess them deeply. If, at
                         death, they regret the negative actions they committed earlier, pay homage,
@@ -1060,20 +1063,20 @@
                             the sense of “transmigrate,” “pass from one life to the next.” When the
                             Tibetan reads <foreign xml:lang="Bo-Ltn" type="quote">rtag pa mi
                                 ’pho</foreign> here, i.e., “it is not something permanent that
-                            transmigrates/passes,” the Tibetan <foreign xml:lang="Bo-Ltn" type="term">mi ’pho</foreign> is to be understood like the term
+                            transmigrates/passes,” the Tibetan <foreign xml:lang="Bo-Ltn" type="term">mi ’pho</foreign> is to be understood like the Sanskrit term
                                 <foreign xml:lang="Sa-Ltn" type="term">asaṃkrama</foreign> (= Tib.
                                 <foreign xml:lang="Bo-Ltn" type="term">mi ’pho ba</foreign>) in
                             verse 5 of the <title xml:lang="Sa-Ltn">Pratītya­samutpāda­kārikās</title>. 
                             See <ptr target="#UT22084-072-008-19"/> in our introduction.</note> nor something
-                        that is extinguished, halted and hence nonexistent. It is neither uncaused,
-                        nor arisen from something without a cause, nor made by an agent. Understand
+                        that is extinguished, halted, and hence nonexistent. It is neither uncaused,
+                        nor arisen from something without a cause, nor made by an external agent. Understand
                         it to be produced by an aggregate of causes and conditions, that is, actions
                         and afflictive emotions.”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-98"/>
                     <p tid="68">The Great King then asked, “Blessed One, if the transmigration and
                         rebirth of sentient beings is not the transmigration of something permanent,
-                        nor of something extinguished, nor without a cause, nor made by an agent,
-                        and if moreover the established fact of rebirth in the world beyond is
+                        nor of something extinguished, nor without a cause, nor made by an external agent,
+                        and if, moreover, the established fact of rebirth in the world beyond is
                         difficult to understand, are there any analogies for it?”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-99"/>
                     <p tid="69">The Blessed One replied, “O Great King, there are eight analogies
@@ -1082,7 +1085,7 @@
                         occurring because of a mirror, (4) an impression and image coming from a
                         stamp, (5) fire coming from a magnifying glass, (6) a sprout arising from a
                         seed, (7) the production of saliva when someone says the word
-                            “sour,” and (8) the sound of an echo. O Great King,
+                            ‘sour,’ and (8) the sound of an echo. O Great King,
                         in these eight analogies, the fact that earlier things give rise to the
                         later ones illustrates how nothing permanent transmigrates. The fact that
                         later things arise from <ref cRef="F.153.a"/> earlier ones illustrates how
@@ -1098,16 +1101,16 @@
                         images from stamps. When there are crystals, sunlight, grass, and wood, we
                         get fire. When there are seeds, earth, and moisture, we get sprouts. When
                         there is salt, a previous experience of drinking salty water, and when the
-                        word “sour” is pronounced, people then begin to salivate.
+                        word ‘sour’ is pronounced, people then begin to salivate.
                         When someone speaks, when there is no other loud sound, and when there is a
                         nearby mountain, then an echo will occur. These are all analogies showing
-                        how sentient beings’ rebirths are not made by agents, but are produced
+                        how sentient beings’ rebirths are not made by external agents, but are produced
                         through the causal conditions of actions and afflictive emotions.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-101"/>
-                    <p tid="71">“Furthermore, O Great King, the teacher illustrates this life. The
-                        student illustrates future lives. Recitation illustrates how consciousness
+                    <p tid="71">“Furthermore, O Great King, the teacher illustrates this life; the
+                        student illustrates future lives; recitation illustrates how consciousness
                         bridges the gap between lives. The earlier lamp illustrates this present
-                        life. The later lamp illustrates future lives. Though the later lamp arose
+                        life; the later lamp illustrates future lives; though the later lamp arose
                         from the earlier lamp, the fact that the one existed before the other
                         illustrates how nothing permanent transmigrates. That the later one arose
                         from the earlier one illustrates how things do not occur without causes. The
@@ -1134,33 +1137,33 @@
                         in both this life and the next exist at one and the same time. To refute
                         them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-204"/>
-                    <p tid="74">Some others might use the mirror analogy to say that the lame are
+                    <p tid="74">“Some others might use the mirror analogy to say that the lame are
                         reborn lame and the fair are reborn fair because the mirror illustrates
                         similarity. To refute them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-104"/>
-                    <p tid="75">Others might use the analogy of the stamp to say that <term type="ignore">god</term>s who have died are reborn as <term type="ignore">god</term>s and that humans who have died are reborn as
+                    <p tid="75">“Others might use the analogy of the stamp to say that <term type="ignore">god</term>s who have died are reborn as <term type="ignore">god</term>s and that humans who have died are reborn as
                         humans. To refute them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-205"/>
                     <p tid="76">“Yet others might use the analogy of the magnifying glass to say
-                        that from virtue come the lower realms and from non-virtue comes high status
+                        that from virtue come the lower realms and from nonvirtue comes high status
                         because a magnifying glass illustrates dissimilarity.<note place="end" xml:id="UT22084-072-008-105" index="47">The point seems to be that the
-                            sūryakānta itself is cool to the touch and yet it emits heat. See <ptr target="#UT22084-072-008-18"/><!--n. 7--> for a verse from Kālidāsa
+                            <foreign xml:lang="Sa-Ltn">sūryakānta</foreign> itself is cool to the touch and yet it emits heat. See <ptr target="#UT22084-072-008-18"/><!--n. 7--> for a verse from Kālidāsa
                             to this effect.</note> To refute them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-106"/>
-                    <p tid="77">Some might use the analogy of the seed to say that one consciousness
+                    <p tid="77">“Some might use the analogy of the seed to say that one consciousness
                         grows to be many. To refute them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-206"/>
-                    <p tid="78">Some too might use the analogy of a sour taste, because it
+                    <p tid="78">“Some too might use the analogy of a sour taste, because it
                         illustrates experience, to say that those who have a history of rebirth as
-                            <term type="ignore">god</term>s will be reborn as <term type="ignore">god</term>s even though they have not done virtuous deeds and that
+                            <term type="ignore">god</term>s will be reborn as <term type="ignore">god</term>s even though they have not done virtuous deeds, and that
                         those who have a history of rebirth in the lower realms will be reborn in
-                        the lower realms even though they have done no non-virtuous deeds. To refute
+                        the lower realms even though they have done no nonvirtuous deeds. To refute
                         them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-107"/>
                     <p tid="79">“Yet some others might use the analogy of the echoing sound to say
                         that rebirth does not come from causes and conditions, as they would
                         maintain that such an analogy illustrates agency. To refute them I taught
-                        the remaining analogies. It is for these reasons that I taught eight
+                        the remaining analogies. It is for these reasons that I taught all eight
                         analogies.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-108"/>
                     <p tid="80">“O Great King, it is not the case that life ceases, with no rebirth
@@ -1168,7 +1171,7 @@
                         life a permanent entity that transmigrates to the hereafter intact. People
                         cannot take rebirth in the hereafter without any dependence upon this life.
                         Nor do they have a rebirth by simply thinking that they <ref cRef="F.154.a"/> will take such and such a rebirth. Rebirth does not occur because people
-                        think that they rely on God and the like and that they will thus be reborn
+                        think that they rely on God and the like, and that they will thus be reborn
                         in the heavens. Nor do people take rebirth thinking that they will be reborn
                         wherever they wish, whether in the heavens or in the lower realms. And
                         rebirth does not occur because people think that they will in any case be
@@ -1176,20 +1179,20 @@
                         conditions. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-109"/>
                     <p tid="81">“Nor can one say that one’s aggregates perish, one dies, and that
-                        afterwards there is nothing at all. One cannot say either that after death
+                        afterward there is nothing at all. One cannot say either that after death
                         in this world, people in the afterlife abide continuously<note place="end" xml:id="UT22084-072-008-110" index="48">The term <foreign xml:lang="Bo-Ltn" type="term">mu chags su</foreign> is obscure. We
                             have taken it as having a sense like that of <foreign xml:lang="Bo-Ltn" type="term">mu mthud kyis</foreign>, “continually.”</note> in the
-                            “world of Death,” and thus do whatever they did in
+                            ‘world of Death,’ and thus do whatever they did in
                         this life without taking rebirth. Nor can one say that consciousness takes
                         rebirth without any halt to the consciousness one has in the present life.
                         One cannot say that the aggregates of this life and the next exist at the
                         same time. Nor can one say that the lame are reborn lame, the fair are
                         reborn fair, and so forth. One cannot say that <term type="ignore">god</term>s who have died are reborn as <term type="ignore">god</term>s
                         and that humans who have died are reborn as humans. Nor can one say that
-                        virtue leads to the lower realms and that non-virtue leads to high status.
+                        virtue leads to the lower realms and that nonvirtue leads to higher status.
                         Many consciousnesses do not develop from one. Beings are not reborn as <term type="ignore">god</term>s without having practiced virtue, nor are they
-                        reborn in the lower realms without having committed some non-virtuous deeds.
-                        Rebirth is not brought about through the actions of a divine agent. </p>
+                        reborn in the lower realms without having committed some nonvirtuous deeds.
+                        Rebirth is not brought about through the actions of an external agent. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-111"/>
                     <p tid="82">“Let us suppose someone asks why these things are not the case. Here
                         is what we would reply. Someone might say about the analogy of a recitation
@@ -1198,7 +1201,7 @@
                         put forth the analogy of the seed. Indeed, if a sprout were to be produced
                         without the seed being destroyed, then the positions of those who accept
                         real selves would be right. However, the sprout is produced upon the
-                        destruction of the seed, i.e., from something that has changed from what it
+                        destruction of the seed—that is, from something that has changed from what it
                         was earlier on.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-112"/>
                     <p tid="83">“Someone might say about the analogy of the lamp that it shows that
@@ -1223,10 +1226,10 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-208"/>
                     <p tid="86">“About the analogy of the magnifying glass, someone might say that
                         it is an illustration of dissimilarity and thus shows that virtue leads to
-                        lower states and non-virtue to higher states. To rule this out we put forth
+                        lower states and nonvirtue to higher states. To rule this out we put forth
                         the analogy of a lamp. A lamp does not give rise to something dissimilar to
                         a lamp, but rather to a lamp. Similarly, it is logical that virtue gives
-                        rise to high status and non-virtue to lower states. </p>
+                        rise to high status and nonvirtue to lower states. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-114"/>
                     <p tid="87">“As for the analogy of the seed, someone might say that it shows
                         that [many different] consciousnesses develop. To rule this out we put forth
@@ -1237,14 +1240,14 @@
                         those who experience a history of birth as <term type="ignore">god</term>s
                         will always be born as <term type="ignore">god</term>s, in spite of doing no
                         virtue, and that those who experience a history of birth in the lower realms
-                        will always be born in lower realms, though they have done no non-virtue. To
+                        will always be born in lower realms, though they have done no nonvirtue. To
                         refute this we put forth the illustration of the mirror, for just as a face
-                        appears in a mirror as it is, so too similar results of virtue and
-                        non-virtue would match [their respective causes] and it would thus be
+                        appears in a mirror as it is, so too the similar results of virtue and
+                        nonvirtue would match [their respective causes] and it would thus be
                         contradictory to make them dissimilar. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-115"/>
                     <p tid="89">“Some might say, with regard to the analogy of echoing sound, that
-                        echoes do not come about unless they are made by an external agent, i.e.,
+                        echoes do not come about unless they are made by an external agent—that is,
                         unless someone shouts. And analogously, so it might be said, beings are not
                         born unless made by an external agent. To rule out that misinterpretation
                         we put forth the illustration of the sour taste. The point is that it is
@@ -1261,8 +1264,9 @@
                         the Blessed One had said. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-211"/>
-                    <p tid="92">Thus ends <title xml:lang="en">The Sūtra of Questions Regarding
-                            Death and Transmigration</title>.</p>
+                    <p tid="92">Thus ends <title xml:lang="en">The Sūtra of the Teaching Regarding
+                        Death and Transmigration</title>.<note place="end" xml:id="UT22084-072-008-212" index="49">The title given here at the end of the sūtra, in all Kangyurs, is <title xml:lang="Bo-Ltn">’chi ’pho ba ji ltar ’gyur ba bstan pa’i mdo</title>, and differs from the main title at the beginning. See <ptr target="#UT22084-072-008-21"/> and <ptr target="#UT22084-072-008-24"/>.</note>
+                    </p>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="100">Colophon</head>
@@ -1359,7 +1363,7 @@
                         Stok Palace Kangyur (<title xml:lang="Bo-Ltn">bka’ ’gyur stog pho brang bris
                             ma</title>). Leh: Smanrtsis shesrig dpemzod, 1980, vol. 86, pp. 511–37.
                         Also available online at <ref target="https://www.tbrc.org/#!rid=W22083">BDRC</ref>, vol. W22083.</bibl>
-                    <bibl xml:id="UT22084-072-008-119">Choné Drakpa Shedrup (<foreign xml:lang="Bo-Ltn">co ne grags pa bshad sgrub</foreign>). <title xml:lang="Bo-Ltn">Lho sgo’i cho ga’i rgyas ’grel gzhan phan nyi
+                    <bibl xml:id="UT22084-072-008-119">Choné Drakpa Shedrup (<foreign xml:lang="Bo-Ltn">co ne grags pa bshad sgrub</foreign>). <title xml:lang="Bo-Ltn">lho sgo’i cho ga’i rgyas ’grel gzhan phan nyi
                             ’od</title>. In <title xml:lang="Bo-Ltn">rje btsun grags pa bshad sgrub
                             kyi gsung ’bum (glog klad par ma)</title>, <title xml:lang="en">The
                             Collected Works by Geluk Master Chone Drakpa Shedrup
@@ -1374,14 +1378,14 @@
                     <bibl xml:id="UT22084-072-008-187">Butön Rinchen Drup (<foreign xml:lang="Bo-Ltn">bu ston rin 
                         chen grub</foreign>). <title xml:lang="Bo-Ltn">chos kyi ’byung gnas gsung  rab rin po 
                             che’i gter mdzod</title>. In: gsung ’bum (zhol par ma/ ldi lir bskyar par brgyab pa), 
-                        vol 24 (ya), pp. 633–1055. New Delhi: International Academy of Indian Culture, 1965–1971.</bibl>
+                        vol. 24 (ya), pp. 633–1055. New Delhi: International Academy of Indian Culture, 1965–1971.</bibl>
                 </div>
                 <div type="section">
                     <head type="section" tid="105">Other Works</head>
-                    <bibl xml:id="UT22084-072-008-125">Bodewitz, H.W. Yonder World in the <title xml:lang="Sa-Ltn">Atharvaveda</title>. <title xml:lang="en">Indo-Iranian
+                    <bibl xml:id="UT22084-072-008-125">Bodewitz, H.W. “Yonder World in the <title xml:lang="Sa-Ltn">Atharvaveda</title>.” <title xml:lang="en">Indo-Iranian
                             Journal</title> 42 (1999): 107–20.</bibl>
                     <bibl xml:id="UT22084-072-008-126">Damdul Namgyal, Geshé. <ref target="https://www.scribd.com/document/54737607/S%C5%AATRA-IN-RESPONSE-TO-A-QUERY-OVER-WHAT-HAPPENS-AFTER-DEATH-A-REVIEW">“Sūtra in Response to
-                        a Query over what Happens After Death: A Review. Buddha’s response to a
+                        a Query over What Happens After Death: A Review. Buddha’s response to a
                         number of questions over the issue of rebirth.”</ref> Unpublished draft on Scribd 
                         (accessed November 11, 2016).</bibl>
                     <bibl xml:id="UT22084-072-008-127">Doniger O’Flaherty, Wendy. “Karma and Rebirth
@@ -1391,13 +1395,14 @@
                     <bibl xml:id="UT22084-072-008-128">Goldstein, Melvyn C. <title xml:lang="en">The
                             New Tibetan-English Dictionary of Modern Tibetan</title>. New Delhi:
                         Munshiram Manoharlal Publishers, 2004.</bibl>
-                    <bibl xml:id="UT22084-072-008-129">Hopkins, Thomas J. “Hindu views of Death and
+                    <bibl xml:id="UT22084-072-008-129">Hopkins, Thomas J. “Hindu Views of Death and
                         Afterlife.” In <title xml:lang="en">Death and Afterlife: Perspectives of the
                             World Religions</title>, edited by H. Obayashi, 143–55. New York:
                         Greenwood Press, 1992.</bibl>
                     <bibl xml:id="UT22084-072-008-130">Jamison, Stephanie W., and Michael Witzel.
                         <title xml:lang="en">
-                            <ref target="http://www.people.fas.harvard.edu/~witzel/vedica.pdf">Vedic Hinduism</ref>
+                            <ref target="http://www.people.fas.harvard.edu/~witzel/vedica.pdf">Vedic 
+                                Hinduism</ref>
                         </title>. 1992/2003 (accessed
                         September 5, 2016). A shortened version appeared in <title xml:lang="en">The
                             Study of Hinduism</title>, edited by A. Sharma, 65–113. Columbia, S.C.:
@@ -1443,7 +1448,7 @@
                     <bibl xml:id="UT22084-072-008-142">Shushan, Gregory. “Afterlife Conceptions in
                         the Vedas.” <title xml:lang="en">Religion Compass</title> 5/6 (2011):
                         202–13.</bibl>
-                    <bibl xml:id="UT22084-072-008-143">Skilling, Peter. “‘Eight Appropriate Similes’
+                    <bibl xml:id="UT22084-072-008-143">Skilling, Peter. “ ‘Eight Appropriate Similes’
                             (<title xml:lang="Bo-Ltn">’Thun pa’i dpe brgyad</title>): Verse 5 of
                         Nāgārjuna’s <title xml:lang="Sa-Ltn">Pratītya­samutpāda­hṛdaya-kārikā</title> and the <title xml:lang="en">Sūtra on the Questions on how Transmigration Occurs</title>.” In <title xml:lang="fr">Mélanges offerts au Vénérable Thích Huyên-Vi à l’occasion
                             de son soixante-dixième anniversaire dirigés par Bhikkhu Tampalawela
@@ -1582,7 +1587,7 @@
                             <term xml:lang="bo">སྐྱུ་རུ་ར།</term>
                             <term xml:lang="Sa-Ltn">āmalaka</term>
                             <term xml:lang="Sa-Ltn">āmalakī</term>
-                            <term type="definition">The Indian <term type="ignore">gooseberry</term>, Emblic Myrobalan.The example of āmalakī in the
+                            <term type="definition">The Indian <term type="ignore">gooseberry</term>, or emblic myrobalan. The simile of an āmalakī in the
                                 palm of one’s hand is used to illustrate yogic perception (<foreign type="term" xml:lang="Sa-Ltn">yogipratyakṣa</foreign>) where the
                                 clarity aspect (compared to a crystal) is emphasized. See, e.g.,
                                 Dharmottara’s <title xml:lang="Sa-Ltn">Nyāyabindhuṭīkā</title> 1.11.
@@ -1617,9 +1622,9 @@
                             <term xml:lang="bo">སྐད་གསར་ཆད།</term>
 
                             <term type="definition">The ninth century revision and codification of
-                                translational equivalents and procedure. It was undertaken during
-                                the reigns of Sad na legs (died 815 <hi rend="small-caps">ce</hi>) and Ral pa can and resulted
-                                in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> and <title xml:lang="Bo-Ltn">sgra sbyor bam po gnyis pa</title>, the very
+                                translational equivalents and procedure in Tibet. It was undertaken during
+                                the reigns of Senalek (<foreign xml:lang="Bo-Ltn">sad na legs</foreign>, d. 815 <hi rend="small-caps">ce</hi>) and Ralpachen (<foreign xml:lang="Bo-Ltn">ral pa can</foreign>, r. 815–838) and resulted
+                                in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> and <title xml:lang="en">Drajor Bampo Nyipa</title> (<title xml:lang="Bo-Ltn">sgra sbyor bam po gnyis pa</title>), the very
                                 influential manuals of translation from Sanskrit to Tibetan.</term>
                         </gloss>
                     </item>
@@ -1649,7 +1654,7 @@
                             <term xml:lang="bo">རྒྱ།</term>
 
                             <term xml:lang="Sa-Ltn">mudrā</term>
-                            <term type="definition">A <term type="ignore">stamp</term> or
+                            <term type="definition">A <term type="ignore">stamp</term>, signet, or
                                 seal.</term>
                         </gloss>
                     </item>
@@ -1711,6 +1716,27 @@
                         </gloss>
                     </item>
                     <item>
+                        <gloss type="term" xml:id="UT22084-072-008-213">
+                            <term>external agent</term>
+                            <term xml:lang="Bo-Ltn">byed pa po </term>
+                            <term xml:lang="bo">བྱེད་པ་པོ།</term>
+                            
+                            <term xml:lang="Sa-Ltn">kartṛ</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-072-008-214">
+                            <term>Śramaṇa Gautama</term>
+                            <term xml:lang="Bo-Ltn">dge sbyong gau ta ma</term>
+                            <term xml:lang="bo">དགེ་སྦྱོང་གཽ་ཏ་མ།</term>
+                            
+                            <term xml:lang="Sa-Ltn">Śramaṇa Gautama</term>
+                            <term type="definition">“The renunciant Gautama,” the name by 
+                                which the Buddha might have been referred to prior to his 
+                                enlightenment or by those who were not his followers.</term>
+                        </gloss>
+                    </item>
+                    <item>
                         <gloss type="person" xml:id="UT22084-072-008-169">
                             <term>Śākya</term>
                             <term xml:lang="Bo-Ltn">shAkya</term>
@@ -1729,7 +1755,7 @@
                             <term xml:lang="bo">དབང་ཕྱུག</term>
 
                             <term xml:lang="Sa-Ltn">īśvara</term>
-                            <term type="definition">The lord of the world; the permanent, single,
+                            <term type="definition">The lord of the world; the permanent, single
                                 agent who created the universe; <term type="ignore">God</term> as
                                 accepted by theistic brahmanical schools.</term>
                         </gloss>
@@ -1825,6 +1851,42 @@
                                 death, Yama, and inhabited by the ancestors (<foreign type="term" xml:lang="Sa-Ltn">pitṛ</foreign>).</term>
                             <term type="definition">See also <ptr target="#UT22084-072-008-6"/>.</term>
                             <term type="alternative">Yamaloka</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-072-008-215">
+                            <term>chiliocosm</term>
+                            <term xml:lang="Bo-Ltn">stong gi ’jig rten gyi khams </term>
+                            <term xml:lang="bo">སྟོང་གི་འཇིག་རྟེན་གྱི་ཁམས།</term>
+                            
+                            <term xml:lang="Sa-Ltn">sāhasralokadhātu</term>
+                            <term type="definition">“A thousand-fold universe,” also called a “small chiliocosm” (<foreign xml:lang="Sa-Ltn">sāhasra­cūḍiko loka­dhātu</foreign>), consisting of a thousand worlds each made up of their own Mount Meru, four continents, sun, moon, and <term type="ignore">god</term> realms.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-072-008-216">
+                            <term>dichiliocosm</term>
+                            <term xml:lang="Bo-Ltn">stong gnyis pa ’jig rten gyi khams </term>
+                            <term xml:lang="bo">སྟོང་གཉིས་པ་འཇིག་རྟེན་གྱི་ཁམས།</term>
+                            
+                            <term xml:lang="Sa-Ltn">dvisāhasra­lokadhātu</term>
+                            <term type="definition">“A twice thousand-fold universe,” i.e. a 
+                                million-fold universe, sometimes called a “second-order midsized-chiliocosm” 
+                                (<foreign xml:lang="Sa-Ltn">dvitīya­madhyama­sāhasra­loka­dhātu</foreign>), 
+                                consisting of a thousand chiliocosms (q.v.).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-072-008-217">
+                            <term>trichiliocosm</term>
+                            <term xml:lang="Bo-Ltn">stong gsum gyi stong chen po’i ’jig rten gyi khams </term>
+                            <term xml:lang="bo">སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོའི་འཇིག་རྟེན་གྱི་ཁམས།</term>
+                            
+                            <term xml:lang="Sa-Ltn">tri­sāhasra­mahā­sāhasra­lokadhātu</term>
+                            <term type="definition">“A thrice thousand-fold universe,” i.e. a 
+                                billion-fold universe, sometimes called a “third-order great chiliocosm” 
+                                (<foreign xml:lang="Sa-Ltn">tṛtīya­mahā­sāhasra­loka­dhātu</foreign>), 
+                                consisting of a billion worlds, i.e. a million chiliocosms (q.v.), or a thousand dichiliocosms (q.v.).</term>
                         </gloss>
                     </item>
                 </list>

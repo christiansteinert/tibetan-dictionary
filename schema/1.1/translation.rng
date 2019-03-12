@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:teix="http://www.tei-c.org/ns/Examples" xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://www.tei-c.org/ns/1.0"><!--
-Schema generated from ODD source 2019-02-26T18:08:49Z. .
+Schema generated from ODD source 2019-03-08T14:47:41Z. .
 TEI Edition: Version 3.5.0. Last updated on
 	29th January 2019, revision 3c0c64ec4
 TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
@@ -42,6 +42,25 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
          </choice>
       </zeroOrMore>
    </define>
+   <define name="endnote">
+      <element name="note">
+         <attribute name="index">
+            <data type="integer"/>
+         </attribute>
+         <attribute name="place">
+            <value>end</value>
+         </attribute>
+         <attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+            <data type="ID"/>
+         </attribute>
+         <zeroOrMore>
+            <choice>
+               <ref name="macro.specialPara"/>
+               <ref name="hi"/>
+            </choice>
+         </zeroOrMore>
+      </element>
+   </define>
    <define name="paragraph">
       <element name="p">
          <attribute name="tid">
@@ -67,7 +86,7 @@ TEI Edition Location: http://www.tei-c.org/Vault/P5/Version 3.5.0/
                   <ref name="ptr"/>
                </zeroOrMore>
                <zeroOrMore>
-                  <ref name="note"/>
+                  <ref name="endnote"/>
                </zeroOrMore>
                <zeroOrMore>
                   <ref name="foreign"/>
@@ -1923,13 +1942,13 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          </zeroOrMore>
          <ref name="att.global.attributes"/>
          <optional>
-            <attribute xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" name="place" a:defaultValue="end">
-               <a:documentation>specifies where this item is placed.</a:documentation>
+            <attribute name="place">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">specifies where this item is placed.</a:documentation>
                <list>
                   <oneOrMore>
                      <choice>
                         <value>end</value>
-                        <a:documentation/>
+                        <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                      </choice>
                   </oneOrMore>
                </list>
@@ -1937,10 +1956,8 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          </optional>
          <optional>
             <attribute name="type">
-               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">characterizes the element in some sense, using any convenient classification scheme or typology.</a:documentation>
-               <data type="token">
-                  <param name="pattern">(\p{L}|\p{N}|\p{P}|\p{S})+</param>
-               </data>
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
             </attribute>
          </optional>
          <optional>
@@ -1957,6 +1974,18 @@ attributes @target and @cRef may be supplied on <name/>.</report>
          </optional>
          <optional>
             <attribute name="user">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="update">
+               <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
+               <text/>
+            </attribute>
+         </optional>
+         <optional>
+            <attribute name="value">
                <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"/>
                <text/>
             </attribute>
@@ -2319,9 +2348,9 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                   </choice>
                </zeroOrMore>
             </element>
-            <optional>
+            <zeroOrMore>
                <ref name="editionStmt"/>
-            </optional>
+            </zeroOrMore>
             <choice>
                <ref name="publicationStmt"/>
                <element name="publicationStmt">
@@ -2332,7 +2361,14 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                      </attribute>
                   </element>
                   <zeroOrMore>
-                     <ref name="note"/>
+                     <choice>
+                        <element name="note">
+                           <text/>
+                        </element>
+                        <element name="date">
+                           <rng:empty xmlns:rng="http://relaxng.org/ns/structure/1.0"/>
+                        </element>
+                     </choice>
                   </zeroOrMore>
                </element>
             </choice>
@@ -2416,7 +2452,28 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                </oneOrMore>
             </element>
             <optional>
-               <ref name="notesStmt"/>
+               <element name="notesStmt">
+                  <zeroOrMore>
+                     <element name="note">
+                        <optional>
+                           <attribute name="type"/>
+                        </optional>
+                        <optional>
+                           <attribute name="date-time"/>
+                        </optional>
+                        <optional>
+                           <attribute name="value"/>
+                        </optional>
+                        <optional>
+                           <attribute name="user"/>
+                        </optional>
+                        <optional>
+                           <attribute name="update"/>
+                        </optional>
+                        <text/>
+                     </element>
+                  </zeroOrMore>
+               </element>
             </optional>
          </element>
       </element>
@@ -2468,7 +2525,9 @@ Elements 7.2.5. Speech Contents]</a:documentation>
       <element name="edition">
          <a:documentation xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">describes the particularities of one edition of a text. [2.2.2. The Edition Statement]</a:documentation>
          <text/>
-         <ref name="date"/>
+         <optional>
+            <ref name="date"/>
+         </optional>
       </element>
    </define>
    <define name="publicationStmt">
@@ -2513,7 +2572,9 @@ Elements 7.2.5. Speech Contents]</a:documentation>
                </attribute>
             </element>
             <zeroOrMore>
-               <ref name="note"/>
+               <element name="note">
+                  <text/>
+               </element>
             </zeroOrMore>
             <element name="date">
                <data type="date"/>

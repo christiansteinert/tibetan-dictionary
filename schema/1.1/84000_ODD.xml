@@ -49,7 +49,7 @@
         <moduleRef key="tei" except=""/>
         <moduleRef key="header" include="availability edition editionStmt fileDesc idno licence notesStmt publicationStmt sourceDesc teiHeader titleStmt"/>
         <moduleRef key="textstructure" include="TEI back body div front text trailer"/>
-        <moduleRef key="linking" include="ab seg"/>
+        <moduleRef key="linking" include="seg"/>
         <classSpec type="atts" ident="att.breaking" mode="delete"/>
         <classSpec type="atts" ident="att.datable" mode="delete"/>
         <classSpec type="atts" ident="att.citing" mode="delete"/>
@@ -171,6 +171,29 @@
           </attList>
         </classSpec>
         <classSpec type="atts" ident="att.written" mode="delete"/>
+        <macroSpec ident="endnote" mode="add">
+          <content>
+            <rng:element xmlns="http://relaxng.org/ns/structure/1.0" name="note">
+              <attribute name="index">
+                <rng:data type="integer"/>
+              </attribute>
+              <attribute name="place">
+                <rng:choice>
+                  <rng:value>end</rng:value>
+                </rng:choice>
+              </attribute>
+              <attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+                <rng:data type="ID"/>
+              </attribute>
+              <rng:zeroOrMore>
+                <rng:choice>
+                  <rng:ref name="macro.specialPara"/>
+                  <rng:ref name="hi"/>
+                </rng:choice>
+              </rng:zeroOrMore>
+            </rng:element>
+          </content>
+        </macroSpec>
         <macroSpec ident="paragraph" mode="add">
           <content>
             <rng:element name="p">
@@ -201,7 +224,7 @@
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ptr"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="note"/>
+                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="endnote"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="foreign"/>
@@ -304,9 +327,6 @@
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
@@ -362,9 +382,6 @@
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
@@ -431,9 +448,6 @@
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
@@ -490,9 +504,6 @@
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
@@ -553,9 +564,6 @@
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
@@ -612,9 +620,6 @@
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="paragraph"/>
-                  </rng:zeroOrMore>
-                  <rng:zeroOrMore>
-                    <ref xmlns="http://relaxng.org/ns/structure/1.0" name="ab"/>
                   </rng:zeroOrMore>
                   <rng:zeroOrMore>
                     <ref xmlns="http://relaxng.org/ns/structure/1.0" name="q"/>
@@ -692,39 +697,6 @@
               </TEI>
             </egXML>
           </exemplum>
-        </elementSpec>
-        <elementSpec ident="ab" module="linking" mode="change">
-          <classes>
-            <memberOf key="att.global" mode="delete"/>
-            <memberOf key="att.global.rendition" mode="delete"/>
-            <memberOf key="att.global.linking" mode="delete"/>
-            <memberOf key="att.global.facs" mode="delete"/>
-            <memberOf key="att.global.change" mode="delete"/>
-            <memberOf key="att.global.responsibility" mode="delete"/>
-            <memberOf key="att.global.source" mode="delete"/>
-            <memberOf key="att.declaring" mode="delete"/>
-            <memberOf key="att.gragmentable" mode="delete"/>
-            <memberOf key="att.written" mode="delete"/>
-            <memberOf key="model.pLike" mode="add"/>
-          </classes>
-          <attList>
-            <attDef ident="type"/>
-            <attDef ident="tid" usage="req">
-              <desc>Numbers paragraph and line groups in a particular text. Also applicable to the
-                  <gi>ab</gi> element.</desc>
-            </attDef>
-          </attList>
-          <exemplum>
-            <egXML xmlns="http://www.tei-c.org/ns/Examples">
-              <ab type="mantra" tid="65">
-                <foreign xml:lang="Sa-Ltn" type="mantra">tadyathā vīmude vītide picarite pigarite
-                  karaṭi karavīra swāri madhura­ghoṣe śatahanita bhaṣitaghe akke nakke vika ḍitā
-                  vikuṭite viraje vighaṣṭavāte</foreign> | </ab>
-            </egXML>
-          </exemplum>
-          <remarks>
-            <p>Used for mantras. Will appear indented in the web display</p>
-          </remarks>
         </elementSpec>
         <elementSpec ident="abbr" module="core" mode="change">
           <classes>
@@ -1283,9 +1255,6 @@
                                 <rng:ref name="paragraph"/>
                               </rng:zeroOrMore>
                               <rng:zeroOrMore>
-                                <rng:ref name="ab"/>
-                              </rng:zeroOrMore>
-                              <rng:zeroOrMore>
                                 <rng:ref name="q"/>
                               </rng:zeroOrMore>
                               <rng:zeroOrMore>
@@ -1536,9 +1505,6 @@
                           <rng:ref name="paragraph"/>
                         </rng:zeroOrMore>
                         <rng:zeroOrMore>
-                          <rng:ref name="ab"/>
-                        </rng:zeroOrMore>
-                        <rng:zeroOrMore>
                           <rng:ref name="q"/>
                         </rng:zeroOrMore>
                         <rng:zeroOrMore>
@@ -1598,9 +1564,6 @@
                         </rng:zeroOrMore>
                         <rng:zeroOrMore>
                           <rng:ref name="paragraph"/>
-                        </rng:zeroOrMore>
-                        <rng:zeroOrMore>
-                          <rng:ref name="ab"/>
                         </rng:zeroOrMore>
                         <rng:zeroOrMore>
                           <rng:ref name="q"/>
@@ -1888,7 +1851,7 @@
           </classes>
           <content>
             <textNode/>
-            <elementRef key="date"/>
+            <elementRef key="date" minOccurs="0"/>
           </content>
           <exemplum>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
@@ -2141,7 +2104,7 @@
                   </bibl>
                 </sourceDesc>
                 <notesStmt>
-                  <note type="lastUpdated">Last updated at 22/06/2018 at 12:46:03 by admin</note>
+                  <note type="lastUpdated" date-time="2019-02-26T08:34:43.421Z" user="celso">26/02/2019 08:34:43</note>
                 </notesStmt>
               </fileDesc>
             </egXML>
@@ -2344,9 +2307,6 @@
                         <rng:ref name="paragraph"/>
                       </rng:zeroOrMore>
                       <rng:zeroOrMore>
-                        <rng:ref name="ab"/>
-                      </rng:zeroOrMore>
-                      <rng:zeroOrMore>
                         <rng:ref name="q"/>
                       </rng:zeroOrMore>
                       <rng:zeroOrMore>
@@ -2405,9 +2365,6 @@
                         <rng:ref name="ptr"/>
                       </rng:zeroOrMore>
                       <rng:zeroOrMore>
-                        <rng:ref name="ab"/>
-                      </rng:zeroOrMore>
-                      <rng:zeroOrMore>
                         <rng:ref name="lg"/>
                       </rng:zeroOrMore>
                       <rng:zeroOrMore>
@@ -2441,9 +2398,6 @@
                               </rng:zeroOrMore>
                               <rng:zeroOrMore>
                                 <rng:ref name="paragraph"/>
-                              </rng:zeroOrMore>
-                              <rng:zeroOrMore>
-                                <rng:ref name="ab"/>
                               </rng:zeroOrMore>
                               <rng:zeroOrMore>
                                 <rng:ref name="q"/>
@@ -3368,7 +3322,6 @@
             <attDef ident="targetEnd" mode="delete"/>
             <attDef ident="anchored" mode="delete"/>
             <attDef ident="place" mode="change" usage="opt">
-              <defaultVal>end</defaultVal>
               <valList type="closed" mode="replace">
                 <valItem ident="end"/>
               </valList>
@@ -3376,26 +3329,31 @@
             <attDef ident="index" mode="add" usage="opt">
               <desc>Gives the number of the note.</desc>
             </attDef>
-            <attDef ident="type" mode="change">
-              <valList type="closed">
-                <valItem ident="lastUpdated"/>
-              </valList>
+            <attDef ident="type" mode="replace">
               <remarks>
                 <p>Here the type attribute is only used for the one <gi>note</gi> element found in
-                  the <gi>notesStmt</gi> to indicate that it shows when the file was last
-                  updated.</p>
+                  the <gi>notesStmt</gi> to indicate information about file updates. Type indicates the type of note. This is automated by the forms in operations.</p>
               </remarks>
             </attDef>
-            <attDef ident="date-time" mode="add">
+            <attDef ident="date-time" mode="add" usage="opt">
               <remarks>
-                <p>Only used in the <gi>note</gi> in the <gi>notesStmt</gi> to indicate that it shows when the file was last
-                  updated.</p>
+                <p>Only used in the <gi>note</gi> in the <gi>notesStmt</gi> to indicate a timestamp for when the note was added. This is automated by the forms in operations.</p>
               </remarks>
             </attDef>
-            <attDef ident="user" mode="add">
+            <attDef ident="user" mode="add" usage="opt">
               <remarks>
                 <p>Only used in the <gi>note</gi> in the <gi>notesStmt</gi> to indicate that it shows by who the file was last
-                  updated.</p>
+                  updated. This is automated by the forms in operations.</p>
+              </remarks>
+            </attDef>
+            <attDef ident="update" mode="add" usage="opt">
+              <remarks>
+                <p>if <att>type</att> = 'update' then this is the type of update. This is automated by the forms in operations.</p>
+              </remarks>
+            </attDef>
+            <attDef ident="value" mode="add" usage="opt">
+              <remarks>
+                <p>if <att>type</att> = 'update' then this is the value of the update. This is automated by the forms in operations.</p>
               </remarks>
             </attDef>
           </attList>
@@ -3412,12 +3370,13 @@
           <exemplum>
             <p>There is one <gi>note</gi> element found at in the <gi>notesStmt</gi> within the
                 <gi>teiHeader</gi>. This <gi>note</gi> simply indicates the last update for the file
-              and is unrelated to the endnotes of the text. For this one exceptional occurrence, the
-                <gi>note</gi> will have the <att>type</att> attribute with the value, "lastUpdated",
-              and it does not use the <att>xml:id</att> attribute or the <att>index</att> attribute. </p>
+              and is unrelated to the endnotes of the text. For this one occurrence, the
+                <gi>note</gi> will have the <att>type</att>, <att>date-time</att>, <att>user</att>, <att>update</att>, and <att>value</att> attributes; 
+              and it does not use the <att>xml:id</att> attribute or the <att>index</att> attribute. This will be maintained by the forms in operations
+            and does not need to be manually entered by markup editors.</p>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <notesStmt>
-                <note type="lastUpdated">Last updated at 29/01/2018 at 10:41:13 by admin</note>
+                <note type="lastUpdated" date-time="2019-03-03T20:47:51.274Z" user="celso">03/03/2019 20:47:51</note>
               </notesStmt>
             </egXML>
           </exemplum>
@@ -3436,7 +3395,7 @@
           <exemplum>
             <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <notesStmt>
-                <note type="lastUpdated">Last updated at 14/02/2018 at 15:33:53 by admin</note>
+                <note type="lastUpdated" date-time="2019-02-26T08:34:43.421Z" user="celso">26/02/2019 08:34:43</note>
               </notesStmt>
             </egXML>
           </exemplum>
@@ -3598,9 +3557,9 @@
               </rng:element>
               <!-- note -->
               <rng:zeroOrMore>
-                <rng:ref name="note">
+                <rng:element name="note">
                   <rng:text/>
-                </rng:ref>
+                </rng:element>
               </rng:zeroOrMore>
               <!-- date -->
               <rng:element name="date">
@@ -4038,20 +3997,10 @@
                 </rng:zeroOrMore>
               </rng:element>              
               <!-- editionStmt -->
-              <optional xmlns="http://relaxng.org/ns/structure/1.0">
-                <rng:ref name="editionStmt">
-                  <rng:element name="edition">
-                    <rng:zeroOrMore>
-                      <rng:choice>
-                        <rng:text/>
-                        <rng:ref name="date">
-                          <rng:text/>
-                        </rng:ref>
-                      </rng:choice>
-                    </rng:zeroOrMore>
-                  </rng:element>
+              <rng:zeroOrMore>
+                  <rng:ref name="editionStmt">
                 </rng:ref>
-              </optional>
+              </rng:zeroOrMore>
               <!-- publicationStmt -->
               <!--two content models are placed here, one for translations and one for placeholders. The placeholder content
                   model is less restrictive. They are divided with an "rng:choice" element-->
@@ -4066,11 +4015,14 @@
                       <rng:data type="ID"/>
                     </attribute>
                   </rng:element>
-                  <rng:zeroOrMore>
-                    <rng:ref name="note">
-                      <rng:text/>
-                    </rng:ref>
-                  </rng:zeroOrMore>
+                    <rng:zeroOrMore>
+                      <rng:choice>
+                        <rng:element name="note">
+                          <rng:text/>
+                        </rng:element>
+                        <rng:element name="date"/>
+                      </rng:choice>
+                    </rng:zeroOrMore>                  
                 </rng:element>
               </rng:choice>
               <!-- sourceDesc -->
@@ -4161,22 +4113,28 @@
               </rng:element>
               <!-- notesStmt -->
               <optional xmlns="http://relaxng.org/ns/structure/1.0">
-                <rng:ref name="notesStmt">
+                <rng:element name="notesStmt">
                   <rng:zeroOrMore>
-                    <rng:ref name="note">
+                    <rng:element name="note">
                       <optional>
-                        <attribute name="type">
-                          <rng:choice>
-                            <rng:value>lastUpdated</rng:value>
-                          </rng:choice>
-                        </attribute>
+                        <attribute name="type"/>
+                      </optional>
+                      <optional>
                         <attribute name="date-time"/>
-                        <attribute name="user"/>                       
+                      </optional>
+                      <optional>
+                        <attribute name="value"/>
+                      </optional>
+                      <optional>
+                        <attribute name="user"/>
+                      </optional>
+                      <optional>
+                        <attribute name="update"/>
                       </optional>
                       <rng:text/>
-                    </rng:ref>
+                    </rng:element>
                   </rng:zeroOrMore>
-                </rng:ref>
+                </rng:element>
               </optional>
             </rng:element>
           </content>
@@ -4244,7 +4202,7 @@
                     </bibl>
                   </sourceDesc>
                   <notesStmt>
-                    <note type="lastUpdated">Last updated at 22/06/2018 at 12:46:03 by admin</note>
+                    <note type="lastUpdated" date-time="2019-02-26T08:34:43.421Z" user="celso">26/02/2019 08:34:43</note>
                   </notesStmt>
                 </fileDesc>
               </teiHeader>
@@ -4585,19 +4543,19 @@
           </list>
         </div>
         <div>
-          <head>Transform the New DOC To TEI-XML</head>
+          <head>Transform the New DOCX To TEI-XML</head>
           <list>
             <head>
               <hi rend="bold">Running the Document through the Conversion Script:</hi>
             </head>
-            <item>Go to <ref target="http://34.195.160.84:8080/exist/apps/84000-import">this
-                conversion app we have created </ref> and import the .docx created from entering the
-              translation into the template. The app will perform the conversion and the output .xml
-              file can be found in the 84000 Collaboration/apps/84000-import-data/TEIDocs
-              collection.</item>
-            <item>Occasionally the app may be down or give you a permissions error. If it says that
+            <item>Use this <ref target="http://operations.84000-translate.org/index.html">conversion app on the project management page</ref>. First click on the "Search"
+              tab and locate the file using the Tohoku number. Once you have found the text click on "edit
+              headers", From there you can expand the "submissions" section and upload the .docx there.
+              The app will perform the conversion and the output .xml file can be found in the 84000 Collaboration/apps/84000-import-data folder. 
+            There will be a unique folder created with the name of the texts xml:id number.</item>
+            <item>Occasionally the app may be down or the project management page may give you a permissions error. If it says that
               permission is denied you should email the lead technician who handles the server's
-              permissions (currently Dominic). Alternatively, it is also possible to convert the
+              permissions (Dominic). Alternatively, it is also possible to convert the
               word .docx created in the template through the <ref target="http://oxgarage.tei-c.org/">oXgarage website</ref>. Convert the file to a
               "TEI P5 XML Document" and run our own .xslt script on the document. The .xslt script
               is in apps/84000-import-data/xsl. (<ref target="84000_ODD.html#index.xml-back.1_div.8">Instructions for running an .xslt script can be found in Appendix H</ref>)</item>
@@ -4660,28 +4618,37 @@
               <hi rend="bold">Paste the XML into the Placeholder File and Check
                 <gi>teiHeader</gi>:</hi>
             </head>
-            <item> When you have finished converting the document into an XML file, it is time to
+            <item> When you have finished converting the document into an TEI-XML file, it is time to
               paste it into the database. There should already be a placeholder file for each of the
               Kangyur and Tengyur texts. Go to 84000 Collaboration &gt; apps &gt; 84000-data &gt;
               tei &gt; translations, and you will see the "kangyur" and "tengyur" folders. Each of
               these folders in turn contain a "placeholders" folder and a "translations" folder.
               Find the placeholder file right click and select "cut" then move it into the sibling "translations"
               folder by right and select "paste" (don't use "copy" and "paste" as this will reset the files permissions). 
+            </item>
+            <item>
               You can then begin pasting the text from the XML you just converted into the placeholder
-              text. Most of the placeholder files contain only the <gi>teiHeader</gi>, but some may
-              contain additional information. In general, try to preserve all the information from
+              text. The placeholder files mostly just contain the <gi>teiHeader</gi>, however, most of this is important
+              information, be sure not to overwrite any of the
+              data that is already present in the placeholder file. In general, try to preserve all the information from
               both sources, and if there is any data that is contradictory between the placeholder
-              file and the XML generated from the script, then comment out the data in the
-              placeholder file and make a note of this in your final list of notes and issues. </item>
+              file and the XML generated from the script, then comment out the data coming from the
+              converted file and make a note of this in your final list of notes and issues. However, 
+            the English titles from the converted new translation will be more up to date, and so these
+            can be used in place of the old ones from the placeholder file.</item>
             <item> The placeholder <gi>titleStmt</gi> should already contain some of the titles for
               the text, but be sure to update any titles from the new translation file, as they may
-              have added the Chinese or other such titles. Also check the original word document, as
-              the conversion script is quite rigid in terms of the titles, some of which might
-              disappear if they were not entered properly or if there were more alternative titles
-              than the usual nine. The actual order of the titles doesn't matter because the parser
+              have added the Chinese or other such titles. There should be a minimum of nine titles:
+              4 Main Titles (Sanskrit, Tibetan, Wylie, English), 4 Long Titles (Sanskrit, Tibetan, Wylie, English), and
+              1 Chinese. Any additional variant <gi>title</gi>s can be added after this as type="otherTitle". 
+              The actual order of the titles doesn't matter because the parser
               will display them in the same order no matter what order the XML is in, but if one or
               more of the nine titles isn't present, leave an empty element there as a place holder,
               e.g., &lt;title type="otherTitle" xml:lang="zh"/&gt;.</item>
+            <item>IMPORTANT: Also check the original word document for additional titles or authors, as
+              the conversion script is quite rigid, and some of them might
+              disappear if they were not entered properly. Also if there were more alternative titles
+              than the usual nine, or additional authors, these will need to be added manually. </item>
             <item> To display the text on the Utilities page, you will need to change the "status"
               attribute within the <gi>publicationStmt</gi>. It should be at "2.b" during the
               copyediting phase, and now for the markup you should change it to "2.a." The text will
@@ -4689,6 +4656,8 @@
                 Utilities Page</ref>. Here you will be able to see how the text will be displayed on
               the webpage before it is published on the official 84000 page. Click on the link that
               says "html" next to the text to see the web display.</item>
+            <item>Alternatively, much of the <gi>teiHeader</gi> may also be edited directly from <ref target="http://operations.84000-translate.org/index.html">the 
+            project management page</ref>.</item>
           </list>
           <list>
             <head>
@@ -5614,6 +5583,8 @@
           <p>
             <ref target="84000_ODD.html">return to table of contents</ref>
           </p>
+          <p>Note, if there is an ampersand "&amp;" in the url address this will be read incorrectly in the TEI. The ampersand
+          character itself should be replaced by the ampersand character code "&amp;amp;". The link should now work properly.</p>
         </div>
       </div>
       <div>
@@ -6059,7 +6030,7 @@
               <egXML xmlns="http://www.tei-c.org/ns/Examples">c ident="front"</egXML> and this will
             take you to that section of the ODD.</item>
           <item>Adding new elements will require creating a new <gi>elementSpec</gi> and adding it
-            to the ODD. To adding or modifying attributes can be done in that specific element's
+            to the ODD. Adding or modifying attributes can be done in that specific element's
               <gi>attList</gi>. For example here is the <gi>attList</gi> for the <gi>title</gi>
             element: <egXML xmlns="http://www.tei-c.org/ns/Examples">
               <attList>

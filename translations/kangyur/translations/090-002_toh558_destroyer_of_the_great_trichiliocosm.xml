@@ -18,9 +18,10 @@
                 <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
                 <author role="translatorEng" ref="contributors.xml#person-51">James Gentry</author>
                 <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.21 <date>2016</date>
+                <edition>v 1.23 <date>2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -56,7 +57,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:27:32 by admin</note>
+                <note type="lastUpdated" date-time="2019-03-10T17:14:50.965Z" user="celso">10/03/2019 17:14:50</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -196,7 +197,7 @@
         </front>
         <body>
             <div type="translation">
-                <head type="translation" tid="491">THE TRANSLATION</head>
+                <head type="translation" tid="491">The Translation</head>
                 <head type="titleHon" tid="492">The Sūtra</head>
                 <head type="titleMain" tid="493">Destroyer of the Great Trichiliocosm</head>
                 <div type="section">
@@ -3206,7 +3207,8 @@
                             Mantra</title>. Venerable Blessed One, you have instructed that these sūtras should be upheld by those
                         who refrain from the five kinds of impure food.<note place="end" xml:id="UT22084-090-002-766" index="32">Tib. <foreign type="term" xml:lang="Bo-Ltn">zas sna lnga</foreign>; Skt. <foreign type="term" xml:lang="Sa-Ltn">pañcāmiṣa</foreign>. The <foreign type="term" xml:lang="Sa-Ltn">ṭīka</foreign>
                             (F.89.b.7) here describes the “five kinds of food” as “food that is mixed with meat, which is the very
-                            nature of desire and so forth.” See also note <ptr target="#UT22084-090-002-768"/><!--17-->.</note>
+                            nature of desire and so forth.” <!--See also <ptr target="#UT22084-090-002-768"/><!-17->.-->
+                        </note>
                         You have also said that we should take ordination and live on alms. However, Blessed One, there are very
                         few alms that are unmixed with the five kinds of impure food. In this way, since there are many more that
                         are mixed with the five kinds of impure food, how, Venerable Blessed One, should we conduct ourselves in
@@ -5801,6 +5803,7 @@
                             <term xml:lang="Sa-Ltn">pañcāmiṣa</term>
                             <term type="definition">The “five kinds of [impure] food” are described in the <title xml:lang="Sa-Ltn">ṭīka</title> (F.80.b.) as
                                 “meat, anything mixed with garlic, beer, fish, and so forth.” </term>
+                            <term type="alternative">five kinds of impure food</term>
                         </gloss>
                     </item>
                 </list>
