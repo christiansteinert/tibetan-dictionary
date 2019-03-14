@@ -4556,7 +4556,7 @@
             <item>Occasionally the app may be down or the project management page may give you a permissions error. If it says that
               permission is denied you should email the lead technician who handles the server's
               permissions (Dominic). Alternatively, it is also possible to convert the
-              word .docx created in the template through the <ref target="http://oxgarage.tei-c.org/">oXgarage website</ref>. Convert the file to a
+              word .docx created in the template through the <ref target="http://oxgarage.tei-c.org/">oXgarage website</ref> or <ref target="https://oxgarage2.tei-c.org/#">it's mirror site</ref>. Convert the file to a
               "TEI P5 XML Document" and run our own .xslt script on the document. The .xslt script
               is in apps/84000-import-data/xsl. (<ref target="84000_ODD.html#index.xml-back.1_div.8">Instructions for running an .xslt script can be found in Appendix H</ref>)</item>
           </list>
@@ -4565,8 +4565,7 @@
               <hi rend="bold">Checking the XML Conversion before You Begin Editing:</hi>
             </head>
             <item>This should create a file that is closer to what we want. However, the script is
-              definitely not perfect, and many sections will need some reworking, particularly the
-                <gi>teiHeader</gi>.</item>
+              definitely not perfect, and many sections will need some reworking.</item>
             <item>If the "verse" styles were applied appropriately in the template, then the script
               should put them correctly into <gi>lg</gi> and <gi>l</gi> elements. It should also
               preserve and convert any italic markup within the verses. The script is able to do
@@ -4615,11 +4614,10 @@
           <head>Edit the XML</head>
           <list>
             <head>
-              <hi rend="bold">Paste the XML into the Placeholder File and Check
-                <gi>teiHeader</gi>:</hi>
+              <hi rend="bold">Merge the Converted XML into the Placeholder File:</hi>
             </head>
             <item> When you have finished converting the document into an TEI-XML file, it is time to
-              paste it into the database. There should already be a placeholder file for each of the
+              transfer it into the translations folder. There should already be a placeholder file for each of the
               Kangyur and Tengyur texts. Go to 84000 Collaboration &gt; apps &gt; 84000-data &gt;
               tei &gt; translations, and you will see the "kangyur" and "tengyur" folders. Each of
               these folders in turn contain a "placeholders" folder and a "translations" folder.
@@ -4629,35 +4627,60 @@
             <item>
               You can then begin pasting the text from the XML you just converted into the placeholder
               text. The placeholder files mostly just contain the <gi>teiHeader</gi>, however, most of this is important
-              information, be sure not to overwrite any of the
-              data that is already present in the placeholder file. In general, try to preserve all the information from
-              both sources, and if there is any data that is contradictory between the placeholder
-              file and the XML generated from the script, then comment out the data coming from the
-              converted file and make a note of this in your final list of notes and issues. However, 
-            the English titles from the converted new translation will be more up to date, and so these
-            can be used in place of the old ones from the placeholder file.</item>
+              information and should not be overwritten. 
+              The converted XML will have directions in the form of comments, which will tell you specifically
+              what elements within the teiHeader need to be added to the placeholder, and which to be left as is. 
+              In general, try to preserve all pertinent information from both sources, and if there is any 
+              data that seems to be contradictory, comment out the additional data and make a note of this in your 
+              final list of notes and issues.</item>
             <item> The placeholder <gi>titleStmt</gi> should already contain some of the titles for
-              the text, but be sure to update any titles from the new translation file, as they may
-              have added the Chinese or other such titles. There should be a minimum of nine titles:
+              the text, but the English titles should be updated according to the new translation (in this
+              one case it is fine to overwrite the placeholder titles), add any of the titles that are not
+              already in the placeholder. There should be a minimum of nine titles:
               4 Main Titles (Sanskrit, Tibetan, Wylie, English), 4 Long Titles (Sanskrit, Tibetan, Wylie, English), and
-              1 Chinese. Any additional variant <gi>title</gi>s can be added after this as type="otherTitle". 
+              1 Chinese. Any additional variant <gi>title</gi>s (whether coming from the converted file or already
+              present in the placeholder) should be added after this as type="otherTitle". 
               The actual order of the titles doesn't matter because the parser
               will display them in the same order no matter what order the XML is in, but if one or
-              more of the nine titles isn't present, leave an empty element there as a place holder,
+              more of the nine default titles are not present, leave an empty element there as a place holder,
               e.g., &lt;title type="otherTitle" xml:lang="zh"/&gt;.</item>
-            <item>IMPORTANT: Also check the original word document for additional titles or authors, as
+            <item>Also check the original word document for additional titles or authors, as
               the conversion script is quite rigid, and some of them might
-              disappear if they were not entered properly. Also if there were more alternative titles
-              than the usual nine, or additional authors, these will need to be added manually. </item>
+              disappear if they were not entered properly.</item>
+            <item>Alternatively, if you prefer, the titles can also be edited from <ref target="http://operations.84000-translate.org/index.html">the project management page</ref>
+              using the original .docx as a reference. The project management page is linked directly to the teiHeaders in the XML.</item>
+          </list>
+          <list>
+            <head>
+                            <hi rend="bold">Edit the Contributors from Project Management</hi>
+                        </head>
+            <item>Open <ref target="http://operations.84000-translate.org/index.html">the 
+              project management page</ref>. Find the text by searching the Toh number, then
+              click on "edit headers" From here click on the "contributors" section. </item>
+            <item>The app's window should show you all the contributor's information as it currently
+              appears in both the &lt;author role="translatorMain"&gt; node and in the "acknowledgements".
+              Here you will need to enter in each contributor's (a) role, (b) their official name in the data base, which
+            should be selected from a drop down list, and (c) the "expression:" for how it appears as written in the
+            acknowledgements. When you click on "save" it will automatically add these contributors to the teiHeader with 
+            the proper element and proper <att>ref</att> identification.</item>
+          </list>
+          <list>
+            <head>
+                            <hi rend="bold">Edit Text Status from Project Management</hi>
+                        </head>
+            <item>Click on the "status". From this window you will be able to see various features regarding the 
+            text's status, some of which corresponds to data in the <gi>teiHeader</gi>, and some of this data
+              is contained in separate data files. In the right column you will see a checklist for "Current Tasks".
+            Here you can see the text's current stage within the work flow. You may "add to current tasks" as needed. </item>
             <item> To display the text on the Utilities page, you will need to change the "status"
               attribute within the <gi>publicationStmt</gi>. It should be at "2.b" during the
-              copyediting phase, and now for the markup you should change it to "2.a." The text will
+              copyediting phase, and now for the markup you should change it to "2.a." (Although it has probably already 
+              been updated by the script). The text will
               now appear on <ref target="http://utilities.84000-translate.org/translations.html">the
                 Utilities Page</ref>. Here you will be able to see how the text will be displayed on
               the webpage before it is published on the official 84000 page. Click on the link that
               says "html" next to the text to see the web display.</item>
-            <item>Alternatively, much of the <gi>teiHeader</gi> may also be edited directly from <ref target="http://operations.84000-translate.org/index.html">the 
-            project management page</ref>.</item>
+            
           </list>
           <list>
             <head>
@@ -4711,7 +4734,7 @@
               unusual.</item>
             <item>When you first get to the <gi>body</gi> of the text, you may notice that the title
             has been repeated with two lines containing separate <gi>p</gi> and <gi>milestone</gi>
-              tags. For example:
+              tags. For example: 
               <egXML xmlns="http://www.tei-c.org/ns/Examples">
                 <body>
                   <div type="translation">
@@ -4977,6 +5000,15 @@
               </egXML> Be default the script will convert every paragraph into a <gi>p</gi> element,
               so these <gi>trailer</gi>s should be manually applied if they appear at the end of
               each chapter. </item>
+            <item>All of the trailers will be italicized in their entirety by the parser, so
+            any <gi>title</gi>s that appear in the trailer should be giving curled quotations marks. 
+              You will probably need to add these as the italicization could likely have been unnoticed in the copy editing 
+            phase. e.g.:
+            <egXML xmlns="http://www.tei-c.org/ns/Examples">
+              <trailer tid="1938">This concludes the first chapter, the introduction to the
+                tantra, in the glorious Caṇḍa­mahā­roṣaṇa tantra called “<title xml:lang="en">The Sole Hero</title>.”</trailer>
+            </egXML>
+                        </item>
             <item>As you are working with the TEI texts, you may encounter various problems that
               require you to search for specific pieces of code or text within the markup. The
               XQuery/XPath Builder is a useful tool for searching for specific instances of text.
