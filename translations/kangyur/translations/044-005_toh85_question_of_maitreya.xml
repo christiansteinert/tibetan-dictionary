@@ -19,9 +19,14 @@
                 <consultant role="advisor" ref="contributors.xml#person-116">Dr. Ulrich Pagel</consultant>
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-31">Casey Kemp</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-276">Sara McClintock</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.02 <date>2016</date>
+                <edition>v 1.1 <date>2016</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -39,7 +44,7 @@
                 </availability>
                 <idno xml:id="UT22084-044-005"/>
                 <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
-                <date>2016-05-30</date>
+                <date>2016-09-16</date>
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh85" type="text">
@@ -56,7 +61,9 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-12T10:18:58.379Z" user="mike">12/03/2019 10:18:58</note>
+                <note type="lastUpdated" date-time="2019-03-15T09:45:15.591Z" user="admin">15/03/2019 09:45:15</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-03-15T08:56:02.767Z" user="john">v 1.02 2016</note>
+            <note type="updated" update="text-version" value="v 1.1" date-time="2019-03-15T09:45:13.349Z" user="john">v 1.1 2016</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -164,6 +171,7 @@
                         collection—and in the <title xml:lang="Sa-Ltn">Maitreya­vyākaraṇa</title>, a text found in several
                         Sanskrit manuscripts, in a Chinese translation, and in a Tibetan version in the Peking (P 1011) and
                         Narthang Kangyurs, but not included in the Degé Kangyur.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-223"/>
                     <p tid="11">These two sūtras in the Ratnakūṭa, which are both often simply called <title xml:lang="en">The
                             Question of Maitreya</title>, are not to be confused with a third sūtra of the same name in the
                         General Sūtra (<title xml:lang="Bo-Ltn">mdo sde</title>) section, Toh 149, a short work also set in
@@ -1038,9 +1046,11 @@
                         Wiesbaden: Harrassowitz Verlag, 1993. </bibl>
                     <bibl xml:id="UT22084-044-005-127">Python, Pierre. <title xml:lang="fr">Vinaya-viniścaya-upāli-paripṛcchā :
                             Enquête d’Upāli pour une exégèse de la discipline.</title> Paris: Adrien-Maisonneuve, 1973. </bibl>                    
-                    <bibl xml:id="UT22084-044-005-129">Roberts, Peter, and Bower, Emily (trs.). <title xml:lang="en">The White
-                            Lotus of the Good Dharma</title>, Toh 113. 84000: Translating the Words of the Buddha
-                        (forthcoming).</bibl>
+                    <bibl xml:id="UT22084-044-005-129">Roberts, Peter, and Bower, Emily (trs.). <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/toh113.html">The White
+                            Lotus of the Good Dharma</ref>
+                        </title>, Toh 113. 84000: Translating the Words of the Buddha
+                        (2018).</bibl>
                     <bibl xml:id="UT22084-044-005-130">Yao, Fumi (tr.). <title xml:lang="en">On Medicinal Materials</title>.
                         Chapter 6, <title xml:lang="Bo-Ltn">sman gyi gzhi</title> (<title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>), of <title xml:lang="Bo-Ltn">’dul ba’i gzhi</title> (<title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh 1). 84000: Translating the Words of the Buddha (forthcoming).</bibl>
                 </div>
