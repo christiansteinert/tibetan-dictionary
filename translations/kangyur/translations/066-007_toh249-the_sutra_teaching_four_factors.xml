@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
  <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -24,7 +24,7 @@
                 <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.02 <date>2019</date>
+                <edition>v 1.04 <date>2019</date>
                 </edition>
             </editionStmt>
            <publicationStmt status="1">
@@ -50,6 +50,8 @@
                 <bibl key="toh249" type="text">
                     <ref>Toh 249</ref>
                     <biblScope>Degé Kangyur, vol.66 (mdo sde, za), folios 59.a–59.b</biblScope>
+                    <author role="translatorTib">Surendrabodhi</author>
+                    <author role="translatorTib">Yeshé Dé</author>
                     <location count-pages="2">
                         <start volume="66" page="119"/>
                         <end volume="66" page="120"/>
@@ -59,7 +61,8 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-02-22T12:26:21.065Z" user="john">22/02/2019 12:26:21</note>
+                <note type="lastUpdated" date-time="2019-04-29T12:23:30.198Z" user="admin">29/04/2019 12:23:30</note>
+            <note type="updated" update="text-version" value="v 1.04" date-time="2019-04-29T12:23:27.57Z" user="mike">v 1.04 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
