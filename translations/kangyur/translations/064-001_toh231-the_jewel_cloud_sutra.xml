@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0">
+<tei:TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
             <titleStmt sponsored="full">
@@ -32,7 +32,7 @@
                 <sponsor ref="sponsors.xml#sponsor-2">George Gu, May E. Ho Gu, Likai Gu, Tiffany Tai, Lillian Gu, Jerry Yen, E. E. Ho, Minda and Miin Ho, Chung Da, and Beiying Ho</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.23 <date>2019</date>
+                <edition>v 1.25 <date>2019</date>
                 </edition>
             </editionStmt>
 <publicationStmt status="1">
@@ -57,6 +57,8 @@
                 <bibl key="toh231" type="text">
                     <ref>Toh 231</ref>
                     <biblScope>Degé Kangyur, vol. 64 (mdo sde, wa), folios 1.a–112.b</biblScope>
+                    <author role="translatorTib">Rinchen Tso</author>
+                    <author role="translatorTib">Chönyi Tsultrim</author>
                     <location count-pages="223">
                         <start volume="64" page="4"/>
                         <end volume="64" page="226"/>
@@ -66,9 +68,10 @@
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated" date-time="2019-03-16T12:08:05.009Z" user="admin">16/03/2019 12:08:05</note>
+               <note type="lastUpdated" date-time="2019-05-08T10:40:39.745Z" user="admin">08/05/2019 10:40:39</note>
             <note type="updated" update="text-version" value="v 1.22" date-time="2019-03-14T11:09:33.397Z" user="john">v 1.22 2019</note>
             <note type="updated" update="text-version" value="v 1.23" date-time="2019-03-16T12:08:02.666Z" user="john">v 1.23 2019</note>
+            <note type="updated" update="text-version" value="v 1.25" date-time="2019-05-08T10:40:36.639Z" user="mike">v 1.25 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -5902,7 +5905,7 @@
                         improper; to denigrate; to lie; to be fond of mental constructs; and to
                         pursue mental constructs. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-656"/>
-                    <p tid="582"> “Undertanding such flaws, bodhisattvas engage in the practice of
+                    <p tid="582"> “Understanding such flaws, bodhisattvas engage in the practice of
                         contemplating emptiness for the sake of going beyond all mental constructs.
                         Through their abundant contemplation of emptiness, they investigate the
                         nature of whatever their minds pursue and have faith in, realizing it all to
@@ -8871,4 +8874,4 @@
             </div>
         </back>
     </text>
-</TEI>
+</tei:TEI>
