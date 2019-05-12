@@ -25,11 +25,12 @@
                 <editor role="externalReviewer" ref="contributors.xml#person-262">David Higgins</editor>
                 <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-281">Paul Harrison</editor>
                 <sponsor ref="sponsors.xml#sponsor-185">Sharon Xu, Michael Pan</sponsor>
 
             </titleStmt>
             <editionStmt>
-                <edition> v 1.00 <date>2018</date>
+                <edition>v 2.00 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -66,7 +67,9 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-13T18:08:00.539Z" user="celso">13/03/2019 18:08:00</note>
+                <note type="lastUpdated" date-time="2019-05-12T12:27:30.904Z" user="admin">12/05/2019 12:27:30</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-09T07:38:39.941Z" user="john">v 1.01 2018</note>
+                <note type="updated" update="text-version" value="v 2.00" date-time="2019-05-12T12:27:27.753Z" user="andre">v 2.00 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -607,7 +610,7 @@
                         the realm of phenomena? How do bodhisattvas not forsake their goal while
                         being of assistance? How do bodhisattvas possess wealth due to merit and how
                         are they without wealth due to skillful means? How do bodhisattvas enter the
-                        gate without attributes through the gateway of the syllable <foreign type="mantra" xml:lang="Sa-Ltn">a</foreign>?
+                        gate without attributes through the gateway of the syllable <mantra type="syllable" xml:lang="Sa-Ltn">a</mantra>?
                             <ref cRef="F.258.a"/> How do bodhisattvas actualize all buddha
                         qualities? How do bodhisattvas gain certainty about the Dharma and discern
                         its distinctions? How do bodhisattvas act in accord with the world while
@@ -828,14 +831,14 @@
                         merit and be without wealth due to skillful means.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-98"/>
                     <p tid="66">“Noble son, if bodhisattvas possess four qualities, they will enter the gate
-                        without attributes through the gateway of the syllable <foreign xml:lang="Sa-Ltn" type="mantra">a</foreign>. What
+                        without attributes through the gateway of the syllable <mantra xml:lang="Sa-Ltn" type="syllable">a</mantra>. What
                         are those four? They are (1) refining the understanding that ‘all formations
                         are impermanent,’ (2) having reached the understanding that ‘all formations
                         have always been suffering,’ (3) refining the view that ‘all phenomena are
                         selfless,’ and (4) gaining the wisdom that ‘nirvāṇa has always been
                         peaceful.’ Noble son, if bodhisattvas possess those four qualities, they
                         will enter the gate without attributes through the gateway of the syllable
-                        <foreign xml:lang="Sa-Ltn" type="mantra">a</foreign>.</p>
+                        <mantra xml:lang="Sa-Ltn" type="syllable">a</mantra>.</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-99"/>
                     <p tid="67">“Noble son, if bodhisattvas possess four qualities, they will actualize all
                         buddha qualities. What are those four? They are (1) possessing the pure eye
@@ -5233,12 +5236,12 @@
                         toward the teaching of the Buddha:</p>
                     <milestone unit="chunk" xml:id="UT22084-058-006-639"/>
                     <p rend="mantra" tid="564">
-                        <foreign xml:lang="Sa-Ltn" type="mantra">Tadyathā: tarave arave anope sarape
+                        <foreign xml:lang="Sa-Ltn" type="term">Tadyathā</foreign>: <mantra xml:lang="Sa-Ltn">tarave arave anope sarape
                             hulu mahāhulu hulu hulu avadṭe vikadṭe paricchedāni nigrīhṇite
                             praghātani idṭi idṭi vidṭi vidṭi adche gadche māra­nigrahana
                             sarva­parapravādini­grahana sarva­mithya­prayātānanni­grahana
                             sarva­bhuta­grahāna buddha­varṇita­dharmaniyata­śāya­bhūtāna buddha­varṇitāna
-                            catur­mahārāja­nirdeśān mantra­balān avatāra prekṣiṇāni­grahāya</foreign>.<note place="end" xml:id="UT22084-058-006-640" index="85"> The Tibetan text of this mantra seems corrupt in
+                            catur­mahārāja­nirdeśān mantra­balān avatāra prekṣiṇāni­grahāya</mantra>.<note place="end" xml:id="UT22084-058-006-640" index="85"> The Tibetan text of this mantra seems corrupt in
                             places, and might have been composed in Prakrit rather than Sanskrit.
                             Here, we have solely rendered the version found in the Degé
                             edition.</note>
