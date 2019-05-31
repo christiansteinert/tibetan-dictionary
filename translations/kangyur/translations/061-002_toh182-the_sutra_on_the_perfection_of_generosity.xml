@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="bo">སྦྱིན་པའི་ཕ་རོལ་ཏུ་ཕིན་པ།</title>
+                <title type="mainTitle" xml:lang="bo">སྦྱིན་པའི་ཕ་རོལ་ཏུ་ཕྱིན་པ།</title>
                 <title type="mainTitle" xml:lang="en">The Perfection of Generosity</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Ārya­dāna­pāramitā</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་སྦྱིན་པའི་ཕ་རོལ་ཏུ་ཕྱིན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
@@ -13,7 +13,7 @@
                 <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The Perfection
                     of Generosity”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­dāna­pāramitā­nāma­mahāyāna­sūtra</title>
-                <author role="translatorMain" ref="contributors.xml#team-9">Translated by Dharmachakra Translation Committee
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee
                     <lb/>under the patronage and supervision of 84000: Translating the Words of the
                     Buddha </author>
             <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
@@ -25,13 +25,13 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-255">Chandika Maharjan</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.05, 2018 <date>2018-11-14</date>
+                <edition>v 0.21 <date>2019</date>
                 </edition>
             </editionStmt>
-            <publicationStmt status="2.a">
+            <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all of the Buddha’s words into modern
+                    initiative that aims to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -51,8 +51,8 @@
             <sourceDesc>
                 <bibl key="toh182" type="text">
                     <ref>Toh 182</ref>
-                    <biblScope>Degé Kangyur, vol. 62 (tsa), folios
-                        77.a.1–95.b.1</biblScope>
+                    <biblScope>Degé Kangyur, vol. 61 (mdo sde, tsa), folios
+                        77.a–95.b</biblScope>
                     <author role="translatorTib">Prajñāvarman</author>
                     <author role="translatorTib">Yeshé Dé</author>
                     <location count-pages="36">
@@ -64,7 +64,9 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-13T18:11:46.783Z" user="celso">13/03/2019 18:11:46</note>
+                <note type="lastUpdated" date-time="2019-05-30T17:54:31.091Z" user="john">30/05/2019 17:54:31</note>
+            <note type="updated" update="text-version" value="v 1.06, 2018" date-time="2019-04-29T13:29:19.807Z" user="mike">v 1.06, 2018 2018-11-14</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:29:19.807Z" user="mike">2</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -99,82 +101,97 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-3"/>
                     <p tid="3">
                         <title xml:lang="en">The Perfection of Generosity</title> belongs to the
-                        general sūtra section of the Tibetan Kangyur. This sūtra was never
-                        translated into Chinese and we have not come across any mention of its title
-                        in Indian commentarial works. As such it seems that it might not have had a
-                        very influential role within Buddhist India. Until recently, this sūtra had
-                        also not received much, if any, attention in modern scholarship. In 2014,
-                        however, Jason McCombs included a full translation of <title xml:lang="en">The Perfection of Generosity,</title> along with an introduction to the text, in his doctoral dissertation.<note place="end" xml:id="UT22084-061-002-4" index="1"> McCombs, Jason Matthew, “Mahāyāna
-                            and the Gift: Theories and Practices,” (PhD diss., University of
-                            California, Los Angeles, 2014), 88–183. His thesis also includes an
+                        general sūtra section of the Tibetan Kangyur. It does not appear to have been
+                        translated into Chinese, and we have not come across any mention of its title
+                        in Indian commentarial works. It does not seem, therefore, to have had
+                        a particularly influential role in Buddhist India. Until recently, it had
+                        also not attracted notable attention in modern scholarship. In 2014,
+                        however, Jason McCombs included a full translation of <title xml:lang="en">The Perfection of Generosity,</title> along with an introduction to the text, in his doctoral dissertation.<note place="end" xml:id="UT22084-061-002-4" index="1"> McCombs (2014), pp. 88–183. His thesis also includes an
                             edited version of the full Tibetan text. Although McCombs’ study and
                             translation of this sūtra only became available to us after we had
-                            completed our translation, we did subsequently compare our translation
-                            to his and as a result we were able to improve our translation in
+                            completed our translation, we subsequently compared our translation
+                            to his and as a result were able to improve our rendering in
                             several instances.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-5"/>
-                    <p tid="4">As is common with this genre of Buddhist literature, an absence of
+                    <p tid="4">As is common with this genre of Buddhist literature, the absence of
                         concrete historical data makes it hard to place the sūtra historically with
-                        much certainty. Still, based on particular doctrinal and literary features,
-                        McCombs argues for a tentative date of composition somewhere around the
+                        much certainty. Still, based on particular doctrinal and literary elements,
+                        McCombs argues for a tentative date of its being set out in written form somewhere around the
                         fifth or sixth century. To sum up his arguments, the sūtra seems to be
-                        fairly developed doctrinally, as various lists of philosophical concepts and
-                        practices appear in their later rather than earlier forms. For example, the
-                        number of perfections (<foreign xml:lang="Sa-Ltn" type="term">pāramitās</foreign>) is listed as ten instead of the earlier,
-                        standard list of six. Perhaps the most revealing historical feature of the
-                        sūtra, is the mention of three goddesses in attendance at the Buddha’s
+                        fairly developed doctrinally, with various lists of philosophical concepts and
+                        practices appearing in their later rather than earlier forms. For example, the
+                        text speaks of the ten perfections (<foreign xml:lang="Sa-Ltn" type="term">pāramitās</foreign>) 
+                        rather than the earlier, standard list of six. And perhaps the most significant feature of the
+                        sūtra from a historical viewpoint is the mention of three goddesses in attendance at the Buddha’s
                         teaching: Umā (<foreign xml:lang="Bo-Ltn">dka’ bzlog ma</foreign>),
                         Mahāśrīdevī (<foreign xml:lang="Bo-Ltn">dpal gyi lha mo chen
                             mo</foreign>), and Bhairavī (<foreign xml:lang="Bo-Ltn">’jigs byed
                             ma</foreign>). These goddesses generally do not appear in Indian
-                        literature until the fifth century, therefore it is reasonable to accept
+                        literature until the fifth century, and it is therefore reasonable to accept
                         McCombs’ tentative dating of the sūtra.<note place="end" xml:id="UT22084-061-002-6" index="2"> See McCombs, “Mahāyāna and the
                             Gift,” 94–95.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-7"/>
-                    <p tid="5">The sūtra is set in Kapilavastu, the city in which the Buddha lived
-                        during his childhood and youth, and it is here that we find him residing in
-                        the parks of his father, King Śuddhodhana. After a lengthy introduction, a
+                    <p tid="5">The sūtra is set in Kapilavastu, the city in which the Buddha had lived
+                        during his childhood and youth, and to which he returned at times after his awakening. 
+                        It is on one of these occasions that we find him residing in
+                        the parks of his father, King Śuddhodhana. In the first chapter, after a lengthy introduction, a
                         bodhisattva asks the Buddha about the practices in which bodhisattvas should
                         exert themselves once they have aroused the mind set on awakening. The
-                        Buddha first answers by explaining how to engage the path of the ten
+                        Buddha first answers by explaining how to engage with the path of the ten
                         virtuous actions and describing the altruistic attitudes that bodhisattvas
-                        should cultivate in this regard. Next, the Buddha explains how bodhisattvas
-                        should endeavor in the practices of the ten perfections. Then, throughout
-                        the second part of the sūtra, in reliance upon a repetitive formula
-                        interspersed with verses, the Buddha provides a detailed explanation of the
-                        way bodhisattvas must practice the perfection of generosity in particular.
-                        The Buddha emphasizes the compassionate motivation that must underlie the
+                        should cultivate in this regard. Next, in the second
+                        chapter of the sūtra, the Buddha explains how bodhisattvas
+                        should endeavor in the practices of the ten perfections, using a repetitive formula
+                        interspersed with verses. The Buddha provides a detailed explanation of the
+                        way bodhisattvas should practice the perfection of generosity in particular,
+                        emphasizing the compassionate motivation that must underlie the
                         act of giving, as well as the spiritual attainments and other benefits
                         derived from the practice of giving. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-8"/>
-                    <p tid="6">This sūtra was translated into Tibetan by the prolific translator
-                        Yeshé Dé sometime during the late eighth or early ninth century when the
+                    <p tid="6">The sūtra was translated into Tibetan by the prolific translator
+                        Yeshé Dé sometime during the late eighth or early ninth century, when the
                         majority of sūtras were translated into Tibetan. According to the colophon,
                         Yeshé Dé was assisted in his task by the renowned Indian scholar
                         Prajñāvarman. As further testament to the date of translation, we also find
-                        the sūtra included in the ninth century Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) Palace catalogue of translated scriptures,
-                        where it is grouped under the category of “sūtras that are ten sections or
-                            shorter.”<note place="end" xml:id="UT22084-061-002-9" index="3"> Lalou,
-                            Marcelle, “Les textes bouddhiques au temps du roi Khri-sroṅ-lde-bcan,”
-                                <title xml:lang="fr">Journal asiatique</title> 241 (1953): 322, no.
-                            142.</note> Within the Degé Kangyur itself, the sūtra is placed next to
-                        another sūtra that likewise includes the term “<term type="ignore">generosity</term>” in its title.<note place="end" xml:id="UT22084-061-002-10" index="4"> This text (Toh 183, Tib. <title xml:lang="Bo-Ltn">sbyin pa’i phan yon bstan pa</title>, Skt. <title xml:lang="Sa-Ltn">Dānānuśaṃsā</title>) is a short, two-page text
+                        the sūtra included in the ninth century Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) Palace 
+                        catalog of translated scriptures,
+                        where it is grouped under the category of “Mahāyāna general sūtras of ten or
+                            fewer fascicles.”<note place="end" xml:id="UT22084-061-002-9" index="3">See Denkarma, 
+                                Degé Tengyur vol. 208 (sna tshogs, jo), F.298.a.5-6; also Lalou (1953), p. 322, no.
+                                142. In the Denkarma, the sūtra is listed with the title <title xml:lang="Bo-Ltn">’phags 
+                                    pa sbyin pa’i pha rol tu phyin pa bstan pa</title>.</note> Within the Degé Kangyur itself, the sūtra is placed next to
+                        another sūtra that likewise includes the term “<term type="ignore">generosity</term>” in its 
+                        title.<note place="end" xml:id="UT22084-061-002-10" index="4"> This text (Toh 183, 
+                            Tib. <title xml:lang="Bo-Ltn">sbyin pa’i phan yon bstan pa</title>, 
+                            Skt. <title xml:lang="Sa-Ltn">Dānānuśaṃsā</title>) is a short, two-page text
                             that presents the benefits associated with the practice of generosity by
                             listing the karmic ripening generated by different types of offering. In
-                            the Stok Palace edition and other witnesses of the <foreign xml:lang="Bo-Ltn" type="term">them spangs ma</foreign> line of
+                            the Stok Palace edition and other witnesses of the Thenpangma (<foreign xml:lang="Bo-Ltn" type="term">them spangs ma</foreign>) line of
                             Kangyur collections, these two texts are catalogued disjointly, and this
                             title is translated as <foreign xml:lang="Bo-Ltn" type="quote">sbyin
-                                pa’i legs pa</foreign>, rather than <foreign xml:lang="Bo-Ltn" type="quote">sbyin pa’i phan yon bstan pa</foreign>.</note> However,
+                                pa’i legs pa</foreign>, rather than <foreign xml:lang="Bo-Ltn" type="quote">sbyin pa’i 
+                                    phan yon bstan pa</foreign>.</note> However,
                         as McCombs points out, <title xml:lang="en">The Perfection of
                             Generosity</title> also overlaps significantly in terms of content with
-                        larger sections found in other sūtras in the Kangyur.<note place="end" xml:id="UT22084-061-002-11" index="5"> In particular, <title xml:lang="Sa-Ltn">Akṣayamati­nirdeśa­sūtra</title> (Toh 175) and
+                        larger sections found in other sūtras in the Kangyur.<note place="end" xml:id="UT22084-061-002-11" index="5"> In 
+                            particular, <title xml:lang="Sa-Ltn">Akṣayamati­nirdeśa­sūtra</title> (Toh 175) and
                             <title xml:lang="Sa-Ltn">Bodhi­sattva­piṭaka­sūtra</title> (Toh 56).
-                            See McCombs, “Mahāyāna and the Gift,” 98–99.</note> As such, it appears
-                        that the organizing principle in this case was the title of the sūtra rather
-                        than its context, which is not uncommon when it comes to the structure of
-                        the Tibetan Kangyur collections. This English translation is based primarily
+                            See McCombs, “Mahāyāna and the Gift,” 98–99.</note> The
+                        organizing principle for the arrangement of the text in the Degé Kangyur (and others 
+                        predominantly of Tshalpa lineage) appears to have had more 
+                        to do with the title of the sūtra than its content, as is not uncommon when it comes to the structure of
+                        the Tibetan Kangyur collections. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-002-304"/>
+                    <p tid="6">The text contains a single chapter colophon (at <ptr target="#UT22084-061-002-309"/>) demarcating the Buddha’s initial 
+                        teaching on the ten virtuous actions from the part that follows on the ten perfections. This
+                        chapter colophon also makes mention of an alternative title for the sūtra, <title xml:lang="en">The 
+                            Array That Ornaments, Adorns, and Decorates All Buddha Qualities</title> (<title xml:lang="Bo-Ltn">sangs 
+                                rgyas kyi chos thams cad kyi rgyan dang / spud pa dang / lhab lhub bkod pa</title>). To the two chapters thus formed we have added descriptive chapter titles that do not, it should 
+                        be noted, appear in the source text.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-002-310"/>
+                    <p tid="6">This English translation is based primarily
                         on the Degé Kangyur version, in consultation with the Comparative Edition
                             (<foreign xml:lang="Bo-Ltn">dpe bsdur ma</foreign>) and the Stok Palace
                         Manuscript.</p>
@@ -187,17 +204,16 @@
                 <head type="titleHon" tid="160">The Noble Great Vehicle Sūtra</head>
                 <head type="titleMain" tid="161">The Perfection of Generosity</head>
                 <div type="section">
+                    <head type="section" tid="1974">How Bodhisattvas Exert Themselves in the Ten Virtuous Actions</head>
                     <milestone unit="chunk" xml:id="UT22084-061-002-12"/>
                     <p tid="7">
                         <ref cRef="F.77.a"/>
                         <ref cRef="B1" type="bampo"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-002-13"/>
-                    <p tid="8">Thus did I hear at one time. The Blessed One was residing at the city
-                        of Kapilavastu, in the parks of King Śuddhodhana, in order to benefit his
-                        kinsmen and the local people. </p>
-                    <milestone unit="chunk" xml:id="UT22084-061-002-14"/>
-                    <p tid="9">The parks were adorned with many hundreds of thousands of trees of
+                    <p tid="8">Thus did I hear at one time. The Blessed One, in order to benefit his
+                        kinsmen and the local people, was residing in the parks of King Śuddhodhana in the city
+                        of Kapilavastu, parks adorned with many hundreds of thousands of trees of
                         different types, such as sāla, palmyra, tamāla, karṇikāra, juniper,
                         walnut, kharjūra, śipan, nīpa, mango, pear, āmalakī, wood apple,
                         pomegranate, elephant apple plantain, banyan fig, goolar fig, myrobalan,
@@ -208,21 +224,22 @@
                         the calls of geese, peacocks, cranes, ducks, cuckoos, ospreys, parrots,
                         grouse, pheasants, partridges, nightingales, and wild ducks. Countless
                         honeybees buzzed in the air. The water in the parks possessed eight special
-                            qualities<note place="end" xml:id="UT22084-061-002-15" index="6">These
-                            qualities are cool, sweet, light, soft, clear, clean, pure, does not
+                            qualities<note place="end" xml:id="UT22084-061-002-15" index="6">The
+                            eight qualities of the best kind of water (a set frequently mentioned 
+                            in the literature) are that it is cool, sweet, light, soft, clear, clean, pure, does not
                             upset the stomach, and does not irritate the throat.</note> and was
                         limpid, flavorful, cool, pristine, and pure. The grass was green, soft and
                         tender, and as pleasing to the touch as silk, wool, cotton, raw silk,
-                        kācalindika cloth, and linen. Those fine parks were beautiful, clean, and
+                        kācilindika cloth, and linen. Those fine parks were beautiful, clean, and
                         free of any stones, pebbles, gravel, dirt, mud, or refuse. They were also
-                        home to various wild animals, such as śarabhas, spotted deer, monkeys, cats,
+                        home to various wild animals, such as śarabha, spotted deer, monkeys, cats,
                         brown bears, rabbits, black bears, <ref cRef="F.77.b"/> hyenas, and a number
                         of different birds. Hundreds of thousands of other beings were also present,
                         such as gods and goddesses of the night, guardians of the world, Varuṇa,
-                        Śiva, Yama, Virūḍhaka, Kubera, Śakra, Virūpākṣa, Dhṛtarāṣṭra, as well as
+                        Śiva, Yama, Virūḍhaka, Kubera, Śakra, Virūpākṣa, and Dhṛtarāṣṭra, as well as
                         asuras, garuḍas, gandharvas, kiṃnaras, and mahoragas.</p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-16"/>
-                    <p tid="10">"A large saṅgha of seventy-seven thousand monks was also residing
+                    <p tid="10">A large saṅgha of seventy-seven thousand monks was also residing
                         there, including venerable Śāradvatīputra, venerable Mahāmaudgalyāyana,
                         venerable Subhūti, venerable Kapphiṇa, venerable Gavāṃpati, venerable
                         Mahākauṣṭhila, venerable Bharadvāja, venerable Ājñātakauṇḍinya, venerable
@@ -230,11 +247,12 @@
                         venerable Bakkula, venerable Rāhula, venerable Upananda, venerable Nanda,
                         and venerable Ānanda. With the exception of one person—namely, venerable
                         Ānanda—they were all worthy ones who had exhausted the defilements and were
-                        without afflictions. They were powerful beings with <term type="ignore">insight</term> and fully liberated minds. They were of noble origin and
+                        without afflictions. They were endowed with <term type="ignore">powers</term>, and had liberated minds and 
+                        liberated <term type="ignore">insight</term>. They were of noble origin and
                         like great elephants. Their work was done, their deeds were done, they had
                         laid down their burden, they had accomplished their own welfare, and their
-                        ties to existence had been exhausted. Due to their correct perception, their
-                        minds were liberated, and they had perfected the sacred mastery of all
+                        ties to existence were exhausted. Due to their correct perception, their
+                        minds were utterly liberated, and they had perfected the sacred mastery of all
                         mental states.</p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-17"/>
                     <p tid="11">Also present was a great assembly of trillions of bodhisattvas that
@@ -250,30 +268,30 @@
                             somewhat unclear, and it is not evident precisely where the individual
                             names begin and end. As such, the rendering of the remainder of the
                             bodhisattva names included in this section should be viewed as
-                            tentative.</note> King Precious Moonlight of Pure Virtue
-                        Kamala­dala­vimala­nakṣatra­rāja­saṃkusumitā­bhijña, Hair in a Topknot Shining
-                        Dark Like Bees Ink Peacocks and Nightingales, Smiling Face That Shines
-                        Bright Like the Moon and a Lotus Flower, Top Ornament of Precious Qualities
-                        With Magnificent Sapphire-like Eyes, Equal and Evenly Set Teeth White like Silver Conch Shells the Moon the White Lotus and Milk, Tongue Wide as the
-                        Leaves of Palm and Plantain Trees and Resembling a Copper Plate, Voice as
-                        Delightful as the Songs of Cuckoos Parrots Grouse Pheasants and
-                        Kalaviṅka Birds, Moonlike Body, Rising Sun, Resembling the Karṇikāra Tree
-                        the Mango Tree and the Blooming Burflower Tree, and the bodhisattva great
-                        being Slender Supple Firm Fine and Smooth Limbs Youthful like Flowers and with Copper-Colored Nails. </p>
+                            tentative.</note> King Precious Moonlight of Pure Virtue;
+                        Kamala­dala­vimala­nakṣatra­rāja­saṃkusumitā­bhijña; Hair in a Topknot Shining
+                        Dark Like Bees, Ink, Peacocks, and Nightingales; Smiling Face That Brightly Shines
+                        Like the Moon and a Lotus Flower; Top Ornament of Precious Qualities
+                        With Magnificent Sapphire-like Eyes; Equal and Evenly Set Teeth White like Silver, Conch Shells, the Moon, a White Lotus, and Milk; Tongue Wide as the
+                        Leaves of Palm and Plantain Trees and Resembling a Copper Plate; Voice as
+                        Delightful as the Songs of Cuckoos, Parrots, Grouse, Pheasants, and
+                        Kalaviṅka Birds; Moonlike Body; Rising Sun; Resembling the Karṇikāra Tree,
+                        the Mango Tree, and the Blooming Burflower Tree; and the bodhisattva great
+                        being Slender, Supple, Firm, Fine, and Smooth Limbs Youthful like Flowers and with Copper-Colored Nails. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-19"/>
                     <p tid="12">Including these bodhisattvas, there were a total of ninety-nine
-                        thousand bodhisattvas, who all had become irreversible beings and turned the
+                        thousand bodhisattvas, all of whom were irreversible in their progress and turned the
                         wheel of the irreversible Dharma. They had subjugated demons and opponents
                         and overcome all the activities of Māra. They were experts in the knowledge
-                        that engages the domain of the thus-gone ones. They had developed the
+                        that engages with the domain of the thus-gone ones. They had developed the
                             superknowledges,<note place="end" xml:id="UT22084-061-002-20" index="8">
                             S has no <foreign xml:lang="Bo-Ltn" type="term">shad</foreign> between
                             those two elements, and <foreign xml:lang="Bo-Ltn" type="term">mngon par
                                 shes pa</foreign> is repeated in what follows: <foreign xml:lang="Bo-Ltn" type="quote">de bzhin gshegs pa thams cad kyi yul
                                 la ’jug pa shes pa la mkhas pa mngon par shes pa / mngon par shes pa
                                 dpa’ bar ’gro ba’i ting nge ’dzin gyi mtha’i sgo bsgrub pa’i gzungs
-                                thob pa</foreign>.</note> attained the recollection that causes one
-                        to enter the absorption of bravery, and mastered the <term type="ignore">skillful means</term> related to all the perfections. <ref cRef="F.78.b"/> They revealed different world-systems, had donned the
+                                thob pa</foreign>.</note> attained the retention that brings about
+                        the final gateway of the absorption of bravery, and mastered the <term type="ignore">skillful means</term> related to all the perfections. <ref cRef="F.78.b"/> They revealed different world systems, had donned the
                         great armor, and had no doubts concerning the qualities of the buddhas. By
                         contemplating all the latent tendencies of the primary and secondary
                         afflictions they had conquered pride and its attendant habitual tendencies
@@ -281,7 +299,7 @@
                         perfected the applications of mindfulness, the true relinquishments, the
                         bases of miraculous power, the <term>powers</term>, the strengths, the factors of
                         awakening, and other qualities of the path such as love, compassion, joy,
-                        equanimity, patience, intention, as well as other wholesome propensities.
+                        equanimity, patience, and intention, as well as other wholesome propensities.
                         They were free of pride, vanity, haughtiness, aggression, arrogance,
                         miserliness, selfishness, possessiveness, fixation, attachment, grasping,
                         oblivion, craving, and longing. For countless eons they had endeavored to
@@ -321,14 +339,14 @@
                         Blessed One’s fame, renown, and praise extended far throughout the
                         immeasurable worlds of the ten directions. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-24"/>
-                    <p tid="15">The diamond ground was even, <ref cRef="F.79.b"/> pleasant, vast,
+                    <p tid="15">The ground, of the essence of diamond, was even, <ref cRef="F.79.b"/> pleasant, vast,
                         and open. It had been sprinkled with water, swept clean, made symmetrical,
                         and made fragrant with smoke rising from incense burners. The ground was
                         strewn with purple, pink, red, and white lotus flowers, as well as the
                         flowers of goolar fig, nīpa, vārśika, taraṇi, pāṭalā, aśoka, kuraṇṭaka,
                         nutmeg, and utika<note place="end" xml:id="UT22084-061-002-25" index="10">We
                             have been unable to identify this tree (Tib. <foreign xml:lang="Bo-Ltn" type="term">u thi ka)</foreign>.</note> trees. The site was also
-                        adorned with trees made of various precious gems. There the Blessed One sat
+                        adorned with trees made of various precious gems. There the Blessed One sat,
                         on a lion throne made of precious gemstone, upon which hundreds of thousands
                         of precious fabrics had been spread. The throne was sheltered by a bejeweled
                         canopy, adorned with a web of small jewel bells, and embellished with
@@ -344,7 +362,7 @@
                         he had arrived at a sacred state of composure and tranquility. He had
                         attained, sustained, and mastered perfect composure and calm, and he had
                         brought his passions under control. Like a lake, his mind was pure, clear,
-                        and pristine. Like a bejeweled shrine, he was refined, dazzling, and
+                        and pristine. Like a sacrificial post made of precious substances, he was refined, dazzling, and
                         brilliant. His body was adorned with the thirty-two major marks of a great
                         being and beautified with the excellent minor marks. Like the ocean, he was
                         filled with the water of the sacred Dharma. Like Mount Sumeru, he was
@@ -353,16 +371,17 @@
                         unbiased. Like the sky, he was immaculate. Like the sun, he dispelled the
                         darkness of ignorance. Like the moon, he had perfected all pure qualities.
                         Like a wish-fulfilling jewel, he fulfilled all <term type="ignore">aspirations</term>. Like the sun, he
-                        was lofty. Like the moon, he was cooling and soothing. Like the ocean, <ref cRef="F.80.a"/> he was a source of wealth. Like the ocean, he was
-                        profound. Like a fire, he was shining. His body was unshakable; his mind was
+                        was lofty. Like the moon, he was cooling and soothing. Like the ocean, <ref cRef="F.80.a"/> he 
+                        was a source of wealth, and like the ocean, too, he was
+                        deep. Like a fire, he was shining. His body was unshakable; his mind was
                         unwavering, calm, and serene; and his senses were free of delusion,
                         arrogance, and excitement. He observed perfect mindfulness, his conduct was
                         excellent, and he was composed and constantly in equipoise. Over countless
                         billions of eons he had accomplished all the roots of virtue and gathered
-                        the entire accumulation of merit. He became skilled in all the perfections
+                        the entire accumulation of merit; he had become skilled in all the perfections
                         and sported on all the levels of the buddhas and bodhisattvas. He
-                        enthusiastically engaged in all the activities of the bodhisattvas and, for
-                        the benefit and happiness of all beings, he was diligent and taught the
+                        enthusiastically engaged in all the activities of the bodhisattvas, strived for
+                        the benefit and happiness of all beings, and taught the
                         Dharma. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-28"/>
                     <p tid="17">The Dharma he taught presents pure conduct. It is virtuous in the
@@ -374,11 +393,17 @@
                         beyond the reach of the intellect, inconceivable, marvelous, and utterly
                         inexpressible. Such is the Dharma that he taught, presented, explained, and
                         elucidated. </p>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-002-29"/>
-                    <p tid="18">At that time, the bodhisattva great being called Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows was present in the assembly. He had a
+                    <p tid="18">Present in the assembly at that time was the bodhisattva great being called 
+                        Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in 
+                        Mountain Caves, Peaks, Clefts, Valleys, and Meadows. He had a
                         beautiful physique and was handsome and pleasant to behold. His complexion
-                        was attractive. He was well-developed and replete with the most delightful
-                            features.<note place="end" xml:id="UT22084-061-002-30" index="12">Translated based on S that treats these as separate items: <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">rgyas pa </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">mchog dang ldan pa</foreign>. D
+                        was attractive. He was well developed and replete with the most delightful
+                            features.<note place="end" xml:id="UT22084-061-002-30" index="12">Translated based on S, 
+                                which treats these as separate items: <foreign xml:lang="Bo-Ltn" type="quote">kha dog 
+                                    bzang po </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">rgyas 
+                                        pa </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">mchog dang ldan pa</foreign>. D
                             reads: <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po
                             </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">rgyas pa mchog dang
                                 ldan pa</foreign>.</note> He had served victorious ones of the past,
@@ -393,36 +418,39 @@
                         envy, miserliness, selfishness, possessiveness, attachment, suffering,
                         unhappiness, and ignorance, he was endowed with merit. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-31"/>
-                    <p tid="19">At one point, the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows stood up, draped his shawl over one
+                    <p tid="19">At one point, the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows stood up, draped his shawl over one
                         shoulder, and knelt with his right knee on the calyx of a lotus flower. With
                         his palms joined together he bowed down toward the Blessed One and said,
-                        “Blessed One, should I be granted the opportunity, I would like to ask a few
-                        questions to the Blessed One, the Thus-Gone One, the Worthy One, the Perfect
+                        “If the Blessed One would grant me the opportunity, I have a few
+                        questions I would like to put to the Blessed One, the thus-gone, worthy, and perfect
                         Buddha.” <ref cRef="F.81.a"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-32"/>
-                    <p tid="20">The Blessed One replied to the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows, “Noble son, all the buddhas
+                    <p tid="20">The Blessed One replied to the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows, “Noble son, all the buddhas
                         and bodhisattvas will always grant you this opportunity. Noble son, ask
-                        whatever you wish to the Thus-Gone One, the Worthy One, the Perfect Buddha.
+                        whatever you wish to the thus-gone, worthy, and perfect Buddha.
                         I will answer your questions and bring satisfaction to your mind.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-33"/>
-                    <p tid="21">After the Blessed One had said those words, the bodhisattva great
-                        being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows asked, “Blessed
+                    <p tid="21">At these words from the Blessed One, the bodhisattva great
+                        being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows asked, “Blessed
                         One, after having first given rise to the mind set on awakening, in what
                         should noble sons and daughters exert themselves?” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-34"/>
                     <p tid="22">When he heard this question, the Blessed One expressed his approval
-                        to the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows, saying, “Excellent, noble son, excellent! Noble son, your wish to
+                        to the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows, saying, “Excellent, noble son, excellent! Noble son, your wish to
                         investigate this matter is excellent! Noble son, listen carefully and pay
                         attention: I shall now explain this.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-35"/>
-                    <p tid="23">The bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves Peaks Clefts Valleys and Meadows agreed to this and listened to the Blessed One as
-                        directed. The Blessed One then said, “Noble son, after having first given
-                        rise to the mind set on awakening, bodhisattva great beings should be
-                        diligent on the path of the ten virtuous actions. <ref cRef="F.81.b"/> Noble
-                        son, how are bodhisattva great beings diligent on the path of the ten
+                    <p tid="23">The bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows agreed to this and listened to the Blessed One as
+                        instructed. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-002-306"/>
+                    <p tid="23">The Blessed One then said, “Noble son, after having first given
+                        rise to the mind set on awakening, bodhisattva great beings should strive
+                        diligently on the path of the ten virtuous actions. <ref cRef="F.81.b"/> Noble
+                        son, how do bodhisattva great beings strive diligently on the path of the ten
                         virtuous actions? Noble son, bodhisattva great beings do so by abandoning
-                        killing and so forth up until wrong views.<note place="end" xml:id="UT22084-061-002-36" index="13">The abandonments of killing and
+                        killing and so forth, up until wrong views.<note place="end" xml:id="UT22084-061-002-36" index="13">The abandonments of killing and
                             wrong views are, respectively, the first and the last of the ten
                             virtuous actions.</note>
                     </p>
@@ -430,25 +458,25 @@
                     <p tid="24">“Noble son, how do bodhisattva great beings abandon killing? Noble
                         son, bodhisattvas do so by reflecting in this way: ‘Even the tiniest of
                         insects, such as an ant, is fond of its life; it cherishes it, likes it, and
-                        enjoys it. I am also fond of my life; I also cherish it, like it, and enjoy
-                        it. Just as I wish that no one kills me, orders someone to kill me, or
-                        rejoices in my killing, I will never kill, order someone to kill, or rejoice
+                        enjoys it. I, too, am fond of my life; I, too, cherish it, like it, and enjoy
+                        it. Just as I wish that no one would kill me, order someone to kill me, or
+                        rejoice in my killing, so, too, will I myself never kill, order someone to kill, or rejoice
                         in the killing of anyone!’ Noble son, this is how bodhisattva great beings
                         abandon killing. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-38"/>
                     <lg tid="25">
                         <l>“From the time of being in their mother’s womb,</l>
                         <l>All beings cherish their lives.</l>
-                        <l>Therefore, those who hold their life dear </l>
+                        <l>Therefore, those who hold their lives dear </l>
                         <l>Should not kill any living being.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-39"/>
                     <p tid="26">“How do bodhisattvas abandon taking what is not given? Noble son,
                         bodhisattvas do so by reflecting in this way: ‘Even the members of low
                         castes and outcasts are fond of wealth; they cherish it, like it, and enjoy
-                        it. I am also fond of wealth; I also cherish it, like it, and enjoy it. Just
-                        as I wish that no one robs me, orders someone to rob me, or rejoices in
-                        someone robbing me, I will never rob, order someone to rob, or rejoice in
+                        it. I am also fond of wealth; I, too, cherish it, like it, and enjoy it. Just
+                        as I wish that no one would rob me, order someone to rob me, or rejoice in
+                        someone robbing me, so, too, will I myself never rob, order someone to rob, or rejoice in
                         anyone being robbed!’ Noble son, this is how bodhisattva great beings
                         abandon taking what is not given. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-40"/>
@@ -463,15 +491,15 @@
                     <p tid="27">“How do bodhisattvas abandon sexual misconduct? Noble son,
                         bodhisattvas do so by reflecting in this way: ‘Even beings born as animals
                         are fond of their mates; they cherish them, like them, and enjoy them. I am
-                        also fond of my wife; I also cherish her, like her, and enjoy being with
-                        her. Just as I wish that no one ravishes her, orders someone to ravish her,
-                        rejoices in someone ravishing her, harasses her, or rapes her, I will never
-                        ravish, order someone to ravish, rejoice in someone ravishing, harass, or
-                        rape anyone’s spouse!’ Noble son, this is how bodhisattva great beings
+                        also fond of my wife; I, too, cherish her, like her, and enjoy being with
+                        her. Just as I wish that no one would ravish her, order someone to ravish her,
+                        rejoice in someone ravishing her, harass her, or rape her, so, too, will I myself never
+                        ravish, order someone to ravish, or rejoice in someone ravishing, harassing, or
+                        raping anyone’s spouse!’ Noble son, this is how bodhisattva great beings
                         abandon sexual misconduct. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-42"/>
                     <lg tid="28">
-                        <l>“Those who are fond of their own spouse,</l>
+                        <l>“Those who are fond of their own spouse</l>
                         <l>Should not ravage another’s spouse,</l>
                         <l>Not even servants</l>
                         <l>Retained by others.</l>
@@ -480,9 +508,9 @@
                     <p tid="29">“How do bodhisattvas abandon lying? Noble son, bodhisattvas do so
                         by reflecting in this way: ‘Even yakṣas, bhūtas, and piśācas are fond of the
                         truth; they cherish it, like it, and enjoy it. I am also fond of the truth;
-                        I also cherish it, like it, and enjoy it. Just as I wish that no one
-                        deceives me, orders someone to deceive me, or rejoices in someone deceiving
-                        me by telling lies, I will never deceive, order someone to deceive, or
+                        I, too, cherish it, like it, and enjoy it. Just as I wish that no one
+                        would deceive me, order someone to deceive me, or rejoice in someone deceiving
+                        me by telling lies, so, too, will I myself never deceive, order someone to deceive, or
                         rejoice in anyone being deceived by lies!’ Noble son, this is how
                         bodhisattva great beings abandon lying. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-44"/>
@@ -498,21 +526,22 @@
                         by reflecting in this way: ‘Even slanderous people find slander unpleasant;
                         they do not want to hear it, do not like it, and do not enjoy it. I also
                         find slander unpleasant; I do not want to hear it, do not like it, and do
-                        not enjoy it. Just as I wish that no one talks to me, orders someone to talk
-                        to me, or rejoices in someone talking to me in a defamatory way, I will
-                        never talk, order someone to talk, or rejoice in anyone being talked to in a
-                        defamatory way!’ Noble son, this is how bodhisattva great beings abandon
+                        not enjoy it. Just as I wish that no one would talk to me in a defamatory way, order 
+                        someone to talk
+                        to me so, or rejoice in someone so talking to me, so, too, will I
+                        myself never talk to anyone in a
+                        defamatory way, order someone to talk so, or rejoice in anyone being so talked to!’ Noble son, this is how bodhisattva great beings abandon
                         slander. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-46"/>
                     <p tid="32">“How do bodhisattvas abandon harsh words? Noble son, bodhisattvas
                         do so by reflecting in this way: ‘Even those who are used to speaking harsh
                         words find such words unpleasant; they do not want to hear them, do not like
-                        them, and do not enjoy them. I also find harsh words unpleasant; I do not
+                        them, and do not enjoy them. I, too, find harsh words unpleasant; I do not
                         want to hear them, do not like them, and do not enjoy them. Just as I wish
-                        that no one hurts me, orders someone to hurt me, or rejoices in someone
-                        hurting me with harsh, cruel, insulting, or defamatory words, I will never
-                        hurt, order someone to hurt, or rejoice in anyone being hurt by harsh,
-                        cruel, insulting, or defaming words!’ Noble son, this is how bodhisattva
+                        that no one would hurt me, order someone to hurt me, or rejoice in someone
+                        hurting me with harsh, cruel, insulting, or defamatory words, so, too, will I myself never
+                        hurt anyone with harsh, cruel, insulting, or defamatory words, order someone to be so hurt, 
+                        or rejoice in anyone being so hurt!’ Noble son, this is how bodhisattva
                         great beings abandon harsh words. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-47"/>
                     <lg tid="33">
@@ -525,23 +554,23 @@
                     <p tid="34">“How do bodhisattvas abandon idle gossip? Noble son, bodhisattva
                             <ref cRef="F.83.a"/> great beings do so by reflecting in this way: ‘Even
                         those who engage in idle gossip find meaningless conversations unpleasant;
-                        they do not want to hear them, do not like them, they do not enjoy them. I
+                        they do not want to hear them, do not like them, and do not enjoy them. I
                         also find meaningless conversations unpleasant; I do not want to hear them,
-                        do not like them, and do not enjoy them. Just as I wish that no one talks
-                        about me, orders someone to talk about me, or rejoices in someone talking
-                        about me surreptitiously, I will never talk about anyone, order someone to
-                        talk about anyone, or rejoice in someone talking about anyone
-                        surreptitiously!’ Noble son, this is how bodhisattva great beings abandon
-                        idle gossip. </p>
+                        do not like them, and do not enjoy them. Just as I wish that no one would talk
+                        about me surreptitiously, order someone to talk about me so, or rejoice in someone so talking
+                        about me, so, too, will I myself never talk about anyone surreptitiously, order someone to
+                        talk about anyone so, or rejoice in someone so talking about anyone!’ Noble son, 
+                        this is how bodhisattva great beings abandon idle gossip. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-49"/>
                     <p tid="35">“How do bodhisattva great beings abandon covetousness? Noble son,
-                        bodhisattvas do so by reflecting in this way: ‘Even covetous persons find
+                        bodhisattvas do so by reflecting in this way: ‘Even covetous people find
                         covetousness unpleasant; they do not wish for it, do not like it, and do not
-                        enjoy it. I also find covetousness unpleasant; I do not wish for it, do not
-                        like it, and do not enjoy it. Just as I wish that no one talks to me, orders
-                        anyone to talk to me, or rejoices in someone talking to me covetously, I
-                        will never talk, make others talk, or rejoice in someone talking to anyone
-                        covetously!’ Noble son, this is how bodhisattva great beings abandon
+                        enjoy it. I, too, find covetousness unpleasant; I do not wish for it, do not
+                        like it, and do not enjoy it. Just as I wish that no one would talk to me 
+                        covetously, order
+                        anyone to talk to me so, or rejoice in someone so talking to me, so, too, will I
+                        myself never talk covetously to anyone, order others to talk so, or rejoice in someone so 
+                        talking to anyone!’ Noble son, this is how bodhisattva great beings abandon
                         covetousness. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-50"/>
                     <lg tid="36">
@@ -554,20 +583,20 @@
                     <p tid="37">“How do bodhisattvas abandon ill will? Noble son, bodhisattvas do
                         so by reflecting in this way: ‘Even those who entertain malicious thoughts
                         find ill will unpleasant; they do not wish for it, do not like it, and do
-                        not enjoy it. I also <ref cRef="F.83.b"/> find ill will unpleasant; I do not
+                        not enjoy it. I, too, <ref cRef="F.83.b"/> find ill will unpleasant; I do not
                         wish for it, do not like it, and do not enjoy it. Just as I wish that no one
-                        expresses, orders someone to express, or rejoices in someone expressing
-                        malicious words to me, I will never express, order someone to express, or
-                        rejoice in someone expressing malicious words to anyone!’ Noble son, this is
+                        would express malicious words to me, order someone to express them, or rejoice in someone expressing
+                        them, so, too, will I myself never express malicious words to anyone, order someone to express them, or
+                        rejoice in someone expressing them!’ Noble son, this is
                         how bodhisattva great beings abandon ill will. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-52"/>
                     <p tid="38">“How do bodhisattvas abandon wrong views? Noble son, bodhisattvas
                         do so by reflecting in this way: ‘Even those who entertain wrong views find
                         wrong views unpleasant; they do not wish for them, do not like them, and do
-                        not enjoy them. I also find wrong views unpleasant; I do not wish for them,
-                        do not like them, and do not enjoy them. Just as I wish that no one teaches
-                        me, orders someone to teach me, or rejoices in someone teaching me wrong
-                        views, I will never teach, make someone teach, or rejoice in someone
+                        not enjoy them. I, too, find wrong views unpleasant; I do not wish for them,
+                        do not like them, and do not enjoy them. Just as I wish that no one would teach
+                        me wrong views, order someone to teach me them, or rejoice in someone teaching 
+                        me them, so, too, will I myself never teach, make someone teach, or rejoice in someone
                         teaching anyone wrong views!’ Noble son, this is how bodhisattva great
                         beings abandon wrong views. Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-53"/>
@@ -579,13 +608,18 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-54"/>
                     <p tid="40">“Noble son, this is how bodhisattva great beings exert themselves
-                        in the path of the ten virtuous actions.” </p>
+                        on the path of the ten virtuous actions.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-002-308"/>
                     <p tid="41">As this teaching on the path of the ten virtuous actions was
                         spoken, countless beings gave rise to the mind set on unsurpassed and
                         perfect awakening. </p>
-                    <p tid="42">This was the first chapter of the Great Vehicle sūtra entitled
-                            <title xml:lang="en">The Array That Ornaments, Adorns, and Decorates All
-                            Buddha Qualities</title>. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-002-309"/>
+                    <p tid="42">This was the first chapter of the Great Vehicle sūtra, <title xml:lang="en">The 
+                        Array That Ornaments, Adorns, and Decorates All Buddha Qualities</title>. </p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="1974">How Bodhisattvas Exert Themselves in the Ten Perfections</head>
                     <milestone unit="chunk" xml:id="UT22084-061-002-57"/>
                     <p tid="43">“Furthermore, noble son, <ref cRef="F.84.a"/> after having first
                         given rise to the mind set on awakening, bodhisattva great beings should
@@ -1679,6 +1713,21 @@
                         </gloss>
                     </item>
                     <item>
+                        <gloss type="place" xml:id="UT22084-061-002-305">
+                            <term>kācilindika</term>
+                            <term xml:lang="Bo-Ltn">ka tsa lin di </term>
+                            <term xml:lang="bo">ཀ་ཙ་ལིན་དི།</term>
+                            <term xml:lang="Sa-Ltn">kācilindika, kācalindika</term>
+                            <term type="definition">An epithet for softness, usually applied 
+                                to cloth, and probably in reference, direct or metaphorical, to the
+                                down of the <term type="ignore">kācilindika</term> bird. See Lamotte, 
+                                Etienne. <title xml:lang="fr">La Concentration de la
+                                    Marche Héroïque</title>. Bruxelles: Peeters (1975), p. 261, n. 321. 
+                                The <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> includes the term using the variant 
+                                spelling <term xml:lang="Sa-Ltn">kācalindika</term>.</term>
+                        </gloss>
+                    </item>
+                    <item>
                         <gloss type="term" xml:id="UT22084-061-002-188">
                             <term>insight</term>
                             <term xml:lang="Bo-Ltn">shes rab </term>
@@ -1713,6 +1762,19 @@
                             <term xml:lang="bo">སྟོབས།</term>
                             <term xml:lang="Sa-Ltn">bala</term>
                             <term type="definition">One of the ten perfections.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-002-307">
+                            <term>sacrificial post</term>
+                            <term xml:lang="Bo-Ltn">mchod sdong </term>
+                            <term xml:lang="bo">མཆོད་སྡོང་།</term>
+                            <term xml:lang="Sa-Ltn">yūpa</term>
+                            <term type="definition">A post set up as a marker to which offerings may be presented. Described in
+                                the <title xml:lang="Sa-Ltn">Maitreyāvadāna</title> (“The Story of Maitreya”), which in the
+                                Kangyur is found within the <title xml:lang="Sa-Ltn">Bhaiṣajya­vastu</title> (in <title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh 1, Degé Kangyur, vol. kha, folios 29a-32b); a
+                                matching passage from the <title xml:lang="Sa-Ltn">Divyāvadāna</title> is translated in Rotman,
+                                Andy, <title xml:lang="en">Divine Stories</title> Part I (Somerville: Wisdom Publications, 2008), pp 121-124.</term>
                         </gloss>
                     </item>
                     <item>
@@ -1861,7 +1923,7 @@
                             <term xml:lang="bo">ཀུན་ཤེས་ཀཽཎཌིནྱ།</term>
                             <term xml:lang="Sa-Ltn">Ājñāta­kauṇḍinya</term>
                             <term type="definition">One of the five ascetics who later became
-                                disciples of the Buddha.</term>
+                                the first five disciples of the Buddha.</term>
                         </gloss>
                     </item>
                     <item>
@@ -2360,8 +2422,10 @@
                             <term xml:lang="Bo-Ltn">gang po </term>
                             <term xml:lang="bo">གང་པོ།</term>
                             <term xml:lang="Sa-Ltn">Pūrṇa</term>
-                            <term type="definition">One of the eminent disciples of the Buddha,
-                                described as the foremost in explaining the doctrine.</term>
+                            <term type="definition">At least five different disciples of the Buddha in 
+                                the canonical texts have this name, but the Pūrṇa in this text  is likely to 
+                                be the eminent disciple of the Buddha from Kapilavastu, nephew of 
+                                Ājñātakauṇḍinya who ordained him, and described as the foremost disciple in explaining the doctrine.</term>
                         </gloss>
                     </item>
                     <item>
