@@ -28,7 +28,7 @@
                 <editor role="externalReviewer" ref="contributors.xml#person-283">Dan Hirshberg</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.5 <date>2019</date>
+                <edition>v 0.7 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2">
@@ -67,11 +67,13 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-05-31T17:54:32.01Z" user="konchog">31/05/2019 17:54:32</note>
+                <note type="lastUpdated" date-time="2019-06-01T08:03:04.501Z" user="john">01/06/2019 08:03:04</note>
             <note type="updated" update="text-version" value="v 1.06, 2018" date-time="2019-04-29T13:29:19.807Z" user="mike">v 1.06, 2018 2018-11-14</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:29:19.807Z" user="mike">2</note>
                 <note type="updated" update="text-version" value="v 0.3" date-time="2019-05-31T08:48:26.556Z" user="john">v 0.3 2019</note>
                 <note type="updated" update="text-version" value="v 0.5" date-time="2019-06-01T07:42:46.284Z" user="john">v 0.5 2019</note>
+                <note type="updated" update="text-version" value="v 0.5" date-time="2019-06-02T10:29:26.676Z" user="john">v 0.5 2019</note>
+                <note type="updated" update="text-version" value="v 0.7" date-time="2019-06-02T10:30:31.462Z" user="john">v 0.7 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -619,8 +621,8 @@
                         perfect awakening. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-002-309"/>
-                    <p tid="42">This was the first chapter of the Great Vehicle sūtra called <title xml:lang="en">The 
-                        Array That Ornaments, Adorns, and Decorates All Buddha Qualities</title>. </p>
+                    <trailer tid="42">This was the first chapter of the Great Vehicle sūtra called “<title xml:lang="en">The 
+                        Array That Ornaments, Adorns, and Decorates All Buddha Qualities</title>.”<note place="end" index="14" xml:id="UT22084-061-002-311">This chapter colophon appears to provide an alternative title for the sūtra. See also <ptr target="#UT22084-061-002-304"/>.</note> </trailer>
                 </div>
                 <div type="section">
                     <head type="section" tid="1974">How Bodhisattvas Exert Themselves in the Ten Perfections</head>
@@ -737,7 +739,7 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-71"/>
                     <lg tid="57">
                         <l>“Through this offering of clothing </l>
-                        <l>May I perfect<note place="end" xml:id="UT22084-061-002-72" index="14">Translated based on S. D reads: <foreign xml:lang="Bo-Ltn" type="quote">sbyor ba</foreign>.</note> the modesty and
+                        <l>May I perfect<note place="end" xml:id="UT22084-061-002-72" index="15">Translated based on S. D reads: <foreign xml:lang="Bo-Ltn" type="quote">sbyor ba</foreign>.</note> the modesty and
                             humility</l>
                         <l>Of all beings,</l>
                         <l>And may I also purify their appearance!</l>
@@ -852,20 +854,20 @@
                     <p tid="71">“How do bodhisattvas exert themselves in the practice of generosity
                         by offering flowers? Noble son, bodhisattvas do so by reflecting in this
                         way: ‘Offering flowers and flower garlands represents the attainment of the
-                        precious flowers of recollection, eloquence, and the factors of awakening.
+                        precious flowers of retention, eloquence, and the branches of awakening.
                         Therefore, I will definitely practice generosity by offering flowers and
                         flower garlands!’ When practicing generosity by offering flowers and flower
                         garlands, bodhisattvas <ref cRef="F.86.b"/> make the following aspiration:
                         ‘In accordance with the aspirations expressed by the buddhas, through this
                         offering of flowers and flower garlands may I adorn the body of all beings
-                        with the precious flowers of recollection, eloquence, and the factors of
+                        with the precious flowers of retention, eloquence, and the branches of
                         awakening!’ Regarding this, there are also some concluding verses: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-87"/>
                     <lg tid="72">
                         <l>“Through this offering of flowers and flower garlands</l>
                         <l>May all beings be adorned,</l>
                         <l>Swiftly and in all manners,</l>
-                        <l>With the flowers of the factors of awakening!</l>
+                        <l>With the flowers of the branches of awakening!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-88"/>
                     <lg tid="73">
@@ -929,7 +931,7 @@
                         by offering beds and pillows? Noble son, bodhisattvas do so by reflecting in
                         this way: ‘Offering beds and pillows represents the loftiness of permanently
                         abandoning all obscurations, the divine abodes of Brahmā that are the
-                        sleeping chambers of the thus-gone ones, and the gift of elevation.<note place="end" xml:id="UT22084-061-002-96" index="15">Tentative translation
+                        sleeping chambers of the thus-gone ones, and the gift of elevation.<note place="end" xml:id="UT22084-061-002-96" index="16">Tentative translation
                             (Tib. <foreign xml:lang="Bo-Ltn" type="quote">sgrib pa thams cad gtan
                                 spong ba’ ’phags pa dang / lha’i tshangs pa’i gnas de bzhin gshegs
                                 pa’i gzims mal dang / ’phangs sbyin pa’i tshigs bla dags yin
@@ -953,7 +955,7 @@
                         <l>“May I sever the web of their negative views</l>
                         <l>With the sword of insight,</l>
                         <l>And offer them perfect beds worthy of the blissful ones</l>
-                        <l>And rested upon<note place="end" xml:id="UT22084-061-002-99" index="16">K<hi rend="subscript">Y</hi>, K, and S read: <foreign xml:lang="Bo-Ltn" type="quote">bstan</foreign>. J and N read: <foreign xml:lang="Bo-Ltn" type="quote">stan</foreign>.</note> in the abodes of Brahmā.
+                        <l>And rested upon<note place="end" xml:id="UT22084-061-002-99" index="17">K<hi rend="subscript">Y</hi>, K, and S read: <foreign xml:lang="Bo-Ltn" type="quote">bstan</foreign>. J and N read: <foreign xml:lang="Bo-Ltn" type="quote">stan</foreign>.</note> in the abodes of Brahmā.
                                 <ref cRef="F.87.b"/>
                         </l>
                     </lg>
@@ -972,7 +974,7 @@
                         definitely practice generosity by offering seats!’ When practicing
                         generosity by offering seats, bodhisattvas make the following aspiration:
                         ‘With aspirations that are in harmony with those of the thus-gone ones,
-                        through this offering of a seat may I cause all beings to attain the vajra
+                        through this offering of seats may I cause all beings to attain the vajra
                         throne at the seat of awakening in all the worlds of the great
                         trichiliocosms!’ Regarding this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-102"/>
@@ -1001,7 +1003,7 @@
                         <l>“By offering chairs, seats, and stools </l>
                         <l>To fellow practitioners of pure conduct,</l>
                         <l>One will attain such a seat</l>
-                        <l>While spinning in cyclic existence.</l>
+                        <l>While turning in cyclic existence.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-106"/>
                     <p tid="89">“How do bodhisattvas exert themselves in the practice of generosity
@@ -1018,7 +1020,7 @@
                         <l>“Through this gift of provisions,</l>
                         <l>May I cause beings who seek</l>
                         <l>The provisions for awakening </l>
-                        <l>To fulfill them!</l>
+                        <l>Achieve complete fulfillment!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-108"/>
                     <lg tid="91">
@@ -1030,13 +1032,13 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-109"/>
                     <p tid="92">“How do bodhisattvas exert themselves in the practice of generosity
                         by offering medicine? Noble son, bodhisattvas do so by reflecting in this
-                        way: ‘Offering medicine represents the perfection of the ambrosial happiness
-                        in which all beings are free from old age and death. Therefore, I will
+                        way: ‘Offering medicine represents the perfect wellbeing of the ambrosia
+                        by which all beings are free from old age and death. Therefore, I will
                         definitely practice generosity by offering medicine!’ When practicing
                         generosity by offering medicine, bodhisattvas make the following aspiration:
                         ‘In accordance with the aspirations blessed by the thus-gone ones, through
-                        this offering of medicine may I cause all beings to perfect the ambrosial
-                        happiness in which all beings are free from old age and death!’ Regarding
+                        this offering of medicine may I cause all beings to perfect the wellbeing of the ambrosia
+                        by which which all beings are free from old age and death!’ Regarding
                         this, it is said: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-110"/>
                     <lg tid="93">
@@ -1080,20 +1082,20 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-115"/>
                     <p tid="98">“How do bodhisattvas exert themselves in the practice of generosity
-                        by giving away gold, silver, jewels, pearl, beryl, conch shells, moonstone,
+                        by giving away gold, silver, jewels, pearls, beryls, conch shells, moonstones,
                         coral, and other precious substances? Noble son, bodhisattvas do so by
-                        reflecting in this way: ‘Giving away gold, silver, jewels, pearl, beryl,
-                        conch shells, moonstone, coral, and other precious substances represents the
+                        reflecting in this way: ‘Giving away gold, silver, jewels, pearls, beryls,
+                        conch shells, moonstones, coral, and other precious substances represents the
                         blue, yellow, red, white, crimson, crystalline, and silvery colors of the
                         bodhisattvas’ light rays that shine within the infinite myriad buddha
                         realms. Therefore, I will definitely practice generosity by giving away
-                        gold, silver, jewels, pearl, beryl, conch shells, moonstone, coral, and
+                        gold, silver, jewels, pearls, beryls, conch shells, moonstones, coral, and
                         other precious substances!’ When practicing generosity by giving away gold,
-                        silver, jewels, pearl, beryl, <ref cRef="F.89.a"/> conch shells, moonstone,
-                        coral, and other precious gems, bodhisattvas make the following aspiration:
+                        silver, jewels, pearls, beryls, <ref cRef="F.89.a"/> conch shells, moonstones,
+                        coral, and other precious substances, bodhisattvas make the following aspiration:
                         ‘In accordance with the aspirations that are known, explained, and clarified
-                        by the thus-gone ones, may this offering of gold, silver, jewels, pearl,
-                        beryl, conch shells, moonstone, coral, and other precious substances enable
+                        by the thus-gone ones, may this offering of gold, silver, jewels, pearls,
+                        beryls, conch shells, moonstones, coral, and other precious substances enable
                         me to illuminate infinite myriad buddha realms with blue, yellow, red,
                         white, crimson, crystalline, and silvery light rays!’ Regarding this, there
                         are also some concluding verses: </p>
@@ -1109,7 +1111,7 @@
                         <l>“The noble persons who offer precious substances</l>
                         <l>Wherever they are reborn,</l>
                         <l>Will illuminate with their light rays</l>
-                        <l>The worlds down to the hell of endless torment.</l>
+                        <l>All worlds down to the Hell of Endless Torment.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-118"/>
                     <p tid="101">“How do bodhisattvas exert themselves in the practice of
@@ -1143,7 +1145,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-121"/>
                     <p tid="104">“How do bodhisattvas exert themselves in the practice of
-                        generosity by giving away parks, forests for ascetics, and temples? Noble
+                        generosity by giving away parks, forests for ascetic practice, and temples? Noble
                         son, bodhisattvas do so by reflecting in this way: ‘Giving away parks,
                         forests for ascetic practice, and temples represents the perfection of the
                         bodhisattvas’ factors of concentration. Therefore, I will definitely
@@ -1170,14 +1172,14 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-124"/>
                     <p tid="107">“How do bodhisattvas exert themselves in the practice of
-                        generosity by giving away their wives, sons, and daughters? Noble son,
+                        generosity by giving away their spouses, sons, and daughters? Noble son,
                         bodhisattvas do so by reflecting in this way: <ref cRef="F.90.a"/> ‘Giving
-                        away one’s wives, sons, and daughters represents the bodhisattvas’ awakening
+                        away one’s spouses, sons, and daughters represents the bodhisattvas’ awakening
                         to unsurpassed and perfect buddhahood. Therefore, I will definitely practice
-                        generosity by giving away my wives, sons, and daughters!’ When practicing
-                        generosity by giving away their wives, sons, and daughters, bodhisattvas
+                        generosity by giving away my spouses, sons, and daughters!’ When practicing
+                        generosity by giving away their spouses, sons, and daughters, bodhisattvas
                         make the following aspiration: ‘In accordance with the aspirations revered
-                        by the thus-gone ones, through this gift of my wives, sons, and daughters
+                        by the thus-gone ones, through this gift of my spouses, sons, and daughters
                         may I cause all beings to fully awaken to unsurpassed and perfect
                         buddhahood!’ Regarding this, there are also some further verses: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-125"/>
@@ -1189,8 +1191,8 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-126"/>
                     <lg tid="109">
-                        <l>“Those who give away their wives, sons, and daughters</l>
-                        <l>Will attain stainless awakening without difficulty.<note place="end" xml:id="UT22084-061-002-127" index="17">Following K<hi rend="subscript">Y</hi>, J, K, N, C,
+                        <l>“Those who give away their spouses, sons, and daughters</l>
+                        <l>Will attain stainless awakening without difficulty.<note place="end" xml:id="UT22084-061-002-127" index="18">Following K<hi rend="subscript">Y</hi>, J, K, N, C,
                                 and H: <foreign xml:lang="Bo-Ltn" type="quote">dka’</foreign>. D
                                 reads <foreign xml:lang="Bo-Ltn" type="quote">dga’</foreign>.</note>
                         </l>
@@ -1257,7 +1259,7 @@
                         generosity by giving away crest jewels and crowns? Noble son, bodhisattvas
                         do so <ref cRef="F.91.a"/> by reflecting in this way: ‘Giving away crest
                         jewels and crowns represents the bodhisattvas’ achievement of the unseen
-                        crown of the head.<note place="end" xml:id="UT22084-061-002-135" index="18">The Buddha’s crown protuberance (Skt. <foreign xml:lang="Sa-Ltn" type="term">uṣṇīṣa</foreign>) is described in canonical sources as
+                        crown of the head.<note place="end" xml:id="UT22084-061-002-135" index="19">The Buddha’s crown protuberance (Skt. <foreign xml:lang="Sa-Ltn" type="term">uṣṇīṣa</foreign>) is described in canonical sources as
                             being invisible, either because the light it emanates is brighter than
                             the light of the sun, or because there is no one above the Buddha, and
                             therefore no one can look down on him.</note> Therefore, I will
@@ -1294,7 +1296,7 @@
                         joyful, their senses controlled. Like the gentle moonlight, may their
                         appearance become peaceful and radiant. Like the brilliance of many suns,
                         may the light rays of their compassion illuminate the gloom of helpless
-                        humans engulfed in darkness, down to the hell of endless torment, and
+                        humans engulfed in darkness, down to the Hell of Endless Torment, and
                         eliminate the physical sufferings of extreme heat. <ref cRef="F.91.b"/> May
                         they be endowed with lotus-like feet, which are adorned with the marks of
                         thousand-spoked wheels, even, and smooth. May they obtain long toes
@@ -1573,7 +1575,7 @@
                     <lg tid="149">
                         <l>“Benefactor, this is excellent! You who are always like a father, this is
                             excellent!</l>
-                        <l>Benefactor, this is excellent! Blissful One, your words<note place="end" xml:id="UT22084-061-002-169" index="19">Following KY, K, N, C, and
+                        <l>Benefactor, this is excellent! Blissful One, your words<note place="end" xml:id="UT22084-061-002-169" index="20">Following KY, K, N, C, and
                                 H: <foreign xml:lang="Bo-Ltn" type="quote">gsung</foreign>. D reads
                                     <foreign xml:lang="Bo-Ltn" type="quote">gsang</foreign>.</note>
                             are excellent!</l>
@@ -1857,7 +1859,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-061-002-196">
-                            <term>factors of awakening</term>
+                            <term>branches of awakening</term>
                             <term xml:lang="Bo-Ltn">byang chub kyi yan lag </term>
                             <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཡན་ལག</term>
                             <term xml:lang="Sa-Ltn">bodhyaṅga</term>
@@ -1921,7 +1923,7 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-061-002-202">
-                            <term>hell of endless torment</term>
+                            <term>Hell of Endless Torment</term>
                             <term xml:lang="Bo-Ltn">mtshams med </term>
                             <term xml:lang="bo">མཚམས་མེད།</term>
                             <term xml:lang="Sa-Ltn">avīci</term>
