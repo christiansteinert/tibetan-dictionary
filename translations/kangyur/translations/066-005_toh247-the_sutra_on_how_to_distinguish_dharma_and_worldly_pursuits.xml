@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -19,6 +19,7 @@
                     supervision of 84000: Translating the Words of the Buddha</author>
                 <author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
                 <author role="translatorEng" ref="contributors.xml#person-58">Anna Zilman</author>
+                <author role="translatorTib" ref="contributors.xml#person-48">Lama Tenzin Sangpo</author>
                 <consultant role="advisor" ref="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
             <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
                 <editor role="externalReviewer" ref="contributors.xml#person-165">Robert Miller</editor>
@@ -26,10 +27,10 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.02 <date>2019</date>
+                <edition>v 0.1 <date>2019</date>
                 </edition>
             </editionStmt>
-            <publicationStmt status="2.a">
+            <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
                     initiative that aims to translate all of the Buddha’s words into modern
@@ -65,8 +66,11 @@
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated" date-time="2019-03-11T20:04:53.847Z" user="celso">11/03/2019 20:04:53</note>
+               <note type="lastUpdated" date-time="2019-06-14T17:17:54.897Z" user="admin">14/06/2019 17:17:54</note>
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-03-08T19:52:46.864Z" user="celso">v 1.01 2019</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-04-23T11:00:51.822Z" user="mike">v 1.02 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:23:28.588Z" user="mike">2</note>
+                <note type="updated" update="text-version" value="v 0.1" date-time="2019-06-14T17:17:52.157Z" user="john">v 0.1 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -427,12 +431,15 @@
                         Delighted by Victory, the other bodhisattvas, the monks, and the rest of the
                         assembly, along with the world with its gods, humans, demigods, and
                         gandharvas all rejoiced and praised what the Blessed One had said. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-48"/>
+                    <p tid="46">This concludes the noble Great Vehicle sūtra
+                        entitled <title xml:lang="en">Distinguishing Between Phenomena and Reality.</title> </p>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="45">Colophon</head>
-                    <milestone unit="chunk" xml:id="UT22084-066-005-48"/>
-                    <p tid="46">This concludes <title xml:lang="en">The Noble Great Vehicle Sūtra
-                            entitled Distinguishing Between Phenomena and Reality</title>. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-49"/>
+                    
                     
                     <p tid="47">It was translated, edited, and finalized by the Indian scholars
                         Jinamitra and Dānaśila, as well as the chief editor and translator venerable
