@@ -21,7 +21,7 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.1 <date>2015</date>
+                <edition>v 1.21 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -56,7 +56,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:32:28 by admin</note>
+                <note type="lastUpdated" date-time="2019-06-18T16:26:01.865Z" user="admin">18/06/2019 16:26:01</note>
+            <note type="updated" update="text-version" value="v 1.21" date-time="2019-06-18T16:25:59.158Z" user="celso">v 1.21 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -182,11 +183,13 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-072-009-15"/>
                     <p tid="16">When the Bhagavān had thus spoken, the monks rejoiced and praised his words. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-072-009-16"/>
+                    <p tid="17"> This completes <title xml:lang="en">The Sūtra on Impermanence</title>. </p>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="26">Colophon</head>
-                    <milestone unit="chunk" xml:id="UT22084-072-009-16"/>
-                    <p tid="17"> This completes <title xml:lang="en">The Sūtra on Impermanence</title>. </p>
+                    <milestone unit="chunk" xml:id="UT22084-072-009-31"/>
                     <p tid="18">Translated and edited by the Indian scholar Surendrabodhi and the principal editor-translator, the
                         monk Zhang Yeshé Dé. It was then also reviewed and finalized in accordance with current language
                         reforms.</p>
