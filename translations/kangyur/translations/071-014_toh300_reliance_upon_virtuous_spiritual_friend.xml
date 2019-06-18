@@ -20,7 +20,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.11 <date>2011 - 2016</date>
+                <edition>v 2.15 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -55,7 +55,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-10T17:12:53.59Z" user="celso">10/03/2019 17:12:53</note>
+                <note type="lastUpdated" date-time="2019-06-18T02:59:14.608Z" user="admin">18/06/2019 02:59:14</note>
+            <note type="updated" update="text-version" value="v 2.15" date-time="2019-06-18T02:59:11.828Z" user="celso">v 2.15 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -187,8 +188,8 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-071-014-13"/>
                     <p tid="15">Thus did I hear at one time. The Bhagavān was dwelling in the Grove of Twin Sāl-Trees in the
-                            vicinity<note place="end" index="3" xml:id="UT22084-071-014-36">DQ: <foreign type="term" xml:lang="Bo-Ltn">nyen ’khor;</foreign> N: <foreign type="term" xml:lang="Bo-Ltn">nye
-                                ’khor</foreign>. </note> of the Malla town of Kuśinagara,<note place="end" index="4" xml:id="UT22084-071-014-37">DN: <foreign type="term" xml:lang="Bo-Ltn">ku sha na gyad;</foreign> Q:
+                            vicinity<note place="end" index="3" xml:id="UT22084-071-014-36">DK<hi rend="subscript">Q</hi>: <foreign type="term" xml:lang="Bo-Ltn">nyen ’khor;</foreign> N: <foreign type="term" xml:lang="Bo-Ltn">nye
+                                ’khor</foreign>. </note> of the Malla town of Kuśinagara,<note place="end" index="4" xml:id="UT22084-071-014-37">DN: <foreign type="term" xml:lang="Bo-Ltn">ku sha na gyad;</foreign> K<hi rend="subscript">Q</hi>:
                                 <foreign type="term" xml:lang="Bo-Ltn">ku shi na gyad</foreign>. </note> together with a retinue
                         of śrāvakas. Then, when the Bhagavān was about to pass into parinirvāṇa, he addressed the bhikṣus,
                         “Bhikṣus, you should train in this way. Bhikṣus, you should train thinking, ‘One should live with a
@@ -222,18 +223,21 @@
                     <milestone unit="chunk" xml:id="UT22084-071-014-17"/>
                     <p tid="21">When the Bhagavān had spoken these words, the bhikṣus rejoiced and highly praised what the Blessed
                         One had taught. </p>
-                </div>
-                <div type="colophon">
-                    <head type="colophon" tid="30">Colophon</head>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-071-014-18"/>
                     <p tid="22">This completes <title xml:lang="en">The Noble Sūtra on Reliance upon a Virtuous Spiritual
-                            Friend</title>.<note place="end" index="7" xml:id="UT22084-071-014-40">The colophon makes no mention
+                        Friend</title>.<note place="end" index="7" xml:id="UT22084-071-014-40">The colophon makes no mention
                             of who the Tibetan translators were, but the Degé catalogue (<title xml:lang="Bo-Ltn">dkar
                                 chag</title>, vol. 103, lak+Sh+mI, F.134.a.7) states that the text was translated by the Paṇḍita
                             Dharmākara and the Lotsāwa Zangkyong (<foreign xml:lang="Bo-Ltn">bzang skyong</foreign>). See
-                                Introduction, <ptr target="#UT22084-071-014-7"/>.</note>
+                            Introduction, <ptr target="#UT22084-071-014-7"/>.</note>
                     </p>
                 </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="30">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-071-014-18"/>
+                   
+                </div>-->
             </div>
         </body>
         <back>
@@ -250,8 +254,9 @@
                         <expan>Narthang Kangyur</expan>
                     </item>
                     <item xml:id="UT22084-071-014-21">
-                        <abbr>Q</abbr>
-                        <expan>Peking Kangyur</expan>
+                        <abbr>K<hi rend="subscript">Q</hi>
+                        </abbr>
+                        <expan>Peking (Qianlong) Kangyur</expan>
                     </item>
                 </list>
             </div>
@@ -267,6 +272,10 @@
                         khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center). 108 volumes.
                         Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2006-2009, vol 71, pp
                         829-831.</bibl>
+                    <bibl xml:id="UT22084-071-014-41">
+                        <title xml:lang="Bo-Ltn">’phags pa dge ba’i bshes gnyen bsten pa’i mdo</title>. rKTs-K300, Q 966, Peking Qianlong (K<hi rend="subscript">Q</hi>), vol. 38 (mdo sna tshogs, lu),
+                        folios 334a-335a.
+                    </bibl>
                     <bibl xml:id="UT22084-071-014-24">Alsdorf, Ludwig. <title xml:lang="de">Śaśa-Jātaka und Śaśa-Avadāna</title>.
                         In: Wiener Zeitschrift für die Kunde Süd-und Ostasiens, 5, 1-17, 1961. Reprinted in: Wezler, Albrecht
                         (ed.). Ludwig Alsdorf, Kleine Schriften. Wiesbaden: F. Steiner, 1974. </bibl>
