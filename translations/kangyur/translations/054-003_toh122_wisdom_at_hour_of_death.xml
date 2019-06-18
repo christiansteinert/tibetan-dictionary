@@ -23,7 +23,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.22 <date>2016</date>
+                <edition>v 1.24 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -57,7 +57,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-10T17:07:10.74Z" user="celso">10/03/2019 17:07:10</note>
+                <note type="lastUpdated" date-time="2019-06-18T16:07:40.028Z" user="admin">18/06/2019 16:07:40</note>
+            <note type="updated" update="text-version" value="v 1.24" date-time="2019-06-18T16:07:37.289Z" user="celso">v 1.24 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -282,12 +283,14 @@
                     <milestone unit="chunk" xml:id="UT22084-054-003-24"/>
                     <p tid="27">After the Blessed One had spoken, <ref cRef="F.153.b"/> the whole assembly, including the
                         bodhisattva Ākāśagarbha and others, were overjoyed and full of praise for the Buddha’s words. </p>
-                </div>
-                <div type="colophon">
-                    <head type="colophon" tid="35">Colophon</head>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-054-003-25"/>
                     <p tid="28">This concludes the Noble Mahāyāna Sūtra on Wisdom at the Hour of Death. </p>
                 </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="35">Colophon</head>
+                    
+                </div>-->
             </div>
         </body>
         <back>
