@@ -22,7 +22,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.1 <date>2013 - 2016</date>
+                <edition>v 2.21 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -56,7 +56,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-01T17:37:47.353Z" user="admin">01/03/2019 17:37:47</note>
+                <note type="lastUpdated" date-time="2019-06-18T02:58:35.223Z" user="admin">18/06/2019 02:58:35</note>
+            <note type="updated" update="text-version" value="v 2.21" date-time="2019-06-18T02:58:29.751Z" user="celso">v 2.21 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -183,15 +184,18 @@
                     <milestone unit="chunk" xml:id="UT22084-068-017-15"/>
                     <p tid="20">When the Blessed One had spoken, the world, including the bodhisattva Kṣitigarbha, the gods,
                         nāgas, yakṣas, and gandharvas rejoiced and praised the teachings of the Blessed One. </p>
-                </div>
-                <div type="colophon">
-                    <head type="colophon" tid="28">Colophon</head>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-068-017-16"/>
                     <p tid="21">This concludes the Noble Mahāyāna Sūtra, <title xml:lang="en">The Three Bodies</title>.<note place="end" index="5" xml:id="UT22084-068-017-57">The colophon makes no mention of who the Tibetan
-                            translators were, and the Degé catalogue (<title xml:lang="Bo-Ltn">dkar chag</title>, vol. 103,
-                            lak+Sh+mI, F.133.a.3) states that this is not known.</note>
+                        translators were, and the Degé catalogue (<title xml:lang="Bo-Ltn">dkar chag</title>, vol. 103,
+                        lak+Sh+mI, F.133.a.3) states that this is not known.</note>
                     </p>
+                    
                 </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="28">Colophon</head>
+                    
+                </div>-->
             </div>
         </body>
         <back>
