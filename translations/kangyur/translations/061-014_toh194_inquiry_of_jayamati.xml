@@ -21,7 +21,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.12 <date>2016</date>
+                <edition>v 1.14 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -55,8 +55,9 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-14T12:06:05.904Z" user="admin">14/03/2019 12:06:05</note>
+                <note type="lastUpdated" date-time="2019-06-18T16:19:14.73Z" user="admin">18/06/2019 16:19:14</note>
             <note type="updated" update="text-version" value="v 1.12" date-time="2019-03-14T12:06:03.658Z" user="john">v 1.12 2016</note>
+            <note type="updated" update="text-version" value="v 1.14" date-time="2019-06-18T16:19:12.035Z" user="celso">v 1.14 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -270,12 +271,14 @@
                     <p tid="18">When the Bhagavān had spoken, the bodhisatva mahāsatva Jayamati, the complete assembly, and the
                         world with its gods, humans, demigods and gandharvas rejoiced and highly praised what had been proclaimed
                         by the Bhagavān. </p>
-                </div>
-                <div type="colophon">
-                    <head type="colophon" tid="26">Colophon</head>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-014-16"/>
-                    <p tid="19">This completes the Noble Mahāyāna sūtra, <title xml:lang="en">The Inquiry of Jayamati</title>.</p>
+                    <p tid="19">This completes the noble Mahāyāna sūtra, <title xml:lang="en">The Inquiry of Jayamati</title>.</p>
+                    
                 </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="26">Colophon</head>
+                                    </div>-->
             </div>
         </body>
         <back>
