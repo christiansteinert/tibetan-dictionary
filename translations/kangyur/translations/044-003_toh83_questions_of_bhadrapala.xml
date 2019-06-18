@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <teiHeader>
-        <fileDesc>
+    <teiHeader> 
+        <fileDesc> 
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">tshong dpon bzang skyong gis zhus pa</title>
                 <title type="mainTitle" xml:lang="bo">ཚོང་དཔོན་བཟང་སྐྱོང་གིས་ཞུས་པ།</title>
@@ -20,9 +20,12 @@
                 <author role="translatorEng" ref="contributors.xml#person-115">Dr Karen Liljenberg</author>
                 <author role="translatorEng" ref="contributors.xml#person-116">Dr Ulrich Pagel</author>
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-165">Robert Miller</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-31">Casey Kemp</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.33 <date>2017</date>
+                <edition>v 1.37 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -44,7 +47,8 @@
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh83" type="text">
-                    <ref>Toh 83</ref>, <biblScope>Degé Kangyur, vol. 44 (dkon brtsegs, cha), folios 71.a–94.b</biblScope>
+                    <ref>Toh 83</ref>
+                    <biblScope>Degé Kangyur, vol. 44 (dkon brtsegs, cha), folios 71.a–94.b</biblScope>
                     <!--series>Degé Kangyur</series>, <biblScope>vol. 44 (dkon brtsegs,
                         cha)</biblScope>, <citedRange>folios 71a–94a</citedRange-->
                     <author role="translatorTib">Jinamitra</author>
@@ -59,7 +63,8 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-10T17:04:03.873Z" user="celso">10/03/2019 17:04:03</note>
+                <note type="lastUpdated" date-time="2019-06-18T15:53:56.194Z" user="admin">18/06/2019 15:53:56</note>
+            <note type="updated" update="text-version" value="v 1.37" date-time="2019-06-18T15:53:53.155Z" user="celso">v 1.37 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -792,7 +797,7 @@
                         consciousness, after leaving the body behind, establishes virtue and non-virtue; <ref cRef="F.85.a"/>
                         establishes feelings, perceptions, and mental processes; and then passes on to the next life. As an
                         analogy, when a man’s and a woman’s sexual organs meet, they are moistened by pleasure; the man embraces
-                        the woman tightly, and then emits his passion. After<note place="end" xml:id="UT22084-044-003-221" index="7"> We follow the reading <foreign xml:lang="Sa-Ltn">nas</foreign> in Q, N,
+                        the woman tightly, and then emits his passion. After<note place="end" xml:id="UT22084-044-003-221" index="7"> We follow the reading <foreign xml:lang="Sa-Ltn">nas</foreign> in K, N,
                             and H rather than D <foreign xml:lang="Sa-Ltn">na</foreign>.</note> the pair’s passion has passed,
                         they uncouple. The bliss of desire arises in them both, but when their passion is spent, desire vanishes
                         and they no longer desire each other. In the same way, the element of consciousness feels joy and its
@@ -1247,13 +1252,16 @@
                     <p tid="205">After the Blessed One had spoken thus, the young prince Mahauṣadhi together with the head
                         merchant Bhadrapāla, as well as the worlds of gods, humans, demi-gods, garuḍas, and gandharvas, rejoiced
                         and praised the words of the Blessed One.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-003-231"/>
+                    <p tid="206">This concludes the section of “The Questions of the Merchant Bhadrapāla,” the thirty-ninth
+                        section of <title xml:lang="en">The Noble Dharma Discourse, the Great Heap of Jewels</title>, in one
+                        hundred thousand sections.</p>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="214">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-044-003-152"/>
-                    <p tid="206">This concludes the section of “The Questions of the Merchant Bhadrapāla,” the thirty-ninth
-                        section of <title xml:lang="en">The Noble Dharma Discourse, the Great Heap of Jewels</title>, in one
-                        hundred thousand sections.</p>
+                    
                     <p tid="207">This text was translated, edited, and finalized by the Indian scholars Jinamitra and
                         Surendrabodhi, together with the chief editor and translator, the monk Yeshé Dé.</p>
                 </div>
@@ -1277,8 +1285,8 @@
                         <expan>Lhasa (<foreign xml:lang="Bo-Ltn">zhol</foreign>) Kangyur</expan>
                     </item>
                     <item xml:id="UT22084-044-003-156">
-                        <abbr>Q</abbr>
-                        <expan>Peking (Qianlong) Kangyur</expan>
+                        <abbr>K</abbr>
+                        <expan>Peking (Kangxi) Kangyur</expan>
                     </item>
                     <item xml:id="UT22084-044-003-157">
                         <abbr>N</abbr>
@@ -1301,7 +1309,7 @@
                         <title xml:lang="Bo-Ltn">’phags pa tshong dpon bzang skyong gis zhus pa zhes bya ba theg pa chen po’i mdo </title>
                         <title xml:lang="Sa-Ltn">Ārya­bhadra­pāla­śreṣṭhi­paripṛcchā­nāma­mahā­yāna­sūtra</title>). [Comparative
                         Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The
-                        Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center). 108 volumes. Beijing:krung
+                        Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center). 108 volumes. Beijing: krung
                         go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2006–2009, vol. 44, pp.
                         197–260.</bibl>
                     <bibl xml:id="UT22084-044-003-161">
