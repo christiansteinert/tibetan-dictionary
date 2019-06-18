@@ -27,7 +27,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.15 <date>2011 - 2016</date>
+                <edition>v 2.19 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -71,9 +71,10 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-10T17:10:34.681Z" user="celso">10/03/2019 17:10:34</note>
+                <note type="lastUpdated" date-time="2019-06-18T02:55:56.167Z" user="admin">18/06/2019 02:55:56</note>
             <note type="updated" update="text-version" value="v 2.13" date-time="2019-02-27T16:31:39.284Z" user="admin">v 2.13 2011 - 2016</note>
                 <note type="updated" update="text-version" value="v 2.14" date-time="2019-02-27T16:32:48.481Z" user="admin">v 2.14 2011 - 2016</note>
+            <note type="updated" update="text-version" value="v 2.19" date-time="2019-06-18T02:55:53.397Z" user="celso">v 2.19 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -499,21 +500,23 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-013-88"/>
                     <p rend="mantra" tid="27">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">“Oṃ!</foreign> Look at us, save us, and emancipate us from all
-                        sufferings. Make us turn in the direction of all collections of merits, <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>.<note place="end" index="37" xml:id="UT22084-061-013-89">In the
+                        <mantra type="dharani" xml:lang="mixed">
+                            <foreign xml:lang="Sa-Ltn">“Oṃ!</foreign> Look at us, save us, and emancipate us from all
+                        sufferings. Make us turn in the direction of all collections of merits, <foreign xml:lang="Sa-Ltn">svāhā</foreign>.<note place="end" index="37" xml:id="UT22084-061-013-89">In the
                             Tibetan text, this first section of the dhāraṇī is in Tibetan. The Skt. of the second sentence should
-                            be corrected from <foreign type="mantra" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānā­mukhī­kuru
-                                svāhā</foreign> to <foreign type="mantra" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānām abhi­mukhī
+                            be corrected from <foreign type="quote" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānā­mukhī­kuru
+                                svāhā</foreign> to <foreign type="quote" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānām abhi­mukhī
                                 kuru svāhā</foreign>.</note>
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṃ gaṅgādi­sarva­tīrthānām abhimukhī kuru</foreign>
-                        <note place="end" index="38" xml:id="UT22084-061-013-90">Skt. <foreign type="mantra" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānyāmuikhī­kuru</foreign> should be corrected to <foreign type="mantra" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānām abhimukhī kuru</foreign>.</note>
-                        <foreign type="mantra" xml:lang="Sa-Ltn"> svāhā | oṃ sāvitryai svāhā | sarva­maṅgala­dhāriṇyai svāhā |
+                        <foreign type="quote" xml:lang="Sa-Ltn">Oṃ gaṅgādi­sarva­tīrthānām abhimukhī kuru</foreign>
+                            <note place="end" index="38" xml:id="UT22084-061-013-90">Skt. <foreign type="quote" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānyāmuikhī­kuru</foreign> should be corrected to <foreign type="quote" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānām abhimukhī kuru</foreign>.</note>
+                            <foreign type="quote" xml:lang="Sa-Ltn"> svāhā | oṃ sāvitryai svāhā | sarva­maṅgala­dhāriṇyai svāhā |
                             catur­veda­nakṣatra­graha­gaṇādimūrtyai svāhā | brahmaṇe svāhā | viṣṇave svāhā | rudrāya svāhā |
                             viśva­mukhāya svāhā | oṃ nigrigrini sarva­kāryasādhani sini sini āvāhayāmi devi śrī­vaiśravaṇāya svāhā
                             | suvarṇa­dhana­dhānyākarṣaṇyai svāhā | sarva­puṇyā­karṣaṇyai svāhā | śrī­devatākarṣaṇyai svāhā |
                             sarva­pāpanāśanyai svāhā | sarvā­lakṣmī­praśamanyai svāhā | sarva­tathāgatābhiṣiktāyai svāhā |
                             sarva­devatābhimukhaśriye svāhā | āyur­bala­varṇa­karāyai svāhā | sarva­pavitra­maṅgala­hastāyai svāhā
                             | siṃha­vāhinyai svāhā | padma­saṃbhūtāyai svāhā | sarva­kṛtya­kākhordavināśanyai svāhā.</foreign>
+                        </mantra>
                         <note place="end" index="39" xml:id="UT22084-061-013-91">The Sanskrit of the dhāraṇi as transcribed in the
                             Tibetan text appears unreliable; the dhāraṇi as presented here is transliterated from the Sanskrit
                             edition.</note>
@@ -531,13 +534,16 @@
                     <milestone unit="chunk" xml:id="UT22084-061-013-96"/>
                     <p tid="25">When the Bhagavān had thus spoken, the fearless bodhisattva Avalokiteśvara, <ref cRef="F.234.b" key="toh739"/> Śrī Mahādevī<note place="end" index="43" xml:id="UT22084-061-013-97">Tib. has <foreign xml:lang="Bo-Ltn">lha mo chen mo dpal de</foreign>, “that Śrī Mahādevī,” while Skt. has <foreign type="term" xml:lang="Sa-Ltn">sā</foreign>, “she.” </note>, the entire retinue, and the world,
                         including gods, humans, asuras, and gandharvas, rejoiced and [678] praised the words of the Bhagavān.</p>
-                </div>
-                <div type="colophon">
-                    <head type="colophon" tid="34">Colophon</head>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-301"/>
                     <p tid="26">This completes <title xml:lang="en">The Noble Prophecy of Śrī Mahādevī</title>.<note place="end" index="44" xml:id="UT22084-061-013-98">The usual mention of the translators in the Tibetan colophon is
-                            missing in all versions.</note>
+                        missing in all versions.</note>
                     </p>
                 </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="34">Colophon</head>
+                    
+                </div>-->
             </div>
         </body>
         <back>
@@ -1100,9 +1106,9 @@
                     <item>
                         <gloss type="person" xml:id="UT22084-061-013-161">
                             <term>Ratna­kusuma­guṇa­sāgara­vaiḍūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī</term>
-                            <term xml:lang="Bo-Ltn">rin po che’i me tog yon tan gyi rgya mtsho baidūrya dang gser gyi ri bo mdog
+                            <term xml:lang="Bo-Ltn">rin po che’i me tog yon tan gyi rgya mtsho baidUrya dang gser gyi ri bo mdog
                                 mdzes gser ’od dpal </term>
-                            <term xml:lang="bo">རིན་པོ་ཆེའི་མེ་ཏོག་ཡོན་ཏན་གྱི་རྒྱ་མཚོ་བཻདūརྱ་དང་གསེར་གྱི་རི་བོ་མདོག་མཛེས་གསེར་འོད་དཔལ།</term>
+                            <term xml:lang="bo">རིན་པོ་ཆེའི་མེ་ཏོག་ཡོན་ཏན་གྱི་རྒྱ་མཚོ་བཻདཱུརྱ་དང་གསེར་གྱི་རི་བོ་མདོག་མཛེས་གསེར་འོད་དཔལ།</term>
                             <term xml:lang="Sa-Ltn">Ratna­kusuma­guṇa­sāgara­vaidūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī</term>
                         </gloss>
                     </item>
