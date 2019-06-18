@@ -23,7 +23,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.14 <date>2018</date>
+                <edition>v 1.16 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -44,7 +44,8 @@
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh210" type="text">
-                    <ref>Toh 210</ref>, <biblScope>Degé Kangyur, vol. 62 (mdo sde, tsha), folios 116.a–123.b</biblScope>
+                    <ref>Toh 210</ref> 
+                    <biblScope>Degé Kangyur, vol. 62 (mdo sde, tsha), folios 116.a–123.b</biblScope>
                     <author role="translatorTib"/>
                     <location count-pages="16">
                         <start volume="62" page="233"/>
@@ -56,7 +57,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-02-26T22:10:42.92Z" user="laura">26/02/2019 22:10:42</note>
+                <note type="lastUpdated" date-time="2019-06-18T16:20:29.036Z" user="admin">18/06/2019 16:20:29</note>
+            <note type="updated" update="text-version" value="v 1.16" date-time="2019-06-18T16:20:25.709Z" user="celso">v 1.16 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -700,7 +702,7 @@
                         bodhisattva mahāsattva Maitreya had taught. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-062-010-113"/>
-                    <p tid="78">This concludes the noble Mahāyāna sūtra, The Rice Seedling.</p>
+                    <p tid="78">This concludes the noble Mahāyāna sūtra, <title xml:lang="en">The Rice Seedling</title>.</p>
                 </div>
             </div>
         </body>
