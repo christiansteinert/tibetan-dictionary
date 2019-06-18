@@ -19,12 +19,9 @@
                     supervision of 84000: Translating the Words of the Buddha</author>
                 <author role="translatorEng" ref="contributors.xml#person-142">Peter Alan Roberts</author>
                 <consultant role="advisor" ref="contributors.xml#person-145">Tulku Yeshi</consultant>
-                
-                
                 <editor role="reviser" ref="contributors.xml#person-232">Ben Gleason</editor>
                 <editor role="reviser" ref="contributors.xml#person-143">Emily Bower</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
-                
                 <consultant role="advisor" ref="contributors.xml#person-235">William Tuladhar-Douglas</consultant>
                 <consultant role="advisor" ref="contributors.xml#person-236">Charles Manson</consultant>
                 <consultant role="advisor" ref="contributors.xml#person-238">Sanjukta Gupta</consultant>
@@ -32,7 +29,7 @@
                 <sponsor ref="sponsors.xml#sponsor-31">Tony Leung Chiu Wai and family</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.43b <date>2013 - 2016</date>
+                <edition>v 2.46 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -68,7 +65,8 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-13T18:49:12.924Z" user="celso">13/03/2019 18:49:12</note>
+                <note type="lastUpdated" date-time="2019-06-18T02:52:30.621Z" user="admin">18/06/2019 02:52:30</note>
+            <note type="updated" update="text-version" value="v 2.46" date-time="2019-06-18T02:52:27.743Z" user="celso">v 2.46 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -107,7 +105,7 @@
                     <milestone unit="chunk" xml:id="UT22084-051-004-3"/>
                     <!-- TEST COMMENT -->
                     <p tid="5">The <title xml:lang="Sa-Ltn">Kāraṇḍavyūha </title>is an early Mantrayāna sūtra that is the source
-                        of the mantra <foreign type="mantra" xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ</foreign>. The sūtra is thus of
+                        of the mantra <mantra xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ</mantra>. The sūtra is thus of
                         particular importance, as this mantra now holds a central role in the Tibetan Buddhist tradition,
                         especially throughout the lay population. This sūtra also records Avalokiteśvara’s transformation into the
                         principal figure of the Buddhist pantheon, greater than all other buddhas, let alone bodhisattvas. In this
@@ -320,7 +318,7 @@
                     <head type="section" tid="697">Oṁ maṇipadme hūṁ</head>
                     <milestone unit="chunk" xml:id="UT22084-051-004-21"/>
                     <p tid="27">The <title xml:lang="Sa-Ltn">Kāraṇḍavyūha</title>’s principal content is the introduction of the
-                            <foreign type="mantra" xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ</foreign> mantra and the descriptions of its
+                            <mantra xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ</mantra> mantra and the descriptions of its
                         inconceivable benefits. These are also the most quoted sections of the sūtra. However, it contains no
                         instructions on the qualities and benefits of each syllable, of the kind that subsequently became
                         widespread in Tibetan Buddhism. It also gives no explanation of the meaning of the mantra as a whole, a
@@ -336,12 +334,13 @@
                         Avalokiteśvara has taken on various attributes and characteristics of Śiva, to the extent that one passage
                         could be misread as describing Avalokiteśvara to be the creator of the universe. Even so, he is still
                         being described as the creator of its deities, including Śiva and Viṣṇu. In particular, Avalokiteśvara’s
-                        mantra is evidence of the influence of Śiva’s five-syllable mantra, <foreign type="mantra" xml:lang="Sa-Ltn">oṁ namaḥ śivāya</foreign> (“<foreign type="term" xml:lang="Sa-Ltn">Oṁ</foreign>—Homage to Śiva!”), which is found in the <title xml:lang="Sa-Ltn">Skandapurāṇa</title>
+                        mantra is evidence of the influence of Śiva’s five-syllable mantra, <mantra xml:lang="Sa-Ltn">oṁ namaḥ śivāya</mantra> (“<mantra xml:lang="mixed">
+                            <foreign xml:lang="Sa-Ltn">Oṁ</foreign>—Homage to Śiva!</mantra>”), which is found in the <title xml:lang="Sa-Ltn">Skandapurāṇa</title>
                         together with a description of the benefits of its recitation.</p>
                     <milestone unit="chunk" xml:id="UT22084-051-004-23"/>
                     <p tid="29">In classical Sanskrit grammar, <foreign type="term" xml:lang="Sa-Ltn">padme</foreign> would be the
-                        locative case, which has led to the interpretation of <foreign type="mantra" xml:lang="Sa-Ltn">oṁ
-                            maṇipadme hūṁ </foreign>as “jewel in the lotus.” However, mantras are typically given in the vocative
+                        locative case, which has led to the interpretation of <mantra xml:lang="Sa-Ltn">oṁ
+                            maṇipadme hūṁ</mantra> as “jewel in the lotus.” However, mantras are typically given in the vocative
                         or dative case, usually with the name of a deity being invoked. <foreign type="term" xml:lang="Sa-Ltn">Padme</foreign> is in fact the vocative for <foreign type="term" xml:lang="Sa-Ltn">padma</foreign>,
                         this being Buddhist Hybrid Sanskrit. In classical Sanskrit, the <emph>e-</emph>ending vocative form is
                         only used for feminine nouns.<note place="end" xml:id="UT22084-051-004-511" index="13">Martin (1987),
@@ -360,7 +359,7 @@
                     <p tid="30">The sūtra itself is rarely read in Tibet, other than in the annual ritual chanting of the Kangyur,
                         and as mentioned above it has been eclipsed by the eleventh-century <title xml:lang="Sa-Ltn">Maṇi
                             Kabum</title>. There is no evidence of it having had any significant impact on religious life in Tibet
-                        in the preceding centuries. In spite of the eventual importance of the <foreign type="mantra" xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ </foreign>mantra, the sūtra is still primarily known only through
+                        in the preceding centuries. In spite of the eventual importance of the <mantra xml:lang="Sa-Ltn">oṁ maṇipadme hūṁ</mantra> mantra, the sūtra is still primarily known only through
                         select quotations. One reason for this is that very little of the teaching and meditation practice of the
                             <title xml:lang="Sa-Ltn">Maṇi Kabum</title> is to be found in the sūtra. </p>
                     <milestone unit="chunk" xml:id="UT22084-051-004-25"/>
@@ -591,7 +590,7 @@
                     <list type="section">
                         <item>
                             <p tid="642">I. Sūtra narrative: Buddha Śākyamuni is in the Jetavana Monastery when lights appear,
-                                transforming the monastery’s appearance. Bodhisattva Sarvanīvaraṇaviṣkambhin questions Buddha
+                                transforming the monastery’s appearance. Bodhisattva Sarvanīvaraṇaviṣkambhin questions Buddha
                                 Śākyamuni about this, and the Buddha states that the cause of the lights is Avalokiteśvara
                                 visiting Avīci hell and then the city of the pretas. </p>
                             <list type="bullet">
@@ -606,7 +605,7 @@
                         <!--closes item with n1-->
                         <item>
                             <p tid="644">II. Sūtra narrative: Buddha Śākyamuni responds to a question from
-                                Sarvanīvaraṇaviṣkambhin about whether Avalokiteśvara has left the hell. </p>
+                                Sarvanīvaraṇaviṣkambhin about whether Avalokiteśvara has left the hell. </p>
                             <list type="bullet">
                                 <item>
                                     <p tid="645">1. Buddha Śākyamuni’s narrative: Avalokiteśvara leaves the hells, visits the city
@@ -642,7 +641,7 @@
                         </item>
                         <!--closes item with n3-->
                         <item>
-                            <p tid="649">IV. Sūtra narrative: Buddha Śākyamuni tells Sarvanīvaraṇaviṣkambhin about his memories
+                            <p tid="649">IV. Sūtra narrative: Buddha Śākyamuni tells Sarvanīvaraṇaviṣkambhin about his memories
                                 of being a bodhisattva named Dānaśūra when Buddha Śikhin taught about Avalokiteśvara. </p>
                             <list type="bullet">
                                 <item>
@@ -684,9 +683,9 @@
                                                     <p tid="655">i. Bali’s narrative: Bali explains how he imprisoned many
                                                         kṣatriyas, including the Pāṇḍavas and Kauravas of <title xml:lang="Sa-Ltn">Mahābhārata</title> fame, and how Nārāyaṇa rescued them. Then he
                                                         describes how he followed the tradition of a king making a vast offering
-                                                        from his wealth and granting the requests of anyone who came. Viṣṇu
+                                                        from his wealth and granting the requests of anyone who came. Viṣṇu
                                                         comes as a brahmin dwarf requesting the amount of land that he can cover
-                                                        in two footsteps. Bali offers him three footsteps’ worth. Viṣṇu takes on
+                                                        in two footsteps. Bali offers him three footsteps’ worth. Viṣṇu takes on
                                                         a gigantic form, encompasses the world in two steps, and then banishes the
                                                         asuras to the underworld. </p>
                                                 </item>
@@ -749,7 +748,7 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="661">VI. Sūtra narrative: Buddha Śākyamuni responds to Sarvanīvaraṇaviṣkambhin’s request for
+                            <p tid="661">VI. Sūtra narrative: Buddha Śākyamuni responds to Sarvanīvaraṇaviṣkambhin’s request for
                                 teachings on Avalokiteśvara by first giving a list of Avalokiteśvara’s samādhis. </p>
                             <list type="bullet">
                                 <item>
@@ -779,7 +778,7 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="667">VIII. Sūtra narrative: Sarvanīvaraṇaviṣkambhin describes the benefits of possessing and
+                            <p tid="667">VIII. Sūtra narrative: Sarvanīvaraṇaviṣkambhin describes the benefits of possessing and
                                 writing the sūtra to Buddha Śākyamuni’s approval. </p>
                             <list type="bullet">
                                 <item>
@@ -795,11 +794,11 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="670">IX. Sūtra narrative: Sarvanīvaraṇaviṣkambhin wishes to go to the pores but Buddha
+                            <p tid="670">IX. Sūtra narrative: Sarvanīvaraṇaviṣkambhin wishes to go to the pores but Buddha
                                 Śākyamuni describes how Samantabhadra failed to find the pores in twelve years of searching.
                                 Buddha Śākyamuni describes how Avalokiteśvara has a subtle form that even he cannot perceive, and
                                 that Avalokiteśvara has eleven heads, a hundred thousand arms, and a trillion eyes. Buddha
-                                Śākyamuni laughs and tells Sarvanīvaraṇaviṣkambhin that it is not yet time for Avalokiteśvara to
+                                Śākyamuni laughs and tells Sarvanīvaraṇaviṣkambhin that it is not yet time for Avalokiteśvara to
                                 come, and then returns to the description of the ten pores. </p>
                             <list type="bullet">
                                 <item>
@@ -819,10 +818,10 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="674">X. Sūtra narrative: Sarvanīvaraṇaviṣkambhin asks where he can find the six-syllable
+                            <p tid="674">X. Sūtra narrative: Sarvanīvaraṇaviṣkambhin asks where he can find the six-syllable
                                 mahāvidyā. Buddha Śākyamuni tells him that the buddhas have spent sixteen eons looking for the
                                 mahāvidyā but failed to find it. He gives a description of the benefits gained by those who do
-                                possess, repeat, and wear it. Sarvanīvaraṇaviṣkambhin says he will use his own skin, bone, and
+                                possess, repeat, and wear it. Sarvanīvaraṇaviṣkambhin says he will use his own skin, bone, and
                                 blood to write it down if he can obtain it. </p>
                             <list type="bullet">
                                 <item>
@@ -850,20 +849,20 @@
                         </item>
                         <item>
                             <p tid="677">XI. Sūtra narrative: The sūtra does not state specifically that Padmottama gives the
-                                mahāvidyā to Buddha Śākyamuni, and Sarvanīvaraṇaviṣkambhin does not ask the Buddha for it
+                                mahāvidyā to Buddha Śākyamuni, and Sarvanīvaraṇaviṣkambhin does not ask the Buddha for it
                                 but asks where he can go to find it. Buddha Śākyamuni describes the dharmabhāṇaka in Vārāṇasī who
                                 possesses the mahāvidyā.</p>
-                            <p tid="84">Sarvanīvaraṇaviṣkambhin goes to Vārāṇasī with a great procession of people and
+                            <p tid="84">Sarvanīvaraṇaviṣkambhin goes to Vārāṇasī with a great procession of people and
                                 offerings, praises the dharmabhāṇaka, and asks for the mahāvidyā. The dharmabhāṇaka describes the
                                 qualities of the mahāvidyā, wrong paths, and the devotion of even Prajñāpāramitā to the
                                 mahāvidyā.</p>
                             <p tid="85">Avalokiteśvara appears in the sky and tells the dharmabhāṇaka several times to give the
-                                mahāvidyā to Sarvanīvaraṇaviṣkambhin.</p> 
+                                mahāvidyā to Sarvanīvaraṇaviṣkambhin.</p> 
                             <p tid="688">The dharmabhāṇaka does not create a maṇḍala, as was
-                                described by Avalokiteśvara, but simply recites the mahāvidyā to Sarva­nīvaraṇa­viṣkambhin.
-                                Sarva­nīvaraṇa­viṣkambhin returns to the Jetavana grove and tells Buddha Śākyamuni that he has
+                                described by Avalokiteśvara, but simply recites the mahāvidyā to Sarva­nīvaraṇa­viṣkambhin.
+                                Sarva­nīvaraṇa­viṣkambhin returns to the Jetavana grove and tells Buddha Śākyamuni that he has
                                 received the mahāvidyā.</p>
-                            <p tid="86">Trillions of buddhas recite the dhāraṇī of the goddess Cundi: <foreign type="mantra" xml:lang="Sa-Ltn">oṁ cale cule cunde svāhā</foreign>. No explanation for this dhāraṇī is
+                            <p tid="86">Trillions of buddhas recite the dhāraṇī of the goddess Cundi: <mantra type="dharani" xml:lang="Sa-Ltn">oṁ cale cule cunde svāhā</mantra>. No explanation for this dhāraṇī is
                                 given, so the reader is assumed to be familiar with it. </p>
                             <list type="bullet">
                                 <item>
@@ -894,14 +893,14 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="684">XII. Sūtra narrative: Buddha Śākyamuni, in response to Sarva­nīvaraṇa­viṣkambhin’s
+                            <p tid="684">XII. Sūtra narrative: Buddha Śākyamuni, in response to Sarva­nīvaraṇa­viṣkambhin’s
                                 question, says there are no more pores than those ten, but that beyond the last pore, the four
                                 oceans come from Avalokiteśvara’s big toe.</p>
                             <p tid="689">He states that Avalokiteśvara is coming to give
                                 prophecies to Śiva (Maheśvara) and Umādevī about their eventual buddhahood. Avalokiteśvara arrives
                                 with a gift of lotus flowers from Amitābha. Maheśvara asks the Buddha for a prophecy, and he is
                                 sent to Avalokiteśvara who prophesies his buddhahood and then does the same for Umādevī. Buddha
-                                Śākyamuni, in response to Sarva­nīvaraṇa­viṣkambhin’s question, describes the qualities of
+                                Śākyamuni, in response to Sarva­nīvaraṇa­viṣkambhin’s question, describes the qualities of
                                 Avalokiteśvara. </p>
                             <list type="bullet">
                                 <item>
@@ -915,9 +914,9 @@
                             </list>
                         </item>
                         <item>
-                            <p tid="686">XIII. Sūtra narrative: Sarvanīvaraṇaviṣkambhin asks for this very sūtra to be taught
+                            <p tid="686">XIII. Sūtra narrative: Sarvanīvaraṇaviṣkambhin asks for this very sūtra to be taught
                                 (although it is near its conclusion), and the Buddha describes the benefits of the sūtra.
-                                Sarva­nīvaraṇa­viṣkambhin sits silently.</p>
+                                Sarva­nīvaraṇa­viṣkambhin sits silently.</p>
                             <p tid="87">Avalokiteśvara and all the other various kinds of beings assembled leave.</p>
                             <p tid="88">In an abrupt change of content, Ānanda asks Śākyamuni Buddha about monastic training.
                                 Śākyamuni condemns bhikṣus with incorrect conduct, saying they should be banished from the
@@ -1532,7 +1531,7 @@
                     <p tid="177">“Bodhisattva Mahāsattva Avalokiteśvara then left for another land, which was made of iron, where
                         he approached the asura king Bali.<note place="end" xml:id="UT22084-051-004-606" index="106">The Sanskrit
                             editions added an extra sentence here: “As he approached, King Bali saw him in the distance,
-                            resembling a disc of gold emitting light rays of various colors.” This would easily have been omitted
+                            resembling a disk of gold emitting light rays of various colors.” This would easily have been omitted
                             when copying a manuscript, since the next sentence begins in a similar way.</note>
                     </p>
                     <p tid="178">“When the asura king Bali saw Bodhisattva Mahāsattva Avalokiteśvara approaching from the
@@ -2757,7 +2756,7 @@
                     <p tid="488">“Then Bodhisattva Mahāsattva Avalokiteśvara gave the six-syllable queen of mahāvidyās<note place="end" xml:id="UT22084-051-004-764" index="264">According to the Sanskrit. The Tibetan omits “queen
                             of.”</note> to the Tathāgata, the arhat, the Samyaksaṃbuddha Padmottama:</p>
                     <p rend="mantra" tid="638">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">“Oṁ maṇipadme hūṁ</foreign>. <ref cRef="F.234.b"/>
+                        <mantra xml:lang="Sa-Ltn">“Oṁ maṇipadme hūṁ</mantra>. <ref cRef="F.234.b"/>
                         <ref cRef="B4" type="bampo"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-051-004-194"/>
@@ -2829,7 +2828,7 @@
                         feces and urine; he has not followed the noble path.”<note place="end" xml:id="UT22084-051-004-776" index="276">According to the Sanskrit. The Tibetan has “his conduct is not
                             controlled.”</note>
                     </p>
-                    <p tid="503">Sarvanīvaraṇaviṣkambhin said to the Bhagavat, “I will do as the Bhagavat has instructed.”</p>
+                    <p tid="503">Sarvanīvaraṇaviṣkambhin said to the Bhagavat, “I will do as the Bhagavat has instructed.”</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-051-004-201"/>
                     <p tid="504">So Bodhisattva Mahāsattva Sarva­nīvaraṇa­viṣkambhin set forth accompanied by many hundreds of
@@ -2930,8 +2929,8 @@
                         the six-syllable queen of mahāvidyās, let alone the tathāgatas, arhats, samyaksaṃbuddhas, and the hosts of
                         bodhisattvas. </p>
                     <p tid="517">“Noble son, this is an essence, like rice. Noble son, through this you can obtain anything from
-                        within the Mahāyāna: many Mahāyāna sūtras, the geyas, the vyākaraṇas, the gāthās, the udānas, the
-                        nidānas, the avadānas, the itivṛttakas, the jātakas, the vaipulyas, the adbhūtadharmas, and the
+                        within the Mahāyāna: many Mahāyāna sūtras, the geyas, the vyākaraṇas, the gāthās, the udānas, the
+                        nidānas, the avadānas, the itivṛttakas, the jātakas, the vaipulyas, the adbhūtadharmas, and the
                             upadeśas.<note place="end" xml:id="UT22084-051-004-791" index="291">This is the traditional division
                                 of the twelve kinds of teachings given by the Buddha. See “twelve wheels of the Dharma.”</note> Simply repeating it will bring peace and liberation. Why say more about its
                         other virtues? </p>
@@ -2973,7 +2972,7 @@
                     <milestone unit="chunk" xml:id="UT22084-051-004-212"/>
                     <p tid="525">Then Sarva­nīvaraṇa­viṣkambhin reverently placed his palms together to receive it.</p>
                     <p rend="mantra" tid="639">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ maṇipadme hūṁ</foreign>.</p>
+                        <mantra xml:lang="Sa-Ltn">Oṁ maṇipadme hūṁ</mantra>.</p>
                     <p tid="527">As soon as this was given, the earth shook in six ways. </p>
                     <p tid="528">Sarva­nīvaraṇa­viṣkambhin attained these samādhis: the samādhi named Unceasing True Nature, the
                         samādhi named Love, Compassion, and Rejoicing, the samādhi named Practicing Yoga, the samādhi named
@@ -3004,12 +3003,10 @@
                             this mantra than did so in the Cundī sūtra. See also <ptr target="#UT22084-051-004-799"/>.</note> samyaksaṃbuddhas gathered there,
                         and those tathāgatas recited this dhāraṇī:</p>
                     <p rend="mantra" tid="640">
-                        <foreign type="mantra" xml:lang="Sa-Ltn">Namaḥ saptanām saṃyak­saṃbuddha­koṭinām tadyathā Oṁ cale cule
-                            cunde</foreign>
-                        <note place="end" xml:id="UT22084-051-004-798" index="298">According to the Tibetan and Cambridge. The Vaidya and
-                            Sāmaśrami have <foreign type="mantra" xml:lang="Sa-Ltn">cunye.</foreign>
-                        </note>
-                        <foreign type="mantra" xml:lang="Sa-Ltn">svāhā</foreign>.<note place="end" xml:id="UT22084-051-004-799" index="299">This is the mantra of the Goddess Cundi in the form written in <title xml:lang="en">The Dhāranī Named Goddess Cunde </title>(folio 46b7). However, it is <foreign type="mantra" xml:lang="Sa-Ltn">oṁ cale cule cundi svāhā</foreign>, the form that is popular in
+                        <mantra type="dharani" xml:lang="Sa-Ltn">Namaḥ saptanām saṃyak­saṃbuddha­koṭinām tadyathā Oṁ cale cule cunde<note place="end" xml:id="UT22084-051-004-798" index="298">According to the Tibetan and Cambridge. The Vaidya and
+                            Sāmaśrami have <foreign xml:lang="Sa-Ltn">cunye.</foreign>
+                            </note>
+                        svāhā</mantra>.<note place="end" xml:id="UT22084-051-004-799" index="299">This is the mantra of the Goddess Cundi in the form written in <title xml:lang="en">The Dhāranī Named Goddess Cunde </title>(folio 46b7). However, it is <mantra type="dharani" xml:lang="Sa-Ltn">oṁ cale cule cundi svāhā</mantra>, the form that is popular in
                             Chinese Buddhism, in the same text as repeated in the Dhāraṇī section of the Kangyur (<title xml:lang="en">The Dhāranī Named Goddess Cunde</title>, folio 143a5). <foreign type="term" xml:lang="Sa-Ltn">Cale cule cunde </foreign>are the vocative forms of Calā, Culā, and Cundā, three
                             variations of her name. Cundi is the vocative for Cundī. The words <emph>seventy million
                                 buddhas</emph> are a reference to her being the mother of seventy million buddhas as described in
@@ -3017,7 +3014,7 @@
                             of the creation of the <title xml:lang="Sa-Ltn">Kāraṇḍa­vyūha­sūtra</title>, at least in its present
                             form.</note>
                     </p>
-                    <p rend="mantra" tid="641">[The homage by seven times ten million samyaksaṃbuddhas is like this: <foreign type="mantra" xml:lang="Sa-Ltn">Oṁ cale cule cunde svāhā</foreign>.]</p>
+                    <p rend="mantra" tid="641">[The homage by seven times ten million samyaksaṃbuddhas is like this: <mantra type="dharani" xml:lang="Sa-Ltn">Oṁ cale cule cunde svāhā</mantra>.]</p>
                     <p tid="538">That was the dhāraṇī recited by seventy-seven times ten million samyaksaṃbuddhas. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-051-004-216"/>
@@ -3094,8 +3091,8 @@
                         and eight-string and sixty-four-string pearl necklaces. They are hung with Kaśika cloth. They have the
                         jingling sounds of silver and gold bells. </p>
                     <p tid="551">“Pratyekabuddhas live on these kings of mountains. <ref cRef="F.240.b"/> They talk with each
-                        other about the sūtras, the geyas, the vyākaraṇas, the gāthās, the udānas, the nidānas, the avadānas, the
-                        itivṛttakas, the jātakas, the vaipulyas, the adbhūtadharmas, and the upadeśas.</p>
+                        other about the sūtras, the geyas, the vyākaraṇas, the gāthās, the udānas, the nidānas, the avadānas, the
+                        itivṛttakas, the jātakas, the vaipulyas, the adbhūtadharmas, and the upadeśas.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-051-004-222"/>
                     <p tid="552">“Then, Sarva­nīvaraṇa­viṣkambhin, beyond that pore, last of all, there is the pore named
@@ -3496,11 +3493,13 @@
                         departed.</p>
                     <p tid="635">The joyful Bhagavat had spoken these words, and the entire community and the world with its
                         devas, humans, asuras, and gandharvas rejoiced in what the Bhagavat had said.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-051-004-257"/>
+                    <p tid="636">The noble Mahāyāna sūtra, <title xml:lang="en">The Basket’s Display</title>, is concluded.</p>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="708">Colophon</head>
-                    <milestone unit="chunk" xml:id="UT22084-051-004-257"/>
-                    <p tid="636">The noble Mahāyāna sūtra, <title xml:lang="en">The Basket’s Display</title>, is concluded.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-004-1002"/>
                     <p tid="637">Translated and revised by the Indian paṇḍitas Jinamitra and Dānaśīla, and by Yeshé Dé, the
                         translator and chief editor.</p>
                 </div>
@@ -3541,17 +3540,17 @@
                         <title xml:lang="Bo-Ltn">’dul ba rnam par ’byed pa</title>,<title xml:lang="Sa-Ltn">
                             Vinaya­vibhaṅga</title>. Toh. 3, Degé Kangyur, vols. 5–8 (’dul ba, ca – nya). </bibl>
                     <bibl xml:id="UT22084-051-004-266">
-                        <title xml:lang="Bo-Ltn">’phags pa shes rab kyi pha rol tu phyin pa brgyad stong pa</title>,<title xml:lang="Sa-Ltn"> Āryāṣṭa­sāhasrikā­prajñā­pāramitā</title> [<title xml:lang="en">Perfection of
+                        <title xml:lang="Bo-Ltn">’phags pa shes rab kyi pha rol tu phyin pa brgyad stong pa</title>,<title xml:lang="Sa-Ltn"> Āryāṣṭa­sāhasrikā­prajñā­pāramitā</title> [<title xml:lang="en">Perfection of
                             Wisdom in Eight Thousand Lines</title>]. Toh. 12, Degé Kangyur, vol. 33 (sher phyin brgyad stong, ka),
                         folios 1b–286a. </bibl>
                     <bibl xml:id="UT22084-051-004-267">
-                        <title xml:lang="Bo-Ltn">bcom ldan ’das ma shes rab kyi pha rol tu phyin pa’i snying po</title>,<title xml:lang="Sa-Ltn"> Bhagavatī­prajñā­pāramitā­hṛdaya </title>[<title xml:lang="en">Heart
+                        <title xml:lang="Bo-Ltn">bcom ldan ’das ma shes rab kyi pha rol tu phyin pa’i snying po</title>,<title xml:lang="Sa-Ltn"> Bhagavatī­prajñā­pāramitā­hṛdaya </title>[<title xml:lang="en">Heart
                         Sūtra</title>]. Toh. 21, Degé Kangyur, vol. 34 (sher phyin sna tshogs, ka), folios 144b–146a.</bibl>
                     <bibl xml:id="UT22084-051-004-268">
-                        <title xml:lang="Bo-Ltn">sangs rgyas phal po che zhes bya ba shin tu rgyas pa chen po’i mdo</title>,<title xml:lang="Sa-Ltn"> Buddhāvataṃsaka­sūtra.</title> Toh. 44, Degé Kangyur, vols. 35-38 (phal chen, ka -
+                        <title xml:lang="Bo-Ltn">sangs rgyas phal po che zhes bya ba shin tu rgyas pa chen po’i mdo</title>,<title xml:lang="Sa-Ltn"> Buddhāvataṃsaka­sūtra.</title> Toh. 44, Degé Kangyur, vols. 35-38 (phal chen, ka -
                         a). </bibl>
                     <bibl xml:id="UT22084-051-004-269">
-                        <title xml:lang="Bo-Ltn">dam pa’i chos pad ma dkar po zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Saddharma­puṇḍarīka­nāma­mahā­yāna­sūtra</title>) [<title xml:lang="en">Lotus
+                        <title xml:lang="Bo-Ltn">dam pa’i chos pad ma dkar po zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Saddharma­puṇḍarīka­nāma­mahā­yāna­sūtra</title>) [<title xml:lang="en">Lotus
                             Sūtra</title>]. Toh. 113, Degé Kangyur, vol. 51 (mdo sde, ja), folios 1b–180b. </bibl>
                     <bibl xml:id="UT22084-051-004-270">
                         <title xml:lang="Bo-Ltn">’phags pa bde ba can gyi bkod pa zhes bya ba theg pa chen po’i mdo</title>,
@@ -3603,7 +3602,7 @@
                         a ‘Magadhism.’” In <title xml:lang="la">Acta Orientalia </title>Vol. 63 (2002): 67–70.</bibl>
                     <bibl xml:id="UT22084-051-004-284">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar
                             and Dictionary</title> (2 vols). New Haven: Yale University Press, 1953.</bibl>
-                    <bibl xml:id="UT22084-051-004-285">Imaeda, Yoshiro. “Note préliminaire sur la formule <foreign type="mantra" xml:lang="Sa-Ltn">oṁ maṇi padme hūṁ</foreign> dans les manuscrits tibétains de Touen-houang.” In
+                    <bibl xml:id="UT22084-051-004-285">Imaeda, Yoshiro. “Note préliminaire sur la formule <foreign xml:lang="Sa-Ltn">oṁ maṇi padme hūṁ</foreign> dans les manuscrits tibétains de Touen-houang.” In
                             <title xml:lang="fr">Contributions aux études sur Touen-Houang</title>, edited by Michel Soymié,
                         71–76. Geneva/Paris: Librairie Droz, 1979.</bibl>
                     <bibl xml:id="UT22084-051-004-286">Kapstein, Matthew (1992). “Remarks on the <foreign xml:lang="Bo-Ltn">mani
@@ -3839,12 +3838,12 @@
                             <term xml:lang="bo">ཆོས་ཀྱི་འཁོར་ལོ།</term>
                             <term xml:lang="Sa-Ltn">dharmacakra</term>
                             <term type="definition">The classification of all aspects of Buddha’s teachings into twelve types:
-                                    <foreign type="term" xml:lang="Sa-Ltn">sūtra</foreign>, <foreign type="term" xml:lang="Sa-Ltn">geya</foreign>, <foreign type="term" xml:lang="Sa-Ltn">vyākaraṇa</foreign>, <foreign type="term" xml:lang="Sa-Ltn">gāthā</foreign>, <foreign type="term" xml:lang="Sa-Ltn">udāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">nidāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">avadāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign>, <foreign type="term" xml:lang="Sa-Ltn">jātaka</foreign>, <foreign type="term" xml:lang="Sa-Ltn">vaipulya</foreign>, <foreign type="term" xml:lang="Sa-Ltn">adbhūtadharma</foreign>, and <foreign type="term" xml:lang="Sa-Ltn">upadeśa</foreign> (see
+                                    <foreign type="term" xml:lang="Sa-Ltn">sūtra</foreign>, <foreign type="term" xml:lang="Sa-Ltn">geya</foreign>, <foreign type="term" xml:lang="Sa-Ltn">vyākaraṇa</foreign>, <foreign type="term" xml:lang="Sa-Ltn">gāthā</foreign>, <foreign type="term" xml:lang="Sa-Ltn">udāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">nidāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">avadāna</foreign>, <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign>, <foreign type="term" xml:lang="Sa-Ltn">jātaka</foreign>, <foreign type="term" xml:lang="Sa-Ltn">vaipulya</foreign>, <foreign type="term" xml:lang="Sa-Ltn">adbhūtadharma</foreign>, and <foreign type="term" xml:lang="Sa-Ltn">upadeśa</foreign> (see
                                 individual terms).</term>
                             <term type="definition">Respectively, the <foreign type="term" xml:lang="Sa-Ltn">sūtras</foreign>, literally “threads,” does not mean entire texts as in the general meaning of
                                 sūtra but the prose passages within texts; the <foreign type="term" xml:lang="Sa-Ltn">geya</foreign>s
-                                are the verse versions of preceding prose passages; the <foreign type="term" xml:lang="Sa-Ltn">vyākaraṇa</foreign>s are prophecies; the <foreign type="term" xml:lang="Sa-Ltn">gāthā</foreign>s are stand-alone verses; the <foreign type="term" xml:lang="Sa-Ltn">udāna</foreign>s are teachings not given in response to a request; the <foreign type="term" xml:lang="Sa-Ltn">nidāna</foreign>s are the introductory sections; the <foreign type="term" xml:lang="Sa-Ltn">avadāna</foreign>s are accounts of the previous lives of individuals who were
-                                alive at the time of the Buddha; the <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign>s are
+                                are the verse versions of preceding prose passages; the <foreign type="term" xml:lang="Sa-Ltn">vyākaraṇa</foreign>s are prophecies; the <foreign type="term" xml:lang="Sa-Ltn">gāthā</foreign>s are stand-alone verses; the <foreign type="term" xml:lang="Sa-Ltn">udāna</foreign>s are teachings not given in response to a request; the <foreign type="term" xml:lang="Sa-Ltn">nidāna</foreign>s are the introductory sections; the <foreign type="term" xml:lang="Sa-Ltn">avadāna</foreign>s are accounts of the previous lives of individuals who were
+                                alive at the time of the Buddha; the <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign>s are
                                 biographies of buddhas and bodhisattvas in the past; the <foreign type="term" xml:lang="Sa-Ltn">jātakas</foreign> are the Buddha’s accounts of his own previous lifetimes; the <foreign type="term" xml:lang="Sa-Ltn">vaipulya</foreign>s are teachings that expand upon a certain
                                 subject; the <foreign type="term" xml:lang="Sa-Ltn">adbhūtadharma</foreign>s are descriptions of
                                 miracles; and the <foreign type="term" xml:lang="Sa-Ltn">upadeśa</foreign>s are explanations of terms
@@ -3903,7 +3902,7 @@
                             <term xml:lang="bo">གསོལ་བ་དང་བཞི་པ།</term>
                             <term xml:lang="Sa-Ltn">jñāpti-caturtha</term>
                             <term type="definition">For someone to be accepted into the Saṅgha, and for any other action that
-                                needs the assent of the Saṅgha, first a motion (<foreign type="term" xml:lang="Sa-Ltn">jñāpti</foreign>; <foreign xml:lang="Bo-Ltn" type="term">gsol-ba</foreign>) is presented to
+                                needs the assent of the Saṅgha, first a motion (<foreign type="term" xml:lang="Sa-Ltn">jñāpti</foreign>; <foreign xml:lang="Bo-Ltn" type="term">gsol ba</foreign>) is presented to
                                 the community, for example, a certain person’s wish for ordination. The motion would be followed
                                 by three propositions, in which is it said that all who assent should remain silent. If no one
                                 speaks up after the third proposition, the motion is passed. The Tibetan translated it literally
@@ -3967,10 +3966,10 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-051-004-334">
-                            <term>itivṛttaka</term>
+                            <term>itivṛttaka</term>
                             <term xml:lang="Bo-Ltn">’di lta bu ’das pa </term>
                             <term xml:lang="bo">འདི་ལྟ་བུ་འདས་པ།</term>
-                            <term xml:lang="Sa-Ltn">itivṛttaka</term>
+                            <term xml:lang="Sa-Ltn">itivṛttaka</term>
                             <term type="definition">As one of the twelve aspects of the Dharma, it means accounts of the lives of
                                 past buddhas and bodhisattvas.</term>
                             <term type="definition">See also “twelve wheels of the Dharma.”</term>
@@ -4491,7 +4490,7 @@
                             <term xml:lang="Sa-Ltn">vajra</term>
                             <term type="definition">The word <term type="ignore">vajra</term> refers to the “thunderbolt,” the indestructible and
                                 irresistible weapon that first appears in Indian literature in the hand of the Vedic deity Indra.
-                                As a symbol of indestructibility and great power it is used in the <title xml:lang="en">Kāraṇḍavyūha</title> to describe the qualities of the <foreign type="mantra" xml:lang="Sa-Ltn">maṇi</foreign> mantra.</term>
+                                As a symbol of indestructibility and great power it is used in the <title xml:lang="en">Kāraṇḍavyūha</title> to describe the qualities of the <foreign type="term" xml:lang="Sa-Ltn">maṇi</foreign> mantra.</term>
                         </gloss>
                     </item>
                     <item>
@@ -4547,10 +4546,10 @@
                     </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-051-004-389">
-                            <term>vyākaraṇa</term>
+                            <term>vyākaraṇa</term>
                             <term xml:lang="Bo-Ltn">lung bstan pa </term>
                             <term xml:lang="bo">ལུང་བསྟན་པ།</term>
-                            <term xml:lang="Sa-Ltn">vyākaraṇa</term>
+                            <term xml:lang="Sa-Ltn">vyākaraṇa</term>
                             <term type="definition">Prophecies. This is also specifically one of the twelve aspects of the
                                 Dharma.</term>
                             <term type="definition">See also “twelve wheels of the Dharma.”</term>
@@ -4960,7 +4959,7 @@
                             <term>Sarva­nīvaraṇa­viṣkambhin</term>
                             <term xml:lang="Bo-Ltn">sgrib pa thams cad rnam par sel ba </term>
                             <term xml:lang="bo">སྒྲིབ་པ་ཐམས་ཅད་རྣམ་པར་སེལ་བ།</term>
-                            <term xml:lang="Sa-Ltn">Sarva­nīvaraṇavi­ṣkambhin</term>
+                            <term xml:lang="Sa-Ltn">Sarva­nīvaraṇavi­ṣkambhin</term>
                             <term type="definition">One of the eight great bodhisattvas. In particular, he has an important role
                                 in the Lotus Sūtra, in which Buddha Śākyamuni sends him to Vārāṇasī to see Avalokiteśvara. This is
                                 paralleled in the <title xml:lang="en">Kāraṇḍavyūha</title>, in which he is sent to Vārāṇasī to
