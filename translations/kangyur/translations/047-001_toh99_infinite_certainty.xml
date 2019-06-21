@@ -3,21 +3,16 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">bcom ldan ’das kyi ye shes rgyas pa’i mdo
-                    sde rin po che mtha’ yas pa mthar phyin pa</title>
+            <titleStmt sponsored="available">
+                <title type="mainTitle" xml:lang="Bo-Ltn">bcom ldan ’das kyi ye shes rgyas pa’i mdo sde rin po che mtha’ yas pa mthar phyin pa</title>
                 <title type="mainTitle" xml:lang="bo">བཅོམ་ལྡན་འདས་ཀྱི་ཡེ་ཤེས་རྒྱས་པའི་མདོ་སྡེ་རིན་པོ་ཆེ་མཐའ་ཡས་པ་མཐར་ཕྱིན་པ།</title>
-                <title type="mainTitle" xml:lang="en">The Precious Discourse on the Blessed One’s
-                    Extensive Wisdom That Leads to Infinite Certainty</title>
+                <title type="mainTitle" xml:lang="en">The Precious Discourse on the Blessed One’s Extensive Wisdom That Leads to Infinite Certainty</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Niṣṭhā­gata­bhagavajjñāna­vaipulya­sūtra­ratnānanta</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་བཅོམ་ལྡན་འདས་ཀྱི་ཡེ་ཤེས་རྒྱས་པའི་མདོ་སྡེ་རིན་པོ་ཆེ་མཐའ་ཡས་པ་མཐར་ཕྱིན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
-                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa bcom ldan ’das kyi ye shes rgyas
-                    pa’i mdo sde rin po che mtha’ yas pa mthar phyin pa zhes bya ba theg pa chen
-                    po’i mdo</title>
-                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The
-                    Precious Discourse on the Blessed One’s Extensive Wisdom That Leads to Infinite
-                    Certainty”</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa bcom ldan ’das kyi ye shes rgyas pa’i mdo sde rin po che mtha’ yas pa mthar phyin pa zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The Precious Discourse on the Blessed One’s Extensive Wisdom That Leads to Infinite Certainty”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ārya­niṣṭhā­gata­bhagavajjñāna­vaipulya­sūtra­ratnānanta­nāma­mahāyāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh">薄伽梵智慧顯現無盡經藏</title>
                 <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee<lb/>
                     under the patronage and supervision of 84000: Translating the Words of the
                     Buddha.</author>
@@ -34,7 +29,7 @@
                 <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.1 <date>2019</date>
+                <edition>v 1.22 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -57,7 +52,8 @@
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh99" type="text">
-                    <ref>Toh 99</ref>, <biblScope>Degé Kangyur, vol. 47 (mdo sde, ga), folios
+                    <ref>Toh 99</ref>
+                    <biblScope>Degé Kangyur, vol. 47 (mdo sde, ga), folios
                         1.a–275.b</biblScope>
                     <author role="translatorTib">Prajñāvarman</author>
                     <author role="translatorTib">Yeshe Nyingpo</author>
@@ -70,13 +66,14 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-04-25T21:40:47.582Z" user="admin">25/04/2019 21:40:47</note>
+                <note type="lastUpdated" date-time="2019-06-21T14:23:11.028Z" user="admin">21/06/2019 14:23:11</note>
             <note type="updated" update="text-version" value="v 0.1" date-time="2019-04-12T09:21:07.305Z" user="john">v 0.1 2019</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-12T09:21:07.305Z" user="john">2</note>
                 <note type="updated" update="text-version" value="v 0.2" date-time="2019-04-12T09:23:33.05Z" user="john">v 0.2 2019</note>
                 <note type="updated" update="text-version" value="v 1" date-time="2019-04-24T19:51:56.22Z" user="john">v 1 2019</note>
                 <note type="updated" update="translation-status" value="1" date-time="2019-04-24T19:51:56.22Z" user="john">1</note>
                 <note type="updated" update="text-version" value="v 1.1" date-time="2019-04-25T21:40:43.165Z" user="john">v 1.1 2019</note>
+            <note type="updated" update="text-version" value="v 1.22" date-time="2019-06-21T14:23:07.692Z" user="celso">v 1.22 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -255,7 +252,7 @@
                                 <ref target="http://read.84000.co/translation/toh176.html#UT22084-060-005-126">The Teaching 
                                 of Vimalakīrti</ref>
                             </title> (Toh 176) and <title xml:lang="en">The 
-                                    Sūtra of Pūrṇa's Questions</title> (Toh 61); (2) the Pūrṇa who was one 
+                                Sūtra of Pūrṇa’s Questions</title> (Toh 61); (2) the Pūrṇa who was one 
                             of the second group of five monks ordained by the Buddha, the “five 
                             friends” (<foreign xml:lang="Bo-Ltn">nye lnga sde</foreign>), all Vārāṇasī
                             merchants’ sons, headed by Yaśas; (3) the Pūrṇa of <title xml:lang="en">The 
@@ -1541,7 +1538,7 @@
                         knowledge of cessation as related to knowledge of causes. When the Thus-Gone
                         One is asked about the knowledge of cessation as related to knowledge of
                         causes, he can respond for an inexpressible number of inexpressible eons,
-                        and so forth, up until . . . <ref cRef="F.17.b"/> Therefore, he will enjoy this
+                        and so forth, up until . . . . <ref cRef="F.17.b"/> Therefore, he will enjoy this
                         temple with its sandalwood courtyard.</p>
                     <milestone unit="chunk" xml:id="UT22084-047-001-120"/>
                     <p tid="105">“Householder, you may wonder how the Thus-Gone One correctly
@@ -1564,7 +1561,7 @@
                         Thus-Gone One correctly understands: ‘This ripening of karma will unfold
                         among the beings in hell. This ripening of karma will unfold in the animal
                         realm. This ripening of karma will unfold in the realm of the Lord of Death,
-                        and so forth, up until . . . This ripening of karma will unfold in the sphere of
+                        and so forth, up until . . . . This ripening of karma will unfold in the sphere of
                         neither notion nor no notion.’ The Thus-Gone One also correctly understands:
                         ‘Such ripening of karma will not unfold. That karma has no creator. That
                         ripening of karma will not be experienced.’ <ref cRef="F.18.a"/>
@@ -1628,7 +1625,7 @@
                         Householder, this is how the Thus-Gone One correctly understands: ‘This
                         journey will lead to birth in the realm of the Lord of Death. This journey
                         will lead to birth in the realm of the demigods. This journey will lead to
-                        birth in the human realm, and so forth, up until . . . <ref cRef="F.19.a"/>
+                        birth in the human realm, and so forth, up until . . . . <ref cRef="F.19.a"/>
                         This journey will lead to birth in the sphere of neither notion nor no
                         notion. This journey will lead to birth as a god. This person will be born
                         as a human.’ Householder, this is how the Thus-Gone One correctly
@@ -1854,7 +1851,7 @@
                         correctly understands the knowledge of cessation as related to knowledge of
                         the form element. When the Thus-Gone One is asked about the knowledge of
                         cessation as related to knowledge of the form element, he can respond for an
-                        eon, and so forth, up until . . . <ref cRef="F.22.b"/> Therefore, he will enjoy
+                        eon, and so forth, up until . . . . <ref cRef="F.22.b"/> Therefore, he will enjoy
                         this temple with its sandalwood courtyard.</p>
                     <milestone unit="chunk" xml:id="UT22084-047-001-143"/>
                     <p tid="129">“Householder, you may wonder how the Thus-Gone One correctly
@@ -1970,7 +1967,7 @@
                         whether he considers impermanence, and so forth, up until . . . whether he
                         considers opposition. When the Thus-Gone One is asked about the knowledge of
                         the <term type="ignore">origin</term> as related to knowledge of the ear
-                        element, he can respond for an eon, and so forth, up until . . . <ref cRef="F.24.b"/> Therefore, he will enjoy this temple with its sandalwood
+                        element, he can respond for an eon, and so forth, up until . . . . <ref cRef="F.24.b"/> Therefore, he will enjoy this temple with its sandalwood
                         courtyard.</p>
                     <milestone unit="chunk" xml:id="UT22084-047-001-150"/>
                     <p tid="136">“Householder, you may wonder how the Thus-Gone One correctly
@@ -2056,7 +2053,7 @@
                         contemplates deliverance, the Thus-Gone One correctly understands. When the
                         Thus-Gone One is asked about the knowledge of the path that leads to
                         cessation as related to knowledge of the sound element, he can respond for
-                        an eon, and so forth, up until . . . <ref cRef="F.26.a"/> Therefore, he will
+                        an eon, and so forth, up until . . . . <ref cRef="F.26.a"/> Therefore, he will
                         enjoy this temple with its sandalwood courtyard.</p>
                     <milestone unit="chunk" xml:id="UT22084-047-001-156"/>
                     <p tid="142">“Householder, you may wonder how the Thus-Gone One correctly
@@ -2727,7 +2724,7 @@
                         insipidity, or whether he contemplates shortcomings, or whether he
                         contemplates deliverance. When the Thus-Gone One is asked about the
                         knowledge of the path that leads to cessation as related to knowledge of the
-                        mind element, he can respond for an eon, and so forth, up until . . . Therefore,
+                        mind element, he can respond for an eon, and so forth, up until . . . . Therefore,
                         he will enjoy this temple with its sandalwood courtyard.</p>
                     <milestone unit="chunk" xml:id="UT22084-047-001-200"/>
                     <p tid="186">“Householder, you may wonder how the Thus-Gone One correctly
@@ -5448,10 +5445,10 @@
                         and so forth, up until . . . . Therefore, he will enjoy this temple with its
                         sandalwood courtyard. As for the <term type="ignore">origin</term>,
                         cessation, and path, they are as previously taught.</p>
-                    <milestone unit="chunk" xml:id="UT22084-047-001-403"/>
                     </div>
                     <div type="chapter">
                         <head type="chapter" tid="1975">Knowledge of Liberation</head>
+                        <milestone unit="chunk" xml:id="UT22084-047-001-403"/>
                         <p tid="397">“Householder, you may wonder how the Thus-Gone One correctly
                         understands the knowledge of liberation. Householder, the Thus-Gone One
                         correctly understands the eight liberations. What are these eight? The first
@@ -17844,7 +17841,7 @@
                         world to the next?’ Yet he could not find anything that transferred from one
                         world to another, and so he thought, ‘In essence these phenomena are like
                         the moon’s reflection in water. It looks as if the moon has gone into the
-                        water and the disc of the moon is also visible there. All these phenomena
+                        water and the disk of the moon is also visible there. All these phenomena
                         are like that—although there is no thing that transfers, it may appear as if
                         something has transferred to the next world. However, the karmic action that
                         is transferred from one world to another does not dissipate.’ </p>
@@ -19965,7 +19962,7 @@
                         rejoiced and praised the words of the Blessed One.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-047-001-1908"/>
-                    <p tid="1956">This completes the great vehicle sūtra, <title xml:lang="en">The Precious Discourse on the Blessed One’s Extensive
+                    <p tid="1956">This completes the Great Vehicle sūtra, <title xml:lang="en">The Precious Discourse on the Blessed One’s Extensive
                             Wisdom That Leads to Infinite Certainty</title>. </p>
                 </div>
                 </div>
