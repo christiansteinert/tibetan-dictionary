@@ -4,28 +4,31 @@
         <teiHeader>
                 <fileDesc>
                         <titleStmt>
-                                <title type="mainTitle" xml:lang="Bo-Ltn">byang chub kyi phyogs
-                                        bstan pa</title>
+                                <title type="mainTitle" xml:lang="Bo-Ltn">byang chub kyi phyogs bstan pa</title>
+                                <title type="mainTitle" xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཕྱོགས་བསྟན་པ།</title>
                                 <title type="mainTitle" xml:lang="Sa-Ltn">bodhipakṣanirdeśa</title>
-                                <title type="mainTitle" xml:lang="en">The Teaching on the Aids to
-                                        Enlightenment</title>
-                                <title type="longTitle" xml:lang="Bo-Ltn">'phags pa byang chub kyi
-                                        phyogs bstan pa zhes bya ba theg pa chen po'i mdo</title>
+                                <title type="mainTitle" xml:lang="en">The Teaching on the Aids to Enlightenment</title>
+                                <title type="longTitle" xml:lang="bo">འཕགས་པ་བྱང་ཆུབ་ཀྱི་ཕྱོགས་བསྟན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa byang chub kyi phyogs bstan pa zhes bya ba theg pa chen po’i mdo</title>
                                 <title type="longTitle" xml:lang="Sa-Ltn">āryabodhipakṣanirdeśanāmamahāyānasūtra</title>
-                                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The
-                                        Teaching on the Aids to Enlightenment”</title>
+                                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The Teaching on the Aids to Enlightenment”</title>
                                 <title type="otherTitle" xml:lang="zh">佛說大乘善見變化文殊師利問法經</title>
-                                <author role="translatorMain" ref="contributors.xml#team-28">Translated by the Sarasvatī Translation Team<lb/> under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
-                                <author role="translatorEng" ref="contributors.xml#person-185">Dr. Shenghai Li</author>
+                                <author role="translatorMain" ref="contributors.xml#team-28">Translated by the Sarasvatī Translation Team<lb/> under the
+                                        patronage and supervision of 84000: Translating the Words of
+                                        the Buddha</author>
+                                <author role="translatorEng" ref="contributors.xml#person-185">Dr.
+                                        Shenghai Li</author>
                                 <editor role="externalReviewer" ref="contributors.xml#person-99">Thomas Cruijsen</editor>
-                                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
-                                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr.
+                                        James Duncan Gentry</editor>
+                                <editor role="copyEditor" ref="contributors.xml#person-92">Laura
+                                        Goetz</editor>
                                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
                         </titleStmt>
                         <editionStmt>
-                                <edition>v 1.0 <date>2019</date>
+                <edition>v 1.01 <date>2019</date>
                 </edition>
-                        </editionStmt>
+            </editionStmt>
                         <publicationStmt status="2.a">
                                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name>
@@ -34,16 +37,15 @@
                                         them available to everyone. </publisher>
                                 <availability>
                                         <licence>
-                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
-                        <p>This work is provided under the protection of
-                                                a Creative Commons CC BY-NC-ND (Attribution -
-                                                Non-commercial - No-derivatives) 3.0 copyright. It
-                                                may be copied or printed for fair use, but only
-                                                with full attribution, and not for commercial
-                                                advantage or personal compensation. For full
-                                                details, see the Creative Commons
-                                                license.</p>
-                    </licence>
+                                                <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                                                <p>This work is provided under the protection of a
+                                                  Creative Commons CC BY-NC-ND (Attribution -
+                                                  Non-commercial - No-derivatives) 3.0 copyright. It
+                                                  may be copied or printed for fair use, but only
+                                                  with full attribution, and not for commercial
+                                                  advantage or personal compensation. For full
+                                                  details, see the Creative Commons license.</p>
+                                        </licence>
                                 </availability>
                                 <idno xml:id="UT22084-060-007"/>
                                 <date>2019-05-01</date>
@@ -51,7 +53,8 @@
                         <sourceDesc>
                                 <bibl key="toh178" type="text">
                                         <ref>Toh 178</ref>
-                                        <biblScope>Toh 178, Degé Kangyur, vol. 60 (mdo sde, ma), folios 240.b–244.b</biblScope>
+                                        <biblScope>Toh 178, Degé Kangyur, vol. 60 (mdo sde, ma),
+                                                folios 240.b–244.b</biblScope>
                                         <author role="translatorTib">t. jinamitra</author>
                                         <author role="translatorTib">jnanasidhi</author>
                                         <author role="translatorTib">ye shes sde</author>
@@ -64,9 +67,11 @@
                                 </bibl>
                         </sourceDesc>
                         <notesStmt>
-                                <note type="lastUpdated" date-time="2019-05-01T15:50:08.674Z" user="andre">01/05/2019 15:50:08</note>
+                                <note type="lastUpdated" date-time="2019-06-21T12:52:29.256Z" user="admin">21/06/2019 12:52:29</note>
                                 <note type="updated" update="translation-status" value="2.a" date-time="2019-04-30T10:19:53.284Z" user="mike">2.a</note>
-                        </notesStmt>
+                        <note type="updated" update="text-version" value="v 1.0" date-time="2019-05-06T11:01:15.765Z" user="andre">v 1.0 2019</note>
+                <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-21T12:52:26.137Z" user="laura">v 1.01 2019</note>
+            </notesStmt>
                 </fileDesc>
         </teiHeader>
         <text>
@@ -125,12 +130,12 @@
                                                 content of his teaching:</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-5"/>
                                         <q>
-                        <p tid="9">Mañjuśrī, I proclaim anyone who sees the
-                                                four truths of the noble ones, the four applications
-                                                of mindfulness, the eightfold path of the noble
-                                                ones, the five faculties, and the seven branches of
-                                                enlightenment in such a manner to have crossed
-                                                over.</p>
+                        <p tid="9">Mañjuśrī, I proclaim anyone who sees the four
+                                                  truths of the noble ones, the four applications of
+                                                  mindfulness, the eightfold path of the noble ones,
+                                                  the five faculties, and the seven branches of
+                                                  enlightenment in such a manner to have crossed
+                                                  over.</p>
                     </q>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-6"/>
                                         <p tid="10">Leaving aside the four truths of the noble ones,
@@ -187,12 +192,11 @@
                                                 Buddhist teachings only as a starting point on which
                                                 to build those of its own. For example, in reference
                                                 to the application of mindfulness of feelings, the
-                                                  <title xml:lang="Input Language">Satipaṭṭhāna
+                                                  <title xml:lang="Pi-Ltn">Satipaṭṭhāna
                                                   Sutta</title> states:</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-10"/>
                                         <q>
                         <p tid="12">He lives in this way observing feelings
-                                                internally, … or externally, or … internally and
+                                                internally, . . . or externally, or . . . internally and
                                                   externally.<note place="end" index="3" xml:id="UT22084-060-007-11"> Walpola
                                                   Rāhula, <title xml:lang="en">What the Buddha
                                                   Taught</title> (London: Gordon Fraser, 1978),
@@ -205,12 +209,11 @@
                                                 shows that there is more to such foundational
                                                 Buddhist teachings and points beyond them by saying
                                                 what appears to be the opposite: </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-13"/>
                                         <q>
-                        <p tid="14">Mañjuśrī, not perceiving
-                                                feelings—neither internally, nor externally, nor
-                                                present in both—is the application of mindfulness
-                                                that carefully considers feelings.</p>
+                        <p tid="14">Mañjuśrī, not perceiving feelings—neither
+                                                  internally, nor externally, nor present in both—is
+                                                  the application of mindfulness that carefully
+                                                  considers feelings.</p>
                     </q>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-14"/>
                                         <p tid="15">In the initial part of its discourse, this sūtra
@@ -229,7 +232,7 @@
                                                 and those [conceptual thoughts] come from verbal
                                                   proliferation.”<note place="end" index="4" xml:id="UT22084-060-007-15">
                                                   <title xml:lang="Sa-Ltn">Mūlamadhyamakakārikā</title> 18.5bc. Ye Shaoyong,
-                                                  <title xml:lang="Input Language">Mūlamadhyamakakārikā: Dbu ma rtsa ba’i tshig
+                                                  <title xml:lang="Zh-Ltn">Mūlamadhyamakakārikā: Dbu ma rtsa ba’i tshig
                                                   le’ur byas pa shes rab ces bya ba; Zhonglun song;
                                                   Fanzanghan hejiao, daodu, yizhu</title> (Shanghai:
                                                   Zhongxi shuju, 2011), 302: <foreign xml:lang="Sa-Ltn" type="quote">karmakleśā
@@ -241,12 +244,11 @@
                                                 conceptualization, which leads to emotions, actions,
                                                 and finally our ordinary existence.<note place="end" index="5" xml:id="UT22084-060-007-16"> See
                                                   Candrakīrti’s interpretation of <title xml:lang="Sa-Ltn">Mūlamadhyamakakārikā</title>
-                                                  18.5 in Louis de La Vallée Poussin, ed., <title xml:lang="Input Language">Madhyamakavṛttiḥ:
+                                                  18.5 in Louis de La Vallée Poussin, ed., <title xml:lang="fr">Madhyamakavṛttiḥ:
                                                   Mūlamadhyamakakārikā (Mādhyamikasūtras) de
                                                   Nāgārjuna avec la Prasannapadā, commentaire de
                                                   Candrakīrti</title> (St. Petersberg: Académie
-                                                  Impériale des Sciences, 1903–13),
-                                                350.</note>
+                                                  Impériale des Sciences, 1903–13), 350.</note>
                     </p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-17"/>
                                         <p tid="16">What is valuable about <title xml:lang="en">The
@@ -271,18 +273,18 @@
                                                   (Berkeley: University of California Press, 1979),
                                                   no. 1099.</note> the Indian monk *Devaśāntika
                                                 (Tianxizai 天息災) translated this sūtra into Chinese,
-                                                where it bears the title <title xml:lang="Input Language">Foshuo dacheng shanjian
-                                                  bianhua wenshushili wenfa jing</title> 佛說大乘善見變化文殊師利問法經
-                                                (Taishō 472). The Tibetan and Chinese translations
-                                                diverge quite considerably in the details, which can
-                                                be observed, for instance, in the presentations of
-                                                the individual members of the aids to enlightenment.
-                                                The two translations generally follow the same
-                                                structure, although here too there are a few
-                                                differences. While the Chinese follows the common
-                                                order of the seven categories of the aids to
-                                                enlightenment, the Tibetan presents the eightfold
-                                                path immediately after the applications of
+                                                where it bears the title <title xml:lang="Zh-Ltn">Foshuo dacheng shanjian
+                                                  bianhua wenshushili wenfa jing</title>
+                                                佛說大乘善見變化文殊師利問法經 (Taishō 472). The Tibetan and
+                                                Chinese translations diverge quite considerably in
+                                                the details, which can be observed, for instance, in
+                                                the presentations of the individual members of the
+                                                aids to enlightenment. The two translations
+                                                generally follow the same structure, although here
+                                                too there are a few differences. While the Chinese
+                                                follows the common order of the seven categories of
+                                                the aids to enlightenment, the Tibetan presents the
+                                                eightfold path immediately after the applications of
                                                 mindfulness. Moreover, in the Chinese translation
                                                 the Buddha also teaches four kinds of effort and
                                                 five kinds of power, two of the three categories
@@ -304,20 +306,20 @@
                         <div type="translation">
                                 <head type="translation" tid="19"> The Translation </head>
                                 <head type="titleHon" tid="20">The Noble Mahāyāna Sūtra</head>
-                                <head type="titleMain" tid="21">The Teaching on the Aids to Enlightenment</head>
+                                <head type="titleMain" tid="21">The Teaching on the Aids to
+                                        Enlightenment</head>
                                 <div type="section">
                                         <milestone unit="chunk" xml:id="UT22084-060-007-23"/>
                                         <p tid="25">
                         <ref cRef="F.240.b"/> Homage to all buddhas and
                                                 bodhisattvas!</p>
+                                        <lb/>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-24"/>
-                                        <p tid="26">
-                        <lb/>Thus did I hear at one time. The Bhagavān
-                                                was residing on Vulture Peak Mountain in Rājagṛha
+                                        <p tid="26">Thus did I hear at one time. The Bhagavān was
+                                                residing on Vulture Peak Mountain in Rājagṛha
                                                 accompanied by a great bhikṣu saṅgha of five hundred
                                                 bhikṣus and by bodhisattva mahāsattvas such as
                                                 Maitreya and Mañjuśrī.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-25"/>
                                         <p tid="27">Then, the Bhagavān said to the Youthful
                                                 Mañjuśrī, “Mañjuśrī, having minds that are misguided
                                                 by the four errors, sentient beings do not see the
@@ -330,7 +332,6 @@
                                                 Mañjuśrī requested the Bhagavān, “Bhagavān, please
                                                 explain how sentient beings perceive things and
                                                 therefore do not transcend saṃsāra.”</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-27"/>
                                         <p tid="29">The Bhagavān replied, “Mañjuśrī, it is because
                                                 they assume a self and something that belongs to a
                                                 self that sentient beings do not transcend saṃsāra.
@@ -350,10 +351,8 @@
                                                 transcend saṃsāra,’ ‘I shall attain complete
                                                 nirvāṇa,’ ‘I shall become liberated from
                                                 suffering.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-29"/>
                                         <p tid="31">“They think, ‘These phenomena are virtuous,’
                                                 ‘These phenomena are nonvirtuous.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-30"/>
                                         <p tid="32">“They think, ‘These phenomena are to be
                                                 abandoned,’ ‘These phenomena are to be brought
                                                 about,’ ‘Suffering is to be understood,’ ‘Its origin
@@ -364,13 +363,12 @@
                                                 impermanent,’ ‘Conditioned states are miserable,’
                                                 ‘Conditioned states are burning,’ ‘I shall escape
                                                 from conditioned states.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-32"/>
                                         <p tid="34">“By thinking in that way, they acquire
                                                 disenchantment induced by phenomenal
                                                 characteristics, bringing to mind notions induced by
-                                                phenomenal characteristics. <ref cRef="F.241.b"/> They think to
-                                                themselves, ‘Understanding these phenomena is
-                                                understanding suffering.’</p>
+                                                phenomenal characteristics. <ref cRef="F.241.b"/>
+                                                They think to themselves, ‘Understanding these
+                                                phenomena is understanding suffering.’</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-33"/>
                                         <p tid="35">“Thinking, ‘I shall abandon the origin,’ they
                                                 are disturbed by all those phenomena and do not
@@ -379,7 +377,6 @@
                                                 ‘Bringing about these phenomena and being disturbed
                                                 by those phenomena is the abandoning of the
                                                 origin.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-34"/>
                                         <p tid="36">“Thinking, ‘I shall realize cessation,’ they
                                                 investigate those phenomena and it seems that they
                                                 are cessation. They then think, ‘These are the
@@ -392,7 +389,6 @@
                                                 they disapprove of all phenomena, part from them,
                                                 turn away from them, and having withdrawn from them,
                                                 they produce a mind of dislike.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-36"/>
                                         <p tid="38">“They think, ‘I am liberated from all suffering;
                                                 what more is there for me to do? I am an arhat.’
                                                 Based on this presumption, when they observe their
@@ -407,14 +403,14 @@
                                         <p tid="39">Then, the Youthful Mañjuśrī asked the Bhagavān,
                                                 “Bhagavān, how should one view the four truths of
                                                 the noble ones?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-38"/>
                                         <p tid="40">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all conditioned states as unproduced has understood
                                                 suffering. Whoever sees all phenomena as unarisen
-                                                has abandoned its origin. <ref cRef="F.242.a"/> Whoever sees all
-                                                phenomena as having completely passed into nirvāṇa
-                                                has realized cessation. Whoever sees all phenomena
-                                                as having no existence has cultivated the path.</p>
+                                                has abandoned its origin. <ref cRef="F.242.a"/>
+                                                Whoever sees all phenomena as having completely
+                                                passed into nirvāṇa has realized cessation. Whoever
+                                                sees all phenomena as having no existence has
+                                                cultivated the path.</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-39"/>
                                         <p tid="41">“Mañjuśrī, whoever sees the four truths of the
                                                 noble ones in this way does not mentally construct
@@ -424,7 +420,6 @@
                                                 to be realized,’ ‘Suffering is to be understood,’
                                                 ‘Its origin is to be abandoned,’ ‘Its cessation is
                                                 to be realized,’ ‘The path is to be cultivated.’ </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-40"/>
                                         <p tid="42">“Why is that so? It is because they see those
                                                 phenomena to which ignorant ordinary beings become
                                                 attached, averse, and perplexed as unproduced, and
@@ -436,7 +431,6 @@
                                                 see all three realms as unproduced, like an
                                                 illusion, a dream, an echo, and a visual
                                                 aberration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-42"/>
                                         <p tid="44">“By seeing the nature of all phenomena in that
                                                 way, they will become free from attachment and
                                                 aversion toward all sentient beings.</p>
@@ -454,10 +448,8 @@
                                         <milestone unit="chunk" xml:id="UT22084-060-007-44"/>
                                         <p tid="46">“Mañjuśrī, bhikṣu Subhūti understands all
                                                 phenomena in such a way, and therefore he does not
-                                                come to prostrate at the feet of the Tathāgata.
-                                                <ref cRef="F.242.b"/>
+                                                come to prostrate at the feet of the Tathāgata. <ref cRef="F.242.b"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-45"/>
                                         <p tid="47">“Why is this so? It is because it would be
                                                 impossible—if he doesn’t perceive even himself, how
                                                 would he perceive the Tathāgata?”</p>
@@ -465,7 +457,6 @@
                                         <p tid="48">Then, the Youthful Mañjuśrī asked the Bhagavān,
                                                 “Bhagavān, how should one view the four applications
                                                 of mindfulness?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-47"/>
                                         <p tid="49">The Bhagavān replied, “Mañjuśrī, in the future I
                                                 will teach the bhikṣus the application of
                                                 mindfulness that carefully considers the body in its
@@ -483,45 +474,38 @@
                                         <p tid="50">When the Bhagavān had said this, the Youthful
                                                 Mañjuśrī asked the Bhagavān, “Bhagavān, how should
                                                 one view the four applications of mindfulness?”</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-49"/>
                                         <p tid="51">The Bhagavān replied, “Mañjuśrī, regard<note place="end" index="7" xml:id="UT22084-060-007-50">
-                                                  Following Stok: <foreign xml:lang="Bo-Ltn" type="term">mthong</foreign>. Degé
-                                                  reads: <foreign xml:lang="Bo-Ltn" type="term">thong</foreign>. </note> them in terms of the
-                                                allusive speech of the Tathāgata, which is difficult
-                                                to understand.” </p>
+                                                  Following Stok: <foreign xml:lang="Bo-Ltn" type="term">mthong</foreign>. Degé reads: <foreign xml:lang="Bo-Ltn" type="term">thong</foreign>.
+                                                </note> them in terms of the allusive speech of the
+                                                Tathāgata, which is difficult to understand.” </p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-51"/>
                                         <p tid="52">Mañjuśrī requested, “Bhagavān, please explain
                                                 how to cultivate the four applications of
                                                 mindfulness.” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-52"/>
                                         <p tid="53">The Bhagavān replied, “Mañjuśrī, regarding the
                                                 body to be like space is the application of
                                                 mindfulness that carefully considers the body.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-53"/>
+                                        
                                         <p tid="54">“Mañjuśrī, not perceiving feelings—neither
                                                 internally, nor externally, nor present in both—is
                                                 the application of mindfulness that carefully
                                                 considers feelings.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-54"/>
+                                        <milestone unit="chunk" xml:id="UT22084-060-007-53"/>
                                         <p tid="55"> “Mañjuśrī, whoever understands mind to be no
                                                 more than a mere name is applying mindfulness that
                                                 carefully considers the mind. <ref cRef="F.243.a"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-55"/>
                                         <p tid="56">“Mañjuśrī, whoever does not perceive virtuous,
                                                 nonvirtuous, or neutral phenomena is applying
                                                 mindfulness that carefully considers phenomena.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-56"/>
                                         <p tid="57">“Mañjuśrī, this is how the four applications of
                                                 mindfulness are to be viewed.”</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-57"/>
                                         <p tid="58">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the eightfold path of the noble ones?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-58"/>
                                         <p tid="59">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all phenomena as not unequal, non-dual, and not
                                                 dualistically distinguishable has right view.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-59"/>
                                         <p tid="60">“Mañjuśrī, whoever sees by way of not
                                                 seeing—without conceptualizing, mentally
                                                 constructing, or falsely imagining any
@@ -530,7 +514,6 @@
                                         <p tid="61">“Mañjuśrī, whoever sees all phenomena as
                                                 inexpressible due to having meditated on the
                                                 sameness of all expressions has right speech.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-61"/>
                                         <p tid="62">“Mañjuśrī, whoever sees all phenomena as free
                                                 from action and instrument due to not perceiving an
                                                 agent has right action.</p>
@@ -539,7 +522,6 @@
                                                 decrease any phenomenon due to abiding in the
                                                 sameness of all livelihoods has right
                                                 livelihood.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-63"/>
                                         <p tid="64">“Mañjuśrī, whoever, by way of applying<note place="end" index="8" xml:id="UT22084-060-007-64">
                                                   <foreign xml:lang="Bo-Ltn" type="term">brtul
                                                   ba</foreign> here is rendered according to one of
@@ -558,7 +540,6 @@
                                                   245); or Narthang and Lhasa: <foreign xml:lang="Bo-Ltn" type="term">rtsol ba</foreign>.
                                                   Degé and Stok read: <foreign xml:lang="Bo-Ltn" type="term">rtsom pa</foreign>.</note> does not
                                                 initiate anything has right effort.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-66"/>
                                         <p tid="65">“Mañjuśrī, whoever is not mindful of any
                                                 phenomenon due to being devoid of the act of
                                                 mindfulness has right mindfulness.</p>
@@ -567,18 +548,15 @@
                                                 naturally meditatively concentrated and undisturbed
                                                 due to not perceiving any object of perception has
                                                 right meditative concentration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-68"/>
                                         <p tid="67">“Mañjuśrī, this is how the eightfold path of the
                                                 noble ones is to be viewed.”</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-69"/>
                                         <p tid="68">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the five faculties?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-70"/>
                                         <p tid="69">The Bhagavān replied, “Mañjuśrī, whoever has the
                                                 confidence to see all phenomena as unproduced by
                                                 virtue of their being intrinsically unproduced has
                                                 the faculty of faith.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-71"/>
                                         <p tid="70">“Mañjuśrī, whoever does not mentally let go of
                                                 any phenomenon due to being free from notions of far
                                                 or near has the faculty of effort. <ref cRef="F.243.b"/>
@@ -588,7 +566,6 @@
                                                 mind or to be mindful of any phenomenon due to being
                                                 disengaged from objects of perception has the
                                                 faculty of mindfulness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-73"/>
                                         <p tid="72">“Mañjuśrī, whoever sees<note place="end" index="10" xml:id="UT22084-060-007-74"> Rendered
                                                   based on Yongle, Lithang, Kangxi, Narthang, Choné,
                                                   and Lhasa: <foreign xml:lang="Bo-Ltn" type="term">mthong</foreign>. Degé and Stok read: <foreign xml:lang="Bo-Ltn" type="term">’gyur</foreign>.
@@ -600,18 +577,15 @@
                                                 intrinsically empty due to being devoid of being
                                                 produced and being devoid of not being known has the
                                                 faculty of wisdom.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-76"/>
                                         <p tid="74">“Mañjuśrī, this is how the five faculties should
                                                 be viewed.”</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-77"/>
                                         <p tid="75">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the seven branches of enlightenment?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-78"/>
                                         <p tid="76">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all phenomena as devoid of existence because there
                                                 is neither mindfulness nor attention has the branch
                                                 of enlightenment of right mindfulness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-79"/>
                                         <p tid="77">“Mañjuśrī, whoever is disengaged from and does
                                                 not perceive any phenomenon by not creating
                                                 virtuous, nonvirtuous, or neutral states has the
@@ -622,7 +596,6 @@
                                                 the three realms due to having destroyed the notion
                                                 of realms has the branch of enlightenment of right
                                                 effort.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-81"/>
                                         <p tid="79">“Mañjuśrī, whoever does not become joyous about
                                                 any conditioned state due to having done away with
                                                 joy and sorrow has the branch of enlightenment of
@@ -632,7 +605,6 @@
                                                 respect to all phenomena because of not perceiving
                                                 objects of perception has the branch of
                                                 enlightenment of right mental suppleness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-83"/>
                                         <p tid="81">“Mañjuśrī, whoever does not perceive mind
                                                 because of realizing that all phenomena have come to
                                                 an end has the branch of enlightenment of right
@@ -644,7 +616,6 @@
                                                 joy has the branch of enlightenment of right
                                                 impartiality. <ref cRef="F.244.a"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-85"/>
                                         <p tid="83">“Mañjuśrī, this is how the seven branches of
                                                 enlightenment should be viewed.</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-86"/>
@@ -669,7 +640,6 @@
                                         <p tid="85">“Mañjuśrī, those with such forbearance are
                                                 deserving of offerings from the world with its
                                                 gods—they are worthy of gifts and reverence.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-88"/>
                                         <p tid="86">“Therefore, Mañjuśrī, those bhikṣus who seek to
                                                 partake of the country’s alms in a beneficial way,
                                                 who seek to subdue Māra, who seek to transcend
@@ -681,51 +651,49 @@
                                                 thirty-two thousand gods realized the Dharma. They
                                                 sprinkled <foreign xml:lang="Sa-Ltn" type="term">mandārava</foreign> flowers upon the Bhagavān and
                                                 uttered these words: </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-90"/>
-                                        <p tid="88">“If those who happen to hear this Dharma
+                                        <p tid="88">If those who happen to hear this Dharma
                                                 teaching by the Bhagavān would successfully go forth
                                                 under the Tathāgata’s dispensation and do well, what
                                                 to say then of those who, having listened to it,
                                                 have confidence and faith in it, and uphold it
-                                                accordingly? <ref cRef="F.244.b"/> Indeed, those who happen to
-                                                hear this Dharma teaching by the Bhagavān will not
-                                                become conceited.”</p>
+                                                accordingly? <ref cRef="F.244.b"/> Indeed, those who
+                                                happen to hear this Dharma teaching by the Bhagavān
+                                                will not become conceited.”</p>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-91"/>
                                         <p tid="89">After the Bhagavān had spoken thus, the Youthful
                                                 Mañjuśrī, the great śrāvakas, and the world with its
                                                 gods, humans, demigods, and gandharvas rejoiced, and
                                                 they praised what the Bhagavān had said. </p>
+                    <lb/>
                                         <milestone unit="chunk" xml:id="UT22084-060-007-92"/>
-                                        <p tid="90">This concludes the Noble Mahāyāna Sūtra, <title xml:lang="en">The Teaching on the Aids to
-                                                  Enlightenment</title>. </p>
-                                <div type="colophon">
-                                        <head tid="91">Colophon</head>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-93"/>
-                                        <p tid="92">This was translated, edited, and finalized based
-                                                on revisions done according to the language reform
-                                                by the Indian masters Jinamitra and Jñānasiddhi, and
-                                                the chief editor and translator venerable Yeshé
-                                                  Dé.<note place="end" index="11" xml:id="UT22084-060-007-94"> Yongle, Lithang,
-                                                  Kangxi, Choné, Narthang, and Lhasa add: <foreign xml:lang="Bo-Ltn" type="quote">shlo ka dgu bcu
-                                                  rtsa gnyis</foreign> (“ninety-two <foreign xml:lang="Sa-Ltn" type="term">śloka</foreign>”;
+                                        <trailer tid="90">This concludes the Noble Mahāyāna Sūtra, “<title xml:lang="en">The Teaching on the Aids to
+                                                Enlightenment</title>.” </trailer>
+                                </div>
+                                        <div type="colophon">
+                                                <head type="colophon" tid="91">Colophon</head>
+                                                <milestone unit="chunk" xml:id="UT22084-060-007-93"/>
+                                                <p tid="92">This was translated, edited, and
+                                                  finalized based on revisions done according to the
+                                                  language reform by the Indian masters Jinamitra
+                                                  and Jñānasiddhi, and the chief editor and
+                                                  translator venerable Yeshé Dé.<note place="end" index="11" xml:id="UT22084-060-007-94"> Yongle,
+                                                  Lithang, Kangxi, Choné, Narthang, and Lhasa add:
+                                                  <foreign xml:lang="Bo-Ltn" type="quote">shlo ka
+                                                  dgu bcu rtsa gnyis</foreign> (“ninety-two <foreign xml:lang="Sa-Ltn" type="term">śloka</foreign>”;
                                                   there are variant Tibetan spellings for <foreign xml:lang="Sa-Ltn" type="term">śloka</foreign> in
                                                   these editions). </note>
-                        </p>
+                    </p>
+                                        </div>
                                 </div>
-                        </div>
-                        </div>
                 </body>
                 <back>
                         <div type="notes">
                                 <head type="notes" tid="93">Notes</head>
-                                <list type="abbreviations">
-                                        <head type="abbreviations" tid="94">Abbreviations</head>
-                                 </list>
                         </div>
                         <div type="listBibl">
                                 <head type="listBibl" tid="95">Bibliography</head>
                                 <div type="section">
-                                        <head tid="96">Tibetan Texts</head>
+                                        <head type="section" tid="96">Tibetan Texts</head>
                                         <bibl xml:id="UT22084-060-007-95">
                         <title xml:lang="Bo-Ltn">’phags pa byang chub kyi phyogs bstan pa zhes bya
                                                   ba theg pa chen po’i mdo</title>. Toh 178, Degé
@@ -748,27 +716,26 @@
                                                 (mdo sde, chi), folios 358.b.6–364.a.6.</bibl>
                                 </div>
                                 <div type="section">
-                                        <head tid="97">Chinese Text</head>
+                                        <head type="section" tid="97">Chinese Text</head>
                                         <bibl xml:id="UT22084-060-007-98">“Foshuo dachen shanjian
-                                                bianhua wenshushili
-                                                wenfojing 佛説大乘善見變化文殊師利問法經.” Translated by
-                                                Tianxizai. In <title xml:lang="Ja-Ltn">Taishō shinshū Daizōkyō</title>, edited
+                                                bianhua wenshushili wenfojing 佛説大乘善見變化文殊師利問法經.”
+                                                Translated by Tianxizai. In <title xml:lang="Ja-Ltn">Taishō shinshū Daizōkyō</title>, edited
                                                 by Junjirō Takakusu and Kaigyoku Watanabe, vol. 14,
                                                 no. 472, 514c–516b. Tokyo: Taishō issaikyō kankōkai,
                                                 1924–1932.</bibl>
                                 </div>
                                 <div type="section">
-                                        <head tid="98">Secondary Literature</head>
+                                        <head type="section" tid="98">Secondary Literature</head>
                                         <bibl xml:id="UT22084-060-007-99">btsan lha ngag dbang tshul
                                                 khrims. <title xml:lang="Bo-Ltn">brda dkrol gser gyi
                                                   me long</title>. Beijing: Mi rigs dpe skrun khang,
                                                 1997.</bibl>
                                         <bibl xml:id="UT22084-060-007-100">La Vallée Poussin, Louis
-                                                de, ed. <title xml:lang="fr">Madhyamakavṛttiḥ: Mūlamadhyamakakārikā
-                                                  (Mādhyamikasūtras) de Nāgārjuna avec la
-                                                  Prasannapadā, commentaire de Candrakīrti</title>.
-                                                St. Petersberg: Académie Impériale des Sciences,
-                                                1903–13.</bibl>
+                                                de, ed. <title xml:lang="fr">Madhyamakavṛttiḥ:
+                                                  Mūlamadhyamakakārikā (Mādhyamikasūtras) de
+                                                  Nāgārjuna avec la Prasannapadā, commentaire de
+                                                  Candrakīrti</title>. St. Petersberg: Académie
+                                                Impériale des Sciences, 1903–13.</bibl>
                                         <bibl xml:id="UT22084-060-007-101">Lancaster, Lewis R. and
                                                 Sung-bae Park. <title xml:lang="en">The Korean
                                                   Buddhist Canon: A Descriptive Catalogue</title>.
@@ -784,12 +751,607 @@
                                                   to Awakening: An Anthology from the Pali
                                                   Canon</title>. 4th Edition. Dhamma Dana
                                                 Publications, 2004. </bibl>
-                                        <bibl xml:id="UT22084-060-007-105">Ye, Shaoyong. <title xml:lang="Bo-Ltn">Mūlamadhyamakakārikā:
-                                                  Dbu ma rtsa ba’i tshig le’ur byas pa shes rab ces
-                                                  bya ba; Zhonglun song; Fanzanghan hejiao, daodu,
+                                        <bibl xml:id="UT22084-060-007-105">Ye, Shaoyong. <title xml:lang="Bo-Ltn">Mūlamadhyamakakārikā: Dbu ma
+                                                  rtsa ba’i tshig le’ur byas pa shes rab ces bya ba;
+                                                  Zhonglun song; Fanzanghan hejiao, daodu,
                                                   yizhu</title>. Shanghai: Zhongxi shuju,
                                                 2011.</bibl>
                                 </div>
+                        </div>
+                        <div type="glossary">
+                                <list type="glossary">
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-106">
+                                                  <term>affliction</term>
+                                                  <term xml:lang="Bo-Ltn">nyon mongs </term>
+                                                  <term xml:lang="bo">ཉོན་མོངས།</term>
+                                                  <term xml:lang="Sa-Ltn">kleśa</term>
+                                                  <term type="definition">Any defiled mental state
+                                                  that disturbs the mind.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-107">
+                                                  <term>aid to enlightenment</term>
+                                                  <term xml:lang="Bo-Ltn">byang chub kyi phyogs </term>
+                                                  <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཕྱོགས།</term>
+                                                  <term xml:lang="Sa-Ltn">bodhipakṣa</term>
+                                                  <term type="definition">A set of thirty-seven
+                                                          essential Buddhist practices. See <ptr target="#UT22084-060-007-6"/>.</term>
+                                                  <term type="alternative">aids to
+                                                  enlightenment</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-108">
+                                                  <term>allusive speech</term>
+                                                  <term xml:lang="Bo-Ltn">ldem po ngag </term>
+                                                  <term xml:lang="bo">ལྡེམ་པོ་ངག</term>
+                                                  <term xml:lang="Sa-Ltn">saṃdhāyavacana</term>
+                                                <term xml:lang="Sa-Ltn">saṃdhābhāṣya</term>
+                                                  <term type="definition">Speech with undisclosed
+                                                  meaning; speech that is indirect and therefore
+                                                  requires further interpretation. </term>
+                                                </gloss>
+                                        </item>
+                                        <item>
+                                                <gloss type="term" xml:id="UT22084-060-007-109">
+                                                  <term>application of mindfulness</term>
+                                                  <term xml:lang="Bo-Ltn">dran pa nye bar gzhag pa</term>
+                                                  <term xml:lang="bo">དྲན་པ་ཉེ་བར་གཞག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">smṛtyupasthāna</term>
+                                                <term type="definition">See “four applications of mindfulness.”</term>
+                                                </gloss>
+                                        </item>
+                                        <item>
+                                                <gloss type="term" xml:id="UT22084-060-007-169">
+                                                <term>four applications of mindfulness</term>
+                                                        <term xml:lang="Bo-Ltn">dran pa nye bar gzhag pa bzhi</term>
+                                                        <term xml:lang="bo">དྲན་པ་ཉེ་བར་གཞག་པ་བཞི།</term>
+                                                        <term xml:lang="Sa-Ltn">catuhsmṛtyupasthāna</term>
+                                                <term type="definition">A meditation where one
+                                                        sees the body as impure, feeling as painful, mind
+                                                        as transient, and things as without self.</term>
+                                                <term type="alternative">applications of
+                                                        mindfulness</term>
+                                        </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-110">
+                                                  <term>appropriate</term>
+                                                  <term xml:lang="Bo-Ltn">nye bar len pa </term>
+                                                  <term xml:lang="bo">ཉེ་བར་ལེན་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">upādā </term>
+                                                  <term type="definition">As one of the twelve links
+                                                  of dependent origination, the noun form
+                                                  <foreign xml:lang="Sa-Ltn">upādāna</foreign> means to cling to
+                                                  existence.</term>
+                                                  <term type="alternative">appropriating</term>
+                                                <term type="alternative">appropriation</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-111">
+                                                  <term>arhat</term>
+                                                  <term xml:lang="Bo-Ltn">dgra bcom pa </term>
+                                                  <term xml:lang="bo">དགྲ་བཅོམ་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">arhat</term>
+                                                  <term type="definition">A person who has achieved
+                                                  complete liberation from saṃsāra.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-112">
+                                                  <term>attention</term>
+                                                  <term xml:lang="Bo-Ltn">yid la byed pa </term>
+                                                  <term xml:lang="bo">ཡིད་ལ་བྱེད་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">manasikāra</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-113">
+                                                  <term>Bhagavān</term>
+                                                  <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                                                  <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                                                  <term xml:lang="Sa-Ltn">bhagavān</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-114">
+                                                  <term>bhikṣu</term>
+                                                  <term xml:lang="Bo-Ltn">dge slong </term>
+                                                  <term xml:lang="bo">དགེ་སློང་།</term>
+                                                  <term xml:lang="Sa-Ltn">bhikṣu</term>
+                                                  <term type="definition">A fully ordained
+                                                  monk.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-115">
+                                                  <term>carefully consider</term>
+                                                  <term xml:lang="Bo-Ltn">rjes su lta ba </term>
+                                                  <term xml:lang="bo">རྗེས་སུ་ལྟ་བ།</term>
+                                                  <term xml:lang="Sa-Ltn">anupaś</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-116">
+                                                  <term>conceptualize</term>
+                                                  <term xml:lang="Bo-Ltn">rnam par rtog pa </term>
+                                                  <term xml:lang="bo">རྣམ་པར་རྟོག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">vikḷp</term>
+                                                  <term type="definition">According to Buddhist
+                                                  epistemology, to conceptualize is to cognize in
+                                                  such a way that language is involved as a
+                                                  medium.</term>
+                                                  <term type="alternative">conceptualizing</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-117">
+                                                  <term>conditioned state</term>
+                                                  <term xml:lang="Bo-Ltn">’du byed </term>
+                                                  <term xml:lang="bo">འདུ་བྱེད།</term>
+                                                  <term xml:lang="Sa-Ltn">saṃskāra</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-118">
+                                                  <term>discernment of phenomena</term>
+                                                  <term xml:lang="Bo-Ltn">chos rnam par ’byed pa </term>
+                                                  <term xml:lang="bo">ཆོས་རྣམ་པར་འབྱེད་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">dharmapravicaya</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-119">
+                                                  <term>effort</term>
+                                                  <term xml:lang="Bo-Ltn">brtson ’grus </term>
+                                                  <term xml:lang="bo">བརྩོན་འགྲུས།</term>
+                                                  <term xml:lang="Sa-Ltn">vīrya</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-120">
+                                                  <term>eightfold path of the noble ones</term>
+                                                  <term xml:lang="Bo-Ltn">’phags pa’i lam yan lag
+                                                  brgyad </term>
+                                                  <term xml:lang="bo">འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད།</term>
+                                                  <term xml:lang="Sa-Ltn">āryāṣṭāṅgamārga</term>
+                                                  <term type="definition">Path leading to the
+                                                          attainment of an arhat, consisting of right (1) view,
+                                                  (2) intention, (3) speech, (4) action, (5) livelihood, (6) effort,
+                                                  (7) mindfulness, and (8) meditative concentration.</term>
+                                                  <term type="alternative">eightfold path</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-121">
+                                                  <term>error</term>
+                                                  <term xml:lang="Bo-Ltn">phyin ci log </term>
+                                                  <term xml:lang="bo">ཕྱིན་ཅི་ལོག</term>
+                                                  <term xml:lang="Sa-Ltn">viparyāsa</term>
+                                                  <term type="definition">Cognitive <term type="ignore">error</term> contrary
+                                                  to Buddhist truth, especially perceptions
+                                                  concerning purity, happiness, permanence, and the
+                                                  existence of an eternal self. See also “four errors.”</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-122">
+                                                  <term>faith</term>
+                                                  <term xml:lang="Bo-Ltn">dad pa </term>
+                                                  <term xml:lang="bo">དད་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">śraddhā</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-123">
+                                                  <term>falsely imagined </term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa ma yin pa kun
+                                                  brtags pa </term>
+                                                  <term xml:lang="bo">ཡང་དག་པ་མ་ཡིན་པ་ཀུན་བརྟགས་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">abhūtaparikalpita</term>
+                                                  <term type="definition">Something unreal that is
+                                                  constructed through imagination. Along with its
+                                                  related form <foreign xml:lang="Sa-Ltn">abhūtaparikalpa</foreign>, it
+                                                  conveys an important concept in the Yogācāra
+                                                  Buddhist philosophy.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-124">
+                                                  <term>falsely imagining</term>
+                                                  <term xml:lang="Bo-Ltn">kun tu rtog pa </term>
+                                                  <term xml:lang="bo">ཀུན་ཏུ་རྟོག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">saṃkḷpa</term>
+                                                  <term type="alternative">falsely imagined</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-125">
+                                                  <term>five faculties</term>
+                                                  <term xml:lang="Bo-Ltn">dbang po lnga </term>
+                                                  <term xml:lang="bo">དབང་པོ་ལྔ།</term>
+                                                  <term xml:lang="Sa-Ltn">pañcendriyāṇi</term>
+                                                  <term type="definition">(1) Faith, (2) effort,
+                                                  (3) mindfulness, (4) meditative concentration, and
+                                                  (5) wisdom.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-126">
+                                                  <term>four errors</term>
+                                                  <term xml:lang="Bo-Ltn">phyin ci log bzhi </term>
+                                                  <term xml:lang="bo">ཕྱིན་ཅི་ལོག་བཞི།</term>
+                                                  <term xml:lang="Sa-Ltn">catvāraḥ viparyāsāḥ</term>
+                                                  <term type="definition">(1) Seeing what is
+                                                  miserable as pleasurable, (2) seeing what is
+                                                  impermanent as permanent, (3) seeing what is
+                                                  impure as pure, (4) seeing what is devoid of a
+                                                  self as having a self. See also “error.”</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-127">
+                                                  <term>four truths of the noble ones</term>
+                                                  <term xml:lang="Bo-Ltn">’phags pa’i bden pa bzhi</term>
+                                                <term xml:lang="bo">འཕགས་པའི་བདེན་པ་བཞི།</term>
+                                                  <term xml:lang="Sa-Ltn">caturāryasatya</term>
+                                                  <term type="definition">The <term type="ignore">four truths of the
+                                                          noble ones</term> are the truths of (1) suffering, (2) origin of
+                                                          suffering, (3) cessation of suffering, and
+                                                          (4) path.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-128">
+                                                  <term>free from fever</term>
+                                                  <term xml:lang="Bo-Ltn">rims nad med pa </term>
+                                                  <term xml:lang="bo">རིམས་ནད་མེད་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">nirjvara</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-129">
+                                                  <term>ignorant ordinary being</term>
+                                                  <term xml:lang="Bo-Ltn">byis pa so so’i skye bo </term>
+                                                  <term xml:lang="bo">བྱིས་པ་སོ་སོའི་སྐྱེ་བོ།</term>
+                                                  <term xml:lang="Sa-Ltn">bālapṛthagjana</term>
+                                                  <term type="definition">A person who has not had a
+                                                  perceptual experience of the truth and has
+                                                  therefore not achieved the state of a noble
+                                                  person.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-130">
+                                                  <term>impartiality</term>
+                                                  <term xml:lang="Bo-Ltn">btang snyoms </term>
+                                                  <term xml:lang="bo">བཏང་སྙོམས།</term>
+                                                  <term xml:lang="Sa-Ltn">upekṣā</term>
+                                                  <term type="definition">An even state of mind
+                                                  characterized by the lack of disturbance and
+                                                  pleasure, where one wishes neither to be separated
+                                                  from nor to approach the object.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-131">
+                                                  <term>joy</term>
+                                                  <term xml:lang="Bo-Ltn">dga’ ba </term>
+                                                  <term xml:lang="bo">དགའ་བ།</term>
+                                                  <term xml:lang="Sa-Ltn">prīti</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-132">
+                                                  <term>Māra</term>
+                                                  <term xml:lang="Bo-Ltn">bdud </term>
+                                                  <term xml:lang="bo">བདུད།</term>
+                                                  <term xml:lang="Sa-Ltn">māra</term>
+                                                  <term type="definition">The chief antagonist in
+                                                  the life of the Buddha, who sought to prevent the
+                                                  Buddha from achieving enlightenment.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-133">
+                                                  <term>meditative concentration</term>
+                                                  <term xml:lang="Bo-Ltn">ting nge ’dzin </term>
+                                                  <term xml:lang="bo">ཏིང་ངེ་འཛིན།</term>
+                                                  <term xml:lang="Sa-Ltn">samādhi</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-134">
+                                                  <term>meditatively concentrated</term>
+                                                  <term xml:lang="Bo-Ltn">mnyam par bzhag pa </term>
+                                                  <term xml:lang="bo">མཉམ་པར་བཞག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">samāhita</term>
+                                                  <term type="definition">Engaged single-pointedly
+                                                  in the meditative state.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-135">
+                                                  <term>mentally construct </term>
+                                                  <term xml:lang="Bo-Ltn">rtog pa </term>
+                                                  <term xml:lang="bo">རྟོག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">kḷp</term>
+                                                  <term type="definition">Same as
+                                                  conceptualizing.</term>
+                                                  <term type="alternative">mentally
+                                                  constructing</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-136">
+                                                  <term>mindfulness</term>
+                                                  <term xml:lang="Bo-Ltn">dran pa </term>
+                                                  <term xml:lang="bo">དྲན་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">smṛti</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-137">
+                                                  <term>neutral</term>
+                                                  <term xml:lang="Bo-Ltn">lung du ma bstan pa </term>
+                                                  <term xml:lang="bo">ལུང་དུ་མ་བསྟན་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">avyākṛta</term>
+                                                  <term type="definition">Neither virtuous nor
+                                                  nonvirtuous.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-138">
+                                                  <term>notion</term>
+                                                  <term xml:lang="Bo-Ltn">’du shes </term>
+                                                  <term xml:lang="bo">འདུ་ཤེས།</term>
+                                                  <term xml:lang="Sa-Ltn">saṃjñā</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-139">
+                                                  <term>objects of perception</term>
+                                                  <term xml:lang="Bo-Ltn">dmigs pa </term>
+                                                  <term xml:lang="bo">དམིགས་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">ālambana</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-141">
+                                                  <term>right action</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i las kyi
+                                                  mtha’ </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་ལས་ཀྱི་མཐའ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyakkarmānta</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-142">
+                                                  <term>right effort</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i rtsol ba </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་རྩོལ་བ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyagvyāyāma</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-143">
+                                                  <term>right intention</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i rtog pa </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་རྟོག་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyaksaṃkalpa</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-144">
+                                                  <term>right livelihood</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i ’tsho ba </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་འཚོ་བ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyagājīva</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-145">
+                                                  <term>right meditative concentration</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i ting nge
+                                                  ’dzin </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་ཏིང་ངེ་འཛིན།</term>
+                                                  <term xml:lang="Sa-Ltn">samyaksamādhi</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-146">
+                                                  <term>right mindfulness</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i dran pa </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་དྲན་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyaksmṛti</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-147">
+                                                  <term>right speech</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i ngag </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་ངག</term>
+                                                  <term xml:lang="Sa-Ltn">samyagvāc</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-148">
+                                                  <term>right view</term>
+                                                  <term xml:lang="Bo-Ltn">yang dag pa’i lta ba </term>
+                                                  <term xml:lang="bo">ཡང་དག་པའི་ལྟ་བ།</term>
+                                                  <term xml:lang="Sa-Ltn">samyagdṛṣṭi</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-149">
+                                                  <term>seven branches of enlightenment</term>
+                                                  <term xml:lang="Bo-Ltn">byang chub kyi yan lag
+                                                  bdun </term>
+                                                  <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཡན་ལག་བདུན།</term>
+                                                  <term xml:lang="Sa-Ltn">saptabodhyaṅgāni</term>
+                                                <term type="definition">(1) Mindfulness, (2) discernment
+                                                        of phenomena, (3) effort, (4) joy, (5) suppleness, (6) meditative
+                                                  concentration, and (7) impartiality. </term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-150">
+                                                  <term>spiritual life</term>
+                                                  <term xml:lang="Bo-Ltn">tshangs par spyod pa </term>
+                                                  <term xml:lang="bo">ཚངས་པར་སྤྱོད་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">brahmacarya</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-151">
+                                                  <term>śramaṇa</term>
+                                                  <term xml:lang="Bo-Ltn">dge sbyong </term>
+                                                  <term xml:lang="bo">དགེ་སྦྱོང་།</term>
+                                                  <term xml:lang="Sa-Ltn">śramaṇa</term>
+                                                  <term type="definition">Literally one who toils,
+                                                  i.e. an ascetic.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-152">
+                                                  <term>suppleness</term>
+                                                  <term xml:lang="Bo-Ltn">shin tu sbyangs pa </term>
+                                                  <term xml:lang="bo">ཤིན་ཏུ་སྦྱངས་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">prasrabdhi</term>
+                                                  <term type="definition">A state in which one is
+                                                  empowered to employ the body and mind in virtuous
+                                                  activities.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-153">
+                                                  <term>Tathāgata</term>
+                                                  <term xml:lang="Bo-Ltn">de bshin gshegs pa </term>
+                                                  <term xml:lang="bo">དེ་བཤིན་གཤེགས་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">tathāgata</term>
+                                                  <term type="definition">“The thus-gone one,” an
+                                                  epithet for the Buddha.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-154">
+                                                  <term>tranquility</term>
+                                                  <term xml:lang="Bo-Ltn">zhi gnas </term>
+                                                  <term xml:lang="bo">ཞི་གནས།</term>
+                                                  <term xml:lang="Sa-Ltn">śamatha</term>
+                                                  <term type="definition">Remaining with the object
+                                                  of meditation single-pointedly without
+                                                  distraction; the cause of higher meditative
+                                                  states.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-155">
+                                                  <term>visual aberration</term>
+                                                  <term xml:lang="Bo-Ltn">mig yor </term>
+                                                  <term xml:lang="bo">མིག་ཡོར།</term>
+                                                  <term xml:lang="Sa-Ltn">pratibhāsa</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="term" xml:id="UT22084-060-007-156">
+                                                  <term>wisdom</term>
+                                                  <term xml:lang="Bo-Ltn">shes rab </term>
+                                                  <term xml:lang="bo">ཤེས་རབ།</term>
+                                                  <term xml:lang="Sa-Ltn">prajñā</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-157">
+                                                  <term>Jinamitra</term>
+                                                  <term xml:lang="Bo-Ltn">dzi na mi tra </term>
+                                                  <term xml:lang="bo">ཛི་ན་མི་ཏྲ།</term>
+                                                  <term xml:lang="Sa-Ltn">Jinamitra</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-158">
+                                                  <term>Jñānasiddhi</term>
+                                                  <term xml:lang="Bo-Ltn">dz+nyA na sid+dhi </term>
+                                                  <term xml:lang="bo">ཛྙཱ་ན་སིདྡྷི།</term>
+                                                  <term xml:lang="Sa-Ltn">Jñānasiddhi</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-159">
+                                                  <term>Maitreya </term>
+                                                  <term xml:lang="Bo-Ltn">’byams pa </term>
+                                                  <term xml:lang="bo">འབྱམས་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">Maitreya </term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-160">
+                                                  <term>Mañjuśrī </term>
+                                                  <term xml:lang="Bo-Ltn">’jam dpal </term>
+                                                  <term xml:lang="bo">འཇམ་དཔལ།</term>
+                                                  <term xml:lang="Sa-Ltn">Mañjuśrī </term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-162">
+                                                  <term>Śākya</term>
+                                                  <term xml:lang="Bo-Ltn">shA kya </term>
+                                                  <term xml:lang="bo">ཤཱ་ཀྱ།</term>
+                                                  <term xml:lang="Sa-Ltn">Śākya</term>
+                                                <term type="definition">Name of the clan into which the Buddha was born.
+                                                  </term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-163">
+                                                  <term>Subhūti</term>
+                                                  <term xml:lang="Bo-Ltn">rab ’byor </term>
+                                                  <term xml:lang="bo">རབ་འབྱོར།</term>
+                                                  <term xml:lang="Sa-Ltn">Subhūti</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-164">
+                                                  <term>Yeshé Dé</term>
+                                                  <term xml:lang="Bo-Ltn">ye shes sde </term>
+                                                  <term xml:lang="bo">ཡེ་ཤེས་སྡེ།</term>
+                                                  <term xml:lang="Sa-Ltn"/>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="person" xml:id="UT22084-060-007-165">
+                                                  <term>Youthful Mañjuśrī</term>
+                                                  <term xml:lang="Bo-Ltn">’jam dpal gzhon nur gyur
+                                                  pa </term>
+                                                  <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ།</term>
+                                                  <term xml:lang="Sa-Ltn">Mañjuśrīkumārabhūta</term>
+                                                  <term type="definition">Mañjuśrī who takes the
+                                                  form of a youth, an epithet by which the
+                                                  well-known bodhisattva is sometimes
+                                                  referred.</term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="place" xml:id="UT22084-060-007-166">
+                                                  <term>Rājagṛha </term>
+                                                  <term xml:lang="Bo-Ltn">rgyal po’i khab </term>
+                                                  <term xml:lang="bo">རྒྱལ་པོའི་ཁབ།</term>
+                                                  <term xml:lang="Sa-Ltn">Rājagṛha </term>
+                                                </gloss>
+                    </item>
+                                        <item>
+                        <gloss type="place" xml:id="UT22084-060-007-168">
+                                                  <term>Vulture Peak Mountain</term>
+                                                  <term xml:lang="Bo-Ltn">bya rgod kyi phung po’i ri </term>
+                                                  <term xml:lang="bo">བྱ་རྒོད་ཀྱི་ཕུང་པོའི་རི།</term>
+                                                  <term xml:lang="Sa-Ltn">Gṛdhrakūṭa </term>
+                                                </gloss>
+                    </item>
+                                </list>
                         </div>
                 </back>
         </text>
