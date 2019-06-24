@@ -26,7 +26,7 @@
                 <sponsor ref="sponsors.xml#sponsor-8">anonymous</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.39 <date>2019</date>
+                <edition>v 1.41 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -61,11 +61,12 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-18T16:09:06.214Z" user="admin">18/06/2019 16:09:06</note>
+                <note type="lastUpdated" date-time="2019-06-24T17:44:58.161Z" user="admin">24/06/2019 17:44:58</note>
             <note type="updated" update="text-version" value="v 1.34" date-time="2019-03-18T11:06:14.991Z" user="john">v 1.34 2018</note>
             <note type="updated" update="text-version" value="v 1.35" date-time="2019-03-18T11:34:16.438Z" user="john">v 1.35 2018</note>
             <note type="updated" update="text-version" value="v 1.37" date-time="2019-04-16T16:42:43.647Z" user="john">v 1.37 2018</note>
             <note type="updated" update="text-version" value="v 1.39" date-time="2019-06-18T16:09:02.753Z" user="celso">v 1.39 2019</note>
+            <note type="updated" update="text-version" value="v 1.41" date-time="2019-06-24T17:44:54.159Z" user="celso">v 1.41 2019</note>
             </notesStmt>
             <!--<notesStmt>
                 <note type="lastUpdated">Last updated at 06/01/2018 at 14:00:24 by celso</note>
@@ -730,7 +731,7 @@
                                 teaches that the higher cognitions are gained by having no attachment, either to samādhi or
                                 worldly things, and by having no pride. The higher cognitions are the realization that there is no
                                 substance to anything, even the Buddha’s words. This realization of emptiness brings buddhahood,
-                                which does not exist on the level of words. Buddhahood has no form; it is the dharmakāya. It
+                                which does not exist on the <term type="ignore">level</term> of words. Buddhahood has no form; it is the dharmakāya. It
                                 transcends every kind of conceptual identification. Those without this understanding believe they
                                 have made spiritual progress but still have desire, particularly for women. </p>
                             <milestone unit="chunk" xml:id="UT22084-055-001-77"/>
@@ -22824,7 +22825,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-4309"/>
                     <p tid="2918">“Young man, what is the restraint of the mind?<note place="end" xml:id="UT22084-055-001-4310" index="1392"> According to the Sanskrit and the Chinese. Absent in the Tibetan.</note> Bodhisattva
                         mahāsattvas who have the restraint of the mind are without fear of the Dharma of the buddhas,<note place="end" xml:id="UT22084-055-001-4311" index="1393"> Chinese: “have attained all the Dharma of the
-                            buddhas,” <foreign xml:lang="zh" type="quote">得一切佛法</foreign> (<foreign xml:lang="Zh-Ltn" type="quote">de yi qie fo fa</foreign>), and adds “have attained all higher cognitions," <foreign xml:lang="zh" type="quote">得一切神通</foreign> (<foreign xml:lang="Zh-Ltn" type="quote">de yi qie shen
+                            buddhas,” <foreign xml:lang="zh" type="quote">得一切佛法</foreign> (<foreign xml:lang="Zh-Ltn" type="quote">de yi qie fo fa</foreign>), and adds “have attained all higher cognitions,” <foreign xml:lang="zh" type="quote">得一切神通</foreign> (<foreign xml:lang="Zh-Ltn" type="quote">de yi qie shen
                                 tong</foreign>).</note> and have attained the unshakable, liberated mind. Young man, that is the
                         restraint of the mind.</p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4312"/>
@@ -23967,7 +23968,7 @@
                     <p tid="3256">Then Brother Ānanda asked the Bhagavān, “What is the name of this teaching? In what way shall I
                         keep it?”</p>
                     <p tid="3257">The Bhagavān said, “Ānanda, you should keep this sūtra as having the name <title xml:lang="en">Entering Great Compassion</title>. You should also keep this sūtra as having the name <title xml:lang="en">The Samādhi, the Revealed Equality of the Nature of All Phenomena</title>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-001-4725"/>
+                    
                     <p tid="3258">Ānanda said, “Bhagavān, I shall keep this Dharma teaching.”</p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4726"/>
                     <p tid="3259">The Bhagavān, having spoken those words, the youth Candraprabha, Brother Ānanda, the fourfold
@@ -23977,9 +23978,9 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4728"/>
                     <lb/>
-                    <p tid="3403">
-                        <title xml:lang="en">The Samādhi, the Revealed Equality of the Nature of All Phenomena</title>, is
-                        concluded.</p>
+                    <trailer tid="3403">
+                        “<title xml:lang="en">The Samādhi, the Revealed Equality of the Nature of All Phenomena</title>,” is
+                        concluded.</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="3392">Colophon</head>
@@ -24330,7 +24331,7 @@
                             <term xml:lang="Bo-Ltn">byang chub snying po </term>
                             <term xml:lang="bo">བྱང་ཆུབ་སྙིང་པོ།</term>
                             <term xml:lang="Sa-Ltn">Bodhimaṇḍa</term>
-                            <term type="definition">"The essence of enlightenment.” The spot in Bodhgaya where the Buddha attained
+                            <term type="definition">“The essence of enlightenment.” The spot in Bodhgaya where the Buddha attained
                                 enlightenment.</term>
                         </gloss>
                     </item>
@@ -24402,8 +24403,16 @@
                             <term xml:lang="Bo-Ltn">rgod kyi phung po </term>
                             <term xml:lang="bo">རྒོད་ཀྱི་ཕུང་པོ།</term>
                             <term xml:lang="Sa-Ltn">Gṛdhrakūṭa</term>
-                            <term type="definition">A mountain by Rajghir in Bihar, which is the setting for many sutras.</term>
-                            <term type="alternative" xml:lang="Sa-Ltn">Gṛdhrakūṭa</term>
+                            <term type="definition">A mountain by Rajghir in Bihar, which is the setting for many sutras. Also rendered here as “Gṛdhrakūṭa.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-055-001-5357">
+                            <term>Gṛdhrakūṭa</term>
+                            <term xml:lang="Bo-Ltn">rgod kyi phung po </term>
+                            <term xml:lang="bo">རྒོད་ཀྱི་ཕུང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Gṛdhrakūṭa</term>
+                            <term type="definition">See “Vulture Peak.”</term>
                         </gloss>
                     </item>
                     <!--<item>
@@ -24454,7 +24463,7 @@
                             <term xml:lang="bo">འཛམ་བུ་རྒྱལ་མཚན།</term>
                             <term xml:lang="Sa-Ltn">Jambudhvaja</term>
                             <term type="definition">An alternative name for Jambudvīpa (rose-apple continent), which means
-                                “rose-apple banner."</term>
+                                “rose-apple banner.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -26959,7 +26968,7 @@
                             <term xml:lang="Bo-Ltn">sha ri’i bu </term>
                             <term xml:lang="bo">ཤ་རིའི་བུ།</term>
                             <term xml:lang="Sa-Ltn">Śāriputra</term>
-                            <term type="definition">"The son of Śāri.” The Buddha’s principal pupil, who passed away before the
+                            <term type="definition">“The son of Śāri.” The Buddha’s principal pupil, who passed away before the
                                 Buddha.</term>
                         </gloss>
                     </item>
@@ -28014,6 +28023,7 @@
                                 knowledge and vision perceive the past without any attachment or hindrance; his knowledge and
                                 vision perceive the future without any attachment or hindrance; and his knowledge and vision
                                 perceive the present without any attachment or hindrance.</term>
+                            <term type="alternative">unique qualities of a buddha</term>
                         </gloss>
                     </item>
                     <item>
@@ -28108,12 +28118,21 @@
                             <term xml:lang="Bo-Ltn">sa </term>
                             <term xml:lang="bo">ས།</term>
                             <term xml:lang="Sa-Ltn">bhūmi</term>
-                            <term type="definition">Literally “grounds” in which qualities grow, and also it means “levels.”
+                            <term type="definition">Literally “grounds” in which qualities grow, and also it means “<term type="ignore">levels</term>.”
                                     <foreign xml:lang="Sa-Ltn" type="term">
                                     <term type="ignore">Bhūmi</term>
-                                </foreign> refers specifically to levels of
-                                enlightenment, especially the ten <term type="ignore">levels</term> of the enlightened bodhisattvas.</term>
-                            <term type="alternative">level</term>
+                                </foreign> refers specifically to <term type="ignore">levels</term> of
+                                enlightenment, especially the ten <term type="ignore">levels</term> of the enlightened bodhisattvas. Also translated here as “<term type="ignore">level</term>.”</term>
+                            
+                        </gloss>
+                    </item>
+                                     <item>
+                        <gloss type="term" mode="match" xml:id="UT22084-055-001-5354">
+                            <term>level</term>
+                            <term xml:lang="Bo-Ltn">sa </term>
+                            <term xml:lang="bo">ས།</term>
+                            <term xml:lang="Sa-Ltn">bhūmi</term>
+                            <term type="definition">See “bhūmi.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -28191,7 +28210,7 @@
                             <term xml:lang="Sa-Ltn">buddhadharmāḥ</term>
                             <term type="definition">These qualities unique to a buddha are eighteen in number: the ten strengths;
                                 the four fearlessness; mindfulness of body, speech, and mind; and compassion.</term>
-                            <term type="alternative" xml:lang="en">unique qualities of a buddha</term>
+                            <!--<term type="alternative" xml:lang="en">unique qualities of a buddha</term> This term actually refers to sangs rgyas kyi chos ma 'dres pa -->
                         </gloss>
                     </item>
                     <item>
@@ -28280,13 +28299,21 @@
                                 contexts, a dhāraṇi is a powerful recitation that is a precursor of mantras and is usually in the
                                 form of intelligible sentences or phrases that preserve or retain the essence of a teaching. There
                                 are two sets of “four <term type="ignore">retentions</term>” in relation to this text. (A) As explained in the sūtra itself
-                                in chapter 24 <ptr target="#UT22084-055-001-2336"/><!--24.65-->: the <term type="ignore">retention</term>, respectively, of
+                                in chapter 24 (<ptr target="#UT22084-055-001-2336"/>)<!--24.65-->: the <term type="ignore">retention</term>, respectively, of
                                 teachings on composites, on sounds, on kleśas, and on purifications. (B) As explained in the
                                 commentary to the opening of the sūtra (1.2, see <ptr target="#UT22084-055-001-93"/>
                                 <!--n.12-->): the recited dhāraṇī sentences and phrases themselves, the <term type="ignore">retention</term> of the memory of
                                 the words of all teachings given, the <term type="ignore">retention</term> of the memory of the meaning of these teachings,
                                 and the <term type="ignore">retention</term> of the realization gained through meditation on that meaning.</term>
-                            <term type="alternative" xml:lang="Sa-Ltn">dhāraṇī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-055-001-5355">
+                            <term>dhāraṇī</term>
+                            <term xml:lang="Bo-Ltn">gzungs </term>
+                            <term xml:lang="bo">གཟུངས།</term>
+                            <term xml:lang="Sa-Ltn">dhāraṇī</term>
+                            <term type="definition">See “retention.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -28535,11 +28562,19 @@
                             <term xml:lang="Bo-Ltn">nyon mongs </term>
                             <term xml:lang="bo">ཉོན་མོངས།</term>
                             <term xml:lang="Sa-Ltn">kleśa</term>
-                            <term type="definition">Literally “pain,” “torment,” or “affliction.” In Buddhist Hybrid Sanskrit it
+                            <term type="definition">Literally “pain,” “torment,” or “<term type="ignore">affliction</term>.” In Buddhist Hybrid Sanskrit it
                                 means literally “impurity” or “depravity.” In its technical use in Buddhism it means any negative
                                 quality in the mind that causes continued existence in saṃsāra. The basic three <term type="ignore">kleśas</term> are
-                                ignorance, attachment, and aversion.</term>
-                            <term type="alternative" xml:lang="en">affliction</term>
+                                ignorance, attachment, and aversion. Also rendered here as “affliction.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-055-001-5356">
+                            <term>affliction</term>
+                            <term xml:lang="Bo-Ltn">nyon mongs </term>
+                            <term xml:lang="bo">ཉོན་མོངས།</term>
+                            <term xml:lang="Sa-Ltn">kleśa</term>
+                            <term type="definition">See “kleśa.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -28724,7 +28759,7 @@
                                 enlightenment, and who do not wish any being to escape from saṃsāra. Also, they are symbolic of
                                 the defects within a person that prevent enlightenment. These four personifications are:
                                 Devaputra-māra (<foreign type="term" xml:lang="Bo-Ltn">lha’i bu’i bdud</foreign>), the Divine
-                                Māra, which is the distraction of pleasures; Mṛtyumāra (<foreign type="term" xml:lang="Bo-Ltn">'chi bdag gi bdud</foreign>), the Māra of Death; Skandhamāra (<foreign type="term" xml:lang="Bo-Ltn">phung po’i bdud</foreign>), the Māra of the Aggregates, which is the body;
+                                Māra, which is the distraction of pleasures; Mṛtyumāra (<foreign type="term" xml:lang="Bo-Ltn">’chi bdag gi bdud</foreign>), the Māra of Death; Skandhamāra (<foreign type="term" xml:lang="Bo-Ltn">phung po’i bdud</foreign>), the Māra of the Aggregates, which is the body;
                                 and Kleśamāra (<foreign type="term" xml:lang="Bo-Ltn">nyon mongs pa’i bdud</foreign>), the Māra of
                                 the Afflictions.</term>
                         </gloss>
@@ -28986,7 +29021,7 @@
                             <term xml:lang="bo">བླག་ཤ།</term>
                             <term xml:lang="Sa-Ltn">plakṣa</term>
                             <term type="definition">
-                                <foreign xml:lang="la">Ficus infectoria</foreign>. Full English name: White fruited wavy-leaf fig tree.</term>
+                                <foreign xml:lang="la">Ficus infectoria</foreign>. Full English name: White fruited <term type="ignore">wavy-leaf fig tree</term>.</term>
                         </gloss>
                     </item>
                     <item>
@@ -29815,7 +29850,7 @@
                             <term type="definition">Several species of finch belonging to the genus Amandava, part of the
                                 Estrildid finch family (Estrildidae). They are renowned as songbirds, and in Tibetan texts the
                                 Sanskrit kalaviṅka was sometimes simply transliterated ka la ping ka, sometimes translated as khu
-                                byug, “cuckoo."</term>
+                                byug, “cuckoo.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -29825,7 +29860,7 @@
                             <term xml:lang="bo">དགེ་བའི་བཤེས་གཉེན།</term>
                             <term xml:lang="Sa-Ltn">kalyāṇamitra</term>
                             <term type="definition">A title for a teacher of the spiritual path, often translated “spiritual
-                                friend."</term>
+                                friend.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -29903,7 +29938,7 @@
                             <term xml:lang="bo">མཛོད་སྤུ།</term>
                             <term xml:lang="Sa-Ltn">ūrṇā</term>
                             <term type="definition">A curled hair or ringlet between the eyebrows that is one of the thirty-two
-                                major signs of a “great being."</term>
+                                major signs of a “great being.”</term>
                         </gloss>
                     </item>
                     <item>
