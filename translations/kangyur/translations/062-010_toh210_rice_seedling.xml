@@ -23,7 +23,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.17 <date>2019</date>
+                <edition>v 1.18 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -57,9 +57,10 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:36:57.475Z" user="admin">21/06/2019 14:36:57</note>
+                <note type="lastUpdated" date-time="2019-06-27T14:14:42.675Z" user="admin">27/06/2019 14:14:42</note>
             <note type="updated" update="text-version" value="v 1.16" date-time="2019-06-18T16:20:25.709Z" user="celso">v 1.16 2019</note>
                 <note type="updated" update="text-version" value="v 1.17" date-time="2019-06-21T14:36:54.313Z" user="celso">v 1.17 2019</note>
+                <note type="updated" update="text-version" value="v 1.18" date-time="2019-06-27T14:14:39.608Z" user="celso">v 1.18 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -703,7 +704,7 @@
                         bodhisattva mahāsattva Maitreya had taught. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-062-010-113"/>
-                    <p tid="78">This concludes the noble Mahāyāna sūtra, <title xml:lang="en">The Rice Seedling</title>.</p>
+                    <trailer tid="78">This concludes the noble Mahāyāna sūtra, “<title xml:lang="en">The Rice Seedling</title>.”</trailer>
                 </div>
             </div>
         </body>
@@ -774,7 +775,6 @@
                             <term type="definition">The central Buddhist doctrine that teaches how things are empty of self-nature
                                 and thus lack independent existence, yet exist provisionally insofar as they are created through
                                 the interaction of various causal <term type="ignore">factors</term>.</term>
-                            <term type="alternative">interdependent origination</term>
                         </gloss>
                     </item>
                     <item>
@@ -783,7 +783,7 @@
                             <term xml:lang="Bo-Ltn">lha ma yin </term>
                             <term xml:lang="bo">ལྷ་མ་ཡིན།</term>
                             <term xml:lang="Sa-Ltn">asura</term>
-                            <term type="alternative">demi-god</term>
+                            <term type="definition"/>
                         </gloss>
                     </item>
                     <item>
@@ -801,7 +801,6 @@
                             <term xml:lang="Bo-Ltn">chos kyi sku </term>
                             <term xml:lang="bo">ཆོས་ཀྱི་སྐུ།</term>
                             <term xml:lang="Sa-Ltn">dharmaśarīra</term>
-                            <term type="alternative">Dharma body, Truth body</term>
                             <term type="definition">See <ptr target="#UT22084-062-010-23"/>.</term>
                           </gloss>
                     </item>
@@ -812,7 +811,6 @@
                             <term xml:lang="bo">དྲི་ཟ།</term>
                             <term xml:lang="Sa-Ltn">gandharva</term>
                             <term type="definition">Class of ethereal beings, living on scents.</term>
-                            <term type="alternative">scent-eater</term>
                         </gloss>
                     </item>
                     <item>
@@ -822,7 +820,6 @@
                             <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ།</term>
                             <term xml:lang="Sa-Ltn">tathāgata</term>
                             <term type="definition">Epithet of the Buddha.</term>
-                            <term type="alternative">Thus-gone one, the Thus-gone</term>
                         </gloss>
                     </item>
                     <item>
@@ -839,7 +836,6 @@
                             <term xml:lang="Bo-Ltn">gang zag </term>
                             <term xml:lang="bo">གང་ཟག</term>
                             <term xml:lang="Sa-Ltn">pudgala</term>
-                            <term type="alternative">individual</term>
                         </gloss>
                     </item>
                     <item>
@@ -851,7 +847,6 @@
                             <term type="definition">“According to Sāṁkhya, the prime substance, from which the material universe
                                 evolves, as opposed to <foreign xml:lang="Sa-Ltn" type="term">puruṣa</foreign>, pure
                                 consciousness.” (Reat, 39 n5).</term>
-                            <term type="alternative">primal matter </term>
                         </gloss>
                     </item>
                     <item>
@@ -1024,8 +1019,16 @@
                                 Buddha’s teaching stipulates (<term type="ignore">dharmas</term>); (4) the various awakened qualities or attainments acquired
                                 through practicing and realizing the Buddha’s teaching (<term type="ignore">dharmas</term>); (5) qualities or aspects more
                                 generally, i.e., phenomena or phenomenal attributes (<term type="ignore">dharmas</term>); and (6) mental objects
-                                (<term type="ignore">dharmas</term>).</term>
-                            <term type="alternative">things</term>
+                                (<term type="ignore">dharmas</term>).</term>                        
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-010-170">
+                            <term>things</term>
+                            <term xml:lang="Bo-Ltn">chos </term>
+                            <term xml:lang="bo">ཆོས།</term>
+                            <term xml:lang="Sa-Ltn">dharma</term>
+                            <term type="definition">See “dharma.”</term>
                         </gloss>
                     </item>
                     <item>
@@ -1035,7 +1038,6 @@
                             <term xml:lang="bo">ཆོས།</term>
                             <term xml:lang="Sa-Ltn">dharma</term>
                             <term type="definition">See “dharma.”</term>
-                            <term type="alternative">things</term>
                         </gloss>
                     </item>
                     <item>
@@ -1045,7 +1047,7 @@
                             <term xml:lang="bo">ཉེ་བར་ལེན་པའི་ཕུང་པོ།</term>
                             <term xml:lang="Sa-Ltn">upādānaskandha</term>
                             <term type="definition">Said of the aggregates individually, but more commonly in terms of all five as
-                                a collective, because they are “the basis of clinging to existence”  (Edgerton).</term>
+                                a collective, because they are “the basis of clinging to existence” (Edgerton).</term>
                         </gloss>
                     </item>
                     <item>
