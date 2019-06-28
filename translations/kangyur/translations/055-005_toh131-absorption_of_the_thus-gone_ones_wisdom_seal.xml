@@ -4,8 +4,8 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">de bzhin gshegs pa'i ye shes kyi phyag
-                    rgya'i ting nge 'dzin gyi mdo/</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">de bzhin gshegs pa’i ye shes kyi phyag
+                    rgya’i ting nge ’dzin gyi mdo/</title>
                 <title type="mainTitle" xml:lang="bo">དེ་བཞིན་གཤེགས་པའི་ཡེ་ཤེས་ཀྱི་ཕྱག་རྒྱའི་ཏིང་ངེ་འཛིན་གྱི་མདོ།</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">tathāgatajñānamudrāsamādhisūtra</title>
                 <title type="mainTitle" xml:lang="en">The Absorption of the Thus-Gone One’s Wisdom
@@ -31,7 +31,7 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.00 <date>2018</date>
+                <edition>v 1.02 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -55,7 +55,11 @@
             <sourceDesc>
                 <bibl key="toh131" type="text">
                     <ref>Toh 131</ref>
-                    <biblScope>Degé Kangyur, vol. 55 (da), folios 230b–253b</biblScope>
+                    <biblScope>Degé Kangyur, vol. 55 (mdo sde, da), folios 230b–253b</biblScope>
+                    <author role="translatorTib">Jinamitra</author>
+                    <author role="translatorTib">Munivarman</author>
+                    <author role="translatorTib">Dānaśīla</author>
+                    <author role="translatorTib">Yeshé Dé</author>
                     <location count-pages="47">
                         <start volume="55" page="462"/>
                         <end volume="55" page="508"/>
@@ -65,7 +69,12 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-13T18:07:13.785Z" user="celso">13/03/2019 18:07:13</note>
+                <note type="lastUpdated" date-time="2019-06-28T12:24:18.71Z" user="admin">28/06/2019 12:24:18</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-11T17:36:21.851Z" user="andre">v 1.01 2018</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-11T17:36:21.851Z" user="andre">2</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2019-04-12T09:09:49.721Z" user="andre">2.a</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-11T12:17:38.092Z" user="mike">v 1.01 2018</note>
+                <note type="updated" update="text-version" value="v 1.02" date-time="2019-06-28T12:24:15.371Z" user="laura">v 1.02 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -108,7 +117,7 @@
                         efforts of the early ninth century. In between these two notable efforts to
                         propagate the sūtra outside of India, we also know of at least one citation
                         of this text in the works of an Indian scholar: that of Bhāviveka (sixth
-                        century) in his <title xml:lang="Sa-Ltn">Tarkajvālā</title>.<note place="end" index="1" xml:id="UT22084-055-005-5"> See Eckel 1994:
+                        century) in his <title xml:lang="Sa-Ltn">Tarkajvālā</title>.<note place="end" index="1" xml:id="UT22084-055-005-5"> See Eckel 1994:
                             166.</note> As such, we have evidence of a continued relevance of this
                         sūtra during the formative centuries of the Great Vehicle tradition in
                         India. To our knowledge, this scripture has until now remained unexplored by
@@ -125,8 +134,8 @@
                         sūtras to form an unofficial subgenre of sūtra literature.<note place="end" index="2" xml:id="UT22084-055-005-7"> In the Degé Kangyur, this group
                             consists of eleven sūtras (Toh 127–37). This grouping is not unique to
                             the Degé, as it is also found in the Choné, Lhasa, and Narthang
-                            Kangyurs, which means it is probably typical of all <foreign xml:lang="Bo-Ltn" type="term">Tshalpa </foreign>recensions. The
-                            Thempangma recension Kangyurs locate it differently, and seemingly
+                            Kangyurs, which means it is probably typical of all <foreign xml:lang="Bo-Ltn" type="term">Tshalpa</foreign> recensions. The
+                            <foreign xml:lang="Bo-Ltn" type="term">Thempangma</foreign> recension Kangyurs locate it differently, and seemingly
                             without any similar classificatory principle.</note> However, the term’s
                         significance clearly varies from sūtra to sūtra within this group of texts.
                         For example, in the famous <title xml:lang="Sa-Ltn">Samādhirājasūtra</title>
@@ -146,7 +155,7 @@
                             2002.</note> It is to this latter group that the current sūtra belongs,
                         as it explicitly describes a meditative absorption, which the rest of the
                         title qualifies as “the thus-gone one’s wisdom seal.” Here,
-                            <distinct>thus-gone one</distinct> (Skt. <foreign xml:lang="Sa-Ltn" type="term">tathāgatha)</foreign> is a common epithet of a fully
+                        <distinct>thus-gone one</distinct> (Skt. <foreign xml:lang="Sa-Ltn" type="term">tathāgatha</foreign>) is a common epithet of a fully
                         awakened being. We have translated this term from the Tibetan <foreign xml:lang="Bo-Ltn" type="term">de bzhin gshegs pa</foreign>, “one who has
                         thus gone,” whereas the Chinese equivalent, <foreign xml:lang="Zh-Ltn" type="term">ru lai</foreign>, reads closer to “thus-come one.” The final
                         term, <distinct>wisdom seal</distinct> (Skt. <foreign xml:lang="Sa-Ltn" type="term">jñānamudrā</foreign>), qualifies the absorption in which the
@@ -192,7 +201,7 @@
                         profound state of absorption: “This absorption is formless, indefinable,
                         ungraspable, unimpeded, and not apparent. It is beyond knowledge and not an
                         object of knowledge.” Upon concluding his teaching about
-                            the<distinct> </distinct>absorption of <distinct>the thus-gone one’s
+                            the <distinct>absorption of the thus-gone one’s
                             wisdom seal</distinct>, all those in attendance purify negative karma
                         accumulated over innumerable eons and no longer regress from unsurpassed and
                         perfect awakening.</p>
@@ -206,7 +215,7 @@
                         who was a devotee of the buddha Śaśiketu.</p>
                     <milestone unit="chunk" xml:id="UT22084-055-005-15"/>
                     <p tid="14">Following this discourse, countless female devotees, led by the
-                        queens of King Bimbisāra, promise their service to the Dharma in all
+                        queens of King Bimbisāra, promise their service to the Dharma in all
                         subsequent lives. This delights the Buddha, who beams a smile at them. The
                         women, captivated, eloquently enjoin the Buddha to give them a teaching
                         about the causes, qualities, and implications of his smile. In response, the
@@ -234,7 +243,7 @@
                         uninterrupted, uncollected, ungraspable, nonabiding, and groundless, until
                         the final term <foreign xml:lang="Sa-Ltn" type="term">nirvāṇa</foreign>.
                         This list echoes the terms used earlier in the sūtra to describe
-                            the<distinct> </distinct>absorption of <distinct>the thus-gone one’s
+                            the <distinct>absorption of the thus-gone one’s
                             wisdom seal</distinct>. Given this definition of the Dharma, the
                         disciples wonder how they should act as its protectors. The Buddha explains
                         that if they indeed realize the meaning of what he has taught them,
@@ -242,20 +251,21 @@
                         Dharma.” Then, with philosophically rich verses he instructs them further on
                         the ultimate truth, beyond concepts and characteristics. The sūtra concludes
                         with another exhortation to the gathered assembly to accomplish
-                            the<distinct> </distinct>absorption of <distinct>the thus-gone one’s
+                        the <distinct>absorption of the thus-gone one’s
                             wisdom seal</distinct>.</p>
                 </div>
             </div>
         </front>
         <body>
             <div type="translation">
-                <head type="translation" tid="16"> The Translation </head>
+                <head type="translation" tid="16">The Translation</head>
                 <head type="titleHon" tid="17">The Noble Great Vehicle Sūtra entitled:</head>
                 <head type="titleMain" tid="18">The Absorption of the Thus-Gone One’s Wisdom
                     Seal</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-055-005-19"/>
-                    <p tid="22">[B.1] <ref cRef="F.230.b"/> Homage to all buddhas and
+                    <p tid="22">
+                        <ref cRef="B1" type="bampo"/> <ref cRef="F.230.b"/> Homage to all buddhas and
                         bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-055-005-21"/>
@@ -424,7 +434,6 @@
                         and the elder Subhūti—all those great hearers—turned to the youthful
                         Mañjuśrī and asked, “Mañjuśrī, where is the Thus-Gone One right now? What
                         does his body look like? How does he abide?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-35"/>
                     <p tid="38">The youthful Mañjuśrī replied to the great hearers, “Venerable ones,
                         you are great hearers, and you possess insight and miraculous abilities. You
                         are powerful and mighty, you have mastered the absorptions of the erudite,
@@ -441,7 +450,6 @@
                         from their respective absorptions and addressed the youthful Mañjuśrī as
                         follows: “Mañjuśrī, we fail to see the Thus-Gone One’s body or his
                         abode.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-37"/>
                     <p tid="40">Mañjuśrī replied to the great hearers, “Then all you venerable great
                         hearers must silently join your palms and one-pointedly hold the Thus-Gone
                         One in your mind for a moment. Do this, and you will see his body and
@@ -470,7 +478,6 @@
                         magical display and miracle of the buddhas is inconceivable. Nevertheless,
                         Śāradvatīputra, listen well and keep this in mind. I will now teach you a
                         little bit about the body of the Thus-Gone One.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-41"/>
                     <p tid="44">“Very well, Blessed One!” Venerable Śāradvatīputra replied, and he
                         listened as the Blessed One had instructed.</p>
                     <milestone unit="chunk" xml:id="UT22084-055-005-42"/>
@@ -574,7 +581,6 @@
                         who fixate on characteristics and who have fallen into dualistic perception
                         possibly understand the way in which the body of the Thus-Gone One
                         abides?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-49"/>
                     <p tid="52">“No, Blessed One, they cannot at all,” replied Śāradvatīputra. “That
                         is impossible. <ref cRef="F.236.b"/> And why? Because, Blessed One, the
                         Thus-Gone One’s body is free of any and all marks.”</p>
@@ -582,7 +588,6 @@
                     <p tid="53">“Śāradvatīputra, yes, that is correct. That is how it is,” the
                         Blessed One agreed. “The Thus-Gone One’s body is free from any and all
                         marks.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-51"/>
                     <p tid="54">Then the Blessed One proceeded to teach extensively about the
                         absorption of <distinct>the thus-gone one’s wisdom seal</distinct>. In order
                         to be comprehensive and thorough, he spoke these verses:</p>
@@ -921,7 +926,6 @@
                         addressed the bodhisattva great being Maitreya: “Maitreya, remember your
                         intention to uphold the Dharma in a future life, in the future, during the
                         final five hundred years! This will be your task!”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-94"/>
                     <p tid="95">Then the bodhisattva great being Maitreya rose from his seat, draped
                         his shawl over one shoulder, and knelt on his right knee. Joining his palms,
                         he bowed toward the Blessed One and said, “Blessed One, I remember my
@@ -993,8 +997,8 @@
                         Thus-Gone One’s body as having the characteristics of form. Maitreya, if
                         bodhisattvas possess these five qualities, know that they will not regress
                         from unsurpassed and perfect awakening.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-055-005-379"/>
                     <p tid="102">Then the Blessed One spoke the following verses:</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-102"/>
                     <lg tid="103">
                         <l>“Those who are envious, who covet worldly success through knowledge,</l>
                         <l>Who harm, who are fraudulent and insulting, and</l>
@@ -1223,11 +1227,12 @@
                         <l>“ ‘If you continue to practice this,</l>
                         <l>Then, as soon as you behold Dīpaṃkara,</l>
                         <l>You will cast away uncertainties and gain insight into sameness.</l>
-                        <l>Then you will become the buddha named Śākyasiṃha.’ ” [B.2]</l>
+                        <l>Then you will become the buddha named Śākyasiṃha.’ ” <ref cRef="B2" type="bampo"/>
+                        </l>
                         <l/>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-005-138"/>
-                    <p tid="134">At that point two of King Bimbisāra’s queens, Śrībhadrā,<note place="end" index="13" xml:id="UT22084-055-005-139"> The name of
+                    <p tid="134">At that point two of King Bimbisāra’s queens, Śrībhadrā,<note place="end" index="13" xml:id="UT22084-055-005-139"> The name of
                             Ajātaśatru’s mother is more typically given as Vaidehī (See Edgerton,
                             vol. II, 510) or Kośaladevī, given that she was from the region of
                             Kośala/Kosala.</note> who was the mother of Ajātaśatru, and
@@ -1260,7 +1265,7 @@
                         sincerely. Blessed One, since we shall not even be concerned with our bodies
                         and lives, what need is there to mention external objects?”</p>
                     <milestone unit="chunk" xml:id="UT22084-055-005-142"/>
-                    <p tid="136">Following the two queens’ example, the retinue of King Bimbisāra’s
+                    <p tid="136">Following the two queens’ example, the retinue of King Bimbisāra’s
                         queens, which consisted of a hundred thousand girls, rose from their seats
                         and joined their palms. Those who had embarked on the path to unsurpassed
                         and perfect awakening rejoiced in this absorption and said, “Blessed One, in
@@ -1274,8 +1279,8 @@
                     <p tid="137">Then the Blessed One smiled. As is the nature of the blessed
                         buddhas, when he smiled, light radiated from the Blessed One’s mouth in
                         hundreds of thousands of distinct, manifold colors—blue, <ref cRef="F.243.b"/> yellow, red, white, violet, crystalline, and silver. This light beamed
-                        from his mouth and illuminated boundless, infinite world-systems. It subdued
-                        all demonic abodes and extended even up to the world of Brahmā. Its
+                        from his mouth and illuminated boundless, infinite world systems. It subdued
+                        all demonic abodes and extended even up to the world of Brahmā. Its
                         brilliance outshone the light of the sun and the moon and pacified the
                         painful feelings of all beings born in hell, the animal realm, and the world
                         of the Lord of Death. Returning back, it swirled around the Blessed One
@@ -1299,7 +1304,7 @@
                     <lg tid="140">
                         <l>“Foremost being, please survey the world with your smiling face, which is
                             like the moon.</l>
-                        <l>Your voice is so gentle—the beautiful and clear voice of Brahmā.</l>
+                        <l>Your voice is so gentle—the beautiful and clear voice of Brahmā.</l>
                         <l>It soothes the mind and pleases the body, fully satisfying our minds.</l>
                         <l>O Teacher, best of men, please reveal the cause of your lion-like
                             smile.</l>
@@ -1396,7 +1401,6 @@
                     <milestone unit="chunk" xml:id="UT22084-055-005-160"/>
                     <p tid="149">In reply, the Blessed One spoke these verses to the queens
                         Śrībhadrā and Suvarṇottamaprabhāsā:</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-161"/>
                     <lg tid="150">
                         <l>“I remember, innumerable eons ago, as many as the grains of sand in the
                             Ganges,</l>
@@ -1404,6 +1408,8 @@
                         <l>That teacher’s life spanned seven hundred million years.</l>
                         <l>That Dharma king’s saṅgha of hearers was infinite. <ref cRef="F.244.b"/>
                         </l>
+                    </lg>
+                        <lg tid="291">
                         <l/>
                         <l>“Then appeared a wheel-turning king, Prajñāsārathi.</l>
                         <l>His two wives, Keturājñī and Arcī, were utterly free from attachment.</l>
@@ -1535,7 +1541,6 @@
                             <ref cRef="F.245.b"/> what will happen to those who receive and hold
                         this absorption of <distinct>the thus-gone one’s wisdom
                         seal</distinct>?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-178"/>
                     <p tid="166">The Blessed One replied to the bodhisattva great being Maitreya,
                         “Maitreya, in future times, they will suffer, suffer immensely. They will be
                         false, totally false. They will have little patience or interest, and they
@@ -1550,7 +1555,6 @@
                         train in suchness, they will gain accomplishment in suchness. From then on,
                         they will not regress from unsurpassed and perfect awakening. This will be
                         their accomplishment.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-180"/>
                     <p tid="168">The Blessed One responded to the bodhisattva great being Maitreya,
                         “Maitreya, beings who previously aroused the mind of awakening and
                         engendered roots of virtue in the presence of a hundred buddhas will, in
@@ -1563,7 +1567,6 @@
                         but renounce it, even though they aroused the mind of awakening. They will
                         not commit it to writing, <ref cRef="F.246.a"/> receive it, hold it, teach
                         it, or trust it.</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-182"/>
                     <p tid="170">“Maitreya, beings who have previously aroused the mind of awakening
                         and produced roots of virtue in the presence of a hundred thousand buddhas
                         will, in future times, arouse the mind of awakening, feel interest in the
@@ -1576,7 +1579,6 @@
                         commit it to writing, retain it, stay interested, proclaim it, and
                         understand its meaning. However, they will not gain acceptance of awakening,
                         will not attain this absorption, and will not gain eloquence.</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-184"/>
                     <p tid="172">“Maitreya, beings who have previously aroused the mind of awakening
                         and produced roots of virtue in the presence of a hundred million buddhas
                         will, in future times, arouse the mind of awakening, hear about the
@@ -1867,7 +1869,6 @@
                         great beings of the fortunate eon, asked the Blessed One, “Blessed One, when
                         we say <distinct>Dharma</distinct>, to what does that term refer?” <ref cRef="F.249.b"/>
                     </p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-219"/>
                     <p tid="205">The Blessed One replied to Prāmodyarāja, Mañjuśrī, and the other
                         sixty incomparable beings, and to Maitreya, Siṃhapradyota, and all the other
                         bodhisattva great beings of the fortunate eon, “Noble sons,
@@ -1879,7 +1880,6 @@
                     <p tid="207">“Noble sons, <distinct>unchanging</distinct> and
                             <distinct>nonconceptual</distinct> refer to
                             <distinct>nonreferential</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-222"/>
                     <p tid="208">“Blessed One, to what does <distinct>nonreferential</distinct>
                         refer?”</p>
                     <p tid="209">“Noble sons, <distinct>nonreferential</distinct> refers to
@@ -1889,7 +1889,6 @@
                         refer?”</p>
                     <p tid="211">“Noble sons, <distinct>inexhaustible</distinct> refers to
                             <distinct>unborn</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-226"/>
                     <p tid="212">“Blessed One, to what does <distinct>unborn</distinct> refer?”</p>
                     <p tid="213">“Noble sons, <distinct>unborn</distinct> refers to
                             <distinct>uninterrupted</distinct>.”</p>
@@ -1898,7 +1897,6 @@
                         refer?”</p>
                     <p tid="215">“Noble sons, <distinct>uninterrupted</distinct> refers to
                             <distinct>uncollected</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-230"/>
                     <p tid="216">“Blessed One, to what does <distinct>uncollected</distinct>
                         refer?”</p>
                     <p tid="217">“Noble sons, <distinct>uncollected</distinct> refers to
@@ -1909,7 +1907,6 @@
                     <p tid="219">“Noble sons, <distinct>ungraspable</distinct> refers to
                             <distinct>nonabiding</distinct>.” <ref cRef="F.250.a"/>
                     </p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-234"/>
                     <p tid="220">“Blessed One, to what does <distinct>nonabiding</distinct>
                         refer?”</p>
                     <p tid="221">“Noble sons, <distinct>nonabiding</distinct> refers to
@@ -1919,7 +1916,6 @@
                         refer?”</p>
                     <p tid="223">“Noble sons, <distinct>unchanging</distinct> refers to
                             <distinct>uncompounded</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-238"/>
                     <p tid="224">“Blessed One, to what does <distinct>uncompounded</distinct>
                         refer?”</p>
                     <p tid="225">“Noble sons, <distinct>uncompounded</distinct> refers to
@@ -1929,7 +1925,6 @@
                         refer?”</p>
                     <p tid="227">“Noble sons, <distinct>unquantifiable</distinct> refers to
                             <distinct>free from thought</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-242"/>
                     <p tid="228">“Blessed One, to what does <distinct>free from thought</distinct>
                         refer?”</p>
                     <p tid="229">“Noble sons, <distinct>free from thought</distinct> refers to
@@ -1939,7 +1934,6 @@
                         refer?”</p>
                     <p tid="231">“Noble sons, <distinct>unknowable</distinct> refers to
                             <distinct>unassembled</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-246"/>
                     <p tid="232">“Blessed One, to what does <distinct>unassembled</distinct>
                         refer?”</p>
                     <p tid="233">“Noble sons, <distinct>unassembled</distinct> refers to
@@ -1949,7 +1943,6 @@
                         refer?”</p>
                     <p tid="235">“Noble sons, <distinct>without separation</distinct> refers to
                             <distinct>sameness</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-250"/>
                     <p tid="236">“Blessed One, to what does <distinct>sameness</distinct> refer?”
                             <ref cRef="F.250.b"/>
                     </p>
@@ -1960,7 +1953,6 @@
                         refer?”</p>
                     <p tid="239">“Noble sons, <distinct>without difference</distinct> refers to
                             <distinct>nonabiding</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-254"/>
                     <p tid="240">“Blessed One, to what does <distinct>nonabiding</distinct>
                         refer?”</p>
                     <p tid="241">“Noble sons, <distinct>nonabiding</distinct> refers to
@@ -1970,7 +1962,6 @@
                         refer?”</p>
                     <p tid="243">“Noble sons, <distinct>immaterial</distinct> refers to
                             <distinct>essenceless</distinct>.”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-258"/>
                     <p tid="244">“Blessed One, to what does <distinct>essenceless</distinct>
                         refer?”</p>
                     <p tid="245">“Noble sons, <distinct>essenceless</distinct> refers to
@@ -1986,7 +1977,6 @@
                         great beings of the fortunate eon, inquired of the Blessed One, “Blessed
                         One, if the Dharma has such characteristics, how can it be that the Dharma
                         ever vanishes? What is it that we should protect?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-263"/>
                     <p tid="249">The Blessed One replied to Prāmodyarāja, Mañjuśrī, and the other
                         sixty incomparable beings, and to Maitreya, Siṃhapradyota, and all the other
                         bodhisattva great beings of the fortunate eon, <ref cRef="F.251.a"/> “Noble
@@ -1999,7 +1989,6 @@
                     <milestone unit="chunk" xml:id="UT22084-055-005-264"/>
                     <p tid="250">When the Blessed One had explained the meaning to them, he spoke
                         these verses:</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-265"/>
                     <lg tid="251">
                         <l>“Some say that what is created is compounded,</l>
                         <l>While others say that it is uncompounded.</l>
@@ -2168,7 +2157,6 @@
                     <p tid="271">Mañjuśrī then asked, “If you discovered awakening upon seeing the
                         blessed thus-gone one Dīpaṃkara, then, Blessed One, why did you continue to
                         circle in saṃsāra for countless eons?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-287"/>
                     <p tid="272">“Mañjuśrī,” replied the Blessed One, “I was circling in saṃsāra for
                         countless eons in order to perform buddha activities, ripen beings, and
                         accomplish excellent former aspirations. However, Mañjuśrī, all the while I
@@ -2176,7 +2164,6 @@
                     <milestone unit="chunk" xml:id="UT22084-055-005-288"/>
                     <p tid="273">Then, in order to explain this meaning more extensively, the
                         Blessed One spoke these verses:</p>
-                    <milestone unit="chunk" xml:id="UT22084-055-005-289"/>
                     <lg tid="274">
                         <l>“With this, you become a leader with boundless and supreme
                             intelligence,</l>
@@ -2275,8 +2262,9 @@
                         world with its gods, humans, asuras, and gandharvas rejoiced and praised
                         what the Blessed One had said.</p>
                     <milestone unit="chunk" xml:id="UT22084-055-005-300"/>
-                    <p tid="284">This completes the noble Great Vehicle sūtra entitled <title xml:lang="en">The Absorption of the Thus-Gone One’s Wisdom
-                        Seal</title>.</p>
+                    <lb/>
+                    <trailer tid="284">This completes the noble Great Vehicle sūtra entitled “<title xml:lang="en">The Absorption of the Thus-Gone One’s Wisdom
+                        Seal</title>.”</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="285">Colophon</head>
@@ -2295,7 +2283,7 @@
             <div type="listBibl">
                 <head type="listBibl" tid="289">Bibliography</head>
                 <div type="section">
-                    <head type="section" tid="290">Main Section</head>
+                    <!--<head type="section" tid="290">Main Section</head>-->
                     <bibl xml:id="UT22084-055-005-302">
                         <title xml:lang="Bo-Ltn">’phags pa de bzhin gshegs pa’i ye shes kyi phyag
                             rgya’i ting nge ’dzin ces bya ba thegs pa chen po’i mdo</title>. Toh
@@ -2426,7 +2414,7 @@
                             <term>limit of reality</term>
                             <term xml:lang="Bo-Ltn">yang dag pa’i mtha </term>
                             <term xml:lang="bo">ཡང་དག་པའི་མཐ།</term>
-                            <term xml:lang="Sa-Ltn">bhūtakoṭi</term>
+                            <term xml:lang="Sa-Ltn">bhūtakoṭi</term>
                             <term type="definition">A synonym for ultimate reality and a way of
                                 describing the attainment of perfection as the culmination of the
                                 spiritual path.</term>
@@ -2602,7 +2590,7 @@
                             <term type="definition">An Indian Kashmiri paṇḍita who was resident in
                                 Tibet during the late eighth and early ninth centuries. He worked
                                 with several Tibetan translators on the translation of several
-                                sūtras. He is also the author of the<title xml:lang="Sa-Ltn">Nyāyabindupiṇḍārtha</title>(Toh 4233), which is contained in
+                                sūtras. He is also the author of the <title xml:lang="Sa-Ltn">Nyāyabindupiṇḍārtha</title> (Toh 4233), which is contained in
                                 the Tibetan Tengyur (<title xml:lang="Bo-Ltn">bstan ’gyur</title>)
                                 collection.</term>
                         </gloss>
@@ -2629,11 +2617,14 @@
                     <item>
                         <gloss type="person" xml:id="UT22084-055-005-338">
                             <term>Kṣemavatī</term>
-                            <term xml:lang="Bo-Ltn">bye ba ldan, bde ldan ma </term>
-                            <term xml:lang="bo">བྱེ་བ་ལྡན,་བདེ་ལྡན་མ།</term>
-                            <term xml:lang="Sa-Ltn">*Kṣemavatī, *Kṣemā</term>
+                            <term xml:lang="Bo-Ltn">bye ba ldan</term>
+                            <term xml:lang="bo">བྱེ་བ་ལྡན།</term>
+                            <term xml:lang="Bo-Ltn">bde ldan ma </term>
+                            <term xml:lang="bo">བདེ་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">*Kṣemavatī</term>
+                            <term xml:lang="Sa-Ltn">*Kṣemā</term>
                             <term type="definition">The mother of Suvarṇottamaprabhāsā, who was
-                                married to King Bimbisāra.</term>
+                                married to King Bimbisāra. See also <ptr target="#UT22084-055-005-140"/>.</term>
                         </gloss>
                     </item>
                     <item>
@@ -2850,7 +2841,7 @@
                             <term xml:lang="Bo-Ltn">dpal bzang </term>
                             <term xml:lang="bo">དཔལ་བཟང་།</term>
                             <term xml:lang="Sa-Ltn">*Śrībhadrā</term>
-                            <term type="definition">One of King Bimbisāra’s queens.</term>
+                            <term type="definition">One of King Bimbisāra’s queens. See also <ptr target="#UT22084-055-005-139"/>.</term>
                         </gloss>
                     </item>
                     <item>
@@ -2869,7 +2860,7 @@
                             <term xml:lang="Bo-Ltn">gser mchog snang ba </term>
                             <term xml:lang="bo">གསེར་མཆོག་སྣང་བ།</term>
                             <term xml:lang="Sa-Ltn">*Suvarṇottamaprabhāsā</term>
-                            <term type="definition">One of King Bimbisāra’s queens.</term>
+                            <term type="definition">One of King Bimbisāra’s queens.</term>
                         </gloss>
                     </item>
                     <item>
@@ -2943,7 +2934,7 @@
                             <term type="definition">According to abhidharma cosmology, when
                                 different world systems form, they drift into each other, but remain
                                 divided by massive rings of stone. Thus, a space remains between two
-                                world-systems’ stone walls—one that is completely dark, untouched by
+                                world systems’ stone walls—one that is completely dark, untouched by
                                 any light. These frigid and desolate spaces are populated by beings
                                 with very negative karma. They cling to the cliffs, climbing around
                                 in darkness searching for sustenance. When they encounter fellow
