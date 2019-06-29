@@ -29,7 +29,7 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.00 <date>2019</date>
+                <edition>v 1.03 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -55,6 +55,8 @@
                     <ref>Toh 245</ref>
                     <biblScope>Degé Kangyur vol. 66 (mdo sde, za), folios
                         27b.5–33a.1</biblScope>
+                    <author role="translatorTib">Prajñāvarman</author>
+                    <author role="translatorTib">Yeshé Dé</author>
                     <location count-pages="12">
                         <start volume="66" page="56"/>
                         <end volume="66" page="67"/>
@@ -64,7 +66,12 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-13T18:12:20.73Z" user="celso">13/03/2019 18:12:20</note>
+                <note type="lastUpdated" date-time="2019-06-29T01:32:16.133Z" user="admin">29/06/2019 01:32:16</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-11T17:34:31.728Z" user="andre">v 1.01 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-11T17:34:31.728Z" user="andre">2</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2019-04-12T09:10:31.779Z" user="andre">2.a</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-06-11T12:33:09.01Z" user="mike">v 1.02 2019</note>
+                <note type="updated" update="text-version" value="v 1.03" date-time="2019-06-29T01:32:10.696Z" user="laura">v 1.03 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -223,7 +230,7 @@
                         notion, which perhaps developed from the observation of worms in decomposing
                         corpses, was already present in the earliest Indic scripture dealing with
                         cures and healing, the <title xml:lang="Sa-Ltn">Atharvaveda</title>, which
-                        was composed sometime between 1200–1000 <hi rend="small-caps">bce</hi>. and
+                        was composed sometime between 1200–1000 <hi rend="small-caps">bce</hi> and
                         offers descriptions of various parasites, or, technically,
                             <emph>worms</emph> (<foreign xml:lang="Sa-Ltn" type="term">krimi</foreign>) that invade the human body.<note place="end" xml:id="UT22084-066-003-17" index="9">Zysk (1993), p. 64.</note> Moreover, Jain and Kāmaśāstra literature,
                         which are closer in temporal proximity to our sūtra, both include theories
@@ -280,7 +287,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-066-003-25"/>
                     <p tid="19">Thus did I hear at one time. The Blessed One was dwelling in Kapilavastu at
-                        the Nyagrodha Park, together with a great sangha of five hundred monks. At
+                        the Nyagrodha Park, together with a great saṅgha of five hundred monks. At
                         one point venerable Śāriputra, venerable Mahāmaudgalyāyana, venerable
                         Mahākāśyapa, venerable Ānanda, and venerable Rāhula all went to see the
                         Blessed One, prostrated to him, placing their heads at his feet, and sat to
@@ -430,7 +437,7 @@
                     <milestone unit="chunk" xml:id="UT22084-066-003-40"/>
                     <p tid="30">“Śāriputra, consider this example: when pus develops in the body of a sick
                         person, 84,000 sores open up on all of that person’s limbs<note place="end" xml:id="UT22084-066-003-41" index="17"> Tib. <foreign xml:lang="Bo-Ltn" type="term">yan lag dang
-                                nying lag</foreign>: the major limbs (head, arms and legs) and minor
+                                nying lag</foreign>: the major limbs (head, arms, and legs) and minor
                             limbs (fingers, toes, nose, ears, etc.).</note> and each open sore also
                         has 84,000 swarms of parasites.<note place="end" xml:id="UT22084-066-003-42" index="18">Tib. <foreign xml:lang="Bo-Ltn" type="term">srin bu’i tshogs</foreign>. The term
                                 <foreign xml:lang="Bo-Ltn" type="term">srin bu</foreign> (Skt.
@@ -455,8 +462,7 @@
                         any peace. They bring that person no happiness.”</p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-45"/>
                     <p tid="32">“Śāriputra, what do you think? That person’s body leaks pus and blood—should
-                        that state of affair be despised?” </p>
-                    <milestone unit="chunk" xml:id="UT22084-066-003-46"/>
+                        that state of affairs be despised?” </p>
                     <p tid="33">“It is indeed something to despise, it is indeed disagreeable, it is indeed
                         not something worthy to look upon.” </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-47"/>
@@ -478,7 +484,7 @@
                     <p tid="36">“Therefore, Śāriputra, if one sees the sense pleasures as being faulty, one
                         will be disenchanted and free from desire. One will then engage in pure
                         conduct with delight and one’s complexion will glow. Śāriputra, this is the
-                        Dharma teaching that begins with a section on the sense pleasures.
+                        <term type="ignore">Dharma teaching</term> that begins with a section on the sense pleasures.
                         Śāriputra, one should be disenchanted with indulgence in passion. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-50"/>
                     <p tid="37">“Now Śāriputra, what is defilement? Śāriputra, defilement is one’s own doing.
@@ -490,7 +496,7 @@
                         perceiving things as having a self, as not having a self, or as being the
                         self. This is the section of Dharma spoken by the Blessed One. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-51"/>
-                    <p tid="38">Śāriputra, childish, ordinary beings are blind and thus conceptualize the
+                    <p tid="38">“Śāriputra, childish, ordinary beings are blind and thus conceptualize the
                         form aggregate. They also conceptualize the aggregates of sensation,
                         perception, formation, and consciousness. But conceptualizing is bondage.
                         Not to form concepts is to be liberated. Śāriputra, whoever conceptualizes
@@ -528,16 +534,14 @@
                         there, circling around the corpse, and catch a whiff of its smell. When that
                         happens, Śāriputra, what do you think? <ref cRef="F.31.b"/> Will they sniff
                         at its stench or not?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-066-003-55"/>
                     <p tid="42">“O Blessed One, certainly not!” exclaimed Śāriputra. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-56"/>
                     <p tid="43">The Blessed One then asked venerable Śāriputra, “So what do you think,
                         Śāriputra? If someone touched<note place="end" xml:id="UT22084-066-003-57" index="20"> Here we follow
-                                K<hi rend="subscript">Y</hi>, K, C and U which read <foreign xml:lang="Bo-Ltn" type="term">reg</foreign>, rather than D which
+                                K<hi rend="subscript">Y</hi>, K, C, and U which read <foreign xml:lang="Bo-Ltn" type="term">reg</foreign>, rather than D which
                             reads <foreign xml:lang="Bo-Ltn" type="term">rig</foreign>. </note> the
                         corpse of that dog, if he shook it, if he enjoyed himself with it, would he
                         be praised by many people?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-066-003-58"/>
                     <p tid="44">Venerable Śāriputra replied, “That person would be difficult even to look
                         at—how could he ever be praised?”</p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-59"/>
@@ -552,7 +556,6 @@
                         who embraces, shakes, and enjoys himself with that dog’s corpse. Śāriputra,
                         what do you think about this? By embracing or touching a dog’s corpse, will
                         sentient beings end up being born in the hell realms?”</p>
-                    <milestone unit="chunk" xml:id="UT22084-066-003-60"/>
                     <p tid="46">“No, Blessed One, they will not.”</p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-61"/>
                     <p tid="47">“Śāriputra, monks must develop the perception of the faults of the sense
@@ -567,7 +570,7 @@
                         from growing. Śāriputra, there are masses of parasites in women’s ears.
                         Known as the <emph>eaters</emph>, they eat and pierce the ears of women. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-62"/>
-                    <p tid="48">Śāriputra, there are masses of parasites on the sides of women’s necks and
+                    <p tid="48">“Śāriputra, there are masses of parasites on the sides of women’s necks and
                         heads. Known as the <emph>yearners</emph>, they eat and pierce the ears of
                         women and make their eyes sharp. Śāriputra, they don’t prick the ears of men
                         but only those of women. Śāriputra, there are masses of parasites on women’s
@@ -616,7 +619,6 @@
                     <milestone unit="chunk" xml:id="UT22084-066-003-68"/>
                     <p tid="51">After the Blissful One had uttered those words, the Teacher continued, saying
                         the following:</p>
-                    <milestone unit="chunk" xml:id="UT22084-066-003-69"/>
                     <lg tid="52">
                         <l>“These bodies that arise from filth</l>
                         <l>Are always home to many creatures.</l>
@@ -648,11 +650,15 @@
                     <p tid="56">After the Blessed One had spoken these words, venerable Śāriputra together
                         with the whole world and its gods, humans, and demigods all rejoiced and
                         praised the teaching of the Blessed One.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-130"/>
+                    <trailer tid="58">This concludes the Noble Great Vehicle Sūtra entitled “<title xml:lang="en">The Sections of Dharma</title>.” <ref cRef="F.33.a"/>
+                    </trailer> 
                 </div>
                 <div type="colophon">
-                    <head tid="57">Colophon</head>
+                    <head type="colophon" tid="57">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-066-003-74"/>
-                    <p tid="58">This concludes the Noble Great Vehicle Sūtra entitled <title xml:lang="en">The Sections of Dharma</title>. <ref cRef="F.33.a"/> The Indian scholar
+                    <p tid="64">The Indian scholar
                         Prajñāvarman and the chief editor-translator, venerable Yeshé Dé,
                         translated, edited, and finalized this work.</p>
                 </div>
@@ -734,7 +740,7 @@
                             Buddhism</title>. Somerville: Wisdom Publications, 2017. </bibl>
                     <bibl xml:id="UT22084-066-003-89">Chapple, Christopher Key. “Abhidharma as Paradigm for Practice.” In
                             <title xml:lang="en">Pāli Buddhism</title>, edited by Frank J. Hoffman
-                        and Deegalle Mahinda, 79-101. New York: Routledge, 2013. </bibl>
+                        and Deegalle Mahinda, 79–101. New York: Routledge, 2013. </bibl>
                     <bibl xml:id="UT22084-066-003-90">Engle, Artemus B. <title xml:lang="en">The Inner Science of Buddhist
                             Practice: Vasubandhu’s Summary of the Five Heaps with Commentary by
                             Sthiramati</title>. Ithaca: Snow Lion, 2009. </bibl>
@@ -752,7 +758,7 @@
                             bzhag</title>. Bejing: mi rigs dpe skrun khang (Minorities Publishing
                         House), 2006. </bibl>
                     <bibl xml:id="UT22084-066-003-95">Pagel, Ulrich. <title xml:lang="en">The Bodhisattvapiṭaka</title>.
-                        Buddhica Britannica, Series Continua 5, Tring: The Institute of Buddhist
+                        Buddhica Britannica, Series Continua 5. Tring: The Institute of Buddhist
                         Studies, 1995. </bibl>
                     <bibl xml:id="UT22084-066-003-96">Potter, Karl H., Robert E. Buswell, and Padmanabh S. Jaini. <title xml:lang="en">Encyclopedia of Indian Philosophies Vol. VII: Abhidharma
                             Buddhism to 150 A.D</title>.  Delhi: Motilal Banarsidass, 2011.</bibl>
@@ -766,6 +772,7 @@
                             Evolution of Indian Medicine</title>. New Brunswick, New Jersey:
                         Transaction Publishers, 1993.</bibl>
                 </div>
+            </div>
                 <div type="glossary">
                     <list type="glossary">
                         <item>
@@ -775,7 +782,7 @@
                                 <term xml:lang="bo">ཕུང་པོ།</term>
                                 <term xml:lang="Sa-Ltn">skandha</term>
                                 <term type="definition">The five <term type="ignore">aggregates</term> of form, sensation,
-                                    perception, formations and consciousness. On the individual
+                                    perception, formations, and consciousness. On the individual
                                     level the five <term type="ignore">aggregates</term> refer to the basis of the mistaken
                                     idea of self. On a general level the five <term type="ignore">aggregates</term> constitute
                                     any compounded phenomena.</term>
@@ -830,7 +837,7 @@
                                 <term xml:lang="Sa-Ltn">paṇḍaka</term>
                                 <term type="definition">A person who either has no sexual organs,
                                     degenerated sexual organs, or the organs of both sexes.</term>
-                                <term type="definition">See also <ptr target="#UT22084-066-003-27"/>.</term>ma
+                                <term type="definition">See also <ptr target="#UT22084-066-003-27"/>.</term>
                             </gloss>
                         </item>
                         <item>
@@ -946,11 +953,11 @@
                         </item>
                         <item>
                             <gloss type="term" xml:id="UT22084-066-003-116">
-                                <term>Dharma presentation</term>
+                                <term>Dharma teaching</term>
                                 <term xml:lang="Bo-Ltn">chos kyi rnam grangs </term>
                                 <term xml:lang="bo">ཆོས་ཀྱི་རྣམ་གྲངས།</term>
                                 <term xml:lang="Sa-Ltn">dharmaparyāya</term>
-                                <term type="definition">A teaching of the Dharma.</term>
+                                <!--<term type="definition">A teaching of the Dharma.</term>-->
                             </gloss>
                         </item>
                         <item>
@@ -1092,7 +1099,7 @@
                         </item>
                     </list>
                 </div>
-            </div>
+            
         </back>
     </text>
 </TEI>
