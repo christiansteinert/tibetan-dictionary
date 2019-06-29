@@ -31,7 +31,7 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.02 <date>2019</date>
+                <edition>v 1.03 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2.a">
@@ -69,12 +69,13 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-28T12:24:18.71Z" user="admin">28/06/2019 12:24:18</note>
+                <note type="lastUpdated" date-time="2019-06-29T15:14:12.482Z" user="admin">29/06/2019 15:14:12</note>
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-11T17:36:21.851Z" user="andre">v 1.01 2018</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-11T17:36:21.851Z" user="andre">2</note>
                 <note type="updated" update="translation-status" value="2.a" date-time="2019-04-12T09:09:49.721Z" user="andre">2.a</note>
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-11T12:17:38.092Z" user="mike">v 1.01 2018</note>
                 <note type="updated" update="text-version" value="v 1.02" date-time="2019-06-28T12:24:15.371Z" user="laura">v 1.02 2019</note>
+                <note type="updated" update="text-version" value="v 1.03" date-time="2019-06-29T15:14:09.156Z" user="laura">v 1.03 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -134,8 +135,8 @@
                         sūtras to form an unofficial subgenre of sūtra literature.<note place="end" index="2" xml:id="UT22084-055-005-7"> In the Degé Kangyur, this group
                             consists of eleven sūtras (Toh 127–37). This grouping is not unique to
                             the Degé, as it is also found in the Choné, Lhasa, and Narthang
-                            Kangyurs, which means it is probably typical of all <foreign xml:lang="Bo-Ltn" type="term">Tshalpa</foreign> recensions. The
-                            <foreign xml:lang="Bo-Ltn" type="term">Thempangma</foreign> recension Kangyurs locate it differently, and seemingly
+                            Kangyurs, which means it is probably typical of all Tshalpa recensions. The
+                            Thempangma recension Kangyurs locate it differently, and seemingly
                             without any similar classificatory principle.</note> However, the term’s
                         significance clearly varies from sūtra to sūtra within this group of texts.
                         For example, in the famous <title xml:lang="Sa-Ltn">Samādhirājasūtra</title>
@@ -1408,9 +1409,10 @@
                         <l>That teacher’s life spanned seven hundred million years.</l>
                         <l>That Dharma king’s saṅgha of hearers was infinite. <ref cRef="F.244.b"/>
                         </l>
-                    </lg>
+                    </lg> <milestone unit="chunk" xml:id="UT22084-055-005-378"/>
+                    
                         <lg tid="291">
-                        <l/>
+                                                  
                         <l>“Then appeared a wheel-turning king, Prajñāsārathi.</l>
                         <l>His two wives, Keturājñī and Arcī, were utterly free from attachment.</l>
                         <l>Desiring the Dharma, they took ordination,</l>
