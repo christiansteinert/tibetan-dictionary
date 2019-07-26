@@ -21,7 +21,7 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.27 <date>2019</date>
+                <edition>v 1.28 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -58,8 +58,9 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-18T16:30:48.389Z" user="admin">18/06/2019 16:30:48</note>
+                <note type="lastUpdated" date-time="2019-07-26T10:26:38.433Z" user="admin">26/07/2019 10:26:38</note>
             <note type="updated" update="text-version" value="v 1.27" date-time="2019-06-18T16:30:45.636Z" user="celso">v 1.27 2019</note>
+                <note type="updated" update="text-version" value="v 1.28" date-time="2019-07-26T10:26:35.074Z" user="laura">v 1.28 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -99,7 +100,7 @@
                             Great Amulet, Queen of Incantations</title> (<title xml:lang="Sa-Ltn">Mahā­pratisāra­vidyā­rājñī</title>, Toh 561), <title xml:lang="en">The Sūtra of Great Cool
                             Grove</title>, (<title xml:lang="en">Mahāśītavana</title>, Toh 562), and <title xml:lang="en">Upholding the Great Secret Mantra</title> (<title xml:lang="Sa-Ltn">Mahā­mantrānudhāraṇi</title>, Toh
                             563).<note place="end" xml:id="UT22084-090-002-733" index="1">For all four, see bibliography under
-                            Dharmachakra (2016) and (forthcoming).</note> Together these scriptures have been apotheosized in the
+                                Dharmachakra (2016) and (forthcoming)<!--Reference Toh 0559--><!--Reference Toh 0562-->.</note> Together these scriptures have been apotheosized in the
                         Mahāyāna tradition as five goddesses known collectively as the Pañcarakṣā, or the “Five Protectresses.” In
                         the Tibetan tradition this collection is known by the moniker <title xml:lang="Bo-Ltn">gzungs chen grwa
                             lnga</title>, “The Fivefold Great Dhāraṇī.” In the Degé Kangyur collection these texts constitute 49,
@@ -117,7 +118,7 @@
                         pragmatic aims, and so forth—that only later coalesced and developed into a typically tantric practice
                         tradition with its own unique set of view, meditation, and conduct. To complicate things further, the core
                         of the <title xml:lang="Sa-Ltn">Mahāmāyūrī</title>, for one, is rooted in Indian Buddhist traditions that
-                        predate even the rise of <foreign xml:lang="Sa-Ltn" type="term">Mahāyāna</foreign>.<note place="end" xml:id="UT22084-090-002-734" index="2">Sørensen (2006), p 90.</note> The <title xml:lang="Sa-Ltn">Mahāmāyūrī</title> also appears as a remedy for snakebites in the earlier <title xml:lang="Sa-Ltn">Mūla­sarvāsti­vāda-vinaya­vastu</title>.<note place="end" xml:id="UT22084-090-002-735" index="3">Pathak (1989), p 32. The story comes at the very end of the <title xml:lang="Sa-Ltn">Bhaiṣajya­vastu</title> (Toh 1 ch. 6); see Yao (forthcoming).</note> This accords with Gregory
+                        predate even the rise of <foreign xml:lang="Sa-Ltn" type="term">Mahāyāna</foreign>.<note place="end" xml:id="UT22084-090-002-734" index="2">Sørensen (2006), p 90.</note> The <title xml:lang="Sa-Ltn">Mahāmāyūrī</title> also appears as a remedy for snakebites in the earlier <title xml:lang="Sa-Ltn">Mūla­sarvāsti­vāda-vinaya­vastu</title>.<note place="end" xml:id="UT22084-090-002-735" index="3">Pathak (1989), p 32. The story comes at the very end of the <title xml:lang="Sa-Ltn">Bhaiṣajya­vastu</title> (Toh 1 ch. 6); see Yao (forthcoming)<!--Reference Toh 0001-6-->.</note> This accords with Gregory
                         Schopen’s general observation, based on inscriptional evidence, that “dhāraṇī texts were publically known
                         much earlier and more widely than texts we think of as ‘classically’ Mahāyāna”.<note place="end" xml:id="UT22084-090-002-736" index="4">Schopen (1989), p 157.</note>
                     </p>
@@ -3254,7 +3255,7 @@
                                 doubt the one related in detail in the <title xml:lang="Sa-Ltn">Śrī­gupta­sūtra</title> (Toh 217),
                                 in which a wealthy householder called Śrīgupta, at the instigation of his Jain teacher, plots to
                                 kill the Buddha in a firepit and with a poisoned meal; he fails, repents, and receives teachings.
-                                See Liljenberg (forthcoming).</note>
+                                See Liljenberg (2016).</note>
                         </l>
                         <l>Of poisonous alms</l>
                         <l>To the protector, the Lion of the Śākyas.</l>
@@ -3360,8 +3361,8 @@
                         said.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-090-002-431"/>
-                    <p tid="462">This concludes the sūtra entitled <title xml:lang="en">Destroyer of the Great
-                        Trichiliocosm</title>. </p>
+                    <trailer tid="462">This concludes the sūtra entitled “<title xml:lang="en">Destroyer of the Great
+                        Trichiliocosm</title>.” </trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="494">Colophon</head>
@@ -3403,13 +3404,16 @@
                         84000: Translating the Words of the Buddha, 2016. (<ref target="http://read.84000.co/translation/UT22084-090-007.html">read.84000.co</ref>)</bibl>
                     <bibl xml:id="UT22084-090-002-437">——— (tr.). <title xml:lang="en">The Great Peahen, Queen of
                             Incantations</title> (<title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyā­rājñī</title>, Toh 559). 84000:
-                        Translating the Words of the Buddha, (forthcoming).</bibl>
+                        Translating the Words of the Buddha, (forthcoming).<!--Reference Toh 0559-->
+                    </bibl>
                     <bibl xml:id="UT22084-090-002-438">——— (tr.). <title xml:lang="en">The Noble Great Amulet, Queen of
                             Incantations</title> (<title xml:lang="Sa-Ltn">Mahā­pratisāra­vidyā­rājñī</title>, Toh 561). 84000:
-                        Translating the Words of the Buddha, (forthcoming).</bibl>
+                        Translating the Words of the Buddha, (forthcoming).<!--Reference Toh 0561-->
+                    </bibl>
                     <bibl xml:id="UT22084-090-002-439">——— (tr.). <title xml:lang="en">The Sūtra of Great Cool Grove</title>,
                             (<title xml:lang="en">Mahāśītavana</title>, Toh 562). 84000: Translating the Words of the Buddha,
-                        (forthcoming).</bibl>
+                        (forthcoming).<!--Reference Toh 0562-->
+                    </bibl>
                     <bibl xml:id="UT22084-090-002-440">Gray, David B. <title xml:lang="en">The Cakrasamvara Tantra (The Discourse
                             of Śrī Heruka): A Study and Annotated Translation</title>. New York: AIBS and Columbia University
                         Press, 2007. </bibl>
@@ -3420,7 +3424,7 @@
                     <bibl xml:id="UT22084-090-002-442">Lewis, Todd. <title xml:lang="en">Popular Buddhist Texts from Nepal:
                             Narratives and Rituals of Newar Buddhism</title>. Albany: State University of New York Press, 2000. </bibl>
                     <bibl xml:id="UT22084-090-002-443">Liljenberg, Karen, and Pagel, Ulrich (trs.). <title xml:lang="Sa-Ltn">The
-                            Śrīguptasūtra</title>. 84000: Translating the Words of the Buddha (forthcoming). </bibl>
+                        Śrīguptasūtra</title>. 84000: Translating the Words of the Buddha, 2016. (<ref target="http://read.84000.co/translation/UT22084-090-002.html">read.84000.co</ref>)</bibl>
                     <bibl xml:id="UT22084-090-002-444">McHugh, James. <title xml:lang="en">Sandalwood and Carrion: Smell in South
                             Asian Culture and Religion</title>. Unpublished Ph.D. dissertation. Department of Sanskrit and Indian
                         Studies, Harvard University, 2008. </bibl>
@@ -3438,7 +3442,7 @@
                         Origin, Practices, and Lore of an Early Esoteric Buddhist Tradition in China.” <title xml:lang="en">Pacific World Journal Fall</title> (8) (2006): 89–123. </bibl>
                     <bibl xml:id="UT22084-090-002-450">Yao, Fumi (tr.). <title xml:lang="en">On Medicinal Materials</title>
                             (<title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>, Toh 1, ch. 6). 84000: Translating the Words of the
-                        Buddha (forthcoming).</bibl>
+                        Buddha (forthcoming)<!--Reference Toh 0001-6-->.</bibl>
                 </div>
             </div>
             <div type="glossary">
