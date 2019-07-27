@@ -4,7 +4,7 @@
     <!-- Reviewed and revised by John, placed in TEI folder 10 Jun 2016 -->
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">za ma tog bkod pa</title>
                 <title type="mainTitle" xml:lang="bo">ཟ་མ་ཏོག་བཀོད་པ།</title>
                 <title type="mainTitle" xml:lang="en">The Basket’s Display</title>
@@ -29,7 +29,7 @@
                 <sponsor ref="sponsors.xml#sponsor-31">Tony Leung Chiu Wai and family</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.46 <date>2019</date>
+                <edition>v 2.47 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -65,8 +65,9 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-18T02:52:30.621Z" user="admin">18/06/2019 02:52:30</note>
+                <note type="lastUpdated" date-time="2019-07-27T10:08:28.035Z" user="admin">27/07/2019 10:08:28</note>
             <note type="updated" update="text-version" value="v 2.46" date-time="2019-06-18T02:52:27.743Z" user="celso">v 2.46 2019</note>
+                <note type="updated" update="text-version" value="v 2.47" date-time="2019-07-27T10:08:24.984Z" user="laura">v 2.47 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -3495,7 +3496,7 @@
                         devas, humans, asuras, and gandharvas rejoiced in what the Bhagavat had said.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-051-004-257"/>
-                    <p tid="636">The noble Mahāyāna sūtra, <title xml:lang="en">The Basket’s Display</title>, is concluded.</p>
+                    <trailer tid="636">The noble Mahāyāna sūtra, “<title xml:lang="en">The Basket’s Display</title>,” is concluded.</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="708">Colophon</head>
@@ -3632,8 +3633,7 @@
                             Text Society’s Pali-English Dictionary.</title> London: Pali Text Society, 1979.</bibl>
                     <bibl xml:id="UT22084-051-004-297">Roberts, P. and Bower, E., trans. <title xml:lang="en">The White Lotus of
                             Compassion</title> (<title xml:lang="Bo-Ltn">snying rje pad ma dkar po zhes bya ba theg pa chen po’i
-                            mdo</title>, <title xml:lang="Sa-Ltn">Karuṇā­puṇḍarīka­nāma­mahā­yāna­sūtra </title>, Toh. 112). 84000
-                        (forthcoming).</bibl>
+                                mdo</title>, <title xml:lang="Sa-Ltn">Karuṇā­puṇḍarīka­nāma­mahā­yāna­sūtra </title>, Toh. 112). 84000: Translating the Words of the Buddha, 2018. (<ref target="http://read.84000.co/translation/toh113.html">read.84000.co</ref>).</bibl>
                     <bibl xml:id="UT22084-051-004-298">Rouse, W.H.D., trans. “Valāhassa-jātaka.” In <title xml:lang="en">The
                             Jātaka or Stories of the Buddha’s Former Births. </title>Pali Text Society Number 196, Vol. 2 (1895):
                         127.</bibl>
