@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">ting nge ’dzin gyi rgyal po’i mdo</title>
                 <title type="mainTitle" xml:lang="bo">ཏིང་ངེ་འཛིན་གྱི་རྒྱལ་པོའི་མདོ།</title>
                 <title type="mainTitle" xml:lang="en">The King of Samādhis Sūtra</title>
@@ -26,7 +26,7 @@
                 <sponsor ref="sponsors.xml#sponsor-8">anonymous</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.41 <date>2019</date>
+                <edition>v 1.42 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -61,12 +61,13 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-24T17:44:58.161Z" user="admin">24/06/2019 17:44:58</note>
+                <note type="lastUpdated" date-time="2019-08-07T20:57:42.865Z" user="admin">07/08/2019 20:57:42</note>
             <note type="updated" update="text-version" value="v 1.34" date-time="2019-03-18T11:06:14.991Z" user="john">v 1.34 2018</note>
             <note type="updated" update="text-version" value="v 1.35" date-time="2019-03-18T11:34:16.438Z" user="john">v 1.35 2018</note>
             <note type="updated" update="text-version" value="v 1.37" date-time="2019-04-16T16:42:43.647Z" user="john">v 1.37 2018</note>
             <note type="updated" update="text-version" value="v 1.39" date-time="2019-06-18T16:09:02.753Z" user="celso">v 1.39 2019</note>
             <note type="updated" update="text-version" value="v 1.41" date-time="2019-06-24T17:44:54.159Z" user="celso">v 1.41 2019</note>
+            <note type="updated" update="text-version" value="v 1.42" date-time="2019-08-07T20:57:39.221Z" user="laura">v 1.42 2019</note>
             </notesStmt>
             <!--<notesStmt>
                 <note type="lastUpdated">Last updated at 06/01/2018 at 14:00:24 by celso</note>
@@ -6807,21 +6808,21 @@
                         </l>
                         <l>Is peaceful, subtle, and difficult to see.</l>
                         <l>All conceptions have been eliminated. </l>
-                        <l>Therefore it is called ‘samādhi.’ {1}</l>
+                        <l>Therefore it is called <distinct>samādhi</distinct>. {1}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1375"/>
                     <lg tid="826">
                         <l>“There are no notions, there are no concepts,</l>
                         <l>There is nothing to be grasped, there is nothing to be shown,</l>
                         <l>And there is no object for the mind.</l>
-                        <l>Therefore it is called ‘samādhi.’ {2}</l>
+                        <l>Therefore it is called <distinct>samādhi</distinct>. {2}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1376"/>
                     <lg tid="827">
                         <l>“When in a state of meditation</l>
                         <l>There is no pride concerning any phenomenon.</l>
                         <l>That very absence of pride—</l>
-                        <l>That is what is called ‘samādhi.’ {3}</l>
+                        <l>That is what is called <distinct>samādhi</distinct>. {3}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1377"/>
                     <lg tid="828">
@@ -6832,14 +6833,14 @@
                                     med</foreign>.</note> even an atom of phenomena.</l>
                         <l>That which is called ‘an atom’ does not exist.</l>
                         <l>There are no phenomena as objects for the mind.</l>
-                        <l>Therefore it is called ‘samādhi.’ {4}</l>
+                        <l>Therefore it is called <distinct>samādhi</distinct>. {4}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1379"/>
                     <lg tid="829">
                         <l>“ ‘The mind has no object’</l>
                         <l>Is also itself a concept.</l>
                         <l>When there are no concepts of phenomena,</l>
-                        <l>Then that is known as ‘samādhi.’ {5}</l>
+                        <l>Then that is known as <distinct>samādhi</distinct>. {5}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1380"/>
                     <lg tid="830">
@@ -7044,7 +7045,7 @@
                                 and most Kangyurs. The Degé has <foreign xml:lang="Bo-Ltn" type="term">dga’</foreign> (“joy”).</note> to know through language<note place="end" xml:id="UT22084-055-001-1420" index="565"> The Chinese appears to mean, “through language only
                                 knowledge is gained.”</note>
                         </l>
-                        <l>And therefore it is called samādhi. {30}</l>
+                        <l>And therefore it is called <distinct>samādhi</distinct>. {30}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-1421"/>
                     <lg tid="855">
@@ -11359,7 +11360,7 @@
                     <lg tid="1412">
                         <l>“Those who have heard the profound Dharma</l>
                         <l>And have not been frightened by it,</l>
-                        <l>Will not even for the sake of their life</l>
+                        <l>Will not even for the sake of their lives</l>
                         <l>Forsake the enlightenment of buddhahood. {24}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-2227"/>
@@ -12060,12 +12061,12 @@
                         enlightenment as other than form. They do not seek enlightenment as other than form. They do not attain
                         enlightenment as other than form. They do not inspire beings to an enlightenment that is other than form.
                         They do not see a tathāgata as other than form. They see a tathāgata in this way: ‘The Tathāgata is the
-                        fearlessness nature of form.’ They do not see the tathāgata as other than form, as other than the nature
+                        fearlessness that is the nature of form.’ They do not see the tathāgata as other than form, as other than the nature
                         of form. They do not see the nature of form as other than the tathāgata. The nature of that which is
                         called form and that of the tathāgata are nondual. The bodhisattva mahāsattvas who see in that way are
                         engaging in the discernment of phenomena. </p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-2370"/>
-                    <p tid="1519">“In that same way they do not perceive enlightenment as other than sensation, <ref cRef="F.84.a"/> other than identification, other than mentation, nor other than consciousness. They do not approach
+                    <p tid="1519">“In that same way they do not perceive enlightenment as other than sensation, <ref cRef="F.84.a"/> other than identification, other than mentation, or other than consciousness. They do not approach
                         enlightenment as being other than consciousness. They do not seek enlightenment as other than
                         consciousness. They do not attain enlightenment as other than consciousness. They do not inspire beings to
                         an enlightenment that is other than consciousness. They do not see a tathāgata as other than
@@ -13333,7 +13334,7 @@
                         benefits that come from giving the Dharma. What are the ten benefits? They are: [1] they reject that which
                         should not be done; [2] they engage in that which should be done; [3] they follow the Dharma of a worthy
                         person; [4] they purify buddha realms; [5] they reach the Bodhimaṇḍa; [6] they give away material things;
-                        [7] they overcome the kleśas; <ref cRef="F.92.a"/> [8] they gives their portion<note place="end" xml:id="UT22084-055-001-2615" index="926"> The commentary explains that this means that they dedicate
+                        [7] they overcome the kleśas; <ref cRef="F.92.a"/> [8] they give their portion<note place="end" xml:id="UT22084-055-001-2615" index="926"> The commentary explains that this means that they dedicate
                             the merit they have to the beings who do not have that merit. The Chinese translates as “portion of
                             merit.”</note> to all beings; [9] they meditate on love toward those on whom their minds are focused; and
                         [10] they attain happiness in this life. </p>
@@ -14679,7 +14680,7 @@
                         <l>“They who possess this supreme samādhi</l>
                         <l>Always have Brahmā, Śakra, and many powerful deities</l>
                         <l>Acting as their attendants,</l>
-                        <l>But there is no pride in their mind. {105}</l>
+                        <l>But there is no pride in their minds. {105}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-2878"/>
                     <lg tid="1868">
@@ -14756,11 +14757,11 @@
                         <l>Life,<note place="end" xml:id="UT22084-055-001-2893" index="1016"> According to the commentary, power
                                 over life means that the bodhisattva can remain alive for countless eons. </note> karma,<note place="end" xml:id="UT22084-055-001-2894" index="1017"> According to the commentary, power over
                                 karma means that the bodhisattva can control the time when it ripens.</note> materials,<note place="end" xml:id="UT22084-055-001-2895" index="1018"> According to the commentary, power over
-                                materials means that the bodhisattva can adorn many worlds.</note> and devotion,<note place="end" xml:id="UT22084-055-001-2896" index="1019"> According to the commentary, power over aspiration
+                                materials means that the bodhisattva can adorn many worlds.</note> and devotion,<note place="end" xml:id="UT22084-055-001-2896" index="1019"> According to the commentary, power over devotion
                                 means that the bodhisattva can see all worlds filled with buddhas.</note>
                         </l>
                         <l>And the strengths of aspiration,<note place="end" xml:id="UT22084-055-001-2897" index="1020"> According
-                                to the commentary, power over prayer means that the bodhisattva can choose the time and world of
+                                to the commentary, power over aspiration means that the bodhisattva can choose the time and world of
                                 his buddhahood.</note> miracles,<note place="end" xml:id="UT22084-055-001-2898" index="1021">
                                 According to the commentary, power over miracles means that the bodhisattva can manifest every
                                 kind of miracle.</note> and birth,<note place="end" xml:id="UT22084-055-001-2899" index="1022">
@@ -15206,7 +15207,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-2989"/>
                     <p tid="1932">“Young man, what is the purification of the great higher cognition of all phenomena? It is
                         having no grasping toward all phenomena, it is having no clinging to the aggregate of correct conduct,<note place="end" xml:id="UT22084-055-001-2990" index="1057"> See also <ptr target="#UT22084-055-001-2634"/>. <!--n. 933-->
-                        </note> it is having no pride in the aggregate of samādhi, it the absence of movement in the aggregate of
+                        </note> it is having no pride in the aggregate of samādhi, it is the absence of movement in the aggregate of
                         wisdom, it is having the discerning insight<note place="end" xml:id="UT22084-055-001-2991" index="1058">
                             According to the main classical meaning of <foreign xml:lang="Sa-Ltn" type="term">vivekadarśana</foreign> and its description and translation, or gloss, in the commentary as
                                 <foreign xml:lang="Bo-Ltn" type="term">de bzhin nyid mthong ba</foreign>. The Tibetan translates
@@ -16117,7 +16118,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3140"/>
                     <lg tid="2049">
-                        <l>“There is no one whomsoever</l>
+                        <l>“There is no one whosoever</l>
                         <l>Who can connect with this nonexistence.</l>
                         <l>The connection with this nonexistence</l>
                         <l>Results in a teaching that is one of conventions.<note place="end" xml:id="UT22084-055-001-3141" index="1091"> According to the Tibetan and the Hodgson manuscript, which has <foreign xml:lang="Sa-Ltn" type="term">saṃvṛti</foreign> (“conventional” or “relative”). According to the
@@ -16126,9 +16127,9 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3142"/>
                     <lg tid="2050">
-                        <l>“The ones who have in their mind the thought <ref cRef="F.108.b"/>
+                        <l>“The ones who have in their minds the thought <ref cRef="F.108.b"/>
                         </l>
-                        <l>‘I shall become a buddha in this world,’</l>
+                        <l>‘I shall become a buddha in this world’</l>
                         <l>Will not be afflicted by craving for existence,</l>
                         <l>And those wise ones will attain enlightenment. {114}</l>
                     </lg>
@@ -16546,7 +16547,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-3206"/>
                     <lg tid="2106">
                         <l>“Having attained this peace, this stainless samādhi,</l>
-                        <l>They will have exceedingly sharp wisdom, supreme wisdom,</l>
+                        <l>They will have exceedingly sharp wisdom, supreme wisdom;</l>
                         <l>They will gain an ocean of learning and always have infinite understanding,</l>
                         <l>Virtuous speech, excellent understanding, and knowledge of the instructions. {170}</l>
                     </lg>
@@ -16589,7 +16590,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-3212"/>
                     <lg tid="2112">
                         <l>“Having attained this peace, this stainless samādhi,</l>
-                        <l>They will never have any illness occur,</l>
+                        <l>They will never have any illness occur:</l>
                         <l>None of the various sicknesses of the mortal world,</l>
                         <l>Whether physical illness or likewise mental illness. {176}</l>
                     </lg>
@@ -16623,7 +16624,7 @@
                     <lg tid="2116">
                         <l>“Just as it is not easy, using pigments,</l>
                         <l>To paint various forms in the air,</l>
-                        <l>In the same way it is not easy to create pictures in the mind<note place="end" xml:id="UT22084-055-001-3218" index="1101"> According to the commentary, this means that one
+                        <l>In the same way it is not easy to create pictures in the minds<note place="end" xml:id="UT22084-055-001-3218" index="1101"> According to the commentary, this means that one
                                 cannot color with thoughts the mind that is in the nondual state of the samādhi.</note>
                         </l>
                         <l>Of those who remain in this stainless samādhi of peace. {180}</l>
@@ -16685,7 +16686,7 @@
                                 three realms, to the desire realm and the form realm, with the formless realm implied. Chinese:
                                 “rebirth in the gods’ realm,” <foreign xml:lang="zh" type="term">生天</foreign> (<foreign xml:lang="Zh-Ltn" type="term">sheng tian</foreign>).</note>
                         </l>
-                        <l>They have no longing for women and have an unconfused mind.</l>
+                        <l>They have no longing for women and have unconfused minds.</l>
                         <l>They are peaceful, completely peaceful, and undefiled. {187}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3232"/>
@@ -16699,7 +16700,7 @@
                     <lg tid="2125">
                         <l>“They have no longing for gold and no longing for wealth.</l>
                         <l>They have no longing for higher rebirth and no attachment to money and jewels. </l>
-                        <l>They have a completely pure mind and are free of thought.</l>
+                        <l>They have completely pure minds and are free of thought.</l>
                         <l>That is the uniqueness of this attainment of samādhi. {189}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3234"/>
@@ -17543,7 +17544,7 @@
                         <l>“Those who always practice correct conduct and samādhi,</l>
                         <l>And also countless dhyānas and liberations,</l>
                         <l>Who always practice emptiness devoid of attributes—</l>
-                        <l>They will soon become a sugata in the world. {278}</l>
+                        <l>They will soon become sugatas in the world. {278}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3383"/>
                     <lg tid="2226">
@@ -19162,7 +19163,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-3674"/>
                     <p tid="2449">“Then King Śūradatta thought, ‘Alas! My harem has gone astray, and so has the populace. These
                         people have cast off their jewels and rings, taken off their shoes, bared one shoulder, knelt on their
-                        right knee, and with palms placed together they have paid homage to that bhikṣu.’ </p>
+                        right knees, and with palms placed together they have paid homage to that bhikṣu.’ </p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3675"/>
                     <p tid="2450">“King Śūradatta was not as handsome and not as attractive as that good-looking bhikṣu. Fearing
                         for his royal status he became furious. <ref cRef="F.132.a"/> When he saw the perfection of the bhikṣu’s
@@ -19410,7 +19411,7 @@
                         <l>“ ‘The wise and learned dharmabhāṇaka, </l>
                         <l>Powerful and renowned in all directions, </l>
                         <l>The bodhisattva who was established in retention,</l>
-                        <l>That Supuṣpacandra, has been slain in the capital. {56}</l>
+                        <l>That Supuṣpacandra has been slain in the capital. {56}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3731"/>
                     <lg tid="2488">
@@ -19567,7 +19568,7 @@
                         <l>“ ‘The bodhisattvas established in retention</l>
                         <l>Have no concept of things and no concept of nothing,</l>
                         <l>No concept of happiness and no concept of unhappiness,</l>
-                        <l>And no concept of number and no concept of numberless.<note place="end" xml:id="UT22084-055-001-3754" index="1249"> This fourth line is according to the Tibetan, Chinese, Hodgson, and Shastri.</note>
+                        <l>And no concept of number and no concept of numberlessness.<note place="end" xml:id="UT22084-055-001-3754" index="1249"> This fourth line is according to the Tibetan, Chinese, Hodgson, and Shastri.</note>
                             {72}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3755"/>
@@ -19736,8 +19737,8 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-3783"/>
                     <lg tid="2525">
                         <l>“Those humans who are indifferent </l>
-                        <l>To their body, which is like a lump of foam, </l>
-                        <l>And their life, which is like a water bubble,</l>
+                        <l>To their bodies, which are like lumps of foam, </l>
+                        <l>And their lives, which are like water bubbles,</l>
                         <l>Will become supreme beings.” {x}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3784"/>
@@ -20262,7 +20263,7 @@
                         <l>And you bestow the medicine that is the good Dharma.</l>
                         <l>Oh! Oh! When you see beings who are sick,</l>
                         <l>Afflicted with all kinds of illnesses,</l>
-                        <l>Oh! oh! arise quickly and give them</l>
+                        <l>Oh! Oh! arise quickly and give them</l>
                         <l>The medicine of the Dharma.<note place="end" xml:id="UT22084-055-001-3874" index="1287"> These lines
                                 are actually from verse xxi, but in the Tibetan and in this translation have been moved forward to
                                 make the passage more readable in these languages.</note> {xx}</l>
@@ -20286,7 +20287,7 @@
                         <l>All the world’s creepers of doubt.</l>
                         <l>Oh! Oh! You who are excellently learned,</l>
                         <l>Stainless, a holder of the Dharma, a supreme human,</l>
-                        <l>Oh! oh! be seated in the midst of your assembly</l>
+                        <l>Oh! Oh! be seated in the midst of your assembly</l>
                         <l>And, wise one, recite thousands of millions of stainless sūtras. {xxii}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3877"/>
@@ -20657,8 +20658,8 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-3944"/>
                     <lg tid="2625">
-                        <l>“The ones who have become a teacher for the world, a guide,</l>
-                        <l>A buddha, self-arisen, having great compassion, </l>
+                        <l>“The ones who have become teachers for the world, guides,</l>
+                        <l>Buddhas, self-arisen, having great compassion, </l>
                         <l>Have attained a supreme accumulation of merit, </l>
                         <l>Which is inconceivable and beyond any measure. {10}</l>
                     </lg>
@@ -21585,7 +21586,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-4088"/>
                     <lg tid="2737">
                         <l>“He had recollection and realization.</l>
-                        <l>He was disciplined, compassionate, and he delighted in correct conduct.</l>
+                        <l>He was disciplined and compassionate, and he delighted in correct conduct.</l>
                         <l>His lovely voice was not harsh but gentle,</l>
                         <l>And he had attained the power of knowledge of the sensory constituents. {48}</l>
                     </lg>
@@ -22686,7 +22687,7 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-4285"/>
                     <p tid="2897">“Bodhisattva mahāsattvas who have the restraint of speech attain the state of great
                         compassion, <ref cRef="F.158.a"/> attain the state of great equanimity, attain easeful examination, and
-                        the quality of being devoid of examination. Young man, that is the restraint of speech.</p>
+                        attain the quality of being devoid of examination. Young man, that is the restraint of speech.</p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4286"/>
                     <p tid="2898">“Moreover, young man, bodhisattva mahāsattvas who have the restraint of speech desist from
                         killing, taking what is not given, not maintaining celibacy, lying, slandering, harsh speech, and idle
@@ -22708,7 +22709,7 @@
                         <l>“That which is called the restraint of speech</l>
                         <l>Is the restraint of speech through which</l>
                         <l>The bodhisattvas will attain the unimpeded knowledge</l>
-                        <l>The entirety of the Dharma.<note place="end" xml:id="UT22084-055-001-4291" index="1390"> In the Tibetan
+                        <l>Of the entirety of the Dharma.<note place="end" xml:id="UT22084-055-001-4291" index="1390"> In the Tibetan
                                 this four-line verse is reduced to three lines.</note> {57}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4292"/>
@@ -22886,7 +22887,7 @@
                         laziness in order to desist from laziness; they do not wish to deceive their parents or their teachers; and they
                         do not develop desire, anger, or ignorance and do not associate with them. They do not abandon the
                         aspiration to enlightenment, they do not destabilize their superior aspiration, and also the bodhisattvas
-                        desist from all other harmful thoughts in their mind, and do not associate with them. Young man, that is
+                        desist from all other harmful thoughts in their minds, and do not associate with them. Young man, that is
                         the restraint of the mind. </p>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4326"/>
                     <p tid="2933">“They perceive the mind as being like a dream, being like a mirage, being like an apparition, and
@@ -23009,14 +23010,14 @@
                     <milestone unit="chunk" xml:id="UT22084-055-001-4345"/>
                     <lg tid="2950">
                         <l>“That restraint of the mind through which wise ones</l>
-                        <l>Do not develop desire or anger in their mind,</l>
+                        <l>Do not develop desire or anger in their minds,</l>
                         <l>And similarly never give rise to ignorance,</l>
                         <l>That is what is called the supreme restraint of the mind. {84}</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-055-001-4346"/>
                     <lg tid="2951">
                         <l>“That restraint of the mind through which wise ones</l>
-                        <l>In their mind do not forsake enlightenment,</l>
+                        <l>In their minds do not forsake enlightenment,</l>
                         <l>And whose superior motivation is never shaken,</l>
                         <l>That is what is called the supreme restraint of the mind. {85}</l>
                     </lg>
@@ -23275,7 +23276,7 @@
                         nonproduction and nonperishing of the phenomena of the mind and mental events.<note place="end" xml:id="UT22084-055-001-4436" index="1415"> According to the Sanskrit. The Tibetan appears to have
                             translated from a manuscript that had <foreign xml:lang="Sa-Ltn" type="term">utpāda</foreign>
                             (“production”) in error for <foreign xml:lang="Sa-Ltn" type="term">anutpāda</foreign>
-                            (“nonproduction”), translating therefore as “the production and indestructibility of the phenomena of
+                            (“nonproduction”), translating therefore as “the production and nonperishing of the phenomena of
                             the mind and mental events.” The Tibetan translation in the commentary’s first chapter of this
                             definition omits both negations, and therefore has “skilled in the realization of the essence of the
                             arising and cessation of the phenomena of the mind and mental events.” Chinese: <foreign xml:lang="zh" type="quote">知心及數善巧方便而得一心</foreign> (<foreign xml:lang="Zh-Ltn" type="quote">zhi xin ji shu shan
@@ -24191,7 +24192,7 @@
                     </div>
                 </div>
                 <div type="section">
-                    <head type="section" tid="3401">Non-canonical Tibetan Sources</head>
+                    <head type="section" tid="3401">Non-Canonical Tibetan Sources</head>
                     <bibl xml:id="UT22084-055-001-4777">Gampopa (sgam po pa bsod nams rin chen). <title xml:lang="Bo-Ltn">dam chos
                             yid bzhin nor bu thar pa rin po che’i rgyan</title>. Kathmandu: Gam-po-pa Library, 2003.</bibl>
                     <bibl xml:id="UT22084-055-001-4779">Pekar Sangpo (pad dkar bzang po). <title xml:lang="Bo-Ltn">bstan pa spyi’i rgyas byed las
@@ -26112,7 +26113,7 @@
                             <term xml:lang="Sa-Ltn">Maitraka</term>
                             <term type="definition">The bodhisattva who became Śākyamuni’s regent and is prophesied to be the next
                                 buddha, the fifth buddha in the Good Eon. In early Buddhism he appears as the human disciple sent
-                                to pay his respects by his teacher, and the Buddha gives him the gift a of a robe and prophesies
+                                to pay his respects by his teacher, and the Buddha gives him the gift of a robe and prophesies
                                 that he will be the next buddha, and that his companion Ajita will be the next cakravartin. As a
                                 bodhisattva, he has both these names. In the White Lotus of Compassion Sūtra, Buddha Ratnagarbha
                                 prophesies that Vimalavaiśayana, the fourth of the thousand young Vedapāṭhaka pupils of
@@ -26144,7 +26145,7 @@
                             <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ།</term>
                             <term xml:lang="Sa-Ltn">Mañjuśrī Kumārabhūta</term>
                             <term type="definition">The bodhisattva who is considered the embodiment of wisdom, with the
-                                additional honorofic title for a young man.</term>
+                                additional honorific title for a young man.</term>
                         </gloss>
                     </item>
                     <item>
@@ -29397,7 +29398,7 @@
                             <term xml:lang="bo">དཔལ་གྱི་བེའུ།</term>
                             <term xml:lang="Sa-Ltn">śrīvatsa</term>
                             <term type="definition">Literally “the favorite of the glorious one,” or (as translated into Tibetan)
-                                “the calf of the glorious one.” This is an auspicious mark that in Indian Buddhsim was said to be
+                                “the calf of the glorious one.” This is an auspicious mark that in Indian Buddhism was said to be
                                 formed from a curl of hair on the breast and was depicted in a shape that resembles the
                                 fleur-de-lis. In Tibet it is usually represented as an eternal knot. It is also one of the
                                 principal attributes of Viṣṇu.</term>
@@ -29780,7 +29781,7 @@
                             <term xml:lang="bo">བསམ་གཏན།</term>
                             <term xml:lang="Sa-Ltn">dhyāna</term>
                             <term type="definition">Sometimes translated as “absorption” or “meditative absorption,” this is one
-                                of several similar but specific terms for particualr states of mind to be cultivated. Dhyāna is
+                                of several similar but specific terms for particular states of mind to be cultivated. Dhyāna is
                                 the term often used in the context of eight successive stages, four of form and four
                                 formless.</term>
                         </gloss>
