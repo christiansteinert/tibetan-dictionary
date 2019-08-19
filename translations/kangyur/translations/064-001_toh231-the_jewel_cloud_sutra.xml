@@ -3,7 +3,7 @@
 <tei:TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">dkon mchog sprin/</title>
                 <title type="mainTitle" xml:lang="bo">དཀོན་མཆོག་སྤྲིན།</title>
                 <title type="mainTitle" xml:lang="en">The Jewel Cloud</title>
@@ -32,7 +32,7 @@
                 <sponsor ref="sponsors.xml#sponsor-2">George Gu, May E. Ho Gu, Likai Gu, Tiffany Tai, Lillian Gu, Jerry Yen, E. E. Ho, Minda and Miin Ho, Chung Da, and Beiying Ho</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.28 <date>2019</date>
+                <edition>v 1.29 <date>2019</date>
                 </edition>
             </editionStmt>
 <publicationStmt status="1">
@@ -68,7 +68,7 @@
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated" date-time="2019-06-21T14:39:07.778Z" user="admin">21/06/2019 14:39:07</note>
+               <note type="lastUpdated" date-time="2019-08-19T16:14:56.231Z" user="admin">19/08/2019 16:14:56</note>
             <note type="updated" update="text-version" value="v 1.22" date-time="2019-03-14T11:09:33.397Z" user="john">v 1.22 2019</note>
             <note type="updated" update="text-version" value="v 1.23" date-time="2019-03-16T12:08:02.666Z" user="john">v 1.23 2019</note>
             <note type="updated" update="text-version" value="v 1.25" date-time="2019-05-08T10:40:36.639Z" user="mike">v 1.25 2019</note>
@@ -76,6 +76,7 @@
                 <note type="updated" update="text-version" value="v 1.27" date-time="2019-06-17T14:44:31.153Z" user="john">v 1.27 2019</note>
                 <note type="updated" update="text-version" value="v 1.27" date-time="2019-06-19T17:54:17.352Z" user="john">v 1.27 2019</note>
                 <note type="updated" update="text-version" value="v 1.28" date-time="2019-06-21T14:39:04.391Z" user="celso">v 1.28 2019</note>
+                <note type="updated" update="text-version" value="v 1.29" date-time="2019-08-19T16:14:52.854Z" user="konchog">v 1.29 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -7164,7 +7165,7 @@
                         in the words of the Blessed One. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-776"/>
-                    <p tid="697"> This completes the Noble Great Vehicle sūtra known as <title xml:lang="en">The Jewel Cloud</title>.</p>
+                    <trailer tid="697"> This completes the Noble Great Vehicle sūtra known as “<title xml:lang="en">The Jewel Cloud</title>.”</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="705">Colophon</head>
