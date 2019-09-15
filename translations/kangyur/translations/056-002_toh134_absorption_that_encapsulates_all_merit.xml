@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">bsod nams thams cad bsdus pa’i ting nge ’dzin</title>
                 <title type="mainTitle" xml:lang="bo">བསོད་ནམས་ཐམས་ཅད་བསྡུས་པའི་ཏིང་ངེ་འཛིན།</title>
                 <title type="mainTitle" xml:lang="en">The Absorption That Encapsulates All Merit</title>
@@ -62,7 +62,7 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:32:40.623Z" user="admin">21/06/2019 14:32:40</note>
+                <note type="lastUpdated" date-time="2019-09-15T14:42:36.745Z" user="andre">15/09/2019 14:42:36</note>
             <note type="updated" update="text-version" value="v 1.33" date-time="2019-06-18T16:13:35.151Z" user="celso">v 1.33 2019</note>
                 <note type="updated" update="text-version" value="v 1.34" date-time="2019-06-21T14:32:37.662Z" user="celso">v 1.34 2019</note>
             </notesStmt>
@@ -1436,35 +1436,43 @@ Notes -->
                     <p tid="179">“Similarly excellent are these eight seed phrases, which lead to inexhaustible eloquence: </p>
                     <list type="bullet">
                         <item>
-                            <p tid="384">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme a</mantra> teaches how all phenomena are
-                                primordially [95b] non-originating. </p>
+                            <p tid="384">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">a</foreign>
+                                </mantra> teaches how all phenomena are
+                                primordially <ref cRef="F.95.b"/> non-originating. </p>
                         </item>
                         <item>
-                            <p tid="385">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme pa</mantra> teaches all phenomena from
+                            <p tid="385">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">pa</foreign>
+                                </mantra> teaches all phenomena from
                                 the ultimate perspective. </p>
                         </item>
                         <item>
-                            <p tid="386">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme na</mantra> teaches the comprehension of
+                            <p tid="386">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">na</foreign>
+                                </mantra> teaches the comprehension of
                                 the name and form of all phenomena. </p>
                         </item>
                         <item>
-                            <p tid="387">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme da</mantra> teaches the calming and
+                            <p tid="387">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">da</foreign>
+                                </mantra> teaches the calming and
                                 pacification of all phenomena. </p>
                         </item>
                         <item>
-                            <p tid="388">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme sa</mantra> teaches transcendence of all
+                            <p tid="388">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">sa</foreign>
+                                </mantra> teaches transcendence of all
                                 phenomena. </p>
                         </item>
                         <item>
-                            <p tid="389">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme ta</mantra> teaches the indivisibility
+                            <p tid="389">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">ta</foreign>
+                                </mantra> teaches the indivisibility
                                 of all phenomena within suchness. </p>
                         </item>
                         <item>
-                            <p tid="390">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme ka</mantra> teaches the exhaustion of
+                            <p tid="390">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">ka</foreign>
+                                </mantra> teaches the exhaustion of
                                 all phenomena. </p>
                         </item>
                         <item>
-                            <p tid="391">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme ma</mantra> teaches the way all
+                            <p tid="391">‘The seed phrase <mantra xml:lang="mixed" type="syllable">supreme <foreign xml:lang="Sa-Ltn">ma</foreign>
+                                </mantra> teaches the way all
                                 phenomena are bereft of middle and extremes.’ </p>
                         </item>
                     </list>
@@ -2640,8 +2648,8 @@ Notes -->
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-056-002-293"/>
-                    <p tid="366">This completes the noble Great Vehicle sūtra, <title xml:lang="en">The Absorption That
-                        Encapsulates All Merit</title>.</p>
+                    <trailer tid="366">This completes the noble Great Vehicle sūtra, “<title xml:lang="en">The Absorption That
+                        Encapsulates All Merit</title>.”</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="401">Colophon</head>
