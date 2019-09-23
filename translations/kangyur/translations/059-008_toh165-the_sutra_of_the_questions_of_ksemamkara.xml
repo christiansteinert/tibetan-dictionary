@@ -4,16 +4,17 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">bde byed kyis zhus pa’i mdo/</title>
-                <title type="mainTitle" xml:lang="Sa-Ltn">kṣemaṃkaraparipṛcchāsutra</title>
-                <title type="mainTitle" xml:lang="en">The Questions of Kṣemaṃkara</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bde byed kyis zhus pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Kṣemaṅkaraparipṛcchā</title>
+                <title type="mainTitle" xml:lang="en">The Question of Kṣemaṅkara</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">’phags pa bde byed kyis zhus pa zhes bya
                     ba theg pa chen po’i mdo</title>
-                <title type="longTitle" xml:lang="Sa-Ltn">āryakṣemaṅkaraparipṛcchānāmamahāyānasūtra</title>
-                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra entitled: The
-                    Questions of Kṣemaṅkara</title>
-                <title type="otherTitle" xml:lang="Bo-Ltn">bde byed kyis zhus pa/</title>
-                <title type="otherTitle" xml:lang="Sa-Ltn">kṣemaṃkaraparipṛcchā</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་བདེ་བྱེད་ཀྱིས་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Āryakṣemaṅkaraparipṛcchānāmamahāyānasūtra</title>
+                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The
+                    Question of Kṣemaṅkara”</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">bde byed kyis zhus pa’i mdo/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Kṣemaṅkaraparipṛcchāsutra</title>
                 <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
                     Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha.</author>
@@ -29,13 +30,13 @@
                     (Eugenie De Jong)</author>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.9 <date>2019</date>
+                <edition>v 0.91 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all of the Buddha’s words into modern
+                    initiative that aims to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
@@ -56,16 +57,15 @@
                     <biblScope>Degé Kangyur, vol. 59 (mdo sde, ba); folios 167.b-171.b</biblScope>
                     <author role="translatorTib">Prajñāvarman</author>
                     <author role="translatorTib">ye shes sde</author>
-                    <location count-pages="9">
-                        <start volume="59" page="336"/>
-                        <end volume="59" page="344"/>
+                    <location work="UT4CZ5369" count-pages="9">
+                        <volume number="59" start-page="334" end-page="342"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11769" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-20T14:53:40.36Z" user="admin">20/09/2019 14:53:40</note>
+                <note type="lastUpdated" date-time="2019-09-23T12:09:30.742Z" user="admin">23/09/2019 12:09:30</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-03-13T17:52:31.555Z" user="andre">v 1.00 2018</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-03-13T18:46:37.719Z" user="andre">v 1.00 2018</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-04-11T17:35:24.187Z" user="andre">v 1.00 2018</note>
@@ -74,6 +74,7 @@
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-18T18:55:23.973Z" user="laura">v 1.01 2019</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-06-27T12:39:57.709Z" user="mike">2</note>
                 <note type="updated" update="text-version" value="v 0.9" date-time="2019-09-20T14:53:38.549Z" user="john">v 0.9 2019</note>
+                <note type="updated" update="text-version" value="v 0.91" date-time="2019-09-23T12:09:28.951Z" user="laura">v 0.91 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -83,14 +84,14 @@
                 <head type="summary" tid="1">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-059-008-1"/>
                 <p tid="2">
-                    <title xml:lang="en">The Questions of Kṣemaṅkara</title> contains a teaching
+                    <title xml:lang="en">The Question of Kṣemaṅkara</title> contains a teaching
                     given by Buddha Śākyamuni to the Śākya youth Kṣemaṅkara, in response to a
                     question he poses about the qualities of bodhisattvas and how to develop such
                     qualities. The Buddha teaches him about the bodhisattvas’ qualities, first in
-                    prose and later reiterated in poetic verse, and then equates the teaching of
+                    prose and later reiterated in verse, and then equates the teaching of
                     this sūtra with the perfection of insight, stating that even if one practices
                     the first five perfections for many eons, one will not make much progress
-                    without knowing this sūtra.</p>
+                    without knowing what is taught in this sūtra.</p>
             </div>
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="3">Acknowledgements</head>
@@ -104,7 +105,7 @@
                 <head type="introduction" tid="7">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-059-008-4"/>
-                    <p tid="9">The setting of this short sūtra, <title xml:lang="en">The Questions
+                    <p tid="9">The setting of this short sūtra, <title xml:lang="en">The Question
                             of Kṣemaṅkara</title>, is the Nyagrodha Park near Kapilavastu, the city
                         in the ancient Śākya kingdom that contained the family home where Prince
                         Siddhārtha grew up. It is assumed to be some ten kilometers to the west of
@@ -119,20 +120,15 @@
                         does not place strong emphasis on monastic discipline, although it does
                         admonish against involvement with women. For the modern reader it should be
                         kept in mind that such comments regarding women are primarily meant for men
-                        as advice in support of celibacy. Moreover, in the overall context of
-                        Buddhism they need not be seen as definitive statements on the nature of
-                        women, given that the Buddha himself taught women, many of whom achieved
-                        high levels of spiritual progress. In fact, toward the end of the sūtra, the
-                        Buddha himself refers to both noble sons and daughters who have entered the
-                        Great Vehicle.</p>
+                        as advice in support of celibacy.</p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-6"/>
                     <p tid="11">In this teaching the Buddha offers Kṣemaṅkara a set of ethical
-                        advice, such as not retaliating when attacked, combined with teachings aimed
+                        instructions, such as not retaliating when attacked, combined with teachings aimed
                         at liberation, such as how to realize emptiness in order to successfully
                         complete the bodhisattva path. Delighted by the Buddha’s response,
                         Kṣemaṅkara makes an offering of his jewelry. The Buddha transforms the
                         jewelry into a multitude of magically created beings, who in turn become the
-                        basis for a further teaching of the Dharma. Unlike many longer sūtras,
+                        basis for a further teaching on the illusory character of phenomena. Unlike many longer sūtras,
                             <title xml:lang="en">The Questions of Kṣemaṅkara</title> does not
                         develop an elaborate storyline, nor are we given much information regarding
                         the setting or the characters. Instead, this is a brief teaching that
@@ -173,11 +169,11 @@
             <div type="translation">
                 <head type="translation" tid="15"> The Translation </head>
                 <head type="titleHon" tid="16">The Noble Great Vehicle Sūtra entitled:</head>
-                <head type="titleMain" tid="17">The Questions of Kṣemaṅkara</head>
+                <head type="titleMain" tid="17">The Question of Kṣemaṅkara</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-059-008-13"/>
                     <p tid="21">
-                        <ref cRef="F.167.b"/> Homage to all buddhas and bodhisattvas!</p>
+                        <ref cRef="F.167.b" type="folio"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-059-008-14"/>
                     <p tid="22">Thus did I hear at one time: The Blessed One was staying in the
@@ -196,11 +192,11 @@
                         thirty-two marks of a great being, proceed from buddha realm to buddha
                         realm, pass away free from delusion, possess the five types of
                         superknowledge as soon as they are born, discard all unfree states, obtain
-                        leisure and advantages, gain retention, possess unobstructed eloquence, <ref cRef="F.168.a"/> possess the quality of not regressing, gain interest in
+                        leisure and advantages, gain retention, possess unobstructed eloquence, <ref cRef="F.168.a" type="folio"/> possess the quality of not regressing, gain interest in
                         emptiness, always delight in going forth, and always delight in pure
                         conduct, even when staying in a household?”</p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-16"/>
-                    <p tid="23">Upon being asked these questions, the Blessed One replied to the
+                    <p tid="23">Upon being asked this question, the Blessed One replied to the
                         young Śākya Kṣemaṅkara as follows: “Noble son, you have asked the Thus-Gone
                         One about this topic for the sake of benefiting and bringing happiness to a
                         multitude of beings, out of love for the world, for the welfare of numerous
@@ -219,7 +215,7 @@
                     <p tid="24">When the Blissful One had said this, the Teacher also spoke these
                         words: </p>
                     <lg tid="25">
-                        <l>“Although blamed, do not reciprocate;</l>
+                        <l>“Although blamed, do not reciprocate.</l>
                         <l>Having been harmed, do not harm others. </l>
                         <l>Even if it means giving up their human body, </l>
                         <l>Bodhisattvas will attain these qualities. </l>
@@ -235,7 +231,7 @@
                     <lg tid="27">
                         <l>“Some people take pleasure in striking<note place="end" index="3" xml:id="UT22084-059-008-21"> Translated based on Yongle, Lithang,
                                 Kangxi, Choné, and Stok: <foreign xml:lang="Bo-Ltn" type="term">’tshog rdung</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">’tshog rung</foreign>.</note> others, </l>
-                        <l>And have a ruthless and malicious attitude. <ref cRef="F.168.b"/>
+                        <l>And have a ruthless and malicious attitude. <ref cRef="F.168.b" type="folio"/>
                         </l>
                         <l>Having forsaken the wisdom of the buddhas,</l>
                         <l>Such unwise people will be burdened with unbearable suffering. </l>
@@ -277,18 +273,17 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-28"/>
                     <lg tid="32">
-                        <l>“Therefore, always practice nothing but patience, </l>
+                        <l>“Therefore, always rely wholly on patience, </l>
                         <l>Attend to monks who teach the Dharma, </l>
                         <l>And never forsake spiritual friends. </l>
                         <l>Then supreme awakening will be easy.” </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-29"/>
                     <p tid="33">“Noble son, bodhisattvas who possess four additional qualities will
-                        never regress from unsurpassed and perfect awakening, and they will achieve
+                        progress irreversibly toward unsurpassed and perfect awakening, and they will achieve
                         the perfect qualities as described. What are these four? Noble son, they are
                         (1) pursuing the Dharma, yearning for the Dharma, and rejoicing, delighting
-                        in, and being inspired by the Dharma, as well as retaining and teaching the
-                        Dharma; (2) renouncing women and not indulging in women; (3) rejoicing in
+                        in, and being inspired by the Dharma, as well as retaining and teaching on the illusory character of phenomena; (2) renouncing women and not indulging in women; (3) rejoicing in
                         benefactors and those who share and give, as well as renouncing dullness and
                             sleep;<note place="end" index="6" xml:id="UT22084-059-008-30">
                             Translated based on Stok: <foreign xml:lang="Bo-Ltn" type="quote">sbyin
@@ -299,8 +294,8 @@
                                 la dga’ ba dang / rmugs pa dang / gnyid yongs su spong ba
                                 yin</foreign>.</note> and (4) feeling inspired by emptiness and
                         abiding in emptiness. Noble son, bodhisattvas who possess these four
-                        qualities will never regress from unsurpassed and perfect awakening and they
-                        will achieve the qualities you described.” <ref cRef="F.169.a"/>
+                        qualities will progress irreversibly toward unsurpassed and perfect awakening and they
+                        will achieve the qualities you described.” <ref cRef="F.169.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-31"/>
                     <p tid="34">When the Blissful One had said this, the Teacher also spoke these
@@ -327,7 +322,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-35"/>
                     <lg tid="38">
-                        <l>“Those who like<note place="end" index="7" xml:id="UT22084-059-008-36">
+                        <l>“Those who delight in<note place="end" index="7" xml:id="UT22084-059-008-36">
                                 Translated based on Stok: <foreign xml:lang="Bo-Ltn" type="term">dga’</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">’ga’</foreign>.</note> the features of women</l>
                         <l>Will become miserable, poor, and feeble. </l>
                         <l>Indulging in them will not bring peace, </l>
@@ -349,7 +344,7 @@
                     <p tid="40">The Śākya youth Kṣemaṅkara also perceived these emanated people.
                         Seeing them, the hairs on his body stood on end, so he asked the Blessed
                         One, “Blessed One, where are these people from? Are they from the east, from
-                        the south, from the west, from the north, from below, or from above? <ref cRef="F.169.b"/> From which cardinal or intermediate direction did they
+                        the south, from the west, from the north, from below, or from above? <ref cRef="F.169.b" type="folio"/> From which cardinal or intermediate direction did they
                         come?” </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-39"/>
                     <p tid="41">“Noble son,” replied the Blessed One, “these people are from neither
@@ -378,14 +373,14 @@
                         sons and daughters, Kṣemaṅkara, are called my children. They are known as my
                         descendants, they are known to possess illumination, they are known to be
                         illuminating, they are known to clear away darkness, they are known to
-                        abandon afflictions—they are known as <distinct>teachers</distinct>, they
+                        abandon afflictions. They are known as <distinct>teachers</distinct>, they
                         are known as <distinct>fields of merit</distinct>, they are known as
                             <distinct>worthy of veneration</distinct>,<note place="end" index="8" xml:id="UT22084-059-008-41"> Translated based on Stok: <foreign xml:lang="Bo-Ltn" type="term">yon gyi gnas</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">yon tan gyi gnas</foreign>.</note>
                         they are known as <distinct>mendicants</distinct>, they are known as
                             <distinct>brahmins</distinct>, they are known as
                             <distinct>learned</distinct>, they are known as
                             <distinct>elephants</distinct>, they are known as <distinct>those who
-                            accept that phenomena are unborn</distinct>, <ref cRef="F.170.a"/> they
+                            accept that phenomena are unborn</distinct>, <ref cRef="F.170.a" type="folio"/> they
                         are known as <distinct>bodhisattvas</distinct>, they are known as
                             <distinct>great beings</distinct>, they are known as<distinct> having
                             the quality of non-regressing</distinct>, they are known as
@@ -423,7 +418,7 @@
                         the acceptance that phenomena are unborn. Twenty-five female lay
                         practitioners will purify the eye of Dharma, making it free from dust and
                         dirt with regard to all phenomena, and all of them will attain the
-                        acceptance that phenomena are unborn. <ref cRef="F.170.b"/> When passing
+                        acceptance that phenomena are unborn. <ref cRef="F.170.b" type="folio"/> When passing
                         away, all of them will be reborn in Sukhāvatī, the buddha realm of the
                         thus-gone, worthy, perfect buddha Amitābha. Once born there, they will all
                         jointly uphold the awakening of the buddhahood of<note place="end" index="9" xml:id="UT22084-059-008-45"> Translated based on Yongle and Stok:
@@ -448,7 +443,7 @@
                         Ānanda, I entrust you with this Dharma discourse. I entrust it to you in
                         order that you retain it, read it aloud, explain it, and accurately teach it
                         to others in great detail. Why? Ānanda, noble sons and noble daughters who
-                        have genuinely entered the Great Vehicle <ref cRef="F.171.a"/> might
+                        have genuinely entered the Great Vehicle <ref cRef="F.171.a" type="folio"/> might
                         practice the five perfections without the perfection of insight for ten
                         eons. Yet those noble sons and noble daughters who retain this Dharma
                         discourse, hold it, read it aloud, understand it, accurately teach it to
@@ -457,8 +452,8 @@
                     <milestone unit="chunk" xml:id="UT22084-059-008-50"/>
                     <p tid="50">Then the Blessed One spoke these verses:</p>
                     <lg tid="51">
-                        <l>“Whoever practices generosity for ten eons, </l>
-                        <l>Without hearing about this way, </l>
+                        <l>“Whoever practices generosity for ten eons </l>
+                        <l>Without hearing about this way </l>
                         <l>Will not be praised</l>
                         <l>As having unsurpassed generosity. </l>
                     </lg>
@@ -466,7 +461,7 @@
                     <lg tid="52">
                         <l>“Those who observe mundane discipline</l>
                         <l>Even for tens of eons</l>
-                        <l>Will continue to dwell on focal points— </l>
+                        <l>Will continue to dwell on observations— </l>
                         <l>Such discipline will not be pure. </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-53"/>
@@ -474,12 +469,12 @@
                         <l>“Those who retain this profound discourse, </l>
                         <l>Which is praised by the buddhas, </l>
                         <l>Will have unsurpassed discipline</l>
-                        <l>And themselves be praised by all the buddhas. </l>
+                        <l>And will themselves be praised by all the buddhas. </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-54"/>
                     <lg tid="54">
                         <l>“Though people may advocate patience for tens of eons, </l>
-                        <l>And practice patience toward all that revile them, </l>
+                        <l>And practice patience toward all who revile them, </l>
                         <l>That patience is not praiseworthy, </l>
                         <l>Unless they have heard about this way. </l>
                     </lg>
@@ -509,7 +504,7 @@
                         <l>“Those who practice concentration </l>
                         <l>For tens of eons</l>
                         <l>May abide in the taste of concentration, </l>
-                        <l>But they will not be called adepts at concentration.</l>
+                        <l>But they will not be called adepts in concentration.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-59"/>
                     <lg tid="59">
@@ -523,7 +518,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-61"/>
                     <lg tid="60">
-                        <l>“In this way, through the sameness <ref cRef="F.171.b"/>
+                        <l>“In this way, through the sameness <ref cRef="F.171.b" type="folio"/>
                         </l>
                         <l>Of generosity, discipline, patience, diligence, </l>
                         <l>Concentration, and insight, </l>
@@ -535,7 +530,7 @@
                         humans, demigods, and gandharvas rejoiced and praised what the Blessed One
                         had said. </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-63"/>
-                    <trailer tid="62">This concludes the noble Great Vehicle sūtra entitled “<title xml:lang="en">The Questions of Kṣemaṅkara</title>.”</trailer>
+                    <trailer tid="62">This concludes the noble Great Vehicle sūtra entitled “<title xml:lang="en">The Question of Kṣemaṅkara</title>.”</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="63">Colophon</head>
@@ -724,7 +719,15 @@
                                 time.</term>
                         </gloss>
                     </item>
-
+                    <item>
+                        <gloss type="term" xml:id="UT22084-059-008-95">
+                            <term>retention</term>
+                            <term xml:lang="Bo-Ltn">gzungs</term>
+                            <term xml:lang="bo">གཟུངས།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                        </gloss>
+                    </item>
+                        
                     <!-- personal names -->
 
                     <item>
