@@ -17,7 +17,8 @@
                 <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.1 <date>2019</date>
+                </edition>
             </editionStmt>
             <publicationStmt status="2.g">
                 <idno xml:id="UT22084-061-004"/>
@@ -27,16 +28,16 @@
                 <bibl key="toh184" type="text">
                     <ref>Toh 184</ref>
                     <biblScope>vol.61, ff.96v105v(pp.192-210)</biblScope>
-                    <location count-pages="19">
-                        <start volume="61" page="194"/>
-                        <end volume="61" page="212"/>
+                    <location work="UT4CZ5369" count-pages="19">
+                        <volume number="61" start-page="192" end-page="210"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11802" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-04-12T07:13:07.453Z" user="admin">12/04/2019 07:13:07</note>
+                <note type="lastUpdated" date-time="2019-09-25T06:26:54.144Z" user="admin">25/09/2019 06:26:54</note>
+            <note type="updated" update="text-version" value="" date-time="2019-09-25T06:26:52.399Z" user="andreas">0.1 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
