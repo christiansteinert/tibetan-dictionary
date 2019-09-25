@@ -12,7 +12,8 @@
                 <author role="translatorMain" ref="contributors.xml#team-9"/>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.1 <date>2019</date>
+                </edition>
             </editionStmt>
             <publicationStmt status="2.g">
                 <idno xml:id="UT22084-058-003"/>
@@ -26,16 +27,16 @@
                     <author role="translatorTib">danasila</author>
                     <author role="translatorTib">munivarma</author>
                     <author role="translatorTib">ye shes sde</author>
-                    <location count-pages="15">
-                        <start volume="58" page="397"/>
-                        <end volume="58" page="411"/>
+                    <location work="UT4CZ5369" count-pages="15">
+                        <volume number="58" start-page="395" end-page="409"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11750" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:40:05 by admin</note>
+                <note type="lastUpdated" date-time="2019-09-25T06:26:00.024Z" user="admin">25/09/2019 06:26:00</note>
+            <note type="updated" update="text-version" value="" date-time="2019-09-25T06:25:58.148Z" user="andreas">0.1 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
