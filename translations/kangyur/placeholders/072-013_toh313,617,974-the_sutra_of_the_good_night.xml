@@ -18,7 +18,8 @@
                 <editor role="associateEditor" ref="contributors.xml#person-251">Nancy Lin, Dr.</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.1 <date>2019</date>
+                </edition>
             </editionStmt>
             <publicationStmt status="3">
                 <idno xml:id="UT22084-072-013"/>
@@ -28,9 +29,8 @@
                 <bibl key="toh313" type="text">
                     <ref>Toh 313</ref>
                     <biblScope>vol.72, ff.161v-163v(pp.322-326)</biblScope>
-                    <location count-pages="5">
-                        <start volume="72" page="324"/>
-                        <end volume="72" page="328"/>
+                    <location work="UT4CZ5369" count-pages="5">
+                        <volume number="72" start-page="322" end-page="326"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11986" work="W22084"/>
@@ -38,9 +38,8 @@
                 <bibl key="toh617" type="text">
                     <ref>Toh 617</ref>
                     <biblScope>vol.91, ff.56r-58v(pp.111-116)</biblScope>
-                    <location count-pages="6">
-                        <start volume="91" page="113"/>
-                        <end volume="91" page="118"/>
+                    <location work="UT4CZ5369" count-pages="6">
+                        <volume number="91" start-page="111" end-page="116"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12351" work="W22084"/>
@@ -48,16 +47,16 @@
                 <bibl key="toh974" type="text">
                     <ref>Toh 974</ref>
                     <biblScope>vol.101, ff.90r-92r(pp.179-183)</biblScope>
-                    <location count-pages="5">
-                        <start volume="101" page="181"/>
-                        <end volume="101" page="185"/>
+                    <location work="UT4CZ5369" count-pages="5">
+                        <volume number="101" start-page="179" end-page="183"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12737" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:50:59 by admin</note>
+                <note type="lastUpdated" date-time="2019-09-26T06:58:19.22Z" user="admin">26/09/2019 06:58:19</note>
+            <note type="updated" update="text-version" value="" date-time="2019-09-26T06:58:17.409Z" user="andreas">0.1 2019</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
