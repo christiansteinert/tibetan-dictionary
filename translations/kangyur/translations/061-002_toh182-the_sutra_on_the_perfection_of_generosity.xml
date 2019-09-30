@@ -28,13 +28,13 @@
                 <editor role="externalReviewer" ref="contributors.xml#person-283">Dan Hirshberg</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.17 <date>2019</date>
+                <edition>v 1.18 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -58,16 +58,15 @@
                         77.a–95.b</biblScope>
                     <author role="translatorTib">Prajñāvarman</author>
                     <author role="translatorTib">Yeshé Dé</author>
-                    <location count-pages="36">
-                        <start volume="61" page="77"/><!-- was 47 -->
-                        <end volume="61" page="95"/>
+                    <location work="UT4CZ5369" count-pages="36"><!-- eKangyur Page count is 38 -->
+                        <volume number="61" start-page="153" end-page="190"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11798" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-15T14:53:11.271Z" user="admin">15/09/2019 14:53:11</note>
+                <note type="lastUpdated" date-time="2019-09-27T15:52:55.408Z" user="celso">27/09/2019 15:52:55</note>
             <note type="updated" update="text-version" value="v 1.06, 2018" date-time="2019-04-29T13:29:19.807Z" user="mike">v 1.06, 2018 2018-11-14</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:29:19.807Z" user="mike">2</note>
                 <note type="updated" update="text-version" value="v 0.3" date-time="2019-05-31T08:48:26.556Z" user="john">v 0.3 2019</note>
@@ -86,6 +85,7 @@
                 <note type="updated" update="text-version" value="v 1.15" date-time="2019-07-29T13:10:42.686Z" user="konchog">v 1.15 2019</note>
                 <note type="updated" update="text-version" value="v 1.16" date-time="2019-08-13T18:13:25.795Z" user="konchog">v 1.16 2019</note>
                 <note type="updated" update="text-version" value="v 1.17" date-time="2019-09-15T14:53:09.402Z" user="andre">v 1.17 2019</note>
+                <note type="updated" update="text-version" value="v 1.18" date-time="2019-09-30T19:38:15.518Z" user="andre">Version updated due to folio numbering fixes.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -230,7 +230,7 @@
                     <head type="section" tid="1974">How Bodhisattvas Exert Themselves in the Ten Virtuous Actions</head>
                     <milestone unit="chunk" xml:id="UT22084-061-002-12"/>
                     <p tid="7">
-                        <ref cRef="F.77.a"/> Homage to all buddhas and bodhisattvas!</p>
+                        <ref cRef="F.77.a" type="folio"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-002-13"/>
                     <p tid="8">Thus did I hear at one time. The Blessed One, in order to benefit his
@@ -255,7 +255,7 @@
                         kācilindika cloth, and linen. Those fine parks were beautiful, clean, and
                         free of any stones, pebbles, gravel, dirt, mud, or refuse. They were also
                         home to various wild animals, such as śarabha, spotted deer, monkeys, cats,
-                        brown bears, rabbits, black bears, <ref cRef="F.77.b"/> hyenas, and a number
+                        brown bears, rabbits, black bears, <ref cRef="F.77.b" type="folio"/> hyenas, and a number
                         of different birds. Hundreds of thousands of other beings were also present,
                         such as gods and goddesses of the night, guardians of the world, Varuṇa,
                         Śiva, Yama, Virūḍhaka, Kubera, Śakra, Virūpākṣa, and Dhṛtarāṣṭra, as well as
@@ -280,7 +280,7 @@
                     <p tid="11">Also present was a great assembly of trillions of bodhisattvas that
                         included the bodhisattva great beings Maitreya; Mañjuśrīkumārabhūta;
                         Avalokiteśvara; Mahāsthāmaprāpta; Samantabhadra; Ākāśagarbha; Devamukuṭa;
-                        Ratnamukuṭa; Ratnapāṇi; Ratnaprabha; <ref cRef="F.78.a"/> Ratnagarbha;
+                        Ratnamukuṭa; Ratnapāṇi; Ratnaprabha; <ref cRef="F.78.a" type="folio"/> Ratnagarbha;
                         Ratnacūḍa; Ratnasiṃha; Ratnajālin; Jālinīprabha; Sūryaprabha; Candraprabha;
                         Stable Strength; Dṛḍhamati; Dṛḍhavīrya; Dṛḍhavikrama; Determined Effort;
                         Mahotsāha; Prāmodyarāja; Bhaiṣajyarāja; Bhaiṣajyasamudgata;<note place="end" xml:id="UT22084-061-002-18" index="7"> At this point the list of
@@ -313,7 +313,7 @@
                                 la ’jug pa shes pa la mkhas pa mngon par shes pa / mngon par shes pa
                                 dpa’ bar ’gro ba’i ting nge ’dzin gyi mtha’i sgo bsgrub pa’i gzungs
                                 thob pa</foreign>.</note> attained the retention that brings about
-                        the final gateway of the absorption of bravery, and mastered the <term type="ignore">skillful means</term> related to all the perfections. <ref cRef="F.78.b"/> They revealed different world systems, had donned the
+                        the final gateway of the absorption of bravery, and mastered the <term type="ignore">skillful means</term> related to all the perfections. <ref cRef="F.78.b" type="folio"/> They revealed different world systems, had donned the
                         great armor, and had no doubts concerning the qualities of the buddhas. By
                         contemplating all the latent tendencies of the primary and secondary
                         afflictions, they had conquered pride and its attendant habitual tendencies
@@ -337,7 +337,7 @@
                         There were the yakṣa general Pāñcika accompanied by his sons, the yakṣa
                         general Vajrapāṇi with his retinue of yakṣas, and the great bhūta Hārītī
                         with her retinue of female yakṣas. Śaṅkhinī, Female Spear Holder,
-                        Yellow-Robed, <ref cRef="F.79.a"/> Umā, Mahāśrīdevī, Sarasvatī, Bhairavī,
+                        Yellow-Robed, <ref cRef="F.79.a" type="folio"/> Umā, Mahāśrīdevī, Sarasvatī, Bhairavī,
                         Candra,<note place="end" xml:id="UT22084-061-002-22" index="9">S reads:
                                 <foreign xml:lang="Bo-Ltn" type="quote">zla ba ma</foreign>.</note>
                         Śakra, lord of the gods, the god Maheśvara, and Brahmā, lord of the Sahā
@@ -361,7 +361,7 @@
                         Blessed One’s fame, renown, and praise extended far throughout the
                         immeasurable worlds of the ten directions. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-24"/>
-                    <p tid="15">The ground, of the essence of diamond, was even, <ref cRef="F.79.b"/> pleasant, vast,
+                    <p tid="15">The ground, of the essence of diamond, was even, <ref cRef="F.79.b" type="folio"/> pleasant, vast,
                         and open. It had been sprinkled with water, swept clean, made symmetrical,
                         and made fragrant with smoke rising from incense burners. The ground was
                         strewn with purple, pink, red, and white lotus flowers, as well as the
@@ -393,7 +393,7 @@
                         unbiased. Like the sky, he was immaculate. Like the sun, he dispelled the
                         darkness of ignorance. Like the moon, he had perfected all pure qualities.
                         Like a wish-fulfilling jewel, he fulfilled all <term type="ignore">aspirations</term>. Like the sun, he
-                        was lofty. Like the moon, he was cooling and soothing. Like the ocean, <ref cRef="F.80.a"/> he 
+                        was lofty. Like the moon, he was cooling and soothing. Like the ocean, <ref cRef="F.80.a" type="folio"/> he 
                         was a source of wealth, and like the ocean, too, he was
                         deep. Like a fire, he was shining. His body was unshakable; his mind was
                         unwavering, calm, and serene; and his senses were free of delusion,
@@ -429,7 +429,7 @@
                             reads: <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po
                             </foreign>/ <foreign xml:lang="Bo-Ltn" type="quote">rgyas pa mchog dang
                                 ldan pa</foreign>.</note> He had served victorious ones of the past,
-                            <ref cRef="F.80.b"/> created roots of virtue with them, and honored myriad
+                            <ref cRef="F.80.b" type="folio"/> created roots of virtue with them, and honored myriad
                         buddhas, and now he upheld the lineage of the Three Jewels. He was
                         compassionate, and his eloquence was unimpeded. He was loving toward all
                         beings, of pure faith, and his attitude was virtuous, steadfast, and
@@ -445,7 +445,7 @@
                         his palms joined together he bowed down toward the Blessed One and said,
                         “If the Blessed One would grant me the opportunity, I have a few
                         questions I would like to put to the Blessed One, the thus-gone, worthy, and perfect
-                        Buddha.” <ref cRef="F.81.a"/>
+                        Buddha.” <ref cRef="F.81.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-32"/>
                     <p tid="20">The Blessed One replied to the bodhisattva great being Crown Jewel of the Lord of Men Resembling a Sublime Lion Sporting and Roaring in Mountain Caves, Peaks, Clefts, Valleys, and Meadows, “Noble son, all the buddhas
@@ -469,7 +469,7 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-306"/>
                     <p tid="23">The Blessed One then said, “Noble son, after having first given
                         rise to the mind set on awakening, bodhisattva great beings should strive
-                        diligently on the path of the ten virtuous actions. <ref cRef="F.81.b"/> Noble
+                        diligently on the path of the ten virtuous actions. <ref cRef="F.81.b" type="folio"/> Noble
                         son, how do bodhisattva great beings strive diligently on the path of the ten
                         virtuous actions? Noble son, bodhisattva great beings do so by abandoning
                         killing and so forth, up until wrong views.<note place="end" xml:id="UT22084-061-002-36" index="13">The abandonments of killing and
@@ -506,7 +506,7 @@
                         <l>“Those who cherish their patrimony</l>
                         <l>Should never steal any wealth, </l>
                         <l>Even mere pieces of wood, clods of dirt,</l>
-                        <l>Or what is rejected by others. <ref cRef="F.82.a"/>
+                        <l>Or what is rejected by others. <ref cRef="F.82.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-41"/>
@@ -540,7 +540,7 @@
                         <l>“The wise who are fond of the truth,</l>
                         <l>As even yakṣas and bhūtas are, </l>
                         <l>Should never deceive others </l>
-                        <l>By telling lies. <ref cRef="F.82.b"/>
+                        <l>By telling lies. <ref cRef="F.82.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-45"/>
@@ -573,7 +573,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-48"/>
                     <p tid="34">“How do bodhisattvas abandon idle gossip? Noble son, bodhisattva
-                            <ref cRef="F.83.a"/> great beings do so by reflecting in this way: ‘Even
+                            <ref cRef="F.83.a" type="folio"/> great beings do so by reflecting in this way: ‘Even
                         those who engage in idle gossip find meaningless conversations unpleasant;
                         they do not want to hear them, do not like them, and do not enjoy them. I
                         also find meaningless conversations unpleasant; I do not want to hear them,
@@ -604,7 +604,7 @@
                     <p tid="37">“How do bodhisattvas abandon ill will? Noble son, bodhisattvas do
                         so by reflecting in this way: ‘Even those who entertain malicious thoughts
                         find ill will unpleasant; they do not wish for it, do not like it, and do
-                        not enjoy it. I, too, <ref cRef="F.83.b"/> find ill will unpleasant; I do not
+                        not enjoy it. I, too, <ref cRef="F.83.b" type="folio"/> find ill will unpleasant; I do not
                         wish for it, do not like it, and do not enjoy it. Therefore, just as I want no one 
                         to express malicious words to me, order someone to express them, or rejoice in someone expressing
                         them, I myself will never express malicious words to anyone, order someone to express them, or
@@ -642,7 +642,7 @@
                 <div type="section">
                     <head type="section" tid="1974">How Bodhisattvas Exert Themselves in the Ten Perfections</head>
                     <milestone unit="chunk" xml:id="UT22084-061-002-57"/>
-                    <p tid="43">“Furthermore, noble son, <ref cRef="F.84.a"/> after having first
+                    <p tid="43">“Furthermore, noble son, <ref cRef="F.84.a" type="folio"/> after having first
                         given rise to the mind set on awakening, bodhisattva great beings should
                         exert themselves in the ten perfections. What are those ten? They are the
                         perfections of generosity, discipline, patience, diligence, concentration,
@@ -667,7 +667,7 @@
                         food!’ The generosity practiced by offering food with such thoughts will
                         provide longevity and happiness.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-60"/>
-                    <p tid="46">At this point, the Blessed One uttered these verses: <ref cRef="F.84.b"/>
+                    <p tid="46">At this point, the Blessed One uttered these verses: <ref cRef="F.84.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-61"/>
                     <lg tid="47">
@@ -722,7 +722,7 @@
                         way: ‘Offering vehicles represents the gathering of all joy and the bases of
                         miraculous power. I must therefore practice generosity by offering vehicles;
                         I will definitely offer chariots, palanquins, horses, elephants, and shoes!’
-                        Then, when practicing generosity by offering vehicles, <ref cRef="F.85.a"/>
+                        Then, when practicing generosity by offering vehicles, <ref cRef="F.85.a" type="folio"/>
                         bodhisattvas make the following aspiration: ‘In accordance with the
                         aspirations praised by the buddhas, through this offering of vehicles may I
                         gather every form of happiness and the bases of miraculous power for all
@@ -772,7 +772,7 @@
                         way: ‘Offering ornaments represents the perfection of the thirty-two major
                         marks and the eighty minor marks of a great being. Therefore, I will
                         definitely practice generosity by offering ornaments made of gold, jewels,
-                        pearls, beryls, conch shells, moonstones, and coral!’ <ref cRef="F.85.b"/> When
+                        pearls, beryls, conch shells, moonstones, and coral!’ <ref cRef="F.85.b" type="folio"/> When
                         practicing generosity by offering ornaments, bodhisattvas make the following
                         aspiration: ‘In accordance with the aspirations expressed by the buddhas,
                         through this offering of ornaments may I witness the bodies of all beings
@@ -823,7 +823,7 @@
                         will definitely practice generosity by offering music!’ When practicing
                         generosity by offering music, bodhisattvas make the following aspiration:
                         ‘In accordance with the aspirations taught by the buddhas, through this
-                        offering of music may I cause all beings to perfect the divine ear!’ <ref cRef="F.86.a"/> Regarding this, there are also some concluding verses: </p>
+                        offering of music may I cause all beings to perfect the divine ear!’ <ref cRef="F.86.a" type="folio"/> Regarding this, there are also some concluding verses: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-81"/>
                     <lg tid="66">
                         <l>“Through this offering of music, </l>
@@ -872,7 +872,7 @@
                         precious flowers of retention, eloquence, and the branches of awakening.
                         Therefore, I will definitely practice generosity by offering flowers and
                         flower garlands!’ When practicing generosity by offering flowers and flower
-                        garlands, bodhisattvas <ref cRef="F.86.b"/> make the following aspiration:
+                        garlands, bodhisattvas <ref cRef="F.86.b" type="folio"/> make the following aspiration:
                         ‘In accordance with the aspirations expressed by the buddhas, through this
                         offering of flowers and flower garlands may I adorn the body of all beings
                         with the precious flowers of retention, eloquence, and the branches of
@@ -919,7 +919,7 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-92"/>
                     <p tid="77">“How do bodhisattvas exert themselves in the practice of generosity
                         by offering residences? Noble son, bodhisattvas do so by reflecting in this
-                        way: ‘Offering residences represents <ref cRef="F.87.a"/> becoming a
+                        way: ‘Offering residences represents <ref cRef="F.87.a" type="folio"/> becoming a
                         shelter, a protector, a support, a refuge, and a helper for all beings.
                         Therefore, I will definitely practice generosity by offering residences!’
                         When practicing generosity by offering residences, bodhisattvas make the
@@ -971,7 +971,7 @@
                         <l>With the sword of insight,</l>
                         <l>And offer them perfect beds worthy of the blissful ones</l>
                         <l>And rested upon<note place="end" xml:id="UT22084-061-002-99" index="17">K<hi rend="subscript">Y</hi>, K, and S read: <foreign xml:lang="Bo-Ltn" type="quote">bstan</foreign>. J and N read: <foreign xml:lang="Bo-Ltn" type="quote">stan</foreign>.</note> in the abodes of Brahmā.
-                                <ref cRef="F.87.b"/>
+                                <ref cRef="F.87.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-100"/>
@@ -1027,7 +1027,7 @@
                         provisions for awakening. Therefore, I will definitely practice generosity
                         by offering provisions!’ When practicing generosity by offering provisions,
                         bodhisattvas make the following aspiration: ‘In accordance with aspirations
-                        worthy of the thus-gone ones, <ref cRef="F.88.a"/> through this offering of
+                        worthy of the thus-gone ones, <ref cRef="F.88.a" type="folio"/> through this offering of
                         provisions may I cause all beings to complete the provisions for awakening!’
                         Regarding this, there are also some concluding verses: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-107"/>
@@ -1075,7 +1075,7 @@
                         bodhisattvas do so by reflecting in this way: ‘The generosity of
                         relinquishing male and female slaves, staff, and workers represents the
                         perfection of the bodhisattvas’ freedom, independence, and self-arisen <term type="ignore">wisdom</term>. Therefore, I will definitely practice
-                        generosity by relinquishing male and female slaves, staff, <ref cRef="F.88.b"/> and workers!’ When practicing generosity by
+                        generosity by relinquishing male and female slaves, staff, <ref cRef="F.88.b" type="folio"/> and workers!’ When practicing generosity by
                         relinquishing male and female slaves, staff, and workers, bodhisattvas make
                         the following aspiration: ‘In accordance with the aspirations expressed and
                         taught by the thus-gone ones, through this generosity of relinquishing my
@@ -1106,7 +1106,7 @@
                         realms. Therefore, I will definitely practice generosity by giving away
                         gold, silver, jewels, pearls, beryls, conch shells, moonstones, coral, and
                         other precious substances!’ When practicing generosity by giving away gold,
-                        silver, jewels, pearls, beryls, <ref cRef="F.89.a"/> conch shells, moonstones,
+                        silver, jewels, pearls, beryls, <ref cRef="F.89.a" type="folio"/> conch shells, moonstones,
                         coral, and other precious substances, bodhisattvas make the following aspiration:
                         ‘In accordance with the aspirations that are known, explained, and clarified
                         by the thus-gone ones, may this offering of gold, silver, jewels, pearls,
@@ -1141,7 +1141,7 @@
                         the following aspiration: ‘In accordance with the aspirations expressed and
                         practiced by the thus-gone ones, by giving away horses, elephants, and
                         chariots may I include all beings in the Great Vehicle—the supreme vehicle,
-                        the unequaled vehicle, <ref cRef="F.89.b"/> the unsurpassed buddha vehicle
+                        the unequaled vehicle, <ref cRef="F.89.b" type="folio"/> the unsurpassed buddha vehicle
                         that is the foremost, sublime, and most excellent vehicle!’ Regarding this,
                         there are also some further verses: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-119"/>
@@ -1188,7 +1188,7 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-124"/>
                     <p tid="107">“How do bodhisattvas exert themselves in the practice of
                         generosity by giving away their spouses, sons, and daughters? Noble son,
-                        bodhisattvas do so by reflecting in this way: <ref cRef="F.90.a"/> ‘Giving
+                        bodhisattvas do so by reflecting in this way: <ref cRef="F.90.a" type="folio"/> ‘Giving
                         away one’s spouses, sons, and daughters represents the bodhisattvas’ awakening
                         to unsurpassed and perfect buddhahood. Therefore, I will definitely practice
                         generosity by giving away my spouses, sons, and daughters!’ When practicing
@@ -1224,7 +1224,7 @@
                         wealth, grains, and stores, bodhisattvas make the following aspiration: ‘In
                         accordance with the aspirations expressed by the thus-gone ones, through
                         this gift of wealth, grains, and stores may I cause all beings to perfect
-                        the treasury of the sacred Dharma!’ Regarding this, it is said: <ref cRef="F.90.b"/>
+                        the treasury of the sacred Dharma!’ Regarding this, it is said: <ref cRef="F.90.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-129"/>
                     <lg tid="111">
@@ -1272,7 +1272,7 @@
                     <milestone unit="chunk" xml:id="UT22084-061-002-134"/>
                     <p tid="116">“How do bodhisattvas exert themselves in the practice of
                         generosity by giving away crest jewels and crowns? Noble son, bodhisattvas
-                        do so <ref cRef="F.91.a"/> by reflecting in this way: ‘Giving away crest
+                        do so <ref cRef="F.91.a" type="folio"/> by reflecting in this way: ‘Giving away crest
                         jewels and crowns represents the bodhisattvas’ achievement of the unseen
                         crown of the head.<note place="end" xml:id="UT22084-061-002-135" index="19">The Buddha’s crown protuberance (Skt. <foreign xml:lang="Sa-Ltn" type="term">uṣṇīṣa</foreign>) is described in canonical sources as
                             being invisible, either because the light it emanates is brighter than
@@ -1312,7 +1312,7 @@
                         appearance become peaceful and radiant. Like the brilliance of many suns,
                         may the light rays of their compassion illuminate the gloom of helpless
                         humans engulfed in darkness, down to the Hell of Endless Torment, and
-                        eliminate the physical sufferings of extreme heat. <ref cRef="F.91.b"/> May
+                        eliminate the physical sufferings of extreme heat. <ref cRef="F.91.b" type="folio"/> May
                         they be endowed with lotus-like feet, which are adorned with the marks of
                         thousand-spoked wheels, even, and smooth. May they obtain long toes
                         connected by webbing like the feet of swans, and may they have nails that
@@ -1355,7 +1355,7 @@
                     <lg tid="123">
                         <l>“Through this offering of my hands,</l>
                         <l>May I swiftly become an object of worship for the world,</l>
-                        <l>A great guide with long hands holding jewels, <ref cRef="F.92.a"/>
+                        <l>A great guide with long hands holding jewels, <ref cRef="F.92.a" type="folio"/>
                         </l>
                         <l>And possessing a golden complexion!</l>
                     </lg>
@@ -1406,7 +1406,7 @@
                         <l>“Through this offering of my eyes,</l>
                         <l>May I awaken to unsurpassed buddhahood</l>
                         <l>And cause all beings</l>
-                        <l>To purify the eye of Dharma! <ref cRef="F.92.b"/>
+                        <l>To purify the eye of Dharma! <ref cRef="F.92.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-149"/>
@@ -1452,7 +1452,7 @@
                         giving away their skin, bodhisattvas make the following aspiration: ‘In
                         accordance with the aspirations of the thus-gone ones, through this gift of
                         my skin may I cause all beings to achieve smooth, fine, and golden skin!’
-                            <ref cRef="F.93.a"/> Regarding this, there is also a further verse: </p>
+                            <ref cRef="F.93.a" type="folio"/> Regarding this, there is also a further verse: </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-154"/>
                     <lg tid="135">
                         <l>“May this gift of my skin</l>
@@ -1497,7 +1497,7 @@
                         <l>As indestructible vajra!</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-061-002-159"/>
-                    <p tid="140">“Furthermore, bodhisattvas also think, <ref cRef="F.93.b"/> ‘By
+                    <p tid="140">“Furthermore, bodhisattvas also think, <ref cRef="F.93.b" type="folio"/> ‘By
                         offering excellent colors, one will attain a beautiful complexion, so I will
                         definitely offer excellent colors! By offering excellent smells, one will
                         develop the scent of renown. By offering excellent flavors, one will gain
@@ -1525,7 +1525,7 @@
                         practice generosity by offering the Dharma! </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-160"/>
                     <p tid="141">“When bodhisattvas practice generosity by making such offerings,
-                        they do not do so out of attachment, aversion, delusion, <ref cRef="F.94.a"/> irritation, contempt, violence, deprecation, disrespect, reproach, pride,
+                        they do not do so out of attachment, aversion, delusion, <ref cRef="F.94.a" type="folio"/> irritation, contempt, violence, deprecation, disrespect, reproach, pride,
                         or haughtiness. They never offer leftovers or anything rotten or decaying.
                         Instead, they present all their offerings respectfully, always expressing an
                         attitude of respect, reverence, and worship. They offer large quantities of
@@ -1546,7 +1546,7 @@
                         generosity they never think, ‘Through this gift, these roots of virtue, and
                         this offering of the Dharma may I become a king, a ruler, a minister, a god,
                         a nāga, a divine son, or any other type of divine being!’ Instead, what do bodhisattvas wish for? They dedicate their merit
-                        to unsurpassed and perfect <ref cRef="F.94.b"/> awakening. They think,
+                        to unsurpassed and perfect <ref cRef="F.94.b" type="folio"/> awakening. They think,
                         ‘Through these roots of virtue and this offering of the Dharma, may I free
                         all beings who have not crossed over to the other shore, and may I liberate
                         all those who are not yet liberated. May I provide relief to all those who
@@ -1586,7 +1586,7 @@
                         Thrilled, happy, and ecstatic, he stood up, draped his shawl over one
                         shoulder, and knelt with his right knee on the calyx of a lotus flower. With
                         his palms joined together, he bowed down toward the Blessed One and
-                        applauded him by chanting these verses: <ref cRef="F.95.a"/>
+                        applauded him by chanting these verses: <ref cRef="F.95.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-002-168"/>
                     <lg tid="149">
@@ -1644,7 +1644,7 @@
                         gandharvas, rejoiced and praised the teachings of the Blessed One.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-002-175"/>
-                    <trailer tid="154">This concludes the noble Great Vehicle sūtra, “<title xml:lang="en">The Perfection of Generosity</title>.” <ref cRef="F.95.b"/>
+                    <trailer tid="154">This concludes the noble Great Vehicle sūtra, “<title xml:lang="en">The Perfection of Generosity</title>.” <ref cRef="F.95.b" type="folio"/>
                     </trailer>
                 </div>
                 <div type="colophon">
