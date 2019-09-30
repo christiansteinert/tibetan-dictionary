@@ -23,13 +23,12 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.46 <date>2019</date>
+                <edition>v 1.47 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -48,9 +47,8 @@
                     <biblScope>Degé Kangyur vol. 62 (mdo sde, tsha), folios 125.a–125.b<!--UT22084-062-012;--></biblScope>
                     <author role="translatorTib">Surendrabodhi</author>
                     <author role="translatorTib">Venerable Yeshe De</author>
-                    <location count-pages="2">
-                        <start volume="62" page="251"/>
-                        <end volume="62" page="252"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="62" start-page="249" end-page="250"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668"/>
                     <idno source-id="O1JC114941JC11848" work="W22084"/>
@@ -59,9 +57,8 @@
                     <ref>Toh 520</ref>
                     <biblScope>Degé Kangyur vol. 88 (rgyud ’bum, na), folios 41.a–42.a (in 1737 <foreign xml:lang="Bo-Ltn">par phud</foreign> printing), 58.a–59.a (in later printings)<!--UT22084-088-014-->
                     </biblScope>
-                    <location count-pages="3">
-                        <start volume="88" page="83"/>
-                        <end volume="88" page="85"/>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="88" start-page="115" end-page="117"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415"/>
                     <idno source-id="O1JC114941JC12242" work="W22084"/>
@@ -69,18 +66,18 @@
                 <bibl key="toh980" type="text">
                     <ref>Toh 980</ref>
                     <biblScope>Degé Kangyur vol. 101 (gzungs ’dus, waṃ), folios 99.a–99.b<!--UT22084-101-035--></biblScope>
-                    <location count-pages="2">
-                        <start volume="101" page="199"/>
-                        <end volume="101" page="200"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="101" start-page="197" end-page="198"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568"/>
                     <idno source-id="O1JC114941JC12743" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-08-09T16:59:33.258Z" user="admin">09/08/2019 16:59:33</note>
+                <note type="lastUpdated" date-time="2019-09-27T15:40:36.687Z" user="celso">27/09/2019 15:40:36</note>
             <note type="updated" update="text-version" value="v 1.45" date-time="2019-06-18T16:21:59.388Z" user="celso">v 1.45 2019</note>
                 <note type="updated" update="text-version" value="v 1.46" date-time="2019-08-09T16:59:29.348Z" user="celso">v 1.46 2019</note>
+                <note type="updated" update="text-version" value="v 1.47" date-time="2019-09-30T19:12:16.904Z" user="andre">Updated due to folio numbering correction</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -219,15 +216,15 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-062-012-8"/>
                     <p tid="11">
-                        <ref cRef="F.125.a" key="toh212"/>
+                        <ref cRef="F.125.a" key="toh212" type="folio"/>
                         <ref key="toh520">[F.41.a]</ref>
-                        <ref cRef="F.58.a" key="toh520"/>
-                        <ref cRef="F.99.a" key="toh980"/> Homage to all buddhas and bodhisattvas!
+                        <ref cRef="F.58.a" key="toh520" type="folio"/>
+                        <ref cRef="F.99.a" key="toh980" type="folio"/> Homage to all buddhas and bodhisattvas!
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-062-012-9"/>
                     <p tid="12">Thus did I hear at one time. <ref key="toh520">[F.41.b]</ref>
-                        <ref cRef="F.58.b" key="toh520"/> The Blessed One was in the Realm of the Thirty-Three Gods, seated on
+                        <ref cRef="F.58.b" key="toh520" type="folio"/> The Blessed One was in the Realm of the Thirty-Three Gods, seated on
                         the throne of Indra. With him were great hearers such as the venerable Aśvajit; bodhisattva mahāsattvas
                         such as noble Maitreya, noble Avalokiteśvara, and Vajrapāṇi, who were adorned with immeasurable precious
                         qualities; as well as various gods such as the great Brahmā, who is the lord of the Sahā world, Nārāyaṇa,
@@ -239,9 +236,9 @@
                         together, he then bowed toward the Blessed One and addressed to him these words: </p>
                     <milestone unit="chunk" xml:id="UT22084-062-012-11"/>
                     <p tid="14">“Blessed One, these gods all really wish to build a stūpa. Now that they are present in this
-                        entourage, please teach them the Dharma in such a way so that their merit of Brahmā <ref cRef="F.125.b" key="toh212"/>
+                        entourage, please teach them the Dharma in such a way so that their merit of Brahmā <ref cRef="F.125.b" key="toh212" type="folio"/>
                         will increase, and the merit of the monks, nuns, laymen, and laywomen will increase much more than that of
-                        all types of beings in the world of gods, māras, and Brahmā, including renunciants and brahmins.”<ref cRef="F.99.b" key="toh980"/>
+                        all types of beings in the world of gods, māras, and Brahmā, including renunciants and brahmins.”<ref cRef="F.99.b" key="toh980" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-062-012-12"/>
@@ -261,7 +258,7 @@
                         <l>The Tathāgata has taught their cause,</l>
                         <l>And that which is their cessation; </l>
                         <l>Thus has proclaimed the Great Renunciant. <ref key="toh520">[F.42.a]</ref>
-                            <ref cRef="F.59.a" key="toh520"/>
+                            <ref cRef="F.59.a" key="toh520" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-062-012-13"/>
