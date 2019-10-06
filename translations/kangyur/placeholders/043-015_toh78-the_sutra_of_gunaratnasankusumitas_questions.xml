@@ -13,9 +13,10 @@
             <editor role="externalReviewer" ref="contributors.xml#person-262">David Higgins</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.1 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="2.e">
+            <publicationStmt status="2.c">
                 <idno xml:id="UT22084-043-015"/>
                 <date/>
             </publicationStmt>
@@ -23,16 +24,18 @@
                 <bibl key="toh78" type="text">
                     <ref>Toh 78</ref>
                     <biblScope>vol:43, ff.261v-266v(pp.522-532)</biblScope>
-                    <location count-pages="11">
-                        <start volume="43" page="524"/>
-                        <end volume="43" page="534"/>
+                    <location work="UT4CZ5369" count-pages="11">
+                        <volume number="43" start-page="522" end-page="532"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11619" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:35:48 by admin</note>
+                <note type="lastUpdated" date-time="2019-10-06T21:06:46.107Z" user="admin">06/10/2019 21:06:46</note>
+            <note type="updated" update="translation-status" value="2.d" date-time="2019-09-04T18:05:51.405Z" user="james">2.d</note>
+                <note type="updated" update="text-version" value="0.1" date-time="2019-10-06T21:06:42.681Z" user="dion-blundell"/>
+                <note type="updated" update="translation-status" value="2.c" date-time="2019-10-06T21:06:42.681Z" user="dion-blundell">2.c</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
