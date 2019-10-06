@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rnam par mi rtog par 'jug pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">avikalpapraveśa</title>
+                <title type="mainTitle" xml:lang="en">Entering into Non-conceptuality</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">'phags pa rnam par mi rtog par 'jug pa zhes bya ba'i gzungs</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">āryāvikalpapraveśanāmadhāraṇī</title>
+                <title type="longTitle" xml:lang="en">The Noble Dhāraṇī Entitled “Entering into Non-conceptuality”</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">rnam par mi rtog par 'jug pa'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">avikalpapraveśadhāraṇī</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+                <editor role="externalReviewer" ref="contributors.xml#person-51">Dr. James Duncan
+                    Gentry</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-257">Raynald
+                    Prévèreau</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-99">Thomas
+                    Cruijsen</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="reviser" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.00 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="2.a">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-057-001"/>
+                <date>2019-10-06</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh142" type="text">
+                    <ref>Toh 142</ref>
+                    <biblScope>vol.57, ff.1r-6v(pp.1-12)</biblScope>
+                    <location work="UT4CZ5369" count-pages="11">
+                        <volume number="57" start-page="2" end-page="12"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11729" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-06T14:29:38.986Z" user="andre">06/10/2019 14:29:38</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2019-09-17T21:25:58.793Z" user="james">2.a</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-057-001-1"/>
+                <p tid="2">
+                    <title xml:lang="en">The Noble Dhāraṇī Entitled “Entering into
+                        Non-conceptuality”</title> is a short Mahāyāna sūtra that came to be
+                    particularly influential in Yogācāra circles. The central theme of the sūtra is
+                    the attainment of the non-conceptual realm, which is reached through the
+                    practice of relinquishing all conceptual signs by not directing the mind toward
+                    them. The sūtra presents the progressive stages through which bodhisattvas can
+                    abandon increasingly subtle conceptual signs and eliminate the erroneous ideas
+                    that lead to the objectification of phenomena.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-057-001-2"/>
+                <p tid="4">
+                    <title xml:lang="en">Entering into Non-conceptuality</title> was translated by
+                    the Dharmachakra Translation Committee under the supervision of Chokyi Nyima
+                    Rinpoche. Ryan Damron prepared the translation and introduction. Miguel Sawaya
+                    compared the English translation with the Tibetan translation found in the Degé
+                    Kangyur and edited the text.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <head tid="6">Main Section</head>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-3"/>
+                    <p tid="7">The <title xml:lang="Sa-Ltn">Avikalpapraveśadhāraṇī</title> (APD), also known
+                        by the synonymous title <title xml:lang="Sa-Ltn">Nirvikalpapraveśadhāraṇī</title>, is a short but influential Mahāyāna
+                            sūtra.<note place="end" index="1" xml:id="UT22084-057-001-4"> Though not explicitly identified as a Mahāyāna
+                            sūtra, the APD states that it was taught to a gathering of bodhisattvas,
+                            with the bodhisattva Avikalpaprabhāsa serving as the primary
+                            interlocutor.</note> Despite being labeled a dhāraṇī, the text
+                        demonstrates the style of a sūtra and is cataloged as such in the Tibetan
+                        Kangyur collections. Though the genre of dhāraṇī is difficult to define, the
+                        term is typically applied to Buddhist scriptures that contain a specific
+                        mantra-like formula that is to be recited in order to bring about a desired
+                        meritorious or even magical result. The APD contains no such formula and
+                        otherwise bears little resemblance to the extensive body of scripture
+                        preserved in the dhāraṇī section of the Tibetan Kangyur. It is possible,
+                        however, to understand this designation by considering the basic meaning of
+                        the Sanskrit term <foreign xml:lang="Sa-Ltn" type="term">dhāraṇa</foreign>.
+                        The term commonly means to “hold,” “uphold,” or “maintain,” and by extension
+                        is frequently used in reference to memory and learning. In the context of
+                        the <title xml:lang="Sa-Ltn">Avikalpapraveśadhāraṇī</title>, the term
+                            <distinct>dhāraṇī</distinct> identifies the text as a mnemonic support
+                        for the Buddha’s discourse on non-conceptuality, presenting his teaching in
+                        a manner that can be easily memorized and frequently recollected. As the
+                        Buddha states at the beginning of the sūtra, a bodhisattva who keeps this
+                        teaching in mind (<foreign xml:lang="Sa-Ltn" type="term">dhārayan</foreign>)
+                        will make rapid progress on the path to buddhahood.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-5"/>
+                    <p tid="8">A popular sūtra in both India and Tibet, the <hi type="wordfile-remnant">Avikalpapraveśadhāraṇī</hi> was particularly influential in Yogācāra
+                        circles. From an early period it was closely associated with the Five
+                        Treatises of Maitreya and is now widely considered a source text for
+                        Maitreya’s <foreign xml:lang="Sa-Ltn" type="term">Dharmadharmatāvibhāga</foreign>.<note place="end" index="2" xml:id="UT22084-057-001-6"> On the relationship
+                            between the APD and the <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāga</title>, see Brunnhölzl 2012, pp. 49–52;
+                            Mathes 2005, pp. 12–13; Meinert 2003, p. 180; Robertson 2006, p.
+                            91.</note> At least two major Indian commentaries were composed on the
+                            <fix>Avikalpapreveśdhāraṇī</fix>: Kamalaśīla’s (fl. 740–95) <title xml:lang="Sa-Ltn">Avikalpapraveśadhāraṇīṭīkā</title> and a similarly
+                        titled work, now lost, by Śākyamitra (fl. ninth century).<note place="end" index="3" xml:id="UT22084-057-001-7">
+                            This is the <title xml:lang="Bo-Ltn">rnam par mi rtog pa la ’jug pa’i
+                                gzung gyi ’grel pa</title>, which is listed as text no. 552 in the
+                            ldan dkar ma catalog (Lalou 1953, p. 332).</note> Renowned Yogācārins
+                        such as Sthiramati (fl. 510–70) and Ratnākaraśānti (fl. eleventh century)
+                        cited the APD in their commentarial works, the latter quoting it in his
+                        treatises on both sūtric and tantric scriptures.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-8"/>
+                    <p tid="9">The <fix>Avikalpapraveśadhāraṇī</fix> proved equally influential in Tibet,
+                        particularly during the early spread of Buddhist teachings in the seventh
+                        through ninth centuries. It was first translated in this period,<note place="end" index="4" xml:id="UT22084-057-001-9"> It is listed as text no. 197 in the Denkarma catalog
+                                (<fix>ldan dkar ma</fix>) (Lalou 1953, p. 324).</note> and became an
+                        important text in the debate over the primacy of gradual or sudden paths to
+                            awakening.<note place="end" index="5" xml:id="UT22084-057-001-10"> For more on the debate between proponents
+                            of the gradual and spontaneous paths to awakening, see Meinert 2003, pp.
+                            179–80, particularly footnote 13; Robertson 2006, pp. 36–87.</note> The
+                        APD was claimed by proponents of both positions; Kamalaśīla, who strenuously
+                        supported the gradualist position, paraphrased the APD in his <title xml:lang="Sa-Ltn">Bhāvanākrama</title> series and composed a commentary
+                        on it, possibly while residing in Tibet and taking part in this debate.<note place="end" index="6" xml:id="UT22084-057-001-11"> See Robertson 2006, pp. 87–91.</note> Conversely,
+                        Vimalamitra cites the APD in support of the instantaneous position in his
+                            *<title xml:lang="Sa-Ltn">Sakṛtpraveśikanirvikalpabhāvanārtha</title>.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-12"/>
+                    <p tid="10">Nubchen Sangyé Yeshé (gnubs chen sangs rgyas ye shes, fl. ninth century)
+                        similarly invoked the <hi type="wordfile-remnant">Avikalpapraveśadhāraṇī</hi> in his <title xml:lang="en">Lamp for the
+                            Eye of Meditation</title> (<title xml:lang="Bo-Ltn">bsam gtan mig
+                            sgron</title>), a text in which he cataloged and hierarchically ranked
+                        the four primary Buddhist systems of his day: the gradual path promoted by
+                        Kamalaśīla, the instantaneous path famously championed by the Chinese Chan
+                        master Heshang Moheyan, the tantric system of Mahāyoga, and the teachings of
+                        the Great Perfection. Nubchen’s analysis of these four paths hinges on their
+                        particular understanding of non-conceptuality, for which he cites numerous
+                        scriptural sources. In the context of these arguments he locates the APD as
+                        a source text for the gradualist position.<note place="end" index="7" xml:id="UT22084-057-001-13"> For a detailed
+                            discussion of the relationship between the APD and the <title xml:lang="en">Lamp for the Eye of Meditation</title>, see Meinert
+                            2003.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-14"/>
+                    <p tid="11">In the later spread of Buddhist teachings in Tibet the APD continued to
+                        feature in Yogācāra-themed literature, especially in the commentarial
+                        traditions surrounding the <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāga</title> and the <title xml:lang="Sa-Ltn">Ratnagotravibhāga</title>.<note place="end" index="8" xml:id="UT22084-057-001-15"> See Brunnhölzl 2012, pp.
+                            150–151; Mathes 2005, passim.</note>
+                    </p>
+                </div>
+                <div type="section">
+                    <head tid="12">Summary of the Text</head>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-16"/>
+                    <p tid="13">The central theme of <title xml:lang="en">Entering into
+                            Non-conceptuality</title> is the practice of relinquishing all
+                        conceptual signs by not directing the mind toward them. The sūtra presents
+                        the progressive stages through which bodhisattvas can abandon increasingly
+                        subtle conceptual signs and eliminate the erroneous ideas that lead to the
+                        objectification of phenomena. This serves to undermine the conceptual
+                        reification of appearances and facilitate direct contact with the
+                        non-conceptual realm.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-17"/>
+                    <p tid="14">The sūtra begins in the North Indian town of Rājagṛha, where the Buddha is
+                        residing together with an assembly of monks and bodhisattvas. From among the
+                        bodhisattvas, Avikalpaprabhāsa (Radiance of Non-conceptuality) approaches
+                        the Buddha and beseeches him to teach <title xml:lang="en">The Dhāraṇī
+                            Entitled “Entering into Non-conceptuality.”</title> The Buddha assents,
+                        and begins by explaining the progressively subtle sets of conceptual signs
+                        that need to be abandoned. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-18"/>
+                    <p tid="15">The first set of conceptual signs to be abandoned consist of are those that
+                        are most fundamental, which in the context of this sūtra refers to any
+                        defiled subjective or objective phenomena in general, and to the five
+                        aggregates in particular. The method for abandoning such conceptual
+                        signs—the primary technique emphasized throughout the text—is to refrain
+                        from mentally engaging them, and to recognize that they are mere appearances
+                        that do not correspond to real phenomena. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-19"/>
+                    <p tid="16">This formula is repeated with the remaining three categories of conceptual
+                        signs. The second category of conceptual signs comprises those that arise in
+                        relation to the antidotes applied when striving to overcome the conceptual
+                        reification of the defiled entities listed in the previous category. These
+                        antidotes include the six perfections: generosity, discipline, patience,
+                        diligence, meditative concentration, and insight. This category also
+                        includes any conceptual signs that arise through an examination of the
+                        antidotes’ intrinsic natures, qualities, and essences.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-20"/>
+                    <p tid="17">The third category of conceptual signs comprises those that pertain to any
+                        true reality one believes to have been realized once the antidotes have been
+                        applied. This includes any conceptual mark that may arise in the context of
+                        examining traditional Buddhist designations for ultimate reality: emptiness,
+                        suchness, the absolute, ultimate truth, and so forth. This also includes any
+                        further marks that arise when one analyzes these designations in terms of
+                        their intrinsic natures, qualities, or essences. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-21"/>
+                    <p tid="18">The fourth and final set of conceptual signs consists of those pertaining to
+                        the attainments that are believed to arise after true reality has been
+                        realized. These include those marks that arise when examining everything
+                        from the ten bodhisattva levels through to the attainment of omniscience. As
+                        in the case of the previous two sets of conceptual signs, this category also
+                        includes those marks that arise through an examination of this set in terms
+                        of intrinsic natures, qualities, and essences. And, as before, all of these
+                        conceptual signs are to be abandoned by not directing the mind toward them
+                        and thereby recognizing them as mere appearances.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-22"/>
+                    <p tid="19">The Buddha next points out that the abandonment of these conceptual signs is
+                        not itself sufficient for attaining a direct experience of the
+                        non-conceptual realm. The abandonment of conceptual signs brings about a
+                        state of meditative absorption conducive to approaching the non-conceptual,
+                        but it is only through the repeated application and perfection of this
+                        method that bodhisattvas are able to experience non-conceptuality. The
+                        Buddha explains that the non-conceptual realm transcends all imputations and
+                        is independent of all emotional and cognitive obscurations. It is
+                        immaterial, indemonstrable, and unmanifest. Bodhisattvas who become
+                        established in the non-conceptual realm will see that all phenomena are
+                        equivalent to space, that they are nothing more than an illusion, a mirage,
+                        a dream, and so forth. Stability in the non-conceptual realm grants a
+                        bodhisattva great power to perform all manner of awakened activity for the
+                        benefit of beings.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-23"/>
+                    <p tid="20">To illustrate the progressive process of meditation outlined in the sūtra,
+                        the Buddha provides an analogy. Just as a person who desires a
+                        wish-fulfilling jewel buried deep beneath the earth must forsake all other
+                        precious minerals unearthed as they dig deeper and deeper toward the
+                        wish-fulfilling jewel, so a bodhisattva who wishes to reach the
+                        non-conceptual realm must unrelentingly relinquish progressively subtler
+                        conceptual signs, not stopping until non-conceptuality is reached.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-24"/>
+                    <p tid="21">The Buddha next presents a sequence of reflections to be used to relinquish
+                        conceptual signs and thereby reach the non-conceptual realm. Whenever a
+                        conceptual mark arises, bodhisattvas should not entertain the idea that such
+                        a mark is their own or belongs to another; bodhisattvas should not regard
+                        that mark as actually representing a real phenomenon that arises or ceases,
+                        is pure or defiled, exists or does not exist, or has an intrinsic nature;
+                        they should not think of the phenomenon as being a cause, an effect, or any
+                        type of action; bodhisattvas should not apprehend any phenomena apart from
+                        the act of cognitive representation (Skt. <foreign xml:lang="Sa-Ltn" type="term">vijñapti</foreign>. Tib. <foreign xml:lang="Bo-Ltn" type="term">rnam par rig pa</foreign>)<fix>,</fix> nor should they
+                        consider that which is distinct from cognition to be unreal; they should not
+                        think cognition itself to be either real or unreal; and finally, when they
+                        no longer engage with any of these concepts, they should even give up the
+                        idea “this is the non-conceptual.” Only when bodhisattvas become stable in
+                        this realization do they enter into the non-conceptual realm.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-25"/>
+                    <p tid="22">The Buddha ends his discourse by extolling the great merit that will accrue
+                        to anyone who trains in this teaching, or even writes it down or recites it
+                        aloud. After offering a summary verse to cap the sūtra, the Buddha finishes
+                        his teaching as the entire retinue, along with the complete host of worldly
+                        and celestial beings, rejoices.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-26"/>
+                    <p tid="23">
+                        <hi type="wordfile-remnant">Recensions, Editions, and Translations</hi>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-27"/>
+                    <p tid="24">The present translation is based on the Sanskrit edition of the APD prepared
+                        by Kazunobu Matsuda, who relied on the two extant Sanskrit witnesses: a
+                        largely complete but slightly damaged manuscript currently held by the
+                        Institute of Oriental Studies at the Academy of Sciences of Russia in St.
+                        Petersburg, and a fragmented manuscript from Gilgit presently held in New
+                        Delhi, India.<note place="end" index="9" xml:id="UT22084-057-001-28"> See Matsuda, 1996. </note> The Tibetan
+                        translation, as preserved in the Degé Kangyur, has also been consulted for
+                        this translation. Significant variants between the Sanskrit text and Tibetan
+                        translations have been noted. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-29"/>
+                    <p tid="25">In addition to the canonical version of the Tibetan translation, two
+                        incomplete Tibetan manuscripts of the APD were discovered among the Dunhuang
+                        documents. One of the manuscripts (IOL Tib J 51) is a copy of the canonical
+                        translation prepared by Jinamitra, Dānaśīla, and Kawa Peltsek. The second
+                        (IOL Tib J 52) preserves a different translation, but it demonstrates only
+                        minor variants that are primarily due to the lexical preferences of the
+                            translator.<note place="end" index="10" xml:id="UT22084-057-001-30"> The extant folia of IOL Tib J 52
+                            correspond to folios 2.b.7–4.b.2 and 5.b.3–6.a.3 of the Degé Kangyur
+                            recension. It should be noted that the digitized images of the scans are
+                            disordered and one folio is reversed. The Arabic numerals on the right
+                            side of the folia do not represent the correct order. There also appears
+                            to be one folio missing in the sequence. Only variants that suggest
+                            differences between Sanskrit recensions have been noted.</note> In both
+                        cases the colophons are missing, making it difficult to precisely determine
+                        the details of their composition. There are also two extant Chinese
+                        translations of the APD: a Dunhuang manuscript by an unknown translator with
+                        the title <title xml:lang="Input Language">Ru wu fenbie zongchi
+                        jing</title>, and an early eleventh-century translation by Dānapāla, the
+                            <title xml:lang="Input Language">Fo shuo ru wu fenbie famen jing</title>
+                        (Taishō 654).<note place="end" index="11" xml:id="UT22084-057-001-31"> See Meinert 2003, pp. 178–179; Ueyama 1983,
+                            pp. 34–35. Ueyama presents an edition of the <title xml:lang="Input Language">Ru wu fenbie zongchi jing</title> in the
+                            same publication, pp. 38–40.</note> The latter is a translation of an
+                        otherwise unknown recension of the Sanskrit text.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-32"/>
+                    <p tid="26">The APD has previously been translated into English twice. Raymond Robertson
+                        translated the APD along with Kamalaśīla’s commentary in his 2006
+                        multi-volume work on the <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāga</title>. Karl Brunnhölzl includes a translation
+                        of the APD in an appendix to his 2012 study of the <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāga</title> and its commentarial tradition.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="27"> The Translation </head>
+                <head type="titleHon" tid="28">The Noble Dhāraṇī</head>
+                <head type="titleMain" tid="29">Entering into Non-conceptuality</head>
+                <!--In the rare case that there is initial text before the first chapter begins, the script will place the
+                        text here. However, this will cause the two headings for the "Honorific Title" and "Main Title" to be duplicated below
+                        as <p> elements. Markup Editors, please delete these initial duplicated <p> elements along with their milestones and delete this comment.-->
+                <milestone unit="chunk" xml:id="UT22084-057-001-33"/>
+                <p tid="30">
+                    <hi type="wordfile-remnant">The Noble Dhāraṇī</hi>
+                </p>
+                <milestone unit="chunk" xml:id="UT22084-057-001-34"/>
+                <p tid="31">
+                    <hi type="wordfile-remnant">Entering into Non-conceptuality</hi>
+                </p>
+                <div>
+                    <head tid="32">Main Section</head>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-35"/>
+                    <p tid="33">Homage to all buddhas and bodhisattvas!</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-36"/>
+                    <p tid="34">Thus did I hear at one time. The Blessed One, together with a great assembly
+                        of monks and bodhisattvas, was residing at Rājagṛha in the palace at the
+                        heart of the non-conceptual realm of phenomena, a place superior to
+                        everything within the three realms. Together with him were the bodhisattvas,
+                        the great beings, Avikalpa, Avikalpaprabhāsa, Avikalpacandra,
+                        Nirvikalpavīra, Nirvikalpadharmanirdeśakuśala, Nirvikalpasvabhāva,
+                        Nirvikalpamati, Nirvikalpanāda, Nirvikalpaspharaṇa, Nirvikalpasvara,<note place="end" index="12" xml:id="UT22084-057-001-37"> Instead of Nirvikalpasvara, the Degé translation reads
+                            Nirvikalpeśvara (<foreign xml:lang="Bo-Ltn">rnam par med dbang
+                                phyug</foreign>). " aing Faśīla, and Kawa Peltstegterpretation would
+                            accord with the Tib.ng the Tib. here. Best to note this, and it seems to
+                            me t</note> Maheśvara,<note place="end" index="13" xml:id="UT22084-057-001-38"> The Degé translation adds
+                            Nirvikalpa- to the name of Maheśvara (<foreign xml:lang="Bo-Ltn">rnam
+                                par rtog med dbang phyug chen po</foreign>).</note> [F.2.a]
+                        Nirvikalpamahāmaitrīśvara, and the bodhisattva, the great being,
+                        Avalokiteśvara.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-39"/>
+                    <p tid="35">At that time, the Blessed One, surrounded and esteemed by an assembly of
+                        hundreds of thousands, taught the Dharma<note place="end" index="14" xml:id="UT22084-057-001-40"> The Degé
+                            translation includes the statement “according to the Mahāyāna” (<foreign xml:lang="Bo-Ltn" type="quote">theg pa chen po la</foreign>).</note>
+                        concerning the non-conceptuality of phenomena. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-41"/>
+                    <p tid="36">The Blessed One surveyed the entire assembly of bodhisattvas and addressed
+                        them, “Noble sons, you should keep in mind the dhāraṇī called <title xml:lang="en">Entering into Non-conceptuality</title>. Keeping it in
+                        mind, a bodhisattva, a great being, will swiftly perfect the qualities of a
+                        buddha and will make steady, excellent progress.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-42"/>
+                    <p tid="37">The bodhisattva, the great being named Avikalpaprabhāsa, rose from his seat
+                        in the assembly, draped his upper robe over his shoulder, and knelt with his
+                        right knee on the ground. He bowed toward the Blessed One with hands folded
+                        and addressed the Blessed One, “Blessed One, please explain the dhāraṇī
+                            <title xml:lang="en">Entering into Non-conceptuality</title>. Once they
+                        have heard it, bodhisattvas, great beings, will keep it in mind, recite it,
+                        contemplate it properly, and teach it extensively to others.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-43"/>
+                    <p tid="38">Thus addressed, the Blessed One said, “Then listen well, noble sons, and be
+                        attentive as I explain the dhāraṇī <title xml:lang="en">Entering into
+                            Non-conceptuality</title>.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-44"/>
+                    <p tid="39">“That is excellent, Blessed One!” replied the bodhisattvas, the great beings.
+                        [F.2.b] They then listened to the Blessed One. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-45"/>
+                    <p tid="40">The Blessed One said to them: “Noble sons, those bodhisattvas, great beings,
+                        who hear teachings on the topic of non-conceptuality and then settle into
+                        non-conceptuality, will abandon all conceptual signs.<note place="end" index="15" xml:id="UT22084-057-001-46"> A
+                            “conceptual sign” (Skt. <foreign xml:lang="Sa-Ltn" type="term">vikalpanimitta</foreign>; Tib. <foreign xml:lang="Bo-Ltn" type="term">rnam par rtog pa’i mtshan ma</foreign>) should here be
+                            understood to refer to those signs that arise through conceptual
+                            engagement with the phenomenon under examination or discussion.</note>
+                        First, bodhisattvas abandon the most fundamental conceptual signs, those of
+                        subject and object. The most fundamental conceptual signs are those marks
+                        that belong to a defiled entity. ‘Defiled entity’ refers to the five
+                        aggregates as the bases for clinging: the aggregate of matter as a basis of
+                        clinging, the aggregate of sensation as a basis of clinging, the aggregate
+                        of perception as a basis of clinging, the aggregate of karmic dispositions
+                        as a basis for clinging, and the aggregate of consciousness as a basis for
+                        clinging. How do bodhisattvas abandon these fundamental conceptual signs?
+                        They abandon them by not directing their minds toward what is experientially
+                        evident. </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-47"/>
+                    <p tid="41">“Once bodhisattvas have progressively abandoned those conceptual signs,
+                        another set of conceptual signs based on an examination of antidotes arises
+                        and becomes experientially evident. This includes the conceptual signs that
+                        arise through examining generosity, examining discipline, examining
+                        patience, examining diligence, examining meditative concentration, and the
+                        conceptual signs based on examining insight. Whether they are examined in
+                        terms of intrinsic natures, examined in terms of qualities, or examined in
+                        terms of essences, bodhisattvas also abandon conceptual signs based on
+                        examining antidotes by not directing their minds toward them.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-48"/>
+                    <p tid="42">“Once bodhisattvas have abandoned those signs, another set of conceptual
+                        signs based on the examination of true reality arises and becomes
+                        experientially evident. [F.3.a] This includes conceptual signs based on
+                        examining emptiness, examining suchness, examining the absolute, examining
+                        the absence of signs, examining ultimate truth, and those based on examining
+                        the field of phenomena. Whether they are examined in terms of particular
+                        features, examined in terms of qualities, or examined in terms of essences,
+                        bodhisattvas also abandon the conceptual signs based on examining true
+                        reality by not directing their minds toward them.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-49"/>
+                    <p tid="43">“Once bodhisattvas have abandoned those signs, another set of conceptual
+                        signs based on examining the attainments arises and becomes experientially
+                        evident. This includes the conceptual signs based on examining the
+                        attainment of the first through tenth bodhisattva levels, conceptual signs
+                        based on examining the attainment of the acceptance that phenomena do not
+                        arise, conceptual signs based on examining the attainment of prophecy,
+                        conceptual signs based on examining the attainment of the ability to purify
+                        buddhafields, conceptual signs based on examining the attainment of the
+                        ability to ripen beings, and conceptual signs based on examining the
+                        attainment of initiation up to conceptual signs based on examining the
+                        attainment of omniscience. Whether they are examined in terms of intrinsic
+                        natures, examined in terms of qualities, or examined in terms of essences,
+                        bodhisattvas also abandon the conceptual signs based on examining the
+                        attainments by not directing their minds toward them.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-50"/>
+                    <p tid="44">“Once bodhisattvas, great beings, have thus abandoned every type of
+                        conceptual sign by not directing their minds toward them, they are well
+                        oriented to the non-conceptual but have yet to experience the non-conceptual
+                        realm. They do, however, possess the fundamental meditative absorption
+                        conducive to experiencing the non-conceptual realm. [F.3.b] As a consequence
+                        of cultivating this genuine method, training in it repeatedly, and correctly
+                        orienting their minds, bodhisattvas will experience the non-conceptual realm
+                        without volition or effort, and gradually purify their experience.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-51"/>
+                    <p tid="45">“For what reason, noble sons,<note place="end" index="16" xml:id="UT22084-057-001-52"> The Degé translation lacks
+                            “noble sons,” but the phrase appears in the Dunhuang version.</note> is
+                        the non-conceptual realm called ‘non-conceptual’? It completely transcends
+                        all conceptual analysis, completely transcends all imputations of
+                        instruction and illustration, completely transcends all conceptual
+                            signs,<note place="end" index="17" xml:id="UT22084-057-001-53"> The Degé translation and Dunhuang version lack
+                            “completely transcends all conceptual signs.”</note> completely
+                        transcends all imputation via the sense faculties, completely transcends
+                        imputation as sense objects, completely transcends imputation as cognitive
+                        representations, and is not based in the cognitive obscurations or in the
+                        obscurations of the afflictive and secondary afflictive emotions.<note place="end" index="18" xml:id="UT22084-057-001-54"> The Degé translation lacks “secondary afflictive emotions,”
+                            but the phrase does appear in the Dunhuang version.</note> For this
+                        reason the non-conceptual realm is called ‘non-conceptual.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-55"/>
+                    <p tid="46">“What, then, is the non-conceptual? The non-conceptual is immaterial,
+                        indemonstrable, unsupported, unmanifest, imperceptible, and without
+                        location. Those bodhisattvas, great beings who are established in the
+                        non-conceptual realm see, with their non-conceptual knowing that is
+                        indistinguishable from what is known, that all phenomena are like the
+                        expanse of space. Through the ensuing mode of knowing they see all phenomena
+                        as illusions, mirages, dreams, hallucinations, echoes, reflections, the
+                        image of the moon in water, and as magical creations.<note place="end" index="19" xml:id="UT22084-057-001-56">
+                            These lines are cited by Ratnākaraśānti in his <title xml:lang="Sa-Ltn">Sarvarahasyanibandha</title>, a commentary on the <title xml:lang="Sa-Ltn">Sarvarahasya Tantra</title> (Isaacson,
+                            forthcoming, p. 16), and in his <title xml:lang="Sa-Ltn">Sāratamā</title>, a commentary on the <title xml:lang="en">Perfection of Wisdom in 8000 Lines</title> (Jaini 1979, p. 82). It
+                            is also cited by Sthiramati in his <title xml:lang="Sa-Ltn">Triṃśikāvijñaptibhāṣya</title> (Buescher 2002, p. 45, lines
+                            16–18).</note> They then attain the full expression of the power of
+                        sustaining great bliss.<note place="end" index="20" xml:id="UT22084-057-001-57"> The Tibetan translations lack an
+                            equivalent for <foreign xml:lang="Sa-Ltn" type="term">vibhutva</foreign>, “power.”</note> They attain the full expression of
+                        the mind’s vast capacity. They attain the full expression of great knowledge
+                        and wisdom. They attain the full expression of the power of maintaining the
+                        great teaching.<note place="end" index="21" xml:id="UT22084-057-001-58"> The Degé translation and the Dunhuang
+                            version lack an equivalent for <foreign xml:lang="Sa-Ltn" type="term">vihāra</foreign>, “maintaining.” </note> In all circumstances they
+                        are able to bring every type of benefit to all beings, never ceasing in
+                        their effortless performance of awakened activity.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-59"/>
+                    <p tid="47">[F.4.a] “Noble sons, consider this analogy: beneath a solid, hard sheet of
+                        rock there is a great trove of precious minerals, a variety of great
+                        wish-fulfilling jewels that shimmer with light, including precious silver,
+                        precious gold, and precious emerald. Along comes a man seeking great
+                        treasure. Another man who is able to perceive the great treasure says to
+                        him, ‘Excuse me sir, beneath this solid, hard sheet of rock there is a great
+                        precious treasure filled with glimmering precious minerals. But beneath that
+                        there is a great<note place="end" index="22" xml:id="UT22084-057-001-60"> The Degé translation omits “great” here,
+                            which is attested in the Sanskrit.</note> precious treasure, a
+                        wish-fulfilling jewel. First you must remove the bedrock. Once that is
+                        removed, you will discover rocks that appear to be silver, but you should
+                        not consider this the great treasure. Recognizing this, continue digging. As
+                        you dig, you will discover rocks that appear to be gold, but again you
+                        should not consider this the great treasure. Recognizing this once again,
+                        dig. As you dig, you will discover rocks that appear to be various minerals,
+                        but again you should not consider this to be the great treasure. Recognizing
+                        this once again, dig. Sir, once you have toiled in unearthing these
+                        minerals, you will effortlessly and without any further exertion discover a
+                        great precious treasure, the wish-fulfilling jewel. Once you have found that
+                        great precious treasure, the wish-fulfilling jewel, you will become rich,
+                        affluent, prosperous, and fully able to benefit yourself and others.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-61"/>
+                    <p tid="48">“Noble sons, this analogy is meant to provide some understanding of our
+                        topic. The solid, hard sheet of rock represents the various karmic
+                        dispositions that reinforce duality and the afflictive emotions. The great
+                        treasure that lies beneath that rock, the precious wish-fulfilling jewel,
+                        represents the non-conceptual realm. The person who seeks the great
+                        treasure, the precious wish-fulfilling jewel, represents the bodhisattva,
+                        the great being. [F.4.b] The person with knowledge of the great treasure is
+                        the Thus-Gone One, the Worthy One, the Perfect Buddha. The bedrock
+                        represents the most fundamental conceptual signs. The command to dig
+                        represents not directing the mind toward them. The rock resembling silver
+                        represents the conceptual signs related to the examination of
+                            antidotes.<note place="end" index="23" xml:id="UT22084-057-001-62"> The Tibetan <foreign xml:lang="Bo-Ltn" type="term">gnyen po la rnam par mi rtog pa’i mtshan ma</foreign>
+                            here lacks an equivalent for the Sanskrit <fix>°</fix>
+                            <foreign xml:lang="Sa-Ltn" type="term">nirūpaṇa</foreign> in the compound
+                                <foreign xml:lang="Sa-Ltn" type="term">pratipakṣanirūpaṇavikalpanimitta</foreign>.</note> The rock
+                        resembling gold represents the conceptual signs related to emptiness and so
+                        on. The rock resembling various gemstones represents the conceptual signs
+                        related to the attainments. Finding the great treasure, the wish-fulfilling
+                        jewel, represents experiencing the non-conceptual realm. Noble sons, through
+                        this analogy, you should understand entering into non-conceptuality.<note place="end" index="24" xml:id="UT22084-057-001-63"> The Degé translation reads <foreign xml:lang="Bo-Ltn" type="quote">rnam par mi rtog pa’i dbyings</foreign>, “the
+                            non-conceptual realm.”</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-64"/>
+                    <p tid="49">“How then, noble sons, do bodhisattvas, great beings, reflect on the
+                        conceptual signs as they have been taught here and enter the non-conceptual
+                        realm? Noble sons, when a fundamental conceptual sign related to the
+                        aggregate of matter<note place="end" index="25" xml:id="UT22084-057-001-65"> The Degé translation should be emended
+                            from <foreign xml:lang="Bo-Ltn" type="term">gzungs</foreign> to <foreign xml:lang="Bo-Ltn" type="term">gzugs</foreign> following the Sanskrit
+                            and the variant attested in the Kangxi and Lhasa Kangyurs.</note>
+                        manifests, bodhisattvas, great beings who are established in the
+                        non-conceptual realm, should reflect in this way: ‘to think, “this is my
+                        material form” is to entertain a conceptual thought; to think, “this
+                        material form belongs to others” is to entertain a conceptual thought; to
+                        think, “this is matter” is to entertain a conceptual thought; to think,
+                        “matter arises,” “it ceases,” “it is afflicted,” or “it is purified” is to
+                        entertain a conceptual thought; to think, “there is no matter” is to
+                        entertain a conceptual thought; to think, “matter does not exist
+                        intrinsically,” “it does not exist causally,” “it does not exist as a
+                        result,” “it does not exist through action,” “it does not exist in relation
+                        to anything,” [F.5.a] or “it is not a mode of being” is to entertain a
+                        conceptual thought; to think, “matter is mere cognitive representation” is
+                        to entertain a conceptual thought; to think, “just as matter does not exist,
+                        so cognitive representation appearing as matter does not exist” is to
+                        entertain a conceptual thought.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-66"/>
+                    <p tid="50">“Therefore, noble sons, the bodhisattvas, great beings, do not apprehend
+                        matter, nor do they apprehend cognitive representations appearing as matter.
+                        In no way do they bring cognitive representation to an end, nor do they
+                        apprehend any phenomenon as being distinct from cognitive representation.
+                        They do not consider that cognitive representation to be non-existent, nor
+                        do they consider non-existence to be something distinct from cognitive
+                        representation. They do not consider the non-existence of a cognitive
+                        representation appearing as matter to be the same as that cognitive
+                        representation, nor do they consider it to be different. They do not
+                        consider a non-existent cognitive representation to be existent, nor do they
+                        consider it to be non-existent. Noble sons, those who do not conceptualize
+                        through any of these conceptual modes do not think, ‘this is the
+                        non-conceptual realm.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-67"/>
+                    <p tid="51">“Noble sons, this is the way of entering the non-conceptual realm. In this
+                        way, bodhisattvas, great beings, become established in the non-conceptual
+                        realm. The same should be applied to sensation, perception, karmic
+                        dispositions, and consciousness. The same should be applied to the
+                        perfection of generosity, the perfection of discipline, the perfection of
+                        patience, the perfection of diligence, the perfection of meditative
+                        concentration, and the perfection of insight. And the same should be applied
+                        to emptiness and so on, up to omniscience.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-68"/>
+                    <p tid="52">[F.5.b] “Noble sons, when conceptual signs<note place="end" index="26" xml:id="UT22084-057-001-69"> The Degé
+                            translation omits “sign.”</note> related to an examination<note place="end" index="27" xml:id="UT22084-057-001-70"> The Degé reading <foreign xml:lang="Bo-Ltn" type="term">spyod pa</foreign> should be emended here to <foreign xml:lang="Bo-Ltn" type="term">dpyod pa</foreign> in accordance with
+                            the Sanskrit <fix>°</fix>
+                            <foreign xml:lang="Sa-Ltn" type="term">nirūpaṇa</foreign>.</note> of omniscience manifest, bodhisattvas,
+                        great beings, should reflect as follows: ‘to think, “this is my omniscience”
+                        is to entertain a conceptual thought; to think, “this is the omniscience of
+                        others” is to entertain a conceptual thought; to think, “this is
+                        omniscience” is to entertain a conceptual thought; to think, “omniscience is
+                        attained” is to entertain a conceptual thought; to think, “omniscience is
+                        meant to destroy all cognitive obscurations and the obscurations of the
+                        afflictive emotions” is to entertain a conceptual thought; to think, “once
+                        purified, the three worlds are nothing other than omniscience”<note place="end" index="28" xml:id="UT22084-057-001-71"> The Tibetan translation reads, “omniscience is
+                            purification,” thus omitting “the three worlds.”</note> is to entertain
+                        a conceptual thought; to think, “omniscience arises,” “it ceases,” “it is
+                        afflicted,” or “it is purified” is to entertain a conceptual thought;<note place="end" index="29" xml:id="UT22084-057-001-72"> The Degé translation omits the clause beginning with “to
+                            think, ‘omniscience arises.’ ” The Dunhuang version reads, “is
+                            difficult” (<foreign xml:lang="Bo-Ltn" type="quote">rab tu dka’
+                                ba</foreign>) instead of “is purified.” </note> to think,
+                        “omniscience does not exist” is to entertain a conceptual thought; to think,
+                        “omniscience does not exist intrinsically,” “it does not exist causally,”
+                        “it does not exist as a result,” “it does not exist through action,” “it
+                        does not exist in relation to anything,” and “it is not a mode of being” is
+                        to entertain a conceptual thought; to think, “omniscience is mere cognitive
+                        representation” is to entertain a conceptual thought; to think, “just as
+                        omniscience does not exist, so cognitive representation appearing as
+                        omniscience does not exist” is to entertain a conceptual thought.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-73"/>
+                    <p tid="53">“Therefore, noble sons,<note place="end" index="30" xml:id="UT22084-057-001-74"> We have followed the Degé
+                            translation in including “noble sons” here.</note> just as bodhisattvas,
+                        great beings, do not apprehend omniscience, they likewise do not apprehend
+                        cognitive representations appearing as omniscience. In no way do they bring
+                        cognitive representation to an end, nor do they apprehend any phenomenon as
+                        being distinct from cognitive representations. They do not consider that
+                        cognitive representation to be non-existent, nor do they consider
+                        non-existence to be something distinct from cognitive representation. They
+                        do not consider the non-existence of that cognitive representation to be
+                        identical to that cognitive representation, [F.6.a] nor do they consider it
+                        to be different. They do not consider the non-existence of that cognitive
+                        representation to be existent, nor do they consider it to be non-existent.
+                        Noble sons, those who do not conceptualize through any of these conceptual
+                            modes<note place="end" index="31" xml:id="UT22084-057-001-75"> The Degé translation reads, “through any
+                            concepts of omniscience” (<foreign xml:lang="Bo-Ltn" type="quote">rnam
+                                pa thams cad mkhyen pa’i rnam par rtog pa thams cad kyis</foreign>).
+                            The repetition of <foreign xml:lang="Bo-Ltn" type="quote">rnam pa thams
+                                cad mkhyen pa</foreign>, “omniscience,” in the Tibetan passage
+                            suggests the possibility that <foreign xml:lang="Bo-Ltn" type="term">mkhyen pa</foreign> was added here by scribal error.</note> do not
+                        think, ‘this is the non-conceptual field of phenomena.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-76"/>
+                    <p tid="54">“This is the way of entering the non-conceptual realm. Noble sons, this is
+                        how bodhisattvas, great beings, become established in the non-conceptual
+                        realm.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-77"/>
+                    <p tid="55">“Noble sons, the merit from taking up this discourse on the Dharma, writing
+                        it down,<note place="end" index="32" xml:id="UT22084-057-001-78"> The Degé translation includes “memorizing it”
+                                (<foreign xml:lang="Bo-Ltn" type="quote">’chang
+                            ba</foreign>).</note> and reciting it is much greater than giving away
+                        one’s body as many times as there are grains of sand in the river Ganga,
+                        much greater than offering jewel-filled world systems as numerous as grains
+                        of sand in the river Ganga, and much greater than the heap of merit created
+                        by commissioning images of the thus-gone ones to fill world systems as
+                        numerous as grains of sand in the river Ganga.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-79"/>
+                    <p tid="56">Then, on that occasion, the Blessed One spoke these verses:</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-80"/>
+                    <lg tid="57">
+                        <l>“With this true doctrine the Victor’s heir, intent upon the
+                            non-conceptual,</l>
+                        <l>Transcends the quagmire of concepts and gradually reaches the end of
+                            thought.</l>
+                        <l>A bodhisattva thereby attains a non-conceptual bliss that is peaceful and
+                            unwavering,</l>
+                        <l>Supreme, under their control, and both equaled and unequaled.”<note place="end" index="33" xml:id="UT22084-057-001-81">
+                                <hi type="wordfile-remnant">These verses are cited in the
+                                    </hi>
+                                <title xml:lang="Sa-Ltn">Guṇavatīṭīkā</title>
+                                <hi type="wordfile-remnant">, Ratnākaraśānti’s commentary on the
+                                    </hi>
+                                <title xml:lang="Sa-Ltn">Mahāmāyā Tantra</title>
+                                <hi type="wordfile-remnant"> (Damron 2014, p. 90). Regarding the
+                                    phrase “equaled and unequaled” (</hi>
+                                <foreign xml:lang="Sa-Ltn" type="term">samāsama</foreign>
+                                <hi type="wordfile-remnant">),
+                                    Ratnākaraśānti comments: “[Non-conceptual bliss] is ‘equaled’
+                                    because it is equivalent with general classes of bliss that are
+                                    other than it. It is ‘unequaled’ because is distinct through
+                                    those [previously mentioned] four distinctions.”</hi>
+                            </note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-82"/>
+                    <p tid="58">When the Blessed One finished his discourse, the bodhisattva, the great being
+                        Avikalpaprabhāsa and the entire retinue together with the world of gods,
+                        humans, asuras, and gandharvas rejoiced as they praised the teachings of the
+                        Blessed One.</p>
+                </div>
+                <div type="colophon">
+                    <head tid="59">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-83"/>
+                    <p tid="60">This completes <fix>The Noble Dhāraṇī Entitled</fix>
+                        <title xml:lang="en">Entering into Non-conceptuality</title>.</p>
+                    <milestone unit="chunk" xml:id="UT22084-057-001-84"/>
+                    <p tid="61">This was translated and finalized by the Indian scholars Jinamitra and
+                        [F.6.b] Dānaśīla, together with the chief editor and translator Kawa
+                        Peltsek.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="62">Notes</head>
+                <list type="abbreviations">
+                    <head tid="63">Abbreviations</head>
+                    <fix/>
+                    <!-- In this section, markup editors need to move the expanded form of the
+                            abbreviation out of the "abbr" element and put it into the "expan" element. Delete
+                           this comment and the "fix" tag when you are done. If there are no abbreviations in 
+                            this text, then delete this entire "list" element, but leave the "div" and "head"
+                            entitled "notes"-->
+                    <item xml:id="UT22084-057-001-85">
+                        <abbr>APD <fix>Avikalpapraveśadhāraṇī</fix>
+                        </abbr>
+                        <expan/>
+                    </item>
+                </list>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="64">Bibliography</head>
+                <div type="section">
+                    <head tid="65">Tibetan Editions</head>
+                    <bibl xml:id="UT22084-057-001-86">
+                        <title xml:lang="Sa-Ltn">’phags pa rnam par mi rtog par ’jug pa zhes bya
+                            ba’i gzungs</title>. Toh 142, Degé Kangyur vol. 57 (mdo sde, pa), folios
+                        1a–6b.</bibl>
+                    <bibl xml:id="UT22084-057-001-87">
+                        <title xml:lang="Sa-Ltn">’phags pa rnam par mi rtog par ’jug pa zhes bya
+                            ba’i gzungs</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of
+                        the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe
+                        sdur khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology
+                        Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun
+                        khang (China Tibetology Publishing House), 2006–2009, vol. 57, pp.
+                        1–14.</bibl>
+                    <bibl xml:id="UT22084-057-001-88">IOL Tib J 51. British Library, London. Accessed through The International
+                        Dunhuang Project: The Silk Road Online (IOL Tib J 51). </bibl>
+                    <bibl xml:id="UT22084-057-001-89">IOL Tib J 52. British Library, London. Accessed through The International
+                        Dunhuang Project: The Silk Road Online (IOL Tib J 52). </bibl>
+                </div>
+                <div type="section">
+                    <head tid="66">Sanskrit Editions</head>
+                    <bibl xml:id="UT22084-057-001-90">
+                        <title xml:lang="Sa-Ltn">Matsuda, Kazunobu, ed. </title>“<title xml:lang="Sa-Ltn">Nirvikalpapraveśadhāraṇī</title>, Sanskrit Text and
+                        Japanese Translation.” <title xml:lang="en">Bulletin of the Research
+                            Institute of Bukkyo University</title> 3 (1996): 89–113.</bibl>
+                </div>
+                <div type="section">
+                    <head tid="67">Secondary Literature</head>
+                    <bibl xml:id="UT22084-057-001-91">Brunnhölzl, Karl. <title xml:lang="en">Mining for Wisdom within Delusion:
+                            Maitreya’s “Distinction between Phenomena and the Nature of Phenomena”
+                            and Its Indian and Tibetan Commentaries</title>. Boston: Snow Lion
+                        Publications, 2012.</bibl>
+                    <bibl xml:id="UT22084-057-001-92">Buescher, Hartmut. “The Triṃśikāvijñaptibhāṣya of Sthiramati: Critical
+                        Editions of the Sanskrit Text and its Tibetan Translation, along with an
+                        Historical Study: The Inception of Yogācāra-Vijñānavāda.” PhD. diss.,
+                        University of Copenhagen, 2002.</bibl>
+                    <bibl xml:id="UT22084-057-001-93">Damron, Ryan. “The Great Illusion: a Preliminary Study of the <title xml:lang="Sa-Ltn">Mahāmāyā Tantra</title> and its Corpus.” MA Thesis, UC
+                        Berkeley, 2014.</bibl>
+                    <bibl xml:id="UT22084-057-001-94">Dharmachakra Translation Committee, trans.<title xml:lang="en">
+                            Distinguishing Phenomena from Their Intrinsic Nature: Maitreya’s
+                            “Dharmadharmatāvibhaṅga,” with Commentaries by Khenpo Shenga and Ju
+                            Mipham</title>. Boston: Snow Lion Publications, 2013.</bibl>
+                    <bibl xml:id="UT22084-057-001-95">Isaacson, Harunaga and Francesco Sferra. “The Commentary by Ratnākaraśānti
+                        on the <title xml:lang="Sa-Ltn">Sarvarahasyatantra</title>,”
+                        forthcoming.</bibl>
+                    <bibl xml:id="UT22084-057-001-96">Jaini, Padmanabh S. <title xml:lang="en">Sāratamā: A Pañjikā on the
+                            Aṣṭasāhasrikā Prajñāpāramitā Sūtra by Ācārya Ratnākaraśānti</title>.
+                        Tibetan Sanskrit Works Series no. XVIII. Patna: Kashi Prasad Jayaswal
+                        Research Institute, 1979.</bibl>
+                    <bibl xml:id="UT22084-057-001-97">Kamalaśīla. <title xml:lang="Bo-Ltn">’phags pa rnam par mi rtog par ’jug
+                            pa zhes bya ba’i gzungs kyi rgya cher ’grel pa (</title>
+                        <title xml:lang="Sa-Ltn">Avikalpapraveśadhāraṇīṭīkā</title>). Toh 4000, Degé
+                        Tengyur vol. 116 (mdo ’grel, ji), folios 123a–145b.</bibl>
+                    <bibl xml:id="UT22084-057-001-98">———. <title xml:lang="Sa-Ltn">Bhāvanākrama I</title>. In <title xml:lang="en">Minor Buddhist Texts Part II</title>, edited by Giuseppe
+                        Tucci, pp. 185–282. Serie Orientale Roma 9:2. Rome: Istituto Italiano per il
+                        Medio ed Estremo Oriente, 1958.</bibl>
+                    <bibl xml:id="UT22084-057-001-99">———. <title xml:lang="Sa-Ltn">Bhāvanākrama III</title>. In <title xml:lang="en">Minor Buddhist Texts Part III,</title> edited by Giuseppe
+                        Tucci. pp. 1–34. Serie Orientale Roma 43. Rome: Istituto Italiano per il
+                        Medio ed Estremo Oriente, 1971.</bibl>
+                    <bibl xml:id="UT22084-057-001-100">Lalou, Marcelle. “Les textes bouddhiques au temps du roi
+                        Khri-sroṅ-lde-bcan.” <title xml:lang="Input Language">Journal
+                            asiatique</title> 241, vol. 3 (1953): 313–53.</bibl>
+                    <bibl xml:id="UT22084-057-001-101">Maitreya. <title xml:lang="Bo-Ltn">chos dang chos nyid rnam par ’byed pa
+                            (</title>
+                        <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāga</title>). Toh
+                        4022, Degé Tengyur vol. 225 (mdo ’grel, phi), folios 45b–49a.</bibl>
+                    <bibl xml:id="UT22084-057-001-102">Mathes, Klaus-Dieter. “’Gos Lo tsā ba gZhon nu dpal’s Commentary on the
+                            <foreign xml:lang="Sa-Ltn" type="term">Dharmatā</foreign> Chapter of the
+                            <title xml:lang="Sa-Ltn">Dharmadharmatāvibhāgakārikās</title>.” <title xml:lang="en">Studies in Indian Philosophy and Buddhism, University of
+                            Tokyo</title> 12 (2005): 3–39.</bibl>
+                    <bibl xml:id="UT22084-057-001-103">Meinert, Carmen. “Structural Analysis of the <title xml:lang="Bo-Ltn">bSam
+                            gtan mig sgron</title>: A Comparison of the Fourfold Correct Practice in
+                        the <title xml:lang="Sa-Ltn">Āryāvikalpapraveśanāmadhāraṇī</title> and the
+                        Contents of the Four Main Chapters of the <title xml:lang="Bo-Ltn">bSam gtan
+                            mig sgron</title>.” <title xml:lang="en">Journal of the International
+                            Association of Buddhist Studies</title> 26.1 (2003): 175–95.</bibl>
+                    <bibl xml:id="UT22084-057-001-104">Robertson, Raymond E. <title xml:lang="en">A Study of the
+                            “Dharmadharmatāvibhaṅga” (Volume 1): The Root Text and its Scriptural
+                            Source (the “Avikalpapraveśadhāraṇī”), with Excerpts from Kamalaśīla’s
+                            “Avikalpapraveśadhāraṇīṭīkā”</title>. Beijing: China-Tibet Publishing
+                        House, 2006.</bibl>
+                    <bibl xml:id="UT22084-057-001-105">Ueyama, Daishun, Kennenth W. Eastman, and Jeffrey L. Broughton. “The
+                            <title xml:lang="Sa-Ltn">Avikalpapraveśa-dhāraṇī</title>: The Dharani of
+                        Entering Non-Discrimination.” <title xml:lang="en">Bulletin of Institute of
+                            Buddhist Cultural Studies</title> 22 (1983): 32–42.</bibl>
+                    <bibl xml:id="UT22084-057-001-106">Vimalamitra. <title xml:lang="Bo-Ltn">cig car ’jug pa rnam par mi rtog
+                            pa’i bsgom don (</title>*<title xml:lang="Sa-Ltn">Sakṛtpraveśikanirvikalpabhāvanārtha</title>). Toh 3910, Degé Tengyur
+                        vol. 110 (dbu ma, ki), folios 6b–13b.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-107">
+                <term>acceptance that phenomena do not arise</term>
+                <term xml:lang="Bo-Ltn">mi skye ba’i chos la bzod pa </term>
+                            <term xml:lang="bo">མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ།</term>
+                <term xml:lang="Sa-Ltn">anutpattikadharmakṣānti</term>
+                <term type="definition">A bodhisattva’s realization that all phenomena are
+                    unproduced and empty. It sustains them on the difficult path of benefitting all
+                    beings so that they do not succumb to the goal of personal liberation. Different
+                    sources link this realization to the first or eighth bodhisattva level
+                        (<fix>bhūmi</fix>).</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-108">
+                <term>aggregates as the bases of clinging</term>
+                <term xml:lang="Bo-Ltn">nye bar len pa’i phung po </term>
+                            <term xml:lang="bo">ཉེ་བར་ལེན་པའི་ཕུང་པོ།</term>
+                <term xml:lang="Sa-Ltn">upādānaskandha</term>
+                <term type="definition">The five aggregates (<fix>skandha</fix>) of matter
+                        (<fix>rūpa</fix>), sensation (<fix>vedanā</fix>), perception
+                        (<fix>saṃjñā</fix>), karmic dispositions (<fix>saṃskāra</fix>), and
+                    consciousness (<fix>vijñāna</fix>). They are referred to as the ‘bases for
+                    clinging’ (<fix>upādāna</fix>) insofar as all conceptual grasping arises on the
+                    basis of these aggregates.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-109">
+                <term>bodhisattva levels</term>
+                <term xml:lang="Bo-Ltn">sa </term>
+                            <term xml:lang="bo">ས།</term>
+                <term xml:lang="Sa-Ltn">bhūmi</term>
+                <term type="definition">The stages a bodhisattva must traverse before reaching
+                    perfect buddhahood; traditionally ten in number, though some systems present
+                    more. </term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-110">
+                <term>cognitive representation</term>
+                <term xml:lang="Bo-Ltn">rnam par rig pa </term>
+                            <term xml:lang="bo">རྣམ་པར་རིག་པ།</term>
+                <term xml:lang="Sa-Ltn">vijñapti</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-111">
+                <term>English</term>
+                <term xml:lang="Bo-Ltn">Tibetan </term>
+                            <term xml:lang="bo">ཊིབེཏན།</term>
+                <term xml:lang="Sa-Ltn">Sanskrit</term>
+                <term type="definition">Definition</term>
+                <term type="alternative">Alternative</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-112">
+                <term>field of phenomena</term>
+                <term xml:lang="Bo-Ltn">chos dbyings </term>
+                            <term xml:lang="bo">ཆོས་དབྱིངས།</term>
+                <term xml:lang="Sa-Ltn">dharmadhātu</term>
+                <term type="definition">The non-conceptual, boundless field (<fix>dhātu</fix>) in
+                    which all phenomena (<fix>dharma</fix>) appear. A term for ultimate
+                    reality.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-113">
+                <term>fundamental</term>
+                <term xml:lang="Bo-Ltn">rang bzhin </term>
+                            <term xml:lang="bo">རང་བཞིན།</term>
+                <term xml:lang="Sa-Ltn">prakṛti</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-114">
+                <term>Great Perfection</term>
+                <term xml:lang="Bo-Ltn">rdzogs pa chen po </term>
+                            <term xml:lang="bo">རྫོགས་པ་ཆེན་པོ།</term>
+                <term xml:lang="Sa-Ltn"/>
+                <term type="definition">A system of uncontrived, non-conceptual meditation developed
+                    in Tibet based on Indian and Chinese Buddhist influences; the pinnacle of
+                    meditation training in the Nyingma lineage of Tibetan Buddhism.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-115">
+                <term>imputation</term>
+                <term xml:lang="Bo-Ltn">rnam par brtag pa </term>
+                            <term xml:lang="bo">རྣམ་པར་བརྟག་པ།</term>
+                <term xml:lang="Sa-Ltn">vikalpa</term>
+                <term type="alternative">conceptual</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-116">
+                <term>insight</term>
+                <term xml:lang="Bo-Ltn">shes rab </term>
+                            <term xml:lang="bo">ཤེས་རབ།</term>
+                <term xml:lang="Sa-Ltn">prajñā</term>
+                <term type="definition">The sixth of the pāramitās.</term>
+                <term type="alternative">knowedge, wisdom</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-117">
+                <term>karmic dispositions</term>
+                <term xml:lang="Bo-Ltn">’du byed </term>
+                            <term xml:lang="bo">འདུ་བྱེད།</term>
+                <term xml:lang="Sa-Ltn">saṃskāra</term>
+                <term type="definition">One of the five aggregates; the very subtle karmic
+                    tendencies that give shape to an individual’s saṃsāric experieince. In
+                    Abhidharma literature there are typically fifty-one saṃskāras.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-118">
+                <term>knowing</term>
+                <term xml:lang="Bo-Ltn">ye shes </term>
+                            <term xml:lang="bo">ཡེ་ཤེས།</term>
+                <term xml:lang="Sa-Ltn">jñāna</term>
+                <term type="alternative">mode of knowing</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-119">
+                <term>matter</term>
+                <term xml:lang="Bo-Ltn">gzugs </term>
+                            <term xml:lang="bo">གཟུགས།</term>
+                <term xml:lang="Sa-Ltn">rūpa </term>
+                <term type="definition">The first of the five aggregates, defined in Abhidharma
+                    literature as anything comprised of the four major elements (earth, air, fire,
+                    and water), either alone or in combination.</term>
+                <term type="alternative">material form</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-120">
+                <term>non-conceptual realm</term>
+                <term xml:lang="Bo-Ltn">rnam par mi rtog pa’i dbyings </term>
+                            <term xml:lang="bo">རྣམ་པར་མི་རྟོག་པའི་དབྱིངས།</term>
+                <term xml:lang="Sa-Ltn">avikalpadhātu</term>
+                <term type="definition">The state of non-conceptuality.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-121">
+                <term>not direct the mind</term>
+                <term xml:lang="Bo-Ltn">yid la mi byed pa </term>
+                            <term xml:lang="bo">ཡིད་ལ་མི་བྱེད་པ།</term>
+                <term xml:lang="Sa-Ltn">amanasikāra</term>
+                <term type="definition">To not conceptually engage or even direct the mind toward an
+                    object of peception.</term>
+                <term type="alternative">not mentally engage</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-122">
+                <term>omniscience</term>
+                <term xml:lang="Bo-Ltn">rnam pa thams cad mkhyen pa nyid </term>
+                            <term xml:lang="bo">རྣམ་པ་ཐམས་ཅད་མཁྱེན་པ་ཉིད།</term>
+                <term xml:lang="Sa-Ltn">sarvākārajñatā</term>
+                <term type="definition">A description of the mode of omniscience in which all
+                    possible phenomena as well as their ultimate nature in known.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-123">
+                <term>secondary afflictive emotions</term>
+                <term xml:lang="Bo-Ltn">nye ba’i nyon mongs </term>
+                            <term xml:lang="bo">ཉེ་བའི་ཉོན་མོངས།</term>
+                <term xml:lang="Sa-Ltn">upakleśa</term>
+                <term type="definition">A subsidiary set of afflictive emotions that differ in
+                    number depending on the system of Abhidharma that presents them.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-124">
+                <term>sign</term>
+                <term xml:lang="Bo-Ltn">mtshan ma </term>
+                            <term xml:lang="bo">མཚན་མ།</term>
+                <term xml:lang="Sa-Ltn">nimitta</term>
+                <term type="definition">Any imagined mark or feature of an object, the misperception
+                    of which serves as the basis of peception and the arising of coarse
+                    conceptuality. </term>
+                <term type="alternative">mark</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-125">
+                <term>six perfections</term>
+                <term xml:lang="Bo-Ltn">pha rol tu phyin pa drug </term>
+                            <term xml:lang="bo">ཕ་རོལ་ཏུ་ཕྱིན་པ་དྲུག</term>
+                <term xml:lang="Sa-Ltn">ṣaṭpāramitā</term>
+                <term type="definition">Generosity (Skt. dāna ; Tib. byin pa ), discipline (Skt.
+                    śīla ; Tib. tshul khrims ), patience (Skt. kṣānti ; Tib. bzod pa ), diligence
+                    (Skt. vīrya ; Tib. brtson ’grus ), meditative concentration (Skt. dhyāna ; Tib.
+                    bsam gtan ), and insight (Skt. prajñā ; Tib. shes rab ). </term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-126">
+                <term>suchness</term>
+                <term xml:lang="Bo-Ltn">de bzhin nyid </term>
+                            <term xml:lang="bo">དེ་བཞིན་ཉིད།</term>
+                <term xml:lang="Sa-Ltn">tathatā</term>
+                <term type="definition">A common term describing ultimate reality.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-127">
+                <term>the absolute</term>
+                <term xml:lang="Bo-Ltn">yang dag pa’i mtha’ </term>
+                            <term xml:lang="bo">ཡང་དག་པའི་མཐའ།</term>
+                <term xml:lang="Sa-Ltn">bhūtakoṭi</term>
+                <term type="definition">A term for ultimate reality.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="term" xml:id="UT22084-057-001-128">
+                <term>worthy one</term>
+                <term xml:lang="Bo-Ltn">dgra bcom pa </term>
+                            <term xml:lang="bo">དགྲ་བཅོམ་པ།</term>
+                <term xml:lang="Sa-Ltn">arhat</term>
+                <term type="definition">A person who has accomplished the final fruition of the path
+                    of the hearers and is liberated from saṃsāra.</term>
+                <term type="alternative">arhat</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-129">
+                <term>Avalokiteśvara</term>
+                <term xml:lang="Bo-Ltn">spyan ras gzigs </term>
+                            <term xml:lang="bo">སྤྱན་རས་གཟིགས།</term>
+                <term xml:lang="Sa-Ltn">Avalokiteśvara</term>
+                <term type="definition">The bodhisattva who is the epitome of compassion.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-130">
+                <term>Avikalpa</term>
+                <term xml:lang="Bo-Ltn">rnam par mi rtog pa </term>
+                            <term xml:lang="bo">རྣམ་པར་མི་རྟོག་པ།</term>
+                <term xml:lang="Sa-Ltn">Avikalpa</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Non-conceptual.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-131">
+                <term>Avikalpacandra</term>
+                <term xml:lang="Bo-Ltn">rnam par mi rtog zla ba </term>
+                            <term xml:lang="bo">རྣམ་པར་མི་རྟོག་ཟླ་བ།</term>
+                <term xml:lang="Sa-Ltn">Avikalpacandra</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Moon of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-132">
+                <term>Avikalpaprabhāsa</term>
+                <term xml:lang="Bo-Ltn">rnam par mi rtog snang ba </term>
+                            <term xml:lang="bo">རྣམ་པར་མི་རྟོག་སྣང་བ།</term>
+                <term xml:lang="Sa-Ltn">Avikalpaprabhāsa</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Light of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-133">
+                <term>English</term>
+                <term xml:lang="Bo-Ltn">Tibetan </term>
+                            <term xml:lang="bo">ཊིབེཏན།</term>
+                <term xml:lang="Sa-Ltn">Sanskrit</term>
+                <term type="definition">Definition</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-134">
+                <term>Heshang Moheyan</term>
+                <term xml:lang="Bo-Ltn"/>
+                <term xml:lang="Sa-Ltn"/>
+                <term type="definition">Fl. Eighth century. A Chinese master of the Chan tradition
+                    who tradition holds lost a debate with Kamalaśīla regarding sudden versus
+                    gradual paths to awakening. He upehld the view of the sudden path. </term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-135">
+                <term>Kamalaśīla</term>
+                <term xml:lang="Bo-Ltn">pad ma’i ngang tshul </term>
+                            <term xml:lang="bo">པད་མའི་ངང་ཚུལ།</term>
+                <term xml:lang="Sa-Ltn">Kamalaśīla</term>
+                <term type="definition">Fl. late eighth century. An Indian monastic scholar
+                    important in the transmission of Buddhism to Tibet.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-136">
+                <term>Maheśvara</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med dbang phyug chen po </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་དབང་ཕྱུག་ཆེན་པོ།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpamaheśvara</term>
+                <term type="definition">111 ’“Great Lord”; the name of a bodhisattva in the
+                    Avikalpraveśdhāraṇī, this is more commonly used as an epithet Śiva.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-137">
+                <term>Nirvikalpadharmanirdeśakuśala</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med chos ston mkhas pa </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་ཆོས་སྟོན་མཁས་པ།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpadharmanirdeśakuśala</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Skilled in Teaching the Dharma
+                    of Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-138">
+                <term>Nirvikalpamahāmaitrīśvara</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med byams pa chen po dbang phyug </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་བྱམས་པ་ཆེན་པོ་དབང་ཕྱུག</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpamahāmaitrīśvara</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Lord of Non-conceptual Great
+                    Love.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-139">
+                <term>Nirvikalpamati</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med blo gros </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་བློ་གྲོས།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpamati</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Wise in
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-140">
+                <term>Nirvikalpanāda</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med nga ro </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་ང་རོ།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpanāda</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Roar of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-141">
+                <term>Nirvikalpaspharaṇa</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med khyab byed </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་ཁྱབ་བྱེད།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpaspharaṇa</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Pervading
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-142">
+                <term>Nirvikalpasvabhāva</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med ngo bo nyid </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་ངོ་བོ་ཉིད།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpasvabhāva</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Having the Nature of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-143">
+                <term>Nirvikalpasvara</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med dbang phyug </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་དབང་ཕྱུག</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpasvara</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Lord of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-144">
+                <term>Nirvikalpavīra</term>
+                <term xml:lang="Bo-Ltn">rnam par rtog med dpa’ bo </term>
+                            <term xml:lang="bo">རྣམ་པར་རྟོག་མེད་དཔའ་བོ།</term>
+                <term xml:lang="Sa-Ltn">Nirvikalpavīra</term>
+                <term type="definition">111 ’Name of a bodhisattva; “Hero of
+                    Non-conceptuality.”</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-145">
+                <term>Nubchen Sangyé Yeshé</term>
+                <term xml:lang="Bo-Ltn">gnub chen sangs rgyas ye shes </term>
+                            <term xml:lang="bo">གནུབ་ཆེན་སངས་རྒྱས་ཡེ་ཤེས།</term>
+                <term xml:lang="Sa-Ltn"/>
+                <term type="definition">Fl. eleventh century. An early Tibetan master of the Nyingma
+                    tradition.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-146">
+                <term>Ratnākaraśānti</term>
+                <term xml:lang="Bo-Ltn">rin chen ’byung gnas zhi ba </term>
+                            <term xml:lang="bo">རིན་ཆེན་འབྱུང་གནས་ཞི་བ།</term>
+                <term xml:lang="Sa-Ltn">Ratnākaraśānti</term>
+                <term type="definition">Fl. late tenth–early eleventh century. An important Indian
+                    monastic scholar who commented on both Mahāyāna and Vajrayāna texts.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-147">
+                <term>Sthiramati</term>
+                <term xml:lang="Bo-Ltn">blo gros brtan pa </term>
+                            <term xml:lang="bo">བློ་གྲོས་བརྟན་པ།</term>
+                <term xml:lang="Sa-Ltn">Sthiramati</term>
+                <term type="definition">Fl. sixth century. An important Indian commentator on the
+                    Yogācāra system.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="person" xml:id="UT22084-057-001-148">
+                <term>Vimalamitra</term>
+                <term xml:lang="Bo-Ltn">dri med bshes gnyen </term>
+                            <term xml:lang="bo">དྲི་མེད་བཤེས་གཉེན།</term>
+                <term xml:lang="Sa-Ltn">Vimalamitra</term>
+                <term type="definition">Fl. eighth century. An Indian master important in the
+                    transmission of Buddhism to Tibet.</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="place" xml:id="UT22084-057-001-149">
+                <term>English</term>
+                <term xml:lang="Bo-Ltn">Tibetan </term>
+                            <term xml:lang="bo">ཊིབེཏན།</term>
+                <term xml:lang="Sa-Ltn">Sanskrit</term>
+                <term type="definition">Definition</term>
+            </gloss>
+        </item>
+        <item>
+            <gloss type="place" xml:id="UT22084-057-001-150">
+                <term>Rājagṛha</term>
+                <term xml:lang="Bo-Ltn">rgyal po’i khab </term>
+                            <term xml:lang="bo">རྒྱལ་པོའི་ཁབ།</term>
+                <term xml:lang="Sa-Ltn">Rājagṛha</term>
+                <term type="definition">The ancient capital of Magadha. Vulture Peak, the site of
+                    many of the historical Buddha's teachings, is located nearby. </term>
+            </gloss>
+        </item>
+    </list>
+            </div>
+        </back>
+    </text>
+</TEI>
