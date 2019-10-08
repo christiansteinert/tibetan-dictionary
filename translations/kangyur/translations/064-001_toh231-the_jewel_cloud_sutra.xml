@@ -15,6 +15,7 @@
                     Cloud”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Āryaratnameghanāmamahāyānasūtra</title>
                 <title type="otherTitle" xml:lang="zh">寶雲經</title>
+                <title type="otherTitle" xml:lang="zh">（大正藏：佛說除蓋障菩薩所問經）</title>
                 <author role="translatorMain" ref="contributors.xml#team-9">Translated by
                     Dharmachakra Translation Committee <lb/>under the patronage and supervision of
                     84000: Translating the Words of the Buddha </author>
@@ -32,13 +33,13 @@
                 <sponsor ref="sponsors.xml#sponsor-2">George Gu, May E. Ho Gu, Likai Gu, Tiffany Tai, Lillian Gu, Jerry Yen, E. E. Ho, Minda and Miin Ho, Chung Da, and Beiying Ho</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.29 <date>2019</date>
+                <edition>v 1.29.2 <date>2019</date>
                 </edition>
             </editionStmt>
 <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -59,16 +60,15 @@
                     <biblScope>Degé Kangyur, vol. 64 (mdo sde, wa), folios 1.a–112.b</biblScope>
                     <author role="translatorTib">Rinchen Tso</author>
                     <author role="translatorTib">Chönyi Tsultrim</author>
-                    <location count-pages="223">
-                        <start volume="64" page="4"/>
-                        <end volume="64" page="226"/>
+                    <location work="UT4CZ5369" count-pages="223">
+                        <volume number="64" start-page="2" end-page="224"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11875" work="W22084"/>
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated" date-time="2019-08-20T15:13:58.046Z" user="admin">20/08/2019 15:13:58</note>
+               <note type="lastUpdated" date-time="2019-10-08T18:51:31.902Z" user="admin">08/10/2019 18:51:31</note>
             <note type="updated" update="text-version" value="v 1.22" date-time="2019-03-14T11:09:33.397Z" user="john">v 1.22 2019</note>
             <note type="updated" update="text-version" value="v 1.23" date-time="2019-03-16T12:08:02.666Z" user="john">v 1.23 2019</note>
             <note type="updated" update="text-version" value="v 1.25" date-time="2019-05-08T10:40:36.639Z" user="mike">v 1.25 2019</note>
@@ -77,6 +77,8 @@
                 <note type="updated" update="text-version" value="v 1.27" date-time="2019-06-19T17:54:17.352Z" user="john">v 1.27 2019</note>
                 <note type="updated" update="text-version" value="v 1.28" date-time="2019-06-21T14:39:04.391Z" user="celso">v 1.28 2019</note>
                 <note type="updated" update="text-version" value="v 1.29" date-time="2019-08-20T15:13:54.673Z" user="konchog">v 1.29 2019</note>
+<note type="updated" update="text-version" value="v 1.29.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.29.2" date-time="2019-10-08T18:51:28.972Z" user="celso">Updated Chinese title and summary</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -86,6 +88,9 @@
                 <head type="summary" tid="699">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-064-001-1"/>
                 <p tid="1">On Gayāśīrṣa Hill, Buddha Śākyamuni is visited by a great gathering of bodhisattvas who have traveled miraculously there from a distant world, to venerate him as one who has vowed to liberate beings in a world much more afflicted than their own. The visiting bodhisattvas are led by Sarva­nīvaraṇa­viṣkam­bhin, who asks the Buddha a series of searching questions. In response, the Buddha gives a detailed and systematic account of the practices, qualities, and nature of bodhisattvas, the stages of their path, their realization, and their activities. Many of the topics are structured into sets of ten aspects, expounded with reasoned explanations and illustrated with parables and analogies. This sūtra is said to have been one of the very first scriptures translated into Tibetan. Its doctrinal richness, profundity, and clarity are justly celebrated, and some of its key statements on meditation, the realization of emptiness, and the fundamental nature of the mind have been widely quoted in the Indian treatises and Tibetan commentarial literature. </p>
+            </div>
+            <div type="summary" xml:lang="zh">
+                <p tid="711">《寶雲經》是最早被翻譯成藏文的佛典之一。在此經中，來自他方世界的諸菩薩眾於象頭山上拜見釋迦牟尼佛。佛陀應除蓋障菩薩所問，為眾人開示菩薩道之次第，並解說菩薩之修持、功德、本質、證量與事業。佛陀於此經中使用了許多譬喻故事來解釋甚深的教義，其中有許多關於禪修、空觀以及心性的內容被廣泛引用於印藏論著中。</p>
             </div>
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="700">Acknowledgements</head>
@@ -337,7 +342,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-064-001-28"/>
                     <p tid="15">
-                        <ref cRef="F.1.b"/> <ref cRef="B1" type="bampo"/> Homage to all the buddhas and bodhisattvas!<note place="end" xml:id="UT22084-064-001-29" index="20"> C, K, S and K<hi rend="subscript">Y</hi> additionally have: <foreign xml:lang="Bo-Ltn" type="quote">dang ’phags pa nyan thos dang / rang
+                        <ref cRef="F.1.b" type="folio"/> <ref cRef="B1" type="bampo"/> Homage to all the buddhas and bodhisattvas!<note place="end" xml:id="UT22084-064-001-29" index="20"> C, K, S and K<hi rend="subscript">Y</hi> additionally have: <foreign xml:lang="Bo-Ltn" type="quote">dang ’phags pa nyan thos dang / rang
                                 sangs rgyas/</foreign> (“…noble hearers, and solitary buddhas!”). H
                             and N have another instance of <foreign xml:lang="Bo-Ltn" type="quote">thams cad</foreign> before the first <foreign xml:lang="Bo-Ltn" type="quote">dang</foreign>. Other witnesses, including the
                             Dunhuang manuscript IOL Tib J 161, agree with D. </note>
@@ -355,7 +360,7 @@
                         liberation of the mind by means of genuine knowledge.<note place="end" xml:id="UT22084-064-001-31" index="21">
                             Translated based on S: <foreign xml:lang="Bo-Ltn" type="quote">yang dag
                                 pa’i shes pas</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">bka’ yang dag pas</foreign>. </note> They had reached the final
-                        culmination of complete mastery over mind <ref cRef="F.2.a"/> and were
+                        culmination of complete mastery over mind <ref cRef="F.2.a" type="folio"/> and were
                         experts with respect to the realm of phenomena. They were children of the
                         King of Dharma. Completely disinterested in acquisitions and praise, they
                         were true renunciants, who had completed their ordination and perfected
@@ -380,7 +385,7 @@
                         marks, and were free from any fixation on wishes. They pursued the welfare
                         of all beings and were experts with respect to the entire domain of the
                         buddhas. Their wisdom was boundless, their minds were vast like the sky,
-                        deep as the sea, and <term type="ignore">unshakable</term> like Sumeru, the king of mountains. <ref cRef="F.2.b"/> Like lotuses, their minds were unstained; like jewels,
+                        deep as the sea, and <term type="ignore">unshakable</term> like Sumeru, the king of mountains. <ref cRef="F.2.b" type="folio"/> Like lotuses, their minds were unstained; like jewels,
                         their minds were pure; like gold, their minds were refined.<note place="end" xml:id="UT22084-064-001-34" index="23"> With the exception of a few very minor variations
                             (including only one member slightly out of sequence), this whole section
                             (starting with “obstructed by only a single birth”) precisely reflects
@@ -423,7 +428,7 @@
                         of the excellent eon. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-42"/>
                     <p tid="19">Present there were also the four great kings and the others gods of the
-                        Heaven of the Four Great Kings, as well as Śakra, king of the gods, <ref cRef="F.3.a"/> along with the other gods of the Heaven of the
+                        Heaven of the Four Great Kings, as well as Śakra, king of the gods, <ref cRef="F.3.a" type="folio"/> along with the other gods of the Heaven of the
                         Thirty-Three. Present there were the gods of the Heaven Free from Strife,<note place="end" xml:id="UT22084-064-001-43" index="30"> S has the revised terminology reflected in <title xml:lang="en">Mahāvyutpatti</title> no. 3080: <foreign xml:lang="Bo-Ltn" type="quote"> ’thab bral</foreign>. D: <foreign xml:lang="Bo-Ltn" type="quote">gnod bral</foreign>. </note> such as
                         Su­yāma;<note place="end" xml:id="UT22084-064-001-44" index="31"> S has the revised terminology reflected in <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> no. 3138: <foreign xml:lang="Bo-Ltn" type="quote"> rab ’thab bral</foreign>. D:
                                 <foreign xml:lang="Bo-Ltn" type="quote">shin tu gnod bral</foreign>. </note> the gods of the Heaven of Joy, such as Saṃ­tuṣita;<note place="end" xml:id="UT22084-064-001-45" index="32"> S has the revised terminology reflected in <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> no. 3137: <foreign xml:lang="Bo-Ltn" type="quote"> yongs su dga’ ldan</foreign>. D:
@@ -453,7 +458,7 @@
                         divine fabrics, canopied with webs of jewel bells, draped with hundreds of
                         thousands of brocade tassels, and adorned with scattered flowers. The vajra
                         surface of the ground where the throne stood was delightful and smooth, like
-                        the palm of a hand. <ref cRef="F.3.b"/> Well sprinkled and well swept, the
+                        the palm of a hand. <ref cRef="F.3.b" type="folio"/> Well sprinkled and well swept, the
                         ground was fragrant and covered with a scattering of many hundreds of
                         thousands of divine flowers. For the sake of the Blessed One’s enjoyment,
                         the area had golden lotus flowers, each the size of a chariot wheel<note place="end" xml:id="UT22084-064-001-48" index="34"> S has the revised terminology reflected in <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> no. 6242: <foreign xml:lang="Bo-Ltn" type="quote">shin rta’i ’phang lo tsam</foreign>.
@@ -485,7 +490,7 @@
                             of universal illumination</distinct>. As this light shone forth, all
                         the worlds in the ten directions were illuminated. The light then returned
                         and circled around the Blessed One three times before it entered his mouth.
-                            <ref cRef="F.4.a"/> At that point, it could not be seen whether the
+                            <ref cRef="F.4.a" type="folio"/> At that point, it could not be seen whether the
                         Blessed One’s mouth was open or closed. Similarly, the light of the sun or
                         the moon may enter the expanse of space, and yet the expanse of space cannot
                         be seen to be either open or closed. In the same way, these light rays
@@ -512,7 +517,7 @@
                         concentration, the delightful sustenance of absorption, and the delightful
                         sustenance of the Dharma. The light that shines from that thus-gone one
                         pervades that realm and illuminates it. Apart from that, that world knows of
-                        no moonlight or sunlight, <ref cRef="F.4.b"/> nor of any light from planets
+                        no moonlight or sunlight, <ref cRef="F.4.b" type="folio"/> nor of any light from planets
                         or stars. The land there is perfectly even, like the palm of a hand, and
                         there are no grasses, trees, rocks, walls, or mountains. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-52"/>
@@ -538,7 +543,7 @@
                     <p tid="26">The blessed thus-gone Padma­netra replied, “Noble son, in the west, beyond as
                         many worlds as there are grains of sand in the river Gaṅgā, there is a world
                         known as Endurance. Therein resides the one known as Śākyamuni. He is a
-                        thus-gone, worthy, <ref cRef="F.5.a"/> perfect buddha, someone with proper
+                        thus-gone, worthy, <ref cRef="F.5.a" type="folio"/> perfect buddha, someone with proper
                         knowledge and conduct, a blissful one, a knower of the world, an unsurpassed
                         leader of those to be trained, a teacher of gods and humans. Whoever merely
                         hears this blessed buddha’s name will make progress toward unexcelled
@@ -565,7 +570,7 @@
                     <p tid="31"> Sarva­nīvaraṇa­viṣkam­bhin asked, “Blessed One, is it because they
                         have not heard the name of that thus-gone one?” </p>
                     <p tid="32"> “Noble son,” replied the Blessed One, “they have indeed heard that thus-gone
-                        one’s name.” <ref cRef="F.5.b"/>
+                        one’s name.” <ref cRef="F.5.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-61"/>
                     <p tid="33">“In that case, why have they not yet attained the level of
@@ -596,7 +601,7 @@
                         to praise him and offer him worship.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-68"/>
                     <p tid="40">In reply, the blessed thus-gone Padma­netra said to the bodhisattva great
-                        being Sarva­nīvaraṇa­viṣkam­bhin, <ref cRef="F.6.a"/> “Noble son, if you know
+                        being Sarva­nīvaraṇa­viṣkam­bhin, <ref cRef="F.6.a" type="folio"/> “Noble son, if you know
                         that the time has come, you may leave.”</p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-976"/>
                     <p tid="41">At that point all the bodhisattvas addressed the blessed thus-gone
@@ -621,7 +626,7 @@
                         sentient beings is a tremendous feat displayed by that thus-gone one.”</p>
                     <p tid="44">“Yes, it is,” the Blessed One agreed. “Noble children, teaching the Dharma
                         among such sentient beings is indeed a tremendous feat displayed by that
-                        thus-gone one. Moreover, noble children, <ref cRef="F.6.b"/> when sentient
+                        thus-gone one. Moreover, noble children, <ref cRef="F.6.b" type="folio"/> when sentient
                         beings within such a world of rampant afflictions give rise to just a single
                         virtuous mind state then they also display a tremendous feat. Why? Well,
                         what would be amazing about finding pure beings in pure worlds? On the other
@@ -646,7 +651,7 @@
                         beryl, some trees of crystal; some brought forth wish-fulfilling trees, and
                         others brought forth trees of gold. Some produced trees in bloom; some
                         brought forth trees bearing fruit. Some emanated a cloud of precious fabric,
-                        some a cloud of ornaments, some a cloud of incense, <ref cRef="F.7.a"/> some
+                        some a cloud of ornaments, some a cloud of incense, <ref cRef="F.7.a" type="folio"/> some
                         a cloud of garlands, some a cloud of powders, some a cloud of parasols, some
                         a cloud of banners, and some a cloud of cymbals. Having brought together all
                         these emanated offerings, the bodhisattvas then gathered and traveled along
@@ -674,7 +679,7 @@
                         worlds—that which cannot be brightened, illumined, or lit up by the sun or
                         the moon, which are otherwise so famed for their miraculous power and
                         force—was now also permeated by that light so that all the beings who lived
-                        there could see one another. <ref cRef="F.7.b"/> Within that trichiliocosm
+                        there could see one another. <ref cRef="F.7.b" type="folio"/> Within that trichiliocosm
                         all the surrounding mountain ranges, great mountain ranges, Mucilinda
                         Mountains, and Mahā­muci­linda Mountains, along with all the other dark
                         mountains, were now also pervaded and illumined by the light. From the Realm
@@ -700,7 +705,7 @@
                         fell from clouds of divine flowers, clouds of divine fruits, clouds of
                         divine garlands, clouds of divine incense, clouds of divine garments, clouds
                         of divine powders, and clouds of divine Dharma robes, divine umbrellas,
-                        divine banners, and divine standards. <ref cRef="F.8.a"/> As this divine
+                        divine banners, and divine standards. <ref cRef="F.8.a" type="folio"/> As this divine
                         rain was falling, all the beings who were touched by it felt blissful.
                         All the ordinary trees and soil of the region of Gayā and Gayā­śīrṣa now
                         disappeared, and instead the land was filled with trees of jewels,
@@ -755,7 +760,7 @@
                     <lg tid="60">
                         <l>“Having discovered the treasure of sublime Dharma,</l>
                         <l>Out of compassion he distributes it in the world—</l>
-                        <l>Here we have arrived at this most excellent mountain <ref cRef="F.8.b"/>
+                        <l>Here we have arrived at this most excellent mountain <ref cRef="F.8.b" type="folio"/>
                         </l>
                         <l>To worship the one who benefits beyond compare. </l>
                     </lg>
@@ -792,7 +797,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-93"/>
                     <p tid="65">As soon as the Blessed One had spoken, the bodhisattva
                         Sarva­nīvaraṇa­viṣkam­bhin, surrounded and venerated by a retinue of one
-                        hundred sextillion bodhisattvas, <ref cRef="F.9.a"/> arrived before the
+                        hundred sextillion bodhisattvas, <ref cRef="F.9.a" type="folio"/> arrived before the
                         Blessed One through his great miraculous power and the great power of the
                         bodhisattvas. The bodhisattvas bowed to the Blessed One’s feet, sat down
                         before him, and Sarva­nīvaraṇa­viṣkam­bhin then spoke the following verses in
@@ -866,7 +871,7 @@
                         <l>“All these supreme children of yours</l>
                         <l>Have set out in pursuit of awakening.</l>
                         <l>As they wish to the hear the sacred Dharma,</l>
-                        <l>I request, O Guide, that you teach them.” <ref cRef="F.9.b"/>
+                        <l>I request, O Guide, that you teach them.” <ref cRef="F.9.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-064-001-104"/>
@@ -895,7 +900,7 @@
                         perfections of patience? How are their perfections of diligence? How are
                         their perfections of concentration? How are their perfections of insight?
                         How are their perfections of skillful means? How are their perfections of
-                        aspirations? How are their perfections of power? <ref cRef="F.10.a"/> How
+                        aspirations? How are their perfections of power? <ref cRef="F.10.a" type="folio"/> How
                         are their perfections of wisdom? </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-108"/>
                     <p tid="80"> “Blessed One, how are bodhisattvas similar to the earth? How are they
@@ -919,7 +924,7 @@
                         do they have a compassionate nature? How are they joyful, and how do they
                         rest in equanimity? </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-110"/>
-                    <p tid="82"> “Blessed One, how do bodhisattvas <ref cRef="F.10.b"/> revel in
+                    <p tid="82"> “Blessed One, how do bodhisattvas <ref cRef="F.10.b" type="folio"/> revel in
                         superknowledge, how do they relinquish the eight unfree states, how do they
                         ensure that the mind of awakening is not lost, how do they recollect former
                         lives, how do they not separate from their spiritual teachers, and how do
@@ -947,7 +952,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-113"/>
                     <p tid="84"> “How are they perfect in conduct, personal associations, behavior, and
                         deportment? How are bodhisattvas free from stinginess and envy? How do they
-                        have equal concern for all sentient beings? <ref cRef="F.11.a"/> How are
+                        have equal concern for all sentient beings? <ref cRef="F.11.a" type="folio"/> How are
                         they skilled in worshiping and venerating the thus-gone ones? Who are the
                         ones who crush pride, and who are the ones with abundant faith? How are they
                         experts concerning the relative? How are they experts concerning the
@@ -968,7 +973,7 @@
                         support? In what way are they like the king of medicinal trees? How do they
                         pursue meritorious deeds? What does their expertise regarding emanations
                         consist of? Blessed One, how do bodhisattvas quickly and fully awaken to
-                        unexcelled and perfect buddhahood?” <ref cRef="F.11.b"/>
+                        unexcelled and perfect buddhahood?” <ref cRef="F.11.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-114"/>
                     <p tid="85"> In reply to the bodhisattva Sarva­nīvaraṇa­viṣkam­bhin, the Blessed One said,
@@ -998,7 +1003,7 @@
                         mundane gain, or with a wish for fame. Rather, they think, ‘How can I bring
                         an end to all the sufferings of these beings?’ In this way, without any
                         concern for material things, they explain the teachings to others in a way
-                        that is genuine and beyond duality. <ref cRef="F.12.a"/> Just as they teach
+                        that is genuine and beyond duality. <ref cRef="F.12.a" type="folio"/> Just as they teach
                         kings and great ministers thoroughly, so also do they genuinely teach
                         outcasts and their offspring. Needless to mention that they also do so for
                         the inhabitants of foreign cities and lands. Through this giving of the Dharma
@@ -1031,7 +1036,7 @@
                             quoted in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">dānaṃ hi bodhisatvasya
                                 bodhir</foreign>. </note> A bodhisattva’s generosity is free of the
                         three unvirtuous qualities of envy, stinginess, and malice.” Therefore, I
-                        too <ref cRef="F.12.b"/> shall follow the Thus-Gone One and practice
+                        too <ref cRef="F.12.b" type="folio"/> shall follow the Thus-Gone One and practice
                         generosity.’ Then, as they engage in generous practices, their generosity
                         does not make them conceited. Such is the bodhisattvas’ perfect giving of
                         material things. </p>
@@ -1060,7 +1065,7 @@
                         Thus, out of unbearable compassion they benefit those sentient beings with
                         all that they possess and all that they have. Yet they do not become
                         conceited based on the roots of virtue that this creates. Such is the
-                        bodhisattvas’ perfect giving of compassion. <ref cRef="F.13.a"/>
+                        bodhisattvas’ perfect giving of compassion. <ref cRef="F.13.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-124"/>
                     <p tid="93"> “What, you may wonder, does the bodhisattvas’ perfect giving free of disdain
@@ -1088,7 +1093,7 @@
                         offer incense, flowers, frankincense, perfumes, or plaster,<note place="end" xml:id="UT22084-064-001-127" index="38"> Translated based on S: <foreign xml:lang="Bo-Ltn" type="term">skyang nul</foreign>. C, J, and N: <foreign xml:lang="Bo-Ltn" type="term">brkyang nul</foreign>. D: <foreign xml:lang="Bo-Ltn" type="term">skyong nul</foreign>. </note> and
                         they restore shrines that have crumbled. Thus they act in the service of the
                         Buddha. How, then, do they serve the Dharma? They listen to the Dharma, read
-                        the Dharma, retain the Dharma, <ref cRef="F.13.b"/> write it down, recite
+                        the Dharma, retain the Dharma, <ref cRef="F.13.b" type="folio"/> write it down, recite
                         it, and practice it to perfection. They keep it in mind. They gain
                         familiarity with it through the unswerving practice of meditation. Thus they
                         act in the service of the Dharma. How, then, do they serve the Saṅgha? To
@@ -1115,7 +1120,7 @@
                         qualities. What are those ten? They are the commitment to the vows of
                         individual liberation, the commitment to the vows of the bodhisattva
                         training, freedom from the pains of the afflictions, freedom from incorrect
-                        mental engagements, fear of karma, <ref cRef="F.14.a"/> fear of evil,
+                        mental engagements, fear of karma, <ref cRef="F.14.a" type="folio"/> fear of evil,
                         consideration of danger, steadfast commitment, open-ended discipline, and
                         discipline that is purified of the three spheres. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-131"/>
@@ -1151,7 +1156,7 @@
                         not unaware of the right time. They do not lack knowledge of the appropriate
                         objects, nor do they fail to know the right measure. They protect sentient
                         beings. In order to complete the accumulations for their awakening they
-                        engage in excellent conduct. <ref cRef="F.14.b"/> They speak softly and
+                        engage in excellent conduct. <ref cRef="F.14.b" type="folio"/> They speak softly and
                         gently, avoid society, and turn toward complete seclusion with a bright
                         smile on their faces.<note place="end" xml:id="UT22084-064-001-134" index="40"> The passage from “What, then, are
                             the genuine bodhisattva practices” to here reflects with some minor
@@ -1185,7 +1190,7 @@
                         bone, muscles, veins, kidney, heart, liver, lungs, intestines, colon,
                         stomach, entrails, innards, bladder, spleen, excrement, perspiration, mucus,
                         nasal mucus, fat, lymph, marrow, grease, bile, discharge, pus, blood, brain,
-                        cerebrum, and urine. <ref cRef="F.15.a"/> It is a bodhisattva’s nature to
+                        cerebrum, and urine. <ref cRef="F.15.a" type="folio"/> It is a bodhisattva’s nature to
                         examine all these entities, and thus, such a thoughtful bodhisattva
                         contemplates, ‘When childish fools who are dull and ignorant encounter these
                         substances they do not feel any desire. So needless to mention that an
@@ -1232,7 +1237,7 @@
                         they are free of all the pains of affliction. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-141"/>
                     <p tid="106"> “What, you may wonder, does the bodhisattvas’ freedom from incorrect mental
-                        engagements consist in? <ref cRef="F.15.b"/> Alone and in secrecy,
+                        engagements consist in? <ref cRef="F.15.b" type="folio"/> Alone and in secrecy,
                         bodhisattvas may leave for their hermitage. Once there, however, they do not
                         think, ‘Living here in solitude I am following the Dharma-Vinaya of the
                         Thus-Gone One. Other mendicants, or brahmins, live with people and are
@@ -1267,7 +1272,7 @@
                         bodhisattvas’ fear of evil. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-145"/>
                     <p tid="109"> “What, you may wonder, does the bodhisattvas’ consideration of danger
-                        consist in? Brahmins, royalty, townspeople, <ref cRef="F.16.a"/> and country
+                        consist in? Brahmins, royalty, townspeople, <ref cRef="F.16.a" type="folio"/> and country
                         dwellers can all rely on a bodhisattva. That is to say, if brahmins,
                         royalty, townspeople, or country dwellers place any of their wealth or
                         possessions, such as cowry shells, gold, precious stones, pearls, beryl,
@@ -1295,7 +1300,7 @@
                         verbally, and mentally pure. In what sense are they physically pure? By
                         giving up all negative physical acts. What are the negative physical acts?
                         They are killing, taking what has not been given, and sexual misconduct.
-                            <ref cRef="F.16.b"/> Such is their physical purity. How are they
+                            <ref cRef="F.16.b" type="folio"/> Such is their physical purity. How are they
                         verbally pure? By giving up all negative verbal acts. What are such acts?
                         They are lying, divisive talk, harsh words, and chatter. Such is their
                         verbal purity. How are they mentally pure? By giving up all negative mental
@@ -1321,7 +1326,7 @@
                             sūtra in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>: <foreign xml:lang="Sa-Ltn" type="quote">yae ime uccayacorrḥ
                                 śokaparidevaduṣkhadaurmanasyopāyāsās tān kṣamate
                                 ’dhivāsayat</foreign>. </note>
-                        <ref cRef="F.17.a"/>
+                        <ref cRef="F.17.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-152"/>
                     <p tid="115"> “What, you may wonder, does the bodhisattvas’ excellent outer patience
@@ -1352,7 +1357,7 @@
                         through, how it arose, and the reason it arose. Once they examine things in
                         this way, they do not perceive any true emergence of anger, nor do they
                         perceive any true ceasing of anger. They do not see any true source of
-                        anger, <ref cRef="F.17.b"/> nor any way that anger emerges, nor any
+                        anger, <ref cRef="F.17.b" type="folio"/> nor any way that anger emerges, nor any
                         conditions that caused it to arise. Thus they become patient and accepting
                         and do not develop an aggressive frame of mind. Such is the bodhisattvas’
                         excellent patience granted by the Buddha. </p>
@@ -1382,7 +1387,7 @@
                         the bodhisattvas’ excellent patience that is not concerned with a purpose. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-159"/>
                     <p tid="121"> “What, you may wonder, does the bodhisattvas’ excellent unperturbed patience
-                        consist in? <ref cRef="F.18.a"/> Bodhisattvas are not just patient as long
+                        consist in? <ref cRef="F.18.a" type="folio"/> Bodhisattvas are not just patient as long
                         as they do not find themselves in a situation where anger otherwise takes
                         over, such as when they are hit, slapped, beaten, wounded, or abused by
                         others. Rather, if others strike bodhisattvas, threaten them, insult them,
@@ -1405,7 +1410,7 @@
                         Rather than acting as a ruler, bodhisattvas will instead think to
                         themselves, ‘These beings are under my care and I must provide for them.
                         Destroying those who are under my care would be wrong.’ Thus they embrace
-                        such beings with compassion, <ref cRef="F.18.b"/> and patiently accept them
+                        such beings with compassion, <ref cRef="F.18.b" type="folio"/> and patiently accept them
                         without any ill will. Such is the bodhisattvas’ excellent compassionate
                         patience. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-161"/>
@@ -1433,7 +1438,7 @@
                         ignorance. Hence they practice patience and tolerant acceptance, free from
                         malicious intent. Such is the bodhisattvas’ excellent patience that
                         liberates based on commitment. Noble son, such then is the bodhisattvas’
-                        practice of excellent patience. <ref cRef="F.19.a"/>
+                        practice of excellent patience. <ref cRef="F.19.a" type="folio"/>
                         <ref cRef="B2" type="bampo"/>
                     </p>
                     <lb/>
@@ -1462,7 +1467,7 @@
                         of diligence is false and deceptive, and it fools childish beings. Noble
                         son, I do not know of a single sentient being who has fully awakened to
                         unexcelled and complete buddhahood through mustering such diligence.
-                        Nevertheless, noble son, <ref cRef="F.19.b"/> I do know of many millions of
+                        Nevertheless, noble son, <ref cRef="F.19.b" type="folio"/> I do know of many millions of
                         beings who have gone beyond suffering by means of the vehicle of the hearers
                         and the vehicle of the solitary buddhas. Therefore, noble son, relinquish
                         your diligence! I swear that you will otherwise just cause trouble for
@@ -1492,7 +1497,7 @@
                         so it goes without saying that hearers and solitary buddhas do not
                         possess such diligence. Bodhisattvas who possess this diligence create the
                         power of diligence within each mind state. Thus they muster a diligence that
-                        upholds all the qualities of the Buddha <ref cRef="F.20.a"/> and gives up
+                        upholds all the qualities of the Buddha <ref cRef="F.20.a" type="folio"/> and gives up
                         all negative and unvirtuous qualities. Such are the bodhisattvas who possess
                         inalienable diligence. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-170"/>
@@ -1521,7 +1526,7 @@
                         understanding oneself is a stain and a flaw in relation to diligence.
                         Inappropriateness is a stain and a flaw in relation to diligence.
                         Incorrectness is a stain and a flaw in relation to diligence. Social
-                        activity <ref cRef="F.20.b"/> is a stain and a flaw in relation to
+                        activity <ref cRef="F.20.b" type="folio"/> is a stain and a flaw in relation to
                         diligence. These are all stains and flaws in relation to diligence, and
                         bodhisattvas are free of all those. Hence their diligence is blazing and
                         stainless, luminous and pure, and perfectly purified. Such is the
@@ -1555,7 +1560,7 @@
                         became engulfed by the great flames of the Hell of Incessant Pain, I would
                         walk through that mass of fire to save just a single being who suffers and
                         who is in need of protection, a guard, shelter, or support. Since I would
-                        cross that many worlds just to free a single being, <ref cRef="F.21.a"/> I
+                        cross that many worlds just to free a single being, <ref cRef="F.21.a" type="folio"/> I
                         would of course also bear with ordinary types of suffering.’ Such diligence
                         is said to be unshared by any hearer, solitary buddha, or non-Buddhist. It
                         is therefore the bodhisattvas’ extraordinary diligence. </p>
@@ -1596,7 +1601,7 @@
                         suffering!’ Such is the bodhisattvas’ diligence that does not deprecate. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-179"/>
                     <p tid="139"> “Noble son, you may also wonder about the character of the bodhisattvas’
-                        diligence that is free of conceit. <ref cRef="F.21.b"/> When bodhisattvas
+                        diligence that is free of conceit. <ref cRef="F.21.b" type="folio"/> When bodhisattvas
                         practice diligence they do not relish the taste of diligence. Their
                         diligence does not make them disparage others, nor does it cause any
                         self-aggrandizement. Rather, bodhisattvas think, ‘What sort of insightful
@@ -1633,7 +1638,7 @@
                         teachers? They are blessed buddhas or bodhisattvas. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-183"/>
                     <p tid="142"> “When bodhisattvas take birth, due to the power of their affinity with past
-                        roots of virtue, they think, ‘Alas, these beings <ref cRef="F.22.a"/> are
+                        roots of virtue, they think, ‘Alas, these beings <ref cRef="F.22.a" type="folio"/> are
                         suffering! Alas, these beings are helpless! Alas, these beings are suffering
                         from disease! Alas, these beings have no rest! Alas, these beings have been
                         sick for a long time! Alas, these beings are blinded by ignorance! And all
@@ -1661,7 +1666,7 @@
                         view, thought, speech, activity, livelihood, effort, mindfulness, and
                         absorption. Since the path is comprehended by means of these, they obtain
                         faculties that are sharp, clear, and aware of the path. With faculties that
-                        are sharp, clear, and aware, <ref cRef="F.22.b"/> they enjoy abundant
+                        are sharp, clear, and aware, <ref cRef="F.22.b" type="folio"/> they enjoy abundant
                         solitude. They abandon all gatherings and abandon all busyness. They no
                         longer feel any pleasure in talking, and give up thoughts of craving, ill
                         will, and malice, and thoughts about gods. They completely lose interest in
@@ -1687,7 +1692,7 @@
                         holds desirous situations to be excellent and the emotion to be a good
                         quality. Absence of shyness, on the other hand, is when the causes,
                         conditions, and bases for desire make it so that even if one’s parents,
-                        spiritual teacher, or the like object to, oppose, or criticize this, <ref cRef="F.23.a"/> one feels no shame about one’s desire, and instead,
+                        spiritual teacher, or the like object to, oppose, or criticize this, <ref cRef="F.23.a" type="folio"/> one feels no shame about one’s desire, and instead,
                         shamelessly, one holds the emotion to be a valuable quality. Thus, by such
                         causes, conditions, and bases one will come to take birth in the lower
                         realms. This is what is known as <distinct>greater desire</distinct>. </p>
@@ -1720,7 +1725,7 @@
                         followed by remorse and the application of a remedy. This is what is
                         referred to as <distinct>middling anger</distinct>. Lesser anger is when
                         one’s anger causes one to accumulate negative acts through mere words and
-                        unpleasant or harsh expressions. <ref cRef="F.23.b"/> Although one becomes a
+                        unpleasant or harsh expressions. <ref cRef="F.23.b" type="folio"/> Although one becomes a
                         little agitated, one immediately relies on a remedy in that very moment.
                         This is <distinct>lesser anger</distinct>. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-190"/>
@@ -1750,7 +1755,7 @@
                         dull and oppressed by torpor. Such a mind is unclear, just as is the case,
                         for example, with the obscured mind state of someone who has just been woken
                         up from a deep sleep. Bodhisattvas are expert at uplifting the mind out of
-                        such states, <ref cRef="F.24.a"/> at engendering joy, and at placing the
+                        such states, <ref cRef="F.24.a" type="folio"/> at engendering joy, and at placing the
                         mind. Such is the expertise of bodhisattvas with regard to the mind. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-192"/>
                     <p tid="151"> “With their expertise about the mind, bodhisattvas conceive of phenomena as
@@ -1778,7 +1783,7 @@
                         and discernment they complete the joyous and blissful second concentration
                         and remain within it. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-194"/>
-                    <p tid="153"> “Comprehending that <ref cRef="F.24.b"/> the second concentration is joyous
+                    <p tid="153"> “Comprehending that <ref cRef="F.24.b" type="folio"/> the second concentration is joyous
                         but also suffering, they think, ‘This is suffering,’ and so they rest in
                         equanimity. While resting in equanimity they are mindful, alert, and their
                         bodies experience pleasure. About this state the noble ones have taught,
@@ -1815,7 +1820,7 @@
                         in equilibrium. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-198"/>
                     <p tid="157"> “However, they do not see these levels as eternal and delightful abodes.
-                            <ref cRef="F.25.a"/> Instead they train intensively in a mind of love
+                            <ref cRef="F.25.a" type="folio"/> Instead they train intensively in a mind of love
                         that is free of resentment, rivalry, and harm, and is expansive,
                         immeasurable, and nondual. When this single-minded inspiration pervades
                         them, they complete the respective level and remain within it. This applies
@@ -1843,7 +1848,7 @@
                     <p tid="159"> “Noble son, bodhisattvas who practice excellent insight possess ten
                         qualities. What are those ten? They are expertise concerning the absence of
                         self, expertise concerning the ripening of karma, expertise concerning the
-                        conditioned, expertise concerning the continuity of cyclic existence, <ref cRef="F.25.b"/> expertise concerning the dissolving of cyclic existence,
+                        conditioned, expertise concerning the continuity of cyclic existence, <ref cRef="F.25.b" type="folio"/> expertise concerning the dissolving of cyclic existence,
                         expertise concerning the vehicles of the hearers and solitary buddhas,
                         expertise concerning the Great Vehicle, expertise in giving up the
                         activities of the māras, unmistaken insight, and unequaled insight. </p>
@@ -1871,7 +1876,7 @@
                         of virtuous and unvirtuous karmic actions unless there exists a self, a
                         being, a life-force, a creature, a soul, an individual, a person, or a human
                         being. However, while indeed no beings exist, the ripening of karma does
-                        manifest!’ <ref cRef="F.26.a"/> Thus, with this insight, bodhisattvas
+                        manifest!’ <ref cRef="F.26.a" type="folio"/> Thus, with this insight, bodhisattvas
                         understand correctly that, although sentient beings do not exist, the
                         ripening of virtuous and unvirtuous karma nevertheless does manifest. Such
                         is the bodhisattvas’ expertise concerning the ripening of karma. </p>
@@ -1898,7 +1903,7 @@
                         suffering, and distress, as well as ceaseless turmoil. Thus emerges this
                         great mass of nothing but suffering. Like a turning waterwheel, the wheel of
                         existence continues to spin in this way.’ This bodhisattvas recognize by the
-                        power of genuine insight. <ref cRef="F.26.b"/> Such is the bodhisattvas’
+                        power of genuine insight. <ref cRef="F.26.b" type="folio"/> Such is the bodhisattvas’
                         expertise with regard to the continuity of cyclic existence. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-205"/>
                     <p tid="164"> “What, you may wonder, does the bodhisattvas’ expertise with respect to the
@@ -1929,7 +1934,7 @@
                         promising to liberate all beings who are confined to the wilds of cyclic
                         existence. It would not be right of me to escape from that wilderness
                         alone.’ Such is the bodhisattvas’ expertise with respect to the vehicles of
-                        the hearers and solitary buddhas. <ref cRef="F.27.a"/>
+                        the hearers and solitary buddhas. <ref cRef="F.27.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-207"/>
                     <p tid="166"> “What, you may wonder, does the bodhisattvas’ expertise with respect to the
@@ -1970,7 +1975,7 @@
                     <p tid="169"> “Noble son, you may wonder about the character of the bodhisattvas’
                         expertise with respect to unequaled insight. Noble son, bodhisattvas are
                         aware that within the world of gods, humans, and demigods, including Māra,
-                        Brahmā, <ref cRef="F.27.b"/> and all the gods, mendicants, and brahmins,
+                        Brahmā, <ref cRef="F.27.b" type="folio"/> and all the gods, mendicants, and brahmins,
                         there is no one whose insight matches that of the thus-gone, worthy, perfect
                         buddha. With his special insight, he outshines the entire world of gods,
                         humans, and demigods, including Māra, Brahmā, and all the gods, mendicants,
@@ -1993,7 +1998,7 @@
                         offer various forms of flowers and fruits to the buddhas and bodhisattvas
                         three times during the day and three times at night, and all the roots of
                         virtue they dedicate toward the attainment of unexcelled and complete
-                        awakening. Trees of perfume, trees of incense, jewel trees, <ref cRef="F.28.a"/> wish-fulfilling trees, flowering trees, and
+                        awakening. Trees of perfume, trees of incense, jewel trees, <ref cRef="F.28.a" type="folio"/> wish-fulfilling trees, flowering trees, and
                         fruit-bearing trees they offer without any sense of ownership or possession
                         three times during the day and three times at night to the buddhas and
                         bodhisattvas, and all the roots of virtue they dedicate toward the
@@ -2041,7 +2046,7 @@
                         open the doors to the joyful destinations with the wisdom that transcends
                         the world.’ When they close the door, they develop the motivation, ‘I shall
                         close the doors to the lower realms.’ When they rest, they form the wish, ‘I
-                        shall place all beings at the seat of awakening.’ <ref cRef="F.28.b"/> When
+                        shall place all beings at the seat of awakening.’ <ref cRef="F.28.b" type="folio"/> When
                         they lie down to sleep on their right side they think, ‘I shall bring all
                         beings beyond suffering by means of the buddhas’ transcendence of
                         suffering.’ As they get up, they develop the motivation, ‘I shall cause all
@@ -2098,7 +2103,7 @@
                         and the nirgranthas. Attempting to mature them, bodhisattvas think, ‘Alas,
                         these beings have been taken by pride. In the past I was unable to train
                         them as their master, so now I shall accept to be their disciple.’ So they
-                        take ordination among them. <ref cRef="F.29.a"/> Once ordained, they strive,
+                        take ordination among them. <ref cRef="F.29.a" type="folio"/> Once ordained, they strive,
                         persist, and muster diligence so as to outshine other non-Buddhists in terms
                         of their activities, pursuits, scholarship, and austerities. In this way
                         they end up being venerated as teachers and masters among the non-Buddhists
@@ -2128,7 +2133,7 @@
                         withdraw from objects consist in? When bodhisattvas see a man who is
                         overtaken by great craving and desire, they may feel that the only way to
                         tame such beings is to emanate a fine and lovely girl—the most beautiful
-                        girl of all—right next to that desirous man. <ref cRef="F.29.b"/> When
+                        girl of all—right next to that desirous man. <ref cRef="F.29.b" type="folio"/> When
                         noticing that the man is completely consumed by desire, the bodhisattva will
                         then let the emanated girl die right there in the bed. Right then, at that
                         very moment, she will begin to rot, stink, and decompose. When the man sees
@@ -2156,7 +2161,7 @@
                         the teaching of Dharma, as they will now regard the bodhisattva as an
                         agreeable person. Before that individual the bodhisattva will then project
                         emanations of the bodhisattva’s parents and say, ‘You there, look here and
-                        drop your regrets. <ref cRef="F.30.a"/> I am your friend and I am telling
+                        drop your regrets. <ref cRef="F.30.a" type="folio"/> I am your friend and I am telling
                         you that no one ever went to hell or became deprived of all success by doing
                         what you have done. Neither is it the case that such action cannot be
                         cleared away through wisdom.’ Having said this, the bodhisattva will then
@@ -2182,7 +2187,7 @@
                         something frightening will be shown something frightening, whereas those who
                         are to be tamed by beatings, threats, killing, or bondage will be shown just
                         that. The noble will tame those who are to be tamed by the noble. Sentient
-                        beings intent on an act with immediate consequences <ref cRef="F.30.b"/> or
+                        beings intent on an act with immediate consequences <ref cRef="F.30.b" type="folio"/> or
                         an act to defeat bodhisattvas<note place="end" xml:id="UT22084-064-001-223" index="53"> Translated based on C, J,
                             K, N, and K<hi rend="subscript">Y</hi>: <foreign xml:lang="Bo-Ltn" type="quote">byang chub sems
                                 dpa’ dag la rgyal bar ’dod pa</foreign>. D and S: <foreign xml:lang="Bo-Ltn" type="quote">byang chub sems dpa’ dag la brgyad
@@ -2215,7 +2220,7 @@
                         beings with a livelihood consist in? Bodhisattvas may encounter beings who
                         are unfit for and incapable of comprehending the Dharma-Vinaya of the noble
                         ones, and who instead chase after food and clothing, perceiving that alone
-                        to be sufficient. <ref cRef="F.31.a"/> Bodhisattvas will then teach them
+                        to be sufficient. <ref cRef="F.31.a" type="folio"/> Bodhisattvas will then teach them
                         various virtuous skills such as reading, sciences, finger calculation,
                         numbers, and mathematics, while avoiding showing them any unvirtuous skills.
                         Such is the bodhisattvas’ skill in providing sentient beings with a
@@ -2259,7 +2264,7 @@
                         another. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-229"/>
                     <p tid="181"> “What, you may wonder, does the bodhisattvas’ skill in genuinely
-                        encouraging, inspiring, and exhilarating beings consist in? <ref cRef="F.31.b"/>
+                        encouraging, inspiring, and exhilarating beings consist in? <ref cRef="F.31.b" type="folio"/>
                         Bodhisattvas cause those beings who have not yet given rise to the awakened
                         mind to do so. Others may have already given rise to the awakened mind, yet
                         they are lazy, have little diligence, and are content with discipline alone.
@@ -2285,7 +2290,7 @@
                         truly inspired and extremely happy to worship and venerate, which is
                         transcendent patience. As they do not feel any weariness while worshiping
                         and venerating, this is transcendent diligence. Being focused on worshiping
-                        and venerating is transcendent concentration. <ref cRef="F.32.a"/> Finally,
+                        and venerating is transcendent concentration. <ref cRef="F.32.a" type="folio"/> Finally,
                         the diversity of the worship and veneration is transcendent insight. Noble
                         son, such is the bodhisattvas’ skill in worshiping and venerating the
                         thus-gone ones. Noble son, bodhisattvas who possess these ten qualities are
@@ -2314,7 +2319,7 @@
                         benefit of all sentient beings consist in? Bodhisattvas aspire to first lead
                         all beings without any exception to the complete transcendence of suffering
                         before they themselves attain a buddha’s complete transcendence of
-                        suffering. <ref cRef="F.32.b"/> Such is the bodhisattvas’ aspiration to
+                        suffering. <ref cRef="F.32.b" type="folio"/> Such is the bodhisattvas’ aspiration to
                         persist for the benefit of all beings. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-235"/>
                     <p tid="187"> “What, you may wonder, does the bodhisattvas’ aspiration of praise to all
@@ -2342,7 +2347,7 @@
                     <p tid="190"> “What, you may wonder, does the bodhisattvas’ limitless aspiration consist
                         in? Bodhisattvas do not have limited aspirations based on meager
                         accumulations for awakening. Instead, they drape their robe over one
-                        shoulder, kneel down on their right knee, <ref cRef="F.33.a"/> and without
+                        shoulder, kneel down on their right knee, <ref cRef="F.33.a" type="folio"/> and without
                         any weariness look to the realms of the world in the ten directions. They
                         sincerely consider all the bodhisattvas present there—all those who are
                         practicing austerities, all those who reside at the seat of awakening, all
@@ -2369,7 +2374,7 @@
                         beings who can hardly be trained!’ They will therefore not feel weary and
                         turn their backs upon such beings. They will not pray to be born in pure
                         realms where not even the names of such beings can be heard. They will not
-                        become bodhisattvas who turn away from the welfare of sentient beings, <ref cRef="F.33.b"/> taking birth in completely pure fields. Bodhisattvas
+                        become bodhisattvas who turn away from the welfare of sentient beings, <ref cRef="F.33.b" type="folio"/> taking birth in completely pure fields. Bodhisattvas
                         with insight instead will think, ‘Throughout all the worlds, may all
                         inferior beings who lack diligence, who are foolish and dumb, ignorant like
                         sheep, and incapable of passing beyond suffering, who are the lowest among
@@ -2410,7 +2415,7 @@
                         because the bodhisattvas’ aspiration for true and complete awakening has
                         been fully perfected, there is not even the most infinitesimal bit of an
                         aspiration that has not been perfected. That is why this is called
-                            <distinct>the aspiration to full perfection</distinct>. <ref cRef="F.34.a"/> Noble son, bodhisattvas who possess these ten qualities
+                            <distinct>the aspiration to full perfection</distinct>. <ref cRef="F.34.a" type="folio"/> Noble son, bodhisattvas who possess these ten qualities
                         practice excellent aspirations. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-243"/>
@@ -2443,7 +2448,7 @@
                     <p tid="198"> “What, you may wonder, does the bodhisattvas’ excellent power of insight
                         consist in? Excepting the wisdom of the thus-gone ones, there are, for
                         bodhisattvas, no qualities of buddhahood that they do not see, actualize, or
-                        comprehend with their insight. <ref cRef="F.34.b"/> Such is the
+                        comprehend with their insight. <ref cRef="F.34.b" type="folio"/> Such is the
                         bodhisattvas’ excellent power of insight. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-249"/>
                     <p tid="199"> “What, you may wonder, does the bodhisattvas’ excellent power of their
@@ -2471,7 +2476,7 @@
                         harm. Such is the bodhisattvas’ excellent power of miracles. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-251"/>
                     <p tid="201"> “What, you may wonder, does the bodhisattvas’ excellent power of mastery
-                        consist in? If they so wish, <ref cRef="F.35.a"/> bodhisattvas may bless a
+                        consist in? If they so wish, <ref cRef="F.35.a" type="folio"/> bodhisattvas may bless a
                         trichiliocosm to be filled with the seven precious substances. If they wish,
                         they may even bless an inexpressible number of inexpressibly many universes
                         to be full of various precious substances. Such is the bodhisattvas’
@@ -2502,7 +2507,7 @@
                     <p tid="205"> “Noble son, bodhisattvas endowed with excellent wisdom possess ten
                         qualities. What are those ten? They are the excellent wisdom regarding the
                         absence of self in a person, the excellent wisdom regarding the absence of
-                        self in phenomena, <ref cRef="F.35.b"/> the excellent wisdom that is not
+                        self in phenomena, <ref cRef="F.35.b" type="folio"/> the excellent wisdom that is not
                         temporary, the excellent wisdom of the sphere of absorption, the excellent
                         wisdom of blessings, the excellent inalienable wisdom, the excellent wisdom
                         that observes the activities of all sentient beings, the excellent wisdom of
@@ -2529,7 +2534,7 @@
                         wisdom regarding the absence of self in a person. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-257"/>
                     <p tid="207"> “What, you may wonder, does the bodhisattvas’ excellent wisdom regarding the
-                        absence of self in phenomena consist in? <ref cRef="F.36.a"/> Bodhisattvas
+                        absence of self in phenomena consist in? <ref cRef="F.36.a" type="folio"/> Bodhisattvas
                         have a correct understanding regarding the unfounded superimpositions and negations
                         made with respect to phenomena. Thus, they correctly recognize this:
                         ‘Nominal designations of an imaginary nature are applied to temporary phenomena. Those
@@ -2559,7 +2564,7 @@
                         bodhisattvas engage in, and they know the absorptions and associated spheres
                         that the buddhas engage in. However, their knowledge of the spheres of
                         absorptions of the thus-gone ones depends upon the permission of the
-                        thus-gone ones. <ref cRef="F.36.b"/> Such knowledge is not due to a wisdom
+                        thus-gone ones. <ref cRef="F.36.b" type="folio"/> Such knowledge is not due to a wisdom
                         of their own that has been attained through maturation. The other
                         absorptions are, on the other hand, known through their own wisdom as
                         attained by means of maturation. Such is the bodhisattvas’ excellent wisdom
@@ -2586,7 +2591,7 @@
                         of Dharma, that some have completed all tasks and pass completely beyond
                         suffering, that some pass beyond suffering by means of the Hearers’ Vehicle,
                         that some pass beyond suffering by means of the Solitary Buddhas’ Vehicle,
-                            <ref cRef="F.37.a"/> that some are born in the higher realms, and that
+                            <ref cRef="F.37.a" type="folio"/> that some are born in the higher realms, and that
                         some are born in the lower realms. In this way they observe the activities
                         of all sentient beings. Such is the bodhisattvas’ excellent wisdom that
                         observes the activities of all sentient beings. </p>
@@ -2617,7 +2622,7 @@
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-266"/>
-                    <p tid="216"> “Noble son, bodhisattvas possessing ten qualities are similar to the earth. <ref cRef="F.37.b"/> What are those ten? They are wide and infinite, provide
+                    <p tid="216"> “Noble son, bodhisattvas possessing ten qualities are similar to the earth. <ref cRef="F.37.b" type="folio"/> What are those ten? They are wide and infinite, provide
                         all beings with sustenance, are indifferent to harm and assistance, absorb
                         the great rain of Dharma, transform all beings, are the ground for the seeds
                         of virtuous qualities, are a vessel of jewels, are a vessel of powerful
@@ -2642,7 +2647,7 @@
                         The earth does not distinguish between those situations. Similarly,
                         bodhisattvas do not become angry at those who harm them, nor do they become
                         attached to those who do them good. Thus, as they neither develop attachment
-                            <ref cRef="F.38.a"/> nor anger in their relations with sentient beings,
+                            <ref cRef="F.38.a" type="folio"/> nor anger in their relations with sentient beings,
                         bodhisattvas are indifferent to harm and assistance. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-270"/>
                     <p tid="220"> “In what way, you may wonder, do bodhisattvas absorb the great rain of
@@ -2671,7 +2676,7 @@
                         can be found within them. Thus, bodhisattvas are vessels of jewels. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-274"/>
                     <p tid="224"> “In what way, you may wonder, are bodhisattvas vessels of powerful medicinal
-                        plants? Consider, noble son, the analogy of the earth. <ref cRef="F.38.b"/>
+                        plants? Consider, noble son, the analogy of the earth. <ref cRef="F.38.b" type="folio"/>
                         All great medicinal plants that remedy all sorts of diseases grow in the
                         earth and emerge from it. Likewise, the great medicinal plants of the Dharma
                         that pacify all the diseases of the afflictions are within the bodhisattvas
@@ -2700,7 +2705,7 @@
                         make the roots of affliction rot; they are limpid, free of murk, and clear;
                         they pacify the torments of affliction; they alleviate craving for pleasure;
                         they are deep and hard to fathom; they flood high and low; and they pacify
-                        the dust of affliction. <ref cRef="F.39.a"/>
+                        the dust of affliction. <ref cRef="F.39.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-278"/>
                     <p tid="228"> “Noble son, you may wonder how bodhisattvas move in a flow of virtuous
@@ -2729,7 +2734,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-281"/>
                     <p tid="231"> “Noble son, you may wonder how bodhisattvas make the web of the roots of
                         affliction rot. Consider, noble son, how water can make the web of the roots
-                        of trees and grass rot. <ref cRef="F.39.b"/> Similarly, with the water of
+                        of trees and grass rot. <ref cRef="F.39.b" type="folio"/> Similarly, with the water of
                         training in absorption bodhisattvas cause the web of the roots of affliction
                         to rot. In this way they render even the names of the web of the roots of
                         affliction unknown, and the imprints that are caused by affliction
@@ -2757,7 +2762,7 @@
                         objects. Thus, bodhisattvas alleviate craving for pleasure. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-285"/>
                     <p tid="235"> “Noble son, you may wonder how bodhisattvas are deep and hard to fathom.
-                        Consider, noble son, <ref cRef="F.40.a"/> the example of water that is deep
+                        Consider, noble son, <ref cRef="F.40.a" type="folio"/> the example of water that is deep
                         and hard to fathom. The bodhisattvas’ true accomplishment of wisdom is
                         similarly profound and can hardly be fathomed by non-Buddhists or demons.
                         Thus, bodhisattvas are deep and hard to fathom. </p>
@@ -2782,7 +2787,7 @@
                     <p tid="238"> “Noble son, bodhisattvas possessing ten qualities are similar to fire. What
                         are those ten? They burn the garbage pit of affliction, bring the qualities
                         of buddhahood to maturation, dry all the mud of affliction, resemble a
-                        bonfire, bring illumination, <ref cRef="F.40.b"/> bring terror, bring
+                        bonfire, bring illumination, <ref cRef="F.40.b" type="folio"/> bring terror, bring
                         assurance, are there for all beings equally, are the object of worship, and
                         cannot be ignored. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-289"/>
@@ -2808,7 +2813,7 @@
                         analogy of a bonfire that is lit to relieve sentient beings’ suffering from
                         the ailments of a cold disease. Bodhisattvas, similarly, heal sentient
                         beings suffering from the cold diseases of affliction by warming them up
-                        with their insight. <ref cRef="F.41.a"/> Thus, bodhisattvas resemble
+                        with their insight. <ref cRef="F.41.a" type="folio"/> Thus, bodhisattvas resemble
                         bonfires. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-293"/>
                     <p tid="243"> “You may wonder how bodhisattvas illuminate. Consider, noble son, the
@@ -2832,7 +2837,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-295"/>
                     <p tid="245"> “You may wonder how bodhisattvas bring assurance. Consider, noble son, the
                         analogy of a man who is lost in the wilderness and then sees a great
-                        bonfire. Turning toward the fire, he then sees a town or an encampment. <ref cRef="F.41.b"/> Seeing it, he will be invigorated and greatly relieved
+                        bonfire. Turning toward the fire, he then sees a town or an encampment. <ref cRef="F.41.b" type="folio"/> Seeing it, he will be invigorated and greatly relieved
                         from all his fear. Similarly, when the beings who are lost in the wild of
                         cyclic existence see a bodhisattva, they feel invigorated and assured,
                         leaving the fears of affliction behind. Thus, bodhisattvas bring assurance. </p>
@@ -2856,7 +2861,7 @@
                         and who are beginners within the Great Vehicle, also cannot be ignored by
                         the world of gods, humans, and demigods. Why? Because gods, nāgas, yakṣas,
                         gandharvas, and demigods understand that before long the bodhisattva will
-                        sit at the seat of awakening <ref cRef="F.42.a"/> and fully awaken to
+                        sit at the seat of awakening <ref cRef="F.42.a" type="folio"/> and fully awaken to
                         unexcelled and complete buddhahood. Thus, bodhisattvas cannot be ignored.
                         Noble son, bodhisattvas possessing these ten qualities are similar to fire. </p>
                     <lb/>
@@ -2880,7 +2885,7 @@
                     <p tid="250"> “Noble son, you may wonder how bodhisattvas never dwell. Consider, noble
                         son, the analogy of how the wind moves without impediment, without dwelling,
                         and without being supported. It seems insubstantial and still it fulfills
-                        its particular function in relation to forests, houses, palaces, <ref cRef="F.42.b"/> the central mountain, and the seas. Similarly, the
+                        its particular function in relation to forests, houses, palaces, <ref cRef="F.42.b" type="folio"/> the central mountain, and the seas. Similarly, the
                         wind-like bodhisattvas do not dwell on any phenomenon. They do not dwell on
                         the aggregates, elements, or sense sources. They do not dwell on forms,
                         feelings, perceptions, formations, or consciousness. They do not dwell on
@@ -2900,7 +2905,7 @@
                         arise in relation to entity, nonentity, sameness, difference, suchness, and
                         so forth. Without any such observation, bodhisattvas experience unobscured
                         freedom and hence they can also act as Śakra, Brahmā, guardians of the
-                        world, and so on. <ref cRef="F.43.a"/> Thus, throughout all the infinite
+                        world, and so on. <ref cRef="F.43.a" type="folio"/> Thus, throughout all the infinite
                         worlds of the ten directions, bodhisattvas move until the end of time to
                         secure the well-being of sentient beings. However, due to having a Dharma
                         form<note place="end" xml:id="UT22084-064-001-301" index="57"> “Dharma form” here translates the Tibetan <foreign xml:lang="Sa-Ltn" type="term">chos kyi lus</foreign>. This
@@ -2929,7 +2934,7 @@
                         possessions, influence, power, lifespan, health, livelihood, skills,
                         learning, intelligence, servants, eloquence, or splendor. Thus, to those who
                         continuously praise themselves they show something that is still more
-                        excellent. <ref cRef="F.43.b"/> As the bodhisattvas teach them the Dharma
+                        excellent. <ref cRef="F.43.b" type="folio"/> As the bodhisattvas teach them the Dharma
                         they make them conquer their pride and practice stainless virtue. In this
                         way, noble son, bodhisattvas scatter, crush, and destroy the mountain peaks
                         of arrogance in sentient beings. </p>
@@ -2955,7 +2960,7 @@
                         blessing them in many ways within the pure appearances of excellent marks,
                         signs, and a circle of light. Blessing all the worlds to be adorned with
                         ornamental arrays, they bring supreme joy, contentment, and appreciation to
-                        gods and humans. They produce the crops, <ref cRef="F.44.a"/> greenery, and
+                        gods and humans. They produce the crops, <ref cRef="F.44.a" type="folio"/> greenery, and
                         trees of both mundane and supramundane qualities of virtue, which bring
                         perfect happiness and bliss. Bringing all beings joy in this comprehensive
                         manner, they empower them with the Dharma in order to bring them further
@@ -2984,7 +2989,7 @@
                         noble son, how the force of the breath keeps beings alive. Similarly,
                         bodhisattvas use the wind of those virtuous qualities that they have
                         accomplished and grant to others to bring forth all types of perfect
-                        sustenance. In this way they delight all beings. <ref cRef="F.44.b"/>
+                        sustenance. In this way they delight all beings. <ref cRef="F.44.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-309"/>
                     <p tid="256"> “Consider further, noble son, the analogy of the wind. In all world
@@ -3008,7 +3013,7 @@
                         by those who are intent on worship. It can be likened to the completion of a
                         thus-gone one’s body endowed with the marks of a hundred merits and in
                         constant equipoise. The oceans can be compared to the oceans of absorption.
-                            <ref cRef="F.45.a"/> The islands, subcontinents, mountains, the four
+                            <ref cRef="F.45.a" type="folio"/> The islands, subcontinents, mountains, the four
                         continents, and so forth can be compared to the various practices,
                         retentions, maturations of sentient beings, saṅghas of disciples, and so
                         forth. The towns, forests, and palaces can be compared to the perfectly pure
@@ -3033,7 +3038,7 @@
                         the worlds in the ten directions, as far as space extends. Then further
                         think that each of those beings in all those worlds now comes to possess
                         the heaps of merit that are the possession of Śakra, and that thus they now
-                        all becomes Śakras without exception. <ref cRef="F.45.b"/> Imagine then that
+                        all becomes Śakras without exception. <ref cRef="F.45.b" type="folio"/> Imagine then that
                         the combined merit of all those Śakras—present across world realms as
                         innumerable as the grains of sand in the river Gaṅgā throughout each of the
                         ten directions—becomes the individual endowment of each one of them, and
@@ -3062,7 +3067,7 @@
                         among the first twenty-nine marks of a thus-gone one. If, in turn, that
                         merit were multiplied by ten inexpressibly many times then that would be
                         enough to manifest the hair between the eyebrows, which is more radiant and
-                        delightful than a thousand stainless full moons. <ref cRef="F.46.a"/> If,
+                        delightful than a thousand stainless full moons. <ref cRef="F.46.a" type="folio"/> If,
                         beyond that, such merit were multiplied by a quadrillion inexpressibly many
                         times, it would yield the crown of a thus-gone one, which is raised above
                         everyone else, imperceptible, and adorned with the crown protrusion.
@@ -3093,7 +3098,7 @@
                     <p tid="260"> “What, you may wonder, are the twelve grounds? They are the ground where the
                         mind of awakening has been engendered,<note place="end" xml:id="UT22084-064-001-314" index="60"> Here and
                             immediately below, the translation is based on S: <foreign xml:lang="Bo-Ltn" type="quote">bskyed pa</foreign>. D: <foreign xml:lang="Bo-Ltn" type="quote">ma bskyed pa</foreign>. </note>
-                        <ref cRef="F.46.b"/> as well as the grounds of the Joyous, the <term>Stainless</term>,
+                        <ref cRef="F.46.b" type="folio"/> as well as the grounds of the Joyous, the <term>Stainless</term>,
                         the <term>Radiant</term>, the <term>Flaming</term>, the <term>Hard to Conquer</term>, the <term>Manifest</term>, the <term>Far Reaching</term>, the <term>Unshakable</term>, the <term>Excellent Intelligence</term>, the <term>Cloud of Dharma</term>,
                         and the buddhas’ ground of Universal Illumination.<note place="end" xml:id="UT22084-064-001-315" index="61"> The
                             last eleven entries in this list of bodhisattva grounds correspond to
@@ -3121,7 +3126,7 @@
                         all endless appearances with a rain of precious mundane and supramundane
                         qualities. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-317"/>
-                    <p tid="262"> The sight of them is excellent, <ref cRef="F.47.a"/> delightful, beautiful,
+                    <p tid="262"> The sight of them is excellent, <ref cRef="F.47.a" type="folio"/> delightful, beautiful,
                         and wholesome. Without being offensive to anyone, any encounter with them is
                         meaningful and fulfills all wishes. Such bodhisattvas stir innumerable world
                         systems. They protect infinitely many beings from such miseries as the lower
@@ -3163,7 +3168,7 @@
                             nine entries in the following list of the bodhisattva’s absorptions were
                             most likely the source for the entries 739–47 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>. See Pagel 2007, p.  158.
                         </note> the universally superior jewel, the firm abode, the immovable, the
-                        <term>irreversible</term>, the jewel mine, <ref cRef="F.47.b"/> the splendorous sunlight,
+                        <term>irreversible</term>, the jewel mine, <ref cRef="F.47.b" type="folio"/> the splendorous sunlight,
                         the accomplishment of all objectives, the <term>lamp of wisdom</term>, the direct
                         encounter with the buddhas of the present, and the heroic gait. These are
                         among the bodhisattvas’ limitless absorptions. </p>
@@ -3193,7 +3198,7 @@
                         be full of buddhas; mastery of aspirations, as one displays complete
                         awakening at whichever time and place it may be desired; mastery of
                         miracles, as one displays infinite miracles throughout all realms of the
-                        world; <ref cRef="F.48.a"/> mastery of Dharma, as one displays the light of
+                        world; <ref cRef="F.48.a" type="folio"/> mastery of Dharma, as one displays the light of
                         the gateways to the Dharma beyond center and edge; and mastery of wisdom, as
                         one displays the complete awakening of wisdom that is endowed with all
                         supreme aspects. With this mastery, there is instantaneously a complete
@@ -3231,7 +3236,7 @@
                             bodhisattva’s eighteen unique qualities was most likely the source for the
                             entries 789–806 in the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>.
                             See Pagel 2007, p.  161. </note>
-                        <ref cRef="F.48.b"/> They are the possession of untaught generosity,
+                        <ref cRef="F.48.b" type="folio"/> They are the possession of untaught generosity,
                         untaught discipline, untaught patience, untaught diligence, untaught
                         concentration, and untaught insight. Furthermore, they consist of gathering
                         sentient beings by the means of attraction; knowing the proper way of
@@ -3256,7 +3261,7 @@
                         continued ripening of all causes related to acts in the past, future, and
                         present; the power to know diverse inclinations; the power to know diverse
                         constitutions; the power to know higher and lower faculties; the power to
-                        know the paths for all destinations; <ref cRef="F.49.a"/> the power to know
+                        know the paths for all destinations; <ref cRef="F.49.a" type="folio"/> the power to know
                         all concentrations, liberations, absorptions, attainments, afflictions,
                         purifications, and arisings; the power to know past existences; the power to
                         know death and rebirth; and the power to know the exhaustion of defilements.
@@ -3280,7 +3285,7 @@
                         of the future; unattached and unimpeded wisdom vision of the present;
                         physical actions all being preceded by and agreeing with wisdom; verbal
                         actions all being preceded by and agreeing with wisdom; and mental actions
-                        all being preceded by and agreeing with wisdom. These eighteen <ref cRef="F.49.b"/> are the thus-gone ones’ unique qualities. </p>
+                        all being preceded by and agreeing with wisdom. These eighteen <ref cRef="F.49.b" type="folio"/> are the thus-gone ones’ unique qualities. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-336"/>
                     <p tid="274"> “What, you may wonder, does the great compassion of thus-gone ones consist
@@ -3322,7 +3327,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-347"/>
                     <p tid="285"> “The thus-gone ones feel great compassion for sentient beings since all
                         phenomena are devoid of arising and yet sentient beings believe they are
-                        subject to arising. <ref cRef="F.50.a"/>
+                        subject to arising. <ref cRef="F.50.a" type="folio"/>
                     </p>
                     <p tid="286"> “The thus-gone ones feel great compassion for sentient beings since all
                         phenomena are devoid of transference and emergence and yet sentient beings
@@ -3355,7 +3360,7 @@
                     <p tid="296"> “The thus-gone ones feel great compassion for sentient beings since all
                         phenomena are without marks and yet sentient beings experience marks. </p>
                     <p tid="297"> “The thus-gone ones feel great compassion for sentient beings since all
-                        phenomena are beyond wishes and yet sentient beings make aspirations. <ref cRef="F.50.b"/>
+                        phenomena are beyond wishes and yet sentient beings make aspirations. <ref cRef="F.50.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-360"/>
                     <p tid="298"> “Alas! Those who inhabit the worlds are caught up in disputes and flawed by
@@ -3393,7 +3398,7 @@
                     <p tid="304"> “Alas! Sentient beings are constantly obsessed with their homes, although
                         they are containers of suffering and intense afflictions. Seeing such
                         beings, the thus-gone ones wish to teach them the Dharma so that they may
-                        emerge from their homes and truly go beyond the three realms. <ref cRef="F.51.a"/> Thus arises the thus-gone ones’ great compassion for
+                        emerge from their homes and truly go beyond the three realms. <ref cRef="F.51.a" type="folio"/> Thus arises the thus-gone ones’ great compassion for
                         sentient beings. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-367"/>
                     <p tid="305"> “All phenomena follow their causes and appear whenever those causes
@@ -3430,7 +3435,7 @@
                         thus-gone ones and bodhisattvas are unfathomable and beyond count. The
                         thus-gone ones may teach on this topic until the end of time and yet these
                         qualities would remain infinite. Here I have merely touched upon them so
-                        that sentient beings may be joyous, faithful, and delighted. <ref cRef="F.51.b"/> Thus bodhisattvas are masters of using every exhalation
+                        that sentient beings may be joyous, faithful, and delighted. <ref cRef="F.51.b" type="folio"/> Thus bodhisattvas are masters of using every exhalation
                         and inhalation in virtuous ways for the benefit of sentient beings. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-373"/>
@@ -3455,7 +3460,7 @@
                         bodhisattvas. Indeed, they constantly and continuously embody an infinite
                         number of hundreds of thousands of heaps of mundane and supramundane
                         qualities. Thus, bodhisattvas are capable of containing the limitless
-                        rainclouds of Dharma. <ref cRef="F.52.a"/>
+                        rainclouds of Dharma. <ref cRef="F.52.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-374"/>
                     <p tid="312"> “In what way, you may wonder, do bodhisattvas open up and arrange the
@@ -3479,7 +3484,7 @@
                         discord, servitude, clear-mindedness, or great glory. They determine which
                         teachings concern science, arts, or crafts, and which ones convey universal
                         expertise in manifold fields of knowledge. They determine which teachings
-                        belong to the Vehicle of the Hearers and turn one into a hearer. <ref cRef="F.52.b"/> They point out which teachings belong to the Solitary
+                        belong to the Vehicle of the Hearers and turn one into a hearer. <ref cRef="F.52.b" type="folio"/> They point out which teachings belong to the Solitary
                         Buddha Vehicle and turn one into a solitary buddha, and they show which
                         teachings are of the Great Vehicle by virtue of possessing all supreme
                         aspects, serving as the means for truly accomplishing the welfare of others,
@@ -3503,7 +3508,7 @@
                         cymbals, and so forth. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-377"/>
                     <p tid="315"> “Similarly, coming from the thus-gone ones and their bodhisattva retinues
-                        who reside in the pure realms, the wind-like bodhisattvas <ref cRef="F.53.a"/> constantly and continuously inspire and motivate sentient beings to
+                        who reside in the pure realms, the wind-like bodhisattvas <ref cRef="F.53.a" type="folio"/> constantly and continuously inspire and motivate sentient beings to
                         engage with the joy of the Dharma. Thus, they bring them freedom from evil
                         acts of body, speech, and mind; splendor and freedom from weariness; and the
                         experience of all divine and human perfections. Saving them from all
@@ -3533,7 +3538,7 @@
                     <p tid="316"> “In what way, you may wonder, do bodhisattvas use their virtuous
                         environment, which they have accumulated over incalculable eons and which
                         contains an ocean of gateways to absorptions, liberations, and retentions,
-                        as well as a central mountain, light, moon, sun, Dharma ways, <ref cRef="F.53.b"/> forests, houses, and surrounding mountains of virtue, to
+                        as well as a central mountain, light, moon, sun, Dharma ways, <ref cRef="F.53.b" type="folio"/> forests, houses, and surrounding mountains of virtue, to
                         tame and ripen their retinues of many beings? And how do they blow the
                         destructive wind of wisdom, which is unsurpassed and transfers beings to the
                         realms where there are no physical bodies? </p>
@@ -3556,7 +3561,7 @@
                         crush incorrect thinking and bring about the inconceivable, complete
                         transcendence of the world and the excellent merit without form. Through the
                         destruction of these forms, they cause a pure transformation that remains
-                        until the end of time, being beyond center and edge. <ref cRef="F.54.a"/>
+                        until the end of time, being beyond center and edge. <ref cRef="F.54.a" type="folio"/>
                         Noble son, thus bodhisattvas cause their virtuous environment, which has
                         been accumulated throughout incalculable eons and contains an ocean of
                         absorptions, liberations, and retentions, as well as a central mountain,
@@ -3583,7 +3588,7 @@
                         respected in all regards, free of all unvirtuous qualities, in possession of
                         all virtuous qualities, and will turn into a support for the entire world.
                         The fools who discard these teachings will roam in continuous darkness, and
-                        will meet only with suffering. <ref cRef="F.54.b"/> The world with its gods,
+                        will meet only with suffering. <ref cRef="F.54.b" type="folio"/> The world with its gods,
                         humans, and demigods will only bring them pain. <ref cRef="B4" type="bampo"/>
                     </p>
                     <lb/>
@@ -3609,7 +3614,7 @@
                     <p tid="322"> “Noble son, bodhisattvas possessing ten qualities are like the moon. What
                         are those ten? They are to gratify the bodies of all beings, to be
                         delightful to behold, to make positive qualities grow, to make negative
-                        qualities wane, to be the object of praise, <ref cRef="F.55.a"/> to possess
+                        qualities wane, to be the object of praise, <ref cRef="F.55.a" type="folio"/> to possess
                         a pure body, to ride a supreme mount, to be constantly adorned, to be
                         interested in and pursue the joy of Dharma, and to have great magical power. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-386"/>
@@ -3637,7 +3642,7 @@
                     <p tid="327"> “Consider, noble son, the analogy of the moon during the dark fortnight. Its
                         colors, light, and size keep waning until the fifteenth day when it
                         completely disappears. Similarly, when the moon-like bodhisattvas attain
-                        transcendent wisdom all negative qualities continuously wane <ref cRef="F.55.b"/> until they finally disappear completely at the seat of
+                        transcendent wisdom all negative qualities continuously wane <ref cRef="F.55.b" type="folio"/> until they finally disappear completely at the seat of
                         awakening. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-391"/>
                     <p tid="328"> “Consider, noble son, how the rising moon is praised by brahmins, royalty,
@@ -3668,7 +3673,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-396"/>
                     <p tid="333"> “Consider, noble son, the god Candra’s possession of great magical power.
                         Likewise, the moon-like bodhisattvas possess great magical power due to
-                        their great merit and great wisdom. Noble son, <ref cRef="F.56.a"/> from the
+                        their great merit and great wisdom. Noble son, <ref cRef="F.56.a" type="folio"/> from the
                         way they satisfy the bodies of all beings, up to their great magical power,
                         such are bodhisattvas. Thus, noble son, bodhisattvas who possess these ten
                         qualities are like the moon. </p>
@@ -3705,7 +3710,7 @@
                             rise of virtuous qualities</distinct>. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-403"/>
                     <p tid="340"> “Consider, noble son, how the time when the light of the sun disappears is
-                        referred to as <distinct>the sunset</distinct>. <ref cRef="F.56.b"/>
+                        referred to as <distinct>the sunset</distinct>. <ref cRef="F.56.b" type="folio"/>
                         Similarly, for the bodhisattvas, when all the afflictions entirely disappear
                         that time is referred to as <distinct>the exhaustion of
                             defilement</distinct>. </p>
@@ -3737,7 +3742,7 @@
                     <p tid="345"> “Consider, noble son, how the shining sun delights virtuous people but
                         displeases the savage. Similarly, the sun-like bodhisattvas shine to the
                         delight of the virtuous, learned, and insightful, whereas they displease
-                        those who have entered negative paths, and are savage, childish, <ref cRef="F.57.a"/> possessed of misguided intelligence, fond of cyclic
+                        those who have entered negative paths, and are savage, childish, <ref cRef="F.57.a" type="folio"/> possessed of misguided intelligence, fond of cyclic
                         existence, or turn away from the transcendence of suffering. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-409"/>
                     <p tid="346"> “Noble son, from their dispelling of the darkness of ignorance up to their
@@ -3770,7 +3775,7 @@
                         attackers. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-415"/>
                     <p tid="352"> “Consider, noble son, how the lion’s roar makes all meek deer and foxes take
-                        off in the ten directions. Similarly, when the bodhisattva lion <ref cRef="F.57.b"/> lets the roar of the absence of self resound it makes
+                        off in the ten directions. Similarly, when the bodhisattva lion <ref cRef="F.57.b" type="folio"/> lets the roar of the absence of self resound it makes
                         all the non-Buddhist deer and foxes, who are attached to self-grasping, take
                         off in the ten directions. Yet bodhisattvas let the lion’s roar of the
                         absence of self resound so that the grasping at a self may be given up, and
@@ -3801,7 +3806,7 @@
                         wherever a bodhisattva lion resides, no meek non-Buddhist deer will consume
                         the crops of virtuous qualities. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-422"/>
-                    <p tid="359"> “Noble son, from being undaunted <ref cRef="F.58.a"/> up to protecting the
+                    <p tid="359"> “Noble son, from being undaunted <ref cRef="F.58.a" type="folio"/> up to protecting the
                         crops of virtue, this is how bodhisattvas are. Thus, noble son, bodhisattvas
                         who possess these ten qualities are like a lion. </p>
                     <lb/>
@@ -3837,7 +3842,7 @@
                         of noble birth. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-426"/>
-                    <p tid="362"> “Noble son, because they possess ten qualities bodhisattvas <ref cRef="F.58.b"/> are like lotuses. What are those ten? They are being
+                    <p tid="362"> “Noble son, because they possess ten qualities bodhisattvas <ref cRef="F.58.b" type="folio"/> are like lotuses. What are those ten? They are being
                         unstained, being free from even minor negativities, possessing the sweet
                         fragrance of discipline, being clean, having a smiling countenance, not
                         being rough, being auspicious to behold, causing the mind to bloom, maturing
@@ -3865,7 +3870,7 @@
                         Wherever bodhisattvas are born that place is likewise clean due to the
                         bodhisattvas’ discipline and purificatory rites. Thus it attracts gods,
                         nāgas, yakṣas, gandharvas, asuras, garuḍas, kiṃnaras, and mahorāgas, as well
-                        as humans and other nonhuman beings. <ref cRef="F.59.a"/> Such a place is
+                        as humans and other nonhuman beings. <ref cRef="F.59.a" type="folio"/> Such a place is
                         acknowledged by the buddhas and highly praised by the bodhisattvas. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-432"/>
                     <p tid="368"> “Consider, noble son, how the beauty of a blooming lotus flower makes people
@@ -3895,7 +3900,7 @@
                         faculty, touching and venerating them purifies the body faculty, and
                         expressing their qualities and contemplating them purifies the mind faculty. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-437"/>
-                    <p tid="373"> “Consider, noble son, how when a lotus grows forth <ref cRef="F.59.b"/> it
+                    <p tid="373"> “Consider, noble son, how when a lotus grows forth <ref cRef="F.59.b" type="folio"/> it
                         will be protected by humans and nonhuman beings. Similarly, when
                         bodhisattvas are born they will be protected by the buddhas and
                         bodhisattvas, as well as by Śakra, Brahmā, and the guardians of the world. </p>
@@ -3919,7 +3924,7 @@
                         no protector, savior, dwelling, support, guardian, or friend’; ‘I shall
                         emerge as a buddha, a supreme leader of all the world with its gods,
                         demons, and Brahmā, and of all gatherings of sages, brahmins, gods, humans,
-                        and demigods, and I shall make the lion’s roar of a buddha be heard’; <ref cRef="F.60.a"/> ‘I shall revel in the features of buddhahood, and I
+                        and demigods, and I shall make the lion’s roar of a buddha be heard’; <ref cRef="F.60.a" type="folio"/> ‘I shall revel in the features of buddhahood, and I
                         shall look with the gaze of the elephant’; and ‘I shall guide sentient
                         beings with the magnificence of buddhahood—not with negative conduct, nor
                         through austerities, attached conduct, or timid conduct either.’ Noble son,
@@ -3944,7 +3949,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-441"/>
                     <p tid="377"> “Furthermore, they act in accord with their words. Bodhisattvas are not like
                         those who teach sweetly while thinking differently. Bodhisattvas do not give
-                        oral teachings while their minds are involved in negative projects. <ref cRef="F.60.b"/> Bodhisattvas do not speak gently while their minds are
+                        oral teachings while their minds are involved in negative projects. <ref cRef="F.60.b" type="folio"/> Bodhisattvas do not speak gently while their minds are
                         aggressive. Bodhisattvas are not like those who pretend to be kind while
                         their minds are tied up in grudges. Bodhisattvas do not pay respect with
                         their bodies while their minds harbor disdain. Bodhisattvas are not
@@ -3968,7 +3973,7 @@
                         pride, they comprehend the teachings without error, and so they realize the
                         path. Realizing the path, they attain the intrinsic nature. As they attain
                         the intrinsic nature they are certain to awaken to unsurpassable and
-                        complete buddhahood. <ref cRef="F.61.a"/> This is how bodhisattvas avoid
+                        complete buddhahood. <ref cRef="F.61.a" type="folio"/> This is how bodhisattvas avoid
                         denying the teachings of the thus-gone ones. Thus, noble son, bodhisattvas
                         who possess these ten qualities have a pure mind. </p>
                     <lb/>
@@ -4000,7 +4005,7 @@
                         things directly or in secret, and that they may teach sentient beings with a
                         concealed intention. Yet the thus-gone ones do not err and do not express
                         themselves in meaningless ways. Therefore, they never commit the fault of
-                        lying. And why is that? <ref cRef="F.61.b"/> Because the thus-gone ones have
+                        lying. And why is that? <ref cRef="F.61.b" type="folio"/> Because the thus-gone ones have
                         abandoned all flaws, stains, and impurities. They are free of all forms of
                         agony and affliction. They are trustworthy. They are peaceful, bright, pure,
                         unstained, and clear. It is impossible and out of the question that the
@@ -4027,7 +4032,7 @@
                         follows: ‘The cause of awakening, the ground of awakening, and the objective
                         of awakening are such that bodhisattvas turn toward the welfare of sentient
                         beings. Thus they engage in the works and activities of sentient beings.
-                        Without ever tiring <ref cRef="F.62.a"/> and without any fear, they carry
+                        Without ever tiring <ref cRef="F.62.a" type="folio"/> and without any fear, they carry
                         the great load. With stable power and steadfast exertion, they truly
                         practice the transcendences and gradually accomplish the buddha qualities.
                         Their minds are unimpeded and infinite, unequaled and extraordinary. With
@@ -4054,7 +4059,7 @@
                         conditions, and such bases, when the bodies of those beings disintegrate and
                         they die, they fall into the lower realms and are born in hell. They
                         likewise notice sentient beings who are involved in positive acts with their
-                        body, speech, <ref cRef="F.62.b"/> and mind. They notice such beings who do
+                        body, speech, <ref cRef="F.62.b" type="folio"/> and mind. They notice such beings who do
                         not deprecate noble ones and who, based on their correct perceptions, commit
                         themselves to acts and qualities that pertain to correct view. They see
                         that, due to such causes, such conditions, and such bases, their death due
@@ -4082,7 +4087,7 @@
                         names, still they are all included within Jambu­dvīpa. They are based on and
                         belong to Jambu­dvīpa. For this reason they are all one continent of
                         Jambu­dvīpa. Similarly, all the vehicles are included in the vehicle of
-                        the thus-gone ones. They remain within <ref cRef="F.63.a"/> and emerge from
+                        the thus-gone ones. They remain within <ref cRef="F.63.a" type="folio"/> and emerge from
                         the vehicle of the thus-gone ones. Thus they feel, ‘The vehicles are,
                         therefore, nothing but a single vehicle: the vehicle of the thus-gone ones.’
                         About this matter they have no doubts or reservations. Thus, bodhisattvas
@@ -4116,7 +4121,7 @@
                         sentient beings who each have their own wishes and individual levels of
                         training, it cuts through the doubts of all of them, matures them, and
                         properly trains them. Although beings may individually think that the
-                        thus-gone ones have <ref cRef="F.63.b"/> taught the Dharma specifically to
+                        thus-gone ones have <ref cRef="F.63.b" type="folio"/> taught the Dharma specifically to
                         them, the thus-gone ones are beyond thoughts and concepts. All that I have
                         heard about this is true. It is reality. In this there is no deception.’
                         Thus, noble son, without any doubts or reservations about these matters,
@@ -4148,7 +4153,7 @@
                     <p tid="394"> “Noble son, with its infinite waters the ocean is wide and vast. Being
                         infinite, the mind of the bodhisattvas is, likewise, wide and vast. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-459"/>
-                    <p tid="395"> “Noble son, the ocean is constantly flowing, <ref cRef="F.64.a"/> constantly
+                    <p tid="395"> “Noble son, the ocean is constantly flowing, <ref cRef="F.64.a" type="folio"/> constantly
                         streaming, and constantly moving. Similarly, bodhisattvas are constantly
                         flowing, constantly streaming, and constantly moving toward omniscience. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-460"/>
@@ -4180,7 +4185,7 @@
                         qualities the minds of bodhisattvas are like the ocean. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-467"/>
-                    <p tid="403"> “Noble son, because they are endowed with ten qualities bodhisattvas <ref cRef="F.64.b"/> possess a subtle intellect. What are those ten? They are
+                    <p tid="403"> “Noble son, because they are endowed with ten qualities bodhisattvas <ref cRef="F.64.b" type="folio"/> possess a subtle intellect. What are those ten? They are
                         expertise in investigating origination, expertise in examining all
                         phenomena, comprehension of the sameness of all phenomena, comprehension
                         that all phenomena are characterized by illusion, expertise in the knowledge
@@ -4210,7 +4215,7 @@
                         origination. As their minds are concerned with profound dependent
                         origination they examine inconceivable karmic action. Thus they think, ‘How
                         amazing that while phenomena are not real, all sorts of actions appear.’
-                            <ref cRef="F.65.a"/> Endowed with such subtle intellect, they understand
+                            <ref cRef="F.65.a" type="folio"/> Endowed with such subtle intellect, they understand
                         the meaning of what the buddhas and bodhisattvas teach, simply by hearing
                         it. With such understanding of the meaning they realize the meaning
                         genuinely and correctly. With a genuine and correct realization of the
@@ -4240,7 +4245,7 @@
                         the intrinsic nature is rational. Whatever does not conflict with the
                         intrinsic nature is rational. Whatever is not a distortion of the intrinsic
                         nature is rational. That which leads to the intrinsic nature is rational.
-                        That which reveals the intrinsic nature is rational. <ref cRef="F.65.b"/>
+                        That which reveals the intrinsic nature is rational. <ref cRef="F.65.b" type="folio"/>
                         Since they have eloquence regarding these matters, bodhisattvas are said to
                         have coherent eloquence. Noble son, bodhisattvas endowed with these ten
                         qualities possess a coherent eloquence. </p>
@@ -4271,7 +4276,7 @@
                     <p tid="413"> “The eloquence of bodhisattvas is free of inadequacies. How so? Because
                         bodhisattvas are fearless. Noble son, when bodhisattvas step into the center
                         of a gathering they are free of fears and anxieties. Like lions, they are
-                        unafraid, fearless, and undisturbed. <ref cRef="F.66.a"/>
+                        unafraid, fearless, and undisturbed. <ref cRef="F.66.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-478"/>
                     <p tid="414"> “The eloquence of bodhisattvas is undistracted. How so? Because they are
@@ -4309,7 +4314,7 @@
                         sharp faculties. Noble son, the eloquence of those with dull faculties may
                         suffer from a lack of clarity, yet that is not the case with those whose
                         faculties are sharp. </p>
-                    <p tid="421"> “Noble son, possessing these ten qualities bodhisattvas <ref cRef="F.66.b"/>
+                    <p tid="421"> “Noble son, possessing these ten qualities bodhisattvas <ref cRef="F.66.b" type="folio"/>
                         are endowed with pure eloquence. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-486"/>
@@ -4337,7 +4342,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-488"/>
                     <p tid="424"> “Noble son, bodhisattvas possessing ten qualities will have their words
-                        accepted. What are those ten? <ref cRef="F.67.a"/> Bodhisattvas do not teach
+                        accepted. What are those ten? <ref cRef="F.67.a" type="folio"/> Bodhisattvas do not teach
                         the Dharma to those who are not ready to receive it. Thus, they do not teach
                         those who are hateful and blame others. They do not teach non-Buddhists, the
                         disrespectful, those lacking faith, or the deceitful and dishonest. They do
@@ -4363,7 +4368,7 @@
                         comprehend the meaning explained and who apply themselves diligently to
                         attain what they have understood, acting in accord with the teachings of the
                         thus-gone ones. Noble son, to such beings the buddhas and bodhisattvas teach
-                        the Dharma. <ref cRef="F.67.b"/> Noble son, bodhisattvas endowed with ten
+                        the Dharma. <ref cRef="F.67.b" type="folio"/> Noble son, bodhisattvas endowed with ten
                         such qualities will have their words accepted. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-491"/>
@@ -4395,7 +4400,7 @@
                         not of the nature of syllables, and syllables are not of the nature of
                         Dharma. Rather, syllables are based on convention, superimposition, and the
                         relative, which give names to nameless phenomena. Yet the names are false
-                        and hollow, and that which is false and hollow has no ultimate reality. <ref cRef="F.68.a"/> That which has no ultimate reality is a false and
+                        and hollow, and that which is false and hollow has no ultimate reality. <ref cRef="F.68.a" type="folio"/> That which has no ultimate reality is a false and
                         deceptive phenomenon. False and deceptive, such phenomena fool childish
                         beings. Noble son, bodhisattvas endowed with these ten qualities express the
                         Dharma. <ref cRef="B5" type="bampo"/>
@@ -4422,7 +4427,7 @@
                         separating from all obscurations, utter purity, reverence for practical
                         instructions, abundant training in emptiness, freedom from involvement with
                         apprehending things, entry upon the path, and perception of reality. Noble son,
-                        bodhisattvas endowed with insight <ref cRef="F.68.b"/> will search for
+                        bodhisattvas endowed with insight <ref cRef="F.68.b" type="folio"/> will search for
                         spiritual teachers, and when they see one they will be delighted and
                         rejoice. Considering them to be their teachers, they will follow them and
                         stay with them. As they follow these teachers, they muster diligence to
@@ -4452,7 +4457,7 @@
                     <p tid="438"> “Noble son,” explained the Blessed One, “this Dharma is to be recognized by
                         each person individually. It cannot be conveyed by means of words. Why is that?
                         Because this Dharma is beyond all words, beyond all statements, beyond the
-                        entire domain of language, and beyond any verbal expression. <ref cRef="F.69.a"/> It is free of all constructs, entirely beyond accepting
+                        entire domain of language, and beyond any verbal expression. <ref cRef="F.69.a" type="folio"/> It is free of all constructs, entirely beyond accepting
                         and rejecting, beyond opening and closing. Free of all logic, it is no
                         object of analysis. Not within the purview of logic, it is beyond the scope
                         of logic. This Dharma has no marks. Free of marks, it is beyond the sphere
@@ -4480,7 +4485,7 @@
                         in one’s personal awareness,” replied the Blessed One. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-506"/>
                     <p tid="442"> “Isn’t what is actualized through insight comprehended within one’s personal
-                        awareness?” asked the bodhisattva Sarva­nīvaraṇa­viṣkam­bhin. <ref cRef="F.69.b"/>
+                        awareness?” asked the bodhisattva Sarva­nīvaraṇa­viṣkam­bhin. <ref cRef="F.69.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-981"/>
                     <p tid="443"> “Noble son,” replied the Blessed One, “it is not. And why? Because it is with
@@ -4515,7 +4520,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-510"/>
                     <p tid="446"> “Noble son, tell me, how will this be for the person who is tormented by the
                         heat of summer and suffering from thirst? Will his heat cool off and his
-                        thirst be quenched simply by hearing about the water, <ref cRef="F.70.a"/>
+                        thirst be quenched simply by hearing about the water, <ref cRef="F.70.a" type="folio"/>
                         or simply by giving it some thought? Will he thereby personally know the
                         cool quality of the water?” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-511"/>
@@ -4545,7 +4550,7 @@
                     <p tid="451"> “Noble son, understand therefore that merely by listening or reflecting, one
                         will not be able to comprehend the Dharma in one’s personal experience.
                         Consider also, noble son, the following analogy. Imagine that a man comes to
-                        experience the taste of a fruit that no other sentient being <ref cRef="F.70.b"/> has ever tasted before. Standing before other people,
+                        experience the taste of a fruit that no other sentient being <ref cRef="F.70.b" type="folio"/> has ever tasted before. Standing before other people,
                         that man may praise the fruit’s qualities, explaining about its perfect
                         color, scent, taste, and so on. But, noble son, would the people thereby
                         personally know how the fruit tastes?” </p>
@@ -4575,7 +4580,7 @@
                         aggregate of insight, knowing the emptiness of the aggregate of liberation,
                         knowing the emptiness of the aggregate of the vision of liberated wisdom,
                         knowing the emptiness of the empty, and knowing the emptiness of the
-                        ultimate. <ref cRef="F.71.a"/> Due to such causes, conditions, and bases,
+                        ultimate. <ref cRef="F.71.a" type="folio"/> Due to such causes, conditions, and bases,
                         they do not observe any emptiness, do not grasp any emptiness, do not have
                         any view of emptiness, and they do not become fixated on emptiness. And due
                         to such causes, such conditions, and such bases, they also do not fall into
@@ -4604,7 +4609,7 @@
                         Why is that? Because, noble son, the thus-gone ones are profound and hard to
                         fathom. They are inconceivable and immeasurable, vast like space. They are
                         completely beyond the sphere of all logicians, and beyond the sphere of all
-                        those who apprehend things. <ref cRef="F.71.b"/> Thus they cannot be
+                        those who apprehend things. <ref cRef="F.71.b" type="folio"/> Thus they cannot be
                         examined, conceived of, estimated, or measured.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-524"/>
                     <p tid="460"> “If the Blessed One would grant me the opportunity,” said the bodhisattva 
@@ -4636,7 +4641,7 @@
                         virtuous qualities and will for long enjoy success, benefit, and happiness.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-530"/>
                     <p tid="466"> “Blessed One, why is this?” asked the bodhisattva Sarva­nīvaraṇa­viṣkam­bhin.
-                            <ref cRef="F.72.a"/> “Are these sentient beings not already aware of the
+                            <ref cRef="F.72.a" type="folio"/> “Are these sentient beings not already aware of the
                         power of the thus-gone ones?” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-531"/>
                     <p tid="467"> “They are not, noble son,” answered the Blessed One. “And why is that?
@@ -4667,7 +4672,7 @@
                         potent medicine of Dharma to sentient beings who suffer from the disease of
                         affliction, they do not know them. Therefore, as they see them stricken by
                         the disease of affliction, they go before them and declare their own
-                        qualities, praising themselves. <ref cRef="F.72.b"/> When those beings who
+                        qualities, praising themselves. <ref cRef="F.72.b" type="folio"/> When those beings who
                         are ill in this way hear such extensive praise of the thus-gone ones’
                         qualities, they gain trust in them and attend to them. For those beings, the
                         thus-gone ones will then dispense the king of medicines, the medicine of
@@ -4691,7 +4696,7 @@
                     <p tid="472"> “Noble son, bodhisattvas possessing ten qualities have a loving nature. What
                         are those ten? They have constant love, undifferentiated love, Dharma love,
                         realized love, gentle love, beneficial love, equal love for all beings, love
-                        free of ill will, omnipresent love, and transcendent love. <ref cRef="F.73.a"/> Noble son, bodhisattvas who possess these ten qualities
+                        free of ill will, omnipresent love, and transcendent love. <ref cRef="F.73.a" type="folio"/> Noble son, bodhisattvas who possess these ten qualities
                         have a loving nature. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-537"/>
@@ -4719,7 +4724,7 @@
                         thoughts.’ ‘I have laid down the banner of pride that I held high for so
                         long.’ ‘I have crushed the mountains of affliction with the vajra of wisdom,
                         crushed them so that not even a trace remains.’ ‘Since I have found relief
-                        myself, now is the time to bring relief to others!’ <ref cRef="F.73.b"/> ‘I
+                        myself, now is the time to bring relief to others!’ <ref cRef="F.73.b" type="folio"/> ‘I
                         have awoken from the indolent drowsiness and obscured dullness that for so
                         long seized me in the world. Now is the time to wake up others!’ ‘I have
                         been freed from all the lower realms, the inferior realms, the realms of
@@ -4741,7 +4746,7 @@
                         are not hurt, harmed, or wounded by any of them. Further, they rest in
                         equanimity with respect to the suffering of the conditioned, the suffering
                         of suffering, and the suffering of change. Thus, they are not hurt, harmed,
-                        or wounded by those types of suffering. <ref cRef="F.74.a"/> Finally, they
+                        or wounded by those types of suffering. <ref cRef="F.74.a" type="folio"/> Finally, they
                         rest in equanimity with respect to those beings whom they have assisted.
                         They feel joy, faith, and delight in them while resting in equanimity with
                         the thought, ‘Those whom I have freed have indeed crossed over.’ Noble son,
@@ -4771,7 +4776,7 @@
                     <p tid="479"> “Noble son, within the perfect palace of the Heaven of Joy there are beings
                         who act carelessly. Those beings are fond of the bodhisattva, have faith in
                         him, and are enraptured by him. However, because of their attachment to
-                        objects they do not go to see the bodhisattva, <ref cRef="F.74.b"/> they do
+                        objects they do not go to see the bodhisattva, <ref cRef="F.74.b" type="folio"/> they do
                         not follow him, and they do not venerate him. Rather, they think, ‘The
                         bodhisattva is here, and we are here too. There is plenty of time, so we
                         shall go to see him later.’ So that those beings may relinquish their
@@ -4804,7 +4809,7 @@
                     <p tid="484"> “Noble son, there are beings who for long carry the aspiration, ‘Whenever a
                         bodhisattva goes to the seat of awakening, I shall be there to diligently
                         worship him.’ For them bodhisattvas will demonstrate going to the seat of
-                        awakening. <ref cRef="F.75.a"/> Such beings will then worship the proceeding
+                        awakening. <ref cRef="F.75.a" type="folio"/> Such beings will then worship the proceeding
                         bodhisattvas each in their own way. Due to their worship of the bodhisattvas
                         their unsurpassable and complete awakening will be certain. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-549"/>
@@ -4839,7 +4844,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-553"/>
                     <p tid="489"> “Noble son, bodhisattvas endowed with ten qualities relinquish the eight
-                        unfree states. <ref cRef="F.75.b"/> What are those ten? They are turning
+                        unfree states. <ref cRef="F.75.b" type="folio"/> What are those ten? They are turning
                         away from unvirtuous qualities, not transgressing the thus-gone ones’ points
                         for training, freedom from stinginess, service to the victorious ones in the
                         past, diligence in meritorious acts, excellent insight, skill in means,
@@ -4870,7 +4875,7 @@
                         expansion of excellent conditions. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-558"/>
                     <p tid="494"> “Bodhisattvas are not born with the type of impairment of the faculties that
-                        renders one unreceptive to the Dharma of the buddhas. <ref cRef="F.76.a"/>
+                        renders one unreceptive to the Dharma of the buddhas. <ref cRef="F.76.a" type="folio"/>
                         Bodhisattvas endeavor in meritorious acts and they are steadfast through
                         their merits. Since they have worshiped the shrines, teachings, and saṅghas
                         of the thus-gone ones with abundant service, adherence, and practice, they
@@ -4899,7 +4904,7 @@
                     <p tid="497"> “Bodhisattvas are not born where no buddhas have appeared, no Dharma is
                         heard, and no saṅgha is venerated. They are not born in such empty buddha
                         realms, but in buddha realms endowed with the perfect presence of the Three
-                        Jewels. <ref cRef="F.76.b"/> Why is that so? Because of the bodhisattvas’
+                        Jewels. <ref cRef="F.76.b" type="folio"/> Why is that so? Because of the bodhisattvas’
                         perfect past aspirations. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-562"/>
                     <p tid="498"> “When bodhisattvas hear of situations such as these, they do not just remain
@@ -4929,7 +4934,7 @@
                         lives. What are those ten? They are veneration of numerous buddhas,
                         upholding the sacred Dharma, pure discipline, absence of regrets, freedom
                         from obscuration, abundant joy, abundant training, mental equipoise,
-                        miraculous birth, <ref cRef="F.77.a"/> and a consciousness free of dullness. </p>
+                        miraculous birth, <ref cRef="F.77.a" type="folio"/> and a consciousness free of dullness. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-565"/>
                     <p tid="501"> “Noble son, bodhisattvas who venerate numerous buddhas will honor and
                         respect the sacred Dharma. They will also honor and respect the individuals
@@ -4958,7 +4963,7 @@
                         never stop worshiping and venerating the saṅgha; never stop speaking
                         respectfully of the buddhas and bodhisattvas, prostrating to them, standing
                         up for them, joining their palms toward them, and performing acts of
-                        reverence; <ref cRef="F.77.b"/> never separate from Dharma teachers of vast
+                        reverence; <ref cRef="F.77.b" type="folio"/> never separate from Dharma teachers of vast
                         learning; never stop receiving the teachings on the perfections; never stop
                         receiving the teachings on the factors of awakening; never stop listening to
                         teachings on the three gateways to liberation; never stop listening to the
@@ -5001,7 +5006,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-569"/>
                     <p tid="504"> “Noble son, bodhisattvas endowed with ten qualities attain the intrinsic
                         nature of the thus-gone ones’ body. What are those ten? They are a body of
-                        sameness, a body of purity, <ref cRef="F.78.a"/> a body free of wounds, a
+                        sameness, a body of purity, <ref cRef="F.78.a" type="folio"/> a body free of wounds, a
                         body of excellent accomplishment, a body of Dharma, a body beyond analysis
                         that is hard to fathom, an inconceivable body, a body of peace, a body that
                         is equal to space, and a body of wisdom. Noble son, bodhisattvas who possess
@@ -5030,7 +5035,7 @@
                         attaining the body of peace. On the ninth ground, their bodies pervade
                         infinitely, and so they attain the body that is equal to space. On the tenth
                         ground, bodhisattvas attain the body of wisdom. Why is that the case? Because
-                        they accomplish all that is to be known.” <ref cRef="F.78.b"/>
+                        they accomplish all that is to be known.” <ref cRef="F.78.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-572"/>
                     <p tid="507"> “Blessed One, is there no difference between the intrinsic nature of a
@@ -5064,7 +5069,7 @@
                         bodhisattva’s body is not pure. Why? Because the light of the jewel of a
                         thus-gone one’s body pervades all the infinite realms of sentient beings and
                         throughout the boundless expanse of space. And why? Because it is completely
-                        pure and free of any stain. <ref cRef="F.79.a"/> A bodhisattva’s body is not
+                        pure and free of any stain. <ref cRef="F.79.a" type="folio"/> A bodhisattva’s body is not
                         pervasive to the same extent, the reason being that it is affected by
                         residual stains. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-578"/>
@@ -5094,7 +5099,7 @@
                         vajra. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-580"/>
-                    <p tid="515"> “Noble son, bodhisattvas who possess ten qualities <ref cRef="F.79.b"/> are
+                    <p tid="515"> “Noble son, bodhisattvas who possess ten qualities <ref cRef="F.79.b" type="folio"/> are
                         great caravan leaders. What are those ten? They are venerability, being
                         worthy of offerings, making others journey along, reliability, providing
                         sustenance, providing perfect provisions, possessing vast accumulations,
@@ -5127,7 +5132,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-586"/>
                     <p tid="520"> “Noble son, by relying on a great leader those who suffer and are destitute
                         will escape the wilderness. Likewise, the carakas, the parivrājakas, the
-                        nirgranthas, and other such non-Buddhists will <ref cRef="F.80.a"/> escape
+                        nirgranthas, and other such non-Buddhists will <ref cRef="F.80.a" type="folio"/> escape
                         the great wilderness of cyclic existence by relying on great bodhisattva
                         leaders. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-587"/>
@@ -5158,7 +5163,7 @@
                     <p tid="525"> “Noble son, because of their great wealth, preeminence, power, and
                         eloquence, great caravan leaders will be at the head of the group of people
                         with whom they travel. Likewise, because of their excellent qualities, utter
-                        preeminence, mastery of the Dharma, <ref cRef="F.80.b"/> and unerring
+                        preeminence, mastery of the Dharma, <ref cRef="F.80.b" type="folio"/> and unerring
                         speech, great bodhisattva leaders will be heading the gathering of the
                         beings with whom they travel. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-592"/>
@@ -5189,7 +5194,7 @@
                         the solitary buddhas. To sentient beings who are to be trained by means of
                         solitary buddhahood they teach the path of the solitary buddhas, and not the
                         path of omniscience. To sentient beings who are attached to grasping at a
-                        self and grasping at phenomena they teach the path of no self <ref cRef="F.81.a"/> and emptiness. They do not teach a path that is
+                        self and grasping at phenomena they teach the path of no self <ref cRef="F.81.a" type="folio"/> and emptiness. They do not teach a path that is
                         associated with a self, a sentient being, a life-force, a soul, a human
                         being, or a person. To sentient beings who are confined to the two extremes
                         they teach a path that is free of those extremes. They do not teach a path
@@ -5216,7 +5221,7 @@
                     <p tid="531"> “You may wonder, noble son, how bodhisattvas remain in the application of
                         mindfulness with respect to the body. Noble son, through genuine insight
                         bodhisattvas examine and abandon the unvirtuous and negative qualities that
-                        pertain to the body. Beginning with the soles of their feet <ref cRef="F.81.b"/> and proceeding all the way up to the brain, they
+                        pertain to the body. Beginning with the soles of their feet <ref cRef="F.81.b" type="folio"/> and proceeding all the way up to the brain, they
                         contemplate the flaws of the body and recognize how the body is devoid of a
                         self. They recognize that the body is fragile, perishable, held together by
                         ligaments, foul smelling, stinking, and repulsive. This recognition puts an
@@ -5246,7 +5251,7 @@
                         mind fondly believes that the impermanent is permanent. It fondly believes
                         that the painful is pleasant. It fondly believes that the lack of self is a
                         self. It fondly believes that the unclean is pure. The mind moves, is
-                        unstable, and changes quickly. It is the root of all affliction, <ref cRef="F.82.a"/> the gateway to the lower realms, the basis for all
+                        unstable, and changes quickly. It is the root of all affliction, <ref cRef="F.82.a" type="folio"/> the gateway to the lower realms, the basis for all
                         subsidiary afflictions, and it squanders the higher realms. It is the
                         condition for desire, anger, and dullness. It is the owner of all phenomena.
                         The mind precedes all phenomena, so knowledge of the mind leads to knowledge
@@ -5286,7 +5291,7 @@
                     <p tid="535"> “You may wonder, noble son, how bodhisattvas remain in the application of
                         mindfulness with respect to objects. Bodhisattvas develop neither attached
                         grasping nor aggressive thoughts in relation to pleasant or unpleasant
-                        forms, sounds, smells, tastes, or textures. <ref cRef="F.82.b"/> Instead
+                        forms, sounds, smells, tastes, or textures. <ref cRef="F.82.b" type="folio"/> Instead
                         they think, ‘Developing desire in relation to such insubstantial phenomena
                         would be unbecoming for me. It would be childish, dull, and bereft of
                         clarity and skill. The Blessed One has taught, “With desire comes
@@ -5316,7 +5321,7 @@
                         the wilderness. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-604"/>
                     <p tid="537"> “You may wonder, noble son, how bodhisattvas remain in the application of
-                        mindfulness with respect to villages, cities, <ref cRef="F.83.a"/> towns,
+                        mindfulness with respect to villages, cities, <ref cRef="F.83.a" type="folio"/> towns,
                         regions, districts, and royal courts. When engaged in their activities
                         within villages, cities, towns, regions, districts, or royal courts,
                         bodhisattvas will not remain in any location that is inappropriate, to be
@@ -5339,7 +5344,7 @@
                         to such causes, conditions, and bases, or if others praise or glorify them,
                         bodhisattvas do not become bloated, proud, or conceited. Instead they will
                         think, ‘Before long the grounds and sources of this fame, praise, and glory
-                        will have vanished, <ref cRef="F.83.b"/> and so will the fame, praise, and
+                        will have vanished, <ref cRef="F.83.b" type="folio"/> and so will the fame, praise, and
                         glory itself. What wise person could become fond of phenomena that are so
                         impermanent, unstable, unreliable, and fickle? How could a wise person
                         become arrogant, proud, or conceited based on such phenomena?’ Thus,
@@ -5376,7 +5381,7 @@
                         and complete afflictions. Endowed with mindfulness concerning subsidiary
                         afflictions, thorough afflictions, and complete afflictions, bodhisattvas
                         fully understand where such afflictions come from and what the conditions
-                            <ref cRef="F.84.a"/> that serve as their basis are. With that knowledge,
+                            <ref cRef="F.84.a" type="folio"/> that serve as their basis are. With that knowledge,
                         they give up such origination and conditioning. Thus, noble son,
                         bodhisattvas remain in the application of mindfulness with respect to
                         subsidiary afflictions, thorough afflictions, and complete afflictions. </p>
@@ -5405,7 +5410,7 @@
                         Finding such rags they wash them, repair them, sew them, and color them. As
                         they do so, they do not tire of, or become weary of, their garments. When
                         there is such freedom from weariness, the clothes can be used well and yet
-                        no one will feel any attachment to them. <ref cRef="F.84.b"/> The
+                        no one will feel any attachment to them. <ref cRef="F.84.b" type="folio"/> The
                         bodhisattvas who wear such clothes will not perceive any flaws in them, for
                         they will not think, ‘Alas, my refuse rags have been torn! Alas, my refuse
                         rags are sagging! Alas, my refuse rags are infested with lice! My refuse
@@ -5431,7 +5436,7 @@
                         to accomplish the strength of the powers will not. Noble son, bodhisattvas
                         who have not yet attained the strength of the powers must apply remedies to
                         avoid the arising of affliction. Noble son, moreover, what do you think, do
-                        the thus-gone ones prefer the vast or the inferior?” <ref cRef="F.85.a"/>
+                        the thus-gone ones prefer the vast or the inferior?” <ref cRef="F.85.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-615"/>
                     <p tid="547"> “I have nothing to say in reply to the Blessed One’s question,” 
@@ -5465,7 +5470,7 @@
                         to exhaust the defilements. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-620"/>
                     <p tid="552"> “Noble son, bodhisattvas are content with Dharma robes of the most inferior
-                        quality and have few desires. <ref cRef="F.85.b"/> Since they have few
+                        quality and have few desires. <ref cRef="F.85.b" type="folio"/> Since they have few
                         desires, they do not go searching, and because they do not search, they do
                         not accumulate. Because they do not accumulate, they do not waste what was
                         accumulated, and since they do not waste what was gathered, they do not
@@ -5492,7 +5497,7 @@
                         in order, not becoming weary, being content, being fond of sharing, being
                         detached, consuming alms in moderation, pursuing virtue, gathering roots of
                         virtue on a large scale, and not entertaining the idea of a singular whole.
-                            <ref cRef="F.86.a"/>
+                            <ref cRef="F.86.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-623"/>
                     <p tid="555"> “You may wonder, noble son, what these qualities may imply, from pursuing
@@ -5530,7 +5535,7 @@
                         their alms, they return to their dwellings. Once there, they put down their
                         alms bowl and Dharma robe, and next wash their feet and hands. Having
                         venerated and worshiped a statue or a shrine devoted to the thus-gone ones,
-                            <ref cRef="F.86.b"/> they go to their own quarters and divide the alms,
+                            <ref cRef="F.86.b" type="folio"/> they go to their own quarters and divide the alms,
                         setting aside one fourth for those who maintain pure conduct, another fourth
                         for those who suffer, another fourth for those who have fallen into error,
                         and the final fourth for themselves. This they consume free of desire. That
@@ -5563,7 +5568,7 @@
                         though threatened by demons, as well as to remain immutably in supramundane
                         concentration, supramundane insight, supramundane wisdom, emptiness, and the
                         genuine realization of the qualities of the Buddha, the path, the limit of
-                        reality, suchness, <ref cRef="F.87.a"/> and the seat of omniscience. </p>
+                        reality, suchness, <ref cRef="F.87.a" type="folio"/> and the seat of omniscience. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-629"/>
                     <p tid="559"> “Noble son, the single seat is the seat of omniscience. Noble son, the
                         single seat is the seat of the Dharma. Bodhisattvas remain unmovable from
@@ -5590,7 +5595,7 @@
                         are those ten? They are maintaining pure conduct for a long time, being
                         expert about the discipline, unimpaired sense faculties, extensive learning,
                         power, freedom from the fears of grasping at a self, being like a deer,
-                        maintaining physical distance, aiming for solitude, <ref cRef="F.87.b"/> and
+                        maintaining physical distance, aiming for solitude, <ref cRef="F.87.b" type="folio"/> and
                         staying clear of displeasure. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-632"/>
                     <p tid="562"> “You may wonder, noble son, what these qualities may imply, from maintaining
@@ -5619,7 +5624,7 @@
                         pure and unpolluted water; places that are clean, without bad smells, and
                         with only little hardship; places with excellent trees, flowers, fruits, and
                         leaves; places that are free from attacks by beasts of prey; places with
-                        caves; <ref cRef="F.88.a"/> places where natural medicines can be found;
+                        caves; <ref cRef="F.88.a" type="folio"/> places where natural medicines can be found;
                         places that are not rugged; places that are delightful to move in; and
                         places that are nothing but peaceful. Such are the places in which they
                         stay. </p>
@@ -5681,7 +5686,7 @@
                                 dhārma­śravaṇikānāṃ cittam ārādhayituṃ | te ca satvās tasyāntike
                                 prītiṃ ca prasādaṃ ca prāmodyaṃ ca pratilabhantae iti ||</foreign>.
                         </note> Thus, the learned will also be able to remedy the perpetuation of
-                        afflictions. <ref cRef="F.88.b"/>
+                        afflictions. <ref cRef="F.88.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-639"/>
                     <p tid="568"> “Since the bodhisattvas are learned, they are free from the dangers of
@@ -5714,7 +5719,7 @@
                         tree. What are those ten? They refrain from sitting at a tree that is very
                         near to town, very far from town, full of thorny fruits, covered by
                             <distinct>malu </distinct> creepers or vine, has withered leaves, or is
-                        the home of monkeys, the home of birds, <ref cRef="F.89.a"/> the home of
+                        the home of monkeys, the home of birds, <ref cRef="F.89.a" type="folio"/> the home of
                         aggressive carnivores, the home of herons, or the home of demons. Thus, they
                         reside at trees that are agreeable to the body and delightful to the mind.
                         Noble son, bodhisattvas who possess ten such qualities remain at the foot of
@@ -5749,7 +5754,7 @@
                     <p tid="572"> “Noble son, bodhisattvas endowed with ten qualities are charnel ground
                         dwellers. What are those ten? They are to feel greatly disenchanted,
                         wherever they may be, as well as to continuously maintain the notions of
-                        death, the devoured, the bloody, the bruised, the rotting, <ref cRef="F.89.b"/> the decomposing, the burning, the scattered, and the
+                        death, the devoured, the bloody, the bruised, the rotting, <ref cRef="F.89.b" type="folio"/> the decomposing, the burning, the scattered, and the
                         skeletal. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-645"/>
                     <p tid="573"> “Noble son, charnel ground-dwelling bodhisattvas should have a loving mind,
@@ -5784,7 +5789,7 @@
                         as to torment the body, nor do they do so for the sake of any mental
                         penance. They also do not live in tents because of being overcome by sleep,
                         nor because of being physically exhausted. Rather, they do so for the sake
-                        of accomplishing the accumulations for awakening. They do so <ref cRef="F.90.a"/> in order to achieve a one-pointed mind, actualize the
+                        of accomplishing the accumulations for awakening. They do so <ref cRef="F.90.a" type="folio"/> in order to achieve a one-pointed mind, actualize the
                         path, proceed to the seat of awakening, benefit sentient beings, and
                         eliminate all afflictions. Noble son, bodhisattvas who possess ten such
                         qualities are tent dwellers. </p>
@@ -5819,7 +5824,7 @@
                         dependent origination, abundant expertise with regard to flaws, abundant
                         contemplation of emptiness, abundant contemplation of the absence of marks,
                         abundant cultivation of yogic training, abundant and continuous
-                        contemplation, absence of regrets, and perfect discipline. <ref cRef="F.90.b"/>
+                        contemplation, absence of regrets, and perfect discipline. <ref cRef="F.90.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-652"/>
                     <p tid="578"> “Noble son, you may wonder what the bodhisattvas’ abundant contemplation of
@@ -5848,7 +5853,7 @@
                         seeking enemies and animosity—whether now or in the future, may I completely
                         calm their anger and ill will and establish them all upon the seat of
                         awakening!’ They do not merely say so; they wish it from the bottom of their
-                        hearts. <ref cRef="F.91.a"/> Such is the bodhisattvas’ abundant cultivation
+                        hearts. <ref cRef="F.91.a" type="folio"/> Such is the bodhisattvas’ abundant cultivation
                         of love. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-654"/>
                     <p tid="580"> “What, you may wonder, does the bodhisattvas’ abundant contemplation of
@@ -5874,7 +5879,7 @@
                         beings; to relinquish those who observe discipline; to venerate sentient
                         beings of inferior character; to attend to unvirtuous company; to abandon
                         spiritual teachers; to abandon the profound discourses; to be frightened by
-                        the profound discourses; <ref cRef="F.91.b"/> to be indolent; to be lazy; to
+                        the profound discourses; <ref cRef="F.91.b" type="folio"/> to be indolent; to be lazy; to
                         disparage oneself; to be undignified; to lack eloquence; to regret what is
                         wrong to regret; to regret what should not be regretted; failing to regret
                         what should be regretted; to be overcome by the eruption of obscurations; to
@@ -5899,7 +5904,7 @@
                         irrelevant; to examine what should not be examined; to wish for that which
                         should not be desired; to believe that things arise where they do not; to
                         take what is not delightful to be delightful; to take what is not the path
-                            <ref cRef="F.92.a"/> to be the path; to believe that one has attained
+                            <ref cRef="F.92.a" type="folio"/> to be the path; to believe that one has attained
                         what has not been attained; to be attached to temporary projects; to be
                         distracted by negative activity; to give up vast factors of virtue; not
                         praising the Great Vehicle; to praise the Hearers’ Vehicle; not praising
@@ -5927,7 +5932,7 @@
                         give up inner marks, finding great joy in their practice. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-658"/>
                     <p tid="584"> “In this way they engage in abundant contemplation and are diligent in their
-                        training. <ref cRef="F.92.b"/> They continuously remain within tranquility
+                        training. <ref cRef="F.92.b" type="folio"/> They continuously remain within tranquility
                         and special insight. Tranquility is one-pointed mind. Special insight is to
                         discern phenomena as they actually are.<note place="end" xml:id="UT22084-064-001-659" index="81"> This is the
                             passage on tranquility and special insight that has often been cited in
@@ -5960,7 +5965,7 @@
                         entered the Great Vehicle. They retain what they have heard so that they
                         themselves will comprehend the unsurpassable wisdom, not out of an
                         aspiration toward the Lesser Vehicle. Noble son, bodhisattvas who possess
-                        ten such qualities are specialists in the discourses. <ref cRef="F.93.a"/>
+                        ten such qualities are specialists in the discourses. <ref cRef="F.93.a" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-661"/>
@@ -5994,7 +5999,7 @@
                         Due to their excellent personal associations, their conduct is perfect and
                         elegant and, as their conduct is very peaceful, they possess conduct that is
                         uncontrived. Noble son, bodhisattvas who possess ten such qualities are
-                        perfect in conduct, personal associations, behavior, and deportment. <ref cRef="F.93.b"/>
+                        perfect in conduct, personal associations, behavior, and deportment. <ref cRef="F.93.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-664"/>
@@ -6024,7 +6029,7 @@
                         taking all sentient beings into account. Thus, they practice to attain the
                         intrinsic nature quickly by all means. As they themselves are delivered from
                         the blazing bonfire of cyclic existence, they also deliver others. Moreover,
-                        they liberate others with an attitude that treats everyone the same, <ref cRef="F.94.a"/> rather than through an attitude of being fond or
+                        they liberate others with an attitude that treats everyone the same, <ref cRef="F.94.a" type="folio"/> rather than through an attitude of being fond or
                         hostile. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-666"/>
                     <p tid="590"> “Noble son, this is how it is. As an analogy, think of a merchant or
@@ -6056,7 +6061,7 @@
                         and venerating the thus-gone ones. What are those ten? They are as follows.
                         Bodhisattvas worship and venerate the thus-gone ones by means of worshiping
                         the Dharma, not through material worship. They worship with persistence, and
-                        act for the welfare and happiness of sentient beings. <ref cRef="F.94.b"/>
+                        act for the welfare and happiness of sentient beings. <ref cRef="F.94.b" type="folio"/>
                         They bring benefit to sentient beings and pursue the aims of sentient
                         beings, never relinquishing their commitment, and never abandoning their
                         bodhisattva activities. They act in accord with what they teach, free of
@@ -6086,7 +6091,7 @@
                     <p tid="595"> “Noble son, bodhisattvas endowed with ten qualities crush pride. What are
                         those ten? They are as follows. Bodhisattvas depart from their households
                         and receive ordination. In this way they crush pride as they think, ‘To my
-                        friends, close family, relatives, <ref cRef="F.95.a"/> and kinsmen I am now
+                        friends, close family, relatives, <ref cRef="F.95.a" type="folio"/> and kinsmen I am now
                         like a dead person.’ They crush pride as they think, ‘I have assumed a
                         repulsive look and I wear ugly clothes. My way is different.’ They crush
                         pride as they think, ‘With my head shaved and holding a begging bowl in my
@@ -6129,7 +6134,7 @@
                         absence of duplicity; excellent insight based on sharp faculties; freedom
                         from obscurations and their eruptions due to having a pure stream of being;
                         reliance on spiritual teachers in the absence of negative company; freedom
-                        from special pride because of pursuing excellent advice; <ref cRef="F.95.b"/> no misunderstanding of the teaching of Dharma; and excellent knowledge of
+                        from special pride because of pursuing excellent advice; <ref cRef="F.95.b" type="folio"/> no misunderstanding of the teaching of Dharma; and excellent knowledge of
                         the thus-gone ones’ greatness because of being inspired by the vast. Noble
                         son, bodhisattvas who possess ten such qualities have abundant faith.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-674"/>
@@ -6160,7 +6165,7 @@
                         beings, employing all sorts of analogies and approaches, and yet there is no
                         end to their teaching of the Dharma. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-680"/>
-                    <p tid="603"> “Noble son, the thus-gone ones <ref cRef="F.96.a"/> are endowed with a
+                    <p tid="603"> “Noble son, the thus-gone ones <ref cRef="F.96.a" type="folio"/> are endowed with a
                         limitless ability to answer questions. Noble son, even if all beings that
                         exist were each simultaneously to ask their own question, each in their own
                         distinct words and syllables, a thus-gone one would be able answer them all
@@ -6185,7 +6190,7 @@
                         infinite. Noble son, the thus-gone ones see sentient beings with their
                         miraculous eyes, and not with the eyes of humans. Noble son, the thus-gone
                         ones see every single being within all world realms—utterly beyond number
-                        and ideas—as precisely as an amla fruit placed in one’s hand. <ref cRef="F.96.b"/>
+                        and ideas—as precisely as an amla fruit placed in one’s hand. <ref cRef="F.96.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-684"/>
                     <p tid="607"> “Noble son, the field of the miraculous ear of the thus-gone ones is
@@ -6214,7 +6219,7 @@
                         afflictions. They are free of all dust and defilement and have eliminated
                         all imprints of affliction. They have mastered all phenomena and have
                         attained sameness. They have emerged beyond all spheres of meditative
-                        absorption and attainments. <ref cRef="F.97.a"/> Noble son, every aspect of
+                        absorption and attainments. <ref cRef="F.97.a" type="folio"/> Noble son, every aspect of
                         the thus-gone ones’ conduct is carried out by means of distinct absorptions.
                         Since the thus-gone ones are active in this way throughout the lifespan of
                         the body in which they transcended suffering, it is needless to mention that
@@ -6241,7 +6246,7 @@
                         themselves become vessels of such greatness of the thus-gone ones.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-690"/>
                     <p tid="613"> “Noble son, thus it is,” declared the Blessed One. “Thus it is. Noble son,
-                        whoever hears this exposition of the thus-gone ones’ greatness <ref cRef="F.97.b"/> will be accepted by the buddhas. Such a being will
+                        whoever hears this exposition of the thus-gone ones’ greatness <ref cRef="F.97.b" type="folio"/> will be accepted by the buddhas. Such a being will
                         engender roots of virtue and venerate numerous buddhas. About this no noble
                         son or daughter should have any doubts, hesitation, or reservations. Without
                         being preoccupied or upset, and by means of strong wishes and powerful
@@ -6270,7 +6275,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-693"/>
                     <p tid="616"> At this point some who were present in the gathering thought, “Ah! Then
                         surely we have also previously received this Dharma teaching that the
-                        Blessed One just delivered.” <ref cRef="F.98.a"/>
+                        Blessed One just delivered.” <ref cRef="F.98.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-694"/>
                     <p tid="617"> The Blessed One now drew forth his tongue, and with his tongue he covered
@@ -6300,7 +6305,7 @@
                         relative. What are those ten? They are as follows. They may speak of form,
                         yet ultimately form is not observed, and they cannot be attached to it. The
                         same is the case with what are designated as feeling, perception, formation,
-                            <ref cRef="F.98.b"/> and consciousness. Ultimately they do not reify
+                            <ref cRef="F.98.b" type="folio"/> and consciousness. Ultimately they do not reify
                         them either, and they are not attached to them. They may speak of the earth
                         element, yet ultimately no earth element is observed and they cannot be
                         attached to it. Likewise, they may speak of the elements of fire, water,
@@ -6325,7 +6330,7 @@
                         can be observed, and they cannot be attached to any of it. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-697"/>
                     <p tid="620"> “Noble son, the so-called relative, therefore, refers to names,
-                        designations, and conventions. <ref cRef="F.99.a"/> Within relative
+                        designations, and conventions. <ref cRef="F.99.a" type="folio"/> Within relative
                         phenomena there is of course nothing ultimate, yet the nonexistence of
                         relative phenomena cannot reveal the ultimate. Noble son, the bodhisattvas
                         who are experts on these points in relative terms, yet not in ultimate
@@ -6357,7 +6362,7 @@
                         thus-gone ones would also be pointless. However, because there is an
                         ultimate, the bodhisattvas are known as experts on the ultimate. Noble son,
                         bodhisattvas who possess ten such qualities are experts on the ultimate.
-                            <ref cRef="F.99.b"/>
+                            <ref cRef="F.99.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-700"/>
@@ -6382,7 +6387,7 @@
                         there will be appropriation. Engagement in appropriation leads to a new
                         existence, and if there is a new existence, there is birth. With birth comes
                         old age, and an aged person will die. In death there is pain, lamentation,
-                        despair, and anxiety. <ref cRef="F.100.a"/> Thus arises this mass of nothing
+                        despair, and anxiety. <ref cRef="F.100.a" type="folio"/> Thus arises this mass of nothing
                         but suffering. Hence, the wise must persist in eliminating ignorance. They
                         must persist in demolishing ignorance, uprooting it, and bringing it to
                         cessation. As ignorance ceases, so will all the phenomena that arise due to
@@ -6413,7 +6418,7 @@
                         they will reflect on their reasons for doing so. Thus they will think, ‘As I
                         myself cross over, I shall let others cross too. As I become free, I shall
                         liberate others. I shall therefore not be lazy, and I will refrain from
-                        indolent acts. <ref cRef="F.100.b"/> Having received ordination I shall
+                        indolent acts. <ref cRef="F.100.b" type="folio"/> Having received ordination I shall
                         purify all negative and unvirtuous factors, causing them to fade away,
                         disappear, and become purified.’ When in this way they eliminate a negative
                         and unvirtuous factor, they will become happy, faithful, and delighted, and
@@ -6443,7 +6448,7 @@
                         omniscient. He knows everything. My Teacher has love for the entire world.
                         He is endowed with great compassion. He is a great object of generosity. He
                         is the Teacher of the entire world with its gods, humans, and demigods.’ Due
-                        to such causes, conditions, and bases <ref cRef="F.101.a"/> they will be
+                        to such causes, conditions, and bases <ref cRef="F.101.a" type="folio"/> they will be
                         happy, faithful, and delighted. They will think, ‘Such is my Teacher, the
                         Blessed One; I have found what is excellent to find. I shall never part from
                         the path of training that the Blessed One has prescribed, even if it were to
@@ -6470,7 +6475,7 @@
                         motivated to attain the intrinsic nature, I shall by all means muster and
                         maintain diligence so that I will cross over this cycle of birth that knows
                         neither beginning nor end.’ Noble son, thinking in such ways bodhisattvas
-                        gain knowledge of themselves. <ref cRef="F.101.b"/> Noble son, bodhisattvas
+                        gain knowledge of themselves. <ref cRef="F.101.b" type="folio"/> Noble son, bodhisattvas
                         who possess ten such qualities possess knowledge of themselves. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-710"/>
@@ -6493,7 +6498,7 @@
                         mind is free of laziness; excellent concentration, as the mind is
                         undistracted; abundant learning free of stupidity; sharp faculties through
                         penetrating insight; and a loving nature, as the mind is free of ill will.”
-                            <ref cRef="F.102.a"/>
+                            <ref cRef="F.102.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-712"/>
                     <p tid="635"> “Blessed One, does one take birth there only when all those factors have
@@ -6539,7 +6544,7 @@
                     <p tid="638"> “Noble son, bodhisattvas endowed with ten qualities renounce the household life.
                         What are those ten? They are lack of appropriation; activity free from
                         distracting social ties; turning away from objects; freedom from craving
-                        objects; <ref cRef="F.102.b"/> being unharmed by the flaws of objects;
+                        objects; <ref cRef="F.102.b" type="folio"/> being unharmed by the flaws of objects;
                         venerating, pursuing, and training hard in the discipline prescribed by the
                         thus-gone ones; contentment with the most basic clothing, alms, bedding,
                         medicines, and utensils; refraining from accumulating alms bowls, Dharma
@@ -6564,7 +6569,7 @@
                         will not try to improve their conduct. How so? They will not suddenly walk
                         slowly, keeping their vision within the range of a yoke, and maintain an air
                         of weariness and freedom from obscuration. Thus they avoid physical
-                        pretense. <ref cRef="F.103.a"/> How do they avoid verbal pretense?
+                        pretense. <ref cRef="F.103.a" type="folio"/> How do they avoid verbal pretense?
                         Bodhisattvas will not be soft-spoken for the sake of acquisitions. Neither
                         will they speak gently, with humor, or in a way that entices others. Thus
                         they avoid verbal pretense. How, then, do they avoid mental pretense? When a
@@ -6591,7 +6596,7 @@
                     <milestone unit="chunk" xml:id="UT22084-064-001-721"/>
                     <p tid="643"> “How, you may wonder, do they not acquire things through improper avenues?
                         Noble son, bodhisattvas do not seek acquisition in ways that cause physical
-                        or mental harm. Physical harm <ref cRef="F.103.b"/> is to run, race, and let
+                        or mental harm. Physical harm <ref cRef="F.103.b" type="folio"/> is to run, race, and let
                         one’s discipline become corrupted for the sake of acquiring things. Mental
                         harm is to wish for acquisitions and to harbor aggressive thoughts in
                         relation to the possessions of other practitioners who maintain pure
@@ -6656,7 +6661,7 @@
                         pertains to the saṅgha, is praised by the victorious ones, is not reviled by
                         the bodhisattvas, is admired by the gods, and is not banned for those who
                         maintain pure conduct. Noble son, bodhisattvas who possess ten such
-                        qualities have a pure livelihood. <ref cRef="F.104.a"/>
+                        qualities have a pure livelihood. <ref cRef="F.104.a" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-726"/>
@@ -6686,7 +6691,7 @@
                         speaking the Dharma and reproaching non-Dharma; giving up reproachable acts
                         and adhering to virtuous action; not discrediting the teachings of the
                         thus-gone ones and separating from all objects that reek of affliction; and
-                        sustaining the intrinsic nature of the thus-gone ones <ref cRef="F.104.b"/>
+                        sustaining the intrinsic nature of the thus-gone ones <ref cRef="F.104.b" type="folio"/>
                         and guarding against all negative and unvirtuous actions. Noble son,
                         bodhisattvas who possess ten such qualities fulfill the command of the
                         thus-gone ones. </p>
@@ -6717,7 +6722,7 @@
                         existence is a raging fire of dullness; proper understanding that ‘all
                         conditioned things are impermanent’; proper understanding that ‘all
                         formations are painful’; proper understanding that ‘the world is empty’;
-                            <ref cRef="F.105.a"/> proper understanding that ‘all phenomena are
+                            <ref cRef="F.105.a" type="folio"/> proper understanding that ‘all phenomena are
                         devoid of self’; proper understanding that ‘the world is infatuated with
                         constructs’; proper understanding that ‘all phenomena arise from
                         conditions’; and proper understanding that ‘passing beyond suffering is
@@ -6744,7 +6749,7 @@
                         regard the sacred Dharma as an elixir, ambrosia, and medicine. And they will
                         search for the sacred Dharma with no regard for life or limb, and when they
                         find it, they will practice it diligently. Noble son, bodhisattvas who
-                        possess ten such qualities uphold the Dharma. <ref cRef="F.105.b"/>
+                        possess ten such qualities uphold the Dharma. <ref cRef="F.105.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-733"/>
@@ -6769,7 +6774,7 @@
                         distinction above all hearers and solitary buddhas, superiority above the
                         entire world, and gaining acceptance that phenomena are nonarising. Noble
                         son, bodhisattvas who possess ten such qualities are welcomed by Śakra,
-                        Brahmā, and the guardians of the world. <ref cRef="F.106.a"/>
+                        Brahmā, and the guardians of the world. <ref cRef="F.106.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-735"/>
                     <p tid="656"> “Noble son, bodhisattvas endowed with ten qualities know intentions and
@@ -6797,7 +6802,7 @@
                         beings who are to be trained by the form of a brahmin; displaying the form
                         of a royal personage to sentient beings who are to be trained by the form of
                         a royal personage; and displaying the form of a householder to sentient
-                        beings who are to be trained by the form of a householder. <ref cRef="F.106.b"/> Thus, noble son, bodhisattvas take on whatever form may
+                        beings who are to be trained by the form of a householder. <ref cRef="F.106.b" type="folio"/> Thus, noble son, bodhisattvas take on whatever form may
                         be required to train a particular sentient being. Noble son, bodhisattvas
                         who possess ten such qualities have knowledge of the ways to bring sentient
                         beings to maturation. </p>
@@ -6824,7 +6829,7 @@
                         through giving what is beneficial, giving happiness, giving without end,
                         speaking in beneficial ways, saying what is meaningful, speaking the Dharma,
                         speaking with reason, acting in meaningful ways, creating harmony through
-                        material things, <ref cRef="F.107.a"/> and creating harmony by means of
+                        material things, <ref cRef="F.107.a" type="folio"/> and creating harmony by means of
                         their wealth. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-740"/>
                     <p tid="661"> “Noble son, giving what is beneficial is generosity with the Dharma; giving
@@ -6854,7 +6859,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-064-001-742"/>
                     <p tid="663"> “Noble son, bodhisattvas endowed with ten qualities provide support. What
-                        are those ten? <ref cRef="F.107.b"/> Protecting all sentient beings from the
+                        are those ten? <ref cRef="F.107.b" type="folio"/> Protecting all sentient beings from the
                         fears of affliction, delivering them from the wilderness of cyclic
                         existence, taking them across the ocean of cyclic existence, being the
                         guardian of those without a protector, being the doctor for those stricken
@@ -6883,7 +6888,7 @@
                         What are those ten? They are as follows. They serve the Three Jewels by all
                         means possible. They provide medicine to the ill, food and drink to those
                         suffering from starvation and thirst, and a shelter for those who are
-                        exposed to winds, storms, and the sun. <ref cRef="F.108.a"/> They
+                        exposed to winds, storms, and the sun. <ref cRef="F.108.a" type="folio"/> They
                         respectfully venerate preceptors and masters and speak respectfully to those
                         who maintain pure conduct. With veneration, they prostrate and join their
                         palms before them. They offer them gardens, temples, and parks, as well as,
@@ -6908,7 +6913,7 @@
                         given buddha realm, they appear to awaken to complete buddhahood in numerous
                         buddha realms. Without moving from one given buddha realm, they turn the
                         wheel of Dharma in numerous buddha realms. Without moving from one given
-                        buddha realm, <ref cRef="F.108.b"/> they appear to pass beyond suffering in
+                        buddha realm, <ref cRef="F.108.b" type="folio"/> they appear to pass beyond suffering in
                         numerous buddha realms. Without moving from one given buddha realm, they
                         send forth emanations into numerous buddha realms, training as many sentient
                         beings as there are to train. As they send forth emanations in this way, no
@@ -6940,7 +6945,7 @@
                         completely; utterly perfect discipline, since discipline has been completely
                         accomplished and the aggregate of discipline has become flawless,
                         uncorrupted, undefiled, beyond hearers and solitary buddhas, completely
-                        pure, and purified; <ref cRef="F.109.a"/> and the remainder are utterly
+                        pure, and purified; <ref cRef="F.109.a" type="folio"/> and the remainder are utterly
                         perfect patience, utterly perfect diligence, utterly perfect concentration,
                         utterly perfect insight, utterly perfect means, utterly perfect aspiration,
                         utterly perfect power, and utterly perfect wisdom. Thus, as their wisdom has
@@ -6961,7 +6966,7 @@
                         that existed in the entire billionfold universe bent toward Gayā­śīrṣa
                         Hill as a Dharma homage to the Blessed One. As a Dharma offering to the
                         Blessed One, the bodhisattvas presented quadrillions of garments and
-                        ornaments in a heap as large as Mount Meru. Śakra, Brahmā, <ref cRef="F.109.b"/> and millions of guardians of the world prostrated,
+                        ornaments in a heap as large as Mount Meru. Śakra, Brahmā, <ref cRef="F.109.b" type="folio"/> and millions of guardians of the world prostrated,
                         joined their palms in homage, and tossed mandārava and mahāmandārava flowers
                         in praise of the Blessed One.</p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-750"/>
@@ -6987,7 +6992,7 @@
                         standards. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-752"/>
                     <p tid="673">As a Dharma homage, blessed buddhas residing in numerous buddha realms
-                        projected numerous light rays from the hair between their eyebrows. <ref cRef="F.110.a"/> The light was multicolored, taking on all sorts of
+                        projected numerous light rays from the hair between their eyebrows. <ref cRef="F.110.a" type="folio"/> The light was multicolored, taking on all sorts of
                         forms and appearances. There were colors of blue, yellow, red, white,
                         violet, crystal, and silver, and the light rays circled around the
                         trichiliocosm, dispelling all darkness. The light then streamed to
@@ -7015,7 +7020,7 @@
                     <p tid="676">“A­martyā,” replied the Blessed One, “as you have thus listened to what is
                         precious, you have accomplished well that which one must attain.” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-756"/>
-                    <p tid="677"> Some gods who were present in the gathering then thought, <ref cRef="F.110.b"/> “How can it be that this goddess has heard this Dharma
+                    <p tid="677"> Some gods who were present in the gathering then thought, <ref cRef="F.110.b" type="folio"/> “How can it be that this goddess has heard this Dharma
                         teaching so many times and served that many thus-gone ones, and still she
                         has but a female body?” </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-757"/>
@@ -7046,7 +7051,7 @@
                         entered that absorption, the great trichiliocosm became as even as the palm
                         of a hand, with a ground made of beryl. There were no dark mountains, nor any
                         ordinary trees. Since the whole environment became pure, there now appeared
-                        nothing but wish-fulfilling trees. <ref cRef="F.111.a"/> In that pure
+                        nothing but wish-fulfilling trees. <ref cRef="F.111.a" type="folio"/> In that pure
                         environment there were springs, ponds, pools, and reservoirs brimming with
                         water of the eight qualities. No ordinary humans were seen, and even the
                         word <emph>woman</emph> was unheard of. In that pure environment
@@ -7073,7 +7078,7 @@
                         faith will be far more abundant. You may wonder, noble son, why that is so.
                         Generosity with material things is insignificant, whereas generosity with
                         the Dharma possesses great miraculous power. And why is that? Because, noble
-                        son, while sentient beings revolving within cyclic existence <ref cRef="F.111.b"/> have abundant experience with material things, they
+                        son, while sentient beings revolving within cyclic existence <ref cRef="F.111.b" type="folio"/> have abundant experience with material things, they
                         have never experienced the taste of the Dharma that is beyond the world. The
                         Dharma is not of the world. </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-763"/>
@@ -7104,7 +7109,7 @@
                         shoulder. Kneeling down on their right knees, they joined their palms. Thus,
                         facing the Blessed One, they said, “Blessed One, when we brought an end to
                         the great cycle of births it was also through hearing of this intrinsic
-                        nature.” <ref cRef="F.112.a"/>
+                        nature.” <ref cRef="F.112.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-767"/>
                     <p tid="688">“Monks, so it is,” replied the Blessed One, “so it is.” And he then spoke to
@@ -7137,7 +7142,7 @@
                         Dharma discourse, he or she should do so without fear, timidity,
                         faintheartedness, or hostility. The teacher should wear freshly cleaned
                         clothes and arouse faith. He or she should think, ‘Even though they may
-                        praise me, <ref cRef="F.112.b"/> I shall not take that as a cause for
+                        praise me, <ref cRef="F.112.b" type="folio"/> I shall not take that as a cause for
                         arrogance or pride. Without praising myself, without belittling others, and
                         without any concern for material things, I shall teach the Dharma.’ ”</p>
                     <milestone unit="chunk" xml:id="UT22084-064-001-771"/>
