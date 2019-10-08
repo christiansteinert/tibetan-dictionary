@@ -12,7 +12,7 @@
                 <title type="longTitle" xml:lang="Bo-Ltn">dpal gtum po khro bo chen po’i rgyud kyi rgyal po dpa’ bo gcig pa zhes bya ba</title>
                 <title type="longTitle" xml:lang="en">The Glorious Caṇḍa­mahā­roṣaṇa Tantra “The Sole Hero”</title>
                 <title type="longTitle" xml:lang="Sa-Ltn">Ekalla­vīrākhya­śrī­caṇḍa­mahā­roṣaṇa­tantram</title>
-                <title type="otherTitle" xml:lang="zh">《大忿怒續》</title>
+                <title type="otherTitle" xml:lang="zh">大忿怒續</title>
                 <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
                     Dharmachakra Translation Committee<lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha</author>
@@ -25,13 +25,13 @@
                     Rinpoche</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.23 <date>2019</date>
+                <edition>v 2.24.2 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all of the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone.</publisher>
                 <availability>
                     <p type="tantricRestriction">
@@ -58,9 +58,8 @@
                     <biblScope>Degé Kangyur, vol. 80 (rgyud ’bum, nga), folios
                         304.b–343.a</biblScope>
                     <author role="translatorTib">Trakpa Gyaltsen</author>
-                    <location count-pages="78">
-                        <start volume="80" page="610"/>
-                        <end volume="80" page="687"/>
+                    <location work="UT4CZ5369" count-pages="78">
+                        <volume number="80" start-page="608" end-page="685"/>
                     </location>
                     <idno parent-id="O1JC114941JC21412"/>
                     <idno source-id="O1JC114941JC12136" work="W22084"/>
@@ -68,11 +67,13 @@
 
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-08-16T16:30:27.649Z" user="admin">16/08/2019 16:30:27</note>
+                <note type="lastUpdated" date-time="2019-10-08T18:55:39.562Z" user="admin">08/10/2019 18:55:39</note>
             <note type="updated" update="text-version" value="v 2.2" date-time="2019-06-15T08:48:11.464Z" user="john">v 2.2 2016</note>
             <note type="updated" update="text-version" value="v 2.21" date-time="2019-06-15T17:07:15.498Z" user="celso">v 2.21 2019</note>
                 <note type="updated" update="text-version" value="v 2.22" date-time="2019-06-21T14:48:33.698Z" user="celso">v 2.22 2019</note>
                 <note type="updated" update="text-version" value="v 2.23" date-time="2019-08-16T16:30:24.207Z" user="celso">v 2.23 2019</note>
+<note type="updated" update="text-version" value="v 2.24.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.24.2" date-time="2019-10-08T18:55:36.286Z" user="celso">Updated Chinese title</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -493,7 +494,7 @@ Appendix: Sanskrit text-->
                     <head type="chapterTitle" tid="1970">Introduction</head>
                     <milestone unit="chunk" xml:id="UT22084-080-015-25"/>
                     <p tid="31">
-                        <ref cRef="F.304.b"/>
+                        <ref cRef="F.304.b" type="folio"/>
                         <!--<modularPassage type="homage">-->
                         <mantra type="syllable" xml:lang="Sa-Ltn">Oṁ</mantra>, homage to
                         Caṇḍa­mahā­roṣaṇa!<!--</modularPassage>-->
@@ -542,7 +543,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-30"/>
                     <p tid="39">The lord Black Acala deeply kissed and firmly embraced Hatred Vajrī,
-                            <ref cRef="F.305.a"/> and said:</p>
+                            <ref cRef="F.305.a" type="folio"/> and said:</p>
                     <lg tid="40">
                         <l>“Goddess, goddess! Very enjoyable,</l>
                         <l>Secret and extremely hard to come by,</l>
@@ -642,7 +643,7 @@ Appendix: Sanskrit text-->
                         <l>“In this, the well-guarded</l>
                         <l>Caṇḍa­mahā­roṣaṇa tantra called <title xml:lang="en">The Sole
                                 Hero</title>.” <!--[I.19]-->
-                            <ref cRef="F.305.b"/>
+                            <ref cRef="F.305.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-44"/>
@@ -741,7 +742,7 @@ Appendix: Sanskrit text-->
                         <l>A white knife, marked with a wheel.</l>
                         <l>In the southwestern corner, one should draw</l>
                         <l>A yellow one, nicely marked with a jewel. <!--[II.12] -->
-                            <ref cRef="F.306.a"/>
+                            <ref cRef="F.306.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-57"/>
@@ -895,7 +896,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-69"/>
                     <lg tid="83">
-                        <l>“Only after offerings to the maṇḍala have been made, <ref cRef="F.306.b"/>
+                        <l>“Only after offerings to the maṇḍala have been made, <ref cRef="F.306.b" type="folio"/>
                         </l>
                         <l>Can one offer refreshments of wine and meat</l>
                         <l>To the yoginī embraced by the yogin</l>
@@ -996,7 +997,7 @@ Appendix: Sanskrit text-->
                         </l>
                         <l>For as long as I circle in saṃsāra,</l>
                         <l>For so long, I, a male offspring of the buddhas, <!--[III.10] -->
-                            <ref cRef="F.307.a"/>
+                            <ref cRef="F.307.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-81"/>
@@ -1091,7 +1092,7 @@ Appendix: Sanskrit text-->
                             <foreign xml:lang="Sa-Ltn">Oṁ</foreign>, knife, cut, cut the flesh of all the māras! <foreign xml:lang="Sa-Ltn">Hūṁ phaṭ</foreign>!</mantra>’<note place="end" xml:id="UT22084-080-015-2167" index="26">Skt. <mantra xml:lang="Sa-Ltn">oṁ karttike sarvamārāṇāṃ māṃsaṃ
                                     kartaya kartaya hūṁ phaṭ</mantra>.
                             </note>
-                        <ref cRef="F.307.b"/> In her left hand, one should place a human skull, or
+                        <ref cRef="F.307.b" type="folio"/> In her left hand, one should place a human skull, or
                         one made of wood, and so on, and recite, ‘<mantra xml:lang="mixed">
                             <foreign xml:lang="Sa-Ltn">Oṁ</foreign>, skull, hold, hold the
                             blood of all the enemies! <foreign xml:lang="Sa-Ltn">Hūṁ
@@ -1150,7 +1151,7 @@ Appendix: Sanskrit text-->
                         <l>Is very sharp indeed.</l>
                         <l>Whoever breaches the samaya,</l>
                         <l>This sword is dedicated to cutting him up. <!--[III.20]-->
-                            <ref cRef="F.308.a"/>
+                            <ref cRef="F.308.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-91"/>
@@ -1229,7 +1230,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <trailer tid="1940">This concludes the chapter on empowerments, the third in the
                         glorious Caṇḍa­mahā­roṣaṇa tantra called “<title xml:lang="en">The Sole
-                            Hero</title>.” <ref cRef="F.308.b"/>
+                            Hero</title>.” <ref cRef="F.308.b" type="folio"/>
                     </trailer>
                 </div>
                 <div type="chapter">
@@ -1327,7 +1328,7 @@ Appendix: Sanskrit text-->
                         <l>One should visualize the temple-palace</l>
                         <l>That has four corners, four doors,</l>
                         <l>And is adorned with eight pillars. <!--[IV.12]-->
-                            <ref cRef="F.309.a"/>
+                            <ref cRef="F.309.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-113"/>
@@ -1437,7 +1438,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-126"/>
                     <lg tid="161">
                         <l>“Later one should invite</l>
-                        <l>The manifestation of wisdom. <ref cRef="F.309.b"/>
+                        <l>The manifestation of wisdom. <ref cRef="F.309.b" type="folio"/>
                         </l>
                         <l>Subsequently these goddesses rouse the lord</l>
                         <l>With songs coming from their own throats. <!--[IV.26]--></l>
@@ -1505,7 +1506,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-135"/>
                     <lg tid="174">
                         <l>“Having impassioned the four goddesses,</l>
-                        <l>One should absorb the entire maṇḍala. <ref cRef="F.310.a"/>
+                        <l>One should absorb the entire maṇḍala. <ref cRef="F.310.a" type="folio"/>
                         </l>
                         <l>The devotee should ardently visualize</l>
                         <l>Just oneself, embraced. <!--[IV.35]--></l>
@@ -1606,7 +1607,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-149"/>
                     <lg tid="188">
-                        <l>“One should drink their urine as one pleases, <ref cRef="F.310.b"/>
+                        <l>“One should drink their urine as one pleases, <ref cRef="F.310.b" type="folio"/>
                         </l>
                         <l>Placing one’s face on their bhaga.</l>
                         <l>Or, indeed, placing the face on the lotus of their anus,</l>
@@ -1722,7 +1723,7 @@ Appendix: Sanskrit text-->
                         <!--[V.3]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-155"/>
-                    <p tid="196">“The third garland mantra: <ref cRef="F.311.a"/>
+                    <p tid="196">“The third garland mantra: <ref cRef="F.311.a" type="folio"/>
                     </p>
                     <p rend="mantra" tid="1898">
                         “<mantra xml:lang="mixed">Homage to all the tathāgatas, the fulfillers of all
@@ -1926,7 +1927,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-163"/>
                     <lg tid="210">
-                        <l>“He should visualize his woman <ref cRef="F.311.b"/>
+                        <l>“He should visualize his woman <ref cRef="F.311.b" type="folio"/>
                         </l>
                         <l>In your form, incisively.</l>
                         <l>Through intensive practice like this,</l>
@@ -2022,7 +2023,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-176"/>
                     <lg tid="223">
                         <l>“ ‘In your seven incarnations as a man,</l>
-                        <l>You have been my lowly servant. <ref cRef="F.312.a"/>
+                        <l>You have been my lowly servant. <ref cRef="F.312.a" type="folio"/>
                         </l>
                         <l>I have bought you with cowrie shells;</l>
                         <l>I should be regarded as your owner.’ <!--[VI.16]--></l>
@@ -2121,7 +2122,7 @@ Appendix: Sanskrit text-->
                         <l>Endowed with a fleshy circle.</l>
                         <l>You should place your vajra there</l>
                         <l>And offer pleasure to the mind. <!--[VI.29]-->
-                            <ref cRef="F.312.b"/>
+                            <ref cRef="F.312.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-190"/>
@@ -2219,7 +2220,7 @@ Appendix: Sanskrit text-->
                         <l>And the position <distinct>pressing the ground</distinct>;</l>
                         <l>The position <distinct>even teeth</distinct>,</l>
                         <l>And the position called <distinct>variegated</distinct>. <!--[VI.42]-->
-                            <ref cRef="F.313.a"/>
+                            <ref cRef="F.313.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-203"/>
@@ -2336,7 +2337,7 @@ Appendix: Sanskrit text-->
                     <lg tid="263">
                         <l>“This position is called <distinct>mounted on a device</distinct>,</l>
                         <l>As it employs repetitive thrusting motion.</l>
-                        <l>With her left foot on one’s shoulder, <ref cRef="F.313.b"/>
+                        <l>With her left foot on one’s shoulder, <ref cRef="F.313.b" type="folio"/>
                         </l>
                         <l>And the right foot at the base of one’s left thigh, <!--[VI.56]--></l>
                     </lg>
@@ -2435,7 +2436,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-230"/>
                     <lg tid="277">
                         <l>“However, if applied with knowledge</l>
-                        <l>It will lead to the accomplishment of Caṇḍa­mahā­roṣaṇa. <ref cRef="F.314.a"/>
+                        <l>It will lead to the accomplishment of Caṇḍa­mahā­roṣaṇa. <ref cRef="F.314.a" type="folio"/>
                         </l>
                         <l>Therefore, making the sound of pleasure <foreign type="term" xml:lang="Sa-Ltn">sīt</foreign>,<note place="end" xml:id="UT22084-080-015-2201" index="60">This line is missing from
                                 the Tibetan. Instead, for this and the next three lines, it reads:
@@ -2545,7 +2546,7 @@ Appendix: Sanskrit text-->
                         <l>One should place the soles of one’s feet on the ground,</l>
                         <l>With the feet at an oblique angle, extended sideways<note place="end" xml:id="UT22084-080-015-2204" index="63">Translated based on the
                                 Tibetan.</note>— <!--[VI.83]-->
-                            <ref cRef="F.314.b"/>
+                            <ref cRef="F.314.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-244"/>
@@ -2628,7 +2629,7 @@ Appendix: Sanskrit text-->
                         Śacī, Ratī, and other goddesses, and started to meditate. At that moment,
                         all of them instantaneously attained the level of Caṇḍa­mahā­roṣaṇa and
                         began to wander on the earth. Among them, Śiva became accomplished as
-                        Vajraśaṃkara; <ref cRef="F.315.a"/> Viṣṇu as Vajranārāyaṇa; Indra as
+                        Vajraśaṃkara; <ref cRef="F.315.a" type="folio"/> Viṣṇu as Vajranārāyaṇa; Indra as
                         Vajrapāṇi; Kāmadeva as Vajrānaṅga. In this way, the main gods, as numerous
                         as grains of sand in the Ganges, became accomplished. <!--[VI.93]-->
                     </p>
@@ -2715,7 +2716,7 @@ Appendix: Sanskrit text-->
                         <l>Even if he does not practice yoga.</l>
                         <l>One should never think whether</l>
                         <l>Something is edible or not. <!--[VII.8]-->
-                            <ref cRef="F.315.b"/>
+                            <ref cRef="F.315.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-265"/>
@@ -2810,7 +2811,7 @@ Appendix: Sanskrit text-->
                     <head type="chapter" tid="1983"> Chapter 8</head>
                     <head type="chapterTitle" tid="1984">Caṇḍa­mahā­roṣaṇa’s Nature</head>
                     <milestone unit="chunk" xml:id="UT22084-080-015-277"/>
-                    <p tid="326">Then the lord made full prostrations to the goddess and said: <ref cRef="F.316.a"/>
+                    <p tid="326">Then the lord made full prostrations to the goddess and said: <ref cRef="F.316.a" type="folio"/>
                     </p>
                     <lg tid="327">
                         <l>“How should a yogin</l>
@@ -2917,7 +2918,7 @@ Appendix: Sanskrit text-->
                     <lg tid="341">
                         <l>“Women are heaven, women are the Dharma,</l>
                         <l>And women are truly the supreme austerity.</l>
-                        <l>Women are the Buddha, women are the Saṅgha, <ref cRef="F.316.b"/>
+                        <l>Women are the Buddha, women are the Saṅgha, <ref cRef="F.316.b" type="folio"/>
                         </l>
                         <l>Women are the <term>Perfection of Wisdom</term>‌. <!--[VIII.14]-->
                         </l>
@@ -3038,7 +3039,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-306"/>
                     <lg tid="357">
-                        <l>“Since everything is only mind, <ref cRef="F.317.a"/>
+                        <l>“Since everything is only mind, <ref cRef="F.317.a" type="folio"/>
                         </l>
                         <l>And its duration is only momentary,</l>
                         <l>Who is it that goes to hell,</l>
@@ -3122,7 +3123,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-318"/>
                     <trailer tid="1945">Thus concludes the chapter on Caṇḍa­mahā­roṣaṇa’s nature,
-                        the eighth in the glorious Caṇḍa­mahā­roṣaṇa tantra called “<title xml:lang="en">The Sole Hero</title>.” <ref cRef="F.317.b"/>
+                        the eighth in the glorious Caṇḍa­mahā­roṣaṇa tantra called “<title xml:lang="en">The Sole Hero</title>.” <ref cRef="F.317.b" type="folio"/>
                     </trailer>
                 </div>
                 <div type="chapter">
@@ -3223,7 +3224,7 @@ Appendix: Sanskrit text-->
                         <l>Merely through a mental wish.</l>
                         <l>At that moment, one becomes, effortlessly,</l>
                         <l>The same as a wish-fulfilling gem. <!--[IX.12]-->
-                            <ref cRef="F.318.a"/>
+                            <ref cRef="F.318.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-331"/>
@@ -3308,7 +3309,7 @@ Appendix: Sanskrit text-->
                     <head type="chapterTitle" tid="1988">In Praise of Women</head>
                     <milestone unit="chunk" xml:id="UT22084-080-015-342"/>
                     <p tid="397">Then the goddess said, “Is it possible, O lord, to attain the level
-                        of Caṇḍa­mahā­roṣaṇa even without a woman? <ref cRef="F.318.b"/> Or is it
+                        of Caṇḍa­mahā­roṣaṇa even without a woman? <ref cRef="F.318.b" type="folio"/> Or is it
                         not possible?”</p>
                     <p tid="398">The lord replied, “It is not possible, O goddess.”</p>
                     <p tid="399">The goddess said, “Is it impossible, O lord, because bliss does not
@@ -3397,7 +3398,7 @@ Appendix: Sanskrit text-->
                         <l>Prostrating with one’s whole body.<note place="end" xml:id="UT22084-080-015-2219" index="78">Literally “with the five
                                 joints.”</note>
                         </l>
-                        <l>Then one should circumambulate her clockwise— <ref cRef="F.319.a"/>
+                        <l>Then one should circumambulate her clockwise— <ref cRef="F.319.a" type="folio"/>
                         </l>
                         <l>This will complete the worship of Caṇḍī. <!--[X.12]--></l>
                     </lg>
@@ -3500,7 +3501,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-367"/>
                     <lg tid="426">
-                        <l>“Abandoned his 84,000 wives <ref cRef="F.319.b"/>
+                        <l>“Abandoned his 84,000 wives <ref cRef="F.319.b" type="folio"/>
                         </l>
                         <l>And his entire harem,</l>
                         <l>And went to the bank of Nairañjanā.</l>
@@ -3594,7 +3595,7 @@ Appendix: Sanskrit text-->
                     <lg tid="441">
                         <l>“Because of their ignorance that had no beginning,</l>
                         <l>Those people are devoid of faith;</l>
-                        <l>They do not turn their minds to the truth— <ref cRef="F.320.a"/>
+                        <l>They do not turn their minds to the truth— <ref cRef="F.320.a" type="folio"/>
                         </l>
                         <l>I, for my part, have concealed it very well. <!--[X.37]--></l>
                     </lg>
@@ -3682,7 +3683,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-390"/>
                     <lg tid="454">
                         <l>“This entire world consists of the Awakened One,</l>
-                        <l>And all these forms are of myself— <ref cRef="F.320.b"/>
+                        <l>And all these forms are of myself— <ref cRef="F.320.b" type="folio"/>
                         </l>
                         <l>They should be known as forms, in essence the same,</l>
                         <l>By the yogins reflecting on truth.” <!--[XI.9]--></l>
@@ -3805,7 +3806,7 @@ Appendix: Sanskrit text-->
                         of spells, wealth, poetic skill, learning, yakṣas, yakṣiṇīs, longevity
                         elixir, philosopher’s stone, the knowledge of alchemy, and so forth—the lord
                         will give all of this. <!--[XII.12]-->
-                        <ref cRef="F.321.a"/>
+                        <ref cRef="F.321.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-405"/>
                     <p tid="472">“Or else one could commission someone to paint Sole Hero on a
@@ -3846,7 +3847,7 @@ Appendix: Sanskrit text-->
                         the magical power of the sword, with the bodily form of a sixteen-year-old
                         with curled hair. One enjoys the five sense objects until the end of
                         saṃsāra. <!--[XII.16]-->
-                        <ref cRef="F.321.b"/>
+                        <ref cRef="F.321.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-409"/>
                     <p tid="476">“In the same way, one should practice with a vajra scepter, a
@@ -3877,7 +3878,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-411"/>
                     <p tid="478">“One should practice with the chief queen and the king made of
-                        banyan wood, <ref cRef="F.322.a"/> and with the group of apsarases—Tilottamā, Śaśidevī, Kañcanamālā, Kuṇḍalahāriṇī, Ārambhā, Urvaśī,
+                        banyan wood, <ref cRef="F.322.a" type="folio"/> and with the group of apsarases—Tilottamā, Śaśidevī, Kañcanamālā, Kuṇḍalahāriṇī, Ārambhā, Urvaśī,
                         Śrībhūṣaṇī, Ratī, Śacī, and so forth, made of deodar wood. In the same way,
                         one should do the practice of the nine planets—the sun, the moon, Mars,
                         Mercury, Jupiter, Venus, Saturn, Rāhu, and Ketu. Similarly the practice of
@@ -3930,7 +3931,7 @@ Appendix: Sanskrit text-->
                         all fears. One should add: ‘<mantra xml:lang="en">Protect me, protect!</mantra>’<note place="end" xml:id="UT22084-080-015-2230" index="89">Skt. <mantra xml:lang="Sa-Ltn">rakṣa rakṣa mām</mantra>.
                             </note>
                         
-                        <ref cRef="F.322.b"/> In this way, one effects protection in every
+                        <ref cRef="F.322.b" type="folio"/> In this way, one effects protection in every
                             respect.<note place="end" xml:id="UT22084-080-015-2231" index="90">Instead of “one effects protection,” the Tibetan has “one burns
                             rākṣasas in all cases.” </note>
                         <!--[XII.22]-->
@@ -4015,7 +4016,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-422"/>
                     <p tid="493">“Having used one’s personal mantra to incant a sword or the like
-                        108 times, one should engage in battle. One will meet with victory. <ref cRef="F.323.a"/> For whatever purpose one dedicates an oblation, that
+                        108 times, one should engage in battle. One will meet with victory. <ref cRef="F.323.a" type="folio"/> For whatever purpose one dedicates an oblation, that
                         purpose will have a successful outcome. <!--[XII.30]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-423"/>
@@ -4105,7 +4106,7 @@ Appendix: Sanskrit text-->
                                     harānantaṃ śīghraṃ varṣāpaya</mantra>.
                         </note>
                         
-                        <ref cRef="F.323.b"/> The god will then send rain. <!--[XII.39]-->
+                        <ref cRef="F.323.b" type="folio"/> The god will then send rain. <!--[XII.39]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-432"/>
                     <p tid="503">“Then one should take Ananta out of the water, bathe him in milk,
@@ -4164,7 +4165,7 @@ Appendix: Sanskrit text-->
                         mantra and offer it. This will bring fulfillment of wishes. One should
                         incant a cake of rice and offer it at evening twilight in a secluded place.
                         Then any objective one aims for will be accomplished. The remaining part of
-                        the ritual is as before. <ref cRef="F.324.a"/> Following the method
+                        the ritual is as before. <ref cRef="F.324.a" type="folio"/> Following the method
                         previously described, one should start on the first day of the bright
                         fortnight and proceed as before until the day of the full moon.
                         <!--[XII.45]-->
@@ -4225,7 +4226,7 @@ Appendix: Sanskrit text-->
                         </note>
                     </p>
                     <p tid="515">“These were the rites belonging to the mantra of the goddess. <!--[XII.51]-->
-                        <ref cRef="F.324.b"/>
+                        <ref cRef="F.324.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-444"/>
@@ -4286,7 +4287,7 @@ Appendix: Sanskrit text-->
                         <l>Those who disparage the Buddha’s teaching.</l>
                         <l>Having seized their wealth,</l>
                         <l>One should perform the benefit of beings. <!--[XIII.2]-->
-                            <ref cRef="F.325.a"/>
+                            <ref cRef="F.325.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-451"/>
@@ -4377,7 +4378,7 @@ Appendix: Sanskrit text-->
                     <lg tid="537">
                         <l>“That which has just been taught is the outward conduct;</l>
                         <l>Now, however, the secret practice will be taught.</l>
-                        <l>One should place a diadem on one’s head <ref cRef="F.325.b"/>
+                        <l>One should place a diadem on one’s head <ref cRef="F.325.b" type="folio"/>
                         </l>
                         <l>And a pair of earrings on one’s ears. <!--[XIII.14]--></l>
                     </lg>
@@ -4480,7 +4481,7 @@ Appendix: Sanskrit text-->
                         <l>Because of engaging one’s mind in the pleasure of it.</l>
                         <l>As this is the reality of everything,</l>
                         <l>It is regarded as the perfection of concentration. <!--[XIII.27]-->
-                            <ref cRef="F.326.a"/>
+                            <ref cRef="F.326.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-476"/>
@@ -4568,7 +4569,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-486"/>
                     <lg tid="562">
                         <l>“He will remain until the end of saṃsāra,</l>
-                        <l>Abiding happily in divine bliss! <ref cRef="F.326.b"/>
+                        <l>Abiding happily in divine bliss! <ref cRef="F.326.b" type="folio"/>
                         </l>
                         <l>It is for this reason that he is called Acala</l>
                         <l>And is worshiped by all the buddhas. <!--[XIV.4]--></l>
@@ -4658,7 +4659,7 @@ Appendix: Sanskrit text-->
                     <head type="chapterTitle" tid="1998"> Purities </head>
                     <milestone unit="chunk" xml:id="UT22084-080-015-498"/>
                     <p tid="575">Then the blessed lady, Delusion Vajrī, said, “How can Sole Hero be
-                        actualized? Tell me, O supreme lord!” <ref cRef="F.327.a"/>
+                        actualized? Tell me, O supreme lord!” <ref cRef="F.327.a" type="folio"/>
                     </p>
                     <p tid="576">The lord then said:</p>
                     <lg tid="577">
@@ -4722,7 +4723,7 @@ Appendix: Sanskrit text-->
                         warrior, and peasant castes. The moon and the sun are semen and menstrual
                         blood. The sword in the center is the emblem of Black Acala. The knives and
                         double vajras in the cardinal directions represent their respective deities,
-                        starting with White Acala in the east. <ref cRef="F.327.b"/> In the
+                        starting with White Acala in the east. <ref cRef="F.327.b" type="folio"/> In the
                         intermediate directions, they represent their respective goddesses, starting
                         with Delusion Vajrī in the southeast. These are the purities of the maṇḍala.
                         <!--[XV.8]-->
@@ -4770,7 +4771,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-509"/>
                     <p tid="591">“Every mortal girl represents earth. A young man represents
-                        enjoyment. <ref cRef="F.328.a "/>The lotus seat signifies lasting for a long
+                        enjoyment. <ref cRef="F.328.a" type="folio"/>The lotus seat signifies lasting for a long
                         time. The sun-and-moon seat signifies being conceived in the womb. The male
                         form born from sperm and menstrual blood is existence, whereas the female
                         form is nonexistence. Blue Acala is consciousness, White is form, Yellow is
@@ -4827,7 +4828,7 @@ Appendix: Sanskrit text-->
                         <l>Birth has becoming for its cause.</l>
                         <l>Old age, death, grief, lamentation, pain, despair, and turmoil have birth
                             for their cause—in this way arises this whole great heap of suffering. <!--[XVI.2]-->
-                            <ref cRef="F.328.b"/>
+                            <ref cRef="F.328.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-516"/>
@@ -4882,7 +4883,7 @@ Appendix: Sanskrit text-->
                         combined with these formations, exhales and inhales; it wanders to and
                         apprehends material objects, and it analyzes and apprehends that which is
                         immaterial; it becomes infatuated, hostile, or bewildered. <!--[XVI.7]-->
-                        <ref cRef="F.329.a"/>
+                        <ref cRef="F.329.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-521"/>
                     <p tid="606">“From these formations arises consciousness, which is sixfold:
@@ -4921,7 +4922,7 @@ Appendix: Sanskrit text-->
                     <p tid="612">“From grasping arises becoming, which is entry into the womb. </p>
                     <p tid="613">“From becoming arises birth, which is one’s visible emergence. This
                         is the acquisition of the five perpetuating aggregates. <!--[XVI.11]-->
-                        <ref cRef="F.329.b"/>
+                        <ref cRef="F.329.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-525"/>
                     <p tid="614">“From this birth arises old age, which is being old and worn-out,
@@ -4963,7 +4964,7 @@ Appendix: Sanskrit text-->
                         being excited with great passion, one passes through the central channel and
                         emerges from the father’s vajra. Passing through the channel of the
                             <term>goddess of the Vajra Realm</term> located in the orifice of the
-                        mother’s lotus, one is established in the birth channel of the womb. <ref cRef="F.330.a"/> Subsequently a new life begins by internalizing the
+                        mother’s lotus, one is established in the birth channel of the womb. <ref cRef="F.330.a" type="folio"/> Subsequently a new life begins by internalizing the
                         secretions. <!--[XVI.15]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-529"/>
@@ -5041,7 +5042,7 @@ Appendix: Sanskrit text-->
                                 ejaculation.)</note>
                         </l>
                         <l>Is referred to by the name Acala.” <!--[XVI.22]-->
-                            <ref cRef="F.330.b"/>
+                            <ref cRef="F.330.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-536"/>
@@ -5153,7 +5154,7 @@ Appendix: Sanskrit text-->
                     <lg tid="639">
                         <l>“One should incant it seven times and eat it</l>
                         <l>Either early in the morning or at mealtime.</l>
-                        <l>Doing this every day for the rest of one’s life <ref cRef="F.331.a"/>
+                        <l>Doing this every day for the rest of one’s life <ref cRef="F.331.a" type="folio"/>
                         </l>
                         <l>Will increase one’s semen or blood. <!--[XVII.12]--></l>
                     </lg>
@@ -5265,7 +5266,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-560"/>
                     <p tid="653">“One should take five parts of yellow orpiment, one part of the
                         potash of <foreign type="term" xml:lang="Sa-Ltn">dhak</foreign>, one part of
-                        the potash of barley, one part of the potash of plantain, <ref cRef="F.331.b"/> and blend them with water. By merely smearing the paste
+                        the potash of barley, one part of the potash of plantain, <ref cRef="F.331.b" type="folio"/> and blend them with water. By merely smearing the paste
                         around the vulva, the armpits, or the penis, one will remove unwanted hair.
                         <!--[XVII.24]-->
                     </p>
@@ -5345,7 +5346,7 @@ Appendix: Sanskrit text-->
                     <p tid="667">“One should eat powdered bark of the arjuna tree with milk and so
                         on. After doing this for one year, one’s lifespan will be extended to three
                         hundred years. <!--[XVII.38]-->
-                        <ref cRef="F.332.a"/>
+                        <ref cRef="F.332.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-575"/>
                     <p tid="668">“One should drink one <foreign type="term" xml:lang="Sa-Ltn">pala</foreign> of the juice of emblic myrobalan with one karṣa of
@@ -5403,7 +5404,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-584"/>
                     <p tid="677">“One should always visualize oneself in the form of the deity and
                         empower the medicine by incanting it with the mantra.” <!--[XVII.48]-->
-                        <ref cRef="F.332.b"/>
+                        <ref cRef="F.332.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-080-015-585"/>
@@ -5486,7 +5487,7 @@ Appendix: Sanskrit text-->
                     <p tid="691">“One should drink two parts of the bark of ivory tree and one part
                         of black pepper, sugar, and <term>Indian heliotrope</term> with buttermilk. This will
                         cure stomach bloat. <!--[XVIII.13]-->
-                        <ref cRef="F.333.a"/>
+                        <ref cRef="F.333.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-599"/>
                     <p tid="692">“Eating emblic myrobalan, long pepper, leadwort, and fresh ginger
@@ -5563,7 +5564,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-615"/>
                     <p tid="708">“One should blend together sour gruel, sesame oil, sea salt, and
-                        the root of doob grass <ref cRef="F.333.b"/> in a metal dish, and apply this
+                        the root of doob grass <ref cRef="F.333.b" type="folio"/> in a metal dish, and apply this
                         to the eyes. This will cure pain in the eyeballs. <!--[XVIII.30]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-616"/>
@@ -5629,7 +5630,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-628"/>
                     <p tid="721">“One should cook clarified butter of a cow with peacock’s bile and
-                        the juice of false daisy, <ref cRef="F.334.a"/> and use this as an errhine.
+                        the juice of false daisy, <ref cRef="F.334.a" type="folio"/> and use this as an errhine.
                         After seven days, one’s hair will become red. <!--[XVIII.43]-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-629"/>
@@ -5698,7 +5699,7 @@ Appendix: Sanskrit text-->
                     <p tid="730">“One should dip one’s penis, for some time, in coconut juice, and
                         then apply the powder of <foreign type="term" xml:lang="Sa-Ltn">sūrasūnna</foreign>.<note place="end" xml:id="UT22084-080-015-2298" index="156">The plant <foreign type="term" xml:lang="Sa-Ltn">sūrasūnna</foreign> (also spelt <foreign type="term" xml:lang="Sa-Ltn">surasunna</foreign> and surasunnaka) could not be
                             identified.</note> This will cure diseases of the male organ. <!--[XVIII.52]-->
-                        <ref cRef="F.334.b"/>
+                        <ref cRef="F.334.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-638"/>
                     <p tid="731">“If one mixes false daisy root with one’s seminal fluid and applies
@@ -5779,7 +5780,7 @@ Appendix: Sanskrit text-->
                         an equal portion of each and make a pill with honey. One should wrap it in
                         cloth and dry it. One should offer it to a woman together with betel. With
                         added shell-powder, she will become enthralled. <!--[XIX.8]-->
-                        <ref cRef="F.335.a"/>
+                        <ref cRef="F.335.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-648"/>
                     <p tid="741">“A woman, if her name is written with goat’s milk using the right
@@ -5893,7 +5894,7 @@ Appendix: Sanskrit text-->
                                 (also spelt <foreign type="term" xml:lang="Sa-Ltn">surasunna</foreign> and <foreign type="term" xml:lang="Sa-Ltn">sūrasūnna</foreign>) could not be identified.</note> before
                             coitus,</l>
                         <l>One will be capable of the ultimate retention of semen. <!--[XIX.21]-->
-                            <ref cRef="F.335.b"/>
+                            <ref cRef="F.335.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-661"/>
@@ -5996,7 +5997,7 @@ Appendix: Sanskrit text-->
                             <foreign type="term" xml:lang="Sa-Ltn">Rāmadūtī</foreign> has not been
                             identified.</note> together with the leaves, put this on the penis, and
                         make love. Then she will drip. <!--[XIX.37]-->
-                        <ref cRef="F.336.a"/>
+                        <ref cRef="F.336.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-677"/>
                     <p tid="772">“One should grind the root of Indian sesbania, blending it with
@@ -6097,7 +6098,7 @@ Appendix: Sanskrit text-->
                         ā</mantra>!’ </p>
                     <p tid="786">“With this mantra, rhinoceros will flee: ‘<mantra xml:lang="Sa-Ltn">Terli ā, terli
                         ā</mantra>!’ <!--[XX.8]-->
-                        <ref cRef="F.336.b"/>
+                        <ref cRef="F.336.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-689"/>
                     <p tid="787">“With this mantra, dogs will flee when threatened with one’s left
@@ -6207,7 +6208,7 @@ Appendix: Sanskrit text-->
                          Reciting this, one should burn the effigy in the charnel ground fire,
                         or in a fire of cutch tree or jujube wood. One will cause the enemy to burn
                         with fever. <!--[XX.17]-->
-                        <ref cRef="F.337.a"/>
+                        <ref cRef="F.337.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-698"/>
                     <p tid="796">“To obliterate the yantra of an enemy, one should write this mantra
@@ -6284,7 +6285,7 @@ Appendix: Sanskrit text-->
                         string around the whole thing and throw it down by one’s feet.<note place="end" xml:id="UT22084-080-015-2345" index="203">Instead of “throw
                             it down at one’s feet,” the Tibetan has “wrap it in a rag with which one
                             has washed one’s feet.”</note>
-                        <ref cRef="F.337.b"/> One should kick it with one’s left foot while
+                        <ref cRef="F.337.b" type="folio"/> One should kick it with one’s left foot while
                         repeating ‘Please bring such and such under my control’ seven times. Then
                         say: ‘<mantra xml:lang="mixed">
                             <foreign xml:lang="Sa-Ltn">Oṁ</foreign>, Caṇḍa­mahā­roṣaṇa, <foreign xml:lang="Sa-Ltn">hrīṁ hrīṁ hroṁ</foreign>! In your wrathful form,
@@ -6380,7 +6381,7 @@ Appendix: Sanskrit text-->
                                     lag dang rkang pa</foreign>).</note> have been sprinkled with
                             this powder,</l>
                         <l>She runs, her body swooning with every step. <!--[XX.28]-->
-                            <ref cRef="F.338.a"/>
+                            <ref cRef="F.338.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-709"/>
@@ -6531,7 +6532,7 @@ Appendix: Sanskrit text-->
                     <p tid="819">“By rubbing two flat pieces of stone<note place="end" xml:id="UT22084-080-015-2369" index="227">This passage is rather
                             unclear.</note> together at night time while saying ‘<mantra xml:lang="Sa-Ltn">Hūṁ</mantra>,’ one will produce the
                         brilliance of lightning. <!--[XXI.3]-->
-                        <ref cRef="F.338.b"/>
+                        <ref cRef="F.338.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-722"/>
                     <p tid="820">“One should light a wick that has been dyed red with lac mixed with
@@ -6618,7 +6619,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-735"/>
                     <p tid="833">“When the flame of a lamp is extinguished, it can be relit after
                         adding sulphur powder. <!--[XXI.17]-->
-                        <ref cRef="F.339.a "/>
+                        <ref cRef="F.339.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-736"/>
                     <p tid="834">“After smearing the feet with <foreign xml:lang="Sa-Ltn">muṇḍirī</foreign>, <foreign xml:lang="Sa-Ltn">śevāla</foreign>,<note place="end" xml:id="UT22084-080-015-2374" index="232">
@@ -6698,7 +6699,7 @@ Appendix: Sanskrit text-->
                         fruit not cut with a knife and, naked and with loose hair, hold it in one’s
                         left hand. One should not put it on the ground. Protection will be afforded
                         by saying the garland mantra of the lord. <!--[XXI.32]-->
-                        <ref cRef="F.339.b"/>
+                        <ref cRef="F.339.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-751"/>
                     <p tid="849">“With whoever’s blood one would wet this mustard fruit, that
@@ -6790,7 +6791,7 @@ Appendix: Sanskrit text-->
                         the root of chaff tree. One should then smear the ends of two sticks, each
                         with one of the roots, and wear them on one’s hips. One will then be fit for
                         battle. <!--[XXI.42]-->
-                        <ref cRef="F.340.a"/>
+                        <ref cRef="F.340.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-761"/>
                     <p tid="859">“When throwing water onto a thickly woven cloth smeared with vaṅga,
@@ -6907,7 +6908,7 @@ Appendix: Sanskrit text-->
                         <l>When it is retained, this is called pūraka.</l>
                         <l>When it is exhaled, this is known as recaka;</l>
                         <l>When there is no movement, this is stambhaka. <!--[XXII.8]-->
-                            <ref cRef="F.340.b"/>
+                            <ref cRef="F.340.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-777"/>
@@ -7019,7 +7020,7 @@ Appendix: Sanskrit text-->
                         <l>
                             <distinct type="term">The killing one</distinct>—should be combined with
                             recaka. <!--[XXII.23]-->
-                            <ref cRef="F.341.a"/>
+                            <ref cRef="F.341.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-792"/>
@@ -7133,7 +7134,7 @@ Appendix: Sanskrit text-->
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-080-015-804"/>
                     <p tid="902">“Also if one feels a prickly sensation in one’s chest and throat,
-                        one will die within three fortnights; <ref cRef="F.341.b"/> in the soles of
+                        one will die within three fortnights; <ref cRef="F.341.b" type="folio"/> in the soles of
                         the feet or hands and the top of the head, one will die within three days.
                         If during an orgasm, one hears the sound of a bell in one’s ears, one will
                         die within three months. If one feels separate prickles at the root of one’s
@@ -7211,7 +7212,7 @@ Appendix: Sanskrit text-->
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-080-015-813"/>
                     <lg tid="911">
-                        <l>“It is the same as a rainbow <ref cRef="F.342.a"/> and said to be like
+                        <l>“It is the same as a rainbow <ref cRef="F.342.a" type="folio"/> and said to be like
                             the moon reflected in water.” <!--[XXIV.4]-->
                         </l>
                     </lg>
@@ -7333,7 +7334,7 @@ Appendix: Sanskrit text-->
                                     āgaccha dhīḥ svāhā</mantra>.
                             </note>
                         
-                        <ref cRef="F.342.b"/>
+                        <ref cRef="F.342.b" type="folio"/>
                         </l>
 
                     <l>‘<mantra xml:lang="mixed">
@@ -7480,7 +7481,7 @@ Appendix: Sanskrit text-->
                     <milestone unit="chunk" xml:id="UT22084-080-015-843"/>
                     <lg tid="943">
                         <l>“The yellow Kāmadeva.</l>
-                        <l>The green vetāla by name of Māhilla <ref cRef="F.343.a"/>
+                        <l>The green vetāla by name of Māhilla <ref cRef="F.343.a" type="folio"/>
                         </l>
                         <l>Should be visualized in the northwest,</l>
                         <l>And the black asura by name of Kokila in the northeast.
