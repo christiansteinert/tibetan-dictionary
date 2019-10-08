@@ -24,13 +24,13 @@
             <author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.01 <date>2019</date>
+                <edition>v 1.1.2 <date>2019</date>
                 </edition>
             </editionStmt>
-            <publicationStmt status="2.a">
+            <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all of the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
@@ -49,22 +49,24 @@
                 <bibl key="toh174" type="text">
                     <ref>Toh 174</ref>
                     <biblScope>Degé Kangyur, vol. 60 (mdo sde, ma), folios 7b.4–78b.7</biblScope>
-                    <location count-pages="143">
-                        <start volume="60" page="16"/>
-                        <end volume="60" page="158"/>
+                    <location work="UT4CZ5369" count-pages="143">
+                        <volume number="60" start-page="14" end-page="156"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11783" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T00:01:49.759Z" user="admin">21/06/2019 00:01:49</note>
+                <note type="lastUpdated" date-time="2019-10-08T18:59:13.372Z" user="admin">08/10/2019 18:59:13</note>
                 <note type="updated" update="translation-status" value="2.d" date-time="2019-03-09T11:34:59.6Z" user="john">2.d</note>
                 <note type="updated" update="translation-status" value="2.c" date-time="2019-05-01T21:08:28.617Z" user="john">2.c</note>
                 <note type="updated" update="translation-status" value="2.b" date-time="2019-05-22T08:53:28.481Z" user="james">2.b</note>
                 <note type="updated" update="translation-status" value="2.a" date-time="2019-05-22T10:46:58.079Z" user="mike">2.a</note>
             <note type="updated" update="text-version" value="v 1.00" date-time="2019-05-27T11:30:09.713Z" user="andre">v 1.00 2019</note>
                 <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-21T00:01:46.783Z" user="laura">v 1.01 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-06-27T12:43:02.408Z" user="mike">2</note>
+<note type="updated" update="text-version" value="v 1.1.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.1.2" date-time="2019-10-08T18:59:10.49Z" user="celso">Edited Chinese glossary according to Joie's corrections</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -233,7 +235,7 @@
                     <head type="chapter" tid="18">Chapter One: The Introduction</head>
                     <milestone unit="chunk" xml:id="UT22084-060-003-11"/>
                     <p tid="19">
-                        <ref cRef="F.7.b"/> <ref cRef="B1" type="bampo"/> Homage to all buddhas and bodhisattvas!</p>
+                        <ref cRef="F.7.b" type="folio"/> <ref cRef="B1" type="bampo"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-060-003-13"/>
                     <p tid="21">Thus did I hear at one time. The Blessed One was staying at the
@@ -243,7 +245,7 @@
                         bodhisattva great being Lokadhara. It was his wish that bodhisattva great
                         beings develop the mind of awakening by adorning themselves with
                         immeasurable virtues; that they understand in its entirety the true meaning
-                        of all phenomena; <ref cRef="F.8.a"/> that they understand how limitless aspirations
+                        of all phenomena; <ref cRef="F.8.a" type="folio"/> that they understand how limitless aspirations
                         lead to the perfection of limitless ornaments; that they comprehend and
                         understand the true characteristics of limitless phenomena; that they purify
                         their motivation through limitless aspirations; that they gain comprehensive
@@ -270,7 +272,7 @@
                         body, how do they sustain unbroken mindfulness until they attain unsurpassed
                         and perfect awakening?”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-15"/>
-                    <p tid="23">The Blessed One responded to the bodhisattva Lokadhara, <ref cRef="F.8.b"/>
+                    <p tid="23">The Blessed One responded to the bodhisattva Lokadhara, <ref cRef="F.8.b" type="folio"/>
                         “Excellent, excellent! Lokadhara, it is excellent that you have asked the
                         Thus-Gone One about these subjects on behalf of bodhisattva great beings.
                         The merit you have gained from asking questions—in order to bring benefit
@@ -294,7 +296,7 @@
                         ask,” and he listened to the Blessed One.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-18"/>
                     <p tid="26">The Blessed One then said, “Sublime being, I have this to say:
-                        <ref cRef="F.9.a"/> Bodhisattva great beings who understand four beneficial subjects
+                        <ref cRef="F.9.a" type="folio"/> Bodhisattva great beings who understand four beneficial subjects
                         will endeavor in and apply themselves to the true characteristics of
                         phenomena and become highly skilled in discerning the characteristics of
                         phenomena. What are these four? They should achieve perfect mindfulness,
@@ -322,7 +324,7 @@
                         characteristic of arising and ceasing of phenomena.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-21"/>
                     <p tid="29">“Lokadhara, bodhisattva great beings who understand an alternate set
-                        of four beneficial subjects <ref cRef="F.9.b"/> will endeavor in and apply themselves to
+                        of four beneficial subjects <ref cRef="F.9.b" type="folio"/> will endeavor in and apply themselves to
                         the true characteristics of phenomena and become highly skilled in
                         discerning the characteristics of phenomena. What are these four? They
                         should assiduously attend to unsurpassed and perfect awakening, swiftly
@@ -349,7 +351,7 @@
                         aspirations, having abundant and pure diligent conduct, steadfastly abiding
                         due to the virtue of patience that is forgiving, and attaining the
                         understanding that differentiates the true characteristics of phenomena.
-                        <ref cRef="F.10.a"/>
+                        <ref cRef="F.10.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-24"/>
                     <p tid="32">“Lokadhara, bodhisattva great beings who have an alternate set of
@@ -380,7 +382,7 @@
                         cultivating the four applications of mindfulness.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-27"/>
                     <p tid="35">“Lokadhara, bodhisattva great beings who understand four subjects
-                        <ref cRef="F.10.b"/> will pursue the power of mindfulness. What are these four? Always
+                        <ref cRef="F.10.b" type="folio"/> will pursue the power of mindfulness. What are these four? Always
                         applying mindfulness with respect to the mind in order to perfect the
                         factors of awakening, having pure insight that employs an acute power of
                         mindfulness to know what was cultivated in previous existences, swiftly
@@ -408,7 +410,7 @@
                         Maintaining pure discipline, having pure conduct, dispelling the five mental
                         obscurations concerning all forms of conduct while being unattached to
                         worldly phenomena, and discarding the obscurations of action and affliction.
-                        <ref cRef="F.11.a"/>
+                        <ref cRef="F.11.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-31"/>
                     <p tid="39">“Lokadhara, bodhisattva great beings who have an alternate set of
@@ -441,7 +443,7 @@
                         categories of all phenomena. What are these four? Being knowledgeable with
                         regard to the progressive order of Dharma teachings, being knowledgeable
                         with regard to the means of the dependent origination of all phenomena,
-                        <ref cRef="F.11.b"/> having the skillful means to cultivate all Dharma teachings, and
+                        <ref cRef="F.11.b" type="folio"/> having the skillful means to cultivate all Dharma teachings, and
                         being very knowledgeable with regard to discerning both the discourses on
                         the definitive meaning and those on the inferred meaning. </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-35"/>
@@ -473,7 +475,7 @@
                         phenomena of cessation and the path.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-38"/>
                     <p tid="46">“Lokadhara, bodhisattva great beings who have an alternate set of
-                        four qualities <ref cRef="F.12.a"/> will progress toward insight by knowing how to
+                        four qualities <ref cRef="F.12.a" type="folio"/> will progress toward insight by knowing how to
                         discern the categories of all phenomena. What are these four? Being
                         knowledgeable with regard to the connection between the formation and
                         destruction of all phenomena; drawing on previous causes to achieve power;
@@ -504,7 +506,7 @@
                     <p tid="49">“Lokadhara, bodhisattva great beings who have four additional
                         qualities will have unbroken mindfulness from the point that they relinquish
                         this body until they awaken to unsurpassed and perfect buddhahood. What are
-                        these four? Strong pursuit of the four applications of mindfulness, <ref cRef="F.12.b"/>
+                        these four? Strong pursuit of the four applications of mindfulness, <ref cRef="F.12.b" type="folio"/>
                         strong pursuit of discerning insight, placing insight at the forefront of
                         all absorptions, and mastering definitive insight.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-43"/>
@@ -533,7 +535,7 @@
                         strength that purifies karmic obscurations.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-46"/>
                     <p tid="53">“Lokadhara, bodhisattva great beings who have an alternate set of
-                        five types of purificatory wisdom strength <ref cRef="F.13.a"/> will perfect the higher
+                        five types of purificatory wisdom strength <ref cRef="F.13.a" type="folio"/> will perfect the higher
                         virtues. What are these five? The wisdom strength that purifies conduct, the
                         wisdom strength that purifies mindfulness, the wisdom strength that purifies
                         practice, the wisdom strength that purifies apprehension of sentient
@@ -560,7 +562,7 @@
                     <p tid="56">“Lokadhara, bodhisattva great beings who have an alternate set of
                         five types of purificatory wisdom strength will perfect the higher virtues.
                         What are these five? The wisdom strength that purifies higher diligence,
-                        <ref cRef="F.13.b"/> the wisdom strength that purifies the acquisition of diligence, the
+                        <ref cRef="F.13.b" type="folio"/> the wisdom strength that purifies the acquisition of diligence, the
                         wisdom strength that purifies concentration, the wisdom strength that
                         purifies the means of concentration, and the wisdom strength that purifies
                         the means of tranquility and special insight.</p>
@@ -587,7 +589,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-060-003-53"/>
                     <p tid="59">“Lokadhara, bodhisattva great beings who have three qualities will
-                        endeavor in the purificatory wisdom strength. <ref cRef="F.14.a"/> What are these three?
+                        endeavor in the purificatory wisdom strength. <ref cRef="F.14.a" type="folio"/> What are these three?
                         Interest, diligence, and carefulness. Bodhisattva great beings who have
                         these three will endeavor in the wisdom strength that purifies the entirety
                         of virtues. Why is this? Lokadhara, interest, diligence, and carefulness are
@@ -612,7 +614,7 @@
                         understood all these purificatory wisdom strengths. Lokadhara, any person
                         who has such purificatory wisdom strength will attain unexcelled, perfect,
                         and complete awakening, just as I have attained it now. Such a person will
-                        also turn the wheel of Dharma, <ref cRef="F.14.b"/> just as I do now. That person will
+                        also turn the wheel of Dharma, <ref cRef="F.14.b" type="folio"/> just as I do now. That person will
                         roar the lion’s roar, just as I roar it. The way that person naturally has
                         power and strength over all phenomena will be just as I do now. Lokadhara,
                         if you have exerted yourself in the cultivation of this purificatory wisdom
@@ -637,7 +639,7 @@
                         world at that time. As there was no other king, the beings of that realm
                         called the Blessed One their <distinct>Dharma King</distinct>. The blessed
                         one King of Lofty Wisdom taught the bodhisattvas a discourse from the
-                        bodhisattva section called <ref cRef="F.15.a"/> <title xml:lang="en">Countering the
+                        bodhisattva section called <ref cRef="F.15.a" type="folio"/> <title xml:lang="en">Countering the
                             Doubts and Pleasing the Minds of All Beings</title>. When
                         five hundred of the bodhisattvas heard this description of the bodhisattvas’
                         purificatory wisdom strength, they generated such strength of diligence that
@@ -661,7 +663,7 @@
                         presence, gained supreme mindfulness, happiness, and insight. Finally, they
                         met the blessed one King of Lofty and Immeasurable Power, who gave them this
                         prophecy: ‘After ten thousand eons, you will fully awaken to unsurpassed and
-                        perfect buddhahood.’ <ref cRef="F.15.b"/> Throughout that ten-thousand-eon period, those
+                        perfect buddhahood.’ <ref cRef="F.15.b" type="folio"/> Throughout that ten-thousand-eon period, those
                         five hundred bodhisattvas met two thousand buddhas. In this way, they
                         perfected the awakening of the buddhas, until finally, one eon, they fully
                         awakened to unsurpassed and perfect buddhahood.</p>
@@ -688,7 +690,7 @@
                         bodhisattva section called <title xml:lang="en">Countering the Doubts and
                             Pleasing the Minds of All Beings</title>. Furthermore, through his
                         miraculous ability, the many assemblies in Veṇuvana were able to behold the
-                        emanated buddhas filling the Jambudvīpas, each teaching the Dharma, <ref cRef="F.16.a"/>
+                        emanated buddhas filling the Jambudvīpas, each teaching the Dharma, <ref cRef="F.16.a" type="folio"/>
                         whereby all the assemblies were delighted. They rose from their seats,
                         prostrated to the Buddha, and marveled, “Blessed One, the miraculous ability
                         of the blessed buddhas is unfathomable. The immeasurable and unfathomable
@@ -725,7 +727,7 @@
                     <p tid="69">“Noble children, if it is rare for someone to even so much as trust
                         in this profound and pure teaching and arrive at the insight of buddhahood,
                         what need we say of being interested in the domain of the thus-gone ones?
-                        <ref cRef="F.16.b"/> Noble children, my <term type="ignore">motivation</term> for adorning myself with such
+                        <ref cRef="F.16.b" type="folio"/> Noble children, my <term type="ignore">motivation</term> for adorning myself with such
                         aspirations and practicing such diligence and patience for so long has been
                         to help those suffering beings who are without protector or refuge and who
                         fall into the lower realms. Once I fully awakened, I ensured the benefit and
@@ -751,7 +753,7 @@
                         beings suffering from hunger and thirst, I would cut flesh from my body,
                         cook it, and give it to them—yet even then my mind felt no trouble or
                         regret; instead, a great and universal love for all beings arose in me.
-                        <ref cRef="F.17.a"/> Noble children, understand that in this fashion, through
+                        <ref cRef="F.17.a" type="folio"/> Noble children, understand that in this fashion, through
                         benefitting beings with the strength of great diligence and skill, one will
                         gather the accumulations leading to unsurpassed and perfect awakening.
                         Therefore, noble children, by earnest practice of interest, diligence, and
@@ -775,7 +777,7 @@
                         love and care of future beings. Previously, when I was engaged in
                         bodhisattva conduct, there were some gentle beings who had grown mistaken
                         and errant in their conduct, leading them to descend to difficult states of
-                        being. <ref cRef="F.17.b"/> I aroused great compassion in order to free them from those
+                        being. <ref cRef="F.17.b" type="folio"/> I aroused great compassion in order to free them from those
                         states, wherefore my distributed relics, even so small as a mustard seed in
                         size, will display miraculous power. After I reach parinirvāṇa, the minds of those
                         who can be tamed by my relics will be purified. With purified minds, they
@@ -799,7 +801,7 @@
                         understand that in the past, I gathered beings without abandoning them by
                         means of such causes and conditions. Presently, I also gather beings without
                         abandoning them. Know that in the future as well, I will gather beings
-                        without abandoning them. <ref cRef="F.18.a"/> Having guarded and cared for such
+                        without abandoning them. <ref cRef="F.18.a" type="folio"/> Having guarded and cared for such
                         discourses, they will flourish extensively in the final five-hundred-year
                         period to come.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-68"/>
@@ -839,7 +841,7 @@
                                 purpose is well-known throughout Buddhist literature, we have been
                                 unable to locate this precise statement in other
                             scriptures.</note> One who is equanimous regarding Dharma and
-                        non-Dharma is said to see the Buddha. <ref cRef="F.18.b"/> Why is this? Because the
+                        non-Dharma is said to see the Buddha. <ref cRef="F.18.b" type="folio"/> Why is this? Because the
                         Thus-Gone One is said to be equanimous regarding all phenomena. Not being
                         attached to, or grasping at, the label <distinct>Dharma</distinct>, one does
                         not fall into the label <distinct>Dharma</distinct>, so what need we say of
@@ -869,7 +871,7 @@
                         Thus-Gone One does not give rise to views regarding phenomena. Thus, seeing
                         the absence of characteristics concerning all phenomena is seeing the
                         Thus-Gone One. Whoever sees in this fashion is said to <distinct>see
-                            accurately</distinct>. <ref cRef="F.19.a"/>
+                            accurately</distinct>. <ref cRef="F.19.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-75"/>
                     <p tid="76">“Noble children, you should regard the Thus-Gone One in this way.
@@ -897,7 +899,7 @@
                         Such people realize the domain of the Thus-Gone One. Such people seek the
                         domain of the Thus-Gone One. Such people are without attachment to the
                         domain of the Thus-Gone One. Why is this? Such people understand the absence
-                        of a domain to be the domain of the Thus-Gone One. <ref cRef="F.19.b"/> They understand
+                        of a domain to be the domain of the Thus-Gone One. <ref cRef="F.19.b" type="folio"/> They understand
                         the lack of a domain to be the domain of the Thus-Gone One.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-77"/>
                     <p tid="78">“Because all Dharma teachings are beyond observation and
@@ -927,7 +929,7 @@
                         cannot be observed. The absence of measures is a gateway of all Dharma
                         teachings, because measures cannot be observed. The absence of bounds is a
                         gateway of all Dharma teachings, because bounds cannot be observed. Noble
-                        children, if a noble son or daughter enters this Dharma gateway, <ref cRef="F.20.a"/> it
+                        children, if a noble son or daughter enters this Dharma gateway, <ref cRef="F.20.a" type="folio"/> it
                         is said that they enter the gateway of all Dharma teachings, understand the
                         gateway of all Dharma teachings, and reveal the gateway of all Dharma
                         teachings.”</p>
@@ -961,7 +963,7 @@
                         <p tid="84">“Lokadhara, how are bodhisattvas skilled in discerning what
                             pertains to the five aggregates? Bodhisattva great beings correctly
                             understand the five aggregates for appropriation in the following way:
-                            <ref cRef="F.20.b"/> The aggregates for appropriation are heaps of ignorance. The
+                            <ref cRef="F.20.b" type="folio"/> The aggregates for appropriation are heaps of ignorance. The
                             aggregates for appropriation are heaps of suffering. The aggregates for
                             appropriation are heaps of delusion. The aggregates for appropriation
                             are heaps of sickness, boils, and thorns.</p>
@@ -994,7 +996,7 @@
                             they engage in and experience myriad nonvirtuous and evil actions.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-83"/>
                         <p tid="86">“It is inappropriate for us to emulate childish ordinary beings,
-                            <ref cRef="F.21.a"/> for we should arouse diligence and earnestly cultivate the
+                            <ref cRef="F.21.a" type="folio"/> for we should arouse diligence and earnestly cultivate the
                             factors of awakening. It is appropriate for us to investigate the
                             aggregate of form accurately. When bodhisattvas contemplate the
                             aggregates accurately, they understand them to be like water bubbles.
@@ -1020,7 +1022,7 @@
                             called <distinct>one who clings to form</distinct>. We should become
                             highly skilled in understanding the marks of form. When bodhisattvas
                             understand this accurately, they know how to discern form accurately.
-                            <ref cRef="F.21.b"/> At that point, they know that the aggregate of form arises from
+                            <ref cRef="F.21.b" type="folio"/> At that point, they know that the aggregate of form arises from
                             the imputations of childish ordinary beings. The fact that phenomena
                             arise from imputation means that they are unborn. Since all imputations
                             are rooted in and based on the mistaken and false understanding of
@@ -1057,7 +1059,7 @@
                                     no</foreign>.</note> If bodhisattvas contemplate in
                             this fashion, they will not appropriate form as either
                                 <distinct>I</distinct> or <distinct>mine</distinct>. They will
-                            contemplate form accurately. <ref cRef="F.22.a"/> They will accurately understand
+                            contemplate form accurately. <ref cRef="F.22.a" type="folio"/> They will accurately understand
                             its characteristic of impermanence and its false and mistaken nature.
                             Beings, however, grasp and cling to this incorrectly observed form and
                             perceive it as <distinct>I</distinct>, <distinct>mine</distinct>,
@@ -1091,7 +1093,7 @@
                         <head type="section" tid="88">Feeling </head>
                         <milestone unit="chunk" xml:id="UT22084-060-003-87"/>
                         <p tid="89">“Lokadhara, how do bodhisattva great beings engage in the
-                            discernment of the aggregate for appropriation of feeling? <ref cRef="F.22.b"/>
+                            discernment of the aggregate for appropriation of feeling? <ref cRef="F.22.b" type="folio"/>
                             Bodhisattvas think: ‘Pleasurable feelings, painful feelings, and
                             feelings that are neither pleasurable nor painful arise through
                             dependent origination and are based on causes and conditions. Therefore,
@@ -1118,7 +1120,7 @@
                             accurately, they will think, ‘The aggregate of feelings is not an
                             aggregate. Feelings arise from false imputation, and they are devoid of
                             action. Feelings arise from the cause of past actions and are
-                            experienced based upon conditions in the present moment. <ref cRef="F.23.a"/>
+                            experienced based upon conditions in the present moment. <ref cRef="F.23.a" type="folio"/>
                             Because feelings are naturally empty, they lack the marks of feelings.’
                             When bodhisattvas contemplate the aggregate of feeling, they see that
                             the aggregate of feelings is like water bubbles that appear and cease
@@ -1147,7 +1149,7 @@
                             in this fashion, they do not view the aggregate of feelings as existing
                             within or without. They are not attached to feelings being
                                 <distinct>I</distinct>, and they are not attached to feelings being
-                                <distinct>mine</distinct>. <ref cRef="F.23.b"/> They thus understand that the
+                                <distinct>mine</distinct>. <ref cRef="F.23.b" type="folio"/> They thus understand that the
                             aggregate of feelings does not come from anywhere, that it is ownerless,
                             and that it is not brought into being by anything. They know that
                             feelings are mistaken, and that what is labeled the <distinct>category
@@ -1180,7 +1182,7 @@
                         <milestone unit="chunk" xml:id="UT22084-060-003-91"/>
                         <p tid="93">“Lokadhara, bodhisattva great beings who understand the
                             aggregate of feelings accurately will not fall under the influence of
-                            attachment, aversion, and delusion. <ref cRef="F.24.a"/> Even if attachment,
+                            attachment, aversion, and delusion. <ref cRef="F.24.a" type="folio"/> Even if attachment,
                             aversion, and delusion should arise, they will immediately dispel them,
                             taking them earnestly onto the genuine path. They diligently practice in
                             order to remove the affliction of attachment from the experience of
@@ -1206,7 +1208,7 @@
                             unborn. Through this characteristic of being unborn, they will
                             understand and realize the aggregate of feelings to be free of marks.
                             Lokadhara, this has been a discussion of how bodhisattva great beings
-                            contemplate the discernment of the aggregate of feelings.” <ref cRef="F.24.b"/>
+                            contemplate the discernment of the aggregate of feelings.” <ref cRef="F.24.b" type="folio"/>
                         </p>
                     </div>
                     <div type="section">
@@ -1244,7 +1246,7 @@
                             is a mere imputation. There are no so-called perceptions either
                             internally or externally. Bound by their false perceptions, childish
                             ordinary beings perceive in terms of attachment, aversion, and delusion.
-                            <ref cRef="F.25.a"/> They perceive children and wives. Childish ordinary beings rely
+                            <ref cRef="F.25.a" type="folio"/> They perceive children and wives. Childish ordinary beings rely
                             on the aggregate of perception and are attached to their false paths.
                             Therefore, they circle throughout saṃsāra due to the aggregate of
                             perception. They fail to understand accurately that the aggregate of
@@ -1279,7 +1281,7 @@
                                     rnam par mi rtog pa ni ’du shes kyi tshor ba thams cad dgag pa’i
                                     phyir yang dag pa ji lta ba bzhin shes shing mthong la gnas na’i
                                     phyir ro. </foreign>
-                            </note> <ref cRef="F.25.b"/> When bodhisattvas
+                            </note> <ref cRef="F.25.b" type="folio"/> When bodhisattvas
                             accurately contemplate the aggregate of perception, they are free from
                             the aggregate of perception, such that, without dwelling on the path of
                             perception, they adhere to an accurate knowledge and understanding of
@@ -1311,7 +1313,7 @@
                             of reflections. The aggregate of formation does not increase or
                             decrease; it is not gathered. Given that all physical, verbal, and
                             mental formations are uncreated, the wise do not become attached to or
-                            grasp the aggregate of formation. Why is this? <ref cRef="F.26.a"/> Physical
+                            grasp the aggregate of formation. Why is this? <ref cRef="F.26.a" type="folio"/> Physical
                             formations do not exist within the body, outside it, or in-between.
                             Likewise, verbal and mental formations do not exist within, without, or
                             in-between.</p>
@@ -1340,7 +1342,7 @@
                             ordinary beings generate physical, verbal, and mental formations. As
                             they grasp and cling to them, they perceive nonphenomena to be phenomena
                             and nonexistent aggregates to be aggregates. Attached to their mistaken
-                            formations, <ref cRef="F.26.b"/> they are bound by them and circle throughout the
+                            formations, <ref cRef="F.26.b" type="folio"/> they are bound by them and circle throughout the
                             five classes of beings, continuously conforming to physical, verbal, and
                             mental formations as they fail to accurately understand. By failing to
                             accurately understand the aggregate of formation, they generate
@@ -1372,7 +1374,7 @@
                             such action, they are bound by the aggregate of formation and fail to
                             recognize the very aggregate of formation to be ignorance and delusion.
                             Under the power of such mistaken perceptions, beings grasp and cling to
-                            formations. <ref cRef="F.27.a"/> Since such people become attached and cling to the
+                            formations. <ref cRef="F.27.a" type="folio"/> Since such people become attached and cling to the
                             aggregate of formation in this way, they sometimes generate pleasurable
                             formations, sometimes generate painful formations, and sometimes
                             generate formations that are neither pleasurable nor painful. When
@@ -1404,7 +1406,7 @@
                             contemplate the impermanent nature of the aggregate of formation. At
                             that time, they will act appropriately by not grasping at, being
                             attached, or clinging to formations, the origination of formations,
-                            <ref cRef="F.27.b"/> the cessation of formations, or the path leading to the
+                            <ref cRef="F.27.b" type="folio"/> the cessation of formations, or the path leading to the
                             cessation of formations. They will not be attached or cling to
                             formations. They will also not be attached to the aggregate of
                             formation. When contemplating this, they will be free from the marks of
@@ -1432,7 +1434,7 @@
                         <p tid="105">“Even though they see formations in terms of their
                             characteristic of being unborn, they do not fully apprehend any
                             characteristics of formations. Why is this? Lokadhara, it is because the
-                            aggregate of formation lacks true characteristics. <ref cRef="F.28.a"/> Just as a
+                            aggregate of formation lacks true characteristics. <ref cRef="F.28.a" type="folio"/> Just as a
                             banana tree lacks both the characteristic of being solid and the
                             characteristic of not being solid, so it is with the characteristics of
                             formations—they lack both the characteristic of being solid and the
@@ -1468,7 +1470,7 @@
                             is called mind, mentality, and consciousness.<note place="end" xml:id="UT22084-060-003-106" index="15"> “Mind, mentality, and
                                 consciousness” here respectively translate <foreign xml:lang="Bo-Ltn" type="term">sems</foreign> (Skt. <foreign xml:lang="Sa-Ltn" type="term">citta</foreign>), <foreign xml:lang="Bo-Ltn" type="term">yid</foreign> (Skt. <foreign xml:lang="Sa-Ltn" type="term">manas</foreign>), and <foreign xml:lang="Bo-Ltn" type="term">rnam par shes pa</foreign> (Skt.
                                     <foreign xml:lang="Sa-Ltn" type="term">vijñāna</foreign>).</note> By conceptualizing everything through
-                            its mental activity, <ref cRef="F.28.b"/> consciousness assembles phenomena and
+                            its mental activity, <ref cRef="F.28.b" type="folio"/> consciousness assembles phenomena and
                             perceives them as characteristics, formations, and intrinsic natures.
                             Thus, it is called the <distinct>aggregate of consciousness</distinct>.
                             In this manner, the aggregate of consciousness is a nonaggregate. It is
@@ -1502,7 +1504,7 @@
                             consciousness imputes marks, beings generate the aggregate of
                             consciousness. By means of their conceptual perception, such people
                             impute it with the synonyms of <distinct>mind</distinct>,
-                                <distinct>mentality</distinct>, <ref cRef="F.29.a"/> and
+                                <distinct>mentality</distinct>, <ref cRef="F.29.a" type="folio"/> and
                                 <distinct>consciousness</distinct>. They assiduously impute
                                 <distinct>this is mind</distinct>, <distinct>this is
                                 mentality</distinct>, and <distinct>this is
@@ -1552,7 +1554,7 @@
                             accurately understand the aggregate of consciousness. Since the
                             aggregate of consciousness is false, then all things heard, seen, felt,
                             and cognized have arisen from a mistaken cause, such that there is no
-                            accurate consciousness of them. <ref cRef="F.29.b"/> In this way, as such people
+                            accurate consciousness of them. <ref cRef="F.29.b" type="folio"/> In this way, as such people
                             fail to accurately apprehend, at times a virtuous consciousness will
                             arise, at times a nonvirtuous consciousness will arise, and at times a
                             consciousness that is neither virtuous nor nonvirtuous will arise.
@@ -1589,7 +1591,7 @@
                             into being due to the gathering of many false and mistaken causes and
                             conditions.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-114"/>
-                        <p tid="112">“When contemplating this, <ref cRef="F.30.a"/> bodhisattvas understand
+                        <p tid="112">“When contemplating this, <ref cRef="F.30.a" type="folio"/> bodhisattvas understand
                             consciousness to be impermanent, painful, unclean, and without self.
                             They understand the characteristic of consciousness to be illusory and
                             realize the nature of consciousness to be illusory. At that time,
@@ -1616,7 +1618,7 @@
                             generate lesser thoughts, they will acquire a lesser body. If they
                             generate superior thoughts, they will acquire a superior body. If they
                             generate middling thoughts, they will acquire a middling body. Due to
-                            following mind, mentality, and consciousness, <ref cRef="F.30.b"/> their dependence
+                            following mind, mentality, and consciousness, <ref cRef="F.30.b" type="folio"/> their dependence
                             and reliance upon the sense sources arises. Because of their attachment
                             to the aggregate of consciousness, they are not liberated from birth,
                             aging, sickness, death, sorrow, lamentation, and suffering.’</p>
@@ -1645,7 +1647,7 @@
                                     Degé, which reads: <foreign xml:lang="Bo-Ltn" type="term">’jog</foreign>.</note> the
                             aggregate of consciousness and eliminating all marks. They understand
                             and realize the characteristics of the origination and cessation of the
-                            aggregate of consciousness. <ref cRef="F.31.a"/> At this point, bodhisattvas neither
+                            aggregate of consciousness. <ref cRef="F.31.a" type="folio"/> At this point, bodhisattvas neither
                             generate nor obstruct the aggregate of consciousness, for they realize
                             the aggregate of consciousness to be primordially unborn. When realizing
                             this, they do not realize consciousness in terms of its characteristic
@@ -1674,7 +1676,7 @@
                             consciousness to be uncreated and unarisen. They do not cling to it or
                             become attached to it as primary. Lokadhara, this is how bodhisattva
                             great beings accurately contemplate the discernment of, and engagement
-                            with, the aggregate of consciousness.” <ref cRef="F.31.b"/>
+                            with, the aggregate of consciousness.” <ref cRef="F.31.b" type="folio"/>
                         </p>
                     </div>
                     <div type="section">
@@ -1708,7 +1710,7 @@
                             how—when beings enter the womb and begin the embryonic stage—their
                             previous set of five aggregates has ceased and a new set of five
                             aggregates arises. They understand that while the previous consciousness
-                            has of course ceased, <ref cRef="F.32.a"/> the five aggregates are not characterized
+                            has of course ceased, <ref cRef="F.32.a" type="folio"/> the five aggregates are not characterized
                             by disruption or cessation. While the consciousness indeed adheres to
                             and abides in the embryo, they understand the five aggregates to be
                             nonabiding and impermanent. Thereby they realize that the five
@@ -1745,7 +1747,7 @@
                             ceasing of the five aggregates for appropriation while in the womb,
                             along with the momentary arising and ceasing of the aggregates of the
                             gods in the formless realms. This is so because their omniscient insight
-                            transcends all worldly insight. <ref cRef="F.32.b"/> Bodhisattva great beings gain
+                            transcends all worldly insight. <ref cRef="F.32.b" type="folio"/> Bodhisattva great beings gain
                             the acceptance that phenomena are unborn and enter the domain of the
                             wisdom of the buddhas. Yet even they are unable to fully understand—as
                             the buddhas do—the subtle characteristics of the five aggregates for
@@ -1778,7 +1780,7 @@
                             eighteen elements, and the twelve causes and conditions. Any phenomena
                             construed to be desired, whether outer or inner, is appropriated;
                             existence is appropriated; as are things seen, heard, felt, cognized; as
-                            are self and possessions. <ref cRef="F.33.a"/> Lokadhara, childish ordinary beings
+                            are self and possessions. <ref cRef="F.33.a" type="folio"/> Lokadhara, childish ordinary beings
                             fail to see and understand this false appropriation. They appropriate
                             phenomena via mistaken causes and conditions. Because such people are
                             bound by appropriation, they appropriate formations due to the condition
@@ -1814,7 +1816,7 @@
                             from mistaken perception, and they wander throughout saṃsāra because
                             they are caught in the net of ignorance. Why do they wander? Because of
                             grasping and attachment to the marks of the five aggregates for
-                            appropriation. <ref cRef="F.33.b"/> They think: ‘I will be happy if I depend on
+                            appropriation. <ref cRef="F.33.b" type="folio"/> They think: ‘I will be happy if I depend on
                             this.’ By observing pleasurable marks, such people become attached to
                             the five aggregates for appropriation and rely upon them. By observing
                             and becoming attached to painful marks and marks that are neither
@@ -1853,7 +1855,7 @@
                                 Tib. <foreign xml:lang="Bo-Ltn" type="term">srid</foreign> read as
                                     <foreign xml:lang="Bo-Ltn" type="term">sred</foreign> according
                                 to Stok and the Chinese.</note> They dwell on and become attached to
-                            ignorance. <ref cRef="F.34.a"/> Because they are bound by the fetters of existence,
+                            ignorance. <ref cRef="F.34.a" type="folio"/> Because they are bound by the fetters of existence,
                             childish ordinary beings are attached to the five aggregates for
                             appropriation. Obscured by their obscurations, they are stupefied by
                             ignorance and become ignorant and unaware. What is the source of their
@@ -1889,7 +1891,7 @@
                             Likewise, you must accurately investigate feeling, perception,
                             formation, and consciousness. You must accurately understand the
                             characteristic of impermanence with regard to feeling, perception,
-                            <ref cRef="F.34.b"/> formation, and consciousness. Should you find yourself attached
+                            <ref cRef="F.34.b" type="folio"/> formation, and consciousness. Should you find yourself attached
                             to feeling, perception, formation, or consciousness, you must
                             immediately dispel and eliminate that attachment. By dispelling and
                             eliminating attachment, the mind will be truly liberated.</p>
@@ -1923,7 +1925,7 @@
                             understand the five aggregates to be like nonaggregates. Such people
                             will not argue with the Buddha. Since they will not contradict the
                             teachings of the Buddha, they will be liberated from the suffering of
-                            hell-beings, animals, and anguished spirits. <ref cRef="F.35.a"/> Lokadhara, the
+                            hell-beings, animals, and anguished spirits. <ref cRef="F.35.a" type="folio"/> Lokadhara, the
                             Blessed Buddha does not debate with others. Because he has ceased all
                             debate, he is called <distinct>Buddha</distinct>, and he teaches to all
                             beings the genuine Dharma, namely this: ‘All that you have previously
@@ -1948,7 +1950,7 @@
                             out on the path to the lower realms and entered the incorrect path. They
                             do not follow the truth. They are mistaken. They fail to understand what
                             the Buddha knows and teaches. They fail to understand what the Buddha
-                            knows and teaches about the five aggregates. <ref cRef="F.35.b"/> They fail to
+                            knows and teaches about the five aggregates. <ref cRef="F.35.b" type="folio"/> They fail to
                             understand what the Buddha teaches concerning the ultimate. Thus, by not
                             following the Buddha’s teachings, they should not receive veneration and
                             offerings. I do not permit them to be ordained, much less to receive the
@@ -1992,7 +1994,7 @@
                             of the aggregates and how to abandon attachment to the aggregates. Much
                             debate then arose among many householders and the ordained concerning
                             this discourse; therefore, they did not perceive it as being true.
-                            Bodhisattva great beings <ref cRef="F.36.a"/> should thus make the following promise
+                            Bodhisattva great beings <ref cRef="F.36.a" type="folio"/> should thus make the following promise
                             and great aspiration: ‘For the sake of the benefit and happiness of
                             beings in the dire times of the future who will be attached to and have
                             wrong views about the aggregates, and in order to dispel their
@@ -2020,7 +2022,7 @@
                             the blessed Royal Mountain of Great Intelligence had eight trillion
                             hearers in his saṅgha, all of whom were worthy ones who had exhausted
                             the defilements. Furthermore, he had 800 quadrillion followers who were
-                            irreversible on the level of training. <ref cRef="F.36.b"/> There were also one
+                            irreversible on the level of training. <ref cRef="F.36.b" type="folio"/> There were also one
                             sextillion beings in his assembly of bodhisattva great beings. The
                             lifespan of the blessed Royal Mountain of Great Intelligence was eighty
                             thousand years. Lokadhara, at that time there was a king named Bringer
@@ -2049,7 +2051,7 @@
                             <l>“ ‘I dreamt that I saw the supreme human.</l>
                             <l>He was golden, ornamented by the signs of a hundred merits.</l>
                             <l>He was replete with limitless virtues.</l>
-                            <l>When I saw him, my mind was filled with joy.’ <ref cRef="F.37.a"/>
+                            <l>When I saw him, my mind was filled with joy.’ <ref cRef="F.37.a" type="folio"/>
                             </l>
                         </lg>
                         <milestone unit="chunk" xml:id="UT22084-060-003-139"/>
@@ -2090,7 +2092,7 @@
                         <p tid="137">“Lokadhara, the blessed Royal Mountain of Great Intelligence
                             understood the two princes’ pure motivation and aspiration<note place="end" xml:id="UT22084-060-003-143" index="26"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sman pa</foreign> read as <foreign xml:lang="Bo-Ltn" type="term">smon pa</foreign> according to
                                 Urga edition of the Kangyur, which accords with the Chinese:
-                                    <foreign xml:lang="zh" type="quote">所願</foreign>.</note> <ref cRef="F.37.b"/> and extensively instructed them
+                                    <foreign xml:lang="zh" type="quote">所願</foreign>.</note> <ref cRef="F.37.b" type="folio"/> and extensively instructed them
                             in the discourse called <title xml:lang="en">The Skillful Means of
                                 Bodhisattvas</title>, in which the five aggregates, twelve sense
                             sources, and eighteen elements are explained. For forty thousand years,
@@ -2124,7 +2126,7 @@
                             discerning and reflecting upon the characteristics of the aggregates,
                             and came to understand them directly and accurately. Lokadhara, they
                             established twenty thousand humans and two hundred thousand gods in
-                            unsurpassed and perfect awakening. <ref cRef="F.38.a"/>
+                            unsurpassed and perfect awakening. <ref cRef="F.38.a" type="folio"/>
                         </p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-145"/>
                         <p tid="138">“Lokadhara, these two bodhisattvas were close companions
@@ -2162,7 +2164,7 @@
                             lacks true characteristics, as the space element is the eye element. For
                             instance, just as the space element lacks true characteristics and is
                             not an entity, the eye element also lacks true characteristics and is
-                            not an entity. Why is this? <ref cRef="F.38.b"/> Because no real entity can be found
+                            not an entity. Why is this? <ref cRef="F.38.b" type="folio"/> Because no real entity can be found
                             in the eye element, the eye element does not exist in any location or
                             direction. It does not exist internally, externally, or somewhere
                             in-between. The eye element lacks true characteristics and is not an
@@ -2197,7 +2199,7 @@
                             does not exist within form, outside of form, or somewhere in-between.
                             Rather, it is imputed. Form appears due to the combination of a location
                             where forms can appear, the presence of an uncorrupted eye faculty,
-                            <ref cRef="F.39.a"/> and the involvement of the mind consciousness. This is called
+                            <ref cRef="F.39.a" type="folio"/> and the involvement of the mind consciousness. This is called
                             the <distinct>characteristic of form</distinct>. It is similar to a
                             reflection in a mirror. If the mirror is unblemished, the characteristic
                             of form will appear in it. But form in fact has no true characteristics;
@@ -2230,7 +2232,7 @@
                             consciousness in the following manner: the eye consciousness has no eye
                             consciousness, no eye-consciousness element, and no characteristic of
                             being permanent. The eye-consciousness element has no entities or real
-                            phenomena. The eye-consciousness element is indemonstrable. <ref cRef="F.39.b"/> The
+                            phenomena. The eye-consciousness element is indemonstrable. <ref cRef="F.39.b" type="folio"/> The
                             eye-consciousness element cannot be gathered or separated, for it lacks
                             a substantial basis. We call it the <distinct>eye-consciousness
                                 element</distinct> because it depends upon the causes and conditions
@@ -2263,7 +2265,7 @@
                             which is conscious of form, is described as a nonelement. Why is this?
                             The wise do not observe the eye-consciousness element as the
                             eye-consciousness element. Since the eye-consciousness element cannot be
-                            observed as the eye-consciousness element, <ref cRef="F.40.a"/> it cannot be found
+                            observed as the eye-consciousness element, <ref cRef="F.40.a" type="folio"/> it cannot be found
                             to be an entity. Why is this? The eye-consciousness element lacks true
                             characteristics. The eye-consciousness element is nothing more than a
                             mere imputation. The expression <distinct>element</distinct> is merely
@@ -2293,7 +2295,7 @@
                         <milestone unit="chunk" xml:id="UT22084-060-003-155"/>
                         <p tid="149">“Lokadhara, how do bodhisattva great beings discern the mind
                             element? Bodhisattvas think, ‘The mind element lacks true
-                            characteristics because it has no substance whatsoever. <ref cRef="F.40.b"/> The
+                            characteristics because it has no substance whatsoever. <ref cRef="F.40.b" type="folio"/> The
                             mind element lacks an actual element and anything called a
                                 <distinct>mind element</distinct>. As for the so-called mind
                             element, for example, once one has placed a seed into the earth, and it
@@ -2338,7 +2340,7 @@
                                 According to Yongle, Kangxi, Narthang, Lhasa, and Stok: …<foreign xml:lang="Bo-Ltn" type="quote">rang bzhin med pas rang bzhin
                                     nyid</foreign>. This also reflects the Chinese: <foreign xml:lang="zh" type="quote">法性無自性。自性不可得。</foreign>.
                                 Degé reads: …<foreign xml:lang="Bo-Ltn" type="quote">rang
-                                    bzhin nyid dmigs su med de</foreign>.</note> <ref cRef="F.41.a"/>
+                                    bzhin nyid dmigs su med de</foreign>.</note> <ref cRef="F.41.a" type="folio"/>
                             The mental-object element is an indeterminate element. Because the
                             mental-object element cannot be observed as inherently existent, it also
                             cannot be observed to be any definite thing. Still, the <distinct>mental
@@ -2373,7 +2375,7 @@
                             category of <distinct>mental-object element</distinct> is designated, in
                             accordance with the <distinct>mental-object element</distinct> imputed
                             by beings. The wise understand the mental-object element to be a
-                            nonelement, <ref cRef="F.41.b"/> for the mental-object element is not singular or
+                            nonelement, <ref cRef="F.41.b" type="folio"/> for the mental-object element is not singular or
                             multiple. The mental-object element does not have many marks of the
                             mental-object element, nor does it have even a few. Through the skillful
                             means of demonstrating elements, the mental-object element is described
@@ -2409,7 +2411,7 @@
                         <milestone unit="chunk" xml:id="UT22084-060-003-161"/>
                         <p tid="154">“Lokadhara, how do bodhisattva great beings discern the mind-consciousness element? Bodhisattva great beings think, ‘The
                             mind-consciousness element is an unborn element; it is an unfixed
-                            element. <ref cRef="F.42.a"/> As the mind-consciousness element is devoid of
+                            element. <ref cRef="F.42.a" type="folio"/> As the mind-consciousness element is devoid of
                             substantial existence and actual qualities, the mind-consciousness
                             element is used to demonstrate the characteristic of the absence of
                             qualities. Why is this? The mind-consciousness element cannot be
@@ -2443,7 +2445,7 @@
                             mind-consciousness element, or somewhere in-between.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-164"/>
                         <p tid="156">“The wise realize the mind-consciousness element to be an
-                            unconjoined element. <ref cRef="F.42.b"/> They know that the mind consciousness does
+                            unconjoined element. <ref cRef="F.42.b" type="folio"/> They know that the mind consciousness does
                             not perceive the mind element, and the mind element does not perceive
                             the mind consciousness.<note place="end" xml:id="UT22084-060-003-165" index="36"> Read according to the Chinese:
                                     <foreign xml:lang="zh" type="quote">意識不知意性。意性不知意識。</foreign>.</note> They understand that it is
@@ -2471,7 +2473,7 @@
                             observed; it is imperceptible and indemonstrable. Because the wise do
                             not observe the mind-consciousness element to have a function, they
                             understand the mind-consciousness element to be uncreated. Because the
-                            mind-consciousness element lacks the mark of birth, <ref cRef="F.43.a"/> they
+                            mind-consciousness element lacks the mark of birth, <ref cRef="F.43.a" type="folio"/> they
                             understand and realize it to be unborn. Lokadhara, this is how
                             bodhisattva great beings discern and understand the mind-consciousness
                             element.”</p>
@@ -2503,7 +2505,7 @@
                             noble ones understand the three realms to be false, nonexistent, devoid
                             of intrinsic nature, free of all phenomena, and arisen from mistaken
                             perception. The Thus-Gone One distinguishes between and explains them in
-                            order to disrupt the mistaken perception of many beings <ref cRef="F.43.b"/> and
+                            order to disrupt the mistaken perception of many beings <ref cRef="F.43.b" type="folio"/> and
                             enable them to see and understand the three realms. The teaching on the
                             existence of the three realms, moreover, describes the three realms so
                             that beings can understand the meaning of nonrealm; for in truth, they
@@ -2532,7 +2534,7 @@
                             elements. All elements are unborn, unarisen, nonabiding, and
                             primordially unobservable. The wise do not become attached to elements,
                             which are mere labels. They do not become attached to, grasp at, or
-                            conceptualize them. <ref cRef="F.44.a"/> Therefore, the wise see and understand all
+                            conceptualize them. <ref cRef="F.44.a" type="folio"/> Therefore, the wise see and understand all
                             elements to be unborn elements. Since all elements are unborn, they are
                             unceasing; thus, on the ultimate level, no element can be observed.
                             Relatively, mental-object elements are distinguished and discussed, but
@@ -2563,7 +2565,7 @@
                             elements.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-171"/>
                         <p tid="162">“Lokadhara, I fully awakened to unsurpassed and perfect
-                            buddhahood without rejecting or disrupting any elements. <ref cRef="F.44.b"/> Why is
+                            buddhahood without rejecting or disrupting any elements. <ref cRef="F.44.b" type="folio"/> Why is
                             this? On the ultimate level, there are no elements. There are no
                             elements, or any actuality, in any elements. All elements are the same
                             as space; so since all elements are included in space, all elements are
@@ -2592,7 +2594,7 @@
                             skilled magician can show beings various illusions, enabling them to
                             experience various illusory entities. However, a relative or friend
                             might tell them, ‘This is an illusion; these entities are magically
-                            created. This illusion is not real. <ref cRef="F.45.a"/> It only appears to beings
+                            created. This illusion is not real. <ref cRef="F.45.a" type="folio"/> It only appears to beings
                             as a mistaken perception.’ In that case, any wise person would
                             understand them to be illusions.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-173"/>
@@ -2633,7 +2635,7 @@
                     <div type="section">
                         <head type="section" tid="168">The Eye and Form Sense Sources</head>
                         <milestone unit="chunk" xml:id="UT22084-060-003-176"/>
-                        <p tid="169">The Blessed One continued addressing Lokadhara: <ref cRef="F.45.b"/> “How
+                        <p tid="169">The Blessed One continued addressing Lokadhara: <ref cRef="F.45.b" type="folio"/> “How
                             are bodhisattva great beings knowledgeable about the twelve sense
                             sources? When discerning the twelve sense sources, they think, ‘The eye
                             sense source cannot be observed in the eye. In the eye, there is no
@@ -2666,7 +2668,7 @@
                             sources, they do not see them as truly existent. Childish ordinary
                             beings with mistaken perception speak of the eye sense source and the
                             form sense source as two entities. I have taught that the eye sense
-                            source and the form sense source <ref cRef="F.46.a"/> are false sense sources. In
+                            source and the form sense source <ref cRef="F.46.a" type="folio"/> are false sense sources. In
                             order to bring about an accurate understanding of the true
                             characteristics of phenomena, I have said that the sense sources arise
                             due to dependent origination, in association with delusion; and thus,
@@ -2695,7 +2697,7 @@
                             childish beings mistakenly apprehend them, while the noble ones
                             correctly understand and know them. They know that the eye and form
                             sense sources are characterized as being unborn, unceasing, and without
-                            coming or going. <ref cRef="F.46.b"/> Thus, the eye does not perceive the eye, the
+                            coming or going. <ref cRef="F.46.b" type="folio"/> Thus, the eye does not perceive the eye, the
                             eye does not conceptualize the eye, form does not perceive form, and
                             form does not conceptualize form. Why is this? Because both are empty.
                             Because both are void, the characteristic of the eye cannot be known via
@@ -2729,7 +2731,7 @@
                             its characteristic is twofold. The mental-object sense source finds its
                             locus in dependence upon the mind. Mind is the gateway of the arising
                             and development of mental objects, and the mental-object sense source is
-                            likewise the gateway of the mind. Therefore, <ref cRef="F.47.a"/> it is termed
+                            likewise the gateway of the mind. Therefore, <ref cRef="F.47.a" type="folio"/> it is termed
                                 the<distinct> mental-object sense source</distinct>. The
                                 <distinct>mind sense source</distinct> is named as such due to it
                             being the gateway of the mental-object sense source. The
@@ -2765,7 +2767,7 @@
                             not sense sources; they are false, nonexistent, and arisen from mistaken
                             conceptuality. Why is this? Because sense sources definitively lack the
                             characteristic of being sense sources. The wise thus realize the sense
-                            sources to be false and nonexistent, <ref cRef="F.47.b"/> in that the mind sense
+                            sources to be false and nonexistent, <ref cRef="F.47.b" type="folio"/> in that the mind sense
                             source and mental-object sense source are inherently unobservable, and
                             any true characteristic that arises from the mind sense source and
                             mental-object sense source is also unobservable.</p>
@@ -2797,7 +2799,7 @@
                             does not think, ‘I am the mind sense source,’ and the mental object
                             sense source does not think, ‘I am the mental object sense source.’ Both
                             are empty and thus illusory; yet they are distinguished and labeled in
-                            name and term. This is how bodhisattva great beings <ref cRef="F.48.a"/> discern and
+                            name and term. This is how bodhisattva great beings <ref cRef="F.48.a" type="folio"/> discern and
                             contemplate the mind and mental-object sense sources.”</p>
                     </div>
                     <div type="section">
@@ -2834,7 +2836,7 @@
                         <p tid="178">“Lokadhara, thus skilled in the twelve sense sources,
                             bodhisattva great beings do not become attached to or hindered by any of
                             the twelve sense sources. They contemplate the sense sources as
-                            something to be known and understood. <ref cRef="F.48.b"/> Skilled in discerning the
+                            something to be known and understood. <ref cRef="F.48.b" type="folio"/> Skilled in discerning the
                             sense sources, they understand and realize that the twelve sense sources
                             are born from many conditions. Because of the absence of marks, they
                             know how to do away with the marks of the twelve sense sources, how to
@@ -2873,7 +2875,7 @@
                         Dependent Origination</head>
                     <milestone unit="chunk" xml:id="UT22084-060-003-190"/>
                     <p tid="182">“Lokadhara, how are bodhisattva great beings skilled in discerning
-                        and contemplating the twelve links of dependent origination? <ref cRef="F.49.a"/>
+                        and contemplating the twelve links of dependent origination? <ref cRef="F.49.a" type="folio"/>
                         Bodhisattva great beings discern and contemplate the twelve links of
                         dependent origination as follows: <distinct>Ignorance</distinct> is so
                         designated because of nonexistence. Ignorance is so designated because it
@@ -2903,7 +2905,7 @@
                         perception, one contravenes knowledge and accumulates a mass of ignorance.
                         This generates desire for another existence, and based on one’s preferences
                         and attachments, one seeks birth in all such places—this is the aggregate of
-                        existence. <ref cRef="F.49.b"/>
+                        existence. <ref cRef="F.49.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-192"/>
                     <p tid="183">“Lokadhara, worldly beings are bound by these twelve links of
@@ -2939,7 +2941,7 @@
                         generate formations. As they lack the quality of having been created, it is
                         said that formations are caused by ignorance. Since the actions of
                         formations lack any basis for gathering, coming, or going, and since the
-                        basis for the formations is neither past, present, nor future, <ref cRef="F.50.a"/>
+                        basis for the formations is neither past, present, nor future, <ref cRef="F.50.a" type="folio"/>
                         ignorance is devoid of ignorance, and the actions of formations are devoid
                         of the actions of formations. Even though the actions of formations have no
                         locus, the actions of formations arise in dependence upon ignorance. Yet the
@@ -2973,7 +2975,7 @@
                         not depend on consciousness.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-197"/>
                     <p tid="187">“As for the statement, ‘name-and-form are due to the condition of
-                        consciousness,’ name-and-form neither depend on consciousness, <ref cRef="F.50.b"/> nor
+                        consciousness,’ name-and-form neither depend on consciousness, <ref cRef="F.50.b" type="folio"/> nor
                         do they arise outside of consciousness. Name-and-form do not come from
                         consciousness, yet because blind, childish ordinary beings observe
                         name-and-form by means of consciousness, they become attached to
@@ -3009,7 +3011,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-003-201"/>
                     <p tid="190">“As for the statement, ‘feeling appears due to the condition of
                         contact,’ feeling does not abide inside contact, outside contact, or
-                        somewhere in-between, nor <ref cRef="F.51.a"/> does contact arise independently as
+                        somewhere in-between, nor <ref cRef="F.51.a" type="folio"/> does contact arise independently as
                         support for feeling. And yet, feeling arises from contact. Since contact is
                         false and nonexistent, what need we say of feeling, for feeling lacks true
                         characteristics. Feeling is a mistaken concept arisen out of nonexistence;
@@ -3041,7 +3043,7 @@
                         craving does not coexist with grasping. Though grasping is not generated by
                         craving, grasping is imputed based upon the coexistence of certain causes
                         and conditions that appear due to the existence of craving. Craving does not
-                        coexist with grasping, yet craving is none other than grasping. <ref cRef="F.51.b"/>
+                        coexist with grasping, yet craving is none other than grasping. <ref cRef="F.51.b" type="folio"/>
                         Grasping does not coexist with craving, yet grasping is none other than
                         craving. Thus, grasping does not exist inside craving, outside craving, or
                         somewhere in-between. Given that craving itself is unobservable, what need
@@ -3074,7 +3076,7 @@
                         analyzed by means of grasping. If grasping itself is false and nonexistent,
                         what need we say about <distinct>becoming</distinct>? Becoming lacks
                         something to be based on. Becoming itself is unobservable as becoming, for
-                        becoming itself does not exist inside becoming, <ref cRef="F.52.a"/> outside becoming,
+                        becoming itself does not exist inside becoming, <ref cRef="F.52.a" type="folio"/> outside becoming,
                         or somewhere in-between. Becoming is neither past, present, nor future. For
                         the wise, becoming is false and delusional, and it has neither formation nor
                         dispersion. Therefore, becoming is something that cannot be known or
@@ -3101,7 +3103,7 @@
                         nonexistent, and that, nonetheless, to demonstrate merely a continuity of
                         the twelve links of dependent origination, one after another, it is said
                         that ‘birth comes about due to the condition of becoming.’ Birth lacks any
-                        phenomena that come together or disperse. <ref cRef="F.52.b"/> Birth does not exist
+                        phenomena that come together or disperse. <ref cRef="F.52.b" type="folio"/> Birth does not exist
                         inside becoming, outside becoming, or somewhere in-between. Birth is neither
                         past, present, nor future. Birth is unobservable in the past, future, and
                         interim. Since birth is unobservable as an entity, the wise understand that
@@ -3128,7 +3130,7 @@
                         death, and suffering. Why is this? Aging, death, and suffering themselves
                         exist neither inside aging, death, and suffering; outside aging, death, and
                         suffering; nor somewhere in-between. Aging, death, and suffering are neither
-                        past, present, nor future. Aging, death, and suffering <ref cRef="F.53.a"/> neither come
+                        past, present, nor future. Aging, death, and suffering <ref cRef="F.53.a" type="folio"/> neither come
                         together with, nor are separate from, aging, death, and suffering. It is
                         said that ‘aging, death, and suffering are due to the condition of birth’
                         based on mistaken perception, a combination of many causes and conditions,
@@ -3160,7 +3162,7 @@
                         there are also no phenomena to be so designated.<note place="end" xml:id="UT22084-060-003-212" index="49"> Read according to Stok: <foreign xml:lang="Bo-Ltn" type="quote">chos zhes bya ba med na</foreign> and
                             Chinese, which analogously reads: <foreign xml:lang="zh" type="quote">若法無者。</foreign>.</note> Therefore, they understand and
                         realize the twelve links of dependent origination up to the point of
-                        ignorance. <ref cRef="F.53.b"/>
+                        ignorance. <ref cRef="F.53.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-213"/>
                     <p tid="197">“Ignorance is unborn, uncreated, unarisen, insubstantial, without
@@ -3192,7 +3194,7 @@
                         and see the three realms in terms of the characteristic of being unborn, and
                         thereby swiftly gain the acceptance that phenomena are unborn. Such
                         bodhisattvas will immediately receive a prophecy that they will attain
-                        unsurpassed and perfect awakening from the present living buddhas, <ref cRef="F.54.a"/>
+                        unsurpassed and perfect awakening from the present living buddhas, <ref cRef="F.54.a" type="folio"/>
                         or such bodhisattvas will be thus prophesied soon, or eventually. Lokadhara,
                         they will be overjoyed when they receive such a happy prophecy, and they
                         will achieve the light of insight from the practice of focusing on and
@@ -3223,7 +3225,7 @@
                         feelings in relation to feelings, the contemplation of the mind in relation
                         to the mind, and the contemplation of mental phenomena in relation to mental
                         phenomena. How do they contemplate the body in relation to the body, and
-                        contemplate feelings, mind, <ref cRef="F.54.b"/> and mental phenomena in relation to
+                        contemplate feelings, mind, <ref cRef="F.54.b" type="folio"/> and mental phenomena in relation to
                         feelings, mind, and mental phenomena?”</p>
                     <div type="section">
                         <head type="section" tid="204">Contemplation of the Body in Relation to the
@@ -3262,7 +3264,7 @@
                             called the body because it is produced from an illusory conjunction. It
                             is called the body because it is conjoined with karma.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-221"/>
-                        <p tid="207">“This body will meet its end before long. <ref cRef="F.55.a"/> It is
+                        <p tid="207">“This body will meet its end before long. <ref cRef="F.55.a" type="folio"/> It is
                             fleeting, impermanent, and variable. It has no characteristics. The body
                             does not exist inside the body, outside the body, or somewhere
                             in-between. This body is not understood or seen as the body. This body
@@ -3294,7 +3296,7 @@
                             the perception of the body as <distinct>I</distinct> or
                                 <distinct>mine</distinct>, for we should not cherish our bodies and
                             lives.’ When bodhisattvas contemplate accurately in this fashion, they
-                            do not observe the body as coming together or separating. <ref cRef="F.55.b"/> They
+                            do not observe the body as coming together or separating. <ref cRef="F.55.b" type="folio"/> They
                             do not see the body as coming from somewhere, going somewhere, or
                             abiding anywhere. They do not think that this body exists in the past,
                             present, or future. Thus, they do not rely on the body or life-force,
@@ -3327,7 +3329,7 @@
                             body cannot be observed as self or other. When contemplating this, one
                             will understand how the body does not come from anywhere or go anywhere.
                             One will comprehend the nature of the body’s unborn and unceasing
-                            character. <ref cRef="F.56.a"/>
+                            character. <ref cRef="F.56.a" type="folio"/>
                         </p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-225"/>
                         <p tid="210">“Lokadhara, bodhisattva great beings who thus contemplate the
@@ -3365,7 +3367,7 @@
                             characteristic of being without marks.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-229"/>
                         <p tid="213">“When bodhisattvas contemplate this, they think, ‘Feelings lack
-                            true characteristics, <ref cRef="F.56.b"/> are insubstantial, and lack any fixed
+                            true characteristics, <ref cRef="F.56.b" type="folio"/> are insubstantial, and lack any fixed
                             attributes. Since they are variegated, they continuously arise and
                             subside, without ever remaining still.’ This leads bodhisattvas to think
                             further, ‘Feelings are uncreated and lack an agent. The three varieties
@@ -3403,7 +3405,7 @@
                             contemplation of the mind in relation to the mind? Bodhisattva great
                             beings contemplate the mind in terms of the characteristics of arising,
                             ceasing, remaining, and transitioning. When they contemplate this, they
-                            think, <ref cRef="F.57.a"/> ‘It does not come from anywhere. It does not go
+                            think, <ref cRef="F.57.a" type="folio"/> ‘It does not come from anywhere. It does not go
                             anywhere. Since it is born from consciousness and conditions, it is
                             insubstantial and unobservable as any fixed quality. This mind does not
                             come or go. It cannot be observed to remain or transition. This mind is
@@ -3435,7 +3437,7 @@
                             formless and invisible; thus, the mind cannot see itself or know its own
                             nature. It occurs simply because childish ordinary beings with mistaken
                             perception make observations via false conditions and consciousness.
-                            <ref cRef="F.57.b"/> This mind is emptiness; it is selfless, unowned, impermanent,
+                            <ref cRef="F.57.b" type="folio"/> This mind is emptiness; it is selfless, unowned, impermanent,
                             unstable, insubstantial, and does not have the quality of
                             changelessness.’ When one thinks and contemplates in this way, one will
                             accomplish the application of mindfulness related to the mind.</p>
@@ -3476,7 +3478,7 @@
                             somewhere in-between. Moreover, they do not observe mental phenomena to
                             be past, present, or future. All mental phenomena arise from many
                             conditions, are rooted in mistaken perception, and have no true
-                            characteristics. <ref cRef="F.58.a"/> That is to say, all mental phenomena are
+                            characteristics. <ref cRef="F.58.a" type="folio"/> That is to say, all mental phenomena are
                             subject to the person. As for the basic nature of mental phenomena, all
                             mental phenomena are devoid of mental phenomena.<note place="end" index="59" xml:id="UT22084-060-003-331"> Read
                                 according to the Chinese: <foreign xml:lang="zh" type="quote">所謂是諸法屬是人。諸法本體於諸法中無諸法。</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="quote">’di lta ste / chos thams cad gang
@@ -3508,7 +3510,7 @@
                             phenomena. When they contemplate this, they will not see mental
                             phenomena as coming from elsewhere. They will not see any mental
                             phenomenon with a foundational basis. Why is this? Mental phenomena lack
-                            any foundation, any basis, and any source. <ref cRef="F.58.b"/> Mental phenomena
+                            any foundation, any basis, and any source. <ref cRef="F.58.b" type="folio"/> Mental phenomena
                             have no foundation, because they lack any basis or locus, and because
                             they lack any observable locus.</p>
                         <milestone unit="chunk" xml:id="UT22084-060-003-333"/>
@@ -3539,7 +3541,7 @@
                         <milestone unit="chunk" xml:id="UT22084-060-003-334"/>
                         <p tid="310">“Lokadhara, this is how bodhisattva great beings practice the
                             contemplation of mental phenomena in relation to mental phenomena.
-                            <ref cRef="F.59.a"/> As for this understanding, they do not observe or appropriate
+                            <ref cRef="F.59.a" type="folio"/> As for this understanding, they do not observe or appropriate
                             any mental phenomena. They exert themselves so as not to generate, dwell
                             on, or stop mental phenomena. They see the characteristic of exhaustion
                             and cessation of all mental phenomena, and their characteristic of
@@ -3590,7 +3592,7 @@
                             dream, in owing their existence to a gathering of conditions of false
                             perception. They trust that all phenomena have the characteristics of
                             being impermanent, suffering, impure, selfless, like a thorn or blister,
-                            insubstantial, unstable, mutable, and destructible. <ref cRef="F.59.b"/> Moreover,
+                            insubstantial, unstable, mutable, and destructible. <ref cRef="F.59.b" type="folio"/> Moreover,
                             they trust that all phenomena are false, and thus nonexistent; that just
                             as a child is fooled by an empty fist or a rainbow, phenomena are merely
                             arisen from imputation and dependent phenomena, and thus lack even a
@@ -3621,7 +3623,7 @@
                         <p tid="223">“Lokadhara, how do bodhisattva great beings accurately
                             contemplate the power of diligence? How do they effortlessly accomplish
                             the power of diligence? How do they become highly skilled in the power
-                            of diligence? <ref cRef="F.60.a"/> Bodhisattva great beings practice diligence
+                            of diligence? <ref cRef="F.60.a" type="folio"/> Bodhisattva great beings practice diligence
                             endlessly. They practice diligence without any interruption, in order to
                             dispel the five obscurations. They practice diligence in order to hear
                             the profound Dharma in this manner. Bodhisattvas are uninterrupted in
@@ -3659,7 +3661,7 @@
                                 of.” The meaning here is that they analyze the nature of such
                                 actions in general, rather than observe them unfold in the
                                 present.</note> the actions of body, speech, and mind. They
-                            constantly consider and bring to mind the topics of perfection. <ref cRef="F.60.b"/>
+                            constantly consider and bring to mind the topics of perfection. <ref cRef="F.60.b" type="folio"/>
                             They consider and bring to mind the methods related to the
                             characteristics of all phenomena as arising, ceasing, remaining, and
                             transferring. They see the truths of suffering, origination, cessation,
@@ -3692,7 +3694,7 @@
                             become attached to absorption. By thoroughly engaging in the
                             characteristics of absorption—and by thoroughly attaining the practices
                             of absorption, thoroughly generating the absorptions, and practicing
-                            absorption that is without observation— <ref cRef="F.61.a"/> they become skilled in
+                            absorption that is without observation— <ref cRef="F.61.a" type="folio"/> they become skilled in
                             the gateways of all absorptions, skilled in entering absorption, skilled
                             in abiding in absorption, skilled in leaving absorption, skilled in not
                             resting in absorption, skilled in the characteristics of observation,
@@ -3725,7 +3727,7 @@
                             marks, without wishes, unborn, unconditioned, unarisen, beyond the way
                             of conditioned phenomena, and [endowed with] the perfect qualities of
                             buddhahood—they will engage diligently as if their hair were on fire.
-                            <ref cRef="F.61.b"/> The insight of these bodhisattvas is indestructible. By
+                            <ref cRef="F.61.b" type="folio"/> The insight of these bodhisattvas is indestructible. By
                             mastering such insight, they transcend the three realms and do not abide
                             in the existence of the three realms. They eliminate all conditioned
                             phenomena and do not abide in any phenomena of attachment and bondage.
@@ -3762,7 +3764,7 @@
                             beings with ignorance as well as the powers of beings without ignorance.
                             They understand the powers of beings who have fallen to the lower realms
                             as well as the powers of beings who have been born in the god or human
-                            realms. <ref cRef="F.62.a"/> They understand the powers of beings who are gentle as
+                            realms. <ref cRef="F.62.a" type="folio"/> They understand the powers of beings who are gentle as
                             well as the powers of beings of the sharpest, middling, and lowest
                             powers. They understand beings with impaired powers as well as beings
                             with unimpaired powers. They understand beings with diligent and lazy
@@ -3781,7 +3783,7 @@
                             beings’ powers of faith, skepticism, respect, disrespect, discipline,
                             impure discipline, patience, laziness, diligence, distraction, settling
                             into absorption, errancy of knowledge, insightfulness, stupidity,
-                            genius, pride, humility, <ref cRef="F.62.b"/> practice of the correct path, practice
+                            genius, pride, humility, <ref cRef="F.62.b" type="folio"/> practice of the correct path, practice
                             of the wrong path, carelessness, mindfulness, and intelligence. They
                             understand beings’ powers that are disturbed, withdrawn, impaired,
                             unimpaired, impure, pure, of the lesser vehicle, of the solitary
@@ -3814,7 +3816,7 @@
                         the noble ones? The bodhisattva great beings are steadfast on the noble
                         path. What is meant by <distinct>path</distinct> in this context? It is the
                         eightfold path of the noble ones, which comprises right view, right thought,
-                        <ref cRef="F.63.a"/> right speech, right action, right livelihood, right effort, right
+                        <ref cRef="F.63.a" type="folio"/> right speech, right action, right livelihood, right effort, right
                         mindfulness, and right absorption. Lokadhara, what is it that bodhisattva
                         great beings practice on the eightfold path of the noble ones? And what
                         means do they obtain on the eightfold path of the noble ones?”</p>
@@ -3845,7 +3847,7 @@
                                     bas chos thams cad rab tu zhi ba dang / rang bzhin gyis mi skye
                                     mi ’gog cing mya ngan las ’das pa dang ’thun pa gang zhe
                                     na</foreign>.</note> One thus does not conceptualize
-                            or imagine any phenomenon; <ref cRef="F.63.b"/> one does not conceptualize, imagine,
+                            or imagine any phenomenon; <ref cRef="F.63.b" type="folio"/> one does not conceptualize, imagine,
                             or manifest anything.<note place="end" xml:id="UT22084-060-003-259" index="68"> Read according to the Chinese:
                                     <foreign xml:lang="zh" type="quote">如是亦不念不分別是一切法。不念不分別不現在前。</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="quote">’di ltar mi rtog pa dang / rnam
                                     par mi rtog pa’i chos thams cad la mi rtog rnam par mi rtog
@@ -3880,7 +3882,7 @@
                             the disruption of thought.’ Right thought is no thought.<note place="end" xml:id="UT22084-060-003-262" index="69"> Alternately,
                                 Stok would read: “The cessation of thought is no thought,” (<foreign xml:lang="Bo-Ltn" type="quote">rnam par rtog pa bcad pa ni rnam
                                     par mi rtog pa’o</foreign>), and the Chinese would read: “The
-                                cessation of thought is right thought” (<foreign xml:lang="zh" type="quote">斷分別是正分別。</foreign>).</note> <ref cRef="F.64.a"/> Thinking is conceptual. Why is
+                                cessation of thought is right thought” (<foreign xml:lang="zh" type="quote">斷分別是正分別。</foreign>).</note> <ref cRef="F.64.a" type="folio"/> Thinking is conceptual. Why is
                             this? By seeing and understanding the characteristics of all thoughts,
                             wrong thoughts are eliminated. They will not think about ‘this or that
                             other thing.’ By abiding in right thought in this way, they will not
@@ -3908,7 +3910,7 @@
                             does not come from anywhere or go anywhere, this is right speech. At
                             this point, by being steadfast in this manner in the correct
                             characteristics of speech, all the words they utter are right speech.
-                            Therefore, when they are steadfast in right speech, <ref cRef="F.64.b"/> they are
+                            Therefore, when they are steadfast in right speech, <ref cRef="F.64.b" type="folio"/> they are
                             said to abide in the actions of the ultimate and pure speech. Abiding in
                             right speech means to see and understand the characteristics of the acts
                             of speech, to understand all spoken words, and to be unconfused about
@@ -3944,7 +3946,7 @@
                             buddhahood—thinking that purity and buddhahood have marks—as pure
                                 livelihood,<note place="end" xml:id="UT22084-060-003-266" index="70"> Degé and other versions <foreign xml:lang="Bo-Ltn" type="term">tshor</foreign> read as
                                         <foreign xml:lang="Bo-Ltn" type="term">’tsho</foreign>
-                                    according to Yongle and Kangxi.</note> <ref cRef="F.65.a"/> then that
+                                    according to Yongle and Kangxi.</note> <ref cRef="F.65.a" type="folio"/> then that
                             is wrong livelihood. <distinct>Right livelihood</distinct> involves
                             giving up all attachment to the articles of livelihood.<note place="end" xml:id="UT22084-060-003-267" index="71"> For example, according to monastic
                                     regulations, monks are permitted thirteen articles of
@@ -3976,7 +3978,7 @@
                             forms of diligence. Why is this? All forms of effort are mistaken. All
                             forms of creation, action, and practice are mistaken. Why is this? All
                             phenomena are produced from wrong actions, and so they are all false.
-                            <ref cRef="F.65.b"/> That being so, right effort involves no creation, production,
+                            <ref cRef="F.65.b" type="folio"/> That being so, right effort involves no creation, production,
                             practice, or aspiration, for all phenomena are devoid of production.
                             Since bodhisattvas give up action with regard to all phenomena, they do
                             not generate any marks of action—not even any marks of nirvāṇa or any
@@ -4004,7 +4006,7 @@
                             mindfulness arise from the condition of mistakenly observing in a wrong
                             manner. Therefore, any basis that engenders mindfulness is false. Right
                             mindfulness does not generate or inhibit any object of observation.
-                            <ref cRef="F.66.a"/> When one observes no object with mindfulness, one is said to be
+                            <ref cRef="F.66.a" type="folio"/> When one observes no object with mindfulness, one is said to be
                             steadfast in right mindfulness, in that there is no basis for wrong
                             mindfulness to arise. In this way, since one knows and understands that
                             all phenomena are false, there is no mindfulness of true phenomena.
@@ -4035,7 +4037,7 @@
                         <milestone unit="chunk" xml:id="UT22084-060-003-270"/>
                         <p tid="253">“Lokadhara, how do bodhisattva great beings abide in right
                             absorption? Bodhisattva great beings understand all forms of absorption
-                            to be wrong absorption. Why is this? <ref cRef="F.66.b"/> When they do not observe
+                            to be wrong absorption. Why is this? <ref cRef="F.66.b" type="folio"/> When they do not observe
                             any phenomenon as absorption—[such as] by perceiving absorption to have
                             marks, or by entering the joy of absorption—they understand the falsity
                             of all the marks of absorption. <distinct>Falsity</distinct> implies
@@ -4064,7 +4066,7 @@
                             practices as absorption and by abiding in right absorption, bodhisattvas
                             are not bound by absorption or the marks of absorption. Transcending the
                             marks of absorption is abiding in right absorption. Furthermore, right
-                            absorption is free from concepts about any phenomenon, <ref cRef="F.67.a"/> and it
+                            absorption is free from concepts about any phenomenon, <ref cRef="F.67.a" type="folio"/> and it
                             is free from concepts of right or wrong with regard to phenomena, which
                             are sameness. Right absorption is the sameness of all phenomena. Right
                             absorption transcends all forms of absorption and all the conditioned
@@ -4102,7 +4104,7 @@
                         the characteristics of arising or being created. They are labeled as
                         aggregates, elements, sense sources, forms, sounds, odors, tastes, tactile
                         objects, or mental objects, and described as
-                            <distinct>name-and-form</distinct>. <ref cRef="F.67.b"/> Through their attachment
+                            <distinct>name-and-form</distinct>. <ref cRef="F.67.b" type="folio"/> Through their attachment
                         and clinging, childish ordinary beings generate further attachment and
                         clinging in a variety of forms, just as tangled silk fringes<note place="end" xml:id="UT22084-060-003-275" index="72"> Translation
                             tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">kha tshar dar
@@ -4129,7 +4131,7 @@
                         the characteristic of falsity. By seeing the world as false, they do not
                         conceptualize the world or transcendence. Why is this? Lokadhara, the
                             <distinct>world</distinct> means the five aggregates for appropriation.
-                        <ref cRef="F.68.a"/> All worldly phenomena are included in this category. Yet, if
+                        <ref cRef="F.68.a" type="folio"/> All worldly phenomena are included in this category. Yet, if
                         investigated by the wise, the aggregates do not exist. They do not observe
                         the aggregates as aggregates, or the nature of the aggregates. The
                         aggregates cannot be observed as a locus of coming, as a locus of staying,
@@ -4152,7 +4154,7 @@
                         Lokadhara, given that the world is not different from transcendence, the
                         Blessed Buddha does not appear in the world, and the Thus-Gone One does not
                         teach that worldly phenomena cannot be observed—all worldly phenomena can be
-                        accurately seen and understood, because they are unborn. <ref cRef="F.68.b"/> Lokadhara,
+                        accurately seen and understood, because they are unborn. <ref cRef="F.68.b" type="folio"/> Lokadhara,
                         not observing or engaging the world is transcendence. Therefore, understand
                         this point: accurately understanding the world and realizing that it cannot
                         be observed is transcendence. Therefore, the Blessed Buddha appeared in the
@@ -4181,7 +4183,7 @@
                         regarding conditioned and unconditioned phenomena? What means do they obtain
                         regarding conditioned and unconditioned phenomena? Lokadhara, bodhisattva
                         great beings discern and contemplate conditioned and unconditioned
-                        phenomena. <ref cRef="F.69.a"/>
+                        phenomena. <ref cRef="F.69.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-280"/>
                     <p tid="264">“How do they discern and contemplate conditioned phenomena?
@@ -4213,7 +4215,7 @@
                         do not appropriate conditioned phenomena. Why is this? Lokadhara, it is not
                         the case that unconditioned phenomena exist separate from conditioned
                         phenomena, or that conditioned phenomena exist separate from unconditioned
-                        phenomena, <ref cRef="F.69.b"/> for the characteristic of the reality of the conditioned
+                        phenomena, <ref cRef="F.69.b" type="folio"/> for the characteristic of the reality of the conditioned
                         is the unconditioned. Why is this? There is nothing conditioned within the
                         conditioned, and nothing unconditioned within the unconditioned. Still, so
                         that mistaken beings can see and understand the characteristics of the
@@ -4243,7 +4245,7 @@
                         unconditioned truly has marks. However, Lokadhara, if the unconditioned had
                         marks, it would not be unconditioned. It is when one teaches in terms of
                         marks, or when one teaches childish ordinary beings for whom phenomena must
-                        be categorized, <ref cRef="F.70.a"/> that the conditioned is said to have three
+                        be categorized, <ref cRef="F.70.a" type="folio"/> that the conditioned is said to have three
                         characteristics: arising, ceasing, and remaining and transitioning; and the
                         unconditioned is said to have three characteristics: not arising, not
                         ceasing, and not remaining or transitioning. Lokadhara, when someone knows
@@ -4270,7 +4272,7 @@
                         the characteristic of observation, they eliminate all forms of observation,
                         and they do not conceptualize in terms of categories or absence of
                         categories. Lokadhara, these are bodhisattva great beings’ means with regard
-                        to conditioned and unconditioned phenomena. <ref cRef="F.70.b"/> By not observing either
+                        to conditioned and unconditioned phenomena. <ref cRef="F.70.b" type="folio"/> By not observing either
                         conditioned or unconditioned phenomena, they are free from attachment and
                         grasping.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-286"/>
@@ -4302,7 +4304,7 @@
                         the lifespan of the blessed Majestic Mount Meru of Gold from the Jambū River
                         was five eons. His saṅgha of hearers was immeasurable. His buddha realm was
                         pure and happy. All the beings who lived there were happy and joyful; they
-                        had little attachment, aggression, and ignorance; <ref cRef="F.71.a"/> they were easy to
+                        had little attachment, aggression, and ignorance; <ref cRef="F.71.a" type="folio"/> they were easy to
                         guide, easy to correct, and easy to purify.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-289"/>
                     <p tid="272">“Lokadhara, the blessed Majestic Mount Meru of Gold from the Jambū
@@ -4331,7 +4333,7 @@
                         point, he remembered all the teachings that he had heard from this Buddha.
                         Endowed with the power of such recollection, he requested the Blessed One,
                         ‘Blessed One, I request an extensive explanation of these Dharma teachings.
-                        Would you please give it?’ <ref cRef="F.71.b"/> In that very life, he brought countless,
+                        Would you please give it?’ <ref cRef="F.71.b" type="folio"/> In that very life, he brought countless,
                         immeasurable beings to unsurpassed and perfect awakening.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-291"/>
                     <p tid="273">“As the blessed Majestic Mount Meru of Gold from the Jambū River
@@ -4357,7 +4359,7 @@
                         count. This buddha’s lifespan was two eons, and his buddha realm was very
                         happy and adorned with the finest ornaments. Therefore, Lokadhara,
                         bodhisattvas who wish to become skilled in the application of these
-                        teachings <ref cRef="F.72.a"/> must train in, recite, and exert themselves diligently in
+                        teachings <ref cRef="F.72.a" type="folio"/> must train in, recite, and exert themselves diligently in
                         these teachings.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-293"/>
                     <p tid="275">“Furthermore, bodhisattva great beings who wish to attain the
@@ -4392,7 +4394,7 @@
                                 [conditions], and contemplating the emergence of limitless skillful
                                 applications. The Tibetan reads: <foreign xml:lang="Bo-Ltn" type="term">chos thams cad kyi rkyen tshad med pa
                                 la rtog pa dang / tshad med pa thams cad kyi rtog pa la sbyor ba
-                                dang ldan pa’i sbyor ba’i tshad pa la rtog pa’o/</foreign>. </note> <ref cRef="F.72.b"/>
+                                dang ldan pa’i sbyor ba’i tshad pa la rtog pa’o/</foreign>. </note> <ref cRef="F.72.b" type="folio"/>
                         As they contemplate such, they will use their skillful application of
                         gateways of absorption to enter limitless conditions for gateways into all
                         Dharma teachings. With such power of entry, with its limitless skillful
@@ -4422,7 +4424,7 @@
                         the force of such absorption, they will become skilled in limitless forms of
                         observation and limitless ways of arising from absorption. If bodhisattvas
                         abide in this, they will gain access to the true characteristics of all
-                        phenomena. <ref cRef="F.73.a"/> Furthermore, Lokadhara, while bodhisattva great beings
+                        phenomena. <ref cRef="F.73.a" type="folio"/> Furthermore, Lokadhara, while bodhisattva great beings
                         always contemplate the means of observing the world and contemplate the
                         observation of conditioned phenomena, they also exert themselves in
                         destroying the means of observing all phenomena, and they are free from any
@@ -4446,7 +4448,7 @@
                         world. He was a thus-gone one, a worthy one, a perfect buddha, perfect in
                         knowledge and conduct, a blissful one, a knower of the world, an unsurpassed
                         being, a charioteer who guides beings, and a teacher of gods and humans.
-                        <ref cRef="F.73.b"/> The lifespan of the blessed one Royal Light of Limitless Qualities
+                        <ref cRef="F.73.b" type="folio"/> The lifespan of the blessed one Royal Light of Limitless Qualities
                         was one eon. His buddha realm was covered with a latticed canopy of the
                         seven precious substances. This world was adorned with palm trees made of
                         the seven precious substances, and these palm trees themselves were adorned
@@ -4471,7 +4473,7 @@
                         three lower realms here; even the name <distinct>three lower
                             realms</distinct> was unheard of.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-300"/>
-                    <p tid="281">“Lokadhara, the blessed Royal Light of Limitless Qualities <ref cRef="F.74.a"/>
+                    <p tid="281">“Lokadhara, the blessed Royal Light of Limitless Qualities <ref cRef="F.74.a" type="folio"/>
                         taught the following Dharma in full to the beings there. He taught the
                         perfection of insight and the bodhisattva section called <title xml:lang="en">Countering the Doubts and Pleasing the Minds of All
                             Beings</title>. Lokadhara, when the blessed Royal Light of Limitless
@@ -4494,7 +4496,7 @@
                         this discourse and generated great diligence, perfected the related
                         qualities, and gained the profound power of mastery. Through the causes and
                         conditions of his roots of virtue, after this bodhisattva left that life, he
-                        encountered two hundred thousand buddhas <ref cRef="F.74.b"/> and received their
+                        encountered two hundred thousand buddhas <ref cRef="F.74.b" type="folio"/> and received their
                         teachings. Since he continuously recalled his past lives, he received
                         ordination at an early age. He practiced pure conduct and always had the
                         power of remembrance. No matter where he was born, he never lost this
@@ -4520,7 +4522,7 @@
                         him with unblinking eyes and promised, “Blessed One, in the final
                         five-hundred-year period to come, we will sustain and uphold this discourse,
                         which is profound and free from attachment, which is the light of all the
-                        buddhas, <ref cRef="F.75.a"/> which arouses the virtuous qualities of the bodhisattvas,
+                        buddhas, <ref cRef="F.75.a" type="folio"/> which arouses the virtuous qualities of the bodhisattvas,
                         and which perfects the accumulations of awakening of all bodhisattvas.
                         Having heard this teaching, we are purified—our minds are purified. We will
                         exert ourselves in seeking, bearing, retaining, reciting, and reading
@@ -4544,7 +4546,7 @@
                         will also protect and sustain my teachings throughout the three times. At
                         present, and when the Dharma is waning after I have entered parinirvāṇa, they will serve the
                         purpose of benefitting and bringing happiness to innumerable beings.
-                        <ref cRef="F.75.b"/> Ānanda,<note place="end" xml:id="UT22084-060-003-305" index="77">
+                        <ref cRef="F.75.b" type="folio"/> Ānanda,<note place="end" xml:id="UT22084-060-003-305" index="77">
                             Degé reads “Lokadhara,” but this seems to be an error.</note> Bhadrapāla
                         and the others will not only sustain my teachings throughout the three
                         times—they will also sustain and uphold the teachings of all the buddhas of
@@ -4573,7 +4575,7 @@
                         happiness. Ānanda, would that person then have kindly benefitted these
                         beings and brought them happiness?”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-308"/>
-                    <p tid="288">Ānanda replied, <ref cRef="F.76.a"/> “It would not be easy to verbally describe
+                    <p tid="288">Ānanda replied, <ref cRef="F.76.a" type="folio"/> “It would not be easy to verbally describe
                         the benefit that person brought them.”</p>
                     <p tid="289">“Ānanda, today I have spoken the truth, for the benefit and
                         happiness brought by such a person does not come close in terms of the
@@ -4598,7 +4600,7 @@
                         millions of eons. Why is this? Ānanda, when these bodhisattvas were engaged
                         in bodhisattva conduct in the past, they steered countless buddhas toward
                         the awakening of buddhahood. In all their lives, these bodhisattvas
-                        protected the Dharma <ref cRef="F.76.b"/> and effortlessly accomplished the unsurpassed
+                        protected the Dharma <ref cRef="F.76.b" type="folio"/> and effortlessly accomplished the unsurpassed
                         and perfect awakening of millions of buddhas. They also steered countless
                         hundreds of thousands of beings toward the awakening of buddhahood, and,
                         through the power of teaching and training them, they all perfected the
@@ -4625,7 +4627,7 @@
                         noble children will sustain and uphold the Dharma that I accomplished over
                         thousands of countless and incalculable eons. Ānanda, I entrust them with,
                         and instruct them in, the Jewel of the Dharma that I accomplished over
-                        countless thousands of eons. <ref cRef="F.77.a"/> This is because these noble children
+                        countless thousands of eons. <ref cRef="F.77.a" type="folio"/> This is because these noble children
                         are cared for by all the buddhas presently abiding in their countless and
                         incalculable buddha realms. Ānanda, these noble children are always an
                         object for the veneration of the world and its gods and humans. Ānanda, when
@@ -4647,7 +4649,7 @@
                         aspirations, they will take ordination and train in the lineage of
                         awakening. Ānanda, know that during the final five-hundred-year period to
                         come, any noble son or daughter who gives rise to diligence for the sake of
-                        this teaching will have zealous and constant roots of virtue.” <ref cRef="F.77.b"/>
+                        this teaching will have zealous and constant roots of virtue.” <ref cRef="F.77.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-311"/>
                     <trailer tid="291">This was the eleventh chapter: “<title xml:lang="en">The Teaching on What Occurred
@@ -4678,7 +4680,7 @@
                         aggregates, the eighteen elements, the twelve sense sources, the twelve
                         links of dependent origination, the four applications of mindfulness, the
                         four correct abandonments, the four foundations of miracles, the five
-                        powers, <ref cRef="F.78.a"/> the five strengths, the seven aspects of awakening, the
+                        powers, <ref cRef="F.78.a" type="folio"/> the five strengths, the seven aspects of awakening, the
                         eight aspects of the path of the noble ones, the phenomena of the world and
                         transcendence, and conditioned and unconditioned phenomena. Furthermore,
                         they will swiftly gain knowledge of the true characteristics of phenomena,
@@ -4701,7 +4703,7 @@
                         bodhisattvas. Lokadhara, I have taught this Dharma-seal discourse in order
                         to dispel the doubts of all beings in the future.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-003-315"/>
-                    <p tid="296">“Lokadhara, when bodhisattva great beings <ref cRef="F.78.b"/> see the four
+                    <p tid="296">“Lokadhara, when bodhisattva great beings <ref cRef="F.78.b" type="folio"/> see the four
                         beneficial factors related to protecting and retaining this discourse and
                         others, they will pledge to do so in the future. What are these four?
                         Bodhisattvas consider that (1) they will swiftly gain immeasurable and
@@ -4835,9 +4837,9 @@
                     <item>
                         <gloss type="term" xml:id="UT22084-060-003-402">
                             <term>twelve sense sources</term>
-                            <term xml:lang="Bo-Ltn">skye mched  bcu gnyis</term>
+                            <term xml:lang="Bo-Ltn">skye mched bcu gnyis</term>
                             <term xml:lang="bo">སྐྱེ་མཆེད་བཅུ་གཉིས།</term>
-                            <term xml:lang="zh">入</term>
+                            <!--<term xml:lang="zh">入</term>--> <!--十二入 not found in T 482-->
                             <term xml:lang="Sa-Ltn">dvā­daśāyatana</term>
                             <term type="definition">One way of describing experience and the world in terms of
                                 twelve <term type="ignore">sense sources</term> (eye and form, ear and sound, nose and odor, tongue and
@@ -4928,8 +4930,8 @@
                             <term>eighteen elements</term>
                             <term xml:lang="Bo-Ltn">khams bco brgyad </term>
                             <term xml:lang="bo">ཁམས་བཅོ་བརྒྱད།</term>
-                            <term xml:lang="zh">性</term>
                             <term xml:lang="Sa-Ltn">aṣṭa­daśa­dhātu</term>
+                            <!--十八界 nor 十八性 found in T482-->
                             <term type="definition">One way of describing experience and the world in terms of
                                 <term type="ignore">eighteen elements</term> (eye, form, and eye consciousness; ear, sound, and ear
                                 consciousness; nose, odor, and nose consciousness; tongue, taste, and tongue
@@ -4947,6 +4949,7 @@
                             <term xml:lang="bo">ཆེན་པོ་བཞི།</term>
                             <term xml:lang="Bo-Ltn">’byung ba chen po bzhi</term>
                             <term xml:lang="bo">འབྱུང་བ་ཆེན་པོ་བཞི།</term>
+                            <term xml:lang="zh">四大</term>
                             <term xml:lang="Sa-Ltn">mahābhūta</term>
                             <term type="definition">The four “main” or “great” outer <term type="ignore">elements</term> of earth, water, fire, air, and (when there is a fifth) space.</term>
                         </gloss>
@@ -5077,7 +5080,7 @@
                 <term>four applications of mindfulness </term>
                 <term xml:lang="Bo-Ltn">dran pa nye bar bzhag pa bzhi</term>
                 <term xml:lang="bo">དྲན་པ་ཉེ་བར་བཞག་པ་བཞི།</term>
-                <term xml:lang="zh">念處</term>
+                <term xml:lang="zh">四念處</term>
                 <term xml:lang="Sa-Ltn">catuhsmṛtyupasthāna</term>
                 <term type="definition">Four contemplations on: (1) the body, (2) feelings, (3)
                     mind, and (4) mental objects. These four contemplations are part of the
@@ -5091,7 +5094,7 @@
                             <term xml:lang="bo">དྲན་པ་ཉེ་བར་བཞག་པ།</term>
                             <term xml:lang="zh">念處</term>
                             <term xml:lang="Sa-Ltn">smṛtyupasthāna</term>
-                            <term type="definition">See "four applications of mindfulness."</term>
+                            <term type="definition">See “four applications of mindfulness.”</term>
                         </gloss>
                     </item>
         <item>
@@ -5128,7 +5131,7 @@
                 <term xml:lang="zh">觀</term>
                 <term type="definition">An important form of Buddhist meditation focusing on
                     developing insight into the nature of phenomena. Often presented as part of a
-                    pair of meditation techniques, the other being "tranquility." </term>
+                    pair of meditation techniques, the other being “tranquility.” </term>
             </gloss>
         </item>
         <item>
@@ -5352,7 +5355,7 @@
                 <term xml:lang="bo">བྱ་ཀ་ལན་ཏ་ཀ</term>
                 <term xml:lang="zh">迦蘭陀</term>
                 <term xml:lang="Sa-Ltn">Kalandaka­nivāpa</term>
-                <term type="definition">Literally, "The Squirrel Feeding Ground," a location within
+                <term type="definition">Literally, “The Squirrel Feeding Ground,” a location within
                     the Veṇuvana where the Buddha stayed; it received its name from the many
                     squirrels living there, being fed by humans; it should be noted that Tibetan
                     translations misunderstand the Sanskrit term <foreign type="term" xml:lang="Sa-Ltn">kalandaka</foreign> to be a kind of bird
