@@ -17,11 +17,15 @@
                 <author role="translatorMain" ref=""/>
             <author role="translatorEng" ref="contributors.xml#person-226">David Gitlen</author>
                 <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-280">Kammie Takahashi</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-252">Dion Blundell</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="2.g">
+
+            <publicationStmt status="2.c">
                 <idno xml:id="UT22084-088-007"/>
                 <date/>
             </publicationStmt>
@@ -29,9 +33,8 @@
                 <bibl key="toh513" type="text">
                     <ref>Toh 513</ref>
                     <biblScope>vol.88, ff.26r-27v(pp.51-54)</biblScope>
-                    <location count-pages="4">
-                        <start volume="88" page="53"/>
-                        <end volume="88" page="56"/>
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="88" start-page="51" end-page="54"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12235" work="W22084"/>
@@ -39,16 +42,18 @@
                 <bibl key="toh856" type="text">
                     <ref>Toh 856</ref>
                     <biblScope>vol.100,ff. 76r-77v(pp.151-154)</biblScope>
-                    <location count-pages="4">
-                        <start volume="100" page="153"/>
-                        <end volume="100" page="156"/>
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="100" start-page="151" end-page="154"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12618" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:54:06 by admin</note>
+                <note type="lastUpdated" date-time="2019-10-09T05:59:52.333Z" user="admin">09/10/2019 05:59:52</note>
+            <note type="updated" update="translation-status" value="2.e" date-time="2019-06-21T07:07:37.133Z" user="john">2.e</note>
+                <note type="updated" update="translation-status" value="2.c" date-time="2019-07-28T02:10:47.602Z" user="dion-blundell">2.c</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-09T05:59:48.729Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
