@@ -16,23 +16,21 @@
                                 <author role="translatorMain" ref="contributors.xml#team-28">Translated by the Sarasvatī Translation Team<lb/> under the
                                         patronage and supervision of 84000: Translating the Words of
                                         the Buddha</author>
-                                <author role="translatorEng" ref="contributors.xml#person-185">Dr.
-                                        Shenghai Li</author>
+                                <author role="translatorEng" ref="contributors.xml#person-185">Dr. Shenghai Li</author>
                                 <editor role="externalReviewer" ref="contributors.xml#person-99">Thomas Cruijsen</editor>
-                                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr.
-                                        James Duncan Gentry</editor>
-                                <editor role="copyEditor" ref="contributors.xml#person-92">Laura
-                                        Goetz</editor>
+                                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+                                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
                                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
                         </titleStmt>
                         <editionStmt>
-                <edition>v 0.9 <date>2019</date>
+                <edition>v 0.9.2 <date>2019</date>
                 </edition>
             </editionStmt>
                         <publicationStmt status="2">
                                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name>
-                                        is a global non-profit initiative that aims to translate all
+                                        is a global non-profit initiative to translate all
                                         the Buddha’s words into modern languages, and to make
                                         them available to everyone. </publisher>
                                 <availability>
@@ -58,22 +56,23 @@
                                         <author role="translatorTib">t. jinamitra</author>
                                         <author role="translatorTib">jnanasidhi</author>
                                         <author role="translatorTib">ye shes sde</author>
-                                        <location count-pages="9">
-                                                <start volume="60" page="482"/>
-                                                <end volume="60" page="490"/>
-                                        </location>
+                                        <location work="UT4CZ5369" count-pages="9">
+                        <volume number="60" start-page="480" end-page="488"/>
+                    </location>
                                         <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                                         <idno source-id="O1JC114941JC11789" work="W22084"/>
                                 </bibl>
                         </sourceDesc>
                         <notesStmt>
-                                <note type="lastUpdated" date-time="2019-09-09T08:51:18.769Z" user="admin">09/09/2019 08:51:18</note>
+                                <note type="lastUpdated" date-time="2019-10-12T19:05:56.974Z" user="admin">12/10/2019 19:05:56</note>
                                 <note type="updated" update="translation-status" value="2.a" date-time="2019-04-30T10:19:53.284Z" user="mike">2.a</note>
                         <note type="updated" update="text-version" value="v 1.0" date-time="2019-05-06T11:01:15.765Z" user="andre">v 0.1 2019</note>
                 <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-21T12:52:26.137Z" user="laura">v 1.01 2019</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-06-27T12:44:29.657Z" user="mike">2</note>
                 <note type="updated" update="text-version" value="v 0.02" date-time="2019-08-27T17:58:22.372Z" user="john">v 0.02 2019</note>
                 <note type="updated" update="text-version" value="v 0.9" date-time="2019-09-09T08:51:16.867Z" user="john">v 0.9 2019</note>
+<note type="updated" update="text-version" value="v 0.9.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 0.9.2" date-time="2019-10-12T19:05:54.184Z" user="john">v 0.9.2</note>
             </notesStmt>
                 </fileDesc>
         </teiHeader>
@@ -81,7 +80,7 @@
                 <front>
                         <div type="summary">
                                 <head type="summary" tid="1">Summary</head>
-                                <milestone unit="chunk" xml:id="UT22084-060-007-1"/>
+                                <tei:milestone unit="chunk" xml:id="UT22084-060-007-1"/>
                                 <p tid="2">In response to a series of queries from Mañjuśrī, Buddha
                                         Śākyamuni first exposes the error that prevents sentient
                                         beings from transcending saṃsāra, and in particular the error 
@@ -96,7 +95,7 @@
                         </div>
                         <div type="acknowledgment">
                                 <head type="acknowledgment" tid="3">Acknowledgements</head>
-                                <milestone unit="chunk" xml:id="UT22084-060-007-2"/>
+                                <tei:milestone unit="chunk" xml:id="UT22084-060-007-2"/>
                                 <p tid="4">This translation was produced by the Sarasvatī
                                         Translation Team. We would like to acknowledge the support
                                         from the American Council of Learned Societies, which has
@@ -107,7 +106,7 @@
                         <div type="introduction">
                                 <head type="introduction" tid="5">Introduction</head>
                                 <div type="section">
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-3"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-3"/>
                                         <p tid="7">The doctrinal term “aids to enlightenment”
                                                   (<foreign xml:lang="Sa-Ltn" type="term">bodhipakṣa</foreign>), 
                                                 referring to a set of essential Buddhist practices, represents 
@@ -116,8 +115,9 @@
                                                 it also occupies an important place in Mahāyāna
                                                 sūtras. Even in Buddhist tantric texts, certain attributes of deities and
                                                 features of maṇḍalas are explained as symbolizing items 
-                                                included in the aids to enlightenment.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-4"/>
+                                                included in the aids to enlightenment.<note place="end" index="1" xml:id="UT22084-060-007-210">Indeed the tantra <title xml:lang="en">Emergence from Sampuṭa</title> (Toh 381, 1.2.1), includes an explanation of the thirty-seven aids.</note>
+                    </p>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-4"/>
                                         <p tid="8">
                         <title xml:lang="en">The Teaching on the Aids to
                                                   Enlightenment</title>, the sūtra translated here,
@@ -132,7 +132,7 @@
                                                 enlightenment. In conclusion, the Buddha himself
                                                 conveniently provides the following summary of the
                                                 content of his teaching:</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-5"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-5"/>
                                         <q>
                         <p tid="9">Mañjuśrī, I proclaim that those who see the four
                                                   truths of the noble ones, the four applications of
@@ -141,7 +141,7 @@
                                                   enlightenment in such a manner have crossed
                                                   over. (<ptr target="#UT22084-060-007-86"/>).</p>
                     </q>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-6"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-6"/>
                                         <p tid="10">Leaving aside the four truths of the noble ones,
                                                 it is noteworthy that the sets of qualities
                                                 discussed here comprise only four of the seven
@@ -163,7 +163,7 @@
                                                   <foreign xml:lang="Bo-Ltn" type="term">byang chub
                                                           kyi yan lag</foreign>, nos. 988–995); and (7) the
                                                 eightfold path of the noble ones (<foreign xml:lang="Sa-Ltn" type="term">aṣṭāṅgamārga</foreign>, <foreign xml:lang="Bo-Ltn" type="term">’phags pa’i lam yan
-                                                        lag</foreign>, nos. 996–1004).<note place="end" index="1" xml:id="UT22084-060-007-7"> See <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, Degé Tengyur, vol. 204 (sna tshogs, co) folios 21.b–22.b. The numbering is from Sakaki
+                                                        lag</foreign>, nos. 996–1004).<note place="end" xml:id="UT22084-060-007-7" index="2"> See <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, Degé Tengyur, vol. 204 (sna tshogs, co) folios 21.b–22.b. The numbering is from Sakaki
                                                   Ryōzaburō’s edition (q.v.), which numbers serially both the categories and
                                                   the items within them. See also <ref target="https://www2.hf.uio.no/polyglotta/index.php?page=fulltext&amp;view=fulltext&amp;vid=263&amp;cid=335617&amp;mid=483400">the four applications of mindfulness</ref>, and the entries that follow, in Braarvig’s online version. Two
                                                   different sets of the four kinds of effort are listed
@@ -174,9 +174,9 @@
                                                   categories.</note> The second, third, and fifth
                                                 categories in this list are not explicitly discussed
                                                 in this sūtra.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-8"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-8"/>
                                         <p tid="11">As mentioned above, the aids to enlightenment
-                                                are frequently mentioned in the Pali canon,<note place="end" index="2" xml:id="UT22084-060-007-9">
+                                                are frequently mentioned in the Pali canon,<note place="end" xml:id="UT22084-060-007-9" index="3">
                                                   A useful volume on this subject is Thanissaro (2004).</note>
                                                 and <title xml:lang="en">The Teaching on the Aids to
                                                   Enlightenment</title> does indeed make references to
@@ -199,10 +199,10 @@
                                         <q>
                         <p tid="12">He lives in this way observing feelings
                                                 internally, . . . or externally, or . . . internally and
-                                                  externally.<note place="end" index="3" xml:id="UT22084-060-007-11">Rāhula (1978), p. 113.</note>
+                                                  externally.<note place="end" xml:id="UT22084-060-007-11" index="4">Rāhula (1978), p. 113.</note>
                         </p>
                     </q>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-12"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-12"/>
                                         <p tid="13">On the other hand, <title xml:lang="en">The
                                                   Teaching on the Aids to Enlightenment</title>
                                                 shows that there is more to such foundational
@@ -214,7 +214,7 @@
                                                   the application of mindfulness that carefully
                                                   considers feelings. (<ptr target="#UT22084-060-007-181"/>)</p>
                     </q>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-14"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-14"/>
                                         <p tid="15">In the initial part of its discourse, this sūtra
                                                 also places an emphasis on conceptualization as a
                                                 source of unenlightened existence. The traditional
@@ -228,21 +228,21 @@
                                                 deconstructing the self and what belongs to the
                                                 self, the pioneer Mahāyāna thinker writes that
                                                 “karma and afflictions arise from conceptualization,
-                                                and those [conceptual thoughts] come from mental
-                                                  proliferation.”<note place="end" index="4" xml:id="UT22084-060-007-15">
+                                                and those [conceptual thoughts] come from conceptual
+                                                  elaboration.”<note place="end" xml:id="UT22084-060-007-15" index="5">
                                                   <title xml:lang="Sa-Ltn">Mūlamadhyamakakārikā</title> 18.5bc. Ye Shaoyong 
                                                           (2011), p. 302: <foreign xml:lang="Sa-Ltn" type="quote">karmakleśā
                                                   vikalpataḥ/ te prapañcāt</foreign>. See also <title xml:lang="Sa-Ltn">Mūlamadhyamakakārikā</title>
-                                                  23.1. </note> In other words, mental proliferation
+                                                  23.1. </note> In other words, conceptual elaboration
                                                   (<foreign xml:lang="Sa-Ltn" type="term">prapañca</foreign>), with its dualistic tendency
                                                 to construct pairs of ideas, such as agent and
                                                 action, man and woman, conditions
                                                 conceptualization, which leads to emotions, actions,
-                                                and finally our ordinary existence.<note place="end" index="5" xml:id="UT22084-060-007-16"> See
+                                                and finally our ordinary existence.<note place="end" xml:id="UT22084-060-007-16" index="6"> See
                                                   Candrakīrti’s interpretation of the <title xml:lang="Sa-Ltn">Mūlamadhyamakakārikā</title>
                                                   18.5 in de La Vallée Poussin (1903–13), p. 350.</note>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-17"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-17"/>
                                         <p tid="16">What is valuable about <title xml:lang="en">The
                                                   Teaching on the Aids to Enlightenment</title> is
                                                 not the fact that it speaks about traditional
@@ -257,8 +257,8 @@
                                                 approaching these traditional Buddhist topics from a
                                                 distinctive Mahāyāna Buddhist perspective.</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-18"/>
-                                        <p tid="17">In the year 984,<note place="end" index="6" xml:id="UT22084-060-007-19"> Lancaster and Park (1979), no. 1099.</note> the Indian monk *Devaśāntika
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-18"/>
+                                        <p tid="17">In the year 984,<note place="end" xml:id="UT22084-060-007-19" index="7"> Lancaster and Park (1979), no. 1099.</note> the Indian monk *Devaśāntika
                                                 (Tianxizai 天息災) translated this sūtra into Chinese,
                                                 with the title <title xml:lang="Zh-Ltn">Foshuo dacheng shanjian
                                                   bianhua wenshushili wenfa jing</title>
@@ -278,7 +278,7 @@
                                                 that are missing in the Tibetan. It also makes mention of 
                                                 the bases of supernatural power as a category, although without
                                                 discussing the four bases individually.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-20"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-20"/>
                                         <p tid="18">There is no extant Sanskrit text of <title xml:lang="en">The Teaching on the Aids to
                                                   Enlightenment</title>. The present translation
                                                 from the Tibetan is based on the Degé 
@@ -296,30 +296,30 @@
                                 <head type="titleMain" tid="21">The Teaching on the Aids to
                                         Enlightenment</head>
                                 <div type="section">
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-23"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-23"/>
                                         <p tid="25">
-                        <ref cRef="F.240.b"/> Homage to all buddhas and
+                        <ref cRef="F.240.b" type="folio"/> Homage to all buddhas and
                                                 bodhisattvas!</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-24"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-24"/>
                                         <p tid="26">Thus did I hear at one time. The Bhagavān was
                                                 residing on Vulture Peak Mountain in Rājagṛha
                                                 accompanied by a great bhikṣu saṅgha of five hundred
                                                 bhikṣus, and by bodhisattva mahāsattvas such as
                                                 Maitreya and Mañjuśrī.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-170"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-170"/>
                                         <p tid="27">At that time, the Bhagavān said to the Youthful
                                                 Mañjuśrī, “Mañjuśrī, having minds that are misguided
                                                 by the four errors, sentient beings do not see the
-                                                four truths of the noble ones <ref cRef="F.241.a"/> as they really are,
+                                                four truths of the noble ones <ref cRef="F.241.a" type="folio"/> as they really are,
                                                 and therefore they do not transcend saṃsāra, which
                                                 is actually unreal.” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-26"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-26"/>
                                         <p tid="28">When the Bhagavān had said this, the Youthful
                                                 Mañjuśrī requested the Bhagavān, “Bhagavān, please
                                                 explain how sentient beings perceive things and
                                                 therefore do not transcend saṃsāra.”</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-171"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-171"/>
                                         <p tid="29">The Bhagavān replied, “Mañjuśrī, it is because
                                                 they assume a self and something that belongs to a
                                                 self that sentient beings do not transcend saṃsāra.
@@ -333,48 +333,47 @@
                                                 corporeal, verbal, and mental. Reifying what does
                                                 not exist, they think, ‘I am attached,’ ‘I am
                                                 averse,’ ‘I am perplexed.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-28"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-28"/>
                                         <p tid="30">“If they go forth under the dispensation of the
                                                 Tathāgata, they think to themselves, ‘I possess
                                                 ethics,’ ‘I practice the spiritual life,’ ‘I shall
                                                 transcend saṃsāra,’ ‘I shall attain complete
                                                 nirvāṇa,’ ‘I shall become liberated from
                                                 suffering.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-201"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-201"/>
                                         <p tid="31">“They think, ‘These phenomena are virtuous,’
                                                 ‘Those phenomena are nonvirtuous.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-202"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-202"/>
                                         <p tid="32">“They think, ‘These phenomena are to be
                                                 abandoned,’ ‘Those phenomena are to be brought
                                                 about,’ ‘Suffering is to be known,’ ‘Its origin
                                                 is to be abandoned,’ ‘Its cessation is to be
                                                 realized,’ ‘The path is to be cultivated.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-203"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-203"/>
                                         <p tid="33">“They think, ‘Conditioned states are
                                                 impermanent,’ ‘Conditioned states are miserable,’
                                                 ‘Conditioned states are burning,’ ‘I shall escape
                                                 from conditioned states.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-31"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-31"/>
                                         <p tid="34">“Through concepts of this kind, they acquire a
                                                 disenchantment induced by phenomenal
-                                                characteristics, <ref cRef="F.241.b"/> and they  
+                                                characteristics, <ref cRef="F.241.b" type="folio"/> and they  
                                                 bring to mind notions induced by
                                                 phenomenal characteristics. With such thoughts, they think to themselves, 
                                                 ‘One who knows those phenomena is someone who knows suffering.’ </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-33"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-33"/>
                                         <p tid="35">“With that thought, they then think, ‘I must abandon the origin.’ They
                                                 are disturbed by all those phenomena, and do not
                                                 understand them; they are afraid, terrified,
                                                 and will be further terrified. With such thoughts, they then think,
-                                                ‘The origin I am abandoning is what brings about those phenomena,
-                                                and what is disturbed by those phenomena.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-172"/>
-                                        <p tid="36">“With those thoughts, they then think, ‘I must 
-                                                realize cessation,’ which, they think, is the cessation 
-                                                of those phenomena that they have conceived. Thinking that 
-                                                they know that, they then 
-                                                think, ‘It is the cessation of those phenomena that is realized.’</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-35"/>
+                                                ‘The bringing about of these phenomena,
+                                                and being disturbed by those phenomena: those things are the origin that is abandoned.’</p>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-172"/>
+                                        <p tid="36">“With that thought, they then think, ‘I must 
+                                                actualize cessation,’ and they think, having investigated those 
+                                                phenomena, that they understand what cessation is. With those thoughts, they then 
+                                                think, ‘These are the things that actualize cessation.’</p>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-35"/>
                                         <p tid="37">“With that thought, they then think, ‘I 
                                                 must cultivate the path.’ They go
                                                 alone to an isolated place, and, by holding 
@@ -384,34 +383,34 @@
                                                 they disapprove of all phenomena, part from them,
                                                 turn away from them, and having withdrawn from them,
                                                 they produce a mind of dislike.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-173"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-173"/>
                                         <p tid="38">“They think, ‘I am liberated from all suffering;
                                                 what more is there for me to do? I am an arhat.’
-                                                Based on this presumption, when they observe their
-                                                rebirth at the time of death they become
+                                                Based on this presumption, when at the time of death they see their
+                                                coming rebirth they become
                                                 apprehensive, uncertain, and doubtful about the
                                                 Buddha’s enlightenment. Having died with a mind
                                                 mired in doubt, they are born in the great hells.
                                         </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-209"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-209"/>
                                         <p tid="38">Why is that so? It is because they conceive of all
                                                 those phenomena which are actually
                                                 unproduced.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-37"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-37"/>
                                         <p tid="39">The Youthful Mañjuśrī then asked the Bhagavān,
                                                 “Bhagavān, how should one view the four truths of
                                                 the noble ones?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-174"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-174"/>
                                         <p tid="40">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all conditioned states as unproduced has understood
                                                 suffering. Whoever sees all phenomena as unarisen
-                                                has abandoned its origin. <ref cRef="F.242.a"/>
+                                                has abandoned its origin. <ref cRef="F.242.a" type="folio"/>
                                                 Whoever sees all phenomena as having completely
                                                 passed into nirvāṇa has realized cessation. Whoever
                                                 sees all phenomena as having no existence has
                                                 cultivated the path.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-39"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-39"/>
                                         <p tid="41">“Mañjuśrī, whoever sees the four truths of the
                                                 noble ones in this way does not mentally construct
                                                 and conceptualize, thinking, ‘These phenomena are
@@ -420,24 +419,24 @@
                                                 to be realized,’ ‘Suffering is to be known,’
                                                 ‘Its origin is to be abandoned,’ ‘Its cessation is
                                                 to be realized,’ ‘The path is to be cultivated.’ </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-175"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-175"/>
                                         <p tid="42">“Why is that so? It is because they see those
                                                 phenomena to which ignorant ordinary beings become
                                                 attached, averse, and perplexed as unproduced, and
                                                 because they see them as falsely imagined and
                                                 fabricated. So they do not adopt those phenomena at
                                                 all, nor do they reject them.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-41"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-41"/>
                                         <p tid="43">“Mentally unattached to the three realms, they
                                                 see all three realms as unproduced, like an
                                                 illusion, a dream, an echo, and a visual
                                                 aberration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-176"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-176"/>
                                         <p tid="44">“By seeing the nature of all phenomena in that
                                                 way, they will become free from attachment and
                                                 aversion toward all sentient beings.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-43"/>
-                                        <p tid="45">“Why is this so? They do not perceive the
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-43"/>
+                                        <p tid="45">“Why is that so? They do not perceive the
                                                 phenomena toward which they would have attachment or
                                                 aversion. With minds equal to space, they do not
                                                 perceive even the Buddha, nor do they perceive even
@@ -447,21 +446,21 @@
                                                 they will not appropriate. Because they do not appropriate,
                                                 they will attain complete nirvāṇa without further
                                                 appropriation.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-44"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-44"/>
                                         <p tid="46">“Mañjuśrī, bhikṣu Subhūti understands all
                                                 phenomena in such a way, and therefore he does not
-                                                come to prostrate at the feet of the Tathāgata. <ref cRef="F.242.b"/>
+                                                come to prostrate at the feet of the Tathāgata. <ref cRef="F.242.b" type="folio"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-177"/>
-                                        <p tid="47">“Why is this so? It is because it would be
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-177"/>
+                                        <p tid="47">“Why is that so? It is because it would be
                                                 impossible—if he does not perceive even himself, how
                                                 would he perceive the Tathāgata?”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-46"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-46"/>
                                         <p tid="48">Then, the Youthful Mañjuśrī asked the Bhagavān,
                                                 “Bhagavān, how should one view the four applications
                                                 of mindfulness?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-178"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-178"/>
                                         <p tid="49">The Bhagavān replied, “Mañjuśrī, in the future I
                                                 will teach the bhikṣus the application of
                                                 mindfulness that carefully considers the body in its
@@ -475,69 +474,69 @@
                                                 considers phenomena in such a way that there will be
                                                 no notion of them as wholes. These teachings will
                                                 take place.”</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-48"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-48"/>
                                         <p tid="50">When the Bhagavān had said this, the Youthful
                                                 Mañjuśrī asked the Bhagavān, “Bhagavān, how should
                                                 one view the four applications of mindfulness?”</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-179"/>
-                                        <p tid="51">The Bhagavān replied, “Mañjuśrī, regard<note place="end" index="7" xml:id="UT22084-060-007-50">
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-179"/>
+                                        <p tid="51">The Bhagavān replied, “Mañjuśrī, regard<note place="end" xml:id="UT22084-060-007-50" index="8">
                                                   Following Stok: <foreign xml:lang="Bo-Ltn" type="term">mthong</foreign>. Degé reads: <foreign xml:lang="Bo-Ltn" type="term">thong</foreign>.
                                                 </note> them in terms of the allusive speech of the
                                                 Tathāgata, which is difficult to understand.” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-51"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-51"/>
                                         <p tid="52">Mañjuśrī requested, “Bhagavān, please explain
                                                 how to cultivate the four applications of
                                                 mindfulness.” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-180"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-180"/>
                                         <p tid="53">The Bhagavān replied, “Mañjuśrī, regarding the
                                                 body to be like space is the application of
                                                 mindfulness that carefully considers the body.</p>
                                         
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-181"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-181"/>
                                         <p tid="54">“Mañjuśrī, not perceiving feelings—neither
                                                 internally, nor externally, nor present in both—is
                                                 the application of mindfulness that carefully
                                                 considers feelings.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-53"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-53"/>
                                         <p tid="55"> “Mañjuśrī, whoever understands mind to be no
                                                 more than a mere name is applying mindfulness that
-                                                carefully considers the mind. <ref cRef="F.243.a"/>
+                                                carefully considers the mind. <ref cRef="F.243.a" type="folio"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-182"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-182"/>
                                         <p tid="56">“Mañjuśrī, whoever does not perceive virtuous,
                                                 nonvirtuous, or neutral phenomena is applying
                                                 mindfulness that carefully considers phenomena.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-183"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-183"/>
                                         <p tid="57">“Mañjuśrī, this is how the four applications of
                                                 mindfulness are to be viewed.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-57"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-57"/>
                                         <p tid="58">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the eightfold path of the noble ones?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-184"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-184"/>
                                         <p tid="59">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all phenomena as not unequal, non-dual, and not
                                                 dualistically distinguishable has right view.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-185"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-185"/>
                                         <p tid="60">“Mañjuśrī, whoever sees by way of not
                                                 seeing—without conceptualizing, mentally
                                                 constructing, or falsely imagining any
                                                 phenomenon—has right intention.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-60"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-60"/>
                                         <p tid="61">“Mañjuśrī, whoever sees all phenomena as
                                                 inexpressible due to having meditated on the
                                                 sameness of all expressions has right speech.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-186"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-186"/>
                                         <p tid="62">“Mañjuśrī, whoever sees all phenomena as free
                                                 from action and instrument due to not perceiving an
                                                 agent has right action.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-62"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-62"/>
                                         <p tid="63">“Mañjuśrī, whoever does not act to increase or
                                                 decrease any phenomenon due to abiding in the
                                                 sameness of all livelihoods has right
                                                 livelihood.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-187"/>
-                                        <p tid="64">“Mañjuśrī, whoever, by way of applying<note place="end" index="8" xml:id="UT22084-060-007-64">
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-187"/>
+                                        <p tid="64">“Mañjuśrī, whoever, by way of applying<note place="end" xml:id="UT22084-060-007-64" index="9">
                                                   <foreign xml:lang="Bo-Ltn" type="term">brtul
                                                   ba</foreign> here is rendered according to one of
                                                 its archaic meanings, <foreign xml:lang="Bo-Ltn" type="term">’bad pa</foreign>. Cf. Tsanlha Ngawang Tsultrim (1997), p. 274. Alternatively,
@@ -545,106 +544,106 @@
                                                   ba</foreign> can mean “restrained,” in which case
                                                   the sense would be, “by way of being restrained
                                                   without exertion.”</note> themselves without
-                                                  exertion,<note place="end" index="9" xml:id="UT22084-060-007-65"> Following Yongle and
+                                                  exertion,<note place="end" xml:id="UT22084-060-007-65" index="10"> Following Yongle and
                                                   Kangxi: <foreign xml:lang="Bo-Ltn" type="term">brtsom pa</foreign> (on <foreign xml:lang="Bo-Ltn" type="term">brtsom pa</foreign>
-                                                  as an equivalent for <foreign xml:lang="Sa-Ltn" type="term">utsāha</foreign>, see <title xml:lang="Sa-Ltn">Mahāvyutpatti</title> folio 38.b (in Degé Tengyur vol. 204, sna tshogs, co), no. 1790
+                                                  as an equivalent for <foreign xml:lang="Sa-Ltn" type="term">utsāha</foreign>, see <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>, folio 38.b in Degé Tengyur vol. 204, sna tshogs, co; no. 1790
                                                   in Sasaki’s edition, vol. 1, p. 141; vol. 2, p.
                                                   245); or Narthang and Lhasa: <foreign xml:lang="Bo-Ltn" type="term">rtsol ba</foreign>.
                                                   Degé and Stok read: <foreign xml:lang="Bo-Ltn" type="term">rtsom pa</foreign>.</note> does not
                                                 initiate anything has right effort.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-188"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-188"/>
                                         <p tid="65">“Mañjuśrī, whoever is not mindful of any
                                                 phenomenon due to being devoid of the act of
                                                 mindfulness has right mindfulness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-67"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-67"/>
                                         <p tid="66">“Mañjuśrī, whoever sees all phenomena as
                                                 naturally meditatively concentrated and undisturbed
                                                 due to not perceiving any object of perception has
                                                 right meditative concentration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-189"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-189"/>
                                         <p tid="67">“Mañjuśrī, this is how the eightfold path of the
                                                 noble ones is to be viewed.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-69"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-69"/>
                                         <p tid="68">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the five faculties?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-190"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-190"/>
                                         <p tid="69">The Bhagavān replied, “Mañjuśrī, whoever has the
                                                 confidence to see all phenomena as unproduced by
                                                 virtue of their being intrinsically unproduced has
                                                 the faculty of faith.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-191"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-191"/>
                                         <p tid="70">“Mañjuśrī, whoever does not mentally let go of
                                                 any phenomenon due to being free from notions of far
-                                                or near has the faculty of effort. <ref cRef="F.243.b"/>
+                                                or near has the faculty of effort. <ref cRef="F.243.b" type="folio"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-72"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-72"/>
                                         <p tid="71">“Mañjuśrī, whoever does not seek to bring to
                                                 mind or to be mindful of any phenomenon due to being
                                                 disengaged from objects of perception has the
                                                 faculty of mindfulness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-192"/>
-                                        <p tid="72">“Mañjuśrī, whoever sees<note place="end" index="10" xml:id="UT22084-060-007-74"> Rendered
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-192"/>
+                                        <p tid="72">“Mañjuśrī, whoever sees<note place="end" xml:id="UT22084-060-007-74" index="11"> Rendered
                                                   based on Yongle, Lithang, Kangxi, Narthang, Choné,
                                                   and Lhasa: <foreign xml:lang="Bo-Ltn" type="term">mthong</foreign>. Degé and Stok read: <foreign xml:lang="Bo-Ltn" type="term">’gyur</foreign>.
                                                 </note> all phenomena as nondual on account of not
                                                 perceiving dualistically has the faculty of
                                                 meditative concentration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-75"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-75"/>
                                         <p tid="73">“Mañjuśrī, whoever sees all phenomena as
                                                 intrinsically empty due to being devoid of being
                                                 produced and being devoid of not being known has the
                                                 faculty of wisdom.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-193"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-193"/>
                                         <p tid="74">“Mañjuśrī, this is how the five faculties should
                                                 be viewed.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-77"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-77"/>
                                         <p tid="75">Mañjuśrī asked, “Bhagavān, how should one view
                                                 the seven branches of enlightenment?” </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-194"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-194"/>
                                         <p tid="76">The Bhagavān replied, “Mañjuśrī, whoever sees
                                                 all phenomena as devoid of existence because there
                                                 is neither mindfulness nor attention has the branch
                                                 of enlightenment of right mindfulness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-195"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-195"/>
                                         <p tid="77">“Mañjuśrī, whoever is disengaged from and does
                                                 not perceive any phenomenon by not creating
                                                 virtuous, nonvirtuous, or neutral states has the
                                                 branch of enlightenment of right discernment of
                                                 phenomena.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-80"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-80"/>
                                         <p tid="78">“Mañjuśrī, whoever neither adopts nor rejects
                                                 the three realms due to having destroyed the notion
                                                 of realms has the branch of enlightenment of right
                                                 effort.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-196"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-196"/>
                                         <p tid="79">“Mañjuśrī, whoever does not become joyous about
                                                 any conditioned state due to having done away with
                                                 joy and sorrow has the branch of enlightenment of
                                                 right joy.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-82"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-82"/>
                                         <p tid="80">“Mañjuśrī, whoever is mentally supple with
                                                 respect to all phenomena because of not perceiving
                                                 objects of perception has the branch of
                                                 enlightenment of right mental suppleness.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-197"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-197"/>
                                         <p tid="81">“Mañjuśrī, whoever does not perceive mind
                                                 because of realizing that all phenomena have come to
                                                 an end has the branch of enlightenment of right
                                                 meditative concentration.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-84"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-84"/>
                                         <p tid="82">“Mañjuśrī, whoever does not rely on, depend on,
                                                 or cleave to any phenomenon, and, acquiring the
                                                 impartiality of not seeing any phenomenon, attains
                                                 joy has the branch of enlightenment of right
-                                                impartiality. <ref cRef="F.244.a"/>
+                                                impartiality. <ref cRef="F.244.a" type="folio"/>
                     </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-198"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-198"/>
                                         <p tid="83">“Mañjuśrī, this is how the seven branches of
                                                 enlightenment should be viewed.</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-86"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-86"/>
                                         <p tid="84">“Mañjuśrī, I proclaim that those who see the four
                                                 truths of the noble ones, the four applications of
                                                 mindfulness, the eightfold path of the noble ones,
@@ -662,11 +661,11 @@
                                                 extracted the thorns, have crossed the pit, are
                                                 completely steady, are free from fever, are bhikṣus,
                                                 are noble ones, are perfect banners.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-87"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-87"/>
                                         <p tid="85">“Mañjuśrī, those with such forbearance are
                                                 deserving of offerings from the world with its
                                                 gods—they are worthy of gifts and reverence.</p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-199"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-199"/>
                                         <p tid="86">“Therefore, Mañjuśrī, those bhikṣus who seek to
                                                 partake of the country’s alms in a beneficial way,
                                                 who seek to subdue Māra, who seek to transcend
@@ -674,40 +673,40 @@
                                                 become liberated from suffering, should work
                                                 diligently on these Dharmas.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-89"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-89"/>
                                         <p tid="87">When this Dharma discourse was taught,
                                                 thirty-two thousand gods realized the Dharma. They
                                                 sprinkled <foreign xml:lang="Sa-Ltn" type="term">mandārava</foreign> flowers upon the Bhagavān and
                                                 uttered these words: </p>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-200"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-200"/>
                                         <p tid="88">“If those who just happen to hear this Dharma
                                                 teaching by the Bhagavān will successfully go forth
                                                 under the Tathāgata’s dispensation and do 
-                                                well, <ref cRef="F.244.b"/> what more needs to
+                                                well, <ref cRef="F.244.b" type="folio"/> what more needs to
                                                 be said of those who, having listened to it,
                                                 have confidence and faith in it, and uphold it
                                                 accordingly? Indeed, those who
                                                 happen to hear this Dharma teaching by the Bhagavān
                                                 will not become conceited.”</p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-91"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-91"/>
                                         <p tid="89">After the Bhagavān had spoken this teaching, the Youthful
                                                 Mañjuśrī, the great śrāvakas, and the world with its
                                                 gods, humans, demigods, and gandharvas rejoiced, and
                                                 they praised what the Bhagavān had said. </p>
                                         <lb/>
-                                        <milestone unit="chunk" xml:id="UT22084-060-007-92"/>
+                                        <tei:milestone unit="chunk" xml:id="UT22084-060-007-92"/>
                                         <trailer tid="90">This concludes the Noble Mahāyāna Sūtra, “<title xml:lang="en">The Teaching on the Aids to
                                                 Enlightenment</title>.” </trailer>
                                 </div>
                                         <div type="colophon">
                                                 <head type="colophon" tid="91">Colophon</head>
-                                                <milestone unit="chunk" xml:id="UT22084-060-007-93"/>
+                                                <tei:milestone unit="chunk" xml:id="UT22084-060-007-93"/>
                                                 <p tid="92">This sūtra was translated, edited, and
                                                   finalized, based on revisions done according to the
                                                   language reform, by the Indian masters Jinamitra
                                                   and Jñānasiddhi, and by the chief editor and
-                                                  translator, the venerable Yeshé Dé.<note place="end" index="11" xml:id="UT22084-060-007-94"> Yongle,
+                                                  translator, the venerable Yeshé Dé.<note place="end" xml:id="UT22084-060-007-94" index="12"> Yongle,
                                                   Lithang, Kangxi, Choné, Narthang, and Lhasa add:
                                                   <foreign xml:lang="Bo-Ltn" type="quote">shlo ka
                                                   dgu bcu rtsa gnyis</foreign> (“ninety-two <foreign xml:lang="Sa-Ltn" type="term">śloka</foreign>”;
