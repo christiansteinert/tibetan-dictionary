@@ -28,15 +28,16 @@
                 <editor role="copyEditor" ref="contributors.xml#person-257">Raynald Prévèreau</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
                 <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.99 <date>2019</date>
+                <edition>v 1.0.0 <date>2019</date>
                 </edition>
             </editionStmt>
-            <publicationStmt status="2">
+            <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -57,16 +58,15 @@
                     <biblScope>Degé Kangyur vol. 66 (mdo sde, za), folios 27.b–33.a</biblScope>
                     <author role="translatorTib">Prajñāvarman</author>
                     <author role="translatorTib">Yeshé Dé</author>
-                    <location count-pages="12">
-                        <start volume="66" page="56"/>
-                        <end volume="66" page="67"/>
+                    <location work="UT4CZ5369" count-pages="12">
+                        <volume number="66" start-page="54" end-page="65"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11895" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-20T14:43:26.242Z" user="john">20/09/2019 14:43:26</note>
+                <note type="lastUpdated" date-time="2019-10-13T17:48:33.83Z" user="admin">13/10/2019 17:48:33</note>
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-11T17:34:31.728Z" user="andre">v 1.01 2019</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-11T17:34:31.728Z" user="andre">2</note>
                 <note type="updated" update="translation-status" value="2.a" date-time="2019-04-12T09:10:31.779Z" user="andre">2.a</note>
@@ -77,6 +77,10 @@
                 <note type="updated" update="text-version" value="v 0.8" date-time="2019-09-09T15:52:21.07Z" user="john">v 0.8 2019</note>
                 <note type="updated" update="text-version" value="v 0.9" date-time="2019-09-20T00:08:41.498Z" user="konchog">v 0.9 2019</note>
                 <note type="updated" update="text-version" value="v 0.99" date-time="2019-09-20T14:57:17.203Z" user="john">v 0.99 2019</note>
+                <note type="updated" update="translation-status" value="1.a" date-time="2019-09-28T20:48:35.488Z" user="john">1.a</note>
+<note type="updated" update="text-version" value="v 0.99.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.0.0" date-time="2019-10-13T17:48:28.361Z" user="john">v 1.0.0</note>
+<note type="updated" update="translation-status" value="1" date-time="2019-10-13T17:48:28.361Z" user="john">1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -285,7 +289,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-066-003-24"/>
                     <p tid="18">
-                        <ref cRef="F.27.b"/> Homage to all buddhas and bodhisattvas! </p>
+                        <ref cRef="F.27.b" type="folio"/> Homage to all buddhas and bodhisattvas! </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-066-003-25"/>
                     <p tid="19">Thus did I hear at one time. The Blessed One was dwelling in 
@@ -295,7 +299,7 @@
                         Mahākāśyapa, venerable Ānanda, and venerable Rāhula all went to see the
                         Blessed One; they prostrated to him, placing their heads at his feet, and then sat to
                         one side. Sitting there, venerable Śāriputra asked the Blessed 
-                        One, <ref cRef="F.28.a"/> “Blessed One, you have spoken of ‘sections of the Dharma.’
+                        One, <ref cRef="F.28.a" type="folio"/> “Blessed One, you have spoken of ‘sections of the Dharma.’
                         But what is the extent of those sections of the Dharma to which the Thus-Gone
                         One refers using that expression? How many such sections are there? What
                         are the sections of the Dharma?”</p>
@@ -359,7 +363,7 @@
                         are so painful?” </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-31"/>
                     <p tid="22">Venerable Śāriputra replied to the Blessed One’s question, 
-                        <ref cRef="F.28.b"/> “Blessed One, paṇḍakas and ṣaṇḍhas are the guards
+                        <ref cRef="F.28.b" type="folio"/> “Blessed One, paṇḍakas and ṣaṇḍhas are the guards
                         of ladies’ quarters. When they see beautiful women, they give rise to
                         desire. Their desirous minds make them boil with affliction and, boiling
                         with affliction, their bodies become engorged with semen. When they
@@ -384,7 +388,7 @@
                         the thoughts of evil men. Śāriputra, these are the actions of paṇḍakas and
                         ṣaṇḍhas who are gripped by desire; they are not the actions of holy beings.
                         Śāriputra, those paṇḍakas who thus entertain evil men’s 
-                        conceptions <ref cRef="F.29.a"/> have the experience, ‘I am touching that,’ and thus
+                        conceptions <ref cRef="F.29.a" type="folio"/> have the experience, ‘I am touching that,’ and thus
                         perceive the body with its nine orifices—this impure, leaking thing—as
                         clean. All these things should not be done. They are not the actions of holy
                         beings. </p>
@@ -414,7 +418,7 @@
                         of form as form, the absence of sensation as sensation, the absence of
                         perception as perception, the absence of formation as formation, and the
                         absence of consciousness as consciousness. Again, what is the reason for
-                        this? That is, what are the causes and conditions for speaking of eyes? <ref cRef="F.29.b"/> They cause one’s virtuous conduct to degenerate, and
+                        this? That is, what are the causes and conditions for speaking of eyes? <ref cRef="F.29.b" type="folio"/> They cause one’s virtuous conduct to degenerate, and
                         therefore we speak of eyes. They cause monkhood to degenerate, and therefore
                         we speak of eyes. Śāriputra, eyes are impermanent, unstable, and do not
                         endure. That is why they should be known as eyes. </p>
@@ -442,7 +446,7 @@
                         pacify them, recognizing them as being non-virtuous. Śāriputra, that being
                         the case, once monks have seen the shortcomings of the sense pleasures, they
                         are disenchanted and free from desire. They then truly rejoice and practice
-                        pure conduct. <ref cRef="F.30.a"/> Their complexions become radiant. </p>
+                        pure conduct. <ref cRef="F.30.a" type="folio"/> Their complexions become radiant. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-40"/>
                     <p tid="30">“Śāriputra, consider this analogy: When pus develops in the body of a sick
                         person, eighty-four thousand sores open up on all of that person’s limbs<note place="end" xml:id="UT22084-066-003-41" index="19"> Tib. <foreign xml:lang="Bo-Ltn" type="term">yan lag dang
@@ -479,7 +483,7 @@
                         follows: ‘The Blessed One has said that women are filthy, foul-smelling,
                         disagreeable, and not worthy of being looked upon. Women, boiling with afflictive
                         emotions, should not be kept company with. Desires too are foul-smelling,
-                        disagreeable, and not worthy of being looked upon.’ <ref cRef="F.30.b"/>
+                        disagreeable, and not worthy of being looked upon.’ <ref cRef="F.30.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-48"/>
                     <p tid="35">“Śāriputra, women’s bodies harbor an additional five groups of parasites
@@ -509,7 +513,7 @@
                         form aggregate. They also conceptualize the aggregates of sensation,
                         perception, formation, and consciousness. But conceptualizing is bondage.
                         Not to form concepts is to be liberated. Śāriputra, whoever conceptualizes
-                        will take on the form aggregate. <ref cRef="F.31.a"/>
+                        will take on the form aggregate. <ref cRef="F.31.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-52"/>
                     <p tid="39">“Śāriputra, there are ten misfortunes that befall someone whose 
@@ -540,7 +544,7 @@
                         bluish-green skin, completely full of maggots, lying on a roadside. Rain
                         falls on the corpse and the wind tosses it about. Then some people arrive
                         there, circling around the corpse, and catch a whiff of its smell. When that
-                        happens, Śāriputra, what do you think? <ref cRef="F.31.b"/> Will they sniff
+                        happens, Śāriputra, what do you think? <ref cRef="F.31.b" type="folio"/> Will they sniff
                         at its stench or not?”</p>
                     <p tid="42">“O Blessed One, certainly not!” exclaimed Śāriputra. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-003-56"/>
@@ -569,7 +573,7 @@
                     <p tid="47">“Śāriputra, monks must develop the perception of the faults of the sense
                         pleasures in the following way. Śāriputra, how should monks develop the
                         perception of the faults of the body? Śāriputra, this body is very harmful
-                        and troublesome. <ref cRef="F.32.a"/> Śāriputra, women’s bodies have
+                        and troublesome. <ref cRef="F.32.a" type="folio"/> Śāriputra, women’s bodies have
                         twenty-five more groups of parasites that are not like the ones present in
                         men’s bodies. Śāriputra, there are masses of parasites in women’s brains.
                         Known as the <emph>robbers</emph>, they eat the brains of women. Śāriputra,
@@ -601,7 +605,7 @@
                         die. Pregnancy comes about from the death, and thus the absence, of those
                         two types of parasites, in addition to the union of mother and father.
                         Śāriputra, in the birth canal inside women’s bodies, there are four hosts of
-                        parasites that are known as the <emph>great lips</emph>, <ref cRef="F.32.b"/> the <emph>lump concealers</emph>, the <emph>wind expellers</emph>, and
+                        parasites that are known as the <emph>great lips</emph>, <ref cRef="F.32.b" type="folio"/> the <emph>lump concealers</emph>, the <emph>wind expellers</emph>, and
                         the <emph>desire catchers</emph>. They incessantly eat at the bodies of
                         women. Because of this, women are completely ablaze with afflictions, yet
                         are never satisfied by indulging in their desires. Consequently, knowing
@@ -661,7 +665,7 @@
                         praised the teaching of the Blessed One.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-066-003-130"/>
-                    <trailer tid="58">This concludes the Noble Great Vehicle Sūtra “<title xml:lang="en">The Sections of Dharma</title>.” <ref cRef="F.33.a"/>
+                    <trailer tid="58">This concludes the Noble Great Vehicle Sūtra “<title xml:lang="en">The Sections of Dharma</title>.” <ref cRef="F.33.a" type="folio"/>
                     </trailer> 
                 </div>
                 <div type="colophon">
