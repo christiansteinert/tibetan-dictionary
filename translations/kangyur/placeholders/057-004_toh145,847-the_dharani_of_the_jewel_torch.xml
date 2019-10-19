@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">dkon mchog ta la la'i gzungs/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">ratnolkādhāraṇīsūtra</title>
                 <title type="mainTitle" xml:lang="en">The Dhāraṇi of the Jewel Torch</title>
@@ -20,11 +20,15 @@
                 <author role="translatorEng" ref="contributors.xml#person-14">David Jackson, Dr.</author>
                 <editor role="externalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
                 <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-262">David Higgins</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="2.e">
+
+            <publicationStmt status="2.c">
                 <idno xml:id="UT22084-057-004"/>
                 <date/>
             </publicationStmt>
@@ -32,9 +36,8 @@
                 <bibl key="toh145" type="text">
                     <ref>Toh 145</ref>
                     <biblScope>vol.57, ff.34r-82r(pp.67-163)</biblScope>
-                    <location count-pages="97">
-                        <start volume="57" page="69"/>
-                        <end volume="57" page="165"/>
+                    <location work="UT4CZ5369" count-pages="97">
+                        <volume number="57" start-page="67" end-page="163"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11734" work="W22084"/>
@@ -44,16 +47,18 @@
                     <biblScope>vol.100,ff. 3v-54v(pp.6-108)</biblScope>
                     <author role="translatorTib">t. surendrabodhi</author>
                     <author role="translatorTib">ye shes sde</author>
-                    <location count-pages="103">
-                        <start volume="100" page="8"/>
-                        <end volume="100" page="110"/>
+                    <location work="UT4CZ5369" count-pages="103">
+                        <volume number="100" start-page="6" end-page="108"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12608" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:58:00 by admin</note>
+                <note type="lastUpdated" date-time="2019-10-19T07:20:51.855Z" user="admin">19/10/2019 07:20:51</note>
+            <note type="updated" update="translation-status" value="2.d" date-time="2019-07-02T13:19:52.294Z" user="john">2.d</note>
+                <note type="updated" update="translation-status" value="2.c" date-time="2019-09-13T09:10:31.38Z" user="john">2.c</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-19T07:20:48.166Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
