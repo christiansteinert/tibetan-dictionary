@@ -9,24 +9,35 @@
                 <title type="mainTitle" xml:lang="en">The Dedication “Perfecting All Intentions”</title>
                 <title type="otherTitle" xml:lang="en">(no Sanskrit title, translated from the Chinese)</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa bsam pa thams cad yongs su rdzogs par byed pa zhes bya ba'i yongs su bsngo ba</title>
+                <author role="translatorMain" ref="contributors.xml#team-46"/>
+            <author role="translatorEng" ref="contributors.xml#person-291">Zsuzsa Majer</author>
+                <editor role="reviser" ref="contributors.xml#person-289">Nathaniel Rich</editor>
             </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-068-019"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh285" type="text">
                     <ref>Toh 285</ref>
                     <biblScope>vol.68, ff.77r-79v(pp.153-158)</biblScope>
-                    <location count-pages="6">
-                        <start volume="68" page="155"/>
-                        <end volume="68" page="160"/>
+                    <location work="UT4CZ5369" count-pages="6">
+                        <volume number="68" start-page="153" end-page="158"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11948" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 09:33:21 by admin</note>
+                <note type="lastUpdated" date-time="2019-10-21T08:07:45.993Z" user="admin">21/10/2019 08:07:45</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-21T08:07:42.385Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
