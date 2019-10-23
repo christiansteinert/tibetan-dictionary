@@ -8,7 +8,7 @@
             <title type="mainTitle" xml:lang="bo">ཆོས་ཀྱི་འཁོར་ལོའི་མདོ།</title>
             <title type="mainTitle" xml:lang="en">The Sūtra of the Wheel of Dharma</title>
             <title type="mainTitle" xml:lang="Sa-Ltn">Dharmacakrasūtra</title>
-            <title type="longTitle" xml:lang="bo"/>
+            <title type="longTitle" xml:lang="bo">ཆོས་ཀྱི་འཁོར་ལོའི་མདོ།</title>
             <title type="longTitle" xml:lang="Bo-Ltn">chos kyi ’khor lo’i mdo</title>
             <title type="longTitle" xml:lang="en"/>
             <title type="longTitle" xml:lang="Sa-Ltn"/>
@@ -19,13 +19,13 @@
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-92"/>
          </titleStmt>
          <editionStmt>
-                <edition>v 1.24 <date>2019</date>
+                <edition>v 1.24.2 <date>2019</date>
                 </edition>
             </editionStmt>
          <publicationStmt status="1">
             <publisher>
-               <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to translate
-               all of the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+               <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate
+               all the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
             <availability>
                <licence>
                   <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -41,10 +41,9 @@
          <sourceDesc>
             <bibl key="toh337" type="text">
                <ref>Toh 337</ref>
-               <biblScope>Degé Kangyur, vol. 72, folios 275.a-277.a</biblScope>
-               <location count-pages="5">
-                        <start volume="72" page="551"/>
-                        <end volume="72" page="555"/>
+               <biblScope>Degé Kangyur, vol. 72, (mdo sde, sa), folios 275.a–277.a</biblScope>
+               <location work="UT4CZ5369" count-pages="5">
+                        <volume number="72" start-page="549" end-page="553"/>
                     </location>
             <idno parent-id="O1JC114941JC14668"/>
                 <idno source-id="O1JC114941JC12017" work="W22084"/>
@@ -52,9 +51,11 @@
          
             </sourceDesc>
          <notesStmt>
-            <note type="lastUpdated" date-time="2019-06-21T14:45:21.96Z" user="admin">21/06/2019 14:45:21</note>
+            <note type="lastUpdated" date-time="2019-10-23T19:00:58.444Z" user="admin">23/10/2019 19:00:58</note>
          <note type="updated" update="text-version" value="v 1.23" date-time="2019-06-18T16:28:15.536Z" user="celso">v 1.23 2019</note>
                 <note type="updated" update="text-version" value="v 1.24" date-time="2019-06-21T14:45:18.91Z" user="celso">v 1.24 2019</note>
+<note type="updated" update="text-version" value="v 1.24.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.24.2" date-time="2019-10-23T19:00:55.688Z" user="celso">Updated biblScope to be consistent with other texts</note>
             </notesStmt>
       </fileDesc>
    </teiHeader>
@@ -196,7 +197,7 @@
             <div type="section">
                <milestone unit="chunk" xml:id="UT22084-072-037-9"/>
                <p tid="14">
-                  <ref cRef="F.275.a"/> Homage to the Omniscient One!</p>
+                  <ref cRef="F.275.a" type="folio"/> Homage to the Omniscient One!</p>
                <lb/>
                <milestone unit="chunk" xml:id="UT22084-072-037-78"/>
                <p tid="16">Thus did I hear at one time. The Blessed One, the Buddha, was residing in the Deer Park at Ṛṣivadana by
@@ -213,7 +214,7 @@
                      the case with the Sanskrit of the <title xml:lang="Sa-Ltn">Lalita­vistara­sūtra</title> (Lefmann, p. 417) and
                      the Pali <title xml:lang="Pi-Ltn">Dhamma­cakkappavattana­sutta</title> (Saṃyutta Nikāya, 56.11; see also Anderson
                      1999, p. 18). </note> focused my mind correctly on the things<note place="end" index="14" xml:id="UT22084-072-037-97">Here “things” translates the Sanskrit <foreign type="term" xml:lang="Bo-Ltn">dharma</foreign> (Pali: <foreign type="term" xml:lang="Pi-Ltn">dhamma</foreign>, Tibetan: <foreign type="term" xml:lang="Bo-Ltn">chos</foreign>). The commentaries suggest that <foreign type="term" xml:lang="Sa-Ltn">dharma</foreign> is used here in the sense of “truth.” For example, the <title xml:lang="Pi-Ltn">Puggala­paññattipa­karaṇa-mūlaṭīkā</title> says: <foreign type="quote" xml:lang="Pi-Ltn">ananussutesu dhammesūti ca ananussutesu saccesūti attho</foreign>.
-                     http://www.tipitaka.org/romn/cscd/abh03t.tik1.xml).</note> that I had not hitherto heard, <ref cRef="F.275.b"/> thinking, ‘This is suffering, a truth of noble beings,’ vision arose; knowledge, apprehension, understanding,
+                     http://www.tipitaka.org/romn/cscd/abh03t.tik1.xml).</note> that I had not hitherto heard, <ref cRef="F.275.b" type="folio"/> thinking, ‘This is suffering, a truth of noble beings,’ vision arose; knowledge, apprehension, understanding,
                   and realization<note place="end" index="15" xml:id="UT22084-072-037-98">The <title xml:lang="Sa-Ltn">Saṅgha­bheda­vastu</title> does not include “realization” (Tibetan: <foreign type="term" xml:lang="Bo-Ltn">rtogs pa</foreign>) in this or the following several repetitions of this phrase. Instead
                      the list only includes “knowledge (<foreign type="term" xml:lang="Sa-Ltn">jñāna</foreign>), apprehension
                         (<foreign type="term" xml:lang="Sa-Ltn">vidyā</foreign>), and understanding (<foreign type="term" xml:lang="Sa-Ltn">buddhi</foreign>)” (Gnoli 1977, p. 135). </note> arose.</p>
@@ -250,7 +251,7 @@
                   apprehension, understanding, and realization arose. </p>
                <milestone unit="chunk" xml:id="UT22084-072-037-82"/>
                <p tid="24">“Monks, as I focused my mind correctly on the things that I had not hitherto heard, thinking, ‘With
-                  higher knowledge I have relinquished the origin of suffering, that truth of noble beings,’ <ref cRef="F.276.a"/>
+                  higher knowledge I have relinquished the origin of suffering, that truth of noble beings,’ <ref cRef="F.276.a" type="folio"/>
                   vision arose; knowledge, apprehension, understanding, and realization arose. </p>
                <milestone unit="chunk" xml:id="UT22084-072-037-14"/>
                <p tid="25">“Monks, as I focused my mind correctly on the things that I had not hitherto heard, thinking, ‘With
@@ -281,7 +282,7 @@
                <p tid="28">“Monks, once I had achieved the vision, knowledge, apprehension, understanding, and realization of
                   turning these four truths of noble beings in three phases with twelve aspects, I was freed from the world
                   replete with gods, māras, Brahmā, mendicants, brahmins, humans, and gods. I had escaped from it, severed ties
-                  with it, and been delivered from it. I dwelled extensively with a mind free from error. <ref cRef="F.276.b"/>
+                  with it, and been delivered from it. I dwelled extensively with a mind free from error. <ref cRef="F.276.b" type="folio"/>
                   Monks, I then had the knowledge that I had fully awakened to unsurpassed and perfect buddhahood.”<note place="end" index="20" xml:id="UT22084-072-037-103"> At this point, the corresponding passage in the <title xml:lang="Sa-Ltn">Lalita­vistara­sūtra</title> ends (Lefmann, p. 418).</note>
                </p>
                <lb/>
@@ -310,7 +311,7 @@
                   very time—the news passed to the celestial yakṣas, as well as to the gods in the Heaven of the Four Great Kings,
                   the Heaven of the Thirty-Three, the Heaven Free from Strife, the Heaven of Joy, the Heaven of Delighting in
                   Emanations, the Heaven of Making Use of Others’ Emanations, and all the way to the Brahmā realm. Thus, also the
-                  gods in the Brahmā realm announced, “Friends, in the Deer Park at Ṛṣivadana by Vārāṇasī, <ref cRef="F.277.a"/>
+                  gods in the Brahmā realm announced, “Friends, in the Deer Park at Ṛṣivadana by Vārāṇasī, <ref cRef="F.277.a" type="folio"/>
                   the Blessed One has turned the wheel of Dharma in three phases with twelve aspects. He has turned the wheel of
                   Dharma in a way that no mendicant or brahmin, and no god, māra, or Brahmā in the world could ever do in accord
                   with the Dharma. He has done so for the benefit of many beings, for the happiness of many beings, out of love
@@ -324,7 +325,8 @@
                      61b.3) end at this point.</note>
                </p>
                <lb/>
-               <p tid="38">This completes <title xml:lang="en">The Sūtra of the Wheel of Dharma</title>.</p>
+                    <milestone unit="chunk" xml:id="UT22084-072-037-22"/>
+               <trailer tid="38">This completes “<title xml:lang="en">The Sūtra of the Wheel of Dharma</title>.”</trailer>
             </div>
          </div>
       </body>
