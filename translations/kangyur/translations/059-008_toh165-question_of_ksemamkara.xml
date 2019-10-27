@@ -29,7 +29,7 @@
                 <author role="translatorEng" ref="contributors.xml#person-55">Ven. Ani Jinpa (Eugenie De Jong)</author>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.1.2 <date>2019</date>
+                <edition>v 1.2.1 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -64,7 +64,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-10-17T14:07:30.578Z" user="admin">17/10/2019 14:07:30</note>
+                <note type="lastUpdated" date-time="2019-10-27T23:32:57.598Z" user="admin">27/10/2019 23:32:57</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-03-13T17:52:31.555Z" user="andre">v 1.00 2018</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-03-13T18:46:37.719Z" user="andre">v 1.00 2018</note>
                 <note type="updated" update="text-version" value="v 1.00" date-time="2019-04-11T17:35:24.187Z" user="andre">v 1.00 2018</note>
@@ -82,6 +82,7 @@
 <note type="updated" update="text-version" value="v 1.1.1" date-time="2019-10-16T15:19:01.977Z" user="john">v 1.1.1</note>
 <note type="updated" update="translation-status" value="1" date-time="2019-10-16T15:19:01.977Z" user="john">1</note>
 <note type="updated" update="text-version" value="v 1.1.2" date-time="2019-10-17T14:07:27.872Z" user="celso">Added soft-hyphens to Skt.</note>
+<note type="updated" update="text-version" value="v 1.2.1" date-time="2019-10-27T23:32:54.802Z" user="john">Corrected some translation problems esp in 1.14.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -115,13 +116,15 @@
                     <p tid="9">The setting of this short sūtra, <title xml:lang="en">The Question
                             of Kṣemaṅkara</title>, is Nyagrodha Park near Kapilavastu, the city
                         in the ancient Śākya kingdom that contained the family home where Prince
-                        Siddhārtha grew up. It is assumed to be some ten kilometers to the west of
-                        his birthplace, Lumbini, in present-day Nepal. The sūtra describes a
-                        conversation between Buddha Śākyamuni and the Śākya youth Kṣemaṅkara, who
-                        asks the Buddha a lengthy question about the qualities good bodhisattvas
-                        should have and how to develop such qualities. </p>
+                        Siddhārtha grew up. Kapilavastu is assumed to be some ten kilometers to the west of
+                        his birthplace, Lumbini, which is in present-day Nepal, but it is not certain which 
+                        of two possible sites today might be its exact location. 
+                    </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-5"/>
-                    <p tid="10">The Buddha’s response unfolds as a teaching on how to practice the
+                    <p tid="10">The sūtra describes a conversation between Buddha Śākyamuni 
+                        and the Śākya youth Kṣemaṅkara, who asks the Buddha a lengthy question about 
+                        the qualities good bodhisattvas should have and how to develop such qualities. 
+                        The Buddha’s response unfolds as a teaching on how to practice the
                         bodhisattva path—an uncomplicated instruction given to a layperson. The
                         teaching is without the specialized vocabulary of Buddhist philosophy and
                         does not place strong emphasis on monastic discipline, although it does
@@ -164,7 +167,7 @@
                         century, a dating that is also attested by the text’s inclusion in the
                         early ninth century Denkarma (<title xml:lang="Bo-Ltn">ldan dkar ma</title>)
                             catalog.<note place="end" index="1" xml:id="UT22084-059-008-10"> The
-                            Denkarma catalog is dated to ca. 812 <hi rend="small-caps">ce</hi>. In
+                            Denkarma catalog is usually dated to ca. 812 <hi rend="small-caps">ce</hi>. In
                             this catalog, <title xml:lang="en">The Question of Kṣemaṅkara</title>
                             is included among the “Miscellaneous Sūtras” (<foreign xml:lang="Bo-Ltn">mdo sde sna tshogs</foreign>), which are fewer than one hundred
                             ślokas long. See Denkarma, folio 299.b.4; also Herrmann-Pfandt 2008, p. 115, n. 217.</note>
@@ -189,21 +192,24 @@
                             youth<note place="end" index="2" xml:id="UT22084-059-008-15">
                             <foreign xml:lang="Bo-Ltn" type="term">gzhon nu</foreign> is missing
                             from Yongle, Lithang, Kangxi, Narthang, Choné, and Lhasa. Only Stok and
-                            Degé have it.</note> named Kṣemaṅkara departed the city of Kapilavastu
+                            Degé have it.</note> named Kṣemaṅkara set out from the city of Kapilavastu
                         for Nyagrodha Park, where the Blessed One was staying. As soon as he
                         arrived there, he touched his head to the feet of the Blessed One and sat
-                        down to one side. With folded palms the Śākya youth Kṣemaṅkara bowed down to
-                        the Blessed One and asked him, “Blessed One, what qualities should
+                        down to one side. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-008-98"/>
+                    <p tid="0">With folded palms the Śākya youth Kṣemaṅkara bowed down to
+                        the Blessed One and asked him, “Blessed One, what attributes should
                         bodhisattvas possess in order to progress irreversibly toward unsurpassed and perfect
                         awakening, so that even with just a little effort they will obtain the
                         thirty-two marks of a great being, proceed from buddha realm to buddha
                         realm, pass away free from delusion, possess the five types of
                         superknowledge as soon as they are born, discard all unfree states, obtain
-                        leisure and advantages, gain retention, possess unobstructed eloquence, <ref cRef="F.168.a" type="folio"/> possess the quality of not regressing, gain interest in
+                        leisure and advantages, gain retention, possess unobstructed 
+                        eloquence, <ref cRef="F.168.a" type="folio"/> possess the quality of not regressing, gain interest in
                         emptiness, always delight in going forth, and always delight in pure
                         conduct, even when staying in a household?”</p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-16"/>
-                    <p tid="23">Upon being asked this question, the Blessed One replied to the
+                    <p tid="23">In answer to this question, the Blessed One replied to the
                         young Śākya Kṣemaṅkara, “Noble son, you have asked the Thus-Gone
                         One about this topic for the sake of benefiting and bringing happiness to a
                         multitude of beings, out of love for the world, for the welfare of numerous
@@ -213,14 +219,14 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-96"/>
                     <p tid="23">“Bodhisattvas who possess four
-                        qualities will attain the qualities you describe. What are those four qualities? Noble
+                        attributes will attain the qualities you have described. What are those four attributes? Noble
                         son, they are as follows: bodhisattvas who possess the strength of patience and practice patience
                         (1) do not retaliate though others revile them, (2) do not strike back
                         though others beat them, (3) do not quarrel though others quarrel with them,
                         and (4) do not get angry though others are hostile to them. Noble son,
-                        bodhisattvas who possess those four qualities will progress irreversibly toward
+                        bodhisattvas who possess those four attributes will progress irreversibly toward
                         unsurpassed and perfect awakening and will obtain the perfect qualities you
-                        described.” </p>
+                        have described.” </p>
                     <milestone unit="chunk" xml:id="UT22084-059-008-17"/>
                     <p tid="24">When the Blissful One had said this, the Teacher also spoke these
                         words: </p>
@@ -289,23 +295,24 @@
                         <l>Then supreme awakening will be easy. </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-008-29"/>
-                    <p tid="33">“Noble son, bodhisattvas who possess four additional qualities will
+                    <p tid="33">“Noble son, bodhisattvas who possess four additional attributes will
                         progress irreversibly toward unsurpassed and perfect awakening, and they will achieve
-                        the perfect qualities as described. What are those four qualities? Noble son, they are
+                        the perfect qualities you have described. What are those four attributes? Noble son, they are
                         (1) pursuing the Dharma, yearning for the Dharma, and rejoicing, delighting
-                        in, and being inspired by the Dharma, as well as retaining and teaching on the illusory character of phenomena; (2) renouncing women and not indulging in women; (3) rejoicing in
-                        benefactors and those who share and give, as well as renouncing dullness and
-                            sleep;<note place="end" index="6" xml:id="UT22084-059-008-30">
+                        in, and being inspired by the Dharma, as well as holding the Dharma and teaching the Dharma; 
+                        (2) renouncing women and not indulging in women; (3) rejoicing in
+                        benefactors, in their giving nature, and in their giving,<note place="end" index="6" xml:id="UT22084-059-008-30">
                             Translated based on Stok: <foreign xml:lang="Bo-Ltn" type="quote">sbyin
                                 pa’i bdag po dang / kun ’gyed pa’i ngang tshul can dang / kun ’gyed
-                                pa la dga’ ba dang / rmugs pa / gnyid yongs su spong ba
-                                yin</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="quote">sbyin
-                                pa’i bdag po dang / kun bged pa’i ngang tshul can dang / kun bged pa
-                                la dga’ ba dang / rmugs pa dang / gnyid yongs su spong ba
-                                yin</foreign>.</note> and (4) feeling inspired by emptiness and
+                                pa la dga’ ba</foreign>. Degé and other Kangyurs have <foreign xml:lang="Bo-Ltn" type="term">kun bged pa</foreign> 
+                                instead of <foreign xml:lang="Bo-Ltn" type="term">kun ’gyed pa</foreign> in both instances.
+                                Although <foreign xml:lang="Bo-Ltn" type="term">bged pa</foreign> occurs quite commonly 
+                                in the  Kangyur and must have a similar meaning, it does not seem to be found in 
+                                any dictionaries.</note> as well as renouncing dullness and
+                            sleep; and (4) feeling inspired by emptiness and
                         abiding in emptiness. Noble son, bodhisattvas who possess those four
-                        qualities will progress irreversibly toward unsurpassed and perfect awakening and they
-                        will achieve the qualities you described.” <ref cRef="F.169.a" type="folio"/>
+                        attributes will progress irreversibly toward unsurpassed and perfect awakening and they
+                        will achieve the qualities you have described.” <ref cRef="F.169.a" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-059-008-31"/>
