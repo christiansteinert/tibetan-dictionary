@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">chos dang don rnam par ’byed pa/</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos dang don rnam par ’byed pa</title>
                 <title type="mainTitle" xml:lang="bo">ཆོས་དང་དོན་རྣམ་པར་འབྱེད་པ།</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Dharmārtha­vibhaṅga</title>
                 <title type="mainTitle" xml:lang="en">Distinguishing Phenomena and What Is Meaningful</title>
@@ -29,13 +29,13 @@
                 <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.0 <date>2019</date>
+                <edition>v 1.0.2 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -59,16 +59,15 @@
                     <author role="translatorTib">Jinamitra </author>
                     <author role="translatorTib">Danaśila</author>
                     <author role="translatorTib">Yeshé Dé</author>
-                    <location count-pages="8">
-                        <start volume="66" page="86"/>
-                        <end volume="66" page="93"/>
+                    <location work="UT4CZ5369" count-pages="8">
+                        <volume number="66" start-page="84" end-page="91"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11898" work="W22084"/>
                 </bibl>
             </sourceDesc>
            <notesStmt>
-               <note type="lastUpdated" date-time="2019-08-02T20:08:56.417Z" user="admin">02/08/2019 20:08:56</note>
+               <note type="lastUpdated" date-time="2019-10-27T20:52:17.799Z" user="admin">27/10/2019 20:52:17</note>
             <note type="updated" update="text-version" value="v 1.01" date-time="2019-03-08T19:52:46.864Z" user="celso">v 1.01 2019</note>
             <note type="updated" update="text-version" value="v 1.02" date-time="2019-04-23T11:00:51.822Z" user="mike">v 1.02 2019</note>
                 <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:23:28.588Z" user="mike">2</note>
@@ -77,6 +76,8 @@
                 <note type="updated" update="text-version" value="v 0.91" date-time="2019-07-23T18:13:26.377Z" user="john">v 0.91 2019</note>
                 <note type="updated" update="text-version" value="v 1.0" date-time="2019-08-02T20:08:50.415Z" user="john">v 1.0 2019</note>
                 <note type="updated" update="translation-status" value="1" date-time="2019-08-02T20:08:50.415Z" user="john">1</note>
+<note type="updated" update="text-version" value="v 1.0.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.0.2" date-time="2019-10-27T20:52:14.964Z" user="celso">Removed slash from wylie title</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -215,7 +216,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-066-005-16"/>
                     <p tid="17">
-                        <ref cRef="F.42.b"/> Homage to all buddhas and bodhisattvas!</p>
+                        <ref cRef="F.42.b" type="folio"/> Homage to all buddhas and bodhisattvas!</p>
                 <lb/>
                     
                   
@@ -226,7 +227,7 @@
                         saṅgha of monks, as well as a great saṅgha of bodhisattvas.</p>
                     <milestone unit="chunk" xml:id="UT22084-066-005-102"/>
                     <p tid="19">At that time, the Blessed One recounted the following to the bodhisattva great being
-                       <ref cRef="F.43.a"/> Delighted by Victory:</p>
+                       <ref cRef="F.43.a" type="folio"/> Delighted by Victory:</p>
                         <lb/>
                         <milestone unit="chunk" xml:id="UT22084-066-005-93"/>
                         <p tid="19">“Noble son, at a past time countless, limitless, immeasurably many eons 
@@ -250,7 +251,7 @@
                         the finest, and the highest vehicle. The vehicle they had entered was higher
                         than the highest: the unsurpassed vehicle. They had entered the unequaled
                         vehicle. They had entered the matchless vehicle. They had entered the
-                        inconceivable vehicle. They had entered the unfathomable vehicle. <ref cRef="F.43.b"/>
+                        inconceivable vehicle. They had entered the unfathomable vehicle. <ref cRef="F.43.b" type="folio"/>
                         Noble son, under the rule of that king Attainment of Victory, vehicles other
                         than the Great Vehicle were unheard of. </p>
                     <milestone unit="chunk" xml:id="UT22084-066-005-21"/>
@@ -292,7 +293,7 @@
                     <lg tid="25">
                         <l>“ ‘He is a protector liberating those who have not been liberated.</l>
                     <l>He grants eyesight to the blind. </l>
-                    <l>He is heroic and courageous with regard to the Dharma. <ref cRef="F.44.a"/>
+                    <l>He is heroic and courageous with regard to the Dharma. <ref cRef="F.44.a" type="folio"/>
                         </l>
                     <l>He is as unwavering as a great mountain.’ </l>
                     </lg>
@@ -351,7 +352,7 @@
                         <milestone unit="chunk" xml:id="UT22084-066-005-95"/>
                     <p tid="35">“ ‘Great King, although the five
                         aggregates are insubstantial, childish ordinary beings think of them as
-                        being substantial. <ref cRef="F.44.b"/> Great King, the aggregates look awful; 
+                        being substantial. <ref cRef="F.44.b" type="folio"/> Great King, the aggregates look awful; 
                         they smell terrible; they ooze pus and blood; they are like wood, clods of dirt, or roads; 
                         and they are insubstantial, inert, and interlinked with joy and sorrow. They are linked to
                         each other by chains of craving, are full of affliction, and are vile.
@@ -381,7 +382,7 @@
                         mistaken, the blind, and the confused. They have fallen into bewilderment.
                         They are completely enveloped in darkness, obscurity, and veils. They are
                         lost in the dense thicket of all their wrong views. Blessed One, these four
-                        collections of the Dharma are all profound; they are like space. <ref cRef="F.45.a"/>
+                        collections of the Dharma are all profound; they are like space. <ref cRef="F.45.a" type="folio"/>
                         Blessed One, will any beings ever come to understand
                         correctly the statements that are spoken in discourses such as this?’ </p>
                     
@@ -410,7 +411,7 @@
                         pass into parinirvāṇa, the young prince Ratnākara will become a buddha. He
                         will be seated in front of the tree of awakening, which will be bedecked
                         with various precious stones. When he attains awakening, he will become a
-                        thus-gone, worthy, perfect buddha. <ref cRef="F.45.b"/> He will be someone learned and
+                        thus-gone, worthy, perfect buddha. <ref cRef="F.45.b" type="folio"/> He will be someone learned and
                         virtuous, a blissful one, a knower of the world, a charioteer who guides
                         beings, an unsurpassed being, a teacher of gods and humans, a blessed
                         buddha known as Splendorous King of Shining Light. His world will be known
@@ -435,7 +436,7 @@
                     <p tid="42">The bodhisattva great being Delighted by Victory, who was among the
                         retinue, now joined his palms and asked the Blessed One, “Blessed One,
                         will beings who have not produced roots of virtue ever even hear this
-                        Dharma teaching, <ref cRef="F.46.a"/> let alone commit it to
+                        Dharma teaching, <ref cRef="F.46.a" type="folio"/> let alone commit it to
                         writing, commission it to be written, retain it, recite it, or
                         offer flowers, incense, and incense powder to it?” </p>
                     <milestone unit="chunk" xml:id="UT22084-066-005-46"/>
