@@ -4,7 +4,7 @@
  <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">chos bzhi bstan pa’i mdo/</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos bzhi bstan pa’i mdo</title>
                 <title type="mainTitle" xml:lang="bo">ཆོས་བཞི་བསྟན་པའི་མདོ།</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Catur­dharma­nirdeśa­sūtra</title>
                 <title type="mainTitle" xml:lang="en">The Sūtra Teaching the Four Factors</title>
@@ -24,13 +24,13 @@
                 <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.05 <date>2019</date>
+                <edition>v 1.5.2 <date>2019</date>
                 </edition>
             </editionStmt>
            <publicationStmt status="1">
                <publisher>
                    <name>84000: Translating the Words of the Buddha</name> is a global
-                       non-profit initiative that aims to translate all the Buddha’s words
+                       non-profit initiative to translate all the Buddha’s words
                        into modern languages, and to make them available to everyone.</publisher>
                <availability>
                    <licence>
@@ -52,18 +52,19 @@
                     <biblScope>Degé Kangyur, vol.66 (mdo sde, za), folios 59.a–59.b</biblScope>
                     <author role="translatorTib">Surendrabodhi</author>
                     <author role="translatorTib">Yeshé Dé</author>
-                    <location count-pages="2">
-                        <start volume="66" page="119"/>
-                        <end volume="66" page="120"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="66" start-page="117" end-page="118"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11901" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:40:04.275Z" user="admin">21/06/2019 14:40:04</note>
+                <note type="lastUpdated" date-time="2019-10-27T20:53:14.32Z" user="admin">27/10/2019 20:53:14</note>
             <note type="updated" update="text-version" value="v 1.04" date-time="2019-04-29T12:23:27.57Z" user="mike">v 1.04 2019</note>
                 <note type="updated" update="text-version" value="v 1.05" date-time="2019-06-21T14:40:01.226Z" user="celso">v 1.05 2019</note>
+<note type="updated" update="text-version" value="v 1.5.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.5.2" date-time="2019-10-27T20:53:11.596Z" user="celso">Removed slash from wylie title</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -115,13 +116,13 @@
                 <div type="section">
                    <milestone unit="chunk" xml:id="UT22084-066-007-16"/>
                     <p tid="9">
-                        <ref cRef="F.59.a"/> Homage to all the buddhas and bodhisattvas!</p>
+                        <ref cRef="F.59.a" type="folio"/> Homage to all the buddhas and bodhisattvas!</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-066-007-55"/>
                     <p tid="10">Thus did I hear at one time. The Blessed One was dwelling in the Sudharmā assembly hall in the Heaven of the Thirty-Three, together with a great gathering of five hundred monks,<note place="end" xml:id="UT22084-066-007-17" index="8"> The Potala Sanskrit edition (Tseng 2010, vol. 1, 397) reads “one thousand two hundred and fifty monks” (<foreign xml:lang="Sa-Ltn" type="term">ardha­trayoda­śabhir bhikṣuśatair</foreign>).</note> and very many bodhisattva mahāsattvas, including Maitreya and Mañjuśrī. 
                  </p>
                     <milestone unit="chunk" xml:id="UT22084-066-007-18"/>
-                    <p tid="11">At that time the Blessed One said to the bodhisattva mahāsattva Maitreya, <ref cRef="F.59.b"/> “O Maitreya, bodhisattva mahāsattva, if you possess four factors, the misdeeds you have committed and accumulated will be overcome. 
+                    <p tid="11">At that time the Blessed One said to the bodhisattva mahāsattva Maitreya, <ref cRef="F.59.b" type="folio"/> “O Maitreya, bodhisattva mahāsattva, if you possess four factors, the misdeeds you have committed and accumulated will be overcome. 
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-066-007-19"/>
                     <p tid="12">“What are these four? The action of repentance, antidotal action, the power of restraint, and the power of support.
@@ -144,8 +145,8 @@
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-066-007-23"/>
-                    <p tid="19">This concludes the noble Mahāyāna sūtra entitled <title xml:lang="en">Teaching the Four Factors</title>. 
-                    </p>
+                    <trailer tid="19">This concludes the noble Mahāyāna sūtra entitled “<title xml:lang="en">Teaching the Four Factors</title>.” 
+                    </trailer>
                 </div>
                <div type="colophon">
                 <head type="colophon" tid="27">Colophon</head>
