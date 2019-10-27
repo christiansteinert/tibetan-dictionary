@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">chos dbyings rang bzhin dbyer med bstan pa’i mdo/</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos dbyings rang bzhin dbyer med bstan pa’i mdo</title>
                 <title type="mainTitle" xml:lang="bo">ཆོས་ཀྱི་དབྱིངས་ཀྱི་རང་བཞིན་དབྱེར་མེད་པ་བསྟན་པ།</title>
                 <title type="mainTitle" xml:lang="en">The Teaching on the Indivisible Nature of the Realm of Phenomena</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Dharmadhātu­prakṛtyasambheda­nirdeśa</title>
@@ -30,13 +30,12 @@
                 <consultant role="advisor" ref="contributors.xml#person-230">Tom Tillemans</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.13 <date>2019</date>
+                <edition>v 1.13.2 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -56,18 +55,19 @@
                     <author role="translatorTib">Jinamitra</author>
                     <author role="translatorTib">Surendrabodhi</author>
                     <author role="translatorTib">Yeshé Dé</author>
-                    <location count-pages="47">
-                        <start volume="40" page="282"/>
-                        <end volume="40" page="329"/>
+                    <location work="UT4CZ5369" count-pages="47">
+                        <volume number="40" start-page="280" end-page="327"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11581" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:19:42.503Z" user="admin">21/06/2019 14:19:42</note>
+                <note type="lastUpdated" date-time="2019-10-27T20:34:48.154Z" user="admin">27/10/2019 20:34:48</note>
             <note type="updated" update="text-version" value="v 1.12" date-time="2019-06-18T15:51:36.376Z" user="celso">v 1.12 2019</note>
                 <note type="updated" update="text-version" value="v 1.13" date-time="2019-06-21T14:19:39.547Z" user="celso">v 1.13 2019</note>
+<note type="updated" update="text-version" value="v 1.13.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.13.2" date-time="2019-10-27T20:34:43.769Z" user="celso">Removed slash from wylie title</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -206,7 +206,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-040-003-10"/>
                     <p tid="10">
-                        <ref cRef="F.140.b"/>
+                        <ref cRef="F.140.b" type="folio"/>
                         <ref cRef="B1" type="bampo"/> Homage to all buddhas and bodhisattvas!</p>
                     <lb/>
                     <p tid="11">Thus did I hear at one time. The Blessed One was in the Jeta Grove, in Anāthapiṇḍada’s park at
@@ -235,7 +235,7 @@
                         have already achieved fruition will gain further distinction. In this way the lineage of the Buddha,
                         Dharma, and Saṅgha will continue unbroken so that numerous beings will arouse the mind set on awakening.
                         The awakening that the Thus-Gone One has gained over incalculable eons will long remain and expand.
-                        Whether the Thus-Gone One remains or passes entirely into nirvāṇa, the teaching of the Dharma <ref cRef="F.141.a"/> will cause those who hear it to pass quickly beyond suffering by means of whichever
+                        Whether the Thus-Gone One remains or passes entirely into nirvāṇa, the teaching of the Dharma <ref cRef="F.141.a" type="folio"/> will cause those who hear it to pass quickly beyond suffering by means of whichever
                         vehicle may inspire them. Would it not be wonderful were youthful Mañjuśrī to deliver such a
                         teaching!”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-13"/>
@@ -263,7 +263,7 @@
                         afflicted, or purified?”</p>
                     <p tid="20">Mañjuśrī replied, “Venerable Śāradvatīputra, childish and ordinary beings are stricken by the
                         errors of the view of the transitory collection. In those who persist in the belief in ‘I’ and ‘mine’
-                        there arises the conception of self and other. <ref cRef="F.141.b"/> In those who conceive of self and
+                        there arises the conception of self and other. <ref cRef="F.141.b" type="folio"/> In those who conceive of self and
                         other there arise a virtuous and unvirtuous mind and the mental states that arise from it; that mind and
                         the factors arising from it then condition the formation of virtuous and unvirtuous actions, and for them,
                         that cause and those conditions bring about their particular forms of ripening according to their
@@ -298,7 +298,7 @@
                     <p tid="27">“Mañjuśrī, the Thus-Gone One has trained many hearers, and so their minds are liberated from
                         defilement with no further appropriation.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-28"/>
-                    <p tid="28">“Venerable Śāradvatīputra, are you one of the Thus-Gone One’s hearers?” <ref cRef="F.142.a"/>
+                    <p tid="28">“Venerable Śāradvatīputra, are you one of the Thus-Gone One’s hearers?” <ref cRef="F.142.a" type="folio"/>
                     </p>
                     <p tid="29">“I am, Mañjuśrī. I am one among the Thus-Gone One’s hearers.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-30"/>
@@ -330,7 +330,7 @@
                     <p tid="40">Mañjuśrī answered, “Venerable Śāradvatīputra, if there were a mind to be observed inside, outside,
                         or in between, then there could also be a liberated mind. However, venerable Śāradvatīputra, there is no
                         mind to be observed inside, outside, or in between, and therefore there is no bondage or liberation
-                        whatsoever.” <ref cRef="F.142.b"/>
+                        whatsoever.” <ref cRef="F.142.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-040-003-41"/>
@@ -358,7 +358,7 @@
                     <p tid="47">The monks replied, “Venerable one, youthful Mañjuśrī declared that nobody ever achieves anything,
                         and that there is no such thing as gaining realization and liberation. At that point we thought, if nobody
                         ever gains any attainment, realization, or liberation, then what purpose would there be in our going
-                        forth, and why should we have taken vows to become monks? <ref cRef="F.143.a"/> Why should we observe
+                        forth, and why should we have taken vows to become monks? <ref cRef="F.143.a" type="folio"/> Why should we observe
                         celibacy? If there were no such thing as deliverance at all, what purpose would it serve to train on the
                         path? It was with these thoughts in mind that we left the gathering.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-48"/>
@@ -384,7 +384,7 @@
                     <p tid="54">“No, it is none of these,” said the monks.</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-54"/>
                     <p tid="55">So the emanation continued, “If the mind has no form, cannot be shown, has no appearance, is
-                        unimpeded, <ref cRef="F.143.b"/> without dwelling, and imperceptible, if it is not to be observed inside,
+                        unimpeded, <ref cRef="F.143.b" type="folio"/> without dwelling, and imperceptible, if it is not to be observed inside,
                         nor outside, nor in between, do you think it is real and established?”</p>
                     <p tid="56">“No, it is not,” answered the monks.</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-56"/>
@@ -408,7 +408,7 @@
                         anything; there is no realization and no liberation.’ ”</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-040-003-60"/>
-                    <p tid="61">When the emanated monk had given them this teaching <ref cRef="F.144.a"/> the minds of the monks,
+                    <p tid="61">When the emanated monk had given them this teaching <ref cRef="F.144.a" type="folio"/> the minds of the monks,
                         with no further appropriation, were liberated from defilement. With their minds liberated, they now
                         returned to youthful Mañjuśrī. Covering themselves with their upper robes, they addressed him as follows:
                         “Mañjuśrī, you have protected us! We have avoided giving up the Dharma and henceforth we will never
@@ -429,7 +429,7 @@
                     <p tid="66">“Venerable ones,” asked venerable Subhūti, “who has trained you?”</p>
                     <p tid="67">“Eminent Subhūti,” they replied, “we have been trained by him who has no attainment or
                         realization, for whom there is no birth and no passing beyond suffering, and who is neither composed nor
-                        distracted.” <ref cRef="F.144.b"/>
+                        distracted.” <ref cRef="F.144.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-67"/>
                     <p tid="68">“How,” Subhūti asked, “did you get trained?”</p>
@@ -459,7 +459,7 @@
                     <p tid="78"> “Mañjuśrī,” said venerable Ānanda, “how can monks who have no such interest be seen to have
                         excessive pride?”</p>
                     <p tid="79">Mañjuśrī replied, “Venerable Ānanda, monks who conceitedly consider themselves pure because of
-                        their pure aggregate of discipline <ref cRef="F.145.a"/> are excessively proud. Those who conceitedly
+                        their pure aggregate of discipline <ref cRef="F.145.a" type="folio"/> are excessively proud. Those who conceitedly
                         think of themselves as pure because they have pure aggregates of absorption, insight, liberation, and
                         liberated wisdom vision—such individuals should be seen as excessively proud. Thinking, ‘I have gained the
                         attainments and achieved direct perception,’ they pride themselves on those achievements. Such thoughts
@@ -484,7 +484,7 @@
                     <p tid="82">“Venerable Ānanda, some monks are frightened by desire, anger, and delusion and relish the taste
                         of the three gateways of liberation. Some are frightened by the four errors and hence relish the taste of
                         the four perceptions. Some are frightened by the five obscurations and so relish the taste of the five
-                        faculties. <ref cRef="F.145.b"/> Some are frightened by the six sense sources and instead relish the six
+                        faculties. <ref cRef="F.145.b" type="folio"/> Some are frightened by the six sense sources and instead relish the six
                         super-knowledges. Some are frightened by the seven bases of consciousness and instead relish the taste of
                         the seven branches of awakening. Some are frightened by the eight flaws and hence relish the taste of the
                         eight-fold path of the noble ones. Some are frightened by the nine conditioned entities<note place="end" index="10" xml:id="UT22084-040-003-301"> This may refer to the nine realms of existence within
@@ -509,7 +509,7 @@
                     <p tid="85">Mañjuśrī replied, “Venerable Ānanda, a monk who, because he himself is at peace within, sees all
                         outer objects as at peace—such a monk has no conceited ideas about ‘the same’ or ‘not the same,’
                         ‘knowledge’ or ‘ignorance,’ ‘perception’ or ‘non-perception,’ ‘the conditioned’ or ‘the unconditioned.’
-                            <ref cRef="F.146.a"/> He does not think, does not conceive, does not divide things in two, does not
+                            <ref cRef="F.146.a" type="folio"/> He does not think, does not conceive, does not divide things in two, does not
                         unite them in one, does not accept, does not reject, does not scatter, and does not cling. He truly
                         observes that while all phenomena are the same as the limit of reality, they are the same through a
                         sameness that is beyond being the same or being not the same, and as there is nothing whatsoever to be
@@ -528,7 +528,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-86"/>
                     <p tid="87"> “When he understands the sameness of all phenomena by means of the sameness of the element of
                         space, he will not superimpose on any phenomena that they are ‘virtuous’ or ‘unvirtuous,’ ‘evil’ or
-                        ‘good,’ ‘defiled’ or ‘undefiled,’ ‘mundane’ or ‘supramundane,’ <ref cRef="F.146.b"/> ‘conditioned’ or
+                        ‘good,’ ‘defiled’ or ‘undefiled,’ ‘mundane’ or ‘supramundane,’ <ref cRef="F.146.b" type="folio"/> ‘conditioned’ or
                         ‘unconditioned.’ While not making such superimpositions, he will also not develop conceit about them, will
                         not think them, and will not conceive of them, for he does not truly observe them. Without superimposing
                         anything on phenomena, he understands that they are all the same in their very sameness, the very same
@@ -550,7 +550,7 @@
                         beings, and upholding the sacred Dharma. Thus their omniscient mind expresses itself to other sentient
                         beings and to other persons while they understand that that mind, too, has the essential nature of the
                         limit of reality. When asked, they reply that through the essential nature of their mind they understand
-                        the essential nature of all beings. Through the essential nature of all beings, <ref cRef="F.147.a"/> they
+                        the essential nature of all beings. Through the essential nature of all beings, <ref cRef="F.147.a" type="folio"/> they
                         understand the essential nature of all phenomena. Through the essential nature of all phenomena, they
                         understand the essential nature of all roots of virtue. Through the essential nature of all roots of
                         virtue, they reveal the essential nature of a bodhisattva. This, divine being, is the bodhisattvas’
@@ -574,7 +574,7 @@
                         peace, understand that all sentient beings are at peace; and as all sentient beings are at peace,
                         understand that all phenomena are at peace; and as all phenomena are at peace, understand that the limit
                         of reality is known as “at peace;” for them, as the limit of reality is at peace, they are at peace,
-                        thorough peace, and utter peace. <ref cRef="F.147.b"/> Hence, when asked, they reveal that all phenomena
+                        thorough peace, and utter peace. <ref cRef="F.147.b" type="folio"/> Hence, when asked, they reveal that all phenomena
                         are at peace. This, divine being, is the bodhisattvas’ revelation of their correct knowledge purified
                         through discipline. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-92"/>
@@ -601,7 +601,7 @@
                         beings they understand the disengagement of awakening. Through the disengagement of awakening they
                         understand the disengagement of all phenomena. Through the disengagement of all phenomena they understand
                         the disengagement of the limit of reality. When asked, they reveal that their diligence is disengaged in
-                        just the same way as all those things are, by their nature, disengaged. <ref cRef="F.148.a"/> This, divine
+                        just the same way as all those things are, by their nature, disengaged. <ref cRef="F.148.a" type="folio"/> This, divine
                         being, is the bodhisattva’s revelation of his correct knowledge purified through diligence.</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-94"/>
                     <p tid="95"> “Divine being, moreover, when bodhisattvas practice concentration on all phenomena being the same
@@ -622,7 +622,7 @@
                         is because they have interrupted what sets transmigration in motion—desire, craving, and wishing. Without
                         pursuing any desires at all, they intentionally move through various births in order to ripen beings,
                         gather the factors of awakening, uphold the sacred Dharma, and ensure the unbroken continuity of the
-                        lineage of the Three Jewels. <ref cRef="F.148.b"/> They move without moving and without upsetting the
+                        lineage of the Three Jewels. <ref cRef="F.148.b" type="folio"/> They move without moving and without upsetting the
                         characteristic purity of the nature of all phenomena. As this is their insight, through the nature of
                         insight they understand awakening. Through the nature of awakening they understand the nature of sentient
                         beings. Through the nature of sentient beings they understand the nature of all phenomena, and they also
@@ -641,7 +641,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-97"/>
                     <p tid="98"> “Having understood that all phenomena are without reality, they observe the body with the
                         understanding that the mind that observes the body is also just like a magical illusion or an echo. With
-                        this insight they are neither attached to pleasant feelings nor hostile to painful ones, <ref cRef="F.149.a"/> and since they are also not confused with respect to feelings that are neither
+                        this insight they are neither attached to pleasant feelings nor hostile to painful ones, <ref cRef="F.149.a" type="folio"/> and since they are also not confused with respect to feelings that are neither
                         painful nor pleasant, they are not predisposed to ignorance. When they are no longer ravished by feelings,
                         then this is their application of mindfulness to the observation of feelings. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-98"/>
@@ -665,7 +665,7 @@
                         distraction from it, and ensure that it is not forgotten. At the beginning it precedes all roots of
                         virtue. It is free from stinginess and relinquishes all possessions. It abandons attitudes of flawed
                         discipline and in the aggregate of discipline it is without dwelling. It harbors no wish to harm any
-                        being, is free of strife, <ref cRef="F.149.b"/> and inflicts no injury with body, speech, or mind. It does
+                        being, is free of strife, <ref cRef="F.149.b" type="folio"/> and inflicts no injury with body, speech, or mind. It does
                         not practice the diligence of a listener or a solitary buddha but does undertake the diligence of the
                         Great Vehicle. It does not direct the mind to unvirtuous phenomena or pay attention to them but cultivates
                         non-dwelling in any concentration or equilibrium. It does not move toward all the aspects of a view and
@@ -685,7 +685,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-103"/>
                     <p tid="104"> “Having cut through all mental constructs, it is free from thoughts. Without intention, anger,
                         fear, or bewilderment, it is immutable. Having conquered pride, it takes delight in the Dharma. With a
-                        well-trained mind, it is noble. With the aggregate of discipline, it is guarded in all respects. <ref cRef="F.150.a"/> With the aggregate of absorption, this mind does not dwell anywhere. With the
+                        well-trained mind, it is noble. With the aggregate of discipline, it is guarded in all respects. <ref cRef="F.150.a" type="folio"/> With the aggregate of absorption, this mind does not dwell anywhere. With the
                         aggregate of insight, this mind is liberated. Never does it abandon the lineage of the noble ones, nor
                         does it ever spoil the vow of the mind of awakening. It does not pursue gain and honor, nor does it pander
                         to others. It guards itself for the sake of guarding others. Being certain of its own intentions, it does
@@ -704,7 +704,7 @@
                         in mind. Leading sentient beings to the absence of self, it knows the self to be without self.
                         Relinquishing affliction while not relinquishing sentient beings, it is both relinquishing and
                         non-relinquishing. Cultivating skillful means and insight, it is peaceful beyond both peace and lack of
-                        peace. <ref cRef="F.150.b"/> In distinction from hearers and solitary buddhas, it proceeds without
+                        peace. <ref cRef="F.150.b" type="folio"/> In distinction from hearers and solitary buddhas, it proceeds without
                         proceeding. Beyond the paths of the māras, this is the path of no path. In distinction from childish,
                         ordinary beings, this is the activity of non-action. As it understands all phenomena, it is sameness that
                         neither raises things up nor puts them down. Without any conceited superiority over others, it does not
@@ -728,7 +728,7 @@
                         minds are like. Rather, bodhisattvas’ minds knowingly take birth to ripen sentient beings. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-111"/>
                     <p tid="112">“Eliminating only their own afflictions is not what bodhisattvas’ minds are like. Rather,
-                        bodhisattvas’ minds work diligently to eliminate the afflictions of all sentient beings. <ref cRef="F.151.a"/>
+                        bodhisattvas’ minds work diligently to eliminate the afflictions of all sentient beings. <ref cRef="F.151.a" type="folio"/>
                     </p>
                     <p tid="113">“Acting for themselves is not what bodhisattvas’ minds are like. Rather, bodhisattvas’ minds act
                         to pacify the suffering of all sentient beings. </p>
@@ -755,7 +755,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-121"/>
                     <p tid="122">“Attaining the result that is the liberation of hearers and solitary buddhas is not what
                         bodhisattvas’ minds are like. Rather, bodhisattvas’ minds sustain all beings with the result of liberation
-                        at the seat of awakening.” <ref cRef="F.151.b"/>
+                        at the seat of awakening.” <ref cRef="F.151.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-122"/>
                     <p tid="123">When Mañjuśrī delivered this section of teaching on the revelation of correct knowledge, ten
@@ -780,7 +780,7 @@
                     <p tid="128">“But how, Mañjuśrī, do they then teach the Dharma?”</p>
                     <p tid="129">Mañjuśrī said, “Divine being, the blessed buddhas teach the Dharma by means of the indivisible
                         nature of the realm of phenomena. They do not teach the Dharma for the sake of no arising, no ceasing, no
-                        raising up, no putting down, no coming, no going, no sentient beings, <ref cRef="F.152.a"/> separation
+                        raising up, no putting down, no coming, no going, no sentient beings, <ref cRef="F.152.a" type="folio"/> separation
                         from sentient beings, affliction, purification, cyclic existence, or the transcendence of suffering.
                         Divine being, this is how the blessed buddhas teach the Dharma.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-129"/>
@@ -803,7 +803,7 @@
                     <p tid="133">Mañjuśrī asked, “Divine being, tell me, how is benefit differentiated?”</p>
                     <p tid="134">“Mañjuśrī,” replied Ratnavara, “benefit is differentiated through formation.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-134"/>
-                    <p tid="135">“Divine being, do you then also claim that the thus-gone ones are subject to formation?” <ref cRef="F.152.b"/>
+                    <p tid="135">“Divine being, do you then also claim that the thus-gone ones are subject to formation?” <ref cRef="F.152.b" type="folio"/>
                     </p>
                     <p tid="136">“No, Mañjuśrī, I do not. Formation does not pertain to the thus-gone ones. They have discovered
                         the unconditioned and are unconditioned, and formation is therefore not relevant to them.”</p>
@@ -833,7 +833,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-145"/>
                     <p tid="146">“Mañjuśrī, when is one a beginner bodhisattva?”</p>
                     <p tid="147">“Divine being, one is referred to as a beginner bodhisattva when, for the very first time, one
-                        becomes inspired by the Dharma of emptiness, <ref cRef="F.153.a"/> the absence of marks, the absence of
+                        becomes inspired by the Dharma of emptiness, <ref cRef="F.153.a" type="folio"/> the absence of marks, the absence of
                         wishes, no arising, and no origination.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-147"/>
                     <p tid="148">“Mañjuśrī, what is a bodhisattva with extensive experience?”</p>
@@ -856,7 +856,7 @@
                     <p tid="153">Mañjuśrī replied, “Divine being, a bodhisattva who neither fears anything nor is attached to
                         anything, and who realizes the nature of the realm of phenomena by means of fearlessness and freedom from
                         attachment—that is an irreversible bodhisattva. Divine being, moreover, whenever a bodhisattva turns back
-                        or enters, he is an irreversible bodhisattva. <ref cRef="F.153.b"/> Why is that? Because bodhisattvas
+                        or enters, he is an irreversible bodhisattva. <ref cRef="F.153.b" type="folio"/> Why is that? Because bodhisattvas
                         return to the realm of desire and they enter the concentrations. Divine being, moreover, whenever a
                         bodhisattva realizes what was not realized before and wholeheartedly refrains from dispute, he is an
                         irreversible bodhisattva. Why? Because when the constituents of sentient beings, phenomena, and oneself,
@@ -877,7 +877,7 @@
                         same as the minds of all beings. Their voices are the same as the voices of all sentient beings. Their
                         realm is the same as the realm of all beings. They abide within the domain of the buddhas. They realize
                         the domain of the realm of phenomena. They are the same due to the sameness of the realm of phenomena.
-                            <ref cRef="F.154.a"/> They know the thoughts of beings, are aware of time, and reach the ultimate seat
+                            <ref cRef="F.154.a" type="folio"/> They know the thoughts of beings, are aware of time, and reach the ultimate seat
                         of awakening. Divine being, this is what it means to be a bodhisattva who has only one birth
                         remaining.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-155"/>
@@ -893,7 +893,7 @@
                         manifest the diligence that brings forth all roots of virtue, they are free from evil. When not involved
                         in laziness, they are irreproachable. When resting in concentration and attainment, they are free from
                         evil. When they do not relish the blissful taste of concentration, they are irreproachable. When
-                        diligently pursuing the learning that leads to insight, they are free from evil. <ref cRef="F.154.b"/>
+                        diligently pursuing the learning that leads to insight, they are free from evil. <ref cRef="F.154.b" type="folio"/>
                         When not associated with misguided knowledge, they are irreproachable. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-157"/>
                     <p tid="158"> “When not retaliating when hurt by others, they are free from evil. When not retaliating when
@@ -910,7 +910,7 @@
                         free from evil. When in possession of perfect wisdom, intelligence, and the truths of the noble ones, they
                         are irreproachable. With steadfast resolve, they are free from evil. When living by their pledges, they
                         are irreproachable. When being in harmony with the way of dependent origination, they are free from evil.
-                        When not grasping at the phenomena of dependent origination, they are irreproachable. <ref cRef="F.155.a"/> When comprehending the empty nature of all phenomena by means of insight and wisdom, they are free from
+                        When not grasping at the phenomena of dependent origination, they are irreproachable. <ref cRef="F.155.a" type="folio"/> When comprehending the empty nature of all phenomena by means of insight and wisdom, they are free from
                         evil. When skillfully gathering all roots of virtue, they are irreproachable. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-159"/>
                     <p tid="160"> “When engaging in all activities by means of great compassion, they are free from evil. When
@@ -928,7 +928,7 @@
                         conception, and expression, and as much as one does not pass beyond suffering in order not to abandon
                         sentient beings—that much one is free from evil and irreproachable. Divine being, someone who is free from
                         evil and irreproachable is beyond words. That which is beyond words is inexpressible, and the
-                        inexpressible meaning is free from evil and beyond reproach. <ref cRef="F.155.b"/> Therefore, divine
+                        inexpressible meaning is free from evil and beyond reproach. <ref cRef="F.155.b" type="folio"/> Therefore, divine
                         being, since bodhisattvas, who base themselves on the inexpressible meaning, emphasize their own minds,
                         they are free from evil and beyond any reproach from noble beings.”</p>
                     <lb/>
@@ -950,7 +950,7 @@
                     <p tid="165">Then, by the power of the Buddha, venerable Ānanda asked the Blessed One, “When will the god
                         Ratnavara awaken to unexcelled and perfect buddhahood? What will his buddha realm be like? And under what
                         name will he attain awakening?”</p>
-                    <p tid="166">The Blessed One replied, “Ānanda, <ref cRef="F.156.a"/> one hundred thousand eons from now,
+                    <p tid="166">The Blessed One replied, “Ānanda, <ref cRef="F.156.a" type="folio"/> one hundred thousand eons from now,
                         during the eon known as Ratnasaṃvara, in a world to the east known as Pritivyūha, the god Ratnavara will
                         awaken to unexcelled and perfect buddhahood; and so it will be that the thus-gone one, the worthy one, the
                         perfect buddha Ratnavyūha will appear in the world. Ānanda, the Pritivyūha world will be rich, vast, and
@@ -965,7 +965,7 @@
                         there will enjoy various Dharma delights, Dharma liberations, concentrations, absorptions, attainments,
                         and miraculous manifestations. They will experience nothing but the best, highest, and most delightful
                         Dharma joys; that is why this realm will be known as Pritivyūha, ‘Array of Joy.’ The lifespan of the
-                        future buddha Ratnavyūha <ref cRef="F.156.b"/> will be six hundred million years, and his bodhisattva
+                        future buddha Ratnavyūha <ref cRef="F.156.b" type="folio"/> will be six hundred million years, and his bodhisattva
                         saṅgha will consist of six hundred million ordained bodhisattvas and innumerable bodhisattvas living as
                         householders. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-167"/>
@@ -988,7 +988,7 @@
                     <p tid="170">“It teaches the absence of distraction with respect to phenomena and is a gateway to tranquility
                         with regard to all phenomena. It teaches the absence of conflict with respect to phenomena and is a
                         gateway to special insight with regard to all phenomena. It teaches the non-disturbance of phenomena and
-                        is a gateway to the ascertainment of all phenomena. <ref cRef="F.157.a"/> It teaches the absence of
+                        is a gateway to the ascertainment of all phenomena. <ref cRef="F.157.a" type="folio"/> It teaches the absence of
                         forgetfulness with regard to phenomena and is a gateway to the recollection of all phenomena. It teaches
                         the understanding of the meaning of phenomena and is a gateway to the understanding of all phenomena. It
                         teaches the mind’s purity with respect to phenomena and is a gateway to intelligence concerning all
@@ -1011,7 +1011,7 @@
                         is a gateway to non-doing with regard to all phenomena. It teaches the absence of activity with respect to
                         phenomena and is a gateway to the non-appropriation of all phenomena. It teaches how to crush the ground
                         of phenomena and is a gateway to the groundlessness of all phenomena. It teaches the absence of concerns
-                        with respect to phenomena and is a gateway to certainty about all phenomena. <ref cRef="F.157.b"/> It
+                        with respect to phenomena and is a gateway to certainty about all phenomena. <ref cRef="F.157.b" type="folio"/> It
                         teaches how to accomplish the fruition of phenomena and is a gateway to the cause of all phenomena. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-172"/>
                     <p tid="173">“It teaches the lack of forgetfulness of phenomena and is a gateway to diligence with respect to
@@ -1036,7 +1036,7 @@
                         ones is spontaneously accomplished and beyond formation. They therefore possess a wisdom vision that
                         unimpededly perceives all phenomena—whether past, future, or present. What a wonder this is!”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-175"/>
-                    <p tid="177">The Blessed One responded, “Ānanda, <ref cRef="F.158.a"/> this wisdom of the thus-gone ones,
+                    <p tid="177">The Blessed One responded, “Ānanda, <ref cRef="F.158.a" type="folio"/> this wisdom of the thus-gone ones,
                         spontaneously accomplished and beyond formation, which unimpededly perceives all phenomena of the past,
                         future, and present, is indeed unique.” </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-176"/>
@@ -1057,7 +1057,7 @@
                         disintegration are not the bodhisattva, and hence arising and disintegration cannot receive any prophecy. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-178"/>
                     <p tid="180"> “Venerable Ānanda, the term <distinct>bodhisattva</distinct> is a designation that functions as
-                        a basis for communication. <ref cRef="F.158.b"/> That, in turn, is the basis for peace. That which is at
+                        a basis for communication. <ref cRef="F.158.b" type="folio"/> That, in turn, is the basis for peace. That which is at
                         peace cannot in any way be prophesied. Venerable Ānanda, the term <distinct>prophecy</distinct> is a
                         synonym for the fact that no phenomena can be grasped. Venerable Ānanda, it is when bodhisattvas do not
                         grasp any phenomena—whether inner or outer, virtuous or unvirtuous, conditioned or unconditioned—that they
@@ -1077,7 +1077,7 @@
                         the Blessed One: “Blessed One, why do you give prophecies to bodhisattvas instead of to listeners?”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-181"/>
                     <p tid="183">The Blessed One replied, “Pāpīyān, bodhisattvas are well known and acknowledged by gods and
-                        humans throughout the great trichiliocosm. <ref cRef="F.159.a"/> This is why bodhisattvas receive such
+                        humans throughout the great trichiliocosm. <ref cRef="F.159.a" type="folio"/> This is why bodhisattvas receive such
                         prophecies. Hearers are not acknowledged among gods and humans and hence they do not receive this
                         prophecy. Evil māra, when a bodhisattva receives the prophecy, numerous sentient beings will arouse the
                         mind aimed at unexcelled and perfect awakening. Yet if a listener received a prophecy, that would not be
@@ -1096,7 +1096,7 @@
                     <p tid="186">“Pāpīyān,” asked Mañjuśrī, “do you not rejoice in the prophecies of the bodhisattvas?”</p>
                     <p tid="187">Māra Pāpīyān replied, “Mañjuśrī, if it were prophesied that all the inhabitants of Jambudvīpa
                         were to become worthy ones, I would indeed rejoice. But it is a different matter when even one single
-                        bodhisattva <ref cRef="F.159.b"/> is prophesied for unexcelled and perfect awakening. Why is that?
+                        bodhisattva <ref cRef="F.159.b" type="folio"/> is prophesied for unexcelled and perfect awakening. Why is that?
                         Mañjuśrī, when a bodhisattva is given the prophecy of awakening to unexcelled and perfect buddhahood, all
                         of my realms are threatened. Moreover, by means of the three vehicles such a bodhisattva will deliver a
                         limitless, countless, and boundless number of sentient beings from the three realms. Mañjuśrī, this
@@ -1117,7 +1117,7 @@
                         awakening, such a bodhisattva is endowed with skillful means. When a bodhisattva does not keep company
                         with any of the afflictions, such a bodhisattva will have departed by means of the perfection of insight. </p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-189"/>
-                    <p tid="191">“Pāpīyān, moreover, when a bodhisattva with superior intent <ref cRef="F.160.a"/> dons the great
+                    <p tid="191">“Pāpīyān, moreover, when a bodhisattva with superior intent <ref cRef="F.160.a" type="folio"/> dons the great
                         armor for the sake of liberating all beings, such a bodhisattva will have set out with superior intent.
                         When a bodhisattva gathers sentient beings through the four means of attraction, such a bodhisattva is
                         endowed with skillful means. When a bodhisattva comprehends that the nature of all beings is the complete
@@ -1144,7 +1144,7 @@
                         have departed by means of the perfection of insight.”</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-040-003-193"/>
-                    <p tid="195">The god Ratnavara now said to Mañjuśrī, “Mañjuśrī, if Māra Pāpīyān, along with his armies, <ref cRef="F.160.b"/> mounts, retinue, and realm, were placed in confinement, then they could not create
+                    <p tid="195">The god Ratnavara now said to Mañjuśrī, “Mañjuśrī, if Māra Pāpīyān, along with his armies, <ref cRef="F.160.b" type="folio"/> mounts, retinue, and realm, were placed in confinement, then they could not create
                         any obstacles for the noble sons and daughters who have entered the Great Vehicle.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-194"/>
                     <p tid="196">Mañjuśrī replied, “Noble son, placing Māra Pāpīyān in confinement is not becoming for a
@@ -1163,7 +1163,7 @@
                         absence of desire for attainment. Therefore, in that absence of desire there is no attainment and no
                         realization. Awakening is an attainment of the unconditioned, and the unconditioned is characterized by no
                         attainment. Awakening is characterized by the realization of emptiness, yet emptiness cannot truly realize
-                        emptiness. Awakening is characterized by the absence of marks, <ref cRef="F.161.a"/> yet the absence of
+                        emptiness. Awakening is characterized by the absence of marks, <ref cRef="F.161.a" type="folio"/> yet the absence of
                         marks cannot truly realize the absence of marks. Awakening is characterized by the absence of wishes, yet
                         the absence of wishes cannot truly realize the absence of wishes. Awakening is the nature of the realm of
                         phenomena, yet that nature cannot truly realize that nature. Awakening is characterized by indivisible
@@ -1185,7 +1185,7 @@
                     <p tid="201">Mañjuśrī replied, “Venerable Śāradvatīputra, if I were to bless them in the same manner, even
                         inanimate objects, such as the trees, grass, and forest here would display those features and teach the
                         Dharma with the eloquence of a buddha. Likewise, were I to bless you, the elder Śāradvatīputra, you would
-                        also take the form of a buddha, displaying all the physical marks, <ref cRef="F.161.b"/> and you would
+                        also take the form of a buddha, displaying all the physical marks, <ref cRef="F.161.b" type="folio"/> and you would
                         also teach the Dharma with the eloquence of a buddha.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-200"/>
                     <p tid="202">At this point venerable Śāradvatīputra thought to himself, “If youthful Mañjuśrī were to
@@ -1208,7 +1208,7 @@
                         omniscience. It is distinguished by a realization of the mental conduct of all beings. It is distinguished
                         by a realization of all entities and nonentities. It is not distinguished by the destruction of entities.
                         It is not distinguished by familiarization and the absence of entities. Still, it is not distinguished,
-                            <ref cRef="F.162.a"/> yet also not undistinguished either. It is without movement, free from movement,
+                            <ref cRef="F.162.a" type="folio"/> yet also not undistinguished either. It is without movement, free from movement,
                         and the interruption of all movement, and so it does not come or go.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-205"/>
                     <p tid="207">Māra Pāpīyān then asked venerable Śāradvatīputra, “Venerable Śāradvatīputra, what is the abode of
@@ -1233,7 +1233,7 @@
                     <p tid="213">When this teaching was given, the minds of eight hundred monks were liberated from defilements
                         without any further appropriation. Among the gods who had faith in Śāradvatīputra and the gods who had
                         faith in the factions of the māras, there were thirty-two thousand beings who aroused the mind set upon
-                        unexcelled and perfect awakening. It was for the sake of training those gods that youthful Mañjuśrī <ref cRef="F.162.b"/> caused Māra Pāpīyān and the elder Śāradvatīputra to appear with the body and physical
+                        unexcelled and perfect awakening. It was for the sake of training those gods that youthful Mañjuśrī <ref cRef="F.162.b" type="folio"/> caused Māra Pāpīyān and the elder Śāradvatīputra to appear with the body and physical
                         marks of a buddha. Now youthful Mañjuśrī withdrew his power, and the elder Śāradvatīputra and Māra Pāpīyān
                         both resumed their usual form. </p>
                     <lb/>
@@ -1253,7 +1253,7 @@
                     <p tid="217">The Blessed One said, “Ānanda, they have gathered here from different buddha realms. Youthful
                         Mañjuśrī ripened them and this Dharma teaching on the indivisible nature of the realm of phenomena has
                         ripened them. Therefore, because of the gratitude and appreciation they feel for this Dharma teaching,
-                        they have come here to see the Thus-Gone One, <ref cRef="F.163.a"/> pay homage to him, and venerate him.
+                        they have come here to see the Thus-Gone One, <ref cRef="F.163.a" type="folio"/> pay homage to him, and venerate him.
                         They have also come to venerate Mañjuśrī and rejoice in this Dharma teaching. Ānanda, after I have passed
                         beyond suffering, these bodhisattvas will uphold the sacred Dharma by spreading this Dharma teaching in
                         Jambudvīpa. Ānanda, these bodhisattvas are diligently upholding the sacred Dharma of many hundreds of
@@ -1273,7 +1273,7 @@
                         teaching, so that in future times it will be widely practiced in Jambudvīpa.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-218"/>
                     <p tid="221">Mañjuśrī replied, “Blessed One, you would not ask me, for example, to bless the element of space
-                        so that it would not get scorched during the eon of fire. <ref cRef="F.163.b"/> Similarly, Blessed One,
+                        so that it would not get scorched during the eon of fire. <ref cRef="F.163.b" type="folio"/> Similarly, Blessed One,
                         since all phenomena are of the nature of the element of space, they are not subject to birth or cessation.
                         That which is not born and does not cease, does not in any way have a nature that can be blessed. Blessed
                         One, since no phenomenon can be blessed, their very essence is blessed. Nevertheless, Blessed One, in
@@ -1291,7 +1291,7 @@
                     <milestone unit="chunk" xml:id="UT22084-040-003-220"/>
                     <p tid="224">The Blessed One said to venerable Ānanda, “Ānanda, you should remember this Dharma teaching. You
                         should hold it, recite it, and master it. You should teach it to others on a vast scale. In that way you
-                        will be worshipping the blessed buddhas of the past, the future, <ref cRef="F.164.a"/> and the
+                        will be worshipping the blessed buddhas of the past, the future, <ref cRef="F.164.a" type="folio"/> and the
                         present.”</p>
                     <milestone unit="chunk" xml:id="UT22084-040-003-221"/>
                     <p tid="225">Ānanda inquired, “Blessed One, what is the name of this Dharma teaching and how should it be
