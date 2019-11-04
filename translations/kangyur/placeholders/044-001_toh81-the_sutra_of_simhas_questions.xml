@@ -17,9 +17,11 @@
                 <editor role="finalReviewer" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="2.g">
+
+            <publicationStmt status="2.e">
                 <idno xml:id="UT22084-044-001"/>
                 <date/>
                 <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
@@ -28,16 +30,18 @@
                 <bibl key="toh81" type="text">
                     <ref>Toh 81</ref>
                     <biblScope>vol:44, ff.27r-29v(pp.53-58)</biblScope>
-                    <location count-pages="6">
-                        <start volume="44" page="55"/>
-                        <end volume="44" page="60"/>
+                    <location work="UT4CZ5369" count-pages="6">
+                        <volume number="44" start-page="53" end-page="58"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11623" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:34:42 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-04T09:32:34.215Z" user="admin">04/11/2019 09:32:34</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-04T09:32:27.59Z" user="andreas">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.e" date-time="2019-11-04T09:32:27.59Z" user="andreas">2.e</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
