@@ -9,11 +9,15 @@
                 <title type="mainTitle" xml:lang="en">The Sūtra of Nanda's Ordination</title>
                 <author role="translatorMain" ref="contributors.xml#team-46"/>
             <author role="translatorEng" ref="contributors.xml#person-291">Zsuzsa Majer</author>
+                <editor role="associateEditor" ref="contributors.xml#person-262">David Higgins</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">James Gentry</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="3">
+
+            <publicationStmt status="2.g">
                 <idno xml:id="UT22084-072-028"/>
                 <date/>
             </publicationStmt>
@@ -21,16 +25,17 @@
                 <bibl key="toh328" type="text">
                     <ref>Toh 328</ref>
                     <biblScope>vol.72, ff.254v-257r(pp.508-513)</biblScope>
-                    <location count-pages="6">
-                        <start volume="72" page="510"/>
-                        <end volume="72" page="515"/>
+                    <location work="UT4CZ5369" count-pages="6">
+                        <volume number="72" start-page="508" end-page="513"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12006" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:47:16 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-04T07:22:58.875Z" user="admin">04/11/2019 07:22:58</note>
+            <note type="updated" update="translation-status" value="2.g" date-time="2019-06-21T07:15:46.31Z" user="john">2.g</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-04T07:22:55.327Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
