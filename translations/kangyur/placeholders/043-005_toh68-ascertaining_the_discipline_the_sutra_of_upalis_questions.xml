@@ -18,9 +18,11 @@
                 <editor role="externalReviewer" ref="contributors.xml#person-285">Per Sørensen</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
-            <publicationStmt status="2.f">
+
+            <publicationStmt status="2.g">
                 <idno xml:id="UT22084-043-005"/>
                 <date/>
             </publicationStmt>
@@ -28,16 +30,18 @@
                 <bibl key="toh68" type="text">
                     <ref>Toh 68</ref>
                     <biblScope>vol:43, ff.115r-231r(pp.229-261)</biblScope>
-                    <location count-pages="33">
-                        <start volume="43" page="231"/>
-                        <end volume="43" page="263"/>
+                    <location work="UT4CZ5369" count-pages="33">
+                        <volume number="43" start-page="229" end-page="261"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11604" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:37:33 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-06T13:12:05.83Z" user="admin">06/11/2019 13:12:05</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-06T13:11:59.611Z" user="andreas">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.g" date-time="2019-11-06T13:11:59.611Z" user="andreas">2.g</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
