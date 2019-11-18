@@ -24,10 +24,10 @@
                                 <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
                         </titleStmt>
                         <editionStmt>
-                <edition>v 0.99.1 <date>2019</date>
+                <edition>v 1.1.1 <date>2019</date>
                 </edition>
             </editionStmt>
-                        <publicationStmt status="1.a">
+                        <publicationStmt status="1">
                                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name>
                                         is a global non-profit initiative to translate all
@@ -46,7 +46,7 @@
                                         </licence>
                                 </availability>
                                 <idno xml:id="UT22084-060-007"/>
-                                <date>2019-11-15</date>
+                                <date>2019-11-18</date>
                         </publicationStmt>
                         <sourceDesc>
                                 <bibl key="toh178" type="text">
@@ -64,7 +64,7 @@
                                 </bibl>
                         </sourceDesc>
                         <notesStmt>
-                                <note type="lastUpdated" date-time="2019-11-01T16:53:15.668Z" user="admin">01/11/2019 16:53:15</note>
+                                <note type="lastUpdated" date-time="2019-11-17T12:37:30.459Z" user="john">17/11/2019 12:37:30</note>
                                 <note type="updated" update="translation-status" value="2.a" date-time="2019-04-30T10:19:53.284Z" user="mike">2.a</note>
                         <note type="updated" update="text-version" value="v 1.0" date-time="2019-05-06T11:01:15.765Z" user="andre">v 0.1 2019</note>
                 <note type="updated" update="text-version" value="v 1.01" date-time="2019-06-21T12:52:26.137Z" user="laura">v 1.01 2019</note>
@@ -76,6 +76,8 @@
 <note type="updated" update="text-version" value="v 0.9.8" date-time="2019-10-29T15:29:04.259Z" user="john">v 0.9.8</note>
 <note type="updated" update="text-version" value="v 0.99.1" date-time="2019-11-01T16:53:10.155Z" user="john">v 0.99.1</note>
 <note type="updated" update="translation-status" value="1.a" date-time="2019-11-01T16:53:10.155Z" user="john">1.a</note>
+<note type="updated" update="text-version" value="v 1.1.1" date-time="2019-11-18T09:59:03.514Z" user="john">v 1.1.1</note>
+<note type="updated" update="translation-status" value="1" date-time="2019-11-18T09:59:03.514Z" user="john">1</note>
             </notesStmt>
                 </fileDesc>
         </teiHeader>
@@ -86,8 +88,8 @@
                                 <tei:milestone unit="chunk" xml:id="UT22084-060-007-1"/>
                                 <p tid="2">In response to a series of queries from Mañjuśrī, Buddha
                                         Śākyamuni first exposes the error that prevents sentient
-                                        beings in general from transcending saṃsāra, and then more particularly errors 
-                                        in understanding the four truths of the noble ones based 
+                                        beings in general from transcending saṃsāra, and then focuses more particularly 
+                                        on errors that result from understanding the four truths of the noble ones based 
                                         on conceptual notions of phenomena. He then goes on to
                                         explain how someone
                                         wishing to attain liberation should skillfully view the following five
@@ -366,7 +368,7 @@
                                                 understand them; they are afraid, terrified,
                                                 and will be further terrified. With such thoughts, they then think,
                                                 ‘The bringing about of these phenomena,
-                                                and being disturbed by those phenomena: those things are the origin that is abandoned.’</p>
+                                                and being disturbed by those phenomena—these things are the origin that is abandoned.’</p>
                                         <tei:milestone unit="chunk" xml:id="UT22084-060-007-172"/>
                                         <p tid="36">“With that thought, they then think, ‘I must 
                                                 actualize cessation,’ and they think, having investigated those 
@@ -962,11 +964,15 @@
                                                 <term xml:lang="Sa-Ltn">catvāri prahāṇani</term>
                                                 <term type="definition">That the translation of this term should 
                                                         not follow the Tibetan literally (which would yield “four kinds 
-                                                        of abandoning”) is widely agreed. On the possibility that the 
-                                                        Sanskrit <foreign type="term" xml:lang="Sa-Ltn">prahāna</foreign>
-                                                        (“abandoning”) may originally have been 
-                                                        <foreign type="term" xml:lang="Sa-Ltn">pradhāna</foreign> (“effort”),
-                                                        see Dayal, p. 102 ff.</term>
+                                                        of abandoning”) is widely agreed. It is possible that the Tibetan 
+                                                        translators may originally have confused the
+                                                        meaning in Buddhist Hybrid Sanskrit (BHS) of the 
+                                                        term <foreign type="term" xml:lang="Sa-Ltn">prahāṇa</foreign> 
+                                                        (“priority”) with its meaning in classical Sanskrit (“elimination”). 
+                                                        The classical Sanskrit equivalent of BHS 
+                                                        <foreign type="term" xml:lang="Sa-Ltn">prahāṇa</foreign> is 
+                                                        <foreign type="term" xml:lang="Sa-Ltn">pradhāna</foreign>. 
+                                                        See Dayal, p. 102 ff.</term>
                         </gloss>
                                         </item>
                                         <item>
