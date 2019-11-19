@@ -12,8 +12,10 @@
                 <editor role="copyEditor" ref="contributors.xml#person-249">Konchog Norbu</editor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="2.c">
                 <idno xml:id="UT22084-076-003"/>
                 <date/>
@@ -22,16 +24,17 @@
                 <bibl key="toh349" type="text">
                     <ref>Toh 349</ref>
                     <biblScope>vol.76, ff.31v-50r(pp.62-99)</biblScope>
-                    <location count-pages="38">
-                        <start volume="76" page="64"/>
-                        <end volume="76" page="101"/>
+                    <location work="UT4CZ5369" count-pages="38">
+                        <volume number="76" start-page="62" end-page="99"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12038" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:45:10 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-19T09:53:59.994Z" user="admin">19/11/2019 09:53:59</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-19T09:53:56.455Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
