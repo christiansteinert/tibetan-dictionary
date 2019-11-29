@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">lang kar gshegs pa'i mdo/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">laṅkāvatārasūtra</title>
                 <title type="mainTitle" xml:lang="en">The Sūtra on the Descent into Laṅka</title>
@@ -17,8 +17,10 @@
                 <author role="translatorEng" ref="contributors.xml#person-99">Thomas Cruijsen</author>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-049-002"/>
                 <date/>
@@ -27,16 +29,17 @@
                 <bibl key="toh107" type="text">
                     <ref>Toh 107</ref>
                     <biblScope>vol.49, ff.56r-191v(pp.111-382)</biblScope>
-                    <location count-pages="272">
-                        <start volume="49" page="113"/>
-                        <end volume="49" page="384"/>
+                    <location work="UT4CZ5369" count-pages="272">
+                        <volume number="49" start-page="111" end-page="382"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11668" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:45:04 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-29T12:42:42.743Z" user="admin">29/11/2019 12:42:42</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-29T12:42:39.098Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
