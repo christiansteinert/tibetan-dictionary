@@ -13,8 +13,10 @@
             <author role="translatorEng" ref="contributors.xml#person-99">Thomas Cruijsen</author>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-066-016"/>
                 <date/>
@@ -23,16 +25,17 @@
                 <bibl key="toh258" type="text">
                     <ref>Toh 258</ref>
                     <biblScope>vol.66, ff.245v-259v(pp.490-518)</biblScope>
-                    <location count-pages="29">
-                        <start volume="66" page="492"/>
-                        <end volume="66" page="520"/>
+                    <location work="UT4CZ5369" count-pages="29">
+                        <volume number="66" start-page="490" end-page="518"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11910" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:52:23 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-29T12:44:44.68Z" user="admin">29/11/2019 12:44:44</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-29T12:44:41.051Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
