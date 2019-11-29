@@ -20,7 +20,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 06/09/2018 at 11:23:03 by admin</note>
+                <note type="lastUpdated" date-time="2019-11-29T11:58:10.241Z" user="john">29/11/2019 11:58:10</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -32,7 +32,7 @@
         </front>
         <body>
             <div type="about">
-                <head type="about">General Sūtra Section</head>
+                <head type="about" tid="12">General Sūtra Section</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="O1JC114941JC14668-1"/>
                     <p tid="2">This large section of the Kangyur is also sometimes called <title xml:lang="Bo-Ltn">mdo mang</title> (“the
@@ -43,18 +43,36 @@
                         and establishment of the different Kangyurs, in the form of varying compilations of sūtra works called
                             <title xml:lang="Bo-Ltn">mdo mang</title>, some of which have survived.</p>
                     <milestone unit="chunk" xml:id="O1JC114941JC14668-2"/>
-                    <p tid="4">According to the Degé Kangyur catalogue, the works in this section are arranged with Mahāyāna sūtras (Toh
-                        94-286) first, followed by Śrāvakayāna works (Toh 287-359)—although not all Kangyurs and commentators
-                        agree on which texts should be assigned to these two broad groups. As Situ Paṇchen Chökyi Jungné, the 18th
+                    <p tid="4">According to the Degé Kangyur catalogue, the works in this section are arranged in two main divisions.
+                        First come those identified as Mahāyāna sūtras (Toh 94-286), ending with a few short summaries and dedications.
+                        Second come the Śrāvakayāna works (Toh 287-359), starting with the massive <title xml:lang="Sa-Ltn">Saddharmasmṛtyupasthāna</title> (Toh 287) spanning 
+                        no less than four volumes. Despite this twofold arrangement in the Degé and other Kangyurs of the Tshalpa line,
+                        however, not all Kangyurs and commentators agree on which texts should be assigned to these two broad 
+                        groups. </p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC14668-8"/>
+                    <p tid="0">Within these two divisions, too, there are several different organizing schema to be seen. Of the Mahāyāna works,
+                        as Situ Paṇchen Chökyi Jungné, the 18th
                         century editor of the Degé Kangyur, observes, sūtras of the Buddha’s third turning of the wheel of Dharma
                         tend to predominate at first, but such categorizing is not always applicable and he himself, as he laid
                         out the Degé Kangyur, simply respected the precedent set by past scholars who arranged the texts of the
-                        Tshalpa Kangyur. Their schema differs significantly from the way the texts are grouped in the early 9th
+                        Tshalpa Kangyur. In some cases, sūtras are clearly grouped together because they are topically or historically 
+                        related to each other, e.g. the three Parinirvāṇa sūtras (Toh 119–121), those on dependent arising (Toh 211–213), and 
+                        the “Cloud” sūtras (Toh 231-235); or because of the way they were used, like the Mahāsūtras (Toh 288–294). 
+                        Other significant grouping of sūtras appears to have been made on the basis of elements in their titles.
+                        One obvious example is the grouping of three otherwise unrelated works that are all called 
+                        “White Lotus” (<foreign xml:lang="Sa-Ltn">puṇḍarīka</foreign>, Toh 111–113); another is of those including the 
+                        word <foreign xml:lang="Sa-Ltn">vyūha</foreign> (Toh 114–116). More often, the basis of grouping by title is that 
+                        it gives some indication of genre, e.g. those called <foreign xml:lang="Sa-Ltn">dharmaparyāya</foreign> (Toh 102–105), 
+                        those including the term <foreign xml:lang="Sa-Ltn">samādhi</foreign> (Toh 127 and 129–137), those that indicate dialogues 
+                        with or questioning by particular individuals (<foreign xml:lang="Sa-Ltn">paripṛcchā</foreign>, Toh 148–174), those that 
+                        include the term “teaching” (<foreign xml:lang="Sa-Ltn">nirdeśa</foreign>, Toh 175–187), “prophecy” 
+                        (<foreign xml:lang="Sa-Ltn">vyākaraṇa</foreign>, Toh 188–193), and instructive narratives or “accounts” (<foreign xml:lang="Sa-Ltn">āvadāna</foreign>, 
+                        Toh 343-349). Such groupings are nevertheless applied neither entirely exclusively,
+                        nor fully inclusively. More broadly, the overall schema that results (whether in the Degé Kangyur or others in which the equivalent
+                        sections are arranged in different order) is very different from the way the texts are grouped in the early 9th
                         century inventory, the Denkarma (<title xml:lang="Bo-Ltn">ldan kar ma</title>), and the slightly later
                         Pangthangma (<title xml:lang="Bo-Ltn">’phang thang ma</title>), both of which order the texts first by
-                        vehicle and source language, and then place them in order of physical size, starting with the longest.
-                        Nevertheless, in the Degé as in many other Kangyurs, the longer files still tend to be grouped in the
-                        earlier volumes.</p>
+                        vehicle and source language, and then place them in order of physical size, starting with the longest.</p>
                     <milestone unit="chunk" xml:id="O1JC114941JC14668-3"/>
                     <p tid="5">The sūtras in this General Sūtra section take many different forms. A large number of them relate dialogues
                         between the Buddha and individual disciples, whether bodhisattvas, kings, ordinary men and women, gods, or
@@ -67,8 +85,9 @@
                     <p tid="6">Among the best known large sūtras are the <title xml:lang="Sa-Ltn">Bhadrakalpika</title> (Toh 94), which
                         lists the names, vows, and other details of the thousand buddhas of the present eon; the <title xml:lang="Sa-Ltn">Lalitavistara</title> (Toh 95), the story of the Buddha's birth, youth, awakening,
                         and first teachings; two versions of the <title xml:lang="Sa-Ltn">Laṅkāvatāra</title> (Toh 107 and 108,
-                        from the Sanskrit and Chinese respectively); the two sūtras known as <title xml:lang="en">The White
-                            Lotus</title>, the <title xml:lang="Sa-Ltn">Karuṇāpuṇḍarīka</title> (Toh 112) and the <title xml:lang="Sa-Ltn">Saddharmapuṇḍarīka</title> (Toh 113), often known as the “Lotus Sūtra” and highly
+                        from the Sanskrit and Chinese respectively); two of the three sūtras known as <title xml:lang="en">The White
+                            Lotus</title>, the <title xml:lang="Sa-Ltn">Karuṇāpuṇḍarīka</title> (Toh 112), and especially 
+                        the <title xml:lang="Sa-Ltn">Saddharmapuṇḍarīka</title> (Toh 113), often known as the “Lotus Sūtra,” which was highly
                         influential in China and Japan; and the <title xml:lang="Sa-Ltn">Samādhirāja</title> (Toh 127).</p>
                     <milestone unit="chunk" xml:id="O1JC114941JC14668-5"/>
                     <p tid="7">The section contains two versions of the important <foreign xml:lang="Sa-Ltn">Mahāparinirvāṇasūtra</foreign> (Toh 119 and 120), translated in the early period from Chinese and
