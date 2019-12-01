@@ -8,7 +8,7 @@
                 <title type="mainTitle" xml:lang="bo">དཔང་སྐོང་ཕྱག་བརྒྱ་པ།</title>
                 <title type="mainTitle" xml:lang="en">Calling Witness with a Hundred Prostrations</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn"/>
-                <title type="longTitle" xml:lang="bo"/>
+                <title type="longTitle" xml:lang="bo">དཔང་སྐོང་ཕྱག་བརྒྱ་པ།</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">dpang skong phyag brgya pa</title>
                 <title type="longTitle" xml:lang="en"/>
                 <title type="longTitle" xml:lang="Sa-Ltn"/>
@@ -20,13 +20,12 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.34 <date>2019</date>
+                <edition>v 1.35.1 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -42,11 +41,10 @@
             <sourceDesc>
                 <bibl key="toh267" type="text">
                     <ref>Toh 267</ref>
-                    <biblScope>Degé Kangyur, vol. 68 (mdo sde, ya), folios 1.b-5.b</biblScope>
+                    <biblScope>Degé Kangyur, vol. 68 (mdo sde, ya), folios 1.b–5.b</biblScope>
                     <author role="translatorTib">Thönmi Sambhoṭa</author>
-                    <location count-pages="9">
-                        <start volume="68" page="4"/>
-                        <end volume="68" page="12"/>
+                    <location work="UT4CZ5369" count-pages="9">
+                        <volume number="68" start-page="2" end-page="10"/>
                     </location>
                 <idno parent-id="O1JC114941JC14668"/>
                 <idno source-id="O1JC114941JC11924" work="W22084"/>
@@ -54,9 +52,11 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:41:54.856Z" user="admin">21/06/2019 14:41:54</note>
+                <note type="lastUpdated" date-time="2019-12-01T18:41:05.672Z" user="admin">01/12/2019 18:41:05</note>
             <note type="updated" update="text-version" value="v 1.33" date-time="2019-06-18T02:58:16.481Z" user="celso">v 1.33 2019</note>
                 <note type="updated" update="text-version" value="v 1.34" date-time="2019-06-21T14:41:51.77Z" user="celso">v 1.34 2019</note>
+<note type="updated" update="text-version" value="v 1.34.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.35.1" date-time="2019-12-01T18:41:02.9Z" user="john">A few small edits and parenthetical terms removed from text and placed in glossary.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -102,7 +102,7 @@
                         one of the first Buddhist texts to come to Tibet, arriving during the third century according to the
                         dating by traditional Tibetan historians, or during the fifth century, according to Western scholars such
                         as Hugh Richardson and Erik Haarh.<note place="end" xml:id="UT22084-068-001-158" index="1">See Richardson
-                            2003, p. 159, Haarh 1969, p. 126-127.</note> In any case, this was long before the people of Tibet
+                            2003, p. 159 and Haarh 1969, pp. 126-27.</note> In any case, this was long before the people of Tibet
                         became Buddhist or had a written language. This history is substantiated by the text’s own colophon, as
                         well as Butön’s seminal <title xml:lang="en">History of Buddhism in India and Tibet</title>. As Butön
                             (<foreign type="term" xml:lang="Bo-Ltn">bu ston</foreign>) relates, in Obermiller’s translation:</p>
@@ -165,7 +165,7 @@
                             the <title xml:lang="Sa-Ltn">Ratna­megha-sūtra</title>
                             <note place="end" xml:id="UT22084-068-001-179" index="7">See Dharmachakra Translation Committee (2019).</note> were then
                             translated (into Tibetan).<note place="end" xml:id="UT22084-068-001-163" index="8">Obermiller 1999, p.
-                                183-4.</note>
+                                183-84.</note>
                         </p>
                     </q>
                     <milestone unit="chunk" xml:id="UT22084-068-001-9"/>
@@ -181,7 +181,7 @@
                         versions of the Kangyur as found in the <foreign xml:lang="Bo-Ltn">dpe bsdur ma</foreign> comparative
                         edition. The few small variations between the versions of the Kangyur change only a word or two of the
                         English translation, and these variants have been noted.</p>
-                    <p tid="13">According to the <title xml:lang="en">Tōhoku Catalogue of Buddhist Canons</title>,<note place="end" xml:id="UT22084-068-001-164" index="9">Ui 1934, p 52.</note> no Sanskrit or Chinese
+                    <p tid="13">According to the <title xml:lang="en">Tōhoku Catalogue of Buddhist Canons</title>,<note place="end" xml:id="UT22084-068-001-164" index="9">Ui 1934, p. 52.</note> no Sanskrit or Chinese
                         version of this sūtra is known to exist.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-068-001-11"/>
@@ -232,11 +232,11 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-068-001-15"/>
                     <p tid="18">
-                        <ref cRef="F.1.b"/>
+                        <ref cRef="F.1.b" type="folio"/>
                         <!--<modularPassage type="homage">-->Devoted prostrations to every one of the myriad Three Jewels, and to
                         the buddhas and bodhisattvas and their retinues, who appear and dwell in the infinite, endless worlds of
                         existence of the ten directions and three times.<!--</modularPassage>-->
-                        <note place="end" xml:id="UT22084-068-001-166" index="11">H N have the additional, opening homage <foreign xml:lang="Bo-Ltn">dkon mchog gsum la phyag ’tshal lo</foreign> (prostrations to the Triple Gem)
+                        <note place="end" xml:id="UT22084-068-001-166" index="11">H and N have the additional, opening homage <foreign xml:lang="Bo-Ltn">dkon mchog gsum la phyag ’tshal lo</foreign> (“prostrations to the Triple Gem”)
                             before the title.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-068-001-16"/>
@@ -247,7 +247,7 @@
                         <l>Prostrations to the tathāgata Ratnārcis, buddha of the west;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-17"/>
                         <l>Prostrations to the tathāgata Jinendra, buddha of the north;</l>
-                        <l>Prostrations to the tathāgata Samādhi­hastyuttara­śrī, buddha of the northeast; <ref cRef="F.2.a"/>
+                        <l>Prostrations to the tathāgata Samādhi­hastyuttara­śrī, buddha of the northeast; <ref cRef="F.2.a" type="folio"/>
                         </l>
                         <l>Prostrations to the tathāgata Padmottaraśrī, buddha of the southeast;</l>
                         <l>Prostrations to the tathāgata Sūrya­maṇḍala­pratibhāsottama­śrī, buddha of the southwest;</l>
@@ -259,82 +259,82 @@
                     <milestone unit="chunk" xml:id="UT22084-068-001-19"/>
                     <lg tid="20">
                         <l>Again, prostrations to the tathāgata, buddha of the east, Akṣobhya;</l>
-                        <l>Prostrations to the tathāgata buddha of the south, Ratnasaṃbhava;</l>
-                        <l>Prostrations to the tathāgata buddha of the west, Amitābha;</l>
-                        <l>Prostrations to the tathāgata buddha of the north, Amoghasiddhi;</l>
+                        <l>Prostrations to the tathāgata, buddha of the south, Ratnasaṃbhava;</l>
+                        <l>Prostrations to the tathāgata, buddha of the west, Amitābha;</l>
+                        <l>Prostrations to the tathāgata, buddha of the north, Amoghasiddhi;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-20"/>
-                        <l>Prostrations to the tathāgata Buddha “Joyous King Vīrasena;”<note place="end" xml:id="UT22084-068-001-167" index="12">One of the thirty-five buddhas of confession. See Python 1973, p. 99,
+                        <l>Prostrations to the tathāgata, Buddha “Joyous King Vīrasena”;<note place="end" xml:id="UT22084-068-001-167" index="12">One of the thirty-five buddhas of confession. See Python 1973, p. 99,
                                 and Lokesh Chandra 1987, #2300-2334.</note>
                         </l>
-                        <l>Prostrations to the tathāgata Buddha Amitāyus;</l>
-                        <l>Prostrations to the tathāgata Buddha Akṣobhya;</l>
-                        <l>Prostrations to the tathāgata Buddha Bhaiṣajya­guru­vaiḍūrya­prabha­rāja;</l>
+                        <l>Prostrations to the tathāgata, Buddha Amitāyus;</l>
+                        <l>Prostrations to the tathāgata, Buddha Akṣobhya;</l>
+                        <l>Prostrations to the tathāgata, Buddha Bhaiṣajya­guru­vaiḍūrya­prabha­rāja;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-21"/>
-                        <l>Prostrations to the tathāgata Buddha Śāla­saṃkusumita­rājendra;</l>
-                        <l>Prostrations to the tathāgata Buddha Śākyamuni;</l>
-                        <l>Prostrations to the tathāgata Buddha Ratnaśrīrāja; <ref cRef="F.2.b"/>
+                        <l>Prostrations to the tathāgata, Buddha Śāla­saṃkusumita­rājendra;</l>
+                        <l>Prostrations to the tathāgata, Buddha Śākyamuni;</l>
+                        <l>Prostrations to the tathāgata, Buddha Ratnaśrīrāja; <ref cRef="F.2.b" type="folio"/>
                         </l>
-                        <l>Prostrations to the tathāgata Buddha Samantabhadra;</l>
+                        <l>Prostrations to the tathāgata, Buddha Samantabhadra;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-22"/>
-                        <l>Prostrations to the tathāgata Buddha Vairocana;</l>
-                        <l>Prostrations to the tathāgata Buddha “King whose Fragrance is that of a Blossoming Utpala;”<note place="end" xml:id="UT22084-068-001-168" index="13">D <foreign xml:lang="Bo-Ltn">bsung</foreign>
-                                (fragrance): H N add <foreign xml:lang="Bo-Ltn">tog gi</foreign> (crown ornament).</note>
+                        <l>Prostrations to the tathāgata, Buddha Vairocana;</l>
+                        <l>Prostrations to the tathāgata, Buddha “King Whose Fragrance Is That of a Blossoming Utpala”;<note place="end" xml:id="UT22084-068-001-168" index="13">D <foreign xml:lang="Bo-Ltn">bsung</foreign>
+                            (“fragrance”); H and N add <foreign xml:lang="Bo-Ltn">tog gi</foreign> (“crown ornament”).</note>
                         </l>
                         <l>Prostrations to the tathāgata in the “World of the Saffron-Colored Victory Banners,” Buddha “Well-Tamed
-                            by the Vajra Essence;”</l>
-                        <l>Prostrations to the tathāgata in the “World in which the Wheel of No Regress has been Proclaimed,”
-                            Buddha “Whose Body is the Blossoming Lotus of Complete Absence of Doubt;”</l>
+                            by the Vajra Essence”;</l>
+                        <l>Prostrations to the tathāgata in the “World in Which the Wheel of No Regress Has Been Proclaimed,”
+                            Buddha “Whose Body Is the Blossoming Lotus of Complete Absence of Doubt”;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-23"/>
-                        <l>Prostrations to the tathāgata in the “World Without Dust,” Buddha Siṃha;</l>
+                        <l>Prostrations to the tathāgata in the “World without Dust,” Buddha Siṃha;</l>
                         <l>Prostrations to the tathāgata in the “World of Supreme Illumination,” Buddha Ratnaśikhin;</l>
                         <l>Prostrations to the tathāgata in the “World of Noble Light,” Buddha Vairocana;</l>
-                        <l>Prostrations to the tathāgata in the “World that is Difficult to Transcend,” Buddha “Whose Body is the
-                            Widely Spreading Light of the Dharma;”</l>
+                        <l>Prostrations to the tathāgata in the “World That Is Difficult to Transcend,” Buddha “Whose Body Is the
+                            Widely Spreading Light of the Dharma”;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-24"/>
-                        <l>Prostrations to the tathāgata in the “World that is Supremely Noble,” Buddha “King who is the Light of
-                            Intelligence that Understands All;”</l>
-                        <l>Prostrations to the tathāgata in the “World where the Mirror-disk has been Proclaimed,” Buddha “Whose
-                            Mind is like the Moon;”</l>
+                        <l>Prostrations to the tathāgata in the “World That Is Supremely Noble,” Buddha “King Who Is the Light of
+                            Intelligence That Understands All”;</l>
+                        <l>Prostrations to the tathāgata in the “World Where the Mirror-Disk Has Been Proclaimed,” Buddha “Whose
+                            Mind Is like the Moon”;</l>
                         <l>Prostrations to all the tathāgatas in the “World of the Glory of the Lotus,” the splendid noble
                             buddhas.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-068-001-25"/>
                     <lg tid="21">
-                        <l>Prostrations to the tathāgata Buddha Candraprabha;<note place="end" xml:id="UT22084-068-001-169" index="14">D <foreign xml:lang="Bo-Ltn">zla ’od</foreign>: J C <foreign xml:lang="Bo-Ltn">pad mo dpal gyi</foreign> (Glorious Lotus).</note>
+                        <l>Prostrations to the tathāgata, Buddha Candraprabha;<note place="end" xml:id="UT22084-068-001-169" index="14">D <foreign xml:lang="Bo-Ltn">zla ’od</foreign>; J and C <foreign xml:lang="Bo-Ltn">pad mo dpal gyi</foreign> (“Glorious Lotus”).</note>
                         </l>
-                        <l>Prostrations to the tathāgata Buddha “Greatly Handsome”;</l>
-                        <l>Prostrations to the tathāgata Buddha “King who is Lord of the World’s Orb”;</l>
-                        <l>Prostrations to the tathāgata Buddha “Joyful Eyes”;</l>
+                        <l>Prostrations to the tathāgata, Buddha “Greatly Handsome”;</l>
+                        <l>Prostrations to the tathāgata, Buddha “King who is Lord of the World’s Orb”;</l>
+                        <l>Prostrations to the tathāgata, Buddha “Joyful Eyes”;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-26"/>
-                        <l>Prostrations to the tathāgata Buddha Sāgaraśrī; <ref cRef="F.3.a"/>
+                        <l>Prostrations to the tathāgata, Buddha Sāgaraśrī; <ref cRef="F.3.a" type="folio"/>
                         </l>
-                        <l>Prostrations to the tathāgata Buddha “Golden Pillar”;</l>
-                        <l>Prostrations to the tathāgata Buddha, “Light of Infinite Good Qualities”;</l>
-                        <l>Prostrations to the tathāgata Buddha “King who is Extremely Exalted by the Precious Majesty Arising
+                        <l>Prostrations to the tathāgata, Buddha “Golden Pillar”;</l>
+                        <l>Prostrations to the tathāgata, Buddha, “Light of Infinite Good Qualities”;</l>
+                        <l>Prostrations to the tathāgata, Buddha “King Who Is Extremely Exalted by the Precious Majesty Arising
                             from All Aspirations”;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-27"/>
-                        <l>Prostrations to the tathāgata Buddha “King of Renowned Melodious Sounds”;</l>
-                        <l>Prostrations to the tathāgata Buddha “Lord of the Ocean that is the Wisdom Vajra”;</l>
-                        <l>Prostrations to the tathāgata Buddha Vipaśyin;</l>
-                        <l>Prostrations to the tathāgata Buddha Śikhin;</l>
+                        <l>Prostrations to the tathāgata, Buddha “King of Renowned Melodious Sounds”;</l>
+                        <l>Prostrations to the tathāgata, Buddha “Lord of the Ocean That Is the Wisdom Vajra”;</l>
+                        <l>Prostrations to the tathāgata, Buddha Vipaśyin;</l>
+                        <l>Prostrations to the tathāgata, Buddha Śikhin;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-28"/>
-                        <l>Prostrations to the tathāgata Buddha Viśvabhū;<note place="end" xml:id="UT22084-068-001-170" index="15">The Tibetan reads <foreign xml:lang="Bo-Ltn">ma lus pa’i dbang po</foreign> “Lord of All”, which
-                                is not the usual rendition of Viśvabhū, i.e. <foreign xml:lang="Bo-Ltn">kun skyobs</foreign>.
-                                However the context clearly indicates that the sūtra is presenting the traditional list of the six
+                        <l>Prostrations to the tathāgata, Buddha Viśvabhū;<note place="end" xml:id="UT22084-068-001-170" index="15">The Tibetan reads <foreign xml:lang="Bo-Ltn">ma lus pa’i dbang po</foreign> (“Lord of All”), which
+                                is not the usual rendition of Viśvabhū, i.e., <foreign xml:lang="Bo-Ltn">kun skyobs</foreign>.
+                                However, the context clearly indicates that the sūtra is presenting the traditional list of the six
                                 tathāgatas who preceded Śākyamuni, from Vipaśyin to Kāśyapa. In that list Viśvabhū follows
                                 Śikhin.</note>
                         </l>
-                        <l>Prostrations to the tathāgata Buddha Krakucchanda;</l>
-                        <l>Prostrations to the tathāgata Buddha Kanakamuni;</l>
-                        <l>Prostrations to the tathāgata Buddha Kāśyapa;</l>
+                        <l>Prostrations to the tathāgata, Buddha Krakucchanda;</l>
+                        <l>Prostrations to the tathāgata, Buddha Kanakamuni;</l>
+                        <l>Prostrations to the tathāgata, Buddha Kāśyapa;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-29"/>
                         <l>Prostrations to all past buddhas;</l>
                         <l>Prostrations to all buddhas dwelling in the present;</l>
                         <l>Prostrations to all future buddhas;</l>
-                        <l>Prostrations to the glory of the bodhisattvas,<note place="end" xml:id="UT22084-068-001-171" index="16">D <foreign xml:lang="Bo-Ltn">dpal</foreign>: Ky <foreign xml:lang="Bo-Ltn">dpa’ ba’i
-                                    dpal</foreign> (brave glory); J K C <foreign xml:lang="Bo-Ltn">dpa’</foreign> (courageous).
+                        <l>Prostrations to the glory of the bodhisattvas,<note place="end" xml:id="UT22084-068-001-171" index="16">D <foreign xml:lang="Bo-Ltn">dpal</foreign>; Ky <foreign xml:lang="Bo-Ltn">dpa’ ba’i
+                            dpal</foreign> (“brave glory”); J, K, and C <foreign xml:lang="Bo-Ltn">dpa’</foreign> (“courageous”).
                             </note> all the great illuminators;<note place="end" xml:id="UT22084-068-001-172" index="17">
-                                <foreign xml:lang="Bo-Ltn">rnam par snang mdzad</foreign> – also the name of the Buddha
+                                <foreign xml:lang="Bo-Ltn">rnam par snang mdzad</foreign>; also the name of the Buddha
                                 Vairocana.</note>
                         </l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-30"/>
@@ -345,21 +345,21 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-068-001-31"/>
                     <lg tid="22">
-                        <l>Prostrations to the category of sūtras, the holy Dharma,<note place="end" xml:id="UT22084-068-001-173" index="18">The “category of sūtras” (<foreign xml:lang="Bo-Ltn">mdo’i
-                                    sde</foreign>) is the first of the twelve branches of scripture (<foreign xml:lang="Bo-Ltn">gsung rab kyi yan lag bcu gnyis</foreign>) which are enumerated here. </note>
+                        <l>Prostrations to the category of sūtras, the holy Dharma;<note place="end" xml:id="UT22084-068-001-173" index="18">The “category of sūtras” (<foreign xml:lang="Bo-Ltn">mdo’i
+                                    sde</foreign>) is the first of the twelve branches of scripture (<foreign xml:lang="Bo-Ltn">gsung rab kyi yan lag bcu gnyis</foreign>), which are enumerated here. </note>
                         </l>
                         <l>Prostrations to the category of melodic verses;</l>
                         <l>Prostrations to the category of prophetic teachings;</l>
                         <l>Prostrations to the category of metered verses;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-32"/>
                         <l>Prostrations to the category of special accounts;</l>
-                        <l>Prostrations to the category of themes; <ref cRef="F.3.b"/>
+                        <l>Prostrations to the category of themes; <ref cRef="F.3.b" type="folio"/>
                         </l>
                         <l>Prostrations to the category of illustrative accounts;</l>
                         <l>Prostrations to the category of parables;<note place="end" xml:id="UT22084-068-001-174" index="19">The
                                 Tibetan reads <foreign xml:lang="Bo-Ltn">’das pa brjod pa’i sde</foreign>. Mahāvyutpatti 1274,
                                 however, gives <foreign xml:lang="Bo-Ltn">de lta bu byung ba’i sde</foreign> for the category
-                                    <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign> (parables, stories), and this
+                            <foreign type="term" xml:lang="Sa-Ltn">itivṛttaka</foreign> (“parables,” “stories”), and this
                                 seems to be the more usual equivalence.</note>
                         </l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-33"/>
@@ -379,7 +379,7 @@
                     <lg tid="23">
                         <l>Prostrations to the bodhisattvas, mahāsattvas, illuminators;</l>
                         <l>Prostrations to the bodhisattva of the east, Samantaprabha;</l>
-                        <l>Prostrations to the bodhisattva of the southern direction, Aśokadatta;</l>
+                        <l>Prostrations to the bodhisattva of the south, Aśokadatta;</l>
                         <l>Prostrations to the bodhisattva of the west, “Intelligence in Conduct”;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-36"/>
                         <l>Prostrations to the bodhisattva of the north, Jayadatta;</l>
@@ -393,7 +393,7 @@
                         <l>Prostrations to the bodhisattva Lord Avalokiteśvara;</l>
                         <milestone unit="chunk" xml:id="UT22084-068-001-38"/>
                         <l>Prostrations to the bodhisattva Maitreya;</l>
-                        <l>Prostrations to the bodhisattva Ākāśagarbha; <ref cRef="F.4.a"/>
+                        <l>Prostrations to the bodhisattva Ākāśagarbha; <ref cRef="F.4.a" type="folio"/>
                         </l>
                         <l>Prostrations to the bodhisattva Samantabhadra;</l>
                         <l>Prostrations to the bodhisattva Vajrapāṇi;</l>
@@ -424,7 +424,7 @@
                     <milestone unit="chunk" xml:id="UT22084-068-001-43"/>
                     <lg tid="25">
                         <l>Through these prostrations with devotion to the Three Jewels,</l>
-                        <l>May all negativities be purified, accumulation of merit fully flourish,</l>
+                        <l>May all negativities be purified, may the accumulation of merit fully flourish,</l>
                         <l>And may the special good qualities</l>
                         <l>Arising from the sermons of each bhagavān be accomplished.</l>
                     </lg>
@@ -438,15 +438,15 @@
                         have not been, are not now, nor ever will be relinquished. I make Dharma offerings, as well as a variety
                         of offerings comparable to the incomparable, that arise from the infinite merit of the bodhisattvas, and
                         are exalted, foremost, holy, special, noble, supreme and unsurpassable, comparable to the incomparable,
-                        and that completely fill the entire world of the ten directions.<ref cRef="F.4.b"/> Having offered these,
-                        please accept them. I shall venerate, honor, respect and please you.</p>
+                        and that completely fill the entire world of the ten directions. <ref cRef="F.4.b" type="folio"/> Having offered these,
+                        please accept them. I shall venerate, honor, respect, and please you.</p>
                     <milestone unit="chunk" xml:id="UT22084-068-001-46"/>
                     <p tid="28">Not holding back even the most trifling, I avow and confess the sins and nonvirtuous actions that
                         contradict all holy scripture and that I myself have committed in this life or while wandering in the
                         three worlds through beginningless, endless births, or that I caused others to perform, or even that I
                         rejoiced in when performed by others. They are: the ten nonvirtues of body, speech, and mind that were
-                        committed under the influence of desire, anger, and ignorance; the five heinous crimes and so forth. I
-                        purify and dispel<note place="end" xml:id="UT22084-068-001-175" index="20">D S N <foreign xml:lang="Bo-Ltn">bsal</foreign>: J K C <foreign xml:lang="Bo-Ltn">bslad</foreign> (express).
+                        committed under the influence of desire, anger, and ignorance; the five heinous crimes; and so forth. I
+                        purify and dispel<note place="end" xml:id="UT22084-068-001-175" index="20">D, S, and N <foreign xml:lang="Bo-Ltn">bsal</foreign>; J, K, and C <foreign xml:lang="Bo-Ltn">bslad</foreign> (“express”).
                         </note> them, examine them and cast them out. I shall not hide, shall not conceal, and shall not fail to
                         acknowledge them. Then, at that time, all negativities will be purified, and all merit will be completely
                         accomplished.</p>
@@ -460,7 +460,7 @@
                         suffering and a contemptible body, may I never again experience them.</p>
                     <milestone unit="chunk" xml:id="UT22084-068-001-48"/>
                     <p tid="30">From this time until the essence of enlightenment is reached, may the virtues of my body, speech,
-                        and mind continue as unceasingly as a stream. <ref cRef="F.5.a"/> In whatever life I might be born, may I
+                        and mind continue as unceasingly as a stream. <ref cRef="F.5.a" type="folio"/> In whatever life I might be born, may I
                         possess magnificent happiness and joy, and attain the ability and power to work for the benefit of all
                         sentient beings. That Dharma which is understood only by the tathāgatas, that suchness which without doubt
                         causes unsurpassable enlightenment—may I fully understand it without mistake, meditate upon it, teach it
@@ -468,24 +468,25 @@
                     <milestone unit="chunk" xml:id="UT22084-068-001-49"/>
                     <p tid="31">From this time until the essence of enlightenment is reached, I take refuge in the Three Jewels. I
                         offer them my body; may each of the greatly compassionate ones forever accept it. The buddhas and
-                        bodhisattvas of the three times, who are free of all<note place="end" xml:id="UT22084-068-001-177" index="22">Ky J K C add <foreign xml:lang="Bo-Ltn">yod pa</foreign> (possession of).
-                        </note> things, who are comparable to selfless dharmas not comprised within the aggregates (<foreign type="term" xml:lang="Sa-Ltn">skandha</foreign>), domains (<foreign type="term" xml:lang="Sa-Ltn">dhātu</foreign>)<note place="end" xml:id="UT22084-068-001-178" index="23">D <foreign xml:lang="Bo-Ltn">khams</foreign>: Ky J N C <foreign xml:lang="Bo-Ltn">dngos po dang sems</foreign>
-                            (matter and mind).</note> or bases of cognition (<foreign type="term" xml:lang="Sa-Ltn">āyatana</foreign>),<note place="end" xml:id="UT22084-068-001-180" index="24">These three
+                        bodhisattvas of the three times, who are free of all<note place="end" xml:id="UT22084-068-001-177" index="22">Ky, J, K, and C add <foreign xml:lang="Bo-Ltn">yod pa</foreign> (“possession of”).
+                        </note> things; who are comparable to selfless dharmas not comprised within the aggregates, domains,<note place="end" xml:id="UT22084-068-001-178" index="23">D <foreign xml:lang="Bo-Ltn">khams</foreign>; Ky, J, N, and C <foreign xml:lang="Bo-Ltn">dngos po dang sems</foreign>
+                            (“matter and mind”).</note> or bases of cognition;<note place="end" xml:id="UT22084-068-001-180" index="24">These three
                             classifications of elements (<foreign type="term" xml:lang="Sa-Ltn">dharma</foreign>) are, following
                             the Abhidharma, ways to describe the impersonal constituents that go to make up a person. The five
                             aggregates collect all conditioned elements, while the eighteen domains are comprised of the six types
                             of objects, the six corresponding faculties—five sensory and one mental—and the six consciousnesses.
                             The twelve bases are the six objects and the six corresponding faculties that serve as sources of
                             cognition.</note> and who are unborn since beginningless time, generated the thought of enlightenment
-                        because of their nature of emptiness. So likewise, I whose name is …, do also generate the thought of
+                        because of their nature of emptiness. So, likewise, I whose name is   .   .   . do also generate the thought of
                         enlightenment from this time until the essence of enlightenment is reached. May I never lose or disregard
                         the thought of enlightenment, and never be separated from noble spiritual masters.</p>
                     <milestone unit="chunk" xml:id="UT22084-068-001-50"/>
-                    <p tid="32">Just as the buddhas of the three times rejoiced in unsurpassable merit, I whose name is…. also
+                    <p tid="32">Just as the buddhas of the three times rejoiced in unsurpassable merit, I 
+                        whose name is  .  .  . also
                         rejoice in all worldly and beyond-worldly merit. When the time of death is certain, may I directly behold
                         the holy faces of all those buddhas and bodhisattvas, and when they extend their golden right hands and
                         place them upon my head, may I receive a prophecy. And may I die with my mind undeluded by defilements,
-                        with aspirations that accord with the selfless dharmas, and with limitless thought of enlightenment. <ref cRef="F.5.b"/>
+                        with aspirations that accord with the selfless dharmas, and with the limitless thought of enlightenment. <ref cRef="F.5.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-068-001-51"/>
@@ -498,7 +499,7 @@
                     </lg>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-068-001-52"/>
-                    <p tid="35">This completes <title xml:lang="en">Calling Witness with a Hundred Prostrations</title>.</p>
+                    <trailer tid="35">This completes “<title xml:lang="en">Calling Witness with a Hundred Prostrations</title>.”</trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="42">Colophon</head>
@@ -577,9 +578,9 @@
                             Tibet (Chos-hbyung) by Bu-ston</title> translated from Tibetan by E. Obermiller. Materialien zur Kunde
                         des Buddhismus 13. Heidelberg: Institut für Buddhismus-Kunde, 1931. Reprinted Delhi: Sri Satguru
                         Publications, 1999.</bibl>
-                    <bibl xml:id="UT22084-068-001-68">Python, Pierre (transl). <title xml:lang="en">Vinaya-viniścaya-upāli-paripṛcchā: Enquête d’Upāli pour un exégèse de la discipline</title>. Paris:
+                    <bibl xml:id="UT22084-068-001-68">Python, Pierre (trans.). <title xml:lang="en">Vinaya-viniścaya-upāli-paripṛcchā: Enquête d’Upāli pour un exégèse de la discipline</title>. Paris:
                         Adrien-Maisonneuve, 1973.</bibl>
-                    <bibl xml:id="UT22084-068-001-69">Richardson, Hugh. “The Origin of the Tibetan Kingdom.” <title xml:lang="en">Bulletin of Tibetology</title>, 3, 1989: 5 – 19. Reprinted in Alex McKay, ed., <title xml:lang="en">The History of Tibet</title>. The Early Period: to c. A.D. 850. The Yarlung Dynasty. London: Curzon
+                    <bibl xml:id="UT22084-068-001-69">Richardson, Hugh. “The Origin of the Tibetan Kingdom.” <title xml:lang="en">Bulletin of Tibetology</title>, 3, 1989: 5–19. Reprinted in Alex McKay, ed., <title xml:lang="en">The History of Tibet</title>. The Early Period: to c. A.D. 850. The Yarlung Dynasty. London: Curzon
                         Press, 2003.</bibl>
                     <bibl xml:id="UT22084-068-001-182">Roberts, Peter Alan, et al. <title xml:lang="en">
                             <ref target="http://read.84000.co/translation/toh116.html">The Basket’s Display</ref>
@@ -597,6 +598,30 @@
                             <term xml:lang="Bo-Ltn">gsung rab kyi yan lag bcu gnyis </term>
                             <term xml:lang="bo">གསུང་རབ་ཀྱི་ཡན་ལག་བཅུ་གཉིས།</term>
                             <term xml:lang="Sa-Ltn">dvādaśaka­dharma­pravacana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-001-185">
+                            <term>domain</term>
+                            <term xml:lang="Bo-Ltn">khams </term>
+                            <term xml:lang="bo">ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">dhātu</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-001-186">
+                            <term>aggregate</term>
+                            <term xml:lang="Bo-Ltn">phung po </term>
+                            <term xml:lang="bo">ཕུང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">skandha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-001-187">
+                            <term>bases of cognition</term>
+                            <term xml:lang="Bo-Ltn">skye mched </term>
+                            <term xml:lang="bo">སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">āyatana</term>
                         </gloss>
                     </item>
                     <item>
@@ -1132,7 +1157,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-132">
-                            <term>King whose Fragrance is that of a Blossoming Utpala</term>
+                            <term>King Whose Fragrance Is That of a Blossoming Utpala</term>
                             <term xml:lang="Bo-Ltn">ut pa la rgyas pa bsung gi rgyal po </term>
                             <term xml:lang="bo">ཨུཏ་པ་ལ་རྒྱས་པ་བསུང་གི་རྒྱལ་པོ།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1141,7 +1166,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-133">
-                            <term>Well-tamed by the Vajra Essence</term>
+                            <term>Well-Tamed by the Vajra Essence</term>
                             <term xml:lang="Bo-Ltn">rdo rje snying pos rab tu ’dul ba </term>
                             <term xml:lang="bo">རྡོ་རྗེ་སྙིང་པོས་རབ་ཏུ་འདུལ་བ།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1159,7 +1184,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-135">
-                            <term>Whose Body is the Widely Spreading Light of the Dharma</term>
+                            <term>Whose Body Is the Widely Spreading Light of the Dharma</term>
                             <term xml:lang="Bo-Ltn">chos kyi ’od zer rab tu rgyas pa’i sku </term>
                             <term xml:lang="bo">ཆོས་ཀྱི་འོད་ཟེར་རབ་ཏུ་རྒྱས་པའི་སྐུ།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1177,7 +1202,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-137">
-                            <term>Whose Mind is Like the Moon</term>
+                            <term>Whose Mind Is Like the Moon</term>
                             <term xml:lang="Bo-Ltn">zla ba’i thugs </term>
                             <term xml:lang="bo">ཟླ་བའི་ཐུགས།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1195,7 +1220,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-139">
-                            <term>King who is Lord of the World’s Orb</term>
+                            <term>King Who Is Lord of the World’s Orb</term>
                             <term xml:lang="Bo-Ltn">’jig rten gyi dkyil ’khor dbang po’i rgyal po </term>
                             <term xml:lang="bo">འཇིག་རྟེན་གྱི་དཀྱིལ་འཁོར་དབང་པོའི་རྒྱལ་པོ།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1231,7 +1256,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-143">
-                            <term>King who is Extremely Exalted by the Precious Majesty Arising from All Aspirations</term>
+                            <term>King Who Is Extremely Exalted by the Precious Majesty Arising from All Aspirations</term>
                             <term xml:lang="Bo-Ltn">smon lam thams cad las ’byung ba’i rin po che’i gzi brjid shin tu ’phags pa’i
                                 rgyal po </term>
                             <term xml:lang="bo">སྨོན་ལམ་ཐམས་ཅད་ལས་འབྱུང་བའི་རིན་པོ་ཆེའི་གཟི་བརྗིད་ཤིན་ཏུ་འཕགས་པའི་རྒྱལ་པོ།</term>
@@ -1250,7 +1275,7 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-068-001-145">
-                            <term>Lord of the Ocean that is the Wisdom Vajra</term>
+                            <term>Lord of the Ocean That Is the Wisdom Vajra</term>
                             <term xml:lang="Bo-Ltn">ye shes rdo rje’i rgya mtsho </term>
                             <term xml:lang="bo">ཡེ་ཤེས་རྡོ་རྗེའི་རྒྱ་མཚོ།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1295,7 +1320,7 @@
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-068-001-150">
-                            <term>World in which the Wheel of No Regress has been Proclaimed</term>
+                            <term>World in Which the Wheel of No Regress Has Been Proclaimed</term>
                             <term xml:lang="Bo-Ltn">phyir mi ldog pa’i ’khor lo bsgrags pa’i ’jig rten </term>
                             <term xml:lang="bo">ཕྱིར་མི་ལྡོག་པའི་འཁོར་ལོ་བསྒྲགས་པའི་འཇིག་རྟེན།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1331,7 +1356,7 @@
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-068-001-154">
-                            <term>World that is Difficult to Transcend</term>
+                            <term>World That Is Difficult to Transcend</term>
                             <term xml:lang="Bo-Ltn">’da’ bar dka’ ba’i ’jig rten </term>
                             <term xml:lang="bo">འདའ་བར་དཀའ་བའི་འཇིག་རྟེན།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1340,7 +1365,7 @@
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-068-001-155">
-                            <term>World that is Supremely Noble</term>
+                            <term>World That Is Supremely Noble</term>
                             <term xml:lang="Bo-Ltn">rab tu bzang po’i ’jig rten </term>
                             <term xml:lang="bo">རབ་ཏུ་བཟང་པོའི་འཇིག་རྟེན།</term>
                             <term xml:lang="Sa-Ltn"/>
@@ -1349,7 +1374,7 @@
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-068-001-156">
-                            <term>World where the Mirror-disk has been Proclaimed</term>
+                            <term>World Where the Mirror-Disk Has Been Proclaimed</term>
                             <term xml:lang="Bo-Ltn">me long gi dkyil ’khor bsgrags pa’i ’jig rten </term>
                             <term xml:lang="bo">མེ་ལོང་གི་དཀྱིལ་འཁོར་བསྒྲགས་པའི་འཇིག་རྟེན།</term>
                             <term xml:lang="Sa-Ltn"/>
