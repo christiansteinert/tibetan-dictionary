@@ -30,13 +30,13 @@
                 <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.22 <date>2019</date>
+                <edition>v 1.22.2 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -57,16 +57,15 @@
                     <ref>Toh 308</ref>
                     <biblScope>Degé Kangyur vol. 72 (mdo sde, sa), folios
                         145.b–155.a</biblScope>
-                    <location count-pages="20">
-                        <start volume="72" page="292"/>
-                        <end volume="72" page="311"/>
+                    <location work="UT4CZ5369" count-pages="20">
+                        <volume number="72" start-page="290" end-page="309"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11978" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-21T14:42:53.627Z" user="admin">21/06/2019 14:42:53</note>
+                <note type="lastUpdated" date-time="2019-12-02T00:17:18.601Z" user="admin">02/12/2019 00:17:18</note>
             <note type="updated" update="text-version" value="v 0.9" date-time="2019-03-02T20:14:42.638Z" user="john">v 0.9 2019</note>
             <note type="updated" update="text-version" value="v 0.91" date-time="2019-03-12T17:57:44.717Z" user="john">v 0.91 2019</note>
             <note type="updated" update="text-version" value="v 1.0" date-time="2019-03-17T12:28:45.008Z" user="john">v 1.0 2019</note>
@@ -74,6 +73,8 @@
             <note type="updated" update="text-version" value="v 1.1" date-time="2019-03-18T22:04:31.631Z" user="john">v 1.1 2019</note>
             <note type="updated" update="text-version" value="v 1.2" date-time="2019-03-28T20:10:21.193Z" user="john">v 1.2 2019</note>
                 <note type="updated" update="text-version" value="v 1.22" date-time="2019-06-21T14:42:50.635Z" user="celso">v 1.22 2019</note>
+<note type="updated" update="text-version" value="v 1.22.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.22.2" date-time="2019-12-02T00:17:15.8Z" user="konchog">Added "the" to first sentence of translation; changed "non-virtue" to "nonvirtue".</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -230,7 +231,7 @@
                             deceased person is being reborn in one of various different states of
                             being because actions he had done are ripening. And suppose people help
                             that person by dedicating to him all sorts of virtuous actions that will
-                            constitute a collection of merit without any non-virtue. In that case,
+                            constitute a collection of merit without any nonvirtue. In that case,
                             the person will be reborn in higher states, or attain liberation. On
                             the other hand, when someone has already taken rebirth, then if one aids
                             him through the dedication of a virtuous action that constitutes merit,
@@ -462,10 +463,10 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-072-008-29"/>
                     <p tid="19">
-                        <ref cRef="F.145.b"/>  Homage to all buddhas and bodhisattvas.</p>
+                        <ref cRef="F.145.b" type="folio"/>  Homage to all buddhas and bodhisattvas.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-191"/>
-                    <p tid="20">Thus did I hear at one time. The Blessed One, seeing that time had
+                    <p tid="20">Thus did I hear at one time. The Blessed One, seeing that the time had
                         come to train all the various householders of the great city of Kapilavastu,
                         went there with a retinue of five hundred to cause them to generate
                         faith.</p>
@@ -478,7 +479,7 @@
                         delicious and sweet food and drink. They offered them, wailing, “We give
                         these to Nandaja!” </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-193"/>
-                    <p tid="22">This made King Śuddhodana wish <ref cRef="F.146.a"/> to
+                    <p tid="22">This made King Śuddhodana wish <ref cRef="F.146.a" type="folio"/> to
                         ask the Blessed One what benefit<note place="end" xml:id="UT22084-072-008-31" index="16">We 
                             find <foreign xml:lang="Bo-Ltn" type="term">sman pa</foreign> in all editions. It clearly needs to
                             be read in its attested sense of <foreign xml:lang="Bo-Ltn" type="term">phan pa</foreign> 
@@ -521,7 +522,7 @@
                         rebirth in a future life but living just as they do in this life? </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-36"/>
                     <p tid="25">“Blessed One, do those who are wealthy and proud in this life go on
-                        to be wealthy and proud in the hereafter too, <ref cRef="F.146.b"/> and do
+                        to be wealthy and proud in the hereafter too, <ref cRef="F.146.b" type="folio"/> and do
                         those who are poor and humble in this life go on to be poor and humble in
                         the next? Or do people simply switch back and forth between the two?<note place="end" xml:id="UT22084-072-008-37" index="19">It is clear in the
                             reply later that the type of “switching” being
@@ -551,8 +552,8 @@
                         “O Great King, with regard to your question as to whether <term type="ignore">god</term>s are reborn as <term type="ignore">god</term>s
                         and so forth, the answer is ‘no.’ Suppose that when <term type="ignore">god</term>s died they were reborn only as <term type="ignore">god</term>s and not reborn as other types of beings, and the same for
                         humans and so forth. O Great King, initially humans come from <term type="ignore">god</term>s, and the three lower realms come from humans’
-                        engagement in non-virtue. Therefore, those <term type="ignore">god</term>s
-                        and so forth who die <ref cRef="F.147.a"/> are reborn in various other types
+                        engagement in nonvirtue. Therefore, those <term type="ignore">god</term>s
+                        and so forth who die <ref cRef="F.147.a" type="folio"/> are reborn in various other types
                         of migrations.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-40"/>
                     <p tid="30">“O Great King, suppose, moreover, that the answer to this question
@@ -562,7 +563,7 @@
                             <foreign xml:lang="Bo-Ltn" type="quote">phyir zhing mang ba</foreign>,
                             literally, “once again many/more.”</note> due to the preponderance<note place="end" xml:id="UT22084-072-008-42" index="21">
                             <foreign xml:lang="Bo-Ltn" type="term">mang ba</foreign>, “more.”</note>
-                        of humans’ engagement in non-virtue! Moreover, O Great King, if the arhats
+                        of humans’ engagement in nonvirtue! Moreover, O Great King, if the arhats
                         of today come from the ranks of humans, then it cannot be right that beings
                         are consistently reborn in their own types. What is more, it would be
                         impossible for anyone to obtain the fruit of being an arhat. Therefore, O
@@ -589,7 +590,7 @@
                         seasons. So, O Great King, know that there are future lives.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-44"/>
-                    <p tid="33">“O Great King, you asked whether <ref cRef="F.147.b"/> it is as the worldly say it is. You
+                    <p tid="33">“O Great King, you asked whether <ref cRef="F.147.b" type="folio"/> it is as the worldly say it is. You
                         asked whether all sentient beings after their deaths live on, befriending
                         their kin in a beginningless lineage, including parents, grandparents,
                         great-grandparents, and so forth, and not taking rebirth in a future life
@@ -625,7 +626,7 @@
                                 yin na</foreign>.</note> How would you delineate which children and
                         relatives do or do not befriend present children, relatives, grandfathers,
                         and so forth? The offspring from this first ancestor, up to and including
-                        the presently existing relatives and children, <ref cRef="F.148.a"/> would
+                        the presently existing relatives and children, <ref cRef="F.148.a" type="folio"/> would
                         be alike in their respective affections [and antagonisms] for one another,
                         just like the presently existing children and relatives. If this is so, who
                         befriends whom and who fails to befriend whom?<note place="end" xml:id="UT22084-072-008-49" index="24">The argument seems to be as follows. Among
@@ -675,7 +676,7 @@
                         people switch between the two. O Great King, just take sentient beings in
                         this life who have not yet died: some are wealthy and proud from the moment
                         of birth, but are then poor and humble from the age of fifty or sixty onward
-                        into their old age; <ref cRef="F.148.b"/> others are poor and humble from birth
+                        into their old age; <ref cRef="F.148.b" type="folio"/> others are poor and humble from birth
                         and throughout their youth, but then, from the age of fifty or
                         sixty up until their old age, they are wealthy and proud. If that is 
                         so, then it is all the more obvious that
@@ -709,7 +710,7 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-57"/>
                     <p tid="41">“What about an apparition of a deceased individual’s style of dress?
                         In the heavenly realm there exists an unfathomable, unimaginable, limitless
-                            <ref cRef="F.149.a"/> world of gandharvas. One type there is called
+                            <ref cRef="F.149.a" type="folio"/> world of gandharvas. One type there is called
                             <distinct>the gandharva who preys upon the minds of those on the verge
                             of death</distinct>.<note place="end" xml:id="UT22084-072-008-58" index="27">
                             <foreign xml:lang="Bo-Ltn" type="quote">dri za ’chi ka ma’i sems la nye
@@ -766,7 +767,7 @@
                     <p tid="43">“O Great King, there is yet another analogy for this being a matter of habitual
                         tendencies. Suppose that a person left whatever castles, houses, and cities
                         they had been in during an earlier part of their life, and that in the later
-                        part of their life, <ref cRef="F.149.b"/> when they lived elsewhere, the
+                        part of their life, <ref cRef="F.149.b" type="folio"/> when they lived elsewhere, the
                         city they knew previously was destroyed. This person dreams of the
                         shape and size of their house as they were when it was neither destroyed nor
                         scattered about,<note place="end" xml:id="UT22084-072-008-64" index="31"> We
@@ -817,7 +818,7 @@
                         being who consumes one small portion of food and drink all the time and over
                         many eons? Have you ever heard of such a sentient being? O Great King,
                         though the Cakravartin king has a wish-fulfilling gem that gives whatever he
-                        might wish, it came to exist because of immeasurable <ref cRef="F.150.a"/>
+                        might wish, it came to exist because of immeasurable <ref cRef="F.150.a" type="folio"/>
                         collections of merit collected earlier over numerous eons—it did not fall
                         from the sky or emerge accidentally. Is it then reasonable that this small
                         portion of food and drink would remain unexpended until the end of the
@@ -851,7 +852,7 @@
                                 <foreign xml:lang="Bo-Ltn" type="term">btang</foreign>; L:
                                 <foreign xml:lang="Bo-Ltn" type="term">gtang</foreign>.
                         </note> that person by [dedicating to him] all sorts of virtuous actions that will
-                        constitute a collection of merit without any non-virtue. In that case, the
+                        constitute a collection of merit without any nonvirtue. In that case, the
                         person will be reborn in higher states, or attain liberation. On the
                         other hand, when someone has already taken rebirth, then if one aids<note place="end" xml:id="UT22084-072-008-72" index="36">D, A: <foreign xml:lang="Bo-Ltn" type="term">bstangs</foreign>; S, L:
                                 <foreign xml:lang="Bo-Ltn" type="term">btang</foreign>.
@@ -868,7 +869,7 @@
                             ancestors (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>). Cf.
                             Negi s.v. <foreign xml:lang="Bo-Ltn" type="term">gshin rje’i ’jig
                                 rten</foreign> (= <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>). On the Vedic afterlife, <foreign xml:lang="Sa-Ltn" type="term">yamaloka</foreign>, see <ptr target="#UT22084-072-008-125">Bodewitz (1999)</ptr>, <ptr target="#UT22084-072-008-142">Shushan (2011)</ptr>.</note> without
-                        rebirth, <ref cRef="F.150.b"/> and taking on food and drink, mounts,
+                        rebirth, <ref cRef="F.150.b" type="folio"/> and taking on food and drink, mounts,
                         clothing, and ornaments. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-74"/>
                     <p tid="48">“O Great King, suppose people say that things seen by the worldly
@@ -943,7 +944,7 @@
                             Sanskrit names for these spirits and have simply given the Tibetan
                             transcription as is. Cf. S, L: <foreign xml:lang="Bo-Ltn" type="quote">ba tsi na</foreign> and <foreign xml:lang="Bo-Ltn" type="quote">ba ra hin ti</foreign>. </note> They conjure up<note place="end" xml:id="UT22084-072-008-83" index="43">
                             <foreign xml:lang="Bo-Ltn" type="term">bsgrub</foreign>.</note> such
-                        things. And then, <ref cRef="F.151.a"/> in order to trick the worldly, these
+                        things. And then, <ref cRef="F.151.a" type="folio"/> in order to trick the worldly, these
                         demons tell stories in the same way the deceased people used to do earlier, and
                         exhibit their characteristic styles of dress.”</p>
                     <lb/>
@@ -978,7 +979,7 @@
                         bags for the ashes of each one. So as not to be mistaken about which type of
                         wood each bag of ash came from, he labelled each bag of ash with the
                         appropriate name. He then went to the Blessed One and asked, “Blessed One
-                            <ref cRef="F.151.b"/>, if you possess omniscient wisdom, then which bag
+                            <ref cRef="F.151.b" type="folio"/>, if you possess omniscient wisdom, then which bag
                         of ash belongs to which tree?” And he showed him the small bags of ashes one
                         by one. For each small bag, the Blessed One explained unmistakenly which
                         tree the ash had come from, saying, “This one is sandalwood ash. This one is
@@ -1012,7 +1013,7 @@
                         household, he took a small bag of rice, and so that he would not mistake
                         whose rice was whose, he wrote down the name of every Śākya he took them
                         from and put these names inside the small bags. When the rice bags came to
-                        be a full load for an elephant, <ref cRef="F.152.a"/> he went to the Blessed
+                        be a full load for an elephant, <ref cRef="F.152.a" type="folio"/> he went to the Blessed
                         One and requested of him, “Blessed One, if your buddha-eye sees all, then please
                         recognize, without opening them, which Śākyas’ small bags of rice are
                         which.” And he put down the elephant’s load of small bags in front of the
@@ -1048,7 +1049,7 @@
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-95"/>
                     <p tid="65">The father, the Great King, then spoke. “Blessed One, there are
-                        sentient beings who have committed non-virtues, such as the actions that bring
+                        sentient beings who have committed nonvirtues, such as the actions that bring
                         immediate retribution, on account of which they come to experience
                         the unbearable ripening of such actions. Please explain what sorts of things
                         they should do to attain happiness.”</p>
@@ -1056,7 +1057,7 @@
                     <p tid="66">The Blessed One replied, “O Great King, those sentient beings who
                         have committed nonvirtuous actions, like those actions that bring immediate
                         retribution, will become pure if they sincerely believe in 
-                        the <ref cRef="F.152.b"/> ripening of the actions and confess them deeply. If, at
+                        the <ref cRef="F.152.b" type="folio"/> ripening of the actions and confess them deeply. If, at
                         death, they regret the negative actions they committed earlier, pay homage,
                         and go for refuge to all the buddhas and bodhisattvas, their negativities
                         will become pure; such beings will also be reborn in high states. Do not
@@ -1095,7 +1096,7 @@
                             ‘sour,’ and (8) the sound of an echo. O Great King,
                         in these eight analogies, the fact that earlier things give rise to the
                         later ones illustrates how nothing permanent transmigrates. The fact that
-                        later things arise from <ref cRef="F.153.a"/> earlier ones illustrates how
+                        later things arise from <ref cRef="F.153.a" type="folio"/> earlier ones illustrates how
                         transmigration and rebirth do not occur without a cause and that they are
                         not of something extinguished and halted.</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-100"/>
@@ -1130,7 +1131,7 @@
                         illustrates how one takes rebirth due to actions one has experienced. The
                         echoing sound illustrates how one takes a rebirth 
                         when causes and conditions are present without other annulling conditions;
-                        <ref cRef="F.153.b"/> it illustrates how a [reborn individual] is not the same as or different
+                        <ref cRef="F.153.b" type="folio"/> it illustrates how a [reborn individual] is not the same as or different
                         [from that of the earlier life].</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-102"/>
                     <p tid="72">“O Great King, if I had not explained all eight analogies but had
@@ -1152,7 +1153,7 @@
                         humans. To refute them I taught the remaining analogies. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-205"/>
                     <p tid="76">“Yet others might use the analogy of the magnifying glass to say
-                        that from virtue come the lower realms and from non-virtue comes high status
+                        that from virtue come the lower realms and from nonvirtue comes high status
                         because a magnifying glass illustrates dissimilarity.<note place="end" xml:id="UT22084-072-008-105" index="47">The point seems to be that the
                             <foreign xml:lang="Sa-Ltn">sūryakānta</foreign> itself is cool to the touch and yet it emits heat. See <ptr target="#UT22084-072-008-18"/><!--n. 7--> for a verse from Kālidāsa
                             to this effect.</note> To refute them I taught the remaining analogies. </p>
@@ -1177,7 +1178,7 @@
                         in the hereafter, and that it is extinguished and halted. Neither is this
                         life a permanent entity that transmigrates to the hereafter intact. People
                         cannot take rebirth in the hereafter without any dependence upon this life.
-                        Nor do they have a rebirth by simply thinking that they <ref cRef="F.154.a"/> will take such and such a rebirth. Rebirth does not occur because people
+                        Nor do they have a rebirth by simply thinking that they <ref cRef="F.154.a" type="folio"/> will take such and such a rebirth. Rebirth does not occur because people
                         think that they rely on God and the like, and that they will thus be reborn
                         in the heavens. Nor do people take rebirth thinking that they will be reborn
                         wherever they wish, whether in the heavens or in the lower realms. And
@@ -1196,7 +1197,7 @@
                         same time. Nor can one say that the lame are reborn lame, the fair are
                         reborn fair, and so forth. One cannot say that <term type="ignore">god</term>s who have died are reborn as <term type="ignore">god</term>s
                         and that humans who have died are reborn as humans. Nor can one say that
-                        virtue leads to the lower realms and that non-virtue leads to higher status.
+                        virtue leads to the lower realms and that nonvirtue leads to higher status.
                         Many consciousnesses do not develop from one. Beings are not reborn as <term type="ignore">god</term>s without having practiced virtue, nor are they
                         reborn in the lower realms without having committed some nonvirtuous deeds.
                         Rebirth is not brought about through the actions of an external agent. </p>
@@ -1217,7 +1218,7 @@
                         is in order to rule out this misinterpretation that we put forth the analogy
                         of echoing sound. An echo does not resound without a person having first
                         spoken and does not occur at the same time as that speech. So the aggregates
-                        do not exist at the same time. <ref cRef="F.154.b"/>. </p>
+                        do not exist at the same time. <ref cRef="F.154.b" type="folio"/>. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-207"/>
                     <p tid="84">“About the illustration of the mirror, it might be said that lame
                         people are born from lame people because of the similarity the mirror
@@ -1233,10 +1234,10 @@
                     <milestone unit="chunk" xml:id="UT22084-072-008-208"/>
                     <p tid="86">“About the analogy of the magnifying glass, someone might say that
                         it is an illustration of dissimilarity and thus shows that virtue leads to
-                        lower states and non-virtue to higher states. To rule this out we put forth
+                        lower states and nonvirtue to higher states. To rule this out we put forth
                         the analogy of a lamp. A lamp does not give rise to something dissimilar to
                         a lamp, but rather to a lamp. Similarly, it is logical that virtue gives
-                        rise to high status and non-virtue to lower states. </p>
+                        rise to high status and nonvirtue to lower states. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-114"/>
                     <p tid="87">“As for the analogy of the seed, someone might say that it shows
                         that [many different] consciousnesses develop. To rule this out we put forth
@@ -1247,10 +1248,10 @@
                         those who experience a history of birth as <term type="ignore">god</term>s
                         will always be born as <term type="ignore">god</term>s, in spite of doing no
                         virtue, and that those who experience a history of birth in the lower realms
-                        will always be born in lower realms, though they have done no non-virtue. To
+                        will always be born in lower realms, though they have done no nonvirtue. To
                         refute this we put forth the illustration of the mirror, for just as a face
                         appears in a mirror as it is, so too the similar results of virtue and
-                        non-virtue would match [their respective causes] and it would thus be
+                        nonvirtue would match [their respective causes] and it would thus be
                         contradictory to make them dissimilar. </p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-115"/>
                     <p tid="89">“Some might say, with regard to the analogy of echoing sound, that
@@ -1267,13 +1268,13 @@
                         beings take birth, perish, and transmigrate from this life to the next.”</p>
                     <milestone unit="chunk" xml:id="UT22084-072-008-116"/>
                     <lb/>
-                    <p tid="91">All the retinue <ref cRef="F.155.a"/> then rejoiced and praised what
+                    <p tid="91">All the retinue <ref cRef="F.155.a" type="folio"/> then rejoiced and praised what
                         the Blessed One had said. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-072-008-211"/>
-                    <p tid="92">Thus ends <title xml:lang="en">The Sūtra of the Teaching Regarding
-                        Death and Transmigration</title>.<note place="end" xml:id="UT22084-072-008-212" index="49">The title given here at the end of the sūtra, in all Kangyurs, is <title xml:lang="Bo-Ltn">’chi ’pho ba ji ltar ’gyur ba bstan pa’i mdo</title>, and differs from the main title at the beginning. See <ptr target="#UT22084-072-008-21"/> and <ptr target="#UT22084-072-008-24"/>.</note>
-                    </p>
+                    <trailer tid="92">Thus ends “<title xml:lang="en">The Sūtra of the Teaching Regarding
+                        Death and Transmigration</title>.”<note place="end" xml:id="UT22084-072-008-212" index="49">The title given here at the end of the sūtra, in all Kangyurs, is <title xml:lang="Bo-Ltn">’chi ’pho ba ji ltar ’gyur ba bstan pa’i mdo</title>, and differs from the main title at the beginning. See <ptr target="#UT22084-072-008-21"/> and <ptr target="#UT22084-072-008-24"/>.</note>
+                    </trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="100">Colophon</head>
