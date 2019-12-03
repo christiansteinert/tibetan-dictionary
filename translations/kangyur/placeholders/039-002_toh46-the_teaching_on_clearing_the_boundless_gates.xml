@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">sgo mtha' yas pa rnam par sbyong ba bstan pa'i mdo/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">anantamukhaviśodhananirdeśasūtra</title>
                 <title type="mainTitle" xml:lang="en">The Teaching on Clearing the Boundless Gates</title>
@@ -15,8 +15,10 @@
             <sponsor ref="sponsors.xml#sponsor-22">Qiang Li (李强) and Ya Wen (文雅)</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="2.g">
                 <idno xml:id="UT22084-039-002"/>
                 <date/>
@@ -25,16 +27,17 @@
                 <bibl key="toh46" type="text">
                     <ref>Toh 46</ref>
                     <biblScope>vol:39, ff.45v-99v(pp.90-198)</biblScope>
-                    <location count-pages="109">
-                        <start volume="39" page="92"/>
-                        <end volume="39" page="200"/>
+                    <location work="UT4CZ5369" count-pages="109">
+                        <volume number="39" start-page="90" end-page="198"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11571" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:40:49 by admin</note>
+                <note type="lastUpdated" date-time="2019-12-03T07:46:57.98Z" user="admin">03/12/2019 07:46:57</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-03T07:46:54.268Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
