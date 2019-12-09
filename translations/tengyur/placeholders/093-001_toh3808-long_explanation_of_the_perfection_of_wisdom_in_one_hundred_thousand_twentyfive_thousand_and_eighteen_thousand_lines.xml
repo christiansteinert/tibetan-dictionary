@@ -9,8 +9,15 @@
                 <title type="mainTitle" xml:lang="en">Long Explanation of the Perfection of Wisdom in One Hundred Thousand, Twenty-five Thousand, and Eighteen Thousand Lines</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">yum gsum gnod ’joms</title>
             </titleStmt>
-            <publicationStmt status="3">
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.f">
                 <idno xml:id="UT23703-093-001"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh3808" type="text">
@@ -19,16 +26,18 @@
                     <author role="translatorTib">a. damstrasena</author>
                     <author role="translatorTib">t. surendrabodhi</author>
                     <author role="translatorTib">ye shes sde</author>
-                    <location count-pages="582">
-                        <start volume="93" page="4"/>
-                        <end volume="93" page="586"/>
+                    <location work="UT23703" count-pages="582">
+                        <volume number="93" start-page="2" end-page="584"/>
                     </location>
                     <idno parent-id="O1JC76301JC10416" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC76301JC10456" work="W23703"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 10:25:55 by admin</note>
+                <note type="lastUpdated" date-time="2019-12-09T09:42:05.8Z" user="admin">09/12/2019 09:42:05</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-09T09:41:59.349Z" user="andreas">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.f" date-time="2019-12-09T09:41:59.349Z" user="andreas">2.f</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
