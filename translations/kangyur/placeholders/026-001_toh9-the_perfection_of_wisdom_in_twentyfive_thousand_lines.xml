@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">sher phyin stong phrag nyi shu lnga pa/ \(nyi khri/\)</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">pañcaviṃśatisāhasrikā­prajñāpāramitā</title>
                 <title type="mainTitle" xml:lang="en">The Perfection of Wisdom in Twenty-five Thousand Lines</title>
@@ -18,8 +18,10 @@
                 <sponsor ref="sponsors.xml#sponsor-1">Kris Yao and Xiang-Jen Yao</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-026-001"/>
                 <date/>
@@ -28,16 +30,19 @@
                 <bibl key="toh9" type="text">
                     <ref>Toh 9</ref>
                     <biblScope/>
-                    <location count-pages="2302">
-                        <start volume="26" page="4"/>
-                        <end volume="28" page="763"/>
+                    <location work="UT4CZ5369" count-pages="2302">
+                        <volume number="26" start-page="2" end-page="763"/>
+                        <volume number="27" start-page="2" end-page="785"/>
+                        <volume number="28" start-page="2" end-page="761"/>
                     </location>
                     <idno parent-id="O1JC114941JC14665" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11521" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:58:22 by admin</note>
+                <note type="lastUpdated" date-time="2019-12-11T09:22:35.166Z" user="admin">11/12/2019 09:22:35</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-11T09:22:31.551Z" user="andreas">v 0.1.0</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -48,6 +53,11 @@
                 <p tid="3">With some exceptions, the text parallels the structure of the other Perfection of Wisdom sūtras, especially the Prajñāpāramitā in 10,000 Lines, yet it has traditionally been regarded as more influential, analyzing the bodhisattvas’ transcendent perfections in considerably greater detail, and showing how bodhisattvas should practise them without ever considering either their practice, or any other phenomena whatsoever, as truly existing.</p>
                 <p tid="4">An original Sanskrit version found in Gilgit exists, as well as four distinct Chinese translations. There is also an important recast Sanskrit manuscript, possibly of 5th century origin, which divides the text according to the eight sections of Asaṅga-Maitreya’s famous treatise, the Abhisamayālaṃkāra. The Tibetan text dates from the 9th century. There are several important commentaries on the text in the Tengyur, by Haribhadra, Smṛtijñānakīrti, Vimuktasena and others.</p>
                 <p tid="5">Estimated to be completed in 8 years.</p>
+            </div>
+            <div type="summary" xml:lang="zh">
+                <p tid="7">《般若波羅密多二萬五千頌》是「六部母般若」中長度排行第二的經文，佔據甘珠爾三卷之長，並分為76個章節。內容記載佛陀與大弟子，特別是舍利弗、須菩提及阿難陀之間的對話。</p>
+                <p tid="8">除了一些特例以外，本經的結構大致與般若經相同，尤其是《般若波羅密多萬頌》。然而，此經向來被認為具有較大的影響力，因為經中對於菩薩如何修習般若智慧有細膩的解釋，並告訴菩薩在修學時不論對修行本身，或是對外境現象都不應該視為實有。</p>
+                <p tid="9">目前本經有在吉爾吉特發現的梵文原版，以及四個不同版本的中文翻譯。此外，還有一個重要的梵文修訂版手稿，可能源於西元5世紀，內容依據無著/彌勒菩薩著名的《現觀莊嚴論》而分成八個段落。藏文版出現在西元9世紀。《丹珠爾》中有由師子賢（Haribhadra）、深第耆那克爾第（Smṛtijñānakīrti） 與解脫軍（Vimuktasena）等所著的重要論著。</p>
             </div>
             <div type="acknowledgment">
                 <p tid="1">Sponsored by Kris Yao and Xiang-Jen Yao.</p>
