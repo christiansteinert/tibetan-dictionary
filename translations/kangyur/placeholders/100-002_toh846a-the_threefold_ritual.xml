@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rgyud gsum pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">The Threefold Ritual</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-100-002"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh846a" type="text">
+                    <ref>Toh 846a</ref>
+                    <biblScope>vol.100,ff. 3v-3v(pp.6-6)</biblScope>
+                    <location work="UT4CZ5369" count-pages="1">
+                        <volume number="100" start-page="6" end-page="6"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="toh846a" work="http://read.84000.co/sections"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-05T14:30:29.716Z" user="admin">05/11/2019 14:30:29</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:04:08.457Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

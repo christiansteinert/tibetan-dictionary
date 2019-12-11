@@ -1,0 +1,1125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rng:grammar xmlns="http://www.tei-c.org/ns/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:rng="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <a:documentation> Schema to validate 84000 Section TEI markup </a:documentation>
+    <rng:start>
+        <rng:ref name="TEI"/>
+    </rng:start>
+    <rng:define name="TEI">
+        <rng:element name="TEI" ns="http://www.tei-c.org/ns/1.0">
+            <!-- teiHeader -->
+            <rng:element name="teiHeader">
+                <!-- fileDesc -->
+                <rng:element name="fileDesc">
+                    <rng:attribute name="type">
+                        <rng:choice>
+                            <rng:value>section</rng:value>
+                            <rng:value>grouping</rng:value>
+                            <rng:value>pseudo-section</rng:value>
+                        </rng:choice>
+                    </rng:attribute>
+                    <!-- titleStmt -->
+                    <rng:element name="titleStmt">
+                        <!-- titles -->
+                        <rng:element name="title">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>mainTitle</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                                <rng:value type="language">Bo-Ltn</rng:value>
+                            </rng:attribute>
+                            <rng:text/>
+                        </rng:element>
+                        <rng:element name="title">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>mainTitle</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                                <rng:value type="language">Sa-Ltn</rng:value>
+                            </rng:attribute>
+                            <rng:text/>
+                        </rng:element>
+                        <rng:element name="title">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>mainTitle</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                                <rng:value type="language">en</rng:value>
+                            </rng:attribute>
+                            <rng:text/>
+                        </rng:element>
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:element name="title">
+                                <rng:attribute name="type">
+                                    <rng:choice>
+                                        <rng:value>mainTitle</rng:value>
+                                    </rng:choice>
+                                </rng:attribute>
+                                <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                                    <rng:value type="language">bo</rng:value>
+                                </rng:attribute>
+                                <rng:text/>
+                            </rng:element>
+                        </optional>
+                        <!-- other titles (store unknown here) -->
+                        <rng:zeroOrMore>
+                            <rng:element name="title">
+                                <rng:attribute name="type">
+                                    <rng:choice>
+                                        <rng:value>otherTitle</rng:value>
+                                    </rng:choice>
+                                </rng:attribute>
+                                <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
+                                <rng:text/>
+                            </rng:element>
+                        </rng:zeroOrMore>
+                        <!-- long titles (official long title) -->
+                        <rng:zeroOrMore>
+                            <rng:element name="title">
+                                <rng:attribute name="type">
+                                    <rng:choice>
+                                        <rng:value>longTitle</rng:value>
+                                    </rng:choice>
+                                </rng:attribute>
+                                <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace"/>
+                                <rng:text/>
+                            </rng:element>
+                        </rng:zeroOrMore>
+                    </rng:element>
+                    <!-- publicationStmt -->
+                    <rng:element name="publicationStmt">
+                        <rng:element name="p">
+                            <rng:text/>
+                        </rng:element>
+                        <!-- idno -->
+                        <rng:element name="idno">
+                            <rng:attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+                                <rng:text/>
+                            </rng:attribute>
+                        </rng:element>
+                        <!-- date -->
+                        <rng:element name="date">
+                            <rng:data type="integer">
+                                <rng:param name="minInclusive">2010</rng:param>
+                                <rng:param name="maxInclusive">2020</rng:param>
+                            </rng:data>
+                        </rng:element>
+                    </rng:element>
+                    <!-- sourceDesc -->
+                    <rng:element name="sourceDesc">
+                        <rng:attribute name="work">
+                            <rng:text/>
+                        </rng:attribute>
+                        <rng:attribute name="sort-index">
+                            <rng:data type="integer"/>
+                        </rng:attribute>
+                        <rng:element name="p">
+                            <rng:text/>
+                        </rng:element>
+                        <rng:element name="bibl">
+                            <!-- parent-id -->
+                            <rng:element name="idno">
+                                <rng:attribute name="parent-id">
+                                    <rng:text/>
+                                </rng:attribute>
+                            </rng:element>
+                        </rng:element>
+                    </rng:element>
+                    <!-- notesStmt -->
+                    <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                        <rng:element name="notesStmt">
+                            <rng:zeroOrMore>
+                                <rng:element name="note">
+                                        <optional>
+                                            <attribute name="type">
+                                                <rng:choice>
+                                                    <rng:value>lastUpdated</rng:value>
+                                                </rng:choice>
+                                            </attribute>
+                                        </optional>
+                                        <optional>
+                                            <attribute name="date-time"/>
+                                        </optional>
+                                        <optional>
+                                            <attribute name="value"/>
+                                        </optional>
+                                        <optional>
+                                            <attribute name="user"/>
+                                        </optional>
+                                        <optional>
+                                            <attribute name="update"/>
+                                        </optional>
+                                    <rng:text/>
+                                </rng:element>
+                            </rng:zeroOrMore>
+                        </rng:element>
+                    </optional>
+                </rng:element>
+            </rng:element>
+            <!-- text -->
+            <rng:element name="text">
+                <!-- front -->
+                <rng:element name="front">
+                    <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                        <!-- abstract -->
+                        <rng:element name="div">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>abstract</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:zeroOrMore>
+                                        <rng:element name="p">
+                                            <rng:ref name="paragraph"/>
+                                        </rng:element>
+                                    </rng:zeroOrMore>
+                                    <rng:zeroOrMore>
+                                        <rng:element name="lg">
+                                            <rng:ref name="lg"/>
+                                        </rng:element>
+                                    </rng:zeroOrMore>
+                                </rng:choice>
+                            </rng:oneOrMore>
+                        </rng:element>
+                    </optional>
+                    <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                        <!-- warning -->
+                        <rng:element name="div">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>warning</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:oneOrMore>
+                                <rng:choice>
+                                    <rng:zeroOrMore>
+                                        <rng:element name="p">
+                                            <rng:ref name="paragraph"/>
+                                        </rng:element>
+                                    </rng:zeroOrMore>
+                                </rng:choice>
+                            </rng:oneOrMore>
+                        </rng:element>
+                    </optional>
+                </rng:element>
+                <!-- body -->
+                <rng:element name="body">
+                    <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                        <!-- translation -->
+                        <rng:element name="div">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>about</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                            <rng:element name="head">
+                                <rng:attribute name="type">
+                                    <rng:choice>
+                                        <rng:value>about</rng:value>
+                                    </rng:choice>
+                                </rng:attribute>
+                                    <rng:attribute name="tid">
+                                    <rng:data type="integer"/>
+                                    </rng:attribute>
+                                <rng:text/>
+                            </rng:element>
+                            <rng:zeroOrMore>
+                                <rng:element name="div">
+                                    <rng:ref name="translation-section"/>
+                                </rng:element>
+                            </rng:zeroOrMore>
+                        </rng:element>
+                    </optional>
+                </rng:element>
+            </rng:element>
+        </rng:element>
+    </rng:define>
+    <!-- translation section type -->
+    <rng:define name="translation-section" ns="http://www.tei-c.org/ns/1.0">
+        <rng:attribute name="type">
+            <rng:choice>
+                <rng:value>section</rng:value>
+            </rng:choice>
+        </rng:attribute>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:zeroOrMore>
+                    <rng:element name="head">
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>section</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                                <rng:attribute name="tid">
+                                    <rng:data type="integer"/>
+                                </rng:attribute>
+                        </optional>
+                        <rng:text/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="milestone">
+                        <rng:ref name="milestone"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="p">
+                        <rng:ref name="paragraph"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ab">
+                        <rng:ref name="ab"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="q">
+                        <rng:ref name="q"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lg">
+                        <rng:ref name="lg"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="list">
+                        <rng:ref name="list"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                    <rng:element name="trailer">
+                        <rng:ref name="trailer"/>
+                    </rng:element>
+                </optional>
+                <rng:zeroOrMore>
+                    <rng:element name="label">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <!-- Sub section -->
+                <rng:zeroOrMore>
+                    <rng:element name="div">
+                        <rng:ref name="translation-section"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- translation chapter type -->
+    <rng:define name="translation-chapter" ns="http://www.tei-c.org/ns/1.0">
+        <rng:attribute name="type">
+            <rng:choice>
+                <rng:value>chapter</rng:value>
+            </rng:choice>
+        </rng:attribute>
+        <!-- chapter number -->
+        <rng:element name="head">
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>chapter</rng:value>
+                </rng:choice>
+            </rng:attribute>
+            <rng:attribute name="tid">
+                <rng:data type="integer"/>
+            </rng:attribute>
+            <rng:text/>
+        </rng:element>
+        <rng:oneOrMore>
+            <rng:choice>
+                <!-- chapter title -->
+                <rng:element name="head">
+                    <rng:attribute name="type">
+                        <rng:choice>
+                            <rng:value>chapterTitle</rng:value>
+                        </rng:choice>
+                    </rng:attribute>
+                    <rng:attribute name="tid">
+                        <rng:data type="integer"/>
+                    </rng:attribute>
+                    <rng:text/>
+                </rng:element>
+                <!-- section title -->
+                <rng:element name="head">
+                    <rng:attribute name="type">
+                        <rng:choice>
+                            <rng:value>section</rng:value>
+                        </rng:choice>
+                    </rng:attribute>
+                    <rng:attribute name="tid">
+                        <rng:data type="integer"/>
+                    </rng:attribute>
+                    <rng:text/>
+                </rng:element>
+                <rng:zeroOrMore>
+                    <rng:element name="milestone">
+                        <rng:ref name="milestone"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="p">
+                        <rng:ref name="paragraph"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ab">
+                        <rng:ref name="ab"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="q">
+                        <rng:ref name="q"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lg">
+                        <rng:ref name="lg"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="list">
+                        <rng:ref name="list"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                    <rng:element name="trailer">
+                        <rng:ref name="trailer"/>
+                    </rng:element>
+                </optional>
+                <rng:zeroOrMore>
+                    <rng:element name="label">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- bibliography section type -->
+    <!-- recursive therefore defined -->
+    <rng:define name="bibliography-section" ns="http://www.tei-c.org/ns/1.0">
+        <rng:attribute name="type">
+            <rng:choice>
+                <rng:value>section</rng:value>
+            </rng:choice>
+        </rng:attribute>
+        <rng:oneOrMore>
+            <rng:choice>
+                <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                    <rng:element name="head">
+                        <optional>
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>section</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                        </optional>
+                        <rng:attribute name="tid">
+                            <rng:data type="integer"/>
+                        </rng:attribute>
+                        <rng:text/>
+                    </rng:element>
+                </optional>
+                <rng:zeroOrMore>
+                    <rng:element name="p">
+                        <rng:ref name="paragraph"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="bibl">
+                        <rng:attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+                            <rng:text/>
+                        </rng:attribute>
+                        <rng:oneOrMore>
+                            <rng:choice>
+                                <rng:text/>
+                                <rng:zeroOrMore>
+                                    <rng:element name="title">
+                                        <rng:ref name="title"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="foreign">
+                                        <rng:ref name="foreign"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="lb">
+                                        <rng:ref name="lb"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="ref">
+                                        <rng:ref name="ref"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="author">
+                                        <rng:data type="string"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="date">
+                                        <rng:data type="string"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                            </rng:choice>
+                        </rng:oneOrMore>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="div">
+                        <rng:ref name="bibliography-section"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- paragraph type -->
+    <rng:define name="paragraph" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="tid">
+                <rng:data type="integer"/>
+            </rng:attribute>
+        </optional>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="title">
+                        <rng:ref name="title"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="label">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ptr">
+                        <rng:ref name="ptr"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="foreign">
+                        <rng:ref name="foreign"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="emph">
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="rend">
+                                <rng:value>bold</rng:value>
+                            </rng:attribute>
+                        </optional>
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="distinct">
+                        <rng:ref name="distinct"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>ignore</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                        </optional>
+                        <rng:oneOrMore>
+                            <rng:choice>
+                                <rng:zeroOrMore>
+                                    <rng:element name="foreign">
+                                        <rng:ref name="foreign"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:text/>
+                            </rng:choice>
+                        </rng:oneOrMore>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!--  ab type -->
+    <rng:define name="ab" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="tid">
+                <rng:data type="integer"/>
+            </rng:attribute>
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>mantra</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <rng:zeroOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="foreign">
+                        <rng:ref name="foreign"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="title">
+                        <rng:ref name="title"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="emph">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="distinct">
+                        <rng:ref name="distinct"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="q">
+                        <rng:ref name="q"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="type">
+                                <rng:choice>
+                                    <rng:value>ignore</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                        </optional>
+                        <rng:text/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:zeroOrMore>
+    </rng:define>
+    <!-- lg type -->
+    <rng:define name="lg" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="tid">
+                <rng:data type="integer"/>
+            </rng:attribute>
+        </optional>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:zeroOrMore>
+                    <rng:element name="l">
+                        <rng:ref name="l"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="milestone">
+                        <rng:ref name="milestone"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!--    term type -->
+    <rng:define name="term" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>ignore</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <rng:text/>
+    </rng:define>
+    <!-- l type -->
+    <rng:define name="l" ns="http://www.tei-c.org/ns/1.0">
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <rng:ref name="term"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="title">
+                        <rng:ref name="title"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="foreign">
+                        <rng:ref name="foreign"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="distinct">
+                        <rng:ref name="distinct"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="emph">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- q type -->
+    <rng:define name="q" ns="http://www.tei-c.org/ns/1.0">
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="p">
+                        <rng:ref name="paragraph"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lg">
+                        <rng:ref name="lg"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- trailer type -->
+    <rng:define name="trailer" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="tid">
+                <rng:data type="integer"/>
+            </rng:attribute>
+        </optional>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="title">
+                        <rng:ref name="title"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="foreign">
+                        <rng:ref name="foreign"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <rng:ref name="term"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lb">
+                        <rng:ref name="lb"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- translation list type -->
+    <rng:define name="list" ns="http://www.tei-c.org/ns/1.0">
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:zeroOrMore>
+                    <rng:element name="milestone">
+                        <rng:ref name="milestone"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="head">
+                        <rng:attribute name="tid">
+                            <rng:data type="integer"/>
+                        </rng:attribute>
+                        <rng:text/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <!-- invalid in html -->
+                    <rng:element name="p">
+                        <rng:ref name="paragraph"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:oneOrMore>
+                    <rng:element name="item">
+                        <rng:oneOrMore>
+                            <rng:choice>
+                                <rng:zeroOrMore>
+                                    <!-- invalid in html -->
+                                    <rng:element name="p">
+                                        <rng:ref name="paragraph"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="title">
+                                        <rng:ref name="title"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="list">
+                                        <rng:ref name="list"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="lb">
+                                        <rng:ref name="lb"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="label">
+                                        <rng:oneOrMore>
+                                            <rng:choice>
+                                                <rng:text/>
+                                                <rng:zeroOrMore>
+                                                    <rng:element name="foreign">
+                                                        <rng:ref name="foreign"/>
+                                                    </rng:element>
+                                                </rng:zeroOrMore>
+                                            </rng:choice>
+                                        </rng:oneOrMore>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                                <rng:zeroOrMore>
+                                    <rng:element name="milestone">
+                                        <rng:ref name="milestone"/>
+                                    </rng:element>
+                                </rng:zeroOrMore>
+                            </rng:choice>
+                        </rng:oneOrMore>
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="n">
+                                <rng:data type="string"/>
+                            </rng:attribute>
+                        </optional>
+                        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+                            <rng:attribute name="style">
+                                <rng:choice>
+                                    <rng:value>bullet l3</rng:value>
+                                </rng:choice>
+                            </rng:attribute>
+                        </optional>
+                    </rng:element>
+                </rng:oneOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="rend">
+                <rng:choice>
+                    <rng:value>bulleted</rng:value>
+                    <rng:value>numbered</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+    </rng:define>
+    <!-- milestone type -->
+    <rng:define name="milestone" ns="http://www.tei-c.org/ns/1.0">
+        <rng:attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+            <rng:text/>
+        </rng:attribute>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="unit">
+                <rng:choice>
+                    <rng:value>chunk</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+    </rng:define>
+    <!-- foreign type -->
+    <rng:define name="foreign" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <!-- lang should be required -->
+            <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                <rng:choice>
+                    <rng:value type="language">en</rng:value>
+                    <rng:value type="language">Bo-Ltn</rng:value>
+                    <rng:value type="language">bo</rng:value>
+                    <rng:value type="language">Sa-Ltn</rng:value>
+                    <rng:value type="language">la</rng:value>
+                    <rng:value type="language">pi</rng:value>
+                    <rng:value type="language">zh</rng:value>
+                    <rng:value type="language">fr</rng:value>
+                    <rng:value type="language">de</rng:value>
+                    <rng:value type="language">ja</rng:value>
+                    <rng:value type="language">it</rng:value>
+                    <rng:value type="language">Zh-Ltn</rng:value>
+                    <rng:value type="language">el</rng:value>
+                    <rng:value type="language">th</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>term</rng:value>
+                    <rng:value>quote</rng:value>
+                    <rng:value>mantra</rng:value>
+                    <rng:value>person</rng:value>
+                    <rng:value>place</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="note">
+                        <rng:ref name="note"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <rng:attribute name="type">
+                            <rng:choice>
+                                <rng:value>ignore</rng:value>
+                            </rng:choice>
+                        </rng:attribute>
+                        <rng:text/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- title type -->
+    <rng:define name="title" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="lang" ns="http://www.w3.org/XML/1998/namespace">
+                <rng:choice>
+                    <rng:value type="language">en</rng:value>
+                    <rng:value type="language">Bo-Ltn</rng:value>
+                    <rng:value type="language">bo</rng:value>
+                    <rng:value type="language">Sa-Ltn</rng:value>
+                    <rng:value type="language">la</rng:value>
+                    <rng:value type="language">pi</rng:value>
+                    <rng:value type="language">zh</rng:value>
+                    <rng:value type="language">fr</rng:value>
+                    <rng:value type="language">de</rng:value>
+                    <rng:value type="language">ja</rng:value>
+                    <rng:value type="language">it</rng:value>
+                    <rng:value type="language">Zh-Ltn</rng:value>
+                    <rng:value type="language">el</rng:value>
+                    <rng:value type="language">th</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>longTitle</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="level"/>
+        </optional>
+        <rng:text/>
+    </rng:define>
+    <!-- distinct type -->
+    <rng:define name="distinct" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="type">
+                <rng:choice>
+                    <rng:value>term</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <rng:text/>
+    </rng:define>
+    <!-- note type -->
+    <rng:define name="note" ns="http://www.tei-c.org/ns/1.0">
+        <rng:attribute name="id" ns="http://www.w3.org/XML/1998/namespace">
+            <rng:text/>
+        </rng:attribute>
+        <rng:attribute name="index">
+            <rng:data type="integer"/>
+        </rng:attribute>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="place">
+                <rng:choice>
+                    <rng:value>end</rng:value>
+                </rng:choice>
+            </rng:attribute>
+        </optional>
+        <rng:oneOrMore>
+            <rng:choice>
+                <rng:text/>
+                <rng:zeroOrMore>
+                    <rng:element name="foreign">
+                        <rng:ref name="foreign"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="title">
+                        <rng:ref name="title"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="distinct">
+                        <rng:ref name="distinct"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ref">
+                        <rng:ref name="ref"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="emph">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="ptr">
+                        <rng:ref name="ptr"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="lg">
+                        <rng:ref name="lg"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="term">
+                        <rng:ref name="term"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+                <rng:zeroOrMore>
+                    <rng:element name="abbr">
+                        <rng:data type="string"/>
+                    </rng:element>
+                </rng:zeroOrMore>
+            </rng:choice>
+        </rng:oneOrMore>
+    </rng:define>
+    <!-- ref type -->
+    <rng:define name="ref" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="cRef">
+                <rng:data type="string"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="target">
+                <rng:data type="anyURI"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="type">
+                <rng:data type="string"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="rend">
+                <rng:data type="string"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="key">
+                <rng:data type="string"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:text/>
+        </optional>
+    </rng:define>
+    <!-- lb type -->
+    <rng:define name="lb" ns="http://www.tei-c.org/ns/1.0">
+        <rng:empty/>
+    </rng:define>
+    <!-- ptr type -->
+    <rng:define name="ptr" ns="http://www.tei-c.org/ns/1.0">
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:attribute name="target">
+                <rng:data type="string"/>
+            </rng:attribute>
+        </optional>
+        <optional xmlns="http://relaxng.org/ns/structure/1.0">
+            <rng:text/>
+        </optional>
+    </rng:define>
+</rng:grammar>
