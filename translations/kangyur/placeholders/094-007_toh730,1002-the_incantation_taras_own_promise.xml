@@ -12,16 +12,22 @@
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags ma sgrol ma rang gis dam bcas pa zhes bya ba'i gzungs/</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryatārāsvapratijñānāmadhāraṇī</title>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
                 <idno xml:id="UT22084-094-007"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh730" type="text">
                     <ref>Toh 730</ref>
                     <biblScope>vol.94, ff.222r-222v(pp.443-444)</biblScope>
-                    <location count-pages="2">
-                        <start volume="94" page="445"/>
-                        <end volume="94" page="446"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="94" start-page="443" end-page="444"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12471" work="W22084"/>
@@ -29,16 +35,17 @@
                 <bibl key="toh1002" type="text">
                     <ref>Toh 1002</ref>
                     <biblScope>vol.101, ff.160r-160v(pp.319-320)</biblScope>
-                    <location count-pages="2">
-                        <start volume="101" page="321"/>
-                        <end volume="101" page="322"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="101" start-page="319" end-page="320"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12765" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 23/01/2019 at 09:07:29 by admin</note>
+                <note type="lastUpdated" date-time="2019-12-13T10:59:45.789Z" user="admin">13/12/2019 10:59:45</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T10:59:39.705Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T10:59:39.705Z" user="john">3</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
