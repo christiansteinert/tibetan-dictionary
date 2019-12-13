@@ -10,7 +10,12 @@
                 <title type="otherTitle" xml:lang="Bo-Ltn">nag po chen po zhes bya ba'i rgyud kyi rgyal po/</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">mahākālatantrarājanāma</title>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
                 <idno xml:id="UT22084-081-009"/>
                 <date/>
             </publicationStmt>
@@ -18,17 +23,19 @@
                 <bibl key="toh440" type="text">
                     <ref>Toh 440</ref>
                     <biblScope>vol.81, ff.45v-86r(pp.90-171)</biblScope>
-                    <location count-pages="82">
-                        <start volume="81" page="92"/>
-                        <end volume="81" page="173"/>
+                    <location work="UT4CZ5369" count-pages="82">
+                        <volume number="81" start-page="90" end-page="171"/>
                     </location>
                     <idno parent-id="O1JC114941JC21412" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12148" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-11T19:05:44.215Z" user="admin">11/03/2019 19:05:44</note>
+                <note type="lastUpdated" date-time="2019-12-13T09:59:32.802Z" user="admin">13/12/2019 09:59:32</note>
                 <note type="updated" update="text-version" value="" date-time="2019-03-11T19:05:41.962Z" user="celso">2020</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T09:59:26.576Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T09:59:26.576Z" user="john">3</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
