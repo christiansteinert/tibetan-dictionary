@@ -10,23 +10,32 @@
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa sgyu ma mkhan bzang po lung bstan pa zhes bya ba theg pa chen po'i mdo</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryabhadra­māyākaravyākaraṇa­nāmamahāyānasūtra</title>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
                 <idno xml:id="UT22084-043-002"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh65" type="text">
                     <ref>Toh 65</ref>
                     <biblScope>vol:43, ff.17v-36r(pp.34-71)</biblScope>
-                    <location count-pages="38">
-                        <start volume="43" page="36"/>
-                        <end volume="43" page="73"/>
+                    <location work="UT4CZ5369" count-pages="38">
+                        <volume number="43" start-page="34" end-page="71"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11601" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 19/09/2018 at 17:05:16 by john</note>
+                <note type="lastUpdated" date-time="2019-12-13T10:42:38.945Z" user="admin">13/12/2019 10:42:38</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T10:42:32.43Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T10:42:32.43Z" user="john">3</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
