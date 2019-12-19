@@ -26,13 +26,12 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.19 <date>2019</date>
+                <edition>v 2.20.0 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -48,12 +47,11 @@
             <sourceDesc>
                 <bibl key="toh115" type="text">
                     <ref>Toh 115</ref>
-                    <biblScope>Degé Kangyur, vol. 51 (mdo sde, pa), folios 195.b-200.b</biblScope>
+                    <biblScope>Degé Kangyur, vol. 51 (mdo sde, ja), folios 195.b-200.b</biblScope>
                     <author role="translatorTib">Dānaśīla</author>
                     <author role="translatorTib">Yeshé Dé (ye shes sde)</author>
-                    <location count-pages="10">
-                        <start volume="51" page="392"/>
-                        <end volume="51" page="401"/>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="51" start-page="390" end-page="399"/>
                     </location>
                 <idno parent-id="O1JC114941JC14668"/>
                 <idno source-id="O1JC114941JC11682" work="W22084"/>
@@ -61,11 +59,13 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-15T14:09:32.04Z" user="admin">15/09/2019 14:09:32</note>
+                <note type="lastUpdated" date-time="2019-12-19T10:15:22.245Z" user="mike">19/12/2019 10:15:22</note>
             <note type="updated" update="text-version" value="v 2.16" date-time="2019-06-18T02:51:19.312Z" user="celso">v 2.16 2019</note>
                 <note type="updated" update="text-version" value="v 2.17" date-time="2019-06-21T14:30:40.976Z" user="celso">v 2.17 2019</note>
                 <note type="updated" update="text-version" value="v 2.18" date-time="2019-07-26T22:22:50.646Z" user="laura">v 2.18 2019</note>
-            <note type="updated" update="text-version" value="v 2.19" date-time="2019-09-15T14:09:30.296Z" user="andre">v 2.19 2019</note>
+                <note type="updated" update="text-version" value="v 2.19" date-time="2019-09-15T14:09:30.296Z" user="andre">v 2.19 2019 - version updated due to correction in folio numbering</note>
+<note type="updated" update="text-version" value="v 2.19.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.20.0" date-time="2019-12-19T10:59:18.609Z" user="mike">Changed de ge reference on title page from "mdo sde, pa" to "mdo sde, ja" as per user feedback</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -249,7 +249,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-051-003-14"/>
                     <p tid="28">
-                        <ref cRef="F.195.b"/>
+                        <ref cRef="F.195.b" type="folio"/>
                         <!--<modularPassage type="homage">-->Homage to all the buddhas and bodhisattvas<!--</modularPassage>-->. </p>
                     <lb/>
                     <p tid="29">
@@ -262,7 +262,7 @@
                                 order is: Mahā­maudgalyāyana, Mahākāśyapa, Mahākapphiṇa, Mahā­kātyāyana. </note> Mahākapphiṇa,
                         Mahākauṣṭhila, Revata, Śuddhipaṃthaka, Nanda, Ānanda, Rāhula, Gavāṃpati, Bharadvāja, Kālodāyin, Vakula,
                         and Aniruddha. He dwelt with these and other great śrāvakas and with many bodhisattva mahāsattvas, such as
-                        the youthful Mañjuśrī, <ref cRef="F.196.a"/> the Bodhisattva Mahāsattva Ajita, the Bodhisattva Mahāsattva
+                        the youthful Mañjuśrī, <ref cRef="F.196.a" type="folio"/> the Bodhisattva Mahāsattva Ajita, the Bodhisattva Mahāsattva
                         Gandhahastin, the Bodhisattva Mahāsattva Nityodyukta, and the Bodhisattva Mahāsattva Anikṣiptadhura, along
                         with many other bodhisattva mahāsattvas. He was also accompanied by Indra, the lord of gods, and Brahmā,
                         the ruler of the Sahā world, along with many myriads<note place="end" xml:id="UT22084-051-003-152" index="9">Literally, the text has: 10 million (<foreign type="term" xml:lang="Bo-Ltn">bye ba</foreign>) x 10 billion (<foreign type="term" xml:lang="Bo-Ltn">khrag
@@ -282,7 +282,7 @@
                         buddha realm is beautifully adorned with displays of the excellences of buddha realms, such as the four
                         kinds of jewels, namely, gold, silver, beryl, and crystal. Furthermore, Śāriputra, the Sukhāvatī world has
                         ponds adorned with seven kinds of jewels. The ponds are full of water possessing the eight qualities. They
-                        are covered by jeweled lotuses, <ref cRef="F.196.b"/> are filled to the top to enable crows to drink, and are lined with golden
+                        are covered by jeweled lotuses, <ref cRef="F.196.b" type="folio"/> are filled to the top to enable crows to drink, and are lined with golden
                         sand. All around, on the four sides of the ponds are four radiantly elegant staircases, each made of one
                         of the four precious substances: gold, silver, beryl, and crystal. By the banks of the ponds grow jeweled
                         trees of the seven radiantly beautiful jewels: gold, silver, beryl, crystal, rosy pearls, emerald, and
@@ -301,7 +301,7 @@
                         flowers, descends three times every day and three times every night. In a single morning, the sentient
                         beings that are born there proceed from one buddha realm to the next, paying homage to hundreds of
                         thousands of buddhas. They also toss hundreds of thousands of bouquets of flowers toward each tathāgata.
-                        After making offerings, they return to that same world for their daily rest. <ref cRef="F.197.a"/>
+                        After making offerings, they return to that same world for their daily rest. <ref cRef="F.197.a" type="folio"/>
                         Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha
                         realms.</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-19"/>
@@ -323,7 +323,7 @@
                         of the Saṅgha. Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of
                         buddha realms.</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-21"/>
-                    <p tid="37">“Now what do you think, Śāriputra, <ref cRef="F.197.b"/> why is that tathāgata called ‘Amitāyus’
+                    <p tid="37">“Now what do you think, Śāriputra, <ref cRef="F.197.b" type="folio"/> why is that tathāgata called ‘Amitāyus’
                         (Immeasurable Life)? Śāriputra, the lifespan of Tathāgata Amitāyus is immeasurable. For this reason, he is
                         called ‘Tathāgata Amitāyus.’ Furthermore, Śāriputra, why is that tathāgata called ‘Amitābha’ (Immeasurable
                         Light)? Śāriputra, the light of Tathāgata Amitābha shines unimpeded throughout all buddha realms. For this
@@ -343,7 +343,7 @@
                         Tathāgata Amitāyus merely with minimal roots of virtue.</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-24"/>
                     <p tid="40">“Śāriputra, if those sons and daughters of good family hear the name of the Bhagavān Tathāgata
-                        Amitāyus and keep it in mind unwaveringly for one, two, three, four, five, <ref cRef="F.198.a"/> six, or
+                        Amitāyus and keep it in mind unwaveringly for one, two, three, four, five, <ref cRef="F.198.a" type="folio"/> six, or
                         seven nights, when the hour of their death arrives, they will depart in an undeluded state. After they
                         have passed away, the Tathāgata Amitābha will stand before them, entirely surrounded by a śrāvaka assembly
                         and honored by a congregation of bodhisattvas. These sons and daughters of good family will be born in
@@ -372,7 +372,7 @@
                     <p tid="42">“Likewise, in the south, the bhagavān buddhas of the south, such as the Tathāgata
                         Candra­sūrya­pradīpa, the Tathāgata Renown,<note place="end" xml:id="UT22084-051-003-160" index="17">There
                             is no equivalent in the Sanskrit version.</note> the Tathāgata Yaśaḥprabha, the Tathāgata
-                        Mahārciskandha, <ref cRef="F.198.b"/> the Tathāgata Merupradīpa, the Tathāgata Anaṃtavīrya, and others, who
+                        Mahārciskandha, <ref cRef="F.198.b" type="folio"/> the Tathāgata Merupradīpa, the Tathāgata Anaṃtavīrya, and others, who
                         are as numerous as the sands of the river Ganges, pervade their own buddha realms with the power of their
                         speech and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all
                         Buddhas,” which praises inconceivable qualities.’</p>
@@ -392,7 +392,7 @@
                         Tathāgata Jālinīprabha, the Tathāgata Prabhākara, and others,<note place="end" xml:id="UT22084-051-003-163" index="20">The Sanskrit mentions another tathāgata who does not figure in the
                             Tibetan, Tathāgata Duṃdubhisvara­nirghoṣa (=Dundubhisvara­nirghoṣa).</note> who are as numerous as the
                         sands of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim,
-                            <ref cRef="F.199.a"/> ‘You should place your trust in this Dharma discourse called “Complete Embrace
+                            <ref cRef="F.199.a" type="folio"/> ‘You should place your trust in this Dharma discourse called “Complete Embrace
                         by all Buddhas,” which praises inconceivable qualities.’</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-29"/>
                     <p tid="45">“Likewise, in the nadir, the bhagavān buddhas of the nadir, such as the Tathāgata Siṃha, the
@@ -409,7 +409,7 @@
                         Tathāgata Ratnotpalaśrī, the Tathāgata Sarvārthadarśa, the Tathāgata Sumerukalpa, and others<note place="end" xml:id="UT22084-051-003-165" index="22">The Sanskrit also mentions the Tathāgata
                             Indra­ketu­dhvaja­rāja, who is absent in the Tibetan text.</note> who are as numerous as the sands of
                         the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, ‘You should
-                        place your trust <ref cRef="F.199.b"/> in this Dharma discourse called “Complete Embrace by all Buddhas,”
+                        place your trust <ref cRef="F.199.b" type="folio"/> in this Dharma discourse called “Complete Embrace by all Buddhas,”
                         which praises Sukhāvatī’s inconceivable qualities.’</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-31"/>
                     <p tid="47">“What do you think about this, Śāriputra, why is this Dharma discourse called ‘Complete Embrace by
@@ -435,7 +435,7 @@
                         enlightenment in this world, the Sahā world, at the time of the five degenerations, I have taught the
                         Dharma that the whole world was reluctant to accept. This is the supreme feat I have accomplished.”</p>
                     <milestone unit="chunk" xml:id="UT22084-051-003-34"/>
-                    <p tid="50">After the Bhagavān <ref cRef="F.200.a"/> had thus spoken, the whole world, including the venerable
+                    <p tid="50">After the Bhagavān <ref cRef="F.200.a" type="folio"/> had thus spoken, the whole world, including the venerable
                         Śāriputra, the great śrāvakas, bodhisattvas, gods, humans, demigods, and gandharvas were delighted and
                         praised highly the words spoken by the Bhagavān.</p>
                     <lb/>
