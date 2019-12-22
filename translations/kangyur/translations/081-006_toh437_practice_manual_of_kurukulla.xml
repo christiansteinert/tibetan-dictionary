@@ -21,13 +21,12 @@
                 <consultant role="advisor" ref="contributors.xml#person-76">Wieslaw Mical</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.3 <date>2019</date>
+                <edition>v 2.4.1 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <p type="tantricRestriction">
                         <emph rend="bold">Warning:</emph> Readers are reminded that according to Vajrayāna Buddhist tradition there are
@@ -51,9 +50,8 @@
                     <biblScope>Degé Kangyur, vol. 81 (rgyud ’bum, ca), folios 29.b–42.b</biblScope>
                     <author role="translatorTib">Kṛṣnapaṇḍita</author>
                     <author role="translatorTib">tshul khrims rgyal ba</author>
-                    <location count-pages="27">
-                        <start volume="81" page="60"/>
-                        <end volume="81" page="86"/>
+                    <location work="UT4CZ5369" count-pages="27">
+                        <volume number="81" start-page="58" end-page="84"/>
                     </location>
                 <idno parent-id="O1JC114941JC21412"/>
                 <idno source-id="O1JC114941JC12144" work="W22084"/>
@@ -61,10 +59,12 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-23T20:49:34.629Z" user="laura">23/06/2019 20:49:34</note>
+                <note type="lastUpdated" date-time="2019-12-22T19:39:15.466Z" user="admin">22/12/2019 19:39:15</note>
             <note type="updated" update="text-version" value="v 2.28" date-time="2019-06-18T03:01:13.901Z" user="celso">v 2.28 2019</note>
                 <note type="updated" update="text-version" value="v 2.29" date-time="2019-06-21T14:50:11.14Z" user="celso">v 2.29 2019</note>
                 <note type="updated" update="text-version" value="v 2.3" date-time="2019-08-02T14:16:13.039Z" user="celso">v 2.3 2019</note>
+<note type="updated" update="text-version" value="v 2.3.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.4.1" date-time="2019-12-22T19:39:12.464Z" user="john">Milestones and line breaks at the beginning and details of 1.2 partially adjusted to fit the Sanskrit and quote in intro to Toh 381.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -326,7 +326,7 @@
                     <milestone unit="chunk" xml:id="UT22084-081-006-27"/>
                     <lg tid="30">
                         <l>
-                            <ref cRef="F.29.b"/>
+                            <ref cRef="F.29.b" type="folio"/>
                             <!--<modularPassage type="homage">-->Homage to noble Mañjuśrī, the youthful
                             one.<!--</modularPassage>-->
                         </l>
@@ -334,20 +334,23 @@
                             <!--<modularPassage type="homage">-->Homage to the noble goddess, Tārā.<!--</modularPassage>-->
                         </l>
                     </lg>
-                    <milestone unit="chunk" xml:id="UT22084-081-006-28"/>
-                    <lg tid="31">
+                    <lg tid="0">
                         <l>The tantra of <title xml:lang="en">The Arising of Tārā</title> is an ocean of yogic practice.</l>
                         <l>Although its scripture and practice manual had declined and disappeared,</l>
                         <l>There was <title xml:lang="en">The Meditative Absorption of Tārā</title>, chief among tantras.</l>
-                        <l>Once that, too, became lost, this practice manual appeared. </l>
-                        <l>For the sake of many beings, and as a compendium to the tantras</l>
+                        
+                    <l>Once that, too, became lost, this practice manual appeared. </l>
+                        </lg>
+                    <milestone unit="chunk" xml:id="UT22084-081-006-28"/>
+                    <lg tid="31">
+                        <l>For the sake of many beings, and as a compendium of the tantras</l>
                         <l>That elaborately teach the yogic practices,</l>
                         <l>Lokeśvāra, Lord of the World, taught this manual of practice.</l>
                     </lg>
-                    <milestone unit="chunk" xml:id="UT22084-081-006-29"/>
-                    <lg tid="32">
+                    <lg tid="0">
                         <l>Listen, all bodhisattvas! </l>
                     </lg>
+                    <milestone unit="chunk" xml:id="UT22084-081-006-29"/>
                     <lg tid="33">
                         <l>This method that benefits all beings</l>
                         <l>Is based on seeing that the world is without refuge,</l>
@@ -393,7 +396,7 @@
                     <lg tid="39">
                         <l>“For us there is no refuge. </l>
                         <l>Yet this teaching of the Buddha is the refuge for those who have none.</l>
-                        <l>Protector of those without a refuge, protector of the world, <ref cRef="F.30.a"/>
+                        <l>Protector of those without a refuge, protector of the world, <ref cRef="F.30.a" type="folio"/>
                         </l>
                         <l>You engender bliss and great wonder about this teaching.” </l>
                     </lg>
@@ -476,7 +479,7 @@
                     <milestone unit="chunk" xml:id="UT22084-081-006-47"/>
                     <p tid="51">The canvas should be woven with a thread spun by a female of fair complexion. Both she and the
                         weaver should eat milk-porridge.</p>
-                    <p tid="52">Upon a lotus seat, wearing an upper garment of red cloth, jewel earrings and a jewel diadem, <ref cRef="F.30.b"/> she displays the mudrā granting fearlessness with her lower right hand, and with her
+                    <p tid="52">Upon a lotus seat, wearing an upper garment of red cloth, jewel earrings and a jewel diadem, <ref cRef="F.30.b" type="folio"/> she displays the mudrā granting fearlessness with her lower right hand, and with her
                         second right hand holds an arrow that she draws to the tip of her ear.<note place="end" index="3" xml:id="UT22084-081-006-593">Based on Sanskrit manuscripts and N and H. D reads <foreign type="term" xml:lang="Bo-Ltn">sna rtser</foreign>.</note> In her upper left hand she holds a bow, and in the
                         second left, a red <foreign type="term" xml:lang="Sa-Ltn">utpala</foreign>. Crowned by Amitābha, dwelling
                         in a cave in the mountains, she is Kurukullā. </p>
@@ -510,7 +513,7 @@
                     <lg tid="59">
                         <l>By mad and haughty women, and by the entire world, </l>
                         <l>This practitioner will be honored. </l>
-                        <l>Because of familiarity with the practice, this mantra holder <ref cRef="F.31.a"/>
+                        <l>Because of familiarity with the practice, this mantra holder <ref cRef="F.31.a" type="folio"/>
                         </l>
                         <l>May do as he wishes with beautiful goddesses. </l>
                     </lg>
@@ -575,7 +578,7 @@
                         <l>The entire world will become of Tārā<note place="end" index="6" xml:id="UT22084-081-006-596">Based on N
                                 and H. D here reads <foreign type="term" xml:lang="Bo-Ltn">sgron ma</foreign> rather than <foreign type="term" xml:lang="Bo-Ltn">sgrol ma</foreign>.</note> and know peace.</l>
                         <l>Having overcome the demons, they bring down a rain of wealth;</l>
-                        <l>As a wish-fulfilling tree, they grant beings whatever they wish for. <ref cRef="F.31.b"/>
+                        <l>As a wish-fulfilling tree, they grant beings whatever they wish for. <ref cRef="F.31.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-57"/>
@@ -670,7 +673,7 @@
                         <l>The jewel of an elephant—such jewels </l>
                         <l>Should be offered mentally to the buddhas.</l>
                         <l>The jewel of a woman, adorned with ornaments</l>
-                        <l>And displaying abundant attractions, <ref cRef="F.32.a"/>
+                        <l>And displaying abundant attractions, <ref cRef="F.32.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-68"/>
@@ -763,7 +766,7 @@
                     <lg tid="93">
                         <l>“The three jewels are my refuge; </l>
                         <l>I confess all my wrongdoings; </l>
-                        <l>I rejoice <ref cRef="F.32.b"/> in the virtues of wandering beings; </l>
+                        <l>I rejoice <ref cRef="F.32.b" type="folio"/> in the virtues of wandering beings; </l>
                         <l>I set my mind on the enlightenment of a buddha”— </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-81"/>
@@ -854,7 +857,7 @@
                         <l>The palms of the hands are joined</l>
                         <l>And the two little fingers visualized.</l>
                         <l>The middle fingers are joined at the tips</l>
-                        <l>And the ring fingers are between them. <ref cRef="F.33.a"/>
+                        <l>And the ring fingers are between them. <ref cRef="F.33.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-93"/>
@@ -955,7 +958,7 @@
                     <lg tid="122">
                         <l>Together with their spouses,</l>
                         <l>Are summoned and arrive enthralled.</l>
-                        <l>From then on, one will be accomplished in every respect <ref cRef="F.33.b"/>
+                        <l>From then on, one will be accomplished in every respect <ref cRef="F.33.b" type="folio"/>
                         </l>
                         <l>And be free from the bonds of saṃsāra, </l>
                     </lg>
@@ -1017,7 +1020,7 @@
                     <p tid="131">Vajrapāṇi, in turn, offered the following words to those buddhas and bodhisattvas: “The
                         bodhisattvas have asked me this, ‘How could buddhas, who possess vajra bodies, dharmadhātu bodies, bodies
                         of non-duality, possibly die at some location on earth?’ ” And he proceeded, “Listen, O bodhisattvas, the
-                        so-called nirvāṇa <ref cRef="F.34.a"/> means a passage to the realm of bliss.”</p>
+                        so-called nirvāṇa <ref cRef="F.34.a" type="folio"/> means a passage to the realm of bliss.”</p>
                     <p tid="132">The bodhisattvas enquired, “O Vajrapāṇi, do the buddhas, the blessed ones, go to the realm of
                         bliss after they relinquish the dharma body, or do they go to the realm of bliss by means of the enjoyment
                         body, having left behind their emanation body? How could they depart, having left behind the dharma
@@ -1091,7 +1094,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-122"/>
                     <lg tid="143">
-                        <l>“The buddhas are of the same body within the dharmadhātu, <ref cRef="F.34.b"/>
+                        <l>“The buddhas are of the same body within the dharmadhātu, <ref cRef="F.34.b" type="folio"/>
                         </l>
                         <l>And they are free from the five obscurations. </l>
                         <l>The body of the profound and the vast—</l>
@@ -1162,7 +1165,7 @@
                         <l>“Originating in dependence—</l>
                         <l>This is how things arise</l>
                         <l>Likewise, depending on mantras, mudrās, and so forth</l>
-                        <l>The accomplishments are gained. <ref cRef="F.35.a"/>
+                        <l>The accomplishments are gained. <ref cRef="F.35.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-131"/>
@@ -1217,7 +1220,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-135"/>
                     <lg tid="168">
-                        <l>Loving-kindness through looking with impassioned love— <ref cRef="F.35.b"/>
+                        <l>Loving-kindness through looking with impassioned love— <ref cRef="F.35.b" type="folio"/>
                         </l>
                         <l>It is through such a mind that one performs enthrallment. </l>
                         <l>Having enthralled all beings, </l>
@@ -1316,7 +1319,7 @@
                     <milestone unit="chunk" xml:id="UT22084-081-006-146"/>
                     <p tid="184">Hence, since this world is attached to non-virtue, it does not gain accomplishment. Therefore, O
                         sons of the victorious ones, you must act to benefit, and give up evil. By means of the specific gestures
-                        the faults associated with the body certainly disappear <ref cRef="F.36.a"/> and, through the mantra, so
+                        the faults associated with the body certainly disappear <ref cRef="F.36.a" type="folio"/> and, through the mantra, so
                         do the faults associated with the composites of the tongue. </p>
                     <milestone unit="chunk" xml:id="UT22084-081-006-147"/>
                     <p tid="185">The faults associated with the mind fade away in those whose minds delight in meditation. With
@@ -1390,7 +1393,7 @@
                     <p tid="196">Now, to bring women fortune, another method shall be explained: </p>
                     <p tid="197">One should draw a lotus flower with seven petals and apply the seven syllables to it. In its
                         center one should, according to the enthrallment-procedure, write the name of the person to be enthralled,
-                        <ref cRef="F.36.b"/> supported by a pair of <mantra type="syllable" xml:lang="Sa-Ltn">hrīḥ</mantra>
+                        <ref cRef="F.36.b" type="folio"/> supported by a pair of <mantra type="syllable" xml:lang="Sa-Ltn">hrīḥ</mantra>
                         syllables. One should draw this on birch bark, or on cotton with flowers, and make it into a charm that is
                         to be worn on the upper arm.</p>
                     <lg tid="198">
@@ -1443,7 +1446,7 @@
                         dice, one will win. </p>
                     <p tid="207">Taking up the cowrie one should recite the Kurukullā mantra one hundred and eight times. On the
                         twelfth or eighth day of the month, one should perform ablutions and make offerings. Then one should wrap
-                        the shell in silk and wear it on one’s arm. <ref cRef="F.37.a"/> Whoever does so will become a great
+                        the shell in silk and wear it on one’s arm. <ref cRef="F.37.a" type="folio"/> Whoever does so will become a great
                         master of riches. If one puts this shell in a box and hides it in the ground one will every day obtain a
                             <foreign type="term" xml:lang="Sa-Ltn">kārṣa</foreign>’s worth of wealth. </p>
                     <lg tid="208">
@@ -1499,7 +1502,7 @@
                         with the following words:</p>
                     <lg tid="216">
                         <l>“If any among the great samaya vows of the King of Dharma</l>
-                        <l>Which you have received from me <ref cRef="F.37.b"/> should degenerate</l>
+                        <l>Which you have received from me <ref cRef="F.37.b" type="folio"/> should degenerate</l>
                         <l>The buddhas and bodhisattvas</l>
                         <l>Who engage in the supreme conduct of secret mantra </l>
                     </lg>
@@ -1592,7 +1595,7 @@
                     <lg tid="229">
                         <l>“You should practice the mantra and so forth.</l>
                         <l>Seeing a woman whose name is Tārā, </l>
-                        <l>Of white and red complexion and beautiful eyes, <ref cRef="F.38.a"/>
+                        <l>Of white and red complexion and beautiful eyes, <ref cRef="F.38.a" type="folio"/>
                         </l>
                         <l>The yogin should respectfully</l>
                     </lg>
@@ -1662,7 +1665,7 @@
                             mahā­padma­kulānāṃ kulika­kulānāṃ varāha­kulānāṃ puṇḍarīka­kulānāṃ ghana­kulānāṃ megha­kulānāṃ
                             jalada­kulānāṃ jala­dhara­kulānāṃ jīmūta­kulānāṃ saṃvarta­kulānāṃ vasanta­kulānāṃ airāvata­kulānāṃ
                             kumuda­kulānāṃ kahlāra­kulānāṃ saugandhi­kakulānāṃ hana hana śareṇa bandha bandha cāpena tāḍaya tāḍaya
-                            utpalena bhītānām abhayaṃ dehi pralaya­kāla iva jala­dhāram avatāraya varṣaṃ <ref cRef="F.38.b"/> tān nāgān vaśīkuru kuru
+                            utpalena bhītānām abhayaṃ dehi pralaya­kāla iva jala­dhāram avatāraya varṣaṃ <ref cRef="F.38.b" type="folio"/> tān nāgān vaśīkuru kuru
                             phuḥ kulāpaya kulāpaya phuḥ phuḥ, oṁ kurukulle hrīḥ hūṁ phaṭ svāhā phaṭ</mantra>
                         <note place="end" index="16" xml:id="UT22084-081-006-606">In the Tibetan text this passage at times
                             appears in a hardly intelligible, transliterated Sanskrit. Here the text has been reconstructed based
@@ -1709,7 +1712,7 @@
                         should obtain the root of <foreign type="term" xml:lang="Sa-Ltn">pratyaṅgirā</foreign>, blend it with milk
                         or ghee, and having poured it into a silver dish, they should drink it. If the dish is offered to an
                         ordained monk there will not be any danger from snakes for one year. Moreover if, because of its
-                        unvirtuous actions, <ref cRef="F.39.a"/> a snake does bite, the snake itself will die. Success comes with
+                        unvirtuous actions, <ref cRef="F.39.a" type="folio"/> a snake does bite, the snake itself will die. Success comes with
                         seven repetitions of the mantra.</p>
                     <p tid="248">Also, if one wishes to cure leprosy, one should, by means of this very mantra, neutralize a
                         poison and then ingest it. This will cure leprosy.</p>
@@ -1738,7 +1741,7 @@
                     <milestone unit="chunk" xml:id="UT22084-081-006-191"/>
                     <p tid="255">So then, at that very time and on that occasion, the Lord dispatched Vajrapāṇi, and benevolently
                         granted this mantra and this manual of instruction to the listeners and the bodhisattvas, to monks and
-                        nuns, and to male <ref cRef="F.39.b"/> and female lay practitioners. Therefore, children of noble family,
+                        nuns, and to male <ref cRef="F.39.b" type="folio"/> and female lay practitioners. Therefore, children of noble family,
                         one who creates a sandalwood maṇḍala and reads this mantra and this manual of instructions will not be
                         harmed by poison, will not die from poison, will have no fear of boils, eczema, leprosy, disease, <foreign type="term" xml:lang="Sa-Ltn">nāgas</foreign>, snakes, tigers and other beasts of prey, weapons,
                         enemies, poverty, or untimely death. None of these will occur.</p>
@@ -1756,7 +1759,7 @@
                     <p tid="258">Sunanda therefore asked the Blessed One, “O Lord, my son was born handsome and good looking,
                         athletic and in possession of auspicious marks, and yet nevertheless dull-witted. How, O Lord, may he
                         develop insight? Lord, if this child becomes literate he shall become a protector of your doctrine.”</p>
-                    <p tid="259">Upon hearing this, the Blessed One, with words preceded by mindfulness, <ref cRef="F.40.a"/>
+                    <p tid="259">Upon hearing this, the Blessed One, with words preceded by mindfulness, <ref cRef="F.40.a" type="folio"/>
                         spoke this manual of practice and gave this mantra. As soon as he had done so, Sunanda’s son, Rohiṇīkumāra
                         by name, acquired insight. By the twelfth year he was free from being intimidated by any of the treatises,
                         as he was thoroughly acquainted with all of the crafts and arts. Therefore, children of noble family, in
@@ -1841,7 +1844,7 @@
                         </l>
                         <l>The vajra should be killed with the sap of <foreign type="term" xml:lang="Sa-Ltn">snuhī</foreign>. </l>
                         <l>The bodily products of a female musk shrew</l>
-                        <l>Are to be infused <ref cRef="F.40.b"/> into the perfected mercury. </l>
+                        <l>Are to be infused <ref cRef="F.40.b" type="folio"/> into the perfected mercury. </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-202"/>
                     <lg tid="271">
@@ -1935,7 +1938,7 @@
                     <lg tid="284">
                         <l>With this mantra, the <foreign type="term" xml:lang="Sa-Ltn">vacā</foreign> fruit should be mashed</l>
                         <l>And mixed with milk.</l>
-                        <l>When a fasting lady drinks this, <ref cRef="F.41.a"/>
+                        <l>When a fasting lady drinks this, <ref cRef="F.41.a" type="folio"/>
                         </l>
                         <l>She will gain a son with the characteristics of a king. </l>
                     </lg>
@@ -2016,7 +2019,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-223"/>
                     <lg tid="295">
-                        <l>If the upper part of the foot twitches, it is nearby; <ref cRef="F.41.b"/>
+                        <l>If the upper part of the foot twitches, it is nearby; <ref cRef="F.41.b" type="folio"/>
                         </l>
                         <l>If it is the sole that twitches, it is far away.</l>
                         <l>Relying first on hearsay,</l>
@@ -2106,7 +2109,7 @@
                     <lg tid="307">
                         <l>Yokes, shackles, prisons,</l>
                         <l>The rain of weapons on the battlefield,</l>
-                        <l> And also anger—these are definitively crushed <ref cRef="F.42.a"/>
+                        <l> And also anger—these are definitively crushed <ref cRef="F.42.a" type="folio"/>
                         </l>
                         <l>Through the perfection of this great tantra.</l>
                     </lg>
@@ -2196,7 +2199,7 @@
                         <l>Thus spoke the protector of sentient beings confined within saṃsāra,</l>
                         <l>The Protector of the World.</l>
                         <l>Upon Mount Potala, the king of mountains, </l>
-                        <l>The Blessed One <ref cRef="F.42.b"/> was pained by the pain of others. </l>
+                        <l>The Blessed One <ref cRef="F.42.b" type="folio"/> was pained by the pain of others. </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-081-006-248"/>
                     <lg tid="320">
@@ -2224,7 +2227,7 @@
             <div type="notes">
                 <head type="notes" tid="681">Notes</head>
                 <list type="abbreviations">
-                    <head type="abbreviations" tid="682">Abbreviations (notes 1-22)</head>
+                    <head type="abbreviations" tid="682">Abbreviations (notes 1–22)</head>
                     <item xml:id="UT22084-081-006-251">
                         <abbr>D</abbr>
                         <expan>Degé Kangyur</expan>
@@ -2235,7 +2238,7 @@
                     </item>
                     <item xml:id="UT22084-081-006-253">
                         <abbr>H</abbr>
-                        <expan>Lhasa (zhol) Kangyur</expan>
+                        <expan>Lhasa (<foreign type="term" xml:lang="Bo-Ltn">zhol</foreign>) Kangyur</expan>
                     </item>
                     <item xml:id="UT22084-081-006-254">
                         <abbr>K</abbr>
@@ -2246,7 +2249,7 @@
                         </abbr>
                         <expan>Yongle Peking Kangyur</expan>
                     </item>
-                    <item xml:id="UT22084-081-006-256"> See Appendix Prologue for abbreviations in notes 23-900. </item>
+                    <item xml:id="UT22084-081-006-256"> See Appendix Prologue for abbreviations in notes 23–900. </item>
                 </list>
             </div>
             <div type="listBibl">
