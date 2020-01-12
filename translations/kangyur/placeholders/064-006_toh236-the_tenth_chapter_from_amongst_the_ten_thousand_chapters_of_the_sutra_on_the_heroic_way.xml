@@ -10,23 +10,31 @@
                 <title type="otherTitle" xml:lang="Bo-Ltn">bcom ldan 'das kyi gtsug gtor chen po de bzhin gshegs pa'i gsang ba sgrub pa'i don mngon par thob pa'i rgyu byang chub sems dpa' thams cad kyi spyod pa dpa' bar 'gro ba'i mdo le'u stong phrag bcu pa las le'u bcu pa</title>
                 <title type="otherTitle" xml:lang="en">The Tenth Chapter from Amongst the Ten Thousand Chapters of the Sūtra on the Heroic Way of Practice of all the Bodhisattvas which is the Cause for Attaining the Goal of Realizing the Secrets of the Tathāgatas, the Great Diadem of the Blessed Ones</title>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="1">
                 <idno xml:id="UT22084-064-006"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh236" type="text">
                     <ref>Toh 236</ref>
                     <biblScope>vol.64, ff.263r-287r(pp.525-573)</biblScope>
-                    <location count-pages="49">
-                        <start volume="64" page="527"/>
-                        <end volume="64" page="575"/>
+                    <location work="UT4CZ5369" count-pages="49">
+                        <volume number="64" start-page="525" end-page="573"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11883" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 09:34:38 by admin</note>
+                <note type="lastUpdated" date-time="2020-01-12T19:39:21.896Z" user="admin">12/01/2020 19:39:21</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-01-12T19:39:15.473Z" user="john">0.0.1</note>
+<note type="updated" update="translation-status" value="1" date-time="2020-01-12T19:39:15.473Z" user="john">1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
