@@ -10,7 +10,7 @@
                 <title type="mainTitle" xml:lang="en">The Questions of Ratnacandra</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་རིན་ཆེན་ཟླ་བས་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">’phags pa rin chen zla bas zhus pa zhes bya ba theg pa chen po’i mdo</title>
-                <title type="longTitle" xml:lang="Sa-Ltn">ĀryaRatnacandra­paripṛcchā­nāma­mahāyāna­sūtra</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Āryaratnacandra­paripṛcchā­nāma­mahāyāna­sūtra</title>
                 <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The Questions of Ratnacandra”</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">rin chen zla bas zhus pa’i mdo/</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">Ratnacandraparipṛcchā</title>
@@ -29,7 +29,7 @@
             </titleStmt>
 
             <editionStmt>
-                <edition>v 0.1.2 <date>2019</date>
+                <edition>v 0.1.3 <date>2019</date>
                 </edition>
             </editionStmt>
 
@@ -68,7 +68,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-01-11T18:46:01.858Z" user="andre">11/01/2020 18:46:01</note>
+                <note type="lastUpdated" date-time="2020-01-14T21:44:32.865Z" user="admin">14/01/2020 21:44:32</note>
 
                 <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-20T08:43:04.615Z" user="andreas">v 0.1.0</note>
                 <note type="updated" update="translation-status" value="2.e" date-time="2019-11-20T08:43:15.64Z" user="andreas">2.e</note>
@@ -80,6 +80,7 @@
             
 <note type="updated" update="text-version" value="v 1.0" date-time="2020-01-12T14:45:39.525Z" user="andre">v 1.0</note>
 <note type="updated" update="text-version" value="v 0.1.2" date-time="2020-01-13T05:55:02.674Z" user="mike">v 0.1.2</note>
+<note type="updated" update="text-version" value="v 0.1.3" date-time="2020-01-14T21:44:30.13Z" user="laura">Checked markup and made a few minor edits</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -90,7 +91,7 @@
                 <milestone unit="chunk" xml:id="UT22084-059-007-1"/>
                 <p tid="2">
                     <title xml:lang="en">The Questions of Ratna­candra</title> is a sūtra in
-                    which Ratna­candra, a prince from the country of Magadha, requests Buddha
+                    which Ratna­candra, a prince from the country of Magadha, requests the Buddha
                     Śākyamuni to reveal the names of the ten buddhas who dwell in the ten
                     directions. Prince Ratna­candra has been told that hearing the names of these ten
                     buddhas ensures that one will attain awakening at some point in the future. The
@@ -115,7 +116,7 @@
                         that takes place on Vulture Peak Mountain outside of the city of Rājagṛha,
                         the capital of the ancient country of Magadha. There Ratna­candra, who is
                         described as one of the sons of King Bimbisāra, the ruler of Magadha,
-                        requests Buddha Śākyamuni to reveal the names of the ten buddhas who dwell
+                        requests the Buddha Śākyamuni to reveal the names of the ten buddhas who dwell
                         in the ten directions. Ratna­candra has been told that hearing the names of
                         these ten buddhas guarantees one’s future awakening and so wishes to know
                         them. The buddha confirms the transformative power of these ten names, and
@@ -182,19 +183,19 @@
                             po</foreign>); to the south is Peaceful (<foreign xml:lang="Bo-Ltn">zhi
                                 ba</foreign>) and the buddha Ratnaprabhā (<foreign xml:lang="Bo-Ltn">rin chen ’od</foreign>); to the west is Heroic (<foreign xml:lang="Bo-Ltn">dpa’ bo</foreign>) and the buddha Ānandaśrī
                                 (<foreign xml:lang="Bo-Ltn">dga’ ba’i dpal</foreign>); to the north
-                            is the realm Without Conflict (<foreign xml:lang="Bo-Ltn">mi ’khrugs
-                                pa</foreign>) and the buddha Ketuśrī (<foreign xml:lang="Bo-Ltn">dpal gyi dpal</foreign>); to the southeast is Opulent (<foreign xml:lang="Bo-Ltn">spyod pa can</foreign>) and the buddha Aśokaśrī
+                            is the realm <term type="ignore">Without Conflict</term> (<foreign xml:lang="Bo-Ltn">mi ’khrugs
+                                pa</foreign>) and the buddha Ketuśrī (<foreign xml:lang="Bo-Ltn">dpal gyi dpal</foreign>); to the southeast is Opulent (<foreign xml:lang="Bo-Ltn">spyod pa can</foreign>) and the buddha <term type="ignore">Aśokaśrī</term>
                                 (<foreign xml:lang="Bo-Ltn">mya ngan med pa’i dpal</foreign>); to
                             the southwest is the realm Shining Bright (<foreign xml:lang="Bo-Ltn">dpal gyi dpal</foreign>) and the buddha Ratnayaṣṭi (<foreign xml:lang="Bo-Ltn">rin chen srog shing</foreign>); to the northwest
                             is Melodious (<foreign xml:lang="Bo-Ltn">dbyangs can</foreign>) and the
-                            buddha Kusumaśrī (<foreign xml:lang="Bo-Ltn">me tog dpal</foreign>); to
+                            buddha <term type="ignore">Kusumaśrī</term> (<foreign xml:lang="Bo-Ltn">me tog dpal</foreign>); to
                             the northeast is <term>Happy</term> (<foreign xml:lang="Bo-Ltn">bde ldan</foreign>)
                             and the buddha with Supernatural Powers that Revels in the Shining Lotus
                                 (<foreign xml:lang="Bo-Ltn">pad mo ’tsher bas rnam par rol pa mngon
-                                par shes pa</foreign>); at the nadir is Vast Expanse (<foreign xml:lang="Bo-Ltn">yangs pa can</foreign>) and the buddha Brilliant
+                                par shes pa</foreign>); at the nadir is <term type="ignore">Vast Expanse</term> (<foreign xml:lang="Bo-Ltn">yangs pa can</foreign>) and the buddha Brilliant
                             Star (<foreign xml:lang="Bo-Ltn">skar ma dpal</foreign>); and at the
-                            zenith is the realm Moonlight (<foreign xml:lang="Bo-Ltn">zla ba snang
-                                ba</foreign>) and the buddha Dhanaśrī (<foreign xml:lang="Bo-Ltn">bnor dpal</foreign>). </note>
+                            zenith is the realm <term type="ignore">Moonlight</term> (<foreign xml:lang="Bo-Ltn">zla ba snang
+                                ba</foreign>) and the buddha <term type="ignore">Dhanaśrī</term> (<foreign xml:lang="Bo-Ltn">bnor dpal</foreign>). </note>
                         <title xml:lang="en">The Questions of the Child Ratna­candra</title> found in
                         the Phukdrak Kangyur also lacks the versified passage that closes <title xml:lang="en">The Questions of Ratna­candra</title>. The text recorded in
                         the Denkarma catalogue as <title xml:lang="en">The Questions of the Child
@@ -358,8 +359,8 @@
                         up until ‘consciousness.’ Prince, what do you think? Why is the thus-gone
                         one called Candanaśrī? The entire buddha realm of the thus-gone one is
                         filled with houses built of sandalwood. Therefore, the thus-gone one is
-                        called Candanaśrī.<!--<note place="end" index="7" xml:id="UT22084-059-007-26"> Candanaśrī means “Sandalwood
-                                Splendor”.</note>--> Any noble son or daughter, who hears the name
+                        called Candanaśrī.<note place="end" index="7" xml:id="UT22084-059-007-26"> Candanaśrī means “Sandalwood
+                                Splendor”.</note> Any noble son or daughter who hears the name
                         Buddha Candanaśrī will never turn back from unsurpassed and perfect
                         awakening.</p>
                     <milestone unit="chunk" xml:id="UT22084-059-007-27"/>
@@ -392,7 +393,7 @@
                         realms, there is a realm called Moonlight. That realm is as flat as the palm
                         of the hand and has all the other qualities described above. Prince, what do
                         you think? Why is that world called Moonlight? It is because the rays of
-                        light from the thus-gone one there illuminate that entire realm. That is why
+                        light from its thus-gone one illuminate that entire realm. That is why
                         that world is called Moonlight. There the thus-gone, worthy, perfect buddha
                         Aśokaśrī resides and lives surrounded by a gathering of bodhisattvas who
                         venerate him. He teaches them the same Dharma mentioned previously, up until
@@ -480,9 +481,9 @@
                         ornaments. Sitting beautifully amidst the gathering, he teaches a Dharma
                         that is virtuous in the beginning, virtuous in the middle, and virtuous in
                         the end. He teaches as follows: ‘The earth element does not cease to exist,
-                        nor does the water element, the fire element, and the wind element.
+                        nor does the water element, the fire element, or the wind element.
                         Likewise, Brahmā who is the lord of beings does not cease to exist, and the
-                        same applies to form, feeling, perception, formation and consciousness.’ Any
+                        same applies to form, feeling, perception, formation, and consciousness.’ Any
                         noble son or daughter who hears the name of that thus-gone, worthy, perfect
                         buddha will never turn back from unsurpassed and perfect awakening and will
                         receive the precious and supreme Dharma.</p>
@@ -533,8 +534,7 @@
                         thousandth of that. It is, in fact, beyond the scope of illustration.”</p>
                     <milestone unit="chunk" xml:id="UT22084-059-007-40"/>
                     <p tid="41">Then, in order to venerate this teaching and the ten thus-gone ones,
-                        Śakra king of the gods, Brahmā lord of the Enduring world, the four guardian
-                        kings, and the divine sons Īśvara, Maheśvara, Glorious Fortune, Tuṣita, and Santuṣita scattered divine
+                        Śakra king of the gods, Brahmā lord of the Enduring world, the Four Great Kings, and the divine sons Īśvara, Maheśvara, Glorious Fortune, Tuṣita, and Santuṣita scattered divine
                         flowers and sandalwood powder upon the Thus-Gone One. Then they spoke these
                         words: “Blessed One, any noble son or daughter who retains, <ref cRef="F.166.b" type="folio"/>
                         carries, reads, and recites this teaching is <term type="ignore">worthy</term> of reverence. Blessed
@@ -555,7 +555,7 @@
                     <milestone unit="chunk" xml:id="UT22084-059-007-43"/>
                     <lg tid="44">
                         <l>“We take refuge in the world protectors</l>
-                        <l>Who have passed, are present,</l>
+                        <l>Who have passed, who are present,</l>
                         <l>And who are yet to come,</l>
                         <l>And in the buddhas residing in all directions.</l>
                     </lg>
@@ -635,7 +635,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-007-55"/>
                     <lg tid="56">
-                        <l>“Of these supreme sages,</l>
+                        <l>“Of these supreme sages</l>
                         <l>In the morning, at noon, </l>
                         <l>And in the evening,</l>
                         <l>Will have good dreams.</l>
@@ -649,9 +649,9 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-007-57"/>
                     <lg tid="58">
-                        <l>“Any negative deed committed,</l>
-                        <l>By way of body, speech, and mind,</l>
-                        <l>After one has recalled these names,</l>
+                        <l>“Any negative deed committed</l>
+                        <l>By way of body, speech, and mind</l>
+                        <l>After one has recalled these names</l>
                         <l>Must also be confessed.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-007-58"/>
@@ -702,7 +702,7 @@
                 <div type="section">
                     <bibl xml:id="UT22084-059-007-64">
                         <title xml:lang="Bo-Ltn">’phags pa rin chen
-                        zla bas zhus pa zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">ĀryaRatna­candra­paripṛcchā­nāma­mahāyāna­sūtra</title>).
+                        zla bas zhus pa zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Āryaratna­candra­paripṛcchā­nāma­mahāyāna­sūtra</title>).
                         Toh 164, Degé Kangyur vol. 59 (mdo sde, ba), folios 160.a–167.b.</bibl>
                     <bibl xml:id="UT22084-059-007-65">
                         <title xml:lang="Bo-Ltn">’phags pa rin chen
@@ -718,8 +718,8 @@
                         Phukdrak Kangyur (mdo sde, go), folios 57.b–63.a.</bibl>
                     <bibl xml:id="UT22084-059-007-67">
                         <title xml:lang="Bo-Ltn">’phags pa khye’u rin
-                            chen zla bas zhus pa zhes bya ba’i theg pa chen po’i mdo.</title> mdo sngags gsung rab rgya mtsho'i snying po
-                            mtshan gzungs mang bsdus (vam) folios 182-205.</bibl>
+                            chen zla bas zhus pa zhes bya ba’i theg pa chen po’i mdo</title>. mdo sngags gsung rab rgya mtsho'i snying po
+                        mtshan gzungs mang bsdus, vol. 2 (vam), ff. 182–205. Lhasa: ding ri ba chos rgyan, 1947.</bibl>
                     <bibl xml:id="UT22084-059-007-68">Denkarma (<title xml:lang="Bo-Ltn">pho brang
                             stod thang ldan [/ lhan] dkar gyi chos 'gyur ro cog gi dkar
                         chag</title>). Toh 4364, Degé Tengyur vol. 206 (sna tshogs, jo), folios
@@ -954,7 +954,7 @@
                             <term xml:lang="Sa-Ltn">Brahmā</term>
                             <term type="definition">A high ranking deity, presiding over a divine
                                 world where other beings consider him the creator; he is also
-                                considered to be the “Lord of the Sahā world” (our universe).</term>
+                                considered to be the “Lord of the Enduring (Sahā) world” (our universe).</term>
                         </gloss>
                     </item>
                     <item>
@@ -964,7 +964,7 @@
                             <term xml:lang="bo">ཅན་ལྡེན་དཔལ།</term>
                             <term xml:lang="Sa-Ltn">Candanaśrī </term>
                             <term type="definition">A buddha who lives in a southern buddha realm
-                                called <term>Joy</term>. His name means “Sandalwood Splendor”. </term>
+                                called <term>Joy</term>. His name means “Sandalwood Splendor.” </term>
                         </gloss>
                     </item>
                     <item>
@@ -1269,7 +1269,7 @@
                             <term xml:lang="Bo-Ltn">shA ri'i bu </term>
                             <term xml:lang="bo">ཤཱ་རིའི་བུ།</term>
                             <term xml:lang="Sa-Ltn">Śāriputra </term>
-                            <term type="definition">One of the main disciples (śrāvaka) of the
+                            <term type="definition">One of the main disciples (<foreign xml:lang="Sa-Ltn">śrāvaka</foreign>) of the
                                 Buddha.</term>
                         </gloss>
                     </item>
@@ -1366,6 +1366,7 @@
                             <term type="definition">A southern buddha realm.</term>
                         </gloss>
                     </item>
+                    
                     <item>
                         <gloss type="place" xml:id="UT22084-059-007-135">
                             <term>Moonlight</term>
