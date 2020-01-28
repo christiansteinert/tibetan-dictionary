@@ -29,7 +29,7 @@
                 <sponsor ref="sponsors.xml#sponsor-8">anonymous</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.45.2 <date>2019</date>
+                <edition>v 1.45.3 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -65,7 +65,7 @@
 
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-10-07T10:48:28.795Z" user="admin">07/10/2019 10:48:28</note>
+                <note type="lastUpdated" date-time="2020-01-28T17:08:30.079Z" user="laura">28/01/2020 17:08:30</note>
                 <note type="updated" update="text-version" value="v 1.34" date-time="2019-03-18T11:06:14.991Z" user="john">v 1.34 2018</note>
                 <note type="updated" update="text-version" value="v 1.35" date-time="2019-03-18T11:34:16.438Z" user="john">v 1.35 2018</note>
                 <note type="updated" update="text-version" value="v 1.37" date-time="2019-04-16T16:42:43.647Z" user="john">v 1.37 2018</note>
@@ -76,6 +76,7 @@
             <note type="updated" update="text-version" value="v 1.44" date-time="2019-08-12T15:20:34.115Z" user="laura">v 1.44 2019</note>
 <note type="updated" update="text-version" value="v 1.45.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
 <note type="updated" update="text-version" value="v 1.45.2" date-time="2019-11-04T08:23:13.145Z" user="admin">Test RDF generation</note>
+<note type="updated" update="text-version" value="v 1.45.3" date-time="2020-01-28T17:13:00.005Z" user="laura">Added glossary entries for Meru and Sumeru the bodhisattvas</note>
             </notesStmt>
             <!--<notesStmt>
                 <note type="lastUpdated">Last updated at 06/01/2018 at 14:00:24 by celso</note>
@@ -1176,7 +1177,7 @@
                             tenth bhūmi, as taught in the <title xml:lang="en">Sūtra of the Ten
                                 Bhūmis</title>. The ten-bhūmi system does not appear in the Gilgit
                             version or the Chinese but does in the later Sanskrit versions and the
-                            Tibetan.</note> They were the bodhisattva mahāsattvas Meru, Sumeru,
+                            Tibetan.</note> They were the bodhisattva mahāsattvas <term>Meru</term>, <term>Sumeru</term>,
                             Mahāmeru,<note place="end" xml:id="UT22084-055-001-99" index="18">
                             According to the Sanskrit. Absent from the Tibetan. </note>
                             Meru­śikhara­dhara,<note place="end" xml:id="UT22084-055-001-100" index="19"> According to the Tibetan <foreign xml:lang="Bo-Ltn">lhun
@@ -27272,6 +27273,15 @@
                         </gloss>
                     </item>
                     <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-055-001-5815">
+                            <term>Meru</term>
+                            <term xml:lang="Bo-Ltn">lhun po </term>
+                            <term xml:lang="bo">ལྷུན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Meru</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
                         <gloss type="place" xml:id="UT22084-055-001-4816">
                             <term>Mahāmucilinda </term>
                             <term xml:lang="Bo-Ltn">btang bzung chen po </term>
@@ -27453,6 +27463,15 @@
                             <term xml:lang="Sa-Ltn">Sumeru</term>
                             <term type="definition">The mountain at the center of the disk of the
                                 world with the four continents around it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-055-001-5832">
+                            <term>Sumeru </term>
+                            <term xml:lang="Bo-Ltn">rab tu lhun po</term>
+                            <term xml:lang="bo">རབ་ཏུ་ལྷུན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Sumeru</term>
+                            <term type="definition">A bodhisattva.</term>
                         </gloss>
                     </item>
                     <item>
