@@ -21,13 +21,12 @@
                 <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.44 <date>2019</date>
+                <edition>v 1.45.1 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -45,9 +44,8 @@
                     <ref>Toh 176 </ref>
                     <biblScope>Degé Kangyur vol. 60 (mdo sde, ma), folios 175.a–239.a </biblScope>
                     <author role="translatorTib">Chönyi Tsultrim</author>
-                    <location count-pages="130">
-                        <start volume="60" page="351"/>
-                        <end volume="60" page="480"/>
+                    <location work="UT4CZ5369" count-pages="130">
+                        <volume number="60" start-page="349" end-page="478"/>
                     </location>
                 <idno parent-id="O1JC114941JC14668"/>
                 <idno source-id="O1JC114941JC11786" work="W22084"/>
@@ -55,15 +53,17 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-15T14:47:57.642Z" user="admin">15/09/2019 14:47:57</note>
-            <note type="updated" update="text-version" value="v 1.36" date-time="2019-05-04T14:01:18.651Z" user="john">v 1.36 2017</note>
+                <note type="lastUpdated" date-time="2019-10-07T10:48:59.87Z" user="admin">07/10/2019 10:48:59</note>
+                <note type="updated" update="text-version" value="v 1.36" date-time="2019-05-04T14:01:18.651Z" user="john">v 1.36 2017</note>
                 <note type="updated" update="text-version" value="v 1.38" date-time="2019-06-18T16:14:55.895Z" user="celso">v 1.38 2019</note>
                 <note type="updated" update="text-version" value="v 1.39" date-time="2019-07-02T17:59:15.102Z" user="john">v 1.39 2019</note>
                 <note type="updated" update="text-version" value="v 1.40" date-time="2019-07-02T18:23:31.65Z" user="john">v 1.40 2019</note>
                 <note type="updated" update="text-version" value="v 1.41" date-time="2019-07-23T19:35:11.07Z" user="john">v 1.41 2019</note>
                 <note type="updated" update="text-version" value="v 1.42" date-time="2019-07-26T10:40:19.831Z" user="laura">v 1.42 2019</note>
                 <note type="updated" update="text-version" value="v 1.43" date-time="2019-08-16T22:54:06.353Z" user="laura">v 1.43 2019</note>
-                <note type="updated" update="text-version" value="v 1.44" date-time="2019-09-15T14:47:55.798Z" user="andre">v 1.44 2019</note>
+                <note type="updated" update="text-version" value="v 1.44" date-time="2019-09-15T14:47:55.798Z" user="andre">v 1.44 2019 - updated due to folio numbering correction</note>
+<note type="updated" update="text-version" value="v 1.44.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.45.1" date-time="2020-02-05T11:15:52.172Z" user="john">Revision of two phrases in 3.12</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -381,7 +381,7 @@
                     <head type="chapterTitle" tid="662">Purification of the Buddhafield</head>
                     <milestone unit="chunk" xml:id="UT22084-060-005-40"/>
                     <p tid="28">
-                        <ref cRef="F.175.a"/> Reverence to all the buddhas, bodhisattvas, noble disciples, and pratyekabuddhas, in
+                        <ref cRef="F.175.a" type="folio"/> Reverence to all the buddhas, bodhisattvas, noble disciples, and pratyekabuddhas, in
                         the past, the present, and the future.</p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-060-005-41"/>
@@ -408,7 +408,7 @@
                     <p tid="31">Their mindfulness, intelligence, realization, meditation, retention, and eloquence all were
                         perfected. They were free of all obscurations and emotional involvements, living in liberation without
                         impediment. They were totally dedicated through the transcendences of generosity; subdued, unwavering,
-                            <ref cRef="F.175.b"/> and sincere morality; tolerance; effort; meditation; wisdom; skill in liberative
+                            <ref cRef="F.175.b" type="folio"/> and sincere morality; tolerance; effort; meditation; wisdom; skill in liberative
                         art; commitment; power; and gnosis.<note place="end" index="16" xml:id="UT22084-060-005-878">The ten
                             transcendences (<foreign type="term" xml:lang="Sa-Ltn">daśapāramitaḥ</foreign>), which correspond to
                             the ten stages (<foreign xml:lang="Sa-Ltn" type="term">daśabhūmayaḥ</foreign>) of the
@@ -443,7 +443,7 @@
                         the peerless gnosis of the Buddha. With their high resolve, they approached the ten powers, the four
                         fearlessnesses, and the eighteen special qualities of the Buddha.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-47"/>
-                    <p tid="35">They had crossed the terrifying abyss of the bad migrations, <ref cRef="F.176.a"/> and yet they
+                    <p tid="35">They had crossed the terrifying abyss of the bad migrations, <ref cRef="F.176.a" type="folio"/> and yet they
                         assumed reincarnation voluntarily in all migrations for the sake of disciplining living beings. Great
                         Kings of medicine, understanding all the sicknesses of passions, they could apply the medicine of the
                         Dharma appropriately.</p>
@@ -460,7 +460,7 @@
                         Prati­saṃvit­praṇāda­prāpta, Gaganagañja, Ratnolkā­dhārin, Ratnavīra, Ratnananda, Ratnaśrī, Indrajāla,
                         Jālinīprabha, Anārambaṇa­dhyāyin, Prajñākūta, Ratnajaha, Mārapramardin, Vidyuddeva, Vikurvaṇarāja,
                         Lakṣaṇa­kūṭa­samatikrānta, Siṃha­ghoṣābhigarjita­śvara, Śaila­śikhara­saṃghaṭṭana­rāja, Gandhahastin,
-                        Gaja­gandha­hastin, Satatodyukta, Anikṣiptadhura, Sumati, Sujāta, <ref cRef="F.176.b"/> Padmaśrī­garbha,
+                        Gaja­gandha­hastin, Satatodyukta, Anikṣiptadhura, Sumati, Sujāta, <ref cRef="F.176.b" type="folio"/> Padmaśrī­garbha,
                         Padmavyūha, Avalokiteśvara, Mahā­sthāma­prāpta, Brahmajāla, Ratnayaṣṭin, Mārajit, Kṣetralaṃkṛta,
                         Maṇi­ratnacchattra, Suvarnacūḍa, Maṇicūḍa, Maitreya, Mañjuśrī­kumāra­bhūta, and so forth, with the
                         remainder of the thirty-two thousand.<note place="end" index="19" xml:id="UT22084-060-005-881"> The list
@@ -491,7 +491,7 @@
                         each holding a precious parasol made of seven different kinds of jewels,<note place="end" index="21" xml:id="UT22084-060-005-883">The jewels were gold, silver, pearl, sapphire, ruby, emerald, and
                             diamond, although various sources alter this list slightly.</note> came forth from the city of Vaiśālī
                         and presented himself at the grove of Āmrapālī. Each approached the Buddha, bowed at his feet,
-                        circumambulated him clockwise seven times, laid down his precious parasol <ref cRef="F.177.a"/> in
+                        circumambulated him clockwise seven times, laid down his precious parasol <ref cRef="F.177.a" type="folio"/> in
                         offering, and withdrew to one side.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-53"/>
                     <p tid="41">As soon as all these precious parasols had been laid down, suddenly, by the miraculous power of
@@ -516,7 +516,7 @@
                         the great precious canopy.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-54"/>
                     <p tid="42">At this vision of the magnificent miracle effected by the supernatural power of the Lord Buddha,
-                        the entire host was ecstatic, enraptured, astonished, delighted, satisfied, <ref cRef="F.177.b"/> and
+                        the entire host was ecstatic, enraptured, astonished, delighted, satisfied, <ref cRef="F.177.b" type="folio"/> and
                         filled with awe and pleasure. They all bowed down to the Tathāgata, withdrew to one side with palms
                         pressed together, and gazed upon him with fixed attention. The young Licchavi Ratnākara knelt with his
                         right knee on the ground, raised his hands, palms pressed together in salute of the Buddha, and praised
@@ -607,7 +607,7 @@
                         <l>“Those who are well disciplined by your precious Dharma </l>
                         <l>Are free of vain imaginings and always deeply peaceful.</l>
                         <l>Supreme doctor, you put an end to birth, decay, sickness, and death.</l>
-                        <l>Immeasurable ocean of virtue, we bow to you! <ref cRef="F.178.a"/>
+                        <l>Immeasurable ocean of virtue, we bow to you! <ref cRef="F.178.a" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-060-005-62"/>
@@ -689,7 +689,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-060-005-70"/>
                     <p tid="58">Then, the young Licchavi Ratnākara, having celebrated the Buddha with these verses, further
-                        addressed him, “Lord, <ref cRef="F.178.b"/> these five hundred young Licchavis are truly on their way to
+                        addressed him, “Lord, <ref cRef="F.178.b" type="folio"/> these five hundred young Licchavis are truly on their way to
                         unexcelled, perfect enlightenment, and they have asked what is the bodhisattvas’ purification of the
                             buddhafield.<note place="end" index="35" xml:id="UT22084-060-005-897"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">byang chub sems dpa’ rnams kyi sangs rgyas kyi zhing yongs su dag pa</foreign>; Skt.
                                 <foreign xml:lang="Sa-Ltn" type="quote">bodhi­sattvāṇam buddha­kṣetra­pari­śuddhi</foreign>.
@@ -721,7 +721,7 @@
                         beings.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-73"/>
                     <p tid="62">“For example, Ratnākara, should one wish to build in empty space, one might go ahead in spite of
-                        the fact that it is not possible to build or to adorn anything in empty space. <ref cRef="F.179.a"/> In
+                        the fact that it is not possible to build or to adorn anything in empty space. <ref cRef="F.179.a" type="folio"/> In
                         just the same way, should a bodhisattva, who knows full well that all things are like empty space, wish to
                         build a buddhafield in order to develop living beings, he might go ahead, in spite of the fact that it is
                         not possible to build or to adorn a buddhafield in empty space.<note place="end" index="36" xml:id="UT22084-060-005-898"> K and X differ here quite radically. X: “For example, sons, if one
@@ -774,7 +774,7 @@
                         with the transcendences of tolerance, discipline, and the superior trance—hence beautiful with the
                         thirty-two auspicious signs—will be born in his buddhafield.</p>
                     <p tid="70">“A bodhisattva’s buddhafield is a field of effort. When he attains enlightenment, living beings
-                        who devote their efforts to virtue will be born in his buddhafield. <ref cRef="F.179.b"/>
+                        who devote their efforts to virtue will be born in his buddhafield. <ref cRef="F.179.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-78"/>
                     <p tid="71">“A bodhisattva’s buddhafield is a field of meditation. When he attains enlightenment, living
@@ -804,7 +804,7 @@
                     <p tid="79">“A bodhisattva’s buddhafield consists of his personal observance of the basic precepts and his
                         restraint in blaming others for their transgressions. When he attains enlightenment, even the word ‘crime’
                         will never be mentioned in his buddhafield.</p>
-                    <p tid="80">“A bodhisattva’s buddhafield is the purity of the path of the ten virtues. <ref cRef="F.180.a"/>
+                    <p tid="80">“A bodhisattva’s buddhafield is the purity of the path of the ten virtues. <ref cRef="F.180.a" type="folio"/>
                         When he attains enlightenment, living beings who are secure in <term type="ignore">long life</term>, great
                         in wealth, chaste in conduct, enhanced by true speech, soft-spoken, free of divisive intrigues and adroit
                         in reconciling factions, enlightening in their conversations,<note place="end" index="38" xml:id="UT22084-060-005-900"> This phrase is taken from K (it is absent in Tib., Skt. and X) because
@@ -838,7 +838,7 @@
                             the Buddha or of Vimalakīrti, so that a thought that may be entertained by numerous members of the
                             assembly may be brought into the open and rejected. He serves therefore as an archetype of the
                             disciple personality and need not be condemned as exceptionally obtuse personally.</note> had this
-                        thought: “If the buddhafield is pure only to the extent that the mind of the bodhisattva is pure, <ref cRef="F.180.b"/> then, when Śākyamuni Buddha was engaged in the career of the bodhisattva, his mind
+                        thought: “If the buddhafield is pure only to the extent that the mind of the bodhisattva is pure, <ref cRef="F.180.b" type="folio"/> then, when Śākyamuni Buddha was engaged in the career of the bodhisattva, his mind
                         must have been impure. Otherwise, how could this buddhafield appear to be so impure?”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-86"/>
                     <p tid="85">The Buddha, aware of venerable Śāriputra’s thoughts, said to him, “What do you think, Śāriputra?
@@ -863,7 +863,7 @@
                         reverend Śāriputra, is a sure sign that there are highs and lows in your mind and that your positive
                         thought in regard to the buddha-gnosis is not pure either. Reverend Śāriputra, those whose minds are
                         impartial toward all living beings and whose positive thoughts toward the buddha-gnosis are pure see this
-                        buddhafield as perfectly pure.” <ref cRef="F.181.a"/>
+                        buddhafield as perfectly pure.” <ref cRef="F.181.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-90"/>
                     <p tid="91">Thereupon the Lord touched the ground of this billion-world galactic universe with his big toe,
@@ -890,7 +890,7 @@
                         ultimate birthlessness.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-94"/>
                     <p tid="96">Then, the Lord withdrew his miraculous power and at once the buddhafield was restored to its usual
-                        appearance. Then, both men and gods who subscribed to the Disciple Vehicle thought, “Alas! <ref cRef="F.181.b"/> All constructed things are impermanent.”</p>
+                        appearance. Then, both men and gods who subscribed to the Disciple Vehicle thought, “Alas! <ref cRef="F.181.b" type="folio"/> All constructed things are impermanent.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-95"/>
                     <p tid="97">Thereby, thirty-two thousand living beings purified their immaculate, undistorted Dharma-eye in
                         regard to all things. The eight thousand bhikṣus were liberated from their mental defilements, attaining
@@ -918,7 +918,7 @@
                         of Vaiśālī.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-97"/>
                     <p tid="99">His wealth was inexhaustible for the purpose of sustaining the poor and the helpless. He observed
-                        a pure morality in order to protect the immoral. <ref cRef="F.182.a"/> He maintained tolerance and <term type="ignore">self</term>-control in order to reconcile beings who were angry, cruel, violent, and
+                        a pure morality in order to protect the immoral. <ref cRef="F.182.a" type="folio"/> He maintained tolerance and <term type="ignore">self</term>-control in order to reconcile beings who were angry, cruel, violent, and
                         brutal. He blazed with energy in order to inspire people who were lazy. He maintained concentration,
                         mindfulness, and meditation in order to sustain the mentally troubled. He attained decisive wisdom in
                         order to sustain the foolish.<note place="end" index="42" xml:id="UT22084-060-005-904">Thus, his conduct
@@ -946,7 +946,7 @@
                         businesses, yet had no interest in profit or possessions. To educate living beings, he would appear at
                         crossroads and on street corners, and to protect them he participated in government. To turn people away
                         from the Individual Vehicle and to engage them in the Mahāyāna, he appeared among listeners and teachers
-                        of the Dharma. <ref cRef="F.182.b"/> To develop children, he visited all the schools. To demonstrate the
+                        of the Dharma. <ref cRef="F.182.b" type="folio"/> To develop children, he visited all the schools. To demonstrate the
                         evils of desire, he even entered the brothels. To establish drunkards in correct mindfulness, he entered
                         all the drinking-houses.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-99"/>
@@ -971,7 +971,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-101"/>
                     <p tid="105">At that time, out of this very skill in liberative art, Vimalakīrti manifested himself as if
                         sick. To inquire after his health, the king, the officials, the lords, the youths, the brahmins, the
-                        householders, the businessmen, <ref cRef="F.183.a"/> the townfolk, the countryfolk, and thousands of other
+                        householders, the businessmen, <ref cRef="F.183.a" type="folio"/> the townfolk, the countryfolk, and thousands of other
                         living beings came forth from the great city of Vaiśālī and called on the invalid. When they arrived,
                         Vimalakīrti taught them the Dharma, beginning his discourse from the actuality of the four main
                         elements:</p>
@@ -994,7 +994,7 @@
                     <p tid="107">“This body is inert, like the earth; selfless, like water; lifeless, like fire; impersonal, like
                         the wind; and nonsubstantial, like space. This body is unreal, being a collocation of the four main
                         elements. It is void, not existing as self or as self-possessed. It is inanimate, being like grass, trees,
-                        walls, clods of earth, and illusions. <ref cRef="F.183.b"/> It is insensate, being driven like a windmill.
+                        walls, clods of earth, and illusions. <ref cRef="F.183.b" type="folio"/> It is insensate, being driven like a windmill.
                         It is filthy, being an agglomeration of pus and excrement. It is false, being fated to be broken and
                         destroyed, in spite of being anointed and massaged. It is afflicted by the four hundred and four
                             diseases.<note place="end" index="49" xml:id="UT22084-060-005-911"> According to Lamotte, the four
@@ -1033,7 +1033,7 @@
                             quiescence” and “transcendental analysis”).</note> It is born of the ten powers, the four
                         fearlessnesses, and the eighteen special qualities. It is born of all the transcendences. It is born from
                         sciences and superknowledges. It is born of the abandonment of all evil qualities, and of the gathering of
-                        all good qualities. <ref cRef="F.184.a"/> It is born of truth.<note place="end" index="54" xml:id="UT22084-060-005-916"> Degé
+                        all good qualities. <ref cRef="F.184.a" type="folio"/> It is born of truth.<note place="end" index="54" xml:id="UT22084-060-005-916"> Degé
                             has <foreign xml:lang="Bo-Ltn" type="quote">dben pa</foreign>, isolation, but most of the other
                             Kangyurs (including the Stok Palace) have <foreign xml:lang="Bo-Ltn" type="quote">bden pa</foreign>,
                             truth, and this is confirmed by the Sanskrit, <foreign xml:lang="Sa-Ltn" type="quote">satya</foreign>.
@@ -1068,7 +1068,7 @@
                         Licchavi Vimalakīrti about his illness. Why? I remember one day, when I was sitting at the foot of a tree
                         in the forest, absorbed in contemplation, the Licchavi Vimalakīrti came to the foot of that tree and said
                         to me, ‘Reverend Śāriputra, this is not the way to absorb yourself in contemplation. You should absorb
-                        yourself in contemplation so that neither body nor mind appear anywhere in the three realms. <ref cRef="F.184.b"/> You should absorb yourself in contemplation in such a way that you can manifest all
+                        yourself in contemplation so that neither body nor mind appear anywhere in the three realms. <ref cRef="F.184.b" type="folio"/> You should absorb yourself in contemplation in such a way that you can manifest all
                         ordinary behavior without forsaking cessation. You should absorb yourself in contemplation in such a way
                         that you can manifest the nature of an ordinary person without abandoning your cultivated spiritual
                         nature. You should absorb yourself in contemplation so that the mind neither settles within nor moves
@@ -1105,7 +1105,7 @@
                         Dharma must be taught according to reality.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-110"/>
                     <p tid="118">“ ‘Reverend Maudgalyāyana, the Dharma is without a living being, because it is free of the dust
-                        of living beings. It is selfless, because it is free of the dust of desire. <ref cRef="F.185.a"/> It is
+                        of living beings. It is selfless, because it is free of the dust of desire. <ref cRef="F.185.a" type="folio"/> It is
                         lifeless, because it is free of birth and death. It is without a person, because it dispenses with past
                         origins and future destinies.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-111"/>
@@ -1142,7 +1142,7 @@
                         is no teacher of the Dharma, no one to listen, and no one to understand. It is as if an illusory person
                         were to teach the Dharma to illusory people.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-115"/>
-                    <p tid="123">“ ‘Therefore, you should teach the Dharma by keeping your mind on this. <ref cRef="F.185.b"/> You
+                    <p tid="123">“ ‘Therefore, you should teach the Dharma by keeping your mind on this. <ref cRef="F.185.b" type="folio"/> You
                         should be adept in regard to the spiritual faculties of living beings. By means of the correct vision of
                         the wisdom-eye, manifesting the great compassion, acknowledging the benevolent activity of the Buddha,
                         purifying your intentions, and understanding the definitive expressions<note place="end" index="61" xml:id="UT22084-060-005-923"> This refers to those teachings (of <foreign xml:lang="Sa-Ltn" type="term">śūnyatā</foreign>, etc.) the Buddha reserves for disciples of greatest ability,
@@ -1174,10 +1174,10 @@
                         for the sake of eliminating the materialism of others. When you enter a town, you should keep in mind its
                         actual voidness, yet you should proceed through it in order to develop men and women. You should enter
                         homes as if entering the family of the Buddha. You should accept alms by not taking anything. You should
-                        see form like a man blind from birth, hear sounds as if they were echoes, <ref cRef="F.186.a"/> smell
-                        scents as if they were winds, experience tastes without any discrimination, touch tangibles in awareness
-                        of the ultimate lack of contact in gnosis, and know things with the consciousness of an illusory creature.
-                        That which is without intrinsic substance and without imparted substance does not burn. And what does not
+                        see form like a man blind from birth, hear sounds as if they were echoes, <ref cRef="F.186.a" type="folio"/> smell
+                        scents as if they were like wind, experience tastes without any discrimination, touch tangible objects without there being in gnosis
+                        any contact, and know things with the consciousness of an illusory creature.
+                        That which is without a state of being self and a state of being other does not burn. And what does not
                         burn will not be extinguished.<note place="end" index="64" xml:id="UT22084-060-005-926"> Skt. <foreign xml:lang="Sa-Ltn" type="quote">yo ’svabhāvo ’para­bhāvaś ca tad anujjvalitam | yad anujjvalitaṃ
                                 tan na śāmyati</foreign>. His seemingly irrelevant statement, which occurs again in Vimala­kīrti’s
                             speech to Kātyāyana (<ptr target="#UT22084-060-005-9"/><!--3.25-->), is, in fact, highly relevant to
@@ -1185,7 +1185,7 @@
                             man’s condition is like that of one whose head is ablaze. Hence their major preoccupation is to
                             extinguish that fire, just as a burning man will seek water with a frantic intensity to save himself.
                             Thus Vimala­kīrti is telling Mahā­kāśyapa and Kātyāyana that since they do not have intrinsic
-                            substance, self, or any imparted substance (i.e., self constituted by relationship with other things),
+                            existence as self, or imparted existence as other in relationship to anything else,
                             they do not really exist and, therefore, they cannot burn with the misery of the world and there is
                             nothing to extinguish in liberation (<foreign xml:lang="Sa-Ltn" type="term">nirvāṇa</foreign>
                             literally meaning “extinguishment”).</note>
@@ -1205,7 +1205,7 @@
                         If a lay bodhisattva may be endowed with such eloquence, who is there who would not conceive the spirit of
                         unexcelled, perfect enlightenment?’ From that time forth, I no longer recommend the vehicles of the
                         disciples and of the solitary sages but recommend the Mahāyāna. And thus, Lord, I am reluctant to go to
-                        this good man to inquire about his illness.” <ref cRef="F.186.b"/>
+                        this good man to inquire about his illness.” <ref cRef="F.186.b" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-060-005-120"/>
@@ -1239,7 +1239,7 @@
                     <p tid="131">“ ‘Take this food, reverend Subhūti, if, without seeing the Buddha, hearing the Dharma, or
                         serving the Saṅgha, you undertake the religious <term type="ignore">life</term> under the six outsider
                         masters—namely, Purāṇa Kāśyapa, Māskārin Gośāli­putra, Saṃjāyin Vairaṭi­putra, Kakuda Kātyāyana, Ajita
-                        Keśakambala, <ref cRef="F.187.a"/> and Nirgrantha Jñāti­putra, and follow the ways they prescribe.</p>
+                        Keśakambala, <ref cRef="F.187.a" type="folio"/> and Nirgrantha Jñāti­putra, and follow the ways they prescribe.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-122"/>
                     <p tid="132">“ ‘Take this food, reverend Subhūti, if, entertaining all false views, you find neither extremes
                         nor middle; if, bound up in the eight adversities, you do not obtain favorable conditions; if,
@@ -1265,7 +1265,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-124"/>
                     <p tid="134">“I answered, ‘No indeed, <term type="ignore">noble</term> sir!’ He then said, ‘Reverend Subhūti,
                         the nature of all things is like illusion, like a magical incarnation. So you should not fear them. Why?
-                        All words also have that nature, and thus the wise are not attached to words, <ref cRef="F.187.b"/> nor do
+                        All words also have that nature, and thus the wise are not attached to words, <ref cRef="F.187.b" type="folio"/> nor do
                         they fear them. Why? All language does not ultimately exist, except as liberation. The nature of all
                         things is liberation.’<note place="end" index="71" xml:id="UT22084-060-005-933"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">yi ge de dag thams cad ni yi ge med pa ste/ rnam par grol ba ni ma
                                 gtogs so/ chos thams cad ni rnam par grol ba’i mtshan nyid do</foreign>. K and X differ slightly,
@@ -1307,7 +1307,7 @@
                         jackal!</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-128"/>
                     <p tid="139">“ ‘Reverend Pūrṇa, all these monks were formerly engaged in the Mahāyāna but have forgotten the
-                            <term>spirit of enlightenment</term>. <ref cRef="F.188.a"/> So do not instruct them in the Disciple
+                            <term>spirit of enlightenment</term>. <ref cRef="F.188.a" type="folio"/> So do not instruct them in the Disciple
                         Vehicle. The Disciple Vehicle is not ultimately valid, and you disciples are like men blind from birth, in
                         regard to recognition of the degrees of the spiritual faculties of living beings.’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-129"/>
@@ -1336,7 +1336,7 @@
                     <p tid="142">Kātyāyana replied, “Lord, I am indeed reluctant to go to that good man to inquire about his
                         illness. Why? Lord, I remember one day when, after the Lord had given some brief instruction to the monks,
                         I was defining the expressions of that discourse by teaching the meaning of impermanence, suffering,
-                        selflessness, <ref cRef="F.188.b"/> and peace,<note place="end" index="75" xml:id="UT22084-060-005-937">
+                        selflessness, <ref cRef="F.188.b" type="folio"/> and peace,<note place="end" index="75" xml:id="UT22084-060-005-937">
                             These four are called the “four insignia of the Dharma” or “four epitomes” (see glossary).</note> the
                         Licchavi Vimalakīrti came there and said to me, ‘Reverend Mahākātyāyana, do not teach an ultimate reality
                         endowed with activity, production, and destruction! Reverend Mahākātyāyana, nothing was ever destroyed, is
@@ -1362,7 +1362,7 @@
                         at my feet, withdrew to one side and asked me, ‘Reverend Aniruddha, you have been proclaimed by the Buddha
                         to be the foremost among those who possess the divine eye. To what distance does the divine vision of the
                         venerable Aniruddha extend?’ I answered, ‘Friends, I see the entire billion-world galactic universe of the
-                        Lord Śākyamuni <ref cRef="F.189.a"/> just as plainly as a man of ordinary vision sees a myrobalan nut on
+                        Lord Śākyamuni <ref cRef="F.189.a" type="folio"/> just as plainly as a man of ordinary vision sees a myrobalan nut on
                         the palm of his hand.’ When I had said these words, the Licchavi Vimalakīrti came there and, having bowed
                         his head at my feet, said to me, ‘Reverend Aniruddha, is your divine eye compounded in nature? Or is it
                         uncompounded in nature? If it is compounded in nature, it is the same as the superknowledges of the
@@ -1389,7 +1389,7 @@
                         Vimalakīrti to inquire about his illness.”</p>
                     <p tid="150">Upāli replied, “Lord, I am indeed reluctant to go to that good man to inquire about his illness.
                         Why? Lord, I remember that one day there were two monks who had committed some infraction and were too
-                        ashamed to appear before the Lord, <ref cRef="F.189.b"/> so they came to me and said, ‘Reverend Upāli, we
+                        ashamed to appear before the Lord, <ref cRef="F.189.b" type="folio"/> so they came to me and said, ‘Reverend Upāli, we
                         have both committed an infraction but are too ashamed to appear before the Buddha. Venerable Upāli, kindly
                         remove our anxieties by absolving us of these infractions.’<note place="end" index="81" xml:id="UT22084-060-005-943"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">the tsom sol te bdag cag
                                 gnyis ltung ba las phyung shig</foreign> (lit. “remove our doubts and take us both out from the
@@ -1417,7 +1417,7 @@
                         conceptualization is total affliction, and not conceptualizing and not discriminating is their true
                         nature. Misapprehension is total affliction, and non-misapprehension is their true nature. The presumption
                         of self is total affliction, and selflessness is their true nature. Reverend Upāli, all things are without
-                        production, destruction, and duration, like magical illusions, clouds, and lightning; all things <ref cRef="F.190.a"/> are evanescent, not remaining even for an instant; all things are like dreams,
+                        production, destruction, and duration, like magical illusions, clouds, and lightning; all things <ref cRef="F.190.a" type="folio"/> are evanescent, not remaining even for an instant; all things are like dreams,
                         hallucinations, and unreal visions; all things are like the reflection of the moon in water and like a
                         mirror-image; they are born of mental construction. Those who know this are called the true upholders of
                         the discipline,<note place="end" index="82" xml:id="UT22084-060-005-944"> Skt. <foreign xml:lang="Sa-Ltn" type="term">vināyadhara</foreign>. As usual, Vimalakīrti makes his point on the disciple’s home
@@ -1445,7 +1445,7 @@
                     <p tid="160">Rāhula replied, “Lord, I am indeed reluctant to go to that good man to inquire about his illness.
                         Why? Lord, I remember that one day many young Licchavi gentlemen came to the place where I was and said to
                         me, ‘Reverend Rāhula, you are the son of the Lord, and, having renounced a kingdom of a universal monarch,
-                        you have left the world. <ref cRef="F.190.b"/> What are the virtues and benefits you saw in leaving the
+                        you have left the world. <ref cRef="F.190.b" type="folio"/> What are the virtues and benefits you saw in leaving the
                         world?’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-142"/>
                     <p tid="161">“As I was teaching them properly the benefits and virtues of renouncing the world, the Licchavi
@@ -1478,7 +1478,7 @@
                             Chap. V.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-143"/>
-                    <p tid="162">“The young men complained, ‘But, householder, <ref cRef="F.191.a"/> we have heard the Tathāgata
+                    <p tid="162">“The young men complained, ‘But, householder, <ref cRef="F.191.a" type="folio"/> we have heard the Tathāgata
                         declare that one should not renounce the world without the permission of one’s parents.’</p>
                     <p tid="163">“Vimalakīrti answered, ‘Young men, you should cultivate yourselves intensively to conceive the
                         spirit of unexcelled, perfect enlightenment. That in itself will be your renunciation and high
@@ -1515,7 +1515,7 @@
                     <p tid="169">“ ‘Reverend Ānanda, go in silence, and do not belittle the Lord. Do not say such things to
                         others. It would not be good for the powerful gods or for the bodhisattvas coming from the various
                         buddhafields to hear such words.</p>
-                    <p tid="170">“ ‘Reverend Ānanda, a universal monarch, <ref cRef="F.191.b"/> who is endowed only with a small
+                    <p tid="170">“ ‘Reverend Ānanda, a universal monarch, <ref cRef="F.191.b" type="folio"/> who is endowed only with a small
                         root of virtue, is free of diseases. How then could the Lord, who has an infinite root of virtue, have any
                         disease? It is impossible.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-148"/>
@@ -1551,7 +1551,7 @@
                         Licchavi Vimalakīrti.<note place="end" index="93" xml:id="UT22084-060-005-955"> K and X start a new
                             chapter at this point, while Tib. and Skt. include the disciples’ and bodhisattvas’ responses to the
                             Buddha’s request in a single chapter.</note>
-                        <ref cRef="F.192.a"/>
+                        <ref cRef="F.192.a" type="folio"/>
                     </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-060-005-152"/>
@@ -1581,7 +1581,7 @@
                             ultimate levels, see Lamotte, p 189, n 89.</note> Furthermore, your reality is just the same as the
                         reality of all living beings, the reality of all things, and the reality of all the holy ones. If your
                         enlightenment can be prophesied in such a way, so can that of all living beings. Why? Because reality does
-                        not consist of duality <ref cRef="F.192.b"/> or of diversity. Maitreya, whenever you attain buddhahood,
+                        not consist of duality <ref cRef="F.192.b" type="folio"/> or of diversity. Maitreya, whenever you attain buddhahood,
                         which is the perfection of enlightenment, at the same time all living beings will also attain buddhahood.
                         Why? Enlightenment consists of the realizations of all living beings. Maitreya, at the moment when you
                         attain ultimate liberation, all living beings will also attain ultimate liberation. Why? The tathāgatas do
@@ -1611,7 +1611,7 @@
                         to infinite space.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-157"/>
                     <p tid="183">“ ‘Enlightenment is unconstructed, because it is neither born nor destroyed, neither abides nor
-                        undergoes any transformation. Enlightenment is the complete knowledge of the thoughts, deeds, <ref cRef="F.193.a"/> and inclinations of all living beings. Enlightenment is not a door for the
+                        undergoes any transformation. Enlightenment is the complete knowledge of the thoughts, deeds, <ref cRef="F.193.a" type="folio"/> and inclinations of all living beings. Enlightenment is not a door for the
                         sense-media. Enlightenment is unadulterated, since it is free of the afflictions of the instinctually
                         driven succession of lives. Enlightenment is neither somewhere nor nowhere, abiding in no location or
                         dimension. Enlightenment, not being contained in anything, does not stand in reality. Enlightenment is
@@ -1637,7 +1637,7 @@
                         Vimalakīrti to inquire about his illness.”</p>
                     <p tid="186">Prabhāvyūha replied, “Lord, I am indeed reluctant to go to that good man to inquire about his
                         illness. Why? Lord, I remember one day, when I was going out of the great city of Vaiśālī, I met the
-                        Licchavi Vimalakīrti <ref cRef="F.193.b"/> coming in. He greeted me, and I then addressed him:
+                        Licchavi Vimalakīrti <ref cRef="F.193.b" type="folio"/> coming in. He greeted me, and I then addressed him:
                         ‘Householder, where do you come from?’ He replied, ‘I come from the seat of enlightenment.’ I then
                         inquired, ‘What is meant by “<term>seat of enlightenment</term>”?’ He then spoke the following words to
                         me: ‘<term type="ignore">Noble</term> son, the seat of enlightenment is the seat of positive thought
@@ -1674,7 +1674,7 @@
                             stopping craving stops grasping; stopping grasping stops existence; stopping existence stops birth;
                             and stopping birth stops old age and death. This is the sequence of realization of the twelvefold
                             chain during the attainment of enlightenment on the seat of enlightenment‌.</note>
-                        <ref cRef="F.194.a"/> It is the seat of eradication of all afflictions, because it is perfectly
+                        <ref cRef="F.194.a" type="folio"/> It is the seat of eradication of all afflictions, because it is perfectly
                         enlightened about the nature of reality. It is the seat of all living beings, because all living beings
                         are without intrinsic identity. It is the seat of all things, because it is perfectly enlightened with
                         regard to voidness.</p>
@@ -1701,7 +1701,7 @@
                     <p tid="194">The Buddha then said to the bodhisattva Jagatindhara, “Jagatindhara, go to the Licchavi
                         Vimalakīrti to inquire about his illness.”</p>
                     <p tid="195">Jagatindhara replied, “Lord, I am indeed reluctant to go to that good man to inquire about his
-                        illness. Why? Lord, I remember that one day, when I was at home, <ref cRef="F.194.b"/> the wicked Māra,
+                        illness. Why? Lord, I remember that one day, when I was at home, <ref cRef="F.194.b" type="folio"/> the wicked Māra,
                         disguised as Indra and surrounded with twelve thousand heavenly maidens, approached me with the sounds of
                         music and singing. Having saluted me by touching my feet with his head, he withdrew with his retinue to
                         one side. I then, thinking he was Śakra, the king of the gods, said to him, ‘Welcome, O Kauśika! You
@@ -1728,7 +1728,7 @@
                         to the good man Vimalakīrti, and only then will you be able to return to your own abode.’ </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-171"/>
                     <p tid="201">“Then Māra was even more frightened and, much against his will, gave the heavenly maidens.</p>
-                    <p tid="202">“The Licchavi Vimalakīrti, having received the goddesses, <ref cRef="F.195.a"/> said to them,
+                    <p tid="202">“The Licchavi Vimalakīrti, having received the goddesses, <ref cRef="F.195.a" type="folio"/> said to them,
                         ‘Now that you have been given to me by Māra, you should all conceive the spirit of unexcelled, perfect
                             enlightenment.’<note place="end" index="101" xml:id="UT22084-060-005-963"> Here Vimalakīrti is shown
                             as an emanation of the Buddha, who encountered these same goddesses as temptresses during his night
@@ -1758,7 +1758,7 @@
                         cultivate the auspicious marks and signs. It is the joy of the liberation of non-intimidation<note place="end" index="103" xml:id="UT22084-060-005-965"> It is commonly observed by the Buddha and all
                             the great Buddhist philosophers, such as Nāgārjuna, that many feel frightened when taught the profound
                             teaching of voidness because of misapprehensions about that most healing of concepts.</note> when
-                        hearing the profound teaching. It is the joy of exploration of the three doors of liberation, <ref cRef="F.195.b"/> and of the realization of liberation. It is the joy of being an ornament of the seat
+                        hearing the profound teaching. It is the joy of exploration of the three doors of liberation, <ref cRef="F.195.b" type="folio"/> and of the realization of liberation. It is the joy of being an ornament of the seat
                         of enlightenment, and of not attaining liberation at the wrong time. It is the joy of serving those of
                         equal fortune, of not hating or resenting those of superior fortune, of serving the spiritual benefactors,
                         and of avoiding sinful friends. It is the joy of the superior gladness of faith and devotion to the
@@ -1779,7 +1779,7 @@
                         abode of the māras?’</p>
                     <p tid="211"> “Vimalakīrti replied, ‘Sisters, there is a door of the Dharma called “The Inexhaustible Lamp.”
                         Practice it! What is it? Sisters, a single lamp may light hundreds of thousands of lamps without itself
-                        being diminished. Likewise, sisters, a single bodhisattva <ref cRef="F.196.a"/> may establish many
+                        being diminished. Likewise, sisters, a single bodhisattva <ref cRef="F.196.a" type="folio"/> may establish many
                         hundreds of thousands of living beings in enlightenment without his mindfulness being diminished. In fact,
                         not only does it not diminish, it grows stronger. Likewise, the more you teach and demonstrate virtuous
                         qualities to others, the more you grow with respect to these virtuous qualities. This is the door of the
@@ -1816,7 +1816,7 @@
                         Licchavi Vimalakīrti came there and said, ‘Merchant’s son, you should not celebrate a sacrifice in this
                         way. You should celebrate a Dharma-sacrifice. What is the use of the sacrifice of material things?’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-179"/>
-                    <p tid="215">“I then asked him, ‘How does one give a Dharma-sacrifice?’ <ref cRef="F.196.b"/>
+                    <p tid="215">“I then asked him, ‘How does one give a Dharma-sacrifice?’ <ref cRef="F.196.b" type="folio"/>
                     </p>
                     <p tid="216">“He replied, ‘A Dharma-sacrifice is that which develops living beings without beginning or end,
                         giving gifts to them all simultaneously.<note place="end" index="107" xml:id="UT22084-060-005-969"> Last
@@ -1850,7 +1850,7 @@
                             found in Skt. or in Tib. Nevertheless, Tib. has the same meaning because the “body, health, and
                             wealth” here referred to are not mundane in nature, but refer to the true body, etc., of the Buddha.
                             See <ptr target="#UT22084-060-005-12"/><!--2.10-->.</note> of mindfulness, consummated by the six
-                        remembrances; of positive thought, consummated through the truly enjoyable Dharma; <ref cRef="F.197.a"/>
+                        remembrances; of positive thought, consummated through the truly enjoyable Dharma; <ref cRef="F.197.a" type="folio"/>
                         of purity of livelihood, consummated by correct spiritual practice; of the respect of noble ones,
                         consummated by joyful and faithful service; of soberness of mind, consummated by absence of dislike for
                         ordinary people; of high resolve, consummated by renunciation; of skill in erudition, consummated by
@@ -1875,7 +1875,7 @@
                         of offerings from all people, including the gods.’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-185"/>
                     <p tid="222">“Lord, as soon as the householder had discoursed thus, two hundred brahmins among the crowd of
-                        brahmins present conceived the spirit of unexcelled, perfect enlightenment. <ref cRef="F.197.b"/> And I,
+                        brahmins present conceived the spirit of unexcelled, perfect enlightenment. <ref cRef="F.197.b" type="folio"/> And I,
                         full of astonishment, having saluted this good man by touching his feet with my head, took from around my
                         neck a necklace of pearls worth one hundred thousand pieces of gold and offered it to him.<note place="end" index="112" xml:id="UT22084-060-005-974"> Sudatta here misses the point, apparently, and,
                             instead of awakening to the transvaluation of the notion of sacrifice, he again resorts to a material
@@ -1904,7 +1904,7 @@
                     <head type="chapter" tid="667">Chapter 4</head>
                     <head type="chapterTitle" tid="668">The Consolation of the Invalid</head>
                     <milestone unit="chunk" xml:id="UT22084-060-005-188"/>
-                    <p tid="226">Then, the Buddha said to the crown prince, Mañjuśrī, “Mañjuśrī, <ref cRef="F.198.a"/> go to the
+                    <p tid="226">Then, the Buddha said to the crown prince, Mañjuśrī, “Mañjuśrī, <ref cRef="F.198.a" type="folio"/> go to the
                         Licchavi Vimalakīrti to inquire about his illness.”</p>
                     <p tid="227">Mañjuśrī replied, “Lord, it is difficult to attend upon the Licchavi Vimalakīrti. He is gifted
                         with marvelous eloquence concerning the law of the profound. He is extremely skilled in full expressions
@@ -1925,7 +1925,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-190"/>
                     <p tid="229">Thus, eight thousand bodhisattvas, five hundred disciples, a great number of Śakras, Brahmās,
                         Lokapālas, and many hundreds of thousands of gods and goddesses, all followed the crown prince Mañjuśrī to
-                        listen to the Dharma. And the crown prince Mañjuśrī, <ref cRef="F.198.b"/> surrounded and followed by
+                        listen to the Dharma. And the crown prince Mañjuśrī, <ref cRef="F.198.b" type="folio"/> surrounded and followed by
                         these bodhisattvas, disciples, Śakras, Brahmās, Lokapālas, gods, and goddesses, entered the great city of
                         Vaiśālī.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-191"/>
@@ -1948,7 +1948,7 @@
                         without <term type="ignore">self</term>-reproach, and if you are living in touch with the supreme
                         happiness.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-194"/>
-                    <p tid="235">“Householder, whence came this sickness of yours? How long will it continue? <ref cRef="F.199.a"/> How does it stand? How can it be alleviated?”</p>
+                    <p tid="235">“Householder, whence came this sickness of yours? How long will it continue? <ref cRef="F.199.a" type="folio"/> How does it stand? How can it be alleviated?”</p>
                     <p tid="236">Vimalakīrti replied, “Mañjuśrī, my sickness comes from ignorance and the thirst for existence and
                         it will last as long as do the sicknesses of all living beings. Were all living beings to be free from
                         sickness, I also would not be sick. Why? Mañjuśrī, for the bodhisattva, the world consists only of living
@@ -2002,7 +2002,7 @@
                     <p tid="245">
                         <emph>Mañjuśrī</emph>: Householder, where should emptiness be sought?</p>
                     <p tid="246">
-                        <emph>Vimalakīrti</emph>: Mañjuśrī, emptiness should be sought among the sixty-two convictions. <ref cRef="F.199.b"/>
+                        <emph>Vimalakīrti</emph>: Mañjuśrī, emptiness should be sought among the sixty-two convictions. <ref cRef="F.199.b" type="folio"/>
                     </p>
                     <p tid="247">
                         <emph>Mañjuśrī</emph>: Where should the sixty-two convictions be sought?</p>
@@ -2051,7 +2051,7 @@
                             This is not practiced in Buddhism, as no absolution is effective: karmic effects cannot be avoided in
                             any case, and the important thing is to cultivate the states of mind that refrain from
                             wrongdoing.</note> He should encourage his empathy for all living beings on account of his own
-                        sickness, his remembrance of suffering experienced from beginningless time, <ref cRef="F.200.a"/> and his
+                        sickness, his remembrance of suffering experienced from beginningless time, <ref cRef="F.200.a" type="folio"/> and his
                         consciousness of working for the welfare of living beings. He should encourage him to manifest the roots
                         of virtue, to maintain the primal purity and the lack of craving, and thus to always strive to become the
                         king of healers, who can cure all sicknesses. Thus should a bodhisattva console a sick bodhisattva, in
@@ -2080,7 +2080,7 @@
                             world.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-204"/>
-                    <p tid="262">“What is the elimination of this sickness? It is the elimination of egoism <ref cRef="F.200.b"/>
+                    <p tid="262">“What is the elimination of this sickness? It is the elimination of egoism <ref cRef="F.200.b" type="folio"/>
                         and possessiveness. What is the elimination of egoism and possessiveness? It is the freedom from dualism.
                         What is freedom from dualism? It is the absence of involvement with either the external or the internal.
                         What is absence of involvement with either external or internal? It is non-deviation, non-fluctuation, and
@@ -2122,7 +2122,7 @@
                             the arising of instinct. This is the method of the Mahāyāna.”</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-207"/>
-                    <p tid="265">“Mañjuśrī, thus should a sick bodhisattva control his own mind in order to overcome old age, <ref cRef="F.201.a"/> sickness, death, and birth. Such, Mañjuśrī, is the sickness of the bodhisattva. If he
+                    <p tid="265">“Mañjuśrī, thus should a sick bodhisattva control his own mind in order to overcome old age, <ref cRef="F.201.a" type="folio"/> sickness, death, and birth. Such, Mañjuśrī, is the sickness of the bodhisattva. If he
                         takes it otherwise, all his efforts will be in vain. Just as one is called ‘hero’ when one overcomes all
                         enemies, so, too, one is called ‘bodhisattva’ when one conquers the miseries of aging, sickness, and
                             death.<note place="end" index="125" xml:id="UT22084-060-005-987"> This analogy explaining the word
@@ -2156,7 +2156,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-7"/>
                     <p tid="267">“What is bondage? And what is liberation? To indulge in liberation from the world without
                         employing liberative art is bondage for the bodhisattva. To engage in <term type="ignore">life</term> in the world with full
-                        employment of liberative art is liberation for the bodhisattva. <ref cRef="F.201.b"/> To experience the
+                        employment of liberative art is liberation for the bodhisattva. <ref cRef="F.201.b" type="folio"/> To experience the
                         taste of contemplation, meditation, and concentration without skill in liberative art is bondage. To
                         experience the taste of contemplation and meditation with skill in liberative art is liberation. Wisdom
                         not integrated with liberative art is bondage, but wisdom integrated with liberative art is liberation.
@@ -2190,7 +2190,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-213"/>
                     <p tid="272">“Mañjuśrī, thus should the sick bodhisattva consider things. His wisdom is the consideration of
-                        body, mind, and sickness as impermanent, miserable, <ref cRef="F.202.a"/> empty, and selfless. His
+                        body, mind, and sickness as impermanent, miserable, <ref cRef="F.202.a" type="folio"/> empty, and selfless. His
                         liberative art consists of not exhausting himself by trying to avoid all physical sickness, and of
                         applying himself to accomplish the benefit of living beings, without interrupting the cycle of
                         reincarnations. Furthermore, his wisdom lies in understanding that body, mind, and sickness are neither
@@ -2211,7 +2211,7 @@
                         manifest, yet where all the works of māras are transcended, there is the domain of the bodhisattva. Where
                         one seeks the gnosis of omniscience, yet does not attain this gnosis at the wrong time, there is the
                         domain of the bodhisattva. Where one knows the four noble truths, yet does not realize those truths at the
-                        wrong time, there is the domain of the bodhisattva. A domain of introspective insight, <ref cRef="F.202.b"/> wherein one does not arrest voluntary reincarnation in the world, such is the domain of the
+                        wrong time, there is the domain of the bodhisattva. A domain of introspective insight, <ref cRef="F.202.b" type="folio"/> wherein one does not arrest voluntary reincarnation in the world, such is the domain of the
                         bodhisattva. A domain where one realizes birthlessness, yet does not become destined for the ultimate,
                         such is the domain of the bodhisattva. Where one sees relativity without entertaining any convictions,
                         there is the domain of the bodhisattva. Where one associates with all beings, yet keeps free of all
@@ -2233,7 +2233,7 @@
                             one of the five or six (see glossary “superknowledges”); hence the paradox.</note> wherein defilements are not
                         exhausted, such is the domain of the bodhisattva. The domain of living by the holy Dharma, without even
                         perceiving any evil paths, such is the domain of the bodhisattva. The domain of the four immeasurables,
-                        where one does not accept rebirth in the heaven of Brahmā, such is the domain of the bodhisattva. <ref cRef="F.203.a"/> The domain of the six remembrances, unaffected by any sort of defilement, such is the
+                        where one does not accept rebirth in the heaven of Brahmā, such is the domain of the bodhisattva. <ref cRef="F.203.a" type="folio"/> The domain of the six remembrances, unaffected by any sort of defilement, such is the
                         domain of the bodhisattva. The domain of contemplation, concentration, and absorption, where one does not
                         reincarnate in the formless realms by force of these concentrations and absorptions,<note place="end" index="132" xml:id="UT22084-060-005-994"> K supplies the location here.</note> such is the domain of
                         the bodhisattva. The domain of the four foci of mindfulness, where body, sensation, mind, and things are
@@ -2254,7 +2254,7 @@
                         quietism, such is the domain of the bodhisattva. The domain of the realization of the unborn nature of all
                         things, yet of the perfection of the body, the auspicious signs and marks, and the ornaments of the
                         Buddha, such is the domain of the bodhisattva. The domain of manifesting the attitudes of the disciples
-                        and the solitary sages without sacrificing the qualities of the Buddha, <ref cRef="F.203.b"/> such is the
+                        and the solitary sages without sacrificing the qualities of the Buddha, <ref cRef="F.203.b" type="folio"/> such is the
                         domain of the bodhisattva. The domain of conformity to all things utterly pure in nature while manifesting
                         behavior that suits the inclinations of all living beings, such is the domain of the bodhisattva. A domain
                         where one realizes that all the buddhafields are indestructible and uncreatable, having the nature of
@@ -2281,7 +2281,7 @@
                         even in his own body, much less in a chair. Reverend Śāriputra, he who is interested in the Dharma has no
                         interest in matter, sensation, intellect, motivation, or consciousness. He has no interest in these
                         aggregates, or in the elements, or in the sense-media. Interested in the Dharma, he has no interest in the
-                        realm of desire, the realm of pure matter, <ref cRef="F.204.a"/> or the immaterial realm. Interested in
+                        realm of desire, the realm of pure matter, <ref cRef="F.204.a" type="folio"/> or the immaterial realm. Interested in
                         the Dharma, he is not interested in attachment to the Buddha, attachment to the Dharma, or attachment to
                         the Saṅgha. Reverend Śāriputra, he who is interested in the Dharma is not interested in recognizing
                         suffering, abandoning its origination, realizing its cessation, or practicing the path. Why? The Dharma is
@@ -2306,7 +2306,7 @@
                         refuge. The Dharma is without sign. He whose consciousness pursues signs is not interested in the Dharma
                         but is interested in signs. The Dharma is not a society. He who seeks to associate with the Dharma is not
                         interested in the Dharma but is interested in association. The Dharma is not a sight, a sound, a category,
-                        or an idea. <ref cRef="F.204.b"/> He who is involved in sights, sounds, categories, and ideas is not
+                        or an idea. <ref cRef="F.204.b" type="folio"/> He who is involved in sights, sounds, categories, and ideas is not
                         interested in the Dharma but is interested in sights, sounds, categories, and ideas. Reverend Śāriputra,
                         the Dharma is free of compounded things and uncompounded things. He who adheres to compounded things and
                         uncompounded things is not interested in the Dharma but is interested in adhering to compounded things and
@@ -2337,7 +2337,7 @@
                         Meru­pradīpa­rāja.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-225"/>
                     <p tid="287">At that moment, the Licchavi Vimalakīrti, having focused himself in concentration, performed a
-                        miraculous feat <ref cRef="F.205.a"/> such that the Lord Tathāgata Meru­pradīpa­rāja, in the universe
+                        miraculous feat <ref cRef="F.205.a" type="folio"/> such that the Lord Tathāgata Meru­pradīpa­rāja, in the universe
                         Merudhvaja, sent to this universe thirty-two hundred thousand thrones. These thrones were so tall,
                         spacious, and beautiful that the bodhisattvas, great disciples, Śakras, Brahmās, Lokapālas, and other gods
                         had never before seen the like. The thrones descended from the sky and came to rest in the house of the
@@ -2361,7 +2361,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-227"/>
                     <p tid="290">The Licchavi Vimalakīrti said to the venerable Śāriputra, “Reverend Śāriputra, take your seat
                         upon a throne.”</p>
-                    <p tid="291">He replied, “Good sir, the thrones are too big and too high, <ref cRef="F.205.b"/> and I cannot
+                    <p tid="291">He replied, “Good sir, the thrones are too big and too high, <ref cRef="F.205.b" type="folio"/> and I cannot
                         sit upon them.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-228"/>
                     <p tid="292">Vimalakīrti said, “Reverend Śāriputra, bow down to the Tathāgata Meru­pradīpa­rāja, and you will
@@ -2393,7 +2393,7 @@
                         putting of the king of mountains, Sumeru, into the mustard seed. That, reverend Śāriputra, is an entrance
                         to the domain of the inconceivable liberation of the bodhisattvas.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-231"/>
-                    <p tid="296"> “Furthermore, reverend Śāriputra, the bodhisattva who lives in the inconceivable liberation <ref cRef="F.206.a"/> can pour into a single pore of his skin all the waters of the four great oceans,
+                    <p tid="296"> “Furthermore, reverend Śāriputra, the bodhisattva who lives in the inconceivable liberation <ref cRef="F.206.a" type="folio"/> can pour into a single pore of his skin all the waters of the four great oceans,
                         without injuring the water-animals such as fish, tortoises, crocodiles, frogs, and other creatures, and
                         without the nāgas, yakṣas, gandharvas, and asuras even being aware of where they are. And the whole
                         operation is visible without any injury or disturbance to any of those living beings.</p>
@@ -2417,7 +2417,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-4"/>
                     <p tid="299">“Thus, a bodhisattva who lives in the inconceivable liberation can manifest all the splendors of
                         the virtues of all the buddhafields within a single buddhafield. Likewise, he can place all living beings
-                        in the palm of his right hand and can show them with the supernatural speed of thought <ref cRef="F.206.b"/> all the buddhafields without ever leaving his own buddhafield. He can display in a single pore all the
+                        in the palm of his right hand and can show them with the supernatural speed of thought <ref cRef="F.206.b" type="folio"/> all the buddhafields without ever leaving his own buddhafield. He can display in a single pore all the
                         offerings ever offered to all the buddhas of the ten directions, and the orbs of all the suns, moons, and
                         stars of the ten directions. He can inhale all the hurricanes of the cosmic wind-atmospheres of the ten
                         directions into his mouth without harming his own body and without letting the forests and the grasses of
@@ -2432,7 +2432,7 @@
                         bodhisattva, and even into a buddha. The bodhisattva can transform miraculously all the cries and
                         noises—superior, mediocre, and inferior, of all living beings of the ten directions, into the voice of the
                         Buddha, with the words of the Buddha, the Dharma, and the Saṅgha, having them proclaim, ‘Impermanent!
-                        Miserable! Empty! Selfless!’ <ref cRef="F.207.a"/> And he can cause them to recite the words and sounds of
+                        Miserable! Empty! Selfless!’ <ref cRef="F.207.a" type="folio"/> And he can cause them to recite the words and sounds of
                         all the teachings taught by all the buddhas of the ten directions.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-13"/>
                     <p tid="301">“Reverend Śāriputra, I have shown you only a small part of the entrance into the domain of the
@@ -2463,7 +2463,8 @@
                             regret.”</note> And as for the bodhisattvas, when they hear this inconceivable liberation they should
                         be as joyful as a young crown prince when he takes the diadem and is anointed, and they should increase to
                         the utmost their devotion to this inconceivable liberation. Indeed, what could the entire host of māras
-                        ever do to one who is devoted to this inconceivable liberation?”</p>
+                        ever do to one who is devoted to this inconceivable liberation?” <ref cRef="F.207.b" type="folio"/>
+                    </p>
                     <p tid="303">When the patriarch Mahākāśyapa had uttered this discourse, thirty-two thousand gods conceived the
                         spirit of unexcelled, perfect enlightenment.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-236"/>
@@ -2482,7 +2483,7 @@
                         opportunity. They are not capable of killing and depriving in that manner without being freely given the
                         chance.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-237"/>
-                    <p tid="305">“Reverend Mahākāśyapa, just as a glowworm cannot eclipse the light of the sun, <ref cRef="F.208.a"/> so, reverend Mahākāśyapa, it is not possible without special allowance that an
+                    <p tid="305">“Reverend Mahākāśyapa, just as a glowworm cannot eclipse the light of the sun, <ref cRef="F.208.a" type="folio"/> so, reverend Mahākāśyapa, it is not possible without special allowance that an
                         ordinary person can thus attack and deprive a bodhisattva. Reverend Mahākāśyapa, just as a donkey could
                         not muster an attack on a wild elephant, even so, reverend Mahākāśyapa, one who is not himself a
                         bodhisattva cannot harass a bodhisattva. Only one who is himself a bodhisattva can harass another
@@ -2506,19 +2507,19 @@
                     <p tid="307">Vimalakīrti replied, “Mañjuśrī, a bodhisattva should regard all living beings as a wise man
                         regards the reflection of the moon in water or as magicians regard men created by magic. He should regard
                         them as being like a face in a mirror; like the water of a mirage; like the sound of an echo; like a mass
-                        of clouds in the sky; <ref cRef="F.208.b"/> like the previous moment of a ball of foam; like the
+                        of clouds in the sky; <ref cRef="F.208.b" type="folio"/> like the previous moment of a ball of foam; like the
                         appearance and disappearance of a bubble of water; like the core of a plantain tree; like a flash of
                         lightning; like the fifth great element; like the seventh sense-medium; like the appearance of matter in
                         an immaterial realm; like a sprout from a rotten seed; like a tortoise-hair coat; like the fun of games
                         for one who wishes to die; like the egoistic views of a stream-winner; like a third rebirth of a
                         once-returner; like the descent of a nonreturner into a womb; like the existence of desire, hatred, and
-                        folly in an arhat; <ref cRef="F.209.a"/> like thoughts of avarice, immorality, wickedness, and hostility
+                        folly in an arhat; <ref cRef="F.209.a" type="folio"/> like thoughts of avarice, immorality, wickedness, and hostility
                         in a bodhisattva who has attained tolerance; like the instincts of afflictions in a tathāgata; like the
                         perception of color in one blind from birth; like the inhalation and exhalation of an ascetic absorbed in
                         the meditation of cessation; like the track of a bird in the sky; like the erection of a eunuch; like the
                         pregnancy of a barren woman; like the unproduced afflictions of an emanated incarnation of the Tathāgata;
                         like dream-visions seen after waking; like the afflictions of one who is free of conceptualizations; like
-                        fire burning without fuel; like the reincarnation of one who has attained ultimate liberation. <ref cRef="F.209.b"/>
+                        fire burning without fuel; like the reincarnation of one who has attained ultimate liberation. <ref cRef="F.209.b" type="folio"/>
                     </p>
                     <p tid="308">“Precisely thus, Mañjuśrī, does a bodhisattva who realizes ultimate selflessness consider all
                             beings.”<note place="end" index="146" xml:id="UT22084-060-005-1008"> This is the definition of the
@@ -2551,7 +2552,7 @@
                         spontaneous because it is fully enlightened spontaneously;<note place="end" index="149" xml:id="UT22084-060-005-1011"> K: “…because it is causeless.”</note> the love that is enlightenment
                         because it is unity of experience; the love that has no presumption because it has eliminated attachment
                         and aversion; the love that is great compassion because it infuses the Mahāyāna with radiance; the love
-                        that is never exhausted because it acknowledges voidness and selflessness; <ref cRef="F.210.a"/> the love
+                        that is never exhausted because it acknowledges voidness and selflessness; <ref cRef="F.210.a" type="folio"/> the love
                         that is giving because it bestows the gift of Dharma free of the tight fist of a bad teacher; the love
                         that is morality because it improves immoral living beings; the love that is tolerance because it protects
                         both self and others; the love that is effort because it takes responsibility for all living beings; the
@@ -2599,7 +2600,7 @@
                         <emph>Vimalakīrti</emph>: He should live for the liberation of all living beings.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-244"/>
                     <p tid="324">
-                        <emph>Mañjuśrī</emph>: What should he who wishes to liberate all living beings do? <ref cRef="F.210.b"/>
+                        <emph>Mañjuśrī</emph>: What should he who wishes to liberate all living beings do? <ref cRef="F.210.b" type="folio"/>
                     </p>
                     <p tid="325">
                         <emph>Vimalakīrti</emph>: He should liberate them from their afflictions.</p>
@@ -2656,7 +2657,7 @@
                         the great heroic bodhisattvas, and being delighted, pleased, and overjoyed, manifested herself in a
                         material body and showered the great spiritual heroes, the bodhisattvas, and the great disciples with
                         heavenly flowers. When the flowers fell on the bodies of the bodhisattvas, they fell off on the floor, but
-                        when they fell on the bodies of the great disciples, they stuck to them and did not fall. <ref cRef="F.211.a"/> The great disciples shook the flowers and even tried to use their magical powers, but
+                        when they fell on the bodies of the great disciples, they stuck to them and did not fall. <ref cRef="F.211.a" type="folio"/> The great disciples shook the flowers and even tried to use their magical powers, but
                         still the flowers would not shake off. </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-250"/>
                     <p tid="345">Then, the goddess said to the venerable Śāriputra, “Reverend Śāriputra, why do you shake these
@@ -2686,7 +2687,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-254"/>
                     <p tid="351">Then the venerable Śāriputra said to the goddess, “Goddess, how long have you been in this
-                        house?” <ref cRef="F.211.b"/>
+                        house?” <ref cRef="F.211.b" type="folio"/>
                     </p>
                     <p tid="352">The goddess replied, “I have been here as long as the elder has been in liberation.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-255"/>
@@ -2728,7 +2729,7 @@
                         <emph>Śāriputra</emph>: Goddess, do you belong to the Disciple Vehicle, to the Solitary Sage Vehicle, or
                         to the Great Vehicle?</p>
                     <p tid="364">
-                        <emph>Goddess</emph>: I belong to the Disciple Vehicle when I teach it to those who need it. <ref cRef="F.212.a"/> I belong to the Solitary Sage Vehicle when I teach the twelve links of dependent
+                        <emph>Goddess</emph>: I belong to the Disciple Vehicle when I teach it to those who need it. <ref cRef="F.212.a" type="folio"/> I belong to the Solitary Sage Vehicle when I teach the twelve links of dependent
                         origination to those who need them. And, since I never abandon the great compassion, I belong to the Great
                         Vehicle, as all need that teaching to attain ultimate liberation.<note place="end" index="159" xml:id="UT22084-060-005-1021"> For numerous references concerning the Mahāyāna doctrine of the “unique
                             vehicle” (<foreign type="term" xml:lang="Sa-Ltn">ekayāna</foreign>), most explicitly stated in the
@@ -2756,7 +2757,7 @@
                     <p tid="369">Furthermore, reverend Śāriputra, whoever enters this house is no longer troubled by his
                         afflictions from the moment he is within. That is the second strange and wonderful thing.</p>
                     <p tid="370">Furthermore, reverend Śāriputra, this house is never forsaken by Śakra, Brahmā, the Lokapālas,
-                        and the bodhisattvas from all the other buddhafields. That is the third strange and wonderful thing. <ref cRef="F.212.b"/>
+                        and the bodhisattvas from all the other buddhafields. That is the third strange and wonderful thing. <ref cRef="F.212.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-264"/>
                     <p tid="371">Furthermore, reverend Śāriputra, this house is never empty of the sounds of the Dharma, the
@@ -2804,7 +2805,7 @@
                             man.</note>
                     </p>
                     <p tid="378">
-                        <emph>Goddess</emph>: Although I have sought my “female state” for these twelve years, <ref cRef="F.213.a"/> I have not yet found it. Reverend Śāriputra, if a magician were to incarnate a woman by magic, would
+                        <emph>Goddess</emph>: Although I have sought my “female state” for these twelve years, <ref cRef="F.213.a" type="folio"/> I have not yet found it. Reverend Śāriputra, if a magician were to incarnate a woman by magic, would
                         you ask her, “What prevents you from transforming yourself out of your female state?”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-268"/>
                     <p tid="379">
@@ -2838,7 +2839,7 @@
                             an interesting discussion of the prejudice against females in Buddhism in general and of the
                             Mādhyamika negation of this prejudice as executed, for example, by the goddess, see Lamotte, p 280, n
                             37.</note>
-                        <ref cRef="F.213.b"/>
+                        <ref cRef="F.213.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-272"/>
                     <p tid="387">
@@ -2884,7 +2885,7 @@
                         enlightenment.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-278"/>
                     <p tid="399">Then the Licchavi Vimalakīrti said to the venerable elder Śāriputra, “Reverend Śāriputra, this
-                        goddess has already served ninety-two million billion buddhas. She plays with the superknowledges. <ref cRef="F.214.a"/> She has truly succeeded in all her vows. She has gained the tolerance of the
+                        goddess has already served ninety-two million billion buddhas. She plays with the superknowledges. <ref cRef="F.214.a" type="folio"/> She has truly succeeded in all her vows. She has gained the tolerance of the
                         birthlessness of things. She has actually attained irreversibility. She can live wherever she wishes on
                         the strength of her vow to develop living beings.”</p>
                 </div>
@@ -2910,7 +2911,7 @@
                     <p tid="405">“He may follow the ways of avarice, yet he gives away all internal and external things without
                         regard even for his own <term type="ignore">life</term>. He may follow the ways of immorality, yet, seeing
                         the horror of even the slightest transgressions, he lives by the ascetic practices and austerities. He may
-                        follow the ways of wickedness and anger, <ref cRef="F.214.b"/> yet he remains utterly free of malice and
+                        follow the ways of wickedness and anger, <ref cRef="F.214.b" type="folio"/> yet he remains utterly free of malice and
                         lives by love. He may follow the ways of laziness, yet his efforts are uninterrupted as he strives in the
                         cultivation of roots of virtue. He may follow the ways of sensuous distraction, yet, naturally
                         concentrated, his contemplation is not dissipated. He may follow the ways of false wisdom, yet, having
@@ -2934,7 +2935,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-284"/>
                     <p tid="408">“He may manifest to living beings the ways of the sick and the unhappy, yet he has entirely
                         conquered and transcended the fear of death.</p>
-                    <p tid="409">“He may follow the ways of the rich, <ref cRef="F.215.a"/> yet he is without acquisitiveness and
+                    <p tid="409">“He may follow the ways of the rich, <ref cRef="F.215.a" type="folio"/> yet he is without acquisitiveness and
                         often reflects upon the notion of impermanence. He may show himself engaged in dancing with harem girls,
                         yet he cleaves to solitude, having crossed the swamp of desire.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-285"/>
@@ -2966,7 +2967,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-287"/>
                     <p tid="417">
                         <term type="ignore">Noble</term> sir, flowers like the blue lotus, the red lotus, the white lotus, the
-                        water lily, <ref cRef="F.215.b"/> and the moon lily do not grow on the dry ground in the wilderness, but
+                        water lily, <ref cRef="F.215.b" type="folio"/> and the moon lily do not grow on the dry ground in the wilderness, but
                         do grow in the swamps and mud banks. Just so, the buddha-qualities do not grow in living beings certainly
                         destined for the uncreated but do grow in those living beings who are like swamps and mud banks of
                         passions. Likewise, as seeds do not grow in the sky but do grow in the earth, so the buddha-qualities do
@@ -2996,7 +2997,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-291"/>
                     <p tid="421">“Therefore, Mañjuśrī, the ordinary individual is grateful to the Tathāgata, but the disciples are
-                        not grateful. Why? <ref cRef="F.216.a"/> Ordinary individuals, upon learning of the virtues of the Buddha,
+                        not grateful. Why? <ref cRef="F.216.a" type="folio"/> Ordinary individuals, upon learning of the virtues of the Buddha,
                         conceive the spirit of unexcelled perfect enlightenment, in order to ensure the uninterrupted continuity
                         of the heritage of the Three Jewels; but the disciples, although they may hear of the qualities, powers,
                         and fearlessnesses of the Buddha until the end of their days, are not capable of conceiving the spirit of
@@ -3061,7 +3062,7 @@
                     <lg tid="430">
                         <l>“Their bearers are the six superknowledges,</l>
                         <l>Their vehicle is the unexcelled Mahāyāna,</l>
-                        <l>Their driver is the spirit of enlightenment‌, <ref cRef="F.216.b"/>
+                        <l>Their driver is the spirit of enlightenment‌, <ref cRef="F.216.b" type="folio"/>
                         </l>
                         <l>And their path is the eightfold peace.</l>
                     </lg>
@@ -3163,7 +3164,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-060-005-312"/>
                     <lg tid="444">
-                        <l>“They excel in all esoteric sciences, <ref cRef="F.217.a"/>
+                        <l>“They excel in all esoteric sciences, <ref cRef="F.217.a" type="folio"/>
                         </l>
                         <l>And in the many different crafts,</l>
                         <l>And they bring forth the happiness </l>
@@ -3275,7 +3276,7 @@
                     <lg tid="457">
                         <l>“For the sake of the poor,</l>
                         <l>They become inexhaustible treasures,</l>
-                        <l>Causing those to whom they give their gifts <ref cRef="F.217.b"/>
+                        <l>Causing those to whom they give their gifts <ref cRef="F.217.b" type="folio"/>
                         </l>
                         <l>To <term>conceive the spirit of enlightenment</term>.</l>
                     </lg>
@@ -3354,7 +3355,7 @@
                         self, there will be no possessiveness. Thus, the absence of presumption is the entrance into
                         nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-337"/>
-                    <p tid="469">The bodhisattva <ref cRef="F.218.a"/> Śrīkūṭa declared, “ ‘Defilement’ and ‘purification’ are
+                    <p tid="469">The bodhisattva <ref cRef="F.218.a" type="folio"/> Śrīkūṭa declared, “ ‘Defilement’ and ‘purification’ are
                         two. When there is thorough knowledge of defilement, there will be no conceit about purification. The path
                         leading to the complete conquest of all conceit is the entrance into nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-338"/>
@@ -3388,7 +3389,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-343"/>
                     <p tid="475">The bodhisattva Siṃha declared, “ ‘Sinfulness’ and ‘sinlessness’ are two. By means of the
                         diamond-like wisdom that pierces to the quick, not to be bound or liberated is the entrance into
-                        nonduality.” <ref cRef="F.218.b"/>
+                        nonduality.” <ref cRef="F.218.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-344"/>
                     <p tid="476">The bodhisattva Siṃhamati declared, “To say, ‘this is impure’ and ‘that is immaculate’ makes for
@@ -3430,7 +3431,7 @@
                         existence of self cannot be perceived, what is there to be made ‘selfless’? Thus, the nondual vision of
                         their nature is the entrance into nonduality.” </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-350"/>
-                    <p tid="482">The bodhisattva Vidyuddeva declared, “ ‘Knowledge’ and ‘ignorance’ are dualistic. <ref cRef="F.219.a"/> The natures of ignorance and knowledge are the same, for ignorance is undefined,
+                    <p tid="482">The bodhisattva Vidyuddeva declared, “ ‘Knowledge’ and ‘ignorance’ are dualistic. <ref cRef="F.219.a" type="folio"/> The natures of ignorance and knowledge are the same, for ignorance is undefined,
                         incalculable, and beyond the sphere of thought. The realization of this is the entrance into
                         nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-351"/>
@@ -3461,7 +3462,7 @@
                     <p tid="486">The bodhisattva Akṣayamati declared, “The dedication of generosity for the sake of attaining
                         omniscience is dualistic. The nature of generosity is itself omniscience, and the nature of omniscience
                         itself is total dedication. Likewise, it is dualistic to dedicate morality, tolerance, effort, meditation,
-                        and wisdom <ref cRef="F.219.b"/> for the sake of omniscience. Omniscience is the nature of wisdom, and
+                        and wisdom <ref cRef="F.219.b" type="folio"/> for the sake of omniscience. Omniscience is the nature of wisdom, and
                         total dedication is the nature of omniscience. Thus, the entrance into this principle of uniqueness is the
                         entrance into nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-355"/>
@@ -3485,7 +3486,7 @@
                     <p tid="490">The bodhisattva Suvinīta declared, “Physical, verbal, and mental vows do not exist dualistically.
                         Why? These things have the nature of inactivity. The nature of inactivity of the body is the same as the
                         nature of inactivity of speech, whose nature of inactivity is the same as the nature of inactivity of the
-                        mind. It is necessary to know and to understand this fact of the ultimate inactivity of all things, <ref cRef="F.220.a"/> for this knowledge is the entrance into nonduality.”</p>
+                        mind. It is necessary to know and to understand this fact of the ultimate inactivity of all things, <ref cRef="F.220.a" type="folio"/> for this knowledge is the entrance into nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-359"/>
                     <p tid="491">The bodhisattva Puṇyakṣetra declared, “It is dualistic to consider actions meritorious, sinful,
                         or unmoving. The non-undertaking of meritorious, sinful, and unmoving actions is not dualistic. The
@@ -3508,7 +3509,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-363"/>
                     <p tid="495">The bodhisattva Ratna­mudrā­hasta declared, “It is dualistic to detest the world and to rejoice
                         in liberation, and neither detesting the world nor rejoicing in liberation is nonduality. Why? Liberation
-                        can be found where there is bondage, <ref cRef="F.220.b"/> but where there is ultimately no bondage where
+                        can be found where there is bondage, <ref cRef="F.220.b" type="folio"/> but where there is ultimately no bondage where
                         is there need for liberation? The mendicant who is neither bound nor liberated does not experience any
                         like or any dislike and thus he enters nonduality.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-364"/>
@@ -3555,7 +3556,7 @@
                             are dualistic. Just as speech is ultimately meaningless, so silence exists only in contrast with
                             speech. Penetration into the equality of silence and speech is the entrance. (see Lamotte, pp 317-318,
                             n 43). </note> The crown prince Mañjuśrī applauded the Licchavi Vimalakīrti: “Excellent! Excellent,
-                            <term type="ignore">noble</term> sir! <ref cRef="F.221.a"/> This is indeed the entrance into the
+                            <term type="ignore">noble</term> sir! <ref cRef="F.221.a" type="folio"/> This is indeed the entrance into the
                         nonduality of the bodhisattvas. Here there is no use for syllables, sounds, and ideas.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-368"/>
                     <p tid="502">When these teachings had been declared, five thousand bodhisattvas entered the door of the Dharma
@@ -3582,7 +3583,7 @@
                         is manifest. In that universe, the trees emit a fragrance that far surpasses all the fragrances, human and
                         divine, of all the buddhafields of the ten directions. In that universe, even the names “disciple” and
                         “solitary sage” do not exist, and the Tathāgata Gandhottama­kūṭa teaches the Dharma to a gathering of
-                        bodhisattvas only. In that universe, all the houses, <ref cRef="F.221.b"/> the avenues, the parks, and the
+                        bodhisattvas only. In that universe, all the houses, <ref cRef="F.221.b" type="folio"/> the avenues, the parks, and the
                         palaces are made of various perfumes, and the fragrance of the food eaten by those bodhisattvas pervades
                         immeasurable universes.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-370"/>
@@ -3608,7 +3609,7 @@
                     <p tid="512">The Licchavi Vimalakīrti addressed that incarnated bodhisattva: “<term type="ignore">Noble</term>
                         son, go in the direction of the zenith and when you have crossed as many buddhafields as there are sands
                         in forty-two Ganges rivers, you will reach a universe called Sarva­gandha­sugandhā, where you will find
-                        the Tathāgata Gandhottama­kūṭa taking his meal. Go to him and, <ref cRef="F.222.a"/> having bowed down at
+                        the Tathāgata Gandhottama­kūṭa taking his meal. Go to him and, <ref cRef="F.222.a" type="folio"/> having bowed down at
                         his feet, make the following inquiry of him:</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-375"/>
                     <p tid="513">“ ‘The Licchavi Vimalakīrti bows down one hundred thousand times at your feet, O Lord, and asks
@@ -3631,7 +3632,7 @@
                         without complaint, and living in touch with the supreme happiness?’ He then requests, having bowed down
                         one hundred thousand times at the feet of the Lord: ‘May the Lord be gracious and give to me the remains
                         of his meal in order to accomplish the buddha-work in the universe called Sahā. Then, those living beings
-                        who aspire to inferior ways may gain the intelligence to aspire to the great Dharma of the Buddha, <ref cRef="F.222.b"/> and the name of the Buddha will be celebrated far and wide.’ ”</p>
+                        who aspire to inferior ways may gain the intelligence to aspire to the great Dharma of the Buddha, <ref cRef="F.222.b" type="folio"/> and the name of the Buddha will be celebrated far and wide.’ ”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-378"/>
                     <p tid="517">At that the bodhisattvas of the buddhafield of the Tathāgata Gandhottama­kūṭa were astonished and
                         asked the Tathāgata Gandhottama­kūṭa, “Lord, where is there such a great being as this? Where is the
@@ -3657,7 +3658,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-381"/>
                     <p tid="521">Then, the Tathāgata Gandhottama­kūṭa poured some of his food, impregnated with all perfumes, into
-                        a fragrant vessel <ref cRef="F.223.a"/> and gave it to the incarnated bodhisattva. And the ninety million
+                        a fragrant vessel <ref cRef="F.223.a" type="folio"/> and gave it to the incarnated bodhisattva. And the ninety million
                         bodhisattvas of that universe volunteered to go along with him: “Lord, we also would like to go to that
                         universe Sahā, to see, honor, and serve the Buddha Śākyamuni and to see Vimalakīrti and those
                         bodhisattvas.” </p>
@@ -3678,7 +3679,7 @@
                     <p tid="524">Then, the incarnated bodhisattva gave the vessel full of food to Vimalakīrti, and the fragrance
                         of that food permeated the entire great city of Vaiśālī and its sweet perfume spread throughout one
                         hundred universes. Within the city of Vaiśālī, the brahmins, householders, and even the Licchavi chieftain
-                        Candracchattra, having noticed this fragrance, were amazed <ref cRef="F.223.b"/> and filled with wonder.
+                        Candracchattra, having noticed this fragrance, were amazed <ref cRef="F.223.b" type="folio"/> and filled with wonder.
                         They were so cleansed in body and mind that they came at once to the house of Vimalakīrti, along with all
                         eighty-four thousand of the Licchavis.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-385"/>
@@ -3702,7 +3703,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-388"/>
                     <p tid="529">Indeed, the entire gathering was satisfied by that food, and the food was not at all depleted.
                         Having eaten that food, there arose in the bodies of those bodhisattvas, disciples, Śakras, Brahmās,
-                        Lokapālas, and other living beings, <ref cRef="F.224.a"/> a bliss just like the bliss of the bodhisattvas
+                        Lokapālas, and other living beings, <ref cRef="F.224.a" type="folio"/> a bliss just like the bliss of the bodhisattvas
                         of the universe Sarva­sukha­pratimaṇḍita. And from all the pores of their skin arose a perfume like that
                         of the trees that grow in the universe Sarva­gandha­sugandhā.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-389"/>
@@ -3724,7 +3725,7 @@
                     <p tid="534">“ ‘This is hell. This is the animal world. This is the world of the <term type="ignore">lord of
                             death</term>. These are the adversities. These are the rebirths with crippled faculties. These are
                         physical misdeeds, and these are the retributions for physical misdeeds. These are verbal misdeeds, and
-                        these are the retributions for verbal misdeeds. <ref cRef="F.224.b"/> These are mental misdeeds, and these
+                        these are the retributions for verbal misdeeds. <ref cRef="F.224.b" type="folio"/> These are mental misdeeds, and these
                         are the retributions for mental misdeeds. This is killing. This is stealing. This is sexual misconduct.
                         This is lying. This is backbiting. This is harsh speech. This is frivolous speech. This is covetousness.
                         This is malice. This is false view.<note place="end" index="189" xml:id="UT22084-060-005-1051"> See
@@ -3752,7 +3753,7 @@
                         inferior. And the bodhisattvas who settle in a buddhafield of such intense hardships must have
                         inconceivably great compassion!”<note place="end" index="191" xml:id="UT22084-060-005-1053"> This
                             paragraph is modified in style with the help of X.</note>
-                        <ref cRef="F.225.a"/>
+                        <ref cRef="F.225.a" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-394"/>
                     <p tid="537">The Licchavi Vimalakīrti declared, “So it is, good sirs! It is as you say. The great compassion
@@ -3773,7 +3774,7 @@
                     <p tid="539">Vimalakīrti replied, “After he transmigrates at death away from this Sahā universe, a bodhisattva
                         must have eight qualities to reach a pure buddhafield safe and sound. What are the eight? He must resolve
                         to himself: ‘I must benefit all living beings, without seeking even the slightest benefit for myself. I
-                        must bear all the miseries of all living beings and give all my accumulated roots of virtue <ref cRef="F.225.b"/> to all living beings. I must have no resentment toward any living being. I must
+                        must bear all the miseries of all living beings and give all my accumulated roots of virtue <ref cRef="F.225.b" type="folio"/> to all living beings. I must have no resentment toward any living being. I must
                         rejoice in all bodhisattvas as if they were the Teacher.<note place="end" index="192" xml:id="UT22084-060-005-1054"> Skt. <foreign type="term" xml:lang="Sa-Ltn">Śāstṛ</foreign>, i.e.,
                             Buddha.</note> I must not neglect any teachings, whether or not I have heard them before. I must
                         control my mind, without coveting the gains of others, and without taking pride in gains of my own. I must
@@ -3799,7 +3800,7 @@
                         Tathāgata.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-398"/>
                     <p tid="544">At that moment the Licchavi Vimalakīrti said to the crown prince Mañjuśrī, “Mañjuśrī, let us take
-                        these many living beings into the presence of the Lord, <ref cRef="F.226.a"/> so that they may see the
+                        these many living beings into the presence of the Lord, <ref cRef="F.226.a" type="folio"/> so that they may see the
                         Tathāgata and bow down to him!”</p>
                     <p tid="545">Mañjuśrī replied, “<term type="ignore">Noble</term> sir, send them if you feel the time is
                         right!” </p>
@@ -3825,7 +3826,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-403"/>
                     <p tid="552">“What concept did you produce toward them?”</p>
                     <p tid="553">“Lord, I produced the concept of inconceivability toward them. Their activities appeared
-                        inconceivable to me to the point that I was unable to think of them, to judge them, <ref cRef="F.226.b"/>
+                        inconceivable to me to the point that I was unable to think of them, to judge them, <ref cRef="F.226.b" type="folio"/>
                         or even to imagine them.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-404"/>
                     <p tid="554">Then the venerable Ānanda asked the Buddha, “Lord, what is this perfume, the likes of which I
@@ -3860,7 +3861,7 @@
                         tolerance eat this food, it will be digested when they have become bodhisattvas one lifetime away from
                         buddhahood. Reverend Ānanda, it is like the medicine called “delicious,” which reaches the stomach but is
                         not digested until all poisons have been eliminated—only then is it digested. Similarly, reverend Ānanda,
-                            <ref cRef="F.227.a"/> this food is not digested until all the poisons of the passions have been
+                            <ref cRef="F.227.a" type="folio"/> this food is not digested until all the poisons of the passions have been
                         eliminated—only then is it digested.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-408"/>
                     <p tid="563">Then, the venerable Ānanda said to the Buddha, “Lord, it is wonderful that this food accomplishes
@@ -3877,7 +3878,7 @@
                         ‘dreams,’ ‘images,’ the ‘reflection of the moon in water,’ ‘echoes,’ ‘illusions,’ and ‘mirages’; and there
                         are those that accomplish the buddha-work by making words understandable. Also, Ānanda, there are utterly
                         pure buddhafields that accomplish the buddha-work for living beings without speech, by silence,
-                        inexpressibility, and unteachability. <ref cRef="F.227.b"/> Ānanda, among all the activities, enjoyments,
+                        inexpressibility, and unteachability. <ref cRef="F.227.b" type="folio"/> Ānanda, among all the activities, enjoyments,
                         and practices of the buddhas, there are none that do not accomplish the buddha-work, because all
                         discipline living beings. Finally, Ānanda, the buddhas accomplish the buddha-work by means of the four
                         māras and all the eighty-four thousand types of passion that afflict living beings.</p>
@@ -3899,7 +3900,7 @@
                         their concentration, their wisdom, their liberation, their gnosis and vision of liberation, their
                         strengths, their fearlessnesses, their special buddha-qualities, their great love, their great compassion,
                         their helpful intentions, their attitudes, their practices, their paths, the lengths of their lives, their
-                        teachings of the Dharma, <ref cRef="F.228.a"/> their development and liberation of living beings, and
+                        teachings of the Dharma, <ref cRef="F.228.a" type="folio"/> their development and liberation of living beings, and
                         their purification of buddhafields. Therefore, they are all called ‘saṃyaksaṃbuddhas,’ ‘tathāgatas,’ and
                         ‘buddhas.’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-412"/>
@@ -3922,7 +3923,7 @@
                         bodhisattvas. They cannot be fathomed even by the wisest of men. Ānanda, one can fathom the depths of the
                         ocean, but one cannot fathom the depths of the wisdom, gnosis, memory, retention, or eloquence of the
                         bodhisattvas. Ānanda, you should remain in equanimity with regard to the deeds of the bodhisattvas. Why?
-                        Ānanda, these marvels displayed in a single morning by the Licchavi Vimalakīrti <ref cRef="F.228.b"/>
+                        Ānanda, these marvels displayed in a single morning by the Licchavi Vimalakīrti <ref cRef="F.228.b" type="folio"/>
                         could not be performed by the disciples and solitary sages who have attained miraculous powers, were they
                         to devote all their powers of incarnation and transformation during one hundred thousand millions of
                         eons.”</p>
@@ -3950,7 +3951,7 @@
                         compassion; not forgetting the omniscient mind generated by high resolve; not tiring in the positive
                         development of living beings; not abandoning the means of unification; giving up body and <term type="ignore">life</term> in order to uphold the holy Dharma; never being satisfied with the roots of
                         virtue already accumulated; taking pleasure in skillful dedication; having no laziness in seeking the
-                        Dharma; <ref cRef="F.229.a"/> being without selfish reticence in teaching the Dharma; sparing no effort in
+                        Dharma; <ref cRef="F.229.a" type="folio"/> being without selfish reticence in teaching the Dharma; sparing no effort in
                         seeing and worshiping the tathāgatas; being fearless in voluntary reincarnations; being neither proud in
                         success nor bowed in failure; not despising the unlearned, and respecting the learned as if they were the
                         Teacher himself; making reasonable those whose passions are excessive; taking pleasure in solitude,
@@ -3969,7 +3970,7 @@
                         wielding the sharp sword of wisdom to chastise the enemy afflictions; knowing well the aggregates, the
                         elements, and the sense-media in order to bear the burdens of all living beings; blazing with energy to
                         conquer the host of demons; seeking knowledge in order to avoid pride; being content with little desire in
-                        order to uphold the Dharma; <ref cRef="F.229.b"/> not mixing with worldly things in order to delight all
+                        order to uphold the Dharma; <ref cRef="F.229.b" type="folio"/> not mixing with worldly things in order to delight all
                         the people; being faultless in all activities in order to conform to all people; producing the
                         superknowledges to actually accomplish all duties of benefit to living beings; acquiring retention,
                         memory, and knowledge in order to retain all learning; understanding the degrees of people’s spiritual
@@ -3992,7 +3993,7 @@
                         realize voidness. He practices signlessness but does not realize signlessness. He practices wishlessness
                         but does not realize wishlessness. He practices non-performance but does not realize non-performance. He
                         knows impermanence but is not complacent about his roots of virtue. He considers misery, but he
-                        reincarnates voluntarily. He knows selflessnes, but does not waste himself. <ref cRef="F.230.a"/> He
+                        reincarnates voluntarily. He knows selflessnes, but does not waste himself. <ref cRef="F.230.a" type="folio"/> He
                         considers peacefulness but does not seek extreme peace. He cherishes solitude but does not avoid mental
                         and physical efforts. He considers placelessness but does not abandon the place of good actions. He
                         considers occurrencelessness but undertakes to bear the burdens of all living beings. He considers
@@ -4015,7 +4016,7 @@
                         uncompounded, and, to perfect the gnosis of omniscience, he does not destroy compounded things. Out of
                         skill in liberative art, he does not rest in the uncompounded, and, through thorough analysis with his
                         wisdom, he does not destroy compounded things. To purify the buddhafield, he does not rest in the
-                        uncompounded, <ref cRef="F.230.b"/> and, by the power of the grace of the Buddha, he does not destroy
+                        uncompounded, <ref cRef="F.230.b" type="folio"/> and, by the power of the grace of the Buddha, he does not destroy
                         compounded things. Because he feels the needs of living beings, he does not rest in the uncompounded, and,
                         in order to show truly the meaning of the Dharma, he does not destroy compounded things. Because of his
                         store of roots of virtue, he does not rest in the uncompounded, and, because of his instinctive enthusiasm
@@ -4046,7 +4047,7 @@
                         should also strive in this.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-419"/>
                     <p tid="578">Then, those bodhisattvas, having heard this teaching, were satisfied, delighted, and reverent.
-                        They were filled with rejoicing and happiness of mind. <ref cRef="F.231.a"/> In order to worship the
+                        They were filled with rejoicing and happiness of mind. <ref cRef="F.231.a" type="folio"/> In order to worship the
                         Buddha Śākyamuni and the bodhisattvas of the Sahā universe, as well as this teaching, they covered the
                         whole earth of this billion-world galactic universe with fragrant powder, incense, perfumes, and flowers
                         up to the height of the knees. Having thus regaled the whole retinue of the Tathāgata, bowed their heads
@@ -4074,7 +4075,7 @@
                         of intellect, but he is not intellect. He is the essence that is the reality of performance, yet he is not
                         performance. He is the essence that is the reality of consciousness, yet he is not consciousness. Like the
                         element of space, he does not abide in any of the four elements. Transcending the scope of eye, ear, nose,
-                        tongue, body, and mind, he is not produced in the six sense-media. <ref cRef="F.231.b"/> He is not
+                        tongue, body, and mind, he is not produced in the six sense-media. <ref cRef="F.231.b" type="folio"/> He is not
                         involved in the three worlds, is free of the three defilements, is associated with the triple liberation,
                         is endowed with the three knowledges, and has truly attained the unattainable.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-421"/>
@@ -4093,7 +4094,7 @@
                         tolerance nor malice, neither effort nor sloth, neither concentration nor distraction, neither wisdom nor
                         foolishness. He is inexpressible. He is neither truth nor falsehood; neither escape from the world nor
                         failure to escape from the world; neither cause of involvement in the world nor not a cause of involvement
-                        in the world; <ref cRef="F.232.a"/> he is the cessation of all theory and all practice.<note place="end" index="204" xml:id="UT22084-060-005-1066"> Tib. <foreign type="quote" xml:lang="Bo-Ltn">smra ba dang
+                        in the world; <ref cRef="F.232.a" type="folio"/> he is the cessation of all theory and all practice.<note place="end" index="204" xml:id="UT22084-060-005-1066"> Tib. <foreign type="quote" xml:lang="Bo-Ltn">smra ba dang
                                 spyod pa thams cad shin tu chad pa</foreign>, but Skt. has <foreign type="quote" xml:lang="Sa-Ltn">sarva­ruta­vyāhāra­samucchinnaḥ</foreign>, “the destruction of all utterance and language.”
                         </note> He is neither a field of merit nor not a field of merit; he is neither worthy of offerings nor
                         unworthy of offerings. He is not an object, and cannot be contacted. He is not a whole, nor a
@@ -4113,7 +4114,7 @@
                     <p tid="585">The Buddha said, “Śāriputra, ask this good man directly where he died to reincarnate here.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-424"/>
                     <p tid="586">Then the venerable Śāriputra asked the Licchavi Vimalakīrti, “<term type="ignore">Noble</term>
-                        sir, where did you die to reincarnate here?” <ref cRef="F.232.b"/>
+                        sir, where did you die to reincarnate here?” <ref cRef="F.232.b" type="folio"/>
                     </p>
                     <p tid="587">Vimalakīrti declared, “Is there anything among the things that you see, elder, that dies or is
                         reborn?”</p>
@@ -4160,7 +4161,7 @@
                         sun rises, all darkness is destroyed.</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-430"/>
                     <p tid="600">
-                        <emph>Vimalakīrti</emph>: Then why does the sun rise over the world? <ref cRef="F.233.a"/>
+                        <emph>Vimalakīrti</emph>: Then why does the sun rise over the world? <ref cRef="F.233.a" type="folio"/>
                     </p>
                     <p tid="601">
                         <emph>Śāriputra</emph>: It rises to illuminate the world, and to eliminate the darkness.</p>
@@ -4182,7 +4183,7 @@
                         ranges; its moon, its sun, and its stars; its devas, nāgas, yakṣas, gandharvas, and asuras themselves; its
                         Brahmā and his retinues; its villages, cities, towns, provinces, kingdoms, men, women, and houses; its
                         bodhisattvas; its disciples; the tree of enlightenment of the Tathāgata Akṣobhya; and the Tathāgata
-                        Akṣobhya himself, seated in the middle of an assembly vast as an ocean, <ref cRef="F.233.b"/> teaching the
+                        Akṣobhya himself, seated in the middle of an assembly vast as an ocean, <ref cRef="F.233.b" type="folio"/> teaching the
                         Dharma. Also the lotuses that accomplish the buddha-work among the living beings, and the three jeweled
                         ladders that rise from its earth to its Trāyastriṃśa heaven, on which ladders the gods of that heaven
                         descend to the world to see, honor, and serve the Tathāgata Akṣobhya and to hear the Dharma, and on which
@@ -4205,7 +4206,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-435"/>
                     <p tid="609">Although the universe Abhirati had been brought into the universe Sahā, the Sahā universe was not
                         increased or diminished; it was neither compressed nor obstructed. Nor was the universe Abhirati reduced
-                        internally, and both universes appeared to be the same <ref cRef="F.234.a"/> as they had ever been. </p>
+                        internally, and both universes appeared to be the same <ref cRef="F.234.a" type="folio"/> as they had ever been. </p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-436"/>
                     <p tid="610">Thereupon, the Buddha Śākyamuni asked all the multitudes, “Friends, behold the splendors of the
                         universe Abhirati, the Tathāgata Akṣobhya, the array of his buddhafield, and the splendors of these
@@ -4227,7 +4228,7 @@
                         splendid as that! May all living beings come to have miraculous powers just like those of the noble
                         Licchavi Vimalakīrti!</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-439"/>
-                    <p tid="616">“We have gained great benefit from having seen a holy man such as he. <ref cRef="F.234.b"/> We have gained a great
+                    <p tid="616">“We have gained great benefit from having seen a holy man such as he. <ref cRef="F.234.b" type="folio"/> We have gained a great
                         benefit from having heard such teaching of the Dharma, whether the Tathāgata himself still actually exists
                         or whether he has already attained ultimate liberation. Hence, there is no need to mention the great
                         benefit for those who, having heard it, believe it, rely on it, embrace it, remember it, read it, and
@@ -4255,7 +4256,7 @@
                         entrance into the method of inconceivable transformations.<note place="end" index="206" xml:id="UT22084-060-005-1068"> Skt. <foreign type="quote" xml:lang="Sa-Ltn">acintya­vikurvaṇa­naya­praveśa­nirdeśa</foreign>. This is a description, not a title of the
                             sūtra, as it is not mentioned at the end of this chapter, where the Buddha gives the titles to
                             Ānanda.</note> Lord, those living beings who, having heard this teaching of the Dharma, accept it,
-                        remember it, read it, and understand it deeply will be, without a doubt, true vessels of the Dharma; <ref cRef="F.235.a"/> there is no need to mention those who apply themselves to the yoga of meditation upon
+                        remember it, read it, and understand it deeply will be, without a doubt, true vessels of the Dharma; <ref cRef="F.235.a" type="folio"/> there is no need to mention those who apply themselves to the yoga of meditation upon
                         it. They will cut off all possibility of unhappy lives, will open their way to all fortunate lives, will
                         always be looked after by all buddhas, will always overcome all adversaries, and will always conquer all
                         devils. They will practice the path of the bodhisattvas, will take their places upon the seat of
@@ -4274,7 +4275,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-443"/>
                     <p tid="621">“Let us suppose, king of gods, that this billion-world galactic universe were as full of
                         tathāgatas as it is covered with groves of sugarcane, with rosebushes, with bamboo thickets, with sesame
-                        gardens, and with flowers, <ref cRef="f.235.b"/> and that a <term type="ignore">noble</term> son or
+                        gardens, and with flowers, <ref cRef="F.235.b" type="folio"/> and that a <term type="ignore">noble</term> son or
                         daughter were to honor them, revere them, respect and adore them, offering them all sorts of comforts and
                         offerings for an eon or more than an eon. And let us suppose that, these tathāgatas having entered
                         ultimate liberation, he or she honored each of them by enshrining their preserved bodies in a memorial
@@ -4298,7 +4299,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-446"/>
                     <p tid="624">The Buddha then further said to Śakra, the king of the gods, “Once, king of gods, long ago, long
                         before eons more numerous than the innumerable, immense, immeasurable, inconceivable, and even before
-                        then, the tathāgata called Bhaiṣajyarāja appeared in the world: <ref cRef="F.236.a"/> an arhat, perfectly
+                        then, the tathāgata called Bhaiṣajyarāja appeared in the world: <ref cRef="F.236.a" type="folio"/> an arhat, perfectly
                         and fully enlightened, endowed with knowledge and conduct, a blissful one, knower of the world,
                         incomparable knower of men who need to be civilized, teacher of gods and men, a lord, a buddha.<note place="end" index="208" xml:id="UT22084-060-005-1070"> These names of the Buddha form part of a
                             traditional litany consisting of eighty names. See <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>,
@@ -4324,7 +4325,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-449"/>
                     <p tid="629">“Candracchattra asked them, ‘What is this “Dharma-worship”?’</p>
                     <p tid="630">“The gods replied, ‘Good man, go to the Tathāgata Bhaiṣajyarāja, ask him about “Dharma-worship,”
-                            <ref cRef="F.236.b"/> and he will explain it to you fully.’</p>
+                            <ref cRef="F.236.b" type="folio"/> and he will explain it to you fully.’</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-450"/>
                     <p tid="631">“Then, the prince Candracchattra went to the Lord Bhaiṣajyarāja, the arhat, the Tathāgata, the
                         unexcelled, perfectly enlightened one, and, having approached him, bowed down at his feet, circumambulated
@@ -4348,7 +4349,7 @@
                         the Dharma. They are approved and praised by the chiefs of the gods, nāgas, yakṣas, gandharvas, asuras,
                         garuḍas, kiṃnaras, and mahoragas. They preserve unbroken the heritage of the holy Dharma, contain the
                         treasury of the Dharma, and represent the summit of Dharma-worship. They are upheld by all holy beings and
-                        teach all the bodhisattva practices. <ref cRef="F.237.a"/> They induce the unmistaken understanding of the
+                        teach all the bodhisattva practices. <ref cRef="F.237.a" type="folio"/> They induce the unmistaken understanding of the
                         Dharma in its ultimate sense. They bring emancipation through teaching the epitomes of the Dharma, and the
                         impermanence, misery, selflessness, and peace of all things. They cause the abandonment of avarice,
                         immorality, malice, laziness, forgetfulness, foolishness, and jealousy, as well as bad convictions,
@@ -4377,7 +4378,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-454"/>
                     <p tid="636">“King of gods, when the prince Candracchattra had heard this definition of Dharma-worship from
                         the Tathāgata Bhaiṣajyarāja, he attained the conformative tolerance of ultimate birthlessness, and, taking
-                        his robes and ornaments, he offered them <ref cRef="F.237.b"/> to the Buddha Bhaiṣajyarāja, saying, ‘When
+                        his robes and ornaments, he offered them <ref cRef="F.237.b" type="folio"/> to the Buddha Bhaiṣajyarāja, saying, ‘When
                         the Tathāgata will be in ultimate liberation, I wish to defend his holy Dharma, to protect it, and to
                         worship it. May the Tathāgata grant me his supernatural blessing, that I may be able to conquer Māra and
                         all adversaries and to incorporate in all my lives the holy Dharma of the Buddha!’</p>
@@ -4403,7 +4404,7 @@
                         that former time, the King Ratnacchattra was not some other than the actual Tathāgata Ratnārcis. You must
                         not imagine that, for the present Tathāgata Ratnārcis was at that time, in that epoch, the universal
                         monarch Ratnacchattra. As for the thousand sons of the King Ratnacchattra, they are now the thousand
-                        bodhisattvas of the present blessed eon, <ref cRef="F.238.a"/> during the course of which they are to
+                        bodhisattvas of the present blessed eon, <ref cRef="F.238.a" type="folio"/> during the course of which they are to
                         become all of the one thousand buddhas to appear in the world. Four of them, Krakucchanda and the others,
                         have already appeared and the rest are still to be born. They start from Krakucchanda and end with the
                         Tathāgata Roca, who will be the last to be born.<note place="end" index="212" xml:id="UT22084-060-005-1074"> According to this belief, in the blessed eon of one thousand buddhas,
@@ -4429,7 +4430,7 @@
                         rejoice, will believe, and will accept it upon the crowns of their heads. Hence, in order to protect those
                         future <term type="ignore">noble</term> sons and daughters, you must spread a teaching such as this!</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-460"/>
-                    <p tid="642">“Maitreya, there are two gestures of the bodhisattvas. What are they? <ref cRef="F.238.b"/> The
+                    <p tid="642">“Maitreya, there are two gestures of the bodhisattvas. What are they? <ref cRef="F.238.b" type="folio"/> The
                         first gesture is to believe in all sorts of phrases and words, and the second gesture is to penetrate
                         exactly the profound principle of the Dharma without being afraid. Such are the two gestures of the
                         bodhisattvas. Maitreya, it must be known that the bodhisattvas who believe in all sorts of words and
@@ -4455,7 +4456,7 @@
                         bodhisattvas who aspire to the profound Dharma hurt themselves and will not quickly attain the tolerance
                         of the ultimate birthlessness of all things.”</p>
                     <milestone unit="chunk" xml:id="UT22084-060-005-463"/>
-                    <p tid="645">Having been thus taught, the bodhisattva Maitreya said to the Buddha, <ref cRef="F.239.a"/>
+                    <p tid="645">Having been thus taught, the bodhisattva Maitreya said to the Buddha, <ref cRef="F.239.a" type="folio"/>
                         “Lord, the beautiful teachings of the Tathāgata are wonderful and truly excellent. Lord, from this time
                         forth, I will avoid all such errors and will defend and uphold this attainment of unexcelled, perfect
                         enlightenment by the Tathāgata during innumerable hundreds of thousands of millions of billions of eons!
@@ -4477,7 +4478,7 @@
                     <milestone unit="chunk" xml:id="UT22084-060-005-466"/>
                     <p tid="649">Then the four Mahārājas, the great kings of the quarters, said to the Buddha, “Lord, in all the
                         towns, villages, cities, kingdoms, and palaces, wherever this formulation of the Dharma will be practiced,
-                        upheld, and correctly taught, we, <ref cRef="F.239.b"/> the four great kings, will go there with our
+                        upheld, and correctly taught, we, <ref cRef="F.239.b" type="folio"/> the four great kings, will go there with our
                         armies, our young warriors, and our retinues, to hear the Dharma. And we will protect the teachers of this
                         Dharma for a radius of one league so that no one who plots injury or disruption against these teachers
                         will have any opportunity to do them harm.”</p>
