@@ -1,0 +1,1409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">spyan 'dren rgyud gsum pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">The Three Part Invitation Tantra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by The
+                    Dharmachakra Translation Committee<lb/>under the patronage and supervision of
+                    84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.2 <date>2020</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="2">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global
+                    non-profit initiative to translate all the Buddha’s words into modern languages,
+                    and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-100-001"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means
+                    that these ids diverge slightly from the standard logic.</note>
+                <date>2020-02-01</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh846" type="text">
+                    <ref>Toh 846</ref>
+                    <biblScope>Degé Kangyur, vol. 100 (gzungs ’dus, e), folios 1.b–3.b</biblScope>
+                    <location work="UT4CZ5369" count-pages="5">
+                        <volume number="101" start-page="2" end-page="6"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12607" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-07T06:25:33.869Z" user="admin">07/02/2020 06:25:33</note>
+
+                <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:04:08.457Z" user="andreas">v 0.1.0</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2019-12-19T07:26:19.082Z" user="andreas">2.d</note>
+                <note type="updated" update="text-version" value="v 0.1.1" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version
+                    increment</note>
+                <note type="updated" update="translation-status" value="2.e" date-time="2020-01-27T13:20:17.038Z" user="mike">2.e</note>
+                <note type="updated" update="translation-status" value="2.b" date-time="2020-01-28T11:58:48.869Z" user="andreas">2.b</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2020-01-29T06:06:19.058Z" user="mike">2.a</note>
+            
+<note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-07T06:25:28.364Z" user="mike">v 0.1.2</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-02-07T06:25:28.364Z" user="mike">2</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-100-001-1"/>
+                <p tid="2">
+                    <title xml:lang="en">The Threefold Invocation Ritual</title> invokes all the
+                    deities of the threefold world that have “entered the path of compassion” and
+                    are “held by the hook of the <foreign xml:lang="Sa-Ltn" type="term">vidyāmantra</foreign>” to gather and pay heed to the one reciting the text
+                    (or the person for whom the text is recited) and bear witness as the right to
+                    rule as a crowned sovereign and a commitment to the Buddhist teachings are
+                    proclaimed.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-100-001-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the supervision of
+                    Chökyi Nyima Rinpoche. The translation was produced by Adam Krug and edited by
+                    Ryan Damron.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-100-001-3"/>
+                    <p tid="7">The Compendium of Dhāraṇī (<foreign xml:lang="Bo-Ltn">gzungs ’dus</foreign>) preserved in the Degé
+                        Kangyur opens with the present work, <title xml:lang="en">The Threefold
+                            Invocation Ritual</title>. A handful of witnesses for this text survive
+                        among the Pelliot Dunhuang manuscripts preserved at the Bibliothèque
+                        Nationale de Paris. The Tohoku catalogue number Toh 846 appears to have
+                        grouped two texts together despite the fact that the Degé Kangyur marks
+                        these as independent works with their own titles. The Dunhuang manuscripts
+                        presented in Marcelle Lalou’s 1938 study, edition, and French translation
+                        confirm that these two sections of Toh 846 are in fact independent works
+                        titled <title xml:lang="en">The Threefold Ritual</title> (<title xml:lang="Bo-Ltn">rgyud gsum pa</title>) and <title xml:lang="en">An
+                            Invocation of the Great Deities and Nāgas</title> (<title xml:lang="Bo-Ltn">lha klu chen po rnams spyan dran pa</title>) in the
+                        Dunhuang witnesses.<note place="end" index="1" xml:id="UT22084-100-001-4"> See Lalou,
+                                “Notes de mythologie.” The reader should also note that the titles
+                                of these texts in the Degé Kangyur differ from the titles in Lalou’s
+                                Dunhuang witnesses. Lalou’s first Dunhuang witness titled <title xml:lang="en">The Threefold Ritual</title> (<title xml:lang="Bo-Ltn">rgyud gsum pa</title>) corresponds in the Degé
+                                Kangyur to the opening section (without the added material from the
+                                    <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title><!--Reference Toh 0044-->) of <title xml:lang="en">The Threefold Invocation Ritual</title> (<title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>), and
+                                Lalou’s second Dunhuang witness titled <title xml:lang="en">An
+                                    Invocation of the Great Deities and Nāgas</title> (<title xml:lang="Bo-Ltn">lha klu chen po rnams spyan dran pa</title>)
+                                appears in the Degé Kangyur with the title <title xml:lang="en">The
+                                    Threefold Ritual</title> (<title xml:lang="Bo-Ltn">rgyud gsum
+                                        pa</title>)<!--Reference Toh 0846a-->.</note> The
+                        confusion over whether or not these two texts should be catalogued as a
+                        single work might have derived from the fact that the title as it appears on
+                        the title page in the Degé Kangyur is a combination of the two titles of
+                        these older versions of the text. The version of <title xml:lang="en">The
+                            Threefold Invocation Ritual</title> preserved in the Degé Kangyur also
+                        adds an aspiration prayer liturgy from section twenty-one of the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title>
+                        <note place="end" index="2" xml:id="UT22084-100-001-5"> My thanks to Ryan Damron for
+                                identifying this section of <title xml:lang="en">The Threefold
+                                    Invocation Ritual</title> as an excerpt from the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title><!--Reference Toh
+                                0044-->. The corresponding verses and location of this passage from
+                                the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title><!--Reference Toh 0044--> is noted in
+                                the translation.</note> and a concluding set of verses that are
+                        not included in the Dunhuang witnesses. </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-6"/>
+                    <p tid="8">The first line of <title xml:lang="en">The Threefold Invocation
+                            Ritual</title> does not contain an original Indic title, so it is
+                        possible that this text is Tibetan in origin. Most of the subject matter of
+                        the invocation, however, is unmistakably Indic. The text begins by calling
+                        upon the great kings and guardians of the cardinal and ordinal directions,
+                        zenith, and nadir. The text then calls upon the attendants of Śiva and the
+                        deity Jambhala and his four treasures (Padma, Mahāpadma, Śaṅkha, and
+                        Mahāśaṅkha), and it follows with a list of sixteen yakṣa generals. The
+                        invocation concludes by calling upon a number of nāga kings, rākṣasīs, and
+                        goddesses. This pantheon of worldly deities is invoked in the first part of
+                        the text to bear witness to the individual who is reciting the liturgy (or
+                        the individual for whom the liturgy is being recited). A short aspiration
+                        prayer follows that confirms the commitment to the bodhisattva path in the
+                        presence of all who have gathered as witnesses. This is followed by a short
+                        set of instructions on the power of the Buddhist teachings that employs the
+                        purāṇic cosmogonic myth of the churning of the ocean of milk, coding
+                        elements of the myth with a broader Buddhist significance.</p>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-7"/>
+                    <p tid="9">The names of all the deities invoked in this text have been rendered in
+                        Sanskrit whenever possible. The Sanskrit names and classifications for these
+                        deities have been derived by triangulating between the Negi Tibetan–Sanskrit
+                        dictionary, Edgerton's <title xml:lang="en">Buddhist Hybrid Sanskrit
+                            Dictionary</title>, Monier-Williams’ Sanskrit-English dictionary, and
+                        the Sanskrit of the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>.
+                        The reader will notice that a number of familiar names from Sanskrit epic
+                        and purāṇic literature appear among lists of yakṣa generals, nāga kings,
+                        rākṣasīs, and goddesses in this text. As is the case in other dhāraṇī texts,
+                        it is likely that the portrayal of these figures in the Sanskrit epics and
+                        purāṇas is secondary to their role as worldly deities in this work. This
+                        phenomenon is also observed in the <title xml:lang="Sa-Ltn">Mahāmāyūrī</title>, where the goddesses Mārīcī and Kālī, for instance,
+                        are listed as rākṣasīs. Similarly, several figures such as Daśagrīva,
+                        Vibhīṣaṇa, Meghanāda, Sugrīva, and Hanuman who are known from the <title xml:lang="Sa-Ltn">Rāmāyaṇa</title> appear here as yakṣa generals and
+                        nāga kings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-8"/>
+                    <p tid="10">
+                        <title xml:lang="en">The Threefold Invocation Ritual</title> does not appear
+                        in either the Denkarma or Phangthangma royal Tibetan catalogues of
+                        translated works. It also does not appear to have been translated into
+                        Chinese at any point. </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-9"/>
+                    <p tid="11">This translation is based on the version of <title xml:lang="en">The
+                            Threefold Invocation Ritual</title> found at the opening of the
+                        Compendium of Dhāraṇī section in the Degé Kangyur in consultation with the
+                        text as it appears in the Comparative Edition (<title xml:lang="Bo-Ltn">dpe
+                            bsdur ma</title>) of the Kangyur. The Stok Palace edition of the
+                        Kangyur—which reflects the Thempangma Kangyur tradition rather than the
+                        Tshalpa tradition to which the Degé belongs—does not include this work. The
+                        section that is derived from the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title> was checked against the Tibetan
+                        translation of that text from the Ornaments of the Buddhas (<title xml:lang="Bo-Ltn">phal chen</title>) section of the Degé Kangyur.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="12"> The Translation </head>
+                <head type="titleMain" tid="13">The Threefold Invocation Ritual</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-100-001-10"/>
+                    <lg tid="14">
+                        <l>
+                            <ref cRef="F.1.b" type="folio"/> I take refuge with sincere devotion and reverence</l>
+                        <l>In the highest guru, the unsurpassed Three Jewels, </l>
+                        <l>And the greatest of them all, the sublime supreme lord.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-11"/>
+                    <lg tid="15">
+                        <l>Brahmā and Śakra—lords of heaven and earth,</l>
+                        <l>Source of all beings’ wealth, </l>
+                        <l>and protectors of the Dharma, the supreme teaching; great kings
+                            Dhṛtarāṣṭra,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-12"/>
+                    <lg tid="16">
+                        <l>Virūḍhaka, Noble Virūpākṣa, and Kubera; </l>
+                        <l>World protectors Indra, Agni,</l>
+                        <l>Yama, Nairṛta, Varuṇa, Vāyu, </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-13"/>
+                    <lg tid="17">
+                        <l>Vaiśravaṇa, Īśāna, and Pṛthivīdevatā;</l>
+                        <l>The Sun, Moon, grahas, nakṣatras, the elephants of the quarters, </l>
+                        <l>And the general, minister, and queen; the guardians of the
+                            directions,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-14"/>
+                    <lg tid="18">
+                        <l>Each with their full retinue of queens and princes;</l>
+                        <l>Renowned great commanders of the gods</l>
+                        <l>Such as Viṣṇu, Gaṇapati, Nandi, and Kārttikeya;</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-15"/>
+                    <lg tid="19">
+                        <l>Great and powerful Mahākāla, Mahābala,</l>
+                        <l>Jambhala, Padma, and Mahāpadma, </l>
+                        <l>Śaṅkha and Mahāśaṅkha, Pūrṇa and Supūrṇa,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-16"/>
+                    <lg tid="20">
+                        <l>Sugrīva, Pūrṇabhadra, Maṇibhadra, <ref cRef="F.2.a" type="folio"/>
+                        </l>
+                        <l>Kumbhakarṇa, Ghaṇṭākarṇa, Trikarṇa, Mahākarṇa,</l>
+                        <l>Sañjñeya and Sañjaya,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-17"/>
+                    <lg tid="21">
+                        <l>Jinarṣabha, Āṭavaka, Haimavata,</l>
+                        <l>Sātāgiri, Pāñcika, Pāñcāla­gaṇḍa, Pāñcālaka,</l>
+                        <l>Daśagrīva, Vibhīṣaṇa, Meghanāda, Gagana­ghoṣa, </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-18"/>
+                    <lg tid="22">
+                        <l>Triśirṣaka,<note place="end" index="3" xml:id="UT22084-100-001-19"> The Tibetan
+                                    reads <foreign xml:lang="Bo-Ltn" type="term">stong
+                                        gsum</foreign> or Trisahasra. Marcelle Lalou translates this
+                                    as Triśirṣaka, who is listed as a <foreign xml:lang="Sa-Ltn" type="term">nāgarāja</foreign> in Bendall's edition of the
+                                        <title xml:lang="Sa-Ltn">Mahāmegha</title><!--Reference Toh
+                                    0235-->. Here, following Lalou’s lead, <foreign xml:lang="Bo-Ltn" type="term">stong gsum</foreign> has been
+                                    amended to <foreign xml:lang="Bo-Ltn" type="term">gdong
+                                        gsum</foreign> or Triśirṣaka, “the three-faced
+                                one.”</note> Sāgara, Nanda, Upananda, </l>
+                        <l>Anavatapta, Manasvin, Vāsuki, and the hosts of grahas;<note place="end" index="4" xml:id="UT22084-100-001-20">
+                                    <foreign xml:lang="Bo-Ltn" type="term">gdon la
+                                        ’jebs</foreign>. The translation of this term
+                                    remains tentative. An alternate translation that adheres closely
+                                    to the meaning that the term <foreign xml:lang="Bo-Ltn" type="term">’jebs pa</foreign> bears in Tibetan might
+                                    indicate that this is either a collective noun or a proper name
+                                    and translate as “Pleasing to the Grahas.” This name does not
+                                    have any Sanskrit equivalent of which I am currently aware. The
+                                    Negi dictionary notes that the Tibetan <foreign xml:lang="Bo-Ltn" type="term">’jebs pa</foreign> translates
+                                    the Sanskrit <foreign xml:lang="Sa-Ltn" type="term">prācuryam</foreign> (“multitude,” “abundance,” “plenty”) in
+                                    the <title xml:lang="Sa-Ltn">Mahāyāna­sūtrālaṅkāra</title>. I
+                                    have attempted to integrate this reading of <foreign xml:lang="Bo-Ltn" type="term">’jebs pa</foreign> into the
+                                    translation “hosts of grahas,” based on the assumption that the
+                                    Tibetan reading may have read an incorrect grammatical particle
+                                    into the original compound.</note>
+                        </l>
+                        <l>Rṣis, vidyādharas, gods of the rains and harvest, </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-21"/>
+                    <lg tid="23">
+                        <l>Gods of the road, the day, the night, conjunctions, lunar phases, and
+                            moments;</l>
+                        <l>Powerful beings such as Hanuman and the like; </l>
+                        <l>Vāgīśvarī, Svaraghoṣā, and Sarasvatī; </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-22"/>
+                    <lg tid="24">
+                        <l>Vatsavatī, Śrīmati,<note place="end" index="5" xml:id="UT22084-100-001-23">
+                                    Possibly also “Śrīdevi.” I have gone
+                                        with Śrīmati here because this yakṣiṇī is witnessed in the
+                                        <title xml:lang="Sa-Ltn">Mahāmāyūrī</title>.</note> Mārīcī, </l>
+                        <l>Gaurī, Guardian of Speech, Gangā, Yamunā, </l>
+                        <l>Hārītī, Śaṅkhinī, Pārvatī, Durgā, and Kālī;</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-24"/>
+                    <lg tid="25">
+                        <l>The seven mothers, the seven sisters, and the four sisters; </l>
+                        <l>Great goddesses and great yakṣiṇīs </l>
+                        <l>Such as Mahākālī and Ekajaṭī and so forth; </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-25"/>
+                    <lg tid="26">
+                        <l>Great rākṣasīs and great piśācīs</l>
+                        <l>Revered for their youthful forms, nurturing, and magical powers, </l>
+                        <l>Awesome in their great hides and praised in battle by the army of the
+                            gods;</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-26"/>
+                    <lg tid="27">
+                        <l>Marvelous, renowned great lay practitioners, </l>
+                        <l>Young gods and nāgas, </l>
+                        <l>Young vidyādharas and ṛṣis,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-27"/>
+                    <lg tid="28">
+                        <l>And their five hundred kinsmen, all of them venerated by monks;</l>
+                        <l>This entire group of resplendent youthful ones </l>
+                        <l>Including the young yakṣa Tiraka and the like; </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-28"/>
+                    <lg tid="29">
+                        <l>Gods and nāgas who are lords of all beings;</l>
+                        <l>Yakṣas, gandharvas, uragas, asuras, </l>
+                        <l>Garuḍas, kumbhāṇḍas, rākṣasas, kinnaras,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-29"/>
+                    <lg tid="30">
+                        <l>Bhūtas, piśācas, local deities, and evil spirits; </l>
+                        <l>All you wise ones who have entered the path of compassion, </l>
+                        <l>All you who are held by the hook of the <foreign xml:lang="Sa-Ltn" type="term">vidyāmantra</foreign>, listen to me. <ref cRef="F.2.b" type="folio"/> </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-30"/>
+                    <lg tid="31">
+                        <l>May [insert name], a person blazing with good fortune</l>
+                        <l>Who has heard and recited the names</l>
+                        <l>Of the Three Jewels with their vowels and consonants</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-31"/>
+                    <lg tid="32">
+                        <l>Have a prosperous and long reign,<note place="end" index="6" xml:id="UT22084-100-001-32">
+                                    <foreign xml:lang="Bo-Ltn" type="quote">gzha’ gzung yun gyi chu
+                                        srid ’thob ’gyur na/</foreign>. The <foreign xml:lang="Bo-Ltn" type="term">la bdun</foreign> particle
+                                        <foreign xml:lang="Bo-Ltn" type="term">na</foreign> at the
+                                    end of this line might also be read as a conditional, though
+                                    that reading seems unlikely.</note>
+                        </l>
+                        <l>Serve and venerate the Three Jewels, which possess immeasurable </l>
+                        <l>Benefits and good qualities, have faith in the scriptures,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-33"/>
+                    <lg tid="33">
+                        <l>And, of course, study and practice the Dharma.</l>
+                        <l>Upon death, may [insert name] depart for the divine pleasure groves</l>
+                        <l>With their vast bounty of scriptures. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-34"/>
+                    <lg tid="34">
+                        <l>This one who is conscientious and devoted is crowned</l>
+                        <l>With the teachings of the sun-like omniscient Dharma lord,</l>
+                        <l>The supreme radiant jewel that crowns the king of the gods</l>
+                        <l>Who brings victory in battle over the asuras and hosts of Māra.<note place="end" index="7" xml:id="UT22084-100-001-35"> The first text in
+                                    Marcelle Lalou's edition of the Dunhuang manuscripts for the
+                                        <title xml:lang="Bo-Ltn">rgyud gsum pa</title> ends here
+                                    with the line <foreign xml:lang="Bo-Ltn" type="quote">bag yod
+                                        dad pa’i spyi bos blang bar mdzad/</foreign> and does not
+                                    contain the full invocation that we see in the edition of this
+                                    text preserved in the Degé Kangyur. See Lalou, “Notes de
+                                    mythologie,” 132.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-36"/>
+                    <p tid="35">Approach,<note place="end" index="8" xml:id="UT22084-100-001-37"> This line begins a
+                                passage quoted from chapter twenty-one of the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title>. <!--Reference
+                                Toh 0044--> See <title xml:lang="Bo-Ltn">’phags pa sangs rgyas phal
+                                    po che zhes bya ba shin tu rgyas pa chen po’i mdo</title>, ff.
+                                248.a.5–248.b.5.</note> children of the Victor! May I and all
+                        beings attain complete nirvāṇa. May those beings who have not yet overcome
+                        it grow weary of cyclic existence by fearlessly cultivating the
+                        accumulations of merit and wisdom. May we not lose sight of the fact that
+                        all things are compounded by nature. May we not reject the form body of a
+                        buddha. May we find freedom from attachment. May we seek the omniscient
+                        wisdom that is devoid of attachment to any phenomena. May we completely
+                        purify buddha realms, not being misled by other perspectives on phenomena.
+                        May we perceive the space-like quality of those buddha realms. May beings
+                        reach complete fruition and may there be no sorrow. May we not lose sight of
+                        the fact that there is no self. May we attain the supernatural powers and
+                        display magical emanations. May we not stray from the realm of reality. May
+                        we not forsake the thought of enlightenment we have generated. May we give
+                        rise to omniscient wisdom. May we satisfy all beings by turning the wheel of
+                        the Dharma. May we not stray from the inexpressible nature of reality. May
+                        we display <ref cRef="F.3.a" type="folio"/> the blessings and magical emanations of a tathāgata. May
+                        we not cast aside the body of a bodhisattva. May we manifest it in every
+                        realm of birth. May we display the great parinirvāṇa. Children of the
+                        Victor, uphold these aspects of the teachings and eliminate improper ways of
+                        engaging in practice.<note place="end" index="9" xml:id="UT22084-100-001-38"> Tib.
+                                    <foreign type="quote" xml:lang="Bo-Ltn">snrel zhir sgrub pa mngon par bsgrub par rnams nye bar
+                                    sgrub pa</foreign>. Here the Tibetan <foreign xml:lang="Bo-Ltn" type="term">nye bar sgrub pa</foreign> is read as a form of the
+                                Sanskrit <foreign xml:lang="Sa-Ltn" type="term">upasaṁ √hṛ</foreign>
+                                (“to root out” or “eliminate”); the Tibetan <foreign xml:lang="Bo-Ltn" type="term">mngon par bsgrub pa</foreign> is
+                                read as a form of the Sanskrit <foreign xml:lang="Sa-Ltn" type="term">abhinir √hṛ</foreign> (“engaging”); the Tibetan
+                                    <foreign xml:lang="Bo-Ltn" type="term">bsgrub</foreign> is read
+                                as the Sanskrit term <foreign xml:lang="Sa-Ltn" type="term">sādhana</foreign>; and the Tibetan <foreign xml:lang="Bo-Ltn" type="term">snrel zhi</foreign> is read as the Sanskrit <foreign xml:lang="Sa-Ltn" type="term">vyatyasta</foreign>
+                                (“improper”).</note> These ten teachings are the most excellent
+                        activity of a buddha. Children of the Victor, these are the awakened
+                        activity of a bodhisattva. The spontaneous activity of the bodhisattvas
+                        cannot be misled by others and is the perfect attainment of unsurpassed
+                            awakening.<note place="end" index="10" xml:id="UT22084-100-001-39"> The section
+                                that is reproduced from the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title><!--Reference Toh 0044--> ends
+                                here.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-40"/>
+                    <lg tid="36">
+                        <l>King of the gods, great sovereign, boon-granting lord,</l>
+                        <l>Fearless hero famous throughout the world </l>
+                        <l>Whose face is radiant with insight like the full moon—</l>
+                        <l>The aspiration and activity of a great being is your sole companion.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-41"/>
+                    <lg tid="37">
+                        <l>Brahmā, Śakra, and the other world protectors</l>
+                        <l>Used the vajra-like samādhi, Mt. Sumeru, as the churning stick </l>
+                        <l>And, along with compassion and effort, the nāga rope, </l>
+                        <l>Churned forth an elixir, the holy Dharma, </l>
+                        <l>From the ocean of great insight that spread everywhere like a feast of
+                            amṛta.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-42"/>
+                    <lg tid="38">
+                        <l>With this jewel of merit, the renowned Dharma, as the crown jewel, </l>
+                        <l>You were victorious in battle over the armies of rākṣasas and the
+                            asuras.</l>
+                        <l>I dedicate this to the mighty helmet of the kingdom of the gods.<note place="end" index="11" xml:id="UT22084-100-001-43">
+                                    <foreign xml:lang="Bo-Ltn" type="quote">lha yi rgyal srid dbu
+                                        rmog btsan par bsngo/</foreign>. The phrase
+                                        <foreign xml:lang="Bo-Ltn" type="term">dbu rmog btsan
+                                        pa</foreign> appears in imperial era Tibetan inscriptions
+                                    and Dunhuang documents as one of a number of terms that are used
+                                    to describe a ruler’s sovereign power, and these materials
+                                    suggest that it should be understood as a martial metaphor for
+                                    the territory over which a ruler has sovereignty. An alternate
+                                    translation of this line might hold the phrases <foreign xml:lang="Bo-Ltn" type="quote">lha yi rgyal srid</foreign>
+                                    and <foreign xml:lang="Bo-Ltn" type="quote">dbu rmog btsan
+                                        pa</foreign> in apposition and translate as, “I dedicate
+                                    this to the kingdom of the gods, the mighty
+                            helmet.”</note>
+                        </l>
+                        <l>I dedicate this so that our radiance, retinues, and wealth may
+                            increase</l>
+                        <l>And in particular so that we may attain powerful and strong standings.
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-44"/>
+                    <lg tid="39">
+                        <l>I dedicate this so that we may perfect all the means of liberation </l>
+                        <l>Such as the magical powers, supernatural cognitions, and perfections </l>
+                        <l>And accomplish all our virtuous actions and intentions. </l>
+                        <l>I dedicate this so that our bodies may be pervaded by the bliss of the
+                            Dharma nectar,</l>
+                        <l>Liberating us from minds that are plagued by suffering. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-45"/>
+                    <lg tid="40">
+                        <l>Spiritual teachers, kind and loving friends, </l>
+                        <l>We are wounded by the blade of the afflictions.</l>
+                        <l>Please sustain us with your compassionate blessing </l>
+                        <l>And ensure that whomever is granted the crown is powerful</l>
+                        <l>And protects the teachings of the Tathāgata. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-001-46"/>
+                    <lg tid="41">
+                        <l>We are faulted beings who are confused and act inappropriately—please
+                            forgive us!</l>
+                        <l>Those who know the time, vidyāmantra, and ritual, please be patient with
+                            us. <ref cRef="F.3.b" type="folio"/>
+                        </l>
+                        <l>We pray that the good fortune of this Dharma offering to the hosts of
+                            gods </l>
+                        <l>Shall ensure prosperity and cause the supreme Dharma to flourish. </l>
+                    </lg>
+                    <trailer tid="42">This concludes “The Threefold Invocation Ritual.” </trailer>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="43">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="45">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="46">Source Texts</head>
+                    <bibl xml:id="UT22084-100-001-47">
+                        <title xml:lang="Bo-Ltn">’phags pa sangs rgyas phal po che zhes bya ba
+                            shin tu rgyas pa chen po'i mdo (</title>
+                        <title xml:lang="Sa-Ltn">Buddhāvataṃsaka­sūtra</title>). Toh 44, vol. 35–38 (phal chen, ka–a),
+                        folios 1.a–396.a.</bibl>
+                    <bibl xml:id="UT22084-100-001-48">
+                        <title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>. Toh 846, Degé
+                        Kangyur vol. 100 (gzungs ’dus, e), folios 1.b–3.b.</bibl>
+                    <bibl xml:id="UT22084-100-001-49">
+                        <title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>. bka’ ’gyur
+                        (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa
+                        zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka
+                        Collation Bureau of the China Tibetology Research Center). 108 volumes.
+                        Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing
+                        House), 2006–2009, vol. 97, pp. 3–9.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="47">Works Cited</head>
+                    <bibl xml:id="UT22084-100-001-50">Bendall, C. “The Mahāmegha Sūtra,” Journal of
+                            the Royal Asiatic Society (1880), 286–311.</bibl>
+                    <bibl xml:id="UT22084-100-001-51">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar
+                            and Dictionary</title>. Delhi: Motilal Banarsidass, 2004.</bibl>
+                    <bibl xml:id="UT22084-100-001-52">Kapstein, Matthew. <title xml:lang="en">The Tibetans. </title>Malden: Blackwell Publishing,
+                        2006.</bibl>
+                    <bibl xml:id="UT22084-100-001-53">Lalou, Marcelle. “Notes de mythologie bouddhique.” <title xml:lang="en">Harvard Journal of Asiatic Studies</title> 3 no. 2 (July 1938):
+                        128–36.</bibl>
+                    <bibl xml:id="UT22084-100-001-54">Monier-Williams, Monier. <title xml:lang="en">A Sanskrit-English
+                            Dictionary: Etymologically and Philologically Arranged with Special
+                            Reference to Cognate Indo-European Languages</title>. Delhi: Motilal
+                        Banarsidass, 2005.</bibl>
+                    <bibl xml:id="UT22084-100-001-55">“Maha­mayuri­vidyarajni (Mmvr).” Input by Klaus Wille based on Takubo,
+                        Shūyo, ed. <title xml:lang="Sa-Ltn">Ārya-Mahā-Māyūrī-Vidyā-Rājñī</title>.
+                        Tokyo: Sankibo, 1972. Göttingen Register of Electronic Texts in Indian
+                        Languages (GRETIL). Accessed May 23, 2018.
+                        http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/mmayuvru.htm.</bibl>
+                    <bibl xml:id="UT22084-100-001-56">Negi, J.S. <title xml:lang="en">Tibetan-Sanskrit Dictionary</title>
+                            (<title xml:lang="Bo-Ltn">bod skad dang legs sbyar gyi tshig mdzod chen
+                            mo</title>). 16 vols. Sarnath: Central Institute of Higher Tibetan
+                        Studies, 1993. </bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-57">
+                            <term>elephants of the quarters</term>
+                            <term xml:lang="Bo-Ltn">phyogs kyi glang po </term>
+                            <term xml:lang="bo">ཕྱོགས་ཀྱི་གླང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">diggaja</term>
+                            <term type="definition">The eight elephants corresponding to the eight
+                                cardinal and ordinal directions and the eight world
+                                protectors.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-58">
+                            <term>eliminate improper ways of engaging in practice</term>
+                            <term xml:lang="Bo-Ltn">snrel zhir sgrub pa mngon par bsgrub par rnams
+                                nye bar sgrub pa </term>
+                            <term xml:lang="bo">སྣྲེལ་ཞིར་སྒྲུབ་པ་མངོན་པར་བསྒྲུབ་པར་རྣམས་ཉེ་བར་སྒྲུབ་པ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-59">
+                            <term>garuḍa</term>
+                            <term xml:lang="Bo-Ltn">gser ’dab </term>
+                            <term xml:lang="bo">གསེར་འདབ།</term>
+                            <term xml:lang="Sa-Ltn">garuḍa</term>
+                            <term type="definition">A class of bird deities. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-60">
+                            <term>hosts of grahas</term>
+                            <term xml:lang="Bo-Ltn">gdon la ’jebs </term>
+                            <term xml:lang="bo">གདོན་ལ་འཇེབས།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">The translation of this term remains tentative
+                                but is read here as a potential translation of the Sanskrit compound <foreign xml:lang="Sa-Ltn" type="term">*grahaprācurya</foreign> in which the Tibetan has
+                                employed an incorrect grammatical particle. An alternate translation
+                                that favors the meaning that the term <foreign xml:lang="Bo-Ltn" type="term">’jebs pa</foreign> bears in Tibetan and the Tibetan
+                                reading of the compound indicates that this could be either a
+                                collective noun or a proper name that translates as “Pleasing to the
+                                Grahas.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-61">
+                            <term>kinnara</term>
+                            <term xml:lang="Bo-Ltn">mi ’am ci </term>
+                            <term xml:lang="bo">མི་འམ་ཅི།</term>
+                            <term xml:lang="Sa-Ltn">kinnara</term>
+                            <term type="definition">A class of semi-divine beings that are
+                                half-human, half-animal. Typically they have animal heads atop human
+                                bodies. The term literally means “Is that human?”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-62">
+                            <term>kumbhāṇḍa</term>
+                            <term xml:lang="Bo-Ltn">grul bum </term>
+                            <term xml:lang="bo">གྲུལ་བུམ།</term>
+                            <term xml:lang="Sa-Ltn">kumbhāṇḍa</term>
+                            <term type="definition">Vampire demon; a type of yakṣa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-63">
+                            <term>mighty helmet</term>
+                            <term xml:lang="Bo-Ltn">dbu rmog btsan pa </term>
+                            <term xml:lang="bo">དབུ་རྨོག་བཙན་པ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A martial metaphor for the territory that falls
+                                under the rule of a particular king.</term>
+                            <term type="definition">See also <ptr target="#UT22084-100-001-43"/>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-64">
+                            <term>reign</term>
+                            <term xml:lang="Bo-Ltn">chu srid </term>
+                            <term xml:lang="bo">ཆུ་སྲིད།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">Rule, kingdom, government, lit. “water domain.”
+                                See Kapstein 2006, p. 4.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-65">
+                            <term>uraga</term>
+                            <term xml:lang="Bo-Ltn">lto ’phye </term>
+                            <term xml:lang="bo">ལྟོ་འཕྱེ།</term>
+                            <term xml:lang="Sa-Ltn">uraga</term>
+                            <term type="definition">A serpent deity that inhabits specific
+                                localities. Also known as a kākorda.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-001-66">
+                            <term>vowels and consonants</term>
+                            <term xml:lang="Bo-Ltn">yi ge gnyis </term>
+                            <term xml:lang="bo">ཡི་གེ་གཉིས།</term>
+                            <term xml:lang="Sa-Ltn">svaravyañjana</term>
+                            <term type="definition">A <foreign xml:lang="Sa-Ltn" type="term">dvandva</foreign> compound signifying (in this text) linguistic
+                                expression in general and the basic components of the Sanskrit
+                                alphabet in particular.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-67">
+                            <term>Agni</term>
+                            <term xml:lang="Bo-Ltn">me lha </term>
+                            <term xml:lang="bo">མེ་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Agni</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Agni</term> guards the southeast quarter.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-68">
+                            <term>Anavatapta</term>
+                            <term xml:lang="Bo-Ltn">ma dros </term>
+                            <term xml:lang="bo">མ་དྲོས།</term>
+                            <term xml:lang="Sa-Ltn">Anavatapta</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-69">
+                            <term>Āṭavaka</term>
+                            <term xml:lang="Bo-Ltn">’brog gnas </term>
+                            <term xml:lang="bo">འབྲོག་གནས།</term>
+                            <term xml:lang="Sa-Ltn">Āṭavaka</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-70">
+                            <term>Brahmā</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa </term>
+                            <term xml:lang="bo">ཚངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmā</term>
+                            <term type="definition">As one of the three primary deities of the Hindu
+                                pantheon, in the Purāṇic cosmogony <term type="ignore">Brahmā</term> is said to issue the four
+                                Vedas (Ṛg, Yajus, Sāma, and Athārva) from his four mouths, from
+                                which the entirety of creation unfolds. In Buddhist traditions,
+                                <term type="ignore">Brahmā</term> is said to be a worldly deity who exists at the zenith of
+                                cyclic existence. He is thus added to the list of the eight
+                                guardians of the directions as the guardian of the zenith. In most
+                                narratives of the life of the Buddha, <term type="ignore">Brahmā</term> is said to appear
+                                together with Śakra to request that the Buddha Śākyamuni teach the
+                                Dharma. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-71">
+                            <term>Daśagrīva</term>
+                            <term xml:lang="Bo-Ltn">mgrin bcu </term>
+                            <term xml:lang="bo">མགྲིན་བཅུ།</term>
+                            <term xml:lang="Sa-Ltn">Daśagrīva</term>
+                            <term type="definition">Name of a nāga king; also a name for Rāvaṇa, the
+                                primary adversary of Rāma in the <title xml:lang="Sa-Ltn">Rāmāyaṇa</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-72">
+                            <term>Dhṛtarāṣṭra</term>
+                            <term xml:lang="Bo-Ltn">yul ’khor srung </term>
+                            <term xml:lang="bo">ཡུལ་འཁོར་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Dhṛtarāṣṭra</term>
+                            <term type="definition">One of the great kings of the four cardinal
+                                directions, <term type="ignore">Dhṛtarāṣṭra</term> guards the eastern quarter of the heavens.
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-73">
+                            <term>Durgā</term>
+                            <term xml:lang="Bo-Ltn">mkhar </term>
+                            <term xml:lang="bo">མཁར།</term>
+                            <term xml:lang="Sa-Ltn">Durgā</term>
+                            <term type="definition">A goddess; another name for Pārvatī, the wife of
+                                Śiva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-74">
+                            <term>Ekajaṭī</term>
+                            <term xml:lang="Bo-Ltn">ral pa cig </term>
+                            <term xml:lang="bo">རལ་པ་ཅིག</term>
+                            <term xml:lang="Sa-Ltn">Ekajaṭī</term>
+                            <term type="definition">A goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-75">
+                            <term>Gagana­ghoṣa</term>
+                            <term xml:lang="Bo-Ltn">nam mkha’i dbyangs </term>
+                            <term xml:lang="bo">ནམ་མཁའི་དབྱངས།</term>
+                            <term xml:lang="Sa-Ltn">Gagana­ghoṣa</term>
+                            <term type="definition">Name of a nāga king. Also known as
+                                Gaganasvara.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-76">
+                            <term>Gaṇapati</term>
+                            <term xml:lang="Bo-Ltn">tshogs bdag </term>
+                            <term xml:lang="bo">ཚོགས་བདག</term>
+                            <term xml:lang="Sa-Ltn">Gaṇapati</term>
+                            <term type="definition">
+                                <term type="ignore">Gaṇapati</term>, or Ganeśa, is the lord of the gaṇas, a
+                                class of demigods usually associated with the god Śiva. In the
+                                Purāṇic traditions <term type="ignore">Gaṇapati</term> is portrayed as the elephant-headed son
+                                of Śiva and Pārvatī.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-77">
+                            <term>Gangā</term>
+                            <term xml:lang="Bo-Ltn">gang gA </term>
+                            <term xml:lang="bo">གང་གཱ།</term>
+                            <term xml:lang="Sa-Ltn">Gangā</term>
+                            <term type="definition">A river goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-78">
+                            <term>Gaurī</term>
+                            <term xml:lang="Bo-Ltn">dkar sham </term>
+                            <term xml:lang="bo">དཀར་ཤམ།</term>
+                            <term xml:lang="Sa-Ltn">Gaurī</term>
+                            <term type="definition">A goddess; a rākṣasī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-79">
+                            <term>Ghaṇṭākarṇa</term>
+                            <term xml:lang="Bo-Ltn">dril rna </term>
+                            <term xml:lang="bo">དྲིལ་རྣ།</term>
+                            <term xml:lang="Sa-Ltn">Ghaṇṭākarṇa</term>
+                            <term type="definition">The name of a worldly deity who is identified
+                                variously as an attendant of Skanda, an attendant of Śiva, a piśāca
+                                attendant of Kubera, and a rākṣasa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-80">
+                            <term>graha</term>
+                            <term xml:lang="Bo-Ltn">gza’ </term>
+                            <term xml:lang="bo">གཟའ།</term>
+                            <term xml:lang="Sa-Ltn">graha</term>
+                            <term type="definition">Deities associated with the planets.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-81">
+                            <term>Guardian of Speech</term>
+                            <term xml:lang="Bo-Ltn">brjod skyob </term>
+                            <term xml:lang="bo">བརྗོད་སྐྱོབ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-82">
+                            <term>Haimavata</term>
+                            <term xml:lang="Bo-Ltn">gangs la gnas </term>
+                            <term xml:lang="bo">གངས་ལ་གནས།</term>
+                            <term xml:lang="Sa-Ltn">Haimavata</term>
+                            <term type="definition">Name of a yakṣa general in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-83">
+                            <term>Hanuman</term>
+                            <term xml:lang="Bo-Ltn">ha nu man ta </term>
+                            <term xml:lang="bo">ཧ་ནུ་མན་ཏ།</term>
+                            <term xml:lang="Sa-Ltn">Hanuman</term>
+                            <term type="definition">Name of a nāga king; a monkey god; Rāma's
+                                companion and devotee in the <title xml:lang="Sa-Ltn">Rāmāyaṇa</title>. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-84">
+                            <term>Hārītī</term>
+                            <term xml:lang="Bo-Ltn">sras ’phan </term>
+                            <term xml:lang="bo">སྲས་འཕན།</term>
+                            <term xml:lang="Sa-Ltn">Hārītī</term>
+                            <term type="definition">A yakṣiṇī; a rākṣasī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-85">
+                            <term>Indra</term>
+                            <term xml:lang="Bo-Ltn">dbang po </term>
+                            <term xml:lang="bo">དབང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Indra</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Indra</term> guards the eastern quarter. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-86">
+                            <term>Īśāna</term>
+                            <term xml:lang="Bo-Ltn">dbang bdag </term>
+                            <term xml:lang="bo">དབང་བདག</term>
+                            <term xml:lang="Sa-Ltn">Īśāna</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term>Īśāna</term> guards the northeast quarter.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-87">
+                            <term>Jambhala</term>
+                            <term xml:lang="Bo-Ltn">gnod ’dzin </term>
+                            <term xml:lang="bo">གནོད་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">Jambhala</term>
+                            <term type="definition">A yakṣa king associated with wealth and often
+                                identified with Kubera/Vaiśravaṇa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-88">
+                            <term>Jinarṣabha</term>
+                            <term xml:lang="Bo-Ltn">rgyal ba’i khyu mchog </term>
+                            <term xml:lang="bo">རྒྱལ་བའི་ཁྱུ་མཆོག</term>
+                            <term xml:lang="Sa-Ltn">Jinarṣabha</term>
+                            <term type="definition">Name of a yakṣa general; a son of Kubera.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-89">
+                            <term>Kālī</term>
+                            <term xml:lang="Bo-Ltn">nag mo </term>
+                            <term xml:lang="bo">ནག་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Kālī</term>
+                            <term type="definition">A goddess; a rākṣasī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>; <!--Reference
+                                Toh 0559--> one of Durgā’s attendants.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-90">
+                            <term>Kārttikeya</term>
+                            <term xml:lang="Bo-Ltn">ka rti ka </term>
+                            <term xml:lang="bo">ཀ་རྟི་ཀ</term>
+                            <term xml:lang="Sa-Ltn">Kārttikeya</term>
+                            <term type="definition">
+                                <term type="ignore">Kārttikeya</term> (alt. Skanda) is the son of Śiva and
+                                Pārvatī. Like Gaṇapati, <term type="ignore">Kārttikeya</term> is said to lead the gaṇas in
+                                battle against demonic beings and is considered a god of war.
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-91">
+                            <term>Kubera</term>
+                            <term xml:lang="Bo-Ltn">lus ngan po </term>
+                            <term xml:lang="bo">ལུས་ངན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Kubera</term>
+                            <term type="definition">One of the great kings of the four directions,
+                                Kubera guards the northern quarter of the heavens. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-92">
+                            <term>Kumbhakarṇa</term>
+                            <term xml:lang="Bo-Ltn">bum rna </term>
+                            <term xml:lang="bo">བུམ་རྣ།</term>
+                            <term xml:lang="Sa-Ltn">Kumbhakarṇa</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-93">
+                            <term>Mahābala</term>
+                            <term xml:lang="Bo-Ltn">stobs po che </term>
+                            <term xml:lang="bo">སྟོབས་པོ་ཆེ།</term>
+                            <term xml:lang="Sa-Ltn">Mahābala</term>
+                            <term type="definition">Listed as the great yakṣa general of Rājagṛha in
+                                the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>.<!--Reference Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-94">
+                            <term>Mahākāla</term>
+                            <term xml:lang="Bo-Ltn">nag po chen po </term>
+                            <term xml:lang="bo">ནག་པོ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākāla</term>
+                            <term type="definition">
+                                <term type="ignore">Mahākāla</term> (“the great black one”) is both a name
+                                for one of the god Śiva’s wrathful manifestations and an important
+                                Buddhist protector deity. The <title xml:lang="Sa-Ltn">Mahābhārata</title> and <title xml:lang="Sa-Ltn">Harivaṁśa</title> list <term type="ignore">Mahākāla</term> as one of Śiva's attendants.
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-95">
+                            <term>Mahākālī</term>
+                            <term xml:lang="Bo-Ltn">nag mo chen mo </term>
+                            <term xml:lang="bo">ནག་མོ་ཆེན་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākālī</term>
+                            <term type="definition">A goddess; one of Durgā’s attendants.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-96">
+                            <term>Mahākarṇa</term>
+                            <term xml:lang="Bo-Ltn">rna bo che </term>
+                            <term xml:lang="bo">རྣ་བོ་ཆེ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākarṇa</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-97">
+                            <term>Mahāpadma</term>
+                            <term xml:lang="Bo-Ltn">pad+ma chen po </term>
+                            <term xml:lang="bo">པདྨ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāpadma</term>
+                            <term type="definition">“The great lotus.” One of the four great
+                                treasures and the being who presides over it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-98">
+                            <term>Mahāśaṅkha</term>
+                            <term xml:lang="Bo-Ltn">dung chen </term>
+                            <term xml:lang="bo">དུང་ཆེན།</term>
+                            <term xml:lang="Sa-Ltn">Mahāśaṅkha</term>
+                            <term type="definition">“The great conch shell.” One of the four great
+                                treasures and the being who presides over it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-99">
+                            <term>Manasvin</term>
+                            <term xml:lang="Bo-Ltn">gzi can </term>
+                            <term xml:lang="bo">གཟི་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Manasvin</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-100">
+                            <term>Maṇibhadra</term>
+                            <term xml:lang="Bo-Ltn">nor bu bzang </term>
+                            <term xml:lang="bo">ནོར་བུ་བཟང་།</term>
+                            <term xml:lang="Sa-Ltn">Maṇibhadra</term>
+                            <term type="definition">Name of a yakṣa general; brother of Pūrṇabhadra
+                                in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>.<!--Reference Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-101">
+                            <term>Mārīcī</term>
+                            <term xml:lang="Bo-Ltn">’od zer can </term>
+                            <term xml:lang="bo">འོད་ཟེར་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Mārīcī</term>
+                            <term type="definition">A goddess; a rākṣasī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-102">
+                            <term>Meghanāda</term>
+                            <term xml:lang="Bo-Ltn">’brug sgra </term>
+                            <term xml:lang="bo">འབྲུག་སྒྲ།</term>
+                            <term xml:lang="Sa-Ltn">Meghanāda</term>
+                            <term type="definition">Name of a nāga king; name of Rāvaṇa’s son in the
+                                    <title xml:lang="Sa-Ltn">Rāmāyaṇa</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-103">
+                            <term>Nairṛta</term>
+                            <term xml:lang="Bo-Ltn">bden bral </term>
+                            <term xml:lang="bo">བདེན་བྲལ།</term>
+                            <term xml:lang="Sa-Ltn">Nairṛta</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Nairṛta</term> guards the southwest quarter. Also known as Nirṛti.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-104">
+                            <term>nakṣatra</term>
+                            <term xml:lang="Bo-Ltn">skar </term>
+                            <term xml:lang="bo">སྐར།</term>
+                            <term xml:lang="Sa-Ltn">nakṣatra</term>
+                            <term type="definition">Deities associated with the stars.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-105">
+                            <term>Nanda</term>
+                            <term xml:lang="Bo-Ltn">dga’ bo </term>
+                            <term xml:lang="bo">དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Nanda</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-106">
+                            <term>Nandi</term>
+                            <term xml:lang="Bo-Ltn">na n+ti </term>
+                            <term xml:lang="bo">ན་ནྟི།</term>
+                            <term xml:lang="Sa-Ltn">Nandi</term>
+                            <term type="definition">
+                                <term type="ignore">Nandi</term> is the bull attendant of Śiva and the
+                                guardian of Śiva's realm in Kailāsa. He is commonly depicted at
+                                Śaiva temples as a bull positioned outside of the main gate of the
+                                temple gazing in upon Śiva's liṅga with utter devotion. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-107">
+                            <term>Padma</term>
+                            <term xml:lang="Bo-Ltn">pad+ma </term>
+                            <term xml:lang="bo">པདྨ།</term>
+                            <term xml:lang="Sa-Ltn">Padma</term>
+                            <term type="definition">“The lotus.” One of the four great treasures and
+                                the being who presides over it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-108">
+                            <term>Pāñcālagaṇḍa</term>
+                            <term xml:lang="Bo-Ltn">lnga len tshigs </term>
+                            <term xml:lang="bo">ལྔ་ལེན་ཚིགས།</term>
+                            <term xml:lang="Sa-Ltn">Pāñcālagaṇḍa</term>
+                            <term type="definition">Name of a yakṣa general in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-109">
+                            <term>Pāñcālaka</term>
+                            <term xml:lang="Bo-Ltn">lnga ser </term>
+                            <term xml:lang="bo">ལྔ་སེར།</term>
+                            <term xml:lang="Sa-Ltn">Pāñcālaka</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-110">
+                            <term>Pāñcika</term>
+                            <term xml:lang="Bo-Ltn">lngas rtsen </term>
+                            <term xml:lang="bo">ལྔས་རྩེན།</term>
+                            <term xml:lang="Sa-Ltn">Pāñcika</term>
+                            <term type="definition">Name of a yakṣa general in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-111">
+                            <term>Pārvatī</term>
+                            <term xml:lang="Bo-Ltn">ri </term>
+                            <term xml:lang="bo">རི།</term>
+                            <term xml:lang="Sa-Ltn">Pārvatī</term>
+                            <term type="definition">A goddess; wife of Śiva in the Purāṇic
+                                traditions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-112">
+                            <term>Pṛthivīdevatā</term>
+                            <term xml:lang="Bo-Ltn">sa yi lha </term>
+                            <term xml:lang="bo">ས་ཡི་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Pṛthivīdevatā</term>
+                            <term type="definition">The name of the earth deity.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-113">
+                            <term>Pūrṇa</term>
+                            <term xml:lang="Bo-Ltn">gang po </term>
+                            <term xml:lang="bo">གང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Pūrṇa</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-114">
+                            <term>Pūrṇabhadra</term>
+                            <term xml:lang="Bo-Ltn">gang pa bzang po </term>
+                            <term xml:lang="bo">གང་པ་བཟང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Pūrṇabhadra</term>
+                            <term type="definition">Name of a yakṣa general; brother of Maṇibhadra
+                                in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>.<!--Reference Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-115">
+                            <term>Sāgara</term>
+                            <term xml:lang="Bo-Ltn">rgya mtsho </term>
+                            <term xml:lang="bo">རྒྱ་མཚོ།</term>
+                            <term xml:lang="Sa-Ltn">Sāgara</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-116">
+                            <term>Śakra</term>
+                            <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Śakra</term>
+                            <term type="definition">Sometimes functioning as an alternate name for
+                                Indra, <term type="ignore">Śakra</term> is considered to be the ruler of the god realm and the
+                                leader of the army of devas. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-117">
+                            <term>Sañjaya</term>
+                            <term xml:lang="Bo-Ltn">yang dag rgyal ba </term>
+                            <term xml:lang="bo">ཡང་དག་རྒྱལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Sañjaya</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-118">
+                            <term>Sañjñeya </term>
+                            <term xml:lang="Bo-Ltn">yang dag shes </term>
+                            <term xml:lang="bo">ཡང་དག་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">Sañjñeya </term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-119">
+                            <term>Śaṅkha</term>
+                            <term xml:lang="Bo-Ltn">dung </term>
+                            <term xml:lang="bo">དུང་།</term>
+                            <term xml:lang="Sa-Ltn">Śaṅkha</term>
+                            <term type="definition">“The conch shell.” One of the four great
+                                treasures and the being who presides over it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-120">
+                            <term>Śaṅkhinī</term>
+                            <term xml:lang="Bo-Ltn">dung can </term>
+                            <term xml:lang="bo">དུང་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Śaṅkhinī</term>
+                            <term type="definition">A rākṣasī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-121">
+                            <term>Sarasvatī</term>
+                            <term xml:lang="Bo-Ltn">dbyangs can </term>
+                            <term xml:lang="bo">དབྱངས་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Sarasvatī</term>
+                            <term type="definition">A river goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-122">
+                            <term>Sātāgiri</term>
+                            <term xml:lang="Bo-Ltn">bde ri </term>
+                            <term xml:lang="bo">བདེ་རི།</term>
+                            <term xml:lang="Sa-Ltn">Sātāgiri</term>
+                            <term type="definition">Name of a yakṣa general in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-123">
+                            <term>Śrīmati</term>
+                            <term xml:lang="Bo-Ltn">dpal gyi lha mo </term>
+                            <term xml:lang="bo">དཔལ་གྱི་ལྷ་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Śrīmati</term>
+                            <term type="definition">A goddess; a yakṣiṇī in the <title xml:lang="Sa-Ltn">Mahā­māyūrī­vidyārājñī</title>. <!--Reference
+                                Toh 0559-->
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-124">
+                            <term>Sugrīva</term>
+                            <term xml:lang="Bo-Ltn">mgrin bzang </term>
+                            <term xml:lang="bo">མགྲིན་བཟང་།</term>
+                            <term xml:lang="Sa-Ltn">Sugrīva</term>
+                            <term type="definition">Name of a yakṣa general; in the <title xml:lang="Sa-Ltn">Rāmāyaṇa</title>, <term type="ignore">Sugrīva</term> is the monkey king
+                                who lends his army to Rāma to defeat Rāvaṇa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-125">
+                            <term>Supūrṇa</term>
+                            <term xml:lang="Bo-Ltn">shin tu gang </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་གང་།</term>
+                            <term xml:lang="Sa-Ltn">Supūrṇa</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-126">
+                            <term>Svaraghoṣā</term>
+                            <term xml:lang="Bo-Ltn">sgra dbyangs </term>
+                            <term xml:lang="bo">སྒྲ་དབྱངས།</term>
+                            <term xml:lang="Sa-Ltn">Svaraghoṣā</term>
+                            <term type="definition">A goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-127">
+                            <term>Tiraka</term>
+                            <term xml:lang="Bo-Ltn">ti ra ka </term>
+                            <term xml:lang="bo">ཏི་ར་ཀ</term>
+                            <term xml:lang="Sa-Ltn">Tiraka</term>
+                            <term type="definition">Name of a yakṣa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-128">
+                            <term>Trikarṇa</term>
+                            <term xml:lang="Bo-Ltn">rna gsum </term>
+                            <term xml:lang="bo">རྣ་གསུམ།</term>
+                            <term xml:lang="Sa-Ltn">Trikarṇa</term>
+                            <term type="definition">Name of a yakṣa general.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-129">
+                            <term>Triśirsaka</term>
+                            <term xml:lang="Bo-Ltn">stong gsum </term>
+                            <term xml:lang="bo">སྟོང་གསུམ།</term>
+                            <term xml:lang="Sa-Ltn">Triśirsaka</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-130">
+                            <term>Upananda</term>
+                            <term xml:lang="Bo-Ltn">bsnyen dga’ bo </term>
+                            <term xml:lang="bo">བསྙེན་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Upananda</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-131">
+                            <term>Vāgīśvarī</term>
+                            <term xml:lang="Bo-Ltn">tshig dbang lha mo </term>
+                            <term xml:lang="bo">ཚིག་དབང་ལྷ་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Vāgīśvarī</term>
+                            <term type="definition">A goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-132">
+                            <term>Vaiśravaṇa</term>
+                            <term xml:lang="Bo-Ltn">rnam thos bu </term>
+                            <term xml:lang="bo">རྣམ་ཐོས་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Vaiśravaṇa</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Vaiśravaṇa</term> guards the northern quarter. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-133">
+                            <term>Varuṇa</term>
+                            <term xml:lang="Bo-Ltn">chu lha </term>
+                            <term xml:lang="bo">ཆུ་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Varuṇa</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Varuṇa</term> guards the northeast quarter.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-134">
+                            <term>Vāsuki</term>
+                            <term xml:lang="Bo-Ltn">nor rgyas </term>
+                            <term xml:lang="bo">ནོར་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">Vāsuki</term>
+                            <term type="definition">Name of a nāga king.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-135">
+                            <term>Vatsavatī</term>
+                            <term xml:lang="Bo-Ltn">be’u ’dra </term>
+                            <term xml:lang="bo">བེའུ་འདྲ།</term>
+                            <term xml:lang="Sa-Ltn">Vatsavatī</term>
+                            <term type="definition">A goddess.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-136">
+                            <term>Vāyu</term>
+                            <term xml:lang="Bo-Ltn">rlung gi lha </term>
+                            <term xml:lang="bo">རླུང་གི་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Vāyu</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Vāyu</term> guards the northwest quarter.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-137">
+                            <term>Vibhīṣaṇa</term>
+                            <term xml:lang="Bo-Ltn">rnam ’jigs </term>
+                            <term xml:lang="bo">རྣམ་འཇིགས།</term>
+                            <term xml:lang="Sa-Ltn">Vibhīṣaṇa</term>
+                            <term type="definition">Name of a nāga king; name of a yakṣa; name of
+                                Rāvaṇa's brother in the <title xml:lang="Sa-Ltn">Rāmāyaṇa</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-138">
+                            <term>vidyāmantra</term>
+                            <term xml:lang="Bo-Ltn">rig pa </term>
+                            <term xml:lang="bo">རིག་པ།</term>
+                            <term xml:lang="Sa-Ltn">vidyāmantra</term>
+                            <term type="definition">A type of incantation or spell used to
+                                accomplish a ritual goal. This can be associated with either
+                                ordinary attainments or those whose goal is awakening.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-139">
+                            <term>Virūḍhaka</term>
+                            <term xml:lang="Bo-Ltn">’phags skyes </term>
+                            <term xml:lang="bo">འཕགས་སྐྱེས།</term>
+                            <term xml:lang="Sa-Ltn">Virūḍhaka</term>
+                            <term type="definition">One of the great kings of the four cardinal
+                                directions, <term type="ignore">Virūḍhaka</term> guards the southern quarter of the
+                                heavens.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-140">
+                            <term>Virūpākṣa</term>
+                            <term xml:lang="Bo-Ltn">mig mi bzang </term>
+                            <term xml:lang="bo">མིག་མི་བཟང་།</term>
+                            <term xml:lang="Sa-Ltn">Virūpākṣa</term>
+                            <term type="definition">One of the great kings of the four carinal
+                                directions, <term type="ignore">Virūpākṣa</term> guards the western quarter of the
+                                heavens.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-141">
+                            <term>Viṣṇu</term>
+                            <term xml:lang="Bo-Ltn">khyab ’jug </term>
+                            <term xml:lang="bo">ཁྱབ་འཇུག</term>
+                            <term xml:lang="Sa-Ltn">Viṣṇu</term>
+                            <term type="definition">In the schema of the eight guardians of the
+                                directions, <term type="ignore">Viṣṇu</term> guards the nadir. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-142">
+                            <term>Yama</term>
+                            <term xml:lang="Bo-Ltn">gshin rje </term>
+                            <term xml:lang="bo">གཤིན་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">Yama</term>
+                            <term type="definition">One of the eight guardians of the directions,
+                                <term type="ignore">Yama</term> guards the southern quarter.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-001-143">
+                            <term>Yamunā</term>
+                            <term xml:lang="Bo-Ltn">ya mu na </term>
+                            <term xml:lang="bo">ཡ་མུ་ན།</term>
+                            <term xml:lang="Sa-Ltn">Yamunā</term>
+                            <term type="definition">A river goddess.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>
