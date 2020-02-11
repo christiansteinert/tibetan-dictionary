@@ -23,7 +23,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.47 <date>2019</date>
+                <edition>v 1.48.0 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -67,17 +67,19 @@
                     <ref>Toh 980</ref>
                     <biblScope>Degé Kangyur vol. 101 (gzungs ’dus, waṃ), folios 99.a–99.b<!--UT22084-101-035--></biblScope>
                     <location work="UT4CZ5369" count-pages="2">
-                        <volume number="101" start-page="197" end-page="198"/>
+                        <volume number="102" start-page="197" end-page="198"/>
                     </location>
                     <idno parent-id="O1JC114941JC20568"/>
                     <idno source-id="O1JC114941JC12743" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-09-27T15:40:36.687Z" user="celso">27/09/2019 15:40:36</note>
+                <note type="lastUpdated" date-time="2020-02-11T11:17:20.888Z" user="admin">11/02/2020 11:17:20</note>
             <note type="updated" update="text-version" value="v 1.45" date-time="2019-06-18T16:21:59.388Z" user="celso">v 1.45 2019</note>
                 <note type="updated" update="text-version" value="v 1.46" date-time="2019-08-09T16:59:29.348Z" user="celso">v 1.46 2019</note>
                 <note type="updated" update="text-version" value="v 1.47" date-time="2019-09-30T19:12:16.904Z" user="andre">Updated due to folio numbering correction</note>
+<note type="updated" update="text-version" value="v 1.47.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.48.0" date-time="2020-02-11T11:17:18.028Z" user="andre">Note added about the volume discrepancy between biblScope (according to BDRC) and eKangyur</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -202,7 +204,7 @@
                             the Kangyur.</note> the Sanskrit syllables are considered potent in their own right as a manifestation
                         of the Dharma and thus of the Buddha himself.</p>
                     <milestone unit="chunk" xml:id="UT22084-062-012-7"/>
-                    <p tid="10">The sūtra is found in three places within the Degé Kangyur: in the General Sūtra section (Toh 212), the Action Tantra section (Toh 520), and the Incantations (Toh 980). In two of those locations, it is followed by duplicates of a short separate text (Toh 521, Toh 981)<note place="end" xml:id="UT22084-062-012-74" index="13">See <ptr target="#bibliography">bibliography</ptr>. </note> containing the verse of dependent arising, which is also, of course, cited in numerous other texts. To date we do not know of any extant Sanskrit original version of the sūtra,<note place="end" xml:id="UT22084-062-012-75" index="14">There is a version in Sanskrit, available on the internet and originally published by P.L Vaidya (<title xml:lang="Sa-Ltn">Mahāyāna-sūtra-saṁgraha</title>, part I, Buddhist Sanskrit Texts 17, Darbhanga: Mithila Institute, 1961, p 119), which he reproduced from N. Aiyaswami Sastri (in <title xml:lang="Sa-Ltn">Ārya Śālistamba Sūtra, Pratītya­samutpāda­vibhaṅgha Sūtra and Pratītya­samudtpāda­gāthā Sūtra</title>, Śāntiniketan: Adyar Library, 1950, pp 25-27). However, Sastri states that he back-translated his Sanskrit version from the Tibetan.</note> and
+                    <p tid="10">The sūtra is found in three places within the Degé Kangyur: in the General Sūtra section (Toh 212), the Action Tantra section (Toh 520), and the Incantations (Toh 980).<note xml:id="UT22084-062-012-80" place="end" index="13">The present text (Toh 980), and all those contained in the same volume (<foreign xml:lang="Bo-Ltn">gzungs ’dus, waṃ</foreign>), are listed as being located in volume 101 of the Degé Kangyur by the Buddhist Digital Resource Center (BDRC). However, several other Kangyur databases—including the eKangyur that supplies the digital input version displayed by 84000 reading room—list this work as being located in volume 102. This discrepancy is partly due to the fact that the two volumes of the <foreign xml:lang="Bo-Ltn">gzungs ‘dus</foreign> section are an added supplement not mentioned in the original catalogue, and also hinges on the fact that the compilers of the Tōhoku catalogue placed another text—which forms a whole, very large volume—the <title xml:lang="Sa-Ltn">Vimalaprabhā­nāmakālacakra­tantraṭīkā</title> (<title xml:lang="Bo-Ltn">dus 'khor 'grel bshad dri med 'od</title>, Toh 845), before the present volume, numbering it as vol. 100, although it is almost certainly intended to come right at the end of the Degé Kangyur texts as volume 102; indeed its final fifth chapter is often carried over and wrapped in the same volume as the Kangyur <foreign xml:lang="Bo-Ltn">dkar chags</foreign> (catalogue). Please note this discrepancy when using the eKangyur viewer in this translation.</note> In two of those locations, it is followed by duplicates of a short separate text (Toh 521, Toh 981)<note place="end" xml:id="UT22084-062-012-74" index="14">See <ptr target="#bibliography">bibliography</ptr>. </note> containing the verse of dependent arising, which is also, of course, cited in numerous other texts. To date we do not know of any extant Sanskrit original version of the sūtra,<note place="end" xml:id="UT22084-062-012-75" index="15">There is a version in Sanskrit, available on the internet and originally published by P.L Vaidya (<title xml:lang="Sa-Ltn">Mahāyāna-sūtra-saṁgraha</title>, part I, Buddhist Sanskrit Texts 17, Darbhanga: Mithila Institute, 1961, p 119), which he reproduced from N. Aiyaswami Sastri (in <title xml:lang="Sa-Ltn">Ārya Śālistamba Sūtra, Pratītya­samutpāda­vibhaṅgha Sūtra and Pratītya­samudtpāda­gāthā Sūtra</title>, Śāntiniketan: Adyar Library, 1950, pp 25-27). However, Sastri states that he back-translated his Sanskrit version from the Tibetan.</note> and
                         although there appear to be a few minor spelling mistakes and inconsistencies found in some versions,
                         there are no significant variations among the available Tibetan texts.</p>
                 </div>
@@ -249,7 +251,7 @@
                         </l>
                         <l>
                             <foreign xml:lang="Sa-Ltn">teṣāṃ ca yo nirodha evaṃvādī mahā­śramaṇaḥ</foreign>
-                            <note place="end" xml:id="UT22084-062-012-76" index="15">There are multiple variations of this creed
+                            <note place="end" xml:id="UT22084-062-012-76" index="16">There are multiple variations of this creed
                                 found throughout the Buddhist world. See Sykes (1856) and Skilling (2003).</note>
                         </l>
                     </lg>
@@ -268,7 +270,7 @@
                         size of a needle and a parasol the size of a flower of the bakula tree, and inserts this verse of
                         dependent arising which is the dharmadhātu, he or she will generate the merit of Brahmā. When such persons
                         pass on from here and die, they will be reborn in the world of Brahmā. When they pass on from there and
-                        die, they will be reborn with fortunes equaling those of the gods of the Pure Abodes.”<note place="end" xml:id="UT22084-062-012-77" index="16">This last sentence is omitted in the otherwise identical copies
+                        die, they will be reborn with fortunes equaling those of the gods of the Pure Abodes.”<note place="end" xml:id="UT22084-062-012-77" index="17">This last sentence is omitted in the otherwise identical copies
                             of the work found in the Tantra and Dhāraṇī sections of the Kangyur, Toh 520 and Toh 980,
                             respectively.</note>
                     </p>
@@ -284,7 +286,7 @@
                     <head type="colophon" tid="28">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-062-012-79"/>
                     <p tid="21">Translated and edited by the Indian scholar Surendrabodhi and the principal editor and translator
-                        Venerable Yeshe Dé.<note place="end" xml:id="UT22084-062-012-78" index="17">Mention of the translators is
+                        Venerable Yeshe Dé.<note place="end" xml:id="UT22084-062-012-78" index="18">Mention of the translators is
                             omitted from the colophon in the versions Toh 520 and Toh 980 (see previous note). </note>
                     </p>
                 </div>
