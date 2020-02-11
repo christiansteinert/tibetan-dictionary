@@ -37,11 +37,11 @@
 
             </titleStmt>
             <editionStmt>
-                <edition>v 0.1.1 <date>2019</date>
+                <edition>v 0.1.2 <date>2020</date>
                 </edition>
             </editionStmt>
 
-            <publicationStmt status="2.a">
+            <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
                     initiative to translate all the Buddha’s words into modern languages, and to
@@ -82,7 +82,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-12-16T17:30:30.833Z" user="admin">16/12/2019 17:30:30</note>
+                <note type="lastUpdated" date-time="2020-02-11T11:19:32.055Z" user="admin">11/02/2020 11:19:32</note>
                 <note type="updated" update="translation-status" value="2.d" date-time="2019-07-02T13:19:52.294Z" user="john">2.d</note>
                 <note type="updated" update="translation-status" value="2.c" date-time="2019-09-13T09:10:31.38Z" user="john">2.c</note>
                 <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-19T07:20:48.166Z" user="andreas">v 0.1.0</note>
@@ -91,6 +91,8 @@
                 <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-30T10:51:56.757Z" user="andre">v 0.1.0</note>
             
 <note type="updated" update="text-version" value="v 0.1.1" date-time="2019-12-16T17:30:27.202Z" user="laura">Proofed markup and made edits as needed.</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-02-11T06:01:52.696Z" user="mike">2</note>
+<note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-11T11:19:28.983Z" user="andre">Note added about the volume discrepancy between biblScope (according to BDRC) and eKangyur</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -140,13 +142,13 @@
                         “incantation.” Most works of this class, which are usually short Mahāyāna
                         sūtras or tantric texts, are included in the <title xml:lang="Sa-Ltn">dhāraṇī</title> section of the Kangyur. In the Degé edition of the
                         Kangyur, this section comprises two hundred and sixty-four texts (Tōhoku
-                        nos. 846–1108). The present scripture is found there as Tōhoku no. 847, and
+                        nos. 846–1108). The present scripture is found there as Tōhoku no. 847,<note place="end" xml:id="UT22084-057-004-1243" index="1">The present text (Toh 847), and all those contained in the same volume (<foreign xml:lang="Bo-Ltn">gzungs ’dus, e</foreign>), are listed as being located in volume 100 of the Degé Kangyur by the Buddhist Digital Resource Center (BDRC). However, several other Kangyur databases—including the eKangyur that supplies the digital input version displayed by 84000 reading room—list this work as being located in volume 101. This discrepancy is partly due to the fact that the two volumes of the <foreign xml:lang="Bo-Ltn">gzungs ‘dus</foreign> section are an added supplement not mentioned in the original catalogue, and also hinges on the fact that the compilers of the Tōhoku catalogue placed another text—which forms a whole, very large volume—the <title xml:lang="Sa-Ltn">Vimalaprabhā­nāmakālacakra­tantraṭīkā</title> (<title xml:lang="Bo-Ltn">dus 'khor 'grel bshad dri med 'od</title>, Toh 845), before the present volume, numbering it as vol. 100, although it is almost certainly intended to come right at the end of the Degé Kangyur texts as volume 102; indeed its final fifth chapter is often carried over and wrapped in the same volume as the Kangyur <foreign xml:lang="Bo-Ltn">dkar chags</foreign> (catalogue). Please note this discrepancy when using the eKangyur viewer in this translation.</note> and
                         is also found earlier, together with other Mahāyāna sūtras, as Tōhoku no.
                         145.</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-5"/>
                     <p tid="9">
                         <title xml:lang="en">The Princeton Dictionary of Buddhism</title>
-                        defines and explains dhāraṇī:<note place="end" index="1" xml:id="UT22084-057-004-6">
+                        defines and explains dhāraṇī:<note place="end" xml:id="UT22084-057-004-6" index="2">
                             <title xml:lang="en">The Princeton Dictionary of Buddhism</title>, s.v.
                             “dhāraṇī.” </note>
                     </p>
@@ -180,7 +182,7 @@
                         rather belong to a pan-Buddhist context. However, the Indian Buddhist locus
                         classicus for a fourfold division of dhāraṇīs is not a sūtra, as stated by
                         that dictionary, but rather a treatise entitled the <title xml:lang="Sa-Ltn">Bodhisattvabhūmi</title>. The relevant passage was also discussed and
-                        translated by Jens Braarvig,<note place="end" index="2" xml:id="UT22084-057-004-9"> See Braarvig 1985, p. 19–20: “The <title xml:lang="Sa-Ltn">Bodhisattvabhūmi</title> divides dhāraṇī into four
+                        translated by Jens Braarvig,<note place="end" xml:id="UT22084-057-004-9" index="3"> See Braarvig 1985, p. 19–20: “The <title xml:lang="Sa-Ltn">Bodhisattvabhūmi</title> divides dhāraṇī into four
                             types: <foreign xml:lang="Sa-Ltn" type="term">dharmadhāraṇī</foreign>
                             [of Dharma], <foreign xml:lang="Sa-Ltn" type="term">arthadhāraṇī</foreign> [of the meaning], <foreign xml:lang="Sa-Ltn" type="term">mantradhāraṇī</foreign> [of mantras] and <foreign xml:lang="Sa-Ltn" type="term">dhāraṇī</foreign> to attain the
                             tolerance, <foreign xml:lang="Sa-Ltn" type="term">kṣānti</foreign>, of a
@@ -204,20 +206,20 @@
                         Dharma, (2) dhāraṇī of the meaning, (3) dhāraṇī of mantras, and (4) dhāraṇī
                         to attain tolerance. Braarvig also cites the <title xml:lang="Sa-Ltn">Akṣaya­matinirdeśa</title>, which characterizes dhāraṇī as both
                         remembrance itself and the faculty or means of retaining in memory the
-                        teachings of the buddhas.<note place="end" index="3" xml:id="UT22084-057-004-10"> Braarvig 1985, p. 18. </note> Braarvig thus
+                        teachings of the buddhas.<note place="end" xml:id="UT22084-057-004-10" index="4"> Braarvig 1985, p. 18. </note> Braarvig thus
                         observes that dhāraṇī became connected with concentration (<foreign xml:lang="Sa-Ltn" type="term">samādhi</foreign>), remembrance or
                         recollection (<foreign xml:lang="Sa-Ltn" type="term">smṛti</foreign>), and
                         meditation (<foreign xml:lang="Sa-Ltn" type="term">dhyāna</foreign>),
                         concluding that “dhāraṇī and samādhi naturally belong together; to retain
                         something in memory, concentration is needed, and remembrance may produce
-                            concentration.”<note place="end" index="4" xml:id="UT22084-057-004-11">
+                            concentration.”<note place="end" xml:id="UT22084-057-004-11" index="5">
                             Braarvig 1985, p. 22.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-12"/>
                     <p tid="12">It should be noted that J. S. Negi in his dictionary entry for the
                         phrase <foreign xml:lang="Bo-Ltn" type="term">don gyi gzungs</foreign>
                         (dhāraṇī of the sense) quotes the same fourfold enumeration of dhāraṇī from
-                        the <title xml:lang="Sa-Ltn">Bodhisattvabhūmi</title>.<note place="end" index="5" xml:id="UT22084-057-004-13"> See J. S. Negi 1993–2005, vol. 6,
+                        the <title xml:lang="Sa-Ltn">Bodhisattvabhūmi</title>.<note place="end" xml:id="UT22084-057-004-13" index="6"> See J. S. Negi 1993–2005, vol. 6,
                             p. 2318: (1) dhāraṇī of the Dharma (<foreign xml:lang="Bo-Ltn" type="term">chos kyi gzungs</foreign>,<foreign xml:lang="Sa-Ltn" type="term"> dharmadhāraṇī</foreign>), (2) dhāraṇī of the sense
                                 (<foreign xml:lang="Bo-Ltn" type="term">don gyi gzungs</foreign>,
                                 <foreign xml:lang="Sa-Ltn" type="term">arthadhāraṇī</foreign>), (3)
@@ -229,41 +231,41 @@
                         dhāraṇī) appear, but in a different order, while the third one is called
                             <foreign xml:lang="Bo-Ltn" type="term">tshig gi gzungs</foreign>
                         (dhāraṇī of words), instead of <foreign xml:lang="Bo-Ltn" type="term">chos
-                            kyi gzungs</foreign> (dhāraṇī of Dharma).<note place="end" index="6" xml:id="UT22084-057-004-14"> See Krang Dbyi-sun 1985, p.
+                            kyi gzungs</foreign> (dhāraṇī of Dharma).<note place="end" xml:id="UT22084-057-004-14" index="7"> See Krang Dbyi-sun 1985, p.
                         2506.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-15"/>
                     <p tid="13">The topic of dhāraṇī has also received notable attention from Janet
                         Gyatso, who provides a rich semiotic analysis focusing on the work of the
-                        Tibetan author Dodrupchen Jikten Tenpai Nyima<note place="end" index="7" xml:id="UT22084-057-004-16"> This is the phonetic rendering of the
+                        Tibetan author Dodrupchen Jikten Tenpai Nyima<note place="end" xml:id="UT22084-057-004-16" index="8"> This is the phonetic rendering of the
                             Tibetan name <foreign xml:lang="Bo-Ltn">rdo grub chen ’jigs med bstan
                                 pa’i nyi ma</foreign>.</note> (1865–c. 1926). Drawing on the
                         theories of Charles Sanders Peirce, Gyatso argues that dhāraṇī function as
                         “iconic signifiers” that represent their signified objects by virtue of
-                        being similar to them.<note place="end" index="8" xml:id="UT22084-057-004-17"> See Gyatso 1992, p. 179.</note> Noting
+                        being similar to them.<note place="end" xml:id="UT22084-057-004-17" index="9"> See Gyatso 1992, p. 179.</note> Noting
                         common examples of iconic signifiers such as pictures, diagrams, and
                         metaphors, she argues that dhāraṇīs are analogous to these since—following
                         the explanation of Dodrupchen—their lack of any conventional meaning is in
                         fact their meaning: “Again, as the mantric formula itself has no
                         linguistically expressible meaning, it resembles the thusness that it is
-                        signifying, and so it can be employed as an iconic sign.”<note place="end" index="9" xml:id="UT22084-057-004-18"> Gyatso 1992, p. 191.</note> Here
+                        signifying, and so it can be employed as an iconic sign.”<note place="end" xml:id="UT22084-057-004-18" index="10"> Gyatso 1992, p. 191.</note> Here
                         the idea is that dhāraṇī qua iconic signs can free practitioners from their
                         own deluded conventions, functioning as “reminders” of inexpressible
                         emptiness. The assumption is that deluded sentient beings forget the
                         “profound situation” of emptiness, and gradually may become accustomed to
                         indexical and symbolic signs that come to be understood as “icons of that
-                        birthless truth.”<note place="end" index="10" xml:id="UT22084-057-004-19">
+                        birthless truth.”<note place="end" xml:id="UT22084-057-004-19" index="11">
                             Gyatso 1992, p. 195.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-20"/>
-                    <p tid="14">Ronald Davidson<note place="end" index="11" xml:id="UT22084-057-004-21"> On the different meanings of dhāraṇī and
+                    <p tid="14">Ronald Davidson<note place="end" xml:id="UT22084-057-004-21" index="12"> On the different meanings of dhāraṇī and
                             the Western scholarly reception of the term, see Davidson 2009.</note>
                         argues that dhāraṇī are “codings” for different elements of Buddhist
                         tradition including doctrines, syllables, scriptures, ritual powers, the
                         elimination of negative karma, the destruction of unwholesome psychological
                         states, essential elements of the Buddhist path, and even the path in its
                         entirety. In this regard, he criticizes his predecessors for limiting their
-                        analyses of dhāraṇī to intellective and mnemonic functions.<note place="end" index="12" xml:id="UT22084-057-004-22"> Davidson 2009, p. 106.</note> He
+                        analyses of dhāraṇī to intellective and mnemonic functions.<note place="end" xml:id="UT22084-057-004-22" index="13"> Davidson 2009, p. 106.</note> He
                         also recognizes dhāraṇī as a scriptural genre, describing it as an extremely
                         diverse phenomenon: </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-23"/>
@@ -276,16 +278,16 @@
                             of benefits. It is indicative, though, that texts in the genre can have
                             their mantradhāraṇīs abstracted elsewhere with no sense that there is a
                             loss of the meaning, just what we might expect for coded
-                                information.<note place="end" index="13" xml:id="UT22084-057-004-24"> See Davidson 2009, p. 142.</note>
+                                information.<note place="end" xml:id="UT22084-057-004-24" index="14"> See Davidson 2009, p. 142.</note>
                         </p>
                     </q>
                     <milestone unit="chunk" xml:id="UT22084-057-004-25"/>
                     <p tid="16">Davidson prefaces these characterizations of dhāraṇī by cautioning
                         that the volume and proliferation of dhāraṇī scriptures and dhāraṇī-related
                         rites necessitate that any statement concerning dhāraṇīs “requires
-                        qualification almost before it is written.”<note place="end" index="14" xml:id="UT22084-057-004-26"> Davidson 2009, p. 141.</note> He notes that
+                        qualification almost before it is written.”<note place="end" xml:id="UT22084-057-004-26" index="15"> Davidson 2009, p. 141.</note> He notes that
                         this situation is exacerbated by the fact that Mahāyāna sūtras “sometimes
-                        contradict each other and, occasionally, themselves.”<note place="end" index="15" xml:id="UT22084-057-004-27"> Davidson 2009, p. 141.
+                        contradict each other and, occasionally, themselves.”<note place="end" xml:id="UT22084-057-004-27" index="16"> Davidson 2009, p. 141.
                         </note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-28"/>
@@ -304,10 +306,10 @@
                         assertive hybrid warning statements, (7) ubiquitous expressives such as
                         praise, homage, confession, and condemnation, (8) perlocutionary expressives
                         or assertives about the joy and amazement of the audience who received the
-                        dhāraṇī under discussion, and (9) the mantradhāraṇī itself.<note place="end" index="16" xml:id="UT22084-057-004-29"> See Davidson 2014, p. 11.</note>
+                        dhāraṇī under discussion, and (9) the mantradhāraṇī itself.<note place="end" xml:id="UT22084-057-004-29" index="17"> See Davidson 2014, p. 11.</note>
                         By identifying these nine types of illocutionary acts across his source
                         texts, Davidson concludes that the dhāraṇī genre is highly formalized—and to
-                        some degree formulaic—working in recognizable pragmatic patterns.<note place="end" index="17" xml:id="UT22084-057-004-30"> Davidson 2014, p.
+                        some degree formulaic—working in recognizable pragmatic patterns.<note place="end" xml:id="UT22084-057-004-30" index="18"> Davidson 2014, p.
                             52.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-31"/>
@@ -376,7 +378,7 @@
                         sūtra will have for future disciples. Here several stark warnings are given
                         to future hearers (mainly future monks) who might one day criticize or
                         reject this sūtra. In one memorable passage the Buddha advises those critics
-                        to accept this teaching just like they would accept the <title xml:lang="Sa-Ltn">Kāraṇḍavyūha Sūtra</title>.<note place="end" index="18" xml:id="UT22084-057-004-40"> The exact words are: “you should
+                        to accept this teaching just like they would accept the <title xml:lang="Sa-Ltn">Kāraṇḍavyūha Sūtra</title>.<note place="end" xml:id="UT22084-057-004-40" index="19"> The exact words are: “you should
                             view this king among sūtras as like, for instance, the <title xml:lang="Sa-Ltn">Kāraṇḍavyūha Sūtra</title>.”</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-41"/>
@@ -420,7 +422,7 @@
                             la</foreign> used in the title instead of the more usual <foreign xml:lang="Bo-Ltn" type="term">sgron me</foreign> (“torch,” “lamp”). We
                         also find the archaic verb <foreign xml:lang="Bo-Ltn" type="term">byin</foreign> (<ptr target="#UT22084-057-004-111">F.37.a</ptr>) as a
                         verb of the Buddha’s speech, which seems not to be anywhere attested though
-                        I have found it in several other sūtras.<note place="end" index="19" xml:id="UT22084-057-004-44"> Another archaic word is <foreign xml:lang="Bo-Ltn" type="term">dbung</foreign> (“center”), which
+                        I have found it in several other sūtras.<note place="end" xml:id="UT22084-057-004-44" index="20"> Another archaic word is <foreign xml:lang="Bo-Ltn" type="term">dbung</foreign> (“center”), which
                             (found on <ptr target="#UT22084-057-004-205">F.45.a</ptr>) is a word not
                             found in either Goldstein or Inagaki. Negi says it is a synonym of
                                 <foreign xml:lang="Bo-Ltn" type="term">dbus</foreign>, and it must
@@ -438,15 +440,15 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-46"/>
                     <p tid="32">Portions of a Sanskrit version are preserved in the form of long
                         quotations in Śāntideva’s <title xml:lang="en">Training Anthology</title>
-                            (<title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>).<note place="end" index="20" xml:id="UT22084-057-004-47"> Of the two quotations from this
+                            (<title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>).<note place="end" xml:id="UT22084-057-004-47" index="21"> Of the two quotations from this
                             dhāraṇī in the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>, the
                             first is in the first chapter (on the perfection of giving) and
                             describes the virtues of faith. See Goodman 2016, p. 3–5. The second
                             quotation appears in chapter 18, which treats the recollection of the
                             Three Jewels. See Goodman 2016, p. 304–322.</note> The research catalog
-                        and bibliography of the Nyingma edition of the Degé Kangyur and Tengyur<note place="end" index="21" xml:id="UT22084-057-004-48"> See <title xml:lang="en">The Nyingma Edition of the sDe-dge bKa’-’gyur and
+                        and bibliography of the Nyingma edition of the Degé Kangyur and Tengyur<note place="end" xml:id="UT22084-057-004-48" index="22"> See <title xml:lang="en">The Nyingma Edition of the sDe-dge bKa’-’gyur and
                                 bsTan-’gyur</title>, 1977–1983, p. 341.</note> refers to a
-                        “fragmentary German translation of <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>”<note place="end" index="22" xml:id="UT22084-057-004-49"> It is worth noting that the same Nyingma
+                        “fragmentary German translation of <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title>”<note place="end" xml:id="UT22084-057-004-49" index="23"> It is worth noting that the same Nyingma
                             catalog also mentions the existence of a <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> manuscript in the Peking Imperial Palace
                             (11.3245) that is reproduced in the <title xml:lang="Sa-Ltn">Śata-piṭaka</title> (STP) series. This must refer to Lokesh Chandra
                             and Raghu Vira 1966–1976, <title xml:lang="en">Sanskrit texts from the
@@ -454,15 +456,15 @@
                                 Tibetan scripts</title>. It, too, was not considered essential for
                             producing the present translation from Tibetan.</note> by M. Winternitz
                         in a single two-page passage on the power of belief from his 1930 book on
-                        Mahāyāna Buddhism according to Sanskrit and Prakrit texts.<note place="end" index="23" xml:id="UT22084-057-004-50"> See Winternitz, 1930.</note>
+                        Mahāyāna Buddhism according to Sanskrit and Prakrit texts.<note place="end" xml:id="UT22084-057-004-50" index="24"> See Winternitz, 1930.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-51"/>
                     <p tid="33">Śāntideva’s entire work was first translated into English by Cecil
                         Bendall and W. H. D. Rouse in 1981, but that translation has many errors and
-                        is therefore of limited usefulness.<note place="end" index="24" xml:id="UT22084-057-004-52"> See Goodman 2016, p. xxxii.</note> The work
-                        was very recently translated again into English by Charles Goodman.<note place="end" index="25" xml:id="UT22084-057-004-53"> Goodman 2016.</note>
+                        is therefore of limited usefulness.<note place="end" xml:id="UT22084-057-004-52" index="25"> See Goodman 2016, p. xxxii.</note> The work
+                        was very recently translated again into English by Charles Goodman.<note place="end" xml:id="UT22084-057-004-53" index="26"> Goodman 2016.</note>
                         My translation of the relevant section from the Tibetan departs in many
-                        respects from Goodman’s.<note place="end" index="26" xml:id="UT22084-057-004-54"> Though Goodman did field work in Sarnath
+                        respects from Goodman’s.<note place="end" xml:id="UT22084-057-004-54" index="27"> Though Goodman did field work in Sarnath
                             (See Goodman 2016, p. lxxi) he seems not to know the sixteen-volume
                             Tibetan-Sanskrit dictionary by J. S. Negi that was published there
                             between 1993 and 2005, which used the <title xml:lang="Sa-Ltn">Śikṣāsamuccaya</title> as one of its sources. He thus overlooked
@@ -471,7 +473,7 @@
                         propitiation leads to better playing, the passage begins by alluding to
                         Sarasvatī, a daughter of Brahmā with a sweet voice. Goodman translates: “A
                         woman with a sweet voice who plays the <foreign xml:lang="Sa-Ltn" type="term">tamboura</foreign>/ Gives the impression of being a daughter
-                        of Brahmā.”<note place="end" index="27" xml:id="UT22084-057-004-55"> See
+                        of Brahmā.”<note place="end" xml:id="UT22084-057-004-55" index="28"> See
                             Goodman 2016, p. 344.</note> This is an unconvincing translation because
                         the main point of the long passage is to make favorable comparisons with
                         even the great and powerful gods. Here the sweet-voiced goddess Sarasvatī
@@ -502,7 +504,7 @@
                     </q>
                     <milestone unit="chunk" xml:id="UT22084-057-004-58"/>
                     <p tid="36">There is a Chinese version (Taishō 299), which was translated by
-                        Fatian (Fa-t’ien) in the year 983,<note place="end" index="28" xml:id="UT22084-057-004-59"> See entry in <title xml:lang="en">The
+                        Fatian (Fa-t’ien) in the year 983,<note place="end" xml:id="UT22084-057-004-59" index="29"> See entry in <title xml:lang="en">The
                                 Korean Buddhist Canon: A Descriptive Catalogue</title>,
                             http://www.acmuller.net/descriptive_catalogue/files/k1095.html. </note>
                         but it was not considered essential for producing this translation.</p>
@@ -523,14 +525,14 @@
                             gzungs</title> (instead of <foreign xml:lang="Bo-Ltn">ta la
                             la’i</foreign>) in the Tenrim Chenmo (<foreign xml:lang="Bo-Ltn" type="term">bstan rim chen mo</foreign>). This may show that the word
                             <foreign xml:lang="Bo-Ltn" type="term">ta la la</foreign> in the title
-                        was unfamiliar to them, if it was not simply a scribal error.<note place="end" index="29" xml:id="UT22084-057-004-62"> See Drolungpa Lodrö
+                        was unfamiliar to them, if it was not simply a scribal error.<note place="end" xml:id="UT22084-057-004-62" index="30"> See Drolungpa Lodrö
                             Jungné, <title xml:lang="Bo-Ltn">bstan rim chen mo</title>, vol. 2, fol.
                             61a: <foreign xml:lang="Bo-Ltn" type="quote">dkon mchog ta la las kyang
                                 / dad pa sngon ’gro ma ltar skyed pa ste // yon tan thams cad bsrung
                                 zhing ’phel bar byed // dad pa nor dang gter dang rkang pa’i mchog /
                                 lag pa bzhin du dag sdud rtsa ba yin / zhes bya ba la sogs pa mang
                                 du gsungs so//</foreign>.</note> One similarly finds it in a
-                        standard history of the Jonangpa.<note place="end" index="30" xml:id="UT22084-057-004-63"> See Dzamthang Lama Ngawang Lodrö Drakpa,
+                        standard history of the Jonangpa.<note place="end" xml:id="UT22084-057-004-63" index="31"> See Dzamthang Lama Ngawang Lodrö Drakpa,
                                 <title xml:lang="Bo-Ltn">dpal ldan jo nang pa’i chos ’byung</title>
                                 (=<title xml:lang="Bo-Ltn">jo nang chos ’byung</title>) 1992, pp.
                             557–558: <foreign xml:lang="Bo-Ltn" type="quote">dkon mchog ta la la’i
@@ -587,7 +589,7 @@
                         Intelligence of Conduct, Pratibhākūṭa, Essence of Speed, and Maitreya.</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-70"/>
                     <p tid="51">Those and other bodhisattva great beings all dwelled in
-                        inconceivable liberation, had reached emancipation<note place="end" index="31" xml:id="UT22084-057-004-71"> Tib. <foreign xml:lang="Bo-Ltn" type="term">nges par byung ba</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">niṣkrānta</foreign>. The Comparative
+                        inconceivable liberation, had reached emancipation<note place="end" xml:id="UT22084-057-004-71" index="32"> Tib. <foreign xml:lang="Bo-Ltn" type="term">nges par byung ba</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">niṣkrānta</foreign>. The Comparative
                             Edition notes that the Yongle, Lithang, Kangxi, and Choné read <foreign xml:lang="Bo-Ltn" type="term">nges par ’byung ba</foreign> (p.
                             207).</note> through the meditative absorption <distinct>heroic
                             progress</distinct>, had unimpeded melodic voices, and were skilled in
@@ -598,12 +600,12 @@
                         absorptions and meditative attainments. They all fulfilled every hope,
                         experienced the perfection of discriminating wisdom, were inclined toward
                         meaningful goals in their bodily, verbal, and mental deeds, were intent on
-                        omniscience, were blessed to have limitless<note place="end" index="32" xml:id="UT22084-057-004-72"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tshad med par</foreign>. The Comparative Edition notes that the
+                        omniscience, were blessed to have limitless<note place="end" xml:id="UT22084-057-004-72" index="33"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tshad med par</foreign>. The Comparative Edition notes that the
                             Narthang and Lhasa editions read <foreign xml:lang="Bo-Ltn" type="quote">tshad med pas</foreign>, which seems preferable (p. 207). The Stok
                             Palace version also reads <foreign xml:lang="Bo-Ltn" type="quote">tshad
                                 med pas</foreign> (fol. 149b6).</note> meditative absorptions and
                         conduct, had attained fearlessness, had emptiness as their sphere of
-                            experience,<note place="end" index="33" xml:id="UT22084-057-004-73">
+                            experience,<note place="end" xml:id="UT22084-057-004-73" index="34">
                             Tib. <foreign xml:lang="Bo-Ltn" type="quote">stong pa nyid spyod yul
                                 ba</foreign>. The Comparative Edition observes that the Narthang and
                             Lhasa editions read <foreign xml:lang="Bo-Ltn" type="quote">stong pa
@@ -660,7 +662,7 @@
                             <title xml:lang="en">The Dhāraṇī of the Jewel Torch</title>.”</p>
                     <p tid="65">The Blessed One answered: “Son of a good family, ask the bodhisattva
                         Samanta­bhadra. He possesses eloquent confidence that is unhindered with
-                        respect to all dharmas.<note place="end" index="34" xml:id="UT22084-057-004-88"> Here “all dharmas” (Tib. <foreign xml:lang="Bo-Ltn" type="term">chos thams cad</foreign>; Skt.
+                        respect to all dharmas.<note place="end" xml:id="UT22084-057-004-88" index="35"> Here “all dharmas” (Tib. <foreign xml:lang="Bo-Ltn" type="term">chos thams cad</foreign>; Skt.
                                 <foreign xml:lang="Sa-Ltn" type="term">sarvadharma</foreign>)
                             denotes both teachings and matters taught.</note> He will teach it to
                         you.”</p>
@@ -704,7 +706,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-100"/>
                     <p tid="77">The Blessed One said: “Son of a good family, you, too, are a king
-                        whose might extends over all dharmas.<note place="end" index="35" xml:id="UT22084-057-004-101"> I.e., the teachings and phenomena.</note>
+                        whose might extends over all dharmas.<note place="end" xml:id="UT22084-057-004-101" index="36"> I.e., the teachings and phenomena.</note>
                         Don’t ask me. You also possess the inconceivable meditative absorption of
                         abiding in emptiness.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-102"/>
@@ -720,12 +722,12 @@
                         behind calling the Buddha ‘Buddha’?”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-105"/>
                     <p tid="81">The bodhisattva Samanta­bhadra said: “O son of the victors, the
-                        basic meaning of <distinct>buddha</distinct> is groundlessness.<note place="end" index="36" xml:id="UT22084-057-004-106"> Tib. <foreign xml:lang="Bo-Ltn" type="term">gzhi med pa’i don</foreign>. The Stok
+                        basic meaning of <distinct>buddha</distinct> is groundlessness.<note place="end" xml:id="UT22084-057-004-106" index="37"> Tib. <foreign xml:lang="Bo-Ltn" type="term">gzhi med pa’i don</foreign>. The Stok
                             Palace version reads <foreign xml:lang="Bo-Ltn" type="term">med pa’i
                                 don</foreign> “the meaning of nonexistence” (fol. 152a3).</note> The
                         basic meaning of <distinct>buddha</distinct> is the absence of entities. The
                         basic meaning of <distinct>buddha</distinct> is inconceivability. The basic
-                        meaning of <distinct>buddha</distinct> is to be equal to the unequaled.<note place="end" index="37" xml:id="UT22084-057-004-107"> Note that Tib.
+                        meaning of <distinct>buddha</distinct> is to be equal to the unequaled.<note place="end" xml:id="UT22084-057-004-107" index="38"> Note that Tib.
                                 <foreign xml:lang="Bo-Ltn" type="term">mi mnyam pa dang mnyam
                                 pa</foreign>; Skt. <foreign xml:lang="Bo-Ltn" type="term">asamasama</foreign> means, according to Inagaki, “equal to the
                             unequaled.” According to Edgerton, it means “unequalled,” lit. “having
@@ -740,7 +742,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-108"/>
                     <p tid="82">Mañjuśrī said: “O son of the victors, but if all phenomena are
                         without conceptual elaborations, how can you teach ‘qualities of a
-                            buddha’?”<note place="end" index="38" xml:id="UT22084-057-004-109"> Note
+                            buddha’?”<note place="end" xml:id="UT22084-057-004-109" index="39"> Note
                             that the Stok Palace version has <foreign xml:lang="Bo-Ltn" type="term">zhes</foreign> instead of <foreign xml:lang="Bo-Ltn" type="term">shes</foreign> (fol. 152a7), which we follow here.</note>
                     </p>
                     <p tid="83">The bodhisattva Samanta­bhadra said: “O son of the victors, such a
@@ -765,7 +767,7 @@
                         the dharmadhātu, which is free of attachment! Why not? Mañjuśrī, it is
                         because the Tathāgata taught that all phenomena are non-entities. Why are
                         they non-entities? It is because the five aggregates are not
-                            apprehended.”<note place="end" index="39" xml:id="UT22084-057-004-117">
+                            apprehended.”<note place="end" xml:id="UT22084-057-004-117" index="40">
                             Tib. <foreign xml:lang="Bo-Ltn" type="term">dmigs pa med pa</foreign>.
                             The Comparative Edition notes that the Narthang and Lhasa editions read
                                 <foreign xml:lang="Bo-Ltn" type="quote">mi dmigs pa</foreign> (p.
@@ -781,7 +783,7 @@
                         neither in terms of having elaborations nor as being devoid of elaborations;
                         it is indivisible into two.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-120"/>
-                    <p tid="92">Then the Blessed One said<note place="end" index="40" xml:id="UT22084-057-004-121"> Note that here Tib. <foreign xml:lang="Bo-Ltn" type="term">byin</foreign>, an archaic verb, is
+                    <p tid="92">Then the Blessed One said<note place="end" xml:id="UT22084-057-004-121" index="41"> Note that here Tib. <foreign xml:lang="Bo-Ltn" type="term">byin</foreign>, an archaic verb, is
                             used with the meaning to say or speak.</note> to the bodhisattva great
                         being Samanta­bhadra: “Son of a good family, this inconceivable teaching is
                         excellent, excellent! Yet, through the teaching of this discourse, the world
@@ -799,7 +801,7 @@
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-126"/>
                     <p tid="97">Then the bodhisattva Samanta­bhadra said to the Blessed One: “This
-                        authentic access to the Dharma<note place="end" index="41" xml:id="UT22084-057-004-127"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rnam par dag pa’i sgo</foreign>. I have here added “the
+                        authentic access to the Dharma<note place="end" xml:id="UT22084-057-004-127" index="42"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rnam par dag pa’i sgo</foreign>. I have here added “the
                             Dharma” for the sake of clarity.</note> is difficult to appreciate!”</p>
                     <p tid="98">The Blessed One said: “Son of a good family, so it is, just as you
                         say.”</p>
@@ -808,14 +810,14 @@
                         Dharma that was taught by the bodhisattva Samanta­bhadra was well
                         expressed.”</p>
                     <p tid="100">The Blessed One said: “Son of a good family, so it is, just as you
-                        say. Moreover, son of a good family, this is the natural result<note place="end" index="42" xml:id="UT22084-057-004-131"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rgyu mthun pa</foreign>. The
+                        say. Moreover, son of a good family, this is the natural result<note place="end" xml:id="UT22084-057-004-131" index="43"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rgyu mthun pa</foreign>. The
                             Comparative Edition follows the Degé and others by including <foreign xml:lang="Bo-Ltn" type="term">rgyu ’thun pa</foreign>, though the
                             more common spelling <foreign xml:lang="Bo-Ltn" type="term">rgyu mthun
                                 pa</foreign> is reflected in the Kangxi, Narthang, Lhasa, and Stok
                             Palace versions. See Comparative Edition, p. 208; Stok Palace, fol.
                             153b1.</note> of all phenomena. It is a great rain of the Dharma.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-132"/>
-                    <p tid="101">Then a brahmin who was like a great śāla tree<note place="end" index="43" xml:id="UT22084-057-004-133"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sā la</foreign>. The Comparative Edition notes that the
+                    <p tid="101">Then a brahmin who was like a great śāla tree<note place="end" xml:id="UT22084-057-004-133" index="44"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sā la</foreign>. The Comparative Edition notes that the
                             Yongle, Lithang, Kangxi, and Choné read <foreign xml:lang="Bo-Ltn" type="term">sa la</foreign> (p. 208). The Stok Palace version reads
                                 <foreign xml:lang="Bo-Ltn" type="term">sā la</foreign> (fol.
                             153b1).</note> and who dwelled in equality said: “Blessed One, awakening
@@ -876,7 +878,7 @@
                     <p tid="119">Mañjuśrī said: “Elder Śāradvatī­putra, if you are neither an
                         ordinary person nor a trainee nor best among those possessing discriminating
                         wisdom, that can only mean you are someone who adheres to a heretical
-                            view.”<note place="end" index="44" xml:id="UT22084-057-004-152"> Here we
+                            view.”<note place="end" xml:id="UT22084-057-004-152" index="45"> Here we
                             have the very rare term: Tib. <foreign xml:lang="Bo-Ltn" type="term">dmigs pa can</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">aupalambhika</foreign>, which refers to someone with a heretical
                             view according to Edgerton.</note>
                         <ref cRef="F.38.b" key="toh145" type="folio"/>
@@ -944,7 +946,7 @@
                         times. <ref cRef="F.9.b" key="toh847" type="folio"/>
                         <ref cRef="F.39.b" key="toh145" type="folio"/> Through the strength and
                         blessing of the Buddha, expound the Dharma with inspired speech, beginning
-                        with the ten categories of the bodhisattva!”<note place="end" index="45" xml:id="UT22084-057-004-161"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">byang chub sems dpa’ rnam par gzhag pa bcu</foreign>.
+                        with the ten categories of the bodhisattva!”<note place="end" xml:id="UT22084-057-004-161" index="46"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">byang chub sems dpa’ rnam par gzhag pa bcu</foreign>.
                             The term <foreign xml:lang="Bo-Ltn" type="term">rnam par gzhag
                                 pa</foreign> probably renders Skt. <foreign xml:lang="Sa-Ltn" type="term">vyavasthāna</foreign>, which can also mean
                             “differentiation” (see Edgerton) i.e., “classification,” and by
@@ -961,7 +963,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-163"/>
                     <p tid="129">Then those blessed buddhas extended their right hands and
                             <term>touched</term>
-                        <note place="end" index="46" xml:id="UT22084-057-004-164"> Tib. <foreign xml:lang="Bo-Ltn" type="term">nyug pa</foreign> is an old term meaning “to touch,”
+                        <note place="end" xml:id="UT22084-057-004-164" index="47"> Tib. <foreign xml:lang="Bo-Ltn" type="term">nyug pa</foreign> is an old term meaning “to touch,”
                             according to Negi.</note> the head of the bodhisattva Dharma­mati. As
                         soon as those blessed buddhas had <term>touched</term> the bodhisattva
                         Dharma­mati, he rose from that absorption and said to the bodhisattvas: “O
@@ -974,7 +976,7 @@
                     <p tid="130">Then those bodhisattvas said to the bodhisattva Dharma­mati: “O son
                         of the victors, who are those bodhisattva great beings who were born into
                         the family of the past, future, and present <ref cRef="F.10.a" key="toh847" type="folio"/> blessed buddhas? Tell me what thought they came from. O
-                            son<note place="end" index="47" xml:id="UT22084-057-004-166"> Note that
+                            son<note place="end" xml:id="UT22084-057-004-166" index="48"> Note that
                             we should here read this as Tib. <foreign xml:lang="Bo-Ltn" type="term">sras</foreign> (singular) rather than <foreign xml:lang="Bo-Ltn" type="term">sras dag</foreign> (plural).</note> of the victors,
                         explain what those ten categories of bodhisattvas are!” <ref cRef="F.40.a" key="toh145" type="folio"/>
                     </p>
@@ -986,7 +988,7 @@
                         awakening, (2) a beginner, (3) one who engages in yogic practice, (4) one
                         who has taken rebirth, (5) one who has perfected application, (6) one who
                         has perfected intention, (7) one who is irreversible, (8) one who is still a
-                            youth,<note place="end" index="48" xml:id="UT22084-057-004-168"> Tib.
+                            youth,<note place="end" xml:id="UT22084-057-004-168" index="49"> Tib.
                                 <foreign xml:lang="Bo-Ltn" type="term">gzhon nur gyur pa</foreign>.
                             Skt. <foreign xml:lang="Sa-Ltn" type="term">Kumāra­bhūta</foreign>
                             according to Edgerton, “while still a youth/remaining a youth.”</note>
@@ -998,12 +1000,12 @@
                         who has first generated the thought of awakening? O sons of the victors,
                         this bodhisattva who has first generated the thought of awakening will, upon
                         seeing the blessed buddhas, see an excellent or beautiful form with a
-                        completely excellent and brilliant complexion,<note place="end" index="49" xml:id="UT22084-057-004-170"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po rgyas pa'am/ rgya che ba'am/ gzi brjid
+                        completely excellent and brilliant complexion,<note place="end" xml:id="UT22084-057-004-170" index="50"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po rgyas pa'am/ rgya che ba'am/ gzi brjid
                                 che ba'am</foreign>. I am reading <foreign xml:lang="Bo-Ltn" type="quote">rgyas pa</foreign>, <foreign xml:lang="Bo-Ltn" type="quote">rgya che ba</foreign>, and <foreign xml:lang="Bo-Ltn" type="quote">gzi brjid che ba</foreign> as modifiers of <foreign xml:lang="Bo-Ltn" type="quote">kha dog bzang po</foreign>.</note> or
-                        miracles of magical displays, miracles of mind reading,<note place="end" index="50" xml:id="UT22084-057-004-171"> See Tib. <foreign xml:lang="Bo-Ltn" type="term">kun tu brjod pa’i cho
+                        miracles of magical displays, miracles of mind reading,<note place="end" xml:id="UT22084-057-004-171" index="51"> See Tib. <foreign xml:lang="Bo-Ltn" type="term">kun tu brjod pa’i cho
                             ’phrul</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">ādeśanā-prātihārya</foreign>," as explained in Edgerton.</note>
                         <ref cRef="F.10.b" key="toh847" type="folio"/> or miracles of insightful
-                            admonition.<note place="end" index="51" xml:id="UT22084-057-004-172">
+                            admonition.<note place="end" xml:id="UT22084-057-004-172" index="52">
                             I.e., miracles of insightful admonition effecting destruction of one’s
                             vices. See Tib. <foreign xml:lang="Bo-Ltn" type="term">rjes si bstan
                                 pa’i cho ’phrul</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">anuśāseniprātihārya</foreign>, as explained in
@@ -1013,10 +1015,10 @@
                         attain the highest insuperable awakening. And with that very first
                         generation of the intention to attain awakening, that being will uphold ten
                         things that are difficult to develop. What are those ten? <ref cRef="F.40.b" key="toh145" type="folio"/> They are: (1) the knowledge of what is
-                        possible and impossible,<note place="end" index="52" xml:id="UT22084-057-004-173"> On “possible” and “impossible” for Tib.
+                        possible and impossible,<note place="end" xml:id="UT22084-057-004-173" index="53"> On “possible” and “impossible” for Tib.
                                 <foreign xml:lang="Bo-Ltn" type="term">gnas dang mi gnas</foreign>;
                             Skt. <foreign xml:lang="Sa-Ltn" type="term">sthānāsthāna</foreign>, see
-                            Edgerton.</note> (2) the knowledge of deeds<note place="end" index="53" xml:id="UT22084-057-004-174"> The Comparative Edition notes that the
+                            Edgerton.</note> (2) the knowledge of deeds<note place="end" xml:id="UT22084-057-004-174" index="54"> The Comparative Edition notes that the
                             Yongle, Lithang, Kangxi, and Choné versions omit <foreign xml:lang="Bo-Ltn" type="quote">las dang</foreign> (pp.
                             208–209).</note> that occur in the past, present, and future and
                         qualities that were obtained, (3) the knowledge of everywhere that paths
@@ -1024,7 +1026,7 @@
                         knowledge of numerous spiritual inclinations and liberations, (6) the
                         knowledge of the superior and inferior faculties, (7) the knowledge of the
                         meditative concentrations, emancipations, absorptions, and meditative
-                        attainments in their defiled and purified forms and their arising,<note place="end" index="54" xml:id="UT22084-057-004-175"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">ldang ba</foreign>. The Comparative
+                        attainments in their defiled and purified forms and their arising,<note place="end" xml:id="UT22084-057-004-175" index="55"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">ldang ba</foreign>. The Comparative
                             Edition notes that the Narthang and Lhasa versions here read <foreign xml:lang="Bo-Ltn" type="quote">ldan pa</foreign> (p. 209). The Stok
                             Palace version also reads <foreign xml:lang="Bo-Ltn" type="quote">ldan
                                 pa</foreign> (fol. 157b4).</note> (8) the knowledge that remembers
@@ -1048,7 +1050,7 @@
                         has first generated the thought of awakening.</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-177"/>
                     <p tid="134">(2) “O sons of the victors, what is the category of the beginning
-                            bodhisattva?<note place="end" index="55" xml:id="UT22084-057-004-178">
+                            bodhisattva?<note place="end" xml:id="UT22084-057-004-178" index="56">
                             Tib. <foreign xml:lang="Bo-Ltn" type="quote">las dang po pa’i byang chub
                                 sems dpa’ rnam par gzhag pa</foreign>.</note> O sons of the victors,
                         this beginning bodhisattva has from the start generated ten aspects of mind.
@@ -1066,7 +1068,7 @@
                         retired into solitude, he should devote himself to pleasing his spiritual
                         teacher. Having pleased his teacher, he should devote himself to being of
                         cheerful speech. Having become of cheerful speech, he should devote himself
-                        to awareness of temporality.<note place="end" index="56" xml:id="UT22084-057-004-180"> Lit. “knowing time” (Tib. <foreign xml:lang="Bo-Ltn" type="term">dus shes pa</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">kālajña</foreign>). Edgerton refers
+                        to awareness of temporality.<note place="end" xml:id="UT22084-057-004-180" index="57"> Lit. “knowing time” (Tib. <foreign xml:lang="Bo-Ltn" type="term">dus shes pa</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">kālajña</foreign>). Edgerton refers
                             only to the entry for <foreign xml:lang="Sa-Ltn" type="term">sarvakālajña</foreign>, which means knowing past, present, and
                             future, but that is too early in the training here.</note> Having become
                         aware of temporality, he should devote himself to fearlessness. Having
@@ -1082,7 +1084,7 @@
                         bodhisattva.</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-181"/>
                     <p tid="136">(3) “O sons of the victors, what is the category of the bodhisattva
-                        who engages in yogic practice? O sons of the victors this<note place="end" index="57" xml:id="UT22084-057-004-182"> The Comparative Edition notes
+                        who engages in yogic practice? O sons of the victors this<note place="end" xml:id="UT22084-057-004-182" index="58"> The Comparative Edition notes
                             that the Narthang and Lhasa versions omit <foreign xml:lang="Bo-Ltn" type="quote">’di la</foreign> (p. 209). The Stok Palace version also
                             omits <foreign xml:lang="Bo-Ltn" type="quote">’di la</foreign> (fol.
                             158b7).</note> the bodhisattva who engages in yogic practice will
@@ -1101,7 +1103,7 @@
                         apply himself to investigating the world realm. He should apply himself to
                         investigating the element of earth. He should apply himself to investigating
                         the elements of water, fire, air, and space, and the form and formless
-                            realms.<note place="end" index="58" xml:id="UT22084-057-004-184"> Note
+                            realms.<note place="end" xml:id="UT22084-057-004-184" index="59"> Note
                             that the desire realm is found below in the verse restatement.</note>
                         Why is that? It is because he for the most part has direct insight that
                         operates regarding all phenomena, and those subjects of learning acquired
@@ -1112,7 +1114,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-185"/>
                     <p tid="138">(4) “O sons of the victors, what is the category of the bodhisattva
                         who has taken rebirth? O sons of the victors, a bodhisattva who has taken
-                        rebirth is born as exalted in sacred scripture<note place="end" index="59" xml:id="UT22084-057-004-186"> Note that my rendering is tentative since
+                        rebirth is born as exalted in sacred scripture<note place="end" xml:id="UT22084-057-004-186" index="60"> Note that my rendering is tentative since
                             the expression <foreign xml:lang="Bo-Ltn" type="quote">gsung rab ’phags
                                 par skyes pa</foreign> is unknown.</note> thanks to ten purifiers.
                         What are those ten? They are: (1) Not turning back from ultimate reality,
@@ -1140,7 +1142,7 @@
                         establishes the dharmas of all buddhas. </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-189"/>
                     <p tid="141">“He should apply himself to investigating the equality of the
-                        perfection of the qualities of past buddhas,<note place="end" index="60" xml:id="UT22084-057-004-190"> Here and in the next few phrases we should
+                        perfection of the qualities of past buddhas,<note place="end" xml:id="UT22084-057-004-190" index="61"> Here and in the next few phrases we should
                             either add <foreign xml:lang="Bo-Ltn" type="term">du</foreign> or
                             understand <foreign xml:lang="Bo-Ltn" type="quote">mnyam pa nyid
                                 du</foreign>, “<emph>as</emph> equality.”</note>
@@ -1292,7 +1294,7 @@
                             <term>experiences</term>, (7) expertise in understanding the sphere of
                         the world, (8) expertise in understanding the past and the future, (9)
                         expertise in understanding the present, and (10) expertise in understanding
-                        the investigation of the relative truth.<note place="end" index="61" xml:id="UT22084-057-004-201"> The Narthang, Lhasa, and Stok Palace
+                        the investigation of the relative truth.<note place="end" xml:id="UT22084-057-004-201" index="62"> The Narthang, Lhasa, and Stok Palace
                             versions all have “expertise in understanding the three times” as item
                             8, “expertise in understanding the relative truth” as item 9, and
                             “expertise in understanding ultimate truth” for item 10. This is
@@ -1306,10 +1308,10 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-202"/>
                     <p tid="152">“O sons of the victors, this is a bodhisattva who is a regent. O
                         sons of the victors, this bodhisattva who is a regent should be taught ten
-                            things.<note place="end" index="62" xml:id="UT22084-057-004-203"> In all
+                            things.<note place="end" xml:id="UT22084-057-004-203" index="63"> In all
                             editions consulted, only nine things that a bodhisattva who is a regent
                             is to be taught are listed.</note> What are those ten? They consist in
-                        being correctly taught: (1) the expertise concerning the royal palace,<note place="end" index="63" xml:id="UT22084-057-004-204"> In the term
+                        being correctly taught: (1) the expertise concerning the royal palace,<note place="end" xml:id="UT22084-057-004-204" index="64"> In the term
                                 <foreign xml:lang="Bo-Ltn" type="term">rgyal po’i pho brang
                                 ’khor</foreign>, the entire expression (including <foreign xml:lang="Bo-Ltn" type="term">’khor</foreign>) means “royal
                             palace.”</note> (2) the modes of conduct in the royal palace, (3) the
@@ -1351,7 +1353,7 @@
                         consecration will be taught ten things by the blessed buddhas. What are
                         these ten? They are: (1) knowing the three times, (2) knowing the
                         Buddhadharma, (3) knowing that the dharmadhātu is indivisible, (4) knowing
-                        that the dharmadhātu is without limit and without center,<note place="end" index="64" xml:id="UT22084-057-004-208"> Note that Negi gives <foreign xml:lang="Bo-Ltn" type="term">dbung</foreign> (“center”) as a normal
+                        that the dharmadhātu is without limit and without center,<note place="end" xml:id="UT22084-057-004-208" index="65"> Note that Negi gives <foreign xml:lang="Bo-Ltn" type="term">dbung</foreign> (“center”) as a normal
                             synonym of <foreign xml:lang="Bo-Ltn" type="term">dbus</foreign>, but it
                             and the verb <foreign xml:lang="Bo-Ltn" type="term">dbung ba</foreign>
                             are both archaic spellings. Also, the Comparative Edition indicates that
@@ -1377,7 +1379,7 @@
                         violently. They trembled, trembled strongly, and trembled violently. They
                         were disturbed, strongly disturbed, and violently disturbed. They shuddered,
                         shuddered strongly, and shuddered violently. And they were agitated,
-                        strongly agitated, and violently agitated.<note place="end" index="65" xml:id="UT22084-057-004-210"> This passage consists of repeated verbs
+                        strongly agitated, and violently agitated.<note place="end" xml:id="UT22084-057-004-210" index="66"> This passage consists of repeated verbs
                             with changes in prefixes, which I am choosing to reflect with adverbial
                             modifiers in the English.</note><!--module ends-->
                     </p>
@@ -1425,7 +1427,7 @@
                         <l>Who possesses beauty and power of body,</l>
                         <l>And who is ornamented by the mark of the difficult-to-attain
                             practices,</l>
-                        <l>I set my mind firmly on the goal of awakening.<note place="end" index="66" xml:id="UT22084-057-004-215"> The phrase <foreign xml:lang="Bo-Ltn" type="quote">byang chub don du brtan pa sems
+                        <l>I set my mind firmly on the goal of awakening.<note place="end" xml:id="UT22084-057-004-215" index="67"> The phrase <foreign xml:lang="Bo-Ltn" type="quote">byang chub don du brtan pa sems
                                     ’jog byed</foreign> is repeated in many of the verses, though
                                 the Stok Palace version largely reads <foreign xml:lang="Bo-Ltn" type="quote">byang chub don du bstan pa sems ’jog byed</foreign>
                                 (“I set my mind on the teachings for the sake of awakening”). See
@@ -1584,7 +1586,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-236"/>
                     <lg tid="182">
                         <l>“In order to understand the exhaustion of eons</l>
-                        <l>And the destruction of eons<note place="end" index="67" xml:id="UT22084-057-004-237"> A detailed account of the cosmological
+                        <l>And the destruction of eons<note place="end" xml:id="UT22084-057-004-237" index="68"> A detailed account of the cosmological
                                 eons (Skt. <foreign xml:lang="Sa-Ltn" type="term">kalpa</foreign>)
                                 is found in the <title xml:lang="Sa-Ltn">Abhidharmakośa</title> ch.
                                 III, stanzas 89–102.</note> in this world in the past </l>
@@ -1811,7 +1813,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-267"/>
                     <lg tid="212">
-                        <l>“A bodhisattva of the third kind<note place="end" index="68" xml:id="UT22084-057-004-268"> I.e., a bodhisattva who engages in
+                        <l>“A bodhisattva of the third kind<note place="end" xml:id="UT22084-057-004-268" index="69"> I.e., a bodhisattva who engages in
                                 yogic practice.</note>
                         </l>
                         <l>Applies himself to the teaching of the King of Dharma.</l>
@@ -1824,7 +1826,7 @@
                         <l>“All phenomena are without self and</l>
                         <l>Without formation. </l>
                         <l>All phenomena are without conceptual thought. </l>
-                        <l>The bodhisattva should understand things in this way.<note place="end" index="69" xml:id="UT22084-057-004-270"> Here we should read
+                        <l>The bodhisattva should understand things in this way.<note place="end" xml:id="UT22084-057-004-270" index="70"> Here we should read
                                     <foreign xml:lang="Bo-Ltn" type="term">rtog par</foreign> as
                                     <foreign xml:lang="Bo-Ltn" type="term">rtogs par</foreign>, even
                                 though all of the versions consulted for this translation read
@@ -1856,7 +1858,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-274"/>
                     <lg tid="217">
-                        <l>“Any bodhisattva who has taken rebirth<note place="end" index="70" xml:id="UT22084-057-004-275"> I.e., the fourth class of bodhisattva
+                        <l>“Any bodhisattva who has taken rebirth<note place="end" xml:id="UT22084-057-004-275" index="71"> I.e., the fourth class of bodhisattva
                                 as per the list given earlier in the text.</note>
                         </l>
                         <l>Has been born where teachings prevail and takes ordination.</l>
@@ -1926,12 +1928,12 @@
                     <lg tid="226">
                         <l>“He understands that the entire world of sentient beings is boundless </l>
                         <l>And, similarly, that it is inestimable, innumerable,</l>
-                        <l>Incomparable, inconceivable,<note place="end" index="71" xml:id="UT22084-057-004-285"> “Incomparable” (Tib. <foreign xml:lang="Bo-Ltn" type="term">mtshungs med</foreign>) and
+                        <l>Incomparable, inconceivable,<note place="end" xml:id="UT22084-057-004-285" index="72"> “Incomparable” (Tib. <foreign xml:lang="Bo-Ltn" type="term">mtshungs med</foreign>) and
                                 “inconceivable” (Tib. <foreign xml:lang="Bo-Ltn" type="term">bsam
                                     yas</foreign>) appear <term type="ignore">in reverse</term>
                                 order here vis-à-vis the corresponding prose list found earlier in
                                 the text.</note> immeasurable, </l>
-                        <l>Empty, immovable, and of a nonexistent nature.<note place="end" index="72" xml:id="UT22084-057-004-286"> Note that for the last term
+                        <l>Empty, immovable, and of a nonexistent nature.<note place="end" xml:id="UT22084-057-004-286" index="73"> Note that for the last term
                                 “nonexistent nature” (Tib. <foreign xml:lang="Bo-Ltn" type="term">med pa’i rang bzhin</foreign>) the original list above has two
                                 terms: <foreign xml:lang="Bo-Ltn" type="term">med pa nyid</foreign>
                                 and <foreign xml:lang="Bo-Ltn" type="term">rang bzhin med
@@ -1959,7 +1961,7 @@
                         <l>And the bodhisattva’s conduct—whether he is praised or not,</l>
                         <l>And whether he is told that sentient beings are vast or of small
                             extent,</l>
-                        <l>The bodhisattva should not let these escape from his mind.<note place="end" index="73" xml:id="UT22084-057-004-290"> Here the
+                        <l>The bodhisattva should not let these escape from his mind.<note place="end" xml:id="UT22084-057-004-290" index="74"> Here the
                                 subject is the sixth class of bodhisattvas, namely, bodhisattvas who
                                 have perfected intention.</note>
                         </l>
@@ -1969,7 +1971,7 @@
                         <l>“And whether sentient beings are said to be defiled or be pure,</l>
                         <l>Or whether they are said to be difficult or easy to train,</l>
                         <l>Whether the dharmadhātu is said to be little or vast,</l>
-                        <l>Whether it is said to undergo destruction or origination,<note place="end" index="74" xml:id="UT22084-057-004-292"> Tib. <foreign xml:lang="Bo-Ltn" type="term">’chags pa</foreign>. The
+                        <l>Whether it is said to undergo destruction or origination,<note place="end" xml:id="UT22084-057-004-292" index="75"> Tib. <foreign xml:lang="Bo-Ltn" type="term">’chags pa</foreign>. The
                                 Comparative Edition notes that the Yongle, Kangxi, and Lhasa
                                 versions here read <foreign xml:lang="Bo-Ltn" type="term">chags
                                     pa</foreign> (p. 211). The Stok Palace version reads <foreign xml:lang="Bo-Ltn" type="term">’chags pa</foreign> (fol. 170b6).
@@ -1990,7 +1992,7 @@
                         <l>“He should thus learn this peaceful, highest of teachings:</l>
                         <l>All phenomena are without phenomenal marks, without defining marks, </l>
                         <l>Non-entities, deceptive, isolated, </l>
-                        <l>Illusory, and like visual distortions.<note place="end" index="75" xml:id="UT22084-057-004-295"> In comparison with the corresponding
+                        <l>Illusory, and like visual distortions.<note place="end" xml:id="UT22084-057-004-295" index="76"> In comparison with the corresponding
                                 prose list given earlier in the text, the attributes missing here
                                 are “nonexistent” (<foreign xml:lang="Bo-Ltn" type="term">med pa
                                     nyid</foreign>), “essenceless” (<foreign xml:lang="Bo-Ltn" type="term">ngo bo nyid med pa</foreign>), and “without
@@ -2023,7 +2025,7 @@
                         <l>“The irreversible bodhisattva develops a conviction in</l>
                         <l>The many aspects of sameness and difference, <ref cRef="F.50.a" key="toh145" type="folio"/>
                         </l>
-                        <l>The existence and non-existence of meanings and<note place="end" index="76" xml:id="UT22084-057-004-299"> The Degé and the
+                        <l>The existence and non-existence of meanings and<note place="end" xml:id="UT22084-057-004-299" index="77"> The Degé and the
                                 Comparative Edition based on it read <foreign xml:lang="Bo-Ltn" type="term">don dam</foreign> here, which clearly does not refer to the
                                     ultimate (Skt. <foreign xml:lang="Sa-Ltn" type="term">paramārtha</foreign>).
                             That the <foreign xml:lang="Bo-Ltn" type="term">dam</foreign> signifies “or” is suggested by the
@@ -2050,7 +2052,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-302"/>
                     <lg tid="238">
-                        <l>“He understands<note place="end" index="77" xml:id="UT22084-057-004-303">
+                        <l>“He understands<note place="end" xml:id="UT22084-057-004-303" index="78">
                                 Here we should follow the Stok Palace version’s <foreign xml:lang="Bo-Ltn" type="term">rtogs</foreign> (fol. 171a6)
                                 rather than <foreign xml:lang="Bo-Ltn" type="term">rtog</foreign>,
                                 which is witnessed in the Degé and other versions consulted in the
@@ -2071,7 +2073,7 @@
                         <l>“He should articulate comprehensive knowledge, how to move among
                             buddhafields </l>
                         <l>And likewise their blessings and analyses,</l>
-                        <l>How one instantaneously goes to the incalculable world systems,<note place="end" index="78" xml:id="UT22084-057-004-306"> Tib. <foreign xml:lang="Bo-Ltn" type="term">grangs med; </foreign>Skt.
+                        <l>How one instantaneously goes to the incalculable world systems,<note place="end" xml:id="UT22084-057-004-306" index="79"> Tib. <foreign xml:lang="Bo-Ltn" type="term">grangs med; </foreign>Skt.
                                     <foreign xml:lang="Sa-Ltn" type="term">asaṃkhyeya</foreign>
                                 (“incalculable”) refers to the system of incalculable world systems
                                 presented in Avataṃsaka cosmology. The term “world systems” is here
@@ -2103,7 +2105,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-310"/>
                     <lg tid="244">
-                        <l>“He has definitive expertise<note place="end" index="79" xml:id="UT22084-057-004-311"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tshang ’byin</foreign>, an archaic form of <foreign xml:lang="Bo-Ltn" type="term">tshar phyin</foreign>/<foreign xml:lang="Bo-Ltn" type="term">mthar phyin</foreign> (“to go to
+                        <l>“He has definitive expertise<note place="end" xml:id="UT22084-057-004-311" index="80"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tshang ’byin</foreign>, an archaic form of <foreign xml:lang="Bo-Ltn" type="term">tshar phyin</foreign>/<foreign xml:lang="Bo-Ltn" type="term">mthar phyin</foreign> (“to go to
                                 the end,” “to conclude,” or “to finalize”). The Comparative Edition
                                 notes that the Yongle, Lithang, Kangxi, and Choné versions read
                                     <foreign xml:lang="Bo-Ltn" type="term">tshar ’byin</foreign> (p.
@@ -2133,7 +2135,7 @@
                     <lg tid="247">
                         <l>“The bodhisattva who has been consecrated is one kind of son of the
                             Tathāgata;</l>
-                        <l>His nature is to be an extraordinary and perfected senior brother.<note place="end" index="80" xml:id="UT22084-057-004-315"> I.e., a royal
+                        <l>His nature is to be an extraordinary and perfected senior brother.<note place="end" xml:id="UT22084-057-004-315" index="81"> I.e., a royal
                                 heir.</note>
                             <ref cRef="F.21.b" key="toh847" type="folio"/>
                         </l>
@@ -2147,7 +2149,7 @@
                         <l>Here, were some sentient beings to pulverize all the worlds </l>
                         <l>Into fine atoms and try to count them all, </l>
                         <l>They will determine that they are countless in number,</l>
-                        <l>Yet the whole of that is known by bodhisattvas.<note place="end" index="81" xml:id="UT22084-057-004-317"> Note that here we have a
+                        <l>Yet the whole of that is known by bodhisattvas.<note place="end" xml:id="UT22084-057-004-317" index="82"> Note that here we have a
                                 verse of five lines.</note>
                         </l>
                     </lg>
@@ -2218,7 +2220,7 @@
                         guardian deities gathered and circumambulated the Blessed One three times.
                         Taking their seats in the presence of the Blessed One, they humbly folded
                         their hands and supplicated the Blessed One: <ref cRef="F.22.b" key="toh847" type="folio"/> “We ask that the Blessed One kindly explain <title xml:lang="en">The Jewel Torch Dhāraṇī</title>!” Then, by remaining
-                        silent, the Blessed One did not assent.<note place="end" index="82" xml:id="UT22084-057-004-329"> Note that here the versions consulted say
+                        silent, the Blessed One did not assent.<note place="end" xml:id="UT22084-057-004-329" index="83"> Note that here the versions consulted say
                             that the Blessed One “assented” (Tib. <foreign xml:lang="Bo-Ltn" type="term">gnang ba mdzad</foreign>), though this does not make
                             sense in the present context; the Blessed One does precisely the
                             opposite in the lines that immediately follow.</note>
@@ -2266,7 +2268,7 @@
                         tens of millions of yakṣa deities assembled, including the four great kings
                         and their troops and servants. Immediately thereafter, Indra, Brahmā, and
                         the worldly guardian deities gathered. Those who desired Dharma and even
-                        those who did not desire it congregated.<note place="end" index="83" xml:id="UT22084-057-004-341"> The Comparative Edition notes that this
+                        those who did not desire it congregated.<note place="end" xml:id="UT22084-057-004-341" index="84"> The Comparative Edition notes that this
                             line (Tib. <foreign xml:lang="Bo-Ltn" type="quote">chos ’dod pa rnams
                                 dang / chos ’dod pa ma yin pa’i gang zag rnams kyang ’dus par gyur
                                 to/</foreign>) is missing from the Yongle, Lithang, Kangxi, and
@@ -2324,7 +2326,7 @@
                     <p tid="285">“Mañjuśrī, ‘emptiness’ is the absence of words.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-356"/>
                     <p tid="286">Mañjuśrī said: “Honorable Śāradvatī­putra, if emptiness is without
-                        words, how can we explain it?<note place="end" index="84" xml:id="UT22084-057-004-357"> The Comparative Edition indicates that the
+                        words, how can we explain it?<note place="end" xml:id="UT22084-057-004-357" index="85"> The Comparative Edition indicates that the
                             Yongle, Lithang, Kangxi, and Choné editions omit this line (i.e.,
                                 <foreign xml:lang="Bo-Ltn" type="quote">btsun pa shar a dva ti’i bu
                                 gal te stong pa nyid tshig med pa yin na/ ci zhig bshad par
@@ -2389,7 +2391,7 @@
                         at a later time, at the time of the final five hundred years of the holy
                         Dharma’s existence?”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-367"/>
-                    <p tid="296">Then sixty-two hundred billion bodhisattvas<note place="end" index="85" xml:id="UT22084-057-004-368"> Note that here forty-six
+                    <p tid="296">Then sixty-two hundred billion bodhisattvas<note place="end" xml:id="UT22084-057-004-368" index="86"> Note that here forty-six
                             bodhisattvas are named.</note> spoke unanimously, including the
                         bodhisattvas Samanta­bhadra, Mañjuśrī Kumāra­bhūta, Avaloki­teśvara,
                         Mahā­sthāmaprāpta, Avoiding Evil Destinies, Bhaiṣajya­rāja, Pratibhākūṭa,
@@ -2400,7 +2402,7 @@
                         Ornamented with Merit, Ornamented by Good Qualities, <term>Ornamented by
                             Marks</term>, <ref cRef="F.54.b" key="toh145" type="folio"/> Always
                         Laughs and His Faculties All Rejoice, King Who Smashes the Peak of the
-                        Mountain, Expert Eloquence, Nityotkṣipta­hasta,<note place="end" index="86" xml:id="UT22084-057-004-369"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rtag tu lag brkyang</foreign>. This appears in Negi as a
+                        Mountain, Expert Eloquence, Nityotkṣipta­hasta,<note place="end" xml:id="UT22084-057-004-369" index="87"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rtag tu lag brkyang</foreign>. This appears in Negi as a
                             bodhisattva name.</note> Dhāraṇī­dhara, Quick Eloquence, Ākāśa­garbha,
                         Essence of the Moon, Sūrya­garbha, Śaśi­vimala­garbha, Āditya­garbha,
                         Superior King, Mahāmeru, Dṛḍhamati, Valiant Eloquence, and the bodhisattva
@@ -2410,7 +2412,7 @@
                             Torch Dhāraṇī</title> could then be fully explained.” </p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-370"/>
                     <p tid="297">The Blessed One said: “Sons of good families, excellent, excellent!
-                        Sons of good families this is difficult to do. A ceremony<note place="end" index="87" xml:id="UT22084-057-004-371"> Tib. <foreign xml:lang="Bo-Ltn" type="term">cho ga</foreign>. Notably, the Stok Palace version reads
+                        Sons of good families this is difficult to do. A ceremony<note place="end" xml:id="UT22084-057-004-371" index="88"> Tib. <foreign xml:lang="Bo-Ltn" type="term">cho ga</foreign>. Notably, the Stok Palace version reads
                                 <foreign xml:lang="Bo-Ltn" type="term">go cha</foreign> (“weapon” or
                             “armor”).</note> like this is extremely difficult.”</p>
                     <p tid="298">Then the Blessed One said to the bodhisattva Samanta­bhadra: “Son
@@ -2424,7 +2426,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-374"/>
                     <p tid="300">Then the Blessed One offered a solemn utterance, then offered it a
                         second time and a third time: “How wonderful is the Dharma, How wonderful is
-                        the Dharma, How wonderful is the Dharma!”<note place="end" index="88" xml:id="UT22084-057-004-375"> Tib. <foreign xml:lang="Bo-Ltn" type="term">a la la chos</foreign>. The Comparative Edition notes
+                        the Dharma, How wonderful is the Dharma!”<note place="end" xml:id="UT22084-057-004-375" index="89"> Tib. <foreign xml:lang="Bo-Ltn" type="term">a la la chos</foreign>. The Comparative Edition notes
                             that the Yongle version does not repeat <foreign xml:lang="Bo-Ltn" type="term">a la la chos</foreign> a third time.</note>
                         <ref cRef="F.55.a" key="toh145" type="folio"/>
                     </p>
@@ -2505,7 +2507,7 @@
                         he guard them.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-394"/>
                     <p tid="319">Then Mañjuśrī Kumāra­bhūta rose from his seat and addressed the
-                        Blessed One: “May the Blessed One<note place="end" index="89" xml:id="UT22084-057-004-395"> The Comparative Edition (p. 212) notes
+                        Blessed One: “May the Blessed One<note place="end" xml:id="UT22084-057-004-395" index="90"> The Comparative Edition (p. 212) notes
                             that the Lhasa version omits <foreign xml:lang="Bo-Ltn" type="quote">bcom ldan ’das kyis</foreign> (“by the Blessed One”). The Stok
                             Palace version also omits this (fol. 179b7).</note> kindly explain the
                         special excellent qualities possessed by those future Dharma teachers who
@@ -2548,26 +2550,26 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-400"/>
                     <p tid="324">The Blessed One said: “These are the names of hells that exist
                         below this earth: (1) Tapana, (2) Pratāpana, (3) Kālasūtra, (4)
-                            <term>Burning</term>, (5) Intense Burning,<note place="end" index="90" xml:id="UT22084-057-004-401"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">rab tu ’bar ba</foreign>. Not in Negi as a hell. The
+                            <term>Burning</term>, (5) Intense Burning,<note place="end" xml:id="UT22084-057-004-401" index="91"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">rab tu ’bar ba</foreign>. Not in Negi as a hell. The
                             Comparative Edition notes that the Narthang and Lhasa editions read
                                 <foreign xml:lang="Bo-Ltn" type="quote">rab tu ’bar</foreign> (p.
                             212). The Stok Palace version also reads <foreign xml:lang="Bo-Ltn" type="quote">rab tu ’bar</foreign> (fol. 180b5).</note> (6)
-                        Difficult to Touch,<note place="end" index="91" xml:id="UT22084-057-004-402"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">reg dka’ ba</foreign>.
+                        Difficult to Touch,<note place="end" xml:id="UT22084-057-004-402" index="92"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">reg dka’ ba</foreign>.
                             Not in Negi as a hell. The Comparative Edition notes that the Narthang
                             and Lhasa editions read <foreign xml:lang="Bo-Ltn" type="quote">reg
                                 dka’</foreign> (p. 212). The Stok Palace version also reads <foreign xml:lang="Bo-Ltn" type="quote">reg dka’</foreign> (fol.
                             180b6).</note> (7) Fierce, (8) Pressing the Lips, (9) Iron Hammer, (10)
-                        Iron Stick, (11) <term>Darkness</term>, (12) Upper Head,<note place="end" index="92" xml:id="UT22084-057-004-403"> Tib. <foreign xml:lang="Bo-Ltn" type="term">mgo bstod</foreign>. Name unknown in any source. If
+                        Iron Stick, (11) <term>Darkness</term>, (12) Upper Head,<note place="end" xml:id="UT22084-057-004-403" index="93"> Tib. <foreign xml:lang="Bo-Ltn" type="term">mgo bstod</foreign>. Name unknown in any source. If
                             emended to <foreign xml:lang="Bo-Ltn" type="term">mgo stod</foreign>,
-                            lit. “upper head.”</note> (13) Urdhvapāda, (14) Monkey Face,<note place="end" index="93" xml:id="UT22084-057-004-404"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">spri’u gdong</foreign> (should be
+                            lit. “upper head.”</note> (13) Urdhvapāda, (14) Monkey Face,<note place="end" xml:id="UT22084-057-004-404" index="94"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">spri’u gdong</foreign> (should be
                             emended to <foreign xml:lang="Bo-Ltn" type="term">spre’u
                             gdong</foreign>). Not in Negi. The Comparative Edition observes that the
-                            Yongle and Kangxi versions read <foreign xml:lang="Bo-Ltn" type="quote">spyi’u gtong</foreign> (p. 212). </note> (15) Always Burning,<note place="end" index="94" xml:id="UT22084-057-004-405"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">rtag tu rab ’bar</foreign>. Not in
+                            Yongle and Kangxi versions read <foreign xml:lang="Bo-Ltn" type="quote">spyi’u gtong</foreign> (p. 212). </note> (15) Always Burning,<note place="end" xml:id="UT22084-057-004-405" index="95"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">rtag tu rab ’bar</foreign>. Not in
                             Negi. The Comparative edition notes that the Yongle, Lithang, Kangxi,
                             and Choné versions read <foreign xml:lang="Bo-Ltn" type="quote">rtag tu
                                 ’bar</foreign> (p. 212).</note> (16) Rotten, (17) Always Foul
                         Smelling, (18) <term>Destruction</term>, (19) Certain Destruction, and (20)
-                        Extremely Thorough Destruction.<note place="end" index="95" xml:id="UT22084-057-004-406"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">shin tu gnod ’joms</foreign>. Not in Negi as a hell.
+                        Extremely Thorough Destruction.<note place="end" xml:id="UT22084-057-004-406" index="96"> Tib. <foreign xml:lang="Bo-Ltn" type="quote">shin tu gnod ’joms</foreign>. Not in Negi as a hell.
                             The Comparative Edition records that the Narthang and Lhasa editions
                             read <foreign xml:lang="Bo-Ltn" type="quote">shin tu gnod
                                 ’byung</foreign> (p. 212). The Stok Palace version also reads
@@ -2583,7 +2585,7 @@
                         in beautifully ornamented world realms, in buddhafields filled with the
                         inconceivable eloquence of the tathāgatas, and in those worlds will live
                         only very beautiful bodhisattvas. And when those beings later die, tens of
-                        millions of buddhas will manifest. In brief, son of a good family,<note place="end" index="96" xml:id="UT22084-057-004-409"> Note that <foreign xml:lang="Bo-Ltn" type="quote">rigs kyi bu</foreign> (“son of a good
+                        millions of buddhas will manifest. In brief, son of a good family,<note place="end" xml:id="UT22084-057-004-409" index="97"> Note that <foreign xml:lang="Bo-Ltn" type="quote">rigs kyi bu</foreign> (“son of a good
                             family”) occurs twice in this sentence but is only translated
                             once.</note> the benefits of this teaching are incalculable and
                         infinite. Moreover, son of a good family, they could not be adequately
@@ -2630,7 +2632,7 @@
                         without saying that no human ascetic or brahmin can. Sons of good families,
                         this Dharma discourse is a sacred stūpa for the world, including the gods.
                         Sons of good families, you should view this king among sūtras as like, for
-                        instance, the <title xml:lang="Sa-Ltn">Kāraṇḍavyūha Sūtra</title>.”<note place="end" index="97" xml:id="UT22084-057-004-415"> The <title xml:lang="Sa-Ltn">Kāraṇḍavyūhasūtra</title> is one of the primary
+                        instance, the <title xml:lang="Sa-Ltn">Kāraṇḍavyūha Sūtra</title>.”<note place="end" xml:id="UT22084-057-004-415" index="98"> The <title xml:lang="Sa-Ltn">Kāraṇḍavyūhasūtra</title> is one of the primary
                             Mahāyāna sūtras associated with Avaloki­teśvara. It was first translated
                             into Tibetan during the Imperial Period and is the earliest textual
                             source for the mantra <mantra xml:lang="Sa-Ltn">oṃ maṇi padme
@@ -2646,7 +2648,7 @@
                     <p tid="333">The Blessed One said: “Mañjuśrī, those who abandon this Dharma
                         discourse and who view its teachers with an unfriendly attitude—I do not
                         allow them to use things given in faith for a day or for a finger snap, or
-                        to come as far as one can spit<note place="end" index="98" xml:id="UT22084-057-004-418"> The text literally says, “so much as their
+                        to come as far as one can spit<note place="end" xml:id="UT22084-057-004-418" index="99"> The text literally says, “so much as their
                             flinging a single lump of their phlegm.”</note> to land that was donated
                         to the monastic assembly.”</p>
                     <milestone unit="chunk" xml:id="UT22084-057-004-419"/>
@@ -3627,7 +3629,7 @@
                     <lg tid="470">
                         <l>“ ‘Some of those fields are destroyed, some remain established, </l>
                         <l>Some seem to be standing upside down,</l>
-                        <l>Some seem to be in reverse<note place="end" index="99" xml:id="UT22084-057-004-555"> Tib. <foreign xml:lang="Bo-Ltn" type="term">snrel zhi</foreign>. Negi gives Skt. <foreign xml:lang="Sa-Ltn" type="term">vyatyasta</foreign>
+                        <l>Some seem to be in reverse<note place="end" xml:id="UT22084-057-004-555" index="100"> Tib. <foreign xml:lang="Bo-Ltn" type="term">snrel zhi</foreign>. Negi gives Skt. <foreign xml:lang="Sa-Ltn" type="term">vyatyasta</foreign>
                                 (“reversed”).</note> or like a mirage,</l>
                         <l>And some appear like a conjuring trick.</l>
                     </lg>
@@ -3775,7 +3777,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-575"/>
                     <lg tid="490">
                         <l>“ ‘And with parasols equipped with various nets of jewels,</l>
-                        <l>They have hung<note place="end" index="100" xml:id="UT22084-057-004-576">
+                        <l>They have hung<note place="end" xml:id="UT22084-057-004-576" index="101">
                                 Preferring the Lhasa version’s <foreign xml:lang="Bo-Ltn" type="term">rab dpyangs</foreign> (“<term type="ignore">hung</term> up,” “suspended”) over
                                     <foreign xml:lang="Bo-Ltn" type="term">rab spyangs</foreign>.
                                 See Comparative Edition, p. 215.</note> flags of silken strings,</l>
@@ -3826,7 +3828,7 @@
                         <l>“ ‘Some train others by means of the powers and the path of the
                             faculties, </l>
                         <l>By means of emancipation through the śrāvaka vehicle,</l>
-                        <l>By means of purification through the vehicle of conditions,<note place="end" index="101" xml:id="UT22084-057-004-583"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rkyen gyi theg pa</foreign>; Skt.
+                        <l>By means of purification through the vehicle of conditions,<note place="end" xml:id="UT22084-057-004-583" index="102"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rkyen gyi theg pa</foreign>; Skt.
                                     <foreign xml:lang="Sa-Ltn" type="term">pratyayayāna</foreign>.
                                 This refers to the pratyekabuddha path, which seeks to understand
                                 the “conditions” of cyclical existence via doctrine of dependent
@@ -3987,7 +3989,7 @@
                     <lg tid="517">
                         <l>“ ‘As poets, they compose poems of the victors;</l>
                         <l>They are dancers, drummers, strongmen, and musicians; </l>
-                        <l>They bear lassos<note place="end" index="102" xml:id="UT22084-057-004-605"> Preferring the Narthang, Lhasa, and
+                        <l>They bear lassos<note place="end" xml:id="UT22084-057-004-605" index="103"> Preferring the Narthang, Lhasa, and
                                 Stok Palace versions’ <foreign xml:lang="Bo-Ltn" type="term">zhags</foreign> over the <foreign xml:lang="Bo-Ltn" type="term">bzhag</foreign> found in other versions. See Comparative
                                 Edition, p. 215; Stok Palace, fol. 198a7.</note> that are garlands
                             of beautiful ornaments and they dance,</l>
@@ -4035,7 +4037,7 @@
                         <l>“ ‘They manifest themselves as expert teachers of the tīrthikas, </l>
                         <l>Of those engaged in such practices, including wandering tīrthikas, <ref cRef="F.70.a" key="toh145" type="folio"/>
                         </l>
-                        <l>Those suffering as Gautama did as an ascetic,<note place="end" index="103" xml:id="UT22084-057-004-612"> This translation of
+                        <l>Those suffering as Gautama did as an ascetic,<note place="end" xml:id="UT22084-057-004-612" index="104"> This translation of
                                     <foreign xml:lang="Bo-Ltn" type="quote">gdung ba gau ta
                                     ma</foreign> is tentative.</note> those observing silence,</l>
                         <l>And naked ascetics who practice wearing no clothing.</l>
@@ -4344,7 +4346,7 @@
                         <l>By learning that objects of wealth are like clouds in a dream,</l>
                         <l>Happily increase their acts of generosity,</l>
                         <l>And therefore achieve <distinct>light rays imbued with
-                                generosity</distinct>.<note place="end" index="104" xml:id="UT22084-057-004-652"> I have opted for <foreign xml:lang="Bo-Ltn" type="term">gtong</foreign> found in the
+                                generosity</distinct>.<note place="end" xml:id="UT22084-057-004-652" index="105"> I have opted for <foreign xml:lang="Bo-Ltn" type="term">gtong</foreign> found in the
                                 Narthang, Choné, Lhasa, and Stok Palace versions over <foreign xml:lang="Bo-Ltn" type="term">stong</foreign> witnessed in the
                                 Degé. See Comparative Edition, p. 216; Stok Palace,
                             201a7.</note>
@@ -4543,7 +4545,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-676"/>
                     <lg tid="587">
-                        <l>“ ‘By praising the Great Seer through secret eulogies<note place="end" index="105" xml:id="UT22084-057-004-677"> Note that the phrase
+                        <l>“ ‘By praising the Great Seer through secret eulogies<note place="end" xml:id="UT22084-057-004-677" index="106"> Note that the phrase
                                 “secret eulogies” (Tib. <foreign xml:lang="Bo-Ltn" type="term">gsang
                                     bstod sgra</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">uccasvara</foreign>) is not in Edgerton or
                                 Monier-Williams, but it appears in Negi.</note>
@@ -4581,7 +4583,7 @@
                     <lg tid="591">
                         <l>“ ‘By giving praise for the sake of awakening and by greatly extoling
                             with the words,</l>
-                        <l>“The Great Muni’s royal law is best,<note place="end" index="106" xml:id="UT22084-057-004-682"> We here follow the Stok Palace
+                        <l>“The Great Muni’s royal law is best,<note place="end" xml:id="UT22084-057-004-682" index="107"> We here follow the Stok Palace
                                 version, reading <foreign xml:lang="Bo-Ltn" type="quote">khrim
                                     kyi</foreign> instead of <foreign xml:lang="Bo-Ltn" type="term">khrims kyis</foreign>. See Stok Palace, fol. 203a5.</note>
                         </l>
@@ -4625,7 +4627,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-687"/>
                     <lg tid="596">
                         <l>“ ‘They emanate <distinct>light rays imbued with myriad
-                                arrays</distinct>,<note place="end" index="107" xml:id="UT22084-057-004-688"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sna tshogs bkod pa</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">vicitravyūha</foreign>. Negi
+                                arrays</distinct>,<note place="end" xml:id="UT22084-057-004-688" index="108"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sna tshogs bkod pa</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">vicitravyūha</foreign>. Negi
                                 includes this phrase and identifies it as a type of light
                                 ray.</note>
                         </l>
@@ -4645,7 +4647,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-690"/>
                     <lg tid="598">
                         <l>“ ‘They emanate <distinct>light rays that greatly
-                                illuminate</distinct>,<note place="end" index="108" xml:id="UT22084-057-004-691"> Tib. <foreign xml:lang="Bo-Ltn" type="term">shin tu dang byed</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">prasādakarī</foreign>. Negi
+                                illuminate</distinct>,<note place="end" xml:id="UT22084-057-004-691" index="109"> Tib. <foreign xml:lang="Bo-Ltn" type="term">shin tu dang byed</foreign>; Skt. <foreign xml:lang="Sa-Ltn" type="term">prasādakarī</foreign>. Negi
                                 includes this phrase and identifies it as a type of light
                                 ray.</note>
                         </l>
@@ -4738,7 +4740,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-702"/>
                     <lg tid="609">
                         <l>“ ‘They emanate <distinct>light rays that purify the body</distinct>, </l>
-                        <l>And human rulers<note place="end" index="109" xml:id="UT22084-057-004-703"> Here we follow the Yongle, Lithang,
+                        <l>And human rulers<note place="end" xml:id="UT22084-057-004-703" index="110"> Here we follow the Yongle, Lithang,
                                 Kangxi, and Choné, which read <foreign xml:lang="Bo-Ltn" type="quote">rnams kyis</foreign> rather than <foreign xml:lang="Bo-Ltn" type="quote">rnams kyi</foreign> (Comparative
                                 Edition, p. 216).</note> see inconceivably many buddha bodies.</l>
                         <l>By painting many pictures of buddhas of various kinds</l>
@@ -4748,7 +4750,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-704"/>
                     <lg tid="610">
                         <l>“ ‘They emanate <distinct>light rays that purify sounds</distinct>,</l>
-                        <l>And they understand sounds to be non-sounds, empty.<note place="end" index="110" xml:id="UT22084-057-004-705"> Here we follow the
+                        <l>And they understand sounds to be non-sounds, empty.<note place="end" xml:id="UT22084-057-004-705" index="111"> Here we follow the
                                 Narthang, Lhasa, and Stok Palace editions’ <foreign xml:lang="Bo-Ltn" type="quote">sgra min</foreign> rather than
                                     <foreign xml:lang="Bo-Ltn" type="quote">sgra mi</foreign>. See
                                 Comparative Edition, p. 217; Stok Palace, fol. 204b3.</note>
@@ -4860,7 +4862,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-719"/>
                     <lg tid="624">
                         <l>“ ‘For example, rich people do indeed possess</l>
-                        <l>Such things as ornaments, jewels, vehicles,<note place="end" index="111" xml:id="UT22084-057-004-720"> Tib. <foreign xml:lang="Bo-Ltn" type="term">bzhon pa</foreign>. The Yongle, Lithang, Kangxi,
+                        <l>Such things as ornaments, jewels, vehicles,<note place="end" xml:id="UT22084-057-004-720" index="112"> Tib. <foreign xml:lang="Bo-Ltn" type="term">bzhon pa</foreign>. The Yongle, Lithang, Kangxi,
                                 Choné, and Stok Palace versions read <foreign xml:lang="Bo-Ltn" type="quote">gzhon pa</foreign>, though this carries the sense
                                 of “young” and does not work well in this context (Comparative
                                 Edition, p. 217; Stok Palace, fol. 205b2). </note> palaces,</l>
@@ -5035,7 +5037,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-743"/>
                     <lg tid="647">
                         <l>“ ‘They rest in equipoise in the path of the tongue, </l>
-                        <l>While the great being<note place="end" index="112" xml:id="UT22084-057-004-744"> The term “great being” (Tib. <foreign xml:lang="Bo-Ltn" type="term">bdag nyid chen po</foreign>) does
+                        <l>While the great being<note place="end" xml:id="UT22084-057-004-744" index="113"> The term “great being” (Tib. <foreign xml:lang="Bo-Ltn" type="term">bdag nyid chen po</foreign>) does
                                 not occur in this line but is added for consistency.</note> rises
                             through the path of all the best tastes.</l>
                         <l>In a way that makes the world with its gods grow befuddled,</l>
@@ -5085,7 +5087,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-750"/>
                     <lg tid="653">
                         <l>“ ‘They rest in equipoise within the bodies of infants, </l>
-                        <l>While he<note place="end" index="113" xml:id="UT22084-057-004-751"> In
+                        <l>While he<note place="end" xml:id="UT22084-057-004-751" index="114"> In
                                 this and the stanzas to follow, “he” (referring to the great being)
                                 is added for consistency. </note> rises through those living in the
                             vigor of youth.</l>
@@ -5112,14 +5114,14 @@
                     <lg tid="656">
                         <l>“ ‘They rest in equipoise within the bodies of learned fully ordained
                             monks, </l>
-                        <l>While he rises through the bodies of trainees and non-trainees.<note place="end" index="114" xml:id="UT22084-057-004-755"> Tib. <foreign xml:lang="Bo-Ltn" type="term">mi slob</foreign> (=<foreign xml:lang="Bo-Ltn" type="term">mi slob pa</foreign>); Skt.
+                        <l>While he rises through the bodies of trainees and non-trainees.<note place="end" xml:id="UT22084-057-004-755" index="115"> Tib. <foreign xml:lang="Bo-Ltn" type="term">mi slob</foreign> (=<foreign xml:lang="Bo-Ltn" type="term">mi slob pa</foreign>); Skt.
                                     <foreign xml:lang="Sa-Ltn" type="term">aśaikṣa</foreign>. Lit.
                                 “one who no longer needs training,” or an arhat—the eighth state
                                 (i.e., spiritual level) according to Edgerton.</note>
                         </l>
                         <l>They rest in equipoise within the bodies of trainees and
                             non-trainees,</l>
-                        <l>While he rises through the bodies of buddhas of conditions.<note place="end" index="115" xml:id="UT22084-057-004-756"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rkyen gyi sangs rgyas</foreign>.
+                        <l>While he rises through the bodies of buddhas of conditions.<note place="end" xml:id="UT22084-057-004-756" index="116"> Tib. <foreign xml:lang="Bo-Ltn" type="term">rkyen gyi sangs rgyas</foreign>.
                                 Although this term does not appear in Negi, it refers to a
                                 pratyekabuddha. See also <ptr target="#UT22084-057-004-583">note 101</ptr> above.</note>
                         </l>
@@ -5283,7 +5285,7 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-057-004-777"/>
                     <lg tid="677">
-                        <l>“ ‘The goddess of the ocean named Hrādinī<note place="end" index="116" xml:id="UT22084-057-004-778"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sgra ldan</foreign>. Possibly also Skt. Rāvaṇī or
+                        <l>“ ‘The goddess of the ocean named Hrādinī<note place="end" xml:id="UT22084-057-004-778" index="117"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sgra ldan</foreign>. Possibly also Skt. Rāvaṇī or
                                 Rutavatī. See Goodman 2016, p. 321 and n. 15. </note>
                         </l>
                         <l>Who is expert in the ways of intoning the families of languages</l>
@@ -5442,7 +5444,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-798"/>
                     <lg tid="697">
                         <l>“ ‘ “All desires are impermanent and not eternal.</l>
-                        <l>They are base, uncertain, and of a bubble-like<note place="end" index="117" xml:id="UT22084-057-004-799"> Note that <foreign xml:lang="Bo-Ltn" type="term">dbu ba</foreign> is the honorific
+                        <l>They are base, uncertain, and of a bubble-like<note place="end" xml:id="UT22084-057-004-799" index="118"> Note that <foreign xml:lang="Bo-Ltn" type="term">dbu ba</foreign> is the honorific
                                 of <foreign xml:lang="Bo-Ltn" type="term">lbu ba</foreign>.</note>
                             nature;</l>
                         <l>Like an illusion, mirage, or a moon reflected in water—</l>
@@ -5550,7 +5552,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-813"/>
                     <lg tid="711">
                         <l>“ ‘If that god Brahmā can project magical projections </l>
-                        <l>With the concentrations and emancipations of the Brahmā path<note place="end" index="118" xml:id="UT22084-057-004-814"> Note that the
+                        <l>With the concentrations and emancipations of the Brahmā path<note place="end" xml:id="UT22084-057-004-814" index="119"> Note that the
                                 Brahmā path refers to compassion.</note> of the world,</l>
                         <l>Then why could those who dwell in the insuperable concentrations and
                             emancipations that have </l>
@@ -5598,7 +5600,7 @@
                     <milestone unit="chunk" xml:id="UT22084-057-004-820"/>
                     <lg tid="717">
                         <l>“ ‘The waters in the thundering clouds of the ocean</l>
-                        <l>Reverberate with sounds pleasing<note place="end" index="119" xml:id="UT22084-057-004-821"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sgra snyan</foreign>; in Sanskrit can be the name
+                        <l>Reverberate with sounds pleasing<note place="end" xml:id="UT22084-057-004-821" index="120"> Tib. <foreign xml:lang="Bo-Ltn" type="term">sgra snyan</foreign>; in Sanskrit can be the name
                                 Sughoṣa and can also be <foreign xml:lang="Sa-Ltn" type="term">sughoṣaka</foreign>, the name of an instrument—a lute.</note>
                             to all sentient beings,</l>
                         <l>All bird songs, animal cries, and the voices of men,</l>
@@ -5616,7 +5618,7 @@
                     <lg tid="719">
                         <l>“ ‘This ocean is a wondrous phenomenon:</l>
                         <l>Since it is as vast as the universe, it is called <distinct>vast
-                                lake</distinct>.<note place="end" index="120" xml:id="UT22084-057-004-824"> This is a traditional etymology of
+                                lake</distinct>.<note place="end" xml:id="UT22084-057-004-824" index="121"> This is a traditional etymology of
                                     <foreign xml:lang="Bo-Ltn" type="term">rgya mtsho</foreign>
                                 (“ocean”).</note>
                         </l>
@@ -5653,7 +5655,7 @@
                         <l>“ ‘In the realm of the gods of the Yāma class, they are the color of deep
                             blue vaiḍūrya gems. </l>
                         <l>Among gods of the Trāyastriṃśa class, they are the color of aśmagarbha
-                                emeralds.<note place="end" index="121" xml:id="UT22084-057-004-829">
+                                emeralds.<note place="end" xml:id="UT22084-057-004-829" index="122">
                                 Tib. <foreign xml:lang="Bo-Ltn" type="term">rdo’i snying
                                     po</foreign>. Negi identifies this as a type of jewel, while
                                 Inagaki states that it means a kind of emerald.</note>
@@ -5766,7 +5768,7 @@
                     <lg tid="736">
                         <l>“ ‘Among the gods of the Trāyastriṃśa class there are the best
                             wish-fulfilling gems,</l>
-                        <l>And in the realm of the gods of the protector class, the best <term ref="UT22084-057-004-973">essence of sandalwood</term>,<note place="end" index="122" xml:id="UT22084-057-004-843"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tsan dan snying po</foreign>.
+                        <l>And in the realm of the gods of the protector class, the best <term ref="UT22084-057-004-973">essence of sandalwood</term>,<note place="end" xml:id="UT22084-057-004-843" index="123"> Tib. <foreign xml:lang="Bo-Ltn" type="term">tsan dan snying po</foreign>.
                             </note>
                         </l>
                         <l>Petals of saffron, the divine wood <foreign xml:lang="Sa-Ltn" type="term">tamāla</foreign>,</l>
