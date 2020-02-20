@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs bsngo ba</title>
+                <title type="mainTitle" xml:lang="en">The Dedication “Protecting All Beings”</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">'phags pa 'gro ba thams cad yongs su skyob par byed pa zhes bya ba'i yongs su bsngo ba</title>
+                <title type="mainTitle" xml:lang="bo">འགྲོ་བ་ཡོངས་སུ་སྐྱོབ་པར་བྱེད་པའི་ཡོངས་བསྔོ་བ།</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་སྐྱོབ་པར་བྱེད་པ་ཞེས་བྱ་བའི་ཡོངས་སུ་བསྔོ་བ།</title>
+
+
+                <author role="translatorMain" ref="contributors.xml#team-46">Translated by the
+                    Alexander Csoma de Kőrös Translation Group<lb/>under the patronage and
+                    supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-291">Zsuzsa Majer</author>
+                <editor role="reviser" ref="contributors.xml#person-289">Nathaniel Rich</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.2 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative to translate all the Buddha’s words into modern languages, and to
+                    make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-068-020"/>
+                <date>2020-02-10</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh286" type="text">
+                    <ref>Toh 286</ref>
+                    <biblScope>Degé Kangyur, vol. 68 (mdo sde, ya), folios 79.b–81.b</biblScope>
+                    <location work="UT4CZ5369" count-pages="5">
+                        <volume number="68" start-page="158" end-page="162"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11949" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-20T10:54:13.206Z" user="admin">20/02/2020 10:54:13</note>
+
+                <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-21T08:08:31.171Z" user="andreas">v 0.1.0</note>
+                <note type="updated" update="translation-status" value="2.e" date-time="2019-11-25T08:47:48.584Z" user="andreas">2.e</note>
+                <note type="updated" update="text-version" value="v 0.1.1" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version
+                    increment</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2020-01-08T09:58:16.981Z" user="andreas">2.d</note>
+                <note type="updated" update="translation-status" value="2.c" date-time="2020-01-14T16:56:12.18Z" user="laura">2.c</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2020-01-28T06:18:51.647Z" user="mike">2.d</note>
+                <note type="updated" update="translation-status" value="2.b" date-time="2020-02-04T07:38:37.513Z" user="andreas">2.b</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2020-02-04T09:31:05.571Z" user="mike">2.a</note>
+            
+<note type="updated" update="text-version" value="v 0.1.1" date-time="2020-02-14T09:50:56.219Z" user="mike">v 0.1.1</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-02-14T09:50:56.219Z" user="mike">2</note>
+<note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-20T10:54:10.523Z" user="andre">Mark-up completed, including editors final remarks</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-068-020-1"/>
+                <p tid="2">This text is a prayer of dedication that strongly resonates with the
+                    later Tibetan literature of mind training (<foreign xml:lang="Bo-Ltn">blo
+                        sbyong</foreign>). The text enumerates the many faults, shortcomings, and
+                    afflictions that burden sentient beings, and also the many possible attainments
+                    that they may have consequently not realized, with the wish that everything that
+                    will ripen for sentient beings ripen instead for the reciter, so that all
+                    sentient beings are thus liberated and purified.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-068-020-2"/>
+                <p tid="4">This text was translated from the Tibetan, introduced, and edited by the
+                    translator Zsuzsa Majer in collaboration with Karma Dorje (Rabjampa), a native
+                    Tibetan speaker and Tibetan language expert; Beáta Kakas, the Sanskrit expert
+                    for checking Sanskrit terms; and Nathaniel Rich, the English-language editor, in
+                    the framework of the Alexander Csoma de Kőrös Translation Group. The translation
+                    was completed under the patronage and supervision of 84000: Translating the
+                    Words of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-020-3"/>
+                    <p tid="7"> This short text and <title xml:lang="en">The Dedication “Fulfilling
+                        All Aspirations”</title> (<ref target="https://read.84000.co/translation/UT22084-068-019.html">Toh 285</ref>) appear to
+                        constitute a pair, and this for several reasons. First, the two texts, both
+                        of which lack Sanskrit titles, appear side by side both in the Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) imperial catalogue
+                        and in the extant Kangyurs of the Tshalpa and Thempangma lines. In the
+                        Tshalpa Kangyurs, the two are placed at the very end of the Mahāyāna
+                        division of the General Sūtra (<foreign xml:lang="Bo-Ltn">mdo sde</foreign>) section, and in the Thempangma Kangyurs toward the end of the entire
+                        General Sūtra section. Their function as dedications therefore seems to be
+                        reflected in that placement, and in the Tshalpa Kangyurs, at the very least,
+                        the two appear to be dedications meant specifically to seal the Mahāyāna
+                        sūtra sections. </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-4"/>
+                    <p tid="8"> Second, since the two texts are dedications, it is perhaps not
+                        surprising that they are neither called sūtras nor are they works that
+                        possess features typical of sūtras, such as the opening “Thus did I hear” or
+                        an introductory passage describing the setting and audience of the
+                        discourse. What is somewhat surprising is that, in spite of that, both are
+                        included together in the sūtra section of the Kangyur. Along those lines,
+                        the lack of features that typically distinguish sūtras led the
+                        fifteenth-century scholar Pekar Sangpo (<foreign xml:lang="Bo-Ltn">pad dkar
+                            bzang po</foreign>), in his analytical survey of all the sūtras found
+                        in the Kangyur, to conclude that the two texts are extracts from another
+                        sūtra, though he does not say which.<note place="end" index="1" xml:id="UT22084-068-020-5"> Pekar Sangpo (2006), pp. 383–390. In this
+                            regard, it is worth noting that Pekar Sangpo gives both texts titles
+                            that include the word “sūtra.”</note> No such text, sūtra or otherwise,
+                        has yet been identified. What can be said with a reasonable degree of
+                        confidence is that, regardless of their exact provenance, the two texts were
+                        translated from Sanskrit or another Indic language in the late eighth or
+                        early ninth century. The short colophon to the present text attests to that,
+                        providing the names of the two translators, the Indian abbot Vidyākaraprabha
+                        and the Tibetan translator Bandé Yeshé Nyingpo, and the senior
+                        editor-translator Bandé Paltsek, who edited and finalized the text. The text
+                        is also listed in both the Denkarma and Phangthangma (<foreign xml:lang="Bo-Ltn">’phang thang ma</foreign>) catalogues. This confirms
+                        the dating of the Tibetan translation to the early ninth century at the
+                        latest.<note place="end" index="2" xml:id="UT22084-068-020-6"> The present
+                            text is found in the Denkarma catalogue in the Various Prayers (<foreign xml:lang="Bo-Ltn">smon lam sna tshogs</foreign>) section under the
+                            title <title xml:lang="Bo-Ltn">’gro ba thams cad yongs su skyob par byed
+                                pa’i bsngo ba</title> and in the Phangthangma catalogue in the One
+                            Hundred and Eight Names, Praises, Blessings, and Various Prayers (<title xml:lang="Bo-Ltn">mtshan brgya rtsa brgyad dang stod ra dang bkra
+                                shis dang smon lam sna tshogs</title> ) section under the title
+                                <title xml:lang="Bo-Ltn">’gro ba thams cad yongs su skyob par byed
+                                pa zhes bya ba’i bsngo ba</title>; its length is said to be forty ślokas. See
+                            Denkarma, folio 304.a; Herrmann-Pfandt (2008), p. 268, no. 467;
+                            Phangthangma, p. 33. </note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-7"/>
+                    <p tid="9">There is no extant Sanskrit text of this sūtra, and there are no
+                        known canonical or Tibetan commentaries. There is no known English
+                        translation of it nor any translation into any European language, and no
+                        academic research or scholarly studies of it are known. A translation of the
+                        Tibetan text is, however, available in the Mongolian Kangyur.<note place="end" index="3" xml:id="UT22084-068-020-8"> It is located in the
+                            Various Sūtras (Mongolian <foreign xml:lang="mn" type="term">eldeb</foreign>, Tib. <foreign xml:lang="Bo-Ltn" type="term">mdo
+                                sna tshogs</foreign>) section. Mongolian Kangyur, vol. 84, folios
+                            92.b–94.b; cf. Ligeti (1942), p. 279.</note> The translation presented
+                        here is based on the Tibetan version in the Degé Kangyur and consultation of
+                        the Comparative Edition (<foreign xml:lang="Bo-Ltn">dpe bsdur ma</foreign>)
+                        as well as the Stok Palace manuscript.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-9"/>
+                    <p tid="10">The structure of the present text partly reflects the liturgy of
+                        “seven branches” or “seven limbs” (<foreign xml:lang="Bo-Ltn" type="term">yan lag bdun pa</foreign>), a set of practices that came to serve as
+                        the basic structure of many Mahāyāna and Vajrayāna Buddhist prayers,
+                        sādhanas, and pūjās. The seven branches are commonly as follows: prostration or
+                        homage, offering, rejoicing in virtue, requesting the buddhas to teach,
+                        requesting the buddhas to not pass into nirvāṇa, and dedication of merit.
+                        Not all of these seven are present in this text, which suggests that perhaps
+                        the set was formalized only later. The structure of the present text also
+                        partly reflects the structure of the preceding text. For example, here there
+                        is also only a single line of homage at the very beginning, which might
+                        indicate that the line was intended only as a customary homage. Also in
+                        common with the preceding text, the line of homage is followed by a request
+                        that the buddhas and bodhisattvas pay heed to the reciter. And what
+                        immediately follows are four brief lines, each of them devoted to a single
+                        act in the order in which they appear in the preceding text: confession,
+                        rejoicing, supplicating the buddhas, and dedicating all merits. </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-10"/>
+                    <p tid="11"> What sets this short text apart, however, is the extensive
+                        dedication that follows, comprising the bulk of the prayer. This features an
+                        enumeration of the many faults, shortcomings, and afflictions that burden
+                        sentient beings and also the many possible attainments that they may have
+                        consequently not realized, with the reciter expressing the wish that
+                        everything that will ripen for sentient beings instead “ripen for me”
+                            (<foreign xml:lang="Bo-Ltn" type="quote">bdag la smin</foreign>), so
+                        that all sentient beings are thus liberated and purified. This strongly
+                        resonates with the much later Tibetan mind training (<foreign xml:lang="Bo-Ltn" type="term">blo sbyong</foreign>) teachings,
+                        especially their central contem­plative exercise of “giving and taking” (<foreign xml:lang="Bo-Ltn" type="term">gtong len</foreign>).
+                        Considering how pervasive the mind training teachings became, and still
+                        remain, in the Tibetan Buddhist world, it might come as a surprise to learn
+                        that other sūtra sources in the Kangyur for the development of that specific
+                        aspiration—that the suffering and negative karma of sentient beings “ripen
+                        for me”—are practically nonexistent. In fact, it would appear that this
+                        hitherto-unnoticed dedication contains the only explicit articulation to be
+                        found in the Kangyur of the paradigmatic aspiration of mind training—the
+                        wish that the suffering of others instead “ripen for me.” </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="12"> The Translation </head>
+                <head type="titleHon" tid="13">The Noble Dedication</head>
+                <head type="titleMain" tid="14">Protecting All Beings</head>
+<div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-020-13"/>
+                    <p tid="18">
+                        <ref cRef="F.79.b" type="folio"/> <ref cRef="F.80.a" type="folio"/> I prostrate to the Buddha, to the Teaching, and to
+                        the entire Assembly.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-14"/>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-15"/>
+                    <p tid="20">Blessed buddhas and all bodhisattva great beings, please pay heed to
+                        me!</p>
+                    <lg tid="21">
+                        <l>I confess all sins.</l>
+                    <l>I rejoice in all merits.</l>
+                    <l>I pray to all buddhas.</l>
+                    <l>I dedicate all merits so that all sentient beings attain the
+                        unsurpassed wisdom of omniscience.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-20"/>
+                    <p tid="25">Just as by their truth and true words the blessed buddhas who teach
+                        the truth have dedicated their perfect roots of virtue, in the same way do
+                        I, too, make this dedication. By that truth and those true words: whatever
+                        sins, nonvirtuous deeds, and evils that all sentient beings have committed;
+                        whatever falsehoods they have spoken and harmful thoughts they have had;
+                        whatever obscurations—afflictive obscurations, karmic obscurations, ripened
+                        obscurations, and cognitive obscurations—have obscured, veiled, and fettered
+                        them; that they have not correctly known their own and others’ aspirations,
+                        latent dispositions, constituents, or intrinsic nature; that they have not
+                        correctly known their differences in faculties and diligence or in their
+                        virtues and nonvirtues; that they have not correctly known those qualities
+                        that are blameworthy, not blameworthy, to be relied upon, or not to be
+                        relied upon; that they have not succeeded in encountering holy beings,
+                        listening to the holy Dharma, directing their minds appropriately, or
+                        practicing in accordance with the Dharma; that they have not correctly known
+                        the various methods of taming by which beings may be tamed however they are
+                        obscured, veiled, and fettered by obscurations: the taming of sentient
+                        beings, the taming of self, the taming of others, the taming of both, taming
+                        gently, <ref cRef="F.80.b" type="folio"/> taming wrathfully, taming with equanimity, taming
+                        threateningly, taming by exorcism, taming with censure, taming by means of
+                        acts of service, veneration, and worship, taming by explaining the Dharma,
+                        taming by smiling, taming by going into seclusion to meditate, taming by
+                        means of the ascetic disciplines and having few possessions, taming through
+                        the practice of the perfections of generosity, ethical discipline,
+                        endurance, diligence, meditative absorption, and wisdom, and taming by
+                        faith, ethical discipline, learning, renunciation, wisdom, and meditative
+                        cultivation; that they have not given rise to the causes of ethical
+                        discipline; that they have not made pure the causes of meditative
+                        concentration, the causes of mental focus, the causes of meditative
+                        absorption, the causes of calm abiding, the causes of transcendent insight,
+                        the causes of the superknowledges, the causes of the exhaustion of
+                        defilements, or the causes of the discernments; that they have not
+                        actualized the meditative absorptions, the liberations, the meditative
+                        concentrations, and the meditative attainments, and that when appearances
+                        arise they have allowed what has arisen to decline; that they have given
+                        rise in their minds to the wish for gain, the wish to be honored, the wish
+                        for fame, and the wish for followers; that they have harbored in their minds
+                        thoughts of desire, malevolent thoughts, violent thoughts, thoughts about
+                        immortality, thoughts about children, thoughts about relatives, and thoughts
+                        about the requisites of clothing, food, bedding, and medicines for treating
+                        illness; that they have experienced short lives, much ill health, bad
+                        complexions, poor figures, weakness, low status, <ref cRef="F.81.a" type="folio"/> meagre resources,
+                        stupidity, being reborn in the lower realms among the hell beings, in the
+                        animal realms, and in the realm of the Lord of the Dead, and that they have
+                        experienced many such kinds of suffering deriving from their bodies and
+                        mental unhappiness deriving from their minds; and that they have delighted
+                        in wrong aspirations and have not realized rightful aspirations—may
+                        everything that will ripen for sentient beings obscured and fettered by
+                        these and any other obscurations ripen for me! And may all sentient beings
+                        thus be liberated and purified. </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-21"/>
+                    <p tid="26">Whatever extent the Buddha element may have, whatever extent the
+                        Dharma element may have, whatever extent the Saṅgha element may have,
+                        whatever extent the very limit of reality may have, whatever extent
+                        nonduality may have, whatever extent suchness may have, whatever extent
+                        sameness may have, whatever extent the elements of desire, anger, and
+                        ignorance may have, and whatever extent those who are bound and will be
+                        bound in saṃsāra may have, to that very extent may all sentient beings’
+                        primary afflictions, all their secondary afflictions, and whatever elements
+                        of affliction itself there may be all ripen for me! And may all sentient
+                        beings thus be liberated and purified.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-22"/>
+                    <p tid="27">However many roots of virtue I have created and accumulated from
+                        cyclic existence’s undiscoverable beginning, I dedicate them to all sentient
+                        beings. Attached to desire, tormented by anger, confused by ignorance, and
+                        yoked to the primary afflictions, secondary afflictions, and affliction
+                        itself, I do not correctly know, see, or understand how to dedicate the
+                        roots of virtue. But the blessed buddhas do know, see, and understand such
+                        things, and just as they dedicated their roots of virtue, so too do I
+                        dedicate mine. <ref cRef="F.81.b" type="folio"/> I dedicate them in accordance with the mind of the
+                        tathāgatas. Just as they tamed sentient beings; just as they ripened their
+                        roots of virtue; just as they multiplied their roots of virtue; just as they
+                        knew suffering, abandoned its origin, realized cessation, cultivated the
+                        path, attained the unsurpassed wisdom of omniscience, abandoned all roots of
+                        nonvirtue, possessed all roots of virtue, vanquished the latent tendencies,
+                        and attained the state of non-forgetfulness and the knowledge of all
+                        aspects—in just the same way that all the buddhas appearing in the past, the
+                        present, and the future dedicated their roots of virtue when they were
+                        bodhisattvas, so too do I dedicate mine. I dedicate them through sameness; I
+                        dedicate them through nonduality; I dedicate them by means of the dedication
+                        that completely protects all beings; and thus I recite a second time, and
+                        thus a third time.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-23"/>
+                    <p tid="28">May sentient beings see me in whatever manner will tame them,
+                        without their having any such thoughts in mind.<note place="end" index="4" xml:id="UT22084-068-020-24"> See, for example, Dharmachakra Translation
+                            Committee, trans., <title xml:lang="en">The Jewel Cloud</title>, Toh 231 (84000: Translating the
+                            Words of the Buddha, 2019), <ref target="https://read.84000.co/translation/toh231.html#UT22084-064-001-736">1.597</ref>.</note><!-- read.84000.co -->
+                        And may I always engage in physical, verbal, and mental actions in whatever
+                        ways sentient beings will be purified.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-25"/>
+                    <p tid="29">In whatever time, whatever place, and whatever way sentient beings
+                        will be tamed, may the sphere of reality be thus revealed to them without
+                        confusion!</p>
+                    <trailer tid="30">The Noble Dedication “Protecting All Beings” is
+                        concluded.</trailer>
+    </div>
+                <div type="colophon">
+                    <head type="colophon" tid="31">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-068-020-26"/>
+                    <p tid="32">It was translated by the Indian abbot Vidyākaraprabha and the
+                        translator Bandé Yeshé Nyingpo and was edited and finalized by the senior
+                        editor-translator Bandé Paltsek.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="33">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="35">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="36">Main Sources</head>
+                    <bibl xml:id="UT22084-068-020-27">
+                        <title xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs bsngo
+                            ba</title>. Toh 286, Degé Kangyur vol. 68 (mdo sde, ya), folios
+                        79.b–81.b.</bibl>
+                    <bibl xml:id="UT22084-068-020-28">
+                        <title xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs bsngo
+                            ba</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the
+                        Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur
+                        khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology
+                        Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun
+                        khang (China Tibetology Publishing House), 2006–2009, vol. 68, pp.
+                        231–236.</bibl>
+                    <bibl xml:id="UT22084-068-020-29">
+                        <title xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs
+                            bsngo</title>. Stok 326, Stok Palace Kangyur vol. 88 (mdo sde, ji),
+                        folios 381.a–384.a.</bibl>
+                    <bibl xml:id="UT22084-068-020-30">
+                        <title xml:lang="mn">Qutuγ-tu qamuγ amitan-i sayitur ibegen
+                            üiledügči uγuγada ǰorin irügeküi neretü</title>. Mongolian Kangyur vol.
+                        84, folios 92.b–94.b. In Chandra, Lokesh, ed. <title xml:lang="en">Mongolian
+                            Kanjur</title>. Śata-piṭaka Series 101–208. New Delhi: Sharada Rani,
+                        1973–1979. </bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="37">Secondary Sources</head>
+                    <bibl xml:id="UT22084-068-020-31">
+                        <title xml:lang="Bo-Ltn">pho brang stod thang ldan dkar gyi chos kyi ’gyur
+                            ro cog gi dkar chag</title> [Denkarma]. Toh 4364. Degé Tengyur vol. 206
+                        (sna tshogs, jo), folios 294.b–310.a. In Herrmann-Pfandt, Adelheid. <title xml:lang="de">Die lHan kar ma: ein früher Katalog der ins
+                            Tibetische übersetzten buddhistischen Texte</title>. Wien: Verlag der
+                        Österreichischen Akademie der Wissenschaften, 2008.</bibl>
+                    <bibl xml:id="UT22084-068-020-32">Ligeti, Louis. <title xml:lang="fr">Catalogue du Kanǰur Mongol imprimé</title>.
+                        Vol. 1, <title xml:lang="fr">Catalogue</title>. Bibliotheca
+                        Orientalis Hungarica 3. Budapest: Société Kőrösi Csoma, 1942.</bibl>
+                    <bibl xml:id="UT22084-068-020-33">Jinpa, Thupten, trans. <title xml:lang="en">Mind Training: The Great Collection</title>. Library of Tibetan
+                        Classics. Boston: Wisdom Publications, 2006.</bibl>
+                    <bibl xml:id="UT22084-068-020-34">Pekar Sangpo (<foreign xml:lang="Bo-Ltn">pad
+                            dkar bzang po</foreign>). <title xml:lang="Bo-Ltn">mdo sde spyi’i rnam
+                            bzhag</title>. Beijing: mi rigs dpe skrun khang, 2006.</bibl>
+                    <bibl xml:id="UT22084-068-020-35">
+                        <title xml:lang="Bo-Ltn">dkar chag ’phang thang ma</title> [Phangthangma].
+                        Beijing: mi rigs dpe skrun khang, 2003.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-36">
+                            <term>affliction itself</term>
+                            <term xml:lang="Bo-Ltn">kun nas nyon mongs pa </term>
+                            <term xml:lang="bo">ཀུན་ནས་ཉོན་མོངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">saṁkleśa</term>
+                            <term type="definition">A term referring to all the primary and
+                                secondary afflictive emotions that completely disturb the
+                                mind.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-37">
+                            <term>anger</term>
+                            <term xml:lang="Bo-Ltn">zhe sdang </term>
+                            <term xml:lang="bo">ཞེ་སྡང་།</term>
+                            <term xml:lang="Sa-Ltn">dveṣa</term>
+                            <term type="definition">Hatred, aggression, and/or aversion. One of the
+                                affective behavior patterns known as the three poisons.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-38">
+                            <term>aspiration</term>
+                            <term xml:lang="Bo-Ltn">smon lam </term>
+                            <term xml:lang="bo">སྨོན་ལམ།</term>
+                            <term xml:lang="Sa-Ltn">praṇidhāna</term>
+                            <term type="definition">A declaration of one’s <term type="ignore">aspirations</term> and vows,
+                                and/or an invocation and request of the buddhas, bodhisattvas,
+                                etc.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-39">
+                            <term>blessed one</term>
+                            <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                            <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                            <term xml:lang="Sa-Ltn">bhagavat</term>
+                            <term xml:lang="Sa-Ltn">bhagavān</term>
+                            <term type="definition">An epithet of a buddha. </term>
+                            <term type="alternative">blessed</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-40">
+                            <term>bodhisattva</term>
+                            <term xml:lang="Bo-Ltn">byang chub sems dpa’ </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའ།</term>
+                            <term xml:lang="Sa-Ltn">bodhisattva</term>
+                            <term type="definition">Someone who vows to achieve the complete
+                                enlightenment of a buddha for the benefit of all sentient
+                                beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-41">
+                            <term>bodhisattva great being</term>
+                            <term xml:lang="Bo-Ltn">byang chub sems dpa’ sems dpa’ chen po </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">bodhisattva-mahāsattva</term>
+                            <term type="definition">Those “great beings” who have the intention to
+                                achieve the complete enlightenment of a buddha in order to liberate
+                                all sentient beings from cyclic existence. An epithet of a
+                                bodhisattva. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-42">
+                            <term>calm abiding</term>
+                            <term xml:lang="Bo-Ltn">zhi gnas </term>
+                            <term xml:lang="bo">ཞི་གནས།</term>
+                            <term xml:lang="Sa-Ltn">śamatha</term>
+                            <term type="definition">Often translated as “<term type="ignore">calm abiding</term>” or “mental
+                                quiescence,” referring to a calm state without thought or the
+                                meditative practice of calming the mind to rest free from the
+                                disturbance of thought. One of the two basic forms of Buddhist
+                                meditation, the other being transcendent insight (<foreign xml:lang="Sa-Ltn" type="term">vipaśyanā</foreign>).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-43">
+                            <term>dedication</term>
+                            <term xml:lang="Bo-Ltn">bsngo ba</term>
+                            <term xml:lang="bo">བསྔོ་བ།</term>
+                            <term xml:lang="Bo-Ltn">yongs su bsngo ba </term>
+                            <term xml:lang="bo">ཡོངས་སུ་བསྔོ་བ།</term>
+                            <term xml:lang="Sa-Ltn">pariṇāma</term>
+                            <term xml:lang="Sa-Ltn">pariṇāmana</term>
+                            <term type="definition">
+                                <term type="ignore">Dedication</term> of the merit at the end of a
+                                spiritual practice or virtuous action, usually for the attainment of
+                                full enlightenment by all sentient beings. In this way the actions
+                                thus <term type="ignore">dedicated</term> contribute to the purpose of attaining enlightenment
+                                for the sake of all sentient beings.</term>
+                            <term type="alternative">dedicate</term>
+                            <term type="alternative">dedicated</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-44">
+                            <term>defilements</term>
+                            <term xml:lang="Bo-Ltn">zag pa </term>
+                            <term xml:lang="bo">ཟག་པ།</term>
+                            <term xml:lang="Sa-Ltn">āsrava</term>
+                            <term type="definition">Literally “outflows,” these are mental
+                                <term type="ignore">defilements</term> that “flow out” toward the objects of cyclic existence,
+                                binding us to them.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-45">
+                            <term>desire </term>
+                            <term xml:lang="Bo-Ltn">’dod chags </term>
+                            <term xml:lang="bo">འདོད་ཆགས།</term>
+                            <term xml:lang="Sa-Ltn">rāga</term>
+                            <term xml:lang="Sa-Ltn">lobha</term>
+                            <term type="definition">Passion, attachment, and/or lust. One of the
+                                affective behavior patterns known as the three poisons. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-46">
+                            <term>diligence</term>
+                            <term xml:lang="Bo-Ltn">brtson ’grus </term>
+                            <term xml:lang="bo">བརྩོན་འགྲུས།</term>
+                            <term xml:lang="Sa-Ltn">vīrya</term>
+                            <term type="definition">
+                                <term type="ignore">Diligence</term> or perseverance. One of the six
+                                perfections of the bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-47">
+                            <term>discernment </term>
+                            <term xml:lang="Bo-Ltn">so so yang dag par rig pa </term>
+                            <term xml:lang="bo">སོ་སོ་ཡང་དག་པར་རིག་པ།</term>
+                            <term xml:lang="Sa-Ltn">pratisaṃvid</term>
+                            <term xml:lang="Sa-Ltn">pratisaṃvedanā</term>
+                            <term type="definition">Correct and unhindered discriminating knowledge.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-48">
+                            <term>endurance</term>
+                            <term xml:lang="Bo-Ltn">bzod pa </term>
+                            <term xml:lang="bo">བཟོད་པ།</term>
+                            <term xml:lang="Sa-Ltn">kṣānti</term>
+                            <term type="definition">Forbearance, patience, and/or tolerance. One of
+                                the six perfections of the bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-49">
+                            <term>sameness</term><!-- equanimity in text refers to btang snyoms, not this tib. -->
+                            <term xml:lang="Bo-Ltn">mnyam pa nyid </term>
+                            <term xml:lang="bo">མཉམ་པ་ཉིད།</term>
+                            <term xml:lang="Sa-Ltn">samatā</term>
+                            <term type="definition">(The state of) “equality,” “equal nature,” “equanimity,” or “equalness.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-50">
+                            <term>ethical discipline</term>
+                            <term xml:lang="Bo-Ltn">tshul khrims </term>
+                            <term xml:lang="bo">ཚུལ་ཁྲིམས།</term>
+                            <term xml:lang="Sa-Ltn">śīla</term>
+                            <term type="definition">Morally virtuous or disciplined conduct and the
+                                abandonment of morally undisciplined conduct of body, speech, and
+                                mind. One of the six perfections of the bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-51">
+                            <term>generosity</term>
+                            <term xml:lang="Bo-Ltn">sbyin pa </term>
+                            <term xml:lang="bo">སྦྱིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">dāna</term>
+                            <term type="definition">The practice of giving or making offerings to
+                                others. One of the six perfections of the bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-52">
+                            <term>holy Dharma</term>
+                            <term xml:lang="Bo-Ltn">dam pa’i chos </term>
+                            <term xml:lang="bo">དམ་པའི་ཆོས།</term>
+                            <term xml:lang="Sa-Ltn">saddharma</term>
+                            <term type="definition">The Buddhadharma or the Buddha’s
+                                teachings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-53">
+                            <term>ignorance</term>
+                            <term xml:lang="Bo-Ltn">gti mug </term>
+                            <term xml:lang="bo">གཏི་མུག</term>
+                            <term xml:lang="Sa-Ltn">moha</term>
+                            <term type="definition">Delusion, stupidity, closed mindedness, and/or
+                                mental darkness. One of the affective behavior patterns known as the
+                                three poisons. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-54">
+                            <term>intrinsic nature</term>
+                            <term xml:lang="Bo-Ltn">rang bzhin </term>
+                            <term xml:lang="bo">རང་བཞིན།</term>
+                            <term xml:lang="Sa-Ltn">svabhāva</term>
+                            <term type="definition">The inherent nature of a phenomenon; in the
+                                present text, this is possibly a <foreign xml:lang="Sa-Ltn" type="term">tathāgatagarbha</foreign> reference.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-55">
+                            <term>karmic obscuration</term>
+                            <term xml:lang="Bo-Ltn">las kyi sgrib pa </term>
+                            <term xml:lang="bo">ལས་ཀྱི་སྒྲིབ་པ།</term>
+                            <term xml:lang="Sa-Ltn">karmāvaraṇa</term>
+                            <term type="definition">Obscurations or obstructions caused by past
+                                deeds.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-56">
+                            <term>latent disposition</term>
+                            <term xml:lang="Bo-Ltn">bag la nyal </term>
+                            <term xml:lang="bo">བག་ལ་ཉལ།</term>
+                            <term xml:lang="Sa-Ltn">anuśaya</term>
+                            <term type="definition">Habitual impulses or subconscious habit patterns
+                                that underlie emotions such as desire and hatred. These are also
+                                causes of the perpetuation of cyclic existence.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-57">
+                            <term>latent tendencies</term>
+                            <term xml:lang="Bo-Ltn">bag chags </term>
+                            <term xml:lang="bo">བག་ཆགས།</term>
+                            <term xml:lang="Sa-Ltn">vāsanā</term>
+                            <term type="definition">Karmic traces or residues imprinted by past
+                                actions and constituting tendencies that predispose one to
+                                particular patterns of behavior.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-58">
+                            <term>learning</term>
+                            <term xml:lang="Bo-Ltn">thos pa </term>
+                            <term xml:lang="bo">ཐོས་པ།</term>
+                            <term xml:lang="Sa-Ltn">śruti</term>
+                            <term xml:lang="Sa-Ltn">śruta</term>
+                            <term type="definition">Hearing or listening to teachings, this refers
+                                to receiving oral instructions and studying scriptures.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-59">
+                            <term>liberations</term>
+                            <term xml:lang="Bo-Ltn">rnam par thar pa </term>
+                            <term xml:lang="bo">རྣམ་པར་ཐར་པ།</term>
+                            <term xml:lang="Sa-Ltn">vimokṣa</term>
+                            <term type="definition">In this context, this refers to a category of
+                                advanced meditative attainments. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-60">
+                            <term>realm of the Lord of the Dead</term>
+                            <term xml:lang="Bo-Ltn">gshin rje’i ’jig rten </term>
+                            <term xml:lang="bo">གཤིན་རྗེའི་འཇིག་རྟེན།</term>
+                            <term xml:lang="Sa-Ltn">yamaloka</term>
+                            <term type="definition">The preta realm, or the realm of ghosts, where Yama, the Lord of Death, is the ruler and judges the dead. Yama is also said to rule over the hells. This term is also the name of the Vedic afterlife inhabited by the ancestors (<foreign xml:lang="Sa-Ltn" type="term">pitṛ</foreign>).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-61">
+                            <term>meditative absorption</term>
+                            <term xml:lang="Bo-Ltn">bsam gtan </term>
+                            <term xml:lang="bo">བསམ་གཏན།</term>
+                            <term xml:lang="Sa-Ltn">dhyāna</term>
+                            <term type="definition">One of the synonyms for meditation, referring
+                                specifically to states of mental stability or one-pointed abiding in
+                                an undistracted state of mind free from afflicted mental states. <foreign type="term" xml:lang="Bo-Ltn">bsam gtan</foreign>/<foreign xml:lang="Sa-Ltn" type="term">dhyāna</foreign> can refer to the specific states of absorption of the form and formless realms (8 in total). One
+                                of the six perfections of the bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-62">
+                            <term>meditative attainment</term>
+                            <term xml:lang="Bo-Ltn">snyoms par ’jug pa </term>
+                            <term xml:lang="bo">སྙོམས་པར་འཇུག་པ།</term>
+                            <term xml:lang="Sa-Ltn">samāpatti</term>
+                            <term type="definition">Meditative equipoise or evenness of mind.
+                                Another synonym for meditation, this refers to a category of
+                                advanced <term type="ignore">meditative attainments</term>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-63">
+                            <term>meditative concentration</term>
+                            <term xml:lang="Bo-Ltn">ting nge ’dzin </term>
+                            <term xml:lang="bo">ཏིང་ངེ་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">samādhi </term>
+                            <term type="definition">A general term for states of deep concentration.
+                                One of the synonyms for meditation, referring in particular to a
+                                state of complete concentration or focus.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-64">
+                            <term>merit</term>
+                            <term xml:lang="Bo-Ltn">bsod nams </term>
+                            <term xml:lang="bo">བསོད་ནམས།</term>
+                            <term xml:lang="Sa-Ltn">puṇya</term>
+                            <term type="definition">Virtuous thoughts, words, and actions that
+                                produce positive results, or <term type="ignore">merit</term>. In Mahāyāna practice, these are
+                                to be dedicated for the benefit of all sentient beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-65">
+                            <term>nonvirtuous deed</term>
+                            <term xml:lang="Bo-Ltn">mi dge ba </term>
+                            <term xml:lang="bo">མི་དགེ་བ།</term>
+                            <term xml:lang="Sa-Ltn">akuśala</term>
+                            <term type="definition">There are ten <term type="ignore">nonvirtuous deeds</term>, being the
+                                opposites of the ten virtuous deeds. The three physical misdeeds are
+                                killing, taking what is not given, and engaging in sexual
+                                misconduct. The four verbal misdeeds are lying, divisive talk, harsh
+                                speech, and gossiping. The three mental misdeeds are covetousness,
+                                ill will, and false views.</term>
+                            <term type="alternative">nonvirtue</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-66">
+                            <term>obscuration</term>
+                            <term xml:lang="Bo-Ltn">sgrib pa </term>
+                            <term xml:lang="bo">སྒྲིབ་པ།</term>
+                            <term xml:lang="Sa-Ltn">āvaraṇa</term>
+                            <term xml:lang="Sa-Ltn">nivaraṇa</term>
+                            <term type="definition">Defilements that obstruct liberation and
+                                omniscience. This term refers both to affective and cognitive
+                                <term type="ignore">obscurations</term>. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-67">
+                            <term>omniscience</term>
+                            <term xml:lang="Bo-Ltn">thams cad mkhyen pa </term>
+                            <term xml:lang="bo">ཐམས་ཅད་མཁྱེན་པ།</term>
+                            <term xml:lang="Bo-Ltn">thams cad mkhyen pa nyid </term>
+                            <term xml:lang="bo">ཐམས་ཅད་མཁྱེན་པ་ཉིད།</term>
+                            <term xml:lang="Sa-Ltn">sarvajñatā</term>
+                            <term type="definition">This refers to the gnosis or <term type="ignore">omniscience</term> of the
+                                Buddha, the “All-Knowing” or “Omniscient” One.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-68">
+                            <term>primary afflictions</term>
+                            <term xml:lang="Bo-Ltn">nyon mongs pa </term>
+                            <term xml:lang="bo">ཉོན་མོངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">kleśa</term>
+                            <term type="definition">Afflictive emotions, such as the three poisons,
+                                that bind one to cyclic existence. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-81">
+                            <term>three poisons</term>
+                            <term xml:lang="Bo-Ltn">dug gsum</term>
+                            <term xml:lang="bo">དུག་གསུམ།</term>
+                            <term xml:lang="Sa-Ltn">tri­viṣa</term>
+                            <term type="definition">The three main affective behavior patterns, namely ignorance, desire, and anger.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-69">
+                            <term>secondary afflictions</term>
+                            <term xml:lang="Bo-Ltn">nye ba’i nyon mongs pa </term>
+                            <term xml:lang="bo">ཉེ་བའི་ཉོན་མོངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">upakleśa </term>
+                            <term type="definition">Literally, “near-afflictions,” or subsidiary
+                                afflictive emotions derivative of or related to the primary
+                                afflictions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-70">
+                            <term>sentient being</term>
+                            <term xml:lang="Bo-Ltn">sems can </term>
+                            <term xml:lang="bo">སེམས་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">sattva</term>
+                            <term type="definition">Any living being in one of the six
+                                realms.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-71">
+                            <term>sphere of reality</term>
+                            <term xml:lang="Bo-Ltn">chos kyi dbyings </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་དབྱིངས།</term>
+                            <term xml:lang="Sa-Ltn">dharmadhātu</term>
+                            <term type="definition">A synonym for emptiness, the ultimate reality,
+                                or the ultimate nature of things. This term is interpreted variously
+                                due to the many different meanings of dharma (<foreign xml:lang="Bo-Ltn" type="term">chos</foreign>) as element,
+                                phenomena, reality, truth, and/or Teaching.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-72">
+                            <term>suchness</term>
+                            <term xml:lang="Bo-Ltn">de bzhin nyid </term>
+                            <term xml:lang="bo">དེ་བཞིན་ཉིད།</term>
+                            <term xml:lang="Sa-Ltn">tathatā</term>
+                            <term type="definition">A synonym for emptiness, this term refers to the
+                                ultimate nature of things, the way things are in reality.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-73">
+                            <term>superknowledges</term>
+                            <term xml:lang="Bo-Ltn">mngon par shes pa </term>
+                            <term xml:lang="bo">མངོན་པར་ཤེས་པ།</term>
+                            <term xml:lang="Sa-Ltn">abhijñā</term>
+                            <term type="definition">Traditionally there are six modes of supernormal
+                                cognition or ability, namely, clairvoyance, clairaudience, knowledge
+                                of the minds of others, remembrance of past lives, the ability to
+                                perform miracles, and the knowledge of the destruction of all mental
+                                defilements. The first five are considered mundane or worldly and
+                                can be attained to some extent by non-Buddhist yogis as well as
+                                Buddhist arhats and bodhisattvas. The sixth is considered to be
+                                supramundane and can be attained only by Buddhist yogis.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-74">
+                            <term>tathāgata</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">tathāgata</term>
+                            <term type="definition">“Thus-gone one,” an epithet of a buddha. A
+                                buddha is one who has “gone” to thusness, suchness, or ultimate reality. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-75">
+                            <term>transcendent insight</term>
+                            <term xml:lang="Bo-Ltn">lhag mthong </term>
+                            <term xml:lang="bo">ལྷག་མཐོང་།</term>
+                            <term xml:lang="Sa-Ltn">vipaśyanā</term>
+                            <term type="definition">Often translated as “insight meditation,”
+                                referring to the liberating insight into the nature of reality or
+                                the meditative practice of developing insight into the nature of
+                                reality. One of the two basic forms of Buddhist meditation, the
+                                other being calm abiding (<foreign xml:lang="Sa-Ltn" type="term">śamatha</foreign>).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-76">
+                            <term>very limit of reality</term>
+                            <term xml:lang="Bo-Ltn">yang dag pa’i mtha’ </term>
+                            <term xml:lang="bo">ཡང་དག་པའི་མཐའ།</term>
+                            <term xml:lang="Sa-Ltn">bhūtakoṭi</term>
+                            <term type="definition">A synonym for ultimate reality, and also a
+                                near-synonym for nirvāṇa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-77">
+                            <term>wisdom</term>
+                            <term xml:lang="Bo-Ltn">shes rab </term>
+                            <term xml:lang="bo">ཤེས་རབ།</term>
+                            <term xml:lang="Sa-Ltn">prajñā</term>
+                            <term type="definition">Transcendent or discriminating awareness; the
+                                mind that sees the ultimate truth. One of the six perfections of the
+                                bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-020-82">
+                            <term>element</term>
+                            <term xml:lang="Bo-Ltn">khams</term>
+                            <term xml:lang="bo">ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">dhātu</term>
+                            <term type="definition">A word that can refer, in different formulations, to the fundamental constituents of material and/or mental phenomena, or to the realms of existence, it also has the general meaning of the nature of something.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-068-020-78">
+                            <term>Bandé Paltsek</term>
+                            <term xml:lang="Bo-Ltn">ban de dpal brtsegs </term>
+                            <term xml:lang="bo">བན་དེ་དཔལ་བརྩེགས།</term>
+                            <term xml:lang="Sa-Ltn"> </term>
+                            <term type="definition">The senior editor-translator who edited and
+                                finalized this text.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-068-020-79">
+                            <term>Bandé Yeshé Nyingpo</term>
+                            <term xml:lang="Bo-Ltn">ban de ye shes snying po </term>
+                            <term xml:lang="bo">བན་དེ་ཡེ་ཤེས་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn"> </term>
+                            <term type="definition">Translator of this text.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-068-020-80">
+                            <term>Vidyākaraprabha</term>
+                            <term xml:lang="Bo-Ltn">bidyA ka ra pra bha </term>
+                            <term xml:lang="bo">བིདྱཱ་ཀ་ར་པྲ་བྷ།</term>
+                            <term xml:lang="Sa-Ltn">Vidyākaraprabha</term>
+                            <term type="definition">Indian abbot, a translator of this text.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>
