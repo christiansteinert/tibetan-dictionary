@@ -5,11 +5,23 @@
         <fileDesc>
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">dpal dgyes pa'i rdo rje'i dka' 'grel mu tig phreng ba</title>
-                <title type="mainTitle" xml:lang="Sa-Ltn">srihevajrapanjika-nama-muktikavali</title>
-                <title type="mainTitle" xml:lang="en"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Śrīhevajrapañjikā-nāma-muktikāvalī</title>
+                <title type="mainTitle" xml:lang="en">“The Garland of Pearls,” a Commentary on Difficult Points in the Glorious Hevajratantra</title>
+                <title type="otherTitle" xml:lang="zh">吉祥喜金剛難語釋真珠鬘</title>
+<author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-76">Wiesiek Mical</author>
+                <author role="translatorEng" ref="contributors.xml#person-58">Anna Zilman</author>
+                <author role="translatorEng" ref="contributors.xml#person-50">Dr. Andreas Doctor</author>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT23703-004-005"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh1189" type="text">
@@ -18,16 +30,17 @@
                     <author role="translatorTib">a. ratnakarasanti</author>
                     <author role="translatorTib">t. santibhadra</author>
                     <author role="translatorTib">'gos lhas btsas</author>
-                    <location count-pages="">
-                        <start volume="4" page="443"/>
-                        <end volume="4" page="595"/>
+                    <location work="UT23703" count-pages="153">
+                        <volume number="4" start-page="441" end-page="593"/>
                     </location>
                     <idno parent-id="O1JC76301JC21614" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC76301JC7717" work="W23703"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-09T12:59:00.64Z" user="john">09/03/2019 12:59:00</note>
+                <note type="lastUpdated" date-time="2020-02-21T09:57:09.355Z" user="admin">21/02/2020 09:57:09</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-02-21T09:57:05.834Z" user="andreas">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
