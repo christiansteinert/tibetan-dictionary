@@ -5,7 +5,7 @@
         <fileDesc>
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">dge ba’i bshes gnyen bsten pa’i mdo</title>
-                <title type="mainTitle" xml:lang="bo">དགེ་བའི་བཤེས་གཉེན་བསྟེན་པའི་མདོ</title>
+                <title type="mainTitle" xml:lang="bo">དགེ་བའི་བཤེས་གཉེན་བསྟེན་པའི་མདོ།</title>
                 <title type="mainTitle" xml:lang="en">The Sūtra on Reliance upon a Virtuous Spiritual Friend</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Kalyāṇa­mitra­sevana­sūtra</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་དགེ་བའི་བཤེས་གཉེན་བསྟེན་པའི་མདོ།</title>
@@ -20,13 +20,12 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.15 <date>2019</date>
+                <edition>v 2.15.3 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
-                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
-                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
                 <availability>
                     <licence>
                         <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
@@ -42,12 +41,11 @@
             <sourceDesc>
                 <bibl key="toh300" type="text">
                     <ref>Toh 300</ref>
-                    <biblScope>Degé Kangyur, vol 71 (mdo sde, sha), folios 304.b—305.a</biblScope>
+                    <biblScope>Degé Kangyur, vol 71 (mdo sde, sha), folios 304.b–305.a</biblScope>
                     <author role="translatorTib">Paṇḍita Dharmākara</author>
                     <author role="translatorTib">Lotsāwa Zangkyong (bzang skyong)</author>
-                    <location count-pages="2">
-                        <start volume="71" page="610"/>
-                        <end volume="71" page="611"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="71" start-page="608" end-page="609"/>
                     </location>
                 <idno parent-id="O1JC114941JC14668"/>
                 <idno source-id="O1JC114941JC11967" work="W22084"/>
@@ -55,8 +53,11 @@
             
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-06-18T02:59:14.608Z" user="admin">18/06/2019 02:59:14</note>
+                <note type="lastUpdated" date-time="2020-02-21T20:12:16.731Z" user="admin">21/02/2020 20:12:16</note>
             <note type="updated" update="text-version" value="v 2.15" date-time="2019-06-18T02:59:11.828Z" user="celso">v 2.15 2019</note>
+<note type="updated" update="text-version" value="v 2.15.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.15.2" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version increment</note>
+<note type="updated" update="text-version" value="v 2.15.3" date-time="2020-02-21T20:12:14.041Z" user="celso">corrected dash in &lt;biblscope&gt;</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -182,7 +183,7 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-071-014-12"/>
                     <p tid="14">
-                        <ref cRef="F.304.b"/>
+                        <ref cRef="F.304.b" type="folio"/>
                         <!--<modularPassage type="homage">--> Homage to all buddhas and bodhisattvas.<!--</modularPassage>-->
                     </p>
                     <lb/>
@@ -202,7 +203,7 @@
                         ‘A virtuous spiritual friend, a virtuous companion, a virtuous support is half the holy life. A
                         non-virtuous spiritual friend, a non-virtuous companion, a non-virtuous support, however, is not.’ ”</p>
                     <milestone unit="chunk" xml:id="UT22084-071-014-15"/>
-                    <p tid="17">The Bhagavān replied, “Ānanda, <ref cRef="F.305.a"/> do not say that a virtuous spiritual friend,
+                    <p tid="17">The Bhagavān replied, “Ānanda, <ref cRef="F.305.a" type="folio"/> do not say that a virtuous spiritual friend,
                         a virtuous companion, a virtuous support is half the holy life, but that a non-virtuous spiritual friend,
                         a non-virtuous companion, a non-virtuous support is not.</p>
                     <p tid="18">“Why? Ānanda, the point is that a virtuous spiritual friend, a virtuous companion, a virtuous
@@ -225,13 +226,13 @@
                         One had taught. </p>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-071-014-18"/>
-                    <p tid="22">This completes <title xml:lang="en">The Noble Sūtra on Reliance upon a Virtuous Spiritual
-                        Friend</title>.<note place="end" index="7" xml:id="UT22084-071-014-40">The colophon makes no mention
+                    <trailer tid="22">This completes “<title xml:lang="en">The Noble Sūtra on Reliance upon a Virtuous Spiritual
+                        Friend</title>.”<note place="end" index="7" xml:id="UT22084-071-014-40">The colophon makes no mention
                             of who the Tibetan translators were, but the Degé catalogue (<title xml:lang="Bo-Ltn">dkar
                                 chag</title>, vol. 103, lak+Sh+mI, F.134.a.7) states that the text was translated by the Paṇḍita
                             Dharmākara and the Lotsāwa Zangkyong (<foreign xml:lang="Bo-Ltn">bzang skyong</foreign>). See
                             Introduction, <ptr target="#UT22084-071-014-7"/>.</note>
-                    </p>
+                    </trailer>
                 </div>
                 <!--<div type="colophon">
                     <head type="colophon" tid="30">Colophon</head>
