@@ -8,8 +8,15 @@
                 <title type="mainTitle" xml:lang="Sa-Ltn">yogaratnamala-nama-hevajrapanjika</title>
                 <title type="mainTitle" xml:lang="en"/>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
                 <idno xml:id="UT23703-003-001"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh1183" type="text">
@@ -18,16 +25,17 @@
                     <author role="translatorTib">a. krsnapandita</author>
                     <author role="translatorTib">t. krsnapandita</author>
                     <author role="translatorTib">tshul khrims rgyal ba</author>
-                    <location count-pages="">
-                        <start volume="3" page="4"/>
-                        <end volume="3" page="123"/>
+                    <location work="UT23703" count-pages="120">
+                        <volume number="3" start-page="2" end-page="121"/>
                     </location>
                     <idno parent-id="O1JC76301JC21614" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC76301JC7710" work="W23703"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 10:27:37 by admin</note>
+                <note type="lastUpdated" date-time="2020-02-21T09:54:58.782Z" user="admin">21/02/2020 09:54:58</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-02-21T09:54:52.67Z" user="andreas">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-02-21T09:54:52.67Z" user="andreas">3</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
