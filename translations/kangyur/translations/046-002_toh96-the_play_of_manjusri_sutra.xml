@@ -39,7 +39,7 @@
 
             </titleStmt>
             <editionStmt>
-                <edition>v 1.1.4 <date>2020</date>
+                <edition>v 1.2.1 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -76,7 +76,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-02-21T12:15:24.46Z" user="admin">21/02/2020 12:15:24</note>
+                <note type="lastUpdated" date-time="2020-02-26T13:24:37.846Z" user="admin">26/02/2020 13:24:37</note>
                 <note type="updated" update="text-version" value="0.1" date-time="2019-09-26T22:29:18.147Z" user="james"/>
                 <note type="updated" update="translation-status" value="2.a" date-time="2019-09-26T22:29:18.147Z" user="james">2.a</note>
                 <note type="updated" update="text-version" value="0.2" date-time="2019-09-27T12:08:43.224Z" user="mike">Testing out new version
@@ -98,6 +98,7 @@
 <note type="updated" update="text-version" value="v 1.1.2" date-time="2020-01-24T09:42:15.783Z" user="john">Corrected the first publication date to 2020</note>
 <note type="updated" update="text-version" value="v 1.1.3" date-time="2020-01-25T15:57:56.285Z" user="john">Minor corrections (2) and additions.</note>
 <note type="updated" update="text-version" value="v 1.1.4" date-time="2020-02-21T12:36:45.044Z" user="admin">Incorrectly scoped xml:id values updated</note>
+<note type="updated" update="text-version" value="v 1.2.1" date-time="2020-02-26T13:24:35.092Z" user="john">Added a paragraph to the intro and a glossary entry, both to do with the passage on rab tu 'byung ba.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -186,6 +187,12 @@
                         his entire retinue of women and warriors, and the citizens of Rājagṛha.
                     It is even acknowledged by the Buddha himself, who is taking a walk with Ānanda
                     on the slopes of Vulture Peak. </p>
+                <milestone unit="chunk" xml:id="UT22084-046-002-579"/>
+                <p tid="6">Having attained a level of realization, Suvarṇottama­prabhāśrī feels she should
+                    abandon her worldly, laywoman’s life and “enter the ascetic life,” i.e. take vows as a nun. In an
+                    important passage (<ptr target="#UT22084-046-002-192"/> <foreign xml:lang="la">et seq</foreign>.)
+                    Mañjuśrī outlines the deeper, inner meanings of going forth for a bodhisatva, and inspires
+                    five hundred bodhisatvas to go forth themselves. </p>
                 <milestone unit="chunk" xml:id="UT22084-046-002-4"/>
                 <p tid="7">Having now met the beautiful Mañjuśrī, adopted his teaching, and attained
                     a higher goal in life, Suvarṇottama­prabhāśrī decides to teach her male friends
@@ -1515,15 +1522,15 @@
                         not depend on anyone else. By means of their own comprehension and
                         knowledge, whatever they know, they know themselves. Whatever they say, they
                         say themselves. Thus they are independent because they are not compliant.” </p>
-                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-046-002-210"/>
                     <p tid="215">When the princely Mañjuśrī had taught this exposition of the Dharma
-                        consisting of this chapter on embracing the ascetic life, because it was so
+                        consisting of this passage on embracing the ascetic life, because it was so
                         well formulated <ref type="folio" cRef="F.234.a"/> five hundred bodhisatvas
                         took the clothes and ornaments off their bodies and declared, “The embrace
                         of the ascetic life of the bodhisatvas as you have taught it was so well
                         formulated that we also wish to attain that embrace of the ascetic
                         life.”</p>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-046-002-211"/>
                     <p tid="216">The princely Mañjuśrī then said to the courtesan’s daughter
                         Suvarṇottama­prabhāśrī, “Girl, get into the carriage and, out of compassion,
@@ -2312,6 +2319,19 @@
                     is more specialized.</term>
             </gloss>
         </item>-->
+                    <item>
+                        <gloss type="term" xml:id="UT22084-046-002-580">
+                            <term>embracing the ascetic life</term>
+                            <term xml:lang="Bo-Ltn">rab tu ’byung ba </term>
+                            <term xml:lang="bo">རབ་ཏུ་འབྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">pravrajyā</term>
+                            <term type="definition">Often rendered “going forth,” this 
+                                term is used for renunciation and the taking of vows as a novice, 
+                                monk, or nun at the vinaya or pratimokṣa level of Buddhist practice.</term>
+                            <term type="alternative">enter the ascetic life</term>
+                            <term type="alternative">embrace the ascetic life</term>
+                        </gloss>
+                    </item>
                     <item>
                         <gloss type="term" xml:id="UT22084-046-002-499">
                             <term>sensory elements</term>
