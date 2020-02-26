@@ -21,15 +21,24 @@
                 <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
                     Dharmachakra Translation Committee <lb/> under the patronage and supervision of
                     84000: Translating the Words of the Buddha</author>
-                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay,
-                    Dr.</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="projectEditor" ref="contributors.xml#person-50">Andreas Doctor</editor>
+
+
+
+
+            
+<author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
+<consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.1.2 <date>2019</date>
+                <edition>v 0.1.3 <date>2020</date>
                 </edition>
             </editionStmt>
 
-            <publicationStmt status="2.a">
+            <publicationStmt status="2">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
                     initiative to translate all the Buddha’s words into modern languages, and to
@@ -64,7 +73,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-01-14T15:55:54.088Z" user="admin">14/01/2020 15:55:54</note>
+                <note type="lastUpdated" date-time="2020-02-26T21:33:27.418Z" user="admin">26/02/2020 21:33:27</note>
                 <note type="updated" update="translation-status" value="2.e" date-time="2019-07-02T14:44:08.116Z" user="john">2.e</note>
                 <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-28T15:12:17.584Z" user="andreas">v 0.1.0</note>
                 <note type="updated" update="translation-status" value="2.d" date-time="2019-11-28T15:12:17.584Z" user="andreas">2.d</note>
@@ -74,6 +83,8 @@
                 <note type="updated" update="translation-status" value="2.a" date-time="2020-01-05T15:29:22.409Z" user="andreas">2.a</note>
             
 <note type="updated" update="text-version" value="v 0.1.2" date-time="2020-01-14T15:55:51.25Z" user="laura">v 0.1.2</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-02-11T06:10:06.818Z" user="mike">2</note>
+<note type="updated" update="text-version" value="v 0.1.3" date-time="2020-02-26T21:33:24.719Z" user="celso">fixed non-breaking spaces in ellipsis</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -107,21 +118,19 @@
                         <title xml:lang="en">The Questions of Ratnajālin</title> belongs to the
                         General Sūtra (<foreign xml:lang="Bo-Ltn">mdo sde</foreign>) section of the
                         Kangyur. It was translated into Tibetan some time during the late eighth or
-                        early ninth century <hi rend="small-caps">ce</hi> by a certain Yeshé Nyingpo
-                            (<foreign xml:lang="Bo-Ltn">ye shes snying po</foreign>) (of whom we
+                        early ninth century <hi rend="small-caps">ce</hi> by a certain Yeshé Nyingpo (of whom we
                         know very little apart from his name) and the Indian scholar Jñānagarbha,
                         who participated in numerous translation projects in Tibet during the early
-                        translation period.<note place="end" index="1" xml:id="UT22084-059-006-4">
+                        translation period.<note place="end" xml:id="UT22084-059-006-4" index="1">
                             Interestingly, Yeshé Nyingpo is a Tibetan translation of Jñānagarbha,
                             and they could perhaps be coreferential terms. As far as we are aware,
                             this was the only sūtra translated jointly by these two figures.</note>
                         The translation was subsequently edited during the same period by the
-                        prolific translator Kawa Paltsek (<foreign xml:lang="Bo-Ltn">ska ba dpal
-                            brtsegs</foreign>). Therefore, the Tibetan translation, which we have
+                        prolific translator Kawa Paltsek. Therefore, the Tibetan translation, which we have
                         rendered into English here, would have been completed during the early
                         translation period, a dating that is also attested by the text’s inclusion
                         in the early-ninth-century Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar
-                            ma</foreign>) catalogue.<note place="end" index="2" xml:id="UT22084-059-006-5"> The Denkarma catalogue is dated to c. 812
+                            ma</foreign>) catalogue.<note place="end" xml:id="UT22084-059-006-5" index="2"> The Denkarma catalogue is dated to c. 812
                                 <hi rend="small-caps">ce</hi>. In this catalogue, <title xml:lang="en">The Questions of Ratnajālin</title> is included among
                             the Miscellaneous Sūtras (<foreign xml:lang="Bo-Ltn">mdo sde sna
                                 tshogs</foreign>) less than ten sections (<foreign xml:lang="Bo-Ltn" type="term">bam po</foreign>) long. See Denkarma, 298.b.4. See also
@@ -140,7 +149,7 @@
                         the Great Vehicle in India. The fact that it was translated into Chinese and
                         Tibetan with more than five hundred years separating the two events also
                         points to a certain popularity and longevity of the text in Buddhist
-                            India.<note place="end" index="3" xml:id="UT22084-059-006-7">Additionally, the sūtra was also translated into Mongolian from
+                            India.<note place="end" xml:id="UT22084-059-006-7" index="3">Additionally, the sūtra was also translated into Mongolian from
                             Tibetan, seemingly around the fourteenth century, although the colophon
                             dates the translation to the seventeenth century (Higuchi 2015). The
                             other mentions of the sūtra that we have come across are two brief
@@ -169,7 +178,7 @@
                         buddhas ended up not being grouped together based on their shared subject
                         matter but instead became dispersed throughout the different sūtra
                         collections due to other editorial concerns. Therefore, we find <title xml:lang="en">The Questions of Ratnajālin</title> grouped together with
-                        the twenty-six sūtras that all share a similar title element (<title xml:lang="en">The Questions of</title> . . .).<note place="end" index="4" xml:id="UT22084-059-006-9"> In the Degé Kangyur we find these
+                        the twenty-six sūtras that all share a similar title element (<title xml:lang="en">The Questions of</title> . . .).<note place="end" xml:id="UT22084-059-006-9" index="4"> In the Degé Kangyur we find these
                             sūtras placed from Toh 148–174.</note>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-059-006-10"/>
@@ -368,11 +377,11 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-006-38"/>
                     <lg tid="42">
-                        <l>And the heavenly ornaments,<note place="end" index="5" xml:id="UT22084-059-006-39"> Here “heavenly ornaments” translates
+                        <l>And the heavenly ornaments,<note place="end" xml:id="UT22084-059-006-39" index="5"> Here “heavenly ornaments” translates
                                 the Tibetan <foreign xml:lang="Bo-Ltn" type="term">mkha’
                                     rten</foreign>. The Sanskrit listed in the Negi dictionary for
                                 this term is <foreign xml:lang="Sa-Ltn" type="term">vyomaka</foreign>, which Monier-Williams defines as “a kind of
-                                ornament.” </note> clear as water, on the thrones,<note place="end" index="6" xml:id="UT22084-059-006-40">Translated based on Stok:
+                                ornament.” </note> clear as water, on the thrones,<note place="end" xml:id="UT22084-059-006-40" index="6">Translated based on Stok:
                                     <foreign xml:lang="Bo-Ltn" type="quote">khri rnams dang ni khri
                                     la chu lta bu’i/ /mkha’ rten dag kyang byas nas de la
                                     ni</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="quote">
@@ -571,7 +580,7 @@
                         saṃsāra for an equivalent number of eons. Their minds will be undeluded, and
                         they will fully awaken to unsurpassed and perfect buddhahood. Their bodies
                         will become solid like that of Nārāyaṇa. Residing in a single place, they
-                        will possess the four necessities.<note place="end" index="7" xml:id="UT22084-059-006-63"> Translation tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">lus dbyibs gcig la spi dza bzhi par
+                        will possess the four necessities.<note place="end" xml:id="UT22084-059-006-63" index="7"> Translation tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">lus dbyibs gcig la spi dza bzhi par
                                 ’gyur</foreign>. The Pedurma edition records no variants. Stok:
                                 <foreign xml:lang="Bo-Ltn" type="quote">rus dbyibs gcig la spi dza
                                 bzhi bar ’gyur</foreign>. Here we have translated this line based on
@@ -622,7 +631,7 @@
                     <milestone unit="chunk" xml:id="UT22084-059-006-70"/>
                     <lg tid="71">
                         <l>“They will always be like Nārāyaṇa.</l>
-                        <l>Residing in a single place, they will possess the four necessities.<note place="end" index="8" xml:id="UT22084-059-006-71"> Translation
+                        <l>Residing in a single place, they will possess the four necessities.<note place="end" xml:id="UT22084-059-006-71" index="8"> Translation
                                 tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">lus dbyibs
                                     gcig la spi dza bzhi</foreign>. The Pedurma edition records no
                                 variants. Stok: <foreign xml:lang="Bo-Ltn" type="quote">rus dbyibs
@@ -636,7 +645,7 @@
                     <milestone unit="chunk" xml:id="UT22084-059-006-72"/>
                     <lg tid="72">
                         <l>“Those who hear his name</l>
-                        <l>And prostrate with their five points<note place="end" index="9" xml:id="UT22084-059-006-73"> Hands, feet, and head.</note>
+                        <l>And prostrate with their five points<!--<note place="end" index="9" xml:id="UT22084-059-006-73"> Hands, feet, and head.</note>-->
                         </l>
                         <l>Will permanently gain the voice of <term>Brahmā</term>
                         </l>
@@ -793,7 +802,7 @@
                     <milestone unit="chunk" xml:id="UT22084-059-006-95"/>
                     <lg tid="94">
                         <l>“Whosoever abandons the sublime Dharma</l>
-                        <l>Is among <term>Māra</term>’s ranks.<note place="end" index="10" xml:id="UT22084-059-006-96"> In the Tibetan text, this verse has
+                        <l>Is among <term>Māra</term>’s ranks.<note place="end" xml:id="UT22084-059-006-96" index="9"> In the Tibetan text, this verse has
                                 only two lines.</note>
                         </l>
                     </lg>
@@ -845,7 +854,7 @@
                     <lg tid="101">
                         <l>“One may fill with gold</l>
                         <l>All the buddha realms,</l>
-                        <l>The numbers of which defy counting,<note place="end" index="11" xml:id="UT22084-059-006-104"> Translated based on Yongle, Peking
+                        <l>The numbers of which defy counting,<note place="end" xml:id="UT22084-059-006-104" index="10"> Translated based on Yongle, Peking
                                 Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">chod</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">mchod</foreign>.</note>
                         </l>
                         <l>And offer it to the world protectors.</l>
@@ -1215,16 +1224,16 @@
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-059-006-155"/>
                     <lg tid="152">
-                        <l>“By pleasing the excellent<note place="end" index="12" xml:id="UT22084-059-006-156">Translated based on Yongle and Peking
+                        <l>“By pleasing the excellent<note place="end" xml:id="UT22084-059-006-156" index="11">Translated based on Yongle and Peking
                                 Kangxi: <foreign xml:lang="Bo-Ltn" type="term">shin tu bzang
                                     ba</foreign>. Degé and Stok: <foreign xml:lang="Bo-Ltn" type="term">shin tu bzung ba</foreign>.</note> buddhas </l>
                         <l>That appear,</l>
-                        <l>They will abandon all the unfree states<note place="end" index="13" xml:id="UT22084-059-006-157"> Translated based on Yongle, Peking
+                        <l>They will abandon all the unfree states<note place="end" xml:id="UT22084-059-006-157" index="12"> Translated based on Yongle, Peking
                                 Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">nga
                                     yis</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">nga
                                     yi</foreign>.</note>
                         </l>
-                        <l>That I have described.<note place="end" index="14" xml:id="UT22084-059-006-158"> Translated based on Yongle, Peking
+                        <l>That I have described.<note place="end" xml:id="UT22084-059-006-158" index="13"> Translated based on Yongle, Peking
                                 Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">bstan</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">bsten</foreign>.</note>
                         </l>
                     </lg>
@@ -1407,7 +1416,7 @@
                     <lg tid="177">
                         <l>“They will shine in all directions</l>
                         <l>And proceed to countless millions of realms.</l>
-                        <l>As they behold the great sage engaging with the world,<note place="end" index="15" xml:id="UT22084-059-006-184"> The translation “engaging
+                        <l>As they behold the great sage engaging with the world,<note place="end" xml:id="UT22084-059-006-184" index="14"> The translation “engaging
                                 with the world” is tentative. All Tibetan versions consulted read:
                                     <foreign xml:lang="Bo-Ltn" type="quote">’jig rten spyod
                                     pa</foreign>.</note>
@@ -1469,7 +1478,7 @@
                     <milestone unit="chunk" xml:id="UT22084-059-006-191"/>
                     <p tid="184">The Blessed One then expressed the meaning of this in verse:</p>
                     <lg tid="185">
-                        <l>“Those in this world who hear<note place="end" index="16" xml:id="UT22084-059-006-193"> Translated based on Yongle, Peking
+                        <l>“Those in this world who hear<note place="end" xml:id="UT22084-059-006-193" index="15"> Translated based on Yongle, Peking
                                 Kangxi, Narthang, Lhasa Zhol, and Stok: <foreign xml:lang="Bo-Ltn" type="term">thos</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">thob</foreign>.</note> the supreme name</l>
                         <l>Of this buddha with an ocean of virtues</l>
                         <l>Will swiftly perform unsurpassed veneration</l>
@@ -1516,7 +1525,7 @@
                     <lg tid="191">
                         <l>“Those who chant the name of this buddha</l>
                         <l>A mere one hundred thousand times will attain concordant acceptance</l>
-                        <l>And the attainment of the divine eye, just as I did.<note place="end" index="17" xml:id="UT22084-059-006-200"> This and the following
+                        <l>And the attainment of the divine eye, just as I did.<note place="end" xml:id="UT22084-059-006-200" index="16"> This and the following
                                 verse only have three lines in the Tibetan.</note>
                         </l>
                     </lg>
@@ -1713,7 +1722,7 @@
                         sprinkled divine red sandalwood powder upon the Blessed One. Trillions of
                         gods tossed, scattered, and sprinkled divine blue, pink, red, and white
                         lotuses, as well as smaller and larger māndārava flowers. Trillions of gods
-                        offered thousands of jeweled parasols. Trillions of gods wept as they bowed
+                        offered thousands of <term type="ignore">jeweled</term> parasols. Trillions of gods wept as they bowed
                         their heads to the Blessed One’s feet, recalling trillions of their past
                         lives. It was the blessings of the Blessed Buddha that allowed these
                         trillions of miracles to occur. </p>
@@ -1977,7 +1986,7 @@
                     <lg tid="257">
                         <l>“The temples could be made of sandalwood;</l>
                         <l>And each supreme and divine temple</l>
-                        <l>Would have ten billion assembly halls.<note place="end" index="18" xml:id="UT22084-059-006-267"> In the Tibetan this verse only has
+                        <l>Would have ten billion assembly halls.<note place="end" xml:id="UT22084-059-006-267" index="17"> In the Tibetan this verse only has
                                 three lines.</note>
                         </l>
                     </lg>
@@ -2036,7 +2045,7 @@
                     <lg tid="265">
                         <l>“They would offer hundreds of flowers and parasols to the reliquary</l>
                         <l>And venerate the great sages in this manner every day</l>
-                        <l>For as many eons as there are grains of sand in the Ganges.<note place="end" index="19" xml:id="UT22084-059-006-276"> In the Tibetan
+                        <l>For as many eons as there are grains of sand in the Ganges.<note place="end" xml:id="UT22084-059-006-276" index="18"> In the Tibetan
                                 this verse only has three lines. </note>
                         </l>
                     </lg>
@@ -2264,6 +2273,17 @@
                             
                         </gloss>
                     </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-059-006-365">
+                                <term>five points (of the body)</term>
+                                <term xml:lang="Bo-Ltn">yan lag lnga</term>
+                                <term xml:lang="bo">ཡན་ལག་ལྔ།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">The head, arms, and legs.</term>
+                                <term type="alternative">five points</term>
+                            </gloss>
+                        </item>
+
                     <item>
                         <gloss type="person" xml:id="UT22084-059-006-308">
                             <term>Amitāyus</term>
@@ -2537,12 +2557,12 @@
                     </item>
                     <item>
                         <gloss type="person" xml:id="UT22084-059-006-333">
-                            <term>Paltsek</term>
-                            <term xml:lang="Bo-Ltn">dpal brtsegs </term>
-                            <term xml:lang="bo">དཔལ་བརྩེགས།</term>
+                            <term>Kawa Paltsek</term>
+                            <term xml:lang="Bo-Ltn">ska ba dpal brtsegs </term>
+                            <term xml:lang="bo">སྐ་བ་དཔལ་བརྩེགས།</term>
                             <term xml:lang="Sa-Ltn"/>
                             <term type="definition">The editor of this discourse.</term>
-                            
+                            <term type="alternative">Paltsek</term>
                         </gloss>
                     </item>
                     <item>
