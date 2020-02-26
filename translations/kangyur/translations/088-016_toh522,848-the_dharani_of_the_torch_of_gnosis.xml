@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ye shes ta la la zhes bya ba’i
+                    gzungs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Jñānolka­nāma­dhāraṇī</title>
+                <title type="mainTitle" xml:lang="en">The Dhāraṇī of the Tathāgata Jñānolka</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa ye shes ta la la zhes bya’i
+                    gzungs ’gro ba thams cad yongs su sbyong ba</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­jñānolka­nāma­dhāraṇī­sarva­gatipariśodhanī</title>
+                <title type="longTitle" xml:lang="en">The Dhāraṇī of the Noble Tathāgata Jñānolka that Purifies All Rebirths</title>
+                <title type="mainTitle" xml:lang="bo">ཡེ་ཤེས་ཏ་ལ་ལ་ཞེས་བྱ་བའི་གཟུངས།</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ཡེ་ཤེས་ཏ་ལ་ལ་ཞེས་བྱའི་གཟུངས་འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་སྦྱོང་བ།</title>
+
+
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by The
+                    Dharmachakra Translation Committee<lb/>under the patronage and supervision of
+                    84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.2 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="2.a">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global
+                    non-profit initiative to translate all the Buddha’s words into modern languages,
+                    and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-088-016"/>
+                <date>2020-02-17</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh522" type="text">
+                    <ref>Toh 522</ref>
+                    <biblScope>Degé Kangyur, vol. 88 (rgyud ’bum, na), folios 59.a–60.b</biblScope><!-- bibl scope supplied in Docx -->
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="88" start-page="117" end-page="120"/>
+                    </location>
+                    <!--<biblScope>vol.88, ff.42r-43v(pp.83-86)</biblScope> bibl scope supplied in PLACEHOLDER 
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="88" start-page="83" end-page="86"/>
+                    </location>-->
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12245" work="W22084"/>
+                </bibl>
+                <bibl key="toh848" type="text">
+                    <ref>Toh 848</ref>
+                    <biblScope>Degé Kangyur, vol. 100 (gzungs ’dus, e), folios 55.a–56.a</biblScope>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="101" start-page="109" end-page="111"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12609" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-26T13:23:17.9Z" user="admin">26/02/2020 13:23:17</note>
+
+                <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:04:49.554Z" user="andreas">v 0.1.0</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2019-12-19T07:26:43.57Z" user="andreas">2.d</note>
+                <note type="updated" update="text-version" value="v 0.1.1" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version
+                    increment</note>
+                <note type="updated" update="translation-status" value="2.e" date-time="2020-01-27T13:19:13.332Z" user="mike">2.e</note>
+                <note type="updated" update="translation-status" value="2.b" date-time="2020-01-28T11:59:31.784Z" user="andreas">2.b</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2020-01-29T06:04:47.549Z" user="mike">2.a</note>
+            
+<note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-26T13:23:14.499Z" user="andre">Mark-up completed with editor remarks</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-088-016-1"/>
+                <p tid="2">
+                    <title xml:lang="en">The Dhāraṇī of the Tathāgata Jñānolka</title> opens
+                    with a description of a group of four tathāgatas and four bodhisattvas seated in
+                    the celestial palace of the Sun and Moon. Upon returning to their celestial
+                    palace and seeing these tathāgatas and bodhisattvas, the deities of the Sun and
+                    Moon both consider whether they might obtain a dhāraṇī that could allow them to
+                    dispel the darkness and shine a light upon all beings. The tathāgatas,
+                    perceiving the thoughts of the Sun and Moon, provide them with the first dhāraṇī
+                    in the text. The bodhisattva Samanta­bhadra then provides a second dhāraṇī mantra
+                    and instructs the deities of the Sun and Moon to use it to free beings who are
+                    bound for rebirth in the lower realms—even those who have been born in the
+                    darkest depths of the Avīci hell.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-088-016-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the
+                    supervision of Chökyi Nyima Rinpoche. The translation was produced by Adam Krug
+                    and edited by Ryan Damron.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-088-016-3"/>
+                    <p tid="7">
+                        <title xml:lang="en">The Dhāraṇī of the Noble Tathāgatha Jñānolka
+                            that Purifies All Rebirths</title> centers on a pairing of four
+                        tathāgatas and four bodhisattvas who offer dhāraṇīs to the deities of the
+                        Sun and the Moon after perceiving their wish to shine a light upon beings
+                        residing in the darkest depths of cyclic existence. The tathāgata Jñānolka
+                        is identified in the Indic title to the work in the Kangyur, and the
+                        Sanskrit names of his three accompanying tathāgatas have thankfully been
+                        identified here based on an edition of the Khotanese manuscript of the
+                            <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title> published along with a
+                        brief study and German translation by Ernst Leumann in 1920.<note place="end" xml:id="UT22084-088-016-4" index="1"> Leumann (1920).</note> The set of
+                        four tathāgatas and four bodhisattvas at the center of the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title> cult appears in Leumann’s
+                        Khotanese sources as follows: </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-5"/>
+                    <p tid="8">– The four tathāgatas: Jñānolka, Suvarṇa­prabhākūṭa­nirbhāsa, Satyavādin, and Bhīkṣmas­varagarjita­rājā.</p> 
+                    <p tid="9">– The four bodhisattvas: Samanta­bhadra, Mañjuśrīkumārabhūta, Dhāraṇīś­vara­rāja, and Vajrapāṇi.</p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-7"/>
+                    <p tid="10">Leumann’s edition also preserves Khotanese Sanskrit versions of the
+                        dhāraṇī mantras contained in the text that appear in this translation. </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-8"/>
+                    <p tid="11">Mauro Maggi’s summary of sources for the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title> notes that the majority of known extant
+                        versions of the text have survived in Khotanese witnesses and that the
+                        earliest Chinese translations of the text derive from both a Khotanese
+                        original and a Tibetan translation. According to Leumann, the Tibetan
+                        translation of the text does not agree very closely with the Khotanese, and
+                        the Khotanese versions vary.<note place="end" xml:id="UT22084-088-016-9" index="2"> Maggi (2008).</note>
+                        While the variants between the Tibetan translation and Khotanese manuscripts
+                        of the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title> raise the
+                        possibility that the version translated and preserved in the Degé edition of
+                        the Kangyur derives from a separate source that has yet to be located, the
+                        Sanskrit manuscript witnesses that are currently available all indicate
+                        Khotan as the most likely location in which the cult of the four tathāgatas
+                        and bodhisattvas in this text and the dhāraṇī mantras it preserves
+                        flourished. Aside from its obvious applications for purifying the potential
+                        consequences of lower rebirth for the living and its potential function as a
+                        ritual liturgy for the bodhisattva’s practice of liberating beings, the
+                        narrative frame of the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title>
+                        indicates that its dhāraṇī mantras could have functioned as part of a
+                        funeral liturgy designed to liberate the recently deceased from lower
+                        rebirth. </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-10"/>
+                    <p tid="12">The <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title> appears in the
+                            Denkarma<note place="end" xml:id="UT22084-088-016-11" index="3"> Yoshimura (1950), 154.</note> and
+                            Phangthangma<note place="end" xml:id="UT22084-088-016-12" index="4">
+                                <title xml:lang="Bo-Ltn">dkar chag ’phang thang ma</title>,
+                                30.</note> royal Tibetan catalogues of translated works, which
+                        indicates that the text was translated into Tibetan by at least the early
+                        ninth century. The text was translated into Chinese twice, first in the late
+                        seventh century by the translator Devaprajñā (T 1397)<note place="end" xml:id="UT22084-088-016-13" index="5"> Lewis R. Lancaster, “K 476,” <title xml:lang="en">The Korean Buddhist Canon</title>, accessed
+                                February 12, 2019,
+                                http://www.acmuller.net/descriptive_catalogue/files/k0476.html.
+                            </note> and then again in the tenth century by Dānapāla (T
+                            1398).<note place="end" xml:id="UT22084-088-016-14" index="6"> Lewis R. Lancaster, “K 476,” <title xml:lang="en">The Korean Buddhist Canon</title>, accessed
+                                February 12, 2019,
+                                http://www.acmuller.net/descriptive_catalogue/files/k0476.html.</note>
+                        This translation is based on the two versions of the text that are preserved
+                        in the Degé Kangyur (Toh 522 and Toh 848<note place="end" xml:id="UT22084-088-016-52" index="7">This text, Toh 848, and all those contained in this same volume (<foreign xml:lang="Bo-Ltn">gzungs ’dus, e</foreign>), are listed as being located in volume 100 of the Degé Kangyur by the Buddhist Digital Resource Center (BDRC). However, several other Kangyur databases—including the eKangyur that supplies the digital input version displayed by 84000 reading room—list this work as being located in volume 101. This discrepancy is partly due to the fact that the two volumes of the <foreign xml:lang="Bo-Ltn">gzungs ‘dus</foreign> section are an added supplement not mentioned in the original catalogue, and also hinges on the fact that the compilers of the Tōhoku catalogue placed another text—which forms a whole, very large volume—the <title xml:lang="Sa-Ltn">Vimalaprabhā­nāmakālacakra­tantraṭīkā</title> (<title xml:lang="Bo-Ltn">dus 'khor 'grel bshad dri med 'od</title>, Toh 845), before the present volume, numbering it as vol. 100, although it is almost certainly intended to come right at the end of the Degé Kangyur texts as volume 102; indeed its final fifth chapter is often carried over and wrapped in the same volume as the Kangyur <foreign xml:lang="Bo-Ltn">dkar chags</foreign> (catalogue). Please note this discrepancy when using the eKangyur viewer in this translation.</note>) in consultation with the two versions of the text in the
+                        Comparative Edition (<title xml:lang="Bo-Ltn">dpe bsdur ma</title>) of the
+                        Kangyur and the text as it is preserved in the Stok Palace Kangyur. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="13"> The Translation </head>
+                <head type="titleMain" tid="14">The Dhāraṇī of the Tathāgata Jñānolka that Purifies
+                    All Rebirths</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-088-016-16"/>
+                    <p tid="18">
+                        <ref cRef="F.59.a" type="folio" key="toh522"/>
+                        <ref cRef="F.55.a" type="folio" key="toh848"/> <ref cRef="F.59.b" type="folio" key="toh522"/> Homage to the Omniscient One.<lb/>Homage to all the buddhas and
+                        bodhisattvas.<lb/>Homage to the blessed one the tathāgata
+                        Jñānolka.<lb/>Homage to the tathāgata Suvarṇa­prabhākūṭa­nirbhāsa.<lb/>Homage
+                        to the tathāgata Satyavādin.<lb/>Homage to the tathāgata
+                        Bhīkṣmas­varagarjita­rājā.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-19"/>
+                    <p tid="20">The four bodhisattvas—Samanta­bhadra, the youthful Mañjuśrī,
+                        Dhāraṇīś­vara­rāja, and Vajrapāṇi—were dwelling in the abode of the Sun and
+                        the Moon along with the tathāgatas. When the Sun and Moon reached the place
+                        where the tathāgatas and bodhisattvas were seated, they saw the tathāgatas
+                        upon lion thrones bedecked with jewels and the bodhisattvas seated within
+                        palaces arrayed with banners bearing the rose apple insignia. The Sun and
+                        Moon each thought, “How from these tathāgatas and bodhisattvas can we obtain
+                        the dhāraṇī mantra called <distinct>the wise one who pervades the ten
+                            directions,</distinct> which rises like the dawn to shine a light upon
+                        all beings and dispel their thick darkness? With its power we could shine a
+                        light upon all sentient beings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-20"/>
+                    <p tid="21">
+                        <ref cRef="F.60.a" type="folio" key="toh522"/>
+                        <ref cRef="F.55.b" type="folio" key="toh848"/> The tathāgatas and bodhisattvas perceived the
+                        thoughts of the Sun and Moon and responded with the following dhāraṇī
+                        mantra:</p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-21"/>
+                    <p rend="mantra" tid="22">
+                        <mantra xml:lang="Sa-Ltn" type="dharani">saryathīva cakṣurdada
+                            cakṣuprabha dhulamētha kalatha ithithaṃsa sūrata sūrata suthāsa
+                            itithaṃsa vēlu vēlu vēlāpaṇi cārumūrtani āraṇi kālāpaṇi kālāpaṇi
+                            tturudhusi turuturudhusi dhāsuti dhāsuti dharadhara dhiridhiri
+                            dhurudhuru dhūradhūra kālakāla sathāsa sathāsa gīla gīla gīlāpaya
+                            gīlāpaya dhasu dhasu sūṃddhu sūmbhu ēthasu ēthasu ēthasāpaṇi yijuru rede
+                            karakara kirikiri kurukuru kurmakurma karmāpaṇi karmāpaṇi karmāpaṇi
+                            karmāpaṇi kēlukēlu kēlāpaṇi karkāri karkāri lāru vuddhe dhurude
+                            mahādhurude karakara kirikiri piḍhusi piḍhusi dhasu dhasu hasu hasu
+                            hasāpaṇi svāhā</mantra>
+                        <note place="end" xml:id="UT22084-088-016-22" index="8"> This is the Sanskrit for the
+                                first dhāraṇī mantra as it appears in Leumann’s 1920 edition of the
+                                Khotanese version of the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title>. See Leumann (1920), 158.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-23"/>
+                    <p tid="23">Then the bodhisattva Samanta­bhadra addressed both the Sun and the
+                        Moon, saying, “Sons of the lineage, eighty-four million buddhas have taught
+                        this dhāraṇī mantra in order to help beings who are bound for lower rebirth.
+                        Sons of the lineage, it is much easier to find a rare <foreign xml:lang="Sa-Ltn" type="term">udumbara</foreign> flower than it is for
+                        these dhāraṇī mantra verses to appear in the world. Sons of the lineage,
+                        obtaining these dhāraṇī mantra verses is much easier than reading and
+                        retaining these verses in one’s mind. Sons of the lineage, it is far more
+                        likely for a buddha to appear in the world than it is for these dhāraṇī
+                        mantra verses to appear in the world. <ref cRef="F.56.a" type="folio" key="toh848"/> Sons of the lineage, if one
+                        recites these dhāraṇī mantra verses three times a day and three times a
+                        night for twenty-one days on behalf of those beings trapped for eons in
+                        Avīci hell, namely, those who have committed the five inexpiable acts or who
+                        have forsaken the holy Dharma, then the power of those verses shall open the
+                        hundred doors of the great Avīci hell, and those beings shall attain
+                        liberation. This is also the case, of course, for human beings in
+                        Jambudvīpa. Whoever hears these dhāraṇī mantra verses shall truly know that
+                        we, the four tathāgatas, the four bodhisattvas, and the Sun and Moon,
+                        <ref cRef="F.60.b" type="folio" key="toh522"/> support them. The dhāraṇī mantra verses are: </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-24"/>
+                    <p rend="mantra" tid="24">
+                        <mantra xml:lang="Sa-Ltn" type="dharani">dhunaṭi mahādhuṇati surusuru
+                            svāhā śuklaviśōdhani taratara svāhā || jyōtipradīpe turuturu svāhā ||
+                            padmamālani sattyatarabudhe huruhuru svāhā satyabuddhe saty'ālōkani
+                            kirikiri svāhā || dhāraṇibuddhi apratihatabuddhi curucuru svāhā ||
+                            lakṣaṇârcite dhūmaparihāre khurukhuru dhāra mahādhāra dharadhara yaṃ
+                            ttîye svāhā || avrrate sutape apratihatabuddhi dharadhara yam tîye svāhā ||</mantra>
+                        <note place="end" index="9" xml:id="UT22084-088-016-53"> This
+                                is the Sanskrit for the second dhāraṇī mantra as it appears in
+                                Leumann’s 1920 edition of the Khotanese version of the <title xml:lang="Sa-Ltn">Jñānolka­dhāraṇī</title>.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-088-016-26"/>
+                    <lg tid="25">
+                        <l>Homage to the blessed one, the tathāgata Jñānolka! </l>
+                        <l>Homage to the tathāgata Suvarṇa­prabhākūṭa­nirbhāsa! </l>
+                        <l>Homage to the tathāgata Satyavādin! </l>
+                        <l>Homage to the tathāgata Bhīkṣmas­varagarjita­rājā! </l>
+                        <l>Make these mantra verses effective! Svāhā!<note place="end" index="10" xml:id="UT22084-088-016-54">The Sanskrit
+                                    names for the four tathāgatas in this translation have been
+                                    derived from the concluding verse to the preceding dhāraṇī, which reads:
+                                        <foreign xml:lang="Sa-Ltn" type="quote">namo jñānolkasya
+                                        tathāgatasya namo suvarṇaprabhākūṭanirbhāsasya tathāgatasya
+                                        namo satyavādinē tathāgatasya namau
+                                        bhikṣmasvaragarjitarājebhya tathātatēbhya siddhyaṃtu
+                                        maṃtrapadā svāhā ||.</foreign> See Leumann (1920), 158.
+                                </note>
+                        </l>
+                    </lg>
+                    <trailer tid="26">This concludes “The Dhāraṇī of the Tathāgata Jñānolka that
+                        Purifies All Rebirths.”</trailer>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="27">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="29">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="30">Source Texts</head>
+                    <bibl xml:id="UT22084-088-016-28">
+                        <title xml:lang="Bo-Ltn">’phags pa ye shes ta
+                            la la zhes bya ba’i gzungs ’gro ba thams cad yongs su sbyong ba
+                            </title>
+                        (<title xml:lang="Sa-Ltn">Āryajñānolkanāmadhāraṇīsarvagatipariśodhanī</title>). Toh
+                        522, Degé Kangyur vol. 88 (rgyud ’bum, na), folios 59.a–60.b.</bibl>
+                    <bibl xml:id="UT22084-088-016-30">
+                        <title xml:lang="Bo-Ltn">’phags pa ye shes ta
+                            la la zhes bya ba’i gzungs ’gro ba thams cad yongs su sbyong ba
+                    </title>(<title xml:lang="Sa-Ltn">Ārya­jñānolko­nāma­dhāraṇī­sarva­gatipariśodhanī</title>). Toh 848, Degé Kangyur vol. 100 (gzungs
+                        ’dus, e), folios 55.a–56.a.</bibl>
+                    <bibl xml:id="UT22084-088-016-31">
+                        <title xml:lang="Bo-Ltn">’phags pa ye shes ta
+                            la la zhes bya ba’i gzungs ’gro ba thams cad yongs su sbyong ba</title>.
+                        bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i
+                        bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan
+                        Tripitaka Collation Bureau of the China Tibetology Research Center). 108
+                        volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology
+                        Publishing House), 2006–2009, vol. 88, pp. 189–94.</bibl>
+                    <bibl xml:id="UT22084-088-016-32">
+                        <title xml:lang="Bo-Ltn">’phags pa ye shes ta
+                            la la zhes bya ba’i gzungs ’gro ba thams cad yongs su sbyong ba</title>.
+                        bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i
+                        bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan
+                        Tripitaka Collation Bureau of the China Tibetology Research Center). 108
+                        volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology
+                        Publishing House), 2006–2009, vol. 97, pp. 168–73.</bibl>
+                    <bibl xml:id="UT22084-088-016-33">
+                        <title xml:lang="Bo-Ltn">’phags pa ye shes ta
+                        la la zhes bya ba’i gzungs </title>(Ārya­jñānolko­nāma­dhāraṇī­sarva­gatipariśodhanī). Stok Palace Kangyur, vol. 102 (rgyud
+                        ’bum, da) folios 42a–44a.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="31">Reference Works</head>
+                    <bibl xml:id="UT22084-088-016-34">
+                        <title xml:lang="Bo-Ltn">dkar chag ’phang
+                            thang ma: sgra sbyor bam po gnyis pa</title>. Beijing: mi rigs dpe skrun
+                        khang, 2003.</bibl>
+                    <bibl xml:id="UT22084-088-016-35">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar and Dictionary</title>. Delhi: Motilal
+                        Banarsidass, 2004.</bibl>
+                    <bibl xml:id="UT22084-088-016-36">Monier-Williams, Monier. <title xml:lang="en">A Sanskrit-English Dictionary: Etymologically and Philologically
+                            Arranged with Special Reference to Cognate Indo-European
+                            Languages</title>. Delhi: Motilal Banarsidass, 2005.</bibl>
+                    <bibl xml:id="UT22084-088-016-37">Negi, J.S. <title xml:lang="en">Tibetan-Sanskrit Dictionary</title> (<title xml:lang="Bo-Ltn">bod skad
+                            dang legs sbyar gyi tshig mdzod chen mo</title>). Sarnath: Central
+                        Institute of higher Tibetan Studies, 1993. </bibl>
+                    <bibl xml:id="UT22084-088-016-38">Yoshimura, Shyuki. <title xml:lang="en">The
+                            Denkar-Ma: An Oldest Catalogue of the Tibetan Buddhist Canons</title>.
+                        Kyoto: Ryukoku University, 1950.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="32">Secondary Sources</head>
+                    <bibl xml:id="UT22084-088-016-39">Leumann, Ernst.
+                            “Die Jñānolka­dhāraṇī.” In <title xml:lang="de">Buddhistische Literatur: Nordarish und Deutsch: I. Teil: Nebenstüke,
+                            157–62.</title> Leipzig, 1920.</bibl>
+                    <bibl xml:id="UT22084-088-016-40">Maggi, Mauro. “Jñānolkadhāranī.” <title xml:lang="en">Encyclopedia Iranica</title>. Accessed February 2, 2018.
+                        http://www.iranicaonline.org/articles/jnanolkadharai.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-42">
+                                <term>Ārya Jñānolka</term>
+                                <term xml:lang="Bo-Ltn">’phags pa ye shes ta la la </term>
+                                <term xml:lang="bo">འཕགས་པ་ཡེ་ཤེས་ཏ་ལ་ལ།</term>
+                                <term xml:lang="Sa-Ltn">Ārya Jñānolka</term>
+                                <term type="definition">A tathāgata.</term>
+                                <term type="alternative">Jñānolka</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-43">
+                                <term>Bhīkṣmas­varagarjita­rājā</term>
+                                <term xml:lang="Bo-Ltn">’jigs pa’i sgra sgrogs rgyal po </term>
+                                <term xml:lang="bo">འཇིགས་པའི་སྒྲ་སྒྲོགས་རྒྱལ་པོ།</term>
+                                <term xml:lang="Sa-Ltn">Bhīkṣmas­varagarjita­rājā</term>
+                                <term type="definition">A tathāgata associated with Ārya Jñānolka.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-44">
+                                <term>Dhāraṇīś­vara­rāja</term>
+                                <term xml:lang="Bo-Ltn">gzungs kyi dbang phyug rgyal po </term>
+                                <term xml:lang="bo">གཟུངས་ཀྱི་དབང་ཕྱུག་རྒྱལ་པོ།</term>
+                                <term xml:lang="Sa-Ltn">Dhāraṇīś­vara­rāja</term>
+                                <term type="definition">A bodhisattva.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-45">
+                                <term>Samanta­bhadra</term>
+                                <term xml:lang="Bo-Ltn">kun tu bzang po </term>
+                                <term xml:lang="bo">ཀུན་ཏུ་བཟང་པོ།</term>
+                                <term xml:lang="Sa-Ltn">Samanta­bhadraḥ</term>
+                                <term type="definition">A bodhisattva.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-46">
+                                <term>Satyavādin</term>
+                                <term xml:lang="Bo-Ltn">bden gsung </term>
+                                <term xml:lang="bo">བདེན་གསུང་།</term>
+                                <term xml:lang="Sa-Ltn">Satyavādin</term>
+                                <term type="definition">A tathāgata associated with Ārya Jñānolka.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-47">
+                                <term>Suvarṇa­prabhākūṭa­nirbhāsa</term>
+                                <term xml:lang="Bo-Ltn">’od brtsegs snang ba </term>
+                                <term xml:lang="bo">འོད་བརྩེགས་སྣང་བ།</term>
+                                <term xml:lang="Sa-Ltn">Suvarṇa­prabhākūṭa­nirbhāsa</term>
+                                <term type="definition">A tathāgata associated with Ārya Jñānolka.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-48">
+                                <term>Mañjuśrī, the youthful</term>
+                                <term xml:lang="Bo-Ltn">’jam dpal gzhon nur gyur pa </term>
+                                <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུར་གྱུར་པ།</term>
+                                <term xml:lang="Sa-Ltn">Mañjuśrīkumārabhūta </term>
+                                <term type="definition">A bodhisattva.</term>
+                                <term type="alternative">Mañjuśrīkumārabhūta</term>
+                                <term type="alternative">the youthful Mañjuśrī</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-088-016-50">
+                                <term>Vajrapāṇi</term>
+                                <term xml:lang="Bo-Ltn">phyag na rdo rje </term>
+                                <term xml:lang="bo">ཕྱག་ན་རྡོ་རྗེ།</term>
+                                <term xml:lang="Sa-Ltn">Vajrapāṇi</term>
+                                <term type="definition">A bodhisattva.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="place" xml:id="UT22084-088-016-51">
+                                <term>Avīci hell</term>
+                                <term xml:lang="Bo-Ltn">mnar med pa </term>
+                                <term xml:lang="bo">མནར་མེད་པ།</term>
+                                <term xml:lang="Sa-Ltn">Avīci</term>
+                                <term type="definition">The lowest hell; the eighth of the eight hot hells.</term>
+                            </gloss>
+                        </item>
+
+                    </list>
+            </div>   
+        </back>
+    </text>
+</TEI>
