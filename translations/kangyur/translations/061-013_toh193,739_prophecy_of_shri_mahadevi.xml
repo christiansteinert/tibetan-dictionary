@@ -35,13 +35,13 @@
                     Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 2.20 <date>2019</date>
+                <edition>v 2.20.2 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global non-profit
-                    initiative that aims to translate all of the Buddha’s words into modern
+                    initiative to translate all the Buddha’s words into modern
                     languages, and to make them available to everyone. </publisher>
                 <availability>
                     <licence>
@@ -61,9 +61,8 @@
                     <ref>Toh 193</ref>
                     <biblScope>Degé Kangyur, vol. 61 (mdo sde, tsa), folios 246.a–250.b</biblScope>
                     <author role="translatorTib">Unknown</author>
-                    <location count-pages="10">
-                        <start volume="61" page="493"/>
-                        <end volume="61" page="502"/>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="61" start-page="491" end-page="500"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668"/>
                     <idno source-id="O1JC114941JC11815" work="W22084"/>
@@ -73,20 +72,21 @@
                     <biblScope>Degé Kangyur, vol. 94 (rgyud ’bum, tsha), folios
                         230.a–234.b</biblScope>
                     <author role="translatorTib">Unknown</author>
-                    <location count-pages="10">
-                        <start volume="94" page="461"/>
-                        <end volume="94" page="470"/>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="94" start-page="459" end-page="468"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415"/>
                     <idno source-id="O1JC114941JC12480" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-08-16T15:21:08.161Z" user="admin">16/08/2019 15:21:08</note>
+                <note type="lastUpdated" date-time="2020-02-26T21:34:46.761Z" user="admin">26/02/2020 21:34:46</note>
                 <note type="updated" update="text-version" value="v 2.13" date-time="2019-02-27T16:31:39.284Z" user="admin">v 2.13 2011 - 2016</note>
                 <note type="updated" update="text-version" value="v 2.14" date-time="2019-02-27T16:32:48.481Z" user="admin">v 2.14 2011 - 2016</note>
                 <note type="updated" update="text-version" value="v 2.19" date-time="2019-06-18T02:55:53.397Z" user="celso">v 2.19 2019</note>
             <note type="updated" update="text-version" value="v 2.20" date-time="2019-08-16T15:21:04.885Z" user="laura">v 2.20 2019</note>
+<note type="updated" update="text-version" value="v 2.20.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.20.2" date-time="2020-02-26T21:34:44.039Z" user="celso">fixed non-breaking spaces in ellipsis</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -197,15 +197,15 @@
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-061-013-9"/>
                     <p tid="9">
-                        <ref cRef="F.246.a" key="toh193"/>
-                        <ref cRef="F.230.a" key="toh739"/>
+                        <ref cRef="F.246.a" key="toh193" type="folio"/>
+                        <ref cRef="F.230.a" key="toh739" type="folio"/>
                         <!--<modularPassage type="homage">--> Homage to all buddhas and
                         bodhisattvas.<!--</modularPassage>-->
                     </p>
                     <lb/>
                     <p tid="10">
-                        <ref cRef="F.246.b" key="toh193"/>
-                        <ref cRef="F.230.b" key="toh739"/>Thus did I hear at one time. The Bhagavān
+                        <ref cRef="F.246.b" key="toh193" type="folio"/>
+                        <ref cRef="F.230.b" key="toh739" type="folio"/>Thus did I hear at one time. The Bhagavān
                         was dwelling in Sukhāvatī together with the great saṅgha of bodhisattvas,
                         amongst them the following bodhisattva mahāsattvas of the excellent
                             eon:<note place="end" index="3" xml:id="UT22084-061-013-10">“Of the
@@ -230,8 +230,8 @@
                             Mahādevī also went toward the Bhagavān. Having circumambulated one
                             hundred thousand times at the Bhagavān’s feet she also paid homage to
                             all the bodhisattva mahāsattvas.”</note>
-                        <ref cRef="F.247.a" key="toh193"/>
-                        <ref cRef="F.231.a" key="toh739"/>
+                        <ref cRef="F.247.a" key="toh193" type="folio"/>
+                        <ref cRef="F.231.a" key="toh739" type="folio"/>
                     </p>
                     <p tid="12">The Bhagavān was adorned with many hundreds of thousands of merits
                         and surrounded by as many as ten million tathāgatas. As Indra, Brahmā and
@@ -264,8 +264,8 @@
                     <p tid="15">Then Bodhisattva Mahāsattva Ārya Avalokiteśvara asked the Bhagavān,
                         “Bhagavān, where did Śrī Mahādevī generate her roots of virtue?”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-013-19"/>
-                    <p tid="16">The Bhagavān replied, “Śrī Mahādevī <ref cRef="F.247.b" key="toh193"/>
-                        <ref cRef="F.231.b" key="toh739"/> generated roots of virtue in the presence
+                    <p tid="16">The Bhagavān replied, “Śrī Mahādevī <ref cRef="F.247.b" key="toh193" type="folio"/>
+                        <ref cRef="F.231.b" key="toh739" type="folio"/> generated roots of virtue in the presence
                         of tathāgatas as numerous as the grains of sand of the River Ganges. O
                         Avalokiteśvara, previously, in the past in a world system called
                         Ratna­saṃbhavā, the tathāgata called
@@ -297,8 +297,8 @@
                         <l>Homage to Tathāgata Candana­kusuma­tejo­nakṣatra­prabhāsa­śrī.</l>
                         <milestone unit="chunk" xml:id="UT22084-061-013-24"/>
                         <l>Homage to Tathāgata Samantāvabhāsa­vijita­saṃgrāma­śrī.</l>
-                        <l>Homage to Tathāgata Guṇa­samudrāvabhāsa­maṇḍala­śrī. <ref cRef="F.248.a" key="toh193"/>
-                            <ref cRef="F.232.a" key="toh739"/>
+                        <l>Homage to Tathāgata Guṇa­samudrāvabhāsa­maṇḍala­śrī. <ref cRef="F.248.a" key="toh193" type="folio"/>
+                            <ref cRef="F.232.a" key="toh739" type="folio"/>
                         </l>
                         <l>Homage to Tathāgata Dhārma­vikurvaṇa­dhvaja­vega­śrī.</l>
                         <l>Homage to Tathāgata Jyotiḥsaumya­gandhāvabhāsa­śrī.</l>
@@ -323,8 +323,8 @@
                         <l>Homage to Tathāgata Gandha­pradīpa­śrī.</l>
                         <l>Homage to Tathāgata Sāgara­garbha­saṃbhava­śrī.</l>
                         <milestone unit="chunk" xml:id="UT22084-061-013-29"/>
-                        <l>Homage to Tathāgata Nirmita­megha­garjanayaśaḥ­śrī. <ref cRef="F.248.b" key="toh193"/>
-                            <ref cRef="F.232.b" key="toh739"/>
+                        <l>Homage to Tathāgata Nirmita­megha­garjanayaśaḥ­śrī. <ref cRef="F.248.b" key="toh193" type="folio"/>
+                            <ref cRef="F.232.b" key="toh739" type="folio"/>
                         </l>
                         <l>Homage to Tathāgata Sarva­dharma­prabhāsa­vyūha­śrī.</l>
                         <l>Homage to Tathāgata Druma­rāja­vivardhita­śrī.</l>
@@ -353,12 +353,12 @@
                         spread light in that world system, and those bodhisattvas dwelling there in
                         that world will spontaneously become radiant and have immeasurable life
                         spans. The word <foreign type="term" xml:lang="Sa-Ltn">buddha­dharma­saṅgha</foreign>
-                        <ref cRef="F.249.a" key="toh193"/> will also come down from the sky, and the
+                        <ref cRef="F.249.a" key="toh193" type="folio"/> will also come down from the sky, and the
                         bodhisattvas who will be born in that buddha field will all be born from the
-                        centers of lotuses.’ <ref cRef="F.233.a" key="toh739"/>
+                        centers of lotuses.’ <ref cRef="F.233.a" key="toh739" type="folio"/>
                     </p>
                     <p tid="20">“What is the twelve-line praise with one hundred and eight names
-                        that is renowned as being stainless?<note place="end" index="11" xml:id="UT22084-061-013-34">Skt. <foreign type="term" xml:lang="Sa-Ltn">dvādaśa­daṇdakaṃ</foreign> . . . <foreign type="term" xml:lang="Sa-Ltn">stotram</foreign>, but Tib. has the puzzling
+                        that is renowned as being stainless?<note place="end" index="11" xml:id="UT22084-061-013-34">Skt. <foreign type="term" xml:lang="Sa-Ltn">dvādaśa­daṇdakaṃ</foreign> . . . <foreign type="term" xml:lang="Sa-Ltn">stotram</foreign>, but Tib. has the puzzling
                                 <foreign xml:lang="Bo-Ltn">stod pa brgyad cu gnyis pa</foreign>
                             “eighty two praises.”</note>
                     </p>
@@ -446,13 +446,13 @@
                         <l> Śvetā (Fair One),</l>
                         <l> Mahāśvetā (Great Fair One),</l>
                         <l> Śvetabhujā (She Who Has Fair Arms),</l>
-                        <l> Sarva­maṅgala­dhāriṇī (She Who Possesses All Auspiciousness), <ref cRef="F.249.b" key="toh193"/>
+                        <l> Sarva­maṅgala­dhāriṇī (She Who Possesses All Auspiciousness), <ref cRef="F.249.b" key="toh193" type="folio"/>
                         </l>
                         <milestone unit="chunk" xml:id="UT22084-061-013-54"/>
                         <l> Sarva­puṇyopacitāṅgī (She Whose Body Consists of All Collections of
                             Merit), </l>
                         <l> Dākṣāyaṇī (Daughter of Dakṣa<note place="end" index="20" xml:id="UT22084-061-013-55">A Hindu creator god. His daughter is the
-                                consort of Śiva.</note>), <ref cRef="F.233.b" key="toh739"/>
+                                consort of Śiva.</note>), <ref cRef="F.233.b" key="toh739" type="folio"/>
                         </l>
                         <l> Śata­sahasra­bhujā (She Who has One Hundred Thousand Arms),</l>
                         <l> Śata­sahasra­nayanā (She Who Has One Hundred Thousand Eyes),</l>
@@ -565,7 +565,7 @@
                                     dang / sbyin sreg tu bya ba dang / bkra shis thams cad kyi
                                     dpal</foreign>, “Glory of All Abodes of the Gods and All Gods,
                                 Glory of All Incantations and What Is Incanted, All Fire Offerings, and What Is Offered and All Auspiciousness.”</note>
-                            <ref cRef="F.250.a" key="toh193"/>
+                            <ref cRef="F.250.a" key="toh193" type="folio"/>
                         </l>
                         <milestone unit="chunk" xml:id="UT22084-061-013-83"/>
                         <l> Pramoda­bhāgya­lolā (She Who Longs for Delight and Happiness),</l>
@@ -583,7 +583,7 @@
                                 glossary entry) <foreign type="term" xml:lang="Bo-Ltn">lha ma yin
                                     mo</foreign> suggests that the spelling <foreign type="term" xml:lang="Sa-Ltn">°sarvāsurya°</foreign> here is more likely to
                                 be correct in the context.</note>
-                            <ref cRef="F.234.a" key="toh739"/>
+                            <ref cRef="F.234.a" key="toh739" type="folio"/>
                         </l>
                         <l> Nir­avadya­sthāna­vāsinī (She Who Stays Irreproachable),</l>
                         <l> Rūpavatī (Beautiful One),</l>
@@ -632,7 +632,7 @@
                             recite<note place="end" index="41" xml:id="UT22084-061-013-94">Skt.
                             omits “and recite.”</note> these names of the tathāgatas, should rise in
                         the morning, clean up, and, having offered flowers and incense to all the
-                        buddhas, also offer sandalwood incense to Śrī Mahādevī. <ref cRef="F.250.b" key="toh193"/> Then, when he recites these names, all glory, all
+                        buddhas, also offer sandalwood incense to Śrī Mahādevī. <ref cRef="F.250.b" key="toh193" type="folio"/> Then, when he recites these names, all glory, all
                         happiness and joys will be obtained. The gods will all guard, protect and
                             preserve<note place="end" index="42" xml:id="UT22084-061-013-95">Skt.
                                 <foreign type="term" xml:lang="Sa-Ltn">guptiṃ kariṣyanti</foreign>,
@@ -641,7 +641,7 @@
                         fulfilled.”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-013-96"/>
                     <p tid="25">When the Bhagavān had thus spoken, the fearless bodhisattva
-                        Avalokiteśvara, <ref cRef="F.234.b" key="toh739"/> Śrī Mahādevī<note place="end" index="43" xml:id="UT22084-061-013-97">Tib. has <foreign xml:lang="Bo-Ltn">lha mo chen mo dpal de</foreign>, “that Śrī
+                        Avalokiteśvara, <ref cRef="F.234.b" key="toh739" type="folio"/> Śrī Mahādevī<note place="end" index="43" xml:id="UT22084-061-013-97">Tib. has <foreign xml:lang="Bo-Ltn">lha mo chen mo dpal de</foreign>, “that Śrī
                             Mahādevī,” while Skt. has <foreign type="term" xml:lang="Sa-Ltn">sā</foreign>, “she.” </note>, the entire retinue, and the world,
                         including gods, humans, asuras, and gandharvas, rejoiced and [678] praised
                         the words of the Bhagavān.</p>
