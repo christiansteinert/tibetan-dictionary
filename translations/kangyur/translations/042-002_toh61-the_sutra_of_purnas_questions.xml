@@ -34,9 +34,11 @@
                 <editor role="copyEditor" ref="contributors.xml#person-252">Dion Blundell</editor>
                 <editor role="TEImarkupEditor" ref="contributors.xml#person-255">Chandika
                     Maharjan</editor>
+            
+<sponsor ref="sponsors.xml#sponsor-200">王学文，马国凤</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 0.4.4 <date>2019</date>
+                <edition>v 0.4.5 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="2">
@@ -70,7 +72,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-12-20T12:57:30.328Z" user="admin">20/12/2019 12:57:30</note>
+                <note type="lastUpdated" date-time="2020-02-26T21:30:56.733Z" user="admin">26/02/2020 21:30:56</note>
                 <note type="updated" update="text-version" value="v 1.0.1" date-time="2019-02-22T10:36:15.278Z" user="admin">v 1.0.1 2019</note>
                 <note type="updated" update="text-version" value="v 1.03" date-time="2019-06-11T12:08:17.893Z" user="mike">v 1.03 2019</note>
                 <note type="updated" update="text-version" value="v 1.04" date-time="2019-06-13T12:34:06.969Z" user="laura">v 1.04 2019</note>
@@ -80,6 +82,7 @@
 <note type="updated" update="text-version" value="v 1.4.2" date-time="2019-10-08T18:58:12.873Z" user="celso">Updated Chinese summary and glossary according to Joie's corrections</note>
 <note type="updated" update="text-version" value="v 1.4.3" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version increment</note>
 <note type="updated" update="text-version" value="v 0.4.4" date-time="2020-01-08T19:32:12.34Z" user="john">Prefinal as sent for checking as Word file</note>
+<note type="updated" update="text-version" value="v 0.4.5" date-time="2020-02-26T21:30:53.95Z" user="celso">fixed non-breaking spaces in ellipsis</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -3463,7 +3466,7 @@
                                 editions, to <foreign xml:lang="Bo-Ltn" type="term">’ga’
                                     zhig</foreign>, in accordance with the Chinese translation
                                     (<foreign type="term" xml:lang="zh">若有人</foreign>: “if there
-                                were someone . . .”). The Tibetan could be the result of a two-stage
+                            were someone . . .”). The Tibetan could be the result of a two-stage
                                 scribal error: first, an accidental error transforming <foreign type="term" xml:lang="Bo-Ltn">’ga’</foreign> to <foreign xml:lang="Bo-Ltn" type="term">dga’</foreign>, based on the
                                 appearance of <foreign xml:lang="Bo-Ltn" type="term">dga’</foreign>
                                 in the previous verse; then, a deliberate “correction” of <foreign xml:lang="Bo-Ltn" type="term">zhig</foreign> to <foreign xml:lang="Bo-Ltn" type="term">zhing</foreign>, to “make sense”
