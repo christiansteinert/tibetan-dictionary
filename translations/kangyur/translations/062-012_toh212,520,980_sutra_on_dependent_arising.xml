@@ -23,7 +23,7 @@
             <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.48.0 <date>2020</date>
+                <edition>v 1.48.1 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -74,12 +74,13 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-02-11T11:17:20.888Z" user="admin">11/02/2020 11:17:20</note>
+                <note type="lastUpdated" date-time="2020-02-27T21:32:19.995Z" user="admin">27/02/2020 21:32:19</note>
             <note type="updated" update="text-version" value="v 1.45" date-time="2019-06-18T16:21:59.388Z" user="celso">v 1.45 2019</note>
                 <note type="updated" update="text-version" value="v 1.46" date-time="2019-08-09T16:59:29.348Z" user="celso">v 1.46 2019</note>
                 <note type="updated" update="text-version" value="v 1.47" date-time="2019-09-30T19:12:16.904Z" user="andre">Updated due to folio numbering correction</note>
 <note type="updated" update="text-version" value="v 1.47.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
 <note type="updated" update="text-version" value="v 1.48.0" date-time="2020-02-11T11:17:18.028Z" user="andre">Note added about the volume discrepancy between biblScope (according to BDRC) and eKangyur</note>
+<note type="updated" update="text-version" value="v 1.48.1" date-time="2020-02-27T21:32:17.189Z" user="celso">moved &lt;foreign&gt; element out of &lt;ref&gt;--caused text "et seq." to disappear in webdisplay.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -148,8 +149,7 @@
                         before he met the Buddha) first hearing about the Buddha from Aśvajit, one of the Buddha’s five erstwhile
                         companions and earliest disciples. When Upatiṣya asks Aśvajit to summarize the very essence of the
                         Buddha’s teaching, Aśvajit answers him by reciting this verse. As soon as he hears it, Upatiṣya
-                        immediately attains a preliminary state of realization.<note place="end" xml:id="UT22084-062-012-63" index="2"> In the Mūlasarvāstivāda-vinaya, the story is told in the <title xml:lang="Sa-Ltn">Pravrajya­vastu</title>, the first chapter of the <title xml:lang="Sa-Ltn">Vinaya­vastu</title> (Toh 1-1), Degé Kangyur vol. 1 (’dul ba, ka), folios 32b <foreign xml:lang="la">et seq.</foreign>. For a translation, see <ref target="http://read.84000.co/translation/toh1-1.html#UT22084-001-001-554">Miller (2018), 1.232 <foreign xml:lang="la">et seq</foreign>
-                            </ref>. In the Pāli Canon,
+                        immediately attains a preliminary state of realization.<note place="end" xml:id="UT22084-062-012-63" index="2"> In the Mūlasarvāstivāda-vinaya, the story is told in the <title xml:lang="Sa-Ltn">Pravrajya­vastu</title>, the first chapter of the <title xml:lang="Sa-Ltn">Vinaya­vastu</title> (Toh 1-1), Degé Kangyur vol. 1 (’dul ba, ka), folios 32b <foreign xml:lang="la">et seq</foreign>. For a translation, see <ref target="http://read.84000.co/translation/toh1-1.html#UT22084-001-001-554">Miller (2018), 1.232</ref> <foreign xml:lang="la">et seq</foreign>. In the Pāli Canon,
                             the same story is told in the Vinayapiṭaka (Mahāvagga I.23.1-10). See also Oldenberg (1997, pp 39-41).
                         </note>
                     </p>
