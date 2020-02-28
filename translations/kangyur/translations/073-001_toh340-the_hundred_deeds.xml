@@ -35,7 +35,7 @@
 
             </titleStmt>
             <editionStmt>
-                <edition>v 1.2.1 <date>2020</date>
+                <edition>v 1.2.2 <date>2020</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -70,7 +70,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-02-28T11:53:41.405Z" user="admin">28/02/2020 11:53:41</note>
+                <note type="lastUpdated" date-time="2020-02-28T23:27:38.272Z" user="admin">28/02/2020 23:27:38</note>
                 <note type="updated" update="translation-status" value="2.b" date-time="2019-06-29T22:29:07.138Z" user="konchog">2.b</note>
                 <note type="updated" update="translation-status" value="2.a" date-time="2019-07-17T09:48:24.029Z" user="mike">2.a</note>
                 <note type="updated" update="text-version" value="v 1.0.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement
@@ -86,6 +86,7 @@
 <note type="updated" update="text-version" value="v 1.1.3" date-time="2020-02-23T22:58:24.38Z" user="john">Date corrected.</note>
 <note type="updated" update="text-version" value="v 1.1.4" date-time="2020-02-24T12:51:26.626Z" user="john">Minor corrections.</note>
 <note type="updated" update="text-version" value="v 1.2.1" date-time="2020-02-28T11:53:37.701Z" user="john">Changed some modular passages more in line with Toh 1-1</note>
+<note type="updated" update="text-version" value="v 1.2.2" date-time="2020-02-28T23:27:34.484Z" user="john">Minor corrections including references to Kalandikanivāsa</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -13711,7 +13712,7 @@
                             and offering him honor and worship.</p>
                         <milestone unit="chunk" xml:id="UT22084-073-001-2217"/>
                         <p tid="2159">The Blessed One traveled and traveled until eventually he
-                            arrived in Rājagṛha, where he stayed in Kalandaka Bamboo Grove. There
+                            arrived in Rājagṛha, where he stayed in the Kalandakanivāsa, in Bamboo Grove. There
                             the young nāga drew down the right shoulder of his upper garment, bowed
                             toward the Blessed One with palms pressed together, and requested the
                             Blessed One, “I would like to provide the Blessed One and the rest of
@@ -19671,8 +19672,8 @@
                             the holy life, then rose from his seat and departed.</p>
                         <milestone unit="chunk" xml:id="UT22084-073-001-3149"/>
                         <p tid="3068">Venerable Śāriputra traveled to the mountain forests in the
-                            south, where there lived another monk who had been staying in Kalandaka
-                            Bamboo Grove before traveling to those mountain forests in the south.
+                            south, where there lived another monk who had traveled from the Kalandakanivāsa, 
+                            in Bamboo Grove, to those mountain forests in the south.
                             That monk saw Venerable Śāriputra in the distance, and approached
                             Venerable Śāriputra. Upon his arrival he touched his head to Venerable
                             Śāriputra’s feet and took a seat at one side. Once the monk had taken a
@@ -19680,7 +19681,7 @@
                             just come?”</p>
                         <milestone unit="chunk" xml:id="UT22084-073-001-3150"/>
                         <p tid="3069">“Venerable Śāriputra,” the monk replied, “I have just come
-                            from a stay in Kalandaka Bamboo Grove.” </p>
+                            from the Kalandakanivāsa, in Bamboo Grove.” </p>
                         <p tid="3070">“Do you know the brahmin Son of Grasping?” asked
                             Śāriputra.</p>
                         <p tid="3071">“Yes, Venerable Śāriputra, I do,” he replied. “He was a
@@ -27671,7 +27672,7 @@
                         <head type="section" tid="4397"> The Hunter </head>
                         <milestone unit="chunk" xml:id="UT22084-073-001-4484"/>
                         <p tid="4398">As the Blessed One was traveling through Magadha, he arrived
-                            in Rājagṛha, where he stayed in Kalandaka at Bamboo Grove. At that time
+                            in Rājagṛha, where he stayed at the Kalandakanivāsa, in Bamboo Grove. At that time
                             Devadatta had repeatedly wronged many inhabitants of Rājagṛha, and those
                             he had wronged expressed their grievances to the Blessed One. </p>
                         <milestone unit="chunk" xml:id="UT22084-073-001-4485"/>
@@ -37895,14 +37896,23 @@
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-073-001-5608">
-                            <term>Kalandaka Bamboo Grove</term>
-                            <term xml:lang="Bo-Ltn">’od ma’i tshal bya ka lan da ka </term>
-                            <term xml:lang="bo">འོད་མའི་ཚལ་བྱ་ཀ་ལན་ད་ཀ</term>
-                            <term xml:lang="Sa-Ltn">Kalandaka Veṇuvana</term>
-                            <term type="definition">A certain grove of bamboo trees in Rājagṛha,
+                            <term>Kalandakanivāsa</term>
+                            <term xml:lang="Bo-Ltn">bya ka lan da ka gnas pa </term>
+                            <term xml:lang="bo">བྱ་ཀ་ལན་ད་ཀ་གནས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Kalandakanivāsa</term>
+                            <term type="definition">A certain place in Bamboo Gove (Veṇuvana) in Rājagṛha,
+                                the Sanskrit name meaning “dwelling place of squirrels;” it was so named by King Bimbisāra after being saved from attack by a snake there thanks to the squawking of many <foreign xml:lang="Sa-Ltn">kalandaka</foreign>—flying squirrels, Sanskrit and Pali sources suggest, but crows or other birds according to the Tibetan rendering. It is also sometimes called Kalandakanivāpa, “place where squirrels are fed.”</term>
+                            </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-073-001-6058">
+                            <term>Bamboo Grove</term>
+                            <term xml:lang="Bo-Ltn">’od ma’i tshal </term>
+                            <term xml:lang="bo">འོད་མའི་ཚལ།</term>
+                            <term xml:lang="Sa-Ltn">Veṇuvana</term>
+                            <term type="definition">A grove of bamboo trees in Rājagṛha,
                                 where Buddha Śākyamuni sometimes dwelt. </term>
-                            <term type="alternative">Bamboo Grove</term>
-                        </gloss>
+                          </gloss>
                     </item>
                     <item>
                         <gloss type="place" xml:id="UT22084-073-001-5609">
