@@ -31,7 +31,7 @@
                 <sponsor ref="sponsors.xml#sponsor-190">Irene Tillman</sponsor>
             </titleStmt>
             <editionStmt>
-                <edition>v 1.2.1 <date>2019</date>
+                <edition>v 1.3.1 <date>2019</date>
                 </edition>
             </editionStmt>
             <publicationStmt status="1">
@@ -66,13 +66,14 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-11-30T12:32:40.291Z" user="admin">30/11/2019 12:32:40</note>
+                <note type="lastUpdated" date-time="2020-02-28T11:44:21.58Z" user="admin">28/02/2020 11:44:21</note>
             <note type="updated" update="text-version" value="v 1.14" date-time="2019-06-18T02:25:27.313Z" user="celso">v 1.14 2019</note>
                 <note type="updated" update="text-version" value="v 1.15" date-time="2019-06-21T14:11:40.294Z" user="celso">v 1.15 2019</note>
             <note type="updated" update="text-version" value="v 1.17" date-time="2019-07-31T19:46:14.742Z" user="celso">v 1.17 2019</note>
 <note type="updated" update="text-version" value="v 1.17.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
 <note type="updated" update="text-version" value="v 1.17.2" date-time="2019-10-08T17:54:12.74Z" user="celso">Updated Chinese title and summary</note>
 <note type="updated" update="text-version" value="v 1.2.1" date-time="2019-11-30T12:32:37.066Z" user="john">Added a note (98), added to note 99, and added a bibliography entry.</note>
+<note type="updated" update="text-version" value="v 1.3.1" date-time="2020-02-28T11:44:18.358Z" user="john">Changed the recurring "Come, join me" module</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -2771,17 +2772,13 @@
                         the well-proclaimed Dharma and Vinaya. We would live the holy life in the Blessed One’s presence.”</p>
                     <milestone unit="chunk" xml:id="UT22084-001-001-598"/>
                     <p tid="520"> The Blessed One said to them, “Come, join me,” thereby allowing their going forth. He enjoined
-                        them with the words, “Monks, come, join me and live the holy life.” Only then, after the Blessed One had
-                        given his consent, did they shave their heads and don the robes. <ref cRef="F.35.b" type="folio"/> With that, they
-                        became ordained monks, pledged to shave their hair and beards every seven days and to carry a begging bowl
-                        and water jug. In habit, they stood with the composure of monks who had been ordained for one hundred
-                        years.</p>
+                        them with the words, “Monks, come, join me and live the holy life.” Only after the Blessed One had given his consent, did their hair fall out and they were clothed in robes, <ref cRef="F.35.b" type="folio"/> with but a week’s worth of hair and beard, alms bowl and water pitcher in their hands. Having completed their approach to monkhood, they stood with the deportment of monks who had been ordained for one hundred years.</p>
                     <p tid="521">Again it is said:</p>
                     <milestone unit="chunk" xml:id="UT22084-001-001-600"/>
                     <lg tid="522">
-                        <l>Once called by the Tathāgata to come forth,</l>
-                        <l>Though your head be tonsured and your body clad in robes </l>
-                        <l>It is more important that your senses be stilled,</l>
+                        <l>Hair tonsured and body clad in robes</l>
+                        <l>From the Tathāgata's call to come forth, </l>
+                        <l>That moment, their senses were perfectly stilled</l>
                         <l>For then will your body be swathed in the Buddha’s mind.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-001-001-601"/>
@@ -3095,17 +3092,14 @@
                         Blessed One’s presence.”</p>
                     <milestone unit="chunk" xml:id="UT22084-001-001-671"/>
                     <p tid="582">The Blessed One said to him, “Come, join me,” thereby allowing his going forth, and enjoined
-                        him with the words, “Monk, come, join me and live the holy life.” Only then, after the Blessed One had
-                        given his consent, did he shave his head and don the robes. With that, he became an ordained monk
-                        pledged to shave his hair and beard every seven days and to carry a begging bowl and water jug. Thus
-                        he adopted the conduct one sees but once in a hundred years.</p>
-                    <p tid="583">Again it is said:</p>
+                        him with the words, “Monk, come, join me and live the holy life.” Only after the Blessed One had given his consent, did his hair fall out and was he clothed in robes, with but a week’s worth of hair and beard, alms bowl and water pitcher in hand. Having completed his approach to monkhood, he stood with the deportment of a monk who had been ordained for one hundred years</p>
+                    <p tid="583">Again it is stated:</p>
                     <milestone unit="chunk" xml:id="UT22084-001-001-673"/>
                     <lg tid="584">
-                        <l>“Once called by the Tathāgata to come forth,</l>
-                        <l>Though your head be tonsured and your body clad in robes </l>
-                        <l>It is more important that your senses be stilled,</l>
-                        <l>For then will your body be swathed in the Buddha’s mind.” <ref cRef="F.40.b" type="folio"/>
+                        <l>“Hair tonsured and body clad in robes</l>
+                        <l>From the Tathāgata's call to come forth,</l>
+                        <l>That moment, his senses were perfectly stilled</l>
+                        <l>And body swathed in the Buddha’s mind.” <ref cRef="F.40.b" type="folio"/>
                         </l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-001-001-674"/>
@@ -6610,7 +6604,7 @@
                             āgama literature” in preference for Mahāyāna sutras, the <title xml:lang="Sa-Ltn">
                                 <term type="ignore">Ekottarikāgama</term>
                             </title> was apparently translated into Tibetan, as Marcelle Lalou located a
-                            reference in the Denkarma (<title xml:lang="Bo-Ltn">ldan dkar ma)</title> catalog to a translation of
+                                        reference in the Denkarma (<title xml:lang="Bo-Ltn">ldan dkar ma</title>) catalog to a translation of
                             the text carried out during Trisong Deutsen’s reign (Glass and Allon, 2007, 31). </note> and then had
                         the nāga repeat it. As he did so with great vigor, it took on the cadence of a prayer. The monk
                         instructor’s eyes lit up with joy and the monk said to the nāga disguised as a brahmin, “My dear sir<!--bzhin bzangs -->,
@@ -7600,15 +7594,13 @@
                     <milestone unit="chunk" xml:id="UT22084-001-001-1933"/>
                     <p tid="1695">By saying to them, “Come, join me, monks,” the Blessed One could allow their going forth. So he
                         said, “Come, monks, join me in living the holy life.” It was only after the Blessed One had said this that
-                        they shaved their heads and donned the robes. By the time they had but a week’s growth of hair and beard,
-                        they took up begging bowls and water bottles in their hands and stood with the composure of monks who had
-                        been ordained for one hundred years. As was said,</p>
+                        their hair fell out and they were clothed in robes, with but a week’s worth of hair and beard, alms bowl and water pitcher in hand. Having completed their approach to monkhood, they stood with the deportment of monks who had been ordained for one hundred years. As was said,</p>
                     <milestone unit="chunk" xml:id="UT22084-001-001-1934"/>
                     <lg tid="1696">
-                        <l>Once the Tathāgata said, “Come, join me,”</l>
-                        <l>Their hair was shaved and bodies clad in robes,</l>
-                        <l>And in that moment they stood pacific,</l>
-                        <l>Bodies enveloped by the Buddha’s mind.</l>
+                        <l>Hair tonsured and body clad in robes</l>
+                        <l>From the Tathāgata's call to come forth,</l>
+                        <l>That moment, their senses were perfectly stilled</l>
+                        <l>And their bodies garbed by the Buddha’s mind.</l>
                     </lg>
                     <milestone unit="chunk" xml:id="UT22084-001-001-1935"/>
                     <p tid="1697">The Blessed One gave them instructions, to which they applied themselves with diligence, effort,
@@ -8806,7 +8798,7 @@
                 <div type="section">
                     <head type="section" tid="2922">The Translated Text: “The Chapter on Going Forth”</head>
                     <bibl xml:id="UT22084-001-001-2234">
-                        <title xml:lang="Bo-Ltn">rab tu ’byung ba’i gzhi</title> (<title xml:lang="Sa-Ltn">Pravrajyā­vastu)</title>. Toh
+                        <title xml:lang="Bo-Ltn">rab tu ’byung ba’i gzhi</title> (<title xml:lang="Sa-Ltn">Pravrajyā­vastu</title>). Toh
                         1, ch. 1, Degé Kangyur, vol. 1 (’dul ba, ka), folios 1.a–131.a. </bibl>
                     <bibl xml:id="UT22084-001-001-2251">
                         <title xml:lang="Bo-Ltn">rab tu ’byung ba’i gzhi</title>. bka’ ’gyur (dpe sdur ma) [“Pedurma” Comparative Edition of
@@ -8816,13 +8808,13 @@
                     <bibl xml:id="UT22084-001-001-2235">Vogel, Claus and Klaus Wille (1984). “Some Hitherto Unidentified Fragments
                         of the Pravrajyā­vastu Portion of the Vinaya­vastu Manuscript Found Near Gilgit,” in <title xml:lang="de">Nachrichten der Akademie der Wissenschaften</title>, 1–41. Göttingen: Philologisch-Historische
                         Klasse, 1984.</bibl>
-                    <bibl xml:id="UT22084-001-001-2236">______ (1992). “Some More Fragments of the Pravrajyā­vastu Portion of the
+                    <bibl xml:id="UT22084-001-001-2236">———(1992). “Some More Fragments of the Pravrajyā­vastu Portion of the
                         Vinaya­vastu Manuscript Found Near Gilgit: Part 1: Saṅgha­rakṣitāvadāna,” in <title xml:lang="de">Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen III</title>, edited by
                         Heinz Bechert et al, 65–109. Göttingen: Vandenhoeck &amp; Ruprecht, 1992.</bibl>
-                    <bibl xml:id="UT22084-001-001-2237">______ (1996a). “The Final Leaves of the Pravrajyā­vastu Portion of the
+                    <bibl xml:id="UT22084-001-001-2237">——— (1996a). “The Final Leaves of the Pravrajyā­vastu Portion of the
                         Vinaya­vastu Manuscript Found Near Gilgit: Part 1: Saṅgha­rakṣitāvadāna,” in <title xml:lang="de">Sanskrit-Texte aus dem buddhistischen Kanon: Neuentdeckungen und Neueditionen III</title>, edited by
                         G. Bongard-Levin et al, 241–296. Göttingen: Vandenhoeck &amp; Ruprecht, 1996a.</bibl>
-                    <bibl xml:id="UT22084-001-001-2238">______ (1996b). “The Final Leaves of the Pravrajyā­vastu Portion of the
+                    <bibl xml:id="UT22084-001-001-2238">———(1996b). “The Final Leaves of the Pravrajyā­vastu Portion of the
                         Vinaya­vastu Manuscript Found Near Gilgit. Part 2. Nāga­kumārāvadāna and a Kučā Fragment of the Upa­sampadā
                         Section of the Sarvāstivādins,” in <title xml:lang="de">Sanskrit-Texte aus dem buddhistischen Kanon:
                             Neuentdeckungen und Neueditionen IV</title>, edited by J. Ching et al, 11–76. Göttingen: Vandenhoeck
@@ -8884,7 +8876,7 @@
                                 Spread in the Land of the Āryas</title>”). In jo nang rje btsun ta’a ra na’a tha’i gsung ’bum
                             dpe bsdur ma, vol. 75, pp. 1–270. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology
                             Publishing House), 2007. For English translation, see Chimpa (1990).</bibl>
-                        <bibl xml:id="UT22084-001-001-2909">______ (II). <title xml:lang="Bo-Ltn">bcom ldan ’das thub pa’i dbang po’i 
+                        <bibl xml:id="UT22084-001-001-2909">———(II). <title xml:lang="Bo-Ltn">bcom ldan ’das thub pa’i dbang po’i 
                             mdzad pa mdo tsam brjod pa mthong bas don ldan rab tu dga’ ba dang bcas pas dad pa’i nyin byed phyogs 
                             brgyar ’char ba</title> (“<title xml:lang="en">The Sun of Confidence That Brings Meaning and Joy On Sight 
                                 and Illuminates All Directions, a Brief Account of the Deeds of the Blessed Śākyamuni</title>”). 
@@ -8923,15 +8915,15 @@
                             Göttingen: Vandenhoeck &amp; Ruprecht, 1996. </bibl>
                         <bibl xml:id="UT22084-001-001-2265"> Bronkhorst, Johannes (1998). <title xml:lang="en">The Two Sources of
                                 Indian Asceticism</title>. Delhi: Motilal Banarsidass, 1998. </bibl>
-                        <bibl xml:id="UT22084-001-001-2266"> ______(2000). “The Riddle of the Jainas and the Ājīvikas in Early
+                        <bibl xml:id="UT22084-001-001-2266"> ———(2000). “The Riddle of the Jainas and the Ājīvikas in Early
                             Buddhist Literature.” <title xml:lang="en">Journal of Indian Philosophy</title> 28 (2000): 511–529. </bibl>
-                        <bibl xml:id="UT22084-001-001-2267"> ______ (2003). “Ājīvika Doctrine Reconsidered.” In <title xml:lang="en">Essays in Jaina Philosophy and Religion</title>, edited by Piotr Balcerowicz,
+                        <bibl xml:id="UT22084-001-001-2267"> ———(2003). “Ājīvika Doctrine Reconsidered.” In <title xml:lang="en">Essays in Jaina Philosophy and Religion</title>, edited by Piotr Balcerowicz,
                             153–178. Delhi: Motilal Banarsidass, 2003. </bibl>
-                        <bibl xml:id="UT22084-001-001-2268"> ______(2007). <title xml:lang="en">Greater Magadha: Studies in the
+                        <bibl xml:id="UT22084-001-001-2268"> ———(2007). <title xml:lang="en">Greater Magadha: Studies in the
                                 Culture of Early India</title>. Leiden &amp; Boston: Brill, 2007. </bibl>
-                        <bibl xml:id="UT22084-001-001-2269"> ______(2011). <title xml:lang="en">Buddhism in the Shadow of
+                        <bibl xml:id="UT22084-001-001-2269"> ———(2011). <title xml:lang="en">Buddhism in the Shadow of
                                 Brahminism</title>. Leiden &amp; Boston: Brill, 2011. </bibl>
-                        <bibl xml:id="UT22084-001-001-2270"> ______(2012). “Ājīvika”. In <title xml:lang="en">Brill’s Encyclopedia
+                        <bibl xml:id="UT22084-001-001-2270"> ———(2012). “Ājīvika”. In <title xml:lang="en">Brill’s Encyclopedia
                                 of Hinduism, Vol. IV</title>, edited by Knut A. Jacobsen, et al. Leiden &amp; Boston: Brill, 2012. </bibl>
                         <bibl xml:id="UT22084-001-001-2271">Brough, John. <title xml:lang="en">The Gandhari Dharmapada</title>.
                             Delhi: Motilal Banarsidass, 2001.</bibl>
@@ -8960,16 +8952,16 @@
                             Ruprecht, 1998. </bibl>
                         <bibl xml:id="UT22084-001-001-2279">Clarke, Shayne (2004a). “Vinaya Mātṛkā: Mother of the Monastic Codes,
                             or Just Another Set of Lists? A Response to Frauwallner’s Handling of the Mahāsāṃghika Vinaya.” <title xml:lang="en">Indo-Iranian Journal</title> 47 (2004): 77–120.</bibl>
-                        <bibl xml:id="UT22084-001-001-2280">______ (2004b). “Right Section, Wrong Collection: An Identification of
+                        <bibl xml:id="UT22084-001-001-2280">———(2004b). “Right Section, Wrong Collection: An Identification of
                             a Canonical Text in the Tibetan bsTan ’gyur — Bya ba’i phung po zhes bya ba (<foreign xml:lang="Sa-Ltn">Kriyāskandha-nāma</foreign>).” <title xml:lang="en">Journal of the American Oriental
                                 Society</title>, 124, no. 2 (Apr–Jun 2004): 335–340.</bibl>
-                        <bibl xml:id="UT22084-001-001-2281">______ (2012). “Multiple Mūlasarvāstivādin Monascticisms: On the
+                        <bibl xml:id="UT22084-001-001-2281">———(2012). “Multiple Mūlasarvāstivādin Monascticisms: On the
                             Affiliation of the Tibetan Nuns’ Lineages and Beyond.” Paper presented at Oslo, June 2012.</bibl>
-                        <bibl xml:id="UT22084-001-001-2282">______ (2014). <title xml:lang="en">Vinaya Texts. Gilgit Manuscripts
+                        <bibl xml:id="UT22084-001-001-2282">———(2014). <title xml:lang="en">Vinaya Texts. Gilgit Manuscripts
                                 in the National Archives of India: Facsimile Edition. Volume 1</title>. New Delhi and Tokyo: The
                             National Archives of India and the International Research Institute for Advanced Buddhology, Soka
                             University, 2014.</bibl>
-                        <bibl xml:id="UT22084-001-001-2283">——— (Forthcoming). <title xml:lang="en">Towards a Comparative Study of
+                        <bibl xml:id="UT22084-001-001-2283">———(Forthcoming). <title xml:lang="en">Towards a Comparative Study of
                             the Sarvāstivāda- and Mūla­sarvāsti­vāda-vinayas: A Preliminary Survey of the Kathāvastu Embedded in
                                 the Uttaragrantha</title>. Forthcoming. </bibl>
                         <bibl xml:id="UT22084-001-001-2284">Csoma de Körös, Alexander. <title xml:lang="en">Analysis of the Dulva:
@@ -8991,7 +8983,7 @@
                             Publications, 1999.</bibl>
                         <bibl xml:id="UT22084-001-001-2287">Dutt, Sukumar (1924). <title xml:lang="en">Early Buddhist
                                 Monachism</title>. London: Kegan, Paul, Trench, Trubner &amp; Co., 1924.</bibl>
-                        <bibl xml:id="UT22084-001-001-2288">______(1962). <title xml:lang="en">Buddhist Monks and Monasteries of
+                        <bibl xml:id="UT22084-001-001-2288">———(1962). <title xml:lang="en">Buddhist Monks and Monasteries of
                                 India</title>. London: George Allen and Unwin, 1962. </bibl>
                         <bibl xml:id="UT22084-001-001-2289">Eimer, Helmut. <title xml:lang="de">Rab tu ’byuṅ ba’i gzhi: die
                             tibetische Übersetzung des Pravrajyāvastu im Vinaya der Mūla­sarvāsti­vādins</title>. Wiesbaden:
@@ -9037,7 +9029,7 @@
                         <bibl xml:id="UT22084-001-001-2302">Kishino, Ryoji. “Two Uttaragranthas: A Consideration of the
                             Upāliparipṛcchā.” <title xml:lang="en">Journal of Indian and Buddhist Studies</title> (<title xml:lang="Ja-Ltn">Indogaku Bukkyogaku Kenkyu</title>) (2006-2007) 55, no. 1 (2002): 385–382,
                             1221.</bibl>
-                        <bibl xml:id="UT22084-001-001-2303">______(2013). “A Study of the Nidāna: An Underrated Canonical Text of
+                        <bibl xml:id="UT22084-001-001-2303">———(2013). “A Study of the Nidāna: An Underrated Canonical Text of
                             the Mūla­sarvāsti­vāda-Vinaya.” PhD diss., University of California at Los Angeles, 2013.</bibl>
                         <bibl xml:id="UT22084-001-001-2304">Kloppenborg, Rita. “The Earliest Buddhist Ritual of Ordination.” In
                                 <title xml:lang="en">Selected Studies on Ritual in the Indian Religions: Essays to D.J.
@@ -9048,7 +9040,7 @@
                         <bibl xml:id="UT22084-001-001-2306">Likhitpreechakul, Paisarn. “Semen, Viagra and Paṇḍaka: Ancient
                             Endocrinology and Modern Day Discrimination.” <title xml:lang="en">Journal of the Oxford Centre for
                                 Buddhist Studies</title>, 3 (2012): 91–127.</bibl>
-                        <bibl xml:id="UT22084-001-001-2307"> Lin, Nancy G. “Adapting the Buddha’s Biographies: A Cultural History
+                        <bibl xml:id="UT22084-001-001-2307">Lin, Nancy G. “Adapting the Buddha’s Biographies: A Cultural History
                             of the Wish-Fulfilling Vine in Tibet, Seventeenth to Eighteenth Centuries.” Ph.D. diss., University of
                             California, Berkeley, 2011. </bibl>
                         <bibl xml:id="UT22084-001-001-2308">MacQueen, Graeme. <title xml:lang="en">A Study of the Śrāmaṇyaphala
@@ -9056,7 +9048,7 @@
                         <bibl xml:id="UT22084-001-001-2309">Martin, Dan (2011). <title xml:lang="en">Tibskrit Philology
                                 2011</title>. Digital download from author’s “Tibetological” website
                             https://sites.google.com/site/tibetological/</bibl>
-                        <bibl xml:id="UT22084-001-001-2310">______(2002) “Tracing the Tibetan Teaching Transmission of the
+                        <bibl xml:id="UT22084-001-001-2310">———(2002) “Tracing the Tibetan Teaching Transmission of the
                             Mngon-pa Kun-btus (<foreign xml:lang="Sa-Ltn">Abhi­dharma­samuccaya</foreign>)
                             through the Early Period of Disunity.” In <title xml:lang="en">The Many Canons of Tibetan
                                 Buddhism</title>, edited by Helmut Eimer and David Germano, 335–357. Leiden &amp; Boston: Brill,
@@ -9065,7 +9057,7 @@
                             the Mūla­sarvāsti­vādins.” In <title xml:lang="de">Sanskrit-Texte aus dem buddhistischen Kanon:
                                 Neuentdeckungen und Neueditionen III</title>, edited by Jens Uwe-Hartmann, Klaus Wille, Claus
                             Vogel, and Günter Grönbold, 145–239. Göttingen: Vandenhoeck &amp; Ruprecht, 1996.</bibl>
-                        <bibl xml:id="UT22084-001-001-2313">______(2007). “A Vinaya Lexical Study: Kaṭhina in the Kaṭhinavastu.”
+                        <bibl xml:id="UT22084-001-001-2313">———(2007). “A Vinaya Lexical Study: Kaṭhina in the Kaṭhinavastu.”
                             In <title xml:lang="en">Studia Indologica. </title>
                             <title xml:lang="en">Professor Satya Ranjan Banerjee Felicitation Volume</title>, edited by Jagat Ram
                             Bhattacharyya, 35–57. Delhi: Eastern Book Linkers, 2007.</bibl>
@@ -9085,7 +9077,7 @@
                             Library, 1981. </bibl>
                         <bibl xml:id="UT22084-001-001-2318">Prebish, Charles S. (1974). “A Review of Scholarship on the Buddhist
                             Councils.” <title xml:lang="en">The Journal of Asian Studies</title> 33, no. 2 (1974): 239–254.</bibl>
-                        <bibl xml:id="UT22084-001-001-2319">______ (1994). <title xml:lang="en">A Survey of Vinaya Literature</title>,
+                        <bibl xml:id="UT22084-001-001-2319">———(1994). <title xml:lang="en">A Survey of Vinaya Literature</title>,
                                 Vol. 1. Taipei: Jin Luen Publishing House, 1994. </bibl>
                         <bibl xml:id="UT22084-001-001-2320">______ (2003). “Varying the Vinaya: Creative Responses to Modernity.”
                             In <title xml:lang="en">Buddhism in the Modern World: Adaptations of an Ancient Tradition</title>,
@@ -9101,7 +9093,7 @@
                             2006.</bibl>
                         <bibl xml:id="UT22084-001-001-2325">Rotman, Andy (2008). <title xml:lang="en">Divine Stories:
                             Divyāvadāna, Part 1</title>. Boston: Wisdom Publications, 2008.</bibl>
-                        <bibl xml:id="UT22084-001-001-2350">______ (2017). <title xml:lang="en">Divine Stories:
+                        <bibl xml:id="UT22084-001-001-2350">———(2017). <title xml:lang="en">Divine Stories:
                             Divyāvadāna, Part 2</title>. Boston: Wisdom Publications, 2017.</bibl>
                         <bibl xml:id="UT22084-001-001-2326">Ruegg, David Seyfort. <title xml:lang="en">The Literature of the
                                 Madhyamaka School of Philosophy in India</title>. Wiesbaden: Otto Harrassowitz, 1981.</bibl>
@@ -9113,7 +9105,7 @@
                         <bibl xml:id="UT22084-001-001-2329">Schopen, Gregory (2000). “Hierarchy and Housing in a Buddhist Monastic
                             Code: A Translation of the <title xml:lang="Sa-Ltn">Śāyanāsana­vastu</title>.” <title xml:lang="en">Buddhist Literature</title>, Vol. 2, 92-196. Berkeley: Institute of Buddhist Studies,
                             2000.</bibl>
-                        <bibl xml:id="UT22084-001-001-2330">______ (2010). “The Lay Ownership of Monasteries and the Role of the
+                        <bibl xml:id="UT22084-001-001-2330">———(2010). “The Lay Ownership of Monasteries and the Role of the
                             Monk in Mūlasarvāstivādin Monasticism.” In <title xml:lang="en">Indian Monastic Buddhism: Collected
                                 Papers on Textual, Inscriptional and Archaeological Evidence</title>, 219–257. Delhi: Motilal
                             Banarsidass, 2010. </bibl>
@@ -9121,17 +9113,17 @@
                                 toryuseikatsu ni kansuru kisoteki kenkyu – Varṣāvastu no sai-kotei, oyobi dokkai kenyu</title> 
                                 (“<title xml:lang="en">A Fundamental Study on the Rain Retreat in Buddhism – A Re-edition of the
                                 Varṣāvastu and Its Annotated Translation</title>”). Osaka, 2007.</bibl>
-                        <bibl xml:id="UT22084-001-001-2332">______ (2010). “A Re-edited Text of the <title xml:lang="Sa-Ltn">Varṣāvastu</title> in the <title xml:lang="Sa-Ltn">Vinayavastu</title> and a Tentative Re-edited
+                        <bibl xml:id="UT22084-001-001-2332">———(2010). “A Re-edited Text of the <title xml:lang="Sa-Ltn">Varṣāvastu</title> in the <title xml:lang="Sa-Ltn">Vinayavastu</title> and a Tentative Re-edited
                             Text of the <title xml:lang="Sa-Ltn">Varṣikavastu</title> in the <title xml:lang="Sa-Ltn">Vinayasūtra</title>.” <title xml:lang="la">Acta Tibetica et Buddhica</title> 3 (2010):
                             1-128.</bibl>
                         <bibl xml:id="UT22084-001-001-2333">Skilling, Peter (1994). “Kanjur Titles and Colophons.” In <title xml:lang="en">Tibetan Studies: Proceedings of the 6th Seminar of the International Association for
                                 Tibetan Studies</title>, Vol. 2, edited by Per Kvaerne, 768–780. Oslo: Institute for Comparative
                             Research in Human Culture, 1994.</bibl>
-                        <bibl xml:id="UT22084-001-001-2912">______(2003). “Traces of the Dharma: Preliminary Reports on Some
+                        <bibl xml:id="UT22084-001-001-2912">———(2003). “Traces of the Dharma: Preliminary Reports on Some
                             <title xml:lang="en">ye dhammā</title> and <title xml:lang="Sa-Ltn">ye dharmā</title> Inscriptions
                             from Mainland South-East Asia.” In <title xml:lang="en">Bulletin de l’École Française
                                 d’Extrême-Orient</title>, 90-91 (2003-2004), pp 273-287. </bibl>
-                        <bibl xml:id="UT22084-001-001-2334">______(2009). “Redaction, Recitation, and Writing: Transmission of the
+                        <bibl xml:id="UT22084-001-001-2334">———(2009). “Redaction, Recitation, and Writing: Transmission of the
                             Buddha’s Teaching in India in the Early Period.” In <title xml:lang="en">Buddhist Manuscript Cultures:
                                 Knowledge, Ritual, and Art</title>, edited by Stephen C. Berkwitz, Juliane Schober, and Claudia
                             Brown, 53–75. London and New York: Routledge, 2009.</bibl>
@@ -9163,7 +9155,7 @@
                             Deutsche Morgenländische Gesellschaft, 1970.</bibl>
                         <bibl xml:id="UT22084-001-001-2342">Von Hinüber, Oskar (1996). <title xml:lang="en">A Handbook of Pāli
                                 Literature</title>. Berlin: Walter de Gruyter &amp; Co., 1996.</bibl>
-                        <bibl xml:id="UT22084-001-001-2343">______ (2014) “The Gilgit Manuscripts: An Ancient Buddhist Library in
+                        <bibl xml:id="UT22084-001-001-2343">———(2014) “The Gilgit Manuscripts: An Ancient Buddhist Library in
                             Modern Research.” In <title xml:lang="en">From Birch Bark to Digital Data: Advances in Buddhist
                                 Manuscript Research</title>, edited by Paul Harrison and Jens-Uwe Hartmann, 79-135. Wien:
                             Österreichische Akademie Der Wissenschaften, 2014.</bibl>
@@ -9885,7 +9877,7 @@
                                     ma</foreign>, Skt. <foreign xml:lang="Sa-Ltn">saṅghāvaśeṣa</foreign>)—literally “saṅgha
                                 remnant”—follows Kalyāṇamitra’s gloss: a group of “saṅgha” meet to impose a disciplinary act upon
                                 an offending monk who retains a remnant of his monastic precepts (Kalyāṇamitra,
-                                F.292.a.6-7)</term>
+                                F.292.a.6–7)</term>
                             <term type="alternative">transgressions whose remnant is restored by the saṅgha</term>
                         </gloss>
                     </item>
