@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title type="mainTitle" xml:lang="Bo-Ltn">bdud rtsi brjod pa</title>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bdud rtsi brjod pa/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn">Amṛtavyāharaṇa</title>
                 <title type="mainTitle" xml:lang="en">The Nectar of Speech</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">’phags pa bdud rtsi brjod pa zhes bya ba
@@ -27,11 +27,11 @@
 
             </titleStmt>
             <editionStmt>
-                <edition>v 0.1.3 <date>2020</date>
+                <edition>v 0.9.1 <date>2020</date>
                 </edition>
             </editionStmt>
 
-            <publicationStmt status="2">
+            <publicationStmt status="1.a">
                 <publisher>
                     <name>84000: Translating the Words of the Buddha</name> is a global
                     non-profit initiative to translate all the Buddha’s words into modern languages,
@@ -62,7 +62,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-02-06T10:54:55.376Z" user="andre">06/02/2020 10:54:55</note>
+                <note type="lastUpdated" date-time="2020-02-29T11:20:10.739Z" user="admin">29/02/2020 11:20:10</note>
 
                 <note type="updated" update="text-version" value="v 0.0.1" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version
                     increment</note>
@@ -75,6 +75,8 @@
 <note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-07T06:10:27.77Z" user="mike">v 0.1.2</note>
 <note type="updated" update="translation-status" value="2" date-time="2020-02-07T06:10:27.77Z" user="mike">2</note>
 <note type="updated" update="text-version" value="v 0.1.3" date-time="2020-02-07T11:39:51.884Z" user="andre">v 0.1.3</note>
+<note type="updated" update="text-version" value="v 0.9.1" date-time="2020-02-29T11:20:05.269Z" user="john">Reviewed and edited, ready for release.</note>
+<note type="updated" update="translation-status" value="1.a" date-time="2020-02-29T11:20:05.269Z" user="john">Reviewed and edited, ready for release.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -83,11 +85,11 @@
             <div type="summary">
                 <head type="summary" tid="1">Summary</head>
                 <milestone unit="chunk" xml:id="UT22084-061-017-57"/>
-                <p tid="41">In this sūtra, Buddha Śākyamuni teaches, at the request of Maitreya, five qualities that bodhisattvas should possess: (1) teaching the Dharma, (2) granting fearlessness, (3) practicing great loving kindness, great compassion, great joy, and great equanimity, (4) repairing old stūpas, and (5) causing all beings to aspire for the mind of awakening. Maitreya praises the benefits of this teaching and vows to teach it again in the future during degenerate times. Both Maitreya and the Buddha emphasize the positive effects on beings and the environment that comes about by upholding, preserving, and teaching <title xml:lang="en">The Nectar of Speech</title>.</p>
+                <p tid="41">In this sūtra, Buddha Śākyamuni teaches, at the request of Maitreya, five qualities that bodhisattvas should have: (1) giving the Dharma, (2) giving freedom from fear, (3) practicing great loving kindness, great compassion, great joy, and great equanimity, (4) repairing dilapidated stūpas, and (5) causing all beings to aspire to the mind of awakening. Maitreya praises the benefits of this teaching and vows to teach it himself in future degenerate times. Both Maitreya and the Buddha emphasize the positive effects on beings and the environment that upholding, preserving, and teaching <title xml:lang="en">The Nectar of Speech</title> will bring about.</p>
             </div>
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="2">Acknowledgements</head>
-                <p tid="42">This text was translated from the Tibetan, introduced, and edited by the Dharmasāgara Translation Group: Raktrul Ngawang Kunga Rinpoche, Rebecca Hufen, Shanshan Jia, Jason Sanche, and Arne Schelling. Prof. Harunaga Isaacson (University of Hamburg) kindly assisted the translators with help and advice. The final version was also lightly edited by the 84000 editorial team. The translation was completed under the patronage and supervision of <distinct>84000: Translating the Words of the Buddha</distinct>.</p>
+                <p tid="42">This text was translated from the Tibetan, introduced, and edited by the Dharmasāgara Translation Group: Raktrul Ngawang Kunga Rinpoche, Rebecca Hufen, Shanshan Jia, Jason Sanche, and Arne Schelling. Prof. Harunaga Isaacson (University of Hamburg) kindly assisted the translators with help and advice. The final version was also lightly edited by the 84000 editorial team. The translation was completed under the patronage and supervision of 84000: Translating the Words of the Buddha.</p>
             </div>
             <div type="introduction">
                 <head type="introduction" tid="3">Introduction</head>
@@ -98,38 +100,42 @@
                         which the Buddha Śākyamuni, at the request of the bodhisattva Maitreya,
                         teaches a great assembly of monks and bodhisattvas. The setting for the
                         teaching is the famous Veṇuvana forest
-                        monastery. This monastery was located outside of Rājagṛha, the capital city
+                        monastery. This monastery was located outside Rājagṛha, the capital city
                         of Magadha, which at the time was one of the great kingdoms of ancient India
                         (located in the modern-day state of Bihar). The teaching provides an outline
-                        of the following five qualities that bodhisattvas should possess in order to
-                        avert obstacles, prolong their lifespans, and attain awakening: Bodhisattvas
-                        should (1) teach the Dharma; (2) grant fearlessness; (3) practice great
+                        of the following five qualities of bodhisattvas that will ensure they
+                        avert obstacles, live long, and attain awakening: Bodhisattvas
+                        should (1) give the Dharma; (2) give freedom from fear; (3) practice great
                         loving kindness, great compassion, great joy, and great equanimity; (4)
-                        repair old stūpas; and (5) cause all beings to aspire for the mind of
-                        awakening. After the Buddha finishes his main teaching, a large number of
+                        repair dilapidated stūpas; and (5) cause all beings to aspire to the mind of
+                        awakening. When the Buddha delivers this brief teaching, a large number of
                         the monks, bodhisattvas, and celestial beings in attendance attain different
                         stages of realization. Maitreya is inspired to give a discourse on the
-                        benefits of this sūtra and vows to teach it again in the future during the
-                        time of degeneration. His elaborations and his commitment are welcomed and
+                        benefits of this sūtra and vows to teach it himself in the future during the
+                        time of degeneration. His exposition of its benefits and commitment to teach it himself are welcomed and
                         endorsed by the Buddha. At the end, the Buddha emphasizes the importance of
                         this teaching and instructs Ānanda to uphold and preserve it. The Buddha
                         names the teaching <title xml:lang="en">The Nectar of Speech</title> and
-                        also gives the alternative title of <title xml:lang="en">The Inquiry of
-                            Maitreya</title>. In the standard formulaic style of ending a sūtra, the
+                        also gives it an alternative title, <title xml:lang="en">The Question of
+                            Maitreya</title>.<note place="end" index="1" xml:id="UT22084-061-017-59">It should be noted that 
+                                there are three sūtras elsewhere in the Kangyur whose main titles are <title xml:lang="en">The Question of
+                                    Maitreya</title> (<title xml:lang="Sa-Ltn">Maitreya­paripṛcchā</title>, <title xml:lang="Bo-Ltn">byams pas zhus pa</title>): <ref target="https://read.84000.co/translation/toh85.html">Toh 85</ref>, <ref target="https://read.84000.co/translation/toh85.html">Toh 86</ref>, and Toh 149.</note> In the standard ending formula, the
                         entire assembly rejoices and praises the words of the Buddha. </p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-2"/>
-                    <p tid="6">At present we are not aware of any Sanskrit version, Chinese translation, or
-                        any other rendering in other languages. The Tibetan versions across
-                        different Kangyurs list various Sanskrit titles, namely <title xml:lang="Sa-Ltn">Amṛtavyāharaṇa</title> (Degé), <title xml:lang="Sa-Ltn">Amṛtadāna</title> (Narthang), and <title xml:lang="Sa-Ltn">Amṛtavarṇa</title> (Stok). According to the colophon,
-                        the Tibetan translation was carried out by the Indian scholar Prajñāvarman
-                        and the Tibetan translator Yeshé Dé. It can therefore be assumed that the
-                        translation was produced in the late eighth or early ninth century <hi rend="small-caps">ce</hi> in central Tibet. The text was cited by the
-                        contemporary Tibetan translator Kawa Paltsek (Toh
-                        4357)<!--Reference Toh 4357--> and listed in the Denkarma catalogue,<note place="end" index="1" xml:id="UT22084-061-017-3">
-                            Denkarma, folio 299.b. See also
+                    <p tid="6">At present we are not aware of any surviving Sanskrit version, Chinese translation, or
+                        rendering of the text in any other language. The Sanskrit titles are rendered differently 
+                        in the versions in different Kangyurs: <title xml:lang="Sa-Ltn">Amṛtavyāharaṇa</title> (Degé), <title xml:lang="Sa-Ltn">Amṛtadāna</title> (Narthang), and <title xml:lang="Sa-Ltn">Amṛtavarṇa</title> (Stok Palace). According to the colophon,
+                        the Tibetan translation was produced by the Indian scholar Prajñāvarman
+                        and the Tibetan translator Yeshé Dé. It can therefore be dated to the 
+                        late eighth or early ninth century <hi rend="small-caps">ce</hi> in central Tibet. The text was cited by the
+                        Tibetan translator Kawa Paltsek, who was a contemporary of the translators<note place="end" index="2" xml:id="UT22084-061-017-60">In his <title xml:lang="Bo-Ltn">gsung rab rin po che’i gtam rgyud dang shAkya’i rabs rgyud</title>, (Toh
+                            4357)<!--Reference Toh 4357-->, a treatise in the Tengyur; see <ptr target="#UT22084-061-017-14"/>.</note> and is listed in the Denkarma catalogue,<note place="end" xml:id="UT22084-061-017-3" index="3">
+                            Denkarma, F.299.b. See also
                                 Hermann-Pfandt (2008), p. 114, no. 215.</note> which confirms
-                        that the translation of this sūtra into Tibetan must have been carried out
-                        prior to 812 <hi rend="small-caps">ce</hi>. This English translation has
+                        that the translation of this sūtra into Tibetan must have been completed
+                        before 812 <hi rend="small-caps">ce</hi>. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-017-61"/>
+                    <p tid="6">This English translation has
                         been produced based on the Tibetan rendering that is found in the Degé
                         Kangyur as well as the Comparative Edition (Tib. <title xml:lang="Bo-Ltn">dpe bsdur ma</title>) and the Stok Palace manuscript.</p>
                 </div>
@@ -147,10 +153,13 @@
                     <milestone unit="chunk" xml:id="UT22084-061-017-7"/>
                     <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-017-8"/>
-                    <p tid="15">Thus did I hear at one time. The Bhagavān was residing in Rājagṛha at
-                        Veṇuvana in Kalandaka­nivāsa  with a great saṅgha of five hundred bhikṣus and a great saṅgha of seventy-two thousand
+                    <p tid="15">Thus did I hear at one time. The Bhagavān was residing in Rājagṛha, at 
+                        the Kalandaka­nivāsa in Veṇuvana, with a great saṅgha of five 
+                        hundred bhikṣus and a great saṅgha of seventy-two thousand
                         bodhisattvas. At that time the bodhisattva mahāsattva Maitreya was also
-                        seated in the assembly. Then bodhisattva mahāsattva Maitreya rose from his
+                        seated in the assembly.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-017-62"/>
+                    <p tid="16">The bodhisattva mahāsattva Maitreya rose from his
                         seat, draped his upper robe over one shoulder, knelt on his right knee, and
                         with palms joined bowed to the Bhagavān and said, “With permission, I would
                         like to ask the Blessed, thus-gone, worthy, perfect Buddha some questions.” </p>
@@ -159,97 +168,101 @@
                         permission. Maitreya, ask the Thus-Gone, worthy, perfect Buddha whatever you
                         wish, and I shall ease your mind by answering each of your questions.”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-10"/>
-                    <p tid="17">The bodhisattva mahāsattva Maitreya then asked the Bhagavān: “Bhagavān,
-                        <ref cRef="F.272.a" type="folio"/> how many qualities do bodhisattva mahāsattvas need to possess so
-                        that no class of māra will cause them obstacles, so that none of the retinue
-                        of Māra will transgress against them, so that they will prolong their
-                        lifespans out of their love for sentient beings, and so that they will soon
+                    <p tid="17">The bodhisattva mahāsattva Maitreya then asked the Bhagavān, “Bhagavān,
+                        <ref cRef="F.272.a" type="folio"/> what are the qualities that bodhisattva 
+                        mahāsattvas need to have so
+                        that none of Māra’s hordes will cause them obstacles, so that none of 
+                        Māra’s retinue will transgress against them, so that out of love for sentient beings 
+                        they will live for a long time, and so that they will soon
                         fully awaken to unexcelled and perfect awakening?”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-11"/>
-                    <p tid="18">The Bhagavān replied the bodhisattva mahāsattva Maitreya, “Maitreya,
+                    <p tid="18">The Bhagavān replied to the bodhisattva mahāsattva Maitreya, “Maitreya,
                         excellent, excellent! Maitreya, your intention in asking the Thus-Gone,
                         worthy, perfect Buddha about this matter is excellent, since you act for the
                         benefit of many beings, aim for the happiness of many beings, have
                         compassion for the world, and seek the welfare, benefit, and well-being of
                         gods and humans. Hence, Maitreya, listen very well and keep it in mind! I
                         will explain it.”</p>
-                    <p tid="19">The bodhisattva mahāsattva Maitreya replied, “I will do so.”</p>
+                    <p tid="19">The bodhisattva mahāsattva Maitreya replied, “I will do so,” and he 
+                        listened accordingly as the Bhagavān taught as follows.</p>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-017-13"/>
-                    <p tid="20">He listened accordingly and the Bhagavān taught him: “Maitreya, if
-                        bodhisattva mahāsattvas are endowed with five particular qualities, no class
-                        of māra will cause them obstacles, none of the retinue of Māra will
-                        transgress against them, they will prolong their lifespans out of their love
-                        for sentient beings, and they will soon fully awaken to unexcelled and
-                        perfect awakening. What are these five? They are the unceasing teaching of
-                        the Dharma; the unceasing granting of fearlessness; the unceasing practice
+                    <p tid="20">“Maitreya, there are five qualities that bodhisattva mahāsattvas should have  
+                        so that none of Māra’s hordes will cause them obstacles, so that none of 
+                        Māra’s retinue will transgress against them, so that out of love
+                        for sentient beings they will live for a long time, and so that they will soon fully awaken to unexcelled and
+                        perfect awakening. What are those five qualities? They are the unceasing giving of
+                        the Dharma; the unceasing giving of freedom from fear; the unceasing practice
                         of great love, great compassion, great joy, and great equanimity; the
-                        unceasing repair of old stūpas; <ref cRef="F.272.b" type="folio"/> and the unceasing inspiration of
-                        all beings to set their minds on awakening.<note place="end" index="2" xml:id="UT22084-061-017-14"> Kawa Paltsek (folio 283.b) quotes this
+                        unceasing repair of dilapidated stūpas; <ref cRef="F.272.b" type="folio"/> and the unceasing inspiring of
+                        all beings to set their minds on awakening.<note place="end" xml:id="UT22084-061-017-14" index="4"> Kawa Paltsek (folio 283.b) quotes this
                                 passage as follows: “When bodhisattvas are endowed with five
                                 qualities, they will not be harmed by Māra, they will live long, and
-                                they will soon attain awakening. These five are (1) always teaching
-                                the Dharma to sentient beings, (2) granting fearlessness to sentient
-                                beings, (3) practicing the four immeasurable qualities, (4)
-                                repairing old stūpas, and (5) causing all beings to aspire for the
+                                they will soon attain awakening. These five are (1) always giving
+                                sentient beings the Dharma, (2) giving sentient beings freedom 
+                                from fear, (3) practicing the four immeasurable qualities, (4)
+                                repairing old stūpas, and (5) causing all beings to aspire to the
                                 mind of awakening.”</note> Maitreya, if bodhisattva mahāsattvas
-                        are endowed with these five qualities, no class of māra will cause them
-                        obstacles, none of the retinue of Māra will transgress against them, they
-                        will prolong their lifespans out of their love for sentient beings, and they
-                        will soon fully awaken to unexcelled and perfect awakening.” </p>
+                        have those five qualities, none of Māra’s hordes will cause them obstacles, none of 
+                        Māra’s retinue will transgress against them, out of love
+                        for sentient beings they will live for a long time, and they
+                        they will soon fully awaken to unexcelled and perfect awakening.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-15"/>
                     <p tid="21">When the Bhagavān taught this discourse on the five qualities, the minds of
-                        five thousand bhikṣus became free of all defilements without remainder.
+                        five thousand bhikṣus became free of all defilements with no further appropriation.
                         Seventy-two thousand bodhisattvas attained the acceptance that phenomena do
-                        not arise. The eye of Dharma of eighty-four thousand gods became purified
-                        regarding phenomena, free from dust and stains, and without defilements. </p>
+                        not arise. The Dharma eye of eighty-four thousand gods regarding phenomena became 
+                        purified, free from dust and stains, and without defilements. </p>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-017-16"/>
-                    <p tid="22">Then the bodhisattva mahāsattva Maitreya said to the Bhagavān: “Bhagavān, I
+                    <p tid="22">The bodhisattva mahāsattva Maitreya then said to the Bhagavān, “Bhagavān, I
                         feel inspired to speak. Blissful One, I feel inspired to speak.”</p>
-                    <p tid="23">The Bhagavān said, “Noble son, speak if you think the time has come.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-017-63"/>
+                    <p tid="23">The Bhagavān said, “Noble son, speak if you know the time has come.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-18"/>
-                    <p tid="24">Thereupon, with the permission of the Bhagavān, the bodhisattva mahāsattva
+                    <p tid="24">Having thus received the Bhagavān’s permission, the bodhisattva mahāsattva
                         Maitreya rose from his seat, draped his upper robe over one shoulder, knelt
                         on his right knee, and with palms joined bowed to the Bhagavān and said,
-                        “Bhagavān, this Dharma discourse cures the illnesses of the afflictions of
-                        all beings who are sick from desire, anger, and ignorance and are obscured
-                        by the darkness of the cataracts and visual aberrations of all views. It
-                        purifies the unexcelled eye of Dharma. How marvelous! Bhagavān, this Dharma
-                        discourse is a great nectar! <ref cRef="F.273.a" type="folio"/> Bhagavān, this Dharma discourse is a
-                        great panacea! Even if born as an animal, those who hear this Dharma
-                        discourse will have gathered an accumulation of great roots of virtue and
+                        “Bhagavān, how marvelous that this Dharma discourse has been taught by the Bhagavān
+                        in order that all beings—sick because of desire, anger, and ignorance, obscured
+                        by the darkness of the cataracts and visual aberrations of all views—may have their illnesses 
+                        of the afflictions cured, and have their unexcelled Dharma eye purified! Bhagavān, this Dharma
+                        discourse you have taught is a great nectar! <ref cRef="F.273.a" type="folio"/> Bhagavān, this Dharma discourse 
+                        you have taught is a great panacea! Even for beings born as animals, those 
+                        who happen to hear this Dharma discourse will have gathered thereby an accumulation of great roots of virtue and
                         will be superior to all beings. They will behold all buddhas. They will be
                         of great service to many beings. They will bring about roots of virtue. They
                             will purify their karmic obscurations,
-                            become liberated from the animal realm, and attain human bodies. Then,
+                            be freed from the animal realm, and attain human bodies. Then,
                             remembering their previous lifetimes and gaining faith in the teachings
-                            of the Tathāgata, they can be reborn in any buddha realm they wish. If
-                            this is so, then what need is there to mention those who hear this while
-                            human?</p>
+                            of the Tathāgata, they will be reborn in any buddha realm they wish. So if
+                            that is the case even for them, what need is there to mention those who hear this teaching 
+                            as human beings?</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-19"/>
                     <p tid="25">“Bhagavān, hearing this Dharma discourse is
                         of great benefit to beings. Bhagavān, beings who hear this Dharma discourse
-                        belong to the assembly of those who are certain to fully awaken to
+                        belong to the assembly of those who are certain to awaken fully to
                         unexcelled and perfect awakening. Respected Bhagavān, because they will be
                         embraced by the thus-gone, worthy, perfect buddhas, they will soon fully
                         awaken to unexcelled and perfect awakening.” </p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-20"/>
                     <p tid="26">The Bhagavān said, “Excellent, Maitreya, excellent! Maitreya, it is just as
-                        you have said. It is the truth. It is only this. It is unmistaken. If even
-                        those who listen with doubts to this Dharma discourse have no small roots of
-                        virtue, then what need is there to mention those who listen to, retain,
+                        you have said. It is the truth. It is that alone. It is unmistaken. Even
+                        those who listen to this Dharma discourse doubtingly will have no small roots of
+                        virtue; so what need is there to mention those who listen to, retain,
                         hold, read, master, and <ref cRef="F.273.b" type="folio"/> teach it extensively and properly without
-                        any doubts? Such sūtra holders will not encounter the works of Māra. They
+                        any doubts? Such holders of the sūtra will not encounter the works of Māra. They
                         will not be harmed by desire, anger, ignorance, pride, avarice, rage, or
                         malevolence. Their bodies will not be stricken by plague or disease. In
-                        whatever place such a sūtra is kept, wherever such a Dharma teacher dwells,
+                        whatever region such a sūtra as this is kept, wherever such a Dharma teacher dwells,
                         or wherever this Dharma discourse is written down as a scripture—in such
                         places all diseases, epidemics, harm, contagions, and conflicts will be
                         quelled.”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-21"/>
                     <p tid="27">Then the bodhisattva mahāsattva Maitreya said to the Bhagavān, “Bhagavān,
-                        later, in the future, during the final five hundred years when the true
-                        Dharma is disappearing and the time of destruction has come with the great
-                        fear that the Buddha’s awakening will vanish, I shall teach this Dharma
+                        later, in the future, during the final five hundred years when the time of 
+                        destruction has come, the true Dharma is disappearing, and there is a great
+                        danger that the Buddha’s awakening will vanish, I shall teach this Dharma
                         discourse to those noble beings. I shall invigorate them. In places where a
                         holder of this sūtra resides, I shall quell all untimely cold winds, winter
                         rains, famine, diseases, plagues, epidemics, infectious disease, harm, and
@@ -264,30 +277,33 @@
                     <milestone unit="chunk" xml:id="UT22084-061-017-22"/>
                     <p tid="28">The Bhagavān said, “Excellent, Maitreya! It is excellent indeed that you have
                         donned the great armor and proclaimed the lion’s roar for the benefit of all
-                        beings in order to uphold the true Dharma of the Tathāgata and to sustain<note place="end" index="3" xml:id="UT22084-061-017-23"> Translated based on S:
+                        beings in order to uphold the true Dharma of the Tathāgata and to sustain<note place="end" xml:id="UT22084-061-017-23" index="5"> Translated based on S:
                                     <foreign xml:lang="Bo-Ltn" type="term">bskyang</foreign>. D:
                                     <foreign xml:lang="Bo-Ltn" type="term">bskyed</foreign>.</note> the Dharma way of the Tathāgata. I
                         entrust this Dharma discourse to you. Thereby, later, in the future, during
-                        the final five hundred years when the true Dharma is disappearing and the
-                        time of destruction has come with the great fear that the Buddha’s awakening
-                        will vanish, you should teach this Dharma discourse to all beings. You
+                        the final five hundred years when the time of 
+                        destruction has come, the true Dharma is disappearing, and there is a great
+                        danger that the Buddha’s awakening will vanish, you should teach this Dharma discourse to all beings. You
                         should proclaim it. You should inspire those noble beings. You should
                         proclaim that they must do nothing else but persevere in taking ultimate
-                        reality as their authority. You should teach them only according to the
+                        reality as their authority. You should teach them only according to 
                         ultimate reality. You should be sure to teach them in such a way that those
                         noble beings understand this Dharma discourse unmistakably as it is.”</p>
                     <p tid="29">The bodhisattva Maitreya said, “Bhagavān, I will do so.”</p>
+                    <lb/>
                     <milestone unit="chunk" xml:id="UT22084-061-017-25"/>
                     <p tid="30">Thereupon Indra and his retinue of gods, Brahmā and his retinue of gods,
-                        Prajāpati, and others, after realizing that this Dharma discourse was coming
+                        Prajāpati, and others, realizing that this Dharma discourse was coming
                         to an end, offered heavenly flowers, fragrant smoke, incense, flower
                         garlands, ointments, powders, garments, parasols, banners, and flags to the
-                        Bhagavān and the bodhisattva mahāsattva Maitreya. They then exclaimed:
+                        Bhagavān and the bodhisattva mahāsattva Maitreya. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-017-64"/>
+                    <p tid="31">They then exclaimed,
                         “Bhagavān, this Dharma discourse that benefits innumerable beings is indeed
                         a marvelous nectar of speech!” <ref cRef="F.274.b" type="folio"/>
                     </p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-26"/>
-                    <p tid="31">Then the Bhagavān said to Venerable Ānanda, “Ānanda, such a Dharma discourse
+                    <p tid="31">The Bhagavān now said to Venerable Ānanda, “Ānanda, such a Dharma discourse
                         is rarely heard. Therefore, you must retain this Dharma discourse. You must
                         write it down, hold it, read it aloud, and master it!”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-27"/>
@@ -295,19 +311,19 @@
                         is the name of this Dharma discourse? How should it be remembered?”</p>
                     <p tid="33">The Bhagavan said, “Ānanda, you should remember this Dharma discourse as
                             <title xml:lang="en">The Nectar of Speech</title>. You should also refer
-                        to it as <title xml:lang="en">The Inquiry of Maitreya</title>.”</p>
+                        to it as <title xml:lang="en">The Question of Maitreya</title>.”</p>
                     <milestone unit="chunk" xml:id="UT22084-061-017-29"/>
-                    <p tid="34">After the Bhagavān had spoken thus, the entire assembly—Venerable Ānanda, the
+                    <p tid="34">After the Bhagavān had thus spoken, the entire assembly—Venerable Ānanda, the
                         bodhisattva mahāsattva Maitreya, the bhikṣus, the bodhisattvas, and also the
-                        gods, humans, asuras, and gandharvas— rejoiced and praised the words of the
+                        gods, humans, asuras, and gandharvas—all rejoiced and praised the words of the
                         Bhagavān.</p>
-                    <trailer tid="35">This concludes the noble Mahāyāna sūtra called “The Nectar of Speech.”
+                    <trailer tid="35">This concludes the noble Mahāyāna sūtra “The Nectar of Speech.”
                     </trailer>
                 </div>
                 <div type="colophon">
                     <head type="colophon" tid="36">Colophon</head>
                     <milestone unit="chunk" xml:id="UT22084-061-017-30"/>
-                    <p tid="37">It was translated, edited, and finalized by the Indian abbot Prajñāvarman and
+                    <p tid="37">Translated, edited, and finalized by the Indian abbot Prajñāvarman and
                         the chief editor-translator venerable Yeshé Dé.</p>
                 </div>
             </div>
@@ -321,7 +337,7 @@
                 <div type="section">
                     <bibl xml:id="UT22084-061-017-31">
                         <title xml:lang="Bo-Ltn">’phags pa bdud rtsi brjod pa zhes bya ba theg pa
-                            chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Āryāmṛtavyāharaṇanāmamahāyānasūtra</title>
+                        chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Āryāmṛta­vyāharaṇa­nāma­mahā­yāna­sūtra</title>
                         <title xml:lang="Bo-Ltn">)</title>. Toh 197, Degé Kangyur vol. 61 (mdo sde, tsa),
                         folios 271.b–274.b. </bibl>
                     <bibl xml:id="UT22084-061-017-32">
@@ -334,7 +350,7 @@
                         740–750.</bibl>
                     <bibl xml:id="UT22084-061-017-33">
                         <title xml:lang="Bo-Ltn">’phags pa bdud rtsi brjod pa zhes bya ba theg pa
-                            chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Amṛtavarṇaṇanāmamahāyānasūtra</title>). Stok Palace Kangyur (stog pho brang bris ma bka’
+                        chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Amṛta­varṇa­nāma­mahā­yāna­sūtra</title>). Stok Palace Kangyur (stog pho brang bris ma bka’
                         ’gyur) vol. 62 (mdo sde, da), folios 370.b–375.b.</bibl>
                     <bibl xml:id="UT22084-061-017-34">Kawa Paltsek (ska ba dpal brtsegs). <title xml:lang="Bo-Ltn">gsung rab rin
                             po che’i gtam rgyud dang shAkya’i rab rgyud</title>. Toh 4357, Degé
@@ -487,7 +503,7 @@
                             <term xml:lang="Bo-Ltn">byams pa </term>
                             <term xml:lang="bo">བྱམས་པ།</term>
                             <term xml:lang="Sa-Ltn">Maitreya</term>
-                            <term type="definition">Name of a bodhisattva who it is believed will be
+                            <term type="definition">Name of a bodhisattva who, it is believed, will be
                                 the future buddha after Śākyamuni, becoming the fifth buddha of this
                                 eon.</term>
                             </gloss>
@@ -535,11 +551,8 @@
                             <term xml:lang="bo">བྱ་ཀ་ལན་ད་ཀ་གནས་པ།</term>
                             <term xml:lang="Sa-Ltn">Kalandaka­nivāsa </term>
                             <term xml:lang="Sa-Ltn">Kalandakanivāpa</term>
-                            <term type="definition">Literally, “The Squirrel Feeding Ground.” A
-                                location within Veṇuvana where the Buddha stayed. The place received
-                                its name from the many flying squirrels living there, being fed by
-                                humans. It should be noted that Tibetan translations understand the
-                                Sanskrit term <foreign xml:lang="Sa-Ltn" type="term">kalandaka</foreign> to refer to a kind of bird. </term>
+                            <term type="definition">Literally, “the dwelling place of kalandaka (birds).” A location within the Veṇuvana where the Buddha stayed. The place was given its name by King Bimbisāra after he had been saved from a snake attack there by the squawking of many <foreign xml:lang="Sa-Ltn" type="term">kalandaka</foreign>—flying squirrels, Sanskrit and Pali sources suggest, but Tibetan translations understand the
+                                Sanskrit term to refer to a kind of bird. The alternative Sanskrit <foreign xml:lang="Sa-Ltn">Kalandakanivāpa</foreign> means “where food-offerings are made to kalandakas.”</term>
                         </gloss>
                     </item>
                     <item>
