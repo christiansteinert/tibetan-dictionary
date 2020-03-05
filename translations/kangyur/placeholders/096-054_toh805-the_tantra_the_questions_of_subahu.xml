@@ -12,10 +12,13 @@
                 <author role="translatorMain" ref="contributors.xml#team-33"/>
             <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
                 <author role="translatorEng" ref="contributors.xml#person-200">Kaia Fischer</author>
+                <author role="translatorEng" ref="contributors.xml#person-308">Erin Sperry</author>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-096-054"/>
                 <date/>
@@ -24,16 +27,17 @@
                 <bibl key="toh805" type="text">
                     <ref>Toh 805</ref>
                     <biblScope>vol.96, ff.118r-140v(pp.235-280)</biblScope>
-                    <location count-pages="46">
-                        <start volume="96" page="237"/>
-                        <end volume="96" page="282"/>
+                    <location work="UT4CZ5369" count-pages="46">
+                        <volume number="96" start-page="235" end-page="280"/>
                     </location>
                     <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12551" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-09T13:10:54.132Z" user="admin">09/03/2019 13:10:54</note>
+                <note type="lastUpdated" date-time="2019-09-23T20:00:56.22Z" user="admin">23/09/2019 20:00:56</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-05T08:42:54.93Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
