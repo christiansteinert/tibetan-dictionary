@@ -9,23 +9,31 @@
                 <title type="mainTitle" xml:lang="en">The Prayer of Maitreya</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa byams pa'i smon lam/</title>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-101-152"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh1096" type="text">
                     <ref>Toh 1096</ref>
                     <biblScope>vol.101, ff.266r-267r(pp.531-533)</biblScope>
-                    <location count-pages="3">
-                        <start volume="101" page="533"/>
-                        <end volume="101" page="535"/>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="101" start-page="531" end-page="533"/>
                     </location>
                     <idno parent-id="O1JC114941JC20569" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12860" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 23/01/2019 at 09:09:10 by admin</note>
+                <note type="lastUpdated" date-time="2020-03-05T09:24:30.743Z" user="admin">05/03/2020 09:24:30</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-05T09:24:27.564Z" user="john">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
