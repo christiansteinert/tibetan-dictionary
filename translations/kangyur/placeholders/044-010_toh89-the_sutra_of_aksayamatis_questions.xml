@@ -11,10 +11,13 @@
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryākṣayamatiparipṛcchā­nāmamahāyānasūtra</title>
                 <author role="translatorMain" ref="contributors.xml#team-45"/>
             <author role="translatorEng" ref="contributors.xml#person-30">Rolf Scheuermann</author>
+                <author role="translatorEng" ref="contributors.xml#person-298">Stefan Schley</author>
             </titleStmt>
             <editionStmt>
-                <edition> </edition>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
             </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-044-010"/>
                 <date/>
@@ -23,16 +26,17 @@
                 <bibl key="toh89" type="text">
                     <ref>Toh 89</ref>
                     <biblScope>vol:44, ff.175v-182v(pp.350-364)</biblScope>
-                    <location count-pages="15">
-                        <start volume="44" page="352"/>
-                        <end volume="44" page="366"/>
+                    <location work="UT4CZ5369" count-pages="15">
+                        <volume number="44" start-page="350" end-page="364"/>
                     </location>
                     <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11636" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 13/02/2019 at 08:36:14 by admin</note>
+                <note type="lastUpdated" date-time="2019-09-25T15:35:15.146Z" user="admin">25/09/2019 15:35:15</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-05T08:39:51.782Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
