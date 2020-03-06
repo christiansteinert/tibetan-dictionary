@@ -14,16 +14,22 @@
                 <consultant role="advisor" ref="contributors.xml#person-96">L.S. Summer</consultant>
                 <consultant role="advisor" ref="contributors.xml#person-97">William Giddings</consultant>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-072-003"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh303" type="text">
                     <ref>Toh 303</ref>
                     <biblScope>vol.72, ff.127r-127v(pp.253-254)</biblScope>
-                    <location count-pages="2">
-                        <start volume="72" page="255"/>
-                        <end volume="72" page="256"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="72" start-page="253" end-page="254"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11972" work="W22084"/>
@@ -31,6 +37,8 @@
             </sourceDesc>
             <notesStmt>
                 <note type="lastUpdated">Last updated at 13/02/2019 at 08:49:55 by admin</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T14:18:12.867Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
