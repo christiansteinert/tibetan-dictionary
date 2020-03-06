@@ -5,27 +5,39 @@
         <fileDesc>
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">dpung bzangs kyis zhus pa'i rgyud tshig don bshad pa'i brjed byang /</title>
-                <title type="mainTitle" xml:lang="Sa-Ltn">arya-subahu-paripricchatantrapadarthatippani</title>
-                <title type="mainTitle" xml:lang="en"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Ārya-subāhu-paripṛcchātantrapadārthaṭippaṇī</title>
+                <title type="mainTitle" xml:lang="en">The Tantra of the Questions of Subāhu: Notes on The Meaning of Terms</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa dpung bzangs kyis zhus pa'i rgyud tshig gi don bshad pa'i brjed byang</title>
+                <author role="translatorMain" ref="contributors.xml#team-33"/>
+            <author role="translatorEng" ref="contributors.xml#person-200">Kaia Fischer</author>
+                <author role="translatorEng" ref="contributors.xml#person-308">Erin Sperry</author>
+                <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT23703-071-003"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh2672" type="text">
                     <ref>Toh 2672</ref>
                     <biblScope>ff. 54v-100v</biblScope>
-                    <location count-pages="">
-                        <start volume="71" page="110"/>
-                        <end volume="71" page="202"/>
+                    <location work="UT23703" count-pages="93">
+                        <volume number="71" start-page="108" end-page="200"/>
                     </location>
                     <idno parent-id="O1JC76301JC21612" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC76301JC9282" work="W23703"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2019-03-09T13:14:27.332Z" user="john">09/03/2019 13:14:27</note>
+                <note type="lastUpdated" date-time="2019-09-23T20:03:45.82Z" user="admin">23/09/2019 20:03:45</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T13:37:00.007Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
