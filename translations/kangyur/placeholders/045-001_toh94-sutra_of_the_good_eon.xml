@@ -9,9 +9,19 @@
                 <title type="mainTitle" xml:lang="en">Sūtra of the Good Eon</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa bskal pa bzang po pa zhes bya ba theg pa chen po'i mdo</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryabhadrakalpika­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-54">Dr. Thomas Doctor</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-045-001"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh94" type="text">
@@ -20,16 +30,17 @@
                     <author role="translatorTib">t. t. Vidyākarasiṃha</author>
                     <author role="translatorTib">dpal dbyangs</author>
                     <author role="translatorTib">r. ska ba dpal brtsegs</author>
-                    <location count-pages="678">
-                        <start volume="45" page="4"/>
-                        <end volume="45" page="681"/>
+                    <location work="UT4CZ5369" count-pages="678">
+                        <volume number="45" start-page="2" end-page="679"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11643" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 09:25:28 by admin</note>
+                <note type="lastUpdated" date-time="2019-09-24T21:45:09.848Z" user="admin">24/09/2019 21:45:09</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T13:23:01.964Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
