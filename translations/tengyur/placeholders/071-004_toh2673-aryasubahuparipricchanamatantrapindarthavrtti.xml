@@ -12,8 +12,15 @@
                 <author role="translatorEng" ref="contributors.xml#person-308">Erin Sperry</author>
                 <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT23703-071-004"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh2673" type="text">
@@ -28,6 +35,8 @@
             </sourceDesc>
             <notesStmt>
                 <note type="lastUpdated" date-time="2019-09-23T20:03:58.506Z" user="admin">23/09/2019 20:03:58</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T13:37:19.765Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
