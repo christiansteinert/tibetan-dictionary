@@ -15,8 +15,15 @@
                 <consultant role="advisor" ref="contributors.xml#person-96">L.S. Summer</consultant>
                 <consultant role="advisor" ref="contributors.xml#person-97">William Giddings</consultant>
             </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
             <publicationStmt status="3">
                 <idno xml:id="UT22084-060-006"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh177" type="text">
@@ -24,9 +31,8 @@
                     <biblScope>vol.60, ff. 240r-240v(pp.179-480)</biblScope>
                     <author role="translatorTib">t. surendrabodhi</author>
                     <author role="translatorTib">ye shes sde</author>
-                    <location count-pages="2">
-                        <start volume="60" page="481"/>
-                        <end volume="60" page="482"/>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="60" start-page="479" end-page="480"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11788" work="W22084"/>
@@ -34,6 +40,8 @@
             </sourceDesc>
             <notesStmt>
                 <note type="lastUpdated">Last updated at 13/02/2019 at 08:36:47 by admin</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T14:17:31.81Z" user="line-tofte">0.0.1</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
