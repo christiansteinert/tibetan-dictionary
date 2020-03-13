@@ -3,7 +3,7 @@
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
-            <titleStmt sponsored="full">
+            <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">yongs su mya ngan las 'das pa chen po'i mdo/</title>
                 <title type="mainTitle" xml:lang="Sa-Ltn"/>
                 <title type="mainTitle" xml:lang="en">The Sūtra of the Great Parinirvāṇa</title>
@@ -11,8 +11,15 @@
                 <title type="otherTitle" xml:lang="en">[Note: this is the long, best known, 56 fascicle version of the sūtra, translated in the early period from a Chinese version, probably the early 5th century "northern text" translation by Dharmakṣema, of which the first 10 fascicles are likely to have existed in Sanskrit but the subsequent 30 fascicles may have some other, later origin.]</title>
                 <title type="otherTitle" xml:lang="zh"/>
             </titleStmt>
-            <publicationStmt status="">
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
                 <idno xml:id="UT22084-052-001"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh119" type="text">
@@ -21,16 +28,19 @@
                     <author role="translatorTib">t. wang phab zhwun (wang phan zhun)</author>
                     <author role="translatorTib">dge ba'i blo gros</author>
                     <author role="translatorTib">rgya mtsho'i sde</author>
-                    <location count-pages="1358">
-                        <start volume="52" page="4"/>
-                        <end volume="53" page="679"/>
+                    <location work="UT4CZ5369" count-pages="1358">
+                        <volume number="52" start-page="2" end-page="685"/>
+                        <volume number="53" start-page="2" end-page="677"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC11691" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 14/09/2018 at 14:45:30 by admin</note>
+                <note type="lastUpdated" date-time="2020-03-13T11:05:14.953Z" user="admin">13/03/2020 11:05:14</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-13T11:05:09.274Z" user="line-tofte">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-03-13T11:05:09.274Z" user="line-tofte">3</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
