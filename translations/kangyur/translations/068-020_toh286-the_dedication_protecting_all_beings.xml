@@ -5,10 +5,11 @@
         <fileDesc>
             <titleStmt>
                 <title type="mainTitle" xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs su bsngo ba/</title>
+                <title type="mainTitle" xml:lang="bo">འགྲོ་བ་ཡོངས་སུ་སྐྱོབ་པར་བྱེད་པའི་ཡོངས་སུ་བསྔོ་བ།</title>
                 <title type="mainTitle" xml:lang="en">The Dedication “Protecting All Beings”</title>
                 <title type="longTitle" xml:lang="Bo-Ltn">'phags pa 'gro ba thams cad yongs su skyob par byed pa zhes bya ba'i yongs su bsngo ba</title>
-                <title type="mainTitle" xml:lang="bo">འགྲོ་བ་ཡོངས་སུ་སྐྱོབ་པར་བྱེད་པའི་ཡོངས་སུ་བསྔོ་བ།</title>
                 <title type="longTitle" xml:lang="bo">འཕགས་པ་འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་སྐྱོབ་པར་བྱེད་པ་ཞེས་བྱ་བའི་ཡོངས་སུ་བསྔོ་བ།</title>
+                <title type="longTitle" xml:lang="en">The Noble Dedication “Protecting All Beings”</title>
 
 
                 <author role="translatorMain" ref="contributors.xml#team-46">Translated by the
@@ -18,10 +19,12 @@
                 <editor role="reviser" ref="contributors.xml#person-289">Nathaniel Rich</editor>
                 <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
                 <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
+
 
             </titleStmt>
             <editionStmt>
-                <edition>v 0.9.1 <date>2020</date>
+                <edition>v 1.1.1 <date>2020</date>
                 </edition>
             </editionStmt>
 
@@ -41,7 +44,7 @@
                     </licence>
                 </availability>
                 <idno xml:id="UT22084-068-020"/>
-                <date>2020-02-10</date>
+                <date>2020-03-13</date>
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh286" type="text">
@@ -55,7 +58,7 @@
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated" date-time="2020-03-02T20:29:36.093Z" user="admin">02/03/2020 20:29:36</note>
+                <note type="lastUpdated" date-time="2020-03-13T19:54:47.733Z" user="admin">13/03/2020 19:54:47</note>
 
                 <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-21T08:08:31.171Z" user="andreas">v 0.1.0</note>
                 <note type="updated" update="translation-status" value="2.e" date-time="2019-11-25T08:47:48.584Z" user="andreas">2.e</note>
@@ -72,6 +75,7 @@
 <note type="updated" update="text-version" value="v 0.1.2" date-time="2020-02-20T10:54:10.523Z" user="andre">Mark-up completed, including editors final remarks</note>
 <note type="updated" update="text-version" value="v 0.9.1" date-time="2020-03-02T20:29:31.085Z" user="john">Reviewed and edited, ready for publication except for final proofreading.</note>
 <note type="updated" update="translation-status" value="1.a" date-time="2020-03-02T20:29:31.085Z" user="john">Reviewed and edited, ready for publication except for final proofreading.</note>
+<note type="updated" update="text-version" value="v 1.1.1" date-time="2020-03-13T19:54:45.327Z" user="john">First published version.</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
@@ -87,7 +91,7 @@
                     afflictions that burden sentient beings, as well as the many possible attainments
                     that they consequently may not have realized, and culminates in the wish that everything negative that
                     would otherwise ripen for sentient beings may ripen instead for the reciter, so that all
-                    sentient beings are thus liberated and purified.</p>
+                    sentient beings may thus be liberated and purified.</p>
             </div>
             <div type="acknowledgment">
                 <head type="acknowledgment" tid="3">Acknowledgements</head>
@@ -104,11 +108,12 @@
                 <head type="introduction" tid="5">Introduction</head>
                 <div type="section">
                     <milestone unit="chunk" xml:id="UT22084-068-020-3"/>
-                    <p tid="7"> This short text and <title xml:lang="en">The Dedication “Fulfilling
-                        All Aspirations”</title> (<ref target="https://read.84000.co/translation/UT22084-068-019.html">Toh 285</ref>) that precedes it appear to
+                    <p tid="7"> This short text and <title xml:lang="en">
+                            <ref target="https://read.84000.co/translation/UT22084-068-019.html">The Dedication “Fulfilling
+                        All Aspirations”</ref>
+                        </title> (Toh 285) that precedes it appear to
                         constitute a pair, and this for several reasons. First, the two texts, both
-                        of which lack Sanskrit titles, appear side by side both in the Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) imperial catalogue
-                        and in the extant Kangyurs of the Tshalpa and Thempangma lines. In the
+                        of which lack Sanskrit titles, appear side by side both in the Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) imperial catalog                        and in the extant Kangyurs of the Tshalpa and Thempangma lines. In the
                         Tshalpa Kangyurs, the two are placed at the very end of the Mahāyāna
                         division of the General Sūtra (<foreign xml:lang="Bo-Ltn">mdo sde</foreign>) section, and in the Thempangma Kangyurs toward the end of the entire
                         General Sūtra section. Their function as dedications therefore seems to be
@@ -116,23 +121,23 @@
                         two appear to be dedications meant specifically to seal the sections of Mahāyāna
                         sūtras. </p>
                     <milestone unit="chunk" xml:id="UT22084-068-020-4"/>
-                    <p tid="8"> Furthermore, since the two texts are dedications, it is perhaps not surprising that they are neither called sūtras, nor show features typical of sūtras, such as the opening “Thus did I hear” or an introductory passage describing the setting and audience of the discourse. What <emph>is</emph> somewhat surprising is that both are nonetheless included in the sūtra section of the Kangyur, indicating that they are to be considered discourses of the Buddha.<note place="end" xml:id="UT22084-068-019-92" index="1">Most Kangyurs include one or more sections of dedication and aspiration texts, designated as such in the catalogues, and containing both extracts from longer texts and stand-alone works, all of them being canonical texts translated into Tibetan. In the Degé Kangyur, two such sections are found, one (Toh 809-827) at the end of the main Tantra collection (<foreign xml:lang="Bo-Ltn">rgyud ’bum</foreign>), and the other (Toh 1094-1108) at the end of the Compendium of Incantations (<foreign xml:lang="Bo-Ltn">gzungs ’dus</foreign>). It is in these sections that we would perhaps most expect to find these texts placed.</note> Along those lines, the lack of features that typically distinguish sūtras led the fifteenth-century scholar Pekar Sangpo (<foreign xml:lang="Bo-Ltn">pad dkar bzang po</foreign>), in his analytical survey of all the sūtras found in the Kangyur, to conclude that the two texts are extracts from another, longer sūtra—though he does not say which,<note place="end" xml:id="UT22084-068-020-5" index="2"> Pekar Sangpo (2006), pp. 383–390. In this
+                    <p tid="8"> Furthermore, since the two texts are dedications, it is perhaps not surprising that they are neither called sūtras, nor show features typical of sūtras, such as the opening “Thus did I hear” or an introductory passage describing the setting and audience of the discourse. What <emph>is</emph> somewhat surprising is that both are nonetheless included in the sūtra section of the Kangyur, indicating that they are to be considered discourses of the Buddha.<note place="end" xml:id="UT22084-068-019-92" index="1">Most Kangyurs include one or more sections of dedication and aspiration texts, designated as such in the catalogs, and containing both extracts from longer texts and standalone works, all of them being canonical texts translated into Tibetan. In the Degé Kangyur, two such sections are found, one (Toh 809–827) at the end of the main Tantra collection (<foreign xml:lang="Bo-Ltn">rgyud ’bum</foreign>), and the other (Toh 1094–1108) at the end of the Compendium of Incantations (<foreign xml:lang="Bo-Ltn">gzungs ’dus</foreign>). It is in these sections that we would perhaps most expect to find these texts placed.</note> Along those lines, the lack of features that typically distinguish sūtras led the fifteenth-century scholar Pekar Sangpo (<foreign xml:lang="Bo-Ltn">pad dkar bzang po</foreign>), in his analytical survey of all the sūtras found in the Kangyur, to conclude that the two texts are extracts from another, longer sūtra—though he does not say which,<note place="end" xml:id="UT22084-068-020-5" index="2"> Pekar Sangpo (2006), pp. 383–90. In this
                             regard, it is worth noting that Pekar Sangpo gives both texts titles
                             that include the word “sūtra.”</note> and our own search for matches (at least in the Tibetan corpus) has not yet identified any such text, sūtra or otherwise. What can be said with a reasonable degree of
                         confidence is that, regardless of their exact provenance, the two texts were
                         translated from Sanskrit or another Indic language in the late eighth or
-                        early ninth century. The short colophon to the present text<note place="end" index="3" xml:id="UT22084-068-020-83">To the extent that the two texts may constitute a pair with a common origin, there is a distinct possibility that this colophon is intended to apply to the preceding text, <title xml:lang="en">
+                        early ninth century. The short colophon to the present text<note place="end" xml:id="UT22084-068-020-83" index="3">To the extent that the two texts may constitute a pair with a common origin, there is a distinct possibility that this colophon is intended to apply to the preceding text, <title xml:lang="en">
                                 <ref target="https://read.84000.co/translation/toh285.html">The Dedication “Fulfilling All Aspirations”</ref>
                             </title> (Toh 285) as well.</note> attests to that,
                         providing the names of the two translators, the Indian abbot Vidyākaraprabha
                         and the Tibetan translator Bandé Yeshé Nyingpo, and the senior
                         editor-translator Bandé Paltsek, who edited and finalized the text. The text
-                        is also listed in both the Denkarma and Phangthangma (<foreign xml:lang="Bo-Ltn">’phang thang ma</foreign>) catalogues. This confirms
+                        is also listed in both the Denkarma and Phangthangma (<foreign xml:lang="Bo-Ltn">’phang thang ma</foreign>) catalogs. This confirms
                         the dating of the Tibetan translation to the early ninth century at the
                         latest.<note place="end" xml:id="UT22084-068-020-6" index="4"> The present
-                            text is found in the Denkarma catalogue in the Various Prayers (<foreign xml:lang="Bo-Ltn">smon lam sna tshogs</foreign>) section under the
+                            text is found in the Denkarma catalog in the Various Prayers (<foreign xml:lang="Bo-Ltn">smon lam sna tshogs</foreign>) section under the
                             title <title xml:lang="Bo-Ltn">’gro ba thams cad yongs su skyob par byed
-                                pa’i bsngo ba</title> and in the Phangthangma catalogue in the One
+                                pa’i bsngo ba</title> and in the Phangthangma catalog in the One
                             Hundred and Eight Names, Praises, Blessings, and Various Prayers (<title xml:lang="Bo-Ltn">mtshan brgya rtsa brgyad dang stod ra dang bkra
                                 shis dang smon lam sna tshogs</title>) section under the title
                                 <title xml:lang="Bo-Ltn">’gro ba thams cad yongs su skyob par byed
@@ -147,7 +152,7 @@
                         academic research or scholarly studies of it are known. A translation of the
                         Tibetan text is, however, available in the Mongolian Kangyur.<note place="end" xml:id="UT22084-068-020-8" index="5"> It is located in the
                             Various Sūtras (Mongolian <foreign xml:lang="mn" type="term">eldeb</foreign>, Tib. <foreign xml:lang="Bo-Ltn" type="term">mdo
-                                sna tshogs</foreign>) section. Mongolian Kangyur, vol. 84, folios
+                                sna tshogs</foreign>) section. Mongolian Kangyur vol. 84, folios
                             92.b–94.b; cf. Ligeti (1942), p. 279.</note> The translation presented
                         here is based on the Tibetan version in the Degé Kangyur and consultation of
                         the Comparative Edition (<foreign xml:lang="Bo-Ltn">dpe bsdur ma</foreign>)
@@ -157,7 +162,7 @@
                         “seven branches” or “seven limbs” (<foreign xml:lang="Bo-Ltn" type="term">yan lag bdun pa</foreign>), a set of practices that came to serve as
                         the basic structure of many Mahāyāna and Vajrayāna Buddhist prayers,
                         sādhanas, and pūjās. The seven branches are commonly as follows: prostration or
-                        homage, offering, rejoicing in virtue, requesting the buddhas to teach,
+                        homage, offering, confession, rejoicing in virtue, requesting the buddhas to teach,
                         requesting the buddhas not to pass into nirvāṇa, and dedication of merit.
                         Not all of these seven are present in this text, which suggests that perhaps
                         the set was formalized only later. The structure of the present text also
@@ -178,7 +183,7 @@
                         consequently not realized, with the reciter expressing the wish that
                         everything negative that would otherwise ripen for sentient beings
                         may instead “ripen for me” (<foreign xml:lang="Bo-Ltn" type="quote">bdag la smin</foreign>), so
-                        that all sentient beings are thus liberated and purified. This strongly
+                        that all sentient beings would thus be liberated and purified. This strongly
                         resonates with the much later Tibetan mind training (<foreign xml:lang="Bo-Ltn" type="term">blo sbyong</foreign>) teachings,
                         especially their central contem­plative exercise of “giving and taking” (<foreign xml:lang="Bo-Ltn" type="term">gtong len</foreign>).
                         Considering how pervasive the mind training teachings became, and still
@@ -287,7 +292,7 @@
                         things, and just as they dedicated their roots of virtue, so too do I
                         dedicate mine. <ref cRef="F.81.b" type="folio"/> I dedicate them in accordance with the mind of the
                         tathāgatas. Just as they tamed sentient beings; just as they ripened their
-                        roots of virtue; just as they multiplied their roots of virtue; just as they
+                        roots of virtue; just as they multiplied their roots of virtue; and just as they
                         knew suffering, abandoned its origin, realized cessation, cultivated the
                         path, attained the unsurpassed wisdom of omniscience, abandoned all roots of
                         nonvirtue, possessed all roots of virtue, vanquished the latent tendencies,
@@ -317,7 +322,8 @@
                     <milestone unit="chunk" xml:id="UT22084-068-020-26"/>
                     <p tid="32">Translated by the Indian abbot Vidyākaraprabha and the
                         translator Bandé Yeshé Nyingpo, and edited and finalized by the senior
-                        editor-translator Bandé Paltsek.</p>
+                        editor-translator Bandé Paltsek.<note place="end" index="7" xml:id="UT22084-068-020-86">See <ptr target="#UT22084-068-020-83"/>.</note>
+                    </p>
                 </div>
             </div>
         </body>
@@ -340,7 +346,7 @@
                         khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology
                         Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun
                         khang (China Tibetology Publishing House), 2006–2009, vol. 68, pp.
-                        231–236.</bibl>
+                        231–36.</bibl>
                     <bibl xml:id="UT22084-068-020-29">
                         <title xml:lang="Bo-Ltn">’gro ba yongs su skyob par byed pa’i yongs
                             su bsngo ba</title>. Stok 326, Stok Palace Kangyur vol. 88 (mdo sde, ji),
@@ -355,7 +361,7 @@
                 <div type="section">
                     <head type="section" tid="37">Secondary Sources</head>
                     <bibl xml:id="UT22084-068-019-33">Denkarma (<title xml:lang="Bo-Ltn">pho brang stod thang 
-                        ldan dkar gyi chos kyi ’gyur ro cog gi dkar chag</title>, Toh 4364). Degé Tengyur vol. 
+                        ldan dkar gyi chos kyi ’gyur ro cog gi dkar chag</title>). Toh 4364, Degé Tengyur vol. 
                         206 (sna tshogs, jo), folios 294.b–310.a. See also Herrmann-Pfandt.</bibl>
                     <bibl xml:id="UT22084-068-020-85">Dharmachakra Translation Group. <title xml:lang="en">
                             <ref target="https://read.84000.co/translation/toh231.html#UT22084-064-001-736">The Jewel Cloud</ref>
@@ -448,11 +454,11 @@
                             <term xml:lang="Bo-Ltn">zhi gnas </term>
                             <term xml:lang="bo">ཞི་གནས།</term>
                             <term xml:lang="Sa-Ltn">śamatha</term>
-                            <term type="definition">Often translated as “<term type="ignore">calm abiding</term>” or “mental
-                                quiescence,” referring to a calm state without thought or the
+                            <term type="definition">Sometimes also translated as “mental
+                                quiescence.” Refers to a calm state without thought, or the
                                 meditative practice of calming the mind to rest free from the
                                 disturbance of thought. One of the two basic forms of Buddhist
-                                meditation, the other being transcendent insight (<foreign xml:lang="Sa-Ltn" type="term">vipaśyanā</foreign>).</term>
+                                meditation, the other being transcendent insight (<foreign xml:lang="Sa-Ltn" type="term">vipaśyanā</foreign>, <foreign xml:lang="Bo-Ltn">lhag mthong</foreign>).</term>
                         </gloss>
                     </item>
                     <item>
@@ -502,8 +508,7 @@
                             <term xml:lang="Bo-Ltn">brtson ’grus </term>
                             <term xml:lang="bo">བརྩོན་འགྲུས།</term>
                             <term xml:lang="Sa-Ltn">vīrya</term>
-                            <term type="definition">
-                                <term type="ignore">Diligence</term> or perseverance. One of the six
+                            <term type="definition">Also “perseverance.” One of the six
                                 perfections of the bodhisattva.</term>
                         </gloss>
                     </item>
@@ -573,7 +578,7 @@
                             <term xml:lang="Bo-Ltn">gti mug </term>
                             <term xml:lang="bo">གཏི་མུག</term>
                             <term xml:lang="Sa-Ltn">moha</term>
-                            <term type="definition">Delusion, stupidity, closed mindedness, and/or
+                            <term type="definition">Delusion, stupidity, closed-mindedness, and/or
                                 mental darkness. One of the affective behavior patterns known as the
                                 three poisons. </term>
                         </gloss>
@@ -658,7 +663,7 @@
                             <term xml:lang="Sa-Ltn">dhyāna</term>
                             <term type="definition">One of the synonyms for meditation, referring
                                 specifically to states of mental stability or one-pointed abiding in
-                                an undistracted state of mind free from afflicted mental states. <foreign type="term" xml:lang="Bo-Ltn">bsam gtan</foreign>/<foreign xml:lang="Sa-Ltn" type="term">dhyāna</foreign> can refer to the specific states of absorption of the form and formless realms (8 in total). One
+                                an undistracted state of mind free from afflicted mental states. <foreign type="term" xml:lang="Bo-Ltn">bsam gtan</foreign>/<foreign xml:lang="Sa-Ltn" type="term">dhyāna</foreign> can refer to the specific states of absorption of the form and formless realms (eight in total). One
                                 of the six perfections of the bodhisattva.</term>
                         </gloss>
                     </item>
@@ -782,8 +787,8 @@
                             <term xml:lang="Sa-Ltn">dharmadhātu</term>
                             <term type="definition">A synonym for emptiness, the ultimate reality,
                                 or the ultimate nature of things. This term is interpreted variously
-                                due to the many different meanings of dharma (<foreign xml:lang="Bo-Ltn" type="term">chos</foreign>) as element,
-                                phenomena, reality, truth, and/or Teaching.</term>
+                                due to the many different meanings of <foreign xml:lang="Sa-Ltn">dharma</foreign> (<foreign xml:lang="Bo-Ltn" type="term">chos</foreign>) as element,
+                                phenomena, reality, truth, and/or the teaching.</term>
                         </gloss>
                     </item>
                     <item>
