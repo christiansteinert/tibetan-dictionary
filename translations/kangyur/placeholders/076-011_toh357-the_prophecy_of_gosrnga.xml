@@ -9,24 +9,36 @@
                 <title type="mainTitle" xml:lang="en">The Prophecy of Gośṛṅga</title>
                 <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa glang ru lung bstan pa zhes bya ba theg pa chen po'i mdo</title>
                 <title type="otherTitle" xml:lang="Sa-Ltn">āryagośṛṅgavyākaraṇa­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-313">Laura Dainty</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
             </titleStmt>
-            <publicationStmt status="3">
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.h">
                 <idno xml:id="UT22084-076-011"/>
+                <date/>
+
             </publicationStmt>
             <sourceDesc>
                 <bibl key="toh357" type="text">
                     <ref>Toh 357</ref>
                     <biblScope>vol.76, ff.220v-232r(pp.440-463)</biblScope>
-                    <location count-pages="24">
-                        <start volume="76" page="442"/>
-                        <end volume="76" page="465"/>
+                    <location work="UT4CZ5369" count-pages="24">
+                        <volume number="76" start-page="440" end-page="463"/>
                     </location>
                     <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
                     <idno source-id="O1JC114941JC12047" work="W22084"/>
                 </bibl>
             </sourceDesc>
             <notesStmt>
-                <note type="lastUpdated">Last updated at 07/09/2018 at 09:29:04 by admin</note>
+                <note type="lastUpdated" date-time="2019-09-24T18:06:13.355Z" user="admin">24/09/2019 18:06:13</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-17T08:31:26.726Z" user="line-tofte">0.0.1</note>
+<note type="updated" update="translation-status" value="2.h" date-time="2020-03-17T08:31:26.726Z" user="line-tofte">2.h</note>
             </notesStmt>
         </fileDesc>
     </teiHeader>
