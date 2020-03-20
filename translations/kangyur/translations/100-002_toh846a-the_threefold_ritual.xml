@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rgyud gsum pa/</title>
+                <title type="mainTitle" xml:lang="bo">རྒྱུད་གསུམ་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Threefold Ritual</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="longTitle" xml:lang="bo"/>
+                <title type="longTitle" xml:lang="Bo-Ltn"/>
+                <title type="longTitle" xml:lang="en"/>
+                <title type="longTitle" xml:lang="Sa-Ltn"/>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by The Dharmachakra Translation Committee<lb/> 
+                    under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-322">Stella Bonnie</editor>
+                <editor role="mainEditor" ref="contributors.xml#person-74">Ryan Damron</editor>
+
+
+         
+<consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.1.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only with full attribution, and not for commercial advantage or personal compensation. For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-100-002"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+                <date>2020-02-17</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh846a" type="text">
+                    <ref>Toh 846a</ref>
+                    <biblScope>Degé Kangyur, vol. 100 (gzungs ’dus, e), folio 3.b</biblScope>
+                    <location work="UT4CZ5369" count-pages="1">
+                        <volume number="101" start-page="6" end-page="6"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="toh846a" work="http://read.84000.co/sections"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-03-20T10:23:38.283Z" user="admin">20/03/2020 10:23:38</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:04:08.457Z" user="andreas">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.d" date-time="2019-12-28T18:37:42.36Z" user="laura">2.d</note>
+<note type="updated" update="translation-status" value="2.e" date-time="2020-01-27T13:19:41.567Z" user="mike">2.e</note>
+<note type="updated" update="translation-status" value="2.b" date-time="2020-01-28T11:58:11.161Z" user="andreas">2.b</note>
+<note type="updated" update="translation-status" value="2.a" date-time="2020-01-29T06:07:10.204Z" user="mike">2.a</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-03-02T13:30:13.42Z" user="andreas">2</note>
+<note type="updated" update="text-version" value="v 1.1.1" date-time="2020-03-20T10:23:32.956Z" user="john">First published version.</note>
+<note type="updated" update="translation-status" value="1" date-time="2020-03-20T10:23:32.956Z" user="john">First published version.</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <!--
+                    <p>Contents</p>
+            <p>Summary</p>
+            <p>Acknowledgments</p>
+            <p>Introduction</p>
+            <p>The Translation: The Threefold Ritual</p>
+            <p>Notes</p>
+            <p>Bibliography</p>< -->
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-100-002-1"/>
+                <p tid="2">
+                    <title xml:lang="en">The Threefold Ritual</title> contains a short liturgy for invoking the pantheon of worldly deities, inviting these beings to seize the rare opportunity to listen to the Dharma and proclaiming the aspiration that all the worldly beings that have gathered to hear the Dharma receive their share of the merit one has generated.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-100-002-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the supervision of Chökyi Nyima Rinpoche. The translation was produced by Adam Krug and edited by Ryan Damron.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-100-002-3"/>
+                    <p tid="6">
+                        <title xml:lang="en">The Threefold Ritual</title> contains a short liturgy for invoking the pantheon of worldly deities, inviting these beings to seize the rare opportunity to listen to the Dharma and proclaiming the aspiration that all the worldly beings that have gathered to hear the Dharma receive their share of the merit one has generated. </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-4"/>
+                    <p tid="7">This text does not appear in either the Denkarma or Phangthangma royal Tibetan catalogues of translated works, and it also does not appear to have been translated into Chinese at any point. Combined with the fact that the title information for the text lacks a Sanskrit or otherwise Indic title as well as a colophon listing any Indic or Tibetan translator, it is possible that this work may in fact be Tibetan in origin. </p>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-5"/>
+                    <p tid="8">This translation is based on the version of <title xml:lang="en">The Threefold Ritual</title> found at the opening of the Compendium of Dhāraṇī (<title xml:lang="Bo-Ltn">gzungs ’dus</title>) section in the Degé Kangyur in consultation with the text as it appears in the Comparative Edition (<title xml:lang="Bo-Ltn">dpe bsdur ma</title>) of the Kangyur. This text does not appear as an independent work in the Tohoku catalogue, where it is listed under the number Toh 846<note place="end" index="1" xml:id="UT22084-100-002-19">The present text, and all those contained in this same volume (<foreign xml:lang="Bo-Ltn">gzungs ’dus, e</foreign>), are listed as being located in volume 100 of the Degé Kangyur by the Buddhist Digital Resource Center (BDRC). However, several other Kangyur databases—including the eKangyur that supplies the digital input version displayed by 84000 reading room—list this work as being located in volume 101. This discrepancy is partly due to the fact that the two volumes of the <foreign xml:lang="Bo-Ltn">gzungs ’dus</foreign> section are an added supplement not mentioned in the original catalogue, and also hinges on the fact that the compilers of the Tōhoku catalogue placed another text—which forms a whole, very large volume—the <title xml:lang="Sa-Ltn">Vimalaprabhā­nāmakālacakra­tantraṭīkā</title> (<title xml:lang="Bo-Ltn">dus ’khor ’grel bshad dri med ’od</title>, Toh 845), before the present volume, numbering it as vol. 100, although it is almost certainly intended to come right at the end of the Degé Kangyur texts as volume 102; indeed its final fifth chapter is often carried over and wrapped in the same volume as the Kangyur <foreign xml:lang="Bo-Ltn">dkar chags</foreign> (catalogue). Please note this discrepancy when using the eKangyur viewer in this translation.</note> and combined with the text <title xml:lang="en">
+                            <ref target="https://read.84000.co/translation/toh846.html">The Threefold Invocation Ritual</ref>
+                        </title> (<title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>) that immediately precedes it. It has been translated here as an independent work under the modified Tohoku number Toh 846a. The decision to present this text as an independent work is supported by the Degé Kangyur, where it appears with its own title and colophon, and by the Dunhuang manuscript witnesses to the text presented in Marcelle Lalou’s 1938 study, edition, and French translation. Lalou’s work shows that the Dunhuang witnesses to the two works catalogued under Toh 846 bear the individual titles <title xml:lang="en">The Threefold Ritual</title> (<title xml:lang="Bo-Ltn">rgyud gsum pa</title>) and <title xml:lang="en"> An Invocation of the Great Deities and Nāgas</title> (<title xml:lang="Bo-Ltn">lha klu chen po rnams spyan dran pa</title>). In the Degé Kangyur, the latter of these two corresponds to the present work and bears the title <title xml:lang="en">The Threefold Ritual</title> (<title xml:lang="Bo-Ltn">rgyud gsum pa</title>). Both works are found in other Kangyurs of predominantly Tshalpa lineage, but in those without a separate section of dhāraṇī they are placed in the tantra sections. Kangyurs that reflect the Thempangma tradition do not include either work.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="9">The Translation</head>
+                <head type="titleHon" tid="10">The Threefold Ritual</head>
+                <head type="titleMain" tid="23"/>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-100-002-7"/>
+                    <lg tid="11">
+                        <l>
+                            <ref cRef="F.3.b" type="folio"/> Brahmā, great king Śakra, gods and nāgas, </l>
+                        <l>Yakṣas, gandharvas, uragas, asuras, </l>
+                        <l>Garuḍas, kumbhāṇḍas, kinnaras, </l>
+                        <l>All beings who are sons of the Sugata, </l>
+                        <l>Accept these seven wonderful and resplendent jewels and listen to me.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-8"/>
+                    <lg tid="12">
+                        <l>The qualities of the blessed Buddha are inconceivable.</l>
+                        <l>The qualities of the holy Dharma are inconceivable.</l>
+                        <l>The qualities of the noble Saṅgha are inconceivable. </l>
+                        <l>The unsurpassed fruition of true faith </l>
+                        <l>In the inconceivable Three Jewels is inconceivable. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-9"/>
+                    <lg tid="13">
+                        <l>It is rare to hear the names of the Three Jewels, </l>
+                        <l>Even over the course of millions of eons.</l>
+                        <l>Now that you have taken such a rare embodiment endowed with leisure,</l>
+                        <l>Use the energy of your magical abilities and faith to approach,</l>
+                        <l>And listen to the profound teaching of the Victor</l>
+                        <l>In this sanctuary bedecked with the jewels of liberation.</l>
+                    </lg>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-10"/>
+                    <lg tid="15">
+                        <l>May those who gather here intent upon the holy Dharma,</l>
+                        <l>Such as powerful gods, nāgas, yakṣas, and the like, </l>
+                        <l>Accept this share of Dharma merit: we dedicate it </l>
+                        <l>So that you may increase in splendor and retinue and accomplish what you desire. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-100-002-11"/>
+                    <lg tid="16">
+                        <l>May you obtain the nectar of the teachings, </l>
+                        <l>Bring prosperity to each and every class of beings wherever they are,</l>
+                        <l>And protect the teachings of the tathāgatas. </l>
+                    </lg>
+                    <trailer tid="17">This concludes “The Threefold Ritual.”</trailer>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="18">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="20">Bibliography</head>
+                <div type="section">
+                    <head tid="21" type="section">Source Texts </head>
+                    <bibl xml:id="UT22084-100-002-12">
+                        <title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>. Toh 846, Degé Kangyur vol. 100 (gzungs ’dus, e), folios 1.a–3.b.</bibl>
+                    <bibl xml:id="UT22084-100-002-13">
+                        <title xml:lang="Bo-Ltn">spyan ’dren rgyud gsum pa</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2006–2009, vol. 97, pp. 3–9. </bibl>
+                </div>
+                <div type="section">
+                    <head tid="22" type="section">Work Cited</head>
+                    <bibl xml:id="UT22084-100-002-15">Lalou, Marcelle. “Notes de mythologie bouddhique.” <title xml:lang="en">Harvard Journal of Asiatic Studies</title> 3 no. 2 (July 1938): 128–36.</bibl>
+                    </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-002-20">
+                            <term>garuḍa</term>
+                            <term xml:lang="Bo-Ltn">gser ’dab </term>
+                            <term xml:lang="bo">གསེར་འདབ།</term>
+                            <term xml:lang="Sa-Ltn">garuḍa</term>
+                            <term type="definition">A class of bird deities. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-002-21">
+                            <term>kinnara</term>
+                            <term xml:lang="Bo-Ltn">mi ’am ci </term>
+                            <term xml:lang="bo">མི་འམ་ཅི།</term>
+                            <term xml:lang="Sa-Ltn">kinnara</term>
+                            <term type="definition">A class of semi-divine beings that are half-human, half-animal. Typically they have animal heads atop human bodies. The term literally means “Is that human?”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-002-22">
+                            <term>kumbhāṇḍa</term>
+                            <term xml:lang="Bo-Ltn">grul bum </term>
+                            <term xml:lang="bo">གྲུལ་བུམ།</term>
+                            <term xml:lang="Sa-Ltn">kumbhāṇḍa</term>
+                            <term type="definition">A class of semi-divine being inhabiting the southern slopes 
+                                of Mount Meru and in service to King Virūḍhaka; sometimes also classed among evil spirits.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-100-002-23">
+                            <term>uraga</term>
+                            <term xml:lang="Bo-Ltn">lto ’phye </term>
+                            <term xml:lang="bo">ལྟོ་འཕྱེ།</term>
+                            <term xml:lang="Sa-Ltn">uraga</term>
+                            <term type="definition">A serpent deity that inhabits specific localities. Also known as a kākorda.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-002-24">
+                            <term>Brahmā</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa </term>
+                            <term xml:lang="bo">ཚངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmā</term>
+                            <term type="definition">The name of one of the three primary deities of the Hindu pantheon. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-100-002-25">
+                            <term>Śakra</term>
+                            <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Śakra</term>
+                            <term type="definition">The name of the king of the worldly gods, synonymous with the name Indra.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>
