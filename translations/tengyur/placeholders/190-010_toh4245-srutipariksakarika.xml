@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">thos pa brtag pa'i tshig le'ur byas pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">srutipariksakarika</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-190-010"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4245" type="text">
+                    <ref>Toh 4245</ref>
+                    <biblScope>ff. 196v-197r</biblScope>
+                    <author role="translatorTib">a. dge srungs</author>
+                    <location count-pages="">
+                        <start volume="190" page="394"/>
+                        <end volume="190" page="395"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10956" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC11022" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:26:53 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

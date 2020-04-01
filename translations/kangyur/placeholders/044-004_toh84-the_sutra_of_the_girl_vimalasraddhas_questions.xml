@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bu mo rnam dag dang bas zhus pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">dārikāvimalaśraddhā­paripṛcchāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Girl Vimalaśraddhā's Questions</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa bu mo rnam dag dad pas zhus pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryadārikāvimalaśraddhā­paripṛcchā­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-17"/>
+            <editor role="associateEditor" ref="contributors.xml#person-99"/>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-044-004"/>
+                <date/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh84" type="text">
+                    <ref>Toh 84</ref>
+                    <biblScope>vol:44, ff.95r-104v (pp.189-208)</biblScope>
+                    <location count-pages="20">
+                        <start volume="44" page="191"/>
+                        <end volume="44" page="210"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11628" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:34:28 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

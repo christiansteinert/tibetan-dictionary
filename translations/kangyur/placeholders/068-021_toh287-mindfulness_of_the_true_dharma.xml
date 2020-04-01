@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dam chos dran pa nyer bzhag</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">saddharmasmṛtyupasthāna</title>
+                <title type="mainTitle" xml:lang="en">Mindfulness of the True Dharma</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa dam pa'i chos dran pa nye bar bzhag pa</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasaddharmasmṛtyupasthāna</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">dam chos dran pa nye bar bzhag pa/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Saddharmasmṛtyupasthāna</title>
+                <title type="otherTitle" xml:lang="zh">正法念處經</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <sponsor ref="sponsors.xml#sponsor-38">Sun Ping, Tian Xingwen, and Sun Fanglin</sponsor>
+                <editor role="externalReviewer" ref="contributors.xml#person-262">David Higgins</editor>
+                <author role="translatorEng" ref="contributors.xml#person-54">Dr. Thomas Doctor</author>
+                <author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
+                <author role="translatorEng" ref="contributors.xml#person-59">Benjamin Collet-Cassart</author>
+                <author role="translatorEng" ref="contributors.xml#person-50">Dr. Andreas Doctor</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.d">
+                <idno xml:id="UT22084-068-021"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh287" type="text">
+                    <ref>Toh 287</ref>
+                    <biblScope/>
+                    <location work="UT4CZ5369" count-pages="2158">
+                        <volume number="68" start-page="163" end-page="635"/>
+                        <volume number="69" start-page="2" end-page="613"/>
+                        <volume number="70" start-page="2" end-page="623"/>
+                        <volume number="71" start-page="2" end-page="458"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11950" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-09-25T16:09:24.115Z" user="admin">25/09/2019 16:09:24</note>
+            <note type="updated" update="translation-status" value="2.f" date-time="2019-04-01T07:16:23.744Z" user="john">2.f</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2019-05-24T15:26:05.834Z" user="john">2.d</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-20T13:16:20.926Z" user="john">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Sun Ping, Tian Xingwen, and Sun Fanglin.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

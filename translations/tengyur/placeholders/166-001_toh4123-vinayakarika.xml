@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">'dul ba tshig le'ur byas pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vinayakarika</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-166-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4123" type="text">
+                    <ref>Toh 4123</ref>
+                    <biblScope>ff. 1v-63r</biblScope>
+                    <author role="translatorTib">a. sa ga'i lha (visakhadeva)</author>
+                    <author role="translatorTib">t. jayakara (n)</author>
+                    <author role="translatorTib">prajnakirti</author>
+                    <author role="translatorTib">r. rong ston shes bya kun rig</author>
+                    <location count-pages="">
+                        <start volume="166" page="4"/>
+                        <end volume="166" page="127"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10823" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10865" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:34:23 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">byams pas chos brgyad zhus pa</title>
+                <title type="mainTitle" xml:lang="bo">བྱམས་པས་ཆོས་བརྒྱད་ཞུས་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Question of Maitreya on the Eight Qualities</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Maitreya­paripṛcchā­dharmāṣṭa </title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་བྱམས་པས་ཆོས་བརྒྱད་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa byams pas chos brgyad zhus pa zhes bya ba theg pa chen po’i
+                    mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The Question of Maitreya on the Eight
+                    Qualities”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­maitreya­paripṛcchā­dharmāṣṭa­nāma­mahā­yāna­sūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-16">
+                    Translated by Karen Liljenberg and Ulrich Pagel<lb/> under the patronage and
+                    supervision of 84000: Translating the Words of the Buddha.</author>
+                <author role="translatorEng" ref="contributors.xml#person-115">Dr. Karen Liljenberg</author>
+                <consultant role="advisor" ref="contributors.xml#person-116">Dr. Ulrich Pagel</consultant>
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.34 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-044-006"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+                <date>2016-05-30</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh86" type="text">
+                    <ref>Toh 86</ref>
+                    <biblScope>Degé Kangyur, vol. 44 (dkon brtsegs, cha), folios 116.b–119.b</biblScope>
+                    <author role="translatorTib">Jinamitra </author>
+                    <author role="translatorTib">Danaśila</author>
+                    <author role="translatorTib">Yeshé Dé</author>
+                    <location count-pages="6">
+                        <start volume="44" page="234"/>
+                        <end volume="44" page="239"/>
+                        
+                    </location>
+                    <idno parent-id="O1JC114941JC14667"/>
+                <idno source-id="O1JC114941JC11632" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-06-18T16:00:56.026Z" user="admin">18/06/2019 16:00:56</note>
+            <note type="updated" update="text-version" value="v 1.34" date-time="2019-06-18T16:00:52.386Z" user="celso">v 1.34 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="35">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-044-006-1"/>
+                <p tid="1">In <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title>, Maitreya asks the
+                    Buddha what qualities bodhisattvas need in order to be sure of completing the path to buddhahood. In
+                    response, the Buddha briefly lists eight qualities. Starting with the excellent intention to become
+                    enlightened, they include loving kindness, as well as realization of the perfection of wisdom, which the
+                    Buddha explains in terms of reflection on the twelve links of dependent origination. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="36">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-044-006-2"/>
+                <p tid="2">This sūtra was translated by Dr. Karen Liljenberg, with Dr. Ulrich Pagel acting as consultant.</p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="37">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-044-006-3"/>
+                    <p tid="4">
+                        <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title>,<note place="end" index="1" xml:id="UT22084-044-006-46">In the Degé Kangyur this title, included within the text, is preceded by
+                            this introductory sentence: “From <title xml:lang="en">The Noble Dharma
+                                Discourse, the Great Heap of Jewels</title> in one hundred thousand sections, section 42: ‘The Noble Elucidation of
+                            the Question of Maitreya on the Eight Qualities’ in a half-fascicle” (<foreign xml:lang="Bo-Ltn" type="quote">’phags pa dkon mchog brtsegs pa chen po’i chos kyi rnam grangs le’u
+                                stong phrag brgya pa las le’u bzhi bcu rtsa gnyis pa ste ’phags pa byams pas chos brgyad zhus pa
+                                lung bstan pa / bam po phyed pa</foreign>). See i.6 for a discussion of the various titles
+                            by which this text is known.</note> like most of the sūtras that comprise the Ratnakūṭa collection, was translated into Tibetan from a Sanskrit original that is now lost,
+                        but that may have dated back as far as the first or second centuries <hi rend="small-caps">ce</hi>, i.e., several centuries before the
+                        collection itself was compiled. Apart from the Tibetan Kangyur version, translated in the ninth century, the
+                        sūtra is extant only in an earlier Chinese translation. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-4"/>
+                    <p tid="5">Both the work translated here and the work that precedes it in the collection, <title xml:lang="en">The Question of Maitreya</title>,<note place="end" index="2" xml:id="UT22084-044-006-47">They are
+                            sūtra numbers 42 and 41, respectively, in the Tibetan version of the Ratnakūṭa collection, but are numbered 86 and 85 in the Tōhoku catalogue of the Degé
+                            Kangyur as a whole.</note> focus on the important figure of the bodhisattva Maitreya, who is generally
+                        accepted as destined to be the future Buddha of this world-system. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-5"/>
+                    <p tid="6">In this sūtra, Maitreya asks the Buddha what qualities bodhisattvas need in order to be sure of
+                        completing the whole path to buddhahood. The Buddha responds with a list of eight qualities that, while
+                        individually all standard elements of the Mahāyāna path, as a set of eight appear to be
+                        specific to this text. The Buddha briefly explains each quality and, in his explanation of the last—the
+                        perfection of wisdom—outlines the doctrine of the twelve links of dependent origination in both their
+                        “forward” and “reverse” orders, corresponding to causation and cessation. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-6"/>
+                    <p tid="7">It is difficult to determine the precise historical relationship of <title xml:lang="en">The
+                            Question of Maitreya on the Eight Qualities</title> with <title xml:lang="en">The Question of
+                            Maitreya</title> (Toh 85), the longer sūtra that immediately precedes it. Their themes are obviously
+                        closely linked—in both, Maitreya questions the Buddha about the bodhisattvas’ qualities. However, their
+                        geographic settings differ: <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title>
+                        takes place on Vulture Peak Mountain near Rājagṛha, like many other Ratnakūṭa sūtras, while <title xml:lang="en">The Question of Maitreya</title> is delivered in
+                        a relatively obscure location, Mount Śuśumāra in the country of the Bhargas. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-7"/>
+                    <p tid="8">Both texts are included in the Denkarma (<title xml:lang="Bo-Ltn">ldan dkar ma</title>) inventory
+                        of early translations, dated to a year of the dragon thought to be most likely 824 (but possibly 812), so
+                        they must have been translated by that date. The translation of this one, the shorter sūtra, is attributed
+                        to Jinamitra and Danaśila, and Yeshé Dé is said to have corrected it using the revised terminology
+                            (<foreign type="term" xml:lang="Bo-Ltn">skad gsar</foreign>). Since <title xml:lang="en">The Question
+                            of Maitreya</title> appears to have needed no such revision, its first Tibetan translation by
+                        Jinamitra and Surendrabodhi, under the editorial supervision of Yeshé Dé, may have been slightly later. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-8"/>
+                    <p tid="9">In the Degé Kangyur, the text has two different titles: the first, in the initial line introducing
+                        it as the forty-second section of the Ratnakūṭa, calls it “The Noble Elucidation of the Question of Maitreya on
+                        the Eight Qualities” (<title xml:lang="Bo-Ltn">’phags pa byams pas chos brgyad zhus pa lung bstan
+                            pa</title>), while the second, immediately afterwards, is simply “The Noble Mahāyāna Sūtra of the
+                        Question of Maitreya” (<title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i
+                            mdo</title>), which is the same as the title of the preceding text. The Sanskrit titles of both
+                        sūtras, as transliterated in Tibetan in the Degé Kangyur, are also the same: <title xml:lang="Sa-Ltn">Maitreya­paripṛcchā</title>. In other Kangyurs, a variety of similar titles are given, while in
+                        some—e.g. the Narthang (<title xml:lang="Bo-Ltn">snar thang</title>) and Stok Palace Manuscript (<title xml:lang="Bo-Ltn">stog pho brang bris ma</title>) Kangyurs—the Sanskrit title includes mention of the
+                        eight qualities: <title xml:lang="Sa-Ltn">Maitreya­paripṛcchā­dharmāṣṭa</title>. Whether the reference to
+                        the “eight qualities” figured in the title of the Sanskrit original or, if not, at what stage it was
+                        integrated into the title as a convenient way of distinguishing this text from the preceding one, is
+                        difficult to determine. In the Tibetan title, at least, inclusion of the eight qualities was a feature in
+                        some Kangyurs and text catalogues early in the imperial period, even if it was not universal. It is found
+                        (as <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa’i chos brgyad pa</title>) in the early ninth
+                        century Denkarma inventory mentioned above. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-9"/>
+                    <p tid="10">This sūtra and the preceding one in the Ratnakūṭa section, both
+                        often simply called <title xml:lang="en">The Question of Maitreya</title>, are not to be confused with a
+                        third sūtra of the same name in the General Sūtra (<title xml:lang="Bo-Ltn">mdo sde</title>) section, Toh
+                        149, a short work (also set in Rajagṛha) in which Maitreya asks a quite different question. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-10"/>
+                    <p tid="11">The main Tibetan text used for the present translation was the Degé (<title xml:lang="Bo-Ltn">sde
+                            dge</title>) edition of the Kangyur. Other Kangyurs were also consulted but, apart from the one noted,
+                        no significant variations were found. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="38">The Translation</head>
+                <head type="titleHon" tid="39">The Noble Mahāyāna Sūtra</head>
+                <head type="titleMain" tid="40">The Question of Maitreya on the Eight Qualities </head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-044-006-11"/>
+                    <p tid="12">
+                        <ref cRef="F.116.b"/> Homage to all the buddhas and bodhisattvas!</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-12"/>
+                    <p tid="13">Thus have I heard at one time. The Blessed One was staying in Rājagṛha, on Vulture Peak Mountain,
+                        together with a great saṅgha of 1,250 monks and 10,000 bodhisattvas. The Blessed One, surrounded by a
+                        retinue of many hundreds of thousands, surveyed those before him, and taught the Dharma. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-13"/>
+                    <p tid="14">At that time, the bodhisattva mahāsattva Maitreya was present among that very retinue. He rose
+                        from his seat, draped his shawl over one shoulder, set his right knee on the ground, and paid
+                        homage with palms joined toward the Blessed One. He then said to the Blessed One, “Would the Blessed One
+                        please, if he has time, answer a certain question that I would like to put to the Tathāgata, the Arhat,
+                        the perfectly enlightened Buddha?” </p>
+                    <p tid="15">The Blessed One <ref cRef="F.117.a"/> answered the bodhisattva mahāsattva Maitreya, “Maitreya, you
+                        may put to the Tathāgata, the Arhat, the perfectly enlightened Buddha whatever question you wish. What I
+                        shall say in response to your question will cause you to rejoice.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-14"/>
+                    <p tid="16">So, since the Blessed One had given him the opportunity, the bodhisattva mahāsattva Maitreya asked
+                        the Blessed One, “Blessed One, how many qualities do bodhisattva mahāsattvas need to possess in order
+                        to become irreversibly set on supreme and perfect enlightenment without regressing, without regressing in
+                        the slightest, and to gain special attainments; to vanquish negative and hostile influences; and, while
+                        engaging in the conduct of a bodhisattva, to realize the intrinsic characteristics of all phenomena just
+                        as they are and therefore be indefatigable in saṃsāra? And, as well as having that indefatigable mind,
+                        through the pristine awareness that does not rely on anything else,<note place="end" index="3" xml:id="UT22084-044-006-48">Tentative translation of <foreign xml:lang="Bo-Ltn" type="term">gzhan gyi
+                                kha na ma las pa’i ye shes</foreign>.</note> to awaken quickly to supreme, perfect enlightenment
+                        and become a buddha?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-15"/>
+                    <p tid="17">The Blessed One replied to the bodhisattva mahāsattva Maitreya, “Very good, Maitreya. It is good
+                        that you have thought to ask the Tathāgata a question on this point. Therefore, Maitreya, listen well and
+                        retain in your mind what I shall explain to you.” </p>
+                    <p tid="18">“Blessed One, please do so,” said the bodhisattva mahāsattva Maitreya, and listened as the Blessed
+                        One had instructed him. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-16"/>
+                    <p tid="19">The Blessed One, in turn, continued, “Maitreya, if bodhisattvas possess eight qualities, they
+                        will become irreversibly set on supreme and perfect enlightenment <ref cRef="F.117.b"/> without
+                        regressing, without regressing in the slightest, and will gain special attainments; they will vanquish
+                        negative and hostile influences; and, while engaging in the conduct of a bodhisattva, they will realize the
+                        intrinsic characteristics of all phenomena just as they are and therefore be indefatigable in saṃsāra.
+                        And, as well as having that indefatigable mind, through the pristine awareness that does not rely on
+                        anything else, they will quickly awaken to supreme, perfect enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-17"/>
+                    <p tid="20">“What are those eight qualities? Well, Maitreya, they are for bodhisattva mahāsattvas to have
+                        excellent intention, excellent application, excellent giving, skill in dedicating merit, excellent
+                        loving kindness, excellent compassion, skill in methods, and emancipation in the perfection of wisdom. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-18"/>
+                    <p tid="21">“Maitreya, how do such bodhisattvas have excellent intention? Well, Maitreya, such
+                        bodhisattva mahāsattvas, whether they hear praises or slander of the Buddha, have the intention to attain
+                        supreme, perfect enlightenment. Whether they hear praises or slander of the Dharma, they have the intention to
+                        attain supreme, perfect enlightenment. Whether they hear praises or slander of the Saṅgha, they have the
+                        intention to attain supreme, perfect enlightenment. This, Maitreya, is how the bodhisattvas have excellent
+                        intention. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-19"/>
+                    <p tid="22">“Maitreya, how do such bodhisattvas have excellent application? Well, Maitreya, such
+                        bodhisattva mahāsattvas renounce killing, theft, <ref cRef="F.118.a"/> sexual misconduct, falsehood,
+                        slander, harsh speech, and gossip. This, Maitreya, is how the bodhisattva mahāsattvas have excellent
+                        application. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-20"/>
+                    <p tid="23">“Maitreya, how do such bodhisattvas have excellent giving? Well, Maitreya, such bodhisattva
+                        mahāsattvas give clothes, food, bedding, curative
+                        medicines, and necessities to ascetics, brahmins, poor people, and beggars. Their generosity then becomes pure.<note place="end" index="4" xml:id="UT22084-044-006-49">The Degé and the other <title xml:lang="Bo-Ltn">tshal pa</title> Kangyurs
+                            have <foreign xml:lang="Bo-Ltn" type="term">sbyin pa dag tu gyur pa yin te</foreign>. The Stok Palace
+                            Kangyur has <foreign xml:lang="Bo-Ltn" type="term">sbyin bdag tu gyur pa yin te</foreign>, which would
+                            mean “he becomes their benefactor.”</note> This, Maitreya, is how the bodhisattvas have excellent
+                        giving. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-21"/>
+                    <p tid="24">“Maitreya, how do such bodhisattvas have skill in dedicating merit? Well, Maitreya, such
+                        bodhisattva mahāsattvas dedicate all the accumulations of roots of virtue that they have created through their                        body, speech, and mind to supreme, perfect enlightenment. This, Maitreya, is how the bodhisattva
+                        mahāsattvas have skill in dedicating merit. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-22"/>
+                    <p tid="25">“Maitreya, how do such bodhisattvas have excellent loving kindness? Well, Maitreya, such
+                        bodhisattva mahāsattvas’ physical actions are kind, their verbal actions are kind, and their mental actions
+                        are kind. This, Maitreya, is how the bodhisattva mahāsattvas have excellent loving kindness. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-23"/>
+                    <p tid="26">“Maitreya, how do such bodhisattvas have excellent compassion? Well, Maitreya, the bodhisattva
+                        mahāsattvas’ physical actions are without malice, their verbal actions are without malice, and their mental
+                        actions are without malice. <ref cRef="F.118.b"/> This, Maitreya, is how the bodhisattvas have excellent
+                        compassion. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-24"/>
+                    <p tid="27">“Maitreya, how do such bodhisattva mahāsattvas have skill in their methods? Well, Maitreya, such
+                        bodhisattva mahāsattvas are skilled in conventional truth, they are skilled in the absolute truth, and they are
+                        skilled in both. This, Maitreya, is how the bodhisattva mahāsattvas have skill in their methods. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-25"/>
+                    <p tid="28">“Maitreya, how do such bodhisattva mahāsattvas have emancipation in the perfection of wisdom?
+                        Well, Maitreya, such bodhisattva mahāsattvas correctly train as follows. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-26"/>
+                    <p tid="29">“They think, ‘Because one thing exists, another one arises; because this is born, that is born.
+                        Conditioned by ignorance, karmic formations come into being. Conditioned by karmic formations,
+                        consciousness comes into being. Conditioned by consciousness, name and form come into being. Conditioned
+                        by name and form, the six sources of perception come into being. Conditioned by the six sources of
+                        perception, contact comes into being. Conditioned by contact, feeling comes into being. Conditioned by
+                        feeling, craving comes into being. Conditioned by craving, grasping comes into being. Conditioned by
+                        grasping, existence comes into being. Conditioned by existence, birth comes into being. Conditioned by
+                        birth, aging and death come into being, as well as misery, lamentations, suffering, unhappiness, and
+                        agitation. That is how this great heap of suffering comes into being; without these conditions, it does not come into being. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-27"/>
+                    <p tid="30">“ ‘When these conditions cease to exist, it
+                        also ceases. When ignorance ceases, karmic formations cease. When karmic formations cease, consciousness
+                        ceases. When consciousness ceases, name and form cease. When name and form cease, the six sources of
+                        perception cease. When the six sources of perception cease, contact ceases. When contact ceases, feeling
+                            <ref cRef="F.119.a"/> ceases. When feeling ceases, craving ceases. When craving ceases, grasping
+                        ceases. When grasping ceases, existence ceases. When existence ceases, birth ceases. When birth ceases,
+                        aging, death, misery, lamentations, suffering, unhappiness, and agitation cease. That is how this great
+                        heap of suffering ceases.’ This, Maitreya, is how the bodhisattva mahāsattvas have emancipation in the
+                        perfection of wisdom. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-28"/>
+                    <p tid="31">“Maitreya, if bodhisattva mahāsattvas possess those eight qualities, they will become
+                        irreversibly set on supreme and perfect enlightenment without regressing, without regressing in the
+                        slightest, and will gain special attainments; they will vanquish negative and hostile influences; and, while
+                        engaging in the conduct of a bodhisattva, they will realize the intrinsic characteristics of all phenomena
+                        just as they are and therefore be indefatigable in saṃsāra. And, as well as having that indefatigable
+                        mind, through the pristine awareness that does not rely on anything else, they will quickly awaken to
+                        supreme, perfect enlightenment and become a buddha.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-29"/>
+                    <p tid="32">After the Blessed One had spoken these words, the bodhisattva mahāsattva Maitreya, together with
+                        the monks, as well as all the worlds of gods and men, demigods and gandharvas, rejoiced and praised what
+                        the Blessed One had said. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-50"/>
+                    <p tid="33">This concludes “The Question of Maitreya‌ on the Eight
+                        Qualities,” the forty-second section of <title xml:lang="en">The Noble Dharma Discourse, the Great Heap of Jewels</title>, in one
+                        hundred thousand sections. </p>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="41">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-044-006-30"/>
+                    
+                    <p tid="34">The Indian scholars Jinamitra and Danaśila together with the chief editor and translator Yeshé Dé
+                        translated, edited, corrected this text using the revised terminology, and finalized it. </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="42">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="43">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-044-006-31">
+                        <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i mdo</title>, Toh 86,
+                        Degé Kangyur, vol. 44 (dkon brtsegs, cha), folios 116b –119a.</bibl>
+                    <bibl xml:id="UT22084-044-006-32">
+                        <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i mdo, bka’ ’gyur</title> (dpe
+                            bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi
+                        bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology Research
+                        Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House),
+                        2006-2009, vol. 44, pp. 323–329.</bibl>
+                    <bibl xml:id="UT22084-044-006-33">
+                        <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa chos brgyad pa’i mdo</title>, Stok Palace Manuscript
+                        Kangyur (stog pho brang bris ma), vol. 40, folios 198b–202b.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-34">
+                            <term>perfection of wisdom</term>
+                            <term xml:lang="Bo-Ltn">shes rab kyi pha rol tu phyin pa </term>
+                            <term xml:lang="bo">ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">prajñāpāramitā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-35">
+                            <term>intrinsic characteristics</term>
+                            <term xml:lang="Bo-Ltn">ngo bo nyid kyi mtshan nyid </term>
+                            <term xml:lang="bo">ངོ་བོ་ཉིད་ཀྱི་མཚན་ཉིད།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-36">
+                            <term>intention</term>
+                            <term xml:lang="Bo-Ltn">bsam pa </term>
+                            <term xml:lang="bo">བསམ་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-37">
+                            <term>application</term>
+                            <term xml:lang="Bo-Ltn">sbyor ba </term>
+                            <term xml:lang="bo">སྦྱོར་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-38">
+                            <term>giving</term>
+                            <term xml:lang="Bo-Ltn">gtong ba </term>
+                            <term xml:lang="bo">གཏོང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-39">
+                            <term>emancipation</term>
+                            <term xml:lang="Bo-Ltn">nges par byung ba </term>
+                            <term xml:lang="bo">ངེས་པར་བྱུང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-40">
+                            <term>malice</term>
+                            <term xml:lang="Bo-Ltn">gnod sems </term>
+                            <term xml:lang="bo">གནོད་སེམས།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-006-41">
+                            <term>indefatigable</term>
+                            <term xml:lang="Bo-Ltn">mi skyo ba </term>
+                            <term xml:lang="bo">མི་སྐྱོ་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-006-42">
+                            <term>Maitreya</term>
+                            <term xml:lang="Bo-Ltn">byams pa </term>
+                            <term xml:lang="bo">བྱམས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Maitreya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-006-43">
+                            <term>Country of the Bhargas</term>
+                            <term xml:lang="Bo-Ltn">yul bha rga </term>
+                            <term xml:lang="bo">ཡུལ་བྷ་རྒ།</term>
+                            <term xml:lang="Sa-Ltn">Bharga</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-006-44">
+                            <term>Mount Śuśumāra</term>
+                            <term xml:lang="Bo-Ltn">chu srin byis pa gsod lta bu’i ri </term>
+                            <term xml:lang="bo">ཆུ་སྲིན་བྱིས་པ་གསོད་ལྟ་བུའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">Śuśumāragiri</term>
+                            <term type="definition">Sometimes has the alternative Sanskrit spelling Śiśumāragiri.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-006-45">
+                            <term>Vulture Peak Mountain</term>
+                            <term xml:lang="Bo-Ltn">bya rgod phung po’i ri </term>
+                            <term xml:lang="bo">བྱ་རྒོད་ཕུང་པོའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">Gṛdhra­kūta­parvata</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

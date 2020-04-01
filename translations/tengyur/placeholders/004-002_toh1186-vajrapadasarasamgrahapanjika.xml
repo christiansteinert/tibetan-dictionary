@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rdo rje'i tshig gi snying po bsdus pa'i dka' 'grel</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vajrapadasarasamgrahapanjika</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT23703-004-002"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1186" type="text">
+                    <ref>Toh 1186</ref>
+                    <biblScope>ff. 58v-146v</biblScope>
+                    <author role="translatorTib">a. snyan grags bzang po (k)</author>
+                    <author role="translatorTib">t. shakya shri bzang po (k)</author>
+                    <author role="translatorTib">dpyal chos kyi bzang po</author>
+                    <author role="translatorTib">r. blo gros brtan pa</author>
+                    <location work="UT23703" count-pages="177">
+                        <volume number="4" start-page="116" end-page="292"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21614" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC7714" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:27:39 by admin</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-02-21T09:59:08.457Z" user="andreas">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-02-21T09:59:08.457Z" user="andreas">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

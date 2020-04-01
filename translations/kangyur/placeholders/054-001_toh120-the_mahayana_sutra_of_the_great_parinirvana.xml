@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">yongs su mya ngan las 'das pa chen po theg pa chen po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahāparinirvāṇamahāyānasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Mahāyāna Sūtra of the Great Parinirvāṇa</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa yongs su mya ngan las 'das pa chen po theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamahāparinirvāṇamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="en">[Note: this is the shorter, lesser known 13 fascicle version of the sūtra, translated in the early period from a Sanskrit original, which may correspond to some extent to the earliest 5th century "six-fascicle" Chinese translation by Buddhabhadra and also attributed to Faxian. It is the equivalent of the first 10 fascicles of Toh 119.]</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-054-001"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh120" type="text">
+                    <ref>Toh 120</ref>
+                    <biblScope>vol.54, ff.1r-151r(pp.1-301)</biblScope>
+                    <location work="UT4CZ5369" count-pages="300">
+                        <volume number="54" start-page="2" end-page="301"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11693" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-03-13T11:41:43.071Z" user="admin">13/03/2020 11:41:43</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-13T11:41:37.773Z" user="line-tofte">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-03-13T11:41:37.773Z" user="line-tofte">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">byang chub sems dpas dris pa snang ba le'u/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">Chapter 15: The Illumination of the Bodhisattva's Questions</title>
+                <author role="translatorMain" ref="contributors.xml#team-33"/>
+            <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
+                <author role="translatorEng" ref="contributors.xml#person-200">Kaia Fischer</author>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-035-015"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh44-15" type="chapter">
+                    <ref>Toh 44-15</ref>
+                    <biblScope/>
+                    <location count-pages="15">
+                        <start volume="35" page="408"/>
+                        <end volume="35" page="422"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11565" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC14683" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-03-09T12:34:34.197Z" user="admin">09/03/2019 12:34:34</note>
+                <note type="updated" update="text-version" value="" date-time="2019-03-09T12:33:39.066Z" user="john"/>
+                <note type="updated" update="translation-status" value="3" date-time="2019-03-09T12:34:30.783Z" user="john">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

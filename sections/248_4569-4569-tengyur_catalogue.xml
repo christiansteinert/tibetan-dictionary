@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="pseudo-section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bstan 'gyur dkar chag/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Sūcilipi</title>
+                <title type="mainTitle" xml:lang="en">Tengyur catalogue</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC76301JC11279"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W23703" sort-index="48">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC7630"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:21:48 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Historical and descriptive catalogue of the Degé Tengyur by its 18th century editor Zhuchen Tsültrim Rinchen (Toh 4569).</p>
+            </div>
+        </front>
+        <body/>
+    </text>
+</TEI>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">spyan ras gzigs phyag stong spyan stong gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">The Incantation of the Thousand-Armed, Thousand-Eyed Avalokiteśvara</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa byang chub sems dpa' spyan ras gzigs dbang phyug phyag stong spyan stong dang ldan pa thogs pa mi mnga' ba'i thugs rje chen po'i sems rgya cher yongs su rdzogs pa zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="en">The Incantation of the Thousand-Armed, Thousand-Eyed, Avalokiteśvara</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa byang chub sems dpa' spyan ras gzigs dbang phyug phyag stong spyan stong dang ldan pa thogs pa mi mnga' ba'i thugs rje chen po'i sems rgya cher yongs su rdzogs pa zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="zh">千手千眼觀世音菩薩陀羅尼（千手千眼觀世音菩薩廣大圓滿無礙大悲心陀羅尼經）</title>
+                <author role="translatorMain" ref=""/>
+                <sponsor ref="sponsors.xml#sponsor-2">George Gu, May E Ho Gu, Likai Gu, Lilian Gu</sponsor>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT22084-093-006"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh691" type="text">
+                    <ref>Toh 691</ref>
+                    <biblScope>vol.93, ff.94v-129v(pp.188-258)</biblScope>
+                    <location count-pages="71">
+                        <start volume="93" page="190"/>
+                        <end volume="93" page="260"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12431" work="W22084"/>
+                </bibl>
+                <bibl key="toh897" type="text">
+                    <ref>Toh 897</ref>
+                    <biblScope>vol.100, ff.168r-205r(pp.335-409)</biblScope>
+                    <location count-pages="75">
+                        <start volume="100" page="337"/>
+                        <end volume="100" page="411"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12659" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:50:17 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by George Gu, May E Ho Gu, Likai Gu, Lilian Gu.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

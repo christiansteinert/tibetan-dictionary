@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">yon tan bsngags pa dpag tu med pa'i gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">aparimitaguṇānuśaṃsādhāraṇī</title>
+                <title type="mainTitle" xml:lang="en">The Incantation, Immeasurable Praise of Good Qualities</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa yon tan bsngags pa dpag tu med pa zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryāparimitaguṇānuśaṃsā­nāmadhāraṇī</title>
+                <title type="otherTitle" xml:lang="en">[Note: the Sanskrit translates as "The Incantation, Praise of Immeasurable Good Qualities"]</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">aparamitaguṇānuśāṃsānāmadhāraṇī</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa yon tan bsngags pa dpag tu med pa zhes bya ba'i gzungs</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryāparamita­guṇānuśānsa­nāmadhāraṇī</title>
+                <title type="otherTitle" xml:lang="en">[Skt. translates as "The Incantation, Praise of Immeasurable Good Qualities"]</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-091-077"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh679" type="text">
+                    <ref>Toh 679</ref>
+                    <biblScope>vol.91, ff.223r-223r(pp.445-445)</biblScope>
+                    <location work="UT4CZ5369" count-pages="1">
+                        <volume number="91" start-page="445" end-page="445"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12417" work="W22084"/>
+                </bibl>
+                <bibl key="toh851" type="text">
+                    <ref>Toh 851</ref>
+                    <biblScope/>
+                    <location work="UT4CZ5369" count-pages="1">
+                        <volume number="100" start-page="127" end-page="127"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12613" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-10T08:00:42.522Z" user="admin">10/10/2019 08:00:42</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:00:38.886Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

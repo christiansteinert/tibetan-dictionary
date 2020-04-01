@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">lha mo nag mo'i bstod pa rgyal po'i rgyud/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">kālīpraśaṃsārājatantra</title>
+                <title type="mainTitle" xml:lang="en">The Sovereign Tantra, In Praise of the Goddess Kālī</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">dpal lha mo nag mo'i bstod pa rgyal po'i rgyud/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">śrīdevīkālīpraśaṃsārājatantra</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-091-068"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh671" type="text">
+                    <ref>Toh 671</ref>
+                    <biblScope>vol.91, ff.202v-209v(pp.404-418)</biblScope>
+                    <location work="UT4CZ5369" count-pages="15">
+                        <volume number="91" start-page="404" end-page="418"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12406" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-13T10:10:21.24Z" user="admin">13/12/2019 10:10:21</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T10:10:14.996Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T10:10:14.996Z" user="john">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

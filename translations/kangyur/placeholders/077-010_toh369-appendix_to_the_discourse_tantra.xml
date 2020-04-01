@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">mngon brjod rgyud bla ma/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">abhidhānottaratantra</title>
+                <title type="mainTitle" xml:lang="en">Appendix to the Discourse Tantra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">mngon par brjod pa'i rgyud bla ma zhes bya ba/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">abhidhanottaratantranāma</title>
+                <author role="translatorMain" ref=""/>
+            <author role="translatorEng" ref="contributors.xml#person-1">Dr. David B. Gray</author>
+                <author role="translatorEng" ref="contributors.xml#person-4">Olga Serbaeva</author>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-077-010"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh369" type="text">
+                    <ref>Toh 369</ref>
+                    <biblScope>vol.77, ff.247r-370r(pp.493-739)</biblScope>
+                    <location count-pages="247">
+                        <start volume="77" page="495"/>
+                        <end volume="77" page="741"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21412" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12064" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:42:33 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

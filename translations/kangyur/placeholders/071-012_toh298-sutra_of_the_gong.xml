@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">gaN+DI'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">gaṇḍīsūtra</title>
+                <title type="mainTitle" xml:lang="en">Sūtra of the Gong</title>
+                <author role="translatorMain" ref="contributors.xml#team-2"/>
+            <author role="translatorEng" ref="contributors.xml#person-5">Annie Bien</author>
+                <editor role="copyEditor" ref="contributors.xml#person-272">Yeshe Hegan</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-141">Charles Hastings</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-071-012"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh298" type="text">
+                    <ref>Toh 298</ref>
+                    <biblScope>vol.71, ff.301v-303v(pp.602-606)</biblScope>
+                    <location count-pages="5">
+                        <start volume="71" page="604"/>
+                        <end volume="71" page="608"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11964" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:51:30 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

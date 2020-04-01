@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ting nge 'dzin gyi 'khor lo'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">samādhicakrasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Wheel of Samādhi</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa ting nge 'dzin gyi 'khor lo zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">samādhicakranāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="en">[Note: translated from Chinese, the equivalent of Toh 118 translated from Sanskrit (Saerji, ARIRIAB-14).]</title>
+                <author role="translatorMain" ref="contributors.xml#team-28"/>
+            <author role="translatorEng" ref="contributors.xml#person-186">Zhuo Siyu</author>
+                <author role="translatorEng" ref="contributors.xml#person-303">Eleanor Brunnen</author>
+                <author role="translatorEng" ref="contributors.xml#person-185">Dr. Shenghai Li</author>
+                <editor role="associateEditor" ref="contributors.xml#person-289">Nathaniel Rich</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-065-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh241" type="text">
+                    <ref>Toh 241</ref>
+                    <biblScope>vol.65, ff. 302r-303r(pp.603-605)</biblScope>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="65" start-page="603" end-page="605"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11890" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-09T06:16:50.031Z" user="admin">09/10/2019 06:16:50</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-09T06:16:46.43Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

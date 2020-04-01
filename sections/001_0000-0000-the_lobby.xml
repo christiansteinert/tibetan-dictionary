@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">The Lobby</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="LOBBY"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W" sort-index="1">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id=""/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:20:12 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">The Reading Room is a browsable catalogue of all the texts in the Kangyur and Tengyur.</p>
+                <p tid="2">In the interest of preserving their traditional structure, the two great canonical collections are here
+                    divided into the same sections and subsections as the Degé Kangyur and Tengyur. Each subsection lists all the
+                    texts that belong to it in their traditional order, showing details of their titles in English, Tibetan, and
+                    Sanskrit, and numbered according to the Tōhoku catalogue. Translation status is indicated in the righthand
+                    column, with links to the translation if completed.</p>
+                <p tid="3">Please note that 84000 is initially concentrating its resources mainly on the Kangyur.</p>
+            </div>
+        </front>
+        <body/>
+    </text>
+</TEI>

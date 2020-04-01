@@ -407,6 +407,8 @@
           return false;
 
         switch(wylie) {
+          case 'm\'i':
+            return false;
           case 'gans':
             return false;
           case 'dabs':
@@ -714,7 +716,7 @@
           value = true;
         if(value==="false")
           value = false;
-        if(value)
+        if(value || (value === false))  
           this.useUnicodeTibetan = value;
           
         if(this.useUnicodeTibetan===true||this.useUnicodeTibetan==='output') {
@@ -1522,6 +1524,14 @@
             if(settings.listSize > 500) {
               settings.listSize = 500;
             }
+            
+            if(settings.unicode==='true') {
+               settings.unicode=true; 
+            }
+            if(settings.unicode==='false') {
+               settings.unicode===false;
+            }
+            
             
             // check if any dictionaries have been added since last time when the settings were saved by the user
             var newDictionaries = [];

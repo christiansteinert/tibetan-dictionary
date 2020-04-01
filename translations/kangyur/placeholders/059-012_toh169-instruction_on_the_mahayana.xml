@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">theg pa chen po'i man ngag</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahāyānopadeśasūtra</title>
+                <title type="mainTitle" xml:lang="en">Instruction on the Mahāyāna</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa theg pa chen po'i man ngag ces bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamahāyānopadeśa­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-15"/>
+            <author role="translatorEng" ref="contributors.xml#person-111">Ina Bieler</author>
+                <editor role="finalReviewer" ref="contributors.xml#person-230">Tom Tillemans</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-059-012"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh169" type="text">
+                    <ref>Toh 169</ref>
+                    <biblScope>vol.59, ff. 260r-307r(pp.519-613)</biblScope>
+                    <author role="translatorTib">t. Jinamitra</author>
+                    <author role="translatorTib">Dānaśīla</author>
+                    <author role="translatorTib">ye shes sde</author>
+                    <location count-pages="95">
+                        <start volume="59" page="521"/>
+                        <end volume="59" page="615"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11774" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:38:04 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

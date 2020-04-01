@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">glang po'i rtsal gyi mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">hastikakṣyasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Elephants’ Exertions</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">glang po'i rtsal zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">hastikakṣyanāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-7"/>
+            <editor role="copyEditor" ref="contributors.xml#person-253">Michael Engle</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.d">
+                <idno xml:id="UT22084-062-007"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh207" type="text">
+                    <ref>Toh 207</ref>
+                    <biblScope>vol.62, ff.95r-109r(pp.189-217)</biblScope>
+                    <location count-pages="29">
+                        <start volume="62" page="191"/>
+                        <end volume="62" page="219"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11840" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:55:39 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

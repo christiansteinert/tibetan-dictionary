@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rdo rje gur gyi rgyud/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">ḍākinīvajrapañjaratantra</title>
+                <title type="mainTitle" xml:lang="en">The Tantra of the Vajra Cage</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa mkha' 'gro ma rdo rje gur zhes bya ba'i rgyud kyi rgyal po chen po'i brtag pa/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryaḍākinīvajrapañjara­mahātantrarājākalpanāma</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-080-003"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh419" type="text">
+                    <ref>Toh 419</ref>
+                    <biblScope>vol.80, ff.30r-65v(pp.59-130)</biblScope>
+                    <location work="UT4CZ5369" count-pages="72">
+                        <volume number="80" start-page="59" end-page="130"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21412" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12121" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-21T09:58:01.103Z" user="admin">21/02/2020 09:58:01</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-02-21T09:57:54.998Z" user="andreas">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-02-21T09:57:54.998Z" user="andreas">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

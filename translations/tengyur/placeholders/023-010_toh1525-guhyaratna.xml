@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">gsang ba rin po che</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">guhyaratna</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-023-010"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1525" type="text">
+                    <ref>Toh 1525</ref>
+                    <biblScope>ff. 82v-83v</biblScope>
+                    <author role="translatorTib">a. mi bskyod rdo rje</author>
+                    <author role="translatorTib">t. mi bskyod rdo rje</author>
+                    <author role="translatorTib">mar pa chos kyi blo gros</author>
+                    <location count-pages="">
+                        <start volume="23" page="166"/>
+                        <end volume="23" page="168"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21619" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC8073" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:06:55 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

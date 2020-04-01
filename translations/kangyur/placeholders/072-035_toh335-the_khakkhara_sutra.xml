@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">'khar gsil gyi mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">The Khakkhara Sūtra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa 'khar gsil gyi mdo</title>
+                <author role="translatorMain" ref="contributors.xml#team-28"/>
+            <editor role="externalReviewer" ref="contributors.xml#person-286">Warner Belanger</editor>
+                <author role="translatorEng" ref="contributors.xml#person-186">Zhuo Siyu</author>
+                <author role="translatorEng" ref="contributors.xml#person-187">Steven Rhodes</author>
+                <author role="translatorEng" ref="contributors.xml#person-185">Dr. Shenghai Li</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-072-035"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh335" type="text">
+                    <ref>Toh 335</ref>
+                    <biblScope>vol.72, ff.271r-274r(pp.541-547)</biblScope>
+                    <location work="UT4CZ5369" count-pages="7">
+                        <volume number="72" start-page="541" end-page="547"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12015" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-09-25T13:31:46.422Z" user="admin">25/09/2019 13:31:46</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-04T09:53:16.431Z" user="andreas">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.g" date-time="2019-11-04T09:53:16.431Z" user="andreas">2.g</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">ma skyes dgra'i 'gyod pa bsal ba'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">ajātaśatrukaukṛtyavinodanasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on Eliminating Ajātaśatru’s Remorse</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa ma skyes dgra'i 'gyod pa bsal ba zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryājātaśatru­kaukṛttyavinodana­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-062-016"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh216" type="text">
+                    <ref>Toh 216</ref>
+                    <biblScope>vol.62, ff. 211v-268v(pp.422-536)</biblScope>
+                    <location count-pages="115">
+                        <start volume="62" page="424"/>
+                        <end volume="62" page="538"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11855" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-05-24T15:11:19.558Z" user="admin">24/05/2019 15:11:19</note>
+            <note type="updated" update="translation-status" value="2.g" date-time="2019-05-24T15:11:16.945Z" user="john">2.g</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

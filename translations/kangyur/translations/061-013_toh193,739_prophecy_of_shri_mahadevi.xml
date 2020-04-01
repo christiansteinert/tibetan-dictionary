@@ -1,0 +1,2402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">lha mo chen mo dpal lung bstan pa</title>
+                <title type="mainTitle" xml:lang="bo">ལྷ་མོ་ཆེན་མོ་དཔལ་ལུང་བསྟན་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Prophecy of Śrī Mahādevī</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Śrī­mahā­devī­vyākaraṇa</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ལྷ་མོ་ཆེན་མོ་དཔལ་ལུང་བསྟན་པ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa lha mo chen mo dpal lung bstan
+                    pa</title>
+                <title type="longTitle" xml:lang="en">The Noble Prophecy of Śrī Mahādevī</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­śrī­mahā­devī­vyākaraṇa</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-27">Translated by the Sakya
+                    Pandita Translation Group (International Buddhist Academy Division)<lb/> under
+                    the patronage and supervision of 84000: Translating the Words of the
+                    Buddha</author>
+                <consultant role="advisor" ref="contributors.xml#person-174">Khenpo Ngawang
+                    Jorden</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-240">Jamyang
+                    Choesang</author>
+                <author role="translatorEng" ref="contributors.xml#person-241">Kunsang
+                    Choepel</author>
+                <author role="translatorEng" ref="contributors.xml#person-242">Boyce Teoh</author>
+                <author role="translatorEng" ref="contributors.xml#person-243">Solvej
+                    Nielsen</author>
+                <!-- <author role="translatorEng">Jamyang Choesang</author>
+                <author role="translatorEng">Kunsang Choepel</author>
+                <author role="translatorEng">Boyce Teoh</author>
+                <author role="translatorEng">Solvej Nielsen</author> -->
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael
+                    Engle</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.20.2 <date>2020</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative to translate all the Buddha’s words into modern
+                    languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-061-013"/>
+                <date>2011-11-01</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh193" type="text">
+                    <ref>Toh 193</ref>
+                    <biblScope>Degé Kangyur, vol. 61 (mdo sde, tsa), folios 246.a–250.b</biblScope>
+                    <author role="translatorTib">Unknown</author>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="61" start-page="491" end-page="500"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668"/>
+                    <idno source-id="O1JC114941JC11815" work="W22084"/>
+                </bibl>
+                <bibl key="toh739" type="text">
+                    <ref>Toh 739</ref>
+                    <biblScope>Degé Kangyur, vol. 94 (rgyud ’bum, tsha), folios
+                        230.a–234.b</biblScope>
+                    <author role="translatorTib">Unknown</author>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="94" start-page="459" end-page="468"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415"/>
+                    <idno source-id="O1JC114941JC12480" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-26T21:34:46.761Z" user="admin">26/02/2020 21:34:46</note>
+                <note type="updated" update="text-version" value="v 2.13" date-time="2019-02-27T16:31:39.284Z" user="admin">v 2.13 2011 - 2016</note>
+                <note type="updated" update="text-version" value="v 2.14" date-time="2019-02-27T16:32:48.481Z" user="admin">v 2.14 2011 - 2016</note>
+                <note type="updated" update="text-version" value="v 2.19" date-time="2019-06-18T02:55:53.397Z" user="celso">v 2.19 2019</note>
+            <note type="updated" update="text-version" value="v 2.20" date-time="2019-08-16T15:21:04.885Z" user="laura">v 2.20 2019</note>
+<note type="updated" update="text-version" value="v 2.20.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.20.2" date-time="2020-02-26T21:34:44.039Z" user="celso">fixed non-breaking spaces in ellipsis</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <!--Contents
+            Summary
+            Acknowledgments
+            Introduction
+            The Translation
+            The Prophecy of Śrī Mahādevī
+            Notes
+            Bibliography -->
+            <div type="summary">
+                <head type="summary" tid="28">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-061-013-1"/>
+                <p tid="1">This sūtra recounts an event that took place in the buddha realm of
+                    Sukhāvatī. The discourse commences with Buddha Śākyamuni relating to Bodhisattva
+                    Avalokiteśvara the benefits of reciting the various names of Śrī Mahādevī. The
+                    Buddha describes how Śrī Mahādevī acquired virtue and other spiritual
+                    accomplishments through the practice of venerating numerous tathāgatas and gives
+                    an account of the prophecy in which her future enlightenment was foretold by all
+                    the buddhas she venerated. The Buddha then lists the one hundred and eight
+                    blessed names of Śrī Mahādevī to be recited by the faithful. The sūtra ends with
+                    Buddha Śākyamuni giving a <foreign type="term" xml:lang="Sa-Ltn"> dhāraṇī
+                    </foreign> and a brief explanation on the benefits of reciting the names of Śrī
+                    Mahādevī, namely the eradication of all negative circumstances and the
+                    accumulation of merit and happiness.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="29">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-061-013-2"/>
+                <p tid="2">This sūtra was translated from Tibetan into English, under the
+                    supervision of Khenpo Ngawang Jorden, by the monks Jamyang Choesang and Kunsang
+                    Choepel, and the lay people Boyce Teoh and Solvej Nielsen, members of the Sakya
+                    Pandita Translation Group (International Buddhist Academy Division),
+                    Kathmandu.</p>
+                <p tid="3">This translation has been completed under the patronage and supervision
+                    of 84000: Translating the Words of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="30">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-061-013-3"/>
+                    <p tid="4">This text extols the virtues and benefits of devotional practices,
+                        such as the recitation of sacred names and formulae or mantras. It can thus
+                        be said to be related to the <foreign type="term" xml:lang="Sa-Ltn">bhakti</foreign> or devotional movement in the religious life of the
+                        Indian subcontinent, a form of religious expression found in all major
+                        religions of the world. Faith (<foreign type="term" xml:lang="Sa-Ltn">śraddhā</foreign>; <foreign type="term" xml:lang="Bo-Ltn">dad
+                            pa</foreign>) is an essential factor of the path to awakening. It is
+                        listed among the five spiritual faculties (<foreign type="term" xml:lang="Sa-Ltn">indriya</foreign>; <foreign type="term" xml:lang="Bo-Ltn">dbang po</foreign>) and the eleven wholesome mental
+                            states.<note place="end" index="1" xml:id="UT22084-061-013-4">The <title xml:lang="Sa-Ltn">Abhi­dharma­kośa</title> gives eleven wholesome
+                            mental factors and lists faith as the first among them.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-5"/>
+                    <p tid="5">In this sūtra, Śrī Mahādevī cultivated her faith by venerating and
+                        chanting names of the enlightened ones, thus accomplishing the roots of
+                        virtue that become the cause of her future awakening. The narrative takes
+                        place in the buddha realm Sukhāvatī, where Buddha Śākyamuni explains to
+                        Bodhisattva Avalokiteśvara the benefits of reciting Śrī Mahādevī’s names. He
+                        further explains how Śrī Mahādevī herself gained the roots of virtue by
+                        venerating numerous tathāgatas, which the Buddha lists. He then relates the
+                        prophecy of Śrī Mahādevī’s future enlightenment, bestowed upon her by those
+                        buddhas, and lists her one hundred and eight names. The sūtra ends with
+                        Buddha Śākyamuni giving a <foreign type="term" xml:lang="Sa-Ltn">dhāraṇī</foreign> and a brief explanation on how to practice the
+                        recitation of Śrī Mahādevī’s names.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-6"/>
+                    <p tid="6">Most Kangyurs include two copies of the text, one (Toh 193) in the
+                        general sūtra (<foreign type="term" xml:lang="Bo-Ltn">mdo sde</foreign>)
+                        section and one (Toh 739) among the collected tantras (<foreign type="term" xml:lang="Bo-Ltn">rgyud ’bum</foreign>), classified under
+                            kriyātantra.<note place="end" index="2" xml:id="UT22084-061-013-7">The
+                            Tibetan copy in the tantra section of the Kangyur (Toh 739) is followed
+                            by two short related texts, both also set in in Sukhāvatī and structured
+                            as expositions by Buddha Śākyamuni to Avalokiteśvara: <title xml:lang="Bo-Ltn">’phags pa dpal chen mo’i mdo</title>, “The Sūtra
+                            of the Gorious Great [Goddess]” (Toh 740)—the goddess concerned being
+                            identified as Lakṣmī in the Sanskrit title of the Degé version but not
+                            in all versions—and <title xml:lang="Bo-Ltn">dpal gyi lha mo’i mtshan
+                                bcu gnyis pa</title> “The Twelve Names of the Glorious Goddess” (Toh
+                            741). In both, the knowing, reciting, reading, and writing of the
+                            goddess’s twelve names (almost but not exactly the same in both cases)
+                            and of short dhāraṇīs (different) are recommended as effective means of
+                            dispelling obstacles and achieving goals. The colophons of both short
+                            texts state that they were translated by Jinamitra and Yeshé Dé.</note>
+                        As neither copy of the Tibetan version has a colophon, there is no
+                        information regarding the translators. However, it must have been translated
+                        in the early period, since it is listed in the early 9th century Denkarma
+                            (<foreign type="term" xml:lang="Bo-Ltn">ldan dkar ma</foreign>)
+                        catalogue of texts translated into Tibetan from Sanskrit. Versions of this
+                        sūtra in Sanskrit and Chinese are still extant today. The present
+                        translation appears to be the first into a Western language. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-8"/>
+                    <p tid="7">The Degé edition of this sūtra was compared with various editions of
+                        the Tibetan canon, namely, the Narthang, Kangxi and Lhasa editions, as well
+                        as with the Sanskrit of the Gilgit manuscript as edited by Nalinaksa Dutt.
+                        The English translation has been made on the basis of the Tibetan, with a
+                        few exceptions as indicated in the notes. The great many proper names
+                        contained in the sūtra are here given in Sanskrit, but translations have
+                        been added in parentheses in the case of the “one hundred and eight
+                        names”—which are, rather, epithets describing Mahādevī.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="31">The Translation</head>
+                <head type="titleHon" tid="32">The Noble</head>
+                <head type="titleMain" tid="33">Prophecy of Śrī Mahādevī</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-061-013-9"/>
+                    <p tid="9">
+                        <ref cRef="F.246.a" key="toh193" type="folio"/>
+                        <ref cRef="F.230.a" key="toh739" type="folio"/>
+                        <!--<modularPassage type="homage">--> Homage to all buddhas and
+                        bodhisattvas.<!--</modularPassage>-->
+                    </p>
+                    <lb/>
+                    <p tid="10">
+                        <ref cRef="F.246.b" key="toh193" type="folio"/>
+                        <ref cRef="F.230.b" key="toh739" type="folio"/>Thus did I hear at one time. The Bhagavān
+                        was dwelling in Sukhāvatī together with the great saṅgha of bodhisattvas,
+                        amongst them the following bodhisattva mahāsattvas of the excellent
+                            eon:<note place="end" index="3" xml:id="UT22084-061-013-10">“Of the
+                            excellent eon” (<foreign type="term" xml:lang="Bo-Ltn">bskal pa bzang
+                                po’i</foreign> = <foreign type="term" xml:lang="Sa-Ltn">bhadra­kalpika</foreign>) missing in Skt.</note> Bodhisattva
+                        Mahāsattva Ārya Avalokiteśvara, Bodhisattva Mahāsattva Mahā­sthāma­prāpta,
+                        Bodhisattva Mahāsattva Sarva­nīvaraṇa­viṣkaṃbhin, Bodhisattva Mahāsattva
+                        Kṣitigarbha, Bodhisattva Mahāsattva Samantabhadra, Bodhisattva Mahāsattva
+                        Ākāśagarbha, Bodhisattva Mahāsattva Vajrapāṇi and Bodhisattva
+                        Sarvabhayahara, and similarly Bodhisattva Mahāsattva Sarva­maṅgala­dhārin,
+                        Bodhisattva Mahāsattva Sarva­puṇya­lakṣaṇa­dhārin, Bodhisattva Mahāsattva
+                        Candra­sūrya­trailokya­dhārin, Bodhisattva Mahāsattva
+                        Sarva­tīrtha­maṅgala­dhārin, and Bodhisattva Mahāsattva Mañjuśrī
+                        Kumārabhūta.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-11"/>
+                    <p tid="11">Then Bodhisattva Mahāsattva Avalokiteśvara went to the place where
+                        the Bhagavān was, paid homage at the Bhagavān’s feet, and remained at one
+                        side. Śrī Mahādevī also went toward the Bhagavān, paid homage at his feet,
+                        and circumambulated him three times. Then she also paid homage to all the
+                        bodhisattva mahāsattvas who were dwelling in Sukhāvati and remained at one
+                            side.<note place="end" index="4" xml:id="UT22084-061-013-12">Skt. “Śrī
+                            Mahādevī also went toward the Bhagavān. Having circumambulated one
+                            hundred thousand times at the Bhagavān’s feet she also paid homage to
+                            all the bodhisattva mahāsattvas.”</note>
+                        <ref cRef="F.247.a" key="toh193" type="folio"/>
+                        <ref cRef="F.231.a" key="toh739" type="folio"/>
+                    </p>
+                    <p tid="12">The Bhagavān was adorned with many hundreds of thousands of merits
+                        and surrounded by as many as ten million tathāgatas. As Indra, Brahmā and
+                        the guardians of the world all offered their praises and acclaim, the
+                        Bhagavān, having gazed at Śrī Mahādevī, addressed Bodhisattva Mahāsattva
+                        Avalokiteśvara as follows in his Great Brahmā voice:</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-13"/>
+                    <p tid="13">“Avalokiteśvara, if any one of the kings, ministers, bhikṣus,
+                        bhikṣuṇīs, upāsakas, upāsikās, brāhmaṇas, kṣatriyas, vaiśyas, or śūdras
+                        retains this praise “The One Hundred and Eight Names<note place="end" index="5" xml:id="UT22084-061-013-14">“Names” omitted in Skt.</note> of
+                        Śrī Mahādevī Which Are Renowned As Stainless,” then the kṣatriya king’s
+                        kingdom, the fears of those beings there, as well as the epidemics and
+                        harmful influences will all be pacified,<note place="end" index="6" xml:id="UT22084-061-013-15">Translated on the basis of the Tibetan. Skt.
+                            has <foreign type="quote" xml:lang="Sa-Ltn">tasya rājñaḥ kṣatriyasya
+                                viṣaye teṣāṃ sattvānāṃ sarva­bhayety upadravā
+                                pra­śamiṣyanti</foreign>. “In the country of the kṣatriya king,
+                            these beings’ misfortunes, i.e. ‘all fears,’ will be pacified.”</note>
+                        and no one at all will fear robbers, rogues, humans or nonhumans. Wealth,
+                        grains, treasuries, and stores will all increase, and the Glorious Mahādevī
+                        will no doubt abide in the home of this kṣatriya king.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-16"/>
+                    <p tid="14">Then those bodhisattva mahāsattvas said, “Bhagavāṇ, these words are
+                        well said. Excellent! Excellent! Those people who will retain the names of
+                        Śrī Mahādevī and who will put them into practice once they have heard
+                            them<note place="end" index="7" xml:id="UT22084-061-013-17">Skt. does
+                            not have “and who put them into practice once they have heard
+                            them.”</note> will have those aforementioned qualities and
+                        benefits.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-18"/>
+                    <p tid="15">Then Bodhisattva Mahāsattva Ārya Avalokiteśvara asked the Bhagavān,
+                        “Bhagavān, where did Śrī Mahādevī generate her roots of virtue?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-19"/>
+                    <p tid="16">The Bhagavān replied, “Śrī Mahādevī <ref cRef="F.247.b" key="toh193" type="folio"/>
+                        <ref cRef="F.231.b" key="toh739" type="folio"/> generated roots of virtue in the presence
+                        of tathāgatas as numerous as the grains of sand of the River Ganges. O
+                        Avalokiteśvara, previously, in the past in a world system called
+                        Ratna­saṃbhavā, the tathāgata called
+                        Ratna­kusuma­guṇa­sāgara­vaiḍūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī
+                        came forth into the world. Śrī Mahādevī generated roots of virtue in his
+                        presence and in the presence of many other tathāgatas, too. Now, the names
+                        of the tathāgatas make Śrī Mahādevī’s roots of virtue flourish and come to
+                        fulfillment. They stay with her always, these names which here in this world
+                        Śrī Mahādevī recites precisely and which dispel all sins, eliminate all
+                        offenses, make all effects<note place="end" index="8" xml:id="UT22084-061-013-20">Skt. <foreign type="term" xml:lang="Sa-Ltn">sarvakārya</foreign> “all effects,” Tib. <foreign type="term" xml:lang="Bo-Ltn">lus thams cad</foreign> “all bodies.”</note>
+                        stainless, gather and increase wealth and grains, eradicate poverty, attract
+                        and catch the attention of all gods, nāgas, yakṣas, gandharvas, asuras,
+                        garuḍas, kiṃnaras, and mahoragas, pacifying all epidemics, natural
+                            misfortunes,<note place="end" index="9" xml:id="UT22084-061-013-21">Skt.
+                                <foreign type="term" xml:lang="Sa-Ltn">upasarga</foreign> “natural
+                            misfortune,” Tib. <foreign type="term" xml:lang="Bo-Ltn">gnod
+                                pa</foreign> “harms.”</note> disputes, conflicts, dissensions, and
+                        arguments, and which will bring the six perfections to fulfilment. They are
+                        as follows:<note place="end" index="10" xml:id="UT22084-061-013-22">The Skt.
+                            list has been followed. The Tibetan (F.248.a–b) has some minor
+                            differences from the Sanskrit.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-23"/>
+                    <lg tid="17">
+                        <l>“Homage to Tathāgata Śrīghana.</l>
+                        <l>Homage to Tathāgata
+                            Ratna­kusuma­guṇa­sāgara­vaiḍūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī.</l>
+                        <l>Homage to Tathāgata Gaṅgāsarva­tīrthamukha­maṅgala­śrī.</l>
+                        <l>Homage to Tathāgata Candana­kusuma­tejo­nakṣatra­prabhāsa­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-24"/>
+                        <l>Homage to Tathāgata Samantāvabhāsa­vijita­saṃgrāma­śrī.</l>
+                        <l>Homage to Tathāgata Guṇa­samudrāvabhāsa­maṇḍala­śrī. <ref cRef="F.248.a" key="toh193" type="folio"/>
+                            <ref cRef="F.232.a" key="toh739" type="folio"/>
+                        </l>
+                        <l>Homage to Tathāgata Dhārma­vikurvaṇa­dhvaja­vega­śrī.</l>
+                        <l>Homage to Tathāgata Jyotiḥsaumya­gandhāvabhāsa­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-25"/>
+                        <l>Homage to Tathāgata Sattvāśaya­śamana­śarīra­śrī.</l>
+                        <l>Homage to Tathāgata Praṇidhāna­sāgarāvabhāsa­śrī.</l>
+                        <l>Homage to Tathāgata Su­parikīrtita­nāmadheya­śrī.</l>
+                        <l>Homage to Tathāgata Asaṃkhyeya­vīrya­susaṃprasthita­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-26"/>
+                        <l>Homage to Tathāgata Aprameya­suvarṇotta­prabhāsa­śrī.</l>
+                        <l>Homage to Tathāgata Sarva­svarāṅga­ruta­nirghoṣa­śrī.</l>
+                        <l>Homage to Tathāgata Prajñā­pradīpāsaṃkhyeya­prabhā­ketu­śrī.</l>
+                        <l>Homage to Tathāgata Nārāyaṇa­vrata­sannāha­sumeru­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-27"/>
+                        <l>Homage to Tathāgata Brahmaśrī.</l>
+                        <l>Homage to Tathāgata Maheśvaraśrī. </l>
+                        <l>Homage to Tathāgata Candrasūryaśrī.</l>
+                        <l>Homage to Tathāgata Gambhīra­dharma­prabhā­rāja­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-28"/>
+                        <l>Homage to Tathāgata Gagana­pradīpābhirāma­śrī.</l>
+                        <l>Homage to Tathāgata Sūrya­prabhā­ketu­śrī.</l>
+                        <l>Homage to Tathāgata Gandha­pradīpa­śrī.</l>
+                        <l>Homage to Tathāgata Sāgara­garbha­saṃbhava­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-29"/>
+                        <l>Homage to Tathāgata Nirmita­megha­garjanayaśaḥ­śrī. <ref cRef="F.248.b" key="toh193" type="folio"/>
+                            <ref cRef="F.232.b" key="toh739" type="folio"/>
+                        </l>
+                        <l>Homage to Tathāgata Sarva­dharma­prabhāsa­vyūha­śrī.</l>
+                        <l>Homage to Tathāgata Druma­rāja­vivardhita­śrī.</l>
+                        <l>Homage to Tathāgata Ratnārciḥparvata­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-30"/>
+                        <l>Homage to Tathāgata Jñānārciḥsāgara­śrī.</l>
+                        <l>Homage to Tathāgata Mahā­praṇidhi­vega­śrī.</l>
+                        <l>Homage to Tathāgata Mahāmeghaśrī.</l>
+                        <l>Homage to Tathāgata Smṛtiketu­rāja­śrī.</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-31"/>
+                        <l>Homage to Tathāgata Indra­ketu­dhvaja­rāja­śrī.</l>
+                        <l>Homage to Tathāgata Sarva­dhana­dhānyākarṣaṇa­śrī.</l>
+                        <l>Homage to Tathāgata Saumyākarṣaṇa­śrī.</l>
+                        <l>Homage to Tathāgata Lakṣmyākarṣaṇa­śrī.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-32"/>
+                    <p tid="18">“Having treated these names of tathāgatas with veneration, one
+                        should retain and recite them, and in this way the merit of a son or
+                        daughter of a noble family will increase immensely.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-33"/>
+                    <p tid="19">“Now, all the tathāgatas made the following prophecies concerning
+                        Śrī Mahādevī: ‘Śrī Mahādevī, in the future you will become the tathāgata,
+                        the arhat, the truly complete buddha called Śrī­maṇi­ratna­sambhava in the
+                        world system called Śrī­mahā­ratna­pratimaṇḍitā. And that world system will
+                        be adorned with various sorts of divine jewels. This very tathāgata will
+                        spread light in that world system, and those bodhisattvas dwelling there in
+                        that world will spontaneously become radiant and have immeasurable life
+                        spans. The word <foreign type="term" xml:lang="Sa-Ltn">buddha­dharma­saṅgha</foreign>
+                        <ref cRef="F.249.a" key="toh193" type="folio"/> will also come down from the sky, and the
+                        bodhisattvas who will be born in that buddha field will all be born from the
+                        centers of lotuses.’ <ref cRef="F.233.a" key="toh739" type="folio"/>
+                    </p>
+                    <p tid="20">“What is the twelve-line praise with one hundred and eight names
+                        that is renowned as being stainless?<note place="end" index="11" xml:id="UT22084-061-013-34">Skt. <foreign type="term" xml:lang="Sa-Ltn">dvādaśa­daṇdakaṃ</foreign> . . . <foreign type="term" xml:lang="Sa-Ltn">stotram</foreign>, but Tib. has the puzzling
+                                <foreign xml:lang="Bo-Ltn">stod pa brgyad cu gnyis pa</foreign>
+                            “eighty two praises.”</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-35"/>
+                    <p tid="21">“O fearless Avalokiteśvara, please hearken to the names of Śrī
+                        Mahādevī. They are as follows:<note place="end" index="12" xml:id="UT22084-061-013-36">The Tibetan and Sanskrit lists of names
+                            differ somewhat. We have followed the Sanskrit and indicated differences
+                            from the Tibetan in notes.</note>
+                    </p>
+                    <lg tid="22">
+                        <l> Sarva­tathāgatābhiṣiktā (She Who Was Empowered by All Tathāgatas),</l>
+                        <l> Sarva­devatābhiṣiktā (She Who Was Empowered by All Gods),</l>
+                        <l> Sarva­tathāgata­mātṛ (Mother of All Tathāgatas),</l>
+                        <l> Sarva­devatā­mātṛ (Mother of All Gods),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-37"/>
+                        <l> Sarva­tathāgata­śrī (Glory of All Tathāgatas),</l>
+                        <l> Sarva­bodhisattva­śrī (Glory of All Bodhisattvas),</l>
+                        <l> Sarvārya­śrāvaka­pratyeka­buddha­śrī (Glory of All Āryaśrāvakas and
+                            Pratyekabuddhas),</l>
+                        <l> Brahma­viṣṇu­maheśvara­śrī (Glory of Brahmā, Viṣṇu, and Maheśvara),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-38"/>
+                        <l> Mahā­sthāna­gata­śrī (Glory Present in Great Places),<note place="end" index="13" xml:id="UT22084-061-013-39">Tib. <foreign type="term" xml:lang="Bo-Ltn">lha la sogs pa thams cad kyi dpal</foreign>
+                                “Glory of All Gods, etc.”</note>
+                        </l>
+                        <l> Sarva­devatābhimukha­śrī (Glory in the Presence of All Gods),<note place="end" index="14" xml:id="UT22084-061-013-40">Tib. <foreign type="term" xml:lang="Bo-Ltn">gnas thams cad na yod pa’i
+                                    dpal</foreign> “Glory Present in All Places.”</note>
+                        </l>
+                        <l> Sarva­deva­nāga­yakṣa­gandharvāsura­garuḍa­kiṃnara­mahoraga­śrī (Glory
+                            of All the Gods, Nāgas, Yakṣas, Gandharvas, Asuras, Garuḍas, Kiṃnaras, and Mahoragas),</l>
+                        <l> Sarva­vidyā­dhara­vajra­pāṇi­vajra­dhara­śrī (Glory of All the
+                            Vidyādharas, Vajrapāṇi and Vajradharas),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-41"/>
+                        <l> Catuḥpañca­lokapāla­śrī (Glory of the Four and the Five Guardians of the
+                            World),</l>
+                        <l> Aṣṭa­grahāṣṭāviṃśati­nakṣatra­śrī (Glory of the Eight Planets<note place="end" index="15" xml:id="UT22084-061-013-42">The eight
+                                planets: (1) Sun, (2) Earth’s moon, (3) Mars, (4) Mercury, (5)
+                                Jupiter, (6) Venus, (7) Saturn, and (8) Eclipse-maker
+                                (Rāhula).</note> and Twenty-Eight Constellations<note place="end" index="16" xml:id="UT22084-061-013-43">According to the ancient
+                                Indian traditions, twenty-eight constellations lie on the path of
+                                the moon during its complete circuit through the plane of the
+                                ecliptic. For a list of the twenty-eight, see Monier
+                                Monier-Williams, Sanskrit-English Dictionary, s.v. <foreign type="term" xml:lang="Sa-Ltn">nakṣatra</foreign>.</note>),</l>
+                        <l> Oṃ Sāvitrī (Daughter of Savitra<note place="end" index="17" xml:id="UT22084-061-013-44">Savitra is a Vedic solar deity, an
+                                Āditya or descendant of the mother of the gods, Aditi.</note>),</l>
+                        <l> Dhātrī (Nurse),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-45"/>
+                        <l> Mātṛ (Mother),</l>
+                        <l> Caturvedaśrī (Glory of the Four Vedas),</l>
+                        <l> Lakṣmī (Goddess of Prosperity),</l>
+                        <l> Bhūtamātṛ (Mother of Sentient Beings),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-46"/>
+                        <l> Jayā (She Who Is Victorious),</l>
+                        <l> Vijayā (She Who Conquers),</l>
+                        <l> Gaṅgā (She Who Is the Ganges),</l>
+                        <l> Sarvatīrthā (She of All Holy Places),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-47"/>
+                        <l>Sarvamaṅgalyā (She Who Confers All Auspiciousness),<note place="end" index="18" xml:id="UT22084-061-013-48">The Tibetan (see glossary
+                                under “Sarvatīrthā”) treats these two epithets as one, i.e. “She Who
+                                Confers the Happiness of All the Holy Places.”</note>
+                        </l>
+                        <l> Vimala­nirmala­kara­śrī (Glory That Makes One Stainless and Pure),</l>
+                        <l> Sarva­pāpa­hantrī (She Who Slays All Sins),</l>
+                        <l> Nirmadakarā (She Who Humbles),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-49"/>
+                        <l> Candraśrī (Glory of the Moon),</l>
+                        <l> Sūryaśrī (Glory of the Sun),</l>
+                        <l> Sarvagrahaśrī (Glory of All the Planets),</l>
+                        <l> Siṃhavāhinī (She Who Rides upon a Lion),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-50"/>
+                        <l> Śata­sahasra­koṭipadma­vivara­saṃcchannā (She Who Is Enveloped by a
+                            Display of One Hundred Thousand Crore Lotuses),<note place="end" index="19" xml:id="UT22084-061-013-51">The Tibetan (see glossary
+                                entry) has “She Who is Enveloped by a Hundred Thousand Supreme
+                                Lotuses.” </note>
+                        </l>
+                        <l> Padmā (She Who Has Lotuses),</l>
+                        <l> Padmasambhavā (She Who Was Born from a Lotus),</l>
+                        <l> Padmālayā (She Whose Abode Is a Lotus),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-52"/>
+                        <l> Padmadharā (She Who Holds a Lotus),</l>
+                        <l> Padmāvatī (She Who Is Endowed with Lotuses),</l>
+                        <l> Aneka­ratnāṃśu­mālā (She Who Has a Garland of Many Light Rays That Are
+                            Like Jewels),</l>
+                        <l> Dhanadā (She Who Brings Wealth),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-53"/>
+                        <l> Śvetā (Fair One),</l>
+                        <l> Mahāśvetā (Great Fair One),</l>
+                        <l> Śvetabhujā (She Who Has Fair Arms),</l>
+                        <l> Sarva­maṅgala­dhāriṇī (She Who Possesses All Auspiciousness), <ref cRef="F.249.b" key="toh193" type="folio"/>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-54"/>
+                        <l> Sarva­puṇyopacitāṅgī (She Whose Body Consists of All Collections of
+                            Merit), </l>
+                        <l> Dākṣāyaṇī (Daughter of Dakṣa<note place="end" index="20" xml:id="UT22084-061-013-55">A Hindu creator god. His daughter is the
+                                consort of Śiva.</note>), <ref cRef="F.233.b" key="toh739" type="folio"/>
+                        </l>
+                        <l> Śata­sahasra­bhujā (She Who has One Hundred Thousand Arms),</l>
+                        <l> Śata­sahasra­nayanā (She Who Has One Hundred Thousand Eyes),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-56"/>
+                        <l> Śata­sahasra­śirā (She Who Has One Hundred Thousand Heads), </l>
+                        <l> Vividha­vicitra­maṇi­mauli­dharā (She Who Bears a Diadem of Many Sorts
+                            of Multicolored Jewels),</l>
+                        <l> Surūpā (She Who Has a Beautiful Form),</l>
+                        <l> Viśvarūpā (She Who Has All Different Forms),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-57"/>
+                        <l> Yaśā (Renowned One),</l>
+                        <l> Mahāyaśā (Highly Renowned One),</l>
+                        <l> Saumyā (Benign One),</l>
+                        <l> Bahujīmūtā (She of the Many Clouds),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-58"/>
+                        <l> Pavitrakeśā (She Whose Hair Is Purity),</l>
+                        <l> Candrakāntā (She Who Is Lovely Like the Moon),</l>
+                        <l> Sūryakāntā (She Who Is Lovely Like the Sun),<note place="end" index="21" xml:id="UT22084-061-013-59">The terms <foreign type="term" xml:lang="Sa-Ltn">candra­kānta</foreign> and <foreign type="term" xml:lang="Sa-Ltn">sūrya­kānta</foreign> also
+                                regularly refer to gems, i.e. moonstone and sunstone
+                                respectively.</note>
+                        </l>
+                        <l> Śubhā (Virtuous One),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-60"/>
+                        <l> Śubhakartrī (She Who Brings About Virtue),</l>
+                        <l> Sarva­sattvābhimukhī (She Who Is Disposed towards All Sentient
+                            Beings),</l>
+                        <l> Āryā (Noble One),</l>
+                        <l> Kusumaśrī (Glory of the Flowers), </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-61"/>
+                        <l> Kusumeśvarā (She Who Is the Sovereign of the Flowers),<note place="end" index="22" xml:id="UT22084-061-013-62">Tib. “She Who Abides in
+                                Flowers.”</note>
+                        </l>
+                        <l> Sarva­sumeru­parvata­rāja­śrī (Glory of the Entire King of Mountains,
+                            Mt. Sumeru),</l>
+                        <l> Sarva­nadī­saricchrī (Glory of All Rivers and Streams),<note place="end" index="23" xml:id="UT22084-061-013-63">Tib. “Glory of All Rivers and
+                                Lakes.”</note>
+                        </l>
+                        <l> Sarva­toya­samudra­śrī (Glory of the Ocean of All Waters),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-64"/>
+                        <l> Sarva­tīrthābhimukha­śrī (Glory of Turning Towards All the Holy
+                            Places),</l>
+                        <l> Sarvauṣadhi­tṛṇa­vanaspati­dhana­dhānya­śrī (Glory of All Medicinal
+                            Herbs, Grasses, Trees, Wealth, and Grains),</l>
+                        <l> Hiraṇyadā (She Who Gives Gold),</l>
+                        <l> Annapānadā (She Who Gives Food and Drink),<note place="end" index="24" xml:id="UT22084-061-013-65">Tib. “She Who Gives Food and
+                                Clothing.”</note>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-66"/>
+                        <l> Prabhāsvarā (She of the Clear Light),</l>
+                        <l> Ālokakarā (She Who Illuminates),</l>
+                        <l> Pavitrāṅgā (She of the Pure Body),</l>
+                        <l> Sarva­tathāgata­vaśavartinī (She Who Has Power over All Tathāgatas),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-67"/>
+                        <l> Sarva­deva­gaṇa­mukha­śrī (Glory when in the Presence of the Entire
+                            Assembly of the Gods),</l>
+                        <l> Yama­varuṇa­kubera­vāsava­śrī (Glory of Yama, Varuṇa, Kubera, and
+                                Vāsava),<note place="end" index="25" xml:id="UT22084-061-013-68">Skt. reads °<foreign type="term" xml:lang="Sa-Ltn">varuṇā</foreign>°. Yama is the lord of death, Varuṇa is the Vedic
+                                god presiding over night, Kubera is the god of riches, and Vāsava is
+                                Indra.</note>
+                        </l>
+                        <l> Dātrī (She Who Gives),</l>
+                        <l> Bhoktrī (She Who Takes Pleasure),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-69"/>
+                        <l> Tejā (She Who Is Brilliance),</l>
+                        <l> Tejovatī (Bright One),</l>
+                        <l> Vibhūtī (Abundance),</l>
+                        <l> Samṛddhi (Great Prosperity),<note place="end" index="26" xml:id="UT22084-061-013-70">Omitted in Tib.</note>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-71"/>
+                        <l> Vivṛddhi (Growth),</l>
+                        <l> Unnati (Advancement),<note place="end" index="27" xml:id="UT22084-061-013-72"> Tib. <foreign type="term" xml:lang="Bo-Ltn">mthong ma</foreign>, “She Who Has
+                                Vision.”</note>
+                        </l>
+                        <l> Dharmaśrī (Glory of the Dharma),</l>
+                        <l> Mādhavāśrayā (She Who Relies on Viṣṇu),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-73"/>
+                        <l> Kusumanilayā (She Whose Abode Is the Flowers),<note place="end" index="28" xml:id="UT22084-061-013-74">Tib. “She Who Abides in the
+                                Kumuda Flower.” Kumuda is a white flower that grows in or near water
+                                and blossoms at night. It is usually thought to be the datura plant,
+                                a member of the lily family with a very large white trumpet-like
+                                flower that opens at night, especially in the moonlight.</note>
+                        </l>
+                        <l> Anasūyā (She Who Is Not Spiteful),<note place="end" index="29" xml:id="UT22084-061-013-75">Tib. “She Who Is Patient.”</note>
+                        </l>
+                        <l> Puruṣa­kārā­śrayā (She Who Relies on Virile Action),<note place="end" index="30" xml:id="UT22084-061-013-76">Omitted in Tib.</note>
+                        </l>
+                        <l>Sarvapavitragātrā (She Whose Body Is Entirely Pure),<note place="end" index="31" xml:id="UT22084-061-013-77">Tib. <foreign xml:lang="Bo-Ltn">mthu rtsal gyi gnas</foreign>, “She Who Is the
+                                Source of Power.”</note>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-78"/>
+                        <l>Maṅgalahastā (She Whose Hands Are Auspicious),<note place="end" index="32" xml:id="UT22084-061-013-79">Tib. <foreign xml:lang="Bo-Ltn">dag byed dang bkra shis thams cad kyi lag pa
+                                    dang ldan ma</foreign>, “She Who Has Hands that Purify and
+                                [Bring] All Auspiciousness.”</note>
+                        </l>
+                        <l> Sarvālakṣmī­nāśayitrī (She Who Destroys All Inauspiciousness),</l>
+                        <l> Sarva­puṇyākarṣaṇa­śrī (Glory That Collects All Merits),</l>
+                        <l> Sarva­pṛthivī­śrī (Glory of the Entire Earth),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-80"/>
+                        <l>Sarvarājaśrī (Glory of All Kings),<note place="end" index="33" xml:id="UT22084-061-013-81">The Tibetan (see glossary entry for
+                                “Sarvapṛthivīśrī”) takes these two as one, “Glory of the Entire
+                                Earth and All Kings.”</note>
+                        </l>
+                        <l> Sarva­vidyā­dhara­rāja­śrī (Glory of the King of All Vidyādharas),</l>
+                        <l> Sarva­bhūta­yakṣa­rākṣasa­preta­piśāca­kuṃbhāṇḍa­mahoraga­śrī (Glory of
+                            All Bhūtas, Yakṣas, Rākṣasas, Pretas, Piśācas, Kumbhāṇḍas, and
+                            Mahoragas),</l>
+                        <l> Dyuti (Splendour),<note place="end" index="34" xml:id="UT22084-061-013-82">Omitted in the Tibetan, which here has
+                                    <foreign xml:lang="Bo-Ltn">lha’i gnas dang lha thams cad kyi
+                                    dpal / bzlas brjod dang / bzlas brjod du bya ba / sbyin sreg
+                                    dang / sbyin sreg tu bya ba dang / bkra shis thams cad kyi
+                                    dpal</foreign>, “Glory of All Abodes of the Gods and All Gods,
+                                Glory of All Incantations and What Is Incanted, All Fire Offerings, and What Is Offered and All Auspiciousness.”</note>
+                            <ref cRef="F.250.a" key="toh193" type="folio"/>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-83"/>
+                        <l> Pramoda­bhāgya­lolā (She Who Longs for Delight and Happiness),</l>
+                        <l> Sarva­rṣi­pavitra­śrī (Glory That Is the Purity of All Seers),</l>
+                        <l> Sarvaśrī (Glory of All),</l>
+                        <l>Bhavajyeṣṭhottamaśrī (Glory That Is the First and the Foremost in
+                                Existence),<note place="end" index="35" xml:id="UT22084-061-013-84">The Tibetan here is <foreign type="term" xml:lang="Bo-Ltn">bud med
+                                    kyi gnas thams cad kyi gtso ma dang dpal gyi mchog</foreign>,
+                                “Supreme Glory and Foremost of All That Is Feminine.”</note>
+                        </l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-85"/>
+                        <l> Sarva­kiṃnara­sarvāsuryottama­śrī (Glory That Is the First of All
+                            Kiṃnaras and of All Asuras),<note place="end" index="36" xml:id="UT22084-061-013-86">The Skt. edition has <foreign type="term" xml:lang="Sa-Ltn">sarva­kiṃnara­sarva­sūryottama­śrī</foreign>, “Glory That Is
+                                the First of All Kiṃnaras and All the Sun,” but in the Tib. (see
+                                glossary entry) <foreign type="term" xml:lang="Bo-Ltn">lha ma yin
+                                    mo</foreign> suggests that the spelling <foreign type="term" xml:lang="Sa-Ltn">°sarvāsurya°</foreign> here is more likely to
+                                be correct in the context.</note>
+                            <ref cRef="F.234.a" key="toh739" type="folio"/>
+                        </l>
+                        <l> Nir­avadya­sthāna­vāsinī (She Who Stays Irreproachable),</l>
+                        <l> Rūpavatī (Beautiful One),</l>
+                        <l> Sukhakarī (She Who Causes Happiness),</l>
+                        <milestone unit="chunk" xml:id="UT22084-061-013-87"/>
+                        <l> Kuberakāntā (Beloved of Kubera),</l>
+                        <l> Dharmarājaśrī (Glory of the Dharma King):</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-88"/>
+                    <p rend="mantra" tid="27">
+                        <mantra type="dharani" xml:lang="mixed">
+                            <foreign xml:lang="Sa-Ltn">“Oṃ!</foreign> Look at us, save us, and emancipate us from all
+                            sufferings. Make us turn in the direction of all collections of merits,
+                                <foreign xml:lang="Sa-Ltn">svāhā</foreign>.<note place="end" index="37" xml:id="UT22084-061-013-89">In the Tibetan text, this
+                                first section of the dhāraṇī is in Tibetan. The Skt. of the second
+                                sentence should be corrected from <foreign type="quote" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānā­mukhī­kuru
+                                    svāhā</foreign> to <foreign type="quote" xml:lang="Sa-Ltn">sarva­puṇya­sambhārānām abhi­mukhī kuru svāhā</foreign>.</note>
+                            <foreign type="quote" xml:lang="Sa-Ltn">Oṃ gaṅgādi­sarva­tīrthānām
+                                abhimukhī kuru</foreign>
+                            <note place="end" index="38" xml:id="UT22084-061-013-90">Skt. <foreign type="quote" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānyāmuikhī­kuru</foreign>
+                                should be corrected to <foreign type="quote" xml:lang="Sa-Ltn">gaṅgādi­sarva­tīrthānām abhimukhī kuru</foreign>.</note>
+                            <foreign type="quote" xml:lang="Sa-Ltn"> svāhā | oṃ sāvitryai svāhā |
+                                sarva­maṅgala­dhāriṇyai svāhā |
+                                catur­veda­nakṣatra­graha­gaṇādimūrtyai svāhā | brahmaṇe svāhā |
+                                viṣṇave svāhā | rudrāya svāhā | viśva­mukhāya svāhā | oṃ nigrigrini
+                                sarva­kāryasādhani sini sini āvāhayāmi devi śrī­vaiśravaṇāya svāhā |
+                                suvarṇa­dhana­dhānyākarṣaṇyai svāhā | sarva­puṇyā­karṣaṇyai svāhā |
+                                śrī­devatākarṣaṇyai svāhā | sarva­pāpanāśanyai svāhā |
+                                sarvā­lakṣmī­praśamanyai svāhā | sarva­tathāgatābhiṣiktāyai svāhā |
+                                sarva­devatābhimukhaśriye svāhā | āyur­bala­varṇa­karāyai svāhā |
+                                sarva­pavitra­maṅgala­hastāyai svāhā | siṃha­vāhinyai svāhā |
+                                padma­saṃbhūtāyai svāhā | sarva­kṛtya­kākhordavināśanyai
+                                svāhā.</foreign>
+                        </mantra>
+                        <note place="end" index="39" xml:id="UT22084-061-013-91">The Sanskrit of the dhāraṇi as transcribed
+                            in the Tibetan text appears unreliable; the dhāraṇi as presented here is
+                            transliterated from the Sanskrit edition.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-92"/>
+                    <p tid="24">“Fearless Avalokiteśvara, anyone who is going to retain and recite
+                        these names of Śrī Mahādevī—which eliminate all offenses, overcome all sins,
+                        accumulate all merits, eliminate<note place="end" index="40" xml:id="UT22084-061-013-93">Tib. <foreign type="term" xml:lang="Bo-Ltn">med par byed pa</foreign>, “make non-existent,” “eliminate;” Skt.
+                                <foreign type="term" xml:lang="Bo-Ltn">praśamanakarāṇi</foreign>,
+                            “make calm,” “pacify.”</note> all inauspiciousness, and accumulate all
+                        glories, happiness and good fortunes—and who is going to retain and
+                            recite<note place="end" index="41" xml:id="UT22084-061-013-94">Skt.
+                            omits “and recite.”</note> these names of the tathāgatas, should rise in
+                        the morning, clean up, and, having offered flowers and incense to all the
+                        buddhas, also offer sandalwood incense to Śrī Mahādevī. <ref cRef="F.250.b" key="toh193" type="folio"/> Then, when he recites these names, all glory, all
+                        happiness and joys will be obtained. The gods will all guard, protect and
+                            preserve<note place="end" index="42" xml:id="UT22084-061-013-95">Skt.
+                                <foreign type="term" xml:lang="Sa-Ltn">guptiṃ kariṣyanti</foreign>,
+                            while Tib. has <foreign type="term" xml:lang="Bo-Ltn">sbed par byed
+                                pa</foreign>, “conceal.”</note> him, and all of his purposes will be
+                        fulfilled.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-96"/>
+                    <p tid="25">When the Bhagavān had thus spoken, the fearless bodhisattva
+                        Avalokiteśvara, <ref cRef="F.234.b" key="toh739" type="folio"/> Śrī Mahādevī<note place="end" index="43" xml:id="UT22084-061-013-97">Tib. has <foreign xml:lang="Bo-Ltn">lha mo chen mo dpal de</foreign>, “that Śrī
+                            Mahādevī,” while Skt. has <foreign type="term" xml:lang="Sa-Ltn">sā</foreign>, “she.” </note>, the entire retinue, and the world,
+                        including gods, humans, asuras, and gandharvas, rejoiced and [678] praised
+                        the words of the Bhagavān.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-013-301"/>
+                    <trailer tid="26">This completes “<title xml:lang="en">The Noble Prophecy of Śrī
+                            Mahādevī</title>.”<note place="end" index="44" xml:id="UT22084-061-013-98">The usual mention of the translators in the
+                            Tibetan colophon is missing in all versions.</note>
+                    </trailer>
+                </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="34">Colophon</head>
+                    
+                </div>-->
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="35">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="36">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-061-013-99">
+                        <title xml:lang="Sa-Ltn">Ārya­śrī­mahā­devī­vyākaraṇam</title>. Sanskrit in
+                        Dutta, Nalinaksa, ed. <title xml:lang="en">Gilgit Manuscripts</title>. (pp.
+                        91–100) Delhi: Sri Satguru Publications, 1984. <ref target="http://www.dsbcproject.org/­āryaśrīmahādevīvyākaraṇam/­āryaśrīmahādevīvyākaraṇam">www.dsbcproject.org</ref>.</bibl>
+                    <bibl xml:id="UT22084-061-013-100">
+                        <title xml:lang="Bo-Ltn">’phags pa lha mo chen mo dpal lung bstan pa</title>
+                            (<title xml:lang="Sa-Ltn">Ārya­śrī­mahā­devī­vyākaraṇa</title>). Toh
+                        193, Degé Kangyur, vol. 61 (mdo sde, tsa), folios 246.a–250.b.</bibl>
+                    <bibl xml:id="UT22084-061-013-101">
+                        <title xml:lang="Bo-Ltn">’phags pa lha mo chen mo dpal lung bstan pa</title>
+                            (<title xml:lang="Sa-Ltn">Ārya­śrī­mahā­devī­vyākaraṇa</title>). Toh
+                        739, Degé Kangyur, vol. 94 (rgyud ’bum, tsha), folios 230.b–234.a.</bibl>
+                    <bibl xml:id="UT22084-061-013-102">
+                        <title xml:lang="Bo-Ltn">’phags pa lha mo chen mo dpal lung bstan
+                        pa</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur],
+                        krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The
+                        Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center).
+                        108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China
+                        Tibetology Publishing House), 2006-2009, vol. 61, pp 690-700 (Toh 193), and
+                        vol. 94, pp 638-650 (Toh 739).</bibl>
+                    <bibl xml:id="UT22084-061-013-103">
+                        <title xml:lang="zh">大吉祥天女十二契一百八名�垢大乘经.</title>
+                        www2.fodian.net/BaoKu/FoJingWenInfo.aspx?ID=T1253. Amoghavajra, trans. Sūtra
+                        no. 1253. <ref target="http://www2.fodian.net/world/tripitaka.htm">www2.fodian.net</ref>.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-104">
+                            <term>bhagavān</term>
+                            <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                            <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                            <term xml:lang="Sa-Ltn">bhagavat</term>
+                            <term type="definition">A general term of respect given to persons of
+                                spiritual attainment. Translations into English have been “Holy
+                                One,” “Blessed One,” and “World-Honored One.” It is here given in
+                                the Sanskrit nominative case, bhagavān.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-105">
+                            <term>mahāsattva</term>
+                            <term xml:lang="Bo-Ltn">sems dpa’ chen po </term>
+                            <term xml:lang="bo">སེམས་དཔའ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">mahāsattva</term>
+                            <term type="definition">Great being.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-106">
+                            <term>tathāgata</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">tathāgata</term>
+                            <term type="definition">“Thus gone.” An epithet of buddhas.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-107">
+                            <term>bhikṣu</term>
+                            <term xml:lang="Bo-Ltn">dge slong </term>
+                            <term xml:lang="bo">དགེ་སློང་།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣu</term>
+                            <term type="definition">A fully ordained monk of the Buddhist
+                                Saṅgha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-108">
+                            <term>bhikṣuṇī</term>
+                            <term xml:lang="Bo-Ltn">dge slong ma </term>
+                            <term xml:lang="bo">དགེ་སློང་མ།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣuṇī</term>
+                            <term type="definition">A fully ordained nun of the Buddhist
+                                Saṅgha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-109">
+                            <term>upāsaka</term>
+                            <term xml:lang="Bo-Ltn">dge bsnyen </term>
+                            <term xml:lang="bo">དགེ་བསྙེན།</term>
+                            <term xml:lang="Sa-Ltn">upāsaka</term>
+                            <term type="definition">Layman.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-110">
+                            <term>upāsikā</term>
+                            <term xml:lang="Bo-Ltn">dge bsnyen ma </term>
+                            <term xml:lang="bo">དགེ་བསྙེན་མ།</term>
+                            <term xml:lang="Sa-Ltn">upāsikā</term>
+                            <term type="definition">Laywoman.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-111">
+                            <term>brāhmaṇa</term>
+                            <term xml:lang="Bo-Ltn">bram ze </term>
+                            <term xml:lang="bo">བྲམ་ཟེ།</term>
+                            <term xml:lang="Sa-Ltn">brāhmaṇa</term>
+                            <term type="definition">A member of priestly caste.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-112">
+                            <term>kṣatriya</term>
+                            <term xml:lang="Bo-Ltn">rgyal rigs </term>
+                            <term xml:lang="bo">རྒྱལ་རིགས།</term>
+                            <term xml:lang="Sa-Ltn">kṣatriya</term>
+                            <term type="definition">Warrior caste.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-113">
+                            <term>vaiśya</term>
+                            <term xml:lang="Bo-Ltn">rje’u rigs </term>
+                            <term xml:lang="bo">རྗེའུ་རིགས།</term>
+                            <term xml:lang="Sa-Ltn">vaiśya</term>
+                            <term type="definition">The merchant caste.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-114">
+                            <term>śūdra</term>
+                            <term xml:lang="Bo-Ltn">dmangs rigs </term>
+                            <term xml:lang="bo">དམངས་རིགས།</term>
+                            <term xml:lang="Sa-Ltn">śūdra</term>
+                            <term type="definition">The name of the lowest of the four castes.
+                                “Untouchables.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-115">
+                            <term>nāga</term>
+                            <term xml:lang="Bo-Ltn">klu </term>
+                            <term xml:lang="bo">ཀླུ།</term>
+                            <term xml:lang="Sa-Ltn">nāga</term>
+                            <term type="definition">
+                                <term type="ignore">Nāgas</term> are serpent-like animals who live
+                                (invisibly) in the human realm and have an ambivalent status, on
+                                occasion positive but also frequently harmful.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-116">
+                            <term>yakṣa</term>
+                            <term xml:lang="Bo-Ltn">gnod sbyin </term>
+                            <term xml:lang="bo">གནོད་སྦྱིན།</term>
+                            <term xml:lang="Sa-Ltn">yakṣa</term>
+                            <term type="definition">
+                                <term type="ignore">Yakṣas</term> are a class of beings who assail
+                                and cause harm to humans. One of the eight classes of
+                                spirits.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-117">
+                            <term>gandharva</term>
+                            <term xml:lang="Bo-Ltn">dri za </term>
+                            <term xml:lang="bo">དྲི་ཟ།</term>
+                            <term xml:lang="Sa-Ltn">gandharva</term>
+                            <term type="definition">The name of a kind of preta (ghost). These
+                                spirits are said to live on odours, hence their name “smell-eater.”
+                                Known for their music.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-118">
+                            <term>asura</term>
+                            <term xml:lang="Bo-Ltn">lha ma yin </term>
+                            <term xml:lang="bo">ལྷ་མ་ཡིན།</term>
+                            <term xml:lang="Sa-Ltn">asura</term>
+                            <term type="definition">Demi-gods, titans.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-119">
+                            <term>garuḍa</term>
+                            <term xml:lang="Bo-Ltn">nam mkha’ lding </term>
+                            <term xml:lang="bo">ནམ་མཁའ་ལྡིང་།</term>
+                            <term xml:lang="Sa-Ltn">garuḍa</term>
+                            <term type="definition">A mythical creature which is half bird, half
+                                man, and is the enemy of serpents.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-120">
+                            <term>kiṃnara</term>
+                            <term xml:lang="Bo-Ltn">mi’am ci </term>
+                            <term xml:lang="bo">མིའམ་ཅི།</term>
+                            <term xml:lang="Sa-Ltn">kiṃnara</term>
+                            <term type="definition">Meaning “Is it a man?” These are a class of
+                                beings included in the god realms. They are half-bird/half-human in
+                                appearance; hence their name.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-121">
+                            <term>mahoraga</term>
+                            <term xml:lang="Bo-Ltn">lto ’phye chen po </term>
+                            <term xml:lang="bo">ལྟོ་འཕྱེ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">mahoraga</term>
+                            <term type="definition">The name of a particularly powerful preta. A
+                                malign local spirit.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-122">
+                            <term>perfections</term>
+                            <term xml:lang="Bo-Ltn">pha rol tu phyin pa </term>
+                            <term xml:lang="bo">ཕ་རོལ་ཏུ་ཕྱིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">pāramitā</term>
+                            <term type="definition">Also translated as “transcendences.” The term is
+                                used to define the actions of a bodhisattva. The six <term type="ignore">perfections</term> are: generosity, discipline,
+                                patience, diligence, concentration and wisdom.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-123">
+                            <term>prophecy</term>
+                            <term xml:lang="Bo-Ltn">lung bstan pa </term>
+                            <term xml:lang="bo">ལུང་བསྟན་པ།</term>
+                            <term xml:lang="Sa-Ltn">vyākaraṇa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-124">
+                            <term>arhat</term>
+                            <term xml:lang="Bo-Ltn">dgra bcom pa </term>
+                            <term xml:lang="bo">དགྲ་བཅོམ་པ།</term>
+                            <term xml:lang="Sa-Ltn">arhant</term>
+                            <term type="definition">“Worthy.” A being who has eliminated afflictive
+                                emotions and hence is liberated from suffering. The Tibetan, taking
+                                a doubtful Sanskrit etymology <foreign type="term" xml:lang="Sa-Ltn">ari han</foreign>, understands the term as “foe
+                                destroyer.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-125">
+                            <term>śrāvaka</term>
+                            <term xml:lang="Bo-Ltn">nyan thos </term>
+                            <term xml:lang="bo">ཉན་ཐོས།</term>
+                            <term xml:lang="Sa-Ltn">śrāvaka</term>
+                            <term xml:lang="Sa-Ltn">āryaśrāvaka</term>
+                            <term type="definition">The disciples of the Buddha who followed the
+                                Lesser Vehicle (Hīnayāna). A <term type="ignore">śrāvaka</term> is
+                                explained as someone who hears the teachings and then proclaims them
+                                to others.</term>
+                            <term type="alternative">Āryaśrāvaka</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-126">
+                            <term>pratyekabuddha</term>
+                            <term xml:lang="Bo-Ltn">rang sangs rgyas </term>
+                            <term xml:lang="bo">རང་སངས་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">pratyekabuddha</term>
+                            <term type="definition">The disciples of the Buddha who followed the
+                                Lesser Vehicle (Hīnayāna). The term “<term type="ignore">pratyekabuddha</term>” means that they “on their own” became
+                                “buddhas.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-127">
+                            <term>Four Vedas</term>
+                            <term xml:lang="Bo-Ltn">rig byed bzhi </term>
+                            <term xml:lang="bo">རིག་བྱེད་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">The Four Vedas</term>
+                            <term type="definition">The textual base for Brahmanism in India is the
+                                Vedas: 1) Ṛgveda, 2) Yajurveda, 3) Sāmaveda, and 4)
+                                Atharvaveda.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-128">
+                            <term>Excellent Eon</term>
+                            <term xml:lang="Bo-Ltn">bskal pa bzang po </term>
+                            <term xml:lang="bo">བསྐལ་པ་བཟང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">bhadrakalpa</term>
+                            <term type="definition">A cosmological era that has buddhas appear in
+                                it.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-129">
+                            <term>preta</term>
+                            <term xml:lang="Bo-Ltn">yi dvags </term>
+                            <term xml:lang="bo">ཡི་དབ༹གས།</term>
+                            <term xml:lang="Sa-Ltn">preta</term>
+                            <term type="definition">“Ghost,” “Hungry ghost.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-130">
+                            <term>bhūta</term>
+                            <term xml:lang="Bo-Ltn">byung po </term>
+                            <term xml:lang="bo">བྱུང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">bhūta</term>
+                            <term type="definition">A class of beings who are connected with the
+                                elements (water, fire, air, earth), like the river spirits, tree
+                                spirits, and so on.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-131">
+                            <term>rākṣasa</term>
+                            <term xml:lang="Bo-Ltn">srin po </term>
+                            <term xml:lang="bo">སྲིན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">rākṣasa</term>
+                            <term type="definition">A general term in Indian culture for a type of
+                                spirit that (inter alia) haunts cemeteries and eats human
+                                flesh.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-132">
+                            <term>piśāca</term>
+                            <term xml:lang="Bo-Ltn">sha za </term>
+                            <term xml:lang="bo">ཤ་ཟ།</term>
+                            <term xml:lang="Sa-Ltn">piśāca</term>
+                            <term type="definition">A type of malevolent ghost, considered to belong
+                                to the preta realm. Tibetan translates the term as
+                                “flesh-eaters.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-133">
+                            <term>kumbhāṇḍa</term>
+                            <term xml:lang="Bo-Ltn">grul bum </term>
+                            <term xml:lang="bo">གྲུལ་བུམ།</term>
+                            <term xml:lang="Sa-Ltn">kumbhāṇḍa</term>
+                            <term type="definition">A class of yakṣa that lives in water but have
+                                the heads of various types of insects or animals.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-134">
+                            <term>dhāraṇī</term>
+                            <term xml:lang="Bo-Ltn">gzungs </term>
+                            <term xml:lang="bo">གཟུངས།</term>
+                            <term xml:lang="Sa-Ltn">dhāraṇī</term>
+                            <term type="definition">
+                                <foreign type="term" xml:lang="Sa-Ltn">Dhāraṇīs</foreign> are long
+                                strings of syllables which sum up some meaning of Dharma. Their use
+                                allows the meaning to be retained in memory. Hence the name, which
+                                means “that which holds / retains.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-135">
+                            <term>Śrī Mahādevī</term>
+                            <term xml:lang="Bo-Ltn">lha mo chen mo dpal </term>
+                            <term xml:lang="bo">ལྷ་མོ་ཆེན་མོ་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Śrī Mahādevī</term>
+                            <term type="definition">“Glorious Great Goddess.” This is also a
+                                widespread name in Hindu contexts; it is, for example, an epithet of
+                                Śiva’s consort.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-136">
+                            <term>Avalokiteśvara</term>
+                            <term xml:lang="Bo-Ltn">spyan ras gzigs dbang phyug </term>
+                            <term xml:lang="bo">སྤྱན་རས་གཟིགས་དབང་ཕྱུག</term>
+                            <term xml:lang="Sa-Ltn">Avalokiteśvara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-137">
+                            <term>Mahā­sthāma­prāpta</term>
+                            <term xml:lang="Bo-Ltn">mthu chen thob pa </term>
+                            <term xml:lang="bo">མཐུ་ཆེན་ཐོབ་པ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­sthāma­prāpta</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-138">
+                            <term>Sarva­nīvaraṇa­viṣkaṃbhin</term>
+                            <term xml:lang="Bo-Ltn">sgrib pa thams cad rnam par sel ba </term>
+                            <term xml:lang="bo">སྒྲིབ་པ་ཐམས་ཅད་རྣམ་པར་སེལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­nīvaraṇa­viṣkaṃbhin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-139">
+                            <term>Kṣitigarbha</term>
+                            <term xml:lang="Bo-Ltn">sa’i snying po </term>
+                            <term xml:lang="bo">སའི་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Kṣitigarbha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-140">
+                            <term>Samantabhadra</term>
+                            <term xml:lang="Bo-Ltn">kun tu bzang po </term>
+                            <term xml:lang="bo">ཀུན་ཏུ་བཟང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Samantabhadra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-141">
+                            <term>Ākāśagarbha</term>
+                            <term xml:lang="Bo-Ltn">nam mkha’ snying po </term>
+                            <term xml:lang="bo">ནམ་མཁའ་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Ākāśagarbha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-142">
+                            <term>Vajrapāṇi</term>
+                            <term xml:lang="Bo-Ltn">lag na rdo rje </term>
+                            <term xml:lang="bo">ལག་ན་རྡོ་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">Vajrapāṇi</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-143">
+                            <term>Sarvabhayahara</term>
+                            <term xml:lang="Bo-Ltn">’jigs pa thams cad sel ba </term>
+                            <term xml:lang="bo">འཇིགས་པ་ཐམས་ཅད་སེལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvabhayahara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-144">
+                            <term>Sarva­maṅgala­dhārin</term>
+                            <term xml:lang="Bo-Ltn">dga’ byed kyi bkra bshis thams cad ’dzin pa </term>
+                            <term xml:lang="bo">དགའ་བྱེད་ཀྱི་བཀྲ་བཤིས་ཐམས་ཅད་འཛིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­maṅgala­dhārin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-145">
+                            <term>Sarva­puṇya­lakṣaṇa­dhārin</term>
+                            <term xml:lang="Bo-Ltn">bsod nams kyi mtshan tham cad ’dzin pa </term>
+                            <term xml:lang="bo">བསོད་ནམས་ཀྱི་མཚན་ཐམ་ཅད་འཛིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­puṇya­lakṣaṇa­dhārin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-146">
+                            <term>Candra­sūrya­trailokya­dhārin</term>
+                            <term xml:lang="Bo-Ltn">nyi zla dang ’jig rten gsum ’dzin pa </term>
+                            <term xml:lang="bo">ཉི་ཟླ་དང་འཇིག་རྟེན་གསུམ་འཛིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Candra­sūrya­trailokya­dhārin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-147">
+                            <term>Sarva­tīrtha­maṅgala­dhārin</term>
+                            <term xml:lang="Bo-Ltn">mu stegs kyi bkra bshis tham cad ’dzin pa </term>
+                            <term xml:lang="bo">མུ་སྟེགས་ཀྱི་བཀྲ་བཤིས་ཐམ་ཅད་འཛིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tīrtha­maṅgala­dhārin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-148">
+                            <term>Mañjuśrī</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal </term>
+                            <term xml:lang="bo">འཇམ་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī</term>
+                        </gloss>
+                    </item>
+                    <!--<item>
+                        <gloss priority="1" xml:id="" type="person">
+                            <term>Nārāyaṇa</term>
+                            <term xml:lang="Bo-Ltn">sred med kyi bu </term>
+                            <term xml:lang="bo">སྲེད་མེད་ཀྱི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Nārāyaṇa</term>
+                        </gloss>
+                    </item> NOT IN TEXT -->
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-149">
+                            <term>Indra</term>
+                            <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Indra</term>
+                            <term type="definition">One of the chief Vedic deities. God of war and
+                                Lord of heaven.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-150">
+                            <term>Brahmā</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa </term>
+                            <term xml:lang="bo">ཚངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmā</term>
+                            <term type="definition">Vedic creator god. In Buddhist texts Brahmā
+                                refers to various gods in high situations of cyclic
+                                existence.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-151">
+                            <term>Maheśvara</term>
+                            <term xml:lang="Bo-Ltn">dbang phyug chen po </term>
+                            <term xml:lang="bo">དབང་ཕྱུག་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Maheśvara</term>
+                            <term type="definition">A common way of referring to Śiva, the great and
+                                omnipotent god of mainstream Hindu religion.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-152">
+                            <term>Yama</term>
+                            <term xml:lang="Bo-Ltn">gshin rje </term>
+                            <term xml:lang="bo">གཤིན་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">Yama</term>
+                            <term type="definition">Lord of the dead.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-153">
+                            <term>Varuṇa</term>
+                            <term xml:lang="Bo-Ltn">chu lha </term>
+                            <term xml:lang="bo">ཆུ་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Varuṇa</term>
+                            <term type="definition">Vedic deity of the sky, water, and ocean.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-154">
+                            <term>Kubera</term>
+                            <term xml:lang="Bo-Ltn">ku be ra </term>
+                            <term xml:lang="bo">ཀུ་བེ་ར།</term>
+                            <term xml:lang="Sa-Ltn">Kubera</term>
+                            <term type="definition">The son of Vaiśravaṇa (one of the four great
+                                kings).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-155">
+                            <term>Viṣṇu</term>
+                            <term xml:lang="Bo-Ltn">khyab ’jug </term>
+                            <term xml:lang="bo">ཁྱབ་འཇུག</term>
+                            <term xml:lang="Sa-Ltn">Viṣṇu</term>
+                            <term type="definition">One of the eight great gods in the Indian
+                                pantheon.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-013-156">
+                            <term>Sukhāvatī</term>
+                            <term xml:lang="Bo-Ltn">bde ba can </term>
+                            <term xml:lang="bo">བདེ་བ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Sukhāvatī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-013-157">
+                            <term>Ratna­saṃbhavā</term>
+                            <term xml:lang="Bo-Ltn">nor bu rin po che las byung ba </term>
+                            <term xml:lang="bo">ནོར་བུ་རིན་པོ་ཆེ་ལས་བྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">Ratna­saṃbhavā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-013-158">
+                            <term>Śrī­mahā­ratna­pratimaṇḍitā</term>
+                            <term xml:lang="Bo-Ltn">dpal rin po ches brgyan pa </term>
+                            <term xml:lang="bo">དཔལ་རིན་པོ་ཆེས་བརྒྱན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Śrī­mahā­ratna­pratimaṇḍitā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-159">
+                            <term>Śrī­maṇi­ratna­sambhava</term>
+                            <term xml:lang="Bo-Ltn">dpal nor bu rin po che las byung ba </term>
+                            <term xml:lang="bo">དཔལ་ནོར་བུ་རིན་པོ་ཆེ་ལས་བྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">Śrī­maṇi­ratna­sambhava</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-160">
+                            <term>Śrīghana</term>
+                            <term xml:lang="Bo-Ltn">dpal stug po </term>
+                            <term xml:lang="bo">དཔལ་སྟུག་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Śrīghana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-161">
+                            <term>Ratna­kusuma­guṇa­sāgara­vaiḍūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī</term>
+                            <term xml:lang="Bo-Ltn">rin po che’i me tog yon tan gyi rgya mtsho
+                                baidUrya dang gser gyi ri bo mdog mdzes gser ’od dpal </term>
+                            <term xml:lang="bo">རིན་པོ་ཆེའི་མེ་ཏོག་ཡོན་ཏན་གྱི་རྒྱ་མཚོ་བཻདཱུརྱ་དང་གསེར་གྱི་རི་བོ་མདོག་མཛེས་གསེར་འོད་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Ratna­kusuma­guṇa­sāgara­vaidūrya­kanaka­giri­suvarṇa­kāṃcana­prabhāsa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-162">
+                            <term>Gaṅgāsarva­tīrthamukha­maṅgala­śrī</term>
+                            <term xml:lang="Bo-Ltn">gang gA’i mu stegs kyi sgo thams cad kyi bkra
+                                bshis kyi dpal </term>
+                            <term xml:lang="bo">གང་གཱའི་མུ་སྟེགས་ཀྱི་སྒོ་ཐམས་ཅད་ཀྱི་བཀྲ་བཤིས་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Gaṅgāsarvatīrtha­mukha­maṅgala­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-163">
+                            <term>Candana­kusuma­tejo­nakṣatra­prabhāsa­śrī</term>
+                            <term xml:lang="Bo-Ltn">tsan dan gyi me tog gzi brjid skar ’od kyi dpal </term>
+                            <term xml:lang="bo">ཙན་དན་གྱི་མེ་ཏོག་གཟི་བརྗིད་སྐར་འོད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Candana­kusuma­tejo­nakṣatra­prabhāsa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-164">
+                            <term>Samantāvabhāsa­vijita­saṃgrāma­śrī</term>
+                            <term xml:lang="Bo-Ltn">kun tu snang ba gyul las rnam par gyal ba’i dpal </term>
+                            <term xml:lang="bo">ཀུན་ཏུ་སྣང་བ་གྱུལ་ལས་རྣམ་པར་གྱལ་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Samantāvabhāsa­vijita­saṃgrāma­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-165">
+                            <term>Guṇa­samudrāvabhāsa­maṇḍala­śrī</term>
+                            <term xml:lang="Bo-Ltn">yon tan rgya mtsho snang ba’i dkyil ’khor gyi
+                                dpal </term>
+                            <term xml:lang="bo">ཡོན་ཏན་རྒྱ་མཚོ་སྣང་བའི་དཀྱིལ་འཁོར་གྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Guṇa­samudrāvabhāsa­maṇḍala­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-166">
+                            <term>Dhārma­vikurvaṇa­dhvaja­vega­śrī</term>
+                            <term xml:lang="Bo-Ltn">chos kyi cho ’phrul rgyal mtshan shugs kyi dpal </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་ཆོ་འཕྲུལ་རྒྱལ་མཚན་ཤུགས་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Dhārma­vikurvaṇa­dhvaja­vega­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-167">
+                            <term>Jyotiḥsaumya­gandhāvabhāsa­śrī</term>
+                            <term xml:lang="Bo-Ltn">skar ’od zhi ba’i spos snang dpal </term>
+                            <term xml:lang="bo">སྐར་འོད་ཞི་བའི་སྤོས་སྣང་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Jyotiḥsaumya­gandhāvabhāsa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-168">
+                            <term>Sattvāśaya­śamana­śarīra­śrī</term>
+                            <term xml:lang="Bo-Ltn">sems can gyi bsam pa zhi bar mdzad pa’i sku’i
+                                dpal </term>
+                            <term xml:lang="bo">སེམས་ཅན་གྱི་བསམ་པ་ཞི་བར་མཛད་པའི་སྐུའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sattvāśaya­śamana­śarīra­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-169">
+                            <term>Praṇidhāna­sāgarāvabhāsa­śrī</term>
+                            <term xml:lang="Bo-Ltn">smon lam rgya mtshos snang ba’i dpal </term>
+                            <term xml:lang="bo">སྨོན་ལམ་རྒྱ་མཚོས་སྣང་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Praṇidhāna­sāgarāvabhāsa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-170">
+                            <term>Su­parikīrtita­nāmadheya­śrī</term>
+                            <term xml:lang="Bo-Ltn">shin tu yongs su brjod pa mtshan gsol dpal </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་ཡོངས་སུ་བརྗོད་པ་མཚན་གསོལ་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Su­parikīrtita­nāmadheya­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-171">
+                            <term>Asaṃkhyeya­vīrya­susaṃprasthita­śrī</term>
+                            <term xml:lang="Bo-Ltn">brtson ’grus grangs med pa la rab tu zhugs pa’i
+                                dpal </term>
+                            <term xml:lang="bo">བརྩོན་འགྲུས་གྲངས་མེད་པ་ལ་རབ་ཏུ་ཞུགས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Asaṃkhyeya­vīrya­susaṃprasthita­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-172">
+                            <term>Aprameya­suvarṇotta­prabhāsa­śrī</term>
+                            <term xml:lang="Bo-Ltn">dpag tu med pa’i gser mdog snang ba’i dpal </term>
+                            <term xml:lang="bo">དཔག་ཏུ་མེད་པའི་གསེར་མདོག་སྣང་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Aprameya­suvarṇotta­prabhāsa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-173">
+                            <term>Sarva­svarāṅga­ruta­nirghoṣa­śrī</term>
+                            <term xml:lang="Bo-Ltn">gsung gi yan lag thams cad kyi sgra dbyangs dpal </term>
+                            <term xml:lang="bo">གསུང་གི་ཡན་ལག་ཐམས་ཅད་ཀྱི་སྒྲ་དབྱངས་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­svarāṅga­ruta­nirghoṣa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-174">
+                            <term>Prajñā­pradīpāsaṃkhyeya­prabhā­ketu­śrī</term>
+                            <term xml:lang="Bo-Ltn">shes rab sgron ma grangs med pa’i ’od kyi me tog
+                                gi dpal </term>
+                            <term xml:lang="bo">ཤེས་རབ་སྒྲོན་མ་གྲངས་མེད་པའི་འོད་ཀྱི་མེ་ཏོག་གི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Prajñā­pradīpāsaṃkhyeya­prabhā­ketu­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-175">
+                            <term>Nārāyaṇa­vrata­sannāha­sumeru­śrī</term>
+                            <term xml:lang="Bo-Ltn">sred med kyi bu’i brtul zhugs kyi go cha ri rab
+                                kyi dpal </term>
+                            <term xml:lang="bo">སྲེད་མེད་ཀྱི་བུའི་བརྟུལ་ཞུགས་ཀྱི་གོ་ཆ་རི་རབ་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Nārāyaṇa­vrata­sannāha­sumeru­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-176">
+                            <term>Brahmaśrī</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa’i dpal </term>
+                            <term xml:lang="bo">ཚངས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-177">
+                            <term>Maheśvaraśrī</term>
+                            <term xml:lang="Bo-Ltn">dbang phyud chen po’i dpal </term>
+                            <term xml:lang="bo">དབང་ཕྱུད་ཆེན་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Maheśvaraśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-178">
+                            <term>Candrasūryaśrī</term>
+                            <term xml:lang="Bo-Ltn">nyi zla’i ’od dpal </term>
+                            <term xml:lang="bo">ཉི་ཟླའི་འོད་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Candrasūryaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-179">
+                            <term>Gambhīra­dharma­prabhā­rāja­śrī</term>
+                            <term xml:lang="Bo-Ltn">zab mo’i chos kyi ’od kyi rgyal po’i dpal </term>
+                            <term xml:lang="bo">ཟབ་མོའི་ཆོས་ཀྱི་འོད་ཀྱི་རྒྱལ་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Gambhīra­dharma­prabhā­rāja­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-180">
+                            <term>Gagana­pradīpābhirāma­śrī</term>
+                            <term xml:lang="Bo-Ltn">nam mkha’i sgron ma’i ’od bzang dpal </term>
+                            <term xml:lang="bo">ནམ་མཁའི་སྒྲོན་མའི་འོད་བཟང་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Gagana­pradīpābhirāma­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-181">
+                            <term>Sūrya­prabhā­ketu­śrī</term>
+                            <term xml:lang="Bo-Ltn">nyi ’od tog gi dpal </term>
+                            <term xml:lang="bo">ཉི་འོད་ཏོག་གི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sūrya­prabhā­ketu­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-182">
+                            <term>Gandha­pradīpa­śrī</term>
+                            <term xml:lang="Bo-Ltn">spos kyi sgron ma’i dpal </term>
+                            <term xml:lang="bo">སྤོས་ཀྱི་སྒྲོན་མའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Gandha­pradīpa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-183">
+                            <term>Sāgara­garbha­saṃbhava­śrī</term>
+                            <term xml:lang="Bo-Ltn">rgya mtsho’i snying po las byung ba’i dpal </term>
+                            <term xml:lang="bo">རྒྱ་མཚོའི་སྙིང་པོ་ལས་བྱུང་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sāgara­garbha­saṃbhava­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-184">
+                            <term>Nirmita­megha­garjanayaśaḥ­śrī</term>
+                            <term xml:lang="Bo-Ltn">sprul ba’i ’brug sgra snyan pa’i dpal </term>
+                            <term xml:lang="bo">སྤྲུལ་བའི་འབྲུག་སྒྲ་སྙན་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Nirmita­megha­garjanayaśaḥ­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-185">
+                            <term>Sarva­dharma­prabhāsa­vyūha­śrī</term>
+                            <term xml:lang="Bo-Ltn">chos kyi snang ba thams cad bkod pa’i dpal </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་སྣང་བ་ཐམས་ཅད་བཀོད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­dharma­prabhāsa­vyūha­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-186">
+                            <term>Druma­rāja­vivardhita­śrī</term>
+                            <term xml:lang="Bo-Ltn">shing gi rgyal po ltar skyes pa’i dpal </term>
+                            <term xml:lang="bo">ཤིང་གི་རྒྱལ་པོ་ལྟར་སྐྱེས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Druma­rāja­vivardhita­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-187">
+                            <term>Ratnārciḥparvata­śrī</term>
+                            <term xml:lang="Bo-Ltn">rin chen ’od ’phro ri bo’i dpal </term>
+                            <term xml:lang="bo">རིན་ཆེན་འོད་འཕྲོ་རི་བོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Ratnārciḥparvata­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-188">
+                            <term>Jñānārciḥsāgara­śrī</term>
+                            <term xml:lang="Bo-Ltn">ye shes ’od ’phro rgya mtsho’i dpal </term>
+                            <term xml:lang="bo">ཡེ་ཤེས་འོད་འཕྲོ་རྒྱ་མཚོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Jñānārciḥsāgara­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-189">
+                            <term>Mahā­praṇidhi­vega­śrī</term>
+                            <term xml:lang="Bo-Ltn">smon lam chen po’i shugs kyi dpal </term>
+                            <term xml:lang="bo">སྨོན་ལམ་ཆེན་པོའི་ཤུགས་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­praṇidhi­vega­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-190">
+                            <term>Mahāmeghaśrī</term>
+                            <term xml:lang="Bo-Ltn">sprin chen po’i dpal </term>
+                            <term xml:lang="bo">སྤྲིན་ཆེན་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāmeghaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-191">
+                            <term>Smṛtiketu­rāja­śrī</term>
+                            <term xml:lang="Bo-Ltn">dran pa’i tog gi rgyal po’i dpal </term>
+                            <term xml:lang="bo">དྲན་པའི་ཏོག་གི་རྒྱལ་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Smṛtiketu­rāja­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-192">
+                            <term>Indra­ketu­dhvaja­rāja­śrī</term>
+                            <term xml:lang="Bo-Ltn">dbang po’i tog gi rgyal tshan gyi rgyal po’i
+                                dpal </term>
+                            <term xml:lang="bo">དབང་པོའི་ཏོག་གི་རྒྱལ་ཚན་གྱི་རྒྱལ་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Indra­ketu­dhvaja­rāja­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-193">
+                            <term>Sarva­dhana­dhānyākarṣaṇa­śrī</term>
+                            <term xml:lang="Bo-Ltn">nor dang ’bru thams cad sdud pa’i dpal </term>
+                            <term xml:lang="bo">ནོར་དང་འབྲུ་ཐམས་ཅད་སྡུད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­dhana­dhānyākarṣaṇa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-194">
+                            <term>Saumyākarṣaṇa­śrī</term>
+                            <term xml:lang="Bo-Ltn">zhi ba ’dren pa’i dpal </term>
+                            <term xml:lang="bo">ཞི་བ་འདྲེན་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Saumyākarṣaṇa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-195">
+                            <term>Lakṣmyākarṣaṇa­śrī</term>
+                            <term xml:lang="Bo-Ltn">phun sum tshogs pa ’gugs pa’i dpal </term>
+                            <term xml:lang="bo">ཕུན་སུམ་ཚོགས་པ་འགུགས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Lakṣmyākarṣaṇa­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-196">
+                            <term>Sarva­tathāgatābhiṣiktā</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa thams cad kyi dbang bskur ba </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་དབང་བསྐུར་བ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tathāgatābhiṣiktā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-197">
+                            <term>Sarva­devatābhiṣiktā</term>
+                            <term xml:lang="Bo-Ltn">lha thams cad kyi dbang bskur ba </term>
+                            <term xml:lang="bo">ལྷ་ཐམས་ཅད་ཀྱི་དབང་བསྐུར་བ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­devatābhiṣiktā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-198">
+                            <term>Sarva­tathāgata­mātṛ</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa thams cad kyi yum </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་ཡུམ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tathāgata­mātṛ</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-199">
+                            <term>Sarva­devatā­mātṛ</term>
+                            <term xml:lang="Bo-Ltn">lha thams cad kyi ma </term>
+                            <term xml:lang="bo">ལྷ་ཐམས་ཅད་ཀྱི་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­devatā­mātṛ</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-200">
+                            <term>Sarva­tathāgata­śrī</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa thams cad kyi dpal </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tathāgata­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-201">
+                            <term>Sarva­bodhisattva­śrī</term>
+                            <term xml:lang="Bo-Ltn">byangs chub sems pa thams cad kyi dpal </term>
+                            <term xml:lang="bo">བྱངས་ཆུབ་སེམས་པ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­bodhisattva­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-202">
+                            <term>Sarvārya­śrāvaka­pratyeka­buddha­śrī</term>
+                            <term xml:lang="Bo-Ltn">’phags pa nyan thos dang rang sangs ryas thams
+                                cad kyi dpal </term>
+                            <term xml:lang="bo">འཕགས་པ་ཉན་ཐོས་དང་རང་སངས་རྱས་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvārya­śrāvaka­pratyeka­buddha­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-203">
+                            <term>Brahma­viṣṇu­maheśvara­śrī</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa dang khyab ’jug dang dbang phyug chen
+                                po thams cad kyi dpal </term>
+                            <term xml:lang="bo">ཚངས་པ་དང་ཁྱབ་འཇུག་དང་དབང་ཕྱུག་ཆེན་པོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Brahma­viṣṇu­maheśvara­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-204">
+                            <term>Sarva­devatābhimukha­śrī</term>
+                            <term xml:lang="Bo-Ltn">lha sogs pa thams cad kyi dpal </term>
+                            <term xml:lang="bo">ལྷ་སོགས་པ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­devatābhimukha­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-205">
+                            <term>Mahā­sthāna­gata­śrī</term>
+                            <term xml:lang="Bo-Ltn">gnas thams cad na yod pa’i dpal </term>
+                            <term xml:lang="bo">གནས་ཐམས་ཅད་ན་ཡོད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­sthāna­gata­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-206">
+                            <term>Sarva­deva­nāga­yakṣa­gandharvāsura­garuḍa­kiṃnara­mahoraga­śrī</term>
+                            <term xml:lang="Bo-Ltn">lha dang klu dang gnod sbyin dang dri za dang
+                                lha ma yin dang nam mkha’ lding dang mi ’am ci dang lto ’phye chen
+                                po thams cad kyi dpal </term>
+                            <term xml:lang="bo">ལྷ་དང་ཀླུ་དང་གནོད་སྦྱིན་དང་དྲི་ཟ་དང་ལྷ་མ་ཡིན་དང་ནམ་མཁའ་ལྡིང་དང་མི་འམ་ཅི་དང་ལྟོ་འཕྱེ་ཆེན་པོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­deva­nāga­yakṣa­gandharvāsura­garuḍa­kiṃnara­mahoraga­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-207">
+                            <term>Sarva­vidyā­dhara­vajra­pāṇi­vajra­dhara­śrī</term>
+                            <term xml:lang="Bo-Ltn">rig sngags ’chang dang lag na rdo rje dang rdo
+                                rje ’chang ba thams cad kyi dpal </term>
+                            <term xml:lang="bo">རིག་སྔགས་འཆང་དང་ལག་ན་རྡོ་རྗེ་དང་རྡོ་རྗེ་འཆང་བ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­vidyā­dhara­vajra­pāṇi­vajra­dhara­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-208">
+                            <term>Catuḥpañca­lokapāla­śrī</term>
+                            <term xml:lang="Bo-Ltn">’jig rten skyong ba bzhi dang lnga’i dpal </term>
+                            <term xml:lang="bo">འཇིག་རྟེན་སྐྱོང་བ་བཞི་དང་ལྔའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Catuḥpañca­lokapāla­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-209">
+                            <term>Aṣṭa­grahāṣṭāviṃśati­nakṣatra­śrī</term>
+                            <term xml:lang="Bo-Ltn">gza’ brgyad dang rgyu skar nyi shu rtsa brgyad
+                                kyi dpal </term>
+                            <term xml:lang="bo">གཟའ་བརྒྱད་དང་རྒྱུ་སྐར་ཉི་ཤུ་རྩ་བརྒྱད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Aṣṭa­grahāṣṭāviṃśati­nakṣatra­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-210">
+                            <term>Oṃ Sāvitrī</term>
+                            <term xml:lang="Bo-Ltn">om nyi ma’i bu mo </term>
+                            <term xml:lang="bo">ཨོམ་ཉི་མའི་བུ་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Oṃ Sāvitrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-211">
+                            <term>Dhātrī</term>
+                            <term xml:lang="Bo-Ltn">ma ma </term>
+                            <term xml:lang="bo">མ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Dhātrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-212">
+                            <term>Mātṛ</term>
+                            <term xml:lang="Bo-Ltn">yum </term>
+                            <term xml:lang="bo">ཡུམ།</term>
+                            <term xml:lang="Sa-Ltn">Mātṛ</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-213">
+                            <term>Caturvedaśrī</term>
+                            <term xml:lang="Bo-Ltn">rig byed bzhi’i dpal </term>
+                            <term xml:lang="bo">རིག་བྱེད་བཞིའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Caturvedaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-214">
+                            <term>Lakṣmī</term>
+                            <term xml:lang="Bo-Ltn">bkra shis ma </term>
+                            <term xml:lang="bo">བཀྲ་ཤིས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Lakṣmī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-215">
+                            <term>Bhūtamātṛ</term>
+                            <term xml:lang="Bo-Ltn">sems can rnams kyi ma </term>
+                            <term xml:lang="bo">སེམས་ཅན་རྣམས་ཀྱི་མ།</term>
+                            <term xml:lang="Sa-Ltn">Bhūtamātṛ</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-216">
+                            <term>Jayā</term>
+                            <term xml:lang="Bo-Ltn">rgyal ma </term>
+                            <term xml:lang="bo">རྒྱལ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Jayā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-217">
+                            <term>Vijayā</term>
+                            <term xml:lang="Bo-Ltn">rnam rgyal ma </term>
+                            <term xml:lang="bo">རྣམ་རྒྱལ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Vijayā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-218">
+                            <term>Gaṅgā</term>
+                            <term xml:lang="Bo-Ltn">gang ga ma </term>
+                            <term xml:lang="bo">གང་ག་མ།</term>
+                            <term xml:lang="Sa-Ltn">Gaṅgā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-219">
+                            <term>Sarvatīrthā</term>
+                            <term xml:lang="Bo-Ltn">mu tegs kyi sgo thams cad kyi bkra shis ma </term>
+                            <term xml:lang="bo">མུ་ཏེགས་ཀྱི་སྒོ་ཐམས་ཅད་ཀྱི་བཀྲ་ཤིས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvatīrthā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-220">
+                            <term>Vimala­nirmala­kara­śrī</term>
+                            <term xml:lang="Bo-Ltn">dri ma med pa</term>
+                            <term xml:lang="bo">དྲི་མ་མེད་པ།</term>
+                            <term xml:lang="Bo-Ltn">dri ma med par byed pa’i dpal </term>
+                            <term xml:lang="bo">དྲི་མ་མེད་པར་བྱེད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Vimala­nirmala­kara­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-221">
+                            <term>Sarva­pāpa­hantrī</term>
+                            <term xml:lang="Bo-Ltn">sdig pa thams cad ’phrog ma </term>
+                            <term xml:lang="bo">སྡིག་པ་ཐམས་ཅད་འཕྲོག་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­pāpa­hantrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-222">
+                            <term>Nirmadakarā</term>
+                            <term xml:lang="Bo-Ltn">rgyags pa med pa </term>
+                            <term xml:lang="bo">རྒྱགས་པ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">Nirmadakarā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-223">
+                            <term>Candraśrī</term>
+                            <term xml:lang="Bo-Ltn">zla ba’i dpal </term>
+                            <term xml:lang="bo">ཟླ་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Candraśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-224">
+                            <term>Sūryaśrī</term>
+                            <term xml:lang="Bo-Ltn">nyi ma’i dpal </term>
+                            <term xml:lang="bo">ཉི་མའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sūryaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-225">
+                            <term>Sarvagrahaśrī</term>
+                            <term xml:lang="Bo-Ltn">zla thams cad kyi dpal </term>
+                            <term xml:lang="bo">ཟླ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvagrahaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-226">
+                            <term>Siṃhavāhinī</term>
+                            <term xml:lang="Bo-Ltn">seng ge la zhon ma </term>
+                            <term xml:lang="bo">སེང་གེ་ལ་ཞོན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Siṃhavāhinī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-227">
+                            <term>Śata­sahasra­koṭipadma­vivara­saṃcchannā</term>
+                            <term xml:lang="Bo-Ltn">pad ma’i mchog ’bum gyis bkab ma </term>
+                            <term xml:lang="bo">པད་མའི་མཆོག་འབུམ་གྱིས་བཀབ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śata­sahasra­koṭipadma­vivara­saṃcchannā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-228">
+                            <term>Padmā</term>
+                            <term xml:lang="Bo-Ltn">pad ma </term>
+                            <term xml:lang="bo">པད་མ།</term>
+                            <term xml:lang="Sa-Ltn">padmā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-229">
+                            <term>Padmālayā</term>
+                            <term xml:lang="Bo-Ltn">pad ma la gnas pa </term>
+                            <term xml:lang="bo">པད་མ་ལ་གནས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Padmālaya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-230">
+                            <term>Padmadharā</term>
+                            <term xml:lang="Bo-Ltn">pad ma ’dzin pa </term>
+                            <term xml:lang="bo">པད་མ་འཛིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Padmadhāra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-231">
+                            <term>Padmasambhavā</term>
+                            <term xml:lang="Bo-Ltn">pad ma las byung ma </term>
+                            <term xml:lang="bo">པད་མ་ལས་བྱུང་མ།</term>
+                            <term xml:lang="Sa-Ltn">Padmasambhava</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-232">
+                            <term>Padmāvatī</term>
+                            <term xml:lang="Bo-Ltn">pad ma dang ldan pa </term>
+                            <term xml:lang="bo">པད་མ་དང་ལྡན་པ།</term>
+                            <term xml:lang="Sa-Ltn">Padmāvatī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-233">
+                            <term>Aneka­ratnāṃśu­mālā</term>
+                            <term xml:lang="Bo-Ltn">’od zer ’bar ba du mas ’khor ba </term>
+                            <term xml:lang="bo">འོད་ཟེར་འབར་བ་དུ་མས་འཁོར་བ།</term>
+                            <term xml:lang="Sa-Ltn">Aneka­ratnāṃśu­mālā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-234">
+                            <term>Dhanadā</term>
+                            <term xml:lang="Bo-Ltn">nor sbyin ma </term>
+                            <term xml:lang="bo">ནོར་སྦྱིན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Dhanadā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-235">
+                            <term>Śvetā</term>
+                            <term xml:lang="Bo-Ltn">dkar mo </term>
+                            <term xml:lang="bo">དཀར་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Śvetā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-236">
+                            <term>Mahāśvetā</term>
+                            <term xml:lang="Bo-Ltn">dkar mo chen mo </term>
+                            <term xml:lang="bo">དཀར་མོ་ཆེན་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāśvetā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-237">
+                            <term>Śvetabhujā</term>
+                            <term xml:lang="Bo-Ltn">lag dkar ma </term>
+                            <term xml:lang="bo">ལག་དཀར་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śvetabhujā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-238">
+                            <term>Sarva­maṅgala­dhāriṇī</term>
+                            <term xml:lang="Bo-Ltn">bkra shis thams cad ’dzin ma </term>
+                            <term xml:lang="bo">བཀྲ་ཤིས་ཐམས་ཅད་འཛིན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­maṅgala­dhāriṇī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-239">
+                            <term>Sarva­puṇyopacitāṅgī</term>
+                            <term xml:lang="Bo-Ltn">bsod nams kyi phung po thams cad kyi lus can </term>
+                            <term xml:lang="bo">བསོད་ནམས་ཀྱི་ཕུང་པོ་ཐམས་ཅད་ཀྱི་ལུས་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­puṇyopacitāṅgī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-240">
+                            <term>Dākṣāyaṇī</term>
+                            <term xml:lang="Bo-Ltn">shes nyen can gyi bu mo </term>
+                            <term xml:lang="bo">ཤེས་ཉེན་ཅན་གྱི་བུ་མོ།</term>
+                            <term xml:lang="Sa-Ltn">Dākṣāyaṇī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-241">
+                            <term>Śata­sahasra­bhujā</term>
+                            <term xml:lang="Bo-Ltn">lag pa ’bum dang ldan ma </term>
+                            <term xml:lang="bo">ལག་པ་འབུམ་དང་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śata­sahasra­bhujā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-242">
+                            <term>Śata­sahasra­nayanā</term>
+                            <term xml:lang="Bo-Ltn">mig ’bum dang ldan ma </term>
+                            <term xml:lang="bo">མིག་འབུམ་དང་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śata­sahasra­nayanā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-243">
+                            <term>Śata­sahasra­śirā</term>
+                            <term xml:lang="Bo-Ltn">mgo ’bum dang ldan ma </term>
+                            <term xml:lang="bo">མགོ་འབུམ་དང་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śata­sahasra­śirā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-244">
+                            <term>Vividha­vicitra­maṇi­mauli­dharā</term>
+                            <term xml:lang="Bo-Ltn">nor bu rnam pa sna tshogs kyis mdzes par byas
+                                pa’i cod pan thogs pa </term>
+                            <term xml:lang="bo">ནོར་བུ་རྣམ་པ་སྣ་ཚོགས་ཀྱིས་མཛེས་པར་བྱས་པའི་ཅོད་པན་ཐོགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Vividha­vicitra­maṇi­mauli­dharā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-245">
+                            <term>Surūpā</term>
+                            <term xml:lang="Bo-Ltn">gzugs bzang ba </term>
+                            <term xml:lang="bo">གཟུགས་བཟང་བ།</term>
+                            <term xml:lang="Sa-Ltn">Surūpā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-246">
+                            <term>Viśvarūpā</term>
+                            <term xml:lang="Bo-Ltn">gzugs sna tshogs can </term>
+                            <term xml:lang="bo">གཟུགས་སྣ་ཚོགས་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Viśvarūpā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-247">
+                            <term>Yaśā</term>
+                            <term xml:lang="Bo-Ltn">rab grags ma </term>
+                            <term xml:lang="bo">རབ་གྲགས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Yaśā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-248">
+                            <term>Mahāyaśā</term>
+                            <term xml:lang="Bo-Ltn">shin tu grags ma </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་གྲགས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāyaśā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-249">
+                            <term>Saumyā</term>
+                            <term xml:lang="Bo-Ltn">zhi ba ma </term>
+                            <term xml:lang="bo">ཞི་བ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Saumyā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-250">
+                            <term>Bahujīmūtā</term>
+                            <term xml:lang="Bo-Ltn">sprin ma </term>
+                            <term xml:lang="bo">སྤྲིན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Bahujīmūtā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-251">
+                            <term>Pavitrakeśā</term>
+                            <term xml:lang="Bo-Ltn">skra gtsang ma </term>
+                            <term xml:lang="bo">སྐྲ་གཙང་མ།</term>
+                            <term xml:lang="Sa-Ltn">Pavitrakeśā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-252">
+                            <term>Candrakāntā</term>
+                            <term xml:lang="Bo-Ltn">zla ba ltar mdzes ma </term>
+                            <term xml:lang="bo">ཟླ་བ་ལྟར་མཛེས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Candrakāntā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-253">
+                            <term>Sūryakāntā</term>
+                            <term xml:lang="Bo-Ltn">nyi ma ltar mdzes ma </term>
+                            <term xml:lang="bo">ཉི་མ་ལྟར་མཛེས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sūryakāntā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-254">
+                            <term>Śubhā</term>
+                            <term xml:lang="Bo-Ltn">dge ma </term>
+                            <term xml:lang="bo">དགེ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śubhā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-255">
+                            <term>Śubhakartrī</term>
+                            <term xml:lang="Bo-Ltn">dge byed ma </term>
+                            <term xml:lang="bo">དགེ་བྱེད་མ།</term>
+                            <term xml:lang="Sa-Ltn">Śubhakartrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-256">
+                            <term>Sarva­sattvābhimukhī</term>
+                            <term xml:lang="Bo-Ltn">sems can thams cad la mngon du phyogs ma’i dpal </term>
+                            <term xml:lang="bo">སེམས་ཅན་ཐམས་ཅད་ལ་མངོན་དུ་ཕྱོགས་མའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­sattvābhimukhī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-013-257">
+                            <term>Āryā</term>
+                            <term xml:lang="Bo-Ltn">’phags ma </term>
+                            <term xml:lang="bo">འཕགས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Āryā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-258">
+                            <term>Kusumaśrī</term>
+                            <term xml:lang="Bo-Ltn">me tog la gnas ma </term>
+                            <term xml:lang="bo">མེ་ཏོག་ལ་གནས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Kusumaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-259">
+                            <term>Kusumeśvarā</term>
+                            <term xml:lang="Bo-Ltn">me tog gi dbang phyug ma </term>
+                            <term xml:lang="bo">མེ་ཏོག་གི་དབང་ཕྱུག་མ།</term>
+                            <term xml:lang="Sa-Ltn">Kusumeśvarā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-260">
+                            <term>Sarva­sumeru­parvata­rāja­śrī</term>
+                            <term xml:lang="Bo-Ltn">ri bo’i rgyal po ri rab thams cad kyi dpal </term>
+                            <term xml:lang="bo">རི་བོའི་རྒྱལ་པོ་རི་རབ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­sumeru­parvata­rāja­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-261">
+                            <term>Sarva­nadī­saricchrī</term>
+                            <term xml:lang="Bo-Ltn">chu klung dang mtsho thams cad kyi dpal </term>
+                            <term xml:lang="bo">ཆུ་ཀླུང་དང་མཚོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­nadī­saricchrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-262">
+                            <term>Sarva­toya­samudra­śrī</term>
+                            <term xml:lang="Bo-Ltn">chu thams cad kyi rgya mtsho’i dpal </term>
+                            <term xml:lang="bo">ཆུ་ཐམས་ཅད་ཀྱི་རྒྱ་མཚོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­toya­samudra­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-263">
+                            <term>Sarva­tīrthābhimukha­śrī</term>
+                            <term xml:lang="Bo-Ltn">mu tegs thams cad du mngon du phyogs pa’i dpal </term>
+                            <term xml:lang="bo">མུ་ཏེགས་ཐམས་ཅད་དུ་མངོན་དུ་ཕྱོགས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tīrthābhimukha­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-264">
+                            <term>Sarvauṣadhi­tṛṇa­vanaspati­dhana­dhānya­śrī</term>
+                            <term xml:lang="Bo-Ltn">sman dang rtsi tog dang shing dang nor dang ’bru
+                                thams cad kyi dpal </term>
+                            <term xml:lang="bo">སྨན་དང་རྩི་ཏོག་དང་ཤིང་དང་ནོར་དང་འབྲུ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvauṣadhi­tṛṇa­vanaspati­dhana­dhānya­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-265">
+                            <term>Hiraṇyadā</term>
+                            <term xml:lang="Bo-Ltn">gser sbyin ma </term>
+                            <term xml:lang="bo">གསེར་སྦྱིན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Hiraṇyadā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-266">
+                            <term>Annapānadā</term>
+                            <term xml:lang="Bo-Ltn">zas dang gos sbyin ma </term>
+                            <term xml:lang="bo">ཟས་དང་གོས་སྦྱིན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Annapānadā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-267">
+                            <term>Prabhāsvarā</term>
+                            <term xml:lang="Bo-Ltn">’od gsal ma </term>
+                            <term xml:lang="bo">འོད་གསལ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Prabhāsvarā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-268">
+                            <term>Ālokakarā</term>
+                            <term xml:lang="Bo-Ltn">snang ba ma </term>
+                            <term xml:lang="bo">སྣང་བ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Ālokakarā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-269">
+                            <term>Pavitrāṅgā</term>
+                            <term xml:lang="Bo-Ltn">lus gtsang ma </term>
+                            <term xml:lang="bo">ལུས་གཙང་མ།</term>
+                            <term xml:lang="Sa-Ltn">Pavitrāṅgā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-270">
+                            <term>Sarva­tathāgata­vaśavartinī</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa thams cad dbang sgyur ma </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ་ཐམས་ཅད་དབང་སྒྱུར་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­tathāgata­vaśavartinī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-271">
+                            <term>Sarva­deva­gaṇa­mukha­śrī</term>
+                            <term xml:lang="Bo-Ltn">lha’i tshogs thams cad la mngon du phyogs pa’i
+                                dpal </term>
+                            <term xml:lang="bo">ལྷའི་ཚོགས་ཐམས་ཅད་ལ་མངོན་དུ་ཕྱོགས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­deva­gaṇa­mukha­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-272">
+                            <term>Yama­varuṇa­kubera­vāsava­śrī</term>
+                            <term xml:lang="Bo-Ltn">gshin rje dang chu lha dang ku be ra dang brgya
+                                byin la sogs pa’i dpal </term>
+                            <term xml:lang="bo">གཤིན་རྗེ་དང་ཆུ་ལྷ་དང་ཀུ་བེ་ར་དང་བརྒྱ་བྱིན་ལ་སོགས་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Yama­varuṇa­kubera­vāsava­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-273">
+                            <term>Dātrī</term>
+                            <term xml:lang="Bo-Ltn">sbyin pa ma </term>
+                            <term xml:lang="bo">སྦྱིན་པ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Dātrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-274">
+                            <term>Bhoktrī</term>
+                            <term xml:lang="Bo-Ltn">longs spyod ma </term>
+                            <term xml:lang="bo">ལོངས་སྤྱོད་མ།</term>
+                            <term xml:lang="Sa-Ltn">Bhoktrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-275">
+                            <term>Tejā</term>
+                            <term xml:lang="Bo-Ltn">gzi brjid ldan ma </term>
+                            <term xml:lang="bo">གཟི་བརྗིད་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Tejā (tejovatī)</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-276">
+                            <term>Tejovatī</term>
+                            <term xml:lang="Bo-Ltn">gzi brjid ldan ma </term>
+                            <term xml:lang="bo">གཟི་བརྗིད་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Tejovatī (tejā)</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-277">
+                            <term>Vibhūtī</term>
+                            <term xml:lang="Bo-Ltn">phun sum tshogs ma </term>
+                            <term xml:lang="bo">ཕུན་སུམ་ཚོགས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Vibhūtī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-278">
+                            <term>Samṛddhi</term>
+                            <term xml:lang="Bo-Ltn">’byor pa ma </term>
+                            <term xml:lang="bo">འབྱོར་པ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Samṛddhi</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-279">
+                            <term>Vivṛddhi</term>
+                            <term xml:lang="Bo-Ltn">rnam par skye ba ma </term>
+                            <term xml:lang="bo">རྣམ་པར་སྐྱེ་བ་མ།</term>
+                            <term xml:lang="Sa-Ltn">Vivṛddhi</term>
+                            <term type="definition">The <foreign type="term" xml:lang="Bo-Ltn">stog
+                                    pho brang</foreign> Kangyur has <foreign type="term" xml:lang="Bo-Ltn">rnam par ’phel ma</foreign>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-280">
+                            <term>Unnati</term>
+                            <term xml:lang="Bo-Ltn">mthong ma </term>
+                            <term xml:lang="bo">མཐོང་མ།</term>
+                            <term xml:lang="Sa-Ltn">Unnati</term>
+                            <term type="definition">Skt. “Advancement,” Tib. “She who has
+                                Vision.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-281">
+                            <term>Dharmaśrī</term>
+                            <term xml:lang="Bo-Ltn">chos kyi dpal </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Dharmaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-282">
+                            <term>Mādhavāśrayā</term>
+                            <term xml:lang="Bo-Ltn">khyab ’jug la brten ma </term>
+                            <term xml:lang="bo">ཁྱབ་འཇུག་ལ་བརྟེན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Mādhavāśrayā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-283">
+                            <term>Kusumanilayā</term>
+                            <term xml:lang="Bo-Ltn">ku mud la gnas ma </term>
+                            <term xml:lang="bo">ཀུ་མུད་ལ་གནས་མ།</term>
+                            <term xml:lang="Sa-Ltn">Kusumanilayā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-284">
+                            <term>Anasūyā</term>
+                            <term xml:lang="Bo-Ltn">bzod ldan ma </term>
+                            <term xml:lang="bo">བཟོད་ལྡན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Anasūyā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-285">
+                            <term>Puruṣa­kārā­śrayā</term>
+                            <term xml:lang="Bo-Ltn">mthu rtsal gyi gnas </term>
+                            <term xml:lang="bo">མཐུ་རྩལ་གྱི་གནས།</term>
+                            <term xml:lang="Sa-Ltn">Puruṣa­kārā­śrayā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-286">
+                            <term>Sarvālakṣmī­nāśayitrī</term>
+                            <term xml:lang="Bo-Ltn">bkra mi shis pa thams cad med par byed pa </term>
+                            <term xml:lang="bo">བཀྲ་མི་ཤིས་པ་ཐམས་ཅད་མེད་པར་བྱེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvālakṣmī­nāśayitrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-287">
+                            <term>Sarva­pṛthivī­śrī</term>
+                            <term xml:lang="Bo-Ltn">sa thams cad dang rgyal po thams cad kyi dpal </term>
+                            <term xml:lang="bo">ས་ཐམས་ཅད་དང་རྒྱལ་པོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­pṛthivī­śrī </term>
+                            <term xml:lang="Sa-Ltn">Sarva­rāja­śrī </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-288">
+                            <term>Sarva­vidyā­dhara­rāja­śrī</term>
+                            <term xml:lang="Bo-Ltn">rig sngags ’chang gi rgyal po thams cad kyi dpal </term>
+                            <term xml:lang="bo">རིག་སྔགས་འཆང་གི་རྒྱལ་པོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­vidyā­dhara­rāja­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-289">
+                            <term>Sarva­bhūta­yakṣa­rākṣasa­preta­piśāca­kuṃbhāṇḍa­mahoraga­śrī</term>
+                            <term xml:lang="Bo-Ltn">byung bo thams cad dang gnod sbyin dang srin po
+                                dang yi dgas dang sha za dang grul bum dang lto ’phye chen po thams
+                                cad kyi dpal </term>
+                            <term xml:lang="bo">བྱུང་བོ་ཐམས་ཅད་དང་གནོད་སྦྱིན་དང་སྲིན་པོ་དང་ཡི་དགས་དང་ཤ་ཟ་དང་གྲུལ་བུམ་དང་ལྟོ་འཕྱེ་ཆེན་པོ་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­bhūta­yakṣa­rākṣasa­preta­piśāca­kuṃbhāṇḍa­mahoraga­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-290">
+                            <term>Sarvaśrī</term>
+                            <term xml:lang="Bo-Ltn">bkra shis thams cad kyi dpal </term>
+                            <term xml:lang="bo">བཀྲ་ཤིས་ཐམས་ཅད་ཀྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarvaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-291">
+                            <term>Dyuti</term>
+                            <term xml:lang="Bo-Ltn">’od la dga’ ba </term>
+                            <term xml:lang="bo">འོད་ལ་དགའ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Dyuti</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-292">
+                            <term>Sarva­kiṃnara­sarvāsuryottama­śrī</term>
+                            <term xml:lang="Bo-Ltn">dpal gyi mchog mi ’am ci mo thams cad dang lha
+                                ma yin mo thams cad kyi dpal gyi mchog </term>
+                            <term xml:lang="bo">དཔལ་གྱི་མཆོག་མི་འམ་ཅི་མོ་ཐམས་ཅད་དང་ལྷ་མ་ཡིན་མོ་ཐམས་ཅད་ཀྱི་དཔལ་གྱི་མཆོག</term>
+                            <term xml:lang="Sa-Ltn">Sarva­kiṃnara­sarvāsuryottama­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-293">
+                            <term>Pramoda­bhāgya­lolā</term>
+                            <term xml:lang="Bo-Ltn">skal ba dang ldan par ’dod pa </term>
+                            <term xml:lang="bo">སྐལ་བ་དང་ལྡན་པར་འདོད་པ།</term>
+                            <term xml:lang="Sa-Ltn">Pramoda­bhāgya­lolā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-294">
+                            <term>Sarva­rṣi­pavitra­śrī</term>
+                            <term xml:lang="Bo-Ltn">drang srong thams cad dag par byed pa’i dpal </term>
+                            <term xml:lang="bo">དྲང་སྲོང་ཐམས་ཅད་དག་པར་བྱེད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­rṣi­pavitra­śrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-295">
+                            <term>Nir­avadya­sthāna­vāsinī</term>
+                            <term xml:lang="Bo-Ltn">kha na ma tho ba med pa’i gnas na ’dug ma </term>
+                            <term xml:lang="bo">ཁ་ན་མ་ཐོ་བ་མེད་པའི་གནས་ན་འདུག་མ།</term>
+                            <term xml:lang="Sa-Ltn">Nir­avadya­sthāna­vāsinī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-296">
+                            <term>Rūpavatī</term>
+                            <term xml:lang="Bo-Ltn">yid du ’ong ma </term>
+                            <term xml:lang="bo">ཡིད་དུ་འོང་མ།</term>
+                            <term xml:lang="Sa-Ltn">Rūpavatī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-297">
+                            <term>Sukhakarī</term>
+                            <term xml:lang="Bo-Ltn">sim par byed ma </term>
+                            <term xml:lang="bo">སིམ་པར་བྱེད་མ།</term>
+                            <term xml:lang="Sa-Ltn">Sukhakarī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-298">
+                            <term>Kuberakāntā</term>
+                            <term xml:lang="Bo-Ltn">ku be ra’i snying du sdug ma </term>
+                            <term xml:lang="bo">ཀུ་བེ་རའི་སྙིང་དུ་སྡུག་མ།</term>
+                            <term xml:lang="Sa-Ltn">Kuberakāntā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-299">
+                            <term>Dharmarājaśrī</term>
+                            <term xml:lang="Bo-Ltn">chos kyi rgyal po’i dpal </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་རྒྱལ་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Dharmarājaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-013-300">
+                            <term>Sarva­puṇyākarṣaṇa­śrī</term>
+                            <term xml:lang="Bo-Ltn">bsod nams thams cad sdud pa’i dpal </term>
+                            <term xml:lang="bo">བསོད་ནམས་ཐམས་ཅད་སྡུད་པའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Sarva­puṇyākarṣaṇa­śrī</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

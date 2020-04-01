@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dpa' gcig ma'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-010-048"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1310" type="text">
+                    <ref>Toh 1310</ref>
+                    <biblScope>ff. 226v-227r</biblScope>
+                    <author role="translatorTib">a. sgra gcan 'dzin</author>
+                    <author role="translatorTib">t. prajnendraruci</author>
+                    <author role="translatorTib">shAkya ye shes</author>
+                    <location count-pages="">
+                        <start volume="10" page="456"/>
+                        <end volume="10" page="457"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21614" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC7844" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:17:08 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ma ga d+hA bzang mo'i rtogs pa brjod pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">sumāgadhāvadāna</title>
+                <title type="mainTitle" xml:lang="en">The Account of the Noble Deeds of Sumāgadhā</title>
+                <author role="translatorMain" ref="contributors.xml#team-27"/>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-075-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh346" type="text">
+                    <ref>Toh 346</ref>
+                    <biblScope>vol.75, ff.291v-298r(pp.582-595)</biblScope>
+                    <location count-pages="14">
+                        <start volume="75" page="584"/>
+                        <end volume="75" page="597"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12032" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:45:35 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

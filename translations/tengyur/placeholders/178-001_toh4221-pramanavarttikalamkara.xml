@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">tshad ma rnam 'grel gyi rgyan</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">pramanavarttikalamkara</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-178-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4221" type="text">
+                    <ref>Toh 4221</ref>
+                    <biblScope>vol 178 ff. 1v-308r, vol 179 ff. 1v-282r</biblScope>
+                    <author role="translatorTib">a. shes rab 'byung gnas sbas pa</author>
+                    <author role="translatorTib">t. skal ldan rgyal po</author>
+                    <author role="translatorTib">blo ldan shes rab</author>
+                    <author role="translatorTib">r. kumarasri</author>
+                    <author role="translatorTib">'phags pa shes rab</author>
+                    <location count-pages="">
+                        <start volume="178" page="3"/>
+                        <end volume="179" page="565"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10956" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10981" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:27:23 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

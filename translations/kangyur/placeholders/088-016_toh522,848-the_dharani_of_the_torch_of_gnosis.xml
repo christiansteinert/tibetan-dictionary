@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ye shes ta la la'i gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">jñānolkadhāraṇī</title>
+                <title type="mainTitle" xml:lang="en">The Dhāraṇi of the Torch of Gnosis</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa ye shes ta la la zhes bya ba'i gzungs 'gro ba thams cad yongs su sbyong pa/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryajñānolkanāmadhāraṇī sarvagatipariśodhanī</title>
+                <title type="otherTitle" xml:lang="en">The Incantation, Torch of Gnosis</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa ye shes ta la la zhes bya ba'i gzungs 'gro ba thams cad yongs su sbyong ba/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryajñānolkonāma­dhāraṇīsarva­gatipariśodhanī</title>
+                <title type="otherTitle" xml:lang="en">The Incantation, Torch of Gnosis</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-088-016"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh522" type="text">
+                    <ref>Toh 522</ref>
+                    <biblScope>vol.88, ff.42r-43v(pp.83-86)</biblScope>
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="88" start-page="83" end-page="86"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12245" work="W22084"/>
+                </bibl>
+                <bibl key="toh848" type="text">
+                    <ref>Toh 848</ref>
+                    <biblScope>vol.100,ff. 55r-56r(pp.109-111)</biblScope>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="100" start-page="109" end-page="111"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12609" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-10T08:04:53.122Z" user="admin">10/10/2019 08:04:53</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:04:49.554Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -247,7 +247,7 @@ DICTLIST={
   containsOnlyTibetan:true,
   label:'bod-rgya tshig-mdzod chen-mo (Tibetan)',
   about:'Bod rgya tshig mdzod chen mo|1985, Mi dmangs dpe skrun khang, Beijing.',
-  public:"false",
+  public:"true",
   listCredits:"true"
 },
 "dung-dkar-tshig-mdzod-chen-mo-Tib":{

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">byang chub kyi phyogs bstan pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">bodhipakṣanirdeśasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Teaching on the Aids to Enlightenment</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa byang chub kyi phyogs bstan pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryabodhipakṣanirdeśa­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">byang chub kyi phyogs bstan pa/</title>
+                <title type="otherTitle" xml:lang="en">The Teaching on the Aids to Enlightenment</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Bodhipakṣanirdeśa</title>
+                <author role="translatorMain" ref="contributors.xml#team-28"/>
+            <author role="translatorEng" ref="contributors.xml#person-185">Dr. Shenghai Li</author>
+                <editor role="externalReviewer" ref="contributors.xml#person-99">Thomas Cruijsen</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.a">
+                <idno xml:id="UT22084-060-007"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh178" type="text">
+                    <ref>Toh 178</ref>
+                    <biblScope>vol.60, ff. 240v-244v(pp.480-488)</biblScope>
+                    <author role="translatorTib">t. jinamitra</author>
+                    <author role="translatorTib">jnanasidhi</author>
+                    <author role="translatorTib">ye shes sde</author>
+                    <location count-pages="9">
+                        <start volume="60" page="482"/>
+                        <end volume="60" page="490"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11789" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-04-30T13:13:21.64Z" user="admin">30/04/2019 13:13:21</note>
+            <note type="updated" update="translation-status" value="2.a" date-time="2019-04-30T10:19:53.284Z" user="mike">2.a</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

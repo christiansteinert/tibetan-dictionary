@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sku gsum pa’i mdo</title>
+                <title type="mainTitle" xml:lang="bo">སྐུ་གསུམ་པའི་མདོ།</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Three Bodies</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Trikāya­sūtra</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་སྐུ་གསུམ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa sku gsum zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble ‌Mahāyāna Sūtra “The Three Bodies”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­trikāya­nāma­mahā­yāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-7">
+                    Translated by the Buddhavacana Translation Group
+                    <lb/> under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-30">Rolf Scheuermann</author>
+                <author role="translatorEng" ref="contributors.xml#person-31">Casey Kemp</author>
+                <consultant role="advisor" ref="contributors.xml#person-28">Khenpo Konchok Tamphel</consultant>
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.21 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-068-017"/>
+                <date>2013-10-26</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh283" type="text">
+                    <ref>Toh 283</ref>
+                    <biblScope>Degé Kangyur, vol. 68 (mdo sde, ya), folios 56.a–57.a</biblScope>
+                    <author role="translatorTib">Unknown</author>
+                    <location count-pages="3">
+                        <start volume="68" page="113"/>
+                        <end volume="68" page="115"/>
+                    </location>
+                <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11945" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-06-18T02:58:35.223Z" user="admin">18/06/2019 02:58:35</note>
+            <note type="updated" update="text-version" value="v 2.21" date-time="2019-06-18T02:58:29.751Z" user="celso">v 2.21 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <!-- Contents
+                Summary
+                Acknowledgments
+                Introduction
+                The Translation
+                The Sūtra of the Three Bodies
+                Notes
+                Bibliography-->
+            <div type="summary">
+                <head type="summary" tid="22">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-068-017-1"/>
+                <p tid="1">As the title suggests, this sūtra describes the three bodies of the Buddha. While the Buddha is
+                    dwelling on Vulture Peak in Rājgṛha, the Bodhisattva Kṣitigarbha asks whether the Tathāgata has a body, to
+                    which the Buddha replies that the Tathāgata has three bodies: a dharmakāya, a saṃbhogakāya, and a nirmāṇakāya.
+                    The Buddha goes on to describe what constitutes these three bodies and their associated meaning. The Buddha
+                    explains that the dharmakāya is like space, the saṃbhogakāya is like clouds, and the nirmāṇakāya is like rain.
+                    At the end of the Buddha’s elucidation, Kṣitigarbha expresses jubilation, and the Buddha declares that whoever
+                    upholds this Dharma teaching will obtain immeasurable merit.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="23">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-068-017-2"/>
+                <p tid="2">Translation by the Buddhavacana Translation Group, Vienna, under the supervision of Khenpo Konchok
+                    Tamphel. Translated into English by Rolf Scheuermann and Casey Kemp.</p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="24">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-017-3"/>
+                    <p tid="4">The setting of this sūtra is Vulture Peak in Rajgir (Rājgṛha), said to be the location where the
+                        Buddha, explaining the doctrine of emptiness in the second turning of the wheel of Dharma, taught the
+                            <foreign xml:lang="Sa-Ltn">prajñā­pāramitā</foreign> and other topics associated with Mahāyāna
+                        Buddhism. It is here that the bodhisattva Kṣitigarbha asks the Buddha a series of questions regarding the
+                        body of the Buddha, which the Buddha answers by expounding the teaching on the three bodies.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-4"/>
+                    <p tid="5">The doctrine of the Buddha’s three bodies (<foreign type="term" xml:lang="Sa-Ltn">trikāya</foreign>) has tended to be associated with the Yogācāra school of Buddhist thought, although the
+                        terms dharmakāya and rūpakāya (form body) are certainly to be found in sūtras such as the <title xml:lang="Sa-Ltn">Aṣṭa­sāhasrikā­prajñā­pāramitā­sūtra</title>.<note place="end" index="1" xml:id="UT22084-068-017-53">For more on the philosophical considerations of the three bodies, see
+                            Harrison (1992) pp 44-94.</note> It has been suggested that sūtras such as the <title xml:lang="Sa-Ltn">Trikāyasūtra</title> may have evolved after such Yogācāra treatises as the <title xml:lang="Sa-Ltn">Mahā­yāna­sūtrālaṃkāra</title>.<note place="end" index="2" xml:id="UT22084-068-017-54">See Makransky (1997) pp.274.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-5"/>
+                    <p tid="6">This tri-fold scheme can also be interpreted as describing different aspects of enlightenment or
+                        buddhahood itself. The dharmakāya, sometimes translated as the “truth body” or “reality body,” generally
+                        refers to the essential nature of the Buddha, as is stated in this sūtra. The saṃbhogakāya and the
+                        nirmāṇakāya, known collectively as the form bodies, are understood as emanations of the dharmakāya, or
+                        essential nature, of the Buddha. In other words, they are the manifestations of the enlightened activity
+                        of the Buddha. The saṃbhogakāya, sometimes translated as “enjoyment body,” is the apparitional form the
+                        Buddha takes for bodhisattvas and practitioners in meditative states or in dreams. The nirmāṇakāya,
+                        sometimes translated as “manifestation body,” is the physical form of the Buddha that can be seen by any
+                        sentient being. The Buddha, who is able to emanate in countless forms, does so in order to liberate beings
+                        through the illumination and demonstration of the Dharma. All three bodies<note place="end" index="3" xml:id="UT22084-068-017-55">Some Mahā­yāna works such as the Abhi­samayālaṃkāra of Maitreya also
+                            mention a fourth body, a svā­bhāvika­kāya, or “innate body.” There are conflicting interpretations by
+                            Indian and Tibetan commentators as to the relationship between the svā­bhāvika­kāya and the
+                            dharma­kāya. For more on the four bodies, see Makransky (1997).</note> are ultimately considered
+                        inseparable. </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-6"/>
+                    <p tid="7">This is the only known sūtra in the Tibetan Kangyur solely dedicated to teaching the doctrine of
+                        the three bodies. The Buddha explains here how one should view the bodies of the Buddha using analogies,
+                        and relates the three bodies to other relevant Buddhist doctrines such as the four wisdoms.<note place="end" index="4" xml:id="UT22084-068-017-56">For information on the relationship between the
+                            three bodies and four wisdoms in Buddhist literature, see Brunnhölzl (2009) pp.71-76.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-7"/>
+                    <p tid="8">This sūtra was first translated by W. Woodville Rockhill in his 1884 publication of <title xml:lang="en">The Life of the Buddha and the Early History of His Order</title>. There is currently no
+                        known extant version in Sanskrit, and among the different published Tibetan versions of the source text,
+                        there do not seem to be any significant variants.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="25">The Translation</head>
+                <head type="titleHon" tid="26">The Noble ‌Mahāyāna Sūtra</head>
+                <head type="titleMain" tid="27">The Three Bodies</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-017-8"/>
+                    <p tid="9">
+                        <ref cRef="F.56.a"/>
+                        <!--<modularPassage type="homage">-->Homage to all buddhas and bodhisattvas!<!--</modularPassage>-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-9"/>
+                    <p tid="10">Thus did I hear at one time. The Blessed One was dwelling on Vulture Peak Mountain in Rājgṛha. He
+                        was accompanied by his entire retinue, by immeasurable, countless bodhisattvas, and by gods and nāgas.
+                        They paid respect to the Blessed One and made offerings to him.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-10"/>
+                    <p tid="11">At that time, the bodhisattva Kṣitigarbha, who was sitting among the retinue, rose from his seat
+                        and asked, “Has the Blessed One a body?”</p>
+                    <p tid="12">The Blessed One replied, “Kṣitigarbha, the Blessed One, the Tathāgata, <ref cRef="F.56.b"/> has
+                        three bodies: a dharmakāya, a saṃbhogakāya and a nirmāṇakāya. Son of a noble family, the three bodies of
+                        the Tathāgata are these: the pure nature is the dharmakāya, pure meditative absorption is the
+                        saṃbhogakāya, and pure conduct is the nirmāṇakāya of all buddhas.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-11"/>
+                    <p tid="13">“Son of a noble family, the dharmakāya of the Tathāgata consists in the fact that he has no
+                        nature, just like the sky. His saṃbhogakāya consists in the fact that he comes forth, just like a cloud.
+                        His nirmāṇakāya consists in the activity of all the buddhas, the fact that it soaks everything, just like
+                        rain.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-12"/>
+                    <p tid="14">The bodhisattva Kṣitigarbha then asked the Blessed One, “How should one view this explanation on
+                        the three bodies of the Blessed One?” </p>
+                    <p tid="15">The Blessed One answered the bodhisattva Kṣitigarbha, “Son of a noble family, you should view the
+                        three bodies of the Tathāgata in the following way. The dharmakāya should be viewed as that which is the
+                        essence of the Tathāgata. The saṃbhogakāya should be viewed as that which is the essence of the
+                        bodhisattvas. The nirmāṇakāya should be viewed as that which is the essence of ordinary beings who conduct
+                        themselves devotedly. </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-13"/>
+                    <p tid="16">“Son of a noble family, the dharmakāya remains the same nature for all the buddhas. The
+                        saṃbhogakāya remains the same meditative absorption for all the buddhas. The nirmāṇakāya remains the same
+                        awakened activity for all the buddhas. </p>
+                    <p tid="17">“Son of a noble family, the basis-of-all in its pure state is mirror-like wisdom, the dharmakāya.
+                        The afflicted mind in its pure state is the wisdom of equality. Mental cognition in its pure state is
+                        discriminating wisdom, the saṃbhogakāya. The five sense cognitions in their pure state are
+                        all-accomplishing wisdom, the nirmāṇakāya.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-14"/>
+                    <p tid="18">The bodhisattva Kṣitigarbha then exclaimed to the Blessed One, “Blessed One, the noble Dharma that
+                        I have heard from the Blessed One <ref cRef="F.57.a"/> is excellent, Sugata, really excellent!”</p>
+                    <p tid="19">The Blessed One then declared, “Son of a noble family, whoever fully upholds this Dharma discourse
+                        of the Blessed One will obtain merit that is immeasurable, inexpressible, incalculable and unfathomable.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-15"/>
+                    <p tid="20">When the Blessed One had spoken, the world, including the bodhisattva Kṣitigarbha, the gods,
+                        nāgas, yakṣas, and gandharvas rejoiced and praised the teachings of the Blessed One. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-068-017-16"/>
+                    <p tid="21">This concludes the Noble Mahāyāna Sūtra, <title xml:lang="en">The Three Bodies</title>.<note place="end" index="5" xml:id="UT22084-068-017-57">The colophon makes no mention of who the Tibetan
+                        translators were, and the Degé catalogue (<title xml:lang="Bo-Ltn">dkar chag</title>, vol. 103,
+                        lak+Sh+mI, F.133.a.3) states that this is not known.</note>
+                    </p>
+                    
+                </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="28">Colophon</head>
+                    
+                </div>-->
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="29">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="30">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-068-017-18">
+                        <title xml:lang="Bo-Ltn">’phags pa sku gsum zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­trikāya­nāma­mahā­yāna­sūtra</title>). Toh 283. Degé Kangyur, vol. 68 (mdo sde,
+                        ya), folios 56a–57a.</bibl>
+                    <bibl xml:id="UT22084-068-017-19">
+                        <title xml:lang="Bo-Ltn">’phags pa sku gsum zhes bya ba theg pa chen po’i mdo</title>. bka’ ’gyur (dpe
+                        bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan
+                        dpe sdur khang (The Tibetan Tripiṭaka Collation Bureau of the China Tibetology Research Center). 108
+                        volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2006-2009,
+                        vol. 68 (mdo sde, ya), pp 168-170.</bibl>
+                    <bibl xml:id="UT22084-068-017-20">Brunnhölzl, Karl (2009). <title xml:lang="en">Luminous Heart: The Third
+                            Karmapa on Consciousness, Wisdom, and Buddha Nature</title>. Ithaca: Snow Lion Publications,
+                        2009.</bibl>
+                    <bibl xml:id="UT22084-068-017-21">Harrison, Paul (1992). “Is the Dharma-kāya the Real ‘Phantom Body’ of the
+                        Buddha?” In <title xml:lang="en">The Journal of the International Association for Buddhist Studies</title>
+                        Vol. 15 No 1, 1992. pp 44-94.</bibl>
+                    <bibl xml:id="UT22084-068-017-22">Makransky, John J. (1997). <title xml:lang="en">Buddhahood Embodied: Sources
+                            of Controversy in India and Tibet. </title>SUNY Series in Buddhist Studies. Albany: State University
+                        of New York Press, 1997.</bibl>
+                    <bibl xml:id="UT22084-068-017-23">Nagao, Gadjin M. <title xml:lang="en">Mādhyamika and Yogācāra: A Study of
+                            ‌Mahāyāna Philosophies</title>. Leslie S. Kawamura (Trans.) Albany: State University of New York,
+                        1991.</bibl>
+                    <bibl xml:id="UT22084-068-017-24">Rockhill, W. Woodville (Trans.) <title xml:lang="en">The Life of the Buddha
+                            and The Early History of His Order Derived from Tibetan Works in the Bkah-hgyur and
+                            Bstan-hgyur</title>. London: Trübner &amp; Co., Ludgate Hill, 1884.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-25">
+                            <term>bodhisattva</term>
+                            <term xml:lang="Bo-Ltn">byang chub sems dpa’ </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའ།</term>
+                            <term xml:lang="Sa-Ltn">bodhisattva</term>
+                            <term type="definition">According to the Mahāyāna, an individual with the intent to achieve awakening
+                                for the sake of all beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-26">
+                            <term>nāga</term>
+                            <term xml:lang="Bo-Ltn">klu </term>
+                            <term xml:lang="bo">ཀླུ།</term>
+                            <term xml:lang="Sa-Ltn">nāga</term>
+                            <term type="definition">Snake-like mystical creature with supernatural powers belonging to the animal
+                                realm.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-27">
+                            <term>dharmakāya</term>
+                            <term xml:lang="Bo-Ltn">chos kyi sku </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་སྐུ།</term>
+                            <term xml:lang="Sa-Ltn">dharmakāya</term>
+                            <term type="definition">
+                                <term type="ignore">Dharmakāya</term> or body of dharma refers to the Buddha’s realization of reality.
+                                Sometimes translated “truth body” or “reality body.” In other contexts, particularly in early
+                                texts, the term may also refer to the Buddha’s qualities as a collective whole, or to his
+                                teachings as embodying him.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-28">
+                            <term>saṃbhogakāya</term>
+                            <term xml:lang="Bo-Ltn">longs spyod rdzogs pa’i sku </term>
+                            <term xml:lang="bo">ལོངས་སྤྱོད་རྫོགས་པའི་སྐུ།</term>
+                            <term xml:lang="Sa-Ltn">saṃbhogakāya</term>
+                            <term type="definition">
+                                <term type="ignore">Saṃbhogakāya</term> or body of enjoyment. Aspect of buddhahood perceptible to
+                                bodhisattvas.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-29">
+                            <term>nirmāṇakāya</term>
+                            <term xml:lang="Bo-Ltn">sprul pa’i sku </term>
+                            <term xml:lang="bo">སྤྲུལ་པའི་སྐུ།</term>
+                            <term xml:lang="Sa-Ltn">nirmāṇakāya</term>
+                            <term type="definition">
+                                <term type="ignore">Nirmāṇakāya</term> or body of manifestation. Aspect of buddhahood perceptible to
+                                ordinary individuals with good karma.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-30">
+                            <term>three bodies</term>
+                            <term xml:lang="Bo-Ltn">sku gsum </term>
+                            <term xml:lang="bo">སྐུ་གསུམ།</term>
+                            <term xml:lang="Sa-Ltn">trikāya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-31">
+                            <term>basis-of-all</term>
+                            <term xml:lang="Bo-Ltn">kun gzhi </term>
+                            <term xml:lang="bo">ཀུན་གཞི།</term>
+                            <term xml:lang="Sa-Ltn">ālaya</term>
+                            <term type="definition">Here, probably the short form for <foreign type="term" xml:lang="Sa-Ltn">ālayavijñāna</foreign>. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-32">
+                            <term>mirror-like wisdom</term>
+                            <term xml:lang="Bo-Ltn">me long lta bu’i ye shes </term>
+                            <term xml:lang="bo">མེ་ལོང་ལྟ་བུའི་ཡེ་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">ādarśajñāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-33">
+                            <term>afflicted mind</term>
+                            <term xml:lang="Bo-Ltn">nyon mongs pa’i yid </term>
+                            <term xml:lang="bo">ཉོན་མོངས་པའི་ཡིད།</term>
+                            <term xml:lang="Sa-Ltn">kliṣṭamana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-34">
+                            <term>wisdom of equality</term>
+                            <term xml:lang="Bo-Ltn">mnyam pa nyid kyi ye shes </term>
+                            <term xml:lang="bo">མཉམ་པ་ཉིད་ཀྱི་ཡེ་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">samatājñāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-35">
+                            <term>mental cognition</term>
+                            <term xml:lang="Bo-Ltn">yid kyi rnam par shes pa </term>
+                            <term xml:lang="bo">ཡིད་ཀྱི་རྣམ་པར་ཤེས་པ།</term>
+                            <term xml:lang="Sa-Ltn">manovijñāna</term>
+                            <term type="definition">Just as the five sense cognitions occur on the basis of the five sense
+                                faculties, <term type="ignore">mental cognition</term> is the cognition that occurs on the basis of the mind faculty.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-36">
+                            <term>discriminating wisdom</term>
+                            <term xml:lang="Bo-Ltn">so sor kun du rtog pa’i ye shes </term>
+                            <term xml:lang="bo">སོ་སོར་ཀུན་དུ་རྟོག་པའི་ཡེ་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">pratyavekṣaṇā­jñāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-37">
+                            <term>five sense cognitions</term>
+                            <term xml:lang="Bo-Ltn">sgo lnga’i rnam par shes pa </term>
+                            <term xml:lang="bo">སྒོ་ལྔའི་རྣམ་པར་ཤེས་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-38">
+                            <term>all-accomplishing wisdom</term>
+                            <term xml:lang="Bo-Ltn">bya ba grub pa’i ye shes </term>
+                            <term xml:lang="bo">བྱ་བ་གྲུབ་པའི་ཡེ་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">kṛtyānuśṭhāna­jñāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-39">
+                            <term>yakṣa</term>
+                            <term xml:lang="Bo-Ltn">gnod sbyin </term>
+                            <term xml:lang="bo">གནོད་སྦྱིན།</term>
+                            <term xml:lang="Sa-Ltn">yakṣa</term>
+                            <term type="definition">
+                                <term type="ignore">Yakṣas</term> or harm givers. A class of mostly malevolent spirits.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-40">
+                            <term>gandharva</term>
+                            <term xml:lang="Bo-Ltn">dri za </term>
+                            <term xml:lang="bo">དྲི་ཟ།</term>
+                            <term xml:lang="Sa-Ltn">gandharva</term>
+                            <term type="definition">
+                                <term type="ignore">Gandharvas</term>, literally “smell-eaters,” are a class of spirits, sometimes
+                                described as celestial musicians. In other contexts the term can also refer to beings in the
+                                bardo-state.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-41" mode="marked">
+                            <term>prajñā­pāramitā</term>
+                            <term xml:lang="Bo-Ltn">shes rab kyi pha rol tu phyin pa </term>
+                            <term xml:lang="bo">ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">prajñā­pāramitā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-42">
+                            <term>Mahāyāna</term>
+                            <term xml:lang="Bo-Ltn">theg pa chen po </term>
+                            <term xml:lang="bo">ཐེག་པ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">mahāyāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-43">
+                            <term>emptiness</term>
+                            <term xml:lang="Bo-Ltn">stong pa nyid </term>
+                            <term xml:lang="bo">སྟོང་པ་ཉིད།</term>
+                            <term xml:lang="Sa-Ltn">śūnyatā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-44">
+                            <term>Yogācāra</term>
+                            <term xml:lang="Bo-Ltn">rnal ’byor spyod pa </term>
+                            <term xml:lang="bo">རྣལ་འབྱོར་སྤྱོད་པ།</term>
+                            <term xml:lang="Sa-Ltn">yogācāra</term>
+                            <term type="definition">Influential philosophical school belonging to Mahāyāna Buddhism.</term>
+                        </gloss>
+                    </item>
+                    <!--<item>
+                        <gloss type="term" priority="0" xml:id="UT22084-068-017-45">
+                            <term>teachings of the Buddha</term>
+                            <term xml:lang="Bo-Ltn">chos </term>
+                            <term xml:lang="bo">ཆོས།</term>
+                            <term xml:lang="Sa-Ltn">dharma</term>
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-46">
+                            <term>rūpakāya</term>
+                            <term xml:lang="Bo-Ltn">gzugs kyi sku </term>
+                            <term xml:lang="bo">གཟུགས་ཀྱི་སྐུ།</term>
+                            <term xml:lang="Sa-Ltn">rūpakāya</term>
+                            <term type="definition">Used to refer to the two form bodies of the Buddha, i.e. the nirmāṇakāya and
+                                the saṃbhogakāya.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-47">
+                            <term>form bodies</term>
+                            <term xml:lang="Bo-Ltn">gzugs kyi sku </term>
+                            <term xml:lang="bo">གཟུགས་ཀྱི་སྐུ།</term>
+                            <term xml:lang="Sa-Ltn">rūpakāya</term>
+                            <term type="definition">See “rūpakāya.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-48">
+                            <term>Blessed One</term>
+                            <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                            <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                            <term xml:lang="Sa-Ltn">Bhagavat</term>
+                            <term type="definition">Epithet of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-068-017-49">
+                            <term>Kṣitigarbha</term>
+                            <term xml:lang="Bo-Ltn">sa’i snying po </term>
+                            <term xml:lang="bo">སའི་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Kṣitigarbha</term>
+                            <term type="definition">An important bodhisattva disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-017-50">
+                            <term>tathāgata</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Tathāgata</term>
+                            <term type="definition">Epithet of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-068-017-51">
+                            <term>Rājgṛha</term>
+                            <term xml:lang="Bo-Ltn">rgyal po’i khab </term>
+                            <term xml:lang="bo">རྒྱལ་པོའི་ཁབ།</term>
+                            <term xml:lang="Sa-Ltn">Rājgṛha</term>
+                            <term type="definition">Town close to Nālānda in the modern state of Bihar.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-068-017-52">
+                            <term>Vulture Peak Mountain</term>
+                            <term xml:lang="Bo-Ltn">bya rgod phung po’i ri </term>
+                            <term xml:lang="bo">བྱ་རྒོད་ཕུང་པོའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">Gṛ̥dhra­kūṭa-parvata</term>
+                            <term type="definition">Name of a mountain close to Rājgṛha. It is famous as the place where the Buddha
+                                is said to have taught the Prajñāpāramitā and other teachings.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

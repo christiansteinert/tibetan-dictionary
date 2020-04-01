@@ -1,0 +1,2339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sangs rgyas kyi stobs skyed pa’i cho
+                    ’phrul rnam par ’phrul pa bstan pa</title>
+                <title type="mainTitle" xml:lang="bo">སངས་རྒྱས་ཀྱི་སྟོབས་སྐྱེད་པའི་ཆོ་འཕྲུལ་རྣམ་པར་འཕྲུལ་པ་བསྟན་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Teaching on the Extraordinary
+                    Transformation that is the Miracle of Attaining the Buddha’s Powers</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Buddha­balādhāna­prātihārya­vikurvāṇa­nirdeśa</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་སངས་རྒྱས་ཀྱི་སྟོབས་སྐྱེད་པའི་ཆོ་འཕྲུལ་རྣམ་པར་འཕྲུལ་པ་བསྟན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa sangs rgyas kyi stobs skyed pa’i
+                    cho ’phrul rnam par ’phrul pa bstan pa zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Sūtra of the Great Vehicle “The
+                    Teaching on the Extraordinary Transformation that is the Miracle of Attaining
+                    the Buddha’s Powers”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­buddha­balādhāna­prātihārya­vikurvāṇa­nirdeśa­nāma­mahā­yāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-7">Translated by the
+                    Buddhavacana Translation Group (Vienna)<lb/> under the patronage and supervision
+                    of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-27">Gregory
+                    Forgues</author>
+                <author role="translatorEng" ref="contributors.xml#person-30">Rolf
+                    Scheuermann</author>
+                <editor role="reviser" ref="contributors.xml#person-31">Casey Kemp</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon
+                    Joffe</editor>
+                <consultant role="advisor" ref="contributors.xml#person-230">Professor Tom
+                    Tillemans</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-239">Khenpo Ngawang
+                    Wöser</consultant>
+                <!--<author role="translatorEng">Khenpo Ngawang Wöser</author>-->
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.33 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative to translate all the Buddha’s words into modern
+                    languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-061-006"/>
+                <date>2016-05-30</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh186" type="text">
+                    <ref>Toh 186</ref>
+                    <biblScope>Degé Kangyur, vol. 61 (mdo sde, tsa), folios 143.b–158.a</biblScope>
+                    <author role="translatorTib">Unknown</author>
+                    <location work="UT4CZ5369" count-pages="30">
+                        <volume number="61" start-page="286" end-page="315"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11804" work="W22084"/>
+                </bibl>
+
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-02T17:40:47.662Z" user="admin">02/10/2019 17:40:47</note>
+                <note type="updated" update="text-version" value="v 1.31" date-time="2019-06-18T16:17:31.913Z" user="celso">v 1.31 2019</note>
+                <note type="updated" update="text-version" value="v 1.32" date-time="2019-06-21T14:35:28.064Z" user="celso">v 1.32 2019</note>
+            <note type="updated" update="text-version" value="v 1.33" date-time="2019-10-02T17:40:45.868Z" user="celso">Corrected wylie typo in n.5 ky -&gt; kyi . I double checked source.</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="114">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-061-006-1"/>
+                <p tid="1">In this sūtra, the Buddha displays supernatural powers three times.
+                    First, he magically transports his entire audience and retinue to Vārāṇasī.
+                    Secondly, having incited Avalokiteśvara and Vajrapāṇi to use their own
+                    miraculous powers to gather there all the beings who must be led to awakening,
+                    he makes the whole world appear as a pure realm like Sukhāvatī. He explains that
+                    a tathāgata’s various powers are like a doctor’s skills, and teaches, with
+                    Mañjuśrī’s help in a series of dialogues with other protagonists, on how the
+                    tathāgatas manifest to beings, displaying his supernatural powers a third time
+                    by making many other buddhas appear all around him. The meaning of the
+                    Tathāgata’s miracles are gradually disclosed to the audience, as well as some
+                    other essential points including the merit to be gained by honoring the
+                    teachings. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="115">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-061-006-2"/>
+                <p tid="2">Translated by the Buddhavacana Translation Group. The translation was
+                    made by by Gregory Forgues in collaboration with Rolf Scheuermann and the
+                    generous assistance of Khenpo Ngawang Wöser. English text edited by Casey Kemp.
+                    Special thanks to Professor Tom Tillemans for his comments and advice.</p>
+                <p tid="3">This translation has been completed under the patronage and supervision
+                    of 84000: Translating the Words of the Buddha. </p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="116">Introduction</head>
+                <div type="section">
+                    <head type="section" tid="117">The Setting</head>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-3"/>
+                    <p tid="4">The sūtra is set at first on the banks of the Nairañjanā River, where
+                        the Buddha is dwelling together with a retinue of bodhisattvas including
+                        Avalokiteśvara, Vajrapāṇi, Maitreya, and Mañjuśrī, as well as great hearers
+                        like Subhūti, Śāriputra, and Maudgalyāyana. After Śakra and Brahmā pay their
+                        respects, the Tathāgata magically transports himself together with his
+                        entire assembly to a grove in Vārāṇasī, where he manifests his supernatural
+                        powers.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="118">The Story </head>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-4"/>
+                    <p tid="5">The Buddha, upon entering into the state of state of concentration
+                        known as <distinct><!--type="concentration"-->the garlands of the
+                            buddhas</distinct>, asks Avalokiteśvara and Vajrapāṇi to summon
+                        miraculously all degenerate beings of the Sahā world system who must be led
+                        to awakening. Entering into the same state of concentration, Avalokiteśvara
+                        and Vajrapāṇi manifest light rays and inspirational verses to invite those
+                        beings to the mango grove. Once they arrive, the Tathāgata displays his
+                        supernatural powers by exerting his sovereign power over the whole world,
+                        turning it into a place similar to the pure realm of Sukhāvatī. With
+                        Mañjuśrī’s help, he teaches on how the tathāgatas manifest to beings in a
+                        series of dialogues with other protagonists. He explains that a tathāgata is
+                        like a doctor who knows the various diseases of beings and the methods to
+                        cure them. The Buddha finally displays his supernatural powers a third time
+                        by making many other buddhas appear all around him. The sūtra ends with a
+                        condensed summary of Buddhadharma.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="119">The Main Points of the Subject Matter</head>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-5"/>
+                    <p tid="6">From a doctrinal perspective, the sūtra explores several important
+                        Mahāyāna topics in relation with the notion of miracles (<foreign type="term" xml:lang="Sa-Ltn">prātihārya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">cho ’phrul</foreign>), supernatural powers (<foreign type="term" xml:lang="Sa-Ltn">ṛddhi</foreign>, <foreign type="term" xml:lang="Bo-Ltn">rdzu ’phrul</foreign>), and extraordinary
+                        transformation (<foreign type="term" xml:lang="Sa-Ltn">vikurvaṇa</foreign>,
+                            <foreign type="term" xml:lang="Bo-Ltn">rnam par ’phrul</foreign>):</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-6"/>
+                    <p tid="7">
+                        <emph>The necessity for miracles</emph>. At the beginning of the text, it is
+                        stated that sentient beings who could fall into negative forms of existence
+                        should be converted to the path in order to lead them to unsurpassable
+                        awakening. This can only occur, though, through the display of miracles. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-7"/>
+                    <p tid="8">
+                        <emph>The description of miracles</emph>. In this sūtra, the miracles of the
+                        Buddha are presented in three different ways: as magical transformations, as
+                        the ability to know another’s mind, and as the capacity to destroy
+                        defilements by expounding the Dharma. First the Buddha performs supernatural
+                        actions that transform the immediate physical surroundings. Then he explains
+                        that beings should be helped according to their dispositions, inclinations,
+                        and capacities. Since the Tathāgata is able to know beings’ minds through
+                        his supernatural powers, he is able to assist them through various skillful
+                        means (<foreign type="term" xml:lang="Sa-Ltn">upāya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">thabs</foreign>) corresponding to their
+                        circumstances. Vasubandhu explains this sequence in great detail in the
+                            <title xml:lang="Sa-Ltn">Abhidharmakośa</title>: the Buddha first
+                        ravishes the minds of beings he wishes to set on the path through the
+                        display of his extraordinary powers. Knowing their dispositions,
+                        inclinations, and capacities, he then imparts methods that will ultimately
+                        lead them to unsurpassable, truly perfect awakening. The use of such
+                        miracles by the Buddha as skillful means is a recurring theme of Mahāyāna
+                        sūtras, as can be seen, for example, in the <title xml:lang="Sa-Ltn">Śūraṃgama­samādhi­sūtra</title> (Lamotte 2003: 233) where there is a
+                        passage that mirrors the storyline of the present sūtra.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-8"/>
+                    <p tid="9">
+                        <emph>The “magical show” as an analogy for the nature of reality</emph>. The
+                            <title xml:lang="Sa-Ltn">Buddha­balā­dhāna­prātihārya­vikurvāṇa­nirdeśa</title> makes the
+                        important point that conditioned phenomena are like a “show” or an illusion,
+                        as clearly explained by Mañjuśrī to the gods. Just like a reflection in a
+                        mirror, the Tathāgata neither comes nor goes. Things neither arise nor
+                        cease. Yet the Tathāgata appears in the world for the sake of beings. For
+                        him, however, there is no birth, no old age, and no death. The sūtra
+                        explains that since all conditioned phenomena are like illusions, the
+                        extraordinary activities of a tathāgata, such as teaching and leading beings
+                        to awakening, are not limited by time and space. His teaching remains even
+                        if he manifested the extinction of suffering eons ago. As an object of
+                        veneration, he is a means to reach awakening by accumulating merit. His
+                        purpose and meaning are not constrained by notions of his being present or
+                        absent. The same idea occurs in a sūtra found in the Ratnakūṭa, <title xml:lang="en">The Prophecy for the Magician Bhadra</title> (Toh.
+                        65)<!--Reference Toh 0065-->, in which the Tathāgata displays similar
+                        miracles (Chang 1983: 4–13) and in which it is stated that the Buddha can
+                        perform magic because he knows that all phenomena are illusory. Action
+                            (<foreign type="term" xml:lang="Sa-Ltn">karma</foreign>) is explained as
+                        being the great conjurer that magically creates beings and material objects.
+                        Thus, the basis of the Tathāgata’s supernatural powers is considered to be
+                        his realization that all phenomena are like magic and illusions. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-9"/>
+                    <p tid="10">
+                        <emph>The nature of the cycle of rebirths (saṃsāra) and karma</emph>. In the
+                            <title xml:lang="Sa-Ltn">Buddha­balā­dhāna­prātihārya­vikurvā­ṇanirdeśa</title>, the Buddha
+                        explains that there is no birth, old age, and death. However, one’s state of
+                        life is dependent on the perception conditioned by the body, since beings
+                        are fixated on the physical basis of their existence. These perceptions
+                        trigger actions. On the basis of these actions, beings will experience
+                        suffering again and again throughout all their future rebirths. This endless
+                        cycle of arisings and cessations is what is called <foreign type="term" xml:lang="Sa-Ltn">saṃsāra</foreign>. The scales of a balance are used as
+                        a metaphor in the text to illustrate this process, and it is worth noting
+                        that this simile is also found in the <title xml:lang="Sa-Ltn">Abhidharma­samuccaya</title> in the same context (Rahula 2001: 94). </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-10"/>
+                    <p tid="11">
+                        <emph>Skillful means and practices</emph>. The sūtra puts forward various
+                        methods for venerating the tathāgatas—making offerings, chanting their
+                        names, supporting the Dharma, propagating the teachings, and making the
+                        Dharma available in any possible way. Of all these methods, those concerning
+                        the protection of the Dharma are deemed supreme. </p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="120">Source Text and Various Versions</head>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-11"/>
+                    <p tid="12">The source text is extant in Tibetan, Chinese, and (partially)
+                        Sanskrit. The Tibetan text is found in the various editions of the Kangyur
+                        with no major variations. A glimpse of what might have been the source text
+                        for the Tibetan translation of the sūtra is afforded by some Sanskrit
+                        fragments in the collection of Gilgit manuscripts. The Gilgit manuscripts
+                        are among the oldest manuscripts in the world, dating back to the 5th and
+                        6th centuries A.D., and include famous works from the Buddhist canon such as
+                        the <title xml:lang="en">Lotus Sūtra</title>. The language of these
+                        manuscripts is a form of Sanskrit with Prakrit vocabulary and inflections.
+                        The Gilgit fragments of this sūtra, although far from representing the whole
+                        text, show no major variations from their Tibetan counterparts. It is,
+                        however, not possible at this stage to establish whether this specific
+                        Sanskrit version of the text was the basis for the Tibetan translations. </p>
+                    <p tid="13">There is unfortunately no colophon to this sūtra, and therefore no
+                        direct mention by name of the Indian and Tibetan translators. We were unable
+                        to find any reference to this sūtra elsewhere in the Tibetan canon. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-12"/>
+                    <p tid="14">Regarding the relationship between this sūtra and others, it is
+                        worth noting that the text belongs to a corpus of sūtras containing passages
+                        in which miracles play a significant role: one Vinaya text, the <title xml:lang="Sa-Ltn">Vinaya­kṣudraka­vastu</title> (Toh
+                        6)<!--Reference Toh 0006-->; two Prajñā­pāramitā­sūtras, the <title xml:lang="en">Prajñā­pāramitā in 25,000 lines</title> (Toh 9)<!--Reference Toh 0009--> and <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/UT22084-031-002.html">Prajñāpāramitā in 10,000 lines</ref>
+                            </title> (Toh 11); the <title xml:lang="Sa-Ltn">Buddhāvataṃsaka</title> (Toh
+                        44)<!--Reference Toh 0044-->; six sūtras from the <title xml:lang="Sa-Ltn">Ratnakūṭa</title>, the
+                        <title xml:lang="Sa-Ltn">Tathāgatācintya­guhya­nirdeśa</title> (Toh 47)<!--Reference Toh 0047-->,
+                        <title xml:lang="Sa-Ltn">Bodhi­sattva­piṭaka</title> (Toh 56)<!--Reference Toh 0056-->, <title xml:lang="Sa-Ltn">Bhadra­māyākāra­vyākaraṇa</title> (Toh 65)<!--Reference Toh 0065-->, <title xml:lang="Sa-Ltn">Mahā­pratihārya­nirdeśa</title> (Toh 66)<!--Reference Toh 0066-->, <title xml:lang="Sa-Ltn">Maitreya­mahā­siṃha­nāda</title> (Toh 67)<!--Reference Toh 0067-->, and <title xml:lang="Sa-Ltn">Acintya­buddha­viśaya­nirdeśa</title> (Toh 79)<!--Reference Toh 0079-->; and
+                        twenty-eight sūtras from the <title xml:lang="Bo-Ltn">mdo sde</title>, the
+                        <title xml:lang="Sa-Ltn">Bhadra­kalpika</title> (Toh 94)<!--Reference Toh 0094-->, <title xml:lang="Sa-Ltn">Saṃghāṭi­sūtra­dharma­paryāya</title> (Toh 102)<!--Reference Toh 0102-->,
+                        <title xml:lang="Sa-Ltn">Karuṇā­puṇḍarīka</title> (Toh 112)<!--Reference Toh 0112-->, <title xml:lang="Sa-Ltn">
+                            <ref target="http://read.84000.co/translation/toh113.html">Saddharma­puṇḍarīka</ref>
+                        </title> (Toh 113), <title xml:lang="Sa-Ltn">Sarva­dharma­guṇa­vyūha­rāja</title> (Toh 114)<!--Reference Toh 0114-->, <title xml:lang="Sa-Ltn">Ratna­karaṇḍa</title> (Toh 117)<!--Reference Toh 0117-->, <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/UT22084-055-001.html">The
+                                King of Samādhis Sūtra</ref>
+                        </title> (Toh 127), <title xml:lang="Sa-Ltn">Praśānta­viniścaya­prātihārya­samādhi</title> (Toh 129)<!--Reference Toh 0129-->, <title xml:lang="Sa-Ltn">Śūraṃgama­samādhi</title> (Toh 132)<!--Reference Toh 0132-->, <title xml:lang="Sa-Ltn">Catur­dāraka­samādhi</title> (Toh 136)<!--Reference Toh 0136-->, <title xml:lang="Sa-Ltn">Mahā­samnipāta­ratna­ketu­dhāraṇī</title> (Toh 138)<!--Reference Toh 0138-->,
+                            <title xml:lang="Sa-Ltn">Tathāgata­mahā­karuṇā­nirdeśa</title> (Toh
+                        147)<!--Reference Toh 0147-->, <title xml:lang="Sa-Ltn">Sāgara­mati­paripṛcchā</title> (Toh 152)<!--Reference Toh 0152-->,
+                            <title xml:lang="Sa-Ltn">Anavatapta­nāga­rāja­paripṛcchā</title> (Toh
+                        156)<!--Reference Toh 0156-->, <title xml:lang="Sa-Ltn">Druma­kiṃnara­rāja­paripṛcchā</title> (Toh
+                        157)<!--Reference Toh 0157-->, <title xml:lang="Sa-Ltn">Vikurvāṇa­rāja­paripṛcchā</title> (Toh 167)<!--Reference Toh 0167-->,
+                        <title xml:lang="Sa-Ltn">Mahāyānopadeśa</title> (Toh 169)<!--Reference Toh 0169-->, <title xml:lang="Sa-Ltn">Ākṣaya­mati­nirdeśa</title> (Toh 175)<!--Reference Toh 0175-->, <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/UT22084-060-005.html">The
+                                Sūtra of the Teaching of Vimalakīrti</ref>
+                        </title> (Toh 176), <title xml:lang="Sa-Ltn">Buddha­balā­dhāna­prātihārya­vikurvāṇa­nirdeśa</title> (this text, Toh
+                        186), <title xml:lang="Sa-Ltn">Mahā­bherī­hāraka­parivarta</title> (Toh
+                        222)<!--Reference Toh 0222-->, <title xml:lang="Sa-Ltn">Trāyastriṃśat­parivarta</title> (Toh 223)<!--Reference Toh 0223-->,
+                        <title xml:lang="Sa-Ltn">Buddha­saṅgīti</title> (Toh 228)<!--Reference Toh 0228-->, <title xml:lang="Sa-Ltn">Mahā­megha</title> (Toh 232)<!--Reference Toh 0232-->, <title xml:lang="Sa-Ltn">Paramārtha­dharma­vijaya</title> (Toh 246)<!--Reference Toh 0246-->, <title xml:lang="Sa-Ltn">Saddharma­smṛtyupasthāna</title> (Toh 287)<!--Reference Toh 0287-->, <title xml:lang="Bo-Ltn">mdzangs blun</title> (Toh 341)<!--Reference Toh 0341-->, and <title xml:lang="Sa-Ltn">Sumāgadhāvadāna</title> (Toh 346)<!--Reference Toh 0346-->. </p>
+                    <p tid="15">In addition, the pure realm of Sukhāvatī is mentioned in the text,
+                        as are some names of tathāgatas and of a specific samādhi also found in the
+                            <title xml:lang="Sa-Ltn">Buddhāvataṃsaka</title>. </p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="121">Translation Issues and Academic Research</head>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-13"/>
+                    <p tid="16">To the best of our knowledge, no complete English translation of
+                        this sūtra was available prior to the one published here. Schopen, however,
+                        edited some Sanskrit fragments of the sūtra, compared them to the Tibetan
+                        text, and provided an English translation on the basis of the Sanskrit and
+                        Tibetan versions. </p>
+                    <p tid="17">The many compounds found in the text remain, unsurprisingly, one of
+                        the main issues for translators. Some Tibetan expressions in which terms
+                        appear in a different order are apparently used for the same Sanskrit
+                        compound, for instance, <foreign xml:lang="Bo-Ltn" type="quote">bsod nams
+                            las skyes pa’i dge ba’i rtsa ba</foreign> (145b.2) instead of <foreign type="quote" xml:lang="Bo-Ltn">dge ba’i rtsa ba las skyes pa’i bsod
+                            nams</foreign> (150b.7). </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-14"/>
+                    <p tid="18">Another good illustration of the difficulty of translating compounds
+                        is the title of the sūtra itself, <title xml:lang="Sa-Ltn">Buddha­balādhāna­prātihārya­vikurvāṇa</title>, which Schopen does not
+                        translate in his study of the Sanskrit text. Although the Sanskrit term
+                            <foreign xml:lang="Sa-Ltn" type="term">balādhāna</foreign> is translated
+                        in the Mahāvyutpatti as <foreign xml:lang="Bo-Ltn" type="term">stobs skyed
+                            pa</foreign>, different transliterations are found in the various
+                        Kangyur editions. For example, the Degé Kangyur reads <foreign xml:lang="Sa-Ltn" type="term">balavadhana</foreign>, the Stok Palace
+                        reads <foreign xml:lang="Sa-Ltn" type="term">balādhana</foreign>, the
+                        Narthang reads <foreign xml:lang="Sa-Ltn" type="term">baladhana</foreign>,
+                        and so forth. The Pedurma (<title xml:lang="Bo-Ltn">dpe sdur ma</title>,
+                        comparative edition, see <ptr target="#bibliography">bibliography</ptr>)
+                        settles for <foreign xml:lang="Sa-Ltn" type="term">balavardhana</foreign>.
+                        In the present case, we chose to follow Schopen, who opts for <foreign xml:lang="Sa-Ltn" type="term">balādhāna</foreign> (1978: 319). Edgerton,
+                        in his <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar and
+                            Dictionary</title>, offers a detailed explanation of this term, which he
+                        understands as “the attainment of (usually some particular) <term type="ignore">power</term>,” such as the <term type="ignore">powers</term> of a tathāgata (1953: 398a). As for the rest of the
+                        compound, we have translated <foreign xml:lang="Sa-Ltn" type="term">prātihārya</foreign> as “miracle” and <foreign type="term" xml:lang="Sa-Ltn">vikurvāṇa</foreign> as “extraordinary transformation.”
+                        In the <title xml:lang="Sa-Ltn">Śūraṃgama­samādhi­sūtra</title> (Lamotte
+                        2003: 233), <foreign xml:lang="Sa-Ltn">prātihāryabala</foreign> and <foreign xml:lang="Sa-Ltn" type="term">vikurvāṇabala</foreign> are often used as
+                        synonyms. Lamotte reads them as <foreign xml:lang="Sa-Ltn" type="term">karmadhāraya</foreign> compounds (in the way of adjective+noun)
+                        respectively meaning “wondrous <term type="ignore">powers</term>” and
+                        “prodigious <term type="ignore">powers</term>.” Burnouf, on his part,
+                        understands <foreign xml:lang="Sa-Ltn" type="term">ṛddhi­prātihārya</foreign> as “supernatural transformation” (2010:
+                        189). La Vallée Poussin translates <foreign xml:lang="Sa-Ltn" type="term">prātihārya</foreign> as “magical <term type="ignore">powers</term>” in
+                        v. VII.47–48 of the <title xml:lang="Sa-Ltn">Abhidharmakośa</title> (and
+                            <title xml:lang="Sa-Ltn" type="longTitle">bhāṣya</title>).<note place="end" index="1" xml:id="UT22084-061-006-213">The English
+                            translations of these terms are found in the English translations of
+                            Lamotte’s, Burnouf’s, and La Vallée Poussin’s respective works. </note>
+                        In this context, <foreign xml:lang="Sa-Ltn" type="term">prātihārya</foreign>
+                        is used by a buddha to convert beings through the manifestation of
+                        miraculous powers, the ability to know others’ minds, and the capacity to
+                        teach, all of which correspond very much to the subject matter of our sūtra.
+                        In this context, the third <foreign xml:lang="Sa-Ltn" type="term">prātihārya</foreign> is deemed to be superior since it cannot be
+                        attained by means of magic formulae (La Vallée Poussin 1988–90: 1166–68 and
+                        1209–1210). For these reasons, we have not read <foreign xml:lang="Sa-Ltn" type="term">prāti­hārya­vikurvāṇa</foreign> as a <foreign xml:lang="Sa-Ltn" type="term">dvandva</foreign> in this context, as we
+                        were originally tempted to do. It is probably a <foreign xml:lang="Sa-Ltn" type="term">karmadhāraya</foreign> (noun+noun) and possibly a <foreign xml:lang="Sa-Ltn" type="term">tatpuruṣa</foreign>. In the Tibetan
+                            <foreign xml:lang="Bo-Ltn" type="term">cho ’phrul rnam par ’phrul
+                            pa</foreign>, the two terms stand in apposition, indicating rather a
+                            <foreign xml:lang="Sa-Ltn" type="term">karmadhāraya</foreign>. The
+                        complete title of the sūtra can therefore be translated as “The Teaching on
+                        the Extraordinary Transformation that is the Miracle of Attaining the
+                        Buddha’s Powers,” and indeed the message of the sūtra is that the ultimate
+                        miracle is to attain the state of buddhahood. Supernatural powers are only a
+                        means to lead beings to awakening. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-15"/>
+                    <p tid="19">Another translation issue concerns the mention in the sūtra of a
+                        grove (<foreign xml:lang="Bo-Ltn" type="quote">shing a mra srung ba’i tshal
+                            / a mra srung ba mo’i tshal</foreign>) located in Vāraṇasī. Although
+                        there is no extant Sanskrit fragment for this passage, Schopen translated
+                        the phrase <foreign xml:lang="Bo-Ltn" type="quote">a mra srung ba mo’i
+                            tshal</foreign> from the Tibetan as “the grove of Āmrapālī” (see Schopen
+                        1978: 323 fragment [1288]), taking it as a reference to the grove offered to
+                        the Buddha by the courtesan Āmrapāli in which several events and teachings
+                        recorded in the canonical texts took place. This translation is problematic
+                        here, however, because Āmrapālī’s grove was located in Vaiśālī and not
+                        Vāraṇasī. There are several reasons for thinking that these phrases do not
+                        refer to Āmrapālī’s grove. In the narratives of the <title xml:lang="Sa-Ltn">Vinaya</title> texts—the only instances in the Kangyur in which
+                        Āmrapālī is a protagonist in her own right as opposed to mentions of her
+                        grove—her name is rendered in Tibetan as <foreign xml:lang="Bo-Ltn" type="term">a mra skyong ma</foreign>, while the phrase a <foreign xml:lang="Bo-Ltn" type="term">mra srung ba</foreign>, which is often
+                        taken as an alternative rendering, is in fact only used in the sūtra section
+                        of the Kangyur, and only within the phrase a <foreign xml:lang="Bo-Ltn" type="term">mra srung ba’i tshal</foreign>, i.e. referring to a grove.
+                        There are, it is true, several sūtras explicitly located in Vaiśālī in which
+                            <foreign xml:lang="Bo-Ltn" type="term">a mra srung ba’i tshal</foreign>
+                        can be reasonably taken as referring to Āmrapālī’s grove. In this text,
+                        however, we are faced not only with the anomalous location, but also with
+                        the variant phrases <foreign xml:lang="Bo-Ltn" type="term">shing a mra srung
+                            ba’i tshal</foreign> and <foreign xml:lang="Bo-Ltn" type="term">a mra
+                            srung ba mo’i tshal</foreign>, both of which occur only here and nowhere
+                        else in the entire Kangyur. A literal translation of the syntactic
+                        construction in this text, <foreign xml:lang="Bo-Ltn" type="term">shing a
+                            mra srung ba’i tshal</foreign> (F.143.b) would be “grove of the
+                        caretaker of mango trees,” and our understanding is that the term <foreign xml:lang="Bo-Ltn" type="term">a mra srung ba</foreign> (<foreign type="term" xml:lang="Sa-Ltn">āmrapāla</foreign> / <foreign type="term" xml:lang="Sa-Ltn">āmrapālī</foreign>) is simply a generic name with this
+                        meaning, not a proper noun. In a word, the translation of <foreign xml:lang="Bo-Ltn" type="term">a mra srung ba’i tshal</foreign> as
+                        “Āmrapālī’s grove” is technically wrong, although it is semantically correct
+                        when the grove is located in Vaiśālī. Other possible hypotheses to explain
+                        the anomaly would be that at some point in the transmission of the text a
+                        geographical or nominal inaccuracy has been introduced; or else that the
+                        translocation of Āmrapālī’s grove to Vāraṇasī is intended to be understood
+                        as part of the Buddha’s miraculous display. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="122">The Translation</head>
+                <head type="titleHon" tid="123">The Noble Sūtra of the Great Vehicle</head>
+                <head type="titleMain" tid="124">The Teaching on the Extraordinary Transformation
+                    that is the Miracle of Attaining the Buddha’s Powers</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-061-006-16"/>
+                    <p tid="20">
+                        <ref cRef="F.143.b" type="folio"/>
+                        <!--modularPassage type=openingHomage-->Homage to the Omniscient
+                        One!<!--/modularPassage-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-17"/>
+                    <p tid="21"><!--modularPassage type=thusSetting Retinue-->Thus did I hear at one
+                        time. The Blessed One was dwelling on the banks of the great Nairañjanā
+                        River, together with seven thousand bodhisattvas.<!--/modularPassage-->
+                        Among them were the Noble Avalokiteśvara, Vajrapāṇi, Maitreya, and Mañjuśrī,
+                        and all the great śrāvakas like Subhūti, Śāriputra, and Maudgalyāyana. He
+                        was circumambulated by Śakra, Brahmā, and all the protectors of the world,
+                        as well as all the kings, ministers, brahmins, and householders, and was
+                            <ref cRef="F.144.a" type="folio"/> placed in front of the assembly. After being
+                        presented with offerings of almsfood, he pleased his surrounding retinue
+                        with a teaching on Dharma, and encouraged, uplifted, and complimented them.
+                        By means of his great supernatural power, the Tathāgata and his surrounding
+                        retinue were then transported to the city of Vārāṇasī, where they stayed in
+                        the grove of the caretaker of mango trees.<note place="end" index="2" xml:id="UT22084-061-006-214">The Tibetan reads here <foreign xml:lang="Bo-Ltn" type="quote">shing a mra srung ba’i
+                                tshal</foreign>. This issue is discussed in detail at the end of the
+                            Introduction. </note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-18"/>
+                    <p tid="22">At that time the earth trembled greatly, and a vast lion throne made
+                        from the seven kinds of precious substances appeared. Covering about ten
+                        miles in height and five miles in breadth, it was well adorned,<note place="end" index="3" xml:id="UT22084-061-006-215">Pd H N S U <foreign xml:lang="Bo-Ltn" type="quote">legs par spras pa</foreign>. D
+                                <foreign xml:lang="Bo-Ltn" type="quote">legs par smras
+                            pa</foreign>.</note> delightful, and pleasing to the mind. It was tied
+                        with hanging silk tassels, clothed with thousands of divine garments,
+                        covered with myriad garlands of divine flowers, endowed with a divine
+                        fragrance, and colorful. The lion throne had arisen from the Tathāgata’s
+                        previously developed roots of virtue. As soon as they saw it, all beings
+                        would immediately reach the stage of accepting that phenomena are not
+                        produced. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-19"/>
+                    <p tid="23"> Then, the Blessed One sat down on this lion throne, settled into
+                        the state of concentration known as <distinct>the garlands of the
+                            buddhas</distinct>, and addressed the bodhisattvas Noble Avalokiteśvara
+                        and Vajrapāṇi as follows. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-20"/>
+                    <p tid="24">“Avalokiteśvara, go forth. Together with Vajrapāṇi, use your great
+                        supernatural powers and state of concentration to assemble around me the
+                        beings of this Sahā world system and of the other world systems of the ten
+                        directions whom you should tame and who are degenerate, have no faith,
+                        practice negative deeds, are obscured because of various types of
+                        affliction, have no consideration for their mothers or fathers, do not
+                        respect ascetics or brahmins for what they are, and have no faith in the
+                        Three Jewels.” <ref cRef="F.144.b" type="folio"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-21"/>
+                    <p tid="25"> On hearing these words from the Tathāgata, the bodhisattvas Noble
+                        Avalokiteśvara and Vajrapāṇi settled into the state of concentration known
+                        as <distinct>watching over and exhorting all beings</distinct>. Through the
+                        ­power of their state of concentration, this great earth was tremendously
+                        shaken in six ways.<note place="end" index="4" xml:id="UT22084-061-006-216">“This great earth teetered, tottered, and tremored in six different
+                            ways: it quivered, quavered, and quaked; it shifted, shuddered, and
+                            shook. The west rose up and the east sank down. [The east rose up and
+                            the west sank down.] The south rose up and the north sank down. The
+                            north rose up and the south sank down. The middle rose up and the ends
+                            sank down. The ends rose up and the middle sank down.” (<title xml:lang="Sa-Ltn">Prāti­hārya­sūtra</title>, translated in Rotman
+                            2008: 174).</note> Thousands of light rays shone forth from the bodies
+                        of Avalokiteśvara and Vajrapāṇi, and as they shone they completely
+                        illuminated the world systems of the great trichiliocosm. They illuminated
+                        everything from the world of Brahmā on down—that is, the worlds endowed with
+                        form and pervaded by form. From these light rays also came these verses of
+                        exhortation: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-22"/>
+                    <lg tid="26">
+                        <l>“Be attentive and without afflictions.</l>
+                        <l>Do not fall under the power of distraction!</l>
+                        <l>While everywhere is the suffering of birth, old age, and death,</l>
+                        <l>Rare is the appearance of the teaching of the Sugata.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-23"/>
+                    <lg tid="27">
+                        <l>“Those of unwholesome livelihood have no fear,</l>
+                        <l>Even though they are bound to circle </l>
+                        <l>In saṃsāra’s ocean for countless eons,</l>
+                        <l>Always ensnared by afflictions.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-24"/>
+                    <lg tid="28">
+                        <l>“Gain, desires, and women are impermanent.</l>
+                        <l>They always possess the nature of an illusory song and dance.</l>
+                        <l>Even if one experiences eons of bliss,</l>
+                        <l>One will eventually undergo suffering.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-25"/>
+                    <lg tid="29">
+                        <l>“Behold how tricky things are!</l>
+                        <l>One’s mother in this life may be one’s wife in another,</l>
+                        <l>And in yet another life fools may eat her flesh,</l>
+                        <l>And in their ignorance enjoy it.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-26"/>
+                    <lg tid="30">
+                        <l>“No doubt, human beings take birth in the ocean of saṃsāra’s
+                            suffering,</l>
+                        <l>Yet they are not afraid. </l>
+                        <l>You who desire to honor the Sugata for having explained the noble Dharma
+                            to human beings,</l>
+                        <l>Go forth!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-27"/>
+                    <lg tid="31">
+                        <l>“Once you have understood the one who can guide the untamed,</l>
+                        <l>You will attain the state of concentration, the cultivation of peace. </l>
+                        <l>Thus, all you human beings in the ocean of saṃsāra,</l>
+                        <l>Be afraid and long for liberation! <ref cRef="F.145.a" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-28"/>
+                    <lg tid="32">
+                        <l> “All you humans, honor this noble one!<note place="end" index="5" xml:id="UT22084-061-006-217">S <foreign type="term" xml:lang="Bo-Ltn">mi rnams kyi ni</foreign>. D <foreign type="term" xml:lang="Bo-Ltn">mi rnams kyis ni</foreign>.</note>
+                        </l>
+                        <l>Do not take the lives of others,</l>
+                        <l>And likewise do not take others’ possessions that have not been
+                            offered.</l>
+                        <l>Do not violate other people’s wives.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-29"/>
+                    <lg tid="33">
+                        <l>“Always pay homage to the Buddhadharma!</l>
+                        <l>Give up pride, arrogance, and harsh speech,</l>
+                        <l> And then set out for the grove of the caretaker of mango trees</l>
+                        <l>In the city called Vārāṇasī!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-30"/>
+                    <lg tid="34">
+                        <l>“Upon arriving, behold the supreme person.</l>
+                        <l>Vast and pleasing is his array:</l>
+                        <l>The saṅgha of monks who always have supernatural powers,</l>
+                        <l>And the bodhisattvas who possess even greater ones.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-31"/>
+                    <lg tid="35">
+                        <l>“He is named Avalokiteśvara</l>
+                        <l>Who continuously sends forth light rays</l>
+                        <l>So that the ignorant know</l>
+                        <l>And the myriad beings are liberated.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-32"/>
+                    <lg tid="36">
+                        <l>“Those who are proud, arrogant, and haughty,</l>
+                        <l>And those who do not venerate the Buddhadharma,</l>
+                        <l>The protector, the supreme Vajrapāṇi, never ceases to illuminate them</l>
+                        <l>And leads them to understanding.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-33"/>
+                    <lg tid="37">
+                        <l>“Their bodies are vast with great supernatural powers.</l>
+                        <l>Eons and eons would not suffice to describe them.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-34"/>
+                    <lg tid="38">
+                        <l>“There, in the grove of the caretaker of mango trees,</l>
+                        <l>Bring perfume, garlands, fine clothes, and ornaments to honor the
+                            Sugata.</l>
+                        <l>Venerate this guide of humankind,</l>
+                        <l>For rare is a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-35"/>
+                    <lg tid="39">
+                        <l>“Beings have suffered for myriads of eons</l>
+                        <l>And will forever do so due to desire.</l>
+                        <l>May the wise always long for liberation</l>
+                        <l>And venerate the supreme person, the Buddha!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-36"/>
+                    <lg tid="40">
+                        <l>“Sons, daughters, relatives,</l>
+                        <l>Parents, wives, friends— </l>
+                        <l>All are illusory and pointless;</l>
+                        <l>They will always be reborn in different ways.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-37"/>
+                    <lg tid="41">
+                        <l>“So, too, gold and silver are like flashes of lightning.</l>
+                        <l>None show any essence.</l>
+                        <l>To reach the state of awakening,</l>
+                        <l>Venerate the guide of humankind."</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-38"/>
+                    <p tid="42">As these inspirational verses arose one after another from the light
+                        rays, <ref cRef="F.145.b" type="folio"/> they filled the world systems of the great
+                        trichiliocosm with sound, inspiring all beings. Those who formerly had wrong
+                        views were converted to right views. Those who were afflicted with pride,
+                        vanity, arrogance, and pretense were freed from pride, vanity, and
+                        arrogance. Those who indulged in lust without restraint were freed from
+                        lust. All those who engaged in killing, stealing, sexual misconduct on
+                        account of desire, or the eight unwholesome factors, were set on the noble
+                        eightfold path in all their actions, words, and thoughts. Each and every one
+                        of them completely abandoned excitement, joking, pleasure, amusement,
+                        desire, anger, envy, and attachment. They felt determined to contemplate,
+                        follow, and serve the Tathāgata. They all wished to hear the Dharma. All the
+                        gods, nāgas, yakṣas, gandharvas, asuras, garuḍas, kinnaras, mahoragas,
+                        humans, non-humans, kings of the nāgas, royal lords of the citadels,
+                        vassals, universal monarchs, monks, nuns, male lay vow holders, and female
+                        lay vow holders carried divine flowers, garlands, salves, aromatic powders,
+                        garments, umbrellas, royal banners, cymbals, and bundles of silk scarves in
+                        order to venerate the Tathāgata. Once they reached the place where he
+                        resided, the grove of the caretaker of mango trees in the great city of
+                        Vārāṇasī, they worshipped him and his surrounding retinue with the roots of
+                        virtue that arose from their own merit. A rain of flowers, a great fragrant
+                        rain, fell. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-39"/>
+                    <p tid="43">Then, <ref cRef="F.146.a" type="folio"/> at that moment, the Blessed One exerted
+                        his sovereign power<note place="end" index="6" xml:id="UT22084-061-006-218">
+                            <foreign xml:lang="Bo-Ltn" type="term">byin gyi rlabs te</foreign>
+                                (<foreign xml:lang="Sa-Ltn" type="term">adhyatiṣṭha</foreign>, see
+                            Schopen 1978: 322 fragment [1288]). We have translated <foreign xml:lang="Bo-Ltn" type="term">byin gyi rlabs</foreign> (<foreign xml:lang="Sa-Ltn" type="term">adhiṣṭhāna</foreign>) in this text as
+                            ‘sovereign power.’ Conze used the expression ‘sustaining power.’ The
+                            term is often translated as ‘blessings.’ However, as explained in Eckel
+                            1994: 90–93, Gómez 2011: 539, 541, and Fiordalis 2012: 104, 118,
+                                <foreign xml:lang="Sa-Ltn" type="term">adhiṣṭhāna</foreign> conveys
+                            the notions of control (of one’s environment as a result of meditative
+                            absorption), authority, or protection (see <title xml:lang="Sa-Ltn">Abhi­dharma­kośa</title> VII.51, cf. Poussin 1925: 119ff). As can
+                            be seen in the present text, <foreign xml:lang="Sa-Ltn" type="term">adhi­ṣṭhāna</foreign> is also used to convey the idea of
+                            transformation through exerting one’s control over objects, people, and
+                            places. It seems to us that ‘sovereign power’ covers all these shades of
+                            meaning as well as the various usages of the Sanskrit term. For example,
+                                <foreign xml:lang="Sa-Ltn" type="term">satyādhiṣṭhāna</foreign>,
+                            ‘the sovereign power of truth,’ and <foreign xml:lang="Sa-Ltn" type="term">adhi­ṣṭhānādhisthita</foreign>, ‘empowered by the
+                            sovereign power (of the Tathāgata)’—which in tantric initiation may also
+                            refer to being empowered as a sovereign.</note> on Jambudvīpa and the
+                        grove of the caretaker of mango trees so that it extended over several
+                        trillions of yojanas. The ground became as smooth as the palm of a hand,
+                        divinely pleasing to the mind, colorful, and fragrant. It was ornamented
+                        with heavenly flower trees, fruit trees, fragrant trees, jewel trees,
+                        wish-fulfilling trees, and trees bearing garments. It supported heavenly
+                        lion thrones with hanging garlands of jewels, cloth, and flowers, and was
+                        suffused with the sound of divine bells. Thus, just like the world system
+                        known as Sukhāvatī, it was ravishing, fulfilling, pleasing, and delightful.
+                        It was blessed, being filled by everyone, from bodhisattvas, śrāvakas,
+                        pratyekabuddhas, gods, nāgas, yakṣas, gandharvas, asuras, garuḍas, kinnaras,
+                        and mahoragas, to monks, nuns, male and female lay vow holders, kings,
+                        ministers, brahmins, and householders.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-40"/>
+                    <p tid="44">Then, the bodhisattvas Noble Avalokiteśvara and Vajrapāṇi emerged
+                        from their state of concentration and went to where the Blessed One was
+                        staying. They approached, circumambulated him three times, and said to him,
+                        “Blessed One, the Tathāgata’s skillful means and methods that bring beings
+                        to spiritual maturity are many. Sugata, they are many indeed. Blessed One,
+                        the bodhisattva mahāsattvas, the great śrāvakas, gods, nāgas, yakṣas,
+                        gandharvas, asuras, garuḍas, <ref cRef="F.146.b" type="folio"/> kinnaras, mahoragas,
+                        kings, ministers, brahmins, householders, monks, nuns, and male and female
+                        lay vow holders have gathered here in great numbers through the strength of
+                        the Tathāgata’s majesty and supernatural powers.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-41"/>
+                    <p tid="45">The Blessed One replied, “Sons of a good family, this is excellent,
+                        most excellent. Sons of the Victorious One, it is indeed so. Many are the
+                        Tathāgata’s skillful means and methods that bring beings to spiritual
+                        maturity. He teaches the Dharma knowing their intentions, the way to convert
+                        them, and their roots of virtue, as well as their behavior according to
+                        their various dispositions. Some beings are to be converted by bodhisattvas.
+                        Some are to be converted by śrāvakas. Some are to be converted by
+                        pratyekabuddhas. Some are to be converted by gods. Some are to be converted
+                        by Śakra. Some are to be converted by Brahmā. Some are to be converted by
+                        nāgas. Some are to be converted by great supernatural powers. Some are to be
+                        converted by kings. Some are to be converted by states of concentration.
+                        Some are to be converted by listening to the Dharma. Some are to be
+                        converted by miracles. Some are to be converted by the Tathāgata’s complete
+                        nirvāṇa. Some are to be converted by relics. Some to be converted strive for
+                        the roots of virtue that arise from commissioning stūpas, monasteries,
+                        promenades, and groves. Some to be converted strive for the roots of virtue
+                        that arise from commissioning statues, images, and representations of gold,
+                        silver, and brass. Some to be converted strive<note place="end" index="7" xml:id="UT22084-061-006-219">In the following sentences, we have chosen
+                            to follow the Sanskrit construction. We have thus translated <foreign xml:lang="Sa-Ltn" type="quote">kecid... kuśala­mūlotsukā
+                                vaineyāḥ</foreign> as “some to be converted strive for the roots of
+                            virtue...” instead of the Tibetan <foreign xml:lang="Bo-Ltn" type="quote">kha cig... dge ba’i rtsa ba la spro ba bskyed pas
+                                ’dul</foreign>, literally, “some are to be converted through
+                            striving for the roots of virtue...”</note> for the roots of virtue that
+                        arise from worshipping and venerating the saṅgha of monks. Some to be
+                        converted strive for the roots of virtue that arise from copying
+                            sūtras,<note place="end" index="8" xml:id="UT22084-061-006-220">
+                            <foreign xml:lang="Bo-Ltn" type="term">dri ba</foreign> in the sense of
+                                <foreign xml:lang="Bo-Ltn" type="term">yi ger ’dri ba</foreign>. See
+                            Schopen 2005: 32ff.</note> having sūtras copied, or reciting sūtras.
+                        Some to be converted strive for the roots of virtue that arise from offering
+                        lamps, incense, flowers, perfume, garlands, salves, jewel necklaces, and so
+                        forth. <ref cRef="F.147.a" type="folio"/> They do not partake of a Dharma versed in the
+                        ultimate nor of a Dharma concerned with nirvāṇa. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-42"/>
+                    <p tid="46">“Sons of the Victorious One, there is indeed nothing whatsoever that
+                        the tathāgatas do not know, see, hear, or fully comprehend. They know what
+                        has happened. They know the future. They know the past. They know the
+                        present. They know the activities of all beings. They know their conduct.
+                        They know their dispositions. They know their birth. They know their
+                        existence. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-43"/>
+                    <p tid="47">“Sons of the Victorious One, it is as follows. Consider the analogy
+                        of a well-trained doctor who is very skilled in the eight branches of
+                        Āyurveda and expert in all conditions, having extensively studied the use of
+                        medicinal substances and instruments, and who knows the condition of the
+                        sick beings whose bodies are tormented by various ailments. He knows the
+                        phases and the degrees. He knows the cure. He knows the diseases related to
+                        the airs, bile, phlegm, or a combination of the three, and those related to
+                        blood, indigestion, tumors, edema, heart disease, leprosy, skin eruption,
+                        abscesses, and boils, as well as poisoning, inflammation, and so on.
+                        Possessing knowledge of all these things, he cures the diseases of all
+                        beings and liberates them from the fear of diverse ailments through various
+                        medicinal substances, vomitives, purgatives, powders, sternutatory
+                        treatments, bleeding, ghee, boiled oil, and tonics.<note place="end" index="9" xml:id="UT22084-061-006-221">The Tibetan reads <foreign xml:lang="Bo-Ltn" type="term">smin par bya ba</foreign>, which
+                            literally means “that which raises, that which ripens.” The Sanskrit
+                            equivalent is <foreign xml:lang="Sa-Ltn" type="term">bālacūrṇa</foreign>
+                            (see Schopen 1978: 326 §1291). However, an alternative and possibly
+                            better reading would be the Āyurvedic tonic called <foreign xml:lang="Sa-Ltn" type="term">balācūrṇa</foreign>, a powder made
+                            with herbs such as <foreign xml:lang="la" type="term">sida
+                                cordifolia</foreign>.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-44"/>
+                    <p tid="48">“In the same way, noble sons of the Victorious One, the Tathāgata
+                        possesses eight branches of Āyurveda with the various states of
+                        concentration, the bases of supernatural powers, the powers, the assurances,
+                        and divine sight and hearing.<note place="end" index="10" xml:id="UT22084-061-006-222">See glossary for lists of these qualities.
+                            Divine sight and hearing are qualities that are part of the <foreign type="term" xml:lang="Sa-Ltn">abhijñās</foreign> (“superior
+                            knowledge”).</note>
+                        <ref cRef="F.147.b" type="folio"/> He is well versed in the various conditions of beings,
+                        their intentions, and their conduct. Thus he seeks to free from taking
+                        rebirth in hell or as animals, hungry ghosts, or in the world of Yama all
+                        those beings who are tormented by the diseases of desire, hatred, and
+                        bewilderment and by the sicknesses of the fundamental and secondary
+                        defilements, as well as those obscured by pride, vanity, and arrogance or by
+                        attachment, suffering, fear, and anger. To this end, by using various
+                        skillful means, various practices, various states of concentration, and
+                        supernatural powers, he brings beings to all stages of liberation up to and
+                        including their unsurpassable, perfect awakening, and thus leads them to the
+                        extinction of their suffering in the sphere of remainderless <foreign xml:lang="Sa-Ltn" type="term">parinirvāṇa</foreign>.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-45"/>
+                    <p tid="49">“He liberates them from the eight unwholesome factors and sets each
+                        of them on the eightfold noble path. Sons of noble family, it is like this.
+                        Consider the analogy of the moon which, for the sake of beings to be
+                        converted, manifests skillfully to them according to the roots of virtue
+                        that constitute their dispositions. It makes itself invisible, or shows
+                        itself as a half-moon, or waning, or waxing, or as a full moon. It dispels
+                        all obscurity and darkness, and refreshes all the grass, forests, medicinal
+                        herbs, and crops. Likewise, sons of the Victorious One, the Tathāgata
+                        understands beings who are obscured by various kinds of suffering, as well
+                        as the conduct of beings who are to be converted in keeping with their
+                        various dispositions. He manifests as being in the state of parinirvāṇa, as
+                        being born, as a universal monarch, and also as someone joyful who is
+                        entertained by amusements and pleasures such as women’s laughter, play,
+                        perfume, and garlands. <ref cRef="F.148.a" type="folio"/> He also manifests as someone
+                        who renounces the household life, goes forth to live as a renunciant and
+                        practices asceticism, and eventually as someone who, having tamed Māra and
+                        turned the wheel of Dharma, pleases beings by bringing down the rain of the
+                        great cloud of Dharma. The tathāgatas have attained parinirvāṇa. Yet they
+                        liberate all beings through various practices such as zealously venerating
+                        relics; having stūpas, monasteries, and images constructed; giving up the
+                        household life for the sake of going forth as a renunciant; and venerating
+                        the Saṅgha of monks, as well as copying, reading, and reciting the noble
+                        Dharma. They also liberate beings through skillful means such as maintaining
+                        the training, the way of life, the monastic vows, fasting,<note place="end" index="11" xml:id="UT22084-061-006-223">
+                            <foreign xml:lang="Bo-Ltn" type="term">bsnyan gnas</foreign> (Tib.) or
+                                <foreign xml:lang="Sa-Ltn">upavāsa</foreign> (Skt.) is the fast day
+                            during the Poṣadha (Pāli <foreign xml:lang="Pi-Ltn" type="term">uposatha</foreign>), which includes the recitation of the <title xml:lang="Sa-Ltn">Prāti­mokṣa­sūtra</title>, the confession of
+                            faults, and the restoration of vows (e.g., the eight vows for lay
+                            followers). </note> and the lay pledges. They liberate these beings from
+                        rebirths as hell beings, animals, and beings born in Yama’s world, and from
+                        existences deprived of the eight freedoms, as well as from negative rebirths
+                        and negative forms of existence, and so forth, and comfort these beings by
+                        having them listen to the Dharma and bringing them to unsurpassable, truly
+                        perfect awakening.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-46"/>
+                    <p tid="50">At that point, some dim-witted gods thought, “The tathāgatas of
+                        earlier times, who were arhats and fully awakened buddhas, accomplished the
+                        deeds of a tathāgata. That is to say, after extending their own lifespan
+                        through their blessings, they liberated all beings from birth, old age,
+                        sickness, death, sorrow, lamentation, suffering, unhappiness, and trouble.
+                        Likewise, this tathāgata, although he has not yet accomplished all the deeds
+                        of a tathāgata, is also extolling and teaching nirvāṇa. And he is displaying
+                            <ref cRef="F.148.b" type="folio"/> supernatural powers and miracles of extraordinary
+                        transformations after having assembled a great retinue. So does this
+                        tathāgata also seek parinirvāṇa right away?” With this thought, they were
+                        depressed and fell silent.</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-47"/>
+                    <p tid="51">The youthful Mañjuśrī then clairvoyantly understood what those gods
+                        were thinking and said to them, “Gods, do not think like that, do not say
+                        such things. Do not be depressed. Many are the skillful means of the
+                        tathāgatas. They teach the Dharma to beings of diverse inclinations by means
+                        of their sovereign power, and the power of their roots of virtue, which
+                        consists of various methods, insights, and states of concentration. Gods,
+                        since I have seen the supernatural powers and miracles of extraordinary
+                        transformations that are the skillful means of the tathāgatas of the past, I
+                        know. So surely the Tathāgata will indeed wish to expound and spread the
+                        king of sūtras of the great vehicle called <title xml:lang="en">The Teaching
+                            on the Extraordinary Transformation that is the Miracle of Attaining the
+                            Buddha’s Powers</title>. Moreover, gods, the tathāgatas do not enter
+                        parinirvāṇa, because there is no parinirvāṇa of the tathāgatas, nor are
+                        their lives ever exhausted. The tathāgatas remain for immeasurable millions
+                        of eons, for utterly inexpressible eons. But through their skillful means
+                        they display their parinirvāṇa to beings, as well as the disappearance of
+                        the noble Dharma. Just as the Tathāgata sees the various beings of an impure
+                        nature who are to be converted by means of parinirvāṇa or by relics, who
+                        have no faith in the Tathāgata, and who are irreverent toward the master, so
+                        in each such case the Tathāgata displays his parinirvāṇa. But in fact, the
+                        Tathāgata neither comes nor goes. When the roots of virtue of beings have
+                        fully matured, <ref cRef="F.149.a" type="folio"/> and they long to look upon the
+                        Tathāgata, are worthy of veneration, long to listen to the Dharma, and their
+                        longing is like the full moon, at that time, the Tathāgata appears in the
+                        world for the benefit and happiness of many beings such as gods and humans,
+                        and for the sake of manifesting and propagating the Three Jewels to
+                            them.<note place="end" index="12" xml:id="UT22084-061-006-224">Translated on the basis of the Tibetan. The Sanskrit is based on a
+                                <foreign xml:lang="Sa-Ltn" type="term">yāvad</foreign> construction:
+                            “The Tathāgata appears in the world, for the benefit of many beings, for
+                            the happiness of many beings and so on, up to manifesting and
+                            propagating the Three Jewels to men and gods.”</note> But in fact, the
+                        Tathāgata is not born, nor does he age or die. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-48"/>
+                    <p tid="52">“Sons of noble family, it is as follows. As an analogy, although
+                        many forms might appear and disappear in a well-polished mirror, one never
+                        sees the reflected image actually entering the mirror or leaving it.<note place="end" index="13" xml:id="UT22084-061-006-225">Tib. <foreign xml:lang="Bo-Ltn" type="term">gzugs brnyan</foreign>, Skt. <foreign xml:lang="Sa-Ltn" type="term">pratibimba</foreign>. The images
+                            appearing in the mirror are nothing but reflections. </note> Gods, you
+                        should also look upon the body of the Tathāgata in this way. </p>
+                    <p tid="53">“Sons of noble family, it is as follows. As an analogy, a
+                        well-trained conjurer displays various cities, archways, parks, vehicles,
+                        physical forms of a universal monarch, amusements, and entertainments. Even
+                        if he makes these illusions cease, they do not move anywhere, nor do they
+                        come or go. You should regard the appearance of the tathāgatas and their
+                        parinirvāṇa in the same way. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-49"/>
+                    <p tid="54">“Moreover, gods, the tathāgatas, even though a thousand years, an
+                        eon, or ten million eons may have elapsed since their parinirvāṇa, because
+                        of their former vows, and on account of the fact that sentient beings
+                        worship them, venerate them, construct relic stūpas, create images, recite
+                        their names, and preserve and venerate the holy Dharma, liberate beings from
+                        all the hells, animal births, the world of Yama, downfalls into inopportune
+                        existences, unfortunate destinies, bad rebirths, and all suffering, even
+                        though these tathāgatas might belong to different world systems, <ref cRef="F.149.b" type="folio"/> until beings gradually attain unsurpassable, truly
+                        perfect enlightenment.<note place="end" index="14" xml:id="UT22084-061-006-226">This passage was translated from the
+                            Sanskrit fragments. As Schopen points out, the Tibetan cannot be
+                            followed here since the syntax of the sentence is problematic: “by
+                            introducing <foreign xml:lang="Bo-Ltn" type="term">sems can</foreign>
+                            here as the logical subject of the sentence, [the Tibetan] has
+                            completely changed the meaning of the passage” (1978: 333). D reads:
+                                <foreign xml:lang="Bo-Ltn" type="quote">yang lha’i bu dag sngon gyi
+                                smon lam gyis de bzhin gshegs pa mya ngan las ’das nas lo stod lon
+                                pa’am/ mya ngan las ’das nas bskal par lon pa’am/ mya ngan las ’das
+                                nas bskal pa bye bar lon yang sems can rnams kyis mchod par bya ba
+                                dang / bkur stir bya ba dang / ring bsrel gyi mchod rten byed du
+                                gzhug pa dang / sku gzugs byed du gzhug pa dang / mtshan nas brjod
+                                pa dang / dam pa’i chos ’dzin pa dang / mchod pa byed pa’i sems can
+                                ’jig rten gyi khams sna tshogs na gnas pa rnams thar par mdzad de
+                                sems can dmyal ba dang / dud ’gro’i skye gnas dang / gshin rje’i
+                                ’jig rten dang / mi khom pa dang / ngan song dang / ngan ’gro log
+                                par ltung ba thams cad dang / sdug <ref cRef="F.149.b" type="folio"/> bsngal
+                                thams cad las yongs su thar par mdzad nas rim gyis bla na med pa
+                                yang dag par rdzogs pa’i byang chub kyi bar du mngon par rdzogs par
+                                ’tshang rgya bar ’gyur na/</foreign> Unfortunately, the other
+                            Kangyurs we consulted are not helpful here. Schopen suggests reading the
+                            long Sanskrit compound °<foreign xml:lang="Sa-Ltn" type="term">saddharmedharaṇa­pūjanā</foreign> (1978: 332 §1296) as a dative:
+                                °<foreign xml:lang="Sa-Ltn" type="term">pūjanān nānā-</foreign>.
+                            This emendation is justified by the fact that the loss of a final dental
+                            followed by the same consonant is frequent in the Gilgit manuscripts
+                            (1978: 336, n9). We have chosen to follow Schopen’s suggestion. However,
+                            it should be added that another problem is involved with Schopen’s
+                            reading: the verb <foreign xml:lang="Sa-Ltn" type="term">mokṣayanti</foreign> has no object in the emended Sanskrit
+                            sentence. Schopen therefore also has to add the logical object satvān to
+                            the sentence on top of his emendation of the compound °<foreign xml:lang="Sa-Ltn" type="term">saddharmedharaṇa­pūjanā</foreign>. An
+                            alternative reading based on the principle of lectio difficilior would
+                            be to accept Schopen’s emendation °<foreign xml:lang="Sa-Ltn" type="term">saddharmedharaṇa­pūjanān</foreign> but to read it as a
+                            bahuvrīhi (accusative plural) instead of a <foreign xml:lang="Sa-Ltn" type="term">tatpuruṣa</foreign> (dative singular). The preceding
+                                <foreign xml:lang="Sa-Ltn" type="term">satvānām</foreign> could be
+                            read in this case as a partitive genitive: “those who have veneration,
+                            etc. (i.e., °<foreign xml:lang="Sa-Ltn" type="term">pūjanān</foreign> =
+                                <foreign xml:lang="Sa-Ltn" type="term">bahuvrīhi</foreign> acc.
+                            plu.) among sentient beings (<foreign xml:lang="Sa-Ltn" type="term">satvānām</foreign> = partitive genitive).” The complete sentence
+                            would read: “Moreover, gods, although a thousand years, an eon, or ten
+                            million eons may have elapsed since the tathāgatas attained parinirvāṇa,
+                            on account of their former vows, they liberate from all the hells,
+                            animal births, the world of Yama, downfalls into inopportune existences,
+                            unfortunate destinies, and bad rebirths those who among beings worship
+                            them, venerate them, construct relic stūpas, create images, recite their
+                            names, and preserve and venerate the holy Dharma...”</note> Thus, what
+                        need is there to mention those who worship the tathāgatas in person by
+                        offering them flowers, incense, perfume, garlands, salves, clothes, and
+                        aromatic powders? Gods, even though one thousand years, an eon, or even ten
+                        million eons may have elapsed since the Bhagavān Buddha entered parinirvāṇa,
+                        if some beings throw a flower in the sky, after calling the Tathāgata by his
+                        name seven times and saying ‘Homage to the Buddha,’ they will all bring an
+                        end to their suffering. But, let alone throwing a flower in the sky, if
+                        someone, whoever they might be, faithfully emulating the Tathāgata, strives
+                        to maintain even a single precept in order to honor the Tathāgata, or
+                        strives to focus on worshipping the Tathāgata even for a single day, or a
+                        single night, or a single moment, this person will put an end to suffering
+                        and gradually, fully, and completely awaken to unsurpassable, truly perfect
+                        enlightenment. If even those who, in order to honor the Tathāgata, laugh,
+                        have fun, joke like fools, play games, or make a stūpa from sand will all
+                        put an end to suffering and fully and completely awaken to unsurpassable,
+                        truly perfect enlightenment, what need is there to mention those who have
+                        built relic stūpas or relic images and, understanding that compassion toward
+                        all beings is the most important thing, think, ‘I shall liberate all beings
+                        from suffering’? And what need is there to mention those who, having
+                        produced the thought directed toward unsurpassable, truly perfect awakening,
+                            <ref cRef="F.150.a" type="folio"/> make offerings of divine flowers and incense,
+                        garlands, salves, aromatic powders, cymbals, umbrellas, and royal banners?
+                        Those who have thus made offerings to all the tathāgatas will be free from
+                        birth, old age, sickness, and death, as well as from misery, lamentation,
+                        suffering, unhappiness, and afflictions. And as long as they have not
+                        completely and fully awakened to unsurpassable, truly perfect awakening,
+                        they will be reborn in pleasant forms of existence. Gods, thus can one
+                        discern the aspiration of the tathāgatas of the past and be in perfect
+                        agreement with it.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-50"/>
+                    <p tid="55">Then, those gods thought, “Oh, this youthful Mañjuśrī is endowed
+                        with great insight. If the tathāgatas possess supreme skillful means, what
+                        does it mean when Mañjuśrī says that the tathāgatas remain in the world
+                        systems and bring beings to spiritual maturity through various skillful
+                        means, even though ten billion eons have passed many times over since the
+                        tathāgatas attained nirvāṇa?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-51"/>
+                    <p tid="56">The youthful Mañjuśrī, having clairvoyantly understood what those
+                        gods were thinking, said, “Gods, excellent! Excellent! Just wait a moment.
+                        These thoughts arising in your mind, as well as your earlier question, are
+                        also the sovereign power of the Tathāgata.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-52"/>
+                    <p tid="57">At this, the Blessed One displayed his supernatural powers and the
+                        tathāgatas Śikhin, Viśvabhū, Krakucchanda, Kanakamuni, Vipāśyin, Akṣobhya,
+                        and Amitābha appeared in his surrounding retinue, sitting on lion thrones
+                        surrounded by the saṅgha of śrāvakas and <ref cRef="F.150.b" type="folio"/> bodhisattvas,
+                        and taught the Dharma to an ocean-like retinue. They too displayed those
+                        same types of supernatural powers by manifesting many tathāgatas sitting on
+                        their lion thrones, expounding the Dharma throughout the world systems of
+                        the east, south, west, and north. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-53"/>
+                    <p tid="58">The retinue of all those gathered and the gods rejoiced, jubilated,
+                        and were pleased. Having themselves increased the power of the roots of
+                        virtue arising from their merit, they worshipped the tathāgatas with
+                        flowers, incense, perfume, garlands, salves, garments, and ornaments, and
+                        circumambulated them three times, proclaiming the following verses:</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-54"/>
+                    <lg tid="59">
+                        <l>“How wonderful is this gnosis!</l>
+                        <l>For this, one should practice the state of concentration and insight!</l>
+                        <l>Just like lights illuminating the world, </l>
+                        <l>This great hero will remain</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-55"/>
+                    <lg tid="60">
+                        <l>“For the benefit of beings</l>
+                        <l>For many eons after his nirvāṇa.</l>
+                        <l>Surrounded by bodhisattvas,</l>
+                        <l>He is seated on a lion throne.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-56"/>
+                    <lg tid="61">
+                        <l>“Seeing the Buddha is excellent.</l>
+                        <l>Listening to the Dharma is excellent.</l>
+                        <l>Likewise, observing a spiritual friend</l>
+                        <l>And listening to him is also excellent.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-57"/>
+                    <lg tid="62">
+                        <l>“All the precepts of the body</l>
+                        <l>That preserve the training are excellent.</l>
+                        <l>Those who have diligently perfected them</l>
+                        <l>Will all achieve awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-58"/>
+                    <lg tid="63">
+                        <l>“Those who are skillful in means and insight</l>
+                        <l>Will liberate beings in this world.</l>
+                        <l>Like the orb of the moon,</l>
+                        <l>Like a conjurer,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-59"/>
+                    <lg tid="64">
+                        <l>“The Tathāgata shows himself</l>
+                        <l>To come and go.</l>
+                        <l>Because they have stūpas,</l>
+                        <l>Drawings, and images made</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-60"/>
+                    <lg tid="65">
+                        <l>“And they honor and worship him,</l>
+                        <l>Those who remember his name</l>
+                        <l>And live for the sake of awakening</l>
+                        <l>Will all attain liberation.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-61"/>
+                    <lg tid="66">
+                        <l>“Since they pay homage to the Tathāgata, <ref cRef="F.151.a" type="folio"/>
+                        </l>
+                        <l>Listen to the noble Dharma,</l>
+                        <l>And worship and retain it accordingly,</l>
+                        <l>They will be free from all suffering.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-62"/>
+                    <p tid="67">As the Tathāgata imparted this instruction on the sovereign power
+                        and the miracle of the extraordinary transformation of a tathāgata,
+                        sixty-four thousand beings reached the stage where they accepted that
+                        phenomena are not produced.<note place="end" index="15" xml:id="UT22084-061-006-227">See Sasaki 1986: “[<foreign xml:lang="Sa-Ltn" type="term">anutpattika­dharma­kṣānti</foreign>]
+                            represents the fact that emptiness or the absolute experience is beyond
+                            the thinkable, and therefore in the failure of the intellect,
+                            designation is impossible. One can only refer to being unborn (<foreign xml:lang="Sa-Ltn" type="term">anutpattika</foreign>) in the absolute
+                            sense. The inclination or willingness to make this absolute statement is
+                            called <foreign xml:lang="Sa-Ltn" type="term">kṣānti</foreign>...
+                            Buddhist <foreign xml:lang="Sa-Ltn" type="term">kṣānti</foreign>,
+                            however, is a willing acceptance of the unborn” (138–139).</note> Twenty
+                        thousand beings completely purified the eye of Dharma that sees all
+                        phenomena. Five thousand gods remained without grasping, their minds freed
+                        from defilements. They were led to the stage of a non-returner. Seven
+                        hundred monks, nuns, and male and female lay vow holders attained various
+                        states of concentration.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-63"/>
+                    <p tid="68">King Prasenajit said to the youthful Mañjuśrī, “Son of the
+                        Victorious One, in your answers to the questions that were asked for the
+                        benefit of all beings, what you said was excellent, it was excellent indeed.
+                        Yet I still have a few doubts. Therefore, please expound upon and answer my
+                        questions, which are about beings applying their minds to what they have
+                        heard and thus becoming free from the suffering of saṃsāra, passing into
+                        fortunate forms of existence, and never falling back from unsurpassable,
+                        truly perfect awakening.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-64"/>
+                    <p tid="69">Mañjuśrī replied, “Great king, it is excellent that you have
+                        developed your previous roots of merit and that your confidence has
+                        increased through the sovereign power of the Tathāgata. Whatever you wish to
+                        know, ask and I shall explain it to you.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-65"/>
+                    <p tid="70">The king said, “Son of the Victorious One, just by hearing the names
+                        of the tathāgatas and honoring and serving them, beings who perform negative
+                        actions will be liberated from rebirths as denizens of the hells and
+                        animals, as well as from Yama’s world, and will pass into pleasant forms of
+                        existence. Who are those beings? In which world system do they abide? How
+                        should we honor them?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-66"/>
+                    <p tid="71">Mañjuśrī <ref cRef="F.151.b" type="folio"/> replied, “Son of noble family,
+                        listen. I shall elucidate the reason why these beings will not pass into
+                        negative forms of existence. I shall state the names of the blessed ones,
+                        the tathāgatas, who will liberate them from rebirths in negative forms of
+                        existence, from rebirths as denizens of the hells and animals, and from
+                        Yama’s world, and I shall state how they are to be worshipped and venerated
+                        in their respective world systems. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-67"/>
+                    <p tid="72">“In the world system called Vaiḍūrya Light abides the Tathāgata, the
+                        Arhat, the truly perfect Buddha called Bhaiṣajyaguru
+                            Vaidūryaprabharāja,<note place="end" index="16" xml:id="UT22084-061-006-228"> In the Tibetan text, <foreign xml:lang="Bo-Ltn" type="term">rgyal po</foreign> (-rāja) is
+                            missing.</note> who watches over beings as well as teaches the Dharma.
+                        In the world system called <term type="ignore">Śikhin</term> abides the
+                        Tathāgata, the Arhat, the truly perfect Buddha called Śikhin. In the world
+                        system called Vimalā abides the Tathāgata, the Arhat, the truly perfect
+                        Buddha called Stainless Arising. In the world system called Peace abides the
+                        Tathāgata, the Arhat, the truly perfect Buddha called Established in Peace.
+                        In the world system called Sukhāvatī abides the Tathāgata, the Arhat, the
+                        truly perfect Buddha called Amitābha. In the world system called Lotus
+                        Excellence abides the Tathāgata, the Arhat, the truly perfect Buddha called
+                        Lotus Born. In the world system called Vajra abides the Tathāgata called
+                        Indestructible Vajra. In the world system called Aśoka abides the Tathāgata
+                        called Vigataśoka. In the world system called Fearless abides the Tathāgata
+                        called Pacifier of All Fears. In the world system called Endowed with
+                        Realization and Intelligence abides the Tathāgata called Purifier of All
+                        Rebirths. In the world system called Free from Negative Forms of Existence
+                        abides the Tathāgata called <ref cRef="F.152.a" type="folio"/> Pacifier of All Negative
+                        Forms of Existence. In the world system called Vimalā abides the Tathāgata
+                        called He Whose Intelligence Has Been Completely Purified. In the world
+                        system called Possessed of Power abides the Tathāgata called Powerful
+                        Intelligence. By calling them by their names, one will become the lord of
+                        the gods. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-68"/>
+                    <p tid="73">“In the world system called Moon abides the Tathāgata called
+                        Stainless Full Moon. By calling him by his name and worshipping him, one
+                        will be completely liberated from all defilements. In the world system
+                        called Excellent Attainment abides the Tathāgata called Pacifier of All
+                        Negative Forms of Existence. By calling him by his name and worshipping him,
+                        one will be liberated from negative forms of existence. In the world system
+                        called Perfect Light abides the Tathāgata called He Who Looks at All Beings
+                        with Love. By calling him by his name and worshipping him, all worldly
+                        beings will be completely delighted. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-69"/>
+                    <p tid="74">“Son of noble family, in a word, even if a sextillion years or a
+                        hundred eons have passed since the tathāgatas Ānandaśrī, Candanaśrī, Hero,
+                        Subjugator of All Demon Forces, Śikhin, Viśvabhū, Krakucchanda, Kanakamuni,
+                        and Kāśyapa have manifested nirvāṇa, great king, all beings will be
+                        liberated from negative rebirths and negative forms of existence by calling
+                        the names of these buddhas; by having relic stūpas, drawings, and
+                        representations made; by worshipping and honoring them with lamps, incense,
+                        flowers, and perfume; and by maintaining the training, way of life,
+                        austerities, discipline, <ref cRef="F.152.b" type="folio"/> and fasting. </p>
+                    <p tid="75">“Karmic obscurations that remain for eons, such as those stemming
+                        from the five actions with immediate results, will be purified. One will
+                        pass to pleasant forms of existence and not to negative ones, and one will
+                        gradually, fully, and completely awaken to unsurpassable, complete, and
+                        perfect awakening. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-70"/>
+                    <p tid="76">“Suppose that sons or daughters of noble family with a feeble
+                        recollection of faith and bodhicitta commission drawings or clay statues of
+                        those tathāgatas. Suppose they do so to liberate friends and relatives, and
+                        for the sake of beings who engage in negative actions, abandon the noble
+                        Dharma, denigrate the noble ones, commit the five actions with immediate
+                        results, take a life, steal the wealth of the Three Jewels, go to the Avīci
+                        hell, or take birth in the three negative forms of existence. And suppose
+                        that once they have commissioned the drawings or statues, they focus
+                        principally on generating compassion toward all these beings and adopt the
+                        noble eightfold path. And then suppose they worship the tathāgatas three
+                        times in the night and three times in the day with flowers, incense,
+                        perfume, garlands, salves, lamps, cymbals, royal banners, and flags, from
+                        the eighth day of the waxing moon until the fifteenth. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-71"/>
+                    <p tid="77">“Now, in order to liberate beings, the buddhas, the blessed ones,
+                        know with their tathāgatas’ gnosis, hear with their divine ear, and see with
+                        their divine eye, so when sons or daughters of noble family dedicate their
+                        merit so that such beings will pass to pleasant forms of existence and
+                        accomplish wholesome deeds instead of negative ones, <ref cRef="F.153.a" type="folio"/>
+                        in order to liberate the beings born in negative forms of existence, they
+                        should supplicate the tathāgatas. They should dedicate their merit in this
+                        way: ‘May negative actions be attenuated through confessing and
+                        acknowledging faults! May the names of the tathāgatas be heard! May beings
+                        be liberated from all negative forms of existence! Until they fully and
+                        perfectly awaken to unsurpassable, complete, and perfect awakening, may
+                        their conduct be in accordance with that of Mañjuśrī himself!’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-72"/>
+                    <p tid="78">“Moreover, if one copies the different teachings of the Dharma or
+                        commissions this activity, keeps them in mind, recites them, and worships
+                        them, then due to the power of the aspiration of the past tathāgatas, the
+                        names of the buddhas will reach the ears of beings born in Avīci hell and in
+                        the three negative forms of existence. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-73"/>
+                    <p tid="79">“In addition, through the power of these different methods of the
+                        Dharma, all negative actions will be attenuated. Through the power of the
+                        tathāgatas’ majesty and their various Dharma discourses, one will be aware
+                        of wholesome and unwholesome actions. Thus one will subsequently not commit
+                        negative actions. One will then be liberated from the various kinds of
+                        suffering and pass to pleasant rebirths. Until one reaches unsurpassable,
+                        complete, and perfect awakening, the state of truly perfect awakening, one’s
+                        actions will be conducive to it. </p>
+                    <p tid="80">“Thus, these Dharma discourses are endowed with many positive
+                        properties. They are like the great maṇi jewel. Just like the great maṇi
+                        jewel, the wish-fulfilling jewel, they accomplish all wishes. All negative
+                        actions are subjugated. All gates to the negative forms of existence are
+                        closed. All gates to the pleasant forms of existence and the buddhas’ realms
+                        are opened. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-74"/>
+                    <p tid="81">“So, son of noble family, owing to the tathāgatas’ various skillful
+                        means, aspirations, extraordinary transformations, sovereign power, and
+                        states of concentration, <ref cRef="F.153.b" type="folio"/> one will pass to pleasant
+                        forms of existence and be liberated from all negative ones by continuously
+                        listening to and worshipping those who have remained in the various world
+                        systems, even if a hundred eons have passed since the tathāgatas’ nirvāṇa.
+                        Therefore, what need is there to mention the importance of keeping in mind
+                        the Dharma, reading it, copying it or commissioning this action, or
+                        accurately teaching it in a detailed way to others? Suppose a son or
+                        daughter of noble family comes to possess this excellent quality. Except for
+                        the tathāgatas, no one could easily express the excellent quality of that
+                        being’s accumulation of merit and of his or her roots of virtue. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-75"/>
+                    <p tid="82">“Great king, you should thus rely on this excellent quality and keep
+                        in mind the various Dharma discourses. You should read them. You should
+                        explain them. You should worship them. You should make your faith in the
+                        Three Jewels integral to you. You should always worship and venerate the
+                        tathāgatas and correctly grasp their teachings. Being repulsed by saṃsāra,
+                        you should be vigilant and focus your thoughts on its momentariness.
+                        Moreover, great king, the pursuit of their desires keeps beings in a state
+                        of suffering for sextillions of eons. That is, they will experience the
+                        suffering of arising and cessation, the suffering of being in the womb, the
+                        suffering of rebirth as a hell being or an animal, or the suffering of the
+                        world of Yama, the suffering of poverty, and the suffering of being cut,
+                        bruised, beaten, struck, and burnt. Therefore, you should proceed to abandon
+                        all conditioned phenomena. Great king, you should give priority to
+                        compassion and long for the Dharma and liberation.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-76"/>
+                    <p tid="83">King Prasenajit, together with his entire retinue, said to Mañjuśrī,
+                        “Mañjuśrī, this is excellent, most excellent! By bringing down the rain of
+                        the Dharma, <ref cRef="F.154.a" type="folio"/> you have made us content and happy. As we
+                        have set out upon the state of awakening, you have made us vigilant.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-77"/>
+                    <p tid="84">An eager bodhisattva then asked the Blessed One, “Blessed One,
+                        suppose someone adopts the various teachings of the Dharma, reads them,
+                        teaches them in detail to others, copies them or commissions their copying,
+                        and honors those who copy, adopt, and recite the teachings with flowers,
+                        incense, perfume, garlands, salves, garments, and ornaments. How much would
+                        the merit of this person increase, Blessed One?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-78"/>
+                    <p tid="85">The Blessed One replied, “If sons or daughters of noble family,
+                        kings, ministers, monks, nuns, male lay vow holders, or female lay vow
+                        holders keep in mind the various teachings of the Dharma with faith in the
+                        Tathāgata, worship them, copy them or commission their copying, and teach
+                        them correctly, they will attain the eight great qualities. What are those
+                        eight great qualities? None of the diseases or harm in the world will affect
+                        them at all. All yakṣas, bhūtas, and piśācas who rob people of their
+                        radiance will abide in loving-kindness. No harmful influences from kṛtyās,
+                        kākhordas, spell-casters, or vetālas will injure their body. Having pleased
+                        all the kings, ministers, brahmins, householders, monks, nuns, and male and
+                        female lay vow holders, they will accomplish all aims. All the gods will
+                        congregate before them. They will pass to pleasant forms of existence. They
+                        will be accepted by Vajrapāṇi. They will be born wherever they might wish
+                        and will remember the succession of their former lives. In this way those
+                        sons or daughters of noble family, and the others, will <ref cRef="F.154.b" type="folio"/> attain the eight great qualities. Thus, for one hundred thousand years
+                        they will venerate these tathāgatas with the divine and manifest offerings
+                        meant for a tathāgata. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-79"/>
+                    <p tid="86">“Suppose someone were to fill Jambudvīpa with tathāgatas’ relic
+                        stūpas made of the seven precious substances, and then venerate, revere, and
+                        worship them for one hundred thousand years with divine garlands, salves,
+                        flowers, lamps, precious umbrellas, cymbals, royal banners, and
+                        flags—compared to such a person, someone who keeps in mind the various
+                        teachings of the Dharma with faith in the Tathāgata and who reads them,
+                        worships them, copies them or commissions their copying, and teaches them
+                        correctly to others will have a vastly greater increase in merit. Son of
+                        noble family, suppose someone were to set the beings of Jambudvīpa on the
+                        noble eightfold path and, after having done so, venerated and worshipped the
+                        Tathāgata for a hundred thousand divine years with all the necessities of
+                        life there might be—compared to such a person, someone who listens to just
+                        one four-line stanza drawn from the various teachings of the Dharma, keeps
+                        it in mind, copies it or commissions it to be copied, and promulgates it to
+                        others will have a vastly greater increase in merit.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-80"/>
+                    <p tid="87">When the Blessed One had explained in detail the significance of the
+                        various teachings of the Dharma, he then spoke the following verses: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-81"/>
+                    <lg tid="88">
+                        <l>“Abiding in one trillion other fields,</l>
+                        <l>Ten million skillful buddhas</l>
+                        <l>Care for beings</l>
+                        <l>And liberate them from negative forms of existence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-82"/>
+                    <lg tid="89">
+                        <l>“After you have performed actions of generosity</l>
+                        <l>By engaging in ceaseless activity,</l>
+                        <l>You should worship the tathāgatas by longing for the Dharma</l>
+                        <l>In order to liberate those who have gone to negative forms of
+                            existence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-83"/>
+                    <lg tid="90">
+                        <l>“Produce drawings, stūpas, and various representations;</l>
+                        <l>Have statues made,</l>
+                        <l>Some of gold or silver, some of metal or clay;</l>
+                        <l>And worship them with various offerings. <ref cRef="F.155.a" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-84"/>
+                    <lg tid="91">
+                        <l>“Worship the tathāgatas with flowers, garlands, salves,</l>
+                        <l>Lamps, cymbals, perfume, and incense.</l>
+                        <l>With superior insight, dedicate merit as well.</l>
+                        <l>Explain the teachings of the sūtras, and abide by them.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-85"/>
+                    <lg tid="92">
+                        <l>“The majesty of the Tathāgata and of the collection of sūtras</l>
+                        <l>Will liberate beings from negative actions.</l>
+                        <l>They will take rebirth in pure abodes</l>
+                        <l>Until they reach unsurpassable awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-86"/>
+                    <lg tid="93">
+                        <l>“They will remember their former actions, and having done so,</l>
+                        <l>Those who understand will not commit negative actions again.</l>
+                        <l>By expounding the bodhisattvas’ collection of sūtras for the sake of
+                                humans,<note place="end" index="17" xml:id="UT22084-061-006-229"> S
+                                (347a.5) <foreign xml:lang="Bo-Ltn" type="term">byang chub sems
+                                    dpa’</foreign> instead of D (155a.2) <foreign xml:lang="Bo-Ltn" type="term">byang chub sems dpas</foreign>.</note>
+                        </l>
+                        <l>They will obtain great merit.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-87"/>
+                    <lg tid="94">
+                        <l>“They will be protected by the gods.</l>
+                        <l>In their bodies no disease will occur.</l>
+                        <l>Nowhere in their kingdoms will there be strife,</l>
+                        <l>And in their homes, villages, and cities there will be peace.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-88"/>
+                    <lg tid="95">
+                        <l>“Whoever holds at all times this collection of sutrās</l>
+                        <l>Holds at all times the treasury of the buddhas.</l>
+                        <l>Whoever worships and venerates it, has it copied, and makes it heard,</l>
+                        <l>They, without doing anything else,</l>
+                        <l>Will perfectly worship the Buddha,</l>
+                        <l>And will quickly attain supreme awakening.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-89"/>
+                    <p tid="96">The eager bodhisattva mahāsattva asked the Blessed One, “Blessed
+                        One, I have some qualms about this. Having come into possession of a kingdom
+                        with this body, will one again experience suffering? Or will there not be
+                        any sorrow when one circles in saṃsāra? Or alternatively, as one will
+                        experience again birth, old age, sickness, death, misery, despair,
+                        lamentation, suffering, and unhappiness, how will one be born, die, live,
+                        and gain happiness? How will one experience suffering?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-90"/>
+                    <p tid="97">The Blessed One answered the eager bodhisattva mahāsattva, “You who
+                        are eager, you should consider that these experiences are conditioned by
+                        karma. Now, son of noble family, <ref cRef="F.155.b" type="folio"/> there is no birth, no
+                        death, no life in this world. Son of noble family, although there is no old
+                        age and death here, one’s state of life is always dependent on the body
+                            consciousness.<note place="end" index="18" xml:id="UT22084-061-006-230">D (155b.1) <foreign xml:lang="Bo-Ltn" type="term">’tsho ba’i khams ni
+                                rtag tu lus kyis par shes pa la gnas so</foreign> does not make
+                            sense. We followed the alternative reading found in most other Kangyurs:
+                                <foreign xml:lang="Bo-Ltn" type="term">’tsho ba’i khams ni rtag tu
+                                lus kyi rnam par shes pa la gnas so</foreign>.</note> Furthermore,
+                        when one transmigrates to various births due to karmic conditions and karmic
+                        circumstances, one will experience happiness and suffering. One has the
+                        notion of happiness as happiness and suffering as suffering. One gives rise
+                        to the notion that non-happiness is not happiness and that non-suffering is
+                        not suffering. Nonetheless, until one possesses the qualities of nirvāṇa in
+                        the realm of nirvāṇa without remainder, one will still be subject to sorrow. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-91"/>
+                    <p tid="98">“Son of noble family, it is as follows. As an analogy, consider
+                        someone who puts on new clothes. Having put them on, this person performs
+                        all sorts of actions and experiences happiness and suffering. Later, at
+                        another time, this person is finally told that these clothes, being old and
+                        moth-eaten, are dirty, upon which he realizes that they should be thrown
+                        away, and thus he gets rid of them. Once he is rid of them, he again looks
+                        for brand new clothes to wear. When he has put them on, he performs various
+                        actions and experiences happiness and suffering. Until this person has put
+                        on genuine clothes that are durable and everlasting, indestructible and
+                        unbreakable, then though many eons pass, one after another, he will either
+                        have to wear such temporary clothes or throw them away. He does not think
+                        about this nor reflect upon it; he is under the influence of the body.
+                        Likewise, son of noble family, at a certain time, due to one’s state of
+                        life, one’s body perishes and is seen to be on the point of collapse. At
+                        that time, one discards this body and looks for another that is new and
+                        young. Taking it on and performing actions with it, one will experience
+                        happiness and suffering. Just as clothes arisen from one’s own merit are
+                        soft, hard, or rough, so too one adopts the body that one takes on according
+                        to one’s state of life. Just as one is born according to one’s roots of
+                        virtue—namely, one’s karmic conditions—one will be born as a god, a king,
+                            <ref cRef="F.156.a" type="folio"/> a hell being, an animal, or a being from the world
+                        of Yama. Although this body is also influenced by one’s state of life and is
+                        given up according to one’s state of life, one does not think about this,
+                        nor reflect upon it. Son of noble family, you should look upon the body just
+                        as you look upon these clothes. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-92"/>
+                    <p tid="99">“Son of noble family, it is like a snake that, when the time has
+                        come on account of karmic conditions, sheds its skin, and then comes and
+                        goes in keeping with its physical shape. Although the snake will experience
+                        happiness and suffering, it does not think about its skin nor reflect upon
+                        it. You should look upon your state of life just as you look upon this
+                        snake. </p>
+                    <p tid="100">“Son of noble family, it is like a tree that, after it has
+                        developed its leaves and foliage, will then, with time, evolve so that
+                        finally they wither and fall. And then yet later again, with time, it will
+                        grow buds, branches, foliage, flowers, and fruit. Son of noble family, it is
+                        in this way that you should look upon arising and cessation due to karmic
+                        conditions. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-93"/>
+                    <p tid="101">“Now, son of noble family, some time in the future beings will
+                        experience more greed, attachment, anger, envy, and pride. As they cause the
+                        scales and weights of karma to move,<note place="end" index="19" xml:id="UT22084-061-006-231">This metaphor is probably used here to
+                            explain the dynamics of cause and effect in relation to karma. Asaṅga
+                            uses the same metaphor to explain rebirth (see <title xml:lang="Sa-Ltn">Abhi­dharma­samuccaya</title> II.1 trans. in Rahula 2001: 94), and
+                            it is found in similar contexts in the Tibetan commentarial literature.
+                        </note> their behavior will follow upon pleasure and attachment, so that
+                        they will commit more negative actions based upon or caused by their
+                        attachment. Committing more negative actions, they will experience
+                        suffering. They who construe impermanent things as permanent and the impure
+                        as pure will not venerate the Buddha, the Dharma, and the Saṅgha. These
+                        infantile people will not seek out a spiritual friend. Instead, they will
+                        mock and ridicule those who teach them the Dharma, rather than having faith
+                        or trust in them. Such beings will perform negative actions. They will adopt
+                        the body that they take on and which they will experience in keeping with
+                        karmic conditions and according to their particular state of life. <ref cRef="F.156.b" type="folio"/> They will then give rise to notions of suffering and
+                        pleasure. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-94"/>
+                    <p tid="102">“Son of noble family, this is the answer of the Tathāgata. This
+                        body should be regarded as karmically conditioned. For this body also there
+                        is no death, there is no life; happiness and suffering will not be
+                        experienced but they will arise and cease according to karmic causes and
+                        conditions. The tathāgatas have undergone sextillions of hardships for the
+                        sake of beings. Having completely given up all their possessions, they
+                        become perfectly awakened within unsurpassable, complete, and perfect
+                        awakening, and establish all beings, too, in great nirvāṇa.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-95"/>
+                    <p tid="103">At that point, the Tathāgata’s sovereign power caused the whole
+                        earth to tremble. The assembled retinue said to the Tathāgata, “Excellent!”
+                        King Prasenajit and the others, by means of many, great, more and more
+                        powerful supernatural powers, made an offering to the Tathāgata of five
+                        hundred divine garments. Trembling, they circumambulated the Tathāgata three
+                        times. In the presence of all the tathāgatas, each of them confessed that
+                        the faults consisting of all their negative actions had indeed been
+                        committed, and they promised to adopt the training. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-96"/>
+                    <p tid="104">At the same time, the assembled retinue exclaimed, “Tathāgata, we
+                        pay homage to those who have turned away from all births, freed all beings
+                        from suffering, and attained liberation. Homage to them! Blessed One, in the
+                        future, we will not take any delight in the experiences of suffering in
+                        saṃsāra. Blessed One, we pray that you liberate us from birth, old age,
+                        disease, death, misery, despair, lamentation, suffering, unhappiness, and
+                        distress.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-97"/>
+                    <p tid="105">The Blessed One replied, “Sons of noble family, with roots of
+                        virtue that focus upon diligent application, may you acquire the superior
+                        intention directed at the Three Jewels. Know all conditioned phenomena to be
+                        impermanent and like illusions. <ref cRef="F.157.a" type="folio"/> Be filled with joy at
+                        upholding the holy Dharma. May you worship, revere, and venerate it more and
+                        more. Know it as supreme compassion for all beings. Consider the one who
+                        expounds the Dharma as a tathāgata. Consider virtuous friends as gurus. Keep
+                        in mind, cultivate, and spread the various Dharma discourses. Sons of noble
+                        family, you will be liberated from all sufferings, all births, old age,
+                        disease, death, misery, unhappiness, and great distress. You will be
+                        liberated from the noose of saṃsāra. Practice the roots of virtue, that is,
+                        the noble eightfold path. May you turn away from the state of not being
+                        vigilant. </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-98"/>
+                    <p tid="106">“Sons of noble family, once beings adopt even a single training of
+                        the Tathāgata for only a short while, they will be liberated from all
+                        suffering, experience pleasant rebirths, and will not experience negative
+                        forms of existence. That being so, what need is there to mention those who,
+                        after abandoning jokes, amusement, pleasure, and games, through their
+                        sublime devotion to the Tathāgata perform rituals to him, live with superior
+                        intentions, and practice the restoration and purification of their vows with
+                        the eight-branched fasting ritual? What need is there to mention that all
+                        those who practice these sorts of conduct will not be born in the three
+                        negative forms of existence, but will pass to pleasant ones, and that,
+                        having experienced the happiness of gods and humans, their suffering will
+                        come to an end so that gradually they will fully and completely awaken to
+                        unsurpassable, complete, and perfect awakening? </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-99"/>
+                    <p tid="107">“Whoever has the body of a woman tainted by the fundamental and
+                        secondary defilements, if they genuinely take refuge in the Three Jewels and
+                        adopt the training, whether for one day, half a day, or just a moment, <ref cRef="F.157.b" type="folio"/> they will all dispel that condition of being a woman,
+                        suffering, unhappiness, and afflictions. Having put an end to suffering,
+                        they will go to pleasant forms of existence until they become fully and
+                        perfectly awakened buddhas within unsurpassable, complete, and perfect
+                        awakening. Sons of noble family, the infantile do not recognize that one who
+                        genuinely takes up the pledges and the training commitments of body, speech,
+                        and mind is endowed with many qualities and great roots of virtue.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-100"/>
+                    <p tid="108"><!--modularPassage type=auspiciousSigns-->At that moment, a great
+                        noise resounded in the sky. All the retinue marveled, upon which a great
+                        rain of flowers and perfume fell.<!--/modularPassage-->
+                        <!--modularPassage type=multipleResult-->One hundred thousand beings were
+                        all liberated from suffering and established in unsurpassable, complete, and
+                        perfect awakening—the spiritual level from which there can be no relapse.
+                        Moreover, ten million beings focused upon taking refuge in the Buddha,
+                        Dharma, and Saṅgha, and generated bodhicitta for the first
+                        time.<!--/modularPassage-->
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-101"/>
+                    <p tid="109">The tathāgatas, too, all disappeared. Then, Vajrapāṇi and the
+                        others, all the vajra holders, Śakra, Brahmā, the protectors of the world,
+                        and the four kings spoke these words to the Blessed One: </p>
+                    <p tid="110">“Thanks to the Tathāgata, we have respite. We have heard the Dharma
+                        discourses and the names of the tathāgatas. To the Blessed One, we have
+                        dedicated our countries, cities, and temples, as well as our bodies and
+                        lives, so that the Dharma will be taught, copied, recited, worshipped, and
+                        proclaimed. We will preserve it. We will protect it. We will accomplish all
+                        its purposes. We will ensure that wealth and grains are well provided. We
+                        will ensure that the Blessed One will be venerated everywhere. We will
+                        ensure that people are free from all diseases. We will ensure that we give
+                        mindfulness, power, and inspiration.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-102"/>
+                    <p tid="111">The Blessed One <ref cRef="F.158.a" type="folio"/> declared, “Excellent. This is
+                        excellent!” And he told them, “At all costs, make sure in this way that
+                        these teachings of the Dharma, which are the pledge of the Tathāgata, will
+                        not quickly disappear.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-103"/>
+                    <p tid="112"><!--modularPassage type=concludingPraise-->When the Blessed One had
+                        spoken in this way, all the bodhisattva mahāsattvas, such as Noble
+                        Avalokiteśvara, Vajrapāṇi, and others, as well as the great śrāvakas and the
+                        entire retinue, and the world of the gods, human beings, asuras, and
+                        gandharvas, rejoiced and praised what the Blessed One had
+                        said.<!--/modularPassage-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-061-006-104"/>
+                    <trailer tid="113"> Here ends the noble Mahāyāna sūtra, “<title xml:lang="en">The Teaching on the Extraordinary Transformation that is the Miracle of
+                            Attaining the Buddha’s Powers</title>.”</trailer>
+                </div>
+                <!--<div type="colophon">
+                    <head type="colophon" tid="125">Colophon</head>
+                    
+                </div>-->
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="126">Notes</head>
+                <list type="abbreviations">
+                    <head type="abbreviations" tid="127">Abbreviations</head>
+                    <item xml:id="UT22084-061-006-105">
+                        <abbr>D</abbr>
+                        <expan>Degé (sde dge) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-061-006-106">
+                        <abbr>H</abbr>
+                        <expan>Lhasa (zhol) Kangyur </expan>
+                    </item>
+                    <item xml:id="UT22084-061-006-107">
+                        <abbr>N</abbr>
+                        <expan>Narthang (snar thang) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-061-006-108">
+                        <abbr>U</abbr>
+                        <expan>Urga (khu re) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-061-006-109">
+                        <abbr>S</abbr>
+                        <expan>Stog Palace (stog pho brang)</expan>
+                    </item>
+                    <item xml:id="UT22084-061-006-110">
+                        <abbr>Pd</abbr>
+                        <expan>Pedurma (dpe bsdur ma) Kangyur</expan>
+                    </item>
+                </list>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="128">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="129">Tibetan Texts</head>
+                    <bibl xml:id="UT22084-061-006-111">
+                        <title xml:lang="Bo-Ltn">’phags pa sangs rgyas kyi stobs skyed pa’i cho
+                            ’phrul rnam par ’phrul ba bstan pa zhes bya ba theg pa chen po’i mdo
+                            (Ārya­buddha­balādhāna­prātihārya­vikurvāṇa­nirdeśa­nāma­mahā­yāna­sūtra).</title>
+                        Toh 186, Degé Kangyur vol. 61, folios 143b–158a.</bibl>
+                    <bibl xml:id="UT22084-061-006-112">
+                        <title xml:lang="Bo-Ltn">’phags pa sangs rgyas kyi stobs skyed pa’i cho
+                            ’phrul rnam par ’phrul ba bstan pa zhes bya ba theg pa chen po’i
+                            mdo</title>. Toh 186, Narthang Kangyur vol. 61, folios 228a–251b.</bibl>
+                    <bibl xml:id="UT22084-061-006-113">
+                        <title xml:lang="Bo-Ltn">’phags pa sangs rgyas kyi stobs skyed pa’i cho
+                            ’phrul rnam par ’phrul ba bstan pa zhes bya ba theg pa chen po’i
+                            mdo</title>. Toh 186, Stok Palace Kangyur vol. 54, folios
+                        332a–351b.</bibl>
+                    <bibl xml:id="UT22084-061-006-114">
+                        <title xml:lang="Bo-Ltn">’phags pa sangs rgyas kyi stobs skyed pa’i cho
+                            ’phrul rnam par ’phrul ba bstan pa zhes bya ba theg pa chen po’i mdo.
+                            bka’ ’gyur</title> (dpe bsdur ma) [Comparative Edition of the Kangyur],
+                        krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The
+                        Tibetan Tripitaka Collation Bureau of the China Tibetology Research Center).
+                        108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China
+                        Tibetology Publishing House), 2006–2009, vol. 61, pp. 387–420.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="130">Sanskrit Fragments</head>
+                    <bibl xml:id="UT22084-061-006-115">Schopen, Gregory. “The Five Leaves of the
+                        Buddha­balā­dhāna­prāti­hārya­vikurvāna-nirdeśa-sūtra Found at Gilgit.”
+                            <title xml:lang="en">Journal of Indian Philosophy</title>, vol. 5 (no.
+                        4), 1978. </bibl>
+                    <bibl xml:id="UT22084-061-006-116">Dutt, Nalinaksha.
+                        “Buddha­balā­dhāna­prātihārya-vikurvāna­nirdeśa-sūtra,” in <title xml:lang="en">Gilgit Manuscripts</title>, vol. IV, 173-183. Calcutta,
+                        1959; reprinted Delhi: Sri Satguru Publications, 1984. [Note: an edition of
+                        the same fragments as in Schopen (1978) but with numerous passages
+                        reconstructed from the Tibetan and inserted without annotation.] </bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="131">Secondary Sources</head>
+                    <bibl xml:id="UT22084-061-006-117">Burnouf, Eugène. <title xml:lang="en">Introduction to the History of Indian Buddhism</title>. Chicago &amp;
+                        London: University of Chicago Press, 2010.</bibl>
+                    <bibl xml:id="UT22084-061-006-118">Chang, Garma C.C. (ed.). <title xml:lang="en">A Treasury of Mahāyāna Sūtras: Selections from the Mahāratnakūṭa
+                            Sūtra</title>. New York: Pennsylvania State University, 1983.</bibl>
+                    <bibl xml:id="UT22084-061-006-119">Cleary, Thomas (tr.). <title xml:lang="en">The Flower Ornament Scripture: A Translation of the Avatamsaka
+                            Sutra</title>. Boston &amp; London: Shambhala, 1993.</bibl>
+                    <bibl xml:id="UT22084-061-006-120">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar and Dictionary</title>. Vol. 2:
+                        Dictionary. New Haven: Yale University Press, 1953.</bibl>
+                    <bibl xml:id="UT22084-061-006-121">La Vallée Poussin, Louis de (tr.). <title xml:lang="en">Abhidharmakośabhāṣya of Vasubandhu</title>. Berkeley:
+                        Asian Humanities Press, 1988–90.</bibl>
+                    <bibl xml:id="UT22084-061-006-122">Lamotte, Etienne (tr.). <title xml:lang="en">Śūraṃgamasamādhisūtra: The Concentration of Heroic Progress</title>.
+                        Delhi: Motilal Banarsidass, 2003.</bibl>
+                    <bibl xml:id="UT22084-061-006-123">Rotman, Andy (tr.). <title xml:lang="en">Divine Stories: Divyāvadāna</title>, Part 1. Boston: Wisdom
+                        Publications, 2008.</bibl>
+                    <bibl xml:id="UT22084-061-006-124">Rahula, Walpola. <title xml:lang="en">Abhidharmasamuccaya: The Compendium of Higher Teaching (philosophy) by
+                            Asanga</title>. Fremont: Asian Humanities Press, 2001.</bibl>
+                    <bibl xml:id="UT22084-061-006-125">Sasaki, Genjun. <title xml:lang="en">Linguistic Approach to Buddhist Thought</title>. Delhi: Motilal
+                        Banarsidass, 1986.</bibl>
+                    <bibl xml:id="UT22084-061-006-126">Schopen, Gregory. <title xml:lang="en">Figments and Fragments of Māhāyana Buddhism in India: More Collected
+                            Papers</title>. Honolulu: University of Hawaii Press, 2005.</bibl>
+                    <bibl xml:id="UT22084-061-006-127">Vaidya, P.L. (ed.). <title xml:lang="Sa-Ltn">Divyāvadāna</title>. Buddhist Sanskrit Texts No. 20. Darbhanga: Mithila
+                        Institute, 1959.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-128">
+                            <term>attaining the Buddha’s powers</term>
+                            <term xml:lang="Bo-Ltn">stobs skyed pa </term>
+                            <term xml:lang="bo">སྟོབས་སྐྱེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">balādhāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-129">
+                            <term>Blessed One</term>
+                            <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                            <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                            <term xml:lang="Sa-Ltn">bhagavān</term>
+                            <term xml:lang="Sa-Ltn">bhagavat</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-130">
+                            <term>karmic circumstances</term>
+                            <term xml:lang="Bo-Ltn">las kyi gzhi </term>
+                            <term xml:lang="bo">ལས་ཀྱི་གཞི།</term>
+                            <term xml:lang="Sa-Ltn">karmavastu</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-131">
+                            <term>saṅgha</term>
+                            <term xml:lang="Bo-Ltn">dge ’dun </term>
+                            <term xml:lang="bo">དགེ་འདུན།</term>
+                            <term xml:lang="Sa-Ltn">saṅgha</term>
+                            <term type="definition">Community.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-132">
+                            <term>eon</term>
+                            <term xml:lang="Bo-Ltn">bskal pa </term>
+                            <term xml:lang="bo">བསྐལ་པ།</term>
+                            <term xml:lang="Sa-Ltn">kalpa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-133">
+                            <term>Dharma discourse</term>
+                            <term xml:lang="Bo-Ltn">chos kyi rnam grangs </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་རྣམ་གྲངས།</term>
+                            <term xml:lang="Sa-Ltn">dharmaparyāya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-134">
+                            <term>nirvāṇa</term>
+                            <term xml:lang="Bo-Ltn">mya ngan las ’das </term>
+                            <term xml:lang="bo">མྱ་ངན་ལས་འདས།</term>
+                            <term xml:lang="Sa-Ltn">nirvāṇa</term>
+                            <term type="definition">Extinction of suffering.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-135">
+                            <term>assurance</term>
+                            <term xml:lang="Bo-Ltn">mi ’jigs pa </term>
+                            <term xml:lang="bo">མི་འཇིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">vaiśāradya</term>
+                            <term type="definition">The four kinds of <term type="ignore">assurance</term> of a tathāgata (<foreign type="term" xml:lang="Sa-Ltn">catur­vaiśāraya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">mi ’jigs pa bzhi</foreign>) are:
+                                    1) <term type="ignore">assurance</term> concerning complete
+                                awakening (<foreign type="term" xml:lang="Sa-Ltn">abhi­sambodhi­vaiśāradya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">thams cad mkhyen pa la mi ’jigs pa</foreign>);
+                                    2) <term type="ignore">assurance</term> concerning the
+                                destruction of the impurities (<foreign type="term" xml:lang="Sa-Ltn">āsravakṣaya­vaiśāradya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">zag pa zad pa mkhyen pa la mi
+                                    ’jigs pa</foreign>); 3) <term type="ignore">assurance</term>
+                                concerning harmful things (<foreign type="term" xml:lang="Sa-Ltn">antarāyika­dharma­vaiśāradya</foreign>, <foreign type="term" xml:lang="Bo-Ltn">bar du gcod pa’i chos la mi ’jigs
+                                pa</foreign>); 4) <term type="ignore">assurance</term> concerning
+                                the path that leads to emancipation (<foreign type="term" xml:lang="Sa-Ltn">nairyāṇika­pratipad­vaiśāradya</foreign>,
+                                    <foreign type="term" xml:lang="Bo-Ltn">thob par ’gyur bar nges
+                                    par ’byung ba’i lam la mi ’jigs pa</foreign>). (See Rahula 2001:
+                                230, in which they are called “perfect self-confidence”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-136">
+                            <term>female lay vow holder</term>
+                            <term xml:lang="Bo-Ltn">dge bsnyen ma </term>
+                            <term xml:lang="bo">དགེ་བསྙེན་མ།</term>
+                            <term xml:lang="Sa-Ltn">upāsikā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-137">
+                            <term>great trichiliocosm</term>
+                            <term xml:lang="Bo-Ltn">stong gsum gyi stong chen po </term>
+                            <term xml:lang="bo">སྟོང་གསུམ་གྱི་སྟོང་ཆེན་པོ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-138">
+                            <term>Mahāyāna</term>
+                            <term xml:lang="Bo-Ltn">theg pa chen po </term>
+                            <term xml:lang="bo">ཐེག་པ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">mahāyāna</term>
+                            <term type="definition">Great Vehicle.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-139">
+                            <term>śrāvaka</term>
+                            <term xml:lang="Bo-Ltn">nyan thos </term>
+                            <term xml:lang="bo">ཉན་ཐོས།</term>
+                            <term xml:lang="Sa-Ltn">śrāvaka</term>
+                            <term type="definition">Hearer.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-140">
+                            <term>insight</term>
+                            <term xml:lang="Bo-Ltn">shes rab </term>
+                            <term xml:lang="bo">ཤེས་རབ།</term>
+                            <term xml:lang="Sa-Ltn">prajñā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-141">
+                            <term>extraordinary transformation</term>
+                            <term xml:lang="Bo-Ltn">rnam par ’phrul pa </term>
+                            <term xml:lang="bo">རྣམ་པར་འཕྲུལ་པ།</term>
+                            <term xml:lang="Sa-Ltn">vikurvāṇa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-142">
+                            <term>male lay vow holder</term>
+                            <term xml:lang="Bo-Ltn">dge bsnyen </term>
+                            <term xml:lang="bo">དགེ་བསྙེན།</term>
+                            <term xml:lang="Sa-Ltn">upāsaka</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-143">
+                            <term>miracle</term>
+                            <term xml:lang="Bo-Ltn">cho ’phrul </term>
+                            <term xml:lang="bo">ཆོ་འཕྲུལ།</term>
+                            <term xml:lang="Sa-Ltn">prātihārya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-144">
+                            <term>monk</term>
+                            <term xml:lang="Bo-Ltn">dge’ slong </term>
+                            <term xml:lang="bo">དགེའ་སློང་།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣu</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-145">
+                            <term>nun</term>
+                            <term xml:lang="Bo-Ltn">dge’ slong ma </term>
+                            <term xml:lang="bo">དགེའ་སློང་མ།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣuṇī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-146">
+                            <term>Omniscient One</term>
+                            <term xml:lang="Bo-Ltn">thams cad mkhyen pa </term>
+                            <term xml:lang="bo">ཐམས་ཅད་མཁྱེན་པ།</term>
+                            <term xml:lang="Sa-Ltn">sarvajñā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-147">
+                            <term>bases of supernatural powers</term>
+                            <term xml:lang="Bo-Ltn">rdzu ’phrul gyi rkang pa </term>
+                            <term xml:lang="bo">རྫུ་འཕྲུལ་གྱི་རྐང་པ།</term>
+                            <term xml:lang="Sa-Ltn">ṛddhipādā</term>
+                            <term type="definition">The four <term type="ignore">bases of
+                                    supernatural powers</term> (<foreign type="term" xml:lang="Sa-Ltn">ṛddhipāda</foreign>, <foreign type="term" xml:lang="Bo-Ltn">rdzu ’phrul gyi rkang pa bzhi</foreign>i) are:
+                                1) concentration through will (<foreign type="term" xml:lang="Sa-Ltn">chanda</foreign>, <foreign type="term" xml:lang="Bo-Ltn">’dun pa</foreign>); 2) concentration through
+                                vigor (<foreign type="term" xml:lang="Sa-Ltn">vīrya</foreign>,
+                                    <foreign type="term" xml:lang="Bo-Ltn">brtson ’grus</foreign>);
+                                3) concentration through the mind (<foreign type="term" xml:lang="Sa-Ltn">citta</foreign>, <foreign type="term" xml:lang="Bo-Ltn">bsam pa</foreign>); 4) concentration through
+                                investigation (<foreign type="term" xml:lang="Sa-Ltn">mīmāṃsā</foreign>, <foreign type="term" xml:lang="Bo-Ltn">dpyod
+                                    pa</foreign>). See Rahula 2001: 163.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-148">
+                            <term>power</term>
+                            <term xml:lang="Bo-Ltn">stobs </term>
+                            <term xml:lang="bo">སྟོབས།</term>
+                            <term xml:lang="Sa-Ltn">bala</term>
+                            <term type="definition">The ten <term type="ignore">powers</term>
+                                    (<foreign type="term" xml:lang="Sa-Ltn">daśabala</foreign>,
+                                    <foreign type="term" xml:lang="Bo-Ltn">stobs bcu</foreign>) of
+                                the Tathāgata are 1) the <term type="ignore">power</term> of
+                                knowledge of what is possible and what is not possible (<foreign type="term" xml:lang="Sa-Ltn">sthānāsthāna­jñāna­bala</foreign>,
+                                    <foreign type="term" xml:lang="Bo-Ltn">gnas dang gnas ma yin pa
+                                    mkhyen pa’i stobs</foreign>); 2) the <term type="ignore">power</term> of knowledge of the individual results of actions
+                                    (<foreign type="term" xml:lang="Sa-Ltn">karmasvaka­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">las kyi rnam smin mkhyen pa’i
+                                stobs</foreign>); 3) the <term type="ignore">power</term> of
+                                knowledge of different practices leading to various destinies
+                                    (<foreign type="term" xml:lang="Sa-Ltn">sarvatra­gāminī­prati­pajjñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">thams cad du ’gro ba’i lam mkhyen
+                                    pa’i stobs</foreign>); 4) the <term type="ignore">power</term>
+                                of knowledge of the different dispositions and tendencies of
+                                different beings (<foreign type="term" xml:lang="Sa-Ltn">aneka­dhātu­nānā­dhātu­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">khams sna tshogs mkhyen pa’i
+                                    stobs</foreign>); 5) the <term type="ignore">power</term> of
+                                knowledge of the different aspirations of beings (<foreign type="term" xml:lang="Sa-Ltn">nānādhi­mukti­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">mos pa sna tshogs mkhyen pa’i
+                                stobs</foreign>); 6) the <term type="ignore">power</term> of
+                                knowledge of the different degrees of development of the faculties
+                                and inclinations of beings (<foreign type="term" xml:lang="Sa-Ltn">indriya­parāparya­jñānabala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">dbang po mchog dang mchog ma yin pa mkhyen
+                                    pa’i stobs</foreign>); 7) the <term type="ignore">power</term>
+                                of knowledge of the absorptions, deliverances, concentrations, and
+                                attainments (<foreign type="term" xml:lang="Sa-Ltn">dhyāna­vimokṣa­samādhi­samāpatti­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">bsam gtan dang rnam thar dang ting
+                                    nge ’dzin dang snyoms par ’jug pa thams cad mkhyen pa’i
+                                    stobs</foreign>); 8) the <term type="ignore">power</term> of
+                                knowledge of previous lives (<foreign type="term" xml:lang="Sa-Ltn">pūrva­nivāsa­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">sngon gyi gnas rjes su dran pa mkhyen pa’i
+                                    stobs</foreign>); 9) the <term type="ignore">power</term> of
+                                knowledge of the deaths and births of beings according to their
+                                actions (<foreign type="term" xml:lang="Sa-Ltn">cyutyu­papāda­jñāna­bala</foreign>, <foreign type="term" xml:lang="Bo-Ltn">’chi ’pho bo dang skye ba mkhyen pa’i
+                                    stobs</foreign>); and 10) the <term type="ignore">power</term>
+                                of knowledge of the destruction of the impurities (<foreign type="term" xml:lang="Sa-Ltn">āsravakṣaya­jñāna­bala</foreign>,
+                                    <foreign type="term" xml:lang="Bo-Ltn">zag pa zad pa mkhyen pa’i
+                                    stobs</foreign>). (Rahula 2001: 229–230, n118).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-149">
+                            <term>gnosis</term>
+                            <term xml:lang="Bo-Ltn">ye shes </term>
+                            <term xml:lang="bo">ཡེ་ཤེས།</term>
+                            <term xml:lang="Sa-Ltn">jñāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-150">
+                            <term>sextillion</term>
+                            <term xml:lang="Bo-Ltn">bye ba khrag khrig brgya stong </term>
+                            <term xml:lang="bo">བྱེ་བ་ཁྲག་ཁྲིག་བརྒྱ་སྟོང་།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-151">
+                            <term>pratyekabuddha</term>
+                            <term xml:lang="Bo-Ltn">rang sangs rgyas </term>
+                            <term xml:lang="bo">རང་སངས་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">pratyekabuddha</term>
+                            <term type="definition">Solitary awakened one.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-152">
+                            <term>state of concentration</term>
+                            <term xml:lang="Bo-Ltn">ting nge ’dzin </term>
+                            <term xml:lang="bo">ཏིང་ངེ་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">samādhi</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-153">
+                            <term>supernatural power</term>
+                            <term xml:lang="Bo-Ltn">rdzu ’phrul </term>
+                            <term xml:lang="bo">རྫུ་འཕྲུལ།</term>
+                            <term xml:lang="Sa-Ltn">ṛddhi</term>
+                            <term type="definition">The <term type="ignore">supernatural
+                                    powers</term> of a śrāvaka correspond to the first <foreign type="term" xml:lang="Sa-Ltn">abhijnā</foreign>: “Being one he
+                                becomes many, being many he becomes one; he becomes visible,
+                                invisible; goes through walls, ramparts and mountains without being
+                                impeded, just as through air; he immerses himself in the earth and
+                                emerges from it as if in water; he goes on water without breaking
+                                through it, as if on [solid] earth; he travels through the air
+                                crosslegged like a winged bird; he takes in his hands and touches
+                                the moon and the sun, those two wonderful, mighty beings, and with
+                                his body he extends his power as far as the Brahma world” (Lamotte
+                                2003: 20). The great <term type="ignore">supernatural powers</term>
+                                    (<foreign type="term" xml:lang="Sa-Ltn">mahāṛddhi</foreign>) of
+                                bodhisattvas are: “causing trembling, blazing, illuminating,
+                                rendering invisible, transforming, coming and going across
+                                obstacles, reducing or enlarging worlds, inserting any matter into
+                                one’s own body, assuming the aspects of those one frequents,
+                                appearing and disappearing, submitting everyone to one’s will,
+                                dominating the supernormal power of others, giving intellectual
+                                clarity to those who lack it, giving mindfulness, bestowing
+                                happiness, and finally, emitting beneficial rays.” (Lamotte 2003:
+                                30).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-154">
+                            <term>converted</term>
+                            <term xml:lang="Bo-Ltn">’dul </term>
+                            <term xml:lang="bo">འདུལ།</term>
+                            <term xml:lang="Sa-Ltn">vaineya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-155">
+                            <term>yojana</term>
+                            <term xml:lang="Bo-Ltn">dpag tsad </term>
+                            <term xml:lang="bo">དཔག་ཙད།</term>
+                            <term xml:lang="Sa-Ltn">yojana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-156">
+                            <term>garlands of the buddhas</term>
+                            <term xml:lang="Bo-Ltn">sangs rgyas phal po che </term>
+                            <term xml:lang="bo">སངས་རྒྱས་ཕལ་པོ་ཆེ།</term>
+                            <term xml:lang="Sa-Ltn">buddhāvataṃsaka</term>
+                            <term type="definition">Here, the name of a particular state of
+                                concentration (but also the title of a composite Mahāyāna sūtra or
+                                “family” of sūtras, Toh 44<!--Reference Toh 0044-->).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-157">
+                            <term>sovereign power</term>
+                            <term xml:lang="Bo-Ltn">byin gyi rlabs </term>
+                            <term xml:lang="bo">བྱིན་གྱི་རླབས།</term>
+                            <term xml:lang="Sa-Ltn">adhiṣṭhāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-158">
+                            <term>eight branches of Āyurveda</term>
+                            <term xml:lang="Bo-Ltn">tshe’i rig pa yan lag brgyad pa </term>
+                            <term xml:lang="bo">ཚེའི་རིག་པ་ཡན་ལག་བརྒྱད་པ།</term>
+                            <term xml:lang="Sa-Ltn">aṣṭāṅgāyurveda</term>
+                            <term type="definition">The eight branches are: 1) <foreign type="term" xml:lang="Sa-Ltn">śalya</foreign> (surgery), 2) <foreign type="term" xml:lang="Sa-Ltn">śālākya</foreign> (treatment of
+                                diseases of the head and neck), 3) <foreign type="term" xml:lang="Sa-Ltn">agada</foreign> (treatment of poisoning),
+                                    4) <foreign type="term" xml:lang="Sa-Ltn">kumāra
+                                    bharaṇa</foreign> (pediatrics), 5) <foreign type="term" xml:lang="Sa-Ltn">kāya cikitsā</foreign> (treatment of internal
+                                diseases), 6) <foreign type="term" xml:lang="Sa-Ltn">bhūta
+                                    kriyā</foreign> (treatment of diseases caused by spirits),
+                                    7) <foreign type="term" xml:lang="Sa-Ltn">vāji karaṇa</foreign>
+                                (aphrodisiacs), and 8) <foreign type="term" xml:lang="Sa-Ltn">rasāyana</foreign> (rejuvenation).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-159">
+                            <term>boiled oil</term>
+                            <term xml:lang="Bo-Ltn">’bru mar bskol ba </term>
+                            <term xml:lang="bo">འབྲུ་མར་བསྐོལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">taila</term>
+                            <term type="definition">In Āyurvedic medicine, taila can be used both
+                                internally and externally. It is produced by boiling herbs in edible
+                                oil, such as sesame seed oil.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-160">
+                            <term>five actions with immediate results</term>
+                            <term xml:lang="Bo-Ltn">mtshams med pa lnga </term>
+                            <term xml:lang="bo">མཚམས་མེད་པ་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañcānantarya­karman</term>
+                            <term type="definition">The <term type="ignore">five actions with
+                                    immediate results</term> are: killing one’s mother, killing
+                                one’s father, killing an arhat, intentionally wounding a buddha, and
+                                creating a schism in the Saṅgha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-161">
+                            <term>kṛtyā</term>
+                            <term xml:lang="Bo-Ltn">gshed byed </term>
+                            <term xml:lang="bo">གཤེད་བྱེད།</term>
+                            <term xml:lang="Sa-Ltn">kṛtyā</term>
+                            <term type="definition">A kind of female evil spirit or
+                                sorceress.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-162">
+                            <term>kākhorda</term>
+                            <term xml:lang="Bo-Ltn">byad </term>
+                            <term xml:lang="bo">བྱད།</term>
+                            <term xml:lang="Sa-Ltn">kākhorda</term>
+                            <term type="definition">A kind of evil spirit, often associated with
+                                vetālas.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-061-006-163">
+                            <term>vetāla</term>
+                            <term xml:lang="Bo-Ltn">ro langs </term>
+                            <term xml:lang="bo">རོ་ལངས།</term>
+                            <term xml:lang="Sa-Ltn">vetāla</term>
+                            <term type="definition">A kind of demon or evil spirit occupying a dead
+                                body; a zombie.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-164">
+                            <term>Akṣobhya</term>
+                            <term xml:lang="Bo-Ltn">mi ’khrugs pa </term>
+                            <term xml:lang="bo">མི་འཁྲུགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">akṣobhya</term>
+                            <term type="definition">“Unmovable One.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-165">
+                            <term>Amitābha</term>
+                            <term xml:lang="Bo-Ltn">’od dpag tu med pa </term>
+                            <term xml:lang="bo">འོད་དཔག་ཏུ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">amitābha</term>
+                            <term type="definition">“Infinite Light.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-166">
+                            <term>Avalokiteśvara</term>
+                            <term xml:lang="Bo-Ltn">’phags pa spyan ras gzigs dbang phyug </term>
+                            <term xml:lang="bo">འཕགས་པ་སྤྱན་རས་གཟིགས་དབང་ཕྱུག</term>
+                            <term xml:lang="Sa-Ltn">āryāvalokiteśvara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-167">
+                            <term>Established in Peace</term>
+                            <term xml:lang="Bo-Ltn">rab tu zhi bar bkod pa </term>
+                            <term xml:lang="bo">རབ་ཏུ་ཞི་བར་བཀོད་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-168">
+                            <term>hero</term>
+                            <term xml:lang="Bo-Ltn">dpa’ bo </term>
+                            <term xml:lang="bo">དཔའ་བོ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-169">
+                            <term>Kanakamuni</term>
+                            <term xml:lang="Bo-Ltn">gser thub </term>
+                            <term xml:lang="bo">གསེར་ཐུབ།</term>
+                            <term xml:lang="Sa-Ltn">kanakamuni</term>
+                            <term type="definition">“Golden Sage.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-170">
+                            <term>Kāśyapa</term>
+                            <term xml:lang="Bo-Ltn">’od srung </term>
+                            <term xml:lang="bo">འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">kāśyapa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-171">
+                            <term>Krakucchanda</term>
+                            <term xml:lang="Bo-Ltn">log par dang sal </term>
+                            <term xml:lang="bo">ལོག་པར་དང་སལ།</term>
+                            <term xml:lang="Sa-Ltn">krakucchanda</term>
+                            <term type="definition">“Destroyer of Saṃsāra.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-172">
+                            <term>Lotus Born</term>
+                            <term xml:lang="Bo-Ltn">pad mo ’byung ba </term>
+                            <term xml:lang="bo">པད་མོ་འབྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">padmasaṃbhava</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-173">
+                            <term>Maitreya</term>
+                            <term xml:lang="Bo-Ltn">byams pa </term>
+                            <term xml:lang="bo">བྱམས་པ།</term>
+                            <term xml:lang="Sa-Ltn">maitreya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-174">
+                            <term>Mañjuśrī</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal </term>
+                            <term xml:lang="bo">འཇམ་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">mañjuśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-175">
+                            <term>Maudgalyāyana</term>
+                            <term xml:lang="Bo-Ltn">maud gal gyi bu </term>
+                            <term xml:lang="bo">མཽད་གལ་གྱི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Maudgalyāyana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-176">
+                            <term>Pacifier of All Fears</term>
+                            <term xml:lang="Bo-Ltn">’jigs pa thams cad rab tu zhi bar mdzad pa </term>
+                            <term xml:lang="bo">འཇིགས་པ་ཐམས་ཅད་རབ་ཏུ་ཞི་བར་མཛད་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-177">
+                            <term>Pacifier of All Negative Forms of Existence</term>
+                            <term xml:lang="Bo-Ltn">ngan song thams cad zhi bar mdzad pa </term>
+                            <term xml:lang="bo">ངན་སོང་ཐམས་ཅད་ཞི་བར་མཛད་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-178">
+                            <term>Powerful Intelligence</term>
+                            <term xml:lang="Bo-Ltn">dbang po’i blo gros </term>
+                            <term xml:lang="bo">དབང་པོའི་བློ་གྲོས།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-179">
+                            <term>Purifier of All Rebirths</term>
+                            <term xml:lang="Bo-Ltn">’gro ba thams cad yongs su byong ba </term>
+                            <term xml:lang="bo">འགྲོ་བ་ཐམས་ཅད་ཡོངས་སུ་བྱོང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-180">
+                            <term>Śāriputra</term>
+                            <term xml:lang="Bo-Ltn">sha ri’i bu </term>
+                            <term xml:lang="bo">ཤ་རིའི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Śāriputra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-181">
+                            <term>Śikhin</term>
+                            <term xml:lang="Bo-Ltn">gtsug phud can </term>
+                            <term xml:lang="bo">གཙུག་ཕུད་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">śikhin</term>
+                            <term type="definition">“Crown Ornament Holder.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-182">
+                            <term>Ānandaśrī</term>
+                            <term xml:lang="Bo-Ltn">dga’ ba’i dpal </term>
+                            <term xml:lang="bo">དགའ་བའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">ānandaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-183">
+                            <term>Candanaśrī</term>
+                            <term xml:lang="Bo-Ltn">tsan dan gyi dpal </term>
+                            <term xml:lang="bo">ཙན་དན་གྱི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">candanaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-184">
+                            <term>Stainless Arising</term>
+                            <term xml:lang="Bo-Ltn">dri med par ’byung ba </term>
+                            <term xml:lang="bo">དྲི་མེད་པར་འབྱུང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-185">
+                            <term>Stainless Full Moon</term>
+                            <term xml:lang="Bo-Ltn">zla ba rgyas pa dri ma med pa </term>
+                            <term xml:lang="bo">ཟླ་བ་རྒྱས་པ་དྲི་མ་མེད་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-186">
+                            <term>Subhūti</term>
+                            <term xml:lang="Bo-Ltn">rab ’byor </term>
+                            <term xml:lang="bo">རབ་འབྱོར།</term>
+                            <term xml:lang="Sa-Ltn">subhūti</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-187">
+                            <term>Subjugator of All Demon Forces</term>
+                            <term xml:lang="Bo-Ltn">bdud thams cad kyi stobs rab tu ’joms pa </term>
+                            <term xml:lang="bo">བདུད་ཐམས་ཅད་ཀྱི་སྟོབས་རབ་ཏུ་འཇོམས་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-188">
+                            <term>Bhaiṣajyaguru Vaidūryaprabharāja</term>
+                            <term xml:lang="Bo-Ltn">sman gyi bla bai du rya’i ’od </term>
+                            <term xml:lang="bo">སྨན་གྱི་བླ་བཻ་དུ་རྱའི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">bhaiṣajya­guru vaidūrya­prabharāja</term>
+                            <term type="definition">Teacher of Medicine, King of Vaiḍūrya
+                                Light.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-189">
+                            <term>He Who Looks at All Beings with Love</term>
+                            <term xml:lang="Bo-Ltn">sems can thams cad sdug par thong ba </term>
+                            <term xml:lang="bo">སེམས་ཅན་ཐམས་ཅད་སྡུག་པར་ཐོང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-190">
+                            <term>He Whose Intelligence Has Been Completely Purified</term>
+                            <term xml:lang="Bo-Ltn">blo gros rnam dag pa </term>
+                            <term xml:lang="bo">བློ་གྲོས་རྣམ་དག་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-191">
+                            <term>Vajrapāṇi</term>
+                            <term xml:lang="Bo-Ltn">lag na rdo rje </term>
+                            <term xml:lang="bo">ལག་ན་རྡོ་རྗེ།</term>
+                            <term xml:lang="Bo-Ltn">phyag na rdo rje </term>
+                            <term xml:lang="bo">ཕྱག་ན་རྡོ་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">vajrapāṇi</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-192">
+                            <term>Vigataśoka</term>
+                            <term xml:lang="Bo-Ltn">mya ngan bral ba </term>
+                            <term xml:lang="bo">མྱ་ངན་བྲལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">vigataśoka</term>
+                            <term type="definition">“Without Suffering.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-193">
+                            <term>Vipāśyin</term>
+                            <term xml:lang="Bo-Ltn">rnam par gzigs </term>
+                            <term xml:lang="bo">རྣམ་པར་གཟིགས།</term>
+                            <term xml:lang="Sa-Ltn">vipāśyin</term>
+                            <term type="definition">“Discerning One.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-194">
+                            <term>Viśvabhū</term>
+                            <term xml:lang="Bo-Ltn">thams cad skyob </term>
+                            <term xml:lang="bo">ཐམས་ཅད་སྐྱོབ།</term>
+                            <term xml:lang="Sa-Ltn">viśvabhū</term>
+                            <term type="definition">“Protector of All.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-195">
+                            <term>Yama</term>
+                            <term xml:lang="Bo-Ltn">gshin rje </term>
+                            <term xml:lang="bo">གཤིན་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">yama</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-061-006-196">
+                            <term>Prasenajit</term>
+                            <term xml:lang="Bo-Ltn">gsal rgyal </term>
+                            <term xml:lang="bo">གསལ་རྒྱལ།</term>
+                            <term xml:lang="Sa-Ltn">prasenajit</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-197">
+                            <term>Endowed with Realization and Intelligence</term>
+                            <term xml:lang="Bo-Ltn">rtogs pa dang blo gros su ldan pa </term>
+                            <term xml:lang="bo">རྟོགས་པ་དང་བློ་གྲོས་སུ་ལྡན་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-198">
+                            <term>Excellent Attainment</term>
+                            <term xml:lang="Bo-Ltn">khyad par thob pa </term>
+                            <term xml:lang="bo">ཁྱད་པར་ཐོབ་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-199">
+                            <term>Fearless</term>
+                            <term xml:lang="Bo-Ltn">’jigs pa med pa </term>
+                            <term xml:lang="bo">འཇིགས་པ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">nirbhaya</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-200">
+                            <term>Free from Negative Forms of Existence</term>
+                            <term xml:lang="Bo-Ltn">ngan ’gro dang bral ba </term>
+                            <term xml:lang="bo">ངན་འགྲོ་དང་བྲལ་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-201">
+                            <term>Vaiḍūrya Light</term>
+                            <term xml:lang="Bo-Ltn">bai du rya snang ba </term>
+                            <term xml:lang="bo">བཻ་དུ་རྱ་སྣང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-202">
+                            <term>Lotus Excellence</term>
+                            <term xml:lang="Bo-Ltn">pad mo’i bla ma </term>
+                            <term xml:lang="bo">པད་མོའི་བླ་མ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-203">
+                            <term>Moon</term>
+                            <term xml:lang="Bo-Ltn">zla ba </term>
+                            <term xml:lang="bo">ཟླ་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-204">
+                            <term>Peace</term>
+                            <term xml:lang="Bo-Ltn">zhi ba </term>
+                            <term xml:lang="bo">ཞི་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-205">
+                            <term>Perfect Light</term>
+                            <term xml:lang="Bo-Ltn">legs par snang ba </term>
+                            <term xml:lang="bo">ལེགས་པར་སྣང་བ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-206">
+                            <term>Possessed of Power</term>
+                            <term xml:lang="Bo-Ltn">dbang po </term>
+                            <term xml:lang="bo">དབང་པོ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-207">
+                            <term>Sahā world system</term>
+                            <term xml:lang="Bo-Ltn">mi mjed kyi ’jig rten gyi khams </term>
+                            <term xml:lang="bo">མི་མཇེད་ཀྱི་འཇིག་རྟེན་གྱི་ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">sahālokadhātu</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-208">
+                            <term>Vimalā</term>
+                            <term xml:lang="Bo-Ltn">dri med pa </term>
+                            <term xml:lang="bo">དྲི་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">vimalā</term>
+                            <term type="definition">“Stainless.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-209">
+                            <term>Sukhāvatī</term>
+                            <term xml:lang="Bo-Ltn">bde ba can </term>
+                            <term xml:lang="bo">བདེ་བ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">sukhāvatī</term>
+                            <term type="definition">“Endowed with Happiness.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-210">
+                            <term>Vārāṇasī</term>
+                            <term xml:lang="Bo-Ltn">bA rA na sI </term>
+                            <term xml:lang="bo">བཱ་རཱ་ན་སཱི།</term>
+                            <term xml:lang="Sa-Ltn">vārāṇasī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-211">
+                            <term>grove of the caretaker of mango trees</term>
+                            <term xml:lang="Bo-Ltn">a mra srung ba’i tshal </term>
+                            <term xml:lang="bo">ཨ་མྲ་སྲུང་བའི་ཚལ།</term>
+                            <term xml:lang="Sa-Ltn">āmrapālīvana</term>
+                            <term type="definition">A phrase usually translated as Āmrapālī’s grove,
+                                referring to the grove in Vaiśālī donated to the Buddha by the
+                                courtesan Āmrapālī (“Protected by a Mango Tree”), but here possibly
+                                to be interpreted as a generic term, as the narrative locates it in
+                                Vārāṇasī.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-061-006-212">
+                            <term>Aśoka</term>
+                            <term xml:lang="Bo-Ltn">mya ngan </term>
+                            <term xml:lang="bo">མྱ་ངན།</term>
+                            <term xml:lang="Sa-Ltn">aśoka</term>
+                            <term type="definition">“Without Suffering.”</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sangs rgyas kyi snying po'i gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">buddhahṛdayadhāraṇī</title>
+                <title type="mainTitle" xml:lang="en">The Incantation, the Essence of the Buddhas</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa sangs rgyas kyi snying po zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryabuddhahṛdayanāmadhāraṇī</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa sangs rgyas kyi snying po zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryabuddhahṛdayanāmadhāraṇī</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-088-009"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh515" type="text">
+                    <ref>Toh 515</ref>
+                    <biblScope>vol.88, ff.29v-31r(pp.58-61)</biblScope>
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="88" start-page="58" end-page="61"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12237" work="W22084"/>
+                </bibl>
+                <bibl key="toh855" type="text">
+                    <ref>Toh 855</ref>
+                    <biblScope>vol.100, ff.74v-76r(pp.148-151)</biblScope>
+                    <location work="UT4CZ5369" count-pages="4">
+                        <volume number="100" start-page="148" end-page="151"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12617" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-10T08:03:25.702Z" user="admin">10/10/2019 08:03:25</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:03:22.106Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

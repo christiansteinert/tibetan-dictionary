@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">spyod pa bsdus pa'i sgron ma</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">caryasamgrahapradipa</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-111-022"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh3960" type="text">
+                    <ref>Toh 3960</ref>
+                    <biblScope>ff. 312v-313r</biblScope>
+                    <author role="translatorTib">a. mar me mdzad ye shes</author>
+                    <author role="translatorTib">t. mar me mdzad ye shes</author>
+                    <author role="translatorTib">tshul khrims rgyal ba</author>
+                    <location count-pages="">
+                        <start volume="111" page="626"/>
+                        <end volume="111" page="627"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10474" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10629" work="W23703"/>
+                </bibl>
+                <bibl key="toh4466" type="text">
+                    <ref>Toh 4466</ref>
+                    <biblScope/>
+                    <author role="translatorTib">Atisa</author>
+                    <location count-pages="1">
+                        <start volume="213" page="2"/>
+                        <end volume="213" page="2"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC11278" work="http://read.84000.co/sections"/>
+                <idno source-id="O1JC76301JC112784466" work="http://read.84000.co/sections"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 16/01/2019 at 10:20:26 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

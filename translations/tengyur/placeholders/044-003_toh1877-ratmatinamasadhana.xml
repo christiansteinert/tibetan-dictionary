@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">mi shigs pa'i rin po che zhes bya ba'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">ratmati-nama-sadhana</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-044-003"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1877" type="text">
+                    <ref>Toh 1877</ref>
+                    <biblScope>ff. 81r-84v</biblScope>
+                    <author role="translatorTib">a. vitapada</author>
+                    <author role="translatorTib">t. kamalaguhya</author>
+                    <author role="translatorTib">ye shes rgyal mtshan</author>
+                    <location count-pages="">
+                        <start volume="44" page="163"/>
+                        <end volume="44" page="170"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21621" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC8448" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:48:36 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

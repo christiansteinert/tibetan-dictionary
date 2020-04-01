@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">nag po chen pa'i rgyud/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahākālatantra</title>
+                <title type="mainTitle" xml:lang="en">The Tantra of Mahākāla</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">dpal nag po chen pa'i rgyud/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">śrīmahākālatantra</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-091-064"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh667" type="text">
+                    <ref>Toh 667</ref>
+                    <biblScope>vol.91, ff.199r-201v(pp.397-402)</biblScope>
+                    <location work="UT4CZ5369" count-pages="6">
+                        <volume number="91" start-page="397" end-page="402"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12402" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-13T10:07:08.809Z" user="admin">13/12/2019 10:07:08</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T10:07:02.613Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T10:07:02.613Z" user="john">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Tibetan-English dictionary application
 This application is written mostly in Javascript. 
 It currently comes in two flavors:
@@ -82,3 +83,8 @@ In the build script you will see that two versions of the dictionary are built o
 
 So as far as the build process is concerned everything should be fine even if you don't have the data for the additional private version of the application. Just don't be surprised when you read the commands in the build script and see that some files that are referenced are missing and that due to that some steps in the build process are skipped.
 
+=======
+# 84000/data-tei
+
+84000 TEI files
+>>>>>>> 1cf70e26e8202f5eaff00f0df5776ba6f34b1ba1

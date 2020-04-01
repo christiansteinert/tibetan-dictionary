@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ting nge 'dzin gyi mi mthun pa'i phyogs rnam par gzhag pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">samadhipratikulapaksavyavasthana(?)</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-110-025"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh3932" type="text">
+                    <ref>Toh 3932</ref>
+                    <biblScope>ff. 123v-125r</biblScope>
+                    <author role="translatorTib">t. hwa shang zab mo la sogs pa</author>
+                    <author role="translatorTib">rnam par mi rtog pa</author>
+                    <location count-pages="">
+                        <start volume="110" page="248"/>
+                        <end volume="110" page="251"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC10474" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC10600" work="W23703"/>
+                </bibl>
+                <bibl key="toh4534" type="text">
+                    <ref>Toh 4534</ref>
+                    <biblScope/>
+                    <author role="translatorTib">Atisa</author>
+                    <location count-pages="1">
+                        <start volume="213" page="70"/>
+                        <end volume="213" page="70"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC11278" work="http://read.84000.co/sections"/>
+                <idno source-id="O1JC76301JC112784534" work="http://read.84000.co/sections"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 16/01/2019 at 10:20:20 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

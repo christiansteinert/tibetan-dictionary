@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">'jig rten 'dzin gyis yongs su dris pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">lokadharaparipṛcchāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Questions of Lokadhara</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa 'jig rten 'dzin gyis yongs su dris pa zhes bya ba'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryalokadharaparipṛcchānāmasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <editor role="copyEditor" ref="contributors.xml#person-252">Dion Blundell</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="2.a">
+                <idno xml:id="UT22084-060-003"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh174" type="text">
+                    <ref>Toh 174</ref>
+                    <biblScope/>
+                    <location count-pages="143">
+                        <start volume="60" page="16"/>
+                        <end volume="60" page="158"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11783" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-05-22T10:47:00.668Z" user="admin">22/05/2019 10:47:00</note>
+            <note type="updated" update="translation-status" value="2.d" date-time="2019-03-09T11:34:59.6Z" user="john">2.d</note>
+                <note type="updated" update="translation-status" value="2.c" date-time="2019-05-01T21:08:28.617Z" user="john">2.c</note>
+                <note type="updated" update="translation-status" value="2.b" date-time="2019-05-22T08:53:28.481Z" user="james">2.b</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2019-05-22T10:46:58.079Z" user="mike">2.a</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

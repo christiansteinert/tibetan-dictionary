@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bde ba can gyi bkod pa</title>
+                <title type="mainTitle" xml:lang="bo">བདེ་བ་ཅན་གྱི་བཀོད་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Display of the Pure Land of Sukhāvatī</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Sukhāvatī­vyūha</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་བདེ་བ་ཅན་གྱི་བཀོད་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa bde ba can gyi bkod pa zhes bya ba theg pa chen po’i
+                    mdo</title>
+                <title type="longTitle" xml:lang="en"> The Noble Mahāyāna Sūtra “The Display of the Pure Land of
+                    Sukhāvatī”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­sukhāvatī­vyūha­nāma­mahā­yāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-27">Translated by the Sakya Pandita Translation Group (International Buddhist Academy
+                    Division)<lb/> under the patronage and supervision of 84000: Translating the Words of the Buddha</author>
+                <consultant role="advisor" ref="contributors.xml#person-174">Khenpo Ngawang Jorden</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-184">Julia Stenzel</author>
+                <author role="translatorEng" ref="contributors.xml#person-233">Ngawang Rinchen Gyaltsen</author>
+                <author role="translatorEng" ref="contributors.xml#person-234">Tsewang Gyaltsen</author>
+                <!-- <author role="translatorEng">Ngawang Rinchen Gyaltsen</author>
+                <author role="translatorEng">Tsewang Gyaltsen</author> -->
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.20.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-051-003"/>
+                <date>2011-12-17</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh115" type="text">
+                    <ref>Toh 115</ref>
+                    <biblScope>Degé Kangyur, vol. 51 (mdo sde, ja), folios 195.b-200.b</biblScope>
+                    <author role="translatorTib">Dānaśīla</author>
+                    <author role="translatorTib">Yeshé Dé (ye shes sde)</author>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="51" start-page="390" end-page="399"/>
+                    </location>
+                <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11682" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-19T10:15:22.245Z" user="mike">19/12/2019 10:15:22</note>
+            <note type="updated" update="text-version" value="v 2.16" date-time="2019-06-18T02:51:19.312Z" user="celso">v 2.16 2019</note>
+                <note type="updated" update="text-version" value="v 2.17" date-time="2019-06-21T14:30:40.976Z" user="celso">v 2.17 2019</note>
+                <note type="updated" update="text-version" value="v 2.18" date-time="2019-07-26T22:22:50.646Z" user="laura">v 2.18 2019</note>
+                <note type="updated" update="text-version" value="v 2.19" date-time="2019-09-15T14:09:30.296Z" user="andre">v 2.19 2019 - version updated due to correction in folio numbering</note>
+<note type="updated" update="text-version" value="v 2.19.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.20.0" date-time="2019-12-19T10:59:18.609Z" user="mike">Changed de ge reference on title page from "mdo sde, pa" to "mdo sde, ja" as per user feedback</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <!--Contents 
+            Summary 
+            Acknowledgments 
+            Introduction 
+            The Translation 
+            The Display of the Pure Land of Sukhāvatī 
+            Bibliography Notes -->
+            <div type="summary">
+                <head type="summary" tid="53">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-051-003-1"/>
+                <p tid="1">In the Jeta Grove of Śrāvastī, Buddha Śākyamuni, surrounded by a large audience, presents to his
+                    disciple Śāriputra a detailed description of the realm of Sukhāvatī, a delightful, enlightened abode, free of
+                    suffering. Its inhabitants are described as mature beings in an environment where everything enhances their
+                    spiritual inclinations. The principal buddha of Sukhāvatī is addressed as Amitāyus (Limitless Life) as well as
+                    Amitābha (Limitless Light). </p>
+                <p tid="2">Buddha Śākyamuni further explains how virtuous people who focus single-mindedly on Buddha Amitābha will
+                    obtain a rebirth in Sukhāvatī in their next life, and he urges all to develop faith in this teaching. In
+                    support, he cites the similar way in which the various buddhas of the six directions exhort their followers to
+                    develop confidence in this teaching on Sukhāvatī. </p>
+                <p tid="3">The sūtra ends with a short dialogue between Śāriputra and Buddha Śākyamuni that highlights the
+                    difficulty of enlightened activity in a degenerate age. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="54">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-051-003-2"/>
+                <p tid="4">Translation by the Sakya Pandita Translation Group, International Buddhist Academy Division, Kathmandu,
+                    under the supervision of Khenpo Ngawang Jorden. This sūtra was translated into English by the monk Ngawang
+                    Rinchen Gyaltsen, Julia Stenzel, and Tsewang Gyaltsen. </p>
+                <p tid="5">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="55">Introduction</head>
+                <div type="section">
+                    <head type="section" tid="56">Origin and History</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-3"/>
+                    <p tid="6">
+                        <title xml:lang="en">The Display of the Pure Land of Sukhāvatī</title> is the shortest of three sūtras
+                        that expound the Land of Delight, the pure realm of Amitābha, called Sukhāvatī. The Kangyur includes
+                        Tibetan translations of two of these texts: this one, often called the “shorter” <title xml:lang="Sa-Ltn">Sukhāvatī</title>, and the “longer” sūtra, with the formal title <title xml:lang="en">The Array of Amitābha</title> (Toh 49 in the Heap of Jewels section).<note place="end" index="1" xml:id="UT22084-051-003-169">Toh 49 (<foreign xml:lang="Bo-Ltn">’od dpag med kyi bkod pa’i mdo</foreign>, <foreign xml:lang="Sa-Ltn">Amitābha­vyūha­sūtra</foreign>), also known in Tibetan as <title xml:lang="Bo-Ltn">bde ba can gyi zhing  bkod pa’i bstan pa</title> (<title xml:lang="en">The Teaching on the Display of the Pure Land  of Sukhāvatī</title>) or, informally, the “longer” <title xml:lang="Sa-Ltn">Sukhāvatī</title>.</note> The third, <title xml:lang="en">The Amitāyus Meditation Sūtra</title>,<note place="end" xml:id="UT22084-051-003-145" index="2">The latter sūtra’s
+                            Sanskrit title <title xml:lang="Sa-Ltn">Amitāyur­dhyāna­sūtra</title> is now believed to have been
+                            fabricated at a later date. Most scholars even consider the <title xml:lang="Zh-Ltn">Guan wu liang
+                                shou jing</title> to be a Chinese or Central Asian compilation. See Fujita (1990), especially p.
+                            155 and n. 48, on the question of the title. On p. 155 Fujita says: “It cannot be determined
+                            categorically what the Sanskrit title of the <title xml:lang="en">Kuan Wu-liang-shou ching</title>
+                            might have been.”</note> is only extant in Chinese. </p>
+                    <p tid="7">The shorter sūtra, according to the Sanskrit scholar Luis Gomez, first appeared in its written form
+                        during the first century <hi rend="small-caps">ce</hi>, possibly in what was then Northwest India and is now Pakistan.<note place="end" xml:id="UT22084-051-003-146" index="3">Gomez (1996), xii.</note>
+                    </p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="57">Source Text and Various Versions </head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-4"/>
+                    <p tid="8">A Sanskrit version of the smaller <title xml:lang="en">Display of the Pure Land of
+                            Sukhāvatī</title> is extant today, as well as Tibetan and Chinese translations. All the translations
+                        show some variation from the Sanskrit source in content and style, which can be attributed in part to
+                        cultural and geographic conditions in Tibet and China.<note place="end" xml:id="UT22084-051-003-147" index="4">Nakamura (1987), p. 204.</note>. The translations have become more
+                        influential than the original itself, for which we presently lack any contextual information.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-5"/>
+                    <p tid="9">There are several Chinese translations of this sūtra, dating from between 240 and 400 <hi rend="small-caps">ce</hi>, but
+                        only one Tibetan version, translated in the eighth or ninth century. The Chinese versions of the sūtra
+                        spread through China, Korea, Japan, and Vietnam and played an important role in the formation of the Pure
+                        Land schools in these countries. These versions appear to embellish the description of the wonders of the
+                        realm of Sukhāvatī,<note place="end" xml:id="UT22084-051-003-148" index="5">Nakamura (1987), p. 206.</note>
+                        whereas the Tibetan version is more subdued and shows its main variations from the Sanskrit original in
+                        the names and the number of buddhas presiding over the different buddha realms. The various editions in
+                        the Tibetan canon, i.e., the Degé, Narthang, Peking, and Lhasa editions, show no major differences that
+                        would alter the meaning. </p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-6"/>
+                    <p tid="10">For the present translation, we have followed the Tibetan text, while comparing it with the
+                        Sanskrit original. Concerning the enumeration of names of the buddhas presiding over the various buddha
+                        realms, we have retained their original Sanskrit names, unless the Tibetan text had names without a known
+                        Sanskrit equivalent, in which case we chose to translate those names into English. The differences are
+                        further commented on in notes.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-7"/>
+                    <p tid="11">The Tibetan version of the smaller <title xml:lang="en">Display of the Pure Land of
+                            Sukhāvatī</title> was translated by the Indian abbot Dānaśīla and the chief editor translator, the
+                        monk Yeshé Dé, as indicated in the colophon.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="58">Main Points of the Subject Matter</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-8"/>
+                    <p tid="12">The sūtra’s overall subject is revealed in the title. The Sanskrit term <foreign type="term" xml:lang="Sa-Ltn">sukhāvatī</foreign>, in Tibetan Dewachen (<foreign type="term" xml:lang="Bo-Ltn">bde
+                            ba can</foreign>), designates a realm of delight, a place where no suffering is experienced. The
+                        inhabitants of this realm are spiritually advanced beings who enjoy the presence of buddhas, bodhisattvas,
+                        and arhats, and engage exclusively in wholesome activities. The principal buddha of this realm has two
+                        names, Amitāyus (Limitless Life) and Amitābha (Limitless Light). Even though it is not explicitly stated
+                        in this particular sūtra, Amitāyus is, in Vajrayāna contexts, sometimes considered a sambhogakāya form of
+                        Buddha Amitābha.<note place="end" xml:id="UT22084-051-003-149" index="6">But see also Roberts and Bower
+                            (2016), Introduction, on the conflation of these two buddhas.</note>
+                    </p>
+                    <p tid="13">The term <foreign type="term" xml:lang="Sa-Ltn">vyūha</foreign> (Tib. <foreign type="term" xml:lang="Bo-Ltn">bkod pa</foreign>) means “display,” indicating that the sūtra is to a large extent a
+                        description of this buddha realm and its characteristics. It is a land with lakes and forests full of
+                        jewels, with magical birds, and with little bells producing lovely sounds. Its ideal environment enhances
+                        the spiritual practice of Sukhāvatī’s inhabitants.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="59">Four Main Topics</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-9"/>
+                    <p tid="14">The sūtra contains four main topics: (1) the description of Sukhāvatī; (2) the prerequisites
+                        needed to take birth in this realm; (3) praise of this discourse expressed by other buddhas; and (4)
+                        Buddha Śākyamuni’s supreme feat.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="60">The Setting</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-10"/>
+                    <p tid="15">The narrative of the sūtra takes place in the Jeta Grove of Śrāvastī, where Buddha Śākyamuni, in
+                        the presence of a large audience consisting of arhats and bodhisattvas, addresses his disciple Śāriputra
+                        and tells him about the realm of Sukhāvatī. The sūtra is in large part a discourse spoken by the Buddha.
+                        Even though the Buddha regularly asks the question, “Śāriputra, what do you think about this?” Śāriputra
+                        speaks only at the very end of the sūtra and praises the Buddha.</p>
+                    <p tid="16">The sūtra ends with a short dialogue between Śāriputra and Buddha Śākyamuni that highlights the
+                        difficulty of Buddha Śākyamuni’s attaining enlightenment and preaching in a degenerate age.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="61">The Significance of Buddha Realms</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-11"/>
+                    <p tid="17">The notion of innumerable buddha realms coexisting with our reality became popular with the
+                        emergence of Mahāyāna Buddhism around the first century <hi rend="small-caps">ce</hi>. They have been interchangeably translated as
+                        buddhafields, buddha realms, or pure lands.</p>
+                    <p tid="18">In <title xml:lang="en">The Display of the Pure Land of Sukhāvatī</title>, the Land of Delight is
+                        described as a realm beyond space and time. The two larger sūtras elaborate on the history of its
+                        emergence. According to those sūtras, the Land of Delight is the result of the powerful vows of Buddha
+                        Amitābha, who out of great compassion created a safe environment for fortunate beings to progress toward
+                        spiritual maturity. The smaller sūtra, however, refers only to the existence of such a realm and its
+                        characteristics.</p>
+                    <p tid="19">In the sūtra, Buddha Śākyamuni explains the manner in which beings take birth in this realm:
+                        fortunate sons and daughters are told to accumulate a significant amount of merit and direct their faith
+                        single-mindedly toward Buddha Amitābha.</p>
+                    <p tid="20">Śākyamuni’s discourse mentions an alternative title for this sūtra. He explains that there are
+                        countless buddha realms with tathāgatas who praise Sukhāvatī with a Dharma discourse called “Complete
+                        Embrace by All Buddhas.”</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="62">References to the Sūtra in the Tibetan Canon</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-12"/>
+                    <p tid="21">The various sūtras of the Pure Land of Sukhāvatī have inspired Tibetan masters to write prayers
+                        and practice rituals that allow adepts to enter Amitābha’s realm. There are numerous Sukhāvatī-related
+                        compositions available in the Tengyur and in different collected works (<title xml:lang="Bo-Ltn">gsung
+                            ’bum</title>).</p>
+                    <p tid="22">
+                        <title xml:lang="en">The Collection of Prayers for Sukhāvatī</title> (<title xml:lang="Bo-Ltn">bde smon phyogs
+                            bsgrigs</title>) is a collection of prayers, practice rituals, and commentaries concerning the pure
+                        land of Amitābha. An edition was published in Chengdu in 2007 by Sichuan
+                        Minorities Publishing House (<foreign xml:lang="Bo-Ltn">Si khron mi rigs dpe skrun khang</foreign>).</p>
+                    <p tid="23">One of the Tibetan masters who made Sukhāvatī a particular focus of attention was Chagmé Rinpoché
+                            (<foreign xml:lang="Bo-Ltn">’chags med</foreign>, 1610-1678). He composed <title xml:lang="en">The
+                            Long Prayer of Sukhāvatī</title> (<title xml:lang="Bo-Ltn">mkhas grub rā ga a syas mdzad pa’i rnam dag
+                            bde chen zhing gi smon lam</title>), among others.</p>
+                    <p tid="24">Furthermore, the well-known <title xml:lang="en">Noble King of Prayers for Good Conduct</title>
+                            (<title xml:lang="Bo-Ltn">’phags pa bzang po spyod pa’i smon lam gyi rgyal po</title>), recited by
+                        adherents of all Tibetan schools, concludes with the aspiration for rebirth in the pure realm of Sukhāvatī.
+                        Praying to be born in the pure realm of Amitābha has become a major practice in Mahāyāna Buddhism.</p>
+                </div>
+                <div type="section">
+                    <head type="section" tid="63">Academic Research</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-13"/>
+                    <p tid="25">There appears to be no translation of the Tibetan <title xml:lang="en">Display of the Pure Land of
+                            Sukhāvatī</title> prior to the one published here. However, the Sanskrit version of the sūtra was
+                        translated into English and edited by Max Müller and Bunyiu Nanjio in Müller and Nanjio (1883).</p>
+                    <p tid="26">Luis O. Gomez has published a non-literal, poetic translation of the Sanskrit and Chinese versions
+                        of the smaller and larger sūtras and gives an introduction to the main topics (Gomez 1996). His literal
+                        translation of the same sūtras is forthcoming. Hisao Inagaki has translated the three Pure Land sūtras on
+                        the basis of their Chinese versions; this translation appears in the BDK English Tripiṭaka Vol. 12,
+                        Berkeley, 1995. An earlier translation from the Chinese was published in Utsuki (1924).</p>
+                    <p tid="27">Nakamura (1987) presents an historical introduction to the beginnings of Pure Land Buddhism and
+                        its textual sources in Indian Buddhism.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="64">The Translation</head>
+                <head type="titleHon" tid="65">The Noble Mahāyāna Sūtra</head>
+                <head type="titleMain" tid="66">The Display of the Pure Land of Sukhāvatī</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-051-003-14"/>
+                    <p tid="28">
+                        <ref cRef="F.195.b" type="folio"/>
+                        <!--<modularPassage type="homage">-->Homage to all the buddhas and bodhisattvas<!--</modularPassage>-->. </p>
+                    <lb/>
+                    <p tid="29">
+                        <!--<modularPassage type="thusDid">-->Thus did I hear at one time<!--</modularPassage>-->. The Bhagavān
+                        was dwelling in Anāthapiṇḍada’s park in the Jeta Grove in Śrāvastī, along with a large monastic saṅgha of
+                        1,250 bhikṣus,<note place="end" xml:id="UT22084-051-003-150" index="7">The Sanskrit has “...<foreign type="term" xml:lang="Sa-Ltn">abhijñānābhijñātaiḥ</foreign>”, i.e., “... bhikṣus, all of them
+                            proficient in the [five kinds of] superknowledge.” This is omitted in the Tibetan. </note> all of them
+                        great elders, śrāvakas, and arhats, such as the Elder Śāriputra, Mahā­maudgalyāyana, Mahākāśyapa,
+                            Mahā­kātyāyana,<note place="end" xml:id="UT22084-051-003-151" index="8">In the Sanskrit version the
+                                order is: Mahā­maudgalyāyana, Mahākāśyapa, Mahākapphiṇa, Mahā­kātyāyana. </note> Mahākapphiṇa,
+                        Mahākauṣṭhila, Revata, Śuddhipaṃthaka, Nanda, Ānanda, Rāhula, Gavāṃpati, Bharadvāja, Kālodāyin, Vakula,
+                        and Aniruddha. He dwelt with these and other great śrāvakas and with many bodhisattva mahāsattvas, such as
+                        the youthful Mañjuśrī, <ref cRef="F.196.a" type="folio"/> the Bodhisattva Mahāsattva Ajita, the Bodhisattva Mahāsattva
+                        Gandhahastin, the Bodhisattva Mahāsattva Nityodyukta, and the Bodhisattva Mahāsattva Anikṣiptadhura, along
+                        with many other bodhisattva mahāsattvas. He was also accompanied by Indra, the lord of gods, and Brahmā,
+                        the ruler of the Sahā world, along with many myriads<note place="end" xml:id="UT22084-051-003-152" index="9">Literally, the text has: 10 million (<foreign type="term" xml:lang="Bo-Ltn">bye ba</foreign>) x 10 billion (<foreign type="term" xml:lang="Bo-Ltn">khrag
+                                khrig</foreign>) x 100 thousand (<foreign type="term" xml:lang="Bo-Ltn">’bum phrag</foreign>). In
+                            the Sanskrit it says, according to Max Müller, a hundred thousand <foreign type="term" xml:lang="Sa-Ltn">nayuta</foreign>s.</note> of gods.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-15"/>
+                    <p tid="30">On that occasion, the Bhagavān said to the venerable Śāriputra, “Śāriputra, if you go from this
+                        buddha realm past 100,000 myriad buddha realms toward the western direction, there is a world known as
+                        Sukhāvatī (The Delightful). In that place the Tathāgata, the arhat, the perfectly and fully enlightened buddha
+                        known as Amitāyus (Immeasurable Life), dwells, lives, and abides, teaching the Dharma.</p>
+                    <p tid="31">“Now what do you think, Śāriputra, why is that world called ‘Sukhāvatī’?</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-16"/>
+                    <p tid="32">“Śāriputra, in the Sukhāvatī world, sentient beings experience neither physical pain nor mental
+                        suffering and the causes for their happiness are limitless. For this reason, this world is called
+                        Sukhāvatī. Furthermore, Śāriputra, the Sukhāvatī world is surrounded on all sides by seven layers of
+                        terraces, seven rows of palm trees, and filigrees of chimes. It is radiantly beautiful. Śāriputra, this
+                        buddha realm is beautifully adorned with displays of the excellences of buddha realms, such as the four
+                        kinds of jewels, namely, gold, silver, beryl, and crystal. Furthermore, Śāriputra, the Sukhāvatī world has
+                        ponds adorned with seven kinds of jewels. The ponds are full of water possessing the eight qualities. They
+                        are covered by jeweled lotuses, <ref cRef="F.196.b" type="folio"/> are filled to the top to enable crows to drink, and are lined with golden
+                        sand. All around, on the four sides of the ponds are four radiantly elegant staircases, each made of one
+                        of the four precious substances: gold, silver, beryl, and crystal. By the banks of the ponds grow jeweled
+                        trees of the seven radiantly beautiful jewels: gold, silver, beryl, crystal, rosy pearls, emerald, and
+                        coral. From all those ponds grow lotuses that bloom as large as chariot wheels. </p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-17"/>
+                    <p tid="33">“The golden lotuses have a golden hue, a golden sheen, and manifest as gold. The blue ones have a
+                        blue hue, a blue sheen, and manifest as blue. The yellow ones have a yellow hue, a yellow sheen, and
+                        manifest as yellow. The red ones have a red hue, a red sheen, and manifest as red. The white ones have a
+                        white hue, a white sheen, and manifest as white. The iridescent ones have an iridescent hue, an iridescent
+                        sheen, and manifest as iridescence. Śāriputra, this buddha realm is beautifully adorned by such displays
+                        of the excellences of buddha realms. Furthermore, Śāriputra, in the Sukhāvatī world, the sound of divine
+                        cymbals is always heard. The vast ground is magnificent, as if golden in color. Śāriputra, this buddha
+                        realm is beautifully adorned by such displays of the excellences of buddha realms.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-18"/>
+                    <p tid="34">“Furthermore, Śāriputra, in that buddha realm a shower of divine flowers, divine mandārava
+                        flowers, descends three times every day and three times every night. In a single morning, the sentient
+                        beings that are born there proceed from one buddha realm to the next, paying homage to hundreds of
+                        thousands of buddhas. They also toss hundreds of thousands of bouquets of flowers toward each tathāgata.
+                        After making offerings, they return to that same world for their daily rest. <ref cRef="F.197.a" type="folio"/>
+                        Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of buddha
+                        realms.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-19"/>
+                    <p tid="35">“Furthermore, Śāriputra, in the Sukhāvatī world there are swans, cranes, and peacocks that
+                        assemble three times during the day and three times at night and perform a concert, each singing its own
+                        melody. When they sing, the sounds of the powers, strengths, and branches of enlightenment emerge. Upon
+                        hearing those sounds, the sentient beings born there are moved to contemplate the Buddha, to contemplate
+                        the Dharma, and to contemplate the Saṅgha. Now what do you think about this, Śāriputra? Have those
+                        sentient beings taken birth as animals? You should not think so. Why is that so? Śāriputra, in this buddha
+                        realm there are not even words for birth as a hell being, birth as an animal, or birth in the world of the
+                        Lord of Death. Those flocks of birds were manifested by the Tathāgata Amitāyus himself to voice the sound
+                        of Dharma. Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of
+                        buddha realms.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-20"/>
+                    <p tid="36">“Furthermore, Śāriputra, when the wind blows in that buddha realm it sways the rows of palm trees
+                        and the filigree net of chimes, creating sweet, enchanting, and delightful sounds, like the myriad
+                        subtleties of divine cymbals when played by a skilled musician. The people there, upon hearing those
+                        sounds, settle into the recollection of the Buddha, the recollection of the Dharma, and the recollection
+                        of the Saṅgha. Śāriputra, this buddha realm is beautifully adorned by such displays of the excellences of
+                        buddha realms.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-21"/>
+                    <p tid="37">“Now what do you think, Śāriputra, <ref cRef="F.197.b" type="folio"/> why is that tathāgata called ‘Amitāyus’
+                        (Immeasurable Life)? Śāriputra, the lifespan of Tathāgata Amitāyus is immeasurable. For this reason, he is
+                        called ‘Tathāgata Amitāyus.’ Furthermore, Śāriputra, why is that tathāgata called ‘Amitābha’ (Immeasurable
+                        Light)? Śāriputra, the light of Tathāgata Amitābha shines unimpeded throughout all buddha realms. For this
+                        reason, he is called ‘Tathāgata Amitābha.’ The Bhagavān Tathāgata Amitābha fully awakened to
+                        unsurpassable, completely perfect enlightenment ten eons ago.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-22"/>
+                    <p tid="38">“Furthermore, Śāriputra, this bhagavān has an immeasurable saṅgha of śrāvakas, who are all pure
+                        arhats; their number cannot be easily expressed. Furthermore, Śāriputra, the sentient beings born in this
+                        buddha realm are all pure bodhisattvas who will not regress and are bound by only one more birth.<note place="end" xml:id="UT22084-051-003-153" index="10">These are bodhisattvas removed from enlightenment
+                            by only one more  birth.</note> Śāriputra, one cannot express the total number of bodhisattvas except
+                        to say that they are immeasurable or countless. Śāriputra, this buddha realm is beautifully adorned by
+                        such displays of the excellences of buddha realms.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-23"/>
+                    <p tid="39">“Therefore Śāriputra, sons and daughters of good family should completely dedicate all roots of
+                        virtue in a respectful manner to be born in that buddha realm. Why? Because by doing so, they will be able
+                        to meet holy beings similar to themselves. Śāriputra, one cannot take birth in the realm of Bhagavān
+                        Tathāgata Amitāyus merely with minimal roots of virtue.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-24"/>
+                    <p tid="40">“Śāriputra, if those sons and daughters of good family hear the name of the Bhagavān Tathāgata
+                        Amitāyus and keep it in mind unwaveringly for one, two, three, four, five, <ref cRef="F.198.a" type="folio"/> six, or
+                        seven nights, when the hour of their death arrives, they will depart in an undeluded state. After they
+                        have passed away, the Tathāgata Amitābha will stand before them, entirely surrounded by a śrāvaka assembly
+                        and honored by a congregation of bodhisattvas. These sons and daughters of good family will be born in
+                        the Sukhāvatī world, the buddha realm of the Bhagavān Tathāgata Amitābha. Therefore, Śāriputra, having
+                        seen its real point, sons and daughters of good family, I declare, ought to respectfully make prayers to
+                        reach that buddha realm.</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-25"/>
+                    <p tid="41">“O Śāriputra, I, the Tathāgata, at present praise [this Sukhāvatī].<note place="end" xml:id="UT22084-051-003-154" index="11">The Skt. has <foreign type="quote" xml:lang="Sa-Ltn">tāṃ
+                                pari­kīrtayāmi</foreign>, “I praise this”; the feminine <foreign type="term" xml:lang="Sa-Ltn">tāṃ</foreign> (missing, of course, in the Tibetan) shows that what is being praised is indeed
+                            Sukhāvatī.</note> So, likewise, Śāriputra, in the east, the Tathāgata Akṣobhya, the Tathāgata
+                        Merudhvaja, the Tathāgata Meru,<note place="end" xml:id="UT22084-051-003-155" index="12">This name is not
+                            mentioned in the Sanskrit text.</note> the Tathāgata Mahāmeru, the Tathāgata Mahā­meru­prabhāsa,<note place="end" xml:id="UT22084-051-003-156" index="13">In the Sanskrit version this name is rendered as
+                            simply Meruprabhāsa.</note> the Tathāgata Harmonious Speech, the Tathāgata Harmonious Voice,<note place="end" xml:id="UT22084-051-003-157" index="14">The Tibetan version includes these last two names,
+                                <foreign type="term" xml:lang="Bo-Ltn">’jam sgra</foreign> (*<foreign type="term" xml:lang="Sa-Ltn">mañjuvacana</foreign>) and <foreign type="term" xml:lang="Bo-Ltn">’jam
+                                dbyangs</foreign> (*<foreign type="term" xml:lang="Sa-Ltn">mañjughoṣa</foreign>). There is no
+                            equivalent in the Sanskrit text, which instead has Mañjudhvaja (Beautiful Victory Banner).</note> and
+                        the other bhagavān buddhas of the east, who are as numerous as the sands of the river Ganges, pervade
+                        their own buddha realms with the power of their speech<note place="end" xml:id="UT22084-051-003-158" index="15">Literally, the text says: “The buddhas cover their land with the power of
+                            their tongue faculty.”</note> and proclaim, ‘You should place your trust in this Dharma discourse
+                        called “Complete Embrace by all Buddhas,”<note place="end" xml:id="UT22084-051-003-159" index="16">The
+                            Sanskrit text has ... <foreign type="quote" xml:lang="Sa-Ltn">sarva­buddha­pari­grahaṃ nāma
+                                dharma­paryāyam</foreign>. This translates as “You should place your trust in this Dharma
+                            discourse called ‘The Grace [lit. the complete embrace] of All Buddhas.’ ” The word <foreign type="term" xml:lang="Sa-Ltn">nāma</foreign> (“called”) is missing in the Tibetan version, but has been added
+                            to clarify the meaning of this passage.</note> which praises inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-26"/>
+                    <p tid="42">“Likewise, in the south, the bhagavān buddhas of the south, such as the Tathāgata
+                        Candra­sūrya­pradīpa, the Tathāgata Renown,<note place="end" xml:id="UT22084-051-003-160" index="17">There
+                            is no equivalent in the Sanskrit version.</note> the Tathāgata Yaśaḥprabha, the Tathāgata
+                        Mahārciskandha, <ref cRef="F.198.b" type="folio"/> the Tathāgata Merupradīpa, the Tathāgata Anaṃtavīrya, and others, who
+                        are as numerous as the sands of the river Ganges, pervade their own buddha realms with the power of their
+                        speech and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all
+                        Buddhas,” which praises inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-27"/>
+                    <p tid="43">“Likewise, in the west, the bhagavān buddhas of the west, such as the Tathāgata Amitāyus, the
+                        Tathāgata Amitaskandha, the Tathāgata Amitadhvaja, the Tathāgata Mahāprabha, the Tathāgata Illuminating
+                        Light Rays,<note place="end" xml:id="UT22084-051-003-161" index="18">
+                            <foreign xml:lang="Bo-Ltn">’od zer snang ba</foreign>. There is no equivalent in the Sanskrit
+                            version.</note> the Tathāgata Ratnaketu,<note place="end" xml:id="UT22084-051-003-162" index="19">The
+                            Sanskrit version reads Mahāratnaketu.</note> the Tathāgata Śuddha­raśmi­prabha, and others, who are as
+                        numerous as the sands of the river Ganges, pervade their own buddha realms with the power of their speech
+                        and proclaim, ‘You should place your trust in this Dharma discourse called “Complete Embrace by all
+                        Buddhas,” which praises inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-28"/>
+                    <p tid="44">“Likewise, in the north, the bhagavān buddhas of the north, such as the Tathāgata Mahārciskandha,
+                        the Tathāgata Vaiśvānara­nirghoṣa, the Tathāgata Duṣpradharṣa, the Tathāgata Āditya­saṃbhava, the
+                        Tathāgata Jālinīprabha, the Tathāgata Prabhākara, and others,<note place="end" xml:id="UT22084-051-003-163" index="20">The Sanskrit mentions another tathāgata who does not figure in the
+                            Tibetan, Tathāgata Duṃdubhisvara­nirghoṣa (=Dundubhisvara­nirghoṣa).</note> who are as numerous as the
+                        sands of the river Ganges, pervade their own buddha realms with the power of their speech and proclaim,
+                            <ref cRef="F.199.a" type="folio"/> ‘You should place your trust in this Dharma discourse called “Complete Embrace
+                        by all Buddhas,” which praises inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-29"/>
+                    <p tid="45">“Likewise, in the nadir, the bhagavān buddhas of the nadir, such as the Tathāgata Siṃha, the
+                        Tathāgata Yaśas, the Tathāgata Yaśaḥprabhāsa, the Tathāgata Dharma, the Tathāgata Dharmadhara, the
+                        Tathāgata Dharmadhvaja, and others, who are numerous as the sands of the river Ganges, pervade their own
+                        buddha realms with the power of their speech and proclaim, ‘You should place your trust in this Dharma
+                        discourse called “Complete Embrace by all Buddhas,” which praises inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-30"/>
+                    <p tid="46">“Likewise, in the zenith, the bhagavān buddhas of the zenith, such as the Tathāgata Brahmaghoṣa,
+                        the Tathāgata Nakṣatrarāja, the Tathāgata Gandhottama, the Tathāgata Gandhaprabhāsa, the Tathāgata Heap of
+                            Incense,<note place="end" xml:id="UT22084-051-003-164" index="21">
+                            <foreign xml:lang="Bo-Ltn">spos kyi phung po</foreign>. The Sanskrit here reads Mahārciskandha (Great
+                            Mass of Light).</note> the Tathāgata Ratna­kusuma­saṃpuṣpita­gotra, the Tathāgata Sālendrarāja, the
+                        Tathāgata Ratnotpalaśrī, the Tathāgata Sarvārthadarśa, the Tathāgata Sumerukalpa, and others<note place="end" xml:id="UT22084-051-003-165" index="22">The Sanskrit also mentions the Tathāgata
+                            Indra­ketu­dhvaja­rāja, who is absent in the Tibetan text.</note> who are as numerous as the sands of
+                        the river Ganges, pervade their own buddha realms with the power of their speech and proclaim, ‘You should
+                        place your trust <ref cRef="F.199.b" type="folio"/> in this Dharma discourse called “Complete Embrace by all Buddhas,”
+                        which praises Sukhāvatī’s inconceivable qualities.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-31"/>
+                    <p tid="47">“What do you think about this, Śāriputra, why is this Dharma discourse called ‘Complete Embrace by
+                        All Buddhas’? Śāriputra, those sons and daughters of good family who have heard, now hear, or will hear
+                        this Dharma discourse and the names of those bhagavān buddhas will all be embraced completely by the
+                        bhagavān buddhas.<note place="end" xml:id="UT22084-051-003-166" index="23">The Sanskrit and Tibetan differ
+                            significantly here and in what immediately follows. We have translated on the basis of the
+                            Tibetan.</note> Śāriputra, of all those sentient beings who aspire, who have made, are making, or will
+                        make aspirations to the Sukhāvatī world, the buddha realm of the Bhagavān Tathāgata Amitābha, none has
+                        turned away, is turning away, nor will ever turn away from the pursuit of unsurpassable, completely
+                        perfect enlightenment. Śāriputra, just as I now praise the inconceivable qualities of those bhagavān
+                        buddhas, likewise, Śāriputra, those bhagavān buddhas also praise my inconceivable qualities.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-32"/>
+                    <p tid="48">Śāriputra declared,<note place="end" xml:id="UT22084-051-003-167" index="24">Here the Tibetan
+                            departs significantly from the Sanskrit, which has the other buddhas say these words.</note> “Bhagavān
+                        Śākyamuni, king of the Śākyas, you have fully awakened to unsurpassable, completely perfect enlightenment
+                        in this Sahā world. You have taught the Dharma that the whole world was reluctant to accept at the time of
+                        the degeneration of the eon, the degeneration of afflictions, the degeneration of beings, the degeneration
+                        of views, and the degeneration of lifespan.<note place="end" xml:id="UT22084-051-003-168" index="25">The
+                            five degenerations. See glossary.</note> How marvelous indeed!”</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-33"/>
+                    <p tid="49">The Bhagavān replied, “Śāriputra, having fully awakened to unsurpassable, completely perfect
+                        enlightenment in this world, the Sahā world, at the time of the five degenerations, I have taught the
+                        Dharma that the whole world was reluctant to accept. This is the supreme feat I have accomplished.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-34"/>
+                    <p tid="50">After the Bhagavān <ref cRef="F.200.a" type="folio"/> had thus spoken, the whole world, including the venerable
+                        Śāriputra, the great śrāvakas, bodhisattvas, gods, humans, demigods, and gandharvas were delighted and
+                        praised highly the words spoken by the Bhagavān.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-171"/>
+                    <trailer tid="51"> This completes the Noble Mahāyāna Sūtra “<title xml:lang="en">The Display of Sukhāvatī</title>.” </trailer>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="67">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-051-003-35"/>
+                    
+                    <p tid="52">This sūtra was translated and finalized by the Indian abbot Dānaśīla and the principal
+                        revisor-translator, the monk Yeshé Dé, along with others.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="68">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="69">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="70">Tibetan Texts</head>
+                    <bibl xml:id="UT22084-051-003-36">
+                        <title xml:lang="Bo-Ltn">’phags pa bde ba can gyi bkod pa zhes bya ba theg pa chen po’i mdo</title>. Toh
+                        115, Degé Kangyur vol. 51 (mdo sde, ja), folios 195b–200b. </bibl>
+                    <bibl xml:id="UT22084-051-003-37">
+                        <title xml:lang="Bo-Ltn">’phags pa bde ba can gyi bkod pa zhes bya ba theg pa chen po’i mdo</title>. bka’
+                        ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi
+                        bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology Research
+                        Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House),
+                        2006–2009, vol. 51, pp. 532–542. </bibl>
+                    <bibl xml:id="UT22084-051-003-38">Ha’o wun zhon and To’u tshun chi, eds. <title xml:lang="Bo-Ltn">bod rgya
+                            shan sbyar gyi shes bya’i rnam grangs kun btus tshig mdzod</title>. Beijing: mi rigs dpe skrun khang
+                        (Minorities Publishing House), 1987. </bibl>
+                    <bibl xml:id="UT22084-051-003-39">
+                        <title xml:lang="Bo-Ltn">bde smon phyogs bsgrigs</title> [<title xml:lang="Bo-Ltn">The Collection of
+                            Prayers for Sukhāvatī</title>], Chengdu: si khron mi rigs dpe skrun khang (Sichuan Minorities
+                        Publishing House), 2007.</bibl>
+                    <bibl xml:id="UT22084-051-003-40">
+                        <title xml:lang="Bo-Ltn">mkhas grub rā ga a syas mdzad pa’i rnam dag bde chen zhing gi smon lam</title>
+                            [<title xml:lang="Bo-Ltn">Long Prayer for Sukhāvatī</title>], Chengdu: si khron mi rigs dpe skrun
+                        khang (Sichuan Minorities Publishing House), 2007.</bibl>
+                    <bibl xml:id="UT22084-051-003-41">
+                        <title xml:lang="Bo-Ltn">’phags pa bzang po spyod pa’i smon lam gyi rgyal po</title> [<title xml:lang="Bo-Ltn">Noble King of Prayers for Good Conduct</title>], Toh 1095, Degé Kangyur, vol. 101
+                        (gzungs ’dus, waM), folios 262a–266b.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="71">Sanskrit Texts</head>
+                    <bibl xml:id="UT22084-051-003-42">
+                        <title xml:lang="Sa-Ltn">Ārya­sukhāvatī­vyūha­nāma­mahā­yāna­sūtra</title>. <ref target="http://gretil.sub.uni-goettingen.de/gretil/1_sanskr/4_rellit/buddh/sukhvysu.htm">http://gretil.sub.uni-goettingen.de</ref>. Accessed August 25, 2010.</bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="72">Secondary Literature</head>
+                    <bibl xml:id="UT22084-051-003-43">Epstein, Ronald, trans. <title xml:lang="en">The Amitābha Sūtra</title>.
+                        Hsüan Hua, A General Explanation of the Buddha Speaks of Amitābha Sūtra. San Francisco: Buddhist Text
+                        Translation Society, 1974. <ref target="http://online.sfsu.edu/~rone/Buddhism/amitabha.htm">online.sfsu.ed</ref>.</bibl>
+                    <bibl xml:id="UT22084-051-003-45">Fujita, Kōtatsu. “Textual Origins of the <title xml:lang="Zh-Ltn">Kuan
+                        Wu-liang-shou ching</title>,” in Robert E. Buswell, Jr., ed., <title xml:lang="en">Chinese Buddhist
+                            Apocrypha</title>. Honolulu: University of Hawai’i Press, 1990, pp. 149–173.</bibl>
+                    <bibl xml:id="UT22084-051-003-44">Gomez, Luis O. <title xml:lang="en">Land of Bliss: The Paradise of the
+                            Buddha of Measureless Light; Sanskrit and Chinese Versions of the Sukhāvatīvyūha Sūtras.</title>
+                        Honolulu: University of Hawai’i Press, 1996.</bibl>                    
+                    <bibl xml:id="UT22084-051-003-46">Hapatsch, Hischam A., trans. and ed. <title xml:lang="de">Die Heiligen
+                            Schriften des Amitābha-Buddhismus: Das große Sukhāvatī-vyūha-Sūtra, Das kleine Sukhāvatī-vyūha-Sūtra,
+                            Das Meditationssūtra</title>. Berlin, 2007. <ref target="http://www.littera.de/buecher/sukha.html">www.littera.de</ref>. Accessed 2010.</bibl>
+                    <bibl xml:id="UT22084-051-003-47">Müller, Max, and Bunyiu Nanjio, trans. “Āryasukhāvatīvyūhasūtra.” <title xml:lang="en">Anecdota Oxoniensia: Aryan Series</title>. Vol. I, part II. Oxford: Clarendon Press,
+                        1883.</bibl>
+                    <bibl xml:id="UT22084-051-003-48">Nakamura, Hajime. <title xml:lang="en">Indian Buddhism: A Survey with
+                            Bibliographical Notes</title>. Delhi: Motilal Banarsidass Publications, 1987.</bibl>
+                    <bibl xml:id="UT22084-051-003-49">Roberts, P. and Bower, E., trans. <title xml:lang="en">The Aparimitāyurjñāna
+                        Sūtra</title>. 84000: Translating the Words of the Buddha, 2016 (<ref target="http://read.84000.co/translation/UT22084-054-003.html">read.84000.co</ref>). </bibl>
+                    <bibl xml:id="UT22084-051-003-50">Utsuki, Nishu. <title xml:lang="en">The Smaller Sukhāvatīvyūha Sūtra or The
+                            Sūtra on the Buddha Amitāyus: Translated from the Chinese Version of Kumārajīva</title>. Kyoto:
+                        Educational Department of the West Hongwanji, 1924. <ref target="http://web.mit.edu/stclair/www/smaller.html">web.mit.edu</ref>.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-51">
+                            <term>Bhagavān</term>
+                            <term xml:lang="Bo-Ltn">bcom ldan ’das </term>
+                            <term xml:lang="bo">བཅོམ་ལྡན་འདས།</term>
+                            <term xml:lang="Sa-Ltn">Bhagavat</term>
+                            <term type="definition">Epithet of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-52">
+                            <term>elder</term>
+                            <term xml:lang="Bo-Ltn">gnas brtan </term>
+                            <term xml:lang="bo">གནས་བརྟན།</term>
+                            <term xml:lang="Sa-Ltn">sthavira</term>
+                            <term type="definition">The term is used to designate a senior monk. The sixteen great arhats, or
+                                sixteen noble <term type="ignore">elders</term> (<foreign type="term" xml:lang="Sa-Ltn">āryasthavira</foreign>), were the
+                                successors of the Buddha’s teaching after he passed. They promised to preserve the teaching until
+                                the coming of the future Buddha Maitreya. They are on the path of seeing of the arhat path. Each
+                                arhat lived in a specific place: (1) Aṅgaja on Mt. Kailash; (2) Ajita in the Crystal Wood of
+                                Sages; (3) Vanavāsin on Mt. Saptaparṇa; (4) Mahākālika in Tāmradvīpa; (5) Vajrīputra in
+                                Siṃhaladvīpa; (6) Śrībhadra on Yamunādvīpa; (7) Kanakavatsa in Kashmir; (8) Kanakabharadvāja in
+                                the Western continent of Godānīya; (9) Bakula in the northern continent of Uttarakuru; (10) Rāhula
+                                in Priyaṅgudvīpa; (11) Cūḍapanthaka on Mt. Gṛdhrakūṭa; (12) Piṇḍolabharadvāja in the eastern
+                                continent of Pūrvavideha; (13) Mahāpanthaka in Trayatriṃśa; (14) Nāgasena on Mt. Meru; (15) Gopaka
+                                on Mt. Bhihula; (16) Abhedya in the Himālayas.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-53">
+                            <term>śrāvaka</term>
+                            <term xml:lang="Bo-Ltn">nyan thos </term>
+                            <term xml:lang="bo">ཉན་ཐོས།</term>
+                            <term xml:lang="Sa-Ltn">śrāvaka</term>
+                            <term type="definition">Hīnayāna practitioner of the first turning of the wheel of the Dharma on the
+                                four noble truths, who realizes the suffering inherent in saṃsāra and focuses on understanding
+                                that there is no independent self. By conquering disturbing emotions, he liberates himself,
+                                attaining first the stage of stream enterer at the path of seeing, followed by the stage of
+                                once-returner who will be reborn only one more time, and then the stage of non-returner who will
+                                no longer be reborn into saṃsāra. The final goal is to become an arhat. These four stages are also
+                                known as the “four results of spiritual practice.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-54">
+                            <term>arhat</term>
+                            <term xml:lang="Bo-Ltn">dgra bcom pa </term>
+                            <term xml:lang="bo">དགྲ་བཅོམ་པ།</term>
+                            <term xml:lang="Sa-Ltn">arhat</term>
+                            <term type="definition">Final goal of the śrāvaka practitioner.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-55">
+                            <term>bodhisattva</term>
+                            <term xml:lang="Bo-Ltn">byang chub sems dpa’ sems dpa’ chen po </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་སེམས་དཔའ་སེམས་དཔའ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">bodhi­sattva mahā­sattva</term>
+                            <term type="definition"><!--<term type="ignore">Bodhisattva</term>; -->Someone who has the intent to achieve full enlightenment for the benefit of sentient beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-56">
+                            <term>tathāgata</term>
+                            <term xml:lang="Bo-Ltn">de bzhin gshegs pa </term>
+                            <term xml:lang="bo">དེ་བཞིན་གཤེགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">tathāgata</term>
+                            <term type="definition">Epithet of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-57">
+                            <term>perfectly and fully enlightened Buddha</term>
+                            <term xml:lang="Bo-Ltn">yang dag par rdzogs pa’i sangs rgyas </term>
+                            <term xml:lang="bo">ཡང་དག་པར་རྫོགས་པའི་སངས་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">samyaksaṃbuddha</term>
+                            <term type="definition">A term used to emphasize the superiority of buddhahood when contrasted with
+                                the achievement of the arhats and pratyekabuddhas. A samyaksaṃbuddha is considered superior by
+                                virtue of his compassionate activity, his omniscience and his ten special powers.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-58">
+                            <term>fully awakened</term>
+                            <term xml:lang="Bo-Ltn">mngon par rdzogs par sangs rgyas </term>
+                            <term xml:lang="bo">མངོན་པར་རྫོགས་པར་སངས་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">abhisaṃbuddha</term>
+                            <term type="definition">A person who has manifested the complete enlightenment of a buddha of the
+                                greater vehicle.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-59">
+                            <term>unsurpassable, completely perfect enlightenment</term>
+                            <term xml:lang="Bo-Ltn">bla na med pa yang dag par rdzogs pa’i byang chub </term>
+                            <term xml:lang="bo">བླ་ན་མེད་པ་ཡང་དག་པར་རྫོགས་པའི་བྱང་ཆུབ།</term>
+                            <term xml:lang="Sa-Ltn">anuttara­samyak­saṃbodhi</term>
+                            <term type="definition">An enlightenment that is authentically complete.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-60">
+                            <term>not regress</term>
+                            <term xml:lang="Bo-Ltn">phyir mi ldog pa </term>
+                            <term xml:lang="bo">ཕྱིར་མི་ལྡོག་པ།</term>
+                            <term type="definition">The third stage on the path to arhat-ship; a non-returner who will no longer
+                                be reborn into saṃsāra.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-61">
+                            <term>water possessing the eight qualities</term>
+                            <term xml:lang="Bo-Ltn">yan lag brgyad dang ldan pa’i chu </term>
+                            <term xml:lang="bo">ཡན་ལག་བརྒྱད་དང་ལྡན་པའི་ཆུ།</term>
+                            <term type="definition">The eight qualities of water: (1) sweet-tasting; (2) cool; (3) soft; (4)
+                                light; (5) transparent; (6) clean; (7) not harmful to the throat; and (8) beneficial to the
+                                stomach.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-62">
+                            <term>branches of enlightenment</term>
+                            <term xml:lang="Bo-Ltn">byang chub kyi yan lag </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཡན་ལག</term>
+                            <term xml:lang="Sa-Ltn">bodhyaṅgāni</term>
+                            <term type="definition">The branches of, respectively, (1) authentic mindfulness; (2) authentic
+                                discrimination of dharmas; (3) authentic perseverance; (4) authentic joy; (5) authentic serenity;
+                                (6) authentic meditative absorption; and (7) authentic equanimity.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-63">
+                            <term>powers</term>
+                            <term xml:lang="Bo-Ltn">dbang po lnga </term>
+                            <term xml:lang="bo">དབང་པོ་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañca indriyāṇi</term>
+                            <term type="definition">The five powers, or faculties, are those of (1) faith; (2) perseverence; (3)
+                                mindfulness; (4) meditative absorption or samādhi; and (5) wisdom or prajñā.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-64">
+                            <term>strengths</term>
+                            <term xml:lang="Bo-Ltn">stobs lnga </term>
+                            <term xml:lang="bo">སྟོབས་ལྔ།</term>
+                            <term xml:lang="Bo-Ltn">stobs bcu </term>
+                            <term xml:lang="bo">སྟོབས་བཅུ།</term>
+                            <term xml:lang="Sa-Ltn">pañcabala</term>
+                            <term xml:lang="Sa-Ltn">daśabala</term>
+                            <term type="definition">For the five <term type="ignore">strengths</term>, see “powers.” The ten <term type="ignore">strengths</term> can refer either to
+                                one set of ten qualities of tathāgatas, or to a different list of ten <term type="ignore">strengths</term> of
+                                bodhisattvas.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-65">
+                            <term>five degenerations</term>
+                            <term xml:lang="Bo-Ltn">snyigs ma lnga </term>
+                            <term xml:lang="bo">སྙིགས་མ་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañcakaṣāya</term>
+                            <term type="definition">The <term type="ignore">five degenerations</term> are: (1) degeneration of life span, (2) degeneration of
+                                views, (3) degeneration of the afflictions (4) degeneration of beings, and (5) the degeneration of
+                                the era.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-66">
+                            <term>gandharva</term>
+                            <term xml:lang="Bo-Ltn">dri za </term>
+                            <term xml:lang="bo">དྲི་ཟ།</term>
+                            <term xml:lang="Sa-Ltn">gandharva</term>
+                            <term type="definition">A class of spirit who lives on scents. Also, a type of celestial musician
+                                living on the rim of Mt Sumeru.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-67">
+                            <term>palm tree</term>
+                            <term xml:lang="Bo-Ltn">shing ta la </term>
+                            <term xml:lang="bo">ཤིང་ཏ་ལ།</term>
+                            <term xml:lang="Sa-Ltn">tāla</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-68">
+                            <term>beryl</term>
+                            <term xml:lang="Bo-Ltn">bai dU rya </term>
+                            <term xml:lang="bo">བཻ་དཱུ་རྱ།</term>
+                            <term xml:lang="Sa-Ltn">vaiḍūrya</term>
+                            <term type="definition">Precious/semiprecious stone; sometimes translated as lapis lazuli.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-69">
+                            <term>emerald</term>
+                            <term xml:lang="Bo-Ltn">rdo’i snying po </term>
+                            <term xml:lang="bo">རྡོའི་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">aśmagarbha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-70">
+                            <term>coral</term>
+                            <term xml:lang="Bo-Ltn">spug gi shing </term>
+                            <term xml:lang="bo">སྤུག་གི་ཤིང་།</term>
+                            <term xml:lang="Sa-Ltn">musāragalva</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-051-003-71">
+                            <term>mandārava</term>
+                            <term xml:lang="Bo-Ltn">man dA ra ba </term>
+                            <term xml:lang="bo">མན་དཱ་ར་བ།</term>
+                            <term xml:lang="Sa-Ltn">mandārava</term>
+                            <term type="definition">A heavenly tree.</term>
+                        </gloss>
+                    </item>
+                    <!--<item>
+                        <gloss type="term" xml:id="UT22084-051-003-72">Became a note - AAR
+                            <term>The Array of Amitābha</term>
+                            <term xml:lang="Bo-Ltn">’od dpag med kyi bkod pa’i mdo </term>
+                            <term xml:lang="bo">འོད་དཔག་མེད་ཀྱི་བཀོད་པའི་མདོ།</term>
+                            <term xml:lang="Sa-Ltn">Amitābha­vyūha­sūtra</term>
+                            <term type="definition">Toh 49, also known in Tibetan as <title xml:lang="Bo-Ltn">bde ba can gyi zhing
+                                    bkod pa’i bstan pa</title> (<title xml:lang="en">The Teaching on the Display of the Pure Land
+                                    of Sukhāvatī</title>) or, informally, the “longer” <title xml:lang="Sa-Ltn">Sukhāvatī</title>.</term>
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-73">
+                            <term>Anāthapiṇḍada</term>
+                            <term xml:lang="Bo-Ltn">mgon med zas sbyin </term>
+                            <term xml:lang="bo">མགོན་མེད་ཟས་སྦྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Anāthapiṇḍada</term>
+                            <term type="definition">A principal benefactor of the Buddha; he was the wealthy banker who acquired
+                                the grove of Prince Jeta, i.e., Jeta Grove, and donated it to the Buddhist community.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-74">
+                            <term>Śāriputra</term>
+                            <term xml:lang="Bo-Ltn">shA ri’i bu </term>
+                            <term xml:lang="bo">ཤཱ་རིའི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Śāriputra</term>
+                            <term type="definition">Śrāvaka arhat, one of the most important followers of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-75">
+                            <term>Mahā­maudgalyāyana</term>
+                            <term xml:lang="Bo-Ltn">mood gal gyi bu chen po </term>
+                            <term xml:lang="bo">མོཨོད་གལ་གྱི་བུ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­maudgalyāyana</term>
+                            <term type="definition">Śrāvaka arhat, one of the most important followers of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-76">
+                            <term>Mahākāśyapa</term>
+                            <term xml:lang="Bo-Ltn">’od srung chen po </term>
+                            <term xml:lang="bo">འོད་སྲུང་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākāśyapa</term>
+                            <term type="definition">Śrāvaka arhat, one of the most important followers of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-77">
+                            <term>Mahā­kātyāyana</term>
+                            <term xml:lang="Bo-Ltn">kA tyA’i bu chen po </term>
+                            <term xml:lang="bo">ཀཱ་ཏྱཱའི་བུ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­kātyāyana</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-78">
+                            <term>Mahākapphiṇa</term>
+                            <term xml:lang="Bo-Ltn">ka pi na chen po </term>
+                            <term xml:lang="bo">ཀ་པི་ན་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākapphiṇa</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-79">
+                            <term>Mahākauṣṭhila</term>
+                            <term xml:lang="Bo-Ltn">gsus po che </term>
+                            <term xml:lang="bo">གསུས་པོ་ཆེ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākauṣṭhila</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-80">
+                            <term>Revata</term>
+                            <term xml:lang="Bo-Ltn">nam gru </term>
+                            <term xml:lang="bo">ནམ་གྲུ།</term>
+                            <term xml:lang="Sa-Ltn">Revata</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-81">
+                            <term>Cūḍapanthaka</term>
+                            <term xml:lang="Bo-Ltn">lam phran bstan </term>
+                            <term xml:lang="bo">ལམ་ཕྲན་བསྟན།</term>
+                            <term xml:lang="Sa-Ltn">Cūḍapanthaka</term>
+                            <term type="definition">Śrāvaka arhat, one of the sixteen sthavira arhats (see “elder”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-82">
+                            <term>Nanda</term>
+                            <term xml:lang="Bo-Ltn">dga’ bo </term>
+                            <term xml:lang="bo">དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Nanda</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-83">
+                            <term>Ānanda</term>
+                            <term xml:lang="Bo-Ltn">kun dga’ bo </term>
+                            <term xml:lang="bo">ཀུན་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Ānanda</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-84">
+                            <term>Rāhula</term>
+                            <term xml:lang="Bo-Ltn">sgra gcan zin </term>
+                            <term xml:lang="bo">སྒྲ་གཅན་ཟིན།</term>
+                            <term xml:lang="Sa-Ltn">Rāhula</term>
+                            <term type="definition">Śrāvaka arhat, one of the sixteen sthavira arhats (see “elder”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-85">
+                            <term>Gavāṃpati</term>
+                            <term xml:lang="Bo-Ltn">ba lang bdag </term>
+                            <term xml:lang="bo">བ་ལང་བདག</term>
+                            <term xml:lang="Sa-Ltn">Gavāṃpati</term>
+                            <term type="definition">Śrāvaka arhat; one of the Buddha’s five close arhat disciples. He took
+                                ordination from the Buddha and then became a disciple of Śāriputra.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-86">
+                            <term>Bharadvāja</term>
+                            <term xml:lang="Bo-Ltn">bha ra dh+va dza </term>
+                            <term xml:lang="bo">བྷ་ར་དྷབ༹་ཛ།</term>
+                            <term xml:lang="Sa-Ltn">Bharadvāja</term>
+                            <term type="definition">Śrāvaka arhat; one of the sixteen sthavira arhats (see “elder”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-87">
+                            <term>Kālodāyin</term>
+                            <term xml:lang="Bo-Ltn">’char byed nag po </term>
+                            <term xml:lang="bo">འཆར་བྱེད་ནག་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Kālodāyin</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-88">
+                            <term>Vakula</term>
+                            <term xml:lang="Bo-Ltn">ba ku la </term>
+                            <term xml:lang="bo">བ་ཀུ་ལ།</term>
+                            <term xml:lang="Sa-Ltn">Bakula</term>
+                            <term type="definition">Śrāvaka arhat; one of the sixteen sthavira arhats (see “elder”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-89">
+                            <term>Aniruddha</term>
+                            <term xml:lang="Bo-Ltn">ma ’gag pa </term>
+                            <term xml:lang="bo">མ་འགག་པ།</term>
+                            <term xml:lang="Bo-Ltn">’gags pa med pa </term>
+                            <term xml:lang="bo">འགགས་པ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">Aniruddha</term>
+                            <term type="definition">Śrāvaka arhat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-90">
+                            <term>Mañjuśrī</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal gzhon nu </term>
+                            <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī</term>
+                            <term type="definition">Name of a bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-91">
+                            <term>Ajita</term>
+                            <term xml:lang="Bo-Ltn">mi pham </term>
+                            <term xml:lang="bo">མི་ཕམ།</term>
+                            <term xml:lang="Sa-Ltn">Ajita</term>
+                            <term type="definition">Name of a bodhisattva. Not to be confused with <foreign xml:lang="Bo-Ltn">mgon
+                                    po mi pham</foreign>, Maitreya.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-92">
+                            <term>Gandhahastin</term>
+                            <term xml:lang="Bo-Ltn">spos kyi glang po </term>
+                            <term xml:lang="bo">སྤོས་ཀྱི་གླང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Gandhahastin</term>
+                            <term type="definition">Name of a bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-93">
+                            <term>Nityodyukta</term>
+                            <term xml:lang="Bo-Ltn">rtag tu btson </term>
+                            <term xml:lang="bo">རྟག་ཏུ་བཙོན།</term>
+                            <term xml:lang="Sa-Ltn">Nityodyukta</term>
+                            <term type="definition">Name of a bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-94">
+                            <term>Anikṣiptadhura</term>
+                            <term xml:lang="Bo-Ltn">brtson pa’i mi ’dor </term>
+                            <term xml:lang="bo">བརྩོན་པའི་མི་འདོར།</term>
+                            <term xml:lang="Sa-Ltn">Anikṣiptadhura</term>
+                            <term type="definition">Name of a bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-95">
+                            <term>Indra</term>
+                            <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Indra</term>
+                            <term type="definition">Chief of the gods of the Thirty-Three, who presides over the desire realm
+                                heaven.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-96">
+                            <term>Brahmā</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa </term>
+                            <term xml:lang="bo">ཚངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmā</term>
+                            <term type="definition">Lord of the Sahā world (q.v.). Buddhists see <term type="ignore">Brahmā</term> as a god occupying a high
+                                position in cyclic existence, with a very long life and a great deal of power.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-97">
+                            <term>Amitābha</term>
+                            <term xml:lang="Bo-Ltn">’od dpag med </term>
+                            <term xml:lang="bo">འོད་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitābha</term>
+                            <term type="definition">Buddha associated with Sukhāvatī; buddha of the western direction; principal
+                                buddha of the Pure Land tradition; as the bodhisattva Dharmākara, he made fourty-eight original
+                                vows (<foreign type="term" xml:lang="Sa-Ltn">praṇidhāna</foreign>) to bring beings to
+                                enlightenment, thus establishing Sukhāvatī for their benefit; in tantrism he is one of the five
+                                dhyāni-buddhas and is associated with the aggregate of notions (<foreign type="term" xml:lang="Sa-Ltn">saṃjñā­skandha</foreign>).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-98">
+                            <term>Amitāyus</term>
+                            <term xml:lang="Bo-Ltn">tshe dpag med </term>
+                            <term xml:lang="bo">ཚེ་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitāyus</term>
+                            <term type="definition">Buddha especially associated with life energy and long life; the Sambhogakāya
+                                aspect of Amitābha. Also a name of Amitābha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-99">
+                            <term>Lord of Death</term>
+                            <term xml:lang="Bo-Ltn">gzhin rje </term>
+                            <term xml:lang="bo">གཞིན་རྗེ།</term>
+                            <term xml:lang="Sa-Ltn">Yama</term>
+                            <term type="definition">Lord of Death.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-100">
+                            <term>Akṣobhya</term>
+                            <term xml:lang="Bo-Ltn">mi ’khrugs pa </term>
+                            <term xml:lang="bo">མི་འཁྲུགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Akṣobhya</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-101">
+                            <term>Merudhvaja</term>
+                            <term xml:lang="Bo-Ltn">lhun po rgyal mtshan </term>
+                            <term xml:lang="bo">ལྷུན་པོ་རྒྱལ་མཚན།</term>
+                            <term xml:lang="Sa-Ltn">Merudhvaja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-102">
+                            <term>Meru</term>
+                            <term xml:lang="Bo-Ltn">lhun po </term>
+                            <term xml:lang="bo">ལྷུན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Meru</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-103">
+                            <term>Mahāmeru</term>
+                            <term xml:lang="Bo-Ltn">lhun po chen po </term>
+                            <term xml:lang="bo">ལྷུན་པོ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāmeru</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-104">
+                            <term>Mahā­meru­prabhāsa</term>
+                            <term xml:lang="Bo-Ltn">lhun po chen po snang ba </term>
+                            <term xml:lang="bo">ལྷུན་པོ་ཆེན་པོ་སྣང་བ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­meru­prabhāsa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-105">
+                            <term>Mañjuvacana</term>
+                            <term xml:lang="Bo-Ltn">’jam sgra </term>
+                            <term xml:lang="bo">འཇམ་སྒྲ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuvacana</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-106">
+                            <term>Mañjughoṣa</term>
+                            <term xml:lang="Bo-Ltn">’jam dbyangs </term>
+                            <term xml:lang="bo">འཇམ་དབྱངས།</term>
+                            <term xml:lang="Sa-Ltn">Mañjughoṣa</term>
+                            <term type="definition">Name of a tathāgata, a form of Mañjuśrī.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-107">
+                            <term>Mañjudhvaja</term>
+                            <term xml:lang="Sa-Ltn">Mañjudhvaja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-108">
+                            <term>Candra­sūrya­pradīpa</term>
+                            <term xml:lang="Bo-Ltn">nyi zla sgron ma </term>
+                            <term xml:lang="bo">ཉི་ཟླ་སྒྲོན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Candra­sūrya­pradīpa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-109">
+                            <term>Yaśas</term>
+                            <term xml:lang="Bo-Ltn">grags pa </term>
+                            <term xml:lang="bo">གྲགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Yaśas</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-110">
+                            <term>Yaśaḥprabha</term>
+                            <term xml:lang="Bo-Ltn">grags pa’i ’od </term>
+                            <term xml:lang="bo">གྲགས་པའི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Yaśaḥprabha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-111">
+                            <term>Yaśaḥprabhāsa</term>
+                            <term xml:lang="Bo-Ltn">grags ’od </term>
+                            <term xml:lang="bo">གྲགས་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Yaśaḥprabhāsa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-112">
+                            <term>Mahārciskandha</term>
+                            <term xml:lang="Bo-Ltn">’od ’phro’i phung po chen po </term>
+                            <term xml:lang="bo">འོད་འཕྲོའི་ཕུང་པོ་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahārciskandha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-113">
+                            <term>Merupradīpa</term>
+                            <term xml:lang="Bo-Ltn">lhun po’i sgron ma </term>
+                            <term xml:lang="bo">ལྷུན་པོའི་སྒྲོན་མ།</term>
+                            <term xml:lang="Sa-Ltn">Merupradīpa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-114">
+                            <term>Anaṃtavīrya</term>
+                            <term xml:lang="Bo-Ltn">brtson ’grus mtha’ yas </term>
+                            <term xml:lang="bo">བརྩོན་འགྲུས་མཐའ་ཡས།</term>
+                            <term xml:lang="Sa-Ltn">Anaṃtavīrya</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <!-- <item>
+                        <gloss type="person" priority="0" xml:id="UT22084-051-003-115">
+                            <term>Amitāyus</term>
+                            <term xml:lang="Bo-Ltn">tshe dpag med </term>
+                            <term xml:lang="bo">ཚེ་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitāyus</term>
+                            <term type="definition">Name of Amitābha.</term>
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-116">
+                            <term>Amitaskandha</term>
+                            <term xml:lang="Bo-Ltn">phung po dpag med </term>
+                            <term xml:lang="bo">ཕུང་པོ་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitaskandha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-117">
+                            <term>Amitadhvaja</term>
+                            <term xml:lang="Bo-Ltn">rgyal msthan dpag med </term>
+                            <term xml:lang="bo">རྒྱལ་མསཐན་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitadhvaja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-118">
+                            <term>Mahāprabha</term>
+                            <term xml:lang="Bo-Ltn">’od chen </term>
+                            <term xml:lang="bo">འོད་ཆེན།</term>
+                            <term xml:lang="Sa-Ltn">Mahāprabha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-119">
+                            <term>Ratnaketu</term>
+                            <term xml:lang="Bo-Ltn">rin po che’i tog </term>
+                            <term xml:lang="bo">རིན་པོ་ཆེའི་ཏོག</term>
+                            <term xml:lang="Sa-Ltn">Ratnaketu</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-120">
+                            <term>Śuddha­raśmi­prabha</term>
+                            <term xml:lang="Bo-Ltn">’od zer dag pa </term>
+                            <term xml:lang="bo">འོད་ཟེར་དག་པ།</term>
+                            <term xml:lang="Sa-Ltn">Śuddha­raśmi­prabha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-121">
+                            <term>Vaiśvānara­nirghoṣa</term>
+                            <term xml:lang="Bo-Ltn">thams cad sgrol ba’i dbyangs sgrol </term>
+                            <term xml:lang="bo">ཐམས་ཅད་སྒྲོལ་བའི་དབྱངས་སྒྲོལ།</term>
+                            <term xml:lang="Sa-Ltn">Vaiśvānara­nirghoṣa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-122">
+                            <term>Duṃdubhisvara­nirghoṣa</term>
+                            <term xml:lang="Sa-Ltn">Duṃdubhisvara­nirghoṣa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-123">
+                            <term>Duṣpradharṣa</term>
+                            <term xml:lang="Bo-Ltn">rab tu thul dka’ </term>
+                            <term xml:lang="bo">རབ་ཏུ་ཐུལ་དཀའ།</term>
+                            <term xml:lang="Sa-Ltn">Duṣpradharṣa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-124">
+                            <term>Āditya­saṃbhava</term>
+                            <term xml:lang="Bo-Ltn">nyi ma’i ’byung </term>
+                            <term xml:lang="bo">ཉི་མའི་འབྱུང་།</term>
+                            <term xml:lang="Sa-Ltn">Āditya­saṃbhava</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-125">
+                            <term>Jālinīprabha</term>
+                            <term xml:lang="Bo-Ltn">dra ba can gyi ’od </term>
+                            <term xml:lang="bo">དྲ་བ་ཅན་གྱི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Jālenīprabha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-126">
+                            <term>Prabhākara</term>
+                            <term xml:lang="Bo-Ltn">’od kyi byung gnas </term>
+                            <term xml:lang="bo">འོད་ཀྱི་བྱུང་གནས།</term>
+                            <term xml:lang="Sa-Ltn">Prabhākara</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-127">
+                            <term>Siṃha</term>
+                            <term xml:lang="Bo-Ltn">seng ge </term>
+                            <term xml:lang="bo">སེང་གེ</term>
+                            <term xml:lang="Sa-Ltn">Siṃha</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-128">
+                            <term>Tathāgata Dharma</term>
+                            <term xml:lang="Bo-Ltn">chos </term>
+                            <term xml:lang="bo">ཆོས།</term>
+                            <term xml:lang="Sa-Ltn">Dharma</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-129">
+                            <term>Dharmadhara</term>
+                            <term xml:lang="Bo-Ltn">chos ’dzin </term>
+                            <term xml:lang="bo">ཆོས་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">Dharmadhara</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-130">
+                            <term>Dharmadhvaja</term>
+                            <term xml:lang="Bo-Ltn">chos kyi rgyal mtshan </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་རྒྱལ་མཚན།</term>
+                            <term xml:lang="Sa-Ltn">Dharmadhvaja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-131">
+                            <term>Brahmaghoṣa</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa’i dbyangs </term>
+                            <term xml:lang="bo">ཚངས་པའི་དབྱངས།</term>
+                            <term xml:lang="Sa-Ltn">Brahmaghoṣa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-132">
+                            <term>Nakṣatrarāja</term>
+                            <term xml:lang="Bo-Ltn">skar m’i rgyal po </term>
+                            <term xml:lang="bo">སྐར་མའི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Nakṣatrarāja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-133">
+                            <term>Gandhottama</term>
+                            <term xml:lang="Bo-Ltn">spos mchog </term>
+                            <term xml:lang="bo">སྤོས་མཆོག</term>
+                            <term xml:lang="Sa-Ltn">Gandhottama</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-134">
+                            <term>Gandhaprabhāsa</term>
+                            <term xml:lang="Bo-Ltn">spos ’od </term>
+                            <term xml:lang="bo">སྤོས་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Gandhaprabhāsa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-135">
+                            <term>Ratna­kusuma­saṃpuṣpita­gotra</term>
+                            <term xml:lang="Bo-Ltn">rin chen me tog shin tu rgyas pa’i rigs </term>
+                            <term xml:lang="bo">རིན་ཆེན་མེ་ཏོག་ཤིན་ཏུ་རྒྱས་པའི་རིགས།</term>
+                            <term xml:lang="Sa-Ltn">Ratna­kusuma­saṃpuṣpita­gotra</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-136">
+                            <term>Sālendrarāja</term>
+                            <term xml:lang="Bo-Ltn">sA la’i dbang po’i rgyal po </term>
+                            <term xml:lang="bo">སཱ་ལའི་དབང་པོའི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Sālendrarāja</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-137">
+                            <term>Ratnotpalaśrī</term>
+                            <term xml:lang="Bo-Ltn">rin chen ud pa la’i dpal </term>
+                            <term xml:lang="bo">རིན་ཆེན་ཨུད་པ་ལའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Ratnotpalaśrī</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-138">
+                            <term>Sarvārthadarśa</term>
+                            <term xml:lang="Bo-Ltn">mthong ba don yod </term>
+                            <term xml:lang="bo">མཐོང་བ་དོན་ཡོད།</term>
+                            <term xml:lang="Sa-Ltn">Sarvārthadarśa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-139">
+                            <term>Sumerukalpa</term>
+                            <term xml:lang="Bo-Ltn">ri rab lta bu </term>
+                            <term xml:lang="bo">རི་རབ་ལྟ་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Sumerukalpa</term>
+                            <term type="definition">Name of a tathāgata.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-140">
+                            <term>Yeshé Dé</term>
+                            <term xml:lang="Bo-Ltn">ban de ye shes sde </term>
+                            <term xml:lang="bo">བན་དེ་ཡེ་ཤེས་སྡེ།</term>
+                            <term type="definition">The monk Yeshé Dé, the translator of the <title xml:lang="Sa-Ltn">Sukhāvatī­vyūha­sūtra</title>. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-051-003-141">
+                            <term>Dānaśīla</term>
+                            <term xml:lang="Bo-Ltn">dA na shI la </term>
+                            <term xml:lang="bo">དཱ་ན་ཤཱི་ལ།</term>
+                            <term xml:lang="Sa-Ltn">Dānaśīla</term>
+                            <term type="definition">Translator of the <title xml:lang="Sa-Ltn">Sukhāvatī­vyūha­sūtra</title>.
+                            </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-051-003-142">
+                            <term>Śrāvastī</term>
+                            <term xml:lang="Bo-Ltn">mnyan yod </term>
+                            <term xml:lang="bo">མཉན་ཡོད།</term>
+                            <term xml:lang="Sa-Ltn">Śrāvastī</term>
+                            <term type="definition">The capital city of Kosala where Buddha lived in the later years of his
+                                life.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-051-003-143">
+                            <term>Jeta Grove</term>
+                            <term xml:lang="Bo-Ltn">rgyal bu rgyal byed kyi tshal </term>
+                            <term xml:lang="bo">རྒྱལ་བུ་རྒྱལ་བྱེད་ཀྱི་ཚལ།</term>
+                            <term xml:lang="Sa-Ltn">Jetavana</term>
+                            <term type="definition">The grove of Prince Jeta in Śrāvastī; the Buddha taught many of his discourses
+                                there, especially during the rainy season retreat.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-051-003-144">
+                            <term>Sahā world</term>
+                            <term xml:lang="Bo-Ltn">mi mjed </term>
+                            <term xml:lang="bo">མི་མཇེད།</term>
+                            <term xml:lang="Bo-Ltn">mi mjed kyi ’jig rten </term>
+                            <term xml:lang="bo">མི་མཇེད་ཀྱི་འཇིག་རྟེན།</term>
+                            <term xml:lang="Sa-Ltn">sahā</term>
+                            <term xml:lang="Sa-Ltn">sahā­loka­dhatu</term>
+                            <term type="definition">This universe of ours, presided over by Brahmā. The term is variously
+                                interpreted as meaning the world of suffering, of endurance, of fearlessness, or of concomitance
+                                (of karmic cause and effect).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-051-003-170">
+                            <term>Sukhāvatī</term>
+                            <term xml:lang="Bo-Ltn">bde ba can </term>
+                            <term xml:lang="bo">བདེ་བ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Sukhāvatī</term>
+                            <term type="definition">Meaning “the delightful” or “the land of delight,” the name of the buddhafield of Amitābha / Amitāyus, in the western direction from our world.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

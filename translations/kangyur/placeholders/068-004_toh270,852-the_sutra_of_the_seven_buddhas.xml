@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sangs rgyas bdun pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">saptabuddhakasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Seven Buddhas</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">'phags pa sangs rgyas bdun pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasaptabuddhaka­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">saptabuddhakamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa sangs rgyas bdun pa zhes bya ba theg pa chen po'i mdo/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasaptabuddhaka­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">saptabuddhakamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <author role="translatorEng" ref="contributors.xml#person-274">Adam Krug</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-068-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh270" type="text">
+                    <ref>Toh 270</ref>
+                    <biblScope>vol.68, ff.13v-17v(pp.26-34)</biblScope>
+                    <location work="UT4CZ5369" count-pages="9">
+                        <volume number="68" start-page="26" end-page="34"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11929" work="W22084"/>
+                </bibl>
+                <bibl key="toh852" type="text">
+                    <ref>Toh 852</ref>
+                    <biblScope>vol.100,ff. 65r-68v(pp.129-136)</biblScope>
+                    <location work="UT4CZ5369" count-pages="8">
+                        <volume number="100" start-page="129" end-page="136"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12614" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-10T08:01:22.6Z" user="admin">10/10/2019 08:01:22</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-10T08:01:19.031Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

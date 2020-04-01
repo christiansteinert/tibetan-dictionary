@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">snying rje chen po pad+ma dkar po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahākaruṇāpuṇḍarīkasūtra</title>
+                <title type="mainTitle" xml:lang="en">The White Lotus of Great Compassion</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa snying rje chen po'i pad+ma dkar po zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamahākaruṇā­puṇḍarīka­nāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh">大悲白蓮經  · (大正藏：大悲經)</title>
+<author role="translatorMain" ref="contributors.xml#team-9"/>
+            <author role="translatorEng" ref="contributors.xml#person-78">Zachary Beer</author>
+                <editor role="reviser" ref="contributors.xml#person-50">Dr. Andreas Doctor</editor>
+<sponsor ref="sponsors.xml#sponsor-196">Zhou Wen Dong, Zhou De Jia</sponsor>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-050-002"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh111" type="text">
+                    <ref>Toh 111</ref>
+                    <biblScope>vol.50, ff.56r-128v(pp.111-256)</biblScope>
+                    <location work="UT4CZ5369" count-pages="146">
+                        <volume number="50" start-page="111" end-page="256"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11674" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-07T16:15:25.496Z" user="admin">07/11/2019 16:15:25</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-06T13:23:55.05Z" user="line-tofte">0.0.1</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

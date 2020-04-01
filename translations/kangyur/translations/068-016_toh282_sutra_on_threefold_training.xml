@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bslab pa gsum gyi mdo</title>
+                <title type="mainTitle" xml:lang="bo">བསླབ་པ་གསུམ་གྱི་མདོ།</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Threefold Training</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Śikṣātrayasūtra</title>
+                <title type="longTitle" xml:lang="bo"/>
+                <title type="longTitle" xml:lang="Bo-Ltn">bslab pa gsum gyi mdo</title>
+                <title type="longTitle" xml:lang="en"/>
+                <title type="longTitle" xml:lang="Sa-Ltn"/>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-10">Translated by the Dharmasāgara Translation Group<lb/> under the patronage and
+                    supervision of 84000: Translating the Words of the Buddha.</author>
+                <author role="translatorEng" ref="contributors.xml#person-79">Raktrul Ngawang Kunga Rinpoche</author>
+                <author role="translatorEng" ref="contributors.xml#person-80">Rebecca Hufen</author>
+                <author role="translatorEng" ref="contributors.xml#person-82">Shanshan Jia</author>
+                <author role="translatorEng" ref="contributors.xml#person-81">Jason Sanche</author>
+                <author role="translatorEng" ref="contributors.xml#person-83">Arne Schelling</author>
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.12 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-068-016"/>
+                <date>2018-01-21</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh282" type="text">
+                    <ref>Toh 282</ref>
+                    <biblScope>Degé Kangyur, vol. 68 (mdo sde, ya), folios 55.b–56.a</biblScope>
+                    <location count-pages="2">
+                        <start volume="68" page="112"/>
+                        <end volume="68" page="113"/>
+                    </location>
+                <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11943" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-06-18T16:36:06.701Z" user="admin">18/06/2019 16:36:06</note>
+            <note type="updated" update="text-version" value="v 1.12" date-time="2019-06-18T16:36:03.968Z" user="celso">v 1.12 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <!--
+                    <p>Contents</p>
+            <p>Summary</p>
+            <p>Acknowledgments</p>
+            <p>Introduction</p>
+            <p>The Translation</p>
+            <p rend="italic">The Sūtra on the Threefold Training</p>
+            <p>Notes</p>
+            <p>Bibliography</p>< -->
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="12">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-068-016-1"/>
+                <p tid="1">In <title xml:lang="en">The Sūtra on the Threefold Training</title>, Buddha Śākyamuni briefly
+                    introduces the three elements or stages of the path, widely known as “the three trainings,” one by one in a
+                    specific order: discipline, meditative concentration, and wisdom. He teaches that training progressively in
+                    them constitutes the gradual path to awakening.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="13">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-068-016-2"/>
+                <p tid="2">This text was translated from the Tibetan, with comparison to Sanskrit, Chinese, and Pali editions,
+                    introduced and edited by the Dharmasāgara Translation Group: Raktrul Ngawang Kunga Rinpoche, Rebecca Hufen,
+                    Shanshan Jia, Jason Sanche, and Arne Schelling.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="14">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-016-3"/>
+                    <p tid="3">
+                        <title xml:lang="en">The Sūtra on the Threefold Training</title> is, in essence, a brief outline of the
+                        core teachings of Buddha Śākyamuni, which he gave while travelling toward Kuśinagara in the last year
+                        before his parinirvāṇa. It was given to a large audience of fully ordained monks in a grove to the north
+                        of Kuṭigrāmaka, a village in the ancient Indian country of Vṛji, which extended from the north bank of the
+                        Ganges opposite Pāṭaliputra up to the Madhesh regions of what is currently southern Nepal. The sūtra’s
+                        condensed teaching represents the three stages of the gradual Buddhist path to enlightenment and
+                        emphasizes how the trainings are undertaken in progression. The first training, discipline, is taught as
+                        the basis for the second training, meditative concentration, which in turn is a prerequisite to wisdom,
+                        the third training.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-4"/>
+                    <p tid="4"> There appear to be several parallels or versions of this text. In its Tibetan translation it is
+                        preserved not only as an independent sūtra, but also in the form of short passages in two long vinaya
+                        texts, the <title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title> (sixth chapter of the <title xml:lang="Sa-Ltn">Vinayavastu</title>)<note place="end" index="1" xml:id="UT22084-068-016-5">
+                            <title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>, Degé Kangyur vol. 2, F.36b–37a. See also Yao
+                            (forthcoming).</note> and the <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title>.<note place="end" index="2" xml:id="UT22084-068-016-6">
+                            <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title>, Degé Kangyur vol. 11, F.239a–239b. See also
+                            Jamspal et al. (forthcoming).</note> It is also found as a passage in the non-Mahāyāna <title xml:lang="Sa-Ltn">Mahāparinirvāṇa Sūtra</title>, of which so far only incomplete Sanskrit manuscripts
+                        are extant, although a Sanskrit version has been reconstructed by Ernst Waldschmidt (1951). With some
+                        variant readings, the same passage appears, too, in the still extant Pali <title xml:lang="Pi-Ltn">Mahāparinibbāna Sutta</title>. Translations of it in Chinese can be found as part of the <title xml:lang="Sa-Ltn">Mahāparinirvāṇa Sūtra</title> and passages in some vinaya texts.<note place="end" index="3" xml:id="UT22084-068-016-7"> 1. Taishō No. 1 <title xml:lang="zh">長阿含經</title>; 2. Taishō No.
+                            5 <title xml:lang="zh">佛般泥洹經</title>; 3. Taishō No. 6 <title xml:lang="zh">般泥洹經</title>; 4. Taishō
+                            1451 <title xml:lang="zh">根本說一切有部毘奈耶雜事</title>; 5. Taishō No. 1448 <title xml:lang="zh">根本說一切有部毘奈耶藥事</title>; 6. Taishō No. 1421 <title xml:lang="zh">彌沙塞部和醯五分律</title>.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-8"/>
+                    <p tid="5">A number of studies and translations of the aforementioned texts in Western languages have been
+                        carried out, for example those by Waldschmidt (1951) and Rhys Davids (1951). However, there have hitherto
+                        been no translations, as far as we know, of the independent sūtra.</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-9"/>
+                    <p tid="6">In this translation of the sūtra from the Tibetan Kangyur, the text is introduced with the title in
+                        Sanskrit and Tibetan, proceeding with the homage and then the general opening formula of “Thus have I
+                        heard at one time.” Naturally, in the other versions in which this text is embedded as part of a larger
+                        work, these introductory statements and the concluding sentence are not included. Besides this, there are
+                        a few variant readings in the Tibetan, Sanskrit, Pali, and especially in the Chinese. Since most of them
+                        do not alter the meaning significantly, we have chosen to note only the most important variants.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="15">The Translation</head>
+                <head type="titleMain" tid="16">The Sūtra on the Threefold Training</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-068-016-10"/>
+                    <p tid="7">
+                        <ref cRef="F.55.b"/> Homage to all buddhas and bodhisattvas.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-32"/>
+                    <p tid="8">Thus have I heard at one time. As the Bhagavān was wandering in the land of Vṛji, he arrived at the
+                        village of Kuṭigrāmaka and settled to the north of that village in a grove of sāl trees,<note place="end" index="4" xml:id="UT22084-068-016-11"> The Tibetan versions in the <title xml:lang="Sa-Ltn">Vinayavastu</title> and <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title>, as well as the
+                            Sanskrit and Chinese versions in the <title xml:lang="Sa-Ltn">Mahāparinirvāṇa Sūtra</title>, here
+                            instead have <foreign type="term" xml:lang="Sa-Ltn">śiṃśapā</foreign> (Tib. <foreign type="term" xml:lang="Bo-Ltn">shing sha pa</foreign>), which refers to the Indian rosewood tree (<foreign type="term" xml:lang="la">Dalbergia sissoo</foreign>).</note>
+                        <ref cRef="F.56.a"/> with a great saṅgha of bhikṣus. Thereupon the Bhagavān taught the following to the
+                        bhikṣus:</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-12"/>
+                    <p tid="9">“This, bhikṣus, is discipline.<note place="end" index="5" xml:id="UT22084-068-016-13"> All versions
+                            except that in the <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title> have a plural here, thus
+                            referring to a set of ethical-moral rules. With “discipline” being a well established translation for
+                            the Sanskrit <foreign type="term" xml:lang="Sa-Ltn">śīla</foreign> and the Tibetan <foreign type="term" xml:lang="Bo-Ltn">tshul khrims</foreign>, and the plural “disciplines” being rather
+                            misleading in English, we have kept the singular form, though in the sense of a mass noun. </note>
+                        This is meditative concentration. This is wisdom. Bhikṣus, training in discipline will lead one to abide
+                        for a long time in meditative concentration. Training in meditative concentration will lead one to gain
+                        wisdom. By training in wisdom, one’s mind will be completely liberated from desire, anger, and ignorance.
+                        In this way, having a completely liberated mind, a noble śrāvaka will perfectly know: ‘My defilements<note place="end" index="6" xml:id="UT22084-068-016-14"> The <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title> and <title xml:lang="Sa-Ltn">Mahāparinirvāṇasūtra</title> instead
+                            read “My births (Skt. <foreign type="term" xml:lang="Sa-Ltn">jāti</foreign>; Tib. <foreign xml:lang="Bo-Ltn">skye ba</foreign>) have ceased,” which is another commonly found statement made
+                            by an arhat, as taught in other discourses.</note> have ceased. I have lived the sublime life. What
+                        was to be done has been done. From here onward, I will not know any further existence.’ ”</p>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-15"/>
+                    <p tid="10">After the Bhagavān had thus spoken, the bhikṣus rejoiced and praised the Bhagavān’s words.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-068-016-33"/>
+                    <p tid="11">This completes <title xml:lang="en">The Sūtra on the Threefold Training</title>.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="listBibl">
+                <head type="listBibl" tid="17">Bibliography</head>
+                                    <div type="section">
+                        <head type="section" tid="18">Tibetan texts</head>
+                        <bibl xml:id="UT22084-068-016-16">
+                            <title xml:lang="Bo-Ltn">bslab pa gsum gyi mdo.</title> Toh 282, Degé Kangyur, vol. 68 (mdo sde, ya),
+                            folios 55b–56a. </bibl>
+                        <bibl xml:id="UT22084-068-016-17">
+                            <title xml:lang="Bo-Ltn">bslab pa gsum gyi mdo</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition
+                            of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan
+                            Tripitaka Collation Bureau of the China Tibetology Research Center). 108 volumes. Beijing: krung go’i
+                            bod rig pa dpe skrun khang (China Tibetology Publishing House), 2006–2009, vol. 68, pp. 165–166. </bibl>
+                        <bibl xml:id="UT22084-068-016-18">
+                            <title xml:lang="Bo-Ltn">sman gyi gzhi</title> (<title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>),
+                            chapter 6 of <title xml:lang="Bo-Ltn">’dul ba gzhi</title> (<title xml:lang="Sa-Ltn">Vinayavastu</title>), Toh 1. Degé Kangyur, vol. 1 (’dul ba, ka), folio 277b– vol.3 (’dul ba, ga),
+                            folio 50a. Translated in Yao (forthcoming).</bibl>
+                        <bibl xml:id="UT22084-068-016-19">
+                            <title xml:lang="Bo-Ltn">’dul ba phran tshegs kyi gzhi</title> (<title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title>), Toh 6. Degé Kangyur, vol. 10 (’dul ba, tha), folio 1a– vol. 11
+                            (’dul ba, da), folio 333a. Translated in Jamspal et al. (forthcoming).</bibl>
+                    </div>
+                    <div type="section">
+                        <head type="section" tid="19">Other works</head>
+                        <bibl xml:id="UT22084-068-016-20">Jamspal, L., and Fischer, K. <title xml:lang="en">The Finer Points of
+                                Discipline‌</title> (<title xml:lang="Sa-Ltn">Vinayakṣurakavastu</title>, Toh 6). 84000:
+                            Translating the Words of the Buddha (forthcoming).</bibl>
+                        <bibl xml:id="UT22084-068-016-21">Rhys Davids, Caroline A. F. and Thomas W. <title xml:lang="en">Dialogues
+                                of the Buddha: Translated from the Pali of the Dîgha Nikâya</title>. Third Edition. Published for
+                            the Pali Text Society. London: Luzac, 1951.</bibl>
+                        <bibl xml:id="UT22084-068-016-22">Waldschmidt, Ernst. “Das Mahāparinirvāṇasūtra: Text in Sanskrit und
+                            Tibetisch, verglichen mit dem Pali nebst einer Übersetzung der chinesischen Entsprechung im Vinaya der
+                            Mūlasarvāstivādins auf Grund von Turfan-Handschriften,” in <title xml:lang="de">Abhandlungen der Deutschen Akademie
+                                der Wissenschaften zu Berlin, Klasse für Sprachen, Literatur und Kunst.</title> Berlin:
+                            Akademie-Verlag, 1951, vol. 2, pp. 101–303. </bibl>
+                        <bibl xml:id="UT22084-068-016-23">Yao, Fumi. <title xml:lang="en">The Chapter on Medicinal
+                                Materials</title> (<title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>, chapter 6 of <title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh 1). 84000: Translating the Words of the Buddha
+                            (forthcoming).</bibl>
+                    </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-24">
+                            <term>bhikṣu</term>
+                            <term xml:lang="Bo-Ltn">dge slong </term>
+                            <term xml:lang="bo">དགེ་སློང་།</term>
+                            <term xml:lang="Sa-Ltn">bhikṣu</term>
+                            <term type="definition">A fully ordained monk.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-25">
+                            <term>sāl tree</term>
+                            <term xml:lang="Bo-Ltn">shing sa la </term>
+                            <term xml:lang="bo">ཤིང་ས་ལ།</term>
+                            <term xml:lang="Sa-Ltn">sāla</term>
+                            <term type="definition">Usually identified as <foreign xml:lang="la" type="term">Shorea
+                                    robusta</foreign>, known as the kind of tree under which the Buddha was born and passed
+                                away.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-26">
+                            <term>discipline</term>
+                            <term xml:lang="Bo-Ltn">tshul khrims </term>
+                            <term xml:lang="bo">ཚུལ་ཁྲིམས།</term>
+                            <term xml:lang="Sa-Ltn">śīla</term>
+                            <term type="definition">A mind set on abandoning the undisciplined conduct of body, speech, and
+                                mind.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-27">
+                            <term>meditative concentration</term>
+                            <term xml:lang="Bo-Ltn">ting nge ’dzin </term>
+                            <term xml:lang="bo">ཏིང་ངེ་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">samādhi</term>
+                            <term type="definition">A mind focused one-pointedly on an object of concentration.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-28">
+                            <term>wisdom</term>
+                            <term xml:lang="Bo-Ltn">shes rab </term>
+                            <term xml:lang="bo">ཤེས་རབ།</term>
+                            <term xml:lang="Sa-Ltn">prajñā</term>
+                            <term type="definition">A mind that sees the ultimate truth directly.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-068-016-29">
+                            <term>śrāvaka</term>
+                            <term xml:lang="Bo-Ltn">nyan thos </term>
+                            <term xml:lang="bo">ཉན་ཐོས།</term>
+                            <term xml:lang="Sa-Ltn">śrāvaka</term>
+                            <term type="definition">Primarily referring to those disciples of the Buddha who aspire to attain the
+                                state of an arhat by seeking self liberation. It is usually defined as “those who hear the
+                                teaching from the Buddha and make it heard to others.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-068-016-30">
+                            <term>Vṛji</term>
+                            <term xml:lang="Bo-Ltn">spong byed </term>
+                            <term xml:lang="bo">སྤོང་བྱེད།</term>
+                            <term xml:lang="Sa-Ltn">vṛji</term>
+                            <term type="definition">One of the sixteen principal <foreign xml:lang="Sa-Ltn">mahājanapadas</foreign> (great
+                                countries) of ancient India, and a confederacy of eight or nine clans. It extended from the north
+                                bank of the Ganges opposite Pāṭaliputra up to the Madhesh regions of present southern
+                                Nepal.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-068-016-31">
+                            <term>Kuṭigrāmaka</term>
+                            <term xml:lang="Bo-Ltn">spyil bu can </term>
+                            <term xml:lang="bo">སྤྱིལ་བུ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Kuṭigrāmaka</term>
+                            <term type="definition">A settlement / village in the country of Vṛji. According to a commentary on
+                                the <title xml:lang="Sa-Ltn">Mahāvaṃsa</title>, the <title xml:lang="Sa-Ltn">Vaṃsatthappakāsinī</title>, it is one <foreign xml:lang="Sa-Ltn" type="term">gāvuta</foreign>
+                                (about two miles) away from the river Ganges.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

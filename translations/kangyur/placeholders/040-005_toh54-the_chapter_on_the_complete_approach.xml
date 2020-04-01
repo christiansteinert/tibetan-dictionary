@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">kun nas sgo'i le'u/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">samantamukhaparivartasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Chapter on the Complete Approach</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa kun nas sgo'i le'u zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryasamantamukha­parivarta­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <editor role="externalReviewer" ref="contributors.xml#person-256">Douglas Duckworth</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-307">Sylviane Tillemans</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-040-005"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh54" type="text">
+                    <ref>Toh 54</ref>
+                    <biblScope>vol:40, ff.184v-195r(pp.368-389)</biblScope>
+                    <location work="UT4CZ5369" count-pages="22">
+                        <volume number="40" start-page="368" end-page="389"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11585" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-18T19:47:37.469Z" user="admin">18/10/2019 19:47:37</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-18T19:47:29.352Z" user="laura">v 0.1.0</note>
+<note type="updated" update="translation-status" value="2.c" date-time="2019-10-18T19:47:29.352Z" user="laura">2.c</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

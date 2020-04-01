@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">pad+ma'i spyan gyi gzungs/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">The Incantation of Padmanetra</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa pad+ma'i spyan zhes bya ba'i gzungs/</title>
+                <title type="otherTitle" xml:lang="en">[Note: the Tōhoku catalogue lists 7 short dhāraṇīs that it includes under the single Toh catalogue number, 539; this is the seventh.]
+                </title>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT22084-100-021"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh539f" type="text">
+                    <ref>Toh 539f</ref>
+                    <biblScope>vol.88, ff.83v-84r(pp.166-167)</biblScope>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="88" start-page="166" end-page="167"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="toh539f" work="http://read.84000.co/sections"/>
+                </bibl>
+                <bibl key="toh866" type="text">
+                    <ref>Toh 866</ref>
+                    <biblScope>vol.100, ff.88r-88v(pp.175-176)</biblScope>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="100" start-page="175" end-page="176"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12628" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-06T17:36:54.248Z" user="john">06/11/2019 17:36:54</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

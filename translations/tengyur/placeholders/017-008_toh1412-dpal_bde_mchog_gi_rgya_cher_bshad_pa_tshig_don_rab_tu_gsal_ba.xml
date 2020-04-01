@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dpal bde mchog gi rgya cher bshad pa tshig don rab tu gsal ba</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-017-008"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1412" type="text">
+                    <ref>Toh 1412</ref>
+                    <biblScope>ff. 353v-450r</biblScope>
+                    <author role="translatorTib">a. dpa' bo rdo rje</author>
+                    <author role="translatorTib">t. parahita</author>
+                    <author role="translatorTib">'phags pa shes rab</author>
+                    <location count-pages="">
+                        <start volume="17" page="708"/>
+                        <end volume="17" page="901"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21619" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC7954" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:11:40 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

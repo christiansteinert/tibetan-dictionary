@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">blo gros mi zad pas zhus pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">akṣayamatiparipṛcchāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of Akṣayamati's Questions</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa blo gros mi zad pas zhus pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryākṣayamatiparipṛcchā­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-45"/>
+            <author role="translatorEng" ref="contributors.xml#person-30">Rolf Scheuermann</author>
+                <author role="translatorEng" ref="contributors.xml#person-298">Stefan Schley</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-044-010"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh89" type="text">
+                    <ref>Toh 89</ref>
+                    <biblScope>vol:44, ff.175v-182v(pp.350-364)</biblScope>
+                    <location work="UT4CZ5369" count-pages="15">
+                        <volume number="44" start-page="350" end-page="364"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14667" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11636" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-09-25T15:35:15.146Z" user="admin">25/09/2019 15:35:15</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-05T08:39:51.782Z" user="line-tofte">0.0.1</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

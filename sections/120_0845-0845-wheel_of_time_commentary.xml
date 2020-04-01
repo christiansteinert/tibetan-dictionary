@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dus 'khor 'grel bshad/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Kālacakra­ṭīkā</title>
+                <title type="mainTitle" xml:lang="en">Wheel of Time Commentary</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC114941JC20567"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W22084" sort-index="20">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC114941JC14716"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-20T23:00:20.677Z" user="john">20/11/2019 23:00:20</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">A single commentary on the Kālacakratantra, traditionally accorded its own section in the Kangyur despite being
+                    a treatise or śāstra (Toh 845).</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about" tid="6">Wheel of Time Commentary</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="O1JC114941JC20567-1"/>
+                    <p tid="2">This section is one of the traditional primary divisions of the Degé Kangyur, despite only containing a
+                        single text which is not, strictly speaking, Buddha-word, being a treatise. The Lithang, Degé, and Urga
+                        Kangyurs include this text, which in most other cases is found only in the Tengyur.</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC20567-2"/>
+                    <p tid="3">The text in question is the <title xml:lang="Sa-Ltn">Vimalaprabha</title> (<title xml:lang="Bo-Ltn">dri med
+                        ’od</title>), a commentary on the Kālacakra <title xml:lang="Sa-Ltn">Laghutantra</title> (Toh 362)
+                        said to have been written by King Puṇḍarīka, eighth king of Shambhala and son of King Yaśas (who compiled
+                        the <title xml:lang="Sa-Ltn">Laghutantra</title> itself). It was first translated into Tibetan from
+                        Sanskrit in the 11th century by the Kashmiri scholar Somanātha and Sherab Trak, and later revised by
+                        Zhangtön Dodé Pal, Tsultrim Dar, and Shongtön.</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC20567-3"/>
+                    <p tid="4">The <foreign type="term" xml:lang="Bo-Ltn">dkar chags</foreign> explains that “although it belongs with the
+                        treatises, as it is the sovereign of all the tantra commentaries that unravel the most definitive, secret,
+                        highest of all mantra systems, it has been published here—just as past scholars have placed it—in order to
+                        honor it as the equivalent of the Teacher’s own word.”</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC20567-4"/>
+                    <p tid="5">The division is placed by the compilers of the Tōhoku catalogue between the Old Tantras and the
+                        Incantations, and although it is clearly intended to come right at the end of the Degé Kangyur, as its
+                        final fifth chapter shares a volume with the Kangyur <foreign type="term" xml:lang="Bo-Ltn">dkar
+                            chags</foreign> (catalogue), we have placed it here along with the other Tantra sections for
+                        convenience and to maintain the sequence of Toh numbers.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

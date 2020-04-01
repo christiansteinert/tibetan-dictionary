@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">khams mang po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">dhātubahukasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of Many Domains</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-071-011"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh297" type="text">
+                    <ref>Toh 297</ref>
+                    <biblScope>vol.71, ff.297r-301v(pp.593-602)</biblScope>
+                    <location work="UT4CZ5369" count-pages="10">
+                        <volume number="71" start-page="593" end-page="602"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11963" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-27T09:49:29.698Z" user="admin">27/02/2020 09:49:29</note>
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-02-27T09:49:23.533Z" user="andreas">0.0.1</note>
+<note type="updated" update="translation-status" value="3" date-time="2020-02-27T09:49:23.533Z" user="andreas">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

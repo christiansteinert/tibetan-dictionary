@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">Other liturgical works</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC76301JC21627"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W23703" sort-index="26">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC76301JC21613"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 06/09/2018 at 11:22:11 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Miscellaneous grouped and single liturgical works not specifically related to one of the four clases of tantra (Toh 3645-3706)</p>
+            </div>
+        </front>
+        <body/>
+    </text>
+</TEI>

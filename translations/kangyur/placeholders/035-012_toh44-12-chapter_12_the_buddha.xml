@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<tei:TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sangs rgyas kyi le'u/</title>
+                <title type="mainTitle" xml:lang="en">Chapter 12: The Buddha</title>
+                <author role="translatorMain" ref="contributors.xml#team-33"/>
+                <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
+                <author role="translatorEng" ref="contributors.xml#person-200">Kaia Fischer</author>
+                <sponsor ref="sponsors.xml#sponsor-16">Richard and Carol Weingarten</sponsor>
+                <sponsor ref="sponsors.xml#sponsor-193">Nicholas Weeks</sponsor>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-035-012"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh44-12" type="chapter">
+                    <ref>Toh 44-12</ref>
+                    <biblScope/>
+                    <location work="UT4CZ5369" count-pages="19">
+                        <volume number="35" start-page="350" end-page="368"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11565" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC14680" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-08T08:11:24.835Z" user="admin">08/11/2019 08:11:24</note>
+                <note type="updated" update="text-version" value="" date-time="2019-03-09T12:27:25.516Z" user="john"/>
+                <note type="updated" update="translation-status" value="3" date-time="2019-03-09T12:27:25.516Z" user="john">3</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-01-10T07:02:08.499Z" user="andreas">0.0.1</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</tei:TEI>

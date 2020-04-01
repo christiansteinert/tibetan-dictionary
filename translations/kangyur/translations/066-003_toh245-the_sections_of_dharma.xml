@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos kyi phung po</title>
+                <title type="mainTitle" xml:lang="bo">ཆོས་ཀྱི་ཕུང་པོ།</title>
+                <title type="mainTitle" xml:lang="en">The Sections of Dharma</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Dharmaskandha</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ཆོས་ཀྱི་ཕུང་པོ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa chos kyi phung po zhes bya ba
+                    theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The Sections of Dharma”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Āryadharmaskandhanāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
+                    Dharmachakra Translation Committee<lb/>under the patronage and supervision of
+                    84000: Translating the Words of the Buddha </author>
+            <consultant role="advisor" ref="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-206">Professor José Cabezón</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-62">Chloé Cramer</author>
+                <author role="translatorEng" ref="contributors.xml#person-60">Ben Ewing</author>
+                <author role="translatorEng" ref="contributors.xml#person-67">Lowell Cook</author>
+                <author role="translatorEng" ref="contributors.xml#person-72">Oriane Lavole</author>
+                <consultant role="advisor" ref="contributors.xml#person-61">Catherine Dalton</consultant>
+                <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-206">José I.Cabezón</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-257">Raynald Prévèreau</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.2.2 <date>2020</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative to translate all the Buddha’s words into modern
+                    languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-066-003"/>
+                <date>2019-10-13</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh245" type="text">
+                    <ref>Toh 245</ref>
+                    <biblScope>Degé Kangyur vol. 66 (mdo sde, za), folios 27.b–33.a</biblScope>
+                    <author role="translatorTib">Prajñāvarman</author>
+                    <author role="translatorTib">Yeshé Dé</author>
+                    <location work="UT4CZ5369" count-pages="12">
+                        <volume number="66" start-page="54" end-page="65"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11895" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-26T21:35:18.694Z" user="admin">26/02/2020 21:35:18</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-04-11T17:34:31.728Z" user="andre">v 1.01 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-11T17:34:31.728Z" user="andre">2</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2019-04-12T09:10:31.779Z" user="andre">2.a</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-06-11T12:33:09.01Z" user="mike">v 1.02 2019</note>
+                <note type="updated" update="text-version" value="v 1.03" date-time="2019-06-29T01:32:10.696Z" user="laura">v 1.03 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-07-03T11:09:48.255Z" user="mike">2</note>
+                <note type="updated" update="text-version" value="v 0.5" date-time="2019-09-08T15:03:17.418Z" user="john">v 0.5 2019</note>
+                <note type="updated" update="text-version" value="v 0.8" date-time="2019-09-09T15:52:21.07Z" user="john">v 0.8 2019</note>
+                <note type="updated" update="text-version" value="v 0.9" date-time="2019-09-20T00:08:41.498Z" user="konchog">v 0.9 2019</note>
+                <note type="updated" update="text-version" value="v 0.99" date-time="2019-09-20T14:57:17.203Z" user="john">v 0.99 2019</note>
+                <note type="updated" update="translation-status" value="1.a" date-time="2019-09-28T20:48:35.488Z" user="john">1.a</note>
+<note type="updated" update="text-version" value="v 0.99.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 1.0.0" date-time="2019-10-13T17:48:28.361Z" user="john">v 1.0.0</note>
+<note type="updated" update="translation-status" value="1" date-time="2019-10-13T17:48:28.361Z" user="john">1</note>
+<note type="updated" update="text-version" value="v 1.1.1" date-time="2019-10-13T18:11:51.054Z" user="john">v 1.1.1</note>
+<note type="updated" update="text-version" value="v 1.2.1" date-time="2019-11-26T19:04:26.636Z" user="john">Added a new sentence in i.6 with a footnote (9) and 2 new bibliography entries.</note>
+<note type="updated" update="text-version" value="v 1.2.2" date-time="2020-02-26T21:35:13.95Z" user="celso">fixed non-breaking spaces in ellipsis</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-066-003-1"/>
+                <p tid="2">In this sūtra some of Buddha Śākyamuni’s senior disciples request a teaching on
+                    the nature of “the sections of Dharma.” The Buddha responds by first
+                    delivering a teaching on the absence of birth with regard to phenomena, as an
+                    antidote to the poison of desire. On that basis, the Buddha then presents a
+                    longer explanation of the repulsiveness of the human body, and of the female body
+                    in particular.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-066-003-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the supervision of
+                    Chokyi Nyima Rinpoche. The translation was produced by Chloé Cramer, Ben Ewing,
+                    Lowell Cook, and Oriane Lavole under the supervision of Catherine Dalton. The
+                    translation was then checked against the Tibetan and edited by Andreas Doctor.
+                    The translation also benefited from the contribution of Professor José Cabezón,
+                    who generously shared his draft translation of the sūtra with the translators
+                    and offered many helpful comments.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-066-003-3"/>
+                    <p tid="6">
+                        <title xml:lang="en">The Sections of Dharma</title> has a long history
+                        as part of the Tibetan Buddhist canon. It was among the first texts brought
+                        from India to Tibet during the Imperial period (seventh to ninth century <hi rend="small-caps">ce</hi>)
+                        where it was translated by the prolific Tibetan translator Yeshé Dé alongside
+                        the Indian scholar Prajñāvarman. Since it appears in both of the available Imperial
+                        catalogs, which are the earliest records of Tibetan scriptural
+                            translations,<note place="end" xml:id="UT22084-066-003-4" index="1"> It appears in
+                            the Denkarma (<foreign xml:lang="Bo-Ltn" type="term">ldan dkar
+                                ma</foreign>) catalog (folio 299.a.6), numbered in Yoshimura (1950), p. 195.e, as text no. 193; in the Phangthangma (<foreign xml:lang="Bo-Ltn" type="term">’phang thang ma</foreign>)
+                            catalog, it's numbered in Halkias (2004), p. 66, as no. 272.
+                        </note> its existence in Tibetan translation can be posited as no later than
+                        824 <hi rend="small-caps">ce</hi>.<note place="end" xml:id="UT22084-066-003-5" index="2"> The date of
+                            the earliest Imperial catalog, the Denkarma, is debated, but this is
+                            the later of the two dates most commonly attributed among scholars, the
+                            other being 812 <hi rend="small-caps">ce</hi>. See Halkias (2004), p.
+                            3. </note> Unfortunately, to our knowledge no version of the text is 
+                        extant in Sanskrit or any other language besides Tibetan (and Mongolian,
+                        into which it was translated from the Tibetan), nor are there any known
+                        commentaries. This greatly limits our knowledge of its precise origins and
+                        context. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-6"/>
+                    <p tid="7">The title of the sūtra refers to the sections of teachings given by the
+                        Buddha, which are traditionally said to number 84,000. The sūtra begins with
+                        an inquiry by Śāriputra about the nature and number of the sections of the
+                        Dharma, to which the Buddha answers with a teaching on the absence of birth
+                        with regard to phenomena—a teaching that serves as an antidote to the poison
+                        of desire. The beginning of the sūtra thus situates the text explicitly in a
+                        Mahāyāna context, introducing as it does the notion that phenomena neither arise nor
+                        cease. Indeed, in the manner of the teachings of the second turning,<note place="end" xml:id="UT22084-066-003-7" index="3"> According to later Indian (and even later,
+                            Tibetan) doxography that first finds clear expression in the <title xml:lang="Sa-Ltn">Saṃdhinirmocanasūtra</title>, the Dharma taught
+                            by the Buddha can be classified into three distinct doctrinal groupings
+                            called the <distinct>three turnings of the wheel of the doctrine</distinct>. According to
+                            this schema, the second turning focuses primarily on the emptiness of
+                            phenomena. </note> the text deconstructs the reality and identity of
+                        objects of desire, thereby demonstrating that desires are mere fantasies
+                        based on imaginary objects and are not to be indulged in by the wise. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-8"/>
+                    <p tid="8">This second-turning introduction to the problem of desire, however, leads to an
+                        extensive discussion of a topic that, due to its emphasis on the elimination
+                        of desire as such, would generally be considered a first-turning
+                            teaching<note place="end" xml:id="UT22084-066-003-9" index="4"> The first turning refers mainly to
+                            the four noble truths, as well as to teachings on the five aggregates.
+                            Mahāyāna exegetes considered these to be teachings of the hearers, and
+                            therefore classified them as teachings of provisional, as opposed to
+                            definitive, meaning. See Powers (2013), p. 103. </note>—namely, the
+                        repulsiveness of the human body, and the female body in particular. In its
+                        presentation of the female constitution, the sūtra in fact disparages women
+                        in a way that most modern readers would find offensive—José Cabezón has
+                        aptly described the sūtra as “one of the most misogynistic texts in the
+                        Buddhist canon.”<note place="end" xml:id="UT22084-066-003-10" index="5">Cabezón (2017), p. 125, no.
+                            328.</note> Nonetheless, recent research has shown that the repulsive
+                        nature of the female body was in fact a common theme in early Mahāyāna
+                        texts. In their studies of texts dating to the beginning of the common era,
+                        Ulrich Pagel (1995), Jan Nattier (2003), and Daniel Boucher (2008) have
+                        argued that one major strand of early Mahāyāna involved male monastics eager
+                        to engage in demanding ascetic practices. The deprecatory descriptions of
+                        the repulsiveness of women’s bodies that form the main argument of <title xml:lang="en">The Sections of Dharma</title> might have served to
+                        support such efforts of male monastics to attain the ideal of renunciation.
+                        In this respect, Boucher and Nattier have noted how women were often
+                        deprecated and represented as an obstacle to men’s practice in some early
+                        Mahāyāna texts, and this very much accords with the tone of the present sūtra.<note place="end" xml:id="UT22084-066-003-11" index="6"> Boucher (2008), pp. 50–52; Nattier (2003), pp.
+                            96–100.</note> In fact, according to these scholars, the early Mahāyāna
+                        might even have seen a decrease in the participation of women in Buddhist
+                        institutions, contrary to a popular modern understanding of the Mahāyāna as
+                        a more egalitarian movement than the “mainstream” tradition.<note place="end" xml:id="UT22084-066-003-12" index="7">Nattier (2003), p. 98. </note> Nevertheless, although this
+                        sūtra does in many ways seem to support this analysis, toward the end of the
+                        sūtra the Buddha twice describes the intended audience as the fourfold
+                        assembly of monks, nuns, laymen, and laywomen. The sūtra itself, therefore,
+                        professes to benefit not only male monastics with its message of the
+                        repulsiveness of the human—and, more particularly, the female—body, but really
+                        anyone, whether male or female, ordained or lay. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-13"/>
+                    <p tid="9">In spite of such calls for a broad audience, this approach is likely to have
+                        resonated most clearly with male monastics, as it represents a Buddhist
+                        perspective that runs right from the institutional androcentrism of early
+                        monastic Buddhism to the valorization of ascetic discipline in the early
+                            Mahāyāna.<note place="end" xml:id="UT22084-066-003-14" index="8"> Boucher (2008), pp. 51–52. </note>
+                        The theme common to the present text and those studied by Boucher and Nattier
+                        suggests that we might also locate this sūtra among the earlier strata of
+                        Mahāyāna sūtras that emerged in the first centuries <hi rend="small-caps">ce</hi>. An interesting difference, however, is
+                            <title xml:lang="en">The Sections of Dharma</title>’s explicit usage of
+                            <foreign xml:lang="Sa-Ltn" type="term">prajñāpāramitā</foreign> themes
+                        in its discussion of such concepts as the absence of birth and cessation
+                        with regard to phenomena; such themes are absent from the texts studied by
+                        Boucher and Nattier. <title xml:lang="en">The Sections of Dharma</title>
+                        therefore seems to belong to a different stream of early Mahāyāna texts: one
+                        still centered on monastics, rather than lay bodhisattvas, yet
+                        simultaneously inspired by <foreign xml:lang="Sa-Ltn" type="term">prajñāpāramitā</foreign> themes. This thematic duality is also
+                        reflected in the fact that the early imperial catalogs categorized this
+                        scripture as a Mahāyāna sūtra, yet the translation colophon in the Stok
+                        Palace Kangyur notes that it belongs to the first turning of the wheel of
+                        Dharma (<foreign xml:lang="Bo-Ltn" type="term">bka’ ’khor lo dang por gtogs
+                            pa’o</foreign>). Indeed, though it does broach prajñāpāramitā concepts, the
+                        sūtra is still very much set in the hearers’ monastic context, exemplified
+                        by the fact that the Buddha teaches in the presence of worthy ones (<foreign xml:lang="Sa-Ltn" type="term">arhants</foreign>), and not
+                        bodhisattvas. The sūtra’s concluding verse, which states that the Buddha did
+                        not expound this teaching to spiritual practitioners, but only to those who
+                        still indulged in desires, moreover suggests that the main body of the text
+                        is a teaching of provisional meaning, which is meant for beginners on the
+                        path and later to be superseded by more advanced teachings. Teachings of
+                        provisional meaning are contextual and adapted to the spiritual capacities
+                        of their audiences. Since they do not literally expound the ultimate
+                        view, they require interpretation. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-15"/>
+                    <p tid="10">One additional theme brought up by this sūtra deserves to be mentioned here.
+                        The modern reader may indeed be surprised by several passages describing how
+                        various physical and mental ailments that afflict women are caused by
+                            parasites (Tib. <foreign xml:lang="Bo-Ltn" type="term">srin
+                            bu</foreign>, Skt. <foreign xml:lang="Sa-Ltn" type="term">krimi/kṛmi</foreign>) that subsist in different parts of their bodies.
+                        According to the sūtra, such parasites are responsible for a host of
+                        (mostly undesirable) traits in the female physique. For example,
+                        some such parasites are said to live in the urinary tracts of women, where
+                        they find nourishment by eating away at their host. The parasites are
+                        described as causing women to become mentally disturbed, thus making them
+                        engage in uninhibited sexual activity. Other parasites are said to gnaw away
+                        at women’s brains, noses, throats, and so forth. The sūtra seems to describe the
+                        presence of these parasites in the female body as also accounting for the 
+                        physical traits characteristic of women, such as their absence of facial hair,
+                        bulging breasts, and smooth throats. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-16"/>
+                    <p tid="11">Although the descriptions of the parasites that live specifically in the female
+                        body may be unique to this sūtra, descriptions of named parasites in the 
+                        human body in general—some very detailed indeed—are found in several other works in 
+                        the Kangyur,<note place="end" index="9" xml:id="UT22084-066-003-134">See, for example, the <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title> 
+                            (Toh 6), second vol. (10), F.138.a <foreign xml:lang="la">et seq.</foreign> (translation in Jamspal and Fischer, 84000, 
+                            forthcoming), and <title xml:lang="Sa-Ltn">Saddharmasmṛtyupasthāna</title> (Toh 287), 
+                            fourth vol. (71), F.117.b <foreign xml:lang="la">et seq.</foreign> 
+                            (translation in Dharmachakra Translation Committee, 84000, forthcoming).</note>
+                        and the belief that parasites are the cause of
+                        various unpleasant physical conditions was already a well-established theory
+                        in Indian medical literature at the time of composition of this text. This
+                        notion, which perhaps developed from the observation of worms in decomposing
+                        corpses, was already present in the earliest Indic scripture dealing with
+                        cures and healing, the <title xml:lang="Sa-Ltn">Atharvaveda</title>, which
+                        was composed sometime between 1200–1000 <hi rend="small-caps">bce</hi> and
+                        offers descriptions of various parasites, or, technically,
+                        “worms” (<foreign xml:lang="Sa-Ltn" type="term">krimi</foreign>) that invade the human body.<note place="end" xml:id="UT22084-066-003-17" index="10">Zysk (1993), p. 64.</note> Moreover, Jain and Kāmaśāstra literature,
+                        which are closer in temporal proximity to the present sūtra, both include theories
+                        of vaginal worms—in the Jain texts these are said to be killed through
+                        sexual intercourse, thus making sex an inherently non-virtuous act, and in
+                        the Kāmaśāstra literature they are described as causing the “itch” of a woman’s
+                            sexual desire.<note place="end" xml:id="UT22084-066-003-18" index="11">Thanks
+                            to José Cabezón for bringing this to our attention. See further Cabezón
+                            (2017), p. 125, no. 328.</note> The sūtra thus offers a presentation
+                        of the female physique that draws from a theory of parasites that must have
+                        been aligned with commonly accepted notions of the human constitution in
+                        India at that time. It should also be noted that this presentation is in
+                        some ways reminiscent of the radical early Buddhist practice, familiar to 
+                        Buddhist ascetics, of contemplating the stages of decomposition of corpses. 
+                        That practice is well described in Buddhaghoṣa’s <title xml:lang="Sa-Ltn">Visuddhimagga</title> (ch. 6.88), for example, and may
+                        have been current in Mahāyāna circles as well, as this sūtra suggests.
+                        Buddhaghoṣa’s closing statements on this practice in fact parallel the
+                        approach and aim of this sūtra when he addresses men’s unfounded lust for
+                        women’s bodies. He writes that “. . . a living body is just as foul as a dead one,
+                        only the characteristic of foulness is not evident in a living body, being
+                        hidden by adventitious embellishments.”<note place="end" xml:id="UT22084-066-003-19" index="12">Cited
+                            in Chapple (2013), p. 92.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-20"/>
+                    <p tid="12">This English translation is based on the Degé (<foreign xml:lang="Bo-Ltn" type="term">sde dge</foreign>) version of the sūtra, in consultation
+                        with the textual variations recorded in the Comparative Edition (<foreign xml:lang="Bo-Ltn" type="term">dpe bsdur ma</foreign>). Additionally,
+                        when the readings in the Degé and the Comparative Edition appeared
+                        problematic, we consulted the Stok Palace manuscript. These variant
+                        readings, when significant, are indicated in the endnotes.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-22"/>
+                    <p tid="13">Finally, our translation also benefitted from contributions by José
+                        Cabezón, who generously shared his draft translation of the entire sūtra with
+                        the committee and offered many helpful comments. Selected parts of Cabezón’s
+                        translation of the sūtra have since been published in his groundbreaking
+                        study on sexuality in Indian Buddhism, where the interested reader will find
+                        further reflections on this sūtra, and the topics of gender and sexuality in
+                        Buddhism in general.<note place="end" xml:id="UT22084-066-003-23" index="13">Cabezón (2017).</note>
+                    </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="14"> The Translation </head>
+                <head type="titleHon" tid="15">The Noble Great Vehicle Sūtra</head>
+                <head type="titleMain" tid="16">The Sections of Dharma</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-066-003-24"/>
+                    <p tid="18">
+                        <ref cRef="F.27.b" type="folio"/> Homage to all buddhas and bodhisattvas! </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-25"/>
+                    <p tid="19">Thus did I hear at one time. The Blessed One was dwelling in 
+                        Nyagrodha Park, in Kapilavastu, together with a great 
+                        saṅgha of five hundred monks. At
+                        one point venerable Śāriputra, venerable Mahāmaudgalyāyana, venerable
+                        Mahākāśyapa, venerable Ānanda, and venerable Rāhula all went to see the
+                        Blessed One; they prostrated to him, placing their heads at his feet, and then sat to
+                        one side. Sitting there, venerable Śāriputra asked the Blessed 
+                        One, <ref cRef="F.28.a" type="folio"/> “Blessed One, you have spoken of ‘sections of the Dharma.’
+                        But what is the extent of those sections of the Dharma to which the Thus-Gone
+                        One refers using that expression? How many such sections are there? What
+                        are the sections of the Dharma?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-26"/>
+                    <p tid="20">The Blessed One replied to venerable Śāriputra, 
+                        “Śāriputra, the Thus-Gone One
+                        has taught that there are eighty-four thousand sections of the Dharma. Śāriputra, in this
+                        regard, the birthlessness of all phenomena is the primary sense of a section
+                        of the Dharma. Śāriputra, I do not claim that there is something called
+                        <emph>phenomena</emph>, or that anything whatsoever is born or ceases. Why is that?
+                        Śāriputra, it is because all phenomena are characterized as being unborn and
+                        unceasing. For example, Śāriputra, paṇḍakas<note place="end" xml:id="UT22084-066-003-27" index="14">Tib.
+                                <foreign xml:lang="Bo-Ltn" type="term">ma ning</foreign>; Skt.
+                                <foreign xml:lang="Sa-Ltn" type="term">paṇḍaka</foreign>. We have
+                            chosen to leave this term untranslated here as no English term seems to
+                            cover the full semantic range of the original Sanskrit. Given that we
+                            are here in the context of someone who cannot be identified as either a
+                            man or a woman, the meaning could perhaps in this context be
+                                “neuter.” It seems, however, that in other contexts the
+                            term may have a broader range of meaning, or even a somewhat different
+                            meaning. Engle (2009, p. 437, no. 562) explains the term as referring to a
+                            man or a woman who has a functioning but somehow deficient sexual
+                            faculty, such as someone who only experiences arousal
+                            intermittently. See also the canonical description from the <title xml:lang="Sa-Ltn">Vinayavastu</title> in <ref target="http://read.84000.co/translation/toh1-1.html#UT22084-001-001-1616">Miller 2018 (4.109</ref>).</note> are not called men or women, and should indeed
+                        not be said to be men or women. Why is that? Śāriputra, it is because they
+                        cannot be designated as men or women. Likewise, Śāriputra, the Thus-Gone One
+                        has attained unsurpassed awakening with respect to all phenomena, but one
+                        cannot say that he therefore knows phenomena on account of phenomena. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-28"/>
+                    <p tid="21">“As an analogy, Śāriputra, neither paṇḍakas nor ṣaṇḍhas<note place="end" xml:id="UT22084-066-003-29" index="15">Tib.
+                                <foreign xml:lang="Bo-Ltn" type="term">za ma</foreign>; Skt.
+                                <foreign xml:lang="Sa-Ltn" type="term">ṣaṇḍha</foreign>. This term
+                            can have a wider range, including those who are, for any number of
+                            reasons, sexually impotent. We have chosen to leave this term
+                            untranslated here as no English term seems to cover the full semantic
+                            range of the original Sanskrit. Engle (2009, p. 437, no. 562)
+                            translates the term as a “sexually deficient person” and notes that the
+                            term refers to a person who lacks a sexual faculty and therefore cannot
+                            perform sexually. Engle specifies that this refers to eunuchs, but also
+                            those with a congenital abnormality, or who suffer from impotence due to
+                            any number of causes.</note> have abandoned passion, but they cannot
+                        act on that passion. Śāriputra, when they see a beautiful woman, and
+                        desire is aroused, most paṇḍakas and ṣaṇḍhas suffer pain in their ducts.<note place="end" xml:id="UT22084-066-003-30" index="16">Tib. <foreign xml:lang="Bo-Ltn" type="term">byin
+                            pa</foreign>. This term literally means “calf,”
+                            as in the calf of the leg, which does not make sense in this context.
+                            Although all versions of the text consulted read <foreign xml:lang="Bo-Ltn" type="term">byin pa</foreign>, it is possible that
+                            a better reading would be <foreign xml:lang="Bo-Ltn" type="term">’byin
+                                pa</foreign>. Reading <foreign xml:lang="Bo-Ltn" type="term">’byin
+                                    pa </foreign>here in the sense of “gate” or
+                            “egress” (<foreign xml:lang="Sa-Ltn" type="term">niḥsaraṇa</foreign>; see the <title xml:lang="Sa-Ltn">Mahāvyutpatti</title>), we have translated it as <title xml:lang="en">ducts</title>, and understand it to refer to the
+                            urethra or other sexual ducts in the case of either a castrated or
+                            uncastrated paṇḍaka or ṣaṇḍha. We are grateful to José Cabezón for
+                            suggesting this possible alternative reading and its interpretation. See
+                            also Cabezón (2017) p. 414, no. 1039.</note> Their ducts drip, their
+                        ducts become like metal,<note place="end" xml:id="UT22084-066-003-132" index="17">Tib. <foreign xml:lang="Bo-Ltn">khar ba</foreign>, which can refer to bell-metal, an alloy of copper and zinc, here presumably denoting hardness. 
+                            Alternatively, <foreign xml:lang="Bo-Ltn">khar ba</foreign>, or more 
+                            often <foreign xml:lang="Bo-Ltn">’khar ba</foreign>, can mean a staff or 
+                            walking stick.</note> and their faces become red. Śāriputra, why do you
+                        think this is? These paṇḍakas and ṣaṇḍhas have not fainted to the floor;
+                        their bodies have not been struck by weapons. Why do you think their ducts
+                        are so painful?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-31"/>
+                    <p tid="22">Venerable Śāriputra replied to the Blessed One’s question, 
+                        <ref cRef="F.28.b" type="folio"/> “Blessed One, paṇḍakas and ṣaṇḍhas are the guards
+                        of ladies’ quarters. When they see beautiful women, they give rise to
+                        desire. Their desirous minds make them boil with affliction and, boiling
+                        with affliction, their bodies become engorged with semen. When they
+                        are thus tormented by the pangs of lust, their ducts burst and their bodies
+                        become ruined.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-32"/>
+                    <p tid="23">Then the Blessed One said to venerable Śāriputra, “Śāriputra, few among
+                        paṇḍakas or ṣaṇḍhas take rebirth in the world of the happy destinies of the
+                        higher realms. Most of them are reborn as hell beings. Śāriputra, observe
+                        the contrast with the sons<note place="end" xml:id="UT22084-066-003-133" index="18">“Sons” here means spiritual sons, i.e. disciples or followers, rather than biological offspring.</note> of the Śākya ascetic, none of whom get carried away
+                        by desire. Why is that? They know that the sense pleasures are without
+                        substance. Knowing that the sense pleasures are impure, they are weary and
+                        disenchanted with them. With this deep dislike, they observe celibacy, and
+                        their complexions are bright. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-33"/>
+                    <p tid="24">“Śāriputra, evil men are unable to feel weary or disenchanted. Why is that?
+                        Śāriputra, it is because evil men, thinking so much about objects of
+                        desire as they do, are full of thoughts. Śāriputra, what are the thoughts of evil men?
+                        They think of things that are non-existent. They think of the impure as
+                        pure. They think of lack of perception as perception. They think of women as
+                        women. They think of being desirous as being desirous. These, Śāriputra, are
+                        the thoughts of evil men. Śāriputra, these are the actions of paṇḍakas and
+                        ṣaṇḍhas who are gripped by desire; they are not the actions of holy beings.
+                        Śāriputra, those paṇḍakas who thus entertain evil men’s 
+                        conceptions <ref cRef="F.29.a" type="folio"/> have the experience, ‘I am touching that,’ and thus
+                        perceive the body with its nine orifices—this impure, leaking thing—as
+                        clean. All these things should not be done. They are not the actions of holy
+                        beings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-34"/>
+                    <p tid="25">“Śāriputra, those ascetics and brahmins who do not recognize the flaws of the
+                        sense pleasures for what they really are fantasize about women and cling to
+                        certain features of their eyes, perceiving them to be like beryl. They do not see
+                        them as bubbles of water. Śāriputra, compare this to the example of a jenny
+                        or a sow that has just given birth. Her body is emptied by giving birth and
+                        a filthy, excrement-like placenta, unbearable to look at, emerges from her
+                        body. Śāriputra, eyes, too, ought to be described like that. The eyes resemble
+                        the placenta of a jenny, a sow, or a bitch. The interior of the
+                        eyeball is like a water bubble. That is why filth emerges from it, and it is
+                        therefore disagreeable. Pus and blood ooze from it—it exudes filth.
+                        Śāriputra, the bodily formation that leaks filth, pus, and blood, and that
+                        leaks essential fluids, that thing is called the eye. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-35"/>
+                    <p tid="26">“Śāriputra, what is the reason for speaking of the eyes? What are the causes
+                        and conditions for their being called <emph>eyes</emph>? They are the leaders of the body. Looking at form,
+                        one is never satisfied—whether at first, in the middle, or in the end—and
+                        therefore one physically engages in an ocean of non-virtuous deeds. Because
+                        of that we speak of eyes.<note place="end" xml:id="UT22084-066-003-36" index="19"> The Sanskrit word for
+                            “eye” (<foreign xml:lang="Sa-Ltn" type="term">netra</foreign>), can also
+                            mean “leader” or “guide.”</note> Why is that, Śāriputra? What are the
+                        causes and conditions for speaking of eyes? It is because they are
+                        disagreeable. Śāriputra, why are the eyes disagreeable? They see the absence
+                        of form as form, the absence of sensation as sensation, the absence of
+                        perception as perception, the absence of formation as formation, and the
+                        absence of consciousness as consciousness. Again, what is the reason for
+                        this? That is, what are the causes and conditions for speaking of eyes? <ref cRef="F.29.b" type="folio"/> They cause one’s virtuous conduct to degenerate, and
+                        therefore we speak of eyes. They cause monkhood to degenerate, and therefore
+                        we speak of eyes. Śāriputra, eyes are impermanent, unstable, and do not
+                        endure. That is why they should be known as eyes. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-37"/>
+                    <p tid="27">“Śāriputra, skilled, well-learned, and dauntless monks relate to the eyes in
+                        this way: eyes are not a woman, not a man, not a sentient being, not a life
+                        principle, not a living being, and not a person. Likewise, Śāriputra, this
+                        applies to the ears, nose, tongue, body, and mind. They are also not a
+                        woman, not a man, not a sentient being, not a life principle, not a living
+                        being, and not a person. These all arise from being mistaken about the five
+                        aggregates. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-38"/>
+                    <p tid="28">“Śāriputra, those ascetics and brahmins who do not correctly know the
+                        shortcomings of the sense pleasures are tormented by lust. Their complexions
+                        become poor and pale. Śāriputra, consider this analogy: When the leaves or
+                        the ripe fruits of a big tree fall off, they lose their luster. In the same
+                        way, Śāriputra, those among monks and nuns, and male and female lay
+                        devotees, who do not correctly know the shortcomings of the sense pleasures
+                        are tormented by lust. Their complexions become poor, their thoughts become
+                        unclear, and their poor complexions become unpleasant to look at.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-39"/>
+                    <p tid="29">“Śāriputra, young monks who are ordained in the prime of their lives will
+                        soon correctly know the sense pleasures, understanding that the sense
+                        pleasures lack substance. Even if they have thoughts of desire, they quickly
+                        pacify them, recognizing them as being non-virtuous. Śāriputra, that being
+                        the case, once monks have seen the shortcomings of the sense pleasures, they
+                        are disenchanted and free from desire. They then truly rejoice and practice
+                        pure conduct. <ref cRef="F.30.a" type="folio"/> Their complexions become radiant. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-40"/>
+                    <p tid="30">“Śāriputra, consider this analogy: When pus develops in the body of a sick
+                        person, eighty-four thousand sores open up on all of that person’s limbs<note place="end" xml:id="UT22084-066-003-41" index="20"> Tib. <foreign xml:lang="Bo-Ltn" type="term">yan lag dang
+                                nying lag</foreign>: the major limbs (head, arms, and legs) and minor
+                            limbs (fingers, toes, nose, ears, etc.).</note> and each open sore also
+                        harbors eighty-four thousand swarms of parasites.<note place="end" xml:id="UT22084-066-003-42" index="21">Tib. <foreign xml:lang="Bo-Ltn" type="term">srin bu’i tshogs</foreign>. The term
+                                <foreign xml:lang="Bo-Ltn" type="term">srin bu</foreign> (Skt.
+                                <foreign xml:lang="Sa-Ltn" type="term">kṛmi</foreign>) refers to any
+                            number of types of worms, insects, or bugs. We have chosen to translate
+                            it here as “parasite” given the context, particularly
+                            below in the text, where these <foreign xml:lang="Bo-Ltn" type="term">srin bu</foreign> are said to inhabit various internal organs in
+                            the female body.</note> These parasites have both beaks and mouths. No
+                        matter how much they eat, they are never satiated. If that person sits near
+                        a heap of embers,<note place="end" xml:id="UT22084-066-003-43" index="22">Tib. <foreign xml:lang="Bo-Ltn" type="term">de mdag ma spungs pa’i drung du ’dug
+                                na</foreign>. Note that the Comparative Edition incorrectly reads
+                                <foreign xml:lang="Bo-Ltn" type="term">ma dag</foreign>.</note> the
+                        more those creatures are tormented by burning, the more they eat. Now, what
+                        do you think about that, Śāriputra? As they consume that person, will those
+                        creatures eat the person up, or not?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-44"/>
+                    <p tid="31">Venerable Śāriputra replied to the Blessed One, “Blessed One, if even to hear this
+                        makes my hair stand on end, it goes without saying how unpleasant it must
+                        be for that person. Blessed One, that person will certainly be eaten up by
+                        those varieties of creatures—nothing will be left uneaten. Those eighty-four thousand
+                        creatures make the body itch and, in that way, give that person
+                        no peace. They bring that person no happiness.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-45"/>
+                    <p tid="32">“Śāriputra, what do you think? That person’s body leaks pus and blood—should
+                        that state of affairs be despised?” </p>
+                    <p tid="33">“It is indeed something to despise, it is indeed disagreeable, it is indeed
+                        not something worthy of being looked upon.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-47"/>
+                    <p tid="34">“Similarly, Śāriputra, skilled monks train correctly by contemplating as
+                        follows: ‘The Blessed One has said that women are filthy, foul-smelling,
+                        disagreeable, and not worthy of being looked upon. Women, boiling with afflictive
+                        emotions, should not be kept company with. Desires too are foul-smelling,
+                        disagreeable, and not worthy of being looked upon.’ <ref cRef="F.30.b" type="folio"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-48"/>
+                    <p tid="35">“Śāriputra, women’s bodies harbor an additional five groups of parasites
+                        that are different from those on men’s bodies. Śāriputra, these five groups
+                        of parasites live in their urinary tracts. Each group of parasites has its
+                        own respective eighty parasites that have both beaks and mouths. These
+                        parasites constantly eat away at women’s bodies. That is why women, incited
+                        by the afflictions, engage in sexual misconduct, and yet, when they engage in
+                        their passions, they find no satisfaction. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-49"/>
+                    <p tid="36">“Therefore, Śāriputra, if one sees the sense pleasures as being ridden with faults, one
+                        will be disenchanted and free from desire. One will then engage in pure
+                        conduct with delight, and one’s complexion will glow. Śāriputra, this is the
+                        Dharma teaching that begins with a section on the sense pleasures.
+                        Śāriputra, one should be disenchanted with indulgence in passion. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-50"/>
+                    <p tid="37">“Now Śāriputra, what is defilement? Śāriputra, defilement is one’s own doing.
+                        Śāriputra, what are purification and pacification? Śāriputra, purification
+                        and pacification are also one’s own doing. Śāriputra, what is defilement and
+                        what is one’s own doing? They are the obsession with perceiving things as
+                        phenomena. What is the obsession with perceiving things as phenomena? It is
+                        to be obsessed with perceiving things as being born and as ceasing, and
+                        perceiving things as having a self, as not having a self, or as being the
+                        self. This is the section of Dharma spoken by the Blessed One. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-51"/>
+                    <p tid="38">“Śāriputra, childish, ordinary beings are blind and thus conceptualize the
+                        form aggregate. They also conceptualize the aggregates of sensation,
+                        perception, formation, and consciousness. But conceptualizing is bondage.
+                        Not to form concepts is to be liberated. Śāriputra, whoever conceptualizes
+                        will take on the form aggregate. <ref cRef="F.31.a" type="folio"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-52"/>
+                    <p tid="39">“Śāriputra, there are ten misfortunes that befall someone whose 
+                        discipline has lapsed. What are the ten? Lapsed discipline will torment one at the time
+                        of death. A monk whose discipline has lapsed will feel regret. Saying, ‘I am
+                        going to go to the hell of unrelenting torment!’ the monk will be afraid to
+                        stay among the assembly. The monk will think, ‘I am disparaging the
+                        discipline! The buddhas have forsaken me, the hearers have forsaken me, the
+                        gods have forsaken me!’ He will be fearful at death, go to the lower realms,
+                        and a human body will be difficult to obtain. Śāriputra, these are the
+                        misfortunes of a monk whose discipline has lapsed—one whose discipline has lapsed 
+                        will suffer torment at the time of death. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-53"/>
+                    <p tid="40">“Śāriputra, since that is the case, you should come to perceive sense
+                        pleasures as ridden with faults. Śāriputra, that means that whether a monk dwells
+                        in the forest, at the base of a tree, in an abandoned building, or out in
+                        the open, he should train himself by thinking, ‘The sense pleasures are foul-smelling. The sense pleasures are disagreeable. The sense pleasures are like
+                        an open wound. The sense pleasures are not worthy of being looked upon. The
+                        sense pleasures are despicable. The sense pleasures are like a corpse filled
+                        to the brim with excrement!’ The sense pleasures are objects of
+                        excitement for the childish. Śāriputra, enough of enjoying women sexually
+                        and pleasing them!</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-54"/>
+                    <p tid="41">“Śāriputra, a woman’s body is completely filled with feces and spittle—who would
+                        enjoy that? Śāriputra, their bodies are to be despised just like the rotten
+                        corpse of an ordinary dog. Indeed, Śāriputra, as an analogy consider a
+                        filthy, rotten, and foul-smelling corpse of a dog with repulsive, dark
+                        bluish-green skin, completely full of maggots, lying on a roadside. Rain
+                        falls on the corpse and the wind tosses it about. Then some people arrive
+                        there, circling around the corpse, and catch a whiff of its smell. When that
+                        happens, Śāriputra, what do you think? <ref cRef="F.31.b" type="folio"/> Will they sniff
+                        at its stench or not?”</p>
+                    <p tid="42">“O Blessed One, certainly not!” exclaimed Śāriputra. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-56"/>
+                    <p tid="43">The Blessed One then asked venerable Śāriputra, “So what do you think,
+                        Śāriputra? If someone touched<note place="end" xml:id="UT22084-066-003-57" index="23"> Here we follow
+                                K<hi rend="subscript">Y</hi>, K, C, and U which read <foreign xml:lang="Bo-Ltn" type="term">reg</foreign>, rather than D which
+                            reads <foreign xml:lang="Bo-Ltn" type="term">rig</foreign>. </note> the
+                        corpse of that dog, if he shook it, if he enjoyed himself with it, would he
+                        be praised by many people?”</p>
+                    <p tid="44">“Such a person would be difficult even to look
+                        at—how could he ever be praised?” replied venerable Śāriputra.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-59"/>
+                    <p tid="45">The Blessed One then said to venerable Śāriputra, “Śāriputra, the thus-gone
+                        ones might praise the person who embraces, shakes, and enjoys himself with
+                        that dog’s corpse. However, they would not praise a person who, even with
+                        just his toe, touches a woman, even if she is the beauty of the land,
+                        sixteen years old, an excellent woman, with a beautiful form, who is lovely
+                        to behold, with delightful full breasts, adorned with jewelry, youthful,
+                        pleasant to touch, and free of disease. Śāriputra, a person who touches such
+                        a beauty of the land with even just his toe is despicable, unlike the one
+                        who embraces, shakes, and enjoys himself with that dog’s corpse. Śāriputra,
+                        what do you think about this? By embracing or touching a dog’s corpse, will
+                        sentient beings end up being born in the hell realms?”</p>
+                    <p tid="46">“No, Blessed One, they will not.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-61"/>
+                    <p tid="47">“Śāriputra, monks must develop the perception of the faults of the sense
+                        pleasures in the following way. Śāriputra, how should monks develop the
+                        perception of the faults of the body? Śāriputra, this body is very harmful
+                        and troublesome. <ref cRef="F.32.a" type="folio"/> Śāriputra, women’s bodies have
+                        twenty-five more groups of parasites that are not like the ones present in
+                        men’s bodies. Śāriputra, there are masses of parasites in women’s brains.
+                        Known as the <emph>robbers</emph>, they eat the brains of women. Śāriputra,
+                        there are masses of parasites in women’s noses. Known as the <emph>mouth
+                            terminators</emph>, they eat women’s moustaches, thus preventing them
+                        from growing. Śāriputra, there are masses of parasites in women’s ears.
+                        Known as the <emph>eaters</emph>, they eat and pierce the ears of women. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-62"/>
+                    <p tid="48">“Śāriputra, there are masses of parasites on the sides of women’s necks and
+                        heads. Known as the <emph>yearners</emph>, they eat and pierce the ears of
+                        women and make their eyes sharp. Śāriputra, they don’t prick the ears of men
+                        but only those of women. Śāriputra, there are masses of parasites on women’s
+                        bodies. Known as the <emph>obstructors</emph>,<note place="end" xml:id="UT22084-066-003-63" index="24">
+                            Tentative translation. The Tibetan reads <foreign xml:lang="Bo-Ltn" type="term">a ba re ban</foreign>, which we have been unable to
+                            identify. Here we have chosen to read the word as a transcription of
+                                <foreign xml:lang="Sa-Ltn" type="term">āvaraṇa</foreign>, meaning
+                            “hindrance” or “obstruction.”
+                        </note> they incessantly eat women’s mouths. That is why the throats of
+                        women are flat, unlike those of men. As soon as women put food or drink in
+                        their mouths, the parasites are the first to eat. They then deposit their
+                        waste inside women’s breasts, making their breasts hang down. Whenever women
+                        become pregnant, the parasites also become pregnant. That is why there is so
+                        much milk in women’s breasts. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-64"/>
+                    <p tid="49">“Śāriputra, inside the part of women’s bodies where the womb lies, there are
+                        destructive parasites known as the <emph>mighty exterminators</emph>. They
+                        kill and eat the parasites known as the <emph>lickers</emph>. If they cannot
+                        find any of the parasites known as the lickers, they too will
+                        die. Pregnancy comes about from the death, and thus the absence, of those
+                        two types of parasites, in addition to the union of mother and father.
+                        Śāriputra, in the birth canal inside women’s bodies, there are four hosts of
+                        parasites that are known as the <emph>great lips</emph>, <ref cRef="F.32.b" type="folio"/> the <emph>lump concealers</emph>, the <emph>wind expellers</emph>, and
+                        the <emph>desire catchers</emph>. They incessantly eat at the bodies of
+                        women. Because of this, women are completely ablaze with afflictions, yet
+                        are never satisfied by indulging in their desires. Consequently, knowing
+                        that women have such great faults, the Thus-Gone One added additional rules
+                        to the fundamental precepts.<note place="end" xml:id="UT22084-066-003-65" index="25">Reading <foreign xml:lang="Bo-Ltn" type="term">dang bca’ ba</foreign> as <foreign xml:lang="Bo-Ltn" type="term">dang bcas pa</foreign>. When the
+                            female renunciate order was established, a number of additional precepts
+                            were added that ordained nuns must follow. These precepts, which
+                            subordinate female monastics to the supervision of the male ordained
+                            community, were most likely added to alleviate opposition in the male
+                            ordained community, and Indian society at large, to the inclusion of
+                            women in the order.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-66"/>
+                    <p tid="50">“Śāriputra, you should teach this Dharma discourse on the sections of Dharma
+                        over and over again to the four assemblies.<note place="end" xml:id="UT22084-066-003-67" index="26">
+                            This refers to the assemblies of monks, nuns, laymen, and
+                            laywomen.</note> Why? So that they will come to know that the body and
+                        the sense pleasures are to be despised. Śāriputra, knowing this body to be a
+                        fabrication, apart from immature, ordinary beings with no education, no one
+                        would continue clinging to the sense pleasures—it would be impossible.
+                        Śāriputra, that being the case, you should not be fond of this body. In
+                        particular, do not be attached to it.” Thus spoke the Blessed One. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-68"/>
+                    <p tid="51">After the Blissful One had uttered those words, the Teacher continued, saying
+                        the following:</p>
+                    <lg tid="52">
+                        <l>“These bodies that arise from filth</l>
+                        <l>Are always home to many creatures.</l>
+                        <l>Filled to the brim with urine and excrement,</l>
+                        <l>It is to these that immature beings cling.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-70"/>
+                    <lg tid="53">
+                        <l>“Monks and nuns,</l>
+                        <l>Laymen and laywomen, </l>
+                        <l>Upon hearing this, let go of their desire.</l>
+                        <l>Free from desire, they are liberated.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-71"/>
+                    <lg tid="54">
+                        <l>“To practitioners of the Dharma</l>
+                        <l>I did not teach these faults.</l>
+                        <l>It is to whomever indulges in desires</l>
+                        <l>That I explained these faults.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-72"/>
+                    <lg tid="55">
+                        <l>“Just as the Buddha has taught,</l>
+                        <l>Once those who fantasize upon seeing women</l>
+                        <l>Understand this genuine encouragement,</l>
+                        <l>Those wise ones will no longer have such thoughts.” </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-73"/>
+                    <p tid="56">After the Blessed One had spoken these words, venerable Śāriputra, together
+                        with the whole world and its gods, humans, and demigods, rejoiced and
+                        praised the teaching of the Blessed One.</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-130"/>
+                    <trailer tid="58">This concludes the Noble Great Vehicle Sūtra “<title xml:lang="en">The Sections of Dharma</title>.” <ref cRef="F.33.a" type="folio"/>
+                    </trailer> 
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="57">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-066-003-74"/>
+                    <p tid="64">The Indian scholar
+                        Prajñāvarman and the chief editor-translator, venerable Yeshé Dé,
+                        translated, edited, and finalized this work.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="59">Notes</head>
+                <div type="section">
+                    <list type="abbreviations">
+                        <head type="abbreviations" tid="60">Kangyur Editions:</head>
+                        <item xml:id="UT22084-066-003-75">
+                            <abbr>D</abbr>
+                            <expan>Degé</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-76">
+                            <abbr>K<hi rend="subscript">Y</hi>
+                            </abbr>
+                            <expan>Yongle</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-77">
+                            <abbr>J</abbr>
+                            <expan>Lithang</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-78">
+                            <abbr>K</abbr>
+                            <expan>Kangxi Peking</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-79">
+                            <abbr>N</abbr>
+                            <expan>Narthang</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-80">
+                            <abbr>C</abbr>
+                            <expan>Choné </expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-81">
+                            <abbr>U</abbr>
+                            <expan>Urga</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-82">
+                            <abbr>H</abbr>
+                            <expan>Lhasa (Zhol)</expan>
+                        </item>
+                        <item xml:id="UT22084-066-003-83">
+                            <abbr>S</abbr>
+                            <expan>Stok Palace </expan>
+                        </item>
+                    </list>
+                </div>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="61">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="62">Main Sources</head>
+                    <bibl xml:id="UT22084-066-003-84">
+                        <title xml:lang="Bo-Ltn">’phags pa chos kyi phung po zhes bya ba theg pa
+                            chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­dharma­skandha­nāma­mahāyāna­sūtra</title>). Toh 245, Degé
+                        Kangyur vol. 66 (mdo sde, za) , ff. 27b–33a. </bibl>
+                    <bibl xml:id="UT22084-066-003-85">
+                        <title xml:lang="Bo-Ltn">’phags pa chos kyi phung po zhes bya ba theg pa
+                            chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­dharma­skandha­nāma­mahāyāna­sūtra</title>).  bka’ ’gyur
+                        (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa
+                        zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka
+                        Collation Bureau of the China Tibetology Research Center). 108 volumes.
+                        Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing
+                        House), 2006–2009, vol. 66, pp. 73–85. </bibl>
+                    <bibl xml:id="UT22084-066-003-86">
+                        <title xml:lang="Bo-Ltn">’phags pa chos kyi phung po zhes bya ba theg pa
+                            chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­dharma­skandha­nāma­mahāyāna­sūtra</title>). Stok Palace Manuscript
+                        Kangyur, vol. 64 (mdo sde, pa), ff. 336b.1–344a.7. </bibl>
+                    </div>
+                <div type="section">
+                    <head type="section" tid="63">Secondary Sources </head>
+                    <bibl xml:id="UT22084-066-003-94">
+                        <title xml:lang="Bo-Ltn">Denkarma</title> (<title xml:lang="Bo-Ltn">pho brang stod thang ldan dkar gyi chos kyi ’gyur ro cog gi dkar chag</title>), Toh. 4364. Degé Tengyur, vol. 206 (sna tshogs, jo), F.294.b–310.a. (See also Yoshimura below).<!--Reference Toh 4364-->
+                    </bibl>
+                    <bibl xml:id="UT22084-066-003-87"> Boucher, Daniel. <title xml:lang="en">Bodhisattvas of Forest and the
+                            Formation of the Mahāyāna</title>. Honolulu: University of Hawaii Press,
+                        2008. </bibl>
+                    <bibl xml:id="UT22084-066-003-88">Cabezón, José. <title xml:lang="en">Sexuality in Classical South Asian
+                            Buddhism</title>. Somerville: Wisdom Publications, 2017. </bibl>
+                    <bibl xml:id="UT22084-066-003-89">Chapple, Christopher Key. “Abhidharma as Paradigm for Practice.” In
+                            <title xml:lang="en">Pāli Buddhism</title>, edited by Frank J. Hoffman
+                        and Deegalle Mahinda, 79–101. New York: Routledge, 2013. </bibl>
+                    <bibl xml:id="UT22084-066-003-135">Dharmachakra Translation Committee. <title xml:lang="en">The Noble Application of 
+                        Mindfulness of the Sacred Dharma</title> (Toh 287). 
+                        84000, forthcoming 2020. </bibl>
+                    <bibl xml:id="UT22084-066-003-90">Engle, Artemus B. <title xml:lang="en">The Inner Science of Buddhist
+                            Practice: Vasubandhu’s Summary of the Five Heaps with Commentary by
+                            Sthiramati</title>. Ithaca: Snow Lion, 2009. </bibl>
+                    <bibl xml:id="UT22084-066-003-91"> Halkias, Georgios T. “Tibetan Buddhism Registered: A Catalogue from the
+                        Imperial Court of ’Phang Thang.” <title xml:lang="en">The Eastern
+                            Buddhist</title> 36:1–2 (2004): 46–105. </bibl>
+                    <bibl xml:id="UT22084-066-003-92">Harrison, Paul and Helmut Eimer. “Kanjur and Tanjur Sigla: A Proposal for
+                        Standardization.” In <title xml:lang="en">Transmission of the Tibetan Canon:
+                            Papers Presented at a Panel of the 7th Seminar of the International
+                            Association for Tibetan Studies</title>, Graz 1995, edited by Helmut Eimer, xi–xiv. Graz: Verlag der
+                        Österreichischen Akademie der Wissenschaften, 1997. </bibl>
+                    <bibl xml:id="UT22084-066-003-136">Jamspal, Lozang, and Fischer, Kaia. <title xml:lang="en">Foundations of the Minor Monastic 
+                        Discipline (Toh 6)</title>. 84000, forthcoming. </bibl>
+                    <bibl xml:id="UT22084-066-003-131">Miller, Robert. <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/toh1-1.html">The Chapter on Going Forth</ref>
+                        </title>. 84000: Translating the Words of the Buddha, 2018. </bibl>
+                    <bibl xml:id="UT22084-066-003-93">Nattier, Jan. <title xml:lang="en">A Few Good Men</title>. Honolulu:
+                        University of Hawaii Press, 2003. </bibl>
+                    <bibl xml:id="UT22084-066-003-95">Pagel, Ulrich. <title xml:lang="en">The Bodhisattvapiṭaka</title>.
+                        Buddhica Britannica, Series Continua 5. Tring: The Institute of Buddhist
+                        Studies, 1995. </bibl>
+                    <bibl xml:id="UT22084-066-003-96">Potter, Karl H., Robert E. Buswell, and Padmanabh S. Jaini. <title xml:lang="en">Encyclopedia of Indian Philosophies Vol. VII: Abhidharma
+                            Buddhism to 150 A.D</title>.  Delhi: Motilal Banarsidass, 2011.</bibl>
+                    <bibl xml:id="UT22084-066-003-97">Schopen, Gregory. <title xml:lang="en">Figments and Fragments of Mahāyāna
+                            Buddhism in India: More Collected Papers</title>. Honolulu: University
+                        of Hawaii Press, 2005. </bibl>
+                    <bibl xml:id="UT22084-066-003-98">Yoshimura, Shyuki. <title xml:lang="en">The Denkar-ma: An Oldest
+                            Catalogue of the Tibetan Buddhist Canons, with introductory
+                            notes</title>. Kyoto: Ryukoku University, 1950. (See also Denkarma above).</bibl>
+                    <bibl xml:id="UT22084-066-003-99">Zysk, Kenneth G. <title xml:lang="en">Religious Medicine: The History and
+                            Evolution of Indian Medicine</title>. New Brunswick, New Jersey:
+                        Transaction Publishers, 1993.</bibl>
+                </div>
+            </div>
+                <div type="glossary">
+                    <list type="glossary">
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-100">
+                                <term>aggregates</term>
+                                <term xml:lang="Bo-Ltn">phung po </term>
+                                <term xml:lang="bo">ཕུང་པོ།</term>
+                                <term xml:lang="Sa-Ltn">skandha</term>
+                                <term type="definition">The five <term type="ignore">aggregates</term> of form, sensation,
+                                    perception, formation, and consciousness. On the individual
+                                    level the five <term type="ignore">aggregates</term> refer to the basis upon which the mistaken idea of a self is projected. </term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-101">
+                                <term>birthlessness</term>
+                                <term xml:lang="Bo-Ltn">skye ba med pa </term>
+                                <term xml:lang="bo">སྐྱེ་བ་མེད་པ།</term>
+                                <term xml:lang="Sa-Ltn">ajātakatvā</term>
+                                <term type="definition">The state of not having arisen, begun, or been born.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-102">
+                                <term>ṣaṇḍha</term>
+                                <term xml:lang="Bo-Ltn">za ma </term>
+                                <term xml:lang="bo">ཟ་མ།</term>
+                                <term xml:lang="Sa-Ltn">ṣaṇḍha</term>
+                                <term type="definition">Someone whose sexual organs (or part of
+                                    them) have been removed, or who is sexually impotent for some
+                                    other reason; sometimes synonym to <foreign xml:lang="Bo-Ltn">ma
+                                        ning</foreign> (see entry “paṇḍaka”).</term>
+                                <term type="definition">See also <ptr target="#UT22084-066-003-29"/>.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-103">
+                                <term>monk</term>
+                                <term xml:lang="Bo-Ltn">dge slong</term>
+                                <term xml:lang="bo">དགེ་སློང་།</term>
+                                <term xml:lang="Sa-Ltn">bhikṣu</term>
+                                <term type="definition">A fully ordained male practitioner.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-129">
+                                <term>nun</term>
+                                <term xml:lang="Bo-Ltn">dge slong ma</term>
+                                <term xml:lang="bo">དགེ་སློང་མ།</term>
+                                <term xml:lang="Sa-Ltn">bhikṣuṇī</term>
+                                <term type="definition">A fully ordained female practitioner.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-104">
+                                <term>paṇḍaka</term>
+                                <term xml:lang="Bo-Ltn">ma ning </term>
+                                <term xml:lang="bo">མ་ནིང་།</term>
+                                <term xml:lang="Sa-Ltn">paṇḍaka</term>
+                                <term type="definition">A person who either has no sexual organs,
+                                    degenerated sexual organs, or the organs of both sexes.</term>
+                                <term type="definition">See also <ptr target="#UT22084-066-003-27"/>.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-105">
+                                <term>pure conduct</term>
+                                <term xml:lang="Bo-Ltn">tshangs par spyad pa spyod pa </term>
+                                <term xml:lang="bo">ཚངས་པར་སྤྱད་པ་སྤྱོད་པ།</term>
+                                <term xml:lang="Sa-Ltn">brahmacarya </term>
+                                <term type="definition">The practice of celibacy or a chaste sexual
+                                    behavior; this lifestyle also entails different spiritual
+                                    practices.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-106">
+                                <term>lump concealers</term>
+                                <term xml:lang="Bo-Ltn">gong bu sped </term>
+                                <term xml:lang="bo">གོང་བུ་སྤེད།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">One of the four parasites that are said to be inside the birth
+                                    canals of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-107">
+                                <term>desire catchers</term>
+                                <term xml:lang="Bo-Ltn">’dod len </term>
+                                <term xml:lang="bo">འདོད་ལེན།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">One of the four parasites that are said to be inside the birth
+                                    canals of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-108">
+                                <term>eaters</term>
+                                <term xml:lang="Bo-Ltn">za bar byed </term>
+                                <term xml:lang="bo">ཟ་བར་བྱེད།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">The parasites that are said to live in the
+                                    ears of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-109">
+                                <term>great lips</term>
+                                <term xml:lang="Bo-Ltn">mchu mchog </term>
+                                <term xml:lang="bo">མཆུ་མཆོག</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">One of the four parasites that are said to be inside the birth
+                                    canals of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-110">
+                                <term>lickers</term>
+                                <term xml:lang="Bo-Ltn">rab tu ldag byed </term>
+                                <term xml:lang="bo">རབ་ཏུ་ལྡག་བྱེད།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">Parasites that are said to live inside
+                                    women’s wombs.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-111">
+                                <term>mighty exterminators</term>
+                                <term xml:lang="Bo-Ltn">zad par byed pa dpa’ ba </term>
+                                <term xml:lang="bo">ཟད་པར་བྱེད་པ་དཔའ་བ།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">Parasites that are said to live inside
+                                    women’s wombs.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-112">
+                                <term>robbers</term>
+                                <term xml:lang="Bo-Ltn">phrog byed </term>
+                                <term xml:lang="bo">ཕྲོག་བྱེད།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">The parasites that are said to live in the
+                                    brains of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-113">
+                                <term>mouth terminators</term>
+                                <term xml:lang="Bo-Ltn">kha rdzogs </term>
+                                <term xml:lang="bo">ཁ་རྫོགས།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">Parasites that are said to live in the noses
+                                    of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-114">
+                                <term>wind expellers</term>
+                                <term xml:lang="Bo-Ltn">rlung ’byin </term>
+                                <term xml:lang="bo">རླུང་འབྱིན།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">One of the four parasites that are said to be inside the birth
+                                    canals of women.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-115">
+                                <term>yearners</term>
+                                <term xml:lang="Bo-Ltn">zhen byed </term>
+                                <term xml:lang="bo">ཞེན་བྱེད།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">Parasites that are said to live on the sides
+                                    of women’s necks and heads.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-116">
+                                <term>Dharma discourse</term>
+                                <term xml:lang="Bo-Ltn">chos kyi rnam grangs </term>
+                                <term xml:lang="bo">ཆོས་ཀྱི་རྣམ་གྲངས།</term>
+                                <term xml:lang="Sa-Ltn">dharmaparyāya</term>
+                                </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-117">
+                                <term>hearer</term>
+                                <term xml:lang="Bo-Ltn">nyan thos </term>
+                                <term xml:lang="bo">ཉན་ཐོས།</term>
+                                <term xml:lang="Sa-Ltn">śrāvaka</term>
+                                <term type="definition">Someone who practices according to the
+                                    Vehicle of the <term type="ignore">Hearers</term> (those who hear the teachings from
+                                    others). </term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-118">
+                                <term>worthy one</term>
+                                <term xml:lang="Bo-Ltn">dgra bcom pa </term>
+                                <term xml:lang="bo">དགྲ་བཅོམ་པ།</term>
+                                <term xml:lang="Sa-Ltn">arhant</term>
+                                <term type="definition">The fourth of the four results attainable by
+                                    a hearer. One who has eliminated all afflictions and personally
+                                    ended the cycle of rebirth.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-066-003-119">
+                                <term>parasite</term>
+                                <term xml:lang="Bo-Ltn">srin bu </term>
+                                <term xml:lang="bo">སྲིན་བུ།</term>
+                                <term xml:lang="Sa-Ltn">krimi</term>
+                                <term xml:lang="Sa-Ltn">kṛmi</term>
+                                <term type="definition">According to classical Indian medical
+                                    literature, the human body is filled with various parasitic
+                                    beings (literally “worms”) that live off the body.</term>
+                                <term type="definition">See also <ptr target="#UT22084-066-003-42"/>.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-120">
+                                <term>Ānanda</term>
+                                <term xml:lang="Bo-Ltn">kun dga’ bo </term>
+                                <term xml:lang="bo">ཀུན་དགའ་བོ།</term>
+                                <term xml:lang="Sa-Ltn">Ānanda</term>
+                                <term type="definition">Attendant of the Buddha and the one who is
+                                    said to have memorized the sūtras.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-121">
+                                <term>Mahākāśyapa</term>
+                                <term xml:lang="Bo-Ltn">’od srung chen po </term>
+                                <term xml:lang="bo">འོད་སྲུང་ཆེན་པོ།</term>
+                                <term xml:lang="Sa-Ltn">Mahākāśyapa</term>
+                                <term type="definition">One of the Buddha’s foremost
+                                    disciples.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-122">
+                                <term>Mahāmaudgalyāyana</term>
+                                <term xml:lang="Bo-Ltn">maud gal gyi bu </term>
+                                <term xml:lang="bo">མཽད་གལ་གྱི་བུ།</term>
+                                <term xml:lang="Sa-Ltn">Maudgalyāyana</term>
+                                <term type="definition">One of the Buddha’s foremost
+                                    disciples.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-123">
+                                <term>Prajñāvarman</term>
+                                <term xml:lang="Bo-Ltn">pra dz+nyA bar ma </term>
+                                <term xml:lang="bo">པྲ་ཛྙཱ་བར་མ།</term>
+                                <term xml:lang="Sa-Ltn">Prajñāvarman </term>
+                                <term type="definition">An Indian Bengali paṇḍita resident in Tibet
+                                    during the late eighth and early ninth centuries. Arriving in Tibet
+                                    on an invitation from the Tibetan king, he assisted in the
+                                    translation of numerous canonical scriptures. He is also the
+                                    author of a few philosophical commentaries contained in the
+                                    Tibetan Tengyur (<foreign xml:lang="Bo-Ltn">bstan ’gyur</foreign>)
+                                    collection.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-124">
+                                <term>Rāhula</term>
+                                <term xml:lang="Bo-Ltn">sgra gcan zin </term>
+                                <term xml:lang="bo">སྒྲ་གཅན་ཟིན།</term>
+                                <term xml:lang="Sa-Ltn">Rāhula</term>
+                                <term type="definition">
+                                    <term type="ignore">Rāhula</term> is the name of Śākyamuni Buddha’s
+                                    physical son. Edgerton reports from different sources that he
+                                    miraculously descended from Tuṣita heaven into his mother’s
+                                    womb, and insisted on becoming a monk when he found out that the
+                                    Buddha was his father. He was ordained by Śāriputra.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-125">
+                                <term>Śāriputra</term>
+                                <term xml:lang="Bo-Ltn">sha ri’i bu </term>
+                                <term xml:lang="bo">ཤ་རིའི་བུ།</term>
+                                <term xml:lang="Sa-Ltn">Śāriputra</term>
+                                <term type="definition">One of the closest disciples of the Buddha,
+                                    known for his pure observance of discipline.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="person" xml:id="UT22084-066-003-126">
+                                <term>Yeshé Dé</term>
+                                <term xml:lang="Bo-Ltn">ye shes sde </term>
+                                <term xml:lang="bo">ཡེ་ཤེས་སྡེ།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">A prolific Tibetan translator active during
+                                    the late eighth and early ninth centuries.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="place" xml:id="UT22084-066-003-127">
+                                <term>Kapilavastu</term>
+                                <term xml:lang="Bo-Ltn">ser skya gnas </term>
+                                <term xml:lang="bo">སེར་སྐྱ་གནས།</term>
+                                <term xml:lang="Sa-Ltn">Kapilavastu</term>
+                                <term type="definition">The city in which Buddha Śākyamuni was born,
+                                    located in present day southern Nepal.</term>
+                            </gloss>
+                        </item>
+                        <item>
+                            <gloss type="place" xml:id="UT22084-066-003-128">
+                                <term>Nyagrodha Park</term>
+                                <term xml:lang="Bo-Ltn">shing nya gro dha’i kun dga’ ra ba </term>
+                                <term xml:lang="bo">ཤིང་ཉ་གྲོ་དྷའི་ཀུན་དགའ་ར་བ།</term>
+                                <term xml:lang="Sa-Ltn">Nyagrodhārāma</term>
+                                <term type="definition">A grove of banyan trees (Skt. <foreign xml:lang="Sa-Ltn">nyagrodha</foreign>, Tib. <foreign xml:lang="Bo-Ltn">nya
+                                        gro dha</foreign>) near Kapilavastu where
+                                        the Buddha sometimes took residence. It was a gift to the
+                                        Buddhist community by King Śuddhodana, the father of the
+                                        Buddha.</term>
+                            </gloss>
+                        </item>
+                    </list>
+                </div>
+            
+        </back>
+    </text>
+</TEI>

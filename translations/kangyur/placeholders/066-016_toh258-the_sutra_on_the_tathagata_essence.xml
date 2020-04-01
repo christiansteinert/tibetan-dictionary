@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">de bzhin gshegs pa'i snying po'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">tathāgatagarbhasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Tathāgata Essence</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa de bzhin gshegs pa'i snying po zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryatathāgatagarbha­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-14"/>
+            <author role="translatorEng" ref="contributors.xml#person-99">Thomas Cruijsen</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-066-016"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh258" type="text">
+                    <ref>Toh 258</ref>
+                    <biblScope>vol.66, ff.245v-259v(pp.490-518)</biblScope>
+                    <location work="UT4CZ5369" count-pages="29">
+                        <volume number="66" start-page="490" end-page="518"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11910" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-29T12:44:44.68Z" user="admin">29/11/2019 12:44:44</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-29T12:44:41.051Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

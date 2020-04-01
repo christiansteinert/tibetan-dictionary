@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">gser 'od mchog tu rnam par rgyal ba'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn"/>
+                <title type="mainTitle" xml:lang="en">The Sūtra, The Supremely Victorious Golden Light</title>
+                <title type="otherTitle" xml:lang="zh">金光明最勝王經</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa gser 'od dam pa mchog tu rnam par rgyal ba'i mdo sde'i rgyal po zhes bya ba theg pa chen po'i mdo/</title>
+                <title type="otherTitle" xml:lang="en">[Translated from the Chinese]</title>
+                <author role="translatorMain" ref="contributors.xml#team-22"/>
+            <sponsor ref="sponsors.xml#sponsor-181">Zhang Dada</sponsor>
+                <author role="translatorEng" ref="contributors.xml#person-142">Dr. Peter Alan Roberts</author>
+                <editor role="reviser" ref="contributors.xml#person-143">Emily Bower</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-089-012"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh555" type="text">
+                    <ref>Toh 555</ref>
+                    <biblScope>vol.89, ff.19r-151r(pp.37-301)</biblScope>
+                    <location count-pages="265">
+                        <start volume="89" page="39"/>
+                        <end volume="89" page="303"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12282" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:49:31 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

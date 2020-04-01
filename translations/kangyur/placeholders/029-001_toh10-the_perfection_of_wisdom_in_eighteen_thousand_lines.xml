@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">sher phyin khri brgyad stong pa/ \(khri brgyad/\)</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">aṣṭādaśasāhasrikāprajñāpāramitā</title>
+                <title type="mainTitle" xml:lang="en">The Perfection of Wisdom in Eighteen Thousand Lines</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa shes rab kyi pha rol tu phyin pa khri brgyad stong pa zhes bya ba theg pa chen po'i mdo/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryāṣṭādaśasāhasrikā­prajñāpāramitā­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref=""/>
+            <author role="translatorEng" ref="contributors.xml#person-211">Dr. Gareth Sparham</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-029-001"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh10" type="text">
+                    <ref>Toh 10</ref>
+                    <biblScope/>
+                    <location work="UT4CZ5369" count-pages="1611">
+                        <volume number="29" start-page="2" end-page="599"/>
+                        <volume number="30" start-page="2" end-page="607"/>
+                        <volume number="31" start-page="2" end-page="412"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14665" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11523" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-20T08:52:03.232Z" user="admin">20/11/2019 08:52:03</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-20T08:51:58.292Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

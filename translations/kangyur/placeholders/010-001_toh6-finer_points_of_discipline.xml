@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">'dul ba phran tshegs kyi gzhi/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vinayakṣudrakavastu</title>
+                <title type="mainTitle" xml:lang="en">Finer Points of Discipline</title>
+                <title type="otherTitle" xml:lang="zh">根本說一切有部毘奈耶雜事</title>
+                <author role="translatorMain" ref="contributors.xml#team-33"/>
+                <sponsor ref="sponsors.xml#sponsor-40">胡作胜先生、王爱莲女士以及胡懿真小姐</sponsor>
+            <author role="translatorEng" ref="contributors.xml#person-199">Dr. Geshe Lozang Jamspal</author>
+                <author role="translatorEng" ref="contributors.xml#person-200">Thomas Kyle Fischer</author>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-010-001"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh6" type="text">
+                    <ref>Toh 6</ref>
+                    <biblScope/>
+                    <author role="translatorTib">a. vidyakaraprabha</author>
+                    <author role="translatorTib">dharmasribhadra</author>
+                    <author role="translatorTib">dpal 'byor</author>
+                    <location count-pages="1280">
+                        <start volume="10" page="4"/>
+                        <end volume="11" page="667"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11495" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11514" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:58:31 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by 胡作胜先生、王爱莲女士以及胡懿真小姐</p>
+            </div>
+        </front>
+    </text>
+</TEI>

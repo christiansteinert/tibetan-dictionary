@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rnga bo che chen po'i le'u'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahābherīhārakaparivartasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Chapter on [Tib:] the Great Drum [Skt:] the Bearer of the Great Drum</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa rnga bo che chen po'i le'u zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryamahābherīhāraka­parivarta­nāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-20"/>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-063-003"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh222" type="text">
+                    <ref>Toh 222</ref>
+                    <biblScope>vol.63, ff.84v-126v(pp.168-252)</biblScope>
+                    <location count-pages="85">
+                        <start volume="63" page="170"/>
+                        <end volume="63" page="254"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11864" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:54:43 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

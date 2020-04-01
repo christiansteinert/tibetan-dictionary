@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>84000 customization of TEI</title>
+                <author>Jeff Wallman</author>
+            </titleStmt>
+            <publicationStmt>
+                <p>for use by whoever wants it</p>
+            </publicationStmt>
+            <notesStmt>
+                <note type="ns">http://84000.co/schemas/TEI</note>
+            </notesStmt>
+            <sourceDesc>
+                <p>created on Monday 03rd March 2014 09:21:12 PM</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <divGen type="toc"/>
+        </front>
+        <body>
+            <p/>
+            <schemaSpec ident="84000-ODD" docLang="en" prefix="" xml:lang="en">
+                <moduleRef key="core" except=""/>
+                <moduleRef key="tei" except=""/>
+                <moduleRef key="header" except=""/>
+                <moduleRef key="textstructure" except=""/>
+                <elementSpec ident="title" module="core" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <desc>classifies the title according to the TBRC typology.</desc>
+                            <desc>classifies the title according to the 84000 typology.</desc>
+                            <valList type="closed" mode="replace">
+                                <valItem ident="mainTitle"/>
+                                <valItem ident="longTitle"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="head" module="core" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <desc>characterizes the element using the TBRC typology.</desc>
+                            <valList type="open" mode="replace">
+                                <valItem ident="bilbliographicalTitle"/>
+                                <valItem ident="titlePageTitle"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="div" module="textstructure" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <desc>These are the divs for 84000 translations - used in the front,
+                                body or back.</desc>
+                            <valList type="closed" mode="replace">
+                                <valItem ident="title"/>
+                                <valItem ident="rights"/>
+                                <valItem ident="contents"/>
+                                <valItem ident="summary"/>
+                                <valItem ident="introduction"/>
+                                <valItem ident="acknowledgement"/>
+                                <valItem ident="listBibl"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <moduleRef key="msdescription" except=""/>
+                <elementSpec ident="distinct" module="core" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <desc>specifies the sublanguage or register to which the word or phrase
+                                is being assigned. For 84000, these are distinct repeating modules
+                                of the Buddha's Word. </desc>
+                            <valList type="open" mode="replace">
+                                <valItem ident="smile"/>
+                                <valItem ident="earthquake"/>
+                                <valItem ident="homage"/>
+                                <valItem ident="finalPraise"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+                <elementSpec ident="foreign" module="core" mode="change">
+                    <attList>
+                        <attDef ident="type" mode="change">
+                            <desc>These are the possible type values for the 84000 foreign element,
+                                specifying the type of foreign element being encoded</desc>
+                            <valList type="closed">
+                                <valItem ident="quote"/>
+                                <valItem ident=" mantra"/>
+                                <valItem ident="term"/>
+                                <valItem ident="horse"/>
+                            </valList>
+                        </attDef>
+                    </attList>
+                </elementSpec>
+            </schemaSpec>
+        </body>
+    </text>
+</TEI>

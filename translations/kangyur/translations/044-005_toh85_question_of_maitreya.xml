@@ -1,0 +1,1666 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">byams pas zhus pa</title>
+                <title type="mainTitle" xml:lang="bo">བྱམས་པས་ཞུས་པ།</title>
+                <title type="mainTitle" xml:lang="en">The Question of Maitreya</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Maitreya­paripṛcchā</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་བྱམས་པས་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “The Question of Maitreya”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­maitreya­paripṛcchā­nāma­mahā­yāna­sūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-16">
+                    Translated by Karen Liljenberg<lb/> under the patronage and supervision of 84000:
+                    Translating the Words of the Buddha.</author>
+                <author role="translatorEng" ref="contributors.xml#person-115">Dr. Karen Liljenberg</author>
+                <consultant role="advisor" ref="contributors.xml#person-116">Dr. Ulrich Pagel</consultant>
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-253">Michael Engle</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-31">Casey Kemp</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+                <editor role="associateEditor" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="proofreader" ref="contributors.xml#person-249">Konchog Norbu</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-276">Sara McClintock</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 1.22 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-044-005"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means that these ids diverge slightly from the standard logic.</note>
+                <date>2016-09-16</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh85" type="text">
+                    <ref>Toh 85</ref>
+                    <biblScope>Degé Kangyur, vol. 44 (dkon brtsegs, cha), folios 104.b–116.b</biblScope>
+                    <author role="translatorTib">Jinamitra </author>
+                    <author role="translatorTib">Surendrabodhi</author>
+                    <location count-pages="25">
+                        <start volume="44" page="210"/>
+                        <end volume="44" page="234"/>
+                        
+                    </location>
+                    <idno parent-id="O1JC114941JC14667"/>
+                <idno source-id="O1JC114941JC11630" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-07-26T10:31:17.369Z" user="admin">26/07/2019 10:31:17</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-03-15T08:56:02.767Z" user="john">v 1.02 2016</note>
+            <note type="updated" update="text-version" value="v 1.1" date-time="2019-03-15T09:45:13.349Z" user="john">v 1.1 2016</note>
+                <note type="updated" update="text-version" value="v 1.13" date-time="2019-06-18T15:49:26.988Z" user="celso">v 1.13 2019</note>
+                <note type="updated" update="text-version" value="v 1.2" date-time="2019-07-21T08:42:26.017Z" user="john">v 1.2 2019</note>
+                <note type="updated" update="text-version" value="v 1.21" date-time="2019-07-21T09:11:43.822Z" user="john">v 1.21 2019</note>
+                <note type="updated" update="text-version" value="v 1.22" date-time="2019-07-26T10:31:14.289Z" user="laura">v 1.22 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="127">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-044-005-1"/>
+                <p tid="1">In <title xml:lang="en">The Question of Maitreya</title>, the bodhisattva Maitreya asks the Buddha what
+                    qualities a bodhisattva needs to attain enlightenment quickly. The Buddha outlines several sets of qualities,
+                    foremost among them the altruistic intention of perfect bodhicitta. The Buddha then recounts to Ānanda how, in
+                    a former life, Maitreya revered a previous Buddha and, wishing to become just like him, at once realized that
+                    all phenomena are unproduced. Ānanda asks why Maitreya did not become a buddha sooner, and in answer the
+                    Buddha compares Maitreya’s bodhisattva career with his own, listing further sets of qualities that
+                    differentiate them and recounting examples of the hardships he himself faced in previous lives. Maitreya, on
+                    the other hand, has followed the easy bodhisattva vehicle using its skillful means, such as the seven branch
+                    practice and the training in the six perfections; the aspirations he thus made are set out in the famous
+                    “Prayer of Maitreya” for which this sūtra is perhaps best known. The Buddha declares that Maitreya will become
+                    enlightened when sentient beings have fewer negative emotions, in contrast to the ignorant and turbulent
+                    beings he himself vowed to help. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="128">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-044-005-2"/>
+                <p tid="2">This sūtra was translated by Dr. Karen Liljenberg, with Dr. Ulrich Pagel acting as consultant. </p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="129">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-044-005-3"/>
+                    <p tid="4">
+                        <title xml:lang="en">The Question of Maitreya</title> (<title xml:lang="Sa-Ltn">Maitreya­paripṛcchā</title>),<note place="end" index="1" xml:id="UT22084-044-005-200"> In D this
+                            title, included within the text, is preceded by this introductory sentence: “From <title xml:lang="en">The Noble Dharma Discourse, the Great Heap of Jewels</title> in one hundred thousand sections, section 41: ‘The Noble Elucidation of the Question of Maitreya’ in one fascicle” (<foreign xml:lang="Bo-Ltn">’phags pa dkon mchog brtsegs pa chen
+                                po’i chos kyi rnam grangs le’u stong phrag brgya pa las le’u bzhi bcu rtsa gcig pa ste / ’phags pa
+                                byams pas zhus pa lung bstan pa / bam po gcig pa</foreign>).</note> like most of the sūtras that
+                        comprise the Ratnakūṭa collection, was translated into Tibetan from a
+                        Sanskrit original that is now lost, but that may have dated back as far as the first or second centuries <hi rend="small-caps">ce</hi>,
+                        i.e., several centuries before the collection itself was compiled. Apart from the Tibetan Kangyur version,
+                        translated in the ninth century, and a fragment in Sanskrit found in Central Asia,<note place="end" index="2" xml:id="UT22084-044-005-201">A fragment of the Stein collection, published in 1911 by Louis
+                            de La Vallée Poussin, was identified as part of this sūtra (corresponding to D, F.108.b–110.a) by
+                            Hisashi Matsumura in 1993 (see bibliography).</note> the sūtra is extant only in an earlier Chinese
+                        translation.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-4"/>
+                    <p tid="5">Both the work translated here and the work that follows it in the collection, <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title>,<note place="end" index="3" xml:id="UT22084-044-005-202">They are sūtra numbers 41 and 42 in the Tibetan version of the Ratnakūṭa collection, but are numbered 85 and 86 respectively in the
+                            Tōhoku catalogue of the Degé Kangyur as a whole.</note> focus on the important figure of the
+                        bodhisattva Maitreya, who is generally accepted as destined to be the future Buddha of this
+                        world-system.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-5"/>
+                    <p tid="6">In <title xml:lang="en">The Question of Maitreya</title>, the Buddha predicts that Maitreya will
+                        attain enlightenment due to having applied the skillful means of the Bodhisattva Vehicle (<foreign type="term" xml:lang="Sa-Ltn">Bodhisattvayāna</foreign>), a synonym for the Mahāyāna. This vehicle,
+                        its entry, and its path are described as “easy,” in contrast to the difficulties encountered by the Buddha
+                        himself. His hardship is detailed in a passage that is unusual for its portrayal of the harsh rejection of
+                        the Buddha and his teachings by some of his contemporaries.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-6"/>
+                    <p tid="7">The sūtra’s stories of the Buddha’s great sacrifices in three of his former lives derive from
+                        earlier Jātaka literature. Although influential to some extent in forming the ideal of the bodhisattva,
+                        such supreme heroic acts were doubtless too daunting for most people. The reader is led to infer that by
+                        following the example of Maitreya future bodhisattvas will be able to attain enlightenment with relative
+                        ease. Thus, the sūtra implicitly promotes the Mahāyāna, without devaluing earlier Buddhist traditions.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-7"/>
+                    <p tid="8">The sūtra is probably best known for an aspiration prayer in verse that, the Buddha tells Ānanda,
+                        was used by Maitreya six times daily as he was training on the bodhisattva path (F.114.a–F.115.a, see
+                        milestones <ptr target="#UT22084-044-005-77"/><!-- 1.67-->–<ptr target="#UT22084-044-005-100"/><!--1.90-->). This prayer is widely known as <title xml:lang="en">The Prayer of Maitreya</title> (<title xml:lang="Bo-Ltn">byams pa’i smon lam</title>) or <title xml:lang="en">The Sovereign Prayer of
+                            Maitreya</title> (<title xml:lang="Sa-Ltn">Maitreya­praṇidhana­rāja</title>, <title xml:lang="Bo-Ltn">byams pa’i smon lam gyi rgyal po</title>); at least in Tibetan Buddhism, its importance as a general
+                        Mahāyāna aspiration prayer is perhaps second only to Samantabhadra’s <title xml:lang="en">Prayer of Good
+                            Action</title> (<title xml:lang="Bo-Ltn">bzang spyod smon lam</title>, from the <title xml:lang="Sa-Ltn">Gaṇḍavyūhasūtra</title>), and it is recited daily in many monasteries. The verses
+                        are also found as an independent text (but with this sūtra mentioned in the colophon as their source) both
+                        in the Dhāraṇī section of the Kangyur (Toh 1096), and in the Tengyur (Toh 4378). Although no Indian
+                        commentaries on this prayer are known, it seems to have been recognized as a distinct feature of the sūtra
+                        at least as far back as the early translation period, as evidenced by the sūtra’s description in the
+                        Phangthangma catalogue (<title xml:lang="Bo-Ltn">dkar chag ’phang thang ma</title>) as “the longer <title xml:lang="en">Noble [Sūtra] of the Question of Maitreya</title> containing the aspiration” (<title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa chen po smon lam can</title>). It is also, presumably,
+                        the “Former Prayer that is Truly Noble” that the Buddha gives Ānanda as an alternative title for the sūtra
+                        (see 1.95). The prayer is the topic of several commentaries in the Tibetan literature, notably those of
+                        Shākya Chokden (<foreign xml:lang="Bo-Ltn">shA kya mchog ldan</foreign>, 1428-1507); Drukpa Padma Karpo
+                            (<foreign xml:lang="Bo-Ltn">’brug pa pad ma dkar po</foreign>, 1527-1592); Tāranātha (<foreign xml:lang="Bo-Ltn">tA ra nA tha</foreign>, 1575-1634), who adds comments on the significance of the
+                        whole sūtra; Choné Trakpa Shedrup (<foreign xml:lang="Bo-Ltn">co ne grags pa bshad sgrub</foreign>,
+                        1675-1748); Ngulchu Dharmabhadra (<foreign xml:lang="Bo-Ltn">dngul chu dhar ma bha dra</foreign>,
+                        1772-1851); and Kyedor Khenpo Ngawang Khedrup (<foreign xml:lang="Bo-Ltn">kye rdor mkhan po ngag dbang
+                            mkhas grub</foreign>, 1779-1838).</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-8"/>
+                    <p tid="9">It is difficult to determine the precise historical relationship of <title xml:lang="en">The
+                            Question of Maitreya</title> with the much shorter sūtra that follows it, <title xml:lang="en">The
+                            Question of Maitreya on the Eight Qualities</title> (Toh 86). Their themes are closely linked—in both,
+                        Maitreya questions the Buddha about the bodhisattvas’ qualities. However, their geographic settings
+                            differ: <title xml:lang="en">The Question of Maitreya</title> is delivered in a relatively obscure
+                        location, Mount Śuśumāra in the country of the Bhargas, while <title xml:lang="en">The Question of
+                            Maitreya on the Eight Qualities</title> is set on Vulture Peak Mountain near Rājagṛha, like many other
+                            <title xml:lang="Sa-Ltn">Ratnakūṭa</title> sūtras. The two texts also have different colophons. The
+                        translation of the longer sūtra is attributed to Jinamitra and Surendrabodhi, under the editorial
+                        supervision of Yeshé Dé, which would date its Tibetan translation to the early ninth century. <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title>, however, is said to have been
+                        translated by Jinamitra and Danaśila, while Yeshé Dé is said to have corrected it using the revised
+                        terminology (<foreign type="term" xml:lang="Bo-Ltn">skad gsar</foreign>). This may imply a slightly later
+                        date for this translation, but could also indicate the existence of an earlier Tibetan translation of
+                            <title xml:lang="en">The Question of Maitreya on the Eight Qualities</title> which required updating
+                        in its terminology.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-9"/>
+                    <p tid="10">Other sūtras in which previous lives of Maitreya are recounted include the <title xml:lang="Sa-Ltn">Saddharma­puṇḍarīka</title> (Toh 113),<note place="end" index="4" xml:id="UT22084-044-005-203">See <ref target="http://read.84000.co/translation/toh113.html#UT22084-051-001-291">Roberts and Bower (2018), chapter 1 (1.88)</ref>.</note>
+                        <title xml:lang="Sa-Ltn">Maitreya­praṣṭhāna</title> (Toh 198),<note place="end" index="5" xml:id="UT22084-044-005-204">See Dharmachakra Translation Committee (forthcoming)<!--Reference Toh 0198 F.111.a-->.</note> and <title xml:lang="Sa-Ltn">Suvarṇaprabhāsa</title> (Toh 556-7). The story of his obtaining the prophecy of his
+                        future buddhahood (<foreign type="term" xml:lang="Sa-Ltn">vyākaraṇa</foreign>) at the time of the Buddha
+                        Ratnaśikhin is told in the <title xml:lang="Sa-Ltn">Mūlasarvāstivāda-vinaya</title> (in the <title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>,<note place="end" index="6" xml:id="UT22084-044-005-205">See
+                            Yao (forthcoming)<!--Reference Toh 0001-6?-->.</note> the sixth chapter of the <title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh
+                        1)—the same account being found in the non-canonical <title xml:lang="Sa-Ltn">Divyāvadāna</title>
+                        collection—and in the <title xml:lang="Sa-Ltn">Maitreya­vyākaraṇa</title>, a text found in several
+                        Sanskrit manuscripts, in a Chinese translation, and in a Tibetan version in the Peking (P 1011) and
+                        Narthang Kangyurs, but not included in the Degé Kangyur.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-223"/>
+                    <p tid="11">These two sūtras in the Ratnakūṭa, which are both often simply called <title xml:lang="en">The
+                            Question of Maitreya</title>, are not to be confused with a third sūtra of the same name in the
+                        General Sūtra (<title xml:lang="Bo-Ltn">mdo sde</title>) section, Toh 149, a short work also set in
+                        Rajagṛha in which Maitreya asks a quite different question.</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-10"/>
+                    <p tid="12">The main Tibetan text used for the present translation was the Degé edition of the Kangyur. Other
+                        Tibetan editions were also consulted but no significant variations were found except for the single one
+                        noted. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="130">The Translation</head>
+                <head type="titleHon" tid="131">The Noble Mahāyāna Sūtra</head>
+                <head type="titleMain" tid="132">The Question of Maitreya</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-044-005-11"/>
+                    <p tid="13">
+                        <ref cRef="F.104.b"/> Homage to all the buddhas and bodhisattvas!</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-12"/>
+                    <p tid="14">Thus have I heard at one time. The Blessed One was staying in the Country of the Bhargas, on Mount
+                        Śuśumāra in a fearsome forest of wild animals, together with a great saṅgha of about 500 monks, eminent
+                        śrāvaka-elders who possessed clairvoyance. These included the omniscient venerable Kauṇḍinya, and the
+                        venerables Aśvajit, Vaṣpa, Mahānāman, Bhadrika, Vimala, Pūrṇa, Gavāṃpati, Mṛgaśiras, Uruvilva Kāśyapa,
+                        Nadīkāśyapa, Gayākāśyapa, Jaṅghā Kāśyapa, Mahākāśyapa, Amogharāja, Sumati, Śāriputra, the eminent
+                        Maudgalyāyana, Parvatarāja, Nanda, Upananda, Ānanda, Rāhula, and so on. <ref cRef="F.105.a"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-13"/>
+                    <p tid="15">Maitreya and 10,000 other bodhisattva mahāsattvas endowed with clairvoyance had also assembled
+                        there. These included the bodhisattvas Vardhamāna­mati, Sumati, Sthiramati, Viśālamati, Pratibhāna­kūṭa,
+                        Avalokiteśvara, Mahā­sthāma­prāpta, Kusumaśrī, Mañjuśrī, Abhi­jñā­puṣpa­supari­pūrṇa,
+                        An­upalambha­manasi­kāra, Prasādavat, Ratnaketu, Indradeva, Varuṇadeva,<note place="end" index="7" xml:id="UT22084-044-005-206">This inclusion of Indradeva and Varuṇadeva, Vedic deities, among the
+                            assembly of attendant bodhisattvas is unusual. It is, however, paralleled in another Ratnakuṭa sūtra,
+                            the <title xml:lang="Sa-Ltn">Tathā­gata­cintya­guhya­nirdeśa</title> (Toh 47).</note> Mṛdusvara,
+                        Kṣetra­viśodhana, Merukūṭa, Prati­bhāna­saṃpad, Indraśrī, Nimiṃdhara, Scourer of the Hell-Dwellers,
+                        Abandoner of Unfavorable Rebirths, Ratnakesarin, and others. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-14"/>
+                    <p tid="16">The Blessed One, surrounded by this retinue of many hundreds of thousands, surveyed those before
+                        him, and taught the Dharma. At that time, the bodhisattva Maitreya was present in that very retinue. He
+                        surveyed the great assembly of bodhisattvas, rose from his seat, draped his shawl over one shoulder,
+                        set his right knee on the ground, and paid homage with palms joined toward the Blessed One. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-15"/>
+                    <p tid="17">He asked the Blessed One, “Would the Blessed One, if he has time, please answer a certain question
+                        that I would like to put to the Tathāgata, the Arhat, the completely and perfectly enlightened Buddha?” </p>
+                    <p tid="18">The Blessed One then replied to the bodhisattva mahāsattva Maitreya, “Maitreya, <ref cRef="F.105.b"/> the Tathāgata always has time to answer such questions. Ask whatever you wish,
+                        Maitreya. What I shall say in response to your question will cause you to rejoice.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-16"/>
+                    <p tid="19">So the bodhisattva mahāsattva Maitreya asked the Blessed One, “Blessed One, how many qualities
+                        do bodhisattvas need to possess in order to abandon all evil rebirths and not fall into the clutches of
+                        sinful associates, but swiftly realize supreme, perfect enlightenment and become a buddha?” </p>
+                    <p tid="20">The Blessed One answered the bodhisattva mahāsattva Maitreya, “Maitreya, you have served the
+                        victorious ones of the past, cultivated the roots of virtue, recalled your past lives, acquired eloquence,
+                        and for a long time, lived chastely. Maitreya, you work for the benefit of many people, bring happiness to
+                        many people, and are compassionate toward the world. You live to bring welfare, benefit, and well-being to
+                        ordinary beings, gods, and men, and to assist the noble sons and daughters, present and future, who belong
+                        to the vehicle of the bodhisattvas. It is indeed good that you have thought of asking the Blessed One a
+                        question on this subject. Therefore, Maitreya, listen well and carefully, and retain all that I say in
+                        your mind.” </p>
+                    <p tid="21">The bodhisattva mahāsattva Maitreya assented to the Blessed One, and listened as the Blessed One
+                        had instructed. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-17"/>
+                    <p tid="22">The Blessed One said, “Maitreya, if bodhisattvas possess one single quality, they will abandon
+                        all evil rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme,
+                        perfect enlightenment and become a buddha. What is that single quality? Having the altruistic intention
+                            <ref cRef="F.106.a"/> of excellent bodhicitta. Maitreya, if bodhisattvas possess this single
+                        quality, they will abandon all evil rebirths and not fall into the clutches of sinful associates, but
+                        swiftly realize supreme, perfect enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-18"/>
+                    <p tid="23">“Furthermore, Maitreya, if bodhisattvas possess two qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What two qualities? Thoroughly applying themselves in calm abiding and
+                        developing skill in insight. If bodhisattvas possess these two qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-19"/>
+                    <p tid="24">“Furthermore, Maitreya, if bodhisattvas possess three qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What three qualities? Attaining great compassion and having definitive
+                        understanding of the teaching of emptiness, yet without being arrogant. Maitreya, if bodhisattvas
+                        possess these three qualities, they will abandon all evil rebirths and not fall into the clutches of
+                        sinful associates, but swiftly realize supreme, perfect enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-20"/>
+                    <p tid="25">“Furthermore, Maitreya, if bodhisattvas possess four qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What four qualities? Observing moral conduct, having no doubt about the
+                        whole of the Dharma, delighting in seclusion, and not wavering from the undertaking to which they have
+                        committed themselves. <ref cRef="F.106.b"/> Maitreya, if bodhisattvas possess these four qualities, they
+                        will abandon all evil rebirths and not fall into the clutches of sinful associates, but swiftly realize
+                        supreme, perfect enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-21"/>
+                    <p tid="26">“Furthermore, Maitreya, if bodhisattvas possess five qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What five qualities? Dwelling in emptiness, not seeking the delusions
+                        of others, investigating the self, delighting in the Dharma, and being committed to helping others.
+                        Maitreya, if bodhisattvas possess these five qualities, they will abandon all evil rebirths and not fall
+                        into the clutches of sinful associates, but swiftly realize supreme, perfect enlightenment and become a
+                        buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-22"/>
+                    <p tid="27">“Furthermore, Maitreya, if bodhisattvas possess six qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What six qualities? Being without attachment, aversion, and ignorance;
+                        immediately answering questions correctly and properly; being tireless in their ritual observance; and
+                        experiencing emptiness. Maitreya, if bodhisattvas possess these six qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-23"/>
+                    <p tid="28">“Furthermore, Maitreya, if bodhisattvas possess seven qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What seven qualities? Being learned in mindfulness and <ref cRef="F.107.a"/> in the Dharma. Being diligent in their undertakings, joyful, mentally supple, and
+                        skilled in meditative concentration and analysis through wisdom. Maitreya, if bodhisattvas possess
+                        these seven qualities, they will abandon all evil rebirths and not fall into the clutches of sinful
+                        associates, but swiftly realize supreme, perfect enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-24"/>
+                    <p tid="29">“Furthermore, Maitreya, if bodhisattvas possess eight qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What eight qualities? Possessing right view, right thought, right
+                        speech, right action, right livelihood, right effort, right mindfulness, and right concentration.<note place="end" index="8" xml:id="UT22084-044-005-207">These eight, of course, comprise the noble
+                            eightfold path.</note> Maitreya, if bodhisattvas possess these eight qualities, they will abandon all
+                        evil rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-25"/>
+                    <p tid="30">“Furthermore, Maitreya, if bodhisattvas possess nine qualities, they will abandon all evil
+                        rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. What nine qualities? </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-26"/>
+                    <p tid="31">“Maitreya, those bodhisattvas distance themselves from desires and from sinful, non-virtuous things.
+                        They investigate, examine, and possess the joy and happiness that arise from solitude. Thus, they                        accomplish the first meditative absorption and maintain it.<note place="end" index="9" xml:id="UT22084-044-005-208">This section outlines the system of the eight meditative absorptions
+                            (Skt. <foreign type="term" xml:lang="Sa-Ltn">dhyāna</foreign>; Pali <foreign type="term" xml:lang="Pi-Ltn">jhāna</foreign>), which are progressively deeper states of meditation. The first four are termed
+                            “form” (<foreign type="term" xml:lang="Sa-Ltn">rūpa</foreign>) <foreign type="term" xml:lang="Pi-Ltn">jhānas</foreign> because the absorption takes place within the fine material sphere (Skt.
+                                <foreign type="term" xml:lang="Sa-Ltn">rūpadhātu</foreign>; Pali <foreign type="term" xml:lang="Pi-Ltn">rūpaloka</foreign>). The final four are called “formless” (<foreign type="term" xml:lang="Sa-Ltn">arūpa</foreign>) because they take place in the formless spheres (Skt. <foreign type="term" xml:lang="Sa-Ltn">arūpyadhātu</foreign>; Pali <foreign type="term" xml:lang="Pi-Ltn">arūpaloka</foreign>), and are also known as the four attainments (<foreign type="term" xml:lang="Sa-Ltn">samāpatti</foreign>). For a presentation of the <foreign type="term" xml:lang="Pi-Ltn">jhāna</foreign> system followed in the present-day Theravāda, see Gunaratana (1988
+                            pp. 9-20.)</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-27"/>
+                    <p tid="32">“They are free from thinking or examining, and possess inner serenity. Because their mindstreams are
+                        one-pointed, they do not think <ref cRef="F.107.b"/> or examine. Endowed with the joy and happiness that
+                        arise from meditative concentration, they then accomplish the second meditative absorption and maintain
+                        it. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-28"/>
+                    <p tid="33">“Because they are free from attachment to joy, they maintain equipoise and possess mindfulness and
+                        awareness. They experience the physical happiness of which the noble ones say, ‘To possess mindfulness and
+                        remain in happiness is equanimity.’<note place="end" index="10" xml:id="UT22084-044-005-209">This is a
+                            citation from the <title xml:lang="Sa-Ltn">Aṣṭā­daśa­sāhasrikā­prajñā­pāramitā</title> (<title xml:lang="en">Perfection of Wisdom in 18,000 Lines</title>), (Toh 11, vol. 29, F.162b). The
+                            preceding passage is also found there.</note> Free of joy they then accomplish the third meditative
+                        absorption and maintain it. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-29"/>
+                    <p tid="34">“They renounce happiness after already renouncing suffering. Because both mental happiness and
+                        mental displeasure decline, there is neither happiness nor suffering. They then accomplish the fourth
+                        meditative absorption and maintain it, with immaculate equipoise and mindfulness. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-30"/>
+                    <p tid="35">“They transcend conceptions of form in all aspects, and their conceptions of materiality decline.
+                        When they do not fabricate conceptions of any kind, they think, ‘This is the infinity of space,’ and then
+                        accomplish the sphere of the infinity of space and maintain it. After they have transcended the sphere of
+                        the infinity of space in all aspects, they think, ‘This is the infinity of consciousness,’ and then
+                        accomplish the sphere of the infinity of consciousness and maintain it. After they have transcended the
+                        sphere of the infinity of consciousness in all aspects, they think, ‘This is nothingness,’ and then
+                        accomplish the sphere of nothingness and maintain it. After they have transcended the sphere of
+                        nothingness in all aspects, they then accomplish the sphere of neither perception nor non-perception and
+                        maintain it. After they have transcended the sphere of neither perception nor non-perception in all aspects,
+                        they then accomplish the cessation of perception and feeling and maintain it.<note place="end" index="11" xml:id="UT22084-044-005-210">This is a fifth accomplishment sometimes added to the four formless
+                            absorptions.</note> Maitreya, if bodhisattvas possess these nine qualities, they will abandon all
+                        evil rebirths and not fall into the clutches of sinful associates, but swiftly realize supreme, perfect
+                        enlightenment and become a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-31"/>
+                    <p tid="36">“Furthermore, Maitreya, if bodhisattvas <ref cRef="F.108.a"/> possess ten qualities, they will
+                        abandon all evil rebirths and not fall into the clutches of sinful associates, but swiftly realize
+                        supreme, perfect enlightenment and become a buddha. What ten qualities? Having vajra-like meditative
+                        concentration, meditative concentration that is assiduous regarding what is correct and incorrect,
+                        meditative concentration of going via methods, illuminating meditative concentration, all-illuminating
+                        meditative concentration, manifest meditative concentration, precious moon meditative concentration,
+                        moon-lamp meditative concentration, meditative concentration without afflictive emotions, and
+                        victory-banner finial meditative concentration. Maitreya, if bodhisattvas possess these ten qualities,
+                        they will abandon all evil rebirths and not fall into the clutches of sinful associates, but swiftly realize
+                        supreme, perfect enlightenment and become a buddha.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-32"/>
+                    <p tid="37">The bodhisattva mahāsattva Maitreya was then satisfied and delighted. Joyful and pleased, he rose
+                        from his seat, draped his shawl over one shoulder, set his right knee on the ground, and bowed to the
+                        Blessed One with joined palms. He praised the Blessed One with these fitting verses: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-33"/>
+                    <lg tid="38">
+                        <l>“In former times, you practiced generous giving. </l>
+                        <l>Giving away dear sons, food and drink, </l>
+                        <l>And even your head and eyes, </l>
+                        <l>You perfected the total generosity of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-34"/>
+                    <lg tid="39">
+                        <l>“For a long time, like a yak its tail,<note place="end" index="12" xml:id="UT22084-044-005-211">This
+                                odd, seemingly culturally Himalayan simile does not appear to be due to any corruption in the
+                                text: N and H merely offer <foreign type="term" xml:lang="Bo-Ltn">yul ring(s)</foreign> instead of
+                                D <foreign type="term" xml:lang="Bo-Ltn">yun ring</foreign>. Indeed, the same simile is found in
+                                other Kangyur texts, again in the context of guarding moral conduct.</note>
+                        </l>
+                        <l>You observed unimpaired moral conduct. </l>
+                        <l>Peerless in your conduct,</l>
+                        <l>You wholly perfected the conduct of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-35"/>
+                    <lg tid="40">
+                        <l>“You generated the power of patience,</l>
+                        <l>And patiently endured the wrong deeds of ignorant people. <ref cRef="F.108.b"/>
+                        </l>
+                        <l>Possessing all the powers of patience,</l>
+                        <l>You wholly perfected the patience of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-36"/>
+                    <lg tid="41">
+                        <l>“You generated the power of diligence,</l>
+                        <l>Then found unsurpassed peace and happiness.</l>
+                        <l>Powerful due to your diligence,</l>
+                        <l>You wholly perfected the diligence of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-37"/>
+                    <lg tid="42">
+                        <l>“After burning up all sins, </l>
+                        <l>You, great guide and being, took pleasure in your meditation.</l>
+                        <l>Powerful due to the power of meditation,</l>
+                        <l>You wholly perfected the meditation of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-38"/>
+                    <lg tid="43">
+                        <l>“Through wisdom that realizes </l>
+                        <l>That phenomena are by nature empty</l>
+                        <l>And that nothing intrinsically arises, </l>
+                        <l>You reached the other shore and wholly perfected the wisdom of a buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-39"/>
+                    <lg tid="44">
+                        <l>“Wise One, beneath the Bodhi tree</l>
+                        <l>You subdued clawed demons</l>
+                        <l>And attained the supreme goal.</l>
+                        <l>As the Buddha, you vanquished the evil gathering of demons.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-40"/>
+                    <lg tid="45">
+                        <l>“Great being, at Vārāṇasī</l>
+                        <l>You turned the wheel of the Dharma.</l>
+                        <l>You terrified the assembly of evil unbelievers,</l>
+                        <l>And, as the Buddha, vanquished the unbelievers’ gatherings.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-41"/>
+                    <lg tid="46">
+                        <l>“Unsurpassed for your vast wisdom,</l>
+                        <l>Utterly without compare,</l>
+                        <l>You teach the Jewel of the Dharma,</l>
+                        <l>O guide and Buddha, you bring about illumination.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-42"/>
+                    <lg tid="47">
+                        <l>“You are peerless in generosity,</l>
+                        <l>Strength of moral conduct, patience, and diligence.</l>
+                        <l>You have accomplished the perfection of everything.</l>
+                        <l>You excel, O Buddha, with your many qualities.”</l>
+                    </lg>
+                    <p tid="48">After the bodhisattva mahāsattva Maitreya had praised the Blessed One in verse with such fitting
+                        words, he stood to one side. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-43"/>
+                    <p tid="49">The venerable Ānanda then said to the Blessed One, “Lord, Blessed One, it is wonderful that the
+                        bodhisattva mahāsattva Maitreya is so supremely eloquent, and that he teaches the Dharma with such words
+                        of certainty, that he teaches the Dharma with such matching words and letters, that he teaches the Dharma
+                        with such profound words, that he teaches the Dharma with words that explain it so well, <ref cRef="F.109.a"/> and that he teaches the Dharma with such memorable words.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-44"/>
+                    <p tid="50">“Exactly, Ānanda,” replied the Blessed One. “It is just as you have said—it is wonderful that the
+                        bodhisattva Maitreya is so supremely eloquent, that the bodhisattva Maitreya teaches the Dharma with such
+                        words of certainty, and all of what you said, up to his teaching the Dharma with such memorable words.
+                        Ānanda, this is not the first time that the bodhisattva Maitreya has praised me with such fitting verses.
+                        Why? Formerly, Ānanda, in times gone by, at a time when ten countless ages had passed, there came into the
+                        world <!--modularPassage type=tathāgataDescription1-->a tathāgata, arhat, completely and perfectly
+                        enlightened buddha, endowed with perfect knowledge and perfect conduct, established in a state of bliss,
+                        commanding all worldly knowledge, an unsurpassed guide who converted all beings, a teacher of gods and
+                        men<!--/modularPassage-->, the Buddha Arhat named Jyoti­vikrīḍitābhijña.<note place="end" index="13" xml:id="UT22084-044-005-212">The Sanskrit name of this tathāgata is attested in the Sanskrit fragment
+                            mentioned in the introduction (see also Matsumura 1993). The name is also a component of the names of
+                            two of the 35 “tathāgatas of confession,” found in a liturgy much used in the Tibetan tradition and
+                            extracted from the <title xml:lang="Sa-Ltn">Vinaya­viniścayopāli­paripṛcchā</title> (Toh 68); the
+                            Tibetan of the equivalent part of the names in the latter text is slightly different, <foreign xml:lang="Bo-Ltn">’od zer rnam par rol pa mngon par mkhyen pa</foreign> (see Python 1973, pp. 34
+                            and 100).</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-45"/>
+                    <p tid="51">“At that time, there lived a brahmin boy named Bhadraśuddha,
+                        <!--modularPassage type=handsomeness-->good-looking, handsome, and beautiful to behold, endowed with a
+                        supremely good complexion and excellent figure<!--/modularPassage-->. He was going to a pleasure grove,
+                        when between the villages he saw the Tathāgata, the Arhat, the completely and perfectly enlightened Buddha
+                        Jyoti­vikrīḍitābhijña. <!--modularPassage type=buddhaQualities-->The Tathāgata was handsome and
+                        charismatic, controlled in his faculties and in his mind. He had attained excellence in control and calm
+                        abiding, and superiority in control and calm abiding. He guarded his faculties, elephant-like in control
+                        of his passions, and was radiant, unsullied, and clear like a lake. His body was adorned with the
+                        thirty-two marks of a great being, and with the eighty minor marks, like the blossoming flower of a royal
+                        sal tree, and towering like Mount Meru, the king of mountains. His face was as calm as the sphere of the
+                        moon, <ref cRef="F.109.b"/> and radiantly clear and brilliant like the sphere of the sun. His body was
+                        proportioned like a nyagrodha tree, blazing with light and great splendor.<!--/modularPassage-->
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-46"/>
+                    <p tid="52">“Seeing him, Bhadraśuddha developed an attitude of faith toward the Blessed One. With this
+                        attitude of faith, he thought, ‘How marvelous! How wondrously this body of the Tathāgata is adorned in its
+                        complexion and splendor. It blazes with glory, the marks of buddhahood, and clear, brilliant radiance.’
+                        The brahmin boy Bhadraśuddha then spoke out loud, ‘How marvelous! May I also, in the future, come to
+                        possess such a body, blazing like this in complexion, magnificence, splendor, the marks of buddhahood,
+                        and with clear, brilliant radiance!’ </p>
+                    <p tid="53">“After he had prayed thus, he lay on the ground and thought, ‘If in the future I shall come to possess such a body, blazing like this in complexion, magnificence, splendor, marks of buddhahood, and with
+                        clear, brilliant radiance, may the Tathāgata touch me with his foot.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-47"/>
+                    <p tid="54">“Then, Ānanda, the Tathāgata, the Arhat, the completely and perfectly enlightened Buddha
+                        Jyoti­vikrīḍitābhijña, learning of the noble intention of the brahmin boy Bhadraśuddha, approached him and
+                        touched him with his foot. As soon as the Tathāgata Jyoti­vikrīḍitābhijña had touched the brahmin boy
+                        Bhadraśuddha with his foot, at that very moment the boy attained acceptance of the fact that all phenomena
+                        are unproduced. Ānanda, the Tathāgata Jyoti­vikrīḍitābhijña looked behind him and addressed the monks,
+                        ‘Monks, on no account should you tread on the brahmin boy Bhadraśuddha with your feet. Why? Because he is
+                            <ref cRef="F.110.a"/> a bodhisattva mahāsattva who has accepted the fact that all phenomena are
+                        unproduced.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-48"/>
+                    <p tid="55">“At that very moment, the brahmin boy Bhadraśuddha obtained the knowledge of the divine eye,
+                        knowledge of the divine ear, knowledge of the thoughts of others, and knowledge recollecting his past
+                        lives, and also accomplished miraculous powers. In the presence of the Tathāgata Jyoti­vikrīḍitābhijña he
+                        spoke the following fitting verses of praise: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-49"/>
+                    <lg tid="56">
+                        <l>“ ‘Though I roamed and searched in all the cardinal and intermediate directions, </l>
+                        <l>There is no lord such as you in all the worlds. </l>
+                        <l>The perfect Buddha is supreme in all realms of existence. </l>
+                        <l>O great self-arisen guide, to you I pay homage. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-50"/>
+                    <lg tid="57">
+                        <l>“ ‘Just as the bright sun in the sky, </l>
+                        <l>In all worldly realms of the cardinal and intermediate directions, </l>
+                        <l>Illuminates all these worlds with its light, </l>
+                        <l>So do your splendid qualities—O Buddha, to you I pay homage. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-51"/>
+                    <lg tid="58">
+                        <l>“ ‘Just as a lion roaring in the deep forests </l>
+                        <l>Subdues the fox and all other ordinary animals, </l>
+                        <l>So you, the noblest and most powerful of men, </l>
+                        <l>Subdue all the great assemblies of unbelievers. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-52"/>
+                    <lg tid="59">
+                        <l>“ ‘The Sugata’s fair ringlet between his eyebrows, </l>
+                        <l>Endlessly splendid like a hoard of silver or snow, </l>
+                        <l>Illuminates all these worlds. </l>
+                        <l>In all the worlds there is nobody who equals you, O Buddha. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-53"/>
+                    <lg tid="60">
+                        <l>“ ‘Best of beings, you possess celestial wheels </l>
+                        <l>Bright and fair, with a thousand spokes and spinning rims, </l>
+                        <l>On your feet: these marks cause the earth, with its mountains and forests, to tremble. </l>
+                        <l>O Sage, you are unrivaled by ordinary beings.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-54"/>
+                    <lg tid="61">
+                        <l>“ ‘Your great knowledge discards afflictive emotions and abandons everything. </l>
+                        <l>Noble One, you discovered the path of deliverance; <ref cRef="F.110.b"/>
+                        </l>
+                        <l>Possessing every wealth, rich in qualities, </l>
+                        <l>You array the wealth of a noble one as you please.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-55"/>
+                    <lg tid="62">
+                        <l>“ ‘You are comparable to the earth, and without equal as a recipient of offerings. </l>
+                        <l> You have obtained mastery of all good qualities, and your moral conduct is pure. </l>
+                        <l>Just as hands cannot grasp or capture space, </l>
+                        <l>So too, in the worlds you possess no attachment or anger.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-56"/>
+                    <lg tid="63">
+                        <l>“ ‘Reaching ultimate acceptance,<note place="end" index="14" xml:id="UT22084-044-005-213">This
+                                translation of <foreign type="term" xml:lang="Bo-Ltn">bzod pa zad kyis gtugs pa</foreign> is
+                                tentative.</note> you learnt that all objects and phenomena </l>
+                        <l>Are without essence, fictitious, and impure. </l>
+                        <l>In all those arrogant sentient beings that migrate in saṃsāra, </l>
+                        <l>You found no life force or substance.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-57"/>
+                    <lg tid="64">
+                        <l>“ ‘Adapting to their dispositions and actions, and knowing their thoughts, </l>
+                        <l>You are a wondrous lamp that discerns them. </l>
+                        <l>Since you witnessed beings carried away by the great river, </l>
+                        <l>You formerly produced the power of firm strength of diligence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-58"/>
+                    <lg tid="65">
+                        <l>“ ‘You possess a mind that rejects rebirth and pacifies afflictive emotions; </l>
+                        <l>Your vast mind brought birth, old age, and death to an end. </l>
+                        <l>Like the sphere of space you are without attachment; </l>
+                        <l>Untainted by worldly qualities, you roam the three worlds.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-59"/>
+                    <lg tid="66">
+                        <l>“ ‘O great being, your wisdom brings illumination, </l>
+                        <l>Dispelling every darkness that has gathered. </l>
+                        <l>You calm the dust of attachment and dispel the darkness </l>
+                        <l>Of the various stains of anger and ignorance—to you I pay homage.’</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-60"/>
+                    <p tid="67">“Ānanda, this does not yet exhaust the miraculous displays and supernormal powers of the brahmin
+                        boy Bhadraśuddha.</p>
+                    <p tid="68">“Ānanda, <!--modularPassage type=pastLifeWho-->if you wonder whether the brahmin boy Bhadraśuddha
+                        was then, at that time, someone else, or you are of two minds about it, or doubtful, do not see him so. Why?
+                        Because the bodhisattva mahāsattva Maitreya himself was then, at that time, the brahmin boy
+                        Bhadraśuddha<!--/modularPassage-->, <ref cRef="F.111.a"/> who uttered these verses of praise to the
+                        Tathāgata, the Arhat, the perfectly enlightened Buddha Jyoti­vikrīḍitābhijña.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-61"/>
+                    <p tid="69">The venerable Ānanda asked, “Blessed One, if this bodhisattva mahāsattva Maitreya developed
+                        acceptance so long ago of the fact that all phenomena are unproduced, why did he not quickly realize
+                        supreme, perfect enlightenment and become a buddha?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-62"/>
+                    <p tid="70">The Blessed One replied to the venerable Ānanda, “Ānanda, the bodhisattvas set in place and
+                            protect<note place="end" index="15" xml:id="UT22084-044-005-214">The Tibetan terms provisionally
+                            translated here as “set in place” and “protect” are <foreign type="term" xml:lang="Bo-Ltn">bkod
+                                pa</foreign> and <foreign type="term" xml:lang="Bo-Ltn">yongs su gzung ba</foreign>. </note> two
+                        things. What two things? They set in place and protect sentient beings, and they set in place and protect
+                        their buddha realms. But of these two, when formerly the bodhisattva mahāsattva Maitreya was engaged in
+                        the conduct of a bodhisattva, he set in place, consecrated, and protected his buddha realm. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-63"/>
+                    <p tid="71">“Ānanda, when I myself was formerly engaged in the conduct of a bodhisattva, I set in place and
+                        protected sentient beings, and I also set in place and protected my buddha realm. Ānanda, I knew through
+                        foresight that forty-two eons after the bodhisattva mahāsattva Maitreya entered the path I would first
+                        arouse the mind of supreme, perfect enlightenment. Ānanda, with the knowledge that, ninety-four eons after
+                        that good eon had passed, I would realize supreme, perfect enlightenment, I applied myself, Ānanda, with
+                        burning diligence <ref cRef="F.111.b"/> and quickly realized supreme, perfect enlightenment and became a
+                        buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-64"/>
+                    <p tid="72">“Ānanda, it was by means of ten qualities that I quickly accomplished supreme, perfect
+                        enlightenment and became a buddha. What ten qualities? I abandoned and let go of all doubts, abandoned and
+                        let go of my spouse, abandoned and let go of my child, abandoned and let go of my head, abandoned and let
+                        go of my eyes, abandoned and let go of my kingdom, abandoned and let go of my wealth, abandoned and let go
+                        of my blood, abandoned and let go of my bones and marrow, and abandoned my limbs. By letting go of
+                        everything I quickly realized supreme, perfect enlightenment and became a buddha. Ānanda, it was by means
+                        of those ten qualities that I quickly realized supreme, perfect enlightenment and became a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-65"/>
+                    <p tid="73">“Ānanda, it was also by means of a further ten qualities that I quickly accomplished supreme,
+                        perfect enlightenment and became a buddha. What ten qualities? Ānanda, I adhered to the teaching of the
+                        qualities of moral conduct, and so I quickly realized supreme, perfect enlightenment and became a buddha.
+                        Ānanda, I possessed the power of patience, and so I quickly realized supreme, perfect enlightenment and
+                        became a buddha. Ānanda, I applied ardent diligence, and so I quickly realized supreme, perfect
+                        enlightenment and became a buddha. Ānanda, I adhered to the qualities of meditation, and so I quickly
+                        realized supreme, perfect enlightenment and became a buddha. <ref cRef="F.112.a"/> Ānanda, I adhered to
+                        the perfection of wisdom, and so I quickly realized supreme, perfect enlightenment and became a buddha.
+                        Ānanda, I did not abandon any sentient being in any way, and so I quickly realized supreme, perfect
+                        enlightenment and became a buddha. Ānanda, I was skillful in my means, and so I quickly realized supreme,
+                        perfect enlightenment and became a buddha. Ānanda, I treated all sentient beings equally, and so I quickly
+                        realized supreme, perfect enlightenment and became a buddha. Ānanda, I realized the teaching of emptiness,
+                        and so I quickly realized supreme, perfect enlightenment and became a buddha. Ānanda, I realized the
+                        teaching of signlessness and wishlessness, and so I quickly realized supreme, perfect enlightenment and
+                        became a buddha. Ānanda, it was by means of those ten qualities that I quickly realized supreme, perfect
+                        enlightenment and became a buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-66"/>
+                    <p tid="74">“Ānanda, if you were aware of how harsh and severe were the sensations of suffering by which I
+                        realized supreme and completely perfect enlightenment, perfect buddhahood, you, Ānanda, would not be so
+                        forthright. The reason, Ānanda, is that formerly, in times gone by, there lived a prince named Giver of
+                        All Wealth, good-looking, handsome, and beautiful to behold, endowed with a supremely good complexion,
+                        excellent figure, and with the great wealth and power of a king. He was going to a pleasure grove when he
+                        saw between the villages a man afflicted with suffering and seriously ill. At this sight, he felt
+                        compassion, approached the man, and asked, <ref cRef="F.112.b"/> ‘You, sir, what are you suffering from?’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-67"/>
+                    <p tid="75">“The man said, ‘Your Highness, I have contracted an illness.’ </p>
+                    <p tid="76">“ ‘What will assuage your illness, my good man?’ asked the prince. ‘What shall I give you?’ </p>
+                    <p tid="77">“ ‘Your Highness,’ replied the man, ‘if I were to drink just enough of the blood from your body to
+                        satisfy me, my illness would be assuaged.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-68"/>
+                    <p tid="78">“Then, Ānanda, Prince Giver of All Wealth took a sharp knife, cut himself, and gave the man the
+                        blood that drained from the wound to drink. Ānanda, as soon as the man drank it, his illness was cured.
+                        Ānanda, even though Prince Giver of All Wealth cut himself and all his blood drained out, he never had a
+                        moment’s regret. Ānanda, <!--modularPassage type=pastLifeWho-->if you wonder whether Prince Giver of All
+                        Wealth was then, at that time, someone else, or you are of two minds about it, or doubtful, do not see him
+                        so. Why? Because I myself was then, at that time, Prince Giver of All Wealth.<!--/modularPassage-->
+                        Ānanda, all the water of the four great oceans can be measured, but the blood that I have given to
+                        sentient beings as I sought supreme, completely perfect enlightenment cannot. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-69"/>
+                    <p tid="79">“Ānanda, formerly, in times gone by, there lived a prince named Puṣpa, good-looking, handsome, and
+                        beautiful to behold, endowed with a supremely good complexion, excellent figure, and with the great wealth
+                        and power of a king. He was going to the site of a pleasure grove when he saw between the villages a man
+                        who had contracted dropsy, afflicted with suffering and seriously ill. </p>
+                    <p tid="80">“At this sight, he felt compassion and approached the man, and asked, ‘My good man, what will assuage this
+                        illness of yours? What shall I give you?’ </p>
+                    <p tid="81">“The man replied, <ref cRef="F.113.a"/> ‘Your Majesty, if I were to get just enough of the marrow
+                        from your body to satisfy me, my illness would be assuaged.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-70"/>
+                    <p tid="82">“Prince Puṣpa was satisfied and delighted; he rejoiced, and then pleasure and happiness arose in
+                        him. He beat his own body, then gouged out the marrow and smeared it on that man’s body. Ānanda, as soon
+                        as he smeared it on him, the man’s illness was cured. Ānanda, even though Prince Puṣpa beat his own body
+                        so that the marrow dripped out, he felt no regret in his mind. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-71"/>
+                    <p tid="83">“Ānanda, <!--modularPassage type=pastLifeWho-->if you wonder whether Prince Puṣpa was then, at that
+                        time, someone else, or you are of two minds about it, or doubtful, do not see him so. Why? Because I myself
+                        was then, at that time, Prince Puṣpa.<!--/modularPassage--> Ānanda, all the water of the four great oceans
+                        can be measured, but the marrow that I have given to sentient beings as I sought supreme, completely
+                        perfect enlightenment cannot. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-72"/>
+                    <p tid="84">“Ānanda, formerly in times gone by there lived a king named Candraprabha, good-looking, handsome
+                        and beautiful to behold, endowed with a supremely good complexion, excellent figure, and with the great
+                        wealth and power of a king. He was going to a pleasure grove, when between the villages he saw a poor, eyeless
+                        blind man, a destitute beggar. At this sight, he felt compassion. </p>
+                    <p tid="85">“That man then approached King Candraprabha and said, ‘Your Majesty, you are happy. Your Majesty,
+                        you are joyful, but I suffer. I am blind; I have no eyes. I am poor and destitute. I am a beggar without
+                        refuge.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-73"/>
+                    <p tid="86">“Then, Ānanda, King Candraprabha saw the man again, and after listening to his words again he
+                        wept, and still in tears, asked him, ‘My good man, what do you need? <ref cRef="F.113.b"/> Should I give you food
+                        or drink? A riding-mount? Jewelry? Gold, gems, pearls, or various kinds of precious things? Tell me
+                        whatever you need.’ </p>
+                    <p tid="87">“The man replied, ‘I beg you, please give me your eye.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-74"/>
+                    <p tid="88">“So, Ānanda, King Candraprabha plucked out his eye and gave it to the man. But, Ānanda, although
+                        King Candraprabha had plucked out his eye and given it to the man, he did not become regretful. Ānanda,
+                        <!--modularPassage type=pastLifeWho-->if you wonder whether King Candraprabha was then, at that time
+,                        someone else, or you are of two minds about it, or doubtful, do not see him so. Why? Because I myself was
+                        then, at that time, King Candraprabha.<!--/modularPassage--> Ānanda, Mount Meru, the king of mountains,
+                        can be measured, but the eyes that I have given to sentient beings as I sought supreme, completely perfect
+                        enlightenment are too great and cannot. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-75"/>
+                    <p tid="89">“Ānanda, when the bodhisattva mahāsattva Maitreya was formerly engaged in the conduct of a
+                        bodhisattva, because the vehicle is easy, the entry is easy, and the path is easy,<note place="end" index="16" xml:id="UT22084-044-005-215">We have not found the phrase <foreign type="term" xml:lang="Bo-Ltn">theg pa bde ba ’jug pa bde ba lam bde ba</foreign> attested elsewhere.</note> he
+                        perfectly accomplished supreme, perfect enlightenment. Ānanda, when the bodhisattva mahāsattva Maitreya
+                        was formerly engaged in the conduct of a bodhisattva he did not let go of his arms, legs, or marrow. He
+                        did not renounce and let go of his spouse, or his child, village, town, city, royal palace, or retinue.
+                        But, Ānanda, when the bodhisattva mahāsattva Maitreya was formerly engaged in the conduct of a
+                        bodhisattva, because he fully embraced skillful means, through the easy vehicle, the easy entry, and the
+                        easy path <ref cRef="F.114.a"/> he accomplished supreme, perfect enlightenment.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-76"/>
+                    <p tid="90">Then the venerable Ānanda asked, “Blessed One, what were the skillful means to which the
+                        bodhisattva mahāsattva Maitreya adhered, thus accomplishing supreme, perfect enlightenment?” </p>
+                    <p tid="91">The Blessed One replied, “Ānanda, when formerly the bodhisattva mahāsattva Maitreya engaged in the
+                        conduct of a bodhisattva, he would drape his shawl over one shoulder, set his right knee on the ground,
+                        and put the palms of his hands together three times during the day and three times during the night.
+                        Making all the buddhas visible, he would then speak to them in these words: </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-77"/>
+                    <lg tid="92">
+                        <l>“ ‘Homage to all the buddhas! </l>
+                        <l>Homage to the bodhisattvas,</l>
+                        <l>Those sages with the divine eye—</l>
+                        <l>And to the śrāvakas, too. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-78"/>
+                    <lg tid="93">
+                        <l>“ ‘Homage to the mind of enlightenment,</l>
+                        <l>Which reverses all negative rebirths,</l>
+                        <l>Shows the path to higher rebirths,</l>
+                        <l>And leads beings to the state without aging or death.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-79"/>
+                    <lg tid="94">
+                        <l>“ ‘Whatever negative actions I have done</l>
+                        <l>Under the influence of mind,</l>
+                        <l>Here in the presence of the buddhas</l>
+                        <l>I confess them.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-80"/>
+                    <lg tid="95">
+                        <l>“ ‘Whatever accumulation of merit</l>
+                        <l>I have produced through the three kinds of action,<note place="end" index="17" xml:id="UT22084-044-005-216">
+                                <foreign type="term" xml:lang="Bo-Ltn">las rnam pa gsum</foreign>, “the three [kinds of] actions”
+                                is interpreted by Dharmabhadra and Ngawang Khedrup to mean meritorious actions of body, speech,
+                                and mind, but by Padma Karpo to be meritorious actions causing rebirth as a human, meritorious
+                                actions causing rebirth as a god, and “non-transferring” actions (<foreign type="term" xml:lang="Bo-Ltn">mi g.yo ba’i las</foreign>) causing rebirth in the two higher realms (of
+                                form and no-form). </note>
+                        </l>
+                        <l>May it be the seed of my omniscience</l>
+                        <l>And inexhaustible enlightenment.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-81"/>
+                    <lg tid="96">
+                        <l>“ ‘Whatever offerings to the buddhas </l>
+                        <l>Arise in all realms throughout the ten directions,</l>
+                        <l>The buddhas know and rejoice in them,</l>
+                        <l>And at that I myself rejoice.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-82"/>
+                    <lg tid="97">
+                        <l>“ ‘I confess all negative actions.</l>
+                        <l>I rejoice in all meritorious acts.</l>
+                        <l>I pay homage to all the buddhas.</l>
+                        <l>May I attain supreme awareness! <ref cRef="F.114.b"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-83"/>
+                    <lg tid="98">
+                        <l>“ ‘I exhort the bodhisattvas</l>
+                        <l>Of all ten directions,</l>
+                        <l>Who abide on the ten bodhisattva levels,</l>
+                        <l>To attain supreme enlightenment.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-84"/>
+                    <lg tid="99">
+                        <l>“ ‘May they become truly enlightened buddhas,</l>
+                        <l>Overcoming negative influences of every kind,</l>
+                        <l>And then, to benefit living beings,</l>
+                        <l>May they turn the wheel of the Dharma.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-85"/>
+                    <lg tid="100">
+                        <l>“ ‘Through the sound of the great Dharma drum,</l>
+                        <l>May they bring the suffering of sentient beings to an end.</l>
+                        <l>For unimaginable millions of eons,</l>
+                        <l>May they teach the Dharma and continue to remain in this world.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-86"/>
+                    <lg tid="101">
+                        <l>“ ‘I beg you, best of all humans,</l>
+                        <l>Look upon those who are trapped in the swamp of desire,</l>
+                        <l>And tightly bound by the cords of craving,</l>
+                        <l>Fettered in every kind of bond.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-87"/>
+                    <lg tid="102">
+                        <l>“ ‘Buddhas, do not belittle</l>
+                        <l>Those whose minds are defiled,</l>
+                        <l>But with loving intent toward all sentient beings,</l>
+                        <l>Save them from the sea of existence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-88"/>
+                    <lg tid="103">
+                        <l>“ ‘May I train in the footsteps</l>
+                        <l>Of the perfect buddhas—those present now,</l>
+                        <l>Those of the past, and those of the future—</l>
+                        <l>And may I engage in the conduct of the bodhisattvas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-89"/>
+                    <lg tid="104">
+                        <l>“ ‘May I complete the six perfections</l>
+                        <l>And liberate beings of the six realms.</l>
+                        <l>May I realize the six supernormal powers</l>
+                        <l>And reach supreme enlightenment.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-90"/>
+                    <lg tid="105">
+                        <l>“ ‘Unproduced and non-arising,</l>
+                        <l>Without self-nature or location,</l>
+                        <l>Neither mental cognition, nor substance—</l>
+                        <l>May I realize the teaching of emptiness.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-91"/>
+                    <lg tid="106">
+                        <l>“ ‘Just like the Buddha, the great sage,</l>
+                        <l>May I realize the teaching of non-self:</l>
+                        <l>A sentient being does not exist, nor does a living being,</l>
+                        <l>Nor does an individual, or a person.<note place="end" index="18" xml:id="UT22084-044-005-217">“Person”
+                                here is a translation of <foreign type="term" xml:lang="Bo-Ltn">gso ba</foreign>.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-92"/>
+                    <lg tid="107">
+                        <l>“ ‘May I not dwell on there being anything substantial, </l>
+                        <l>A belief in a self, or what I take to be mine,</l>
+                        <l>But in order to make all sentient beings happy,</l>
+                        <l>May I give everything away without miserliness.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-93"/>
+                    <lg tid="108">
+                        <l>“ ‘Since material objects do not really exist,</l>
+                        <l> May my wealth be spontaneously accomplished.</l>
+                        <l>Since all material objects decay,</l>
+                        <l> May I complete the perfection of generosity.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-94"/>
+                    <lg tid="109">
+                        <l>“ ‘Possessing conduct that is flawless,</l>
+                        <l>Conduct that is perfect,</l>
+                        <l>And conduct that is without arrogance, <ref cRef="F.115.a"/>
+                        </l>
+                        <l>May I complete the perfection of moral conduct.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-95"/>
+                    <lg tid="110">
+                        <l>“ ‘Like the elements of earth, water, fire,</l>
+                        <l>And wind, not dwelling on anything,<note place="end" index="19" xml:id="UT22084-044-005-218">The
+                                commentaries differ considerably in their interpretations of these two lines, with Padma Karpo
+                                emphasizing simply the inanimate nature of the four elements, and most of the others detailing
+                                particular qualities of patience for which each of the four is a simile. Despite the syntax, most
+                                agree that “not dwelling” (<foreign type="term" xml:lang="Bo-Ltn">mi gnas pa</foreign>) refers
+                                principally to the wind element. The translation here is an attempt to remain open to more than
+                                one interpretation. </note>
+                        </l>
+                        <l>With patience and<note place="end" index="20" xml:id="UT22084-044-005-219">D and most other Kangyurs
+                                have <foreign type="term" xml:lang="Bo-Ltn">bzod pa’am</foreign> here in Toh 85, but <foreign type="term" xml:lang="Bo-Ltn">bzod pa’ang</foreign> in the versions in the Dhāraṇī section
+                                (Toh 1096) and in the Tengyur (Toh 4378), which makes more sense; S has simply <foreign type="term" xml:lang="Bo-Ltn">bzod pa</foreign>.</note> free of anger,</l>
+                        <l>May I complete the perfection of patience.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-96"/>
+                    <lg tid="111">
+                        <l>“ ‘Through assiduous application of diligence,</l>
+                        <l>May I have constant enthusiasm without laziness,</l>
+                        <l>And with strength of body and mind,</l>
+                        <l>May I complete the perfection of diligence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-97"/>
+                    <lg tid="112">
+                        <l>“ ‘Through magic-like meditative concentration,</l>
+                        <l>Meditative concentration of bravery,</l>
+                        <l>And vajra-like meditative concentration,</l>
+                        <l>May I complete the perfection of meditation.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-98"/>
+                    <lg tid="113">
+                        <l>“ ‘Actualizing the three gates to liberation,</l>
+                        <l>The sameness of the three times,</l>
+                        <l>And the threefold knowledge,<note place="end" index="21" xml:id="UT22084-044-005-220"><!--KB-->According to
+                                Tāranātha’s commentary, the threefold knowledge (<foreign type="term" xml:lang="Bo-Ltn">rig pa
+                                    gsum</foreign>) comprises (1) knowledge of the whole of the past (<foreign type="term" xml:lang="Bo-Ltn">sngon gyi mtha’ rig pa</foreign>), (2) knowledge of the whole of the future
+                                    (<foreign type="term" xml:lang="Bo-Ltn">phyi ma’i mtha’ rig pa</foreign>), and (3) knowledge of
+                                the exhaustion of defilements (<foreign type="term" xml:lang="Bo-Ltn">zag zad rig pa</foreign>);
+                                the other commentaries, however, take the three kinds of knowledge as knowledge of the minds,
+                                mental events, and their causes, of all sentient beings in the past, present, and future.</note>
+                        </l>
+                        <l>May I complete the perfection of wisdom.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-99"/>
+                    <lg tid="114">
+                        <l>“ ‘May I be praised by all the buddhas,</l>
+                        <l>And blaze with light and splendor;</l>
+                        <l>Through the diligence of a bodhisattva,</l>
+                        <l>May my intention be fulfilled.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-100"/>
+                    <lg tid="115">
+                        <l>“ ‘Thus engaging in such conduct,</l>
+                        <l>May I, who am known as Maitreya,</l>
+                        <l>Complete the six perfections</l>
+                        <l>And dwell on the ten bodhisattva levels.’</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-101"/>
+                    <p tid="116">“Ānanda, those are the skillful means through which the bodhisattva mahāsattva Maitreya, by
+                        adhering to them, through the easy vehicle, the easy entry, and the easy path, perfectly accomplished
+                        supreme, perfect, and complete enlightenment. Ānanda, when the bodhisattva mahāsattva Maitreya was
+                        formerly engaged in the conduct of a bodhisattva, he thought to himself, ‘How I wish that sentient beings,
+                        having less desire, anger, and ignorance, might acquire the path of the ten virtuous actions! In the
+                        future, may I perfectly accomplish supreme, perfect, and complete enlightenment and become a buddha.’ It
+                        was thus that he consecrated his buddha realm. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-102"/>
+                    <p tid="117">“Ānanda, such a time and period will come about; then sentient beings will become less desiring,
+                        angry, <ref cRef="F.115.b"/> and ignorant, and keep to the path of the ten virtuous actions. After that,
+                        the bodhisattva mahāsattva Maitreya, due to the power of his prayer, will perfectly accomplish supreme,
+                        perfect, and completely enlightened buddhahood. </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-103"/>
+                    <p tid="118">“Ānanda, when I formerly engaged in the conduct of a bodhisattva, I made this prayer: ‘When the
+                        world is beset with the five degenerations, sentient beings will have great desire, anger, and ignorance.
+                        Desire, anger, and ignorance will all increase. Beings will desire and crave irreligious things. They will
+                        be overcome by fearsome desire, and adopt false doctrines. They will despise their fathers, their mothers,
+                        their cousins, and their siblings, their partners, their relatives, noble beings, abbots, spiritual
+                        teachers, themselves, and others. These people will be filthy, wild, and stupid. How wonderful it will be
+                        if I can perfectly realize supreme, perfect enlightenment and become a buddha among them!’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-104"/>
+                    <p tid="119">“Having lived in such a terrible epoch, Ānanda, I have kindled great compassion. Today, when I
+                        enter villages, cities, towns, districts and provinces, and the surroundings of royal palaces with great
+                        compassion, as soon as I teach the Dharma I am slandered and reviled, harshly abused, and told not to
+                        create a gathering. Ānanda, it is even said that I am a nihilist, or that I am an eternalist. They say
+                        that those in my retinue have many desires, and that their desires are great. When I enter into houses,
+                        earth is thrown at me. I am given food mixed with poison. They even have <ref cRef="F.116.a"/> bonfires
+                        made for me.<note place="end" index="22" xml:id="UT22084-044-005-221">One such story is recounted in the
+                                <title xml:lang="Sa-Ltn">Śrīguptasūtra</title> (<title xml:lang="Bo-Ltn">dpal sbas kyi
+                            mdo</title>, Toh 217); see bibliography. For a translation, see Liljenberg (2016).</note> So it
+                        is. Although I am a buddha, I am denigrated as cohabiting with so-called ‘beautiful women’ and the like.
+                        Ānanda, I kindled great compassion, and with great compassion, I now teach the Dharma to such sentient
+                        beings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-105"/>
+                    <p tid="120">The venerable Ānanda then said to the Blessed One, “The Blessed One who teaches the Dharma to
+                        such sentient beings, converting those not previously converted by the Tathāgata, the Arhat, the perfectly
+                        enlightened Buddha, has taken on a great burden, and undergone hardships.” </p>
+                    <p tid="121">The Blessed One replied to the venerable Ānanda, “Exactly, Ānanda. It is just as you have said.
+                        Ānanda, the Tathāgata, the Arhat, the perfectly enlightened Buddha has tamed those not previously tamed,
+                        taken on a great burden, and himself endowed with every virtuous quality, undergone hardship by teaching
+                        the Dharma to such sentient beings. Why? Because this is how much he was gripped by great compassion.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-106"/>
+                    <p tid="122">The venerable Ānanda then exclaimed, “That the Blessed One should bestow such a Dharma discourse,
+                        that I should hear this Dharma discourse, and hear this topic from the Blessed One, the best of men, is
+                        hair-raising and amazing! Blessed One, what is the name of this Dharma discourse? How should it be
+                        remembered?” </p>
+                    <p tid="123">The Blessed One replied, “From now onward, Ānanda, you should remember this Dharma discourse as
+                        ‘The Former Prayer that is Truly Noble.’ You should also remember it as ‘The True Arising of the
+                        Tathāgata.’ You should also remember it as ‘The Arising of the Intention of Enlightenment.’ You should
+                        also remember it as ‘The Question of Maitreya.’ ” </p>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-107"/>
+                    <p tid="124">When the Blessed One had spoken, the venerable Ānanda and the bodhisattva Maitreya, together with
+                        the five hundred monks <ref cRef="F.116.b"/> and the entire retinue, as well as the worlds of gods and
+                        men, demi-gods and gandharvas, rejoiced and praised the Blessed One’s words. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-224"/>
+                    <trailer tid="125">This concludes the “<title xml:lang="en">Section of the Question of Maitreya</title>,” the forty-first section of “<title xml:lang="en">The Noble
+                        Dharma Discourse, the Great Heap of Jewels</title>,” in one hundred thousand sections. </trailer>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="133">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-044-005-108"/>
+                    
+                    <p tid="126">This text was translated, edited, and finalized by the Indian scholars Jinamitra and
+                        Surendrabodhi, together with the chief editor and translator Yeshé Dé. </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="134">Notes</head>
+                <list type="abbreviations">
+                    <head type="abbreviations" tid="135">Abbreviations</head>
+                    <item xml:id="UT22084-044-005-109">
+                        <abbr>D</abbr>
+                        <expan>Degé (<foreign xml:lang="Bo-Ltn">sde dge</foreign>) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-044-005-110">
+                        <abbr>H</abbr>
+                        <expan>Lhasa (<foreign xml:lang="Bo-Ltn">zhol</foreign>) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-044-005-111">
+                        <abbr>N</abbr>
+                        <expan>Narthang (<foreign xml:lang="Bo-Ltn">snar thang</foreign>) Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-044-005-112">
+                        <abbr>S</abbr>
+                        <expan>Stok Palace (<foreign xml:lang="Bo-Ltn">stog pho brang bris ma</foreign>) Kangyur</expan>
+                    </item>
+                </list>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="136">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="137">Tibetan texts</head>
+                    <bibl xml:id="UT22084-044-005-113">
+                        <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­maitreya­pari­pṛcchā­nāma­mahā­yāna­sūtra</title>), Toh 85, Degé Kangyur, vol.
+                        44 (dkon brtsegs, cha), folios 104b–116b. </bibl>
+                    <bibl xml:id="UT22084-044-005-114">
+                        <title xml:lang="Bo-Ltn">’phags pa byams pas zhus pa zhes bya ba theg pa chen po’i mdo</title>, bka’ ’gyur (dpe
+                            bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi
+                        bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China Tibetology Research
+                        Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House),
+                        2006-2009, vol. 44, pp. 289–316. </bibl>
+                    <bibl xml:id="UT22084-044-005-115">
+                        <title xml:lang="Bo-Ltn">’phags pa shes rab kyi pha rol tu phyin pa khri brgyad stong pa</title> (<title xml:lang="Sa-Ltn">Aṣṭā­daśa­sāhasrikā­prajñā­pāramitā</title>) [Perfection of Wisdom in 18,000 Lines],
+                        Toh 10, Degé Kangyur, vol. 29 F.1a–vol. 31 F.206a.</bibl>
+                    <bibl xml:id="UT22084-044-005-116">
+                        <title xml:lang="Bo-Ltn">de bzhin gshegs pa’i gsang ba bsam gyis mi khyab pa bstan pa</title> (<title xml:lang="Sa-Ltn">Tathāgata­cintya­guhya­nirdeśa</title>), Toh 47, Degé Kangyur, vol. 39, F.100a–203a. </bibl>
+                    <bibl xml:id="UT22084-044-005-117">
+                        <title xml:lang="Bo-Ltn">dpal sbas kyi mdo</title> (<title xml:lang="Sa-Ltn">Śrīguptasūtra</title>), Toh
+                        217, Degé Kangyur, vol. 62, F.269a-284a; for translation, see Liljenberg (2016).</bibl>
+                    <bibl xml:id="UT22084-044-005-121"> Choné Trakpa Shedrup (co ne grags pa bshad sgrub). <title xml:lang="Bo-Ltn">byams pa’i smon lam gyi rnam par bzhad pa dga’ ldan du bgrod pa’i lam bzang, in co ne grags pa bshad
+                        sgrub kyi gsung ’bum.</title> Beijing: Mes po’i shul bzhag series, krung go’i bod rig pa dpe skrun
+                        khang (China Tibetology Publishing House, 2009). (BDRC W1PD90129). </bibl>
+                    <bibl xml:id="UT22084-044-005-119"> Drukpa Padma Karpo (’brug pa pad+ma dkar po). <title xml:lang="Bo-Ltn">’phags pa byams pa’i smon lam gyi ’grel pa thogs med kyi dgongs pa gsal bar bstan pa</title>. In
+                        <title xml:lang="Bo-Ltn">gsung ’bum</title>, vol. 7 (ja), pp. 349-376. Darjeeling: Kargyud Sungrab
+                        Nyamso Khang (1973-1974). (BDRC W10736). </bibl>
+                    <bibl xml:id="UT22084-044-005-123"> Kyedor Khenpo Ngawang Khedrup (kye rdor mkhan po ngag dbang mkhas grub).
+                        <title xml:lang="Bo-Ltn">byams pa’i smon lam gyi tshig don rnam bshad.</title> In gsung ’bum, vol. 2,
+                        pp 315-360. Leh, Ladakh: S.W. Tashigangpa (1972–1974). (BDRC W16912). </bibl>
+                    <bibl xml:id="UT22084-044-005-122"> Ngulchu Dharmabhadra (dngul chu d+harma b+hadra). <title xml:lang="Bo-Ltn">byams pa’i smon lam gyi ’grel pa’i zin bris.</title> In gsung ’bum, vol. 1. pp. 495 et seq. Ngulchu
+                        Chödzong: dngul chu bla brang, 2000? (BDRC W6493). </bibl>
+                    <bibl xml:id="UT22084-044-005-118"> Shākya Chokden (shAkya mchog ldan). <title xml:lang="Bo-Ltn">byams pas
+                            btab pa’i smon lam gyi rnam par bshad pa byams pa’i chos la ’jug pa’i sgo</title>. In <title xml:lang="Bo-Ltn">gsung bum</title>, vol. 8 (nya), pp 407-430. New Delhi: Ngawang Topgyel, (1995).
+                        (BDRC W23200). </bibl>                    
+                    <bibl xml:id="UT22084-044-005-120"> Tāranātha (tA ra nA tha). <title xml:lang="Bo-Ltn">byams smon gyi ’grel
+                            pa.</title> In gsung ’bum (blockprints from rtag brtan phun tshogs gling), vol. 13, pp 257–299. Leh,
+                        Ladakh: Namgyal &amp; Tsewang Taru (1982–87). (BDRC W22277). </bibl>                 
+                    
+                   
+                </div>
+                <div type="section">
+                    <head type="section" tid="138">Other works</head>
+                    <bibl xml:id="UT22084-044-005-124">Dharmachakra Translation Committee (tr.). <title xml:lang="en">Maitreya’s
+                        Setting Out</title>, Toh 198. 84000: Translating the Words of the Buddha (forthcoming)<!--Reference Toh 0198-->.</bibl>
+                    <bibl xml:id="UT22084-044-005-128">Gunaratana, Henepola. <title xml:lang="en">The Jhānas in Theravāda Buddhist
+                        Meditation</title>. Kandy, Śri Lanka: Buddhist Publication Society, 1988. </bibl>
+                    <bibl xml:id="UT22084-044-005-125">Liljenberg, Karen (tr.). <title xml:lang="en">The Śrīgupta Sūtra</title>,
+                        Toh 217. 84000: Translating the Words of the Buddha, 2016. (<ref target="http://read.84000.co/translation/UT22084-090-002.html">read.84000.co</ref>).</bibl>
+                    <bibl xml:id="UT22084-044-005-126">Matsumura, Hisashi. “Marginalia to the Sanskrit Fragments of Some Buddhist
+                        Texts,” in <title xml:lang="en">Central Asiatic Journal</title>, vol. 37, no. 1/2 (1993), pp. 120–149.
+                        Wiesbaden: Harrassowitz Verlag, 1993. </bibl>
+                    <bibl xml:id="UT22084-044-005-127">Python, Pierre. <title xml:lang="fr">Vinaya-viniścaya-upāli-paripṛcchā :
+                            Enquête d’Upāli pour une exégèse de la discipline.</title> Paris: Adrien-Maisonneuve, 1973. </bibl>                    
+                    <bibl xml:id="UT22084-044-005-129">Roberts, Peter, and Bower, Emily (trs.). <title xml:lang="en">
+                            <ref target="http://read.84000.co/translation/toh113.html">The White
+                            Lotus of the Good Dharma</ref>
+                        </title>, Toh 113. 84000: Translating the Words of the Buddha
+                        (2018).</bibl>
+                    <bibl xml:id="UT22084-044-005-130">Yao, Fumi (tr.). <title xml:lang="en">On Medicinal Materials</title>.
+                        Chapter 6, <title xml:lang="Bo-Ltn">sman gyi gzhi</title> (<title xml:lang="Sa-Ltn">Bhaiṣajyavastu</title>), of <title xml:lang="Bo-Ltn">’dul ba’i gzhi</title> (<title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh 1). 84000: Translating the Words of the Buddha (forthcoming)<!--Reference Toh 0001-6-->.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-131">
+                            <term>sphere of nothingness</term>
+                            <term xml:lang="Bo-Ltn">ci yang med pa’i skye mched </term>
+                            <term xml:lang="bo">ཅི་ཡང་མེད་པའི་སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">akiñcanyāyatanaṃ</term>
+                            <term type="definition">Third of the four formless absorptions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-132">
+                            <term>four great oceans</term>
+                            <term xml:lang="Bo-Ltn">rgya mtsho chen po bzhi </term>
+                            <term xml:lang="bo">རྒྱ་མཚོ་ཆེན་པོ་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">catvaro samudrāḥ</term>
+                            <term type="definition">Four oceans believed to surround the central mountain, Mt. Meru, in Indian
+                                cosmology.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-133">
+                            <term>emptiness</term>
+                            <term xml:lang="Bo-Ltn">stong pa nyid </term>
+                            <term xml:lang="bo">སྟོང་པ་ཉིད།</term>
+                            <term xml:lang="Sa-Ltn">śūnyatā</term>
+                            <term type="definition">Meditative concentration which realizes the non-self of persons and phenomena;
+                                the first of the three doors of liberation.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-134">
+                            <term>sphere of neither perception nor non-perception</term>
+                            <term xml:lang="Bo-Ltn">’du shes med ’du shes med min skye mched </term>
+                            <term xml:lang="bo">འདུ་ཤེས་མེད་འདུ་ཤེས་མེད་མིན་སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">naiva­saṃjñānāsaṃjñāyatanaṃ</term>
+                            <term type="definition">Fourth of the four formless absorptions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-135">
+                            <term>sphere of the infinity of space</term>
+                            <term xml:lang="Bo-Ltn">nam mkha’ mtha yas skye mched </term>
+                            <term xml:lang="bo">ནམ་མཁའ་མཐ་ཡས་སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">ākāśānantyāyatanaṃ</term>
+                            <term type="definition">First of the four formless absorptions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-136">
+                            <term>sphere of the infinity of consciousness</term>
+                            <term xml:lang="Bo-Ltn">rnam shes mtha’ yas skye mched </term>
+                            <term xml:lang="bo">རྣམ་ཤེས་མཐའ་ཡས་སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">vi­jñānānantyāyatanaṃ</term>
+                            <term type="definition">Second of the four formless absorptions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-137">
+                            <term>noble eightfold path</term>
+                            <term xml:lang="Bo-Ltn">’phags lam yan lag brgyad </term>
+                            <term xml:lang="bo">འཕགས་ལམ་ཡན་ལག་བརྒྱད།</term>
+                            <term xml:lang="Sa-Ltn">āryaṣṭāṇgamārga</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-138">
+                            <term>wishlessness</term>
+                            <term xml:lang="Bo-Ltn">smon pa med pa </term>
+                            <term xml:lang="bo">སྨོན་པ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">praṇihita</term>
+                            <term type="definition">Meditative concentration which views nirvāṇa, which is the complete
+                                pacification of the aggregates; the third of the Three Doors of Liberation.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-139">
+                            <term>signlessness</term>
+                            <term xml:lang="Bo-Ltn">mtshan ma med pa </term>
+                            <term xml:lang="bo">མཚན་མ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">animitta</term>
+                            <term type="definition">Meditative concentration which views the five aggregates, the basis for the
+                                conception of a self, as faulty; the second of the three doors of liberation.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-140">
+                            <term>calm abiding</term>
+                            <term xml:lang="Bo-Ltn">zhi gnas </term>
+                            <term xml:lang="bo">ཞི་གནས།</term>
+                            <term xml:lang="Sa-Ltn">śamatha</term>
+                            <term type="definition">Meditation technique to calm the mind.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-141">
+                            <term>perfection of wisdom</term>
+                            <term xml:lang="Bo-Ltn">shes rab kyi pha rol tu phyin pa </term>
+                            <term xml:lang="bo">ཤེས་རབ་ཀྱི་ཕ་རོལ་ཏུ་ཕྱིན་པ།</term>
+                            <term xml:lang="Sa-Ltn">prajñāpāramitā</term>
+                            <term type="definition">The sixth of the six perfections.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-142">
+                            <term>meditative absorption</term>
+                            <term xml:lang="Bo-Ltn">bsam gtan </term>
+                            <term xml:lang="bo">བསམ་གཏན།</term>
+                            <term xml:lang="Sa-Ltn">dhyāna</term>
+                            <term type="definition">Four levels of meditation within the Form Realm.</term>
+                            <term type="definition">See also <ptr target="#UT22084-044-005-208"/>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-143">
+                            <term>sal tree</term>
+                            <term xml:lang="Bo-Ltn">shing sA la </term>
+                            <term xml:lang="bo">ཤིང་སཱ་ལ།</term>
+                            <term xml:lang="Sa-Ltn">śāla</term>
+                            <term type="definition">A hardwood tree, <foreign type="term" xml:lang="la">Shorea robusta</foreign>,
+                                widespread on the Indian subcontinent.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-144">
+                            <term>nyagrodha tree</term>
+                            <term xml:lang="Bo-Ltn">shing nya gro dha </term>
+                            <term xml:lang="bo">ཤིང་ཉ་གྲོ་དྷ།</term>
+                            <term xml:lang="Sa-Ltn">nyagrodha</term>
+                            <term type="definition">A tree, <foreign type="term" xml:lang="la">Ficus benghalensis</foreign>,
+                                native to the Indian subcontinent, that can cover large areas by putting down aerial roots that
+                                become subsidiary trunks.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-145">
+                            <term>Ānanda</term>
+                            <term xml:lang="Bo-Ltn">kun dga’ bo </term>
+                            <term xml:lang="bo">ཀུན་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Ānanda</term>
+                            <term type="definition">The cousin and close attendant monk of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-146">
+                            <term>Giver of All Wealth</term>
+                            <term xml:lang="Bo-Ltn">nor thams cad phyin pa </term>
+                            <term xml:lang="bo">ནོར་ཐམས་ཅད་ཕྱིན་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-147">
+                            <term>Puṣpa</term>
+                            <term xml:lang="Bo-Ltn">me tog </term>
+                            <term xml:lang="bo">མེ་ཏོག</term>
+                            <term xml:lang="Sa-Ltn">Puṣpa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-148">
+                            <term>Candraprabha</term>
+                            <term xml:lang="Bo-Ltn">zla ’od </term>
+                            <term xml:lang="bo">ཟླ་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Candraprabha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-149">
+                            <term>Kauṇḍinya</term>
+                            <term xml:lang="Bo-Ltn">kauN+Din+ya</term>
+                            <term xml:lang="bo">ཀཽཎྜིནྱ།</term>                      
+                            <term xml:lang="Sa-Ltn">Kauṇḍinya</term>
+                            <term type="definition">One of the first five disciples of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-150">
+                            <term>Aśvajit</term>
+                            <term xml:lang="Bo-Ltn">rta thul </term>
+                            <term xml:lang="bo">རྟ་ཐུལ།</term>
+                            <term xml:lang="Sa-Ltn">Aśvajit</term>
+                            <term type="definition">One of the first five disciples of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-151">
+                            <term>Vaṣpa</term>
+                            <term xml:lang="Bo-Ltn">rlangs pa </term>
+                            <term xml:lang="bo">རླངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Vaṣpa</term>
+                            <term type="definition">One of the first five disciples of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-152">
+                            <term>Mahānāman</term>
+                            <term xml:lang="Bo-Ltn">ming chen </term>
+                            <term xml:lang="bo">མིང་ཆེན།</term>
+                            <term xml:lang="Sa-Ltn">Mahānāman</term>
+                            <term type="definition">One of the first five disciples of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-153">
+                            <term>Bhadrika</term>
+                            <term xml:lang="Bo-Ltn">bzang ldan </term>
+                            <term xml:lang="bo">བཟང་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn">Bhadrika</term>
+                            <term type="definition">One of the first five disciples of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-154">
+                            <term>Vimala</term>
+                            <term xml:lang="Bo-Ltn">dri ma med </term>
+                            <term xml:lang="bo">དྲི་མ་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Vimala</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-155">
+                            <term>Pūrṇa</term>
+                            <term xml:lang="Bo-Ltn">gang po </term>
+                            <term xml:lang="bo">གང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Pūrṇa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-156">
+                            <term>Gavāṃpati</term>
+                            <term xml:lang="Bo-Ltn">ba lang bdag </term>
+                            <term xml:lang="bo">བ་ལང་བདག</term>
+                            <term xml:lang="Sa-Ltn">Gavāṃpati</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-157">
+                            <term>Mṛgaśiras</term>
+                            <term xml:lang="Bo-Ltn">ri dags mgo </term>
+                            <term xml:lang="bo">རི་དགས་མགོ</term>
+                            <term xml:lang="Sa-Ltn">Mṛgaśiras</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-158">
+                            <term>Uruvilva Kāśyapa</term>
+                            <term xml:lang="Bo-Ltn">lteng rgyas ’od srung </term>
+                            <term xml:lang="bo">ལྟེང་རྒྱས་འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Uruvilva Kāśyapa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-159">
+                            <term>Nadīkāśyapa</term>
+                            <term xml:lang="Bo-Ltn">chu klung ’od srung </term>
+                            <term xml:lang="bo">ཆུ་ཀླུང་འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Nadīkāśyapa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-160">
+                            <term>Gayākāśyapa</term>
+                            <term xml:lang="Bo-Ltn">ga ya ’od srung </term>
+                            <term xml:lang="bo">ག་ཡ་འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Gayākāśyapa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-161">
+                            <term>Jaṅghā Kāśyapa</term>
+                            <term xml:lang="Bo-Ltn">byin pa ’od srung </term>
+                            <term xml:lang="bo">བྱིན་པ་འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Jaṅghā Kāśyapa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-162">
+                            <term>Mahākāśyapa</term>
+                            <term xml:lang="Bo-Ltn">’od srung chen po </term>
+                            <term xml:lang="bo">འོད་སྲུང་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākāśyapa</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-163">
+                            <term>Amogharāja</term>
+                            <term xml:lang="Bo-Ltn">don yod rgyal po </term>
+                            <term xml:lang="bo">དོན་ཡོད་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Amogharāja</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-164">
+                            <term>Sumati</term>
+                            <term xml:lang="Bo-Ltn">blo gros bzang po </term>
+                            <term xml:lang="bo">བློ་གྲོས་བཟང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Sumati</term>
+                            <term type="definition">Name shared by a close Śravaka disciple of the Buddha, and by a
+                                bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-165">
+                            <term>Śāriputra</term>
+                            <term xml:lang="Bo-Ltn">sha ri’i bu </term>
+                            <term xml:lang="bo">ཤ་རིའི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Śāriputra</term>
+                            <term type="definition">Close Śravaka disciple of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-166">
+                            <term>Maudgalyāyana</term>
+                            <term xml:lang="Bo-Ltn">maud gal gyi bu </term>
+                            <term xml:lang="bo">མཽད་གལ་གྱི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Maudgalyāyana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-167">
+                            <term>Parvatarāja</term>
+                            <term xml:lang="Bo-Ltn">ri rgyal </term>
+                            <term xml:lang="bo">རི་རྒྱལ།</term>
+                            <term xml:lang="Sa-Ltn">Parvatarāja</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-168">
+                            <term>Nanda</term>
+                            <term xml:lang="Bo-Ltn">dga’ bo </term>
+                            <term xml:lang="bo">དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Nanda</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-169">
+                            <term>Upananda</term>
+                            <term xml:lang="Bo-Ltn">nye dga’ </term>
+                            <term xml:lang="bo">ཉེ་དགའ།</term>
+                            <term xml:lang="Sa-Ltn">Upananda</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-170">
+                            <term>Rāhula</term>
+                            <term xml:lang="Bo-Ltn">sgra gcan zin </term>
+                            <term xml:lang="bo">སྒྲ་གཅན་ཟིན།</term>
+                            <term xml:lang="Sa-Ltn">Rāhula</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-171">
+                            <term>Vardhamāna­mati</term>
+                            <term xml:lang="Bo-Ltn">blo gros ’phel </term>
+                            <term xml:lang="bo">བློ་གྲོས་འཕེལ།</term>
+                            <term xml:lang="Sa-Ltn">Vardhamāna­mati</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-172">
+                            <term>Sthiramati</term>
+                            <term xml:lang="Bo-Ltn">blo gros brtan </term>
+                            <term xml:lang="bo">བློ་གྲོས་བརྟན།</term>
+                            <term xml:lang="Sa-Ltn">Sthiramati</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-173">
+                            <term>Viśālamati</term>
+                            <term xml:lang="Bo-Ltn">blo gros yangs pa </term>
+                            <term xml:lang="bo">བློ་གྲོས་ཡངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Viśālamati</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-174">
+                            <term>Pratibhāna­kūṭa</term>
+                            <term xml:lang="Bo-Ltn">spobs pa brtsegs </term>
+                            <term xml:lang="bo">སྤོབས་པ་བརྩེགས།</term>
+                            <term xml:lang="Sa-Ltn">Pratibhāna­kūṭa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-175">
+                            <term>Avalokiteśvara</term>
+                            <term xml:lang="Bo-Ltn">spyan ras gzigs dbang phyug </term>
+                            <term xml:lang="bo">སྤྱན་རས་གཟིགས་དབང་ཕྱུག</term>
+                            <term xml:lang="Sa-Ltn">Avalokiteśvara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-176">
+                            <term>Mahā­sthāma­prāpta</term>
+                            <term xml:lang="Bo-Ltn">mthu chen thob </term>
+                            <term xml:lang="bo">མཐུ་ཆེན་ཐོབ།</term>
+                            <term xml:lang="Sa-Ltn">Mahā­sthāma­prāpta</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-177">
+                            <term>Kusumaśrī</term>
+                            <term xml:lang="Bo-Ltn">me tog dpal </term>
+                            <term xml:lang="bo">མེ་ཏོག་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Kusumaśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-178">
+                            <term>Mañjuśrī</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal </term>
+                            <term xml:lang="bo">འཇམ་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-179">
+                            <term>Abhi­jñā­puṣpa­supari­pūrṇa</term>
+                            <term xml:lang="Bo-Ltn">mngon par shes pa’i me tog shin tu rgyas pa </term>
+                            <term xml:lang="bo">མངོན་པར་ཤེས་པའི་མེ་ཏོག་ཤིན་ཏུ་རྒྱས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Abhi­jñā­puṣpa­supari­pūrṇa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-180">
+                            <term>An­upalambha­manasi­kāra</term>
+                            <term xml:lang="Bo-Ltn">dmigs pa med pa yid la byed pa </term>
+                            <term xml:lang="bo">དམིགས་པ་མེད་པ་ཡིད་ལ་བྱེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">An­upalambha­manasi­kāra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-181">
+                            <term>Prasādavat</term>
+                            <term xml:lang="Bo-Ltn">dad ldan </term>
+                            <term xml:lang="bo">དད་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn">Prasādavat</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-182">
+                            <term>Ratnaketu</term>
+                            <term xml:lang="Bo-Ltn">rin chen tog </term>
+                            <term xml:lang="bo">རིན་ཆེན་ཏོག</term>
+                            <term xml:lang="Sa-Ltn">Ratnaketu</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-183">
+                            <term>Indradeva</term>
+                            <term xml:lang="Bo-Ltn">dbang po’i lha </term>
+                            <term xml:lang="bo">དབང་པོའི་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Indradeva</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-184">
+                            <term>Varuṇadeva</term>
+                            <term xml:lang="Bo-Ltn">chu lha </term>
+                            <term xml:lang="bo">ཆུ་ལྷ།</term>
+                            <term xml:lang="Sa-Ltn">Varuṇadeva</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-185">
+                            <term>Mṛdusvara</term>
+                            <term xml:lang="Bo-Ltn">sgra dbyangs snyan </term>
+                            <term xml:lang="bo">སྒྲ་དབྱངས་སྙན།</term>
+                            <term xml:lang="Sa-Ltn">Mṛdusvara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-186">
+                            <term>Kṣetra­viśodhana</term>
+                            <term xml:lang="Bo-Ltn">zhing rnam par sbyong </term>
+                            <term xml:lang="bo">ཞིང་རྣམ་པར་སྦྱོང་།</term>
+                            <term xml:lang="Sa-Ltn">Kṣetra­viśodhana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-187">
+                            <term>Merukūṭa</term>
+                            <term xml:lang="Bo-Ltn">lhun po brtsegs </term>
+                            <term xml:lang="bo">ལྷུན་པོ་བརྩེགས།</term>
+                            <term xml:lang="Sa-Ltn">Merukūṭa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-188">
+                            <term>Prati­bhāna­saṃpad</term>
+                            <term xml:lang="Bo-Ltn">spobs pa phun sum tshogs </term>
+                            <term xml:lang="bo">སྤོབས་པ་ཕུན་སུམ་ཚོགས།</term>
+                            <term xml:lang="Sa-Ltn">Prati­bhāna­saṃpad</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-189">
+                            <term>Indraśrī</term>
+                            <term xml:lang="Bo-Ltn">dbang po’i dpal </term>
+                            <term xml:lang="bo">དབང་པོའི་དཔལ།</term>
+                            <term xml:lang="Sa-Ltn">Indraśrī</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-190">
+                            <term>Nimiṃdhara</term>
+                            <term xml:lang="Bo-Ltn">sa ’dzin </term>
+                            <term xml:lang="bo">ས་འཛིན།</term>
+                            <term xml:lang="Sa-Ltn">Nimiṃdhara</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-191">
+                            <term>Scourer of the Hell-dwellers</term>
+                            <term xml:lang="Bo-Ltn">sems can dmyal ba skems </term>
+                            <term xml:lang="bo">སེམས་ཅན་དམྱལ་བ་སྐེམས།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-192">
+                            <term>Abandoner of Unfavorable Rebirths</term>
+                            <term xml:lang="Bo-Ltn">ngan song spong </term>
+                            <term xml:lang="bo">ངན་སོང་སྤོང་།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-193">
+                            <term>Ratnakesarin</term>
+                            <term xml:lang="Bo-Ltn">rin chen ze ba can </term>
+                            <term xml:lang="bo">རིན་ཆེན་ཟེ་བ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Ratnakesarin</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-194">
+                            <term>Jyoti­vikrīḍitābhijña</term>
+                            <term xml:lang="Bo-Ltn">snang bas rnam par rol pa’i mngon par shes pa </term>
+                            <term xml:lang="bo">སྣང་བས་རྣམ་པར་རོལ་པའི་མངོན་པར་ཤེས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Jyoti­vikrīḍitābhijña</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-044-005-195">
+                            <term>Bhadraśuddha</term>
+                            <term xml:lang="Bo-Ltn">bzang dag </term>
+                            <term xml:lang="bo">བཟང་དག</term>
+                            <term xml:lang="Sa-Ltn">Bhadraśuddha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-005-196">
+                            <term>Country of the Bhargas</term>
+                            <term xml:lang="Bo-Ltn">yul bha rga </term>
+                            <term xml:lang="bo">ཡུལ་བྷ་རྒ།</term>
+                            <term xml:lang="Sa-Ltn">Bharga</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-005-197">
+                            <term>Mount Śuśumāra</term>
+                            <term xml:lang="Bo-Ltn">chu srin byis pa gsod lta bu’i ri </term>
+                            <term xml:lang="bo">ཆུ་སྲིན་བྱིས་པ་གསོད་ལྟ་བུའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">Śuśumāragiri</term>
+                            <term type="definition">Sometimes has the alternative Sanskrit spelling Śiśumāragiri.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-044-005-198">
+                            <term>Vulture Peak Mountain</term>
+                            <term xml:lang="Bo-Ltn">bya rgod phung po’i ri </term>
+                            <term xml:lang="bo">བྱ་རྒོད་ཕུང་པོའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">Gṛdhra­kūta­parvata</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-044-005-222">
+                            <term>god</term>
+                            <term xml:lang="Bo-Ltn"> lha</term>
+                            <term xml:lang="bo">ལྷ།</term>
+                            <term xml:lang="Bo-Ltn">lha’i bu</term>
+                            <term xml:lang="bo">ལྷའི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">deva</term>
+                            <term xml:lang="Sa-Ltn">devaputra</term>
+                            <!--<term type="alternative">demigod</term> Doesn't match tibetan - AAR -->
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

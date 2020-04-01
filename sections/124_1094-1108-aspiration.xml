@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bsngo smon/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Praṇidhāna</title>
+                <title type="mainTitle" xml:lang="en">Aspiration</title>
+                <title type="otherTitle" xml:lang=""/>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC114941JC20569"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W22084" sort-index="24">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC114941JC14717"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-12T10:37:49.316Z" user="john">12/12/2019 10:37:49</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Canonical aspiration and dedication prayers to conclude the Compendium of Incantations (Toh 1094-1108).</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about" tid="4">Aspiration</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="O1JC114941JC20569-1"/>
+                    <p tid="2">Fifteen works that bring the Incantations section to a conclusion with aspiration prayers, dedication, and
+                        expressions of auspiciousness.</p>
+                    <p tid="3">Only two of these works, the <title xml:lang="en">Prayer of Maitreya</title> (<title xml:lang="Bo-Ltn">byams pa’i smon lam</title>, Toh 1096) and <title xml:lang="en">Prayer of Sublime Action</title>
+                            (<title xml:lang="Bo-Ltn">mchog gi spyod pa’i smon lam</title>, Toh 1097), are unique to this section
+                        and not duplicates of works elsewhere in the Kangyur.</p>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

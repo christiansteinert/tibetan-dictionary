@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">thabs kyi zhags pa pad+mo'i phreng ba/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">[no Sanskrit title]</title>
+                <title type="mainTitle" xml:lang="en">The Noble Lasso of Methods, the Lotus Garland</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa thabs kyi zhags pa pad+mo'i phreng zhes bya ba/</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">thabs kyi zhags pa pad+mo'i phreng ba don bsdus pa'i rgyud/</title>
+                <title type="otherTitle" xml:lang="en">The Noose of Methods, the Lotus Garland Synopsis Tantra</title>
+                <author role="translatorMain" ref="contributors.xml#team-25"/>
+            <author role="translatorEng" ref="contributors.xml#person-158">Dr. Robert Mayer</author>
+                <author role="translatorEng" ref="contributors.xml#person-159">Dr. Cathy Cantwell</author>
+                <editor role="finalReviewer" ref="contributors.xml#person-230">Tom Tillemans</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-098-005"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh835" type="text">
+                    <ref>Toh 835</ref>
+                    <biblScope>vol.98,ff. 299r-311r(pp. 597-621)</biblScope>
+                    <location count-pages="25">
+                        <start volume="98" page="599"/>
+                        <end volume="98" page="623"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20566" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12584" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:57:38 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="2">Summary</head>
+                <p tid="1">Reconstructed stemmatic edition of the tantra together with its Tengyur commentary (G 2716, Q 4717; not found in Degé) in a restored version, IOLTibJ321.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

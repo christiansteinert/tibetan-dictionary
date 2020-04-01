@@ -1,0 +1,1884 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">kun rdzob dang don dam pa’i bden pa bstan pa</title>
+                <title type="mainTitle" xml:lang="bo">ཀུན་རྫོབ་དང་དོན་དམ་པའི་བདེན་པ་བསྟན་པ།</title>
+                <title type="mainTitle" xml:lang="en">Teaching the Relative and Ultimate Truths</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Saṃvṛti­paramārtha­satya­nirdeśa</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ཀུན་རྫོབ་དང་དོན་དམ་པའི་བདེན་པ་བསྟན་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa kun rdzob dang don dam pa’i bden pa bstan pa zhes bya ba theg
+                    pa chen po’i mdo </title>
+                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “Teaching the Relative and Ultimate Truths”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­saṃvṛti­paramārtha­satya­nirdeśa­nāma­mahā­yāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-9">
+                    Translated by the Dharmachakra Translation Group<lb/> under the patronage and
+                    supervision of 84000: Translating the Words of the Buddha</author>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+                <author role="translatorEng" ref="contributors.xml#person-70">Miguel Sawaya</author>
+                <author role="translatorEng" ref="contributors.xml#person-50">Andreas Doctor</author>
+                <editor role="reviser" ref="contributors.xml#person-61">Catherine Dalton</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
+                <consultant role="advisor" ref="contributors.xml#person-46">Khenpo Trokpa Tulku</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-48">Lama Tenzin Sangpo</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-49">Lama Karma Oser</consultant>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.24 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative that aims to
+                    translate all of the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-060-008"/>
+                <date>2014-03-24</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh179" type="text">
+                    <ref>Toh 179</ref>
+                    <biblScope>Degé Kangyur, vol. 60 (mdo sde, ma), folios 244.b–266.b</biblScope>
+                    <author role="translatorTib">Śākyaprabha</author>
+                    <author role="translatorTib">Jinamitra</author>
+                    <author role="translatorTib">Dharmatāśīla</author>
+                    <location count-pages="45">
+                        <start volume="60" page="490"/>
+                        <end volume="60" page="534"/>
+                    </location>
+                <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11791" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-06-18T02:55:19.392Z" user="admin">18/06/2019 02:55:19</note>
+            <note type="updated" update="text-version" value="v 2.22" date-time="2019-03-27T07:58:24.398Z" user="john">v 2.22 2014 - 2016</note>
+                <note type="updated" update="text-version" value="v 2.24" date-time="2019-06-18T02:55:16.582Z" user="celso">v 2.24 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="297">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-060-008-1"/>
+                <p tid="1"> In <title xml:lang="en">Teaching the Relative and Ultimate Truths</title>, the bodhisattva Mañjuśrī is
+                    summoned by Buddha Śākyamuni from a faraway buddha realm to teach in a way that demolishes all dualistic
+                    experience. As Mañjuśrī begins to teach, the main message of the sūtra unfolds as an explanation of the two
+                    truths. The general theme of Mañjuśrī’s discourse is centered on the particular circumstances in Ratnaketu’s
+                    buddha realm, but the message is equally applicable to the experiences of beings here in this world. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="298">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-060-008-2"/>
+                <p tid="2">Translated by the Dharmachakra Translation Committee under the guidance of Chökyi Nyima Rinpoche.
+                    Miguel Sawaya and Andreas Doctor produced the translation and wrote the introduction. Catherine Dalton
+                    compared the draft translation with the original Tibetan and edited the text. The translators are grateful to
+                    Khenpo Trokpa Tulku, Lama Karma Oser, and Lama Tenzin Sangpo from Ka-Nying Shedrub Ling Monastery for their
+                    assistance in resolving several difficult passages.</p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="299">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-060-008-3"/>
+                    <p tid="4">
+                        <title xml:lang="en">Teaching the Relative and Ultimate Truths</title> is a sūtra significant in the canon
+                        of the Great Vehicle, concerned as it is with one of the key themes of Buddhist philosophy, the two
+                        truths. These two principles are (1) the relative truth (understanding the world as it appears); and (2)
+                        the ultimate truth (understanding the world as it is). Since this bifurcation of reality is one of the
+                        frameworks underlying the entirety of Buddhist thought, the message of this sūtra is of importance for all
+                        Buddhist traditions, and for the Great Vehicle in particular.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-4"/>
+                    <p tid="5">Some readers may be surprised that most of the teaching delivered in this sūtra is spoken not by
+                        the Buddha himself, but by his disciple Mañjuśrī. However, as readers familiar with the Great Vehicle
+                        sūtras will have noticed, in this literature the Buddha often encourages his students to teach, and
+                        subsequently endorses their lectures as <foreign xml:lang="la">bona fide</foreign> “words of the Buddha”
+                            (<foreign type="term" xml:lang="Sa-Ltn">buddhavacana</foreign>). In this way Mañjuśrī’s teaching
+                        becomes authentic scripture through the awakened activity of the Buddha himself. Still, before Mañjuśrī
+                        can deliver his eloquent teaching, he must first arrive in this world, as it turns out that he has
+                        temporarily taken up residence in a distant buddha realm, known as Jewel World. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-5"/>
+                    <p tid="6">The sūtra, which takes place on Vulture Peak Mountain—a hill just outside the ancient city of
+                        Rājagṛha, capital of what was then the state of Magadha—begins with a bodhisattva god named Lord of Peace
+                        and Calm asking the Buddha where Mañjuśrī might be found. The Buddha announces that Mañjuśrī has moved to
+                        a buddha realm many thousands of world systems away. There, the Buddha explains, Mañjuśrī lives in the
+                        assembly of another buddha, Ratnaketu. Lord of Peace and Calm politely requests the Buddha to send a
+                        signal to Mañjuśrī summoning him to this world, since Mañjuśrī is the only bodhisattva who is able to
+                        teach in a way that demolishes all dualistic experience or, as the text describes it, experience that
+                        involves “reference points.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-6"/>
+                    <p tid="7">The Buddha obliges and immediately sends forth a light from the magical hair between his eyebrows.
+                        The light inspires Mañjuśrī to return to this world, this time joined on his travels by an enormous
+                        assembly of bodhisattvas from the buddha realm of Ratnaketu. They arrive and, accompanied by much pomp and
+                        festivity, they offer proper worship to Buddha Śākyamuni. Once they have settled here in this world,
+                        Mañjuśrī is asked to give the assembly a teaching just like the instructions offered by Buddha Ratnaketu
+                        in his far-off buddha realm.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-7"/>
+                    <p tid="8">As Mañjuśrī begins to teach, the main message of the sūtra unfolds in the form of an explanation of
+                        the two truths. The general theme of Mañjuśrī’s discourse is centered on the particular circumstances in
+                        Ratnaketu’s buddha realm, but the message is equally applicable to the experiences of beings here in this
+                        world.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-8"/>
+                    <p tid="9">There are two truths, Mañjuśrī teaches. There is the relative truth in which all types of
+                        experiences unfold—good and bad, virtuous and nonvirtuous, pleasant and painful, awakened and confused.
+                        This truth also includes all the spiritual trainings that take an ordinary being along the path to the
+                        state of awakening itself. And then there is the ultimate truth, in which it is realized that all the
+                        phenomena experienced on the relative level are, in their most fundamental state, in Mañjuśrī’s words,
+                        “unborn, unarisen, and unreal.” This is the truth that is experienced by awakened beings. Still, even
+                        though awakened beings perceive the unborn, unarisen, and unreal nature of all phenomena, they actively
+                        participate in the relative aspect of things. In relative terms, awakened beings carry out the trainings
+                        on the path, guide confused beings toward the liberated state, and perform a multitude of services to
+                        beings in general. Nevertheless, as Mañjuśrī teaches again and again in this sūtra, they train without
+                        training, they guide without guiding, and they serve without serving. Through such paradoxical
+                        expressions, Mañjuśrī describes the experiences of those who have direct understanding of both the
+                        ultimate and relative truths. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-9"/>
+                    <p tid="10">The teaching unfolds organically as Mañjuśrī responds to a series of questions put by several of
+                        the bodhisattvas in Buddha Śākyamuni’s retinue. Although the recurring theme of the teaching remains the
+                        nature of the two truths, Mañjuśrī covers a variety of topics specific to the questions asked. In this way
+                        he describes the qualities of both the hearers and bodhisattvas in Buddha Ratnaketu’s circle and the moral
+                        trainings (<foreign type="term" xml:lang="Sa-Ltn">vinaya</foreign>) that they observe.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-10"/>
+                    <p tid="11">Interestingly, Mañjuśrī teaches that the very same acts that the hearers in the assembly avoid,
+                        the bodhisattvas adopt as their core training, although with a twist. For example, while the hearers seek
+                        to avoid miserliness at all cost, the bodhisattvas engage precisely in “miserliness,” albeit with the
+                        understanding that it is the welfare of other beings that they refuse to relinquish, rather than any
+                        worldly mammon. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-11"/>
+                    <p tid="12">Toward the latter half of the sūtra, the teaching takes on a more personal character as the
+                        bodhisattvas interview Mañjuśrī concerning his own personal attainments and practice. In this way we find
+                        Mañjuśrī describing his own insights and spiritual prowess, although in somewhat cryptic language.
+                        Accordingly, when Lord of Peace and Calm asks him whether he directly comprehends the unarisen nature of
+                        phenomena on the ultimate level, Mañjuśrī replies, “Divine son, the utterly unarisen does not comprehend
+                        the utterly unarisen. And why? Because, divine son, all phenomena are utterly unborn, utterly unarisen,
+                        and utterly unreal.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-12"/>
+                    <p tid="13">At the end of Mañjuśrī’s teaching, the Buddha praises and approves what he has taught. Here, the
+                        Buddha is asked by several bodhisattvas to elaborate on some of the themes raised by Mañjuśrī. In general,
+                        throughout the sūtra, it is clear that the teachings and trainings of the bodhisattvas are considered
+                        preferable, superior, and far vaster in scope than those of the hearers. This is here confirmed by the
+                        Buddha, using a series of analogies that illustrate the superiority of the bodhisattva vehicle. For
+                        example, the conceptual wisdom of the hearers is compared to a single drop of water, while the
+                        nonconceptual wisdom of the bodhisattvas is taught to be infinitely greater, like the great ocean. The
+                        reader is left in no doubt as to where the protagonists in this sūtra stand in terms of their devotional
+                        allegiance. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-13"/>
+                    <p tid="14">Toward the end of the sūtra, in a final display of his superior spiritual abilities, Mañjuśrī
+                        enters an absorption that allows him to alter the perceptions of everyone present, so that they now
+                        perceive this world as the buddha realm of Ratnaketu. Encouraged by the Buddha, Mañjuśrī reveals his
+                        magically created illusion to everyone, before departing for that distant buddha realm from whence he
+                        first arrived. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-14"/>
+                    <p tid="15">At the very end of the sūtra, we find the customary inquiry by Ānanda to the Buddha regarding the
+                        title of the sūtra, its benefits to potential devotees, and the right way to propagate it. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-15"/>
+                    <p tid="16">The translation was made based on the Degé block print, with reference to other recensions of the
+                        sūtra as listed in the Pedurma (<foreign xml:lang="Bo-Ltn">dpe bsdur ma</foreign>) comparative edition of
+                        the Kangyur. Unfortunately, it appears that no Sanskrit manuscript remains extant.<note place="end" index="1" xml:id="UT22084-060-008-237">A brief passage from this text in Sanskrit (part of <ptr target="#UT22084-060-008-32"/><!--1.17-->) has, however, survived in Prajñākaramati’s <title xml:lang="Sa-Ltn">Bodhi­caryāvatāra­pañjikā</title>. See Vose (2009), 214 n8.</note>
+                    </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="300">The Translation </head>
+                <head type="titleHon" tid="301">The Noble Great Vehicle Sūtra </head>
+                <head type="titleMain" tid="302">Teaching the Relative and Ultimate Truths </head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-060-008-16"/>
+                    <p tid="17">
+                        <ref cRef="F.244.b"/>
+                        <ref cRef="B1" type="bampo"/>
+                        <!--<modularPassage type="homage">-->Homage to all buddhas and bodhisattvas!<!--</modularPassage>-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-17"/>
+                    <p tid="18"> Thus have I heard at one time. The Blessed One was dwelling in Rājagṛha, on Vulture Peak
+                        Mountain, together with a large monastic saṅgha of 8,000 monks and 72,000 bodhisattvas, as well as gods
+                        living in the desire and form realms. There, the Blessed One taught the Dharma, surrounded and honored by
+                        a retinue of many hundreds of thousands of beings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-18"/>
+                    <p tid="19">Present in the assembly was a god, called Lord of Peace and Calm. He prostrated at the feet of the
+                        Blessed One and, bowing with joined palms in the direction of the Blessed One, asked the Blessed One,
+                        “Blessed One, where is <ref cRef="F.245.a"/> Mañjuśrī Kumārabhūta now? Blessed One, I myself and everyone
+                        here would like that sublime being to teach the Dharma.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-19"/>
+                    <p tid="20">The Blessed One replied, “Divine son, if one travels east of this buddha realm and passes beyond
+                        18,000 other buddha realms, there is a buddha realm called Jewel World. There, the Thus-gone, worthy,
+                        perfect Buddha Ratnaketu at present lives and teaches the Dharma; and Mañjuśrī Kumārabhūta is there
+                        now.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-20"/>
+                    <p tid="21">The god Lord of Peace and Calm said to the Blessed One, “Blessed One, it would be wonderful if a
+                        sign were made such that Mañjuśrī Kumārabhūta, upon seeing it, would wish to return here. The reason is,
+                        Blessed One, that Dharma teachings such as those of Mañjuśrī Kumārabhūta are not to be heard from any of
+                        the hearers, solitary buddhas, or those bodhisattvas who rely on reference points. Except for the
+                        Thus-gone One, no one else at all is capable of teaching the Dharma in that manner. Blessed One, when
+                        Mañjuśrī teaches the Dharma, all the dwellings of the demons lose their luster. Moreover, all demons
+                        become unable to inflict any harm. All opposition is utterly defeated. Those with reference points are
+                        left without reference. The sacred Dharma also remains for a long time. The Thus-gone One will also
+                        rejoice in this and approve of it.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-21"/>
+                    <p tid="22">The Blessed One knew that the god Lord of Peace and Calm would make this request, and sent out a
+                        beam of light from the ūrṇā hair on his brow. That ray of light illuminated the great trichiliocosm with
+                        its intense luminescence <ref cRef="F.245.b"/> and, passing through those 18,000 other buddha realms, its
+                        intense radiance spread throughout the Jewel World, the buddha realm of the Blessed, thus-gone, worthy,
+                        perfect Buddha Ratnaketu. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-22"/>
+                    <p tid="23">Witnessing this radiance, some bodhisattva great beings asked the Blessed, thus-gone, worthy,
+                        perfect Buddha Ratnaketu who resided there, “Blessed One, there was such a bright light just now; who
+                        caused that sign?” </p>
+                    <p tid="24">“Son of noble family,” replied the Blessed Ratnaketu, “to the west of this buddha realm, past
+                        18,000 buddha realms, is the Sahā world. There, the Blessed, thus-gone, worthy, perfect Buddha Śākyamuni
+                        currently lives and teaches the Dharma. The Blessed, thus-gone, worthy, perfect Buddha Śākyamuni sent out
+                        a beam of light from the ūrṇā hair on his brow, and the luminescence of that beam of light passed through
+                        18,000 buddha realms and illuminated this world with its intense radiance.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-23"/>
+                    <p tid="25">“Blessed One,” asked those bodhisattva great beings, “why did that blessed, thus-gone, worthy,
+                        perfect buddha emit this beam of light?” </p>
+                    <p tid="26">The Blessed Ratnaketu replied, “He did so in order to summon Mañjuśrī Kumārabhūta. And why? To
+                        make him return there. In that buddha’s retinue there are numerous bodhisattva great beings as well as
+                        many gods, nāgas, yakṣas, gandharvas, and so forth. They all want to behold Mañjuśrī Kumārabhūta and <ref cRef="F.246.a"/> hear him teach the Dharma.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-24"/>
+                    <p tid="27">The Thus-gone Ratnaketu then said to Mañjuśrī Kumārabhūta, “Mañjuśrī, since the Blessed, Thus-gone
+                        Śākyamuni and all those in his retinue would like to see you, you should go to that Sahā world.” </p>
+                    <p tid="28">“Yes, Blessed One,” replied Mañjuśrī. “I had also noticed that sign.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-25"/>
+                    <p tid="29">So Mañjuśrī Kumārabhūta, along with ten thousand bodhisattvas, bowed at the feet of the Thus-gone
+                        Ratnaketu. They circumambulated the Blessed, thus-gone, worthy, perfect Buddha Ratnaketu three times, and
+                        then instantaneously traveled to this Sahā world, arriving as quickly as it takes a strong person to
+                        extend and retract his arm. Remaining in midair with their bodies invisible, they sent down a great shower
+                        of fragrant, colorful, and delightful flowers, such as had never been seen or heard of before, in order to
+                        honor the Blessed, thus-gone, worthy, perfect Buddha Śākyamuni. This great shower of flowers filled the
+                        whole great trichiliocosm to knee height. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-26"/>
+                    <p tid="30">Seeing these flowers, everyone assembled there was amazed and asked, “Blessed One, who caused this
+                        great shower of blossoms, so pleasant to behold, to fall?” </p>
+                    <p tid="31">The Blessed One replied, “Mañjuśrī Kumārabhūta, accompanied by ten thousand bodhisattvas, has come
+                        from the Jewel World to this Sahā world. With their bodies invisible, <ref cRef="F.246.b"/> they all sent
+                        down this great shower of flowers to honor the Thus-gone One.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-27"/>
+                    <p tid="32">Those in the retinue said, “Blessed One, we would like to see Mañjuśrī Kumārabhūta and those
+                        bodhisattva great beings.” </p>
+                    <p tid="33">At that point, Mañjuśrī Kumārabhūta and the ten thousand bodhisattvas descended from the sky.
+                        Having prostrated at the Blessed One’s feet, Mañjuśrī Kumārabhūta and the bodhisattva great beings each
+                        sat down on their own miraculously emanated seat. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-28"/>
+                    <p tid="34">Then the god Lord of Peace and Calm bowed to the Blessed One and said, with joined palms, “Blessed
+                        One, all of us would like to listen, so please ask Mañjuśrī Kumārabhūta to teach.” </p>
+                    <p tid="35">The Blessed One replied, “Divine son, you yourself should make that request.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-29"/>
+                    <p tid="36"> So the god said, “Mañjuśrī, it would be wonderful if you could give us a Dharma teaching similar
+                        to what is taught in the buddha realm of the Blessed, Thus-gone Ratnaketu.” </p>
+                    <p tid="37"> Mañjuśrī replied, “Ultimately, the Dharma is not about generating attachment; nor is it about
+                        bringing attachment to an end. Ultimately, it is not about generating anger; nor is it about bringing
+                        anger to an end. Ultimately, it is not about generating delusion; nor is it about bringing delusion to an
+                        end. Ultimately, it is not about generating wisdom; nor is it about bringing wisdom to an end.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-30"/>
+                    <p tid="38">The god said, “Mañjuśrī, how is that?” </p>
+                    <p tid="39"> Mañjuśrī replied, “Divine son, in the unborn, there is no birth or ending whatsoever. Ultimately,
+                        divine son, the bodhisattva <ref cRef="F.247.a"/> great beings have no thoughts at all, none that have
+                        arisen, none that are arising, and none that will arise. And why is that? Because ultimately all phenomena
+                        are inherently unborn.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-31"/>
+                    <p tid="40">The god asked, “Mañjuśrī, so what does that Thus-gone One wish to see abandoned through his
+                        teaching the Dharma?” </p>
+                    <p tid="41"> Mañjuśrī said, “That Thus-gone One teaches the Dharma because ultimately things are neither
+                        inherently born, nor do they inherently end. And why? Because bodhisattva great beings apply themselves
+                        assiduously to the ultimate truth. However, they do not apply themselves diligently to the relative
+                        truth.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-32"/>
+                    <p tid="42">The god said, “Mañjuśrī, what is the ultimate truth?” </p>
+                    <p tid="43"> Mañjuśrī said, “Divine son, if, on the ultimate level, ultimate truth becomes an object of body,
+                        speech, or mind, that is not ‘ultimate truth’ but relative truth itself. Rather, divine son, on the
+                        ultimate level, ultimate truth transcends all conventions. It is without specific instances; it does not
+                        arise, does not cease, and is free from something to be expressed, an expression, something to be known,
+                        and knowledge. Divine son, the ultimate truth transcends everything up through the domain of omniscient
+                        wisdom that is endowed with the supreme of all aspects. Divine son, it has no engagement with, nor any
+                        turning back of, concepts and thoughts. Ultimately, there is no ‘far shore,’ there is no ‘this shore,’ nor
+                        is there a middle. Divine son, although one indeed makes the exaggerated claim, ‘This is ultimate truth,’
+                        that is not the same as saying, ‘Ultimate truth is like this.’ Divine son, ultimately, reality is unborn;
+                        thus, no conventions apply to it. That to which, on the ultimate level, no conventions apply, divine son,
+                        is ultimate truth. Thus, that is not like saying, ‘Ultimate truth is like this.’ <ref cRef="F.247.b"/>
+                        Divine son, the Thus-gone, worthy, perfect Buddha also says that ultimately all phenomena and all terms
+                        are false and deceptive phenomena.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-33"/>
+                    <p tid="44"> The god said, “How is it then, Mañjuśrī, that the Dharma taught by the Thus-gone One is not
+                        false?” </p>
+                    <p tid="45"> Mañjuśrī said, “Divine son, on the ultimate level, the Thus-gone One does not speak falsely. Nor
+                        does he speak truly. And why is that? Ultimately, divine son, the Thus-gone One has not arisen. And so,
+                        ultimately he speaks neither falsely nor truly. Divine son, what do you think? Are explanations given by
+                        magical creations of the Thus-gone One true or false?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-34"/>
+                    <p tid="46">The god said, “Mañjuśrī, explanations given by magical creations of the Thus-gone One are not
+                        true, nor are they false. Why is that? Mañjuśrī, ultimately there is nothing truly established in that
+                        which is emanated by the Thus-gone One.”</p>
+                    <p tid="47"> Mañjuśrī said, “Divine son, so it is. The Thus-gone One knows that all phenomena are
+                        unestablished in the ultimate sense. Whatever is unestablished in the ultimate sense should not be called
+                        true nor should it be called false in the context of the ultimate. Why is that? Because ultimately all
+                        phenomena are unborn.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-35"/>
+                    <p tid="48">The god said, “Mañjuśrī, how does the Thus-gone One teach the ultimate truth?”</p>
+                    <p tid="49"> Mañjuśrī said, “The ultimate truth, divine son, cannot be taught. And why? Because the topic, the
+                        teacher, the method of teaching, the student, and the reason for teaching are all ultimately utterly
+                        unborn. Phenomena that are utterly unborn cannot themselves express utterly unborn phenomena.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-36"/>
+                    <p tid="50">When Mañjuśrī Kumārabhūta had given this teaching on the ultimate truth without teaching, the
+                        minds of five hundred monks were freed from defilements without further clinging. <ref cRef="F.248.a"/>
+                        Countless bodhisattva great beings developed, without developing it, the acceptance that phenomena are
+                        unborn. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-37"/>
+                    <p tid="51">The god said, “Mañjuśrī, it is difficult to feel conviction in the ultimate truth.” </p>
+                    <p tid="52"> Mañjuśrī said, “Divine son, it is difficult for anyone who relies on reference points to feel
+                        conviction in the ultimate truth.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-38"/>
+                    <p tid="53">The god said, “Mañjuśrī, it is difficult to understand the ultimate truth.”</p>
+                    <p tid="54"> Mañjuśrī said, “Divine son, it is difficult for those who do not exert themselves to understand
+                        the ultimate truth.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-39"/>
+                    <p tid="55">The god said, “Mañjuśrī, how do monks exert themselves?”</p>
+                    <p tid="56"> Mañjuśrī said, “Divine son, ultimately, when they are without exertion that aims to understand,
+                        relinquish, cultivate, or actualize, that is how monks exert themselves without exerting themselves. And
+                        why? Because one might think, ‘Ultimately, this is to be understood, this is to be relinquished, this is
+                        to be cultivated, and this is to be actualized.’ However, such thinking involves conceptual marks and
+                        elaborations. It involves reference points and disturbing emotions. It involves tumult and fear. It
+                        involves illness and suffering. It involves pain and poison. Thus, engagement of that type is not
+                        authentic.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-40"/>
+                    <p tid="57">The god said, “Mañjuśrī, what is authentic engagement?”</p>
+                    <p tid="58"> Mañjuśrī said, “Divine son, whatever is the same as suchness, the sphere of reality, and the
+                        utterly unborn on the ultimate level is also the same as the five acts with immediate consequence on the
+                        ultimate level.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-41"/>
+                    <p tid="59">“Whatever is the same as suchness, the sphere of reality, and the utterly unborn on the ultimate
+                        level is also ultimately the same as views. <ref cRef="F.248.b"/>
+                    </p>
+                    <p tid="60">“Whatever is the same as suchness, the sphere of reality, and the utterly unborn on the ultimate
+                        level is also ultimately the same as the dharmas of ordinary beings. </p>
+                    <p tid="61">“Whatever is the same as suchness, the sphere of reality, and the utterly unborn on the ultimate
+                        level is also ultimately the same as the dharmas of those who are training. </p>
+                    <p tid="62">“Whatever is the same as suchness, the sphere of reality, and the utterly unborn on the ultimate
+                        level is also ultimately the same as the dharmas of those who are no longer training. </p>
+                    <p tid="63">“Whatever is the same as suchness, the sphere of reality, and the utterly unborn on the ultimate
+                        level is also ultimately the same as the dharmas of the completely perfect Buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-42"/>
+                    <p tid="64">“Whatever is the same as the dharmas of the completely perfect Buddha on the ultimate level is
+                        also ultimately the same as suchness, the sphere of reality, and the utterly unborn. </p>
+                    <p tid="65">“Whatever is the same as the dharmas of the completely perfect Buddha on the ultimate level is
+                        also ultimately the same as nirvāṇa. </p>
+                    <p tid="66">“Whatever is the same as nirvāṇa on the ultimate level is also ultimately the same as saṃsāra. </p>
+                    <p tid="67">“Whatever is the same as saṃsāra on the ultimate level is also ultimately the same as affliction. </p>
+                    <p tid="68">“Whatever is the same as affliction on the ultimate level is also ultimately the same as
+                        purification. </p>
+                    <p tid="69">“Whatever is the same as purification on the ultimate level is also ultimately the same as all
+                        phenomena. </p>
+                    <p tid="70">“A monk who genuinely engages in the equality of all phenomena on the ultimate level in this way,
+                        divine son, is called one with <distinct>authentic engagement</distinct> on the ultimate level. However,
+                        it is not like the way it is expressed.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-43"/>
+                    <p tid="71">The god said, “Mañjuśrī, what is the sameness by which everything up to purification is said to be
+                        ultimately the same, and also to be ultimately the same as all phenomena?” </p>
+                    <p tid="72"> Mañjuśrī said, “Ultimately, all phenomena are the same in that they are unarisen. <ref cRef="F.249.a"/> Ultimately, all phenomena are the same in that they are unborn. Ultimately, all
+                        phenomena are the same in that they are unreal. Therefore, divine son, ultimately all phenomena are the
+                        same. And why is that? Since ultimately, divine son, all phenomena are unarisen, they cannot be
+                        distinguished. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-44"/>
+                    <p tid="73">“Divine son, it is like this analogy. The space within a clay vessel and the space within a
+                        precious vessel are both the element of space; ultimately, not the slightest distinction can be made
+                        between them. Divine son, in the very same way, disturbing emotions are themselves unarisen on the
+                        ultimate level. Purification itself is also unarisen on the ultimate level. Ultimately, saṃsāra itself is
+                        also unarisen. Ultimately, all phenomena up through nirvāṇa itself are unarisen. Ultimately, not even a
+                        slight distinction can be made with respect to these. And why? Because ultimately all phenomena are
+                        unarisen.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-45"/>
+                    <p tid="74">The god said, “Mañjuśrī, how should bodhisattva great beings exert themselves with respect to the
+                        truths of the noble ones?”</p>
+                    <p tid="75"> Mañjuśrī said, “Divine son, if bodhisattva great beings did not apply themselves to the truths of
+                        the noble ones, how could they teach, without teaching, the Dharma to the hearers? Yet, divine son,
+                        although indeed that is the case, the bodhisattva great beings’ meditation on the truths involves
+                        consideration, while the hearers’ meditation on the truths does not involve consideration. Why is that?
+                        Divine son, on the relative level the bodhisattva great beings consider all sentient beings. Although they
+                        do meditate on the truths without meditating, they do not actualize the limit of reality by focusing on
+                        lack of substance. On the relative level, in order to acquire skill in means, the bodhisattva great beings
+                            <ref cRef="F.249.b"/> meditate on the truths without meditating. On the relative level they do not
+                        discard the truths of saṃsāra, nor of nirvāṇa. On the relative level, in order to individually
+                        discriminate the wisdoms of the buddhas, the bodhisattva great beings meditate on the truths without
+                        meditating. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-46"/>
+                    <p tid="76">“Divine son, it is as in the following analogy. A person who had been caught by many
+                            strangers<note place="end" index="2" xml:id="UT22084-060-008-238">Tib. <foreign xml:lang="Bo-Ltn">’dron pa</foreign>.</note> flees. He escapes from among those many strangers and enters a jungle.
+                        But he becomes frightened, panics, and leaves the jungle, never to return. Divine son, in the same way the
+                        hearers are frightened of saṃsāra and flee in panic. They do not return to this world but meditate
+                        one-pointedly on the truths in solitude. Thus, since they lack the intelligence of various methods, they
+                        do not consider all sentient beings, and so forth up to not considering the wisdom of omniscience. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-47"/>
+                    <p tid="77"> “Divine son, it is like the following analogy. A leader acquires many servants and all necessary
+                        provisions. Thinking that he should set out to gather many goods, he rounds up many people and, without
+                        fear or panic, he leaves the wild forest. Similarly, divine son, the bodhisattva great beings resemble
+                        that great leader as they engage in worldly conduct on the relative level. Thereby, they provide for all
+                        sentient beings and engage with great compassion, which can be likened to the many servants. They acquire
+                        all the roots of virtue, which are the provisions. They possess the great profit that is comprised of the
+                        six perfections, the means of attracting disciples, and unsurpassed merit and wisdom. They act for the
+                        welfare of all realms of sentient beings and proceed from buddha realm to buddha realm. Thus, they provide
+                        for sentient beings and meditate on the truths through being skilled in means. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-48"/>
+                    <p tid="78"> “Divine son, consider this analogy. If one infuses a hempen cloth with campaka and vārṣika
+                        flowers, their scent fades quickly. <ref cRef="F.250.a"/> Divine son, similarly, the hearers’ meditation
+                        on the truths is observed for just a short period of time. Passing quickly into nirvāṇa, they do not bring
+                        forth the fragrance of the buddhas’ discipline, hearing, absorption, knowledge, and wisdom. Furthermore,
+                        they are unable to relinquish the disturbing emotions that are conjoined with the habitual tendencies. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-49"/>
+                    <p tid="79">“Divine son, now consider another analogy. If one were to infuse a cloth of precious Benares silk
+                        for hundreds of thousands of great aeons with the scent of perfume and flowers from the human and divine
+                        realms, its divine fragrance would be experienced in perpetuity, and that pure aroma would overwhelm both
+                        gods and men. Divine son, similarly, the bodhisattva great beings without meditating meditate on the
+                        truths for incalculably many hundreds of thousands of eons. They do not relinquish doing so until they
+                        have attained omniscient wisdom endowed with the supreme of all aspects and pass into complete nirvāṇa.
+                        And so, without reference points, they become exceedingly fragrant with the scent of omniscient wisdom
+                        endowed with the supreme of all aspects. In terms of worldly conventions, they abandon all their habitual
+                        tendencies toward the disturbing emotions and attract the worlds of gods, men, and demigods.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-50"/>
+                    <p tid="80">Then the god Lord of Peace and Calm asked Mañjuśrī Kumārabhūta, “Mañjuśrī, how is the spiritual
+                        community of hearers that belong to the Blessed, thus-gone, worthy, perfect Buddha Ratnaketu?” </p>
+                    <p tid="81"> Mañjuśrī replied, “Ultimately, they are not devoted followers, but they are also not devotedly
+                        turning to someone else. Ultimately, they are not followers of the family, but neither do they ultimately
+                        abandon the family of the Thus-gone One. Ultimately, they are not following the Dharma; indeed, ultimately
+                        they do not observe any Dharma at all. Ultimately, they do not possess the eight mistaken dharmas, but
+                        neither are they relatively free from them. <ref cRef="F.250.b"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-51"/>
+                    <p tid="82">“Ultimately they are not stream-enterers, yet in terms of the conventional truth of the world,
+                        they are beyond all the lower realms. Ultimately they are not once-returners, yet relatively they do
+                        return in order to ripen beings. Ultimately they are not non-returners, yet relatively from all phenomena
+                        there is no return. Ultimately they are not worthy ones, yet according to worldly conventions they are
+                        supremely worthy of veneration by the world along with its gods. Ultimately they are not hearers, yet,
+                        without conceptually apprehending them, they do listen to all the blessed buddhas. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-52"/>
+                    <p tid="83">“Ultimately they are not without attachment, yet relatively they are unharmed by the torments of
+                        attachment. Ultimately they are not without anger, yet relatively they are unharmed by the torments of
+                        anger. Ultimately they are not without delusion, yet relatively all phenomena are free from darkness.
+                        Ultimately they are not without disturbing emotions, yet relatively they endeavor to tame the disturbing
+                        emotions of all beings. Ultimately they have abided definitively in non-origination from the very
+                        beginning, yet relatively they consciously take up existence. Relatively they embrace cyclic existence,
+                        yet ultimately there is no grasping to or abandoning of any phenomenon. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-53"/>
+                    <p tid="84"> “Ultimately, without intense mindfulness regarding all phenomena, they see without seeing.
+                        Relatively, however, they train in the foundations of mindfulness. Ultimately, without knowing, they know
+                        that all phenomena are unborn and unceasing. In terms of worldly experience, however, they train in the
+                        thorough relinquishments. Ultimately, they have neither body nor mind yet, in the relative truth of the
+                        world, they have accomplished the bases of miraculous power. <ref cRef="F.251.a"/> Ultimately they are
+                        without any faculties, yet relatively they have accomplished all the faculties. Ultimately, without
+                        seeing, they see that all phenomena are unreal. However, in order to eradicate the conceit and conceptual
+                        apprehension of everyone who is conceited and engages in conceptual apprehension, they train, without
+                        training, in the <term>powers</term>. Ultimately, in order to make it understood that all phenomena are
+                        unreal, they train, without training, in the branches of awakening. Although ultimately utterly unreal,
+                        relatively they train in the path by means of not training. Ultimately, they accomplish tranquillity
+                        within the limit of reality. Ultimately, by not training, they see insight to be utterly unarisen.
+                        Ultimately, their knowledge is born through not apprehending ignorance as something to be exhausted.
+                        Ultimately, neither exhaustion nor arising is observed. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-54"/>
+                    <p tid="85">“Although they see all beings and all buddha realms with their physical eye, ultimately they see
+                        nothing whatsoever. Although they see all the deaths, transmigrations, and rebirths of all beings so
+                        clearly with their divine eye, ultimately they see nothing whatsoever. Although they know all the
+                        experiences and movements of the minds of all beings with their eye of wisdom, ultimately they know
+                        nothing whatsoever. Although they see all dharmas with their dharma eye, ultimately they see nothing
+                        whatsoever. Although they perform all the acts of a buddha with their buddha eye, ultimately they perform
+                        nothing whatsoever. Although with their divine ear they hear the teachings of all the blessed buddhas,
+                        ultimately they hear nothing whatsoever. Although with their single mind they view the minds of all
+                        beings, ultimately they view nothing whatsoever. Although with their wisdom of recollection they surely
+                        recollect the very dawn of time, ultimately they recollect nothing whatsoever. Although they visit the
+                        inconceivable buddha realms by means of their miraculous powers, ultimately there is no coming or going.
+                        Although their defilements are exhausted, <ref cRef="F.251.b"/> ultimately there is nothing to be
+                        exhausted. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-55"/>
+                    <p tid="86">“Although they appear as beings, ultimately their bodies are devoid of true existence. Although
+                        they speak, ultimately their speech is not pronounced in the form of syllables. Although they think,
+                        ultimately thought is not something that can be expressed as mind or mental phenomena. Ultimately they do
+                        not appear as form, but relatively they are adorned with the thirty-two marks and ornamented with the
+                        excellent signs of great beings. They are adorned with the accumulations of merit and wisdom. Their
+                        splendor is dazzling. Their speech resounds. They have been anointed with the unguent of discipline. Words
+                        spoken with ill intent cause them no disturbing emotions. They sport in clairvoyant powers. Their learning
+                        sets them free.<note place="end" index="3" xml:id="UT22084-060-008-239">Tib. <foreign xml:lang="Bo-Ltn">rnam par shigs</foreign>.</note> With their eloquence they make declarations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-56"/>
+                    <p tid="87"> “Relatively, they produce emanations by means of wisdom; with the light of wisdom they dispel all
+                        darkness; with knowledge they illuminate; their teaching knows no limit, and is assimilated as
+                        realization. Relatively, for all beings they are the refuge, and because of their awakening they
+                        constantly consider beings—who are continuously beheld by the blessed buddhas, but who are not considered
+                        by the hearers, solitary buddhas, and the extremists with reference points— so that, relatively, their
+                        teaching knows no exhaustion, their mindfulness is like the ocean, their absorption is comparable to the
+                        central mountain, and their patience is like the earth. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-57"/>
+                    <p tid="88">“Relatively, they are courageous when it comes to clearing away all thoughts; they shine like the
+                        sun to dispel the deep darkness of ignorance; they shine like the moon in order to illuminate the world.
+                        Relatively, they are like a ruler in order to attract others. Relatively, they are like Brahmā in order to
+                        master the mind. Relatively, they are incomparable in order to master space. Relatively they have
+                        followed, but ultimately there is no one who goes, comes, or remains. Why is that? Because ultimately all
+                        phenomena are utterly unarisen. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-58"/>
+                    <p tid="89">“Divine son, such is the spiritual community of hearers belonging to the Blessed, thus-gone, <ref cRef="F.252.a"/> worthy, perfect Buddha Ratnaketu. Moreover, the dharma that they possess is even more
+                        inconceivable than that.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-59"/>
+                    <p tid="90"> When Mañjuśrī Kumārabhūta delivered this teaching in a manner beyond reference points, five
+                        hundred monks, five hundred laypeople, and five thousand gods who held reference points all made this
+                        supplication: “Blessed One, may we also become hearers belonging to the Blessed, thus-gone, worthy,
+                        perfect Buddha Ratnaketu.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-60"/>
+                    <p tid="91"> Mañjuśrī replied, “Well, my friends, in that buddha realm no-one with reference points is born!
+                        My friends, only bodhisattva great beings who are free from reference points are born there without being
+                        born. My friends, if you aspire to that realm, you must strive in the perfection of knowledge in a manner
+                        free from reference points. My friends, when you strive in the perfection of knowledge in a manner that is
+                        free from reference points, then, my friends, it will not be difficult to discover omniscient wisdom that
+                        is endowed with the supreme of all aspects. So what need is there to mention that you will also be born in
+                        the pure buddha realms!”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-61"/>
+                    <p tid="92">The god Lord of Peace and Calm then asked Mañjuśrī Kumārabhūta, “Mañjuśrī, what is the vinaya of
+                        the hearers like? And how is the vinaya of the bodhisattva great beings?”</p>
+                    <p tid="93"> Mañjuśrī replied, “Divine son, the vinaya that is well known in the three worlds is the vinaya of
+                        the hearers. However, on the relative level, the vinaya of the bodhisattva great beings gathers all
+                        accumulations of roots of virtue, comforts all beings, and tames them by taking birth in the three realms. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-62"/>
+                    <p tid="94">“The vinaya of the hearers opposes all disturbing emotions. <ref cRef="F.252.b"/> However,
+                        relatively, the vinaya of the bodhisattva great beings goes further in order to eliminate the disturbing
+                        emotions of all beings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-63"/>
+                    <p tid="95"> “The vinaya of the hearers is aware of just one place. However, relatively, the vinaya of the
+                        bodhisattva great beings is aware of all the limitless and boundless worlds in the ten directions. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-64"/>
+                    <p tid="96">“The vinaya of the hearers maintains equanimity with regard to all demons. However, relatively,
+                        the vinaya of the bodhisattva great beings disturbs all classes of demons in all the limitless and
+                        boundless worlds in the ten directions, and conquers all hostile forces. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-65"/>
+                    <p tid="97">“The vinaya of the hearers clarifies one’s own mind stream. However, relatively, the vinaya of the
+                        bodhisattva great beings clarifies the mind streams of all beings, causes the wisdom of omniscience to
+                        manifest, and causes the vision of stainless wisdom with regard to all phenomena to manifest. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-66"/>
+                    <p tid="98">“The vinaya of the hearers is contemplated by individual minds. However, relatively, the vinaya of
+                        the bodhisattva great beings is the intent of all the buddhas in the past, the present, and the future. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-67"/>
+                    <p tid="99">“The vinaya of the hearers is like a stone that cannot be repaired when broken. However,
+                        relatively, the vinaya of the bodhisattva great beings is like gold and silver, which can be mended when
+                        broken. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-68"/>
+                    <p tid="100">“The vinaya of the hearers does not contain all the teachings of the Buddha, and it also lacks
+                        skillful means. However, relatively, the vinaya of the bodhisattva great beings has great skillful means
+                        and comprises all the teachings of the Buddha. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-69"/>
+                    <p tid="101">“The vinaya of the hearers does not embody the ten strengths, the various types of fearlessness,
+                        the unique qualities, or omniscient wisdom. However, relatively, the vinaya of the bodhisattva great
+                        beings contains the ten powers, the various types of fearlessness, the unique qualities, and omniscient
+                        wisdom. <ref cRef="F.253.a"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-70"/>
+                    <p tid="102"> “The vinaya of the hearers is like escaping from being burned by a fire. However, relatively,
+                        the vinaya of the bodhisattva great beings is to be delighted by the joy of Dharma, just as one would
+                        enjoy a park or a palace. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-71"/>
+                    <p tid="103">“The vinaya of the hearers does not interrupt the stream of habitual patterns. However,
+                        relatively, the vinaya of the bodhisattva great beings overcomes all habitual patterns. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-72"/>
+                    <p tid="104">“Divine son, in short, the vinaya of the hearers is derived from a Dharma that is limited and
+                        confined. However, relatively, the vinaya of the bodhisattva great beings follows a Dharma that is
+                        limitless and beyond measure. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-73"/>
+                    <p tid="105">“The vinaya of the hearers brings the attainment of limited discipline, learning, absorption,
+                        knowledge, liberation, and vision of the wisdom of liberation. However, relatively, the vinaya of the
+                        bodhisattva great beings knows no bounds, possesses limitless qualities, and makes one attain limitless
+                        discipline, learning, absorption, knowledge, liberation, and vision of the wisdom of liberation.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-74"/>
+                    <p tid="106">At this point, the Blessed One expressed his approval of Mañjuśrī Kumārabhūta: “Well said,
+                        Mañjuśrī! You have explained the vinaya of the bodhisattva great beings well on the relative level. Well
+                        done, well done. Now, Mañjuśrī, in order to illustrate the meaning of this, I will give you some examples.
+                        Mañjuśrī, imagine two men: one of them praises the hoofprints of an ox, while the other man praises the
+                        ocean. Mañjuśrī, what do you think? How extensively would the first man be able to praise the hoofprints
+                        of an ox?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-75"/>
+                    <p tid="107"> Mañjuśrī replied, “Blessed One, since all ox hoofprints are so small, what is even the use of
+                        praising them?”</p>
+                    <p tid="108">The Blessed One said, “Just as the ox hoofprints <ref cRef="F.253.b"/> are small, so you should
+                        view the vinaya of the hearers. Now, Mañjuśrī, what do you think? Would the other man be able to express a
+                        fitting praise of the ocean?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-76"/>
+                    <p tid="109"> Mañjuśrī replied, “Blessed One, the praises of the ocean could be incredibly numerous,
+                        limitless, and inconceivable.”</p>
+                    <p tid="110">The Blessed One said, “Mañjuśrī, just as the praises of the ocean are boundless, so you should
+                        view the vinaya of the bodhisattvas on the relative level.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-77"/>
+                    <p tid="111">As he delivered this teaching without teaching, 12,000 gods, without ultimately forming anything,
+                        formed the wish for unexcelled and completely perfect awakening. They all declared, “Blessed One, without
+                        training, we will practice the trainings of the bodhisattvas.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-78"/>
+                    <p tid="112">The god Lord of Peace and Calm asked Mañjuśrī Kumārabhūta, “Mañjuśrī, do you train in the vinaya
+                        of the hearers or in the vinaya of the bodhisattvas?”</p>
+                    <p tid="113"> Mañjuśrī answered, “Divine son, what do you think? Is there any water that cannot be contained
+                        in the ocean?”</p>
+                    <p tid="114">The god replied, “No, Mañjuśrī, there is no water anywhere that cannot be contained in the
+                        ocean.”</p>
+                    <p tid="115"> Mañjuśrī said, “Divine son, in the same way the vinaya of the bodhisattva great beings is like
+                        the ocean.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-79"/>
+                    <p tid="116">The god asked, “Mañjuśrī, that word <foreign type="term" xml:lang="Sa-Ltn">vinaya</foreign>, what
+                        does that mean?”</p>
+                    <p tid="117"> Mañjuśrī answered, “Divine son, on the relative level vinaya refers to taming the disturbing
+                        emotions. <foreign type="term" xml:lang="Sa-Ltn">Vinaya</foreign> also means understanding disturbing
+                        emotions.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-80"/>
+                    <p tid="118">The god said, “Mañjuśrī, how does one tame the disturbing emotions? How does one understand
+                        disturbing emotions?” <ref cRef="F.254.a"/>
+                    </p>
+                    <p tid="119"> Mañjuśrī said, “Ultimately, all phenomena are unborn, unarisen, and unreal. Yet this absence is
+                        misunderstood on the relative level. Misunderstanding this absence produces concepts and thoughts. Out of
+                        concept and thought appears mistaken conceptual activity. Mistaken conceptual activity then gives rise to
+                        the superimposition of a self. From the superimposition of a self comes the manifestation of views. Based
+                        on the manifestation of views, disturbing emotions appear. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-81"/>
+                    <p tid="120"> “Divine son, whoever knows, without knowing, that ultimately all phenomena are utterly unborn,
+                        utterly unarisen, and utterly unreal, is unmistaken in terms of the ultimate. Whoever is unmistaken in
+                        terms of the ultimate does not form concepts or thoughts. Whoever does not form concepts or thoughts is
+                        applying himself correctly. Whoever applies himself correctly does not ultimately form superimpositions of
+                        a self. When superimpositions of a self do not ultimately arise, manifest views also do not arise, and
+                        ultimately even the views related to passing beyond suffering do not arise. In that way one comes to
+                        experience the unborn, and pacifies disturbing emotions in a manner free from views. Divine son, this is
+                        what is meant by taming disturbing emotions. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-82"/>
+                    <p tid="121">“Divine son, disturbing emotions are ultimately utterly empty, utterly signless and utterly
+                        wishless due to the insight and wisdom to which no disturbing emotions ever appear. When one has the
+                        insight that ultimately they are utterly unborn, utterly unarisen, and utterly unreal, then, divine son,
+                        one knows disturbing emotions in a manner free from knowing. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-83"/>
+                    <p tid="122">“Divine son, consider this analogy. If you chant an incantation against a viper’s venom, it is
+                        possible to neutralize the snake’s poison. Divine son, in the same way, whoever understands the types of
+                        disturbing emotions <ref cRef="F.254.b"/> will neutralize his disturbing emotions in a manner that is
+                        beyond reference points.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-84"/>
+                    <p tid="123">The god said, “Mañjuśrī, what are the types of disturbing emotions?”</p>
+                    <p tid="124"> Mañjuśrī said, “Divine son, ultimately all phenomena are utterly unborn, utterly unarisen, and
+                        utterly unreal. Any conceptualization of that state is a form of disturbing emotion. Ultimately, there are
+                        no conceptualizations, so therefore there are also no disturbing emotions whatsoever. Divine son, because
+                        there are no disturbing emotions, there is no all-ground.<note place="end" index="4" xml:id="UT22084-060-008-240">The Tibetan does not include the word “no” in connection with the
+                            disturbing emotions. Given the context, however, this appears to be a scribal error. </note> Because
+                        there is no all-ground, there is ultimately no abiding. Because there is no abiding, there is ultimately
+                        no scorching. Because there is ultimately no scorching, there is said to be peace. On the ultimate level,
+                        things are not as they are expressed in words. Still, divine son, relatively this is how disturbing
+                        emotions are tamed.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-85"/>
+                    <p tid="125">The god said, “Mañjuśrī, how are disturbing emotions tamed? Are they something? Or nothing?”</p>
+                    <p tid="126"> Mañjuśrī said, “Divine son, this is how it is. Imagine a man who has a nightmare in which he is
+                        bitten by a venomous viper. Although he is suffering, he is treated with an antidote and recovers. As the
+                        poison is neutralized, his pain disappears. Divine son, what do you think? Was this man actually bitten or
+                        not?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-86"/>
+                    <p tid="127">The god said, “Mañjuśrī, ultimately it did not truly happen.”</p>
+                    <p tid="128"> Mañjuśrī said, “Divine son, how was the poison neutralized?”</p>
+                    <p tid="129">The god said, “Mañjuśrī, just as the bite was not truly real, the neutralization of the poison
+                        was also not truly real.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-87"/>
+                    <p tid="130"> Mañjuśrī said, “Divine son, in the same way the noble ones view, without viewing, all disturbing
+                        emotions on the ultimate level. Divine son, you ask how disturbing emotions are tamed. Well, divine son,
+                        just as the ego ultimately is egoless, so, divine son, disturbing emotions are not ultimately disturbing
+                        emotions. Divine son, ultimately this self is suchness. Therefore, divine son, disturbing emotions also
+                        ultimately become suchness. Divine son, in this way, the self is not ultimately the self. <ref cRef="F.255.a"/> Therefore, divine son, disturbing emotions are also not ultimately disturbing
+                        emotions. Divine son, whoever focuses on taming disturbing emotions on the ultimate level is not
+                        ultimately focusing on anything. Why? Divine son, because on the ultimate level nothing manifests, and
+                        therefore all phenomena are pacified. Divine son, on the ultimate level, there is no grasping, and
+                        therefore all phenomena are fully pacified. Divine son, on the ultimate level, all phenomena are free from
+                        superimposition, and therefore all phenomena are completely pacified. Divine son, on the ultimate level,
+                        all phenomena are utterly unborn, and therefore they are also beyond ceasing. Divine son, the ultimate
+                        level is utterly unreal and therefore all phenomena are utterly unborn.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-88"/>
+                    <p tid="131">The god said, “Mañjuśrī, what is the gateway to all dharmas?”</p>
+                    <p tid="132"> Mañjuśrī said, “Divine son, the relative truth, which employs all forms of statements, speech,
+                        cognition, objects of cognition, activities, conventions, and acts, is a gateway to all dharmas. The
+                        ultimate truth, which is so because it is the opposite of all forms of speech, statements, cognition,
+                        objects of cognition, activities, conventions, and acts, is a gateway to all dharmas. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-89"/>
+                    <p tid="133">“Moreover, divine son, on the relative level, the incorrect conceptual workings of the mind are a
+                        gateway to saṃsāra. On the relative level, the correct conceptual workings of the mind are a gateway to
+                        nirvāṇa. </p>
+                    <p tid="134">“On the relative level, doubt is a gateway to obscuration. On the relative level, liberation is a
+                        gateway to the absence of obscuration. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-90"/>
+                    <p tid="135">“On the relative level, conceptuality is a gateway to disturbing emotions. On the relative level,
+                        non-conceptuality is a gateway to the absence of disturbing emotions. </p>
+                    <p tid="136">“On the relative level, distraction is a gateway to thought. On the relative level, tranquility
+                        is a gateway to peace. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-91"/>
+                    <p tid="137">“On the relative level, holding views is a gateway to pride. On the relative level, emptiness is
+                        a gateway to the absence of pride. </p>
+                    <p tid="138">“On the relative level, relying on evil company is a gateway to all roots of non-virtue. On the
+                        relative level, relying on a virtuous spiritual friend is the gateway to all roots of virtue. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-92"/>
+                    <p tid="139">“On the relative level, wrong view is a gateway to all suffering. <ref cRef="F.255.b"/> On the
+                        relative level, correct view is a gateway to all happiness. </p>
+                    <p tid="140">“On the relative level, miserliness is a gateway to poverty. On the relative level, generosity is
+                        a gateway to great wealth. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-93"/>
+                    <p tid="141">“On the relative level, a bad character is a gateway to all lower realms. On the relative level,
+                        discipline is a gateway to all human and divine births. </p>
+                    <p tid="142">“On the relative level, ill will is a gateway to an ugly appearance. On the relative level,
+                        patience is a gateway to a beautiful appearance. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-94"/>
+                    <p tid="143">“On the relative level, laziness is a gateway to a lack of realization. On the relative level,
+                        diligence is a gateway to realization. </p>
+                    <p tid="144">“On the relative level, thought is a gateway to agitation. On the relative level, concentration
+                        is a gateway to pliability of mind. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-95"/>
+                    <p tid="145">“On the relative level, faulty knowledge is a gateway to a lack of understanding. On the relative
+                        level, knowledge is a gateway to the thirty-seven factors of awakening. </p>
+                    <p tid="146">“On the relative level, love is a gateway to not becoming angry. On the relative level, great
+                        compassion is a gateway to an altruistic mind. On the relative level, an altruistic mind is a gateway to
+                        the absence of deceit. On the relative level, joy is a gateway to conviction in the Dharma. On the
+                        relative level, equanimity is a gateway to being free from all faults. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-96"/>
+                    <p tid="147">“On the relative level, the applications of mindfulness are a gateway to not letting any roots of
+                        virtue diminish. On the relative level, the thorough relinquishments are a gateway to genuine
+                        perseverance. On the relative level, the bases of miraculous power are a gateway to pliancy of body and
+                        mind. On the relative level, the faculties are a gateway to attaining faith. On the relative level, the
+                            <term>powers</term> are a gateway to conquering all disturbing emotions. On the relative level, the
+                        branches of awakening are a gateway to realizing omniscience. On the relative level, the eightfold path of
+                        the noble ones is a gateway to transcending all unwholesome paths. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-97"/>
+                    <p tid="148"> “Moreover, divine son, on the relative level, the mind set on awakening is a gateway to all
+                        buddha qualities. On the relative level, upholding the sacred Dharma is a gateway to becoming a lord of
+                        all dharmas. On the relative level, ripening beings is a gateway to upholding the sacred Dharma. On the
+                        relative level, method is a gateway to becoming learned regarding the correct and the incorrect. <ref cRef="F.256.a"/> On the relative level, the perfection of knowledge is a gateway to nirvāṇa. </p>
+                    <p tid="149">“On the ultimate level, the unarisen is a gateway to all dharmas.” <ref cRef="B2" type="bampo"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-98"/>
+                    <p tid="150">The god said, “Mañjuśrī, what is the gateway to the utterly unborn?”</p>
+                    <p tid="151"> Mañjuśrī said, “Divine son, on the ultimate level, the utterly unarisen is a gateway in every
+                        way.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-99"/>
+                    <p tid="152">The god said, “Mañjuśrī, what is the nature of the utterly unarisen?”</p>
+                    <p tid="153"> Mañjuśrī said, “Divine son, on the ultimate level, the utterly unreal is the nature of the
+                        utterly unarisen.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-100"/>
+                    <p tid="154">The god said, “Mañjuśrī, does the utterly unarisen have any divisions?” </p>
+                    <p tid="155"> Mañjuśrī said, “Divine son, what do you think? Does the sky have any divisions?”</p>
+                    <p tid="156">The god answered, “No, Mañjuśrī, it does not.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-101"/>
+                    <p tid="157"> Mañjuśrī said, “Divine son, in the same way, just as the sky does not have any divisions, so,
+                        divine son, does the utterly unborn also not have any divisions.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-102"/>
+                    <p tid="158">The god said, “Mañjuśrī, do you comprehend the utterly unarisen on the ultimate level?”</p>
+                    <p tid="159"> Mañjuśrī said, “Divine son, the utterly unarisen does not comprehend the utterly unarisen. And
+                        why? Because, divine son, all phenomena are utterly unborn, utterly unarisen, and utterly unreal.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-103"/>
+                    <p tid="160">The god asked, “Mañjuśrī, are you this eloquent because you know and understand any phenomenon
+                        whatsoever?”</p>
+                    <p tid="161"> Mañjuśrī said, “Divine son, what do you think? Does an echo make a sound because it knows
+                        phenomena?”</p>
+                    <p tid="162">The god replied, “Mañjuśrī, of course an echo does not know any phenomena. Instead, on the
+                        relative level, the sound appears from circumstances.”</p>
+                    <p tid="163"> Mañjuśrī said, “Divine son, in the same way, based on the circumstance of observing all beings,
+                        on the relative level a bodhisattva <ref cRef="F.256.b"/> great being speaks without speaking.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-104"/>
+                    <p tid="164">The god asked, “Mañjuśrī, on what basis do you teach?”</p>
+                    <p tid="165"> Mañjuśrī said, “Divine son, on what type of emanation does the Thus-gone One base himself as he
+                        teaches?”</p>
+                    <p tid="166">The god said, “Mañjuśrī, the Thus-gone One does not ultimately base himself on any emanation
+                        whatsoever.”</p>
+                    <p tid="167"> Mañjuśrī said, “Divine son, in the same way, on the ultimate level, without basing myself on any
+                        phenomena, I teach without teaching.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-105"/>
+                    <p tid="168">The god said, “Mañjuśrī, if, on the ultimate level, without basing yourself on any phenomena, you
+                        teach without teaching, on what basis do you awaken to unexcelled and completely perfect buddhahood?”</p>
+                    <p tid="169"> Mañjuśrī said, “Divine son, I base myself on the acts with immediate consequence and, without
+                        awakening to completely perfect buddhahood, I awaken to unexcelled and completely perfect buddhahood.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-106"/>
+                    <p tid="170">The god said, “How do you base yourself on the acts with immediate consequence?”</p>
+                    <p tid="171"> Mañjuśrī said, “Divine son, ultimately the acts with immediate consequence do not truly exist
+                        and do not have any substance. It is on them that I base myself without basing myself.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-107"/>
+                    <p tid="172">The god said, “Mañjuśrī, the Thus-gone One has explained that beings are born in hell because of
+                        committing the acts with immediate consequence.”</p>
+                    <p tid="173"> Mañjuśrī said, “Divine son, the Thus-gone One has explained that beings are born in hell because
+                        of committing the acts with immediate consequence. In the same way, divine son, the Thus-gone One teaches,
+                        without teaching, how to quickly awaken to unexcelled and completely perfect buddhahood when basing
+                        oneself on the acts with immediate consequence, without basing oneself on the acts with immediate
+                        consequence.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-108"/>
+                    <p tid="174">The god said, “Mañjuśrī, what are the acts with immediate consequence?” </p>
+                    <p tid="175"> Mañjuśrī said, “Divine son, the acts with immediate consequence are those by which the
+                        bodhisattva great beings quickly, without awakening to unexcelled and completely perfect buddhahood,
+                        perfectly awaken. Such are the acts with immediate consequence of the bodhisattva great beings. <ref cRef="F.257.a"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-109"/>
+                    <p tid="176"> “Divine son, you may wonder what the five acts with immediate consequence are. Well, divine son,
+                        the first act with immediate consequence of the bodhisattva great beings is as follows. When a bodhisattva
+                        great being with pure motivation, without developing, has developed the mind set on unexcelled and
+                        completely perfect buddhahood, he does not develop the mind-set that aims for the levels of the hearers,
+                        solitary buddhas, anyone with reference points, or the extremists. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-110"/>
+                    <p tid="177"> “Moreover, divine son, the second act with immediate consequence of the bodhisattva great beings
+                        is as follows. Divine son, when a bodhisattva great being, without producing, has produced the mind set on
+                        giving up all possessions, he will not entertain any feelings of miserliness until he reaches the essence
+                        of enlightenment. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-111"/>
+                    <p tid="178">“Moreover, divine son, the third act with immediate consequence of the bodhisattva great beings
+                        is as follows. Divine son, when a bodhisattva great being, without producing, has produced the mind-set
+                        that thinks, ‘I will protect all beings in any possible way,’ he will not yield from that. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-112"/>
+                    <p tid="179">“Moreover, divine son, the fourth act with immediate consequence of the bodhisattva great beings
+                        is as follows. Divine son, when a bodhisattva great being, without attaining forbearance, has attained the
+                        forbearance that understands that ultimately all phenomena are utterly unborn, utterly unarisen, and
+                        utterly unreal, he will not engender any clinging to substance, essence, or actuality. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-113"/>
+                    <p tid="180">“Moreover, divine son, the fifth act with immediate consequence of the bodhisattva great beings
+                        is as follows. Divine son, when a bodhisattva great being, without engendering, has engendered the
+                        mind-set that thinks, ‘I will fully understand all phenomena by means of momentary knowledge,’ he will not
+                        rest under any circumstances until he has obtained, without obtaining, the wisdom of omniscience that is
+                        endowed with all supreme features. </p>
+                    <p tid="181">“By abiding in this way, without abiding, the bodhisattva great being quickly and perfectly
+                        awakens, without ultimately awakening, to unexcelled and completely perfect buddhahood.” <ref cRef="F.257.b"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-114"/>
+                    <p tid="182">The god said, “Mañjuśrī, those acts of immediate consequence that cause ordinary childish beings
+                        to be born in hell are the very acts that cause a bodhisattva great being to awaken to unexcelled and
+                        completely perfect buddhahood without perfectly awakening. Is that correct?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-115"/>
+                    <p tid="183"> Mañjuśrī said, “Yes, divine son, it is. And why? Divine son, ultimately all phenomena are utter
+                        emptiness. Divine son, understanding this utter emptiness is awakening. Yet, ultimately, awakening is not
+                        the way that it is expressed through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-116"/>
+                    <p tid="184">“Divine son, ultimately all phenomena are utter signlessness. Divine son, understanding this
+                        utter signlessness is awakening. Yet, ultimately, awakening is not the way that it is expressed through
+                        words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-117"/>
+                    <p tid="185">“Divine son, ultimately all phenomena are utter wishlessness. Divine son, understanding this
+                        utter wishlessness is awakening. Yet, ultimately, awakening is not the way that it is expressed through
+                        words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-118"/>
+                    <p tid="186"> “Divine son, ultimately all phenomena do not exist as something that can be apprehended
+                        whatsoever. Divine son, understanding this state of being beyond something to apprehend whatsoever is
+                        awakening. Yet, ultimately, awakening is not the way that it is expressed through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-119"/>
+                    <p tid="187">“Divine son, ultimately all phenomena are utterly beyond formation. Divine son, understanding
+                        this state where phenomena are utterly beyond formation is awakening. Yet, ultimately, awakening is not
+                        the way that it is expressed through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-120"/>
+                    <p tid="188">“Divine son, ultimately all phenomena are utterly unconditioned. Divine son, understanding this
+                        utterly unconditioned state is awakening. Yet, ultimately, awakening is not the way that it is expressed
+                        through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-121"/>
+                    <p tid="189">“Divine son, ultimately all phenomena are utterly unseen. Divine son, understanding this state of
+                        being utterly unseen is awakening. Yet, ultimately, awakening is not the way that it is expressed through
+                        words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-122"/>
+                    <p tid="190">“Divine son, ultimately all phenomena are utterly unborn. <ref cRef="F.258.a"/> Divine son,
+                        understanding this utterly unborn state is awakening. Yet, ultimately, awakening is not the way that it is
+                        expressed through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-123"/>
+                    <p tid="191">“Divine son, ultimately all phenomena are utterly unarisen. Divine son, understanding this
+                        utterly unarisen state is awakening. Yet, ultimately, awakening is not the way that it is expressed
+                        through words. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-124"/>
+                    <p tid="192">“Divine son, ultimately all phenomena are utterly unreal. Divine son, understanding this state of
+                        being utterly unreal is awakening. Yet, ultimately, awakening is not the way that it is expressed through
+                        words.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-125"/>
+                    <p tid="193"> The god then asked, “Mañjuśrī, who will have faith in this Dharma teaching?”</p>
+                    <p tid="194"> Mañjuśrī replied, “Divine son, since ultimately even the Thus-gone One does not have faith,
+                        forget about the hearers, solitary buddhas, and all the extremists who rely on reference points.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-126"/>
+                    <p tid="195">The god asked him, “Who will gain conviction in it?”</p>
+                    <p tid="196"> Mañjuśrī said, “Those who ultimately are not attached to any phenomenon will gain
+                        conviction.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-127"/>
+                    <p tid="197">The god asked him, “Who will apply it earnestly?”</p>
+                    <p tid="198"> Mañjuśrī said, “Those who ultimately do not earnestly apply themselves to any phenomenon.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-128"/>
+                    <p tid="199">The god asked him, “Who will become realized?”</p>
+                    <p tid="200"> Mañjuśrī said, “Those who ultimately do not realize any phenomenon.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-129"/>
+                    <p tid="201">The god asked him, “Mañjuśrī, who are those who ultimately do not realize any phenomenon?”</p>
+                    <p tid="202"> Mañjuśrī answered, “Divine son, those who, on the relative level, realize the omniscient wisdom
+                        that is endowed with the supreme of all aspects.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-130"/>
+                    <p tid="203">The god said, “Mañjuśrī, what kind of nature do they have?”</p>
+                    <p tid="204"> Mañjuśrī said, “Divine son, ultimately they have the utterly unborn nature.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-131"/>
+                    <p tid="205">The god asked him, “Mañjuśrī, in whose hands will a sūtra such as this end up?” </p>
+                    <p tid="206"> Mañjuśrī replied, “Divine son, relatively, in the hands of those who offer the sacred Dharma to
+                        all beings.”<ref cRef="F.258.b"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-132"/>
+                    <p tid="207">The god said, “Mañjuśrī, how will they abide?”</p>
+                    <p tid="208"> Mañjuśrī said, “Divine son, ultimately they will abide in the utterly unborn, the utterly
+                        unarisen, and the utterly unreal.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-133"/>
+                    <p tid="209">The god asked, “Mañjuśrī, in what way will they proceed?”</p>
+                    <p tid="210"> Mañjuśrī said, “Divine son, ultimately they will proceed within the utterly unborn, the utterly
+                        unarisen, and the utterly unreal.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-134"/>
+                    <p tid="211">The god said, “Mañjuśrī, how will the irreversible bodhisattva great being attain awakening?”</p>
+                    <p tid="212"> Mañjuśrī said, “Divine son, whoever is an irreversible bodhisattva great being has no chance and
+                        no opportunity not to attain awakening.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-135"/>
+                    <p tid="213">The god said, “Mañjuśrī, what do the bodhisattva great beings turn back from?” </p>
+                    <p tid="214"> Mañjuśrī said, “Divine son, ultimately, bodhisattva great beings turn back from thoughts. They
+                        turn back from the levels of all the hearers, solitary buddhas, and the extremists who rely on reference
+                        points.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-136"/>
+                    <p tid="215">The god said, “Mañjuśrī, what does a bodhisattva great being not turn back from?”</p>
+                    <p tid="216"> Mañjuśrī said, “Divine son, bodhisattva great beings do not turn back from all phenomena being
+                        the same in being utterly unarisen. If you wonder why, it is because ultimately all phenomena are the same
+                        in being utterly unarisen, and the bodhisattva great beings are the same. That is why they do not turn
+                        back.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-137"/>
+                    <p tid="217">The god asked, “When one speaks of the sameness of all phenomena in being utterly unarisen,
+                        Mañjuśrī, what phenomenon is that a designation for?”</p>
+                    <p tid="218"> Mañjuśrī said, “The sameness of all phenomena in being utterly unarisen designates that
+                        ultimately there is no diversity.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-138"/>
+                    <p tid="219">The god said, “Mañjuśrī, how does the sameness of all phenomena in being utterly unarisen
+                        manifest as diversity?”</p>
+                    <p tid="220"> Mañjuśrī said, “Divine son, <ref cRef="F.259.a"/> whoever conceptualizes the sameness of all
+                        phenomena in being utterly unarisen as ultimately having substance, materiality, and essence will
+                        ultimately experience diversity. As for ultimately experiencing diversity, it develops into many views
+                        involving reference points. Those who hold these many views that involve reference points wander
+                        helplessly in all the various forms of existence. Divine son, whoever does not conceptualize the sameness
+                        of all phenomena in not occurring as ultimately having substance, materiality, and essence, does
+                        ultimately not experience diversity. Since he ultimately does not experience diversity, he ultimately
+                        understands the utterly unreal. In this way he comes to understand that all phenomena ultimately are the
+                        same in being characterized as utterly unborn.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-139"/>
+                    <p tid="221">The god asked, “Mañjuśrī, is there a method that can awaken a bodhisattva great being with
+                        disturbing emotions, but not someone <emph>without</emph> disturbing emotions?”</p>
+                    <p tid="222"> Mañjuśrī said, “Divine son, there is. Divine son, relatively, all phenomena continuously emerge
+                        and disappear. In this way, the awakening of bodhisattva great beings also appears, relatively. And why?
+                        Divine son, ultimately, all phenomena are without disturbing emotions, unborn and unceasing. Any
+                        phenomenon that is ultimately unborn and unceasing is also ultimately beyond being realized. It will never
+                        be realized, nor was it ever realized. And why? Divine son, because ultimately all phenomena are utterly
+                        unborn. Therefore, divine son, through such a method a bodhisattva great being with disturbing emotions
+                        can awaken, yet someone who is devoid of disturbing emotions cannot.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-140"/>
+                    <p tid="223">The god said, “Mañjuśrī, is there a method by which a bodhisattva great being who is miserly can
+                        complete the perfection of generosity, yet those who are generous cannot?”</p>
+                    <p tid="224"> Mañjuśrī said, “Yes, divine son, there is a method by which a miserly bodhisattva great being
+                            <ref cRef="F.259.b"/> can complete the perfection of generosity, yet those who are generous cannot.
+                        And why? Because to never let go of, or cast away, any sentient being, or any of the buddha qualities, on
+                        the relative level, is the miserliness of the bodhisattva great beings.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-141"/>
+                    <p tid="225">The god said, “Mañjuśrī, is there a method by which a bodhisattva great being who is ill behaved
+                        can complete the perfection of discipline, yet those who are disciplined cannot?”</p>
+                    <p tid="226"> Mañjuśrī said, “There is. Divine son, when a bodhisattva great being avoids superficial
+                        discipline in order to ripen beings, that is the perfection of discipline of a bodhisattva great being on
+                        the relative level.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-142"/>
+                    <p tid="227">The god said, “Mañjuśrī, is there a method of patience for a bodhisattva great being who has
+                        forsaken patience?”</p>
+                    <p tid="228"> Mañjuśrī said, “Divine son, there is. Any bodhisattva great being who ultimately has no patience
+                        with any phenomena having substance, actuality, or essence is in fact, in an ineffable manner, in
+                        possession of the supreme patience. Divine son, in a manner free from reference points, that is the
+                        supreme patience of a bodhisattva great being.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-143"/>
+                    <p tid="229">The god said, “Mañjuśrī, is there a method by which a lazy bodhisattva great being can be
+                        diligent?”</p>
+                    <p tid="230"> Mañjuśrī said, “Divine son, there is. A lazy bodhisattva great being is unlike those diligent
+                        hearers, solitary buddhas, and extremists who employ an easy form of diligence that involves focus.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-144"/>
+                    <p tid="231">The god said, “Mañjuśrī, is there a method by which a bodhisattva great being who is forgetful
+                        can rest in equipoise?”</p>
+                    <p tid="232"> Mañjuśrī said, “Divine son, there is. A bodhisattva great being, who, even in his sleep, does
+                        not give rise to thoughts of substance, essence, or actuality on the ultimate level, is resting in
+                        equipoise in a manner devoid of reference points.” <ref cRef="F.260.a"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-145"/>
+                    <p tid="233">The god said, “Mañjuśrī, is there a method by which a bodhisattva great being who has no
+                        knowledge can come to possess great knowledge?”</p>
+                    <p tid="234"> Mañjuśrī said, “Divine son, there is. And why? Divine son, ultimately all phenomena are
+                        discerned by knowledge. However, when one searches for phenomena, they disappear and cannot be observed.
+                        Knowledge is also like that; ultimately it also does not exist and cannot be observed. Therefore,
+                        relatively, one speaks of ‘possessing knowledge,’ even though that knowledge is ultimately utterly unborn.
+                        Divine son, according to that method, a bodhisattva great being who has no knowledge is called
+                            <distinct>one who possesses great knowledge</distinct>, or <distinct>one who possesses especially
+                            exalted knowledge</distinct>, or <distinct>one who possesses sacred knowledge</distinct>, or
+                            <distinct>one who lays hold of knowledge</distinct>, or <distinct>one who possesses knowledge devoid
+                            of a focus.</distinct> Ultimately, things are not as they are described.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-146"/>
+                    <p tid="235">The Blessed One now addressed Mañjuśrī Kumārabhūta. “Excellent!” he said. “Excellent, excellent!
+                        Mañjuśrī, you have spoken well and explained, without explaining, the acts and non-acts of bodhisattva
+                        great beings. Mañjuśrī, for a starving person, feeble and thin, it is better to suffer, and thus not to
+                        unknowingly eat poisonous food. In the same way, Mañjuśrī, it is better for bodhisattva great beings to
+                        engage in nonconceptual miserliness, bad behavior, ill will, laziness, forgetfulness, and lack of
+                        knowledge, and thus not engage in the conceptual applications of generosity, discipline, patience,
+                        diligence, concentration, and knowledge of the hearers and solitary buddhas who rely on reference points.
+                        Why? Because the latter give rise to the faults of poisonous reference points, and this must therefore be
+                        understood to be a danger on the relative level.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-147"/>
+                    <p tid="236">At this point the god Excellent Rule <ref cRef="F.260.b"/> asked the Blessed One, “Blessed One,
+                        are bodhisattva great beings not afraid of disturbing emotions?” </p>
+                    <p tid="237">The Blessed One replied, “Divine son, relatively, bodhisattva great beings do fear disturbing
+                        emotions. But far more, they fear the mind-set of the hearers and solitary buddhas, who rely on reference
+                        points; their fear of the disturbing emotions is not comparable.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-148"/>
+                    <p tid="238">The god asked, “Blessed One, why is that?” </p>
+                    <p tid="239">The Blessed One answered, “Divine son, that is something you should ask yourself! Why not explain
+                        it yourself, as best you can? Divine son, what do you think? If a person wishes to survive, would that
+                        person’s greatest fear be having his limbs severed, or having his head cut off?” </p>
+                    <p tid="240">The god replied, “Blessed One, someone who loses his limbs could still survive. Thus, if he
+                        wanted to acquire merit, he could still take up and follow a meritorious path, which in turn would become
+                        a cause for taking birth in the higher realms. However, Blessed One, someone who had his head cut off
+                        would be unable to survive. In this way, even if he strove for merit, he would be unable to genuinely
+                        follow a meritorious path.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-149"/>
+                    <p tid="241"> The Blessed One said, “Divine son, similarly, for bodhisattva great beings it is better to
+                        conduct themselves without reference points, even if it involves transgression, and thus not have the
+                        qualities and trainings of those who fall into the views of the hearers and solitary buddhas who rely on
+                        reference points. It is better to be a miserly bodhisattva, and thus not abandon all sentient beings, or
+                        even cast away all the qualities of a buddha. It is better to be an ill-behaved bodhisattva great being
+                        rather than someone who fails to ripen others. It is better to be a bodhisattva great being who faithfully
+                        practices on the level of action with conviction in the absence of focus, yet has disturbing emotions,
+                        than to be a hearer or solitary buddha who relies on reference points, who attains certainty and is free
+                        from disturbing emotions.” <ref cRef="F.261.a"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-150"/>
+                    <p tid="242"> The god said, “Blessed One, the acts of the bodhisattva great beings, which are non-acts, are at
+                        odds with the entire world. Blessed One, when the poisonous faults of reference points have formed, the
+                        discipline of the hearers and solitary buddhas, who rely on reference points, becomes an unwholesome state
+                        for bodhisattva great beings. No matter how diligent the hearers and solitary buddhas, who rely on
+                        reference points, are, the poisonous faults of reference points have been formed, and thus their diligence
+                        is inferior to the laziness of bodhisattva great beings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-151"/>
+                    <p tid="243">The Blessed One said, “Divine son, just as the food of a destitute man is poison for a universal
+                        monarch, likewise, divine son, are the discipline and diligence of the hearers and solitary buddhas, who
+                        rely on reference points, for ill-behaved and lazy bodhisattva great beings. And why? Because of involving
+                        the poisonous faults of reference points. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-152"/>
+                    <p tid="244">“Divine son, just as the wealth of a person who is only concerned with his personal achievements
+                        is not sufficient to ensure the wellbeing of a whole city, likewise, divine son, the diligence of those
+                        who have the impoverished, inferior, and conceptual attitude of the hearers and solitary buddhas is unable
+                        to liberate even the beings here in Jambudvīpa, let alone liberate all beings.</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-153"/>
+                    <p tid="245"> “Divine son, just as a leader who lovingly and compassionately grants great wealth and enjoyment
+                        to others may use his wealth to accomplish the happiness of limitless beings in order to give all beings
+                        unsurpassed happiness, so likewise, divine son, whoever develops the superior attitude of the bodhisattva
+                        great beings and inspires all beings with knowledge, means, great love, and compassion <ref cRef="F.261.b"/> will ripen limitless beings through his diligence beyond focus and the great wealth of the
+                        accumulations of merit and wisdom, gathered over limitless trillions of great eons. Without settling them,
+                        he will even settle all beings in omniscience.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-154"/>
+                    <p tid="246">Venerable Mahākāśyapa now addressed the Blessed One. “Blessed One,” he said, “the hearers
+                        actualize all unconditioned phenomena while, Blessed One, bodhisattva great beings are classified under
+                        conditioned phenomena. How can that outshine all the hearers and solitary buddhas who rely on reference
+                        points, who are included under the unconditioned?”</p>
+                    <p tid="247">The Blessed One answered him, “Kāśyapa, I will give you an analogy that illustrates this. Some
+                        people need an analogy to understand the meaning expressed by a skilled being. It is like this: imagine
+                        that the four great oceans were filled with butter. Then, imagine that someone were to extract a drop of
+                        butter from the oceans using the very tip of a hair split into one hundredths. Do you think, Kāśyapa, that
+                        the drop of butter extracted with that very tip of a hair split into one hundredths would be able to
+                        outshine the four great oceans filled with butter?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-155"/>
+                    <p tid="248"> Kāśyapa replied, “No, Blessed One, they would not. Blissful One, they would not.”</p>
+                    <p tid="249">The Blessed One asked, “Moreover, Kāśyapa, which one among the two would be largest, best,
+                        foremost, and most valuable?”</p>
+                    <p tid="250"> Kāśyapa replied, “Blessed One, even one trillionth of a single ocean would be, Blessed One, much
+                        larger, better, exalted, and valuable than the single drop. Blessed One, the drop that was extracted using
+                        that very tip of a hair split into one hundredths could not compare to that, let alone all four great
+                        oceans.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-156"/>
+                    <p tid="251">The Blessed One said, “In the same way as in this analogy, <ref cRef="F.262.a"/> the
+                        unconditioned wisdom of the hearers and solitary buddhas, who rely on reference points, is as
+                        insignificant as the drop of butter that was extracted from that very tip of a hair split into one
+                        hundredths, since it involves reference points. </p>
+                    <p tid="252">“Kāśyapa, the bodhisattva great beings are similar to the four great oceans filled with butter in
+                        this analogy. They are free from reference points. They are endowed with all supreme features of engaging,
+                        without engaging, the level of faithful practice. They embody all the accumulations of merit and wisdom.
+                        Without viewing, they view conditioned wisdom. Moreover, through the blazing fire of the ultimate, they
+                        ripen beings and thereby transform them, without relying on reference points, into the omniscient wisdom
+                        that is endowed with all supreme aspects. </p>
+                    <p tid="253">“Kāśyapa, this is how the bodhisattva great beings, without relying on reference points, outshine
+                        the hearers and solitary buddhas who rely on reference points and who have attained the unconditioned. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-157"/>
+                    <p tid="254">“Kāśyapa, as another analogy, imagine a city that contains hundreds of thousands of semiprecious
+                        trinkets. At the same time, there is a boat on the ocean that easily and effortlessly brings to land
+                        precious and valuable gemstones of beryl. Now, what do you think: could the semiprecious stones found in
+                        the city outshine the precious gemstones of beryl?”</p>
+                    <p tid="255"> Kāśyapa replied, “Blessed One, it could not. Blissful One, it could not.”</p>
+                    <p tid="256">The Blessed One said, “Kāśyapa, just like the semiprecious trinkets found in the city, so should
+                        you view the hearers and solitary buddhas who rely on reference points and their attainment of the
+                        unconditioned. Kāśyapa, just like the most valuable gemstones of beryl, which are first discovered in the
+                        ocean, then boarded on to the ship, and easily and effortlessly arrive at the trading house, so, Kāśyapa,
+                        should you view the bodhisattva great beings who arrive at the trading houses in the city of cyclic
+                        existence and, without establishing anyone, establish all beings in unsurpassed and <ref cRef="F.262.b"/>
+                        perfectly complete awakening. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-158"/>
+                    <p tid="257">“Kāśyapa, consider a further analogy. During the third month of spring, the entire land is filled
+                        with crops. If, at that time, a small insect should carry off a single grain to eat, which would be
+                        larger, that single grain or all the grains found on the entire land?”</p>
+                    <p tid="258"> Kāśyapa answered, “Blessed One, the entire world filled with crops would have an infinitely
+                        greater pile of grains, which would be able to nourish uncountable, limitless beings. At the same time,
+                        Blessed One, the single grain that the small insect carried off to eat could not even sustain a single
+                        being.” </p>
+                    <p tid="259">The Blessed One said, “Kāśyapa, you should see the result that is the undefiled liberation of all
+                        hearers and solitary buddhas who rely on reference points as being just like the single grain that the
+                        small insect carried off to eat. On the other hand, Kāśyapa, it is as being like the entire earth filled
+                        with crops that you should see, Kāśyapa, the crops of the bodhisattva great beings’ roots of virtue; they
+                        are the accumulations of merit and wisdom that in an unsurpassed manner embody the entire buddhadharma,
+                        such as the six perfections, by means of abiding, without abiding, within the relative and ultimate
+                        truths. When they have ripened, the bliss of the unsurpassed wisdom that is endowed with the supreme of
+                        all aspects becomes, in a manner that is beyond reference points, the sustenance of all beings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-159"/>
+                    <p tid="260">Venerable Mahākāśyapa exclaimed to the Blessed One, “Blessed One, that is amazing! Blissful One,
+                        that is amazing! It is exactly as the Blessed One has explained, without explaining. Blessed One, that is
+                        how the bodhisattva great beings, by means of the unsurpassed wisdom beyond focus, which is endowed with
+                        the supreme of all aspects, engage in, without engaging in, the level of faithful practice—and thereby
+                        outshine the hearers and solitary buddhas who rely on reference points.” <ref cRef="F.263.a"/>
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-160"/>
+                    <p tid="261">The bodhisattva great beings from the buddha realm of the Blessed Thus-gone Ratnaketu, who had
+                        arrived here in the Sahā world together with noble Mañjuśrī, now addressed the Blessed One. “Blessed One,
+                        it is like this. The instructions of the hearers and solitary buddhas who rely on reference points, such
+                        as the way to abandon disturbing emotions and determine downfalls, are all conceptual and specific
+                        instructions that involve reference points. </p>
+                    <p tid="262">“In the buddha realm of the Blessed, thus-gone, worthy, perfect Buddha Ratnaketu, there are no
+                        such instructions that involve reference points. Such instructions that involve focus do not exist there.
+                        Instead, Blessed One, the beings there listen, without listening, to the pure instructions of the
+                        bodhisattva great beings. They listen, without listening, to the irreversible instructions. They listen,
+                        without listening, to the instructions beyond reference points. They listen, without listening, to the
+                        instructions on how all phenomena are ultimately utterly unborn. They listen, without listening, to the
+                        instructions on how all phenomena are ultimately utterly unarisen. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-161"/>
+                    <p tid="263">“The Blessed, thus-gone, worthy, perfect Buddha Śākyamuni underwent great hardship. Having
+                        patience with so much suffering, and understanding that ultimately all phenomena are utterly unborn, he
+                        taught the higher, middling, and lower Dharma. </p>
+                    <p tid="264">“It is like this: ultimately all phenomena are utterly unborn, utterly unarisen, and utterly
+                        unreal. However, from this single identity that all phenomena share on the ultimate level, the Blessed One
+                        teaches the Dharma, without teaching, in many ways in order to accommodate the reference points of
+                        beings.” </p>
+                    <p tid="265">The bodhisattva great beings then began to venerate the Blessed, Thus-gone, Worthy, Perfect
+                        Buddha Śākyamuni with exquisite offerings, such as divine flowers, fragrant herbs, incense, <ref cRef="F.263.b"/> flower garlands, unguents, powders, robes, parasols, standards, banners, and canopies
+                        with victory banners. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-162"/>
+                    <p tid="266"> They addressed Mañjuśrī Kumārabhūta.“Mañjuśrī,” they said, “we will now proceed to Jewel World.” </p>
+                    <p tid="267"> Mañjuśrī told them, “Children of noble family, if you know that the time has come to leave, then
+                        do so.” </p>
+                    <p tid="268">The bodhisattva great beings asked him, “Mañjuśrī, are you not coming with us?”</p>
+                    <p tid="269"> Mañjuśrī replied, “Children of noble family, all buddha realms are a single buddha realm.
+                        Likewise, all buddhas are a single buddha. Likewise, all dharmas are a single dharma. Likewise, all beings
+                        are a single being. Since there are no differences between these, children of noble family, I will also go
+                        there.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-163"/>
+                    <p tid="270">The bodhisattva great beings asked, “Mañjuśrī, in what way are all of the buddha realms a single
+                        buddha realm? Mañjuśrī, in what way are all buddhas a single buddha? Mañjuśrī, in what way are all dharmas
+                        are a single dharma? Mañjuśrī, in what way are all beings a single being?”</p>
+                    <p tid="271"> Mañjuśrī answered, “Children of noble family, none of the buddha realms are realms. Why? Because
+                        ultimately they are utterly unborn. Children of noble family, none of the buddhas are buddhas. Why?
+                        Because ultimately they are utterly unarisen. Children of noble family, none of the dharmas are dharmas.
+                        Why? Because ultimately they are utterly unreal. Children of noble family, no beings are beings. Why?
+                        Because ultimately they are all utterly and entirely unarisen.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-164"/>
+                    <p tid="272">With these words, Mañjuśrī Kumārabhūta <ref cRef="F.264.a"/> caused this trichiliocosm to appear
+                        precisely, without any difference, like the Jewel World of the Blessed, Thus-gone Ratnaketu. As he had
+                        thus fulfilled his intention, he rested evenly in absorption. Then the bodhisattva great beings also saw
+                        the Blessed, thus-gone, worthy, perfect Buddha Ratnaketu and the Jewel World. In fact the bodhisattva
+                        great beings all thought that they had arrived in the Jewel World. Looking at the Blessed, thus-gone,
+                        worthy, perfect Buddha Śākyamuni, they saw him in the precise colors and shape of the Blessed, Thus-gone
+                        Ratnaketu. Even the great hearers thought that they had become bodhisattva great beings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-165"/>
+                    <p tid="273">The bodhisattva great beings, who thought that they were beholding Ratnaketu, asked the Blessed,
+                        Thus-gone Śākyamuni, “Blessed One, who has brought us to this Jewel World?”</p>
+                    <p tid="274">The Blessed Śākyamuni asked them, “Children of noble family, who has led you?”</p>
+                    <p tid="275">The bodhisattva great beings replied, “Blessed One, Mañjuśrī Kumārabhūta led us.”</p>
+                    <p tid="276">The Blessed Śākyamuni said, “Children of noble family, Mañjuśrī Kumārabhūta has brought you here
+                        without coming and going.”</p>
+                    <p tid="277"> Mañjuśrī Kumārabhūta told the bodhisattva great beings. “Children of noble family, to find out
+                        where you are being led to, and from where you are being led, look with your equipoise!”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-166"/>
+                    <p tid="278">When the bodhisattva great beings each looked through their meditative absorption, <ref cRef="F.264.b"/> they saw that they had never moved from this Sahā world. Amazed, they were full of
+                        astonishment and exclaimed, “Although we never got up from our seats, we thought that we had traveled to
+                        the Jewel World. But it was Mañjuśrī who caused it all by means of his inconceivable blessing without
+                        blessing!” They then added, “Blessed One, may all beings also attain this blessing in a manner beyond
+                        reference point!”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-167"/>
+                    <p tid="279">Then the Blessed Śākyamuni spoke to the bodhisattva great beings.“Children of noble family,
+                        consider this analogy. Space contains the earth, and also wood, zinc, copper, silver, gold, as well gems,
+                        pearls, beryl, conch, crystal, coral,<note place="end" index="5" xml:id="UT22084-060-008-241">The list
+                            also includes one type of stone (Tib. <foreign type="term" xml:lang="Bo-Ltn">a mra gar ba</foreign>)
+                            that we have been unable to identify.</note> cat’s eye, conch shells that coil to the right, and red
+                        pearls, so that all these are contained within space. Yet at the same time, children of noble family,
+                        although relatively there are of course different items contained, space itself remains undifferentiated.
+                        And why? Because ultimately space is utterly unreal. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-168"/>
+                    <p tid="280">“Likewise, children of noble family, ultimately all phenomena are surely utterly unborn, utterly
+                        unarisen, and utterly unreal. And yet, through the relative conventions of the world, they are imputed and
+                        designated in a conventional manner: ‘This is form, this is feeling, this is perception, this is
+                        formation, this is consciousness. These are the sense fields. These are the elements. This is the Jewel of
+                        the Buddha. This is the Jewel of the Dharma. This is the Jewel of the Saṅgha. This is the vehicle of the
+                        hearers. This is the vehicle of the solitary buddhas. This is the unexcelled vehicle. These are the paths
+                        of the ten virtuous actions. These are the paths of the ten nonvirtuous actions. These are hell beings.
+                        These are the animal existences. These are the abodes of the hungry spirits. <ref cRef="F.265.a"/> These
+                        are demigods. These are humans. These are gods. These are gods who experience desire. These are gods who
+                        experience form. These are gods who experience the formless. This is the desire realm. This is the form
+                        realm. This is the formless realm. These are good physical actions. These are good verbal actions. These
+                        are good mental actions. This is the perfection of generosity. This is the perfection of discipline. This
+                        is the perfection of patience. This is the perfection of diligence. This is the perfection of
+                        concentration. This is the perfection of knowledge. This is the perfection of skillful means. This is the
+                        perfection of aspirations. This is the perfection of strength. This is the perfection of wisdom. These are
+                        the ten levels, the ten powers, the ten strengths of the bodhisattvas, the ten strengths of the thus-gone
+                        ones, the fourfold fearlessness, the four genuine discriminations, the five faculties, the five
+                            <term>powers</term>, the eighteen unique qualities of a buddha, the omniscient wisdom that is endowed
+                        with the supreme of all aspects, the awakening of a buddha, suchness, the limit of reality, emptiness,
+                        signlessness, wishlessness, the unconditioned, all conditioned and unconditioned phenomena, saṃsāra and
+                        nirvāṇa, all speech and objects of speech, consciousness and objects of consciousness.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-169"/>
+                    <p tid="281">“In this way, as conventions are designated and connected, the relative conventions of the world
+                        are applied. Ultimately, however, all experiences are nonexistent. And why? Children of noble family,
+                        ultimately all phenomena are utterly unborn, utterly unarisen, and utterly unreal.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-170"/>
+                    <p tid="282">The bodhisattva great beings were amazed. They rose from their seats and performed a very
+                        elaborate and unique worship of the Blessed, thus-gone, worthy, perfect <ref cRef="F.265.b"/> Buddha
+                        Śākyamuni. They bowed down their heads to the feet of the Blessed One and said, “Blessed One, in a manner
+                        beyond reference point, please emit your sound to all beings: a lion’s roar, an especially exalted sound,
+                        the sound of the supreme leader, the sound of a great being, a sound of the genuine, the sound of
+                        thatness, a sound beyond reference point, the sound of the ultimate.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-171"/>
+                    <p tid="283">Those bodhisattva great beings happily and joyfully circumambulated the Blessed, thus-gone,
+                        worthy, perfect Buddha Śākyamuni several hundred thousand times before finally departing from the presence
+                        of the Blessed One. Proceeding into the ten directions, they donned, in the manner of having no armor, the
+                        great armor of diligence beyond reference point. In this way they taught, without teaching, this Dharma
+                        teaching, which abides within both the ultimate and the relative truths. They taught this very
+                        Dharma-vinaya to tame all beings and, without establishing, they established these beings in the teaching. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-172"/>
+                    <p tid="284">Mañjuśrī Kumārabhūta did not get up, but remained on his seat, resting evenly in absorption. By
+                        means of his absorption, a light known as <distinct>eradicating the reference points and ignorance of all
+                            beings</distinct> shone forth above his head from his crown protuberance. As the light appeared, it
+                        illuminated all the infinite buddha realms within all the worlds in the ten directions. The light rays
+                        caused the Blessed, thus-gone, worthy, perfect Buddha Śākyamuni to teach the Dharma so that the teaching
+                        on relying on both the relative and ultimate truth was heard, without being heard. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-173"/>
+                    <p tid="285">In order to pay homage to all the buddhas and the bodhisattva great beings in all the infinite
+                        and limitless worlds in the ten directions, the light produced clouds that rained down divine flowers,
+                        clouds that rained down divine fragrant herbs, clouds that rained down divine incense, <ref cRef="F.266.a"/> clouds that rained down divine garlands, clouds that rained down divine unguents, clouds that rained
+                        down divine powders, clouds that rained down divine garments, clouds that rained down divine parasols,
+                        clouds that rained down divine standards, clouds that rained down divine banners, clouds that rained down
+                        divine victory banners, clouds that rained down divine canopies. There were clouds that rained down divine
+                        flowers, fragrant herbs, incense, garlands, unguents, powders, garments, parasols, standards, banners,
+                        victory banners, and canopies. Thus they sent forth clouds that rained down divine flowers, fragrant
+                        herbs, incense, garlands, unguents, powders, garments, parasols, standards, banners, victory banners, and
+                        canopies that were all of the finest quality and produced all forms of unexcelled exuberance. </p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-174"/>
+                    <p tid="286">Now Mañjuśrī Kumārabhūta emerged from his absorption. In a manner beyond reference points, he
+                        circumambulated the Blessed, thus-gone, worthy, perfect Buddha Śākyamuni several hundred thousand times
+                        before he departed from this Sahā world. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-175"/>
+                    <p tid="287">The Blessed One now told Venerable Ānanda, “Ānanda, you should uphold and propagate this Dharma
+                        teaching, which is the source of all buddhas and bodhisattva great beings.”</p>
+                    <p tid="288">Venerable Ānanda answered the Blessed One, “Blessed One, I can indeed uphold this teaching, but I
+                        would be unable to propagate it. The reason, Blessed One, is that ultimately there are so many beings who
+                        cling to reference points; they also cling to physical matter, and they cling to substance, and it is
+                        extremely difficult to break them away from this mistaken grasping.” <ref cRef="F.266.b"/>
+                    </p>
+                    <p tid="289">The Blessed One said to Venerable Ānanda, “Ānanda, all the blessed buddhas in the past, present,
+                        and future have blessed, without blessing, this Dharma teaching. Ānanda, you only need to act as a mere
+                        circumstance.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-176"/>
+                    <p tid="290">Venerable Ānanda asked him, “Blessed One, what happens if a son or daughter of noble family
+                        should hear just a little of this teaching?”</p>
+                    <p tid="291">The Blessed One replied, “Ānanda, it is based on this Dharma teaching that the Thus-gone One
+                        genuinely teaches, shows reality, shows the absence of reference points, shows the ultimate, and teaches
+                        without teaching. This teaching is inconceivable and limitless. Ānanda, whoever hears, without hearing, a
+                        little of this Dharma teaching, even if it is just a single syllable, will encounter all the inconceivable
+                        and limitless teachings of the Buddha.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-177"/>
+                    <p tid="292">Then Venerable Ānanda asked the Blessed One, “Blessed One, what is the name of this Dharma
+                        teaching? How should one apprehend it?” </p>
+                    <p tid="293">The Blessed One said, “Ānanda, you should know this Dharma teaching as <title xml:lang="en">Teaching the Relative and Ultimate Truths</title>.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-178"/>
+                    <p tid="294">When the Blessed One had spoken, the bodhisattva great beings, the great hearers, Venerable
+                        Ānanda, and the entire retinue, as well as the world with all its gods, humans, demigods, and gandharvas,
+                        rejoiced and praised the Blessed One’s teachings. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-179"/>
+                    <p tid="295">This completes the Noble Great Vehicle Sūtra, <title xml:lang="en">Teaching the Relative and
+                        Ultimate Truths</title>. </p>
+                    
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="303">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-060-008-242"/>
+                    <p tid="296">It was translated, proofed, and finalized by the Indian scholars Śākyaprabha and Jinamitra,
+                        together with the translator-editor Bhande Dharmatāśīla and others. </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="304">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="305">Bibliography</head>
+                <div type="section">
+                    <head type="section" tid="306">Tibetan Texts </head>
+                    <bibl xml:id="UT22084-060-008-180">
+                        <title xml:lang="Bo-Ltn">’phags pa kun rdzob dang don dam pa’i bden pa bstan pa zhes bya ba theg pa chen
+                            po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­saṃvṛti­paramārtha­satya­nirdeśa­nāma­mahā­yāna­sūtra</title>). Toh 179, Degé Kangyur, vol. 60
+                        (mdo sde, ma), folios 244b–266b. </bibl>
+                    <bibl xml:id="UT22084-060-008-181">
+                        <title xml:lang="Bo-Ltn">’phags pa kun rdzob dang don dam pa’i bden pa bstan pa zhes bya ba theg pa chen
+                            po’i mdo</title>. bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur]. krung go’i bod rig
+                        pa zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China
+                        Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology
+                        Publishing House), 2006–9, vol. 60, pp. 653–707. </bibl>
+                </div>
+                <div type="section">
+                    <head type="section" tid="307">Secondary Literature </head>
+                    <bibl xml:id="UT22084-060-008-182">
+                        <author>Vose, Kevin A.</author>
+                        <title xml:lang="en">Resurrecting Candrakīrti: Disputes in the Tibetan Creation of Prāsaṅgika</title>.
+                        Boston: Wisdom Publications, 2009. </bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-183">
+                            <term>applications of mindfulness</term>
+                            <term xml:lang="Bo-Ltn">dran pa nye bar bzhag pa </term>
+                            <term xml:lang="bo">དྲན་པ་ཉེ་བར་བཞག་པ།</term>
+                            <term xml:lang="Sa-Ltn">smṛtyupasthāna</term>
+                            <term type="definition">Four contemplations on (1) the body, (2) feelings, (3) mind, and (4)
+                                phenomena.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-184">
+                            <term>bases of miraculous power</term>
+                            <term xml:lang="Bo-Ltn">rdzu ’phrul gyi rkang pa </term>
+                            <term xml:lang="bo">རྫུ་འཕྲུལ་གྱི་རྐང་པ།</term>
+                            <term xml:lang="Sa-Ltn">ṛddhipāda</term>
+                            <term type="definition">Determination, discernment, diligence, and meditative concentration.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-185">
+                            <term>bhande</term>
+                            <term xml:lang="Bo-Ltn">ban de </term>
+                            <term xml:lang="bo">བན་དེ།</term>
+                            <term xml:lang="Sa-Ltn">bhadanta</term>
+                            <term type="definition">The general term from ancient India for any member of the ordained Buddhist
+                                saṅgha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-186">
+                            <term>Blissful One</term>
+                            <term xml:lang="Bo-Ltn">bde bar gshegs pa </term>
+                            <term xml:lang="bo">བདེ་བར་གཤེགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">sugata</term>
+                            <term type="definition">Synonym for a buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-187">
+                            <term>thirty-seven factors of awakening</term>
+                            <term xml:lang="Bo-Ltn">byang chub kyi chos sum cu rtsa bdun </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཆོས་སུམ་ཅུ་རྩ་བདུན།</term>
+                            <term xml:lang="Sa-Ltn">sapta­triṃśadbodhyaṅga</term>
+                            <term type="definition">Thirty-seven practices that lead the practitioner to the awakened state: the
+                                four applications of mindfulness, the four thorough relinquishments, the four bases of miraculous
+                                power, the five faculties, the five power‌s, the eightfold path, and the seven branches of
+                                awakening.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-188">
+                            <term>elements</term>
+                            <term xml:lang="Bo-Ltn">khams </term>
+                            <term xml:lang="bo">ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">dhātu</term>
+                            <term type="definition">One way of describing experience and the world in terms of eighteen <term type="ignore">elements</term>
+                                (eye, form, and eye consciousness; ear, sound, and ear consciousness; nose, odor, and nose
+                                consciousness; tongue, taste, and tongue consciousness; body, touch, and body consciousness; mind,
+                                mental objects, and mind consciousness).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-189">
+                            <term>branches of awakening</term>
+                            <term xml:lang="Bo-Ltn">byang chub kyi yan lag </term>
+                            <term xml:lang="bo">བྱང་ཆུབ་ཀྱི་ཡན་ལག</term>
+                            <term xml:lang="Sa-Ltn">bodhyaṅga</term>
+                            <term type="definition">Mindfulness, discrimination, diligence, joy, pliability, absorption, and
+                                equanimity.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-190">
+                            <term>buddhadharma</term>
+                            <term xml:lang="Bo-Ltn">sangs rgyas kyi chos </term>
+                            <term xml:lang="bo">སངས་རྒྱས་ཀྱི་ཆོས།</term>
+                            <term xml:lang="Sa-Ltn">buddhadharma</term>
+                            <term type="definition">Can refer to the teaching of the Buddha as well as the dharmas that constitute
+                                an awakened being.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-191">
+                            <term>desire realm</term>
+                            <term xml:lang="Bo-Ltn">’dod pa’i khams </term>
+                            <term xml:lang="bo">འདོད་པའི་ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">kamadhātu</term>
+                            <term type="definition">One of the three realms of saṃsāra, characterized by a prevalence of
+                                desire.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-192">
+                            <term>eight mistaken dharmas</term>
+                            <term xml:lang="Bo-Ltn">log pa’i chos brgyad </term>
+                            <term xml:lang="bo">ལོག་པའི་ཆོས་བརྒྱད།</term>
+                            <term xml:lang="Sa-Ltn">mithyādharma</term>
+                            <term type="definition">Possibly, this is identical to the eight worldly dharmas: hoping for
+                                happiness, fame, praise, and gain, and fearing suffering, slander, blame, and loss.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-193">
+                            <term>eighteen unique qualities of a buddha</term>
+                            <term xml:lang="Bo-Ltn">sangs rgyas kyi chos ma ’dres pa bco brgyad </term>
+                            <term xml:lang="bo">སངས་རྒྱས་ཀྱི་ཆོས་མ་འདྲེས་པ་བཅོ་བརྒྱད།</term>
+                            <term xml:lang="Sa-Ltn">aṣṭā­daśāveṇika­buddha­dharma</term>
+                            <term type="definition">Eighteen special features of a buddha’s behavior, realization, activity, and
+                                wisdom that are not shared by other beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-194">
+                            <term>eightfold path of the noble ones</term>
+                            <term xml:lang="Bo-Ltn">’phags pa’i lam yan lag brgyad pa </term>
+                            <term xml:lang="bo">འཕགས་པའི་ལམ་ཡན་ལག་བརྒྱད་པ།</term>
+                            <term xml:lang="Sa-Ltn">āryāṣṭāṅga­mārga</term>
+                            <term type="definition">Correct view, intention, speech, actions, livelihood, effort, mindfulness, and
+                                concentration.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-195">
+                            <term>acts with immediate consequence</term>
+                            <term xml:lang="Bo-Ltn">mtshams med pa lnga </term>
+                            <term xml:lang="bo">མཚམས་མེད་པ་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañca ānantarya</term>
+                            <term type="definition">Describing the result of committing one of five particularly heinous crimes:
+                                (1) killing one’s father, (2) killing one’s mother, (3) killing an arhat, (4) maliciously drawing
+                                blood from a buddha, and (5) causing a schism in the sangha. In this sūtra, Mañjuśrī describes a
+                                corresponding set of five <term type="ignore">acts with immediate consequences</term> that bodhisattvas should, in fact,
+                                perform.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-196">
+                            <term>faculties</term>
+                            <term xml:lang="Bo-Ltn">dbang po lnga </term>
+                            <term xml:lang="bo">དབང་པོ་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañcendriyāṇi</term>
+                            <term type="definition">Faith, dilligence, mindfulness, absorption, and knowledge.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-197">
+                            <term>form realm</term>
+                            <term xml:lang="Bo-Ltn">gzugs kyi khams </term>
+                            <term xml:lang="bo">གཟུགས་ཀྱི་ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">rūpadhātu</term>
+                            <term type="definition">One of the three realms of saṃsāra, characterized by coarse materiality
+                                similar to the desire realm.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-198">
+                            <term>formless realm</term>
+                            <term xml:lang="Bo-Ltn">gzugs med pa’i khams </term>
+                            <term xml:lang="bo">གཟུགས་མེད་པའི་ཁམས།</term>
+                            <term xml:lang="Sa-Ltn">ārūpyadhātu</term>
+                            <term xml:lang="Sa-Ltn">arūpadhātu</term>
+                            <term type="definition">One of the three realms of saṃsāra, characterized by having only a subtle
+                                mental form.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-199">
+                            <term>four genuine discriminations</term>
+                            <term xml:lang="Bo-Ltn">so so yang dag par rig pa bzhi </term>
+                            <term xml:lang="bo">སོ་སོ་ཡང་དག་པར་རིག་པ་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">catuḥpratisaṃvid</term>
+                            <term type="definition">Genuine discrimination with respect to dharmas, meaning, language, and
+                                eloquence.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-200">
+                            <term>fourfold fearlessness</term>
+                            <term xml:lang="Bo-Ltn">mi ’jigs pa bzhi </term>
+                            <term xml:lang="bo">མི་འཇིགས་པ་བཞི།</term>
+                            <term xml:lang="Sa-Ltn">caturabhaya</term>
+                            <term type="definition">
+                                <term type="ignore">Fearlessness</term> in declaring that one has (1) awakened, (2) ceased all illusions,
+                                (3) taught the obstacles to awakening, and (4) shown the way to liberation.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-201">
+                            <term>hearer</term>
+                            <term xml:lang="Bo-Ltn">nyan thos </term>
+                            <term xml:lang="bo">ཉན་ཐོས།</term>
+                            <term xml:lang="Sa-Ltn">śrāvaka</term>
+                            <term type="definition">A follower of those teachings of the Buddha that <term type="ignore">focus</term> on the monastic
+                                lifestyle and liberating oneself from suffering, in contrast to followers of the bodhisattva
+                                vehicle who seek buddhahood for the sake of all beings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-202">
+                            <term>non-returner</term>
+                            <term xml:lang="Bo-Ltn">phyir mi ’ong ba </term>
+                            <term xml:lang="bo">ཕྱིར་མི་འོང་བ།</term>
+                            <term xml:lang="Sa-Ltn">anāgāmin</term>
+                            <term type="definition">The third level of noble ones when practicing the path of the hearers (bound
+                                to never be reborn).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-203">
+                            <term>once-returner</term>
+                            <term xml:lang="Bo-Ltn">lan cig phyir ’ong ba </term>
+                            <term xml:lang="bo">ལན་ཅིག་ཕྱིར་འོང་བ།</term>
+                            <term xml:lang="Sa-Ltn">sakṛdāgāmin</term>
+                            <term type="definition">The second level of noble ones when practicing the path of the hearers (bound
+                                to be born again no more than once).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-204">
+                            <term>sense fields</term>
+                            <term xml:lang="Bo-Ltn">skye mched </term>
+                            <term xml:lang="bo">སྐྱེ་མཆེད།</term>
+                            <term xml:lang="Sa-Ltn">āyatana</term>
+                            <term type="definition">One way of describing experience and the world in terms of twelve <term type="ignore">sense fields</term>
+                                (eye and form, ear and sound, nose and odor, tongue and taste, body and touch, mind and mental
+                                objects).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-205">
+                            <term>stream-enterer</term>
+                            <term xml:lang="Bo-Ltn">rgyun du zhugs pa </term>
+                            <term xml:lang="bo">རྒྱུན་དུ་ཞུགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">srotāpanna</term>
+                            <term type="definition">A person who has entered the “stream” of practice that leads to nirvāṇa. The
+                                first of the four attainments of the path of the hearers.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-206">
+                            <term>ten levels</term>
+                            <term xml:lang="Bo-Ltn">sa bcu </term>
+                            <term xml:lang="bo">ས་བཅུ།</term>
+                            <term xml:lang="Sa-Ltn">daśabhūmi</term>
+                            <term type="definition">The <term type="ignore">ten levels</term> of a bodhisattva’s development into a fully enlightened
+                                buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-207">
+                            <term>ten nonvirtuous actions</term>
+                            <term xml:lang="Bo-Ltn">mi dge ba bcu </term>
+                            <term xml:lang="bo">མི་དགེ་བ་བཅུ།</term>
+                            <term xml:lang="Sa-Ltn">daśākuśala</term>
+                            <term type="definition">Killing, stealing, sexual misconduct, lying, divisive speech, harsh speech,
+                                gossip, covetousness, ill will, and wrong views.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-208">
+                            <term>ten powers</term>
+                            <term xml:lang="Bo-Ltn">dbang bcu </term>
+                            <term xml:lang="bo">དབང་བཅུ།</term>
+                            <term xml:lang="Sa-Ltn">daśavaśitā</term>
+                            <term type="definition">The <term type="ignore">ten powers</term> gained by bodhisattvas as they progress on the path: life,
+                                deeds, necessities, devotion, aspiration, miraculous abilities, birth, doctrine, mind, and
+                                wisdom.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-209" mode="marked">
+                            <term>powers</term>
+                            <term xml:lang="Bo-Ltn">stobs lnga </term>
+                            <term xml:lang="bo">སྟོབས་ལྔ།</term>
+                            <term xml:lang="Sa-Ltn">pañcabalāni</term>
+                            <term type="definition">Faith, dilligence, mindfulness, absorption, and knowledge. Although the same
+                                as the faculties, they are termed “powers” due to their greater strength.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-210">
+                            <term>thorough relinquishments</term>
+                            <term xml:lang="Bo-Ltn">yang dag par spong ba </term>
+                            <term xml:lang="bo">ཡང་དག་པར་སྤོང་བ།</term>
+                            <term xml:lang="Sa-Ltn">samyakprahāṇa</term>
+                            <term type="definition">Relinquishing negative acts in the present and the future, and enhancing
+                                positive acts in the present and the future.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-211">
+                            <term>ūrṇā hair</term>
+                            <term xml:lang="Bo-Ltn">mdzod spu </term>
+                            <term xml:lang="bo">མཛོད་སྤུ།</term>
+                            <term xml:lang="Sa-Ltn">ūrṇākeśa</term>
+                            <term type="definition">A hair between the eyebrows of a buddha. One of the marks of an awakened
+                                being.</term>
+                        </gloss>
+                    </item>
+                    <!--<item>
+                        <gloss type="term" priority="0" xml:id="UT22084-060-008-212">
+                            <term>unmanifest</term>
+                            <term xml:lang="Bo-Ltn">ma byung ba </term>
+                            <term xml:lang="bo">མ་བྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">anutpanna</term>
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-213">
+                            <term>focus</term>
+                            <term xml:lang="Bo-Ltn">dmigs pa </term>
+                            <term xml:lang="bo">དམིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">upalabdhi</term>
+                            <term type="definition">Also translated “reference point” q.v.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-214">
+                            <term>reference point</term>
+                            <term xml:lang="Bo-Ltn">dmigs pa </term>
+                            <term xml:lang="bo">དམིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">upalabdhi</term>
+                            <term type="definition">Conceptual mind. Also translated “focus” q.v.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-215">
+                            <term>sphere of reality</term>
+                            <term xml:lang="Bo-Ltn">chos kyi dbyings </term>
+                            <term xml:lang="bo">ཆོས་ཀྱི་དབྱིངས།</term>
+                            <term xml:lang="Sa-Ltn">dharmadhātu</term>
+                            <term type="definition">The element, or nature, of ultimate reality.</term>
+                        </gloss>
+                    </item>
+                    <!--<item>
+                        <gloss type="term" priority="0" xml:id="UT22084-060-008-216">
+                            <term>non-occurrence</term>
+                            <term xml:lang="Bo-Ltn">shin tu mi ’byung ba </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་མི་འབྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">-</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" priority="0" xml:id="UT22084-060-008-217">
+                            <term>non-occurring</term>
+                            <term xml:lang="Bo-Ltn">shin tu mi ’byung ba </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་མི་འབྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">-</term>
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-218">
+                            <term>limit of reality</term>
+                            <term xml:lang="Bo-Ltn">yang dag pa’i mtha’ </term>
+                            <term xml:lang="bo">ཡང་དག་པའི་མཐའ།</term>
+                            <term xml:lang="Sa-Ltn">bhūtakoṭi</term>
+                            <term type="definition">The ultimate experience of reality, a close synonym of nirvāṇa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-219">
+                            <term>fearlessness</term>
+                            <term xml:lang="Bo-Ltn">mi ’jigs pa </term>
+                            <term xml:lang="bo">མི་འཇིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">abhaya</term>
+                            <term type="definition">See “fourfold fearlessness.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-060-008-220">
+                            <term>unique qualities</term>
+                            <term xml:lang="Bo-Ltn">ma ’dres pa </term>
+                            <term xml:lang="bo">མ་འདྲེས་པ།</term>
+                            <term xml:lang="Sa-Ltn">āveṇika</term>
+                            <term type="definition">See “eighteen unique qualities of a buddha.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-221">
+                            <term>Ānanda</term>
+                            <term xml:lang="Bo-Ltn">kun dga’ bo </term>
+                            <term xml:lang="bo">ཀུན་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Ānanda</term>
+                            <term type="definition">The buddha’s cousin and principal attendant.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-222">
+                            <term>Dharmatāśīla</term>
+                            <term xml:lang="Bo-Ltn">dharmatA shIla </term>
+                            <term xml:lang="bo">དྷརྨཏཱ་ཤཱིལ།</term>
+                            <term xml:lang="Sa-Ltn">Dharmatāśīla</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-223">
+                            <term>Excellent Rule</term>
+                            <term xml:lang="Bo-Ltn">mtshams bzangs </term>
+                            <term xml:lang="bo">མཚམས་བཟངས།</term>
+                            <term xml:lang="Sa-Ltn">Susīma</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-224">
+                            <term>Jinamitra</term>
+                            <term xml:lang="Bo-Ltn">dzi na mi tra </term>
+                            <term xml:lang="bo">ཛི་ན་མི་ཏྲ།</term>
+                            <term xml:lang="Sa-Ltn">Jinamitra</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-225">
+                            <term>Kāśyapa</term>
+                            <term xml:lang="Bo-Ltn">’od srung </term>
+                            <term xml:lang="bo">འོད་སྲུང་།</term>
+                            <term xml:lang="Sa-Ltn">Kāśyapa</term>
+                            <term type="definition">Same as Mahākāśyapa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-226">
+                            <term>Lord of Peace and Calm</term>
+                            <term xml:lang="Bo-Ltn">rab tu zhi ba rnam par dul ba’i dbang phyug </term>
+                            <term xml:lang="bo">རབ་ཏུ་ཞི་བ་རྣམ་པར་དུལ་བའི་དབང་ཕྱུག</term>
+                            <term type="definition">A bodhisattva god in the assembly receiving Buddha Śākyamuni’s
+                                teachings.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-227">
+                            <term>Mahākāśyapa</term>
+                            <term xml:lang="Bo-Ltn">’od srung chen po </term>
+                            <term xml:lang="bo">འོད་སྲུང་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahākāśyapa</term>
+                            <term type="definition">A senior student of Buddha Śākyamuni, famous for his austere lifestyle.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-228">
+                            <term>Mañjuśrī Kumārabhūta</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal gzhon nu gyur pa </term>
+                            <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུ་གྱུར་པ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī Kumārabhūta</term>
+                            <term type="definition">The bodhisattva Mañjuśrī; literally “Youthful Mañjuśrī.”</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-229">
+                            <term>Ratnaketu</term>
+                            <term xml:lang="Bo-Ltn">rin po che’i tog </term>
+                            <term xml:lang="bo">རིན་པོ་ཆེའི་ཏོག</term>
+                            <term xml:lang="Sa-Ltn">Ratnaketu</term>
+                            <term type="definition">A buddha who lives in the realm known as Jewel World.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-060-008-230">
+                            <term>Śākyaprabha</term>
+                            <term xml:lang="Bo-Ltn">shAkya prabhA </term>
+                            <term xml:lang="bo">ཤཱཀྱ་པྲབྷཱ།</term>
+                            <term xml:lang="Sa-Ltn">Śākyaprabha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-231">
+                            <term>Jambudvīpa</term>
+                            <term xml:lang="Bo-Ltn">’dzam bu’i gling </term>
+                            <term xml:lang="bo">འཛམ་བུའི་གླིང་།</term>
+                            <term xml:lang="Sa-Ltn">Jambudvīpa</term>
+                            <term type="definition">The present continent according to Buddhist world descriptions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-232">
+                            <term>Jewel World</term>
+                            <term xml:lang="Bo-Ltn">rin po che dang ldan pa </term>
+                            <term xml:lang="bo">རིན་པོ་ཆེ་དང་ལྡན་པ།</term>
+                            <term type="definition">The realm of the Buddha Ratnaketu.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-233">
+                            <term>Rājagṛha</term>
+                            <term xml:lang="Bo-Ltn">rgyal po’i khab </term>
+                            <term xml:lang="bo">རྒྱལ་པོའི་ཁབ།</term>
+                            <term xml:lang="Sa-Ltn">Rājagṛha</term>
+                            <term type="definition">The capital of the ancient kingdom of Magadha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-234">
+                            <term>Sahā world</term>
+                            <term xml:lang="Bo-Ltn">mi mjed </term>
+                            <term xml:lang="bo">མི་མཇེད།</term>
+                            <term xml:lang="Sa-Ltn">sahālokadhātu</term>
+                            <term type="definition">The present world.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-235">
+                            <term>Vulture Peak Mountain</term>
+                            <term xml:lang="Bo-Ltn">bya rgod phung po’i ri </term>
+                            <term xml:lang="bo">བྱ་རྒོད་ཕུང་པོའི་རི།</term>
+                            <term xml:lang="Sa-Ltn">gṛdhra­kūṭa parvata</term>
+                            <term type="definition">The mountain where many Great Vehicle teachings were delivered by Buddha
+                                Śākyamuni.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-060-008-236">
+                            <term>Benares</term>
+                            <term xml:lang="Bo-Ltn">gsal ldan </term>
+                            <term xml:lang="bo">གསལ་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn">Kāśi</term>
+                            <term type="definition">Modern Vārāṇasi.</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

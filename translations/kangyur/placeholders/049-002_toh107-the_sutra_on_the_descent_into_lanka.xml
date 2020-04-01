@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">lang kar gshegs pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">laṅkāvatārasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Descent into Laṅka</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa lang kar gshegs pa'i theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryalaṅkāvatāramahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="en">The Noble Mahāyāna Sūtra 'The Descent into Laṅka'</title>
+                <title type="otherTitle" xml:lang="en">[Note: the longer, late version of the sūtra, translated from the Sanskrit]</title>
+                <title type="otherTitle" xml:lang="zh">入楞伽經</title>
+                <author role="translatorMain" ref="contributors.xml#team-14"/>
+            <sponsor ref="sponsors.xml#sponsor-8">Anonymous</sponsor>
+                <author role="translatorEng" ref="contributors.xml#person-99">Thomas Cruijsen</author>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-049-002"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh107" type="text">
+                    <ref>Toh 107</ref>
+                    <biblScope>vol.49, ff.56r-191v(pp.111-382)</biblScope>
+                    <location work="UT4CZ5369" count-pages="272">
+                        <volume number="49" start-page="111" end-page="382"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11668" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-11-29T12:42:42.743Z" user="admin">29/11/2019 12:42:42</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-29T12:42:39.098Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Anonymous</p>
+            </div>
+        </front>
+    </text>
+</TEI>

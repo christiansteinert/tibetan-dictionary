@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">de bzhin gshegs pa'i yon tan dang ye shes bsam gyis mi khyab pa'i yul la 'jug pa bstan pa'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">tathāgataguṇa­jñānācintyaviṣayāvatāra­nirdeśasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra Teaching the Deployment of the Inconceivable Qualities and Gnosis of the Tathāgatas on their Objects</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa de bzhin gshegs pa'i yon tan dang ye shes bsam gyis mi khyab pa'i yul la 'jug pa bstan pa zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryatathāgataguṇa­jñānācintyaviṣayāvatāra­nirdeśanāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-16"/>
+            <author role="translatorEng" ref="contributors.xml#person-115">Dr. Karen Liljenberg</author>
+                <editor role="externalReviewer" ref="contributors.xml#person-282">Gavin Kilty</editor>
+                <sponsor ref="sponsors.xml#sponsor-47">Make Wang Xiao Juan</sponsor>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.1 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="2.c">
+                <idno xml:id="UT22084-061-005"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh185" type="text">
+                    <ref>Toh 185</ref>
+                    <biblScope>vol.61, ff.106r-143v(pp.211-286)</biblScope>
+                    <location work="UT4CZ5369" count-pages="76">
+                        <volume number="61" start-page="211" end-page="286"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11803" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-07T08:19:35.51Z" user="admin">07/10/2019 08:19:35</note>
+            <note type="updated" update="translation-status" value="2.d" date-time="2019-05-06T16:17:25.267Z" user="john">2.d</note>
+                <note type="updated" update="translation-status" value="2.c" date-time="2019-05-30T01:13:35.014Z" user="dion-blundell">2.c</note>
+                <note type="updated" update="text-version" value="0.1" date-time="2019-10-07T08:19:33.747Z" user="andreas"/>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

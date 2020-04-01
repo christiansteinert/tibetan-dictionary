@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">phyag rgya chen po'i thig le'i rgyud/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mahāmudrātilakatantra</title>
+                <title type="mainTitle" xml:lang="en">Tantra of the Tilaka (Forehead Mark) of Mahāmudrā</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">dpal phyag rgya chen po'i thig le zhes bya ba rnal 'byor ma chen mo'i rgyud kyi rgyal po'i mnga' bdag/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">śrīmahāmudrātilakanāma­mahāyoginītantra­rājādhipati</title>
+                <author role="translatorMain" ref="contributors.xml#team-22"/>
+            <author role="translatorEng" ref="contributors.xml#person-142">Dr. Peter Alan Roberts</author>
+                <editor role="reviser" ref="contributors.xml#person-143">Emily Bower</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition> </edition>
+            </editionStmt>
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-080-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh420" type="text">
+                    <ref>Toh 420</ref>
+                    <biblScope>vol.80, ff.66r-90v(pp.131-180)</biblScope>
+                    <location count-pages="50">
+                        <start volume="80" page="133"/>
+                        <end volume="80" page="182"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21412" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12122" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 13/02/2019 at 08:57:11 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

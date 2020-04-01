@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">mdor bsdus pa'i sgrub thabs kyi 'grel pa rin chen phreng ba</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">pindikrtasadhanavrttiratnavali</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-036-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1826" type="text">
+                    <ref>Toh 1826</ref>
+                    <biblScope>ff. 1v-95r</biblScope>
+                    <author role="translatorTib">a. rin chen 'byung gnas zhi ba</author>
+                    <author role="translatorTib">t. karmavajra</author>
+                    <location count-pages="">
+                        <start volume="36" page="4"/>
+                        <end volume="36" page="191"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21621" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC8388" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 14/01/2019 at 16:40:33 by john</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

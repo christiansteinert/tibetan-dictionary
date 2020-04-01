@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">don yod zhags pa'i cho ga zhib mo'i rgyal po/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">amoghapāśakalpa</title>
+                <title type="mainTitle" xml:lang="en">The King of Detailed Procedures for Amoghapāśa</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa don yod pa'i zhags pa'i cho ga zhib mo'i rgyal po/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryāmoghapāśakalparājā</title>
+                <title type="otherTitle" xml:lang="zh">不空羂索神變真言經</title>
+                <author role="translatorMain" ref="contributors.xml#team-9"/>
+            <sponsor ref="sponsors.xml#sponsor-38">Sun Ping, Tian Xingwen, and Sun Fanglin</sponsor>
+                <author role="translatorEng" ref="contributors.xml#person-76">Wiesiek Mical</author>
+                <author role="translatorEng" ref="contributors.xml#person-58">Anna Zilman</author>
+                <author role="translatorEng" ref="contributors.xml#person-50">Dr. Andreas Doctor</author>
+<editor role="projectEditor" ref="contributors.xml#person-74">Ryan Damron</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>0.0.1 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.g">
+                <idno xml:id="UT22084-092-001"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh686" type="text">
+                    <ref>Toh 686</ref>
+                    <biblScope>vol.92, ff.1r-316r(pp.1-631) and vol.93, ff.1r-57v(pp.1-114)</biblScope>
+                    <location work="UT4CZ5369" count-pages="741">
+                        <volume number="92" start-page="2" end-page="631"/>
+                        <volume number="93" start-page="2" end-page="114"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12425" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-09-23T20:15:43.67Z" user="admin">23/09/2019 20:15:43</note>
+            
+<note type="updated" update="text-version" value="0.0.1" date-time="2020-03-17T08:56:54.094Z" user="line-tofte">0.0.1</note>
+<note type="updated" update="translation-status" value="2.g" date-time="2020-03-17T08:56:54.094Z" user="line-tofte">2.g</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment">
+                <p tid="1">Sponsored by Sun Ping, Tian Xingwen, and Sun Fanglin.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

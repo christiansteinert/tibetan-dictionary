@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">dbyar gyi gzhi/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">varṣāvastu</title>
+                <title type="mainTitle" xml:lang="en">Chapter 4: On the Rains</title>
+                <author role="translatorMain" ref="contributors.xml#team-26"/>
+            <author role="translatorEng" ref="contributors.xml#person-165">Robert Miller</author>
+                <editor role="externalReviewer" ref="contributors.xml#person-284">Vincent Eltschinger</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.f">
+                <idno xml:id="UT22084-001-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1-4" type="chapter">
+                    <ref>Toh 1-4</ref>
+                    <biblScope>vol:1,ff.237v-251r(pp.474-502)</biblScope>
+                    <location work="UT4CZ5369" count-pages="29">
+                        <volume number="1" start-page="474" end-page="502"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11497" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12908" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-30T08:01:51.242Z" user="admin">30/10/2019 08:01:51</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-30T08:01:47.601Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="2">Summary</head>
+                <p tid="1">Describes the timing and procedures for the annual rains retreat.</p>
+            </div>
+        </front>
+    </text>
+</TEI>

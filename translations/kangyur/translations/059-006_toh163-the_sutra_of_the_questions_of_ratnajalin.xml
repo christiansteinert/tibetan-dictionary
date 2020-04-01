@@ -1,0 +1,2899 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rin chen dra ba can gyis zhus pa'i
+                    mdo/</title>
+                <!--Translator omitted sūtra/pa'i mdo-->
+                <title type="mainTitle" xml:lang="bo"/>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Ratnajāliparipṛcchāsūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra of the Questions of
+                    Ratnajālin</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་རིན་ཆེན་དྲ་བ་ཅན་གྱིས་ཞུས་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa rin chen dra ba can gyis zhus pa
+                    zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “The Questions
+                    of Ratnajālin”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Āryaratnajāliparipṛcchānāmamahāyānasūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the
+                    Dharmachakra Translation Committee <lb/> under the patronage and supervision of
+                    84000: Translating the Words of the Buddha</author>
+                <editor role="associateEditor" ref="contributors.xml#person-250">Rory Lindsay, Dr.</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-108">André Rodrigues</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-92">Laura Goetz</editor>
+                <editor role="projectEditor" ref="contributors.xml#person-50">Andreas Doctor</editor>
+
+
+
+
+            
+<author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
+<consultant role="advisor" ref="contributors.xml#person-40">Chökyi Nyima Rinpoche</consultant>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.3 <date>2020</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative to translate all the Buddha’s words into modern languages, and to
+                    make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-059-006"/>
+                <note>An early mistake in the assigning of UT numbers within the 84000 project means
+                    that these ids diverge slightly from the standard logic.</note>
+                <date>2020-01-08</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh163" type="text">
+                    <ref>Toh 163</ref>
+                    <biblScope>Degé Kangyur, vol. 59 (mdo sde, cha), folios 144.a–159.b</biblScope>
+                    <author role="translatorTib">t. t. Jñānagarbha</author>
+                    <author role="translatorTib">ye shes snying po</author>
+                    <author role="translatorTib">r. dpal brtsegs</author>
+                    <location work="UT4CZ5369" count-pages="32">
+                        <volume number="59" start-page="287" end-page="318"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11765" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-02-26T21:33:27.418Z" user="admin">26/02/2020 21:33:27</note>
+                <note type="updated" update="translation-status" value="2.e" date-time="2019-07-02T14:44:08.116Z" user="john">2.e</note>
+                <note type="updated" update="text-version" value="v 0.1.0" date-time="2019-11-28T15:12:17.584Z" user="andreas">v 0.1.0</note>
+                <note type="updated" update="translation-status" value="2.d" date-time="2019-11-28T15:12:17.584Z" user="andreas">2.d</note>
+                <note type="updated" update="translation-status" value="2.b" date-time="2019-12-04T08:54:19.146Z" user="andreas">2.b</note>
+                <note type="updated" update="text-version" value="v 0.1.1" date-time="2019-12-20T12:56:48.575Z" user="admin">Automated version
+                    increment</note>
+                <note type="updated" update="translation-status" value="2.a" date-time="2020-01-05T15:29:22.409Z" user="andreas">2.a</note>
+            
+<note type="updated" update="text-version" value="v 0.1.2" date-time="2020-01-14T15:55:51.25Z" user="laura">v 0.1.2</note>
+<note type="updated" update="translation-status" value="2" date-time="2020-02-11T06:10:06.818Z" user="mike">2</note>
+<note type="updated" update="text-version" value="v 0.1.3" date-time="2020-02-26T21:33:24.719Z" user="celso">fixed non-breaking spaces in ellipsis</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-059-006-1"/>
+                <p tid="2">Prompted by a dream, the young Licchavi boy Ratnajālin invites the Buddha
+                    to the city of Vaiśālī. When the Buddha arrives Ratnajālin asks whether there
+                    are other buddhas whose names, when heard, bring benefit to bodhisattvas. The
+                    Buddha replies that there are, and he proceeds to describe the power of the
+                    names of buddhas in the four cardinal directions as well as above and below.
+                    Once Ratnajālin has understood the teaching on the power of the names of these
+                    thus-gone ones, the Buddha provides encouragement for the future propagation of
+                    this discourse.</p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-059-006-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the guidance
+                    of Chökyi Nyima Rinpoche. The translation was produced by Timothy Hinkle, who
+                    also wrote the introduction. Andreas Doctor checked the translation against the
+                    Tibetan and edited the text.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-059-006-3"/>
+                    <p tid="7">
+                        <title xml:lang="en">The Questions of Ratnajālin</title> belongs to the
+                        General Sūtra (<foreign xml:lang="Bo-Ltn">mdo sde</foreign>) section of the
+                        Kangyur. It was translated into Tibetan some time during the late eighth or
+                        early ninth century <hi rend="small-caps">ce</hi> by a certain Yeshé Nyingpo (of whom we
+                        know very little apart from his name) and the Indian scholar Jñānagarbha,
+                        who participated in numerous translation projects in Tibet during the early
+                        translation period.<note place="end" xml:id="UT22084-059-006-4" index="1">
+                            Interestingly, Yeshé Nyingpo is a Tibetan translation of Jñānagarbha,
+                            and they could perhaps be coreferential terms. As far as we are aware,
+                            this was the only sūtra translated jointly by these two figures.</note>
+                        The translation was subsequently edited during the same period by the
+                        prolific translator Kawa Paltsek. Therefore, the Tibetan translation, which we have
+                        rendered into English here, would have been completed during the early
+                        translation period, a dating that is also attested by the text’s inclusion
+                        in the early-ninth-century Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar
+                            ma</foreign>) catalogue.<note place="end" xml:id="UT22084-059-006-5" index="2"> The Denkarma catalogue is dated to c. 812
+                                <hi rend="small-caps">ce</hi>. In this catalogue, <title xml:lang="en">The Questions of Ratnajālin</title> is included among
+                            the Miscellaneous Sūtras (<foreign xml:lang="Bo-Ltn">mdo sde sna
+                                tshogs</foreign>) less than ten sections (<foreign xml:lang="Bo-Ltn" type="term">bam po</foreign>) long. See Denkarma, 298.b.4. See also
+                            Herrmann-Pfandt 2008, p. 86, no. 159.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-6"/>
+                    <p tid="8">The original Sanskrit no longer seems to be extant, but a single
+                        translation was made into Chinese (Taishō vol. 14, no. 433). This Chinese
+                        translation was produced much earlier than the Tibetan, sometime during the
+                        end of the third century <hi rend="small-caps">ce</hi> by the Indo-Scythian
+                        monk Dharmarakṣa (c. 233–310 <hi rend="small-caps">ce</hi>). Dharmarakṣa was
+                        one of the most prolific translators of early Chinese Buddhism, producing
+                        more than 150 translations of canonical scriptures during his life. With
+                        this Chinese translation, we thus have a very early <foreign xml:lang="la" type="term">terminus ante quem</foreign> for the composition of this
+                        discourse that places it right in the formative period of the literature of
+                        the Great Vehicle in India. The fact that it was translated into Chinese and
+                        Tibetan with more than five hundred years separating the two events also
+                        points to a certain popularity and longevity of the text in Buddhist
+                            India.<note place="end" xml:id="UT22084-059-006-7" index="3">Additionally, the sūtra was also translated into Mongolian from
+                            Tibetan, seemingly around the fourteenth century, although the colophon
+                            dates the translation to the seventeenth century (Higuchi 2015). The
+                            other mentions of the sūtra that we have come across are two brief
+                            references to it in Schopen 1983, pp. 121, 127. </note> In producing
+                        this translation, we have based our work on the Degé xylograph while
+                        consulting the Comparative Edition (<foreign xml:lang="Bo-Ltn" type="term">dpe bsdur ma</foreign>) as well as the Stok Palace manuscript. We have
+                        also occasionally consulted the Chinese translation and included any such
+                        influence on the translation in the annotations.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-8"/>
+                    <p tid="9">
+                        <title xml:lang="en">The Questions of Ratnajālin</title> is primarily
+                        concerned with the benefits that arise from knowing the names of various
+                        buddhas in different realms. Like many sūtras, this scripture begins with an
+                        interlocutor raising a question to the buddha. In this case, it is the young
+                        boy Ratnajālin who asks whether or not there are buddhas whose very names
+                        carry such transformative power as to elevate the knower to buddhahood in
+                        addition to arousing virtually all other important spiritual qualities. The
+                        buddha replies that there are, in fact, several buddhas whose names hold
+                        such power and he proceeds to describe and name these buddhas and their
+                        realms as well as declare the specific effects that knowledge of their names
+                        enacts. The notion that a devotee can become destined for awakening merely
+                        by hearing the names of buddhas who live in other realms is shared by a
+                        number of Great Vehicle sūtras. In the Degé Kangyur, however, since a number
+                        of organizing principles were at play when the editors structured the canon,
+                        the texts concerned with the liberating effects of the names of various
+                        buddhas ended up not being grouped together based on their shared subject
+                        matter but instead became dispersed throughout the different sūtra
+                        collections due to other editorial concerns. Therefore, we find <title xml:lang="en">The Questions of Ratnajālin</title> grouped together with
+                        the twenty-six sūtras that all share a similar title element (<title xml:lang="en">The Questions of</title> . . .).<note place="end" xml:id="UT22084-059-006-9" index="4"> In the Degé Kangyur we find these
+                            sūtras placed from Toh 148–174.</note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-10"/>
+                    <p tid="10">As for the events in the sūtra, the story begins in Vaiśālī with
+                        Ratnajālin, an eight-year-old boy of the Licchavi clan. Based on a dream,
+                        Ratnajālin leaves the city to invite the Buddha and the saṅgha to visit
+                        Vaiśālī for their daily alms round. The following day, the Buddha arrives in
+                        Vaiśālī as many miracles delight the people. At the proper time Ratnajālin
+                        asks the Buddha about the power inherent in the names of the buddhas, in
+                        particular whether there are buddhas whose names, simply upon being heard,
+                        have the efficacy to propel the listener forward on the path to awakening.
+                        In reply, the Buddha mentions six specific buddhas living in distant buddha
+                        realms in the four cardinal directions as well as in the directions above
+                        and below. He mentions them by name and declares that trust in their names
+                        and existence is the key factor that ensures a number of desired benefits,
+                        including the eventual attainment of awakening. Thus, as long as one trusts
+                        them, these buddha names have tremendous beneficial powers. Concluding his
+                        teaching, the Buddha describes the benefits that ensue from hearing this
+                        discourse—primarily that those who hear it will be able to attract many
+                        beings and propel them onto the path of awakening. Lastly, he advises the
+                        assembled community to uphold this discourse and offers Ratnajālin a
+                        prophecy of his future meeting with the buddha Maitreya.</p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="11"> The Translation </head>
+                <head type="titleHon" tid="12">The Noble Great Vehicle Sūtra</head>
+                <head type="titleMain" tid="13">The Questions of Ratnajālin</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-059-006-13"/>
+                    <p tid="17">
+                        <ref cRef="F.144.a" type="folio"/>
+                        <ref cRef="B1" type="bampo"/> Homage to all buddhas and bodhisattvas!</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-14"/>
+                    <p tid="19">Thus did I hear at one time. The Blessed One was dwelling in Vaiśālī
+                        in a mansion located by the Monkey Pond, together with a great assembly of
+                        monks. In the assembly were four hundred twenty million bodhisattvas. Some
+                        of the bodhisattvas, such as Maitreya, were held back by just one birth,
+                        while others were held back by two, three, four, five, ten, thirty, or forty
+                        births, with some bodhisattvas even held back by one thousand births. Also
+                        in the assembly were six hundred million worthy ones and nine hundred ninety
+                        million gods including the gods in the desire realm and form realm, the four
+                        great kings, Śakra who rules the gods, <term>Brahmā</term> who rules the
+                        Sahā world, the god Great Splendor, the god Candraprabha, the god
+                        Sūryaprabha, the god Pinnacle of Renown, and the god <term>Joyful</term>. In
+                        attendance were also the nāga kings Anavatapta, Sāgara, Vāsukin, Manasvin,
+                        Nanda, Upananda, Mucilinda, and Mahāmucilinda, as well as the demigod
+                        sovereign Rāhu and the retinues of all the other demigod sovereigns.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-16"/>
+                    <p tid="20">At that time, in the city of Vaiśālī, there was a Licchavi named
+                        Limitless Strength, who was the son of Siṃha the captain. Limitless
+                        Strength, son of Siṃha, himself had a son, a young Licchavi boy known as
+                        Ratnajālin. Since this child had previously served many buddhas, <ref cRef="F.144.b" type="folio"/> he had come to possess the lamp that
+                        shines with the immense light of the Dharma way. One time, when he was
+                        around eight years old, he had a dream as he slept. In his dream, the god
+                        Saṁtuṣita descended from the Heaven of Joy and spoke to him, encouraging
+                        Ratnajālin with this melodious song: </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-17"/>
+                    <lg tid="21">
+                        <l>“The essential being, the Victor, the Buddha,</l>
+                        <l>Abides, illuminating the entire trichiliocosm.</l>
+                        <l>With vast accumulations of merit, he appears in golden hue.</l>
+                        <l>The appearance of this great being is beautiful in all respects.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-18"/>
+                    <lg tid="22">
+                        <l>“He is endowed with the light of ten million suns</l>
+                        <l>And shines like a thousand or even ten million</l>
+                        <l>Luminous full moons—</l>
+                        <l>As many as there are grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-19"/>
+                    <lg tid="23">
+                        <l>“Shining like many millions of suns— </l>
+                        <l>He shines like the supreme disk in the east,</l>
+                        <l>Those in the south and the west,</l>
+                        <l>And the supreme disk in the north.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-20"/>
+                    <lg tid="24">
+                        <l>“The light rays that stream forth</l>
+                        <l>From each pore of this shining protector of the world</l>
+                        <l>Will, each and every one, </l>
+                        <l>Make all full moons appear gloomy. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-21"/>
+                    <lg tid="25">
+                        <l>“From each pore in the skin of those who are omniscient,</l>
+                        <l>Light streams forth.</l>
+                        <l>The light that shines from him illuminates as many worlds</l>
+                        <l>As there are grains of sand in sixty-six Ganges rivers.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-22"/>
+                    <p tid="26">In the morning, the Licchavi boy Ratnajālin told his father
+                        Limitless Strength, “Father, last night the god Saṁtuṣita arrived from the
+                        Heaven of Joy and encouraged me with a melodious song. Father, I am telling
+                        you this so that we can begin the practice of worshiping the Thus-Gone One.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-23"/>
+                    <p tid="27">At this point the Licchavi boy Ratnajālin sang these verses to his
+                        father Limitless Strength:</p>
+                    <lg tid="28">
+                        <l>“The captain of all beings, the perfect Buddha,</l>
+                        <l>The great being inconceivably learned in the ways of the world— </l>
+                        <l>Please, may you worship this protector, <ref cRef="F.145.a" type="folio"/>
+                        </l>
+                        <l>For such a guide rarely appears in the world.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-25"/>
+                    <lg tid="29">
+                        <l>“Just like the uḍumbara flower,</l>
+                        <l>He has a beautiful color and delicious scent and fragrance. </l>
+                        <l>He is stainless and without afflictions.</l>
+                        <l>Such a perfect flower is hard to find.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-26"/>
+                    <lg tid="30">
+                        <l>“Father, thus I supplicate you: </l>
+                        <l>Right now, may you joyfully agree</l>
+                        <l>To worship the luminous protector of the world</l>
+                        <l>Who perceives the ultimate!”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-27"/>
+                    <p tid="31">The Licchavi Limitless Strength was delighted and addressed the
+                        Licchavi Siṃha:</p>
+                    <lg tid="32">
+                        <l>“O Captain, follow my son’s advice</l>
+                        <l>To worship the Victorious One!”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-29"/>
+                    <lg tid="33">
+                        <l>To worship the Guide, the Lion of the Śākyas,</l>
+                        <l>And to delight the wonderful youth,</l>
+                        <l>Six hundred million householders set to work.</l>
+                        <l>Śakra with his thousand divine eyes, </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-30"/>
+                    <lg tid="34">
+                        <l>The powerful gods <term>Brahmā</term> and Īśvara</l>
+                        <l>And Susārthavāha, son of <term>Māra</term>, </l>
+                        <l>Together with ten million earthly gods,</l>
+                        <l>All came to the delight of Vaiśālī. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-31"/>
+                    <lg tid="35">
+                        <l>Here they produced</l>
+                        <l>Billions of thrones made of gold and silver</l>
+                        <l>And ornamented with the seven precious substances.</l>
+                        <l>Each throne had billions of precious items.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-32"/>
+                    <lg tid="36">
+                        <l>Each side of the thrones was adorned with jewels</l>
+                        <l>And had a fine victory banner of the seven precious substances
+                            attached.</l>
+                        <l>The size of the thrones was several leagues.</l>
+                        <l>The victory banners were half a league high. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-33"/>
+                    <lg tid="37">
+                        <l>On either side of the victory banners</l>
+                        <l>Was a platform higher than a league</l>
+                        <l>Made exclusively of a single substance—</l>
+                        <l>Precious jewels rising more than a league in height.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-34"/>
+                    <lg tid="38">
+                        <l>In between the thrones divine banners were hung </l>
+                        <l>More than a league long.</l>
+                        <l>The banners featured nets of golden tassels </l>
+                        <l>Adorned with strings of bells. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-35"/>
+                    <lg tid="39">
+                        <l>Beneath the thrones were well-fastened columns,</l>
+                        <l>More than one billion of them.</l>
+                        <l>All of these perfect thrones</l>
+                        <l>Were firmly placed, as if bolted to the ground.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-36"/>
+                    <lg tid="40">
+                        <l>The surface of the thrones was made of gold—</l>
+                        <l>Golden and with silver and beryl,</l>
+                        <l>Crystal, coral, and emerald too. <ref cRef="F.145.b" type="folio"/>
+                        </l>
+                        <l>Also, at the bottom and the base</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-37"/>
+                    <lg tid="41">
+                        <l>Were placed natural pearl parasols, </l>
+                        <l>Numbering in the billions</l>
+                        <l>And colored red with deep red sandalwood.</l>
+                        <l>Having produced the thrones</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-38"/>
+                    <lg tid="42">
+                        <l>And the heavenly ornaments,<note place="end" xml:id="UT22084-059-006-39" index="5"> Here “heavenly ornaments” translates
+                                the Tibetan <foreign xml:lang="Bo-Ltn" type="term">mkha’
+                                    rten</foreign>. The Sanskrit listed in the Negi dictionary for
+                                this term is <foreign xml:lang="Sa-Ltn" type="term">vyomaka</foreign>, which Monier-Williams defines as “a kind of
+                                ornament.” </note> clear as water, on the thrones,<note place="end" xml:id="UT22084-059-006-40" index="6">Translated based on Stok:
+                                    <foreign xml:lang="Bo-Ltn" type="quote">khri rnams dang ni khri
+                                    la chu lta bu’i/ /mkha’ rten dag kyang byas nas de la
+                                    ni</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="quote">
+                                    khri rnams dang ni khril tshul lta bu yi / mkha’ rten dag kyang
+                                    byas nas de la ni</foreign>. Yongle, Peking Kangxi, and
+                                Narthang: <foreign xml:lang="Bo-Ltn" type="quote">khri rnams dang ni
+                                    khril chu lta ba’i / mkha’ rten dag kyang byas nas de la
+                                    ni</foreign>. Lhasa Zhol: <foreign xml:lang="Bo-Ltn" type="quote">khri rnams dang ni khri tshul lta bu yi / mkha’
+                                    rten dag kyang byas nas de la ni</foreign>. </note>
+                        </l>
+                        <l>Golden nets were placed on them</l>
+                        <l>And adorned with gold, </l>
+                        <l>Silver, beryl, and crystal.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-41"/>
+                    <lg tid="43">
+                        <l>Having produced the ornaments of coral and emerald, </l>
+                        <l>Affixed to those were sweet-sounding bells</l>
+                        <l>Resounding with the voice of the Guide.</l>
+                        <l>Fumigants were placed there for veneration.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-42"/>
+                    <lg tid="44">
+                        <l>In the sky above Vaiśālī </l>
+                        <l>Was a canopy sewn of golden thread. </l>
+                        <l>From each and every golden thread</l>
+                        <l>Hung billions of tassels of the finest jewels</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-43"/>
+                    <lg tid="45">
+                        <l>And billions of ornamental garlands of pearl</l>
+                        <l>Strung with golden thread.</l>
+                        <l>All the Licchavis who lived in the city of Vaiśālī</l>
+                        <l>Were joyful, regardless of where they went.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-44"/>
+                    <lg tid="46">
+                        <l>They covered the ground of the city of Vaiśālī</l>
+                        <l>With pieces of cloth the length of seven men</l>
+                        <l>Printed with lattices of red sandalwood</l>
+                        <l>And made of well-spun fabrics.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-45"/>
+                    <lg tid="47">
+                        <l>On the right side, seventy billion instruments</l>
+                        <l>Of thousands of different varieties rang forth.</l>
+                        <l>On the left side, a further seventy billion</l>
+                        <l>Were also engaged in venerating the Lion of the Śākyas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-46"/>
+                    <lg tid="48">
+                        <l>Having set forth such a great array, </l>
+                        <l>The Licchavi boy named Ratnajālin</l>
+                        <l>Joyfully announced to his parents,</l>
+                        <l>“I am going before the Buddha.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-47"/>
+                    <lg tid="49">
+                        <l>This learned one left the city</l>
+                        <l>And went to where the great victorious lord was staying.</l>
+                        <l>The young man bowed his head at the feet of this ocean of virtues</l>
+                        <l>And stood to one side.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-48"/>
+                    <p tid="50">Then the Licchavi boy Ratnajālin left the city of Vaiśālī and went
+                        to where the Blessed One was staying. He bowed to the feet of the Blessed
+                        One and stood to one side. With him standing there to the side, the Blessed
+                        One <ref cRef="F.146.a" type="folio"/> delivered a Dharma discourse to the
+                        Licchavi boy Ratnajālin that delighted, captivated, and uplifted him, and
+                        made him utterly delighted. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-49"/>
+                    <p tid="51">The Licchavi boy Ratnajālin then stood up, draped his shawl over one
+                        shoulder, and knelt on his right knee. With his palms together he bowed
+                        toward the Blessed One and asked, “Would the Blessed One and his monastic
+                        saṅgha agree to take tomorrow’s midday meal at my home?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-50"/>
+                    <p tid="52">Out of love for the Licchavi boy Ratnajālin, the Blessed One showed
+                        his acceptance of the offer by remaining silent. The Licchavi boy Ratnajālin
+                        understood that the Blessed One had accepted through his silence, and so he
+                        circumambulated the Blessed One three times before taking his leave. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-51"/>
+                    <p tid="53">The Licchavi boy Ratnajālin then entered the city of Vaiśālī along
+                        with Śakra who rules the gods, <term>Brahmā</term> who rules the Sahā world,
+                        and the god Great Splendor. With enthusiasm and delight, they began to
+                        prepare abundant varieties of food. When the night had passed, they set out
+                        cushions and decorated Vaiśālī. They then returned to the Blessed One, bowed
+                        to him, and stood to one side. The Licchavi boy Ratnajālin then said to the
+                        Blessed One, “Blessed One, it is time for the midday meal. If it please you,
+                        your meal is ready. The time has come.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-52"/>
+                    <p tid="54">Accordingly, on that morning the Blessed One donned his lower
+                        garments and Dharma robes. Bearing his alms bowl, with his infinite saṅgha
+                        of monks he rose into the sky to the height of seven men <ref cRef="F.146.b" type="folio"/> and traveled to the city of Vaiśālī.
+                        <!--module starts-->As soon as he moved, the transformative power of the
+                        Thus-Gone One caused all the worlds of the great trichiliocosm to shake six
+                        times as they quivered, trembled, and quaked; wobbled, rocked, and swayed;
+                        vibrated, shuddered, and reeled; clattered, rattled, and clanged; and
+                        tremored, shook, and convulsed. Thus they shook six times with eighteen
+                        omens.<!--module ends--> He also displayed trillions of miracles as he
+                        traveled to the city of Vaiśālī. At that time, trillions of gods scattered
+                        and tossed blue, pink, red, and white lotuses, flowers made of precious
+                        divine substances, the powdered aloewood of the gods, powdered gems, gold
+                        from the Jambū river, and powdered divine gems upon the Blessed One.
+                        Trillions of divine instruments resounded. Unfathomable divine ornaments
+                        adorned him. In the sky above, a steady rain of red sandalwood powder fell
+                        to the depth of a chariot axle.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-53"/>
+                    <p tid="55">The Blessed One then arrived at the Licchavi boy Ratnajālin’s home
+                        and sat upon the seat that had been prepared for him along with the saṅghas
+                        of fully ordained monks and nuns and the assemblies of novice monks and
+                        nuns. Seeing that he had arrived, the Licchavi boy Ratnajālin personally
+                        served the Blessed One with an abundance of the finest food, drink, and
+                        sweets, to please him and serve him everything he wished for. When the
+                        Licchavi boy Ratnajālin noticed that the Blessed One had finished eating, he
+                        picked up the alms bowl, offered water, and covered the Blessed One’s hands.
+                            <ref cRef="F.147.a" type="folio"/> He then dressed the Blessed One with
+                        a priceless set of the three Dharma robes. He also dressed the saṅghas of
+                        fully ordained monks and nuns and the assemblies of novice monks and nuns
+                        with sets of the three Dharma robes. Why? He did this because he was moved
+                        by the power of the Blessed One.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-54"/>
+                    <p tid="56">The Licchavi boy Ratnajālin then asked the Blessed One, “If the
+                        Blessed One were to grant me the opportunity to request a teaching, I would
+                        like to ask the Blessed Thus-Gone One a few questions.”</p>
+                    <p tid="57">The Blessed One responded to the Licchavi boy Ratnajālin, “Young
+                        man, you may ask the Thus-Gone One anything you are concerned with. Then I
+                        shall delight you with teachings that answer your questions.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-56"/>
+                    <p tid="58">The Licchavi boy Ratnajālin then asked the Blessed One, “Blessed
+                        One, in other worlds, are there blessed buddhas that through their previous
+                        aspirations have names that, when merely heard, help noble sons and
+                        daughters who follow the Bodhisattva Vehicle to end all doubt and
+                        hesitation, to become irreversible and fully awaken to unsurpassed and
+                        perfect buddhahood, to gain recollection of past lives, to never have a
+                        stingy attitude, to be surrounded by the bodhisattva assembly and to be
+                        without the assembly of hearers, to acquire countless trillions of virtues,
+                        to satisfy all beings by pleasing all the buddhas, to terrify the māras, to
+                        purify all buddha realms, to cleanse the stains in the minds of all beings,
+                            <ref cRef="F.147.b" type="folio"/> to inspire all beings to the virtuous
+                        Dharma, to be protected by the gods, to be considered by the bodhisattvas,
+                        to be blessed by the thus-gone ones, to never be separated from the blessed
+                        buddhas, to perfect bodhisattva conduct by possessing the finest qualities,
+                        to gain the entirety of the 84,000 verbal expressions, to attain the voice
+                        of <term>Brahmā</term>, and to gain a voice that is in conformity with all
+                        worlds?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-57"/>
+                    <p tid="59">The Blessed One answered the Licchavi boy Ratnajālin, “Excellent,
+                        excellent, young man. Your thought to ask the Thus-Gone One about such
+                        subjects reflects excellent eloquence and fine analysis. Thus, listen well,
+                        young man, and bear what I say in mind. Then I will teach you.” </p>
+                    <p tid="60">“Blessed One, I shall do just that.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-59"/>
+                    <p tid="61">The bodhisattva Ratnajālin listened as the Blessed One had
+                        instructed, and so the Blessed One said, “Young man, to the east of here
+                        there is a world called Pearled. Young man, consider this: There are as many
+                        peaks of existence as there are grains of sand in the Ganges. And all those
+                        too are filled with the smallest possible particles. If a person then came
+                        along and carried away one single such particle and placed it in a spot past
+                        as many trillions of buddha realms as there are smallest particles in all
+                        those world systems under the peaks of existence—then, young man, by
+                        repeating this in the same way for a long time, would that great mass of
+                        particles eventually run out <ref cRef="F.148.a" type="folio"/> and reach
+                        its limit? Now, young man, tell me, would it be easy to consider, count,
+                        assess, or determine the places in the universe where that person placed or
+                        did not place those particles?”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-60"/>
+                    <p tid="62">“Blessed One, it would not be easy. Blessed One, for that reason,
+                        anyone who gets the right sense of this analogy that you have expressed
+                        would gain a great degree of understanding.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-61"/>
+                    <p tid="63">The Blessed One said, “Young man, if all the worlds in which that
+                        person placed a particle, or alternatively the worlds in which that person
+                        did not place a particle—ranging from the mass of water underlying these
+                        worlds up to their peaks—were filled with minute particles, and if a second
+                        person came along and removed a single particle from them at a time and
+                        placed it in a spot past as many trillions of buddha realms as there were
+                        minute particles in those worlds, then, young man, by repeating this for a
+                        long time, eventually that great mass of particles would become dispersed.
+                        Young man, by this way of proceeding, the latter person would travel past
+                        nine million nine hundred thousand incalculable numbers of worlds and thus
+                        arrive past countless trillions of buddha realms. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-62"/>
+                    <p tid="64">“That is where the world called Pearled is located. There the
+                        thus-gone one, the worthy one, the perfect buddha Majestic King with the
+                        Splendorous Voice of Learning Adorned by Precious Moonlight lives, abides,
+                        and teaches the Dharma. Young man, those noble sons or daughters who abide
+                        in the Bodhisattva Vehicle, who have no doubt regarding the name of the
+                        thus-gone, worthy, perfect buddha Majestic King with the Splendorous Voice
+                        of Learning Adorned by Precious Moonlight, <ref cRef="F.148.b" type="folio"/> and who trust in my vision, will attain the dominion of a universal
+                        monarch after their lives are over. A buddha will appear within their
+                        dominions. When they see that thus-gone one, they will perform boundless
+                        veneration, practice pure conduct, and master the five types of miraculous
+                        abilities. Immediately upon beholding that thus-gone one, they will achieve
+                        the <distinct>hundred-swirled</distinct> retention. They will serve as many
+                        buddhas as there are grains of sand in the Ganges. They will turn away from
+                        saṃsāra for an equivalent number of eons. Their minds will be undeluded, and
+                        they will fully awaken to unsurpassed and perfect buddhahood. Their bodies
+                        will become solid like that of Nārāyaṇa. Residing in a single place, they
+                        will possess the four necessities.<note place="end" xml:id="UT22084-059-006-63" index="7"> Translation tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">lus dbyibs gcig la spi dza bzhi par
+                                ’gyur</foreign>. The Pedurma edition records no variants. Stok:
+                                <foreign xml:lang="Bo-Ltn" type="quote">rus dbyibs gcig la spi dza
+                                bzhi bar ’gyur</foreign>. Here we have translated this line based on
+                            the corresponding passage in the Chinese version, which reads <foreign xml:lang="zh" type="quote">住在一處具足四事</foreign>: “Residing in a single
+                            place, they will possess the four necessities” (i.e., shelter, clothing,
+                            food, and medicine). </note> Their bodies will take on golden
+                        complexions. They will be adorned with the thirty-two major marks of a great
+                        being. They will gain the melodious voice of <term>Brahmā</term>. They will
+                        eliminate all unfree states and attain an abundance of leisure.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-64"/>
+                    <p tid="65">In order to elaborate on the meaning of what he had taught, the
+                        Blessed One then spoke in verse:</p>
+                    <lg tid="66">
+                        <l>“Those who hear the name of this world protector</l>
+                        <l>And entertain no doubt,</l>
+                        <l>Trusting in what I see,</l>
+                        <l>Shall become worthy of veneration.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-66"/>
+                    <lg tid="67">
+                        <l>“They will attain the eternal dominion</l>
+                        <l>Of universal monarchs and behold buddhas.</l>
+                        <l>Having beheld them, they will perform</l>
+                        <l>Boundless and inconceivable veneration.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-67"/>
+                    <lg tid="68">
+                        <l>“They will always practice pure conduct.</l>
+                        <l>They will realize all forms of miraculous abilities.</l>
+                        <l>Once they see the buddha, they will achieve</l>
+                        <l>The <distinct>hundred-swirled</distinct> retention. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-68"/>
+                    <lg tid="69">
+                        <l>“They will behold as many buddhas</l>
+                        <l>As there are sands in the Ganges.</l>
+                        <l>They will abandon saṃsāra</l>
+                        <l>For that many billions of eons.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-69"/>
+                    <lg tid="70">
+                        <l>“Those who hear the name of the world protector</l>
+                        <l>Spoken to the assemblies and saṅghas <ref cRef="F.149.a" type="folio"/>
+                        </l>
+                        <l>Will become undeluded,</l>
+                        <l>And it will be a cause for awakening to buddhahood.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-70"/>
+                    <lg tid="71">
+                        <l>“They will always be like Nārāyaṇa.</l>
+                        <l>Residing in a single place, they will possess the four necessities.<note place="end" xml:id="UT22084-059-006-71" index="8"> Translation
+                                tentative. Degé: <foreign xml:lang="Bo-Ltn" type="quote">lus dbyibs
+                                    gcig la spi dza bzhi</foreign>. The Pedurma edition records no
+                                variants. Stok: <foreign xml:lang="Bo-Ltn" type="quote">rus dbyibs
+                                    gcig la spi dza bzhi</foreign>. Although the Chinese translation
+                                does not include this line, we have adopted the meaning from the
+                                seemingly identical line that occurred above (see <ptr target="#UT22084-059-006-63"/>). </note>
+                        </l>
+                        <l>Their bodies will be golden colored</l>
+                        <l>And display the thirty-two marks.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-72"/>
+                    <lg tid="72">
+                        <l>“Those who hear his name</l>
+                        <l>And prostrate with their five points<!--<note place="end" index="9" xml:id="UT22084-059-006-73"> Hands, feet, and head.</note>-->
+                        </l>
+                        <l>Will permanently gain the voice of <term>Brahmā</term>
+                        </l>
+                        <l>And abandon the unfree states.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-74"/>
+                    <lg tid="73">
+                        <l>“Those who hear the name of this world protector</l>
+                        <l>And entertain no doubt</l>
+                        <l>Will not shy away from awakening.</l>
+                        <l>They shall never have any hesitation.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-75"/>
+                    <lg tid="74">
+                        <l>“Those who remember the victor’s name</l>
+                        <l>For a full seven days and nights</l>
+                        <l>Will purify the infinite seeing eyes</l>
+                        <l>Praised by the buddhas. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-76"/>
+                    <lg tid="75">
+                        <l>“They shall refine the eyes of flesh</l>
+                        <l>Into the eyes of a god.</l>
+                        <l>They will perceive as many buddhas</l>
+                        <l>As there are grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-77"/>
+                    <lg tid="76">
+                        <l>“They will venerate each of them</l>
+                        <l>And receive teachings from each as well.</l>
+                        <l>Seeing all the buddhas with their own eyes,</l>
+                        <l>They will bring comfort to all humanity.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-78"/>
+                    <lg tid="77">
+                        <l>“Those who hear the name of this thus-gone one</l>
+                        <l>Have already offered unfathomable service</l>
+                        <l>To the buddhas,</l>
+                        <l>All of whom they will recollect.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-79"/>
+                    <lg tid="78">
+                        <l>“If his name is relayed</l>
+                        <l>Before any being at all,</l>
+                        <l>When those other beings hear this name,</l>
+                        <l>They too will definitely proceed to awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-80"/>
+                    <lg tid="79">
+                        <l>“By generating faith in this buddha,</l>
+                        <l>The unfree states are dispelled,</l>
+                        <l>While by engaging in debate and quarreling,</l>
+                        <l>One will be born into the unfree states.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-81"/>
+                    <lg tid="80">
+                        <l>“Once beings have heard</l>
+                        <l>The name of this great sage,</l>
+                        <l>They shall no longer be interested</l>
+                        <l>In debate and quarreling. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-82"/>
+                    <lg tid="81">
+                        <l>“The actions that lead to the Hell of Ultimate Torment,</l>
+                        <l>Which could last for eons,</l>
+                        <l>As well as the actions that produce a simple headache—</l>
+                        <l>All such actions will not ripen for these beings.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-83"/>
+                    <lg tid="82">
+                        <l>“They shall not be burned by fire,</l>
+                        <l>Nor drown in water.</l>
+                        <l>Even when they draw the ire of the king,</l>
+                        <l>It shall be quickly assuaged. <ref cRef="F.149.b" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-84"/>
+                    <lg tid="83">
+                        <l>“Those who remember this sage’s name</l>
+                        <l>Shall be spared many illnesses</l>
+                        <l>Including blindness, defective sight, </l>
+                        <l>Paralysis, hunchback, and decrepitude.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-85"/>
+                    <lg tid="84">
+                        <l>“Evil and malevolent</l>
+                        <l>Yakṣas, gandharvas, demigods, </l>
+                        <l>Kumbhāṇḍas, rākṣasas, and humans</l>
+                        <l>Shall be unable to harm them.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-86"/>
+                    <lg tid="85">
+                        <l>“Those who remember this sage’s name</l>
+                        <l>Shall be favored and preferred</l>
+                        <l>By all the bhūtas, gandharvas, yakṣas,</l>
+                        <l>Nāgas, and gods.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-87"/>
+                    <lg tid="86">
+                        <l>“Those who hear this protector’s name</l>
+                        <l>Shall swiftly attain vast accumulations,</l>
+                        <l>Sublime voices, and absorption.</l>
+                        <l>Their myriad virtues will be renowned.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-88"/>
+                    <lg tid="87">
+                        <l>“Having heard this world protector’s name</l>
+                        <l>Without doubting it,</l>
+                        <l>They will hew to awakening</l>
+                        <l>Throughout all their subsequent lives.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-89"/>
+                    <lg tid="88">
+                        <l>“Those who hear this great sage’s name</l>
+                        <l>Shall uphold and preach</l>
+                        <l>The way of the well-spoken Dharma </l>
+                        <l>Taught by the buddhas who have gone beyond anguish.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-90"/>
+                    <lg tid="89">
+                        <l>“They shall uphold the teachings</l>
+                        <l>Well spoken by all the buddhas.</l>
+                        <l>They shall manifest the supreme array</l>
+                        <l>And serve all the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-91"/>
+                    <lg tid="90">
+                        <l>“Once they pass away,</l>
+                        <l>They will swiftly behold myriad buddhas</l>
+                        <l>And uphold the teachings</l>
+                        <l>Spoken by the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-92"/>
+                    <lg tid="91">
+                        <l>“Those who hear this protector’s name</l>
+                        <l>Shall earnestly train and establish</l>
+                        <l>Millions of beings on the path,</l>
+                        <l>Bringing them all to awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-93"/>
+                    <lg tid="92">
+                        <l>“Those who trust what I have seen</l>
+                        <l>Shall uphold the teachings</l>
+                        <l>Of all the buddhas, the protectors,</l>
+                        <l>And additionally venerate the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-94"/>
+                    <lg tid="93">
+                        <l>“Those who have faith in this buddha’s wisdom,</l>
+                        <l>Trusting in what I have seen,</l>
+                        <l>Shall be liberated from many fetters.</l>
+                        <l>They will cross the abyss and become fearless.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-95"/>
+                    <lg tid="94">
+                        <l>“Whosoever abandons the sublime Dharma</l>
+                        <l>Is among <term>Māra</term>’s ranks.<note place="end" xml:id="UT22084-059-006-96" index="9"> In the Tibetan text, this verse has
+                                only two lines.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-97"/>
+                    <lg tid="95">
+                        <l>“The body hairs of every being</l>
+                        <l>Who migrates among the five types of beings</l>
+                        <l>Could be consolidated within</l>
+                        <l>A single hair on the teacher’s kneecap.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-98"/>
+                    <lg tid="96">
+                        <l>“From a single pore</l>
+                        <l>Of the protector, the guardian of the world, <ref cRef="F.150.a" type="folio"/>
+                        </l>
+                        <l>As many rays of light as there are</l>
+                        <l>Grains of sand in the Ganges stream forth.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-99"/>
+                    <lg tid="97">
+                        <l>“Those who trust in the <term type="ignore">infinite light</term>
+                        </l>
+                        <l>Of the world protector</l>
+                        <l>Shall in one life behold many buddhas—</l>
+                        <l>Millions of buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-100"/>
+                    <lg tid="98">
+                        <l>“Those who hear the teaching</l>
+                        <l>Of this discourse by the Dharma king</l>
+                        <l>And never doubt it</l>
+                        <l>Shall become like me.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-101"/>
+                    <lg tid="99">
+                        <l>“Those who hear the teaching</l>
+                        <l>Of this discourse in Vaiśālī</l>
+                        <l>Shall themselves preach it to others</l>
+                        <l>At a later time.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-102"/>
+                    <lg tid="100">
+                        <l>“Those who preach this widely</l>
+                        <l>Shall come to pervade as many worlds</l>
+                        <l>As there are grains of sand in the Ganges</l>
+                        <l>With a single burst of light.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-103"/>
+                    <lg tid="101">
+                        <l>“One may fill with gold</l>
+                        <l>All the buddha realms,</l>
+                        <l>The numbers of which defy counting,<note place="end" xml:id="UT22084-059-006-104" index="10"> Translated based on Yongle, Peking
+                                Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">chod</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">mchod</foreign>.</note>
+                        </l>
+                        <l>And offer it to the world protectors.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-105"/>
+                    <lg tid="102">
+                        <l>“Yet, in comparison, those who hear this name</l>
+                        <l>And who are truly delighted by it</l>
+                        <l>And utter their homage to the buddhas</l>
+                        <l>Obtain inconceivably more merit.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-106"/>
+                    <lg tid="103">
+                        <l>“The mass of merit gained</l>
+                        <l>By repeatedly paying homage</l>
+                        <l>To all the world protectors</l>
+                        <l>Cannot be expressed by any measure.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-107"/>
+                    <lg tid="104">
+                        <l>“Those who hear the world protector’s name</l>
+                        <l>And do not hesitate about it</l>
+                        <l>Will have their bodies filled with light</l>
+                        <l>And become like precious gems.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-108"/>
+                    <lg tid="105">
+                        <l>“After they have passed beyond,</l>
+                        <l>Those who remember the name of the sage</l>
+                        <l>Will have the sweet scent of divine red sandalwood</l>
+                        <l>Waft from their mouth.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-109"/>
+                    <lg tid="106">
+                        <l>“Those who hear the name</l>
+                        <l>Of the buddha, the protector, the essential being,</l>
+                        <l>Will have light stream from their pores,</l>
+                        <l>Beautifying their bodies.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-110"/>
+                    <lg tid="107">
+                        <l>“In all of their ensuing lives </l>
+                        <l>They will become deeply learned.</l>
+                        <l>They will retain their unfathomable erudition,</l>
+                        <l>Just like Ānanda does for the Buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-111"/>
+                    <lg tid="108">
+                        <l>“When they behold the one who illuminates the world,</l>
+                        <l>They will attain boundless happiness.</l>
+                        <l>As they engage in bodhisattva conduct,</l>
+                        <l>They will recall all their lives.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-112"/>
+                    <lg tid="109">
+                        <l>“Even when they see the victors’ heart sons,</l>
+                        <l>They will attain boundless happiness. <ref cRef="F.150.b" type="folio"/>
+                        </l>
+                        <l>They will make extensive offerings </l>
+                        <l>With incense, flowers, and ointments.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-113"/>
+                    <lg tid="110">
+                        <l>“This does not include those who do not remember</l>
+                        <l>The name of this world protector when it is spoken,</l>
+                        <l>Or those who are on <term>Māra</term>’s side,</l>
+                        <l>Or those who have previously been extremists.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-114"/>
+                    <lg tid="111">
+                        <l>“As I have taught this Dharma way,</l>
+                        <l>Those who have heard it now</l>
+                        <l>Shall also receive this discourse in their hands</l>
+                        <l>In a future life.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-115"/>
+                    <lg tid="112">
+                        <l>“Those who hear the explanation</l>
+                        <l>Of this sublime discourse</l>
+                        <l>Have previously venerated and served,</l>
+                        <l>And they shall receive it in their hands again.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-116"/>
+                    <lg tid="113">
+                        <l>“Those who make aspirations</l>
+                        <l>Shall, in a future life,</l>
+                        <l>Receive into their hands</l>
+                        <l>This discourse spoken by the Dharma King.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-117"/>
+                    <lg tid="114">
+                        <l>“Having faith in this discourse</l>
+                        <l>Brings even more merit</l>
+                        <l>Than honoring countless buddhas</l>
+                        <l>With a one-pointed mind.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-118"/>
+                    <lg tid="115">
+                        <l>“They forever will have beautiful bodies and lots of merit</l>
+                        <l>And be fearless and wealthy.</l>
+                        <l>They will be mindful </l>
+                        <l>And ornamented with the major marks.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-119"/>
+                    <lg tid="116">
+                        <l>“Thus, having heard</l>
+                        <l>The teaching of this discourse,</l>
+                        <l>In the future retain it, teach it,</l>
+                        <l>And explain it to others!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-120"/>
+                    <lg tid="117">
+                        <l>“Those who have honored hundreds of thousands</l>
+                        <l>Of buddhas, universal monarchs,</l>
+                        <l>Shall also in the future</l>
+                        <l>Have vision free from doubt.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-121"/>
+                    <lg tid="118">
+                        <l>“Those who have performed service</l>
+                        <l>For countless world protectors in the past</l>
+                        <l>Will trust what they hear and see</l>
+                        <l>Of this world protector.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-122"/>
+                    <lg tid="119">
+                        <l>“Those who hear his name</l>
+                        <l>Will actualize the form of a buddha.</l>
+                        <l>They will guard the teachings </l>
+                        <l>And the sublime Dharma of all the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-123"/>
+                    <lg tid="120">
+                        <l>“However, those who abandon the teachings of awakening</l>
+                        <l>Shall become like sheep—mute and with poor eyesight,</l>
+                        <l>Or even with no eyes at all</l>
+                        <l>For millions of eons.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-124"/>
+                    <lg tid="121">
+                        <l>“Compared to destroying countless reliquaries,</l>
+                        <l>With one’s own hands,</l>
+                        <l>It is a far viler deed</l>
+                        <l>To abandon this discourse.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-125"/>
+                    <lg tid="122">
+                        <l>“Thus when, at a future time, </l>
+                        <l>You attain that which I am preaching, <ref cRef="F.151.a" type="folio"/>
+                        </l>
+                        <l>Do not harbor any doubt</l>
+                        <l>About the unsurpassed wisdom of the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-126"/>
+                    <lg tid="123">
+                        <l>“Once you have heard this discourse,</l>
+                        <l>Perform respectful veneration</l>
+                        <l>With flowers, incense, streamers,</l>
+                        <l>Parasols, and powders!”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-127"/>
+                    <lg tid="124">
+                        <l>Then, with his soft and supple hands,</l>
+                        <l>The Thus-Gone One</l>
+                        <l>Repeatedly caressed</l>
+                        <l>The Licchavi boy’s head.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-128"/>
+                    <lg tid="125">
+                        <l>After this, the gods </l>
+                        <l>Made a loud cry</l>
+                        <l>And scattered pleasing divine flowers,</l>
+                        <l>Filling the realm.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-129"/>
+                    <lg tid="126">
+                        <l>The gods, having remained in the sky,</l>
+                        <l>Then sang countless songs.</l>
+                        <l>Millions of brahmā gods</l>
+                        <l>Cast down a rain of red sandalwood powder.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-130"/>
+                    <lg tid="127">
+                        <l>When Ratnajālin heard this discourse</l>
+                        <l>Spoken by the Thus-Gone One,</l>
+                        <l>He was pleased and delighted,</l>
+                        <l>And spoke these words to the Thus-Gone One:</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-131"/>
+                    <lg tid="128">
+                        <l>“In the future, </l>
+                        <l>I will become a monk</l>
+                        <l>And fearlessly preach this discourse</l>
+                        <l>In towns and villages.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-132"/>
+                    <lg tid="129">
+                        <l>“I will act according to the Buddha’s teaching,</l>
+                        <l>Which the perfect Buddha has spoken so gloriously.</l>
+                        <l>Traveling millions of leagues</l>
+                        <l>I will preach the way.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-133"/>
+                    <lg tid="130">
+                        <l>“I will serve all the gods, nāgas,</l>
+                        <l>And kiṃnaras, </l>
+                        <l>And other non-human beings,</l>
+                        <l>Satisfying them with the gift of Dharma.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-134"/>
+                    <lg tid="131">
+                        <l>When this unsurpassed discourse</l>
+                        <l>Was taught by the Buddha,</l>
+                        <l>The assembly of demigods celebrated</l>
+                        <l>And scattered countless flowers.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-135"/>
+                    <lg tid="132">
+                        <l>A single hair of the Dharma King,</l>
+                        <l>The Lion of the Śākyas, </l>
+                        <l>Who is the supreme being in all buddha realms,</l>
+                        <l>Illuminated all the realms.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-136"/>
+                    <lg tid="133">
+                        <l>Then, the tongue of the Teacher,</l>
+                        <l>The great being, the essential being, </l>
+                        <l>Emerged and covered millions of realms </l>
+                        <l>As numerous as the grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-137"/>
+                    <lg tid="134">
+                        <l>As the Thus-Gone One covered millions of realms</l>
+                        <l>Throughout the ten directions of the universe,</l>
+                        <l>The youth Ratnajālin,</l>
+                        <l>As well as other heroes and Licchavis</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-138"/>
+                    <lg tid="135">
+                        <l>Numbering six hundred million,</l>
+                        <l>Arrived saying, “Please teach us!”</l>
+                        <l>The Teacher then introduced <ref cRef="F.151.b" type="folio"/>
+                        </l>
+                        <l>The Dharma to them all.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-139"/>
+                    <lg tid="136">
+                        <l>The buddhas gift every form of happiness,</l>
+                        <l>And their eyes are unimpeded.</l>
+                        <l>The countless thus-gone ones</l>
+                        <l>Have abandoned doubt about awakened qualities.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-140"/>
+                    <lg tid="137">
+                        <l>The buddhas’ wisdom is unimpeded—</l>
+                        <l>It perceives the three times.</l>
+                        <l>Given that they have dominion over all phenomena,</l>
+                        <l>There is nothing unknown to the buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-141"/>
+                    <lg tid="138">
+                        <l>The Guide of Humans preaches</l>
+                        <l>That the aggregates are nonexistent.</l>
+                        <l>The four elements are as if hollow,</l>
+                        <l>And nowhere are there sounds to be attached to.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-142"/>
+                    <lg tid="139">
+                        <l>The essence of the aggregates</l>
+                        <l>Of form, feeling, perception,</l>
+                        <l>Thoughts, formations, and consciousness</l>
+                        <l>Should be known to be nonexistent.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-143"/>
+                    <lg tid="140">
+                        <l>Just as the Buddha has taught,</l>
+                        <l>If one uncovers the aggregates,</l>
+                        <l>One will swiftly attain retention</l>
+                        <l>And become undeluded.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-144"/>
+                    <lg tid="141">
+                        <l>All phenomena are void—</l>
+                        <l>All of them are empty and without self.</l>
+                        <l>Of this there can be no debate or delusion.</l>
+                        <l>This is what the Thus-Gone One has taught.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-145"/>
+                    <p tid="142">“Young man, located in the south, past twelve buddha realms
+                        reckoned as twice the number of smallest particles in the previous analogy,
+                        there is a world called Adorned by the Moon. There resides the thus-gone,
+                        worthy, perfect buddha King of Knowledge of Floral Light Displays. He is
+                        alive and well and teaches the Dharma. Young man, when those noble sons or
+                        daughters who abide in the Bodhisattva Vehicle hear the name of the blessed
+                        one, the thus-gone one King of Knowledge of Floral Light Displays—as long as
+                        they do not doubt this but trust in my vision—they will achieve the
+                        absorption of <distinct>emitting light rays</distinct> once they have passed
+                        away. They will become knowledgeable in ten thousand countless trillions of
+                        methods to gain absorption. <ref cRef="F.152.a" type="folio"/> They will
+                        become knowledgeable in sixty countless trillions of dhāraṇī methods—from
+                        the <distinct>oceanic</distinct> dhāraṇī to the <distinct>precious
+                            treasury</distinct> dhāraṇī. They will be undeluded in this regard until
+                        reaching the end of awakening. When they die, ten million buddhas will come
+                        from the east and reveal themselves, and the same will occur from all other
+                        directions. They will retain the Dharma that these blessed buddhas teach.
+                        Until they reach awakening they will not lose this Dharma way. Having worked
+                        to turn away from cyclic existence for five hundred eons starting from the
+                        time they began as bodhisattvas, they will reach unsurpassed and perfect
+                        awakening.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-146"/>
+                    <p tid="143">The Blessed One then expressed this in verse:</p>
+                    <lg tid="144">
+                        <l>“Hearing the name of this protector,</l>
+                        <l>The lord of humans, the world protector,</l>
+                        <l>They will eliminate five hundred eons</l>
+                        <l>Of cyclic existence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-148"/>
+                    <lg tid="145">
+                        <l>“When death comes to those noble sons and daughters,</l>
+                        <l>Millions of buddhas will appear to them.</l>
+                        <l>Having seen them, paying homage with their faculties,</l>
+                        <l>They will listen to the Dharma and retain it.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-149"/>
+                    <lg tid="146">
+                        <l>“When they hear that thus-gone one’s name</l>
+                        <l>And engage in sacred practice,</l>
+                        <l>They will not waste the Dharma taught by them—</l>
+                        <l>Even for millions of eons.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-150"/>
+                    <lg tid="147">
+                        <l>“By proclaiming the name of this buddha,</l>
+                        <l>They will attain seventy thousand </l>
+                        <l>Absorptions known as <distinct>precious</distinct>,</l>
+                        <l>And they will proclaim millions of virtues.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-151"/>
+                    <lg tid="148">
+                        <l>“Those who apprehend the name of this sage</l>
+                        <l>Will come to abide</l>
+                        <l>In countless millions</l>
+                        <l>Plus sixty million absorptions.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-152"/>
+                    <lg tid="149">
+                        <l>“Thus, when heroes of equilibrium</l>
+                        <l>Engage in bodhisattva conduct,</l>
+                        <l>They establish many thousands of beings</l>
+                        <l>In supreme awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-153"/>
+                    <lg tid="150">
+                        <l>“Until reaching perfect awakening,</l>
+                        <l>They will not engage in desirous conduct.</l>
+                        <l>The beings to whom they teach the name of this buddha</l>
+                        <l>Will also turn away from desire.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-154"/>
+                    <lg tid="151">
+                        <l>“Those who hear the name of this buddha <ref cRef="F.152.b" type="folio"/>
+                        </l>
+                        <l>And teach it to all beings</l>
+                        <l>Will never again enter unfree states;</l>
+                        <l>It will not be hard for them to find leisure.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-155"/>
+                    <lg tid="152">
+                        <l>“By pleasing the excellent<note place="end" xml:id="UT22084-059-006-156" index="11">Translated based on Yongle and Peking
+                                Kangxi: <foreign xml:lang="Bo-Ltn" type="term">shin tu bzang
+                                    ba</foreign>. Degé and Stok: <foreign xml:lang="Bo-Ltn" type="term">shin tu bzung ba</foreign>.</note> buddhas </l>
+                        <l>That appear,</l>
+                        <l>They will abandon all the unfree states<note place="end" xml:id="UT22084-059-006-157" index="12"> Translated based on Yongle, Peking
+                                Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">nga
+                                    yis</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">nga
+                                    yi</foreign>.</note>
+                        </l>
+                        <l>That I have described.<note place="end" xml:id="UT22084-059-006-158" index="13"> Translated based on Yongle, Peking
+                                Kangxi, and Stok: <foreign xml:lang="Bo-Ltn" type="term">bstan</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">bsten</foreign>.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-159"/>
+                    <lg tid="153">
+                        <l>“Young man, if you were to understand</l>
+                        <l>What the guide knows,</l>
+                        <l>Once you knew the name of this teacher,</l>
+                        <l>You would spread it throughout the ten directions.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-160"/>
+                    <lg tid="154">
+                        <l>“Thus, young man, </l>
+                        <l>If you share this name with others,</l>
+                        <l>You will acquire genuine awakening</l>
+                        <l>And become a protector of the world.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-161"/>
+                    <lg tid="155">
+                        <l>“Those who hear this buddha’s name,</l>
+                        <l>Remember it without distraction,</l>
+                        <l>And share it with others,</l>
+                        <l>Will guard their awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-162"/>
+                    <lg tid="156">
+                        <l>“Those who hear this discourse</l>
+                        <l>And teach it to others</l>
+                        <l>Will guard these teachings</l>
+                        <l>Of the well-spoken Dharma way.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-163"/>
+                    <p tid="157">“Young man, located in the west, past worlds numbering three times
+                        the number of smallest particles in the previous analogy, there is a world
+                        called Citraratna. There the thus-gone, worthy, perfect buddha King of
+                        Blossoming Sal Tree Flowers lives. He is alive and well and teaches the
+                        Dharma. Young man, when those noble sons or daughters who abide in the Great
+                        Vehicle hear the name of the thus-gone one King of Blossoming Sal Tree
+                        Flowers—as long as they do not doubt this but trust in my vision—they will
+                        acquire five qualities once they have passed away. What are these five? When
+                        their bodies are destroyed, buddhas will appear and they will attain the
+                        position of a universal monarch, the five forms of miraculous abilities, the
+                        recall of Dharma teachings, the <distinct>thousand-swirled</distinct>
+                        dhāraṇī, and the thirty-two marks of a great being until they attain
+                        awakening. They will achieve these five qualities.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-164"/>
+                    <p tid="158">The Blessed One then expressed the meaning of this in verse: <ref cRef="F.153.a" type="folio"/>
+                    </p>
+                    <lg tid="159">
+                        <l>“Those who hear the name of this leader of men, this protector,</l>
+                        <l>And are faithful, without hesitation,</l>
+                        <l>Will acquire these five qualities,</l>
+                        <l>Which shall not be lost until they attain awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-166"/>
+                    <lg tid="160">
+                        <l>“They will gain a golden-colored appearance,</l>
+                        <l>The supreme knowledge of a universal monarch,</l>
+                        <l>Merit rivaling that of Nārāyaṇa,</l>
+                        <l>And the unceasing turning of the wheel of the sacred Dharma.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-167"/>
+                    <lg tid="161">
+                        <l>“They will be fortunate and have a thousand sons</l>
+                        <l>Who are heroic and courageous, capable of defeating their opponents.</l>
+                        <l>Adorned with marks, their bodies will have perfect limbs.</l>
+                        <l>Therefore, their power will resemble that of a supreme ruler.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-168"/>
+                    <lg tid="162">
+                        <l>“They will have many thousands of queens </l>
+                        <l>Who are fine and beautiful, with golden complexions.</l>
+                        <l>Going late to bed and rising early,</l>
+                        <l>They will never cause their supreme rulers any sorrow.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-169"/>
+                    <lg tid="163">
+                        <l>“The vassals, ministers, and major householders </l>
+                        <l>Living in his realm</l>
+                        <l>Will never cause the king any grief when they meet.</l>
+                        <l>Their merit will even be greater than that.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-170"/>
+                    <lg tid="164">
+                        <l>“Even the crafty gods will find them difficult to match.</l>
+                        <l>All the yakṣas and nāgas living in the human world</l>
+                        <l>And all the other beings living in his realm</l>
+                        <l>They will establish at the seat of awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-171"/>
+                    <lg tid="165">
+                        <l>“Their dominion will expand and the harvests grow bountiful.</l>
+                        <l>Their realm will be happy and buddhas will appear.</l>
+                        <l>They will perform sacred worship of them.</l>
+                        <l>The land of the king will be free from malice.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-172"/>
+                    <lg tid="166">
+                        <l>“Even those scholars who hear the perfect name of this buddha,</l>
+                        <l>Yet doubt it or become displeased with it,</l>
+                        <l>Will benefit from the perfect Dharma</l>
+                        <l>In the sublime discourse that I have spoken today.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-173"/>
+                    <lg tid="167">
+                        <l>“However, this is not the case for those who abandoned the Dharma</l>
+                        <l>Of previous victors, or those in the grip of demons,</l>
+                        <l>Or those who in the past despised</l>
+                        <l>The essential beings, the perfect victors. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-174"/>
+                    <lg tid="168">
+                        <l>“Young man, those who haven’t witnessed the delights</l>
+                        <l>Of the royal palace and this realm of the Licchavis </l>
+                        <l>And who haven’t seen me <ref cRef="F.153.b" type="folio"/>
+                        </l>
+                        <l>Will harbor doubts when they hear the name of this buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-175"/>
+                    <p tid="169">“Young man, located in the north, past sixty buddha realms reckoned
+                        as thrice the number of smallest particles in the previous analogy, there is
+                        a world called Covered with a Jewel Net. There the thus-gone, worthy,
+                        perfect buddha Pure Moon Disk lives. He is alive and well and teaches the
+                        Dharma. Young man, when those noble sons or daughters who abide in the Great
+                        Vehicle hear the name of the thus-gone one Pure Moon Disk—as long as they do
+                        not doubt this but trust in my vision—they will obtain the absorption called
+                            <distinct>source of jewels</distinct> and behold as many buddhas as
+                        there are grains of sand in the Ganges once they have passed away. For as
+                        many millions of eons, they will turn away from cyclic existence. Such
+                        beginning bodhisattvas will reach unsurpassed and perfect awakening. They
+                        will also attain the absorption called <distinct>pleasant melody</distinct>.
+                        They will not turn away from unsurpassed and perfect awakening.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-176"/>
+                    <p tid="170">“Should women hear the name of the blessed thus-gone one Pure Moon
+                        Disk without feeling any hesitation or doubt and with trust in my vision,
+                        they will abandon their female faculties and gain male faculties once they
+                        have passed away. They will establish many beings in unsurpassed and perfect
+                        awakening. They will achieve the absorption called <distinct>pleasant
+                            melody</distinct>. They will not turn back from unsurpassed and perfect
+                        awakening.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-177"/>
+                    <p tid="171">The Blessed One then expressed this in verse:</p>
+                    <lg tid="172">
+                        <l>“Those who hear the name of this sublime human</l>
+                        <l>And do not doubt it</l>
+                        <l>Will, after as many eons as there are grains of sand in the Ganges, <ref cRef="F.154.a" type="folio"/>
+                        </l>
+                        <l>Abandon rebirth and change to a state free from anguish.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-179"/>
+                    <lg tid="173">
+                        <l>“They will behold and venerate</l>
+                        <l>Buddhas as numerous as the sands of the Ganges. </l>
+                        <l>All those buddhas they will venerate</l>
+                        <l>In a single life, as the victors pass beyond anguish.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-180"/>
+                    <lg tid="174">
+                        <l>“Those who hear the name of this leader of men</l>
+                        <l>As they engage in the perfect actions of sacred awakening</l>
+                        <l>And remember it without ever doubting it</l>
+                        <l>Will achieve a similar exalted state.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-181"/>
+                    <lg tid="175">
+                        <l>“Those who hear the name of this supreme human</l>
+                        <l>And do not doubt it at all</l>
+                        <l>Shall obtain self-existing wisdom, buddhahood itself,</l>
+                        <l>And skillfully attain the absorption called <distinct>pleasant
+                                voice</distinct>.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-182"/>
+                    <lg tid="176">
+                        <l>“As they engage in the perfect actions of sacred awakening,</l>
+                        <l>They will achieve the faculties of a pure individual.</l>
+                        <l>They will be beautiful and endowed with all qualities—</l>
+                        <l>Such distinctions they will attain.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-183"/>
+                    <lg tid="177">
+                        <l>“They will shine in all directions</l>
+                        <l>And proceed to countless millions of realms.</l>
+                        <l>As they behold the great sage engaging with the world,<note place="end" xml:id="UT22084-059-006-184" index="14"> The translation “engaging
+                                with the world” is tentative. All Tibetan versions consulted read:
+                                    <foreign xml:lang="Bo-Ltn" type="quote">’jig rten spyod
+                                    pa</foreign>.</note>
+                        </l>
+                        <l>They will escape anguish and later discover awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-185"/>
+                    <lg tid="178">
+                        <l>“Having heard the name</l>
+                        <l>Of that great lord, that thus-gone one,</l>
+                        <l>One will attain such distinctions as perfect miraculous powers,</l>
+                        <l>And also the desire to attain awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-186"/>
+                    <lg tid="179">
+                        <l>“Having developed interest in immaculate awakening,</l>
+                        <l>They will share the name of the victor with others.</l>
+                        <l>They will obtain virtues similar to his—</l>
+                        <l>As brilliant as the full moon.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-187"/>
+                    <lg tid="180">
+                        <l>“Such learned persons will establish </l>
+                        <l>Fathomless multitudes of beings in supreme awakening.</l>
+                        <l>Like the chariot of the moon in the sky,</l>
+                        <l>They will be beautiful and shine brightly.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-188"/>
+                    <lg tid="181">
+                        <l>“Those who remember the name of this victor</l>
+                        <l>Will have bodies that are just as beautiful.</l>
+                        <l>Yet some scholars who hear the name of this victor</l>
+                        <l>Might doubt it, finding displeasure in it.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-189"/>
+                    <lg tid="182">
+                        <l>“As they engage in the perfect actions of sacred awakening, </l>
+                        <l>These teachings will be helpful for them.</l>
+                        <l>Due to the supreme great sage who engages with the world,</l>
+                        <l>Such scholars will not come to ruin. <ref cRef="F.154.b" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-190"/>
+                    <p tid="183">“Young man, located below us, past ninety-nine times the number of
+                        particles in the previous analogy, there is a world called Lord of the
+                        Supreme Banner. There resides the thus-gone, worthy, perfect buddha King Who
+                        Is Peaceful and Splendorous in His Learning and Rich in Melody. He is alive
+                        and well and teaches the Dharma. Young man, when those noble sons or
+                        daughters who abide in the Great Vehicle hear the name of the thus-gone one
+                        King Who Is Peaceful and Splendorous in His Learning and Rich in Melody—as
+                        long as they do not doubt this but trust in my vision—they will achieve the
+                        absorption called <distinct>utterly illuminating</distinct> once they have
+                        passed away. At the time of death, they will see trillions of buddhas. In
+                        all directions, as in the east, they will see trillions of buddhas. They
+                        will retain all the Dharma teachings given by these blessed buddhas. Until
+                        reaching awakening, they will be blessed by trillions of buddhas. Such
+                        beginning bodhisattvas, having turned from cyclic existence for ninety-nine
+                        trillion eons, will reach unsurpassed and perfect awakening.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-191"/>
+                    <p tid="184">The Blessed One then expressed the meaning of this in verse:</p>
+                    <lg tid="185">
+                        <l>“Those in this world who hear<note place="end" xml:id="UT22084-059-006-193" index="15"> Translated based on Yongle, Peking
+                                Kangxi, Narthang, Lhasa Zhol, and Stok: <foreign xml:lang="Bo-Ltn" type="term">thos</foreign>. Degé: <foreign xml:lang="Bo-Ltn" type="term">thob</foreign>.</note> the supreme name</l>
+                        <l>Of this buddha with an ocean of virtues</l>
+                        <l>Will swiftly perform unsurpassed veneration</l>
+                        <l>Of one hundred billion buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-194"/>
+                    <lg tid="186">
+                        <l>“Once they have venerated these limitless beings free from stains,</l>
+                        <l>They will engage in the splendorous activity</l>
+                        <l>Of the magnificent buddhas in all existences.</l>
+                        <l>Later, they will also reach the perfect insight of awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-195"/>
+                    <lg tid="187">
+                        <l>“Those who, in a single life, venerate as many guides</l>
+                        <l>As there are grains of sand in the Ganges</l>
+                        <l>Attain the <distinct>utterly illuminating</distinct> absorption <ref cRef="F.155.a" type="folio"/>
+                        </l>
+                        <l>And subsequently reach awakening beyond anguish.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-196"/>
+                    <lg tid="188">
+                        <l>“Having obtained immaculate awakening, great awakening,</l>
+                        <l>They will turn the sublime wheel of Dharma,</l>
+                        <l>Whereby they will establish beings in the supreme awakening of
+                            buddhahood,</l>
+                        <l>Transcending anguish just as rainfall quenches flames.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-197"/>
+                    <lg tid="189">
+                        <l>“The guide of humans, the charioteer of humans, </l>
+                        <l>Is the single field of merit, the single mount of merit. </l>
+                        <l>If people simply develop faith toward that buddha,</l>
+                        <l>They will instantly discard all unfree states.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-198"/>
+                    <lg tid="190">
+                        <l>“Those who recite the name of this blissful one</l>
+                        <l>Will obtain human bodies and gain leisure.</l>
+                        <l>Then these wise persons will create merit</l>
+                        <l>In the limitless ocean wherein the thus-gone ones dwell.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-199"/>
+                    <lg tid="191">
+                        <l>“Those who chant the name of this buddha</l>
+                        <l>A mere one hundred thousand times will attain concordant acceptance</l>
+                        <l>And the attainment of the divine eye, just as I did.<note place="end" xml:id="UT22084-059-006-200" index="16"> This and the following
+                                verse only have three lines in the Tibetan.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-201"/>
+                    <lg tid="192">
+                        <l>“When I saw the buddha Dīpaṃkara I scattered flowers</l>
+                        <l>And thereby attained acceptance.</l>
+                        <l>They will acquire that sort of acceptance.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-202"/>
+                    <lg tid="193">
+                        <l>“Those who hear the name of this illuminating sage </l>
+                        <l>Who protects the world are sure to be proper vessels.</l>
+                        <l>This goes for everyone except extremists</l>
+                        <l>And those who suffer from jealousy.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-203"/>
+                    <lg tid="194">
+                        <l>“Those who hear such a discourse taught</l>
+                        <l>Directly from the guide, the buddha,</l>
+                        <l>Will remember it in the future</l>
+                        <l>And teach it to others.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-204"/>
+                    <p tid="195">“Young man, located above this buddha realm, as in the previous
+                        analogy, past as many realms as there are grains of sand in the Ganges,
+                        there is a world called Wide Open. There the thus-gone, worthy, perfect
+                        buddha Stable in Immeasurable Diligence lives. He is alive and well and
+                        teaches the Dharma. Young man, when those noble sons or daughters who abide
+                        in the Great Vehicle hear the name of the thus-gone one Stable in
+                        Immeasurable Diligence—as long as they do not doubt this <ref cRef="F.155.b" type="folio"/> but trust in my vision—their diligence will never
+                        decrease once they have passed away. Never again will they indulge in
+                        desire. Never again will they be stained by the suffering of a mother. Never
+                        again will they be stained by the suffering of a father, relative, and
+                        friend. Never will they be stained by the suffering of a sister. Never again
+                        will they be stained by the suffering of a companion, ally, clansman, or
+                        kinsman. Never will their bodies not be adorned by the thirty-two marks of a
+                        great being. Never again will their attachment, aggression, and ignorance
+                        increase. Never again will any diseases proliferate. Never again will any
+                        anguish grow. Instead, they will gain limitless happiness. On the way to
+                        awakening, they will gain countless trillions of limitless virtues.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-205"/>
+                    <p tid="196">The Blessed One then expressed the meaning of this in verse:</p>
+                    <lg tid="197">
+                        <l>“Those who hear the name of this world protector</l>
+                        <l>And do not doubt it</l>
+                        <l>Will never have to witness</l>
+                        <l>The suffering of parents and many relatives.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-207"/>
+                    <lg tid="198">
+                        <l>“Above us abides the supreme human,</l>
+                        <l>Who illuminates the world.</l>
+                        <l>He illuminates the three realms of existence</l>
+                        <l>And teaches beings the Dharma.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-208"/>
+                    <lg tid="199">
+                        <l>“Those who hear the name of this perfect buddha</l>
+                        <l>And teach it to others</l>
+                        <l>Will be perennially adorned</l>
+                        <l>With the thirty-two marks.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-209"/>
+                    <lg tid="200">
+                        <l>“Those who remember the name of this sage</l>
+                        <l>Will not have their insight impaired.</l>
+                        <l>When they are engaged in the practices of awakening,</l>
+                        <l>They will venerate the bodhisattvas as well.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-210"/>
+                    <lg tid="201">
+                        <l>“By teaching this buddha’s name,</l>
+                        <l>When later they practice for awakening,</l>
+                        <l>These insightful ones shall constantly venerate</l>
+                        <l>Inconceivable millions of buddhas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-211"/>
+                    <lg tid="202">
+                        <l>“Those who hear the name of this perfect buddha</l>
+                        <l>And then reveal it to others</l>
+                        <l>Will obtain a mass of merit <ref cRef="F.156.a" type="folio"/>
+                        </l>
+                        <l>The measure of which is impossible to describe. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-212"/>
+                    <lg tid="203">
+                        <l>“Those who hear this name</l>
+                        <l>Shall never come to doubt—</l>
+                        <l>Even for the longest time in the future—</l>
+                        <l>The unsurpassed wisdom of buddhahood.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-213"/>
+                    <lg tid="204">
+                        <l>“Those who see this perfect buddha</l>
+                        <l>And render service and honor unto him</l>
+                        <l>Shall receive this discourse</l>
+                        <l>In their hands at a future time.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-214"/>
+                    <lg tid="205">
+                        <l>“Those who see me surrounded by bodhisattvas,</l>
+                        <l>As well as Ratnajālin,</l>
+                        <l>And hear this discourse</l>
+                        <l>Will not come to doubt it.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-215"/>
+                    <lg tid="206">
+                        <l>“They will abandon any doubt </l>
+                        <l>In the boundless thus-gone ones and their buddha qualities.</l>
+                        <l>They will continue their earlier practices</l>
+                        <l>For many billions of eons.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-216"/>
+                    <lg tid="207">
+                        <l>“They will give up their hands and legs</l>
+                        <l>And give away their ears, noses, heads,</l>
+                        <l>Sons, daughters, and subjects</l>
+                        <l>Without any displeasure.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-217"/>
+                    <lg tid="208">
+                        <l>“When those who hear this discourse</l>
+                        <l>Come in contact with it in the future,</l>
+                        <l>They shall teach it to others,</l>
+                        <l>And so become worthy of veneration.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-218"/>
+                    <lg tid="209">
+                        <l>“Let those who desire complete awakening,</l>
+                        <l>Which is the domain of all the buddhas,</l>
+                        <l>Never doubt the teachings</l>
+                        <l>Of the world protector!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-219"/>
+                    <lg tid="210">
+                        <l>“Those who have heard this discourse</l>
+                        <l>Must uphold it free from deceit.</l>
+                        <l>They should preach this discourse again and again,</l>
+                        <l>Wherever they may go.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-220"/>
+                    <lg tid="211">
+                        <l>“If they can perfect the meaning of this discourse, </l>
+                        <l>Entirely within three months,</l>
+                        <l>They shall attain the wisdom of retention</l>
+                        <l>That recollects all teachings.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-221"/>
+                    <p tid="212">Once the Young Licchavi Ratnajālin had heard these well-spoken
+                        teachings of the Blessed One, he draped the Blessed One in priceless fabrics
+                        ornamented with gold. Then the Blessed One performed a miracle such that
+                        from every pore of the Blessed One’s body, light streamed forth,
+                        illuminating all the countless, infinite worlds in the east. All the beings
+                        born in those buddha realms beheld this buddha realm, and all the beings
+                        gathered in the Thus-Gone One’s <ref cRef="F.156.b" type="folio"/> assembly
+                        in this buddha realm also beheld this buddha realm. At that moment as many
+                        blessed buddhas, including their fourfold assemblies, were illuminated as
+                        ninety-nine times the number of grains of sand in the Ganges. Such was the
+                        miracle that he performed.</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-222"/>
+                    <p tid="213">The Blessed One then asked the young Licchavi Ratnajālin, “Young
+                        man, when you look above, do you see all the blessed buddhas, who are so
+                        unfathomably, innumerably, limitlessly, immeasurably, and indescribably
+                        many?”</p>
+                    <p tid="214">“Blessed One, I see them. Blissful One, I see them.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-224"/>
+                    <p tid="215">“Noble son, the names of these thus-gone ones vastly outnumber the
+                        names of the gods and humans gathered in the worlds of the great
+                        trichiliocosm. Each of them has an inconceivable and boundless agglomeration
+                        of names. This also applies to the thus-gone one Majestic King with the
+                        Elegant Peaceful Voice in the east, and likewise to the thus-gone one Pure
+                        Moon Disk, the thus-gone one King of Knowledge of Floral Light Displays, the
+                        thus-gone one King of Blossoming Sal Tree Flowers, and the thus-gone one
+                        Majestic King with the Splendorous Voice of Learning Adorned by Precious
+                        Moonlight. Just as it is with the name of a single thus-gone one, so it is
+                        with that of any thus-gone one. Do you see that?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-225"/>
+                    <p tid="216">“Blessed One, I see it. Blissful One, I see it. So it is in the
+                        south, in the west, in the north, below, <ref cRef="F.157.a" type="folio"/>
+                        and above—in each of the ten directions there are countless names of the
+                        individual thus-gone ones and myriad different names of the thus-gone ones.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-226"/>
+                    <p tid="217">“Young man, do you see how the blessed buddhas vastly exceed those
+                        who abide in the realm of a universal monarch?”</p>
+                    <p tid="218">“Blessed One, I see it. Blissful One, I see it.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-228"/>
+                    <p tid="219">The young Licchavi Ratnajālin became pleased, delighted, joyful,
+                        and happy. At that moment when he was happy and delighted the earth quaked.
+                        A great burst of light appeared that benefitted all beings, brought them
+                        happiness, pleased their minds, and aroused roots of virtue in them.
+                        Trillions of gods stationed in the sky cast down powdered gold from the
+                        divine Jambū River. Trillions of brahmā gods tossed, scattered, and
+                        sprinkled divine red sandalwood powder upon the Blessed One. Trillions of
+                        gods tossed, scattered, and sprinkled divine blue, pink, red, and white
+                        lotuses, as well as smaller and larger māndārava flowers. Trillions of gods
+                        offered thousands of <term type="ignore">jeweled</term> parasols. Trillions of gods wept as they bowed
+                        their heads to the Blessed One’s feet, recalling trillions of their past
+                        lives. It was the blessings of the Blessed Buddha that allowed these
+                        trillions of miracles to occur. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-229"/>
+                    <p tid="220">About this, it was said,</p>
+                    <lg tid="221">
+                        <l>Billions of gods</l>
+                        <l>Stationed in the periphery</l>
+                        <l>Tossed fine red sandalwood powder</l>
+                        <l>Upon the perfect Buddha. <ref cRef="F.157.b" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-231"/>
+                    <lg tid="222">
+                        <l>Tens of billions of <term type="ignore">śakra</term> gods</l>
+                        <l>Stationed in the sky</l>
+                        <l>Tossed much powdered gold from the Jambū River</l>
+                        <l>Upon the Thus-Gone One.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-232"/>
+                    <lg tid="223">
+                        <l>Ten million brahmā gods arrived</l>
+                        <l>And tossed powdered red sandalwood</l>
+                        <l>Upon the perfect Buddha </l>
+                        <l>And sang melodious songs.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-233"/>
+                    <lg tid="224">
+                        <l>Seeing the immaculate light,</l>
+                        <l>The gods arrayed themselves in the sky.</l>
+                        <l>They sang countless songs</l>
+                        <l>And waved fabrics in the sky.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-234"/>
+                    <lg tid="225">
+                        <l>The gods arrayed in the sky,</l>
+                        <l>Holding thousands of lotus flowers,</l>
+                        <l>Displayed them to the World Illuminator</l>
+                        <l>And venerated him with banners and such.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-235"/>
+                    <lg tid="226">
+                        <l>With minds filled with joy,</l>
+                        <l>They honored the unparalleled supreme Victor, the Lord of Sages.</l>
+                        <l>They praised him and scattered upon him</l>
+                        <l>Garlands of precious jewels and pearls.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-236"/>
+                    <lg tid="227">
+                        <l>A trillion people</l>
+                        <l>Venerated the unparalleled supreme Victor.</l>
+                        <l>They remembered hundreds of their past lives</l>
+                        <l>And bowed their heads to the unparalleled Lord of Sages.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-237"/>
+                    <lg tid="228">
+                        <l>Then, the World Illuminator</l>
+                        <l>Beat the Dharma drum;</l>
+                        <l>Its sound was heard throughout many billions</l>
+                        <l>Of buddha realms.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-238"/>
+                    <lg tid="229">
+                        <l>At that moment, </l>
+                        <l>Countless millions of beings arrived from all directions.</l>
+                        <l>They were established in the wisdom of buddhahood</l>
+                        <l>By the perfect Buddha.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-239"/>
+                    <lg tid="230">
+                        <l>The young man was delighted;</l>
+                        <l>He offered a seat of uraga sandalwood</l>
+                        <l>And venerated the supreme Buddha</l>
+                        <l>With powdered gems.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-240"/>
+                    <lg tid="231">
+                        <l>The light of one precious gem</l>
+                        <l>Shone throughout thousands of worlds.</l>
+                        <l>The light of that single gem</l>
+                        <l>Radiated throughout billions of worlds.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-241"/>
+                    <lg tid="232">
+                        <l>In the same way, light sprang forth</l>
+                        <l>From every gem without exception.</l>
+                        <l>At that moment, they also</l>
+                        <l>Illuminated Vaiśālī.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-242"/>
+                    <lg tid="233">
+                        <l>All of these gems were used</l>
+                        <l>To venerate the principle Buddha.</l>
+                        <l>A great pile of gems</l>
+                        <l>Also was offered to the Great Sage. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-243"/>
+                    <lg tid="234">
+                        <l>Parasols adorned</l>
+                        <l>With pearl garlands surrounded him.</l>
+                        <l>Each had twenty-five thousand</l>
+                        <l>Surrounding layers.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-244"/>
+                    <lg tid="235">
+                        <l>They venerated the Great Sage</l>
+                        <l>Through such excellent means. <ref cRef="F.158.a" type="folio"/>
+                        </l>
+                        <l>Woven fabrics were offered</l>
+                        <l>To all the bodhisattvas.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-245"/>
+                    <lg tid="236">
+                        <l>Before emanated trees of awakening</l>
+                        <l>Lion thrones were placed.</l>
+                        <l>All told, two hundred fifty million</l>
+                        <l>Were set out.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-246"/>
+                    <lg tid="237">
+                        <l>For millions of years,</l>
+                        <l>Countless bodhisattvas—</l>
+                        <l>Hundreds of millions in fact—</l>
+                        <l>Arrived there.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-247"/>
+                    <lg tid="238">
+                        <l>They arrived first from the east,</l>
+                        <l>And then from the south, west, and north,</l>
+                        <l>From above and below,</l>
+                        <l>And from the intermediate directions.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-248"/>
+                    <lg tid="239">
+                        <l>The golden-colored light</l>
+                        <l>Of the Refuge, the World Protector,</l>
+                        <l>Filled as many realms</l>
+                        <l>As the eye could see.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-249"/>
+                    <lg tid="240">
+                        <l>Bodhisattvas arrived</l>
+                        <l>From all worlds</l>
+                        <l>To the place where the Teacher was sitting</l>
+                        <l>And the Dharma was shining.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-250"/>
+                    <lg tid="241">
+                        <l>In this fashion, Ratnajālin,</l>
+                        <l>The young Licchavi,</l>
+                        <l>Performed boundless,</l>
+                        <l>Limitless, and inconceivable homage.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-251"/>
+                    <lg tid="242">
+                        <l>Then the great person,</l>
+                        <l>The supreme human, the Lion of the Śākyas,</l>
+                        <l>Brought comfort to the assembled</l>
+                        <l>Gods, nāgas, and humans:</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-252"/>
+                    <lg tid="243">
+                        <l>“Standing before me,</l>
+                        <l>You have performed such veneration.</l>
+                        <l>This veneration has been done with offerings </l>
+                        <l>As numerous as the grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-253"/>
+                    <lg tid="244">
+                        <l>“Those who hear this discourse, </l>
+                        <l>Which has been taught for the sake of Ratnajālin,</l>
+                        <l>Shall not turn back from awakening;</l>
+                        <l>They will become supreme preachers of buddhahood.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-254"/>
+                    <lg tid="245">
+                        <l>“One cannot describe</l>
+                        <l>The measure of the mass of merit</l>
+                        <l>That ensues from remembering this discourse</l>
+                        <l>By saying, ‘It shall be this much.’</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-255"/>
+                    <lg tid="246">
+                        <l>“While one can describe the extent</l>
+                        <l>Of the earth, water, fire, and wind</l>
+                        <l>Throughout the ten directions,</l>
+                        <l>It is impossible to describe this mass of merit.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-256"/>
+                    <lg tid="247">
+                        <l>“When a monk or nun,</l>
+                        <l>Or a novice monk or nun,</l>
+                        <l>Hears this discourse,</l>
+                        <l>All beings including gods, nāgas, and mahoragas</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-257"/>
+                    <lg tid="248">
+                        <l>“Will arrive near them</l>
+                        <l>And find their splendor overwhelming.</l>
+                        <l>While it is possible that fire can turn cold,</l>
+                        <l>Their splendor will never diminish. <ref cRef="F.158.b" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-258"/>
+                    <lg tid="249">
+                        <l>“When someone who remembers this discourse</l>
+                        <l>Engages in the conduct of awakening,</l>
+                        <l>All beings will attend to them</l>
+                        <l>And venerate the mind of awakening.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-259"/>
+                    <lg tid="250">
+                        <l>“A powerful person</l>
+                        <l>Might hold up a thousand worlds </l>
+                        <l>For millions of eons </l>
+                        <l>On the tip of a hair that has been split a billion times.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-260"/>
+                    <lg tid="251">
+                        <l>“Still, compared to that, during the latter days</l>
+                        <l>One may teach to others</l>
+                        <l>A discourse of the buddhas’ awakening </l>
+                        <l>That one has heard in this fashion.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-261"/>
+                    <lg tid="252">
+                        <l>“In that case the great wonder</l>
+                        <l>Of the former example</l>
+                        <l>Shall not measure even a hundredth of that—</l>
+                        <l>As no number, figure, or example could suffice.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-262"/>
+                    <lg tid="253">
+                        <l>“In the latter days,</l>
+                        <l>When people hear the unsurpassed teachings</l>
+                        <l>Of the lion’s roar in this manner,</l>
+                        <l>It will not be contradicted or opposed. </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-263"/>
+                    <lg tid="254">
+                        <l>“In the future, when people hear</l>
+                        <l>Of those who have seen the World Protector—</l>
+                        <l>The shining perfect Buddha—</l>
+                        <l>They will act with respect and reverence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-264"/>
+                    <lg tid="255">
+                        <l>“If all beings</l>
+                        <l>In millions of buddha realms</l>
+                        <l>Were endowed with the wisdom of buddhahood—</l>
+                        <l>As many of them as there are grains of sand in the Ganges—</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-265"/>
+                    <lg tid="256">
+                        <l>“One might perform service to them</l>
+                        <l>For many hundreds of eons,</l>
+                        <l>And offer them as many fine temples</l>
+                        <l>As there are worlds in the great trichiliocosm.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-266"/>
+                    <lg tid="257">
+                        <l>“The temples could be made of sandalwood;</l>
+                        <l>And each supreme and divine temple</l>
+                        <l>Would have ten billion assembly halls.<note place="end" xml:id="UT22084-059-006-267" index="17"> In the Tibetan this verse only has
+                                three lines.</note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-268"/>
+                    <lg tid="258">
+                        <l>“Each of the billion assembly halls</l>
+                        <l>Could be made from divine jewels as an offering.</l>
+                        <l>One could arrange thrones for everyone,</l>
+                        <l>Complete with a billion servants.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-269"/>
+                    <lg tid="259">
+                        <l>“Skillfully, one could take nets of jewels</l>
+                        <l>And adorn the thrones.</l>
+                        <l>For eons as numerous as the grains of sand in the Ganges,</l>
+                        <l>The great sages who wander through the world could then abide there.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-270"/>
+                    <lg tid="260">
+                        <l>“One could offer all that is fit to be offered</l>
+                        <l>To each of those buddhas.</l>
+                        <l>One could also create reliquaries for their parinirvāṇas</l>
+                        <l>As numerous as the grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-271"/>
+                    <lg tid="261">
+                        <l>“One could create a reliquary to every single buddha</l>
+                        <l>In all the worlds of the great trichiliocosm—</l>
+                        <l>Composed of jewels, with thousands of divine doors, <ref cRef="F.159.a" type="folio"/>
+                        </l>
+                        <l>Reaching as high as the peak of existence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-272"/>
+                    <lg tid="262">
+                        <l>“One could offer parasols as numerous as the grains of sand in the
+                            Ganges</l>
+                        <l>To each of these reliquaries.</l>
+                        <l>The parasols offered at that time would be</l>
+                        <l>Covered with ornamental garlands of pearl.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-273"/>
+                    <lg tid="263">
+                        <l>“One could also offer millions of streamers</l>
+                        <l>As numerous as the grains of sand in the Ganges</l>
+                        <l>And billions of banners made of various precious jewels</l>
+                        <l>To these reliquaries as numerous as the grains of sand in the Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-274"/>
+                    <lg tid="264">
+                        <l>“One could play billions of instruments</l>
+                        <l>At each reliquary of the omniscient illuminators.</l>
+                        <l>Trillions of respectful humans too</l>
+                        <l>Would join in making offerings.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-275"/>
+                    <lg tid="265">
+                        <l>“They would offer hundreds of flowers and parasols to the reliquary</l>
+                        <l>And venerate the great sages in this manner every day</l>
+                        <l>For as many eons as there are grains of sand in the Ganges.<note place="end" xml:id="UT22084-059-006-276" index="18"> In the Tibetan
+                                this verse only has three lines. </note>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-277"/>
+                    <lg tid="266">
+                        <l>“Compared to all this, hearing just one verse from this discourse</l>
+                        <l>While not doubting it, developing interest,</l>
+                        <l>And reciting these victors’ names</l>
+                        <l>Brings merit that is unsurpassed and supreme.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-278"/>
+                    <lg tid="267">
+                        <l>“Wise ones should listen to the names of absorptions,</l>
+                        <l>Maintain flawless discipline, remember these names,</l>
+                        <l>And venerate the thus-gone buddhas.</l>
+                        <l>Thereby, they will behold as many buddhas as the grains of sand in the
+                            Ganges.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-279"/>
+                    <lg tid="268">
+                        <l>“Having directed their minds to the sacred veneration</l>
+                        <l>Of the supreme humans, the great sages,</l>
+                        <l>They will always be sane, they will teach the Dharma,</l>
+                        <l>And for millions of eons they will remain undeluded.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-280"/>
+                    <lg tid="269">
+                        <l>“As the World Protector teaches</l>
+                        <l>This supreme king of discourses, </l>
+                        <l>Those who hear what the Supreme Victor has previously seen</l>
+                        <l>Will obtain happiness in the future.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-281"/>
+                    <lg tid="270">
+                        <l>“They will discard desires, knowing them to have faults,</l>
+                        <l>Like a person tossing away a vessel filled with foul-smelling
+                            excrement.</l>
+                        <l>Such wise beings will delight in emancipation and peace,</l>
+                        <l>Be constantly sane, and rely on the protectors.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-282"/>
+                    <lg tid="271">
+                        <l>“Those who saw me teach this</l>
+                        <l>In the city of Vaiśālī,</l>
+                        <l>Including Ratnajālin, who beheld and venerated me,</l>
+                        <l>Shall remember this supreme discourse in the future.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-283"/>
+                    <lg tid="272">
+                        <l>“Those of my children who always follow me,</l>
+                        <l>Engage in the supreme acts of awakening and peace,</l>
+                        <l>And constantly train beings <ref cRef="F.159.b" type="folio"/>
+                        </l>
+                        <l>Shall uphold this supreme discourse in the future.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-284"/>
+                    <lg tid="273">
+                        <l>“Those who serve the buddhas, the guides,</l>
+                        <l>As they engage in the fathomless and incalculable practices,</l>
+                        <l>And likewise engage in perfect worship,</l>
+                        <l>Shall uphold this teaching of the Supreme Victor in the future.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-285"/>
+                    <lg tid="274">
+                        <l>“One could have engaged in pure conduct for a million eons</l>
+                        <l>Or previously worked for the benefit of infinite worlds;</l>
+                        <l>Yet the merit of hearing this discourse in the future</l>
+                        <l>Shall not be countable at all.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-286"/>
+                    <lg tid="275">
+                        <l>“Let those intelligent beings who desire to behold</l>
+                        <l>These peaceful and immortal buddhas—</l>
+                        <l>The unfathomable and limitless buddhas—</l>
+                        <l>Uphold the unfathomable greatness of this discourse!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-287"/>
+                    <lg tid="276">
+                        <l>“Let those who wish to behold all these buddhas,</l>
+                        <l>Including Amitāyus, Akṣobhya, Vimalaprabhā,</l>
+                        <l>and Siṃhaketu,</l>
+                        <l>Uphold this teaching of the Supreme Victor in the future!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-288"/>
+                    <lg tid="277">
+                        <l>“Let those who wish to behold these principle illuminators,</l>
+                        <l>The buddhas Maitreya and Vimalaprabhā,</l>
+                        <l>Mahātmā, and Siṃhaketu,</l>
+                        <l>Uphold this teaching of the Supreme Victor in the future!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-289"/>
+                    <lg tid="278">
+                        <l>“I have taught this noble and supreme discourse</l>
+                        <l>to Ratnajālin.</l>
+                        <l>In the future, </l>
+                        <l>Do not stay in heedless places!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-290"/>
+                    <lg tid="279">
+                        <l>“When the future times come,</l>
+                        <l>Be careful and always keep your discipline flawless.</l>
+                        <l>Then, when your time comes to die,</l>
+                        <l>You will go to the realm of the victor Infinite Light.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-291"/>
+                    <lg tid="280">
+                        <l>“His realm is known as Jeweled,</l>
+                        <l>And is located in a world above us.</l>
+                        <l>Following that, when your time comes to die,</l>
+                        <l>You will swiftly behold the buddha Maitreya.”</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-292"/>
+                    <p tid="281">Once the Blessed One gave this teaching, the young Licchavi
+                        Ratnajālin as well as four hundred million bodhisattvas such as Maitreya,
+                        and also six hundred million worthy ones and nine hundred ninety million
+                        gods rejoiced and praised what the Blessed One had said. </p>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-293"/>
+                    <trailer tid="282">This completes the Great Vehicle sūtra “<title xml:lang="en">The Questions of Ratnajālin</title>.”</trailer>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="283">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-059-006-294"/>
+                    <p tid="284">It was translated by the Indian scholar Jñānagarbha and the
+                        translator Venerable Yeshé Nyingpo. It was proofed and finalized by the
+                        editor-translator Venerable Paltsek.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="285">Notes</head>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="287">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-059-006-295">
+                        <title xml:lang="Bo-Ltn">’phags pa rin chen dra ba can gyis zhus pa zhes bya
+                            ba theg pa chen po’i mdo</title> (<title xml:lang="Sa-Ltn">Ārya­ratna­jāli­paripṛcchā­nāma­mahāyāna­sūtra</title>). Toh 163, Degé
+                        Kangyur vol. 59 (mdo sde, ba), folios 144a–159b.</bibl>
+                    <bibl xml:id="UT22084-059-006-296">
+                        <title xml:lang="Bo-Ltn">’phags pa rin chen dra ba can gyis zhus pa zhes bya
+                            ba theg pa chen po’i mdo</title>. bka’ ’gyur (dpe bsdur ma) [Comparative
+                        Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’
+                        bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China
+                        Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe
+                        skrun khang (China Tibetology Publishing House), 2006–2009, vol. 59, pp.
+                        388–432.</bibl>
+                    <bibl xml:id="UT22084-059-006-297">
+                        <title xml:lang="Bo-Ltn">ʼphags pa rin chen dra ba can gyis zhus pa zhes bya
+                            ba theg pa chen poʼi mdo</title> (<title xml:lang="Sa-Ltn">Ārya­ratna­jāli­paripṛcchā­nāma­mahāyāna­sūtra</title>). Stok Palace
+                        Kangyur vol. 65 (mdo sde, pha), folios 53a–74a.</bibl>
+                    <bibl xml:id="UT22084-059-006-299">“Bǎo wǎng jīng <foreign xml:lang="zh">寶網經</foreign>.” In <title xml:lang="Ja-Ltn">Taishō Tripiṭaka</title>,
+                        edited by Junjirō Takakusu and Kaigyoku Watanabe, vol. 14, no. 433.
+                        Tokyo: Taishō issaikyō kankōkai, 1924–1934.</bibl>
+                    <bibl xml:id="UT22084-059-006-298">Denkarma (<title xml:lang="Bo-Ltn">pho brang
+                            stod thang ldan [/ lhan] dkar gyi chos 'gyur ro cog gi dkar
+                        chag</title>). Degé Tengyur, vol. 206 (sna tshogs, jo), folios 294.b–310.a. </bibl>
+                    <bibl xml:id="UT22084-059-006-300">Herrmann-Pfandt, Adelheid. <title xml:lang="de">Die lHan kar ma: ein früher Katalog der ins Tibetische
+                            übersetzten buddhistischen Texte</title>. Wien: Verlag der
+                        Österreichischen Akademie der Wissenschaften, 2008.</bibl>
+                    <bibl xml:id="UT22084-059-006-301">Higuchi, Koichi. “Linguistic and Philological
+                        Value of Mongolian Buddhist Works: The case of Mongolian versions of
+                        Ratnajāli.” <title xml:lang="la">Acta Linguistica Petropolitana</title> vol.
+                        XI, part 3 (2015): 541–47.</bibl>
+                    <bibl xml:id="UT22084-059-006-302">Schopen, Gregory. “The Generalization of an
+                        Old Yogic Attainment in Medieval Mahāyāna Sūtra Literature: Some Notes on
+                        Jātismara.” <title xml:lang="en">Journal of the International Association of
+                            Buddhist Studies</title> 6/1 (1983): 109–147.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-059-006-303">
+                            <term>bhūta</term>
+                            <term xml:lang="Bo-Ltn">’byung po </term>
+                            <term xml:lang="bo">འབྱུང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">bhūta</term>
+                            <term type="definition">A general term for spirit, ghost, or demon
+                                (either positive or negative).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-059-006-304">
+                            <term>kumbhāṇḍa</term>
+                            <term xml:lang="Bo-Ltn">grul bum </term>
+                            <term xml:lang="bo">གྲུལ་བུམ།</term>
+                            <term xml:lang="Sa-Ltn">kumbhāṇḍa</term>
+                            <term type="definition">A class of dwarf beings subordinate to the great
+                                king of the south, Virūḍhaka. The name uses a play on the word
+                                    <foreign xml:lang="Sa-Ltn" type="term">āṇḍa</foreign>, which
+                                means “egg” but is a euphemism for testicle. Thus, they are often
+                                depicted as having testicles as big as pots (from <foreign xml:lang="Sa-Ltn" type="term">khumba</foreign>, or
+                                “pot”).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-059-006-305">
+                            <term>rākṣasa</term>
+                            <term xml:lang="Bo-Ltn">srin po </term>
+                            <term xml:lang="bo">སྲིན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">rākṣasa</term>
+                            <term type="definition">A flesh-eating demon that haunts frightening
+                                places.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-059-006-306">
+                            <term>reliquary</term>
+                            <term xml:lang="Bo-Ltn">mchod rten </term>
+                            <term xml:lang="bo">མཆོད་རྟེན།</term>
+                            <term xml:lang="Sa-Ltn">stūpa</term>
+                            <term type="definition">Usually a heap or circular archeological
+                                structure containing relics of the masters of the past.</term>
+                            <term type="alternative">reliquaries</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-307">
+                            <term>Akṣobhya</term>
+                            <term xml:lang="Bo-Ltn">mi bskyod pa </term>
+                            <term xml:lang="bo">མི་བསྐྱོད་པ།</term>
+                            <term xml:lang="Sa-Ltn">Akṣobhya</term>
+                            <term type="definition">One of the five tathāgatas.</term>
+                            
+                        </gloss>
+                    </item>
+                        <item>
+                            <gloss type="term" xml:id="UT22084-059-006-365">
+                                <term>five points (of the body)</term>
+                                <term xml:lang="Bo-Ltn">yan lag lnga</term>
+                                <term xml:lang="bo">ཡན་ལག་ལྔ།</term>
+                                <term xml:lang="Sa-Ltn"/>
+                                <term type="definition">The head, arms, and legs.</term>
+                                <term type="alternative">five points</term>
+                            </gloss>
+                        </item>
+
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-308">
+                            <term>Amitāyus</term>
+                            <term xml:lang="Bo-Ltn">tshe dpag med </term>
+                            <term xml:lang="bo">ཚེ་དཔག་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Amitāyus</term>
+                            <term type="definition">The buddha associated with longevity.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-309">
+                            <term>Ānanda</term>
+                            <term xml:lang="Bo-Ltn">kun dga’ </term>
+                            <term xml:lang="bo">ཀུན་དགའ།</term>
+                            <term xml:lang="Sa-Ltn">Ānanda</term>
+                            
+                        </gloss>
+                    </item>
+
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-310">
+                            <term>Anavatapta</term>
+                            <term xml:lang="Bo-Ltn">ma dros pa </term>
+                            <term xml:lang="bo">མ་དྲོས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Anavatapta</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-059-006-311">
+                            <term>Brahmā</term>
+                            <term xml:lang="Bo-Ltn">tshangs pa </term>
+                            <term xml:lang="bo">ཚངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Brahmā</term>
+                            <term type="definition">A divine being who rules the brahmā realm; a
+                                member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-312">
+                            <term>Candraprabha</term>
+                            <term xml:lang="Bo-Ltn">zla ba’i ’od </term>
+                            <term xml:lang="bo">ཟླ་བའི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Candraprabha</term>
+                            <term type="definition">A god; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-313">
+                            <term>Dīpaṃkara </term>
+                            <term xml:lang="Bo-Ltn">mar me mdzad </term>
+                            <term xml:lang="bo">མར་མེ་མཛད།</term>
+                            <term xml:lang="Sa-Ltn">Dīpaṃkara</term>
+                            <term type="definition">One of the most renowned of former
+                                buddhas.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-314">
+                            <term>Great Splendor</term>
+                            <term xml:lang="Bo-Ltn">shin tu dpal bzang ldan </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་དཔལ་བཟང་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A god; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-315">
+                            <term>Infinite Light</term>
+                            <term xml:lang="Bo-Ltn">’od zer mtha’ yas </term>
+                            <term xml:lang="bo">འོད་ཟེར་མཐའ་ཡས།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-316">
+                            <term>Īśvara</term>
+                            <term xml:lang="Bo-Ltn">dbang phyug </term>
+                            <term xml:lang="bo">དབང་ཕྱུག</term>
+                            <term xml:lang="Sa-Ltn">Īśvara</term>
+                            <term type="definition">An important god known also as Śiva; a member of
+                                the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-317">
+                            <term>Jñānagarbha </term>
+                            <term xml:lang="Bo-Ltn">dza+nyA na gar bha </term>
+                            <term xml:lang="bo">ཛྙཱ་ན་གར་བྷ།</term>
+                            <term xml:lang="Sa-Ltn">Jñānagarbha </term>
+                            <term type="definition">The Indian scholar who assisted in the
+                                translation of this discourse.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-059-006-318">
+                            <term>Joyful</term>
+                            <term xml:lang="Bo-Ltn">mngon par dga’ ba </term>
+                            <term xml:lang="bo">མངོན་པར་དགའ་བ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A god; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-319">
+                            <term>King of Blossoming Sal Tree Flowers</term>
+                            <term xml:lang="Bo-Ltn">me tog rgyas pa sA la’i rgyal po </term>
+                            <term xml:lang="bo">མེ་ཏོག་རྒྱས་པ་སཱ་ལའི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm to the west
+                                of this world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-320">
+                            <term>King of Knowledge of Floral Light Displays</term>
+                            <term xml:lang="Bo-Ltn">me tog gi ’od kyis rnam par rol pa mngon par
+                                mkhyen pa’i rgyal po </term>
+                            <term xml:lang="bo">མེ་ཏོག་གི་འོད་ཀྱིས་རྣམ་པར་རོལ་པ་མངོན་པར་མཁྱེན་པའི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm to the
+                                south of this world. </term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-321">
+                            <term>King Who Is Peaceful and Splendorous in His Learning and Rich in
+                                Melody</term>
+                            <term xml:lang="Bo-Ltn">rab tu zhi ba mkhas pa’i gzi brjid dbyangs kyi
+                                dbang phyug gi rgyal po </term>
+                            <term xml:lang="bo">རབ་ཏུ་ཞི་བ་མཁས་པའི་གཟི་བརྗིད་དབྱངས་ཀྱི་དབང་ཕྱུག་གི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm below this
+                                world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-322">
+                            <term>Limitless Strength</term>
+                            <term xml:lang="Bo-Ltn">stobs mtha’ yas </term>
+                            <term xml:lang="bo">སྟོབས་མཐའ་ཡས།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A leader of the Licchavis.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-323">
+                            <term>Mahāmucilinda</term>
+                            <term xml:lang="Bo-Ltn">btang bzung chen po </term>
+                            <term xml:lang="bo">བཏང་བཟུང་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahāmucilinda</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-324">
+                            <term>Mahātmā</term>
+                            <term xml:lang="Bo-Ltn">bdag nyid chen po </term>
+                            <term xml:lang="bo">བདག་ཉིད་ཆེན་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Mahātmā</term>
+                            <term type="definition">A buddha.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-325">
+                            <term>Maitreya</term>
+                            <term xml:lang="Bo-Ltn">byams pa </term>
+                            <term xml:lang="bo">བྱམས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Maitreya</term>
+                            <term type="definition">Bodhisattva of loving kindness; the next buddha
+                                to follow Śākyamuni.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-326">
+                            <term>Majestic King with the Elegant Peaceful Voice</term>
+                            <term xml:lang="Bo-Ltn">legs par rab tu zhi ba'i dpal dbyangs kyi dbang
+                                phyug gi rgyal po </term>
+                            <term xml:lang="bo">ལེགས་པར་རབ་ཏུ་ཞི་བའི་དཔལ་དབྱངས་ཀྱི་དབང་ཕྱུག་གི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives to the east of this
+                                world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-327">
+                            <term>Majestic King with the Splendorous Voice of Learning Adorned by
+                                Precious Moonlight</term>
+                            <term xml:lang="Bo-Ltn">rin chen ’od zer zla bas brgyan pa mkhas pa’i
+                                gzi brjid dbyangs kyi dbang phyug gi rgyal po </term>
+                            <term xml:lang="bo">རིན་ཆེན་འོད་ཟེར་ཟླ་བས་བརྒྱན་པ་མཁས་པའི་གཟི་བརྗིད་དབྱངས་ཀྱི་དབང་ཕྱུག་གི་རྒྱལ་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm to the east
+                                of this world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-328">
+                            <term>Manasvin</term>
+                            <term xml:lang="Bo-Ltn">gzi can </term>
+                            <term xml:lang="bo">གཟི་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Manasvin</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-059-006-329">
+                            <term>Māra</term>
+                            <term xml:lang="Bo-Ltn">bdud </term>
+                            <term xml:lang="bo">བདུད།</term>
+                            <term xml:lang="Sa-Ltn">Māra</term>
+                            <term type="definition">The main adversary of the Buddha and the
+                                embodiment of evil.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-330">
+                            <term>Mucilinda</term>
+                            <term xml:lang="Bo-Ltn">btang bzung </term>
+                            <term xml:lang="bo">བཏང་བཟུང་།</term>
+                            <term xml:lang="Sa-Ltn">Mucilinda</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-331">
+                            <term>Nanda</term>
+                            <term xml:lang="Bo-Ltn">dga’ bo </term>
+                            <term xml:lang="bo">དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Nanda</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-332">
+                            <term>Nārāyaṇa</term>
+                            <term xml:lang="Bo-Ltn">sred med kyi bu </term>
+                            <term xml:lang="bo">སྲེད་མེད་ཀྱི་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Nārāyaṇa</term>
+                            <term type="definition">One of the epithets of Kṛṣṇa.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-333">
+                            <term>Kawa Paltsek</term>
+                            <term xml:lang="Bo-Ltn">ska ba dpal brtsegs </term>
+                            <term xml:lang="bo">སྐ་བ་དཔལ་བརྩེགས།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">The editor of this discourse.</term>
+                            <term type="alternative">Paltsek</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-334">
+                            <term>Pinnacle of Renown</term>
+                            <term xml:lang="Bo-Ltn">grags pa’i tog </term>
+                            <term xml:lang="bo">གྲགས་པའི་ཏོག</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A god; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-335">
+                            <term>Pure Moon Disk </term>
+                            <term xml:lang="Bo-Ltn">zla ba’i dkyil ’khor rnam dag </term>
+                            <term xml:lang="bo">ཟླ་བའི་དཀྱིལ་འཁོར་རྣམ་དག</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm to the
+                                north of this world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-336">
+                            <term>Rāhu</term>
+                            <term xml:lang="Bo-Ltn">sgra gcan </term>
+                            <term xml:lang="bo">སྒྲ་གཅན།</term>
+                            <term xml:lang="Sa-Ltn">Rāhu</term>
+                            <term type="definition">One of the kings of the demi-gods; the demon who
+                                causes an eclipse.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-337">
+                            <term>Ratnajālin</term>
+                            <term xml:lang="Bo-Ltn">rin chen dra ba can </term>
+                            <term xml:lang="bo">རིན་ཆེན་དྲ་བ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Ratnajālin</term>
+                            <term type="definition">A young Licchavi; the main interlocutor of this
+                                discourse.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-338">
+                            <term>Sāgara</term>
+                            <term xml:lang="Bo-Ltn">rgya mtsho </term>
+                            <term xml:lang="bo">རྒྱ་མཚོ།</term>
+                            <term xml:lang="Sa-Ltn">Sāgara</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-339">
+                            <term>Śakra</term>
+                            <term xml:lang="Bo-Ltn">brgya byin </term>
+                            <term xml:lang="bo">བརྒྱ་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Śakra</term>
+                            <term type="definition">An important god who rules the Heaven of the
+                                Thirty-Three; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-340">
+                            <term>Saṁtuṣita</term>
+                            <term xml:lang="Bo-Ltn">yongs su dga’ ldan </term>
+                            <term xml:lang="bo">ཡོངས་སུ་དགའ་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn">Saṁtuṣita</term>
+                            <term type="definition">The god who appears to Ratnajālin in a dream
+                                inspiring him to meet the Buddha.</term>
+                            
+                        </gloss>
+                    </item>
+                    <!-- Not in text <item>
+                        <gloss type="person" mode="marked" xml:id="UT22084-059-006-341">
+                            <term>Siṃha</term>
+                            <term xml:lang="Bo-Ltn">seng ge </term>
+                            <term xml:lang="bo">སེང་གེ</term>
+                            <term xml:lang="Sa-Ltn">Siṃha</term>
+                            <term type="definition">A buddha.</term>
+                            
+                        </gloss>
+                    </item>-->
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-342">
+                            <term>Siṃha</term>
+                            <term xml:lang="Bo-Ltn">seng ge </term>
+                            <term xml:lang="bo">སེང་གེ</term>
+                            <term xml:lang="Sa-Ltn">Siṃha</term>
+                            <term type="definition">And elder of the Licchavis.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-343">
+                            <term>Siṃhaketu</term>
+                            <term xml:lang="Bo-Ltn">seng ge tog </term>
+                            <term xml:lang="bo">སེང་གེ་ཏོག</term>
+                            <term xml:lang="Sa-Ltn">Siṃhaketu</term>
+                            <term type="definition">A buddha.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-344">
+                            <term>Stable in Immeasurable Diligence </term>
+                            <term xml:lang="Bo-Ltn">brtson ’grus grangs med pas yang dag par rab tu
+                                gnas pa </term>
+                            <term xml:lang="bo">བརྩོན་འགྲུས་གྲངས་མེད་པས་ཡང་དག་པར་རབ་ཏུ་གནས་པ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha who lives in a buddha realm above this
+                                world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-345">
+                            <term>Sūryaprabha</term>
+                            <term xml:lang="Bo-Ltn">nyi ma’i ’od </term>
+                            <term xml:lang="bo">ཉི་མའི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Sūryaprabha</term>
+                            <term type="definition">A god; a member of the Buddha's retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-346">
+                            <term>Susārthavāha</term>
+                            <term xml:lang="Bo-Ltn">ded dpon bzang po </term>
+                            <term xml:lang="bo">དེད་དཔོན་བཟང་པོ།</term>
+                            <term xml:lang="Sa-Ltn">Susārthavāha</term>
+                            <term type="definition">A god identified as a child of
+                                <term>Māra</term>.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-347">
+                            <term>Upananda</term>
+                            <term xml:lang="Bo-Ltn">nye dga’ bo </term>
+                            <term xml:lang="bo">ཉེ་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Upananda</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-348">
+                            <term>Vāsukin</term>
+                            <term xml:lang="Bo-Ltn">nor rgyas </term>
+                            <term xml:lang="bo">ནོར་རྒྱས།</term>
+                            <term xml:lang="Sa-Ltn">Vāsukin</term>
+                            <term type="definition">A nāga king; a member of the Buddha's
+                                retinue.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-349">
+                            <term>Vimalaprabhā</term>
+                            <term xml:lang="Bo-Ltn">dri ma med pa’i ’od </term>
+                            <term xml:lang="bo">དྲི་མ་མེད་པའི་འོད།</term>
+                            <term xml:lang="Sa-Ltn">Vimalaprabhā</term>
+                            <term type="definition">A buddha.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-059-006-350">
+                            <term>Yeshé Nyingpo</term>
+                            <term xml:lang="Bo-Ltn">ye shes snying po </term>
+                            <term xml:lang="bo">ཡེ་ཤེས་སྙིང་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">The Tibetan translator of this discourse.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-351">
+                            <term>Adorned by the Moon</term>
+                            <term xml:lang="Bo-Ltn">zla bas brgyan pa </term>
+                            <term xml:lang="bo">ཟླ་བས་བརྒྱན་པ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha realm to the south.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-352">
+                            <term>Citraratna</term>
+                            <term xml:lang="Bo-Ltn">rin chen bkra ba </term>
+                            <term xml:lang="bo">རིན་ཆེན་བཀྲ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Citraratna</term>
+                            <term type="definition">A buddha realm to the west.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-353">
+                            <term>Covered with a Jewel Net</term>
+                            <term xml:lang="Bo-Ltn">rin chen dra bas g.yogs pa </term>
+                            <term xml:lang="bo">རིན་ཆེན་དྲ་བས་གཡོགས་པ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha realm to the north.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-354">
+                            <term>Heaven of Joy</term>
+                            <term xml:lang="Bo-Ltn">dga’ ldan </term>
+                            <term xml:lang="bo">དགའ་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn">Tuṣita</term>
+                            <term type="definition">The fourth of the six heavens of the desire
+                                realm. In Buddhist thought it is where all future buddhas dwell
+                                prior to their awakening.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-355">
+                            <term>Hell of Ultimate Torment </term>
+                            <term xml:lang="Bo-Ltn">mnar med </term>
+                            <term xml:lang="bo">མནར་མེད།</term>
+                            <term xml:lang="Sa-Ltn">Avīci </term>
+                            <term type="definition">The worst hell realm.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-356">
+                            <term>Jambū river</term>
+                            <term xml:lang="Bo-Ltn">’dzam bu </term>
+                            <term xml:lang="bo">འཛམ་བུ།</term>
+                            <term xml:lang="Sa-Ltn">Jambū</term>
+                            <term type="definition">A divine river whose gold is believed to be
+                                especially fine.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-357">
+                            <term>Jeweled</term>
+                            <term xml:lang="Bo-Ltn">rin chen ldan </term>
+                            <term xml:lang="bo">རིན་ཆེན་ལྡན།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">The buddha realm of the buddha Infinite Light,
+                                located above this world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-358">
+                            <term>Licchavi</term>
+                            <term xml:lang="Bo-Ltn">li tsa+tsha bI </term>
+                            <term xml:lang="bo">ལི་ཙྪ་བཱི།</term>
+                            <term xml:lang="Sa-Ltn">Licchavi</term>
+                            <term type="definition">The ancient republican state of the Licchavi
+                                people. Its capital was Vaiśālī.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-359">
+                            <term>Lord of the Supreme Banner</term>
+                            <term xml:lang="Bo-Ltn">rgyal mtshan mchog gi bdag po </term>
+                            <term xml:lang="bo">རྒྱལ་མཚན་མཆོག་གི་བདག་པོ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha realm below this world.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-360">
+                            <term>Monkey Pond</term>
+                            <term xml:lang="Bo-Ltn">spre’u rdzing </term>
+                            <term xml:lang="bo">སྤྲེའུ་རྫིང་།</term>
+                            <term xml:lang="Sa-Ltn">Markaṭahrada</term>
+                            <term type="definition">A pond in the city of Vaiśālī.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-361">
+                            <term>Pearled</term>
+                            <term xml:lang="Bo-Ltn">mu tig can </term>
+                            <term xml:lang="bo">མུ་ཏིག་ཅན།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha realm to the east.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-362">
+                            <term>Sahā</term>
+                            <term xml:lang="Bo-Ltn">mi mjed </term>
+                            <term xml:lang="bo">མི་མཇེད།</term>
+                            <term xml:lang="Sa-Ltn">Sahā</term>
+                            <term type="definition">The universe in which we live.</term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-363">
+                            <term>Vaiśālī</term>
+                            <term xml:lang="Bo-Ltn">yangs pa can </term>
+                            <term xml:lang="bo">ཡངས་པ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Vaiśālī</term>
+                            <term type="definition">The ancient capital of the Licchavi republican
+                                state, the Buddha visited this city several times during his
+                                lifetime. It is perhaps most famous as the location where, on
+                                different occasions, the Buddha cured a plague, admitted the first
+                                nuns into the Buddhist order, was offered a bowl of honey by
+                                monkeys, and announced his parinirvāṇa three months prior to his
+                                departure. </term>
+                            
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-059-006-364">
+                            <term>Wide Open</term>
+                            <term xml:lang="Bo-Ltn">shin tu rnam par phye ba </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་རྣམ་པར་ཕྱེ་བ།</term>
+                            <term xml:lang="Sa-Ltn"/>
+                            <term type="definition">A buddha realm above this world.</term>
+                            
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

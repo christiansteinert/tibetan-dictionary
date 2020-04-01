@@ -1,0 +1,1601 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">las kyi sgrib pa rnam par dag pa</title>
+                <title type="mainTitle" xml:lang="bo">ལས་ཀྱི་སྒྲིབ་པ་རྣམ་པར་དག་པ།</title>
+                <title type="mainTitle" xml:lang="en">Purification of Karmic Obscurations</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Karmāvaraṇa­viśuddhi</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ལས་ཀྱི་སྒྲིབ་པ་རྣམ་པར་དག་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa las kyi sgrib pa rnam par dag pa zhes bya ba theg pa chen po’i
+                    mdo</title>
+                <title type="longTitle" xml:lang="en">The Noble Mahāyāna Sūtra “Purification of Karmic Obscurations”</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Ārya­karmāvaraṇa­viśuddhi­nāma­mahā­yāna­sūtra</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <author role="translatorMain" ref="contributors.xml#team-15">Translated by the Garchen Buddhist Institute Translation Group<lb/> under the
+                    patronage and supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-111">Ina Bieler</author>
+                <consultant role="advisor" ref="contributors.xml#person-102">H.E. Garchen Rinpoche</consultant>
+                <consultant role="advisor" ref="contributors.xml#person-230">Dr. Tom Tillemans</consultant>
+            <editor role="TEImarkupEditor" ref="contributors.xml#person-306">Simeon Joffe</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 2.15.2 <date>2020</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="1">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit initiative to translate all the Buddha’s words into modern languages, and to make them available to everyone.</publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC BY-NC-ND (Attribution -
+                            Non-commercial - No-derivatives) 3.0 copyright. It may be copied or printed for fair use, but only
+                            with full attribution, and not for commercial advantage or personal compensation. For full details,
+                            see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-062-018"/>
+                <date>2013-01-23</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh218" type="text">
+                    <ref>Toh 218</ref>
+                    <biblScope>Degé Kangyur, vol. 62 (mdo sde, tsha), folios 284.a–297.b</biblScope>
+                    <author role="translatorTib">Jinamitra</author>
+                    <author role="translatorTib">Prajñāvarman</author>
+                    <author role="translatorTib">Yeshé Dé</author>
+                    <location work="UT4CZ5369" count-pages="28">
+                        <volume number="62" start-page="567" end-page="594"/>
+                    </location>
+                <idno parent-id="O1JC114941JC14668"/>
+                <idno source-id="O1JC114941JC11858" work="W22084"/>
+                </bibl>
+            
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2020-01-28T17:26:55.548Z" user="admin">28/01/2020 17:26:55</note>
+            <note type="updated" update="text-version" value="v 2.14" date-time="2019-06-18T02:56:29.51Z" user="celso">v 2.14 2019</note>
+                <note type="updated" update="text-version" value="v 2.15" date-time="2019-06-21T14:38:12.634Z" user="celso">v 2.15 2019</note>
+<note type="updated" update="text-version" value="v 2.15.1" date-time="2019-10-07T10:27:24.685Z" user="admin">Publication statement updated</note>
+<note type="updated" update="text-version" value="v 2.15.2" date-time="2020-01-28T17:26:52.847Z" user="laura">Corrected Tib./Wyl. in glossary for Prajñāvarman</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="184">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-062-018-1"/>
+                <p tid="1">The Buddha is residing at Āmrapālī’s Grove in Vaiśālī, when Mañjuśrī brings before him the monk
+                    Stainless Light, who had been seduced by a prostitute and feels strong remorse for having violated his vows.
+                    After the monk confesses his wrongdoing, the Buddha explains the lack of inherent nature of all phenomena and
+                    the luminous nature of mind, and the monk Stainless Light gives rise to the mind of enlightenment. At
+                    Mañjuśrī’s request, the Buddha then explains how bodhisattvas purify obscurations by generating an altruistic
+                    mind and realizing the empty nature of all phenomena. He asks Mañjuśrī about his own attainment of patient
+                    forbearance in seeing all phenomena as non-arising and recounts the tale of the monk Vīradatta, who, many eons
+                    in the past, had engaged in a sexual affair with a girl and even killed a jealous rival before feeling strong
+                    remorse. Despite these negative actions, once the empty, non-existent nature of all phenomena had been
+                    explained to him by the bodhisattva Liberator from Fear, he was able to generate bodhicitta and attain patient
+                    forbearance in seeing all phenomena as non-arising. The Buddha explains that even a person who had enjoyed
+                    pleasures and murdered someone would be able to attain patient forbearance in seeing all phenomena as
+                    non-arising through practicing this sūtra, which he calls “the Dharma mirror of all phenomena.” </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="185">Acknowledgments</head>
+                <milestone unit="chunk" xml:id="UT22084-062-018-2"/>
+                <p tid="2">Translated by the Garchen Buddhist Institute Translation Group. The translation was prepared under the
+                    supervision of H.E. Garchen Rinpoche by Ina Bieler, who would like to acknowledge the support and help of Dr.
+                    Tom Tillemans with the introduction to this text and research on certain technical terms. </p>
+                <p tid="3">This translation has been completed under the patronage and supervision of 84000: Translating the Words
+                    of the Buddha.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="186">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-062-018-3"/>
+                    <p tid="4">The setting for this sūtra is Āmrapālī’s Grove in Vaiśālī, where Buddha Śākyamuni taught and
+                        performed miracles. The Lord Buddha visited Vaiśālī several times; first, in the fifth year after his
+                        enlightenment, he spent the rainy season there, and later, he laid down various rules of the Vinaya at
+                        Vaiśālī, as well as giving other important discourses. On his last visit he announced his approaching
+                        parinirvāṇa. In addition, one hundred years after the Buddha’s parinirvāṇa, it was the site of the second
+                        Buddhist Council.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-4"/>
+                    <p tid="5">This sūtra relates the story of a monk who has been seduced by a prostitute and is deeply
+                        remorseful for his actions. Mañjuśrī takes him to seek the counsel of the Buddha. What is interesting is
+                        the way in which the Buddha deals with monastic discipline and the ethical impairment of the monk’s vows,
+                        contrasting the view of emptiness, or the lack of intrinsic nature of phenomena, and morality. Here, the
+                        view of emptiness trumps the code of monastic discipline as explained in the Vinaya. From the point of
+                        view of the monk’s vows, sleeping with a woman is a disaster; however, this moral discourse takes the
+                        point of view of emptiness. This is an example of how the codes of monastic discipline are sometimes
+                        subordinated to the ultimate view of emptiness. Although the Vinaya is practiced in all vehicles,
+                        including the Vajrayāna, it is given different priorities. For example, in the Mahāyāna, if a monk holds
+                        the bodhisattva vows, certain exceptions can be made to his monastic vows, such as the one that prohibits
+                        touching a woman, when he is employing skillful means. Here in this text, however (although it is a
+                        Mahāyāna sūtra), the emphasis is not on any such skillful means, but on the metaphysical view of
+                        emptiness.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-5"/>
+                    <p tid="6">The Degé Kangyur version of this sūtra was compared to those in the Stok Palace Kangyur and Lhasa
+                        Kangyur; discrepancies and remarks are indicated in the endnotes. This text was translated solely on the
+                        basis of the Tibetan versions, as a Sanskrit original has not been found. When the names of individuals
+                        are generally known in Sanskrit, e.g. Mañjuśrī, they are presented here in Sanskrit. In the case of many
+                        other personal names, however, it is difficult to establish from the Tibetan translation an unquestionable
+                        rendering back into Sanskrit; these names are therefore translated into English instead.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-6"/>
+                    <p tid="7">The Sanskrit title of the work, as transcribed in the Degé and most other recensions of the
+                        Kangyur, is—shorn of its honorific elements—<foreign xml:lang="Sa-Ltn">Karmāvaraṇa­viśuddha­sūtra</foreign>, which could be translated as “purified of karmic obscurations.”
+                        However, the sūtra is mentioned in Śāntideva’s <title xml:lang="Sa-Ltn">Śikṣā­samuccaya</title> with the
+                        title <foreign xml:lang="Sa-Ltn">Karmāvaraṇa­viśuddhi­sūtra</foreign> (which is also the spelling given in
+                        the Narthang Kangyur), and we have followed most modern cataloguers of the Kangyur in taking this spelling
+                        as the probable original version, rendering it as <title xml:lang="en">Purification of Karmic
+                            Obscurations</title>.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-7"/>
+                    <p tid="8"> According to the colophon, the sūtra was originally translated from Sanskrit into Tibetan by the
+                        Indian paṇḍitas Jinamitra and Prajñāvarman, and by the principal editor-translator (<foreign xml:lang="Bo-Ltn">lo tsā ba</foreign>), the monk Yeshé Dé (<foreign xml:lang="Bo-Ltn">ye shes
+                            sde</foreign>), and others. Jinamitra was a Kaśmīri of around the late eighth to early ninth century
+                        who travelled to Samyé Monastery in Tibet during the reign of the Dharma king Trisong Detsen (<foreign xml:lang="Bo-Ltn">khri srong lde btsan</foreign>) to engage in translation; he and Yeshé Dé
+                        collaborated on the translation of many hundreds of works. The translation of this text is listed in the
+                        Denkarma (<foreign xml:lang="Bo-Ltn">ldan dkar ma</foreign>) catalogue, compiled in 824, and was thus most
+                        likely prepared in the early ninth century. </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="187">The Translation </head>
+                <head type="titleHon" tid="188">The Noble Mahāyāna Sūtra</head>
+                <head type="titleMain" tid="189">Purification of Karmic Obscurations </head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-062-018-8"/>
+                    <p tid="9">
+                        <ref cRef="F.284.a" type="folio"/>
+                        <!--<modularPassage type="homage">-->Homage to all the buddhas and bodhisattvas! <!--</modularPassage>-->
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-9"/>
+                    <p tid="10"><!--<modularPassage type="thusDid">-->Thus have I heard at one time. The Bhagavān was dwelling at
+                        Āmrapālī’s Grove in Vaiśālī, in the company of a great monastic assembly of about five hundred monks and
+                        thirty-two thousand great bodhisattva mahāsattvas, such as the bodhisattva mahāsattvas Destroyer of Pride,
+                        Sublime Knowledge Displayed with Luminosity, Like a Lotus Flower,<note place="end" index="1" xml:id="UT22084-062-018-181">Both D (F.284.a.5) and H (F.438.b.4) read <foreign xml:lang="Bo-Ltn">me
+                                tog dam pa lta bu</foreign>, but S (F.216.a.1) reads <foreign xml:lang="Bo-Ltn">me tog padma lta
+                                bu</foreign>. The translation follows the latter reading. </note> King of Light Diffusion,
+                        Embodiment Always Appearing Like an Honorable Image, All Doubts Diminished, He whose Intelligence is Like
+                        an Ocean of Arrayed Jewels, Abode of Myriad Flowers, King of Utterly Clear Melody, Lamp of the Light King,
+                        Golden Light of the Glorious Essence, Mighty One, Subjugator of All Places, King of Openly Proclaiming
+                        Melody, Embodiment of Enchanting Splendor, the great bodhisattva mahāsattva Youthful Mañjuśrī, and
+                        others.<!--</modularPassage>--> In all he was accompanied by thirty-two-thousand great bodhisattva
+                        mahāsattvas. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-10"/>
+                    <p tid="11">At that time, the monk called Stainless Light came to the great city of Vaiśālī to beg for alms.
+                            <ref cRef="F.284.b" type="folio"/> As he made his alms round, he arrived at a prostitute’s home, not knowing whose
+                        it was.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-11"/>
+                    <p tid="12">The moment the monk went into her home, lustful intentions were aroused in the prostitute, who
+                        thought, “I will not let this monk go without sleeping with him. If I fail, I will die.” Once the monk had
+                        come inside, she immediately shut the door and told him, “It would be wrong for you not to sleep with me.
+                        Unless you sleep with me, I will die.” </p>
+                    <p tid="13">The monk Stainless Light protested to the prostitute, “Auntie! I must train in the great precepts
+                        prescribed by the Buddha. I dare not engage in sexual activity. Please let me go! I would rather die than
+                        engage in sexual activity.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-12"/>
+                    <p tid="14">At this the prostitute thought, “If I use a certain secret mantra and drug to seduce<note place="end" index="2" xml:id="UT22084-062-018-182">D (F.284.b.4) reads <foreign xml:lang="Bo-Ltn">bdag
+                                gis gsang sngags dang / sman gang gis dge slong ’di ’dug nas</foreign> which would be translated
+                            as “by... this monk will stay.” While H (F.437.a.7) also uses <foreign xml:lang="Bo-Ltn">dug
+                                nas</foreign>, S (F.216.b.3) reads <foreign xml:lang="Bo-Ltn">’gug nas</foreign> which translates
+                            as “seduce” and thus seems more fitting in this case.</note> this monk, he will surely engage in
+                        blissful acts with me; I shall definitely use that secret mantra and drug on this monk.” But she said to
+                        him, “I, too, have no desire to destroy or impair the Buddha’s prescribed precepts. Most graciously accept
+                        my alms.”</p>
+                    <p tid="15">With these words she went inside, bewitched the food with magic spells and secret mantras, and
+                        poured it into the monk’s begging bowl. As soon as she had poured out his food, the monk suddenly gave
+                        rise to immoral thoughts. Fantasizing, he gave rise to enormous longing. When the prostitute noticed the
+                        change in the monk’s expression, she grabbed him with her right hand, led him to the bed, and they slept
+                        with each other. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-13"/>
+                    <p tid="16">After the monk had had his pleasure from dallying with the prostitute, he collected his alms, went
+                        to the main temple, and thought, “Oh, woe is me! I have just violated all that is contained in the
+                        Buddha’s great teaching of moral conduct! <ref cRef="F.285.a" type="folio"/> As I have violated my moral conduct, I am
+                        no longer worthy to partake of faithful people’s offerings. I shall fall into the great hell realms.”</p>
+                    <p tid="17">He approached his monastic companions and said, “I have neglected my moral conduct. As I am no
+                        longer an ordained devotee, I shall fall into the great hell realms.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-14"/>
+                    <p tid="18">His monastic companions asked, “Why did you neglect your moral conduct?” So he recounted to them
+                        exactly how it had happened. </p>
+                    <p tid="19"> “Venerable Stainless Light,” his monastic companions said, “the bodhisattva mahāsattva called
+                        Youthful Mañjuśrī is expert in expunging all wrong-doings. He is expert in dispelling all obscurations. He
+                        has attained patient forbearance in seeing all phenomena as non-arising.<note place="end" index="3" xml:id="UT22084-062-018-183">On <foreign xml:lang="Sa-Ltn">anutpattika­dharma­kṣānti</foreign>, see
+                            Lamotte (1981), chapter XXV “La patience à l’endroit du Dharma,” p. 902 <foreign xml:lang="fr">et
+                                seq</foreign>. See <foreign xml:lang="la">ibid</foreign>. p. 970, n. 2 (our translation): “...It
+                            is on the 8th level that the bodhisattva obtains the forbearance to accept and understand the
+                            non-arising of the elements, the certainty to become enlightened and the assurance that he will not
+                            fall back; he exchanges the body that he has had from birth, or the body of flesh, for the
+                            dharmakāya.” See also <foreign xml:lang="la">ibid</foreign>. p. 903 n. 1; and Edgerton (1953) p. 27
+                            s.v. <foreign type="term" xml:lang="Sa-Ltn">anutpattika­dharma­kṣānti</foreign>: “intellectual
+                            receptivity to the truth that states of existence have no origination.” </note> Even the Bhagavān
+                        speaks well of him, praising and extolling him. So, venerable one, please come. We shall go to meet
+                        Youthful Mañjuśrī. He will be able to dispel your distress.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-15"/>
+                    <p tid="20">Then, without eating his food, the monk Stainless Light, together with his monastic companions,
+                        left for the abode of Youthful Mañjuśrī. When they entered the presence of Youthful Mañjuśrī, they
+                        exchanged some joyful and delightful conversation, and then recounted to Youthful Mañjuśrī what had
+                        happened.</p>
+                    <p tid="21">After these explanations, Youthful Mañjuśrī told the monk Stainless Light, “Monk, eat some of this
+                        food. Once you have eaten, tell the Bhagavān about this and follow the Bhagavān’s instructions.”</p>
+                    <p tid="22">As soon as the monk Stainless Light had eaten, he and his monastic companions, together with
+                        Youthful Mañjuśrī, left for the abode of the Bhagavān. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-16"/>
+                    <p tid="23">Upon entering his presence, they touched their heads to the feet of the Bhagavān, and after
+                        circumambulating the Bhagavān three times, they sat down to one side of him. <ref cRef="F.285.b" type="folio"/> The
+                        monk Stainless Light was too ashamed to be able to speak to the Bhagavān, so Youthful Mañjuśrī rose from
+                        his seat, draped his outer robe over one shoulder, knelt on his right knee, joined his palms before the
+                        Bhagavān, and relayed to the Bhagavān everything that had happened. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-17"/>
+                    <p tid="24">When he had been told what had happened, the Bhagavān asked the monk Stainless Light, “Monk, is it
+                        true that you did thus?” </p>
+                    <p tid="25">Stainless Light replied, “Bhagavān, yes, it is true.” </p>
+                    <p tid="26">The Bhagavān asked, “Monk, did you have a prior intention to engage in lustful conduct?” </p>
+                    <p tid="27">Stainless Light replied, “Bhagavān, no, I did not.” </p>
+                    <p tid="28">The Bhagavān asked, “Monk, if lustful thoughts did not arise, how did you come to engage in
+                        lustful conduct?” </p>
+                    <p tid="29">Stainless Light replied, “Bhagavān, my lustful mind arose later on.” </p>
+                    <p tid="30">The Bhagavān asked, “Monk, did you engage in your passionate act with that mind?” </p>
+                    <p tid="31">Stainless Light replied, “Bhagavān, no, I did not.” </p>
+                    <p tid="32">The Bhagavān asked, “Monk, when their minds are afflicted, sentient beings become controlled by
+                        their afflictions; when their minds are purified, they become pure. Is this not the Dharma I taught?” </p>
+                    <p tid="33">Stainless Light replied, “Bhagavān, yes, it is.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-18"/>
+                    <p tid="34">The Bhagavān asked, “Monk, what do you think? In your sleep, when dreaming, did you ever engage in
+                        passionate acts?” </p>
+                    <p tid="35">Stainless Light replied, “Bhagavān, yes, I did.” </p>
+                    <p tid="36">The Bhagavān asked, “Monk, do you not know that it is your mind that engaged in passionate
+                        conduct?” </p>
+                    <p tid="37">Stainless Light replied, “Bhagavān, I do know that.”<note place="end" index="4" xml:id="UT22084-062-018-184">D (F.285.b.6) reads <foreign xml:lang="Bo-Ltn">khyod kyis mi shod
+                                dam</foreign>; this reading accords with H (F.441.a.6), and would translate as “Are you not now
+                            telling me that it is your mind that engaged in passionate conduct?” In response the monk negates it
+                            by saying, “No, it is not so.” However, S (F.218.b.2) reads <foreign xml:lang="Bo-Ltn">khyod kyis mi
+                                shes sam</foreign> which would be rendered as “Do you not know that it is your mind that engaged
+                            in passionate conduct?” and in response the monk affirms it by saying, “Yes I do.” The translation
+                            follows this reading, which makes more sense in the context. </note>
+                    </p>
+                    <p tid="38">The Bhagavān asked, “Monk, do you think that there is a difference such that your dreaming mind
+                        and your waking mind are separate and distinct?”<note place="end" index="5" xml:id="UT22084-062-018-185">D
+                            (F.285.b.7) reads <foreign xml:lang="Bo-Ltn">gnyid ma log pa’i sems ’di la bye brag dang tha dad du
+                                bya ba zhig yod par mthong ngam</foreign>, which accords with H (F.441.b.1) and would translate as
+                            “Do you think the activities engaged in by your dreaming mind and your waking mind are separate and
+                            distinct?” However, S (F.218.b.3) reads <foreign xml:lang="Bo-Ltn">gnyid ma log pa’i sems’di la bye
+                                brag dang tha dad du dbye ba zhig yod par mthong ngam</foreign>. The context and grammar seem to
+                            favor this latter reading. </note>
+                        <ref cRef="F.286.a" type="folio"/>
+                    </p>
+                    <p tid="39">Stainless Light replied, “Bhagavān, I do not see the slightest distinction between the dreaming
+                        mind and the waking mind.” </p>
+                    <p tid="40">The Bhagavān asked, “Monk, what do you think? Have I not taught that all phenomena are like
+                        dreams?” </p>
+                    <p tid="41">Stainless Light replied, “Bhagavān, yes, you have.” </p>
+                    <p tid="42">The Bhagavān asked, “Monk, what do you think? Are dreams true?” </p>
+                    <p tid="43">Stainless Light replied, “Bhagavān, no, they are not.” </p>
+                    <p tid="44">The Bhagavān asked, “Monk, what do you think? Are not the dreaming mind and the waking mind
+                        non-existent?” </p>
+                    <p tid="45">Stainless Light replied, “Bhagavān, they are indeed non-existent. Sugata, they are indeed
+                        non-existent.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-19"/>
+                    <p tid="46">The Bhagavān asked, “Monk, what do you think? Could something non-existent exist anywhere?” </p>
+                    <p tid="47">Stainless Light replied, “Bhagavān, no, it could not.” </p>
+                    <p tid="48">The Bhagavān asked, “Monk, what do you think? Could something non-existent arise?” Stainless Light
+                        replied, “Bhagavān, no, it could not.” </p>
+                    <p tid="49">The Bhagavān asked, “Monk, what do you think? Could something non-arising arise or cease? Could it
+                        become controlled by afflictions, or cleansed?” </p>
+                    <p tid="50">Stainless Light replied, “Bhagavān, no, it could not.” </p>
+                    <p tid="51">The Bhagavān asked, “Monk, what do you think? Could non-arising phenomena go to the hell realms,
+                        or to the birthplace of an animal, or to the realm of the Lord of Death?” </p>
+                    <p tid="52">Stainless Light replied, “Bhagavān, since things that are non-arising do not exist, it would be
+                        impossible for them to go to the lower realms.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-20"/>
+                    <p tid="53">The Bhagavān continued, “Monk, while all phenomena are luminous in this way, childish ordinary
+                        beings construct unreal phenomena, construct erroneous qualities, and have constructed all phenomena,
+                        which are in fact insignificant and worthless. And thus they will go to hell, animal states of birth, and
+                        to the realm of the Lord of Death. <ref cRef="F.286.b" type="folio"/> Monk, furthermore, all phenomena are untrue; they
+                        have the characteristic that once created they do not remain.<note place="end" index="6" xml:id="UT22084-062-018-186">
+                            <foreign xml:lang="Bo-Ltn">rnam par bsgrubs nas nye par gnas pa’i mtshan nyid do</foreign>. The
+                            meaning is unclear but it would fit the context to assume that a negative particle is missing.</note>
+                        Monk, all phenomena are compounded; childish ordinary beings have given rise to attachment, hatred, and
+                        delusion. Monk, all phenomena arise from distorted perceptions. Monk, all phenomena lack existence, their
+                        very essence is like a mirage. Monk, all phenomena lack a core, they are like space. Monk, as all
+                        phenomena are devoid of reality, they are not real entities. Monk, as all phenomena are deep like space,
+                        they are deep. Monk, as all phenomena are unperceived, they are wide open. Monk, as all phenomena are
+                        utterly void, they are non-abiding. Monk, as all phenomena have no worth for anything at all, they are
+                        unreliable. Monk, as all phenomena are without worth whatsover, they are baseless. Monk, as all phenomena
+                        are devoid of afflicted concepts, they are unfettered. Monk, as all phenomena are non-arising by nature,
+                        they are entirely free from pain. Monk, as all phenomena are void, they are unobscured. Monk, as all
+                        phenomena are free of hatred by nature,<note place="end" index="7" xml:id="UT22084-062-018-187">D
+                            (F.286.b.5) reads <foreign xml:lang="Bo-Ltn">chos thams cad ni rang bzhin gyis ldang ba med pa’i
+                                phyir</foreign>; this reading accords with H (F.442.b.6) and would translate as “as all phenomena
+                            are non-arising by nature.” However, S (F.220.a.7) reads <foreign xml:lang="Bo-Ltn">chos thams cad ni
+                                rang bzhin gyis sdang ba med pa’i phyir</foreign>, “as all phenomena are free of hatred by
+                            nature,” and once again this reading seems to fit the context better. </note> there is no hatred.
+                        Monk, as all phenomena are luminous by nature, there is no delusion. Monk, as all phenomena are like
+                        hallucinations, there is no karmic maturation. Monk, as all phenomena appear mistakenly, they are like
+                        illusions. Monk, as all phenomena are constructed falsely, they are non-abiding.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-21"/>
+                    <p tid="54">“Monk, as childish ordinary beings project existence on to non-existent phenomena, they act
+                        completely blindly. Monk, as all phenomena are mutually contradictory conditions, they are non-arising.
+                        Monk, as all phenomena are without path, they are unattached. Monk, as all phenomena are not truly
+                        afflicted, they are free from afflictions. <ref cRef="F.287.a" type="folio"/> Monk, as all phenomena are as immaculate
+                        as space, they are stainless. Monk, as phenomena are nothing but void, they are nothing whatsoever. Monk,
+                        as all phenomena are inherently non-arising, they are tamed. Monk, as all phenomena are devoid of an
+                        earlier limit, a later limit, and a middle, they are untrue. Monk, as no phenomenon is the cause of
+                        another, phenomena are liberated. Monk, as all phenomena are like grass, wood, walls, and clods of dirt,
+                        they are material substance. Monk, as all phenomena are like space, they are essenceless. Monk, as no
+                        phenomenon is anything to be attached to, phenomena are equal. Monk, as all phenomena are like a body of
+                            space<note place="end" index="8" xml:id="UT22084-062-018-188">
+                            <foreign xml:lang="Bo-Ltn">nam mkha’i lus</foreign>, i.e., “insubstantial.”</note> and an empty hand,
+                        they cannot be grasped. Monk, as all phenomena have been the objects of thorough searches by those endowed
+                        with exalted wisdom, they are unobtained. Monk, as all phenomena are free of the three times, they are
+                        timeless. Monk, as all phenomena are nothing to be benightedly attached to, they are not to be engaged
+                        with. Monk, as all phenomena are devoid of obscurations, they are free of pain. Monk, as all phenomena are
+                        like nirvāṇa, they are blissful. Monk, as all phenomena are without fearsomeness, they are not to be
+                        feared. Monk, as all phenomena are unobserved on this side, there is no other side. Monk, as all phenomena
+                        are incalculable, they are beyond measure. Monk, as the signs of all phenomena are insignificant, they are
+                        signless. Monk, as all phenomena lack wishes, they are wishless. Monk, as all phenomena have the nature of
+                        false formations, they are without actual formation. <ref cRef="F.287.b" type="folio"/> Monk, as all phenomena are
+                        undisturbed by discursive thought, they are unelaborated. Monk, as all phenomena are free of abiding, they
+                        are non-abiding. Monk, as all phenomena are always clear, they are unsullied. Monk, as the arising of all
+                        phenomena is unperceived, as their arising is insignificant, as their arising is worthless, as their
+                        arising is empty, and as their arising is peaceful, they are final nirvāṇa. Monk, for these reasons, these
+                        phenomena are exactly as I have taught. Monk, dwelling within the essence of enlightenment, I have not
+                        perceived even the slightest phenomenon that arises, that perishes, that is afflicted, cleansed, obscured,
+                        fettered, regretful, or miserable. Why is that so? Monk, as all phenomena are at all times unafflicted,
+                        they are perfectly pure by nature.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-22"/>
+                    <p tid="55">When the monk Stainless Light heard this of the nature of phenomena, he felt satisfied, and
+                        rejoiced. He was very happy, and felt joy and relief. Delighted to have no obscurations, he joined his
+                        palms before the Bhagavān, bowed, and spoke these verses to the Bhagavān: </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-23"/>
+                    <lg tid="56">
+                        <l>“Ah! Ah! Buddha powerful,</l>
+                        <l>Refuge of the world including gods,</l>
+                        <l>Even though you needed no training,</l>
+                        <l>Your good qualities rise above all.</l>
+                        <l>Homage to you, who sets free all pain!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-24"/>
+                    <lg tid="57">
+                        <l>“You grant refuge to the protectorless,</l>
+                        <l>And give counsel to those without guide.</l>
+                        <l>You dwell in the peaceful path of bliss.</l>
+                        <l>Homage to you, Buddha powerful!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-25"/>
+                    <lg tid="58">
+                        <l>“You are the lamp for the blind of this world;</l>
+                        <l>Granting sight to those who could not see,</l>
+                        <l>You free those beings who had no freedom.</l>
+                        <l>Homage to you, hero powerful!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-26"/>
+                    <lg tid="59">
+                        <l>“You are free from clinging and dislike,<ref cRef="F.288.a" type="folio"/>
+                        </l>
+                        <l>And teach lustful ones suffering;</l>
+                        <l>You have seen the lie of saṃsāra’s circle.</l>
+                        <l>Homage to you, wisdom’s might supreme!</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-27"/>
+                    <lg tid="60">
+                        <l>“Never attached because of discursive thoughts,</l>
+                        <l>Freeing with inconceivable wisdom</l>
+                        <l>Supreme in the three worlds, you are unstained and free of passions.</l>
+                        <l>Homage to you, who are unstained and clean! </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-28"/>
+                    <lg tid="61">
+                        <l>“I, too, shall enter awakening,</l>
+                        <l>Shall end helpless beings’ misery.</l>
+                        <l>Having attained such wisdom</l>
+                        <l>I shall not be tainted by the lesser paths.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-29"/>
+                    <lg tid="62">
+                        <l>“I shall suffer for inconceivable myriads of eons,</l>
+                        <l>But shall not forsake the bodhi mind.</l>
+                        <l>Like the moon within a field of stars</l>
+                        <l>Is how you appear, world’s guardian.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-30"/>
+                    <lg tid="63">
+                        <l>“Some with inferior minds,</l>
+                        <l>Though they travel on the vast extensive sea,</l>
+                        <l>Fail to collect many gems,</l>
+                        <l>But only bring back worthless trinkets.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-31"/>
+                    <lg tid="64">
+                        <l>“Likewise, some, although they hear of the buddhas’ manifestations</l>
+                        <l>And his strengths, awakened intent does not arise in them.</l>
+                        <l>They turn away from awakening, and strive on the hearers’ path.</l>
+                        <l>They will not pierce wisdom’s vast expanse—</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-32"/>
+                    <lg tid="65">
+                        <l>“Just as someone with childish character,</l>
+                        <l>Although he sees the king surrounded by his court,</l>
+                        <l>Finds inspiration only in the ministers’ skill</l>
+                        <l>And will not fully pierce the knowledge of the king.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-33"/>
+                    <lg tid="66">
+                        <l>“Likewise, there are those who, </l>
+                        <l>Although they hear of great buddha attributes,</l>
+                        <l>And of his wisdom’s magical display,</l>
+                        <l>Decide upon the lower mind.</l>
+                        <l>They are lazy and their minds are weak.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-34"/>
+                    <lg tid="67">
+                        <l>“The non-attachment to the world of those of the inferior vehicle</l>
+                        <l>Gives as much light as fireflies in the night.</l>
+                        <l>But those who work with the sun in all its splendor,</l>
+                        <l>Will, when they obtain that illumination, be divest of darkness.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-35"/>
+                    <lg tid="68">
+                        <l>“The Buddha’s voice reaches the highest realms.</l>
+                        <l>The Buddha’s voice reaches the noble-born.</l>
+                        <l>The Buddha, supreme lamp for this world,</l>
+                        <l>Illuminates all the world and the realms of the gods.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-36"/>
+                    <lg tid="69">
+                        <l>“Just as, when a lion is seen amongst foxes,</l>
+                        <l>Some may take interest in fox talk <ref cRef="F.288.b" type="folio"/>
+                        </l>
+                        <l>And, ignoring the lion’s display,</l>
+                        <l>Find delight in fox affairs,</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-37"/>
+                    <lg tid="70">
+                        <l>“So, too, when those who, among the hearers</l>
+                        <l>See the Supreme Lion of Man’s display,</l>
+                        <l>But take delight in the lower vehicle,</l>
+                        <l>Their powers will be one-sided indeed.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-38"/>
+                    <lg tid="71">
+                        <l>“May people who seek wisdom always expound</l>
+                        <l>On suffering, to help the worldly ones;<note place="end" index="9" xml:id="UT22084-062-018-189">D
+                                (F.288.b.2) reads <foreign xml:lang="Bo-Ltn">’jig rten kun tu sdug bsngal mang ’grel ba</foreign>,
+                                which accords with H (F.445.b.1) and would translate as “explaining suffering at length in all the
+                                worlds.” However, S (F.222.a.6) reads <foreign xml:lang="Bo-Ltn">’jig rten don du sdug bsngal mang
+                                    ’grel ba</foreign>, “explaining suffering for the sake of worldly ones;” the translation
+                                follows the latter reading. </note>
+                        </l>
+                        <l>May they seek the wisdom, true and sublime</l>
+                        <l>Which is not the ground of common hearers.” </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-39"/>
+                    <p tid="72">Hearing these verses of faith spoken by the monk Stainless Light, forty-two thousand sons of gods
+                        gave rise to the mind set on unsurpassed, perfectly complete enlightenment. Tossing mandārava blossoms
+                        toward the Bhagavān, Youthful Mañjuśrī, and the monk Stainless Light, they proclaimed, “Monk, very good,
+                        very good. To thus pursue the enlightenment of a buddha is to reciprocate the Tathāgata’s kindness.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-40"/>
+                    <p tid="73">At that moment the Bhagavān smiled. An attribute of bhagavān buddhas is that whenever they smile,
+                        light radiates from their mouths in myriad colors such as blue, yellow, red, white, vermillion,
+                        crystalline, and silver. Diverse colors emerged, permeated infinite limitless world systems with light,
+                        and extended up to the brahmā worlds. Outshining even the light of the sun and moon, the light then
+                        returned, circled around the Bhagavān three times, and vanished into the crown of the Bhagavān’s head. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-41"/>
+                    <p tid="74">Then the venerable Ānanda rose from his seat. Draping his Dharma robe over one shoulder, he placed
+                        his right knee on the ground, faced the Bhagavān, joined his palms, and asked him, <ref cRef="F.289.a" type="folio"/>
+                        “As the bhagavats, tathāgatas, arhats, perfectly enlightened buddhas do not smile without causes and
+                        conditions, what is the cause of your smile, and what are the conditions for it?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-42"/>
+                    <p tid="75">The Bhagavān replied, “Ānanda, the monk Stainless Light has given rise to the mind set on
+                        enlightenment with noble intent. I therefore predict that the monk Stainless Light shall attain
+                        unsurpassed perfectly complete enlightenment. Ānanda, in the future, after ten eons have passed, the monk
+                        Stainless Light will make offerings to two hundred and twenty million buddhas and attain patient
+                        forbearance in seeing all phenomena as non-arising, in the presence of the tathāgata, arhat, perfectly
+                        complete Buddha Maitreya. He will also make offerings to all the bhagavān buddhas of the Fortunate Eon.
+                        Thereafter, having fully matured, he will become the Tathāgata He Who Proclaims the Lion’s Roar of Conduct
+                        That is Renowned to be the Lotus of Good Qualities. Ānanda, the buddhafield of that tathāgata, arhat,
+                        perfectly complete Buddha He Who Proclaims the Lion’s Roar of Conduct That is Renowned to be the Lotus of
+                        Good Qualities, will be made with seven precious attributes. There will be no hearers or solitary
+                        realizers, only bodhisattvas will gather there. Furthermore, in this buddhafield he will teach them the
+                        Dharma called ‘The Wheel of No Return.’ Also, those bodhisattvas will swiftly awaken truly and completely
+                        into unsurpassed, perfectly complete enlightenment. Thus their buddhafield will become utterly
+                            purified<note place="end" index="10" xml:id="UT22084-062-018-190">D (F.289.a.6) reads <foreign xml:lang="Bo-Ltn">yongs su sbyang bar ’gyur ro</foreign>, as does S (F.223.b.1). H (F.446.b.5)
+                            reads <foreign xml:lang="Bo-Ltn">yongs su spyad par ’gyur ro</foreign>, which would translate as
+                            “entirely consumed,” or “completely enjoy” or other equivalents. The translation follows D. </note> by
+                        the excellence of exalted wisdom, and this world system will then be called ‘Endowed with Infinite
+                            Discourses.’ ”<note place="end" index="11" xml:id="UT22084-062-018-191">D (F.289.a.6) reads <foreign xml:lang="Bo-Ltn">rnam grags mtha’ yas ldan zhes bya bar</foreign>, which is an unusual
+                            combination and would translate as “Endowed with Infinite Full Renown.” Both S (F.223.b.1) and H
+                            (F.446.b.7) instead read <foreign xml:lang="Bo-Ltn">rnam grangs mtha’ yas ldan zhes bya bar</foreign>,
+                            “Endowed with Infinite Discourses,” which seems more fitting. </note>
+                    </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-43"/>
+                    <p tid="76">The Bhagavān then said to the venerable Ānanda, “Ānanda, it is like this. In the same way that all
+                        darkness disappears when the sun rises, Ānanda, so, likewise, whoever hears this Dharma discourse will
+                        attain full illumination, and will also attain non-obscuration with regard to all phenomena.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-44"/>
+                    <p tid="77">At this, the venerable Ānanda asked the Bhagavān, <ref cRef="F.289.b" type="folio"/> “Bhagavān, how does one
+                        become obscured, and how non-obscured?” </p>
+                    <p tid="78">But the Bhagavān told him, “Never mind, Ānanda! What use is it for you to ask questions on that
+                        point? Ānanda, if the tathāgata explained everything about obscuration and non-obscuration, the world and
+                        its gods would become confused.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-45"/>
+                    <p tid="79">Youthful Mañjuśrī, however, made this plea to the Bhagavān: “Bhagavān, by hearing about
+                        obscuration and non-obscuration, the bodhisattvas of the final five hundred years will no longer give rise
+                        to desire for worldly affairs. Therefore, please do explain them!” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-46"/>
+                    <p tid="80">The Bhagavān said, “Mañjuśrī, as for ‘obscuration,’ attachment is an obscuration, hatred is an
+                        obscuration, ignorance is an obscuration, generosity is an obscuration, moral conduct is an obscuration,
+                        patience is an obscuration, diligence is an obscuration, meditation is an obscuration, transcendent
+                        awareness is an obscuration, perceiving the Buddha is an obscuration, perceiving the Dharma is an
+                        obscuration, perceiving the Saṅgha is an obscuration, perceiving emptiness is an obscuration, perceiving
+                        signlessness is an obscuration, perceiving wishlessness is an obscuration, perceiving the actual absence
+                        of formations is an obscuration, perceiving non-arising is an obscuration, and perceiving enlightenment is
+                        an obscuration. Mañjuśrī, in brief, whether they are viewed as totally afflicted or fully cleansed, you
+                        should regard them all as obscurations.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-47"/>
+                    <p tid="81">Mañjuśrī asked, “Bhagavān, how is generosity an obscuration? How are moral conduct, patience,
+                        diligence, meditation, and transcendent awareness obscurations?” </p>
+                    <p tid="82">The Bhagavān replied, “Mañjuśrī, in all phenomena there is indeed no obscuration. Nevertheless,
+                        conditioned by their thoughts, childish ordinary beings engage in obscured activity with regard to
+                        generosity, and they engage in obscured activity with regard to moral conduct, patience, diligence,
+                        meditation, and transcendent awareness. How is this so? <ref cRef="F.290.a" type="folio"/>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-48"/>
+                    <p tid="83">“Mañjuśrī, when childish ordinary beings practice generosity, they do it with disrespect toward
+                        miserly sentient beings. Due to their disrespect, those who practice giving get angry and give rise to the
+                        fault of resentfulness. The faults of anger and resentfulness plunge them into the hell realms. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-49"/>
+                    <p tid="84">“When childish ordinary beings observe moral conduct they speak ill of those neglecting moral
+                        conduct, disparaging and treating them contemptuously. When these disparaging remarks are repeated to
+                        others it causes disrespect in many ordinary beings, who will go to the lower realms due to their
+                        disrespect. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-50"/>
+                    <p tid="85">“When they practice patience, they declare, ‘We have patience, while those others bear harmful
+                        thoughts.’ Intoxicated with the arrogance of patience, they create all the suffering that results from
+                        fundamental heedlessness. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-51"/>
+                    <p tid="86">“When they exert themselves in diligence, they extol themselves and think, ‘Those other monks are
+                        lazy and lack diligence, yet they enjoy the offerings of the faithful. They are not worthy of even
+                        enjoying water from a water container.’ As they exert themselves in diligence, they praise themselves and
+                        disparage others. I say that they are childish beings. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-52"/>
+                    <p tid="87">“When they spend their time in the equilibrium of meditation, they give rise to attachment to the
+                        joyful bliss of meditation and think, ‘We spend our time in equipoise. Those other monks spend their time
+                        in mental distraction. They spend their time enjoying frivolous entertainments. As they enjoy frivolous
+                        entertainments, how will they ever become buddhas? They are far from the enlightenment of a buddha.’ Those
+                        who take attitudes like these, as long as they think such contemptuous thoughts, will cling tightly to
+                        saṃsāra for eons. Later, if they engage in enlightenment, even if they have great learning, they will
+                        imagine that, amongst all letterless phenomena,<note place="end" index="12" xml:id="UT22084-062-018-192">
+                            <foreign xml:lang="Bo-Ltn">yi ge med pa</foreign>, “letterless,” refers to the emptiness of all
+                            phenomena and their transcendence of all conventions; phenomena are nameless, inexpressible, and
+                            ineffable. </note> the mind is existent. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-53"/>
+                    <p tid="88">“When they observe transcendent awareness they disdain others. I say that they have no knowledge,
+                        I say that they talk even though they do not know, <ref cRef="F.290.b" type="folio"/> I say that they are not sublime
+                        beings, I say that as they conceptualize, they are corrupted. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-54"/>
+                    <p tid="89">“If they enter the Mahāyāna, again they will think, ‘We are foremost in this world, we are the
+                        best in this world, we are supreme in this world.’ When they see followers of the Hearers’ Vehicle they
+                        give rise to disrespect, disparage them, denigrate them, and speak ill of them. Due to these evil thoughts
+                        and condemnations they will be reborn in the lower realms.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-55"/>
+                    <p tid="90">Youthful Mañjuśrī asked the Bhagavān, “Bhagavān, are the bodhisattvas not praised because of the
+                        Buddha’s teachings?” </p>
+                    <p tid="91">The Bhagavān replied, “Mañjuśrī, what do you think? Do the bodhisattvas not regard all sentient
+                        beings affectionately, do they not naturally give rise to altruism?” </p>
+                    <p tid="92">Mañjuśrī answered, “Bhagavān, yes, they do.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-56"/>
+                    <p tid="93">The Bhagavān continued, “Mañjuśrī, what do you think? Would bodhisattvas forsake even a few
+                        sentient beings, whether of the Hearer’s Vehicle, the Solitary Realizers’ Vehicle, or the Mahāyāna?” </p>
+                    <p tid="94"> Mañjuśrī answered, “Bhagavān, they would not. As bodhisattvas regard all sentient beings equally,
+                        bodhisattvas would not dismiss even a few sentient beings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-57"/>
+                    <p tid="95">The Bhagavān continued, “Mañjuśrī, it is like this. Just as a physician does not forsake even a
+                        few sentient beings, whether they are a king, a merchant, a householder, or a mendicant, but attends to
+                        all with equanimity and thinks of what he can do to free these sentient beings from their illnesses,
+                        Mañjuśrī, likewise, the bodhisattva mahāsattvas suffuse all sentient beings with compassion and attend to
+                        them with equanimity. <ref cRef="F.291.a" type="folio"/> They think, ‘How can I cause all these sentient beings to find
+                        definite release through the Buddha’s teachings?’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-58"/>
+                    <p tid="96">“Mañjuśrī, it is like this: just as when the lineage of medical cure remains unbroken, the
+                        physician is pleased and rejoices, likewise, Mañjuśrī, the bodhisattva mahāsattvas are pleased and rejoice
+                        when the lineage of the Buddha remains unbroken. Mañjuśrī, not all sentient beings are like physicians.
+                        Mañjuśrī, a physician who has the ability to heal is rare. Likewise, Mañjuśrī, not all sentient beings are
+                        like the Buddha; bodhicitta is rare. Not all sentient beings can bear to put on such armor for the purpose
+                        of enlightenment. Just as lazy people might think, ‘I shall be a physician,’ and yet do not seriously
+                        observe the practices of physicians, so, likewise, not all beings are able to give rise to the mind set on
+                        enlightenment. Laziness makes them fall ill. Mañjuśrī, naturally occurring bodhicitta is rare.
+                        Self-arising exalted wisdom is rare. A vast mind is rare. To seriously observe the teachings of the Buddha
+                        is rare.”</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-59"/>
+                    <p tid="97">Youthful Mañjuśrī asked the Bhagavān, “Bhagavān, how can bodhisattvas become unobscured and
+                        purified with respect to all phenomena?” </p>
+                    <p tid="98">At this question the Bhagavān replied to Youthful Mañjuśrī, “Mañjuśrī, bodhisattvas who see all
+                        phenomena as objects of desire will attain purification from karmic obscurations. Those who see all
+                        phenomena as objects of hatred will attain purification from karmic obscurations. Those who see all
+                        phenomena as objects of delusion will attain purification from karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-60"/>
+                    <p tid="99">“Furthermore, Mañjuśrī, bodhisattvas who openly delight in the pleasures of the five senses
+                        without renouncing or abandoning them, <ref cRef="F.291.b" type="folio"/> and those who see the Buddha’s teachings as
+                        essentially desire will attain purification of karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-61"/>
+                    <p tid="100">“Furthermore, Mañjuśrī, bodhisattvas who pursue enlightenment through the five obscurations, who
+                        do not pursue and attain enlightenment, and who do not have obscurations either, will attain purification
+                        of all karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-62"/>
+                    <p tid="101"> “Furthermore, Mañjuśrī, bodhisattvas who have purified the nine grounds of hostility will attain
+                        loving kindness. Those who genuinely discern the development of the ground of their hostility to a
+                        particular person, yet do not apprehend a self, or others, or even loving kindness, being free of
+                        apprehending all phenomena in this way have supreme loving kindness. Thus, bodhisattvas endowed with
+                        patience will attain freedom from obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-63"/>
+                    <p tid="102">“Furthermore, Mañjuśrī, a bodhisattva who sees downfalls as non-downfalls, who sees discipline as
+                        non-discipline, who sees affliction as purity, and who sees saṃsāric realms as the sphere of nirvāṇa, will
+                        attain purification of karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-64"/>
+                    <p tid="103">“Furthermore, Mañjuśrī, a bodhisattva who sees the realm of desire as the sphere of nirvāṇa, who
+                        sees the realm of hatred as the sphere of nirvāṇa, and who sees the realm of delusion as the sphere of
+                        nirvāṇa, will attain purification from karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-65"/>
+                    <p tid="104">“Furthermore, Mañjuśrī, a bodhisattva mahāsattva who truly sees all phenomena as the teachings of
+                        the Buddha will attain purification of karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-66"/>
+                    <p tid="105">“Furthermore, Mañjuśrī, a bodhisattva who sees all phenomena as arising from the ground of space
+                        will attain purification of karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-67"/>
+                    <p tid="106">“Furthermore, Mañjuśrī, a bodhisattva who does not distinguish between the phenomena of avarice
+                        and the phenomena of generosity, <ref cRef="F.292.a" type="folio"/> who does not distinguish between the phenomena of
+                        immoral conduct and the phenomena of moral conduct, who does not distinguish between the phenomena of
+                        malice and the phenomena of patience, who does not distinguish between the phenomena of laziness and the
+                        phenomena of diligence, who does not distinguish between the phenomena of distraction and the phenomena of
+                        meditation, and who does not distinguish between the phenomena of misconstrued wisdom and the phenomena of
+                        wisdom will attain purification from karmic obscurations. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-68"/>
+                    <p tid="107">“Furthermore, Mañjuśrī, a bodhisattva who is convinced that all afflictions are the Buddhadharma
+                        will attain purification of karmic obscurations.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-69"/>
+                    <p tid="108">Youthful Mañjuśrī asked the Bhagavān, “Bhagavān, how do the bodhisattvas integrate the teachings
+                        of the Buddha into all afflictions?” </p>
+                    <p tid="109">The Bhagavān answered, “Mañjuśrī, what do you think? Does a phenomenon engage in afflicted acts
+                        with respect to another phenomenon?” </p>
+                    <p tid="110">Mañjuśrī replied, “Bhagavān, no, it does not.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-70"/>
+                    <p tid="111">The Bhagavān asked, “Mañjuśrī, what do you think? Does a phenomenon engage in pure acts with
+                        respect to another phenomenon?” </p>
+                    <p tid="112">Mañjuśrī replied, “Bhagavān, no, it does not.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-71"/>
+                    <p tid="113">The Bhagavān spoke, “Mañjuśrī, what do you think? How did you attain patient forbearance in
+                        seeing all phenomena as non-arising?” </p>
+                    <p tid="114">Mañjuśrī replied, “Bhagavān, it is with respect to all afflictions that I have attained patient
+                        forbearance in seeing all phenomena as non-arising. Why? Bhagavān, since all afflictions arise from the
+                        ground of space, I neither seek, nor abandon, nor meditate on, nor manifest, any phenomenon. Bhagavān,
+                        childish ordinary beings are neither separate from the teachings of the Buddha, <ref cRef="F.292.b" type="folio"/> nor
+                        have they realized them; and so, Bhagavān, in order to abandon afflictions, I have abandoned these
+                        apprehensions of the Buddha’s teachings.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-72"/>
+                    <p tid="115">Then the Bhagavān praised Youthful Mañjuśrī, “Very well done. Mañjuśrī, very well done.”</p>
+                    <lb/>
+                    <p tid="116">“Mañjuśrī, a long time in the past, incalculable, immeasurable, measureless, inconceivable,
+                        unfathomable eons ago, in a world system called Most Fragrant, the tathāgata, arhat, perfectly complete
+                        buddha, endowed with perfect knowledge and virtue, sugata, knower of the world, unsurpassed guide who
+                        tames beings, teacher of gods and men, the buddha Bhagavān <term>Stainless Light, the Essence of the
+                            Sun</term>, appeared in the world. Mañjuśrī, this tathāgata, arhat, perfectly complete buddha
+                            <term>Stainless Light, the Essence of the Sun</term>, was able to live for nine thousand eons. The
+                        sentient beings of that world system took an interest in the lesser paths. Interest in the great paths
+                        decreased. After this tathāgata passed into parinirvāṇa, his sacred Dharma endured for a thousand years.
+                        His bodily relics proliferated in the same way that my bodily relics will proliferate.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-73"/>
+                    <p tid="117">“Mañjuśrī, at that time there appeared a monk called Vīradatta. He practiced all that is
+                        contained in the Buddha’s teaching of moral conduct. He was modest, inclined to the higher trainings, and
+                        learned. That monk was handsome and lovely to behold. He was of fine color and complexion. One morning he
+                        put on his lower garment, took his begging bowl and robes, and went to the great city of Vijaya in order
+                        to beg for alms. As he walked around the city begging for alms, he came to a merchant’s home. In that
+                        merchant’s home <ref cRef="F.293.a" type="folio"/> was the merchant’s daughter. Her body was shapely; she was
+                        beautiful, lovely to behold, and she had not yet been bestowed upon a husband.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-74"/>
+                    <p tid="118">“When the merchant’s daughter saw the monk Vīradatta, lustful intentions were aroused in her and
+                        she thought, ‘If I do not gain the monk Vīradatta as my husband, I will die.’ Being unable to talk about
+                        this to anyone and deeply distressed by her desire, she became ill. After the monk Vīradatta had made his
+                        rounds begging for alms, he went to the main temple. The girl’s father had died, too.</p>
+                    <p tid="119">“The girl’s mother asked her, ‘Why have you fallen so ill?’ But the girl did not respond and
+                        continued to fast.</p>
+                    <p tid="120">“Then the girl’s friends of the same age who had experienced the same joys and pains asked her,
+                        ‘Why have you fallen so ill?’</p>
+                    <p tid="121">“The girl replied, ‘When I saw a certain monk, I gave rise to longing desire. If I have sex with
+                        this monk, I will be cured from my illness, but if I do not have sex with him, I will die.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-75"/>
+                    <p tid="122">“The other girls told her mother what she had said, whereupon her mother thought, ‘If she does
+                        not have sex with the monk Vīradatta there is nothing that can be done to keep this girl from dying.’ And
+                        then she thought, ‘I must have my daughter receive instruction from the monk Vīradatta. Then the monk
+                        Vīradatta will come to our home regularly.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-76"/>
+                    <p tid="123">“Subsequently the monk Vīradatta returned to the city of Vijaya in order to beg for alms, and
+                        again he went to the merchant’s home in order to beg for alms. He went inside, and when he saw that the
+                        merchant’s daughter had become so weak he asked, ‘Why has this girl become so weak and ill?’</p>
+                    <p tid="124">“The girl’s mother replied, ‘The girl wanted to listen to the Dharma but I prevented her. This is
+                        why she fell ill.’</p>
+                    <p tid="125">“The monk Vīradatta therefore said to the girl’s mother, <ref cRef="F.293.b" type="folio"/> ‘Do not prevent
+                        this girl from listening to the Dharma.’</p>
+                    <p tid="126">“The mother said, ‘If you, master, will impart instruction to her, I shall not prevent this girl
+                        from listening to the Dharma.’ </p>
+                    <p tid="127">“The monk Vīradatta said, ‘I shall impart instruction to this girl.’ </p>
+                    <p tid="128">“The girl’s mother said, ‘Master, please come to our home regularly.’ </p>
+                    <p tid="129">“ ‘I shall come,’ Vīradatta replied. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-77"/>
+                    <p tid="130">“When she heard the monk’s words, the girl’s improper thoughts became less overpowering than they
+                        had been, and she thought, ‘Now I shall by all means make him act according to my desire; I shall seduce
+                        him.’ She said to the monk, ‘Master, please do me the favor of coming to our home.’</p>
+                    <p tid="131">“The monk Vīradatta wordlessly indicated his agreement, took his alms, and went to the main
+                        temple.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-78"/>
+                    <p tid="132">“Then the girl’s mother told her, ‘Daughter, from now on adorn yourself with jewels, anoint your
+                        body with sandalwood, dress yourself in colorful robes. You must make an effort to be sure that he falls
+                        under your power!’ Accordingly, the girl applied herself with effort.</p>
+                    <p tid="133">“Thereafter, the monk Vīradatta visited her home repeatedly and they became friends. From seeing
+                        her all the time, he gave rise to lustful intentions toward the girl. Preoccupied by desire and being in
+                        her company, he became fettered by desire. He came together with the girl, and had full sexual intercourse
+                        with her. Becoming intimate with her,<note place="end" index="13" xml:id="UT22084-062-018-193">D
+                            (F.293.b.6) reads <foreign xml:lang="Bo-Ltn">de ’dres shing mngon par dga’ nas</foreign>, which
+                            translates as “joining and truly adoring;” this accords with H (F.454.a.4). However, S (F.230.a.5)
+                            reads <foreign xml:lang="Bo-Ltn">der ’dris shing mgnon par dga’ nas</foreign>, which translates as
+                            “becoming intimate and truly adoring,” which seems more fitting. </note> and adoring her, he had
+                        intercourse with her again and again. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-79"/>
+                    <p tid="134">“The suitor who had previously asked for her hand heard that Vīradatta had been sleeping with the
+                        girl; thinking about how the monk Vīradatta had been with the girl again and again, he decided to seize
+                        him and kill him. </p>
+                    <p tid="135"> “When the monk Vīradatta heard that the girl’s suitor intended to kill him he thought, <ref cRef="F.294.a" type="folio"/> ‘I must send some poison with the girl to bring death to that merchant’s son.’ So the
+                        monk Vīradatta passed some poison to the girl and said to her, ‘If you love me, kill your suitor with this
+                        poison.’ </p>
+                    <p tid="136">“The girl took the poison from the monk, mixed it with food, and sent it with the maid, telling
+                        her, ‘Go and offer this to my suitor.’ The maid offered the food mixed with poison to the girl’s suitor;
+                        the merchant’s son ate the food mixed with poison, and he died.</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-80"/>
+                    <p tid="137">“As soon as the monk Vīradatta learned that the merchant’s son had died, he felt deep distress,
+                        thinking, ‘I have committed a horrific deed. I have committed an inexpiable deed. I have indulged in
+                        pleasure, and moreover I have caused a man to die. What kind of creature am I? What will I become in a
+                        future life? I will fall into the hell realms.’ He felt great physical pain, and he thought, ‘It is
+                        certain that when I die I will go to the hell realms.’ Reflecting thus, he wondered, ‘Is there anyone who
+                        can liberate me from this misery?’ He wandered from temple to temple, and would collapse to the ground
+                        like a felled tree, weeping, ‘Oh no! Oh no! I have become a sentient being of the hell realms.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-81"/>
+                    <p tid="138">“At that time, there was a temple called Snow Temple. The monk went to that temple and when he
+                        reached the entrance, he fell to the ground and wept, ‘Oh no! Oh no! I have become a sentient being of the
+                        hell realms.’ </p>
+                    <p tid="139"> “The bodhisattva mahāsattva Liberator from Fear came into the temple, and when he saw the monk
+                        crumpled on the ground, he asked him, ‘Monk, why have you fallen to the ground?’</p>
+                    <p tid="140">“The monk replied, ‘I have become a sentient being of the hell realms. I have committed a
+                        horrific deed. <ref cRef="F.294.b" type="folio"/> I have engaged in sexual intercourse, and also killed a person.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-82"/>
+                    <p tid="141">“But the bodhisattva Liberator from Fear said to the monk Vīradatta, ‘Monk, do not be afraid. I
+                        shall bring an end to your fear.’ </p>
+                    <p tid="142">“When the monk Vīradatta heard these words of reassurance he was overjoyed and happy. The
+                        bodhisattva Liberator from Fear helped the monk Vīradatta up from the ground, took him by his right hand,
+                        and they went into a thick forest, where they remained.</p>
+                    <p tid="143">“The bodhisattva mahāsattva Liberator from Fear then hovered in space at the height of a palm
+                        tree, and asked the monk, ‘Monk, do you trust me?’ </p>
+                    <p tid="144">“The monk joined his palms and said these words, ‘I have met the Bhagavān. I have met the Sugata.’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-83"/>
+                    <p tid="145">“At that moment, the bodhisattva mahāsattva Liberator from Fear entered the samādhi called
+                            <distinct>the exalted wisdom mudrā of the tathāgatas, the entrance gate to the domain of all
+                            buddhas</distinct>. No sooner had he entered that samādhi than golden forms of tathāgatas endowed with
+                        the thirty-two marks of a buddha emerged from his body. The forms of those tathāgatas pervaded the entire
+                        forest. Those tathāgatas spoke these verses that accord with<note place="end" index="14" xml:id="UT22084-062-018-194">D (F.294.b.5) reads <foreign xml:lang="Bo-Ltn">’thun</foreign>; this
+                            seems to be a spelling mistake as both S (F.231.b.5) and H (F.455.b.5) read <foreign xml:lang="Bo-Ltn">mthun</foreign>, which translates as “accord with.”</note> enlightened speech: </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-84"/>
+                    <lg tid="146">
+                        <l>“ ‘All these phenomena are like reflections,</l>
+                        <l>Just as the moon appears in water, yet is not there.</l>
+                        <l>Immature minds have become dim and afraid,</l>
+                        <l>Thus creating toxic thoughts of lust and hate.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-85"/>
+                    <lg tid="147">
+                        <l>“ ‘All phenomena are like space, ever pure and clear,</l>
+                        <l>Beyond suffering, non-dwelling, and peaceful.</l>
+                        <l>There is no one who feels or performs actions.</l>
+                        <l>All things are peace, unreal, and without essence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-86"/>
+                    <lg tid="148">
+                        <l>“ ‘When examined from within, lust cannot be found,</l>
+                        <l>Nor has anyone ever discovered hate.</l>
+                        <l>Immature ones believe that they are attached,</l>
+                        <l>Yet there is no one who has ever been so.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-87"/>
+                    <lg tid="149">
+                        <l>“ ‘In dreams they believe in the forms that they see; <ref cRef="F.295.a" type="folio"/>
+                        </l>
+                        <l>With liking and disliking their minds grow dull.</l>
+                        <l>Wielding weapons and striving to kill,<note place="end" index="15" xml:id="UT22084-062-018-195">D
+                                (F.295.a.1) reads <foreign xml:lang="Bo-Ltn">mtshon cha thogs shing gsad par gsol ba na,</foreign>
+                                which accords with H (F.456.a.3) and could be translated as “wielding weapons and speaking of
+                                killing / requesting to kill.” However, the reading in S (F.232.a.2), <foreign xml:lang="Bo-Ltn">mtshon cha thogs shing gsad par rtsol ba na</foreign>, seems more fitting. </note>
+                        </l>
+                        <l>When in fact the weapon and killer do not exist;</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-88"/>
+                    <lg tid="150">
+                        <l>“ ‘In this way, immature ones engage in lust,</l>
+                        <l>Combat, resistance, and also butchery.</l>
+                        <l>Their minds deluded, they are frightened and dull,</l>
+                        <l>With thoughts of “I must have this” they grasp at joy.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-89"/>
+                    <lg tid="151">
+                        <l>“ ‘These worldly preoccupations are like dreams,</l>
+                        <l>Such phenomena are worthless, void, of no essence;</l>
+                        <l>Like a mirage and similar to a cloud,</l>
+                        <l>Lust is without sign and delusion is peace.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-90"/>
+                    <lg tid="152">
+                        <l>“ ‘Phenomena resemble grass straws and walls.</l>
+                        <l>Mind can be found neither inside nor outside.</l>
+                        <l>Lust is no living creature, nor sentient person;</l>
+                        <l>Hate is neither an individual nor a thing.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-91"/>
+                    <lg tid="153">
+                        <l>“ ‘Causes and conditions form phenomena;</l>
+                        <l>Illusions<note place="end" index="16" xml:id="UT22084-062-018-196">D (F.295.a.3) reads <foreign xml:lang="Bo-Ltn">sgyu de la ni rmongs shing byed pa med</foreign>, which accords with H
+                                (F.456.a.6). However, S (F.232.a.5) reads <foreign xml:lang="Bo-Ltn">rgyu rkyen de la rmongs shing
+                                    byed pa med</foreign>, which could be translated “causes and conditions neither confuse nor
+                                act.”</note> neither confuse nor act;</l>
+                        <l>Like a moon in a pool of water, they are unproduced.</l>
+                        <l>The body, too, is not there; attachment to it is worthless.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-92"/>
+                    <lg tid="154">
+                        <l>“ ‘It stems from illusion and is emptiness;</l>
+                        <l>Grasping at matter, immature ones dissect and construct.</l>
+                        <l>Illusions are worthless, absent, empty;</l>
+                        <l>There is no lust, hatred, and ignorance.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-93"/>
+                    <lg tid="155">
+                        <l>“ ‘All phenomena are void of attributes;</l>
+                        <l>With no root seen, they are at peace from the first;</l>
+                        <l>Without end, they are void and lack all essence.</l>
+                        <l>Lust is clear light, ignorance is perfect peace.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-94"/>
+                    <lg tid="156">
+                        <l>“ ‘When childish ones see reflected images,</l>
+                        <l>They believe in their identity as truth;</l>
+                        <l>Of no worth and ungraspable, things do not exist,</l>
+                        <l>Yet beings wrongly view what is without essence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-95"/>
+                    <lg tid="157">
+                        <l>“ ‘These phenomena, optical illusions:</l>
+                        <l>Lust, delusion, and hatred, all ungraspable,</l>
+                        <l>Like mirages, dreams, and the moon in a pool of water,</l>
+                        <l>No-one should crave or hate them.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-96"/>
+                    <lg tid="158">
+                        <l>“ ‘They are harmless and empty.</l>
+                        <l>No perception of anything can be found;</l>
+                        <l>None of these constructions exist.</l>
+                        <l>Things are unobservable and perfectly at peace.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-97"/>
+                    <lg tid="159">
+                        <l>“ ‘Delusion, lust, and hatred do not exist.</l>
+                        <l>These illusions will never be real.</l>
+                        <l>All phenomena, like illusions or dreams,</l>
+                        <l>With no apparent origin, none exist.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-98"/>
+                    <lg tid="160">
+                        <l>“ ‘Likewise, though it is seen in a pool,</l>
+                        <l>The moon never enters any water.</l>
+                        <l>Just so, though the infantile hate and lust,</l>
+                        <l>Their desire and hatred are never real.<ref cRef="F.295.b" type="folio"/>
+                        </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-99"/>
+                    <lg tid="161">
+                        <l>“ ‘Lust cannot be grasped and hate does not exist.</l>
+                        <l>Ignorance is clear light, conditions are empty.</l>
+                        <l>Beings are not perceived and there is no life.</l>
+                        <l>All things are of no import, peaceful, and without essence.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-100"/>
+                    <lg tid="162">
+                        <l>“ ‘There are no eyes, nor are there ears.</l>
+                        <l>The nose cannot be found and nor can the tongue;</l>
+                        <l>Nothing material has any essence.</l>
+                        <l>Intoxicated, childish ones are confused.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-101"/>
+                    <lg tid="163">
+                        <l>“ ‘Space is boundless, limitless, endless,</l>
+                        <l>Inexhaustible, and unproduced.</l>
+                        <l>So, too, are all phenomena:</l>
+                        <l>They are like rain in the sky, pristine and crystal clear.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-102"/>
+                    <lg tid="164">
+                        <l>“ ‘Manifold phenomena are all fabricated,</l>
+                        <l>But none of those fabrications are ever real.</l>
+                        <l>The infantile grasp at the skandhas like that, too;</l>
+                        <l>But none of them, either, are ever real.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-103"/>
+                    <lg tid="165">
+                        <l>“ ‘The wise do not think of real and unreal,</l>
+                        <l>But see the true nature of all things as peace,</l>
+                        <l>Unarisen and ungraspable.</l>
+                        <l>Nor have their own bodies ever existed.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-104"/>
+                    <lg tid="166">
+                        <l>“ ‘All things are luminous, unfettered and free,</l>
+                        <l>Peaceful, non-abiding, beyond misery;</l>
+                        <l>None of them can be seized.</l>
+                        <l>When they know this, the wise will be free.’ </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-105"/>
+                    <p tid="167">“In order to hear the teaching of the bodhisattva Liberator from Fear, forty-two thousand sons of
+                        gods assembled in the forest, and upon hearing these verses of teachings, they attained patient
+                        forbearance in seeing all phenomena as non-arising. The monk Vīradatta also became completely free of
+                        fetters, and seeing with a genuine mind of enlightenment the array of the tathāgata’s emanations, he fully
+                        recognized the nature of this teaching and attained patient forbearance in seeing all phenomena as
+                        non-arising. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-106"/>
+                    <p tid="168">“Mañjuśrī, should you wonder whether at that time the bodhisattva Liberator from Fear was someone
+                        else, you will not find it so. Why? Because the bodhisattva Maitreya was the bodhisattva Liberator from
+                        Fear at that time. Mañjuśrī, should you wonder whether at that time the monk Vīradatta was someone else,
+                        you will not find it so. Why? Because the Tathāgata Jewel Moon Performing Enlightened Actions was the monk
+                        Vīradatta at that time. <ref cRef="F.296.a" type="folio"/>.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-107"/>
+                    <p tid="169">At this, Youthful Mañjuśrī asked the Bhagavān, “Bhagavān, did the monk Vīradatta attain manifest
+                        complete enlightenment?” </p>
+                    <p tid="170">The Bhagavān replied, “Mañjuśrī, he attained manifest complete enlightenment and became the
+                        Tathāgata Jewel Moon in the West, as many buddhafields beyond this buddhafield as there are sand grains in
+                        the River Ganges, in a world system called Eternal Light. </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-108"/>
+                    <p tid="171">“Mañjuśrī, consider how someone who practiced this Dharma teaching<note place="end" index="17" xml:id="UT22084-062-018-197">D (F.296.a.3) reads <foreign xml:lang="Bo-Ltn">chos ’di dag gi sgrub pa
+                                byed pa dag</foreign>, which accords with H. S (F.233.b.5) reads <foreign xml:lang="Bo-Ltn">chos
+                                ’di dag gi sgrib pa med pa dag</foreign> which translates “those who are free of obscurations
+                            regarding these teachings.” Since it seems that the benefits of the practice of this sūtra are being
+                            explained, the version in D seemed preferable here. </note> attained patient forbearance in seeing all
+                        phenomena as non-arising despite having partaken of all that he desired and even having interrupted
+                        another’s life. How could that be? It was because he understood that everything in the three realms is
+                        untrue, and that all sentient beings are like optical illusions. Mañjuśrī, when one abides in the
+                        illusion-like mind there is no obscuration with respect to any phenomenon. Further, Mañjuśrī, childish
+                        ordinary beings fall into the hell realms, or into birth as an animal, or into the realm of the Lord of
+                        Death, due to their own discursive thoughts. Imagining nonexistent phenomena, they experience infinite
+                        suffering.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-109"/>
+                    <p tid="172"> Youthful Mañjuśrī asked the Bhagavān, “Bhagavān, what qualities will a bodhisattva who
+                        comprehends, upholds, perfectly masters, and honors this Dharma discourse, obtain in this very life?” </p>
+                    <p tid="173">The Bhagavān replied, “Mañjuśrī, what do you think? How beneficial is it to the men of Jambudvīpa
+                        when the sun rises?” </p>
+                    <p tid="174">Mañjuśrī answered, “Bhagavān, the benefit is inconceivable; there is boundless light. It allows
+                        people to engage in activities.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-110"/>
+                    <p tid="175">The Bhagavān continued, “Mañjuśrī, likewise, through this Dharma discourse, <ref cRef="F.296.b" type="folio"/>
+                        all the bodhisattva’s afflictions will be dispelled and the boundless light of exalted wisdom will arise.
+                        He will then attain freedom from obscurations with regard to all phenomena. He will become free of misery,
+                        and all fetters will also vanish. He will also swiftly actualize unattached confidence. No māra or
+                        adversary will be able to overcome him. He will also teach the Dharma, and moreover he will teach the
+                        Dharma with limitless confidence.<note place="end" index="18" xml:id="UT22084-062-018-198">Limitless
+                            confidence, free of all doubts because one has realized the ultimate truth, is a quality that only a
+                            fully enlightened buddha possesses. This passage thus implies that one will become a buddha. </note>
+                        Mañjuśrī, it is like this: just as when a fire takes hold, it burns away all grass and wood, likewise,
+                        Mañjuśrī, this Dharma discourse burns away all afflictions. Mañjuśrī, it is like this: just as the
+                        majestic snow mountain outshines all the black mountains, likewise, Mañjuśrī, a bodhisattva who is skilled
+                        in this Dharma discourse subjugates and outshines in virtue all opponents. Mañjuśrī, it is like this: just
+                        as the wheel-turning emperor outshines all regional kings, likewise, Mañjuśrī, a bodhisattva who abides by
+                        this Dharma discourse outshines those who are skilled in language and composition. Mañjuśrī, it is like
+                        this: just as a monk who holds to the rules of the Vinaya is skilled in controlling all downfalls,
+                        likewise, Mañjuśrī, a bodhisattva who is skilled in this Dharma discourse dispels the regret of all
+                        sentient beings of the ten directions. Mañjuśrī, it is like this: just as the rising sun makes all gloomy
+                        darkness disappear, likewise, Mañjuśrī, a bodhisattva who is skilled in this Dharma discourse dispels the
+                        afflictions of all sentient beings and thus causes the light of exalted wisdom to manifest. Mañjuśrī, this
+                        is because whoever trains in this Dharma discourse trains in the higher training of transcendent
+                        awareness.” </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-111"/>
+                    <p tid="176">Then the evil Māra came to the Bhagavān and said to the Bhagavān, “Bhagavān, you are
+                        compassionate. <ref cRef="F.297.a" type="folio"/> You are the physician of all sentient beings and endowed with a
+                        loving heart. If that is so, Bhagavān, all the abodes of Māra are shaken, and I too am stricken with
+                        painful suffering. Bhagavān, please do not expound this Dharma discourse. Bhagavān, I will do anything so
+                        that this Dharma discourse is not practiced in Jambudvīpa. I will do anything so that no one comprehends,
+                        holds, and masters this Dharma discourse. I will do anything to make beings perceive this Dharma discourse
+                        as a wrong path. I will make them perceive the elaborate sūtras with corrupt views. I will employ all
+                        means to make various fetters arise so the monks abandon this Dharma discourse.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-112"/>
+                    <p tid="177">At that moment, by the Buddha’s miraculous powers, Indra, the chief of gods, appeared before the
+                        Bhagavān. He prostrated with his head to the Bhagavān’s feet, cast mandārava flowers toward the Bhagavān,
+                        and said to him, “Bhagavān, if the evil Māra deliberately tries to make this Dharma discourse decline,
+                        Bhagavān, then I shall comprehend this Dharma discourse, I shall hold it, and perfectly master it. And
+                        after you, the Bhagavān, and the venerable Ānanda have passed into parinirvāṇa, I shall cause this Dharma
+                        discourse to be practiced in Jambudvīpa. I shall command the Four Great Kings and the host of yakṣas,
+                        together with their retinues, to guard, protect, and shield this teaching. I, too, shall guard, protect,
+                        and shield those who comprehend, hold, read, and perfectly master this Dharma discourse.” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-113"/>
+                    <p tid="178">Thereupon the Bhagavān said to the venerable Ānanda, “Ānanda, comprehend this Dharma discourse,
+                        establish it, assemble it, perfectly master it, and teach it widely to others. <ref cRef="F.297.b" type="folio"/>
+                        Because, Ānanda, it is the Dharma mirror of all phenomena.”<note place="end" index="19" xml:id="UT22084-062-018-199">This teaching is said to be a “Dharma mirror” because it clearly reflects
+                            the nature of all phenomena. </note>
+                    </p>
+                    <p tid="179"> Ānanda said, “Bhagavān, just as the Tathāgata commands, I shall comprehend this Dharma
+                        discourse. Bhagavān, what is the name of this Dharma discourse? How shall it be retained?” </p>
+                    <p tid="180">The Bhagavān answered, “Ānanda, for all these reasons, retain this Dharma discourse with the name
+                        ‘Purification of Karmic Obscurations.’ Also retain it with the name ‘Entering the Unobscured Exalted
+                        Wisdom.’ ” </p>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-114"/>
+                    <lb/>
+                    <p tid="181">When this Dharma discourse was expounded, the minds of sixty monks were liberated from all
+                        defilements, without remainder.<note place="end" index="20" xml:id="UT22084-062-018-200">This is a loose
+                            translation of <foreign xml:lang="Bo-Ltn">len pa med par</foreign>. Of the two types of arhat, with
+                            and without remainder, the latter state is attained when all afflictive emotions have been purified.
+                            An arhat with remainder continues to assume the five skandhas, while one without abandons the five
+                            skandhas altogether. The monks referred to here became arhats without remainder because “their minds
+                            were liberated from all defilements.” </note> Eighty bodhisattvas attained patient forbearance in
+                        seeing all phenomena as non-arising. When the Bhagavān had thus spoken, the Youthful Mañjuśrī, the
+                        venerable Ānanda, the monks, and the worlds of gods, humans, demi-gods, and gandharvas rejoiced, and
+                        highly praised the Bhagavān’s words. </p>
+                    <lb/> 
+                    <milestone unit="chunk" xml:id="UT22084-062-018-115"/>
+                    <trailer tid="182"> This concludes the noble Mahāyāna sūtra, “<foreign xml:lang="en">Purification of Karmic
+                        Obscurations</foreign>.”</trailer>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="190">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-062-018-201"/>
+                    <p tid="183">The sūtra was translated and edited by the Indian paṇḍitas Jinamitra and Prajñāvarman, and by the
+                        principal editor-translator, the monk Yeshé Dé, along with others. </p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="191">Notes</head>
+                <list type="abbreviations">
+                    <head type="abbreviations" tid="192">Abbreviations</head>
+                    <item xml:id="UT22084-062-018-116">
+                        <abbr>D</abbr>
+                        <expan>Degé Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-062-018-117">
+                        <abbr>H</abbr>
+                        <expan>Lhasa Kangyur</expan>
+                    </item>
+                    <item xml:id="UT22084-062-018-118">
+                        <abbr>S</abbr>
+                        <expan>Stok Palace Kangyur</expan>
+                    </item>
+                </list>
+            </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="193">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-062-018-119">
+                        <title xml:lang="Bo-Ltn">’phags pa las kyi sgrib pa rnam par dag pa zhes bya ba theg pa chen po’i
+                            mdo</title> (<title xml:lang="Sa-Ltn">Ārya­karmāvaraṇa­viśuddhi­nāma­mahā­yāna­sūtra</title>). Toh.
+                        218, Degé Kangyur, vol. 62 (mdo sde, tsha), folios 284a-297b. </bibl>
+                    <bibl xml:id="UT22084-062-018-120">
+                        <title xml:lang="Bo-Ltn">’phags pa las kyi sgrib pa rnam par dag pa zhes bya ba theg pa chen po’i
+                            mdo.</title> Lhasa number 222, Lhasa Kangyur, vol. 62 (mdo sde, ma), folios 438a-461a. </bibl>
+                    <bibl xml:id="UT22084-062-018-121">
+                        <title xml:lang="Bo-Ltn">’phags pa las kyi sgrib pa rnam par dag pa zhes bya ba theg pa chen po’i
+                            mdo.</title> Stog number 128, Stok Palace (stog pho brang) Kangyur, vol. 65 (mdo sde, pha), folios
+                        215b-236a. </bibl>
+                    <bibl xml:id="UT22084-062-018-122">
+                        <title xml:lang="Bo-Ltn">’phags pa las kyi sgrib pa rnam par dag pa zhes bya ba theg pa chen po’i
+                            mdo.</title> bka’ ’gyur (dpe bsdur ma) [Comparative Edition of the Kangyur], krung go’i bod rig pa
+                        zhib ’jug ste gnas kyi bka’ bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China
+                        Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe skrun khang (China Tibetology
+                        Publishing House), 2006-2009, vol. 62, pp 780-814. </bibl>
+                    <bibl xml:id="UT22084-062-018-123">Lamotte, Etienne. <title xml:lang="fr">Le Traité de la Grande Vertu de
+                            Sagesse de Nāgārjuna (Mahāprajñāpāramitāśāstra),</title> Tome II, Chapitres XVI-XXX. Louvain:
+                        Publications de l’Institut Orientaliste de Louvain, 1981. </bibl>
+                    <bibl xml:id="UT22084-062-018-124">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar
+                            and Dictionary</title> (2 vols). New Haven: Yale University Press, 1953. </bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-125">
+                            <term>construct</term>
+                            <term xml:lang="Bo-Ltn">brtag </term>
+                            <term xml:lang="bo">བརྟག</term>
+                            <term xml:lang="Bo-Ltn">rtog </term>
+                            <term xml:lang="bo">རྟོག</term>
+                            <term xml:lang="Sa-Ltn"/>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-126">
+                            <term>definite release</term>
+                            <term xml:lang="Bo-Ltn">nges par ’byung ba </term>
+                            <term xml:lang="bo">ངེས་པར་འབྱུང་བ།</term>
+                            <term xml:lang="Sa-Ltn">niryāṇa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-127">
+                            <term>distorted</term>
+                            <term xml:lang="Bo-Ltn">phyin ci log pa </term>
+                            <term xml:lang="bo">ཕྱིན་ཅི་ལོག་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-128">
+                            <term>essenceless</term>
+                            <term xml:lang="Bo-Ltn">ngo bo med pa </term>
+                            <term xml:lang="bo">ངོ་བོ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">niḥsvabhāva</term>
+                            <term xml:lang="Sa-Ltn">asvabhāva</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-129">
+                            <term>worthless</term>
+                            <term xml:lang="Bo-Ltn">gsog </term>
+                            <term xml:lang="bo">གསོག</term>
+                            <term xml:lang="Sa-Ltn">rikta</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-130">
+                            <term>insignificant</term>
+                            <term xml:lang="Bo-Ltn">gsob </term>
+                            <term xml:lang="bo">གསོབ།</term>
+                            <term xml:lang="Sa-Ltn">tuccha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-131">
+                            <term>formation</term>
+                            <term xml:lang="Bo-Ltn">’du byed </term>
+                            <term xml:lang="bo">འདུ་བྱེད།</term>
+                            <term xml:lang="Sa-Ltn">saṃskāra</term>
+                            <term type="definition">One of the five aggregates; formative forces concomitant with the production
+                                of karmic seeds causing future samsaric existence.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-132">
+                            <term>fully cleansed</term>
+                            <term xml:lang="Bo-Ltn">rnam par byang ba </term>
+                            <term xml:lang="bo">རྣམ་པར་བྱང་བ།</term>
+                            <term xml:lang="Sa-Ltn">vyavadāna</term>
+                            <term type="definition">The opposite of ‘totally afflicted.’</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-133">
+                            <term>miserable</term>
+                            <term xml:lang="Bo-Ltn">yid la gcags pa </term>
+                            <term xml:lang="bo">ཡིད་ལ་གཅགས་པ།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-134">
+                            <term>patient forbearance in seeing all phenomena as non-arising</term>
+                            <term xml:lang="Bo-Ltn">mi skye ba’i chos la bzod pa </term>
+                            <term xml:lang="bo">མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ།</term>
+                            <term xml:lang="Sa-Ltn">anutpattika­dharma­kṣānti</term>
+                            <term type="definition">The forbearance to accept and understand the non-arising of phenomena,
+                                attained by a bodhisattva on the 8th level (see <ptr target="#UT22084-062-018-183"/><!--3-->).</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-135">
+                            <term>perception</term>
+                            <term xml:lang="Bo-Ltn">dmigs pa </term>
+                            <term xml:lang="bo">དམིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">ālambana</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-136">
+                            <term>project</term>
+                            <term xml:lang="Bo-Ltn">sgro btags pa </term>
+                            <term xml:lang="bo">སྒྲོ་བཏགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">samāropa</term>
+                            <term type="definition">To superimpose existence upon something which does not exist; adherents of
+                                eternalist views superimpose existence upon something which does not exist. They grasp at a
+                                concrete reality. The opposite is the view of nihilists which denies the existence of
+                                phenomena.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-137">
+                            <term>totally afflicted</term>
+                            <term xml:lang="Bo-Ltn">kun nas nyon mongs pa </term>
+                            <term xml:lang="bo">ཀུན་ནས་ཉོན་མོངས་པ།</term>
+                            <term xml:lang="Sa-Ltn">saṃkleśa</term>
+                            <term type="definition">Saṃsāra, in being nothing but afflicted; its opposite is ‘fully cleansed,’
+                                ‘complete purification.’</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-138">
+                            <term>fettered</term>
+                            <term xml:lang="Bo-Ltn">kun nas dkris pa </term>
+                            <term xml:lang="bo">ཀུན་ནས་དཀྲིས་པ།</term>
+                            <term xml:lang="Sa-Ltn">paryavasthāna</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-139">
+                            <term>transcendent awareness</term>
+                            <term xml:lang="Bo-Ltn">shes rab </term>
+                            <term xml:lang="bo">ཤེས་རབ།</term>
+                            <term xml:lang="Sa-Ltn">prajñā</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-140">
+                            <term>unelaborated</term>
+                            <term xml:lang="Bo-Ltn">spros pa med pa </term>
+                            <term xml:lang="bo">སྤྲོས་པ་མེད་པ།</term>
+                            <term xml:lang="Sa-Ltn">niṣprapañca</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-141">
+                            <term>unperceived</term>
+                            <term xml:lang="Bo-Ltn">mi dmigs pa </term>
+                            <term xml:lang="bo">མི་དམིགས་པ།</term>
+                            <term xml:lang="Sa-Ltn">anupalambha</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-142">
+                            <term>void</term>
+                            <term xml:lang="Bo-Ltn">dben pa </term>
+                            <term xml:lang="bo">དབེན་པ།</term>
+                            <term xml:lang="Sa-Ltn">viveka</term>
+                            <term type="definition">Equivalent to <foreign xml:lang="Bo-Ltn">med pa</foreign> (non-existent) or
+                                    <foreign xml:lang="Bo-Ltn">stong pa</foreign> (empty), with a sense of ‘being devoid
+                                of.’</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-143">
+                            <term>Stok Palace Kangyur</term>
+                            <term xml:lang="Bo-Ltn">stog pho brang bris ma </term>
+                            <term xml:lang="bo">སྟོག་ཕོ་བྲང་བྲིས་མ།</term>
+                            <term type="definition">A manuscript Kangyur copied from a Bhutanese original in 1729 and kept at the
+                                Stok Palace near Leh, Ladakh. It is among the Kangyurs derived mostly from the Thempangma
+                                    (<foreign xml:lang="Bo-Ltn">them spangs ma</foreign>) tradition.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="term" xml:id="UT22084-062-018-144">
+                            <term>Lhasa Kangyur</term>
+                            <term xml:lang="Bo-Ltn">lha sa</term>
+                            <term xml:lang="bo">ལྷ་ས།</term>
+                            <term xml:lang="Bo-Ltn">zhol </term>
+                            <term xml:lang="bo">ཞོལ།</term>
+                            <term type="definition">A xylograph Kangyur printed in 1934. Based mainly on the Narthang (<foreign xml:lang="Bo-Ltn">snar thang</foreign>) Kangyur but with some texts following the Degé
+                                Kangyur, it is among several Kangyurs of “mixed” lineage, including elements from the Thempangma
+                                    (<foreign xml:lang="Bo-Ltn">them spangs ma</foreign>) in addition to the predominating Tshalpa
+                                    (<foreign xml:lang="Bo-Ltn">tshal pa</foreign>) traditions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-145">
+                            <term>Abode of Myriad Flowers</term>
+                            <term xml:lang="Bo-Ltn">me tog sna tshogs gnas </term>
+                            <term xml:lang="bo">མེ་ཏོག་སྣ་ཚོགས་གནས།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-146">
+                            <term>All Doubts Diminished</term>
+                            <term xml:lang="Bo-Ltn">som nyi thams cad mgu byed </term>
+                            <term xml:lang="bo">སོམ་ཉི་ཐམས་ཅད་མགུ་བྱེད།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-147">
+                            <term>Ānanda</term>
+                            <term xml:lang="Bo-Ltn">kun dga’ bo </term>
+                            <term xml:lang="bo">ཀུན་དགའ་བོ།</term>
+                            <term xml:lang="Sa-Ltn">Ānanda</term>
+                            <term type="definition">Śrāvaka arhat and attendant of the Buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-148">
+                            <term>Destroyer of Pride</term>
+                            <term xml:lang="Bo-Ltn">nga rgyal rnam par ’joms </term>
+                            <term xml:lang="bo">ང་རྒྱལ་རྣམ་པར་འཇོམས།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-149">
+                            <term>Vīradatta</term>
+                            <term xml:lang="Bo-Ltn">dpas byin </term>
+                            <term xml:lang="bo">དཔས་བྱིན།</term>
+                            <term xml:lang="Sa-Ltn">Vīradatta</term>
+                            <term type="definition">The name, in his previous lifetime as a monk, of the buddha named Jewel Moon
+                                Performing Enlightened Actions.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-150">
+                            <term>Embodiment Always Appearing Like an Honorable Image</term>
+                            <term xml:lang="Bo-Ltn">rtag tu bu don ltar bris pa’i lus can </term>
+                            <term xml:lang="bo">རྟག་ཏུ་བུ་དོན་ལྟར་བྲིས་པའི་ལུས་ཅན།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-151">
+                            <term>Embodiment of Enchanting Splendor</term>
+                            <term xml:lang="Bo-Ltn">gzi brjid yid ’ong kun bsdus </term>
+                            <term xml:lang="bo">གཟི་བརྗིད་ཡིད་འོང་ཀུན་བསྡུས།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-152">
+                            <term>Golden Light of the Glorious Essence</term>
+                            <term xml:lang="Bo-Ltn">dpal gyi snying po’i gser ’od </term>
+                            <term xml:lang="bo">དཔལ་གྱི་སྙིང་པོའི་གསེར་འོད།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-153">
+                            <term>He whose Intelligence is Like an Ocean of Arrayed Jewels</term>
+                            <term xml:lang="Bo-Ltn">rin chen bkod pa’i rgya mtsho blo gros </term>
+                            <term xml:lang="bo">རིན་ཆེན་བཀོད་པའི་རྒྱ་མཚོ་བློ་གྲོས།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-154">
+                            <term>Indra, the chief of gods</term>
+                            <term xml:lang="Bo-Ltn">lha’i dbang po rgya byin </term>
+                            <term xml:lang="bo">ལྷའི་དབང་པོ་རྒྱ་བྱིན།</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-155">
+                            <term>Jewel Moon Performing Enlightened Actions</term>
+                            <term xml:lang="Bo-Ltn">rin chen zla ba byang chub kyi spyad pa spyod pa </term>
+                            <term xml:lang="bo">རིན་ཆེན་ཟླ་བ་བྱང་ཆུབ་ཀྱི་སྤྱད་པ་སྤྱོད་པ།</term>
+                            <term type="definition">A buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-156">
+                            <term>Jinamitra</term>
+                            <term xml:lang="Bo-Ltn">dzi na mi tra </term>
+                            <term xml:lang="bo">ཛི་ན་མི་ཏྲ།</term>
+                            <term xml:lang="Sa-Ltn">Jinamitra</term>
+                            <term type="definition">Indian paṇḍit who translated and edited (among many others) the sūtra <title xml:lang="en">Purification of Karmic Obscurations</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-157">
+                            <term>King of Light Diffusion</term>
+                            <term xml:lang="Bo-Ltn">’od zer rab tu ’gyed pa’i rgyal po </term>
+                            <term xml:lang="bo">འོད་ཟེར་རབ་ཏུ་འགྱེད་པའི་རྒྱལ་པོ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-158">
+                            <term>King of Openly Proclaiming Melody</term>
+                            <term xml:lang="Bo-Ltn">sgra dbyangs mngon par sgrogs pa’i rgyal po </term>
+                            <term xml:lang="bo">སྒྲ་དབྱངས་མངོན་པར་སྒྲོགས་པའི་རྒྱལ་པོ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-159">
+                            <term>King of Utterly Clear Melody</term>
+                            <term xml:lang="Bo-Ltn">sgra dbyangs rnam par dag pa’i rgyal po </term>
+                            <term xml:lang="bo">སྒྲ་དབྱངས་རྣམ་པར་དག་པའི་རྒྱལ་པོ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-160">
+                            <term>Lamp of the Light King</term>
+                            <term xml:lang="Bo-Ltn">’od zer rgyal po’i sgron ma </term>
+                            <term xml:lang="bo">འོད་ཟེར་རྒྱལ་པོའི་སྒྲོན་མ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-161">
+                            <term>Liberator from Fear</term>
+                            <term xml:lang="Bo-Ltn">jigs sgrol </term>
+                            <term xml:lang="bo">ཇིགས་སྒྲོལ།</term>
+                            <term type="definition">Name of Maitreya in a previous lifetime as a bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-162">
+                            <term>Like a Lotus Flower</term>
+                            <term xml:lang="Bo-Ltn">me tog pad+ma lta bu </term>
+                            <term xml:lang="bo">མེ་ཏོག་པདྨ་ལྟ་བུ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-163">
+                            <term>He Who Proclaims the Lion’s Roar of Conduct That is Renowned to be the Lotus of Good
+                                Qualities</term>
+                            <term xml:lang="Bo-Ltn">yon tan pad+ma rnam par grags spyod seng ge’i sgra sgrogs </term>
+                            <term xml:lang="bo">ཡོན་ཏན་པདྨ་རྣམ་པར་གྲགས་སྤྱོད་སེང་གེའི་སྒྲ་སྒྲོགས།</term>
+                            <term type="definition">A buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-164">
+                            <term>Maitreya</term>
+                            <term xml:lang="Bo-Ltn">byams pa </term>
+                            <term xml:lang="bo">བྱམས་པ།</term>
+                            <term xml:lang="Sa-Ltn">Maitreya</term>
+                            <term type="definition">Bodhisattva of loving kindness; the next buddha to follow Śākyamuni.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-165">
+                            <term>Mighty One</term>
+                            <term xml:lang="Bo-Ltn">dbang po </term>
+                            <term xml:lang="bo">དབང་པོ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-166">
+                            <term>Prajñāvarman</term>
+                            <term xml:lang="Bo-Ltn">pradz+nyA barma </term>
+                            <term xml:lang="bo">པྲཛྙཱ་བརྨ།</term>
+                            <term xml:lang="Sa-Ltn">Prajñāvarman</term>
+                            <term type="definition">Indian paṇḍit who translated and edited (among others) the sūtra <title xml:lang="en">Purification of Karmic Obscurations</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-167">
+                            <term>Stainless Light</term>
+                            <term xml:lang="Bo-Ltn">’dri med ’od </term>
+                            <term xml:lang="bo">འདྲི་མེད་འོད།</term>
+                            <term type="definition">A monk, main character of the sūtra <title xml:lang="en">Purification of
+                                    Karmic Obscurations</title>. </term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-168">
+                            <term>Subjugator of All Places</term>
+                            <term xml:lang="Bo-Ltn">yul thams cad rab tu ’dul ba </term>
+                            <term xml:lang="bo">ཡུལ་ཐམས་ཅད་རབ་ཏུ་འདུལ་བ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-169">
+                            <term>Sublime Knowledge Displayed with Luminosity</term>
+                            <term xml:lang="Bo-Ltn">’od kyis rnam par rtse ba mngon par shes pa </term>
+                            <term xml:lang="bo">འོད་ཀྱིས་རྣམ་པར་རྩེ་བ་མངོན་པར་ཤེས་པ།</term>
+                            <term type="definition">A bodhisattva.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-170" mode="marked">
+                            <term>Stainless Light, the Essence of the Sun</term>
+                            <term xml:lang="Bo-Ltn">nyi ma’i snying po ’od zer dri ma med pa </term>
+                            <term xml:lang="bo">ཉི་མའི་སྙིང་པོ་འོད་ཟེར་དྲི་མ་མེད་པ།</term>
+                            <term type="definition">A buddha.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-171">
+                            <term>Yeshé Dé</term>
+                            <term xml:lang="Bo-Ltn">ye shes sde </term>
+                            <term xml:lang="bo">ཡེ་ཤེས་སྡེ།</term>
+                            <term type="definition">Prolific translator and editor of a large number of sūtras, including <title xml:lang="en">Purification of Karmic Obscurations</title>.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="person" xml:id="UT22084-062-018-172">
+                            <term>Youthful Mañjuśrī</term>
+                            <term xml:lang="Bo-Ltn">’jam dpal gzhon nur ’gyur pa </term>
+                            <term xml:lang="bo">འཇམ་དཔལ་གཞོན་ནུར་འགྱུར་པ།</term>
+                            <term xml:lang="Sa-Ltn">Mañjuśrī­kumāra­bhūta</term>
+                            <term type="definition">Bodhisattva of wisdom and one of the Buddha’s principal interlocutors in many
+                                sūtras.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-173">
+                            <term>Eternal Light</term>
+                            <term xml:lang="Bo-Ltn">’od zer rtag pa </term>
+                            <term xml:lang="bo">འོད་ཟེར་རྟག་པ།</term>
+                            <term type="definition">A world system.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-174">
+                            <term>Jambudvīpa</term>
+                            <term xml:lang="Bo-Ltn">’dzam bu gling </term>
+                            <term xml:lang="bo">འཛམ་བུ་གླིང་།</term>
+                            <term xml:lang="Sa-Ltn">Jambudvīpa</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-175">
+                            <term>Āmrapālī’s Grove</term>
+                            <term xml:lang="Bo-Ltn">A mras bsrungs ba’i tshal </term>
+                            <term xml:lang="bo">ཨཱ་མྲས་བསྲུངས་བའི་ཚལ།</term>
+                            <term xml:lang="Sa-Ltn">Āmrapālīvana</term>
+                            <term type="definition">The site in Vaiśālī where Buddha Śākyamuni taught and performed
+                                miracles.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-176">
+                            <term>Most Fragrant</term>
+                            <term xml:lang="Bo-Ltn">shin tu dri ldan </term>
+                            <term xml:lang="bo">ཤིན་ཏུ་དྲི་ལྡན།</term>
+                            <term type="definition">A world system.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-177">
+                            <term>Vaiśālī</term>
+                            <term xml:lang="Bo-Ltn">yangs pa can </term>
+                            <term xml:lang="bo">ཡངས་པ་ཅན།</term>
+                            <term xml:lang="Sa-Ltn">Vaiśālī</term>
+                            <term type="definition">The site where Buddha Śākyamuni laid down various rules of the Vinaya, gave
+                                other teachings, and, on his last visit, announced his approaching parinirvāṇa.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-178">
+                            <term>Vijaya</term>
+                            <term xml:lang="Bo-Ltn">rnam par rgyal ba </term>
+                            <term xml:lang="bo">རྣམ་པར་རྒྱལ་བ།</term>
+                            <term xml:lang="Sa-Ltn">Vijaya</term>
+                            <term type="definition">A great city in the world system Most Fragant.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-179">
+                            <term>Endowed with Infinite Discourses</term>
+                            <term xml:lang="Bo-Ltn">rnam grangs mtha’ yas ldan </term>
+                            <term xml:lang="bo">རྣམ་གྲངས་མཐའ་ཡས་ལྡན།</term>
+                            <term type="definition">A world system.</term>
+                        </gloss>
+                    </item>
+                    <item>
+                        <gloss type="place" xml:id="UT22084-062-018-180">
+                            <term>Snow Temple</term>
+                            <term xml:lang="Bo-Ltn">gtsug lag khang gangs zhes </term>
+                            <term xml:lang="bo">གཙུག་ལག་ཁང་གངས་ཞེས།</term>
+                        </gloss>
+                    </item>
+                </list>
+            </div>
+        </back>
+    </text>
+</TEI>

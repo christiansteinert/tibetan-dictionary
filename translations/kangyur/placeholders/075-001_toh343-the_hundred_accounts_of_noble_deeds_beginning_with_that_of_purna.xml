@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt sponsored="full">
+                <title type="mainTitle" xml:lang="Bo-Ltn">gang po la sogs pa'i rtogs pa brjod pa brgya pa/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">pūrṇapramukhāvadānaśataka</title>
+                <title type="mainTitle" xml:lang="en">The Hundred Accounts of Noble Deeds, Beginning with That of Pūrṇa</title>
+                <title type="otherTitle" xml:lang="zh"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT22084-075-001"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh343" type="text">
+                    <ref>Toh 343</ref>
+                    <biblScope>vol.75, ff.1r-286v(pp.1-572)</biblScope>
+                    <location count-pages="571">
+                        <start volume="75" page="4"/>
+                        <end volume="75" page="574"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12028" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 14/09/2018 at 14:47:01 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="acknowledgment"/>
+        </front>
+    </text>
+</TEI>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/current/section.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc type="section">
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">'dul ba/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Vinaya</title>
+                <title type="mainTitle" xml:lang="en">Discipline</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Published in 84000 Reading Room</p>
+                <idno xml:id="O1JC114941JC11495"/>
+                <date>2010</date>
+            </publicationStmt>
+            <sourceDesc work="W22084" sort-index="2">
+                <p>Derived from previous outline file from TBRC</p>
+                <bibl>
+                    <idno parent-id="O1JC11494"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 08/10/2018 at 12:37:52 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="abstract">
+                <p tid="1">Works focusing primarily on the monastic rules and their origins, but also containing a wealth of historical, biographical, and cultural material (Toh 1-7).</p>
+            </div>
+        </front>
+        <body>
+            <div type="about">
+                <head type="about">Discipline</head>
+                <div type="section">
+                    <head type="section"/>
+                    <milestone unit="chunk" xml:id="O1JC114941JC11495-1"/>
+                    <p tid="2">The texts of the Vinaya, or Discipline (<foreign xml:lang="Bo-Ltn">’dul ba</foreign>) comprise the monastic code, its history, and commentaries on it. As well as detailing all the rules to be kept by monks, nuns, male and female novices, and male and female lay practitioners, they include a wealth of history, biography, and narrative recording the circumstances under which each rule was originally introduced by the Buddha.</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC11495-2"/>
+                    <p tid="3">This section of the Kangyur corresponds approximately to the Vinayapiṭaka of the Pāli and Chinese Tripiṭakas. Since it was largely due to divergences in the details of monastic code that early Buddhist groups differentiated into various schools, the vinaya literature of each school is quite different. The Pāli vinaya is that of the Theravāda school, while translations of vinaya texts into Chinese include the more or less complete vinaya literature of five other Indian Buddhist schools.</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC11495-3"/>
+                    <p tid="4">The works in this section of the Kangyur were translated into Tibetan from the Sanskrit texts of the Mūlasarvāstivāda-vinaya, the vinaya tradition held by the first monks to bring their ordination lineage to Tibet. Vinaya texts of other schools do not seem to have been translated into Tibetan. While scholars disagree about whether there was a Mūlasarvāstivādin school as such, distinct from the Sarvāstivādin school, the Mūlasarvāstivāda-vinaya is a distinct body of literature many times longer than any other vinaya. It has survived in Tibetan, Chinese, and partially in Sanskrit in the form of manuscripts found in Gilgit. The Tibetan translations represent a more complete version than the Chinese. The Mūlasarvāstivāda-vinaya literature is notable for its historical and narrative richness and contains material duplicated in, or paralleled by, a considerable number of sūtras, avadānas, and other works and passages elsewhere in the Kangyur; it almost constitutes a canonical collection in its own right.</p>
+                    <milestone unit="chunk" xml:id="O1JC114941JC11495-4"/>
+                    <p tid="5">The seven works listed here can be divided into the four major traditional divisions of the corpus:</p>
+                    <list>
+                        <item>
+                            <p tid="6">(1) <title xml:lang="Sa-Ltn">Vinayavibhaṅga</title>, the codified rules themselves and their commentarial texts. Toh 2 and 4 are the Prātimokṣasūtras outlining the rules for monks and nuns, respectively, and each has a detailed commentary, Toh 3 and 5, in which the incidents that gave rise to the different rules are recounted.</p>
+                        </item>
+                        <item>
+                            <p tid="7">(2) <title xml:lang="Sa-Ltn">Vinayavastu</title>, Toh 1, a single large text containing seventeen “chapters” or topics (<foreign xml:lang="Sa-Ltn">vastu</foreign>, Tib. <foreign xml:lang="Bo-Ltn">gzhi</foreign>) each delineating a specific aspect of monastic life.</p>
+                        </item>
+                        <item>
+                            <p tid="8">(3) <title xml:lang="Sa-Ltn">Vinayakṣudrakavastu</title>, Toh 6, a large additional “chapter” dealing with a wide range of miscellaneous topics not covered in the seventeen chapters of the <title xml:lang="Sa-Ltn">Vinayavastu</title>.</p>
+                        </item>
+                        <item>
+                            <p tid="9">(4) <title xml:lang="Sa-Ltn">Vinayottaragrantha</title>, Toh 7, a compilation of ten or so subsections, some of which may have been independent texts, providing amplified explanations of the monastic code and its history. Two versions of the Uttaragrantha have been preserved in Tibetan translation (here numbered Toh 7 and 7A), of which the second is more complete, the first consisting only of the <title xml:lang="en">Questions of Upāli</title> while the second contains the same text along with a number of others. The colophons and the catalogue of the Degé Kangyur suggest that both versions were retained because of different levels of authentication concerning their respective contents.</p>
+                        </item>
+                    </list>
+                </div>
+            </div>
+        </body>
+    </text>
+</TEI>

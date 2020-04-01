@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">rdo rje sems dpa'i sgrub thabs</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vajrasattvasadhana</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-035-019"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh1814" type="text">
+                    <ref>Toh 1814</ref>
+                    <biblScope>ff. 195v-204v</biblScope>
+                    <author role="translatorTib">a. zla ba grags pa</author>
+                    <author role="translatorTib">t. tathagataraksita</author>
+                    <author role="translatorTib">klog skya gzhon nu dpal</author>
+                    <author role="translatorTib">r. dipamkararaksita</author>
+                    <author role="translatorTib">ba ri</author>
+                    <location count-pages="">
+                        <start volume="35" page="392"/>
+                        <end volume="35" page="410"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21621" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC8375" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 09:49:26 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="292" id="de.christian_steinert.tibetandict" version="0.0.13" versionCode="293" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="294" id="de.christian_steinert.tibetandict" version="0.0.14" versionCode="294" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TibetanDictionary</name>
     <description>A Tibetan Dictionary app that supports Wylie input, uses Tibetan script and comes with various dictionaries.</description>
     <author email="dictionary@christian-steinert.de" href="http://www.christian-steinert.de">Christian Steinert</author>
     <content src="index.html" />
     <access origin="*" />
     <plugin name="cordova-android-support-gradle-release" spec="^2.0.1">
-       <variable name="ANDROID_SUPPORT_VERSION" value="27.+" /> 
+       <variable name="ANDROID_SUPPORT_VERSION" value="16.+" /> 
     </plugin>
     <engine name="android" spec="^7.1.4" />
 </widget>

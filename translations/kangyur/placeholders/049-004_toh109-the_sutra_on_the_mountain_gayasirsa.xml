@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">ga yA mgo'i ri'i mdo/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">gayāśīrṣasūtra</title>
+                <title type="mainTitle" xml:lang="en">The Sūtra on the Mountain Gayāśīrṣa</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa ga yA mgo'i ri zhes bya ba theg pa chen po'i mdo</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryagayāśīrṣanāmamahāyānasūtra</title>
+                <author role="translatorMain" ref="contributors.xml#team-28"/>
+            <editor role="associateEditor" ref="contributors.xml#person-51">Dr. James Duncan Gentry</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-7">Dr. Paul Hackett</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="2.e">
+                <idno xml:id="UT22084-049-004"/>
+                <date/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh109" type="text">
+                    <ref>Toh 109</ref>
+                    <biblScope>vol.49, ff.285r-292r(pp.569-583)</biblScope>
+                    <location work="UT4CZ5369" count-pages="15">
+                        <volume number="49" start-page="569" end-page="583"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11670" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-10-08T07:42:55.651Z" user="admin">08/10/2019 07:42:55</note>
+            
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-10-08T07:42:51.906Z" user="andreas">v 0.1.0</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

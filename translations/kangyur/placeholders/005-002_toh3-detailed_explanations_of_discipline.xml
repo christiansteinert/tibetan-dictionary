@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">'dul ba rnam 'byed/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">vinayavibhaṅga</title>
+                <title type="mainTitle" xml:lang="en">Detailed Explanations of Discipline</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'dul ba rnam par 'byed pa/</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-005-002"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh3" type="text">
+                    <ref>Toh 3</ref>
+                    <biblScope/>
+                    <author role="translatorTib">t. Jinamitra (k)</author>
+                    <author role="translatorTib">Klu'i rgyal mtshan</author>
+                    <location work="UT4CZ5369" count-pages="2217">
+                        <volume number="5" start-page="41" end-page="583"/>
+                        <volume number="6" start-page="2" end-page="573"/>
+                        <volume number="7" start-page="2" end-page="573"/>
+                        <volume number="8" start-page="2" end-page="537"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC11495" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11511" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-13T09:58:33.003Z" user="admin">13/12/2019 09:58:33</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T09:58:25.915Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T09:58:25.915Z" user="john">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

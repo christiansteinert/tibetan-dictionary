@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">tshogs kyi bdag po'i snying po/</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">gaṇapatihṛdaya</title>
+                <title type="mainTitle" xml:lang="en">The Essence of Gaṇapati</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa tshogs kyi bdag po'i snying po/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryagaṇapatihṛdaya</title>
+                <title type="otherTitle" xml:lang="Bo-Ltn">'phags pa tshogs kyi bdag po'i snying po/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">āryagaṇapatihṛdaya</title>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.1.0 <date>2019</date>
+                </edition>
+            </editionStmt>
+
+            <publicationStmt status="3">
+                <idno xml:id="UT22084-091-062"/>
+                <date/>
+
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh665" type="text">
+                    <ref>Toh 665</ref>
+                    <biblScope>vol.91, ff.192v-193r(pp.384-385)</biblScope>
+                    <location work="UT4CZ5369" count-pages="2">
+                        <volume number="91" start-page="384" end-page="385"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC21415" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12400" work="W22084"/>
+                </bibl>
+                <bibl key="toh1084" type="text">
+                    <ref>Toh 1084</ref>
+                    <biblScope>vol.101, ff.251r-252r(pp.501-503)</biblScope>
+                    <location work="UT4CZ5369" count-pages="3">
+                        <volume number="101" start-page="501" end-page="503"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC20568" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC12848" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated" date-time="2019-12-13T10:05:26.731Z" user="admin">13/12/2019 10:05:26</note>
+<note type="updated" update="text-version" value="v 0.1.0" date-time="2019-12-13T10:05:20.372Z" user="john">v 0.1.0</note>
+<note type="updated" update="translation-status" value="3" date-time="2019-12-13T10:05:20.372Z" user="john">3</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>

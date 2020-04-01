@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">chos dang don rnam par ’byed pa/</title>
+                <title type="mainTitle" xml:lang="bo">ཆོས་དང་དོན་རྣམ་པར་འབྱེད་པ།</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">Dharmārtha­vibhaṅga</title>
+                <title type="mainTitle" xml:lang="en">Distinguishing Phenomena and What Is Meaningful</title>
+                <title type="longTitle" xml:lang="Bo-Ltn">’phags pa chos dang don rnam par ’byed pa zhes bya ba theg pa chen po’i mdo</title>
+                <title type="longTitle" xml:lang="Sa-Ltn">Āryadharmārtha­vibhaṅga­nāma­mahāyāna­sūtra</title>
+                <title type="longTitle" xml:lang="bo">འཕགས་པ་ཆོས་དང་དོན་རྣམ་པར་འབྱེད་པ་ཞེས་བྱ་བ་ཐེག་པ་ཆེན་པོའི་མདོ།</title>
+                <title type="longTitle" xml:lang="en">The Noble Great Vehicle Sūtra “Distinguishing Phenomena and What Is Meaningful”</title>
+                <title type="otherTitle" xml:lang="zh"/>
+                <title type="otherTitle" xml:lang="Bo-Ltn">don dang chos rnam par ’byed pa/</title>
+                <title type="otherTitle" xml:lang="Sa-Ltn">Dharmārtha­vibhaṅga</title>
+                <author role="translatorMain" ref="contributors.xml#team-9">Translated by the Dharmachakra Translation Committee<lb/> under the patronage and
+                    supervision of 84000: Translating the Words of the Buddha</author>
+                <author role="translatorEng" ref="contributors.xml#person-75">Timothy Hinkle</author>
+                <author role="translatorEng" ref="contributors.xml#person-58">Anna Zilman</author>
+                <author role="translatorTib" ref="contributors.xml#person-48">Lama Tenzin Sangpo</author>
+                <consultant role="advisor" ref="contributors.xml#person-40">Chokyi Nyima Rinpoche</consultant>
+            <editor role="reviser" ref="contributors.xml#person-50">Andreas Doctor</editor>
+                <editor role="externalReviewer" ref="contributors.xml#person-165">Robert Miller</editor>
+                <editor role="copyEditor" ref="contributors.xml#person-257">Raynald Prévèreau</editor>
+                <editor role="TEImarkupEditor" ref="contributors.xml#person-95">Celso Wilkinson</editor>
+                <editor role="finalReviewer" ref="contributors.xml#person-139">John Canti</editor>
+            </titleStmt>
+            <editionStmt>
+                <edition>v 0.9 <date>2019</date>
+                </edition>
+            </editionStmt>
+            <publicationStmt status="2">
+                <publisher>
+                    <name>84000: Translating the Words of the Buddha</name> is a global non-profit
+                    initiative that aims to translate all of the Buddha’s words into modern
+                    languages, and to make them available to everyone. </publisher>
+                <availability>
+                    <licence>
+                        <graphic url="http://i.creativecommons.org/l/by-nc-nd/2.0/88x31.png"/>
+                        <p>This work is provided under the protection of a Creative Commons CC
+                            BY-NC-ND (Attribution - Non-commercial - No-derivatives) 3.0 copyright.
+                            It may be copied or printed for fair use, but only with full
+                            attribution, and not for commercial advantage or personal compensation.
+                            For full details, see the Creative Commons license.</p>
+                    </licence>
+                </availability>
+                <idno xml:id="UT22084-066-005"/>
+               <note>An early mistake in the assigning of UT numbers within the 84000 project means
+                    that these ids diverge slightly from the standard logic.</note>
+                <date>2019-01-29</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh247" type="text">
+                    <ref>Toh 247</ref>
+                    <biblScope>Degé Kangyur, vol. 66 (mdo sde, za), folios 42.b–46.a<!--(pp.84-91)--></biblScope>
+                    <author role="translatorTib">Jinamitra </author>
+                    <author role="translatorTib">Danaśila</author>
+                    <author role="translatorTib">Yeshé Dé</author>
+                    <location count-pages="8">
+                        <start volume="66" page="86"/>
+                        <end volume="66" page="93"/>
+                    </location>
+                    <idno parent-id="O1JC114941JC14668" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC114941JC11898" work="W22084"/>
+                </bibl>
+            </sourceDesc>
+           <notesStmt>
+               <note type="lastUpdated" date-time="2019-07-22T17:26:01.684Z" user="admin">22/07/2019 17:26:01</note>
+            <note type="updated" update="text-version" value="v 1.01" date-time="2019-03-08T19:52:46.864Z" user="celso">v 1.01 2019</note>
+            <note type="updated" update="text-version" value="v 1.02" date-time="2019-04-23T11:00:51.822Z" user="mike">v 1.02 2019</note>
+                <note type="updated" update="translation-status" value="2" date-time="2019-04-29T13:23:28.588Z" user="mike">2</note>
+                <note type="updated" update="text-version" value="v 0.1" date-time="2019-06-14T17:17:52.157Z" user="john">v 0.1 2019</note>
+                <note type="updated" update="text-version" value="v 0.9" date-time="2019-07-22T17:25:58.645Z" user="john">v 0.9 2019</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <div type="summary">
+                <head type="summary" tid="1">Summary</head>
+                <milestone unit="chunk" xml:id="UT22084-066-005-1"/>
+                <p tid="2">There are two main themes in <title xml:lang="en">Distinguishing Phenomena and What Is 
+                    Meaningful</title>. One is in the narrative structure: Buddha Śākyamuni tells how, countless
+                    eons ago, in a world called Flower Origin, a buddha named Arisen from Flowers 
+                    gave instructions to a royal family, and prophesied the awakening of the prince 
+                    Ratnākara. Arisen from Flowers, Buddha Śākyamuni then relates, has since become the buddha
+                    Amitābha, and the prince Ratnākara the bodhisattva Avalokiteśvara. The other theme 
+                    is doctrinal, and lies in the content of the teaching given by Arisen from Flowers: it 
+                    explains the four mistakes made by ordinary beings in the way they perceive the 
+                    five aggregates, and how bodhisattvas teach them how to clear away these misconceptions, 
+                    so that they may be free of the sufferings that result. </p>
+            </div>
+            <div type="acknowledgment">
+                <head type="acknowledgment" tid="3">Acknowledgements</head>
+                <milestone unit="chunk" xml:id="UT22084-066-005-2"/>
+                <p tid="4">Translated by the Dharmachakra Translation Committee under the guidance
+                    of Chökyi Nyima Rinpoche. The translation was produced by Anna Zilman and
+                    Timothy Hinkle. Andreas Doctor compared the translation with the Tibetan and
+                    edited the text.</p>
+            </div>
+            <div type="introduction">
+                <head type="introduction" tid="5">Introduction</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-066-005-3"/>
+                    <p tid="6">
+                        <title xml:lang="en">Distinguishing Phenomena and What Is Meaningful</title> is
+                        a scripture that in the Degé Kangyur belongs to the General Sūtra section.
+                        The sūtra is set in Anāthapiṇḍada’s park at Śrāvastī, where Buddha Śākyamuni
+                        is residing with a gathering of monks and bodhisattvas. In delivering his
+                        teaching, Śākyamuni describes an ancient world known as Flower 
+                        Origin,<note place="end" xml:id="UT22084-066-005-4" index="1"> The Sanskrit name for
+                            this world is most likely <foreign xml:lang="Sa-Ltn" type="term">puṣpākara</foreign>. This is attested in Negi for
+                                <foreign xml:lang="Bo-Ltn" type="term">me tog gi ’byung gnas</foreign> and it is found 
+                            in Edgerton (1998, p. 350) as the name of a buddha. We have not, however, found a world by this
+                            name, i.e., a <foreign xml:lang="Sa-Ltn" type="term">puṣpākaraloka</foreign>, and have 
+                            therefore rendered this name in English
+                            translation.</note> in which lived a buddha called Arisen from 
+                        Flowers.<note place="end" xml:id="UT22084-066-005-5" index="2"> Although canonical
+                            sources list past buddhas known either as <foreign xml:lang="Sa-Ltn">puṣpa</foreign>, <foreign xml:lang="Sa-Ltn">puṣpita</foreign>,
+                            or <foreign xml:lang="Sa-Ltn">puṣpakṛta</foreign>, we have not found
+                            an attested Sanskrit for the Tibetan <foreign xml:lang="Bo-Ltn">me tog
+                                las byung ba</foreign>. We have therefore preferred to use the
+                            English translation of this name, rather than attempt a reconstruction,
+                            especially because clear lists and equivalents for such names of buddhas as
+                            these do not as yet seem to be available. For a discussion of the names
+                            of buddhas listed in the <title xml:lang="Sa-Ltn">Bhadra­kalpika­sūtra</title>, see Skilling (2010) and, in
+                            particular, Skilling (2014). </note> That world was governed by a
+                        king known as Attainment of Victory, under whose rule everyone practiced
+                        the Great Vehicle. Prompted by the prince Ratnākara, the royal family goes
+                        to meet Arisen from Flowers. That buddha then teaches the audience about the
+                        insubstantial and unsatisfactory nature of the aggregates, and describes
+                        beings’ tendency to perceive the aggregates in a flawed manner: while the
+                        aggregates are actually impermanent, repulsive, unclean, and unreal,
+                        sentient beings conceive of them as lasting, beautiful, pure, and true.
+                        Buddha Śākyamuni further explains how beings are themselves a product of their
+                        actions, and that the five aggregates (the components that together
+                        constitute a sentient being) are not purposely created by anyone.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-6"/>
+                    <p tid="7">The sūtra thus presents a version of the well–known “four errors”
+                            (<foreign xml:lang="Sa-Ltn" type="term">catvāro viparyāsāḥ</foreign>,
+                            <foreign xml:lang="Bo-Ltn" type="term">phyin ci log pa bzhi</foreign>),
+                        often described in Buddhist canonical literature as the main
+                        underpinnings of sentient beings’ mistaken view of the world: 
+                        erroneously perceiving (1) the impermanent to be permanent, (2) the painful to be
+                        pleasant, (3) the dirty to be clean, and (4) what has no self to have 
+                        a self.<note place="end" xml:id="UT22084-066-005-7" index="3"> For a discussion
+                            of these four errors, see Lang (2003).</note> The four errors are 
+                        discussed extensively not only in the Abhidharma, but also in
+                        the <title xml:lang="Sa-Ltn">Catuḥśataka</title> of Āryadeva
+                        (fl. third century), where each is treated in a separate chapter 
+                        (chapters 6–9).<note place="end" xml:id="UT22084-066-005-8" index="4">See Lang (1986).</note>
+                        The present sūtra invokes the four errors, but instead of presenting the
+                        illusion that the painful is pleasant, it speaks of the illusion that the
+                        repulsive (<foreign xml:lang="Bo-Ltn" type="term">mi sdug pa</foreign>) is
+                        beautiful (<foreign xml:lang="Bo-Ltn" type="term">sdug pa</foreign>). Aside
+                        from this minor twist, the context remains that of the usual four errors. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-9"/>
+                    <p tid="8">Once the Buddha Arisen from Flowers has taught the audience, the
+                        king, queen, prince, and the entire retinue all take ordination. The
+                        thus-gone one then prophesies Prince Ratnākara’s awakening, revealing his
+                        future name, world, lifespan, and the nature of his teachings. Toward the
+                        end of the sūtra, Buddha Śākyamuni reveals the current identity of the main
+                        characters of his narrative. Arisen from Flowers has now become the buddha
+                        Amitābha, and Ratnākara has become the bodhisattva known as Avalokiteśvara. In the
+                        remainder of the sūtra, Śākyamuni reveals that anyone who faithfully
+                        receives this Dharma teaching will be reborn in Sukhāvatī (the buddha realm
+                        of Amitābha) and that all women who touch or read this sūtra will be able to
+                        exchange their female bodies for male forms and never again take rebirth in
+                        a female body.<note place="end" xml:id="UT22084-066-005-11" index="5">This notion 
+                            that women might be obliged to turn into or be reborn as men in order to awaken to 
+                            buddhahood, somewhat jarring to modern sensibilities, is a common idea found
+                        throughout Mahāyāna literature. For more on this theme, see Nattier (2002). Statements of this kind are partially 
+                        counterbalanced by passages in other sūtras in which the role of gender 
+                        is downplayed or deconstructed.</note> </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-100"/>
+                    <p tid="9">The title of the sūtra could be interpreted in a number of different ways, some of which would require translations other than the one we have chosen. <foreign xml:lang="Bo-Ltn">Chos</foreign> (<foreign xml:lang="Sa-Ltn">dharma</foreign>) could refer to qualities, factors, practices, states, phenomena, or the teachings, while <foreign xml:lang="Bo-Ltn">don</foreign> (<foreign xml:lang="Sa-Ltn">artha</foreign>), too, has a wide range of meanings including object, referent, goal, purpose, worth, use, meaning, and cause. We have inevitably had to narrow the possibilities down to produce a rendering in English.<note place="end" index="6" xml:id="UT22084-066-005-101">In translating <foreign xml:lang="Bo-Ltn">don</foreign> as “what is meaningful,” we have taken as one of the only available cues the single occurrence of the word in the text—in the third line of <ptr target="#UT22084-066-005-35"/>. Although the translation of this line renders <foreign xml:lang="Bo-Ltn">chos</foreign> as “the Dharma” rather than as “phenomena,” the play between the different meanings of this word in this and the following stanza in the source text, and the possible ambiguities that result, are probably intentional. </note>
+                    </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-12"/>
+                    <p tid="10">There is no extant Sanskrit version of this scripture, and the sūtra
+                        does not appear to have been translated into Chinese. In producing
+                        this translation, we have based our work on the Degé xylograph Kangyur while
+                        consulting the Comparative Edition (<title xml:lang="Bo-Ltn">dpe bsdur
+                            ma</title>), as well as the Stok Palace manuscript Kangyur. The colophon of the
+                        sūtra states that it was translated by the Indian scholars Jinamitra and
+                        Dānaśīla, as well as the prolific Tibetan translator Yeshé Dé. We can
+                        therefore date the Tibetan translation to the late eighth or early ninth
+                        century, and this is confirmed by the text’s inclusion in the early
+                        ninth century Denkarma (<title xml:lang="Bo-Ltn">ldan dkar ma</title>)
+                        and Phangthangma (<title xml:lang="Bo-Ltn">’phang thang ma</title>) 
+                        catalogues.<note place="end" xml:id="UT22084-066-005-13" index="7"> In the
+                            Denkarma catalogue, which is usually thought to date 
+                            to c. 812 <hi rend="small-caps">ce</hi>, the sūtra is included 
+                            (F.299.b.3) among the “Miscellaneous Sūtras” (<title xml:lang="Bo-Ltn">mdo 
+                                sde sna tshogs</title>) less than one hundred ślokas in length, 
+                            but the order of the words in the title is inverted 
+                            to <title xml:lang="Bo-Ltn">don dang chos rnam par ’byed 
+                                pa</title> (“Distinguishing What is Meaningful and Phenomena”). 
+                            See also Herrmann-Pfandt 2008, p. 111, no. 208. In the Phangthangma catalogue, 
+                            the title is the same as in all Kangyurs.</note>
+                    </p>
+                </div>
+            </div>
+        </front>
+        <body>
+            <div type="translation">
+                <head type="translation" tid="11"> The Translation </head>
+                <head type="titleHon" tid="12">The Noble Great Vehicle Sūtra</head>
+                <head type="titleMain" tid="13">Distinguishing Phenomena and What Is Meaningful</head>
+                <div type="section">
+                    <milestone unit="chunk" xml:id="UT22084-066-005-16"/>
+                    <p tid="17">
+                        <ref cRef="F.42.b"/> Homage to all buddhas and bodhisattvas!</p>
+                <lb/>
+                    
+                  
+                    
+                    <p tid="18">Thus did I hear at one time. The Blessed One was staying in the Jeta
+                        Grove, Anāthapiṇḍada’s park in Śrāvastī. He was there together with a great
+                        saṅgha of monks, as well as a great saṅgha of bodhisattvas.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-18"/>
+                    <p tid="19">At that time, the Blessed One recounted the following to the bodhisattva great being
+                       <ref cRef="F.43.a"/> Delighted by Victory:</p>
+                        <lb/>
+                        <milestone unit="chunk" xml:id="UT22084-066-005-93"/>
+                        <p tid="19">“Noble son, at a past time countless, limitless, immeasurably many eons 
+                            ago, there was a world called Flower
+                            Origin. It was abundantly prosperous and happy, had good crops, and was delightful. 
+                            It was filled with many people, and was as even as the palm of a
+                        hand. Noble son, in the world Flower Origin dwelled the thus-gone, worthy,
+                        perfect buddha Arisen from Flowers. He still abides there, alive and well,
+                        teaching the Dharma to the fourfold assembly, as well as to gods, nāgas,
+                        yakṣas, gandharvas, demigods, garuḍas, kiṃnaras, mahoragas, humans, and
+                        non-humans. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-19"/>
+                    <p tid="20">“Noble son, in the world Flower Origin lived the ruler Attainment of
+                        Victory. He was a universal emperor, who had as his dominion the entire
+                        trichiliocosm. Noble son, under the king’s rule<note place="end" xml:id="UT22084-066-005-20" index="8"> Tibetan: <foreign xml:lang="Bo-Ltn" type="term">tshig rab</foreign>.
+                        </note> beings had found happiness and well-being, followed the path of the
+                        ten virtuous deeds, and were satisfied with their spouses. Everyone there had
+                        entered but a single vehicle: they had entered the Great Vehicle. They had
+                        entered the supreme vehicle. They had entered the main vehicle. They had
+                        entered the true vehicle. They had entered the foremost vehicle—the best,
+                        the finest, and the highest vehicle. The vehicle they had entered was higher
+                        than the highest: the unsurpassed vehicle. They had entered the unequaled
+                        vehicle. They had entered the matchless vehicle. They had entered the
+                        inconceivable vehicle. They had entered the unfathomable vehicle. <ref cRef="F.43.b"/>
+                        Noble son, under the rule of that king Attainment of Victory, vehicles other
+                        than the Great Vehicle were unheard of. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-21"/>
+                    <p tid="21">“Noble son, in his retinue of queens King Attainment of Victory
+                        had ninety-nine thousand wives, none of whom had entered any other vehicle.
+                        They all belonged solely to the Great Vehicle, longed for the Dharma day and
+                        night, and took delight in the Dharma. Noble son, that king’s primary wife
+                        Ratnaśrī, who was a beloved<note place="end" xml:id="UT22084-066-005-22" index="9"> Translated based on the Stok Palace Kangyur: <foreign xml:lang="Bo-Ltn" type="term">sdug pa</foreign>. The Degé Kangyur reads:
+                                <foreign xml:lang="Bo-Ltn" type="term">sdud pa</foreign>.</note>
+                        bodhisattva, followed the Buddha, the Dharma,<note place="end" xml:id="UT22084-066-005-23" index="10"> Translated based on the Yongle, Lithang,
+                            Kangxi, Narthang, Choné, Lhasa, and Stok Palace Kangyurs: <foreign xml:lang="Bo-Ltn" type="quote">sangs rgyas dang chos</foreign>. The Degé Kangyur reads: <foreign xml:lang="Bo-Ltn" type="quote">sangs rgyas pa’i
+                            chos</foreign>.</note> and the Saṅgha. She belonged to the Great
+                        Vehicle, longed for the Dharma at all times, and found delight only in the
+                        joy of the Dharma. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-24"/>
+                    <p tid="22">“Noble son, once, while Ratnaśrī was seated upon a splendid lion
+                        throne, her son Ratnākara got down from her lap where he had been sitting in
+                        the cross-legged posture. He was adorned with divine ornaments, attired with
+                        divine fabrics, and his body was adorned with the excellent major and minor
+                        marks. As soon as he got down, the child asked his mother, ‘Mother, is the
+                        thus-gone Arisen from Flowers still alive?’ </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-25"/>
+                    <p tid="22">“The queen Ratnaśrī answered the
+                        young child: </p>
+                    <lg tid="23">
+                        <l>“ ‘My only son, the omniscient one,</l>
+                        <l>The protector of the world,</l>
+                        <l>The unsurpassed one who delights all—</l>
+                        <l>He is alive in the world of gods and humans.’ </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-26"/>
+                    <p tid="24">“The prince Ratnākara then said to his parents, ‘Father and
+                        Mother, come here! We must go to the thus-gone, worthy, perfect buddha
+                        Arisen from Flowers in order to behold him, to pay homage and make
+                        offerings, to serve him, and to receive Dharma teachings from him. If you
+                        wonder why we need to do so, Father and Mother, it is because the Thus-Gone One
+                        performs hardships in the world of gods and humans.</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-27"/>
+                    <lg tid="25">
+                        <l>“ ‘He is a protector liberating those who have not been liberated.</l>
+                    <l>He grants eyesight to the blind. </l>
+                    <l>He is heroic and courageous with regard to the Dharma. <ref cRef="F.44.a"/>
+                        </l>
+                    <l>He is as unwavering as a great mountain.’ </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-31"/>
+                    <p tid="29">“King Attainment of Victory and Queen Ratnaśrī then brought their
+                        son and the retinue of queens and servants and went before that blessed one.
+                        They circumambulated that blessed one seven times and offered him extremely
+                        valuable pearl necklaces, after which they all sat down among the assembly.
+                        Noble son, the prince then rose up into the sky to the height of seven palm
+                        trees by means of his miraculous ability, and showered upon the 
+                        blessed Arisen from Flowers a rain of jewels, flowers, and incense. He then proclaimed to
+                        that blessed one:</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-32"/>
+                    <lg tid="30">
+                        <l>“ ‘O Teacher, you have crossed </l>
+                        <l>The great river of suffering,</l>
+                        <l>And ferry beings across it.</l>
+                        <l>I have come here to see you, Omniscient One.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-33"/>
+                    <lg tid="31">
+                        <l>“ ‘As the unsurpassed protector of the world,</l>
+                        <l>There is no one who has ever matched you,</l>
+                        <l>Or displayed such qualities as yours,</l>
+                        <l>In the world of gods and humans.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-34"/>
+                    <lg tid="32">
+                        <l>“ ‘You establish in the Lesser Vehicle</l>
+                        <l>Beings who have strayed onto negative paths,</l>
+                        <l>Those who are under the sway of desire and anger,</l>
+                        <l>And then you teach the Great Vehicle.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-35"/>
+                    <lg tid="33">
+                        <l>“ ‘You are skilled in means and courageous,</l>
+                        <l>A master of great compassion.</l>
+                        <l>The Dharma is meaningful and you are sated by the Dharma;</l>
+                        <l>You set forth the Dharma and are a source of all qualities.</l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-36"/>
+                    <lg tid="34">
+                        <l>“ ‘Also, knowing phenomena to be unborn</l>
+                        <l>And without substance,</l>
+                        <l>You know their true nature.</l>
+                        <l>That is how you perform hardships.’ </l>
+                    </lg>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-37"/>
+                    <p tid="35">“The young prince praised that blessed one in this manner, then
+                        circumambulated him and sat before him. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-94"/>
+                    <p tid="35">“The Blessed One looked in all
+                        directions with his broad eyes, which resembled the petals of a lotus
+                        flower. Knowing the minds and mental states of the fourfold assembly, he
+                        said to King Attainment of Victory: </p>
+                        <milestone unit="chunk" xml:id="UT22084-066-005-95"/>
+                    <p tid="35">“ ‘Great King, although the five
+                        aggregates are insubstantial, childish ordinary beings think of them as
+                        being substantial. <ref cRef="F.44.b"/> Great King, the aggregates look awful; 
+                        they smell terrible; they ooze pus and blood; they are like wood, clods of dirt, or roads; 
+                        and they are insubstantial, inert, and interlinked with joy and sorrow. They are linked to
+                        each other by chains of craving, are full of affliction, and are vile.
+                        Still, ordinary beings think that such insubstantial things are substantial;
+                        they think that impermanent things are permanent, repulsive things are
+                        beautiful, unclean things are clean, and unreal things are real. Great King,
+                        the five aggregates are “painted” by one’s own karma. As
+                        an analogy, O Great King, there is no painter who paints the peacock’s
+                        five-colored tail, and neither is there any paint involved. Rather, it is
+                        painted by the peacock’s own karma. Great King, in the same way, childish
+                        ordinary beings arise from reciprocal conditions, painted by their own
+                        karma.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-38"/>
+                    <p tid="36">“At this point the bodhisattva great being Invincible Lord<note place="end" xml:id="UT22084-066-005-39" index="11"> The Tibetan for this
+                            bodhisattva’s name is <foreign xml:lang="Bo-Ltn">mi pham dbang
+                                phyug</foreign>. <foreign xml:lang="Bo-Ltn" type="term">mi
+                                pham</foreign> translates the Sanskrit <foreign xml:lang="Sa-Ltn" type="term">ajita</foreign>, which is an epithet typically
+                            associated with Maitreya. It is therefore possible that the bodhisattva
+                            mentioned here could be the well-known Maitreya.</note> stood up among
+                        the assembly, circumambulated the Blessed One, draped his shawl over one
+                        shoulder, knelt down on his right knee, and bowed with joined palms.</p> 
+                    <milestone unit="chunk" xml:id="UT22084-066-005-96"/>
+                    <p tid="37">“He said to the Blessed One, ‘Blessed One, these aggregates do look awful and
+                        smell terrible; they ooze blood and pus; they are like wood, clods of dirt,
+                        walls, or roads; they are insubstantial and inert. Childish ordinary
+                        beings think that these things have substance, but these beings are like the
+                        mistaken, the blind, and the confused. They have fallen into bewilderment.
+                        They are completely enveloped in darkness, obscurity, and veils. They are
+                        lost in the dense thicket of all their wrong views. Blessed One, these four
+                        collections of the Dharma are all profound; they are like space. <ref cRef="F.45.a"/>
+                        Blessed One, will any beings ever come to understand
+                        correctly the statements that are spoken in discourses such as this?’ </p>
+                    
+                    <milestone unit="chunk" xml:id="UT22084-066-005-40"/>
+                    <p tid="38">“The blessed Arisen from Flowers answered that bodhisattva great
+                        being, ‘Noble son, whenever bodhisattva great beings manifest, it will be in
+                        order to purify beings. They teach them the Dharma in accordance with their
+                        inclinations. They cut through the cravings of those who are tormented by
+                        craving. They clear away the suffering of those tormented by pain. Knowing
+                        all phenomena to be insubstantial and knowing them to be like space, they
+                        direct sentient beings to the nature of phenomena. Bodhisattvas are then
+                        known as purifiers of beings.’</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-42"/>
+                    <p tid="39">“When that blessed, thus-gone, worthy, perfect buddha Arisen from
+                        Flowers had delivered this teaching concerning sentient beings, King
+                        Attainment of Victory cut off his hair and beard. His son, as well as Queen
+                        Ratnaśrī and the retinue of queens and servants, likewise all cut off their
+                        hair and they all took ordination with the Blessed One. </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-43"/>
+                    <p tid="40">“The Blessed One now spoke to the assembly: ‘Noble children, look at
+                        the young prince. Noble children, this sublime being has produced roots of
+                        virtue in the company of ninety-nine trillion buddhas. On all of these
+                        occasions he has become a Dharma preacher. And this person here has always
+                        been the father of that sublime being. This sublime being has always ripened
+                        beings to unsurpassed and perfect awakening. Noble children, as soon as I
+                        pass into parinirvāṇa, the young prince Ratnākara will become a buddha. He
+                        will be seated in front of the tree of awakening, which will be bedecked
+                        with various precious stones. When he attains awakening, he will become a
+                        thus-gone, worthy, perfect buddha. <ref cRef="F.45.b"/> He will be someone learned and
+                        virtuous, a blissful one, a knower of the world, a charioteer who guides
+                        beings, an unsurpassed being, a teacher of gods and humans, a blessed
+                        buddha known as Splendorous King of Shining Light. His world will be known
+                        as Painted with Many Jewels. He will have an immeasurable saṅgha of hearers.
+                        He will have a lifespan of ninety-six trillion eons. The appearance of his
+                        sacred Dharma will remain for seven million five hundred thousand
+                        years.’</p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-44"/>
+                    <p tid="41">“Noble son, at that time, when the prophecy concerning that
+                        bodhisattva great being was made, eighty-four thousand beings gained
+                        acceptance that phenomena are unborn. Noble son, should you wonder,
+                        question, or have doubts regarding the identity of the thus-gone one of that
+                        time, there is no need. Why so? Noble son, it is the thus-gone, worthy, perfect
+                        buddha Amitābha who was known at that time as the thus-gone Arisen from Flowers
+                        and who taught the Dharma in that world. Noble son, should you wonder,
+                        question, or have doubts regarding the identity of the prince known as
+                        Ratnākara at that time, there is no need. Why so? Noble son, it is the bodhisattva
+                        Avalokiteśvara who was at that time the son of King Attainment of Victory. That
+                        thus-gone one prophesied, ‘He will gain awakening from me.’ ”</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-45"/>
+                    <p tid="42">The bodhisattva great being Delighted by Victory, who was among the
+                        retinue, now joined his palms and asked the Blessed One, “Blessed One,
+                        will beings who have not produced roots of virtue ever even hear this
+                        Dharma teaching, <ref cRef="F.46.a"/> let alone commit it to
+                        writing, commission it to be written, retain it, recite it, or
+                        offer flowers, incense, and incense powder to it?” </p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-46"/>
+                    <p tid="43">The Blessed One replied to the bodhisattva great being Delighted by
+                        Victory, “Noble son, only those who have served as many buddhas as there are
+                        grains of sand in the Ganges River will come across this discourse. Noble
+                        son, those sentient beings who hear this Dharma teaching and do not doubt it
+                        will be reborn in the realm of Sukhāvatī after they die and pass from this
+                        world. Noble son, any place where this discourse is kept will become worthy
+                        of homage. Noble son, later, in the future, any woman who holds or reads
+                        aloud this Dharma teaching will exchange her female body and be reborn in
+                        the realm of Sukhāvatī. That will be her last birth as a female.<note place="end" xml:id="UT22084-066-005-98" index="12">See <ptr target="#UT22084-066-005-11"/>.</note> She will,
+                        moreover, behold the thus-gone Amitābha at the moment of death.”</p>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-47"/>
+                    <p tid="44">Once the Blessed One had spoken, the bodhisattva great being
+                        Delighted by Victory, the other bodhisattvas, the monks, and the rest of the
+                        assembly, along with the world with its gods, humans, demigods, and
+                        gandharvas, all rejoiced and praised what the Blessed One had said. </p>
+                    <lb/>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-48"/>
+                    <trailer tid="46">This concludes the noble Great Vehicle sūtra
+                        “Distinguishing Phenomena and What Is Meaningful.” </trailer>
+                </div>
+                <div type="colophon">
+                    <head type="colophon" tid="45">Colophon</head>
+                    <milestone unit="chunk" xml:id="UT22084-066-005-49"/>
+                    
+                    
+                    <p tid="47">Translated, edited, and finalized by the Indian scholars
+                        Jinamitra and Dānaśila, as well as by the chief editor and translator, the venerable
+                        Yeshé Dé.</p>
+                </div>
+            </div>
+        </body>
+        <back>
+            <div type="notes">
+                <head type="notes" tid="48">Notes</head>
+                </div>
+            <div type="listBibl">
+                <head type="listBibl" tid="50">Bibliography</head>
+                <div type="section">
+                    <bibl xml:id="UT22084-066-005-52">
+                        <title xml:lang="Bo-Ltn">’phags pa chos dang don rnam par ’byed pa zhes bya
+                            ba theg pa chen po’i mdo</title>
+                        (<title xml:lang="Sa-Ltn">Ārya­dharmārtha­vibhāga­nāma­mahāyāna­sūtra</title>). Toh 247, Degé Kangyur vol. 66 (mdo sde, za), folios
+                        42.b–46.a.</bibl>
+                    <bibl xml:id="UT22084-066-005-53">
+                        <title xml:lang="Bo-Ltn">’phags pa chos dang don rnam par ’byed pa ces bya
+                            ba thegs pa chen po’i mdo</title>. Stok no. 116, <title xml:lang="Bo-Ltn">stog pho brang bris ma</title>, vol. 64 (mdo sde, pa),
+                        folios 349.a–354.b.</bibl>
+                    <bibl xml:id="UT22084-066-005-54">
+                        <title xml:lang="Bo-Ltn">’phags pa chos dang don rnam par ’byed pa zhes bya
+                            ba theg pa chen po’i mdo</title>. bka’ ’gyur (dpe bsdur ma) [Comparative
+                        Edition of the Kangyur], krung go’i bod rig pa zhib ’jug ste gnas kyi bka’
+                        bstan dpe sdur khang (The Tibetan Tripitaka Collation Bureau of the China
+                        Tibetology Research Center). 108 volumes. Beijing: krung go’i bod rig pa dpe
+                        skrun khang (China Tibetology Publishing House), 2006–2009, vol. 66, pp.
+                        117–27.</bibl>
+                    <bibl xml:id="UT22084-066-005-99">
+                        Denkarma (<title xml:lang="Bo-Ltn">pho brang stod thang ldan dkar gyi chos kyi
+                            ’gyur ro cog gi dkar chag</title>), Toh. 4364. Degé Tengyur, 
+                        vol. 206 (sna tshogs, jo), folios 294.b–310.a.</bibl>
+                    <bibl xml:id="UT22084-066-005-55">Edgerton, Franklin. <title xml:lang="en">Buddhist Hybrid Sanskrit Grammar and Dictionary 2: Dictionary</title>.
+                        Delhi: Motilal Banarsidass, 1998.</bibl>
+                    <bibl xml:id="UT22084-066-005-56">Herrmann-Pfandt, Adelheid. <title xml:lang="de">Die lHan kar ma: ein früher Katalog der ins
+                            Tibetische übersetzten buddhistischen Texte</title>. Wien: Verlag der österreichischen Akademie der Wissenschaften, 2008.</bibl>
+                    <bibl xml:id="UT22084-066-005-57">Lang, Karen C. (1986). <title xml:lang="en">Āryadeva’s Catuḥśataka: On the Bodhisattva’s Cultivation of Merit and
+                            Knowledge</title>. Copenhagen: Akademisk Forlag, 1986.</bibl>
+                    <bibl xml:id="UT22084-066-005-58">——— (2003). <title xml:lang="en">Four Illusions: Candrakīrti’s Advice to Travelers on the Bodhisattva
+                            Path</title>. New York: Oxford University Press, 2003.</bibl>
+                    <bibl xml:id="UT22084-066-005-59">Nattier, Jan. “Gender and Enlightenment:
+                        Sexual Transformation in Mahāyāna Sūtras.” Unpublished manuscript,
+                        University of Indiana, 2002.</bibl>
+                    <bibl xml:id="UT22084-066-005-60">Negi, J. S. <title xml:lang="en">Tibetan-Sanskrit Dictionary</title>. 16 vols. Sarnath, Varanasi:
+                        Central Institute of Higher Tibetan Studies, 1993–2005.</bibl>
+                    <bibl xml:id="UT22084-066-005-61">Skilling, Peter. “Notes on the
+                        Bhadrakalpika-sūtra.” <title xml:lang="en">Annual Report of the
+                            International Research Institute for Advanced Buddhology at Soka
+                            University</title> XIII (2010), pp. 195–229.</bibl>
+                    <bibl xml:id="UT22084-066-005-97">Skilling, Peter, and Saerji. “How the Buddhas of the Fortunate Aeon First Aspired to Awakening: The 
+                        pūrva-praṇidhānas of Buddhas 1–250.” <title xml:lang="en">Annual Report of the
+                            International Research Institute for Advanced Buddhology at Soka
+                            University</title> XVII (2014), pp. 245–91.</bibl>
+                </div>
+            </div>
+            <div type="glossary">
+                <list type="glossary">
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-62">
+        <term>five aggregates</term>
+        <term xml:lang="Bo-Ltn">phung po lnga </term>
+                            <term xml:lang="bo">ཕུང་པོ་ལྔ།</term>
+        
+        <term xml:lang="Sa-Ltn">pañcaskandha</term>
+        <term type="definition">The constituents of a human being: form, feeling, perception,
+            formation, and consciousness.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-63">
+        <term>acceptance that phenomena are unborn</term>
+        <term xml:lang="Bo-Ltn">mi skye ba’i chos la bzod pa </term>
+                            <term xml:lang="bo">མི་སྐྱེ་བའི་ཆོས་ལ་བཟོད་པ།</term>
+        
+          <term xml:lang="Sa-Ltn">anutpattika­dharma­kṣānti</term>
+        <term type="definition">The realization that all phenomena are beyond birth.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-64">
+        <term>four errors</term>
+        <term xml:lang="Bo-Ltn">phyin ci log bzhi </term>
+                            <term xml:lang="bo">ཕྱིན་ཅི་ལོག་བཞི།</term>
+        
+        <term xml:lang="Sa-Ltn">caturo viparyāsā</term>
+        <term type="definition">Taking what is impermanent to be permanent, what is painful to be
+          delightful, what is unclean to be clean, and what is no self to be a self.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-65">
+        <term>nāga</term>
+        <term xml:lang="Bo-Ltn">klu </term>
+                            <term xml:lang="bo">ཀླུ།</term>
+        
+        <term xml:lang="Sa-Ltn">nāga</term>
+        <term type="definition">A semidivine class of beings who live in subterranean aquatic
+          environments and who are known to hoard wealth and esoteric teachings. They are associated
+          with snakes and serpents.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-66">
+        <term>yakṣa</term>
+        <term xml:lang="Bo-Ltn">gnod sbyin </term>
+                            <term xml:lang="bo">གནོད་སྦྱིན།</term>
+        
+        <term xml:lang="Sa-Ltn">yakṣa</term>
+        <term type="definition">A class of beings belonging to the realm of Kubera, the god of
+          wealth.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-67">
+        <term>gandharva</term>
+        <term xml:lang="Bo-Ltn">dri za </term>
+                            <term xml:lang="bo">དྲི་ཟ།</term>
+        
+        <term xml:lang="Sa-Ltn">gandharva</term>
+        <term type="definition">Lower class of divine being, under the control of the Guardian King
+          of the East. Capable of flight, they are often described as “celestial musicians.”</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-68">
+        <term>demigod</term>
+        <term xml:lang="Bo-Ltn">lha ma yin </term>
+                            <term xml:lang="bo">ལྷ་མ་ཡིན།</term>
+        
+        <term xml:lang="Sa-Ltn">asura</term>
+        <term type="definition">The traditional adversaries of the devas (gods) who are frequently
+          portrayed in the Brahmanical mythology as having a disruptive effect on cosmological and
+          social harmony.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-69">
+        <term>garuḍa </term>
+        <term xml:lang="Bo-Ltn">nam mkha’ lding </term>
+                            <term xml:lang="bo">ནམ་མཁའ་ལྡིང་།</term>
+        
+        <term xml:lang="Sa-Ltn">garuḍa</term>
+        <term type="definition">Lower class of divine being,described as an eagle-type bird with a
+          gigantic wing span. They were traditionally enemies of the nāgas. In the Vedas, they were
+          thought to have brought nectar from the heavens to earth.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-70">
+        <term>kiṃnara</term>
+        <term xml:lang="Bo-Ltn">mi’am ci </term>
+                            <term xml:lang="bo">མིའམ་ཅི།</term>
+        
+        <term xml:lang="Sa-Ltn">kiṃnara</term>
+        <term type="definition">A class of semidivine beings that resemble humans to the degree that
+          their very name—which means “Is that a man?”—suggests some confusion as to their divine
+          status.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-71">
+        <term>mahoraga</term>
+        <term xml:lang="Bo-Ltn">lto ’phye chen po </term>
+        <term xml:lang="bo">ལྟོ་འཕྱེ་ཆེན་པོ།</term>
+        <term xml:lang="Sa-Ltn">mahoraga</term>
+        <term type="definition">A class of serpentine non-human beings.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-72">
+        <term>trichiliocosm</term>
+        <term xml:lang="Bo-Ltn">stong gsum </term>
+        <term xml:lang="bo">སྟོང་གསུམ།</term>
+        <term xml:lang="Sa-Ltn">trisāhasra­loka­dhātu</term>
+        <term type="definition">A universe containing one billion worlds.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="term" xml:id="UT22084-066-005-73">
+        <term>parinirvāṇa</term>
+        <term xml:lang="Bo-Ltn">yongs su mya ngan las ’das pa </term>
+                            <term xml:lang="bo">ཡོངས་སུ་མྱ་ངན་ལས་འདས་པ།</term>
+        <term xml:lang="Sa-Ltn">parinirvāṇa</term>
+        <term type="definition">The final stage of passing into nirvāṇa, which occurs when a worthy
+          one or a buddha passes away.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-74">
+        <term>Anāthapiṇḍada</term>
+        <term xml:lang="Bo-Ltn">mgon med zas sbyin </term>
+                            <term xml:lang="bo">མགོན་མེད་ཟས་སྦྱིན།</term>
+        
+        <term xml:lang="Sa-Ltn">Anāthapiṇḍada</term>
+        <term type="definition">An important benefactor of Buddha Śakyamuni.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-75">
+        <term>Delighted by Victory</term>
+        <term xml:lang="Bo-Ltn">rgyal bas dga’ </term>
+                            <term xml:lang="bo">རྒྱལ་བས་དགའ།</term>
+        
+        <term type="definition">The bodhisattva to whom this sūtra is spoken.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-76">
+        <term>Arisen from Flowers</term>
+        <term xml:lang="Bo-Ltn">me tog las byung ba </term>
+                            <term xml:lang="bo">མེ་ཏོག་ལས་བྱུང་བ།</term>
+        
+        <term type="definition">A former buddha, who presently is Buddha Amitābha.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-77">
+        <term>Attainment of Victory</term>
+        <term xml:lang="Bo-Ltn">rgyal ba thob pa </term>
+                            <term xml:lang="bo">རྒྱལ་བ་ཐོབ་པ།</term>
+        
+        <term type="definition">The ruler of the world Flower Origin.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-78">
+        <term>Ratnaśrī</term>
+        <term xml:lang="Bo-Ltn">rin chen dpal </term>
+                            <term xml:lang="bo">རིན་ཆེན་དཔལ།</term>
+        
+        <term xml:lang="Sa-Ltn">Ratnaśrī</term>
+        <term type="definition">The queen of King Attainment of Victory.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-79">
+        <term>Ratnākara</term>
+        <term xml:lang="Bo-Ltn">rin chen ’byung gnas </term>
+                            <term xml:lang="bo">རིན་ཆེན་འབྱུང་གནས།</term>
+        
+        <term xml:lang="Sa-Ltn">Ratnākara</term>
+        <term type="definition">The son of King Attainment of Victory.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-80">
+        <term>Invincible Lord </term>
+        <term xml:lang="Bo-Ltn">mi pham dbang phyug </term>
+                            <term xml:lang="bo">མི་ཕམ་དབང་ཕྱུག</term>
+        
+        <term type="definition">A bodhisattva in the assembly of the buddha Arisen from
+          Flowers.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-81">
+        <term>Splendorous King of Shining Light</term>
+        <term xml:lang="Bo-Ltn">’od zer kun nas mngon ’phags dpal brtsegs rgyal po </term>
+                            <term xml:lang="bo">འོད་ཟེར་ཀུན་ནས་མངོན་འཕགས་དཔལ་བརྩེགས་རྒྱལ་པོ།</term>
+        
+        <term type="definition">The name of Prince Ratnākara once he attains awakening.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-82">
+        <term>Amitābha</term>
+        <term xml:lang="Bo-Ltn">’od dpag med </term>
+                            <term xml:lang="bo">འོད་དཔག་མེད།</term>
+        
+        <term xml:lang="Sa-Ltn">Amitābha</term>
+        <term type="definition">The buddha residing in the western buddha realm Sukhāvatī.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-83">
+        <term>Avalokiteśvara</term>
+        <term xml:lang="Bo-Ltn">spyan ras gzigs dbang phyug </term>
+                            <term xml:lang="bo">སྤྱན་རས་གཟིགས་དབང་ཕྱུག</term>
+        
+        <term xml:lang="Sa-Ltn">Avalokiteśvara</term>
+        <term type="definition">One of the main bodhisattva disciples of Buddha Śākyamuni, praised
+          for his compassion.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-84">
+        <term>Jinamitra</term>
+        <term xml:lang="Bo-Ltn">dzi na mi tra </term>
+                            <term xml:lang="bo">ཛི་ན་མི་ཏྲ།</term>
+        
+        <term xml:lang="Sa-Ltn">Jinamitra</term>
+        <term type="definition">An Indian Kashmiri paṇḍita who was resident in Tibet during the late
+          eighth and early ninth centuries. He worked with several Tibetan translators on the
+          translation of a number of sūtras.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-85">
+        <term>Dānaśīla</term>
+        <term xml:lang="Bo-Ltn">dA na shI la </term>
+                            <term xml:lang="bo">དཱ་ན་ཤཱི་ལ།</term>
+        
+        <term xml:lang="Sa-Ltn">Dānaśīla</term>
+        <term type="definition">An Indian paṇḍita who was resident in Tibet during the late eighth
+          and early ninth centuries.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-86">
+        <term>Yeshé Dé</term>
+        <term xml:lang="Bo-Ltn">ye shes sde </term>
+                            <term xml:lang="bo">ཡེ་ཤེས་སྡེ།</term>
+        
+        
+        <term type="definition">A prolific Tibetan translator active during the late eighth and
+          early ninth centuries.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="person" xml:id="UT22084-066-005-87">
+        <term>Śākyamuni </term>
+        <term xml:lang="Bo-Ltn">shAkya thub pa </term>
+                            <term xml:lang="bo">ཤཱཀྱ་ཐུབ་པ།</term>
+        
+        <term xml:lang="Sa-Ltn">Śākyamuni </term>
+        <term type="definition">The buddha of this age; the historical buddha.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="place" xml:id="UT22084-066-005-88">
+        <term>Jeta Grove</term>
+        <term xml:lang="Bo-Ltn">rgyal bu rgyal byed kyi tshal </term>
+                            <term xml:lang="bo">རྒྱལ་བུ་རྒྱལ་བྱེད་ཀྱི་ཚལ།</term>
+        
+        <term xml:lang="Sa-Ltn">Jetavana</term>
+        <term type="definition">The park donated to the Buddha by Anāthapiṇḍada.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="place" xml:id="UT22084-066-005-89">
+        <term>Śrāvastī</term>
+        <term xml:lang="Bo-Ltn">mnyan yod </term>
+                            <term xml:lang="bo">མཉན་ཡོད།</term>
+        
+        <term xml:lang="Sa-Ltn">Śrāvastī</term>
+        <term type="definition">The capital of the ancient Kosala kingdom in India during the
+          sixth–fifth centuries <hi rend="small-caps">bce</hi>.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="place" xml:id="UT22084-066-005-90">
+        <term>Painted with Many Jewels</term>
+        <term xml:lang="Bo-Ltn">kun nas rin po ches yang dag par bris pa </term>
+                            <term xml:lang="bo">ཀུན་ནས་རིན་པོ་ཆེས་ཡང་དག་པར་བྲིས་པ།</term>
+        
+        <term type="definition">The buddha realm in which Prince Ratnākara will attain
+          awakening.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="place" xml:id="UT22084-066-005-91">
+        <term>Flower Origin</term>
+        <term xml:lang="Bo-Ltn">me tog gi ’byung gnas </term>
+                            <term xml:lang="bo">མེ་ཏོག་གི་འབྱུང་གནས།</term>
+        
+        <term type="definition">The buddha realm of the Buddha Arisen from Flowers.</term>
+      </gloss>
+    </item>
+    <item>
+      <gloss type="place" xml:id="UT22084-066-005-92">
+        <term>Sukhāvatī</term>
+        <term xml:lang="Bo-Ltn">bde ba can </term>
+                            <term xml:lang="bo">བདེ་བ་ཅན།</term>
+        
+        <term xml:lang="Sa-Ltn">Sukhāvatī</term>
+        <term type="definition">The buddha realm, located in the western direction, in which Buddha
+          Amitābha resides.</term>
+      </gloss>
+    </item>
+  </list>
+            </div>
+        </back>
+    </text>
+</TEI>

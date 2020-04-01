@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../../../schema/current/translation.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="mainTitle" xml:lang="Bo-Ltn">bkra shis kyi tshigs su bcad pa</title>
+                <title type="mainTitle" xml:lang="Sa-Ltn">mangalagatha</title>
+                <title type="mainTitle" xml:lang="en"/>
+            </titleStmt>
+            <publicationStmt status="">
+                <idno xml:id="UT23703-207-048"/>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl key="toh4411" type="text">
+                    <ref>Toh 4411</ref>
+                    <biblScope>ff. 347r-349r</biblScope>
+                    <author role="translatorTib">a. klu sgrub</author>
+                    <author role="translatorTib">t. jinamitra</author>
+                    <author role="translatorTib">ye shes sde</author>
+                    <location count-pages="">
+                        <start volume="207" page="695"/>
+                        <end volume="207" page="699"/>
+                    </location>
+                    <idno parent-id="O1JC76301JC21687" work="http://read.84000.co/sections"/>
+                    <idno source-id="O1JC76301JC112171JC21754" work="W23703"/>
+                </bibl>
+            </sourceDesc>
+            <notesStmt>
+                <note type="lastUpdated">Last updated at 07/09/2018 at 10:15:19 by admin</note>
+            </notesStmt>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <front/>
+    </text>
+</TEI>
