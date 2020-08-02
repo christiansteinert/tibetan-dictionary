@@ -34,7 +34,7 @@
             dictionaries:dictionaries
           },
           cache: true,
-        }).success(function(data) { 
+        }).done(function(data) { 
           DICT.loadTerm(term, data, saveState);
         }).fail(function(xhr,msg,err) {
           alert(msg + '\n' + err);
@@ -54,7 +54,7 @@
             dictionaries:dictionaries
           },
           cache: true,
-        }).success(function(data) { 
+        }).done(function(data) { 
           callback( data );
         }).fail(function(xhr,msg,err) {
           alert(msg + '\n' + err);
@@ -71,7 +71,7 @@
             checkTerms:sections
           },
           cache: true,
-        }).success(function(data) {
+        }).done(function(data) {
           DICT.activateInlineTibetanSections(data);
         }).fail(function(xhr,msg,err) {
           alert(msg + '\n' + err);
@@ -295,10 +295,12 @@
   
     var DICT={};
     var DICT={
+      _needsBackspaceWorkaround:null,
       _touch:false,
       _offset:0,
       dataAccess:{},
       useUnicodeTibetan:true,
+      wasTypedInWylie:false,
       DICTLIST:{},
       WORDLIST:[],
       ABBREV:[],
@@ -510,7 +512,7 @@
        */
       normalizeWylie:function(text) {
         text = text.replace(/v/,'w');
-        
+        text = text.replace(/[\u0009\u000A\u000B\u000C\u000D\u0020\u0085\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000\u180E\u200B\u200C\u200D\u2060\uFEFF\u00B7]+/g,' ');
         text = text.replace(/^ *[/]/mg,'_');
         text = text.replace(/^ +|[ _]+$/,'');
         if(text != '' && !/.*(?: |\+|\/|་|།)$/.test(text))
@@ -528,7 +530,8 @@
         text = text.replace(/([^a-zA-Z'])[ _]+$/mg,'$1'); //prevent tsegs after non-word charcters at the end of a line
         text = text.replace(/([aeiou]')([bcdfghjklmnpqrstvwxyz])/ig,'$1a$2'); //enforce a vowel after a-chung
         text = text.replace(/\.( |\/)|\.$/g,'//$1'); //a dot at the end of a syllable cannot be part of the syllable. Convert it to a double-shad
-                
+
+        
         //prevent spaces after certain character combinations (this is a cleanup rule that removes some spaces 
         // that may have been introduced by one of the previous rules but are not desired)
         text = text.replace(/(\/)[ _]([\]\)}])/mg,'$1$2');
@@ -639,6 +642,7 @@
       },
 
       uniSyllableToWylieSyllable:function(syllable) {
+        syllable = this._normalizeWylieForLookup(syllable);
         if(this.UNICODE_SYLLABLELIST[syllable]) {
           var result = this.UNICODE_SYLLABLELIST[syllable];
           result = result.replace(/([aeiou]')([bcdfghjklmnpqrstvwxyz])/g,"$1a$2");
@@ -799,7 +803,16 @@
         $("#credits").html(credits)
         
       },
-            
+
+      needsBackspaceWorkaround:function() {
+        // old versions of Android cannot delete Tibetan script when pressing backspace
+        // in that case we need workarounds
+        if(this._needsBackspaceWorkaround === null) {
+          this._needsBackspaceWorkaround = /Android [1234]/.test(navigator.userAgent)
+        }
+        return this._needsBackspaceWorkaround;
+      },
+      
       doInit:function($) {
         try{
           //if(window.cordova) { 
@@ -868,7 +881,7 @@
             }
           });
 
-          $('#searchTerm').on('keypress',function(event){
+          $('#searchTerm').on('keypress',function(event){          
             if(event.keyCode == 13){ //enter
             
               // if enter is pressed in the input field then convert all syllables to unicode
@@ -893,16 +906,37 @@
                 lastUniInput = DICT.lastUniInput,
                 newInput = DICT.uniToWylie(uniInput).replace(/_/g,' '),
                 currentInput = DICT.currentInput;
+
+            if ( uniInput === '' || lastUniInput === ''  ) {
+              // whenever the input field has become empty then reset the flag which remembers that the user had typed Wylie
+              DICT.wasTypedInWylie = false;
+            }
+                
+            if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
+              // remember if something was typed in Wylie rather than in Tibetan unicode
+              // in this case we will later convert the input back to Wylie when backspace is pressed.
+              DICT.wasTypedInWylie = true;
+            }
+                
             if(event.keyCode == 8 ||(newInput.length < currentInput.length && currentInput.indexOf(newInput)===0)
                                   ||(uniInput.length < lastUniInput.length && lastUniInput.indexOf(uniInput)===0)){ // backspace
-              if(DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") ) {
-                if(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput)) { 
-                  // if the input field ends with a tseg or shad, then clear the last syllable
-                  var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/,'$1');
-                  $('#searchTerm').val(adjusted);
-                  DICT.search(false,true,0);
-                }
+              var isAtEndOfSyllable = /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
+              if(DICT.wasTypedInWylie && DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && isAtEndOfSyllable ) {
+                // backspace at end of Tibetan syllable after having typed Wylie
+                // => convert syllable back to Wylie
+                var adjusted = DICT.uniToWylie(uniInput).replace(/[_  ]*$/, '');
+                $('#searchTerm').val(adjusted);
+                DICT.search(false,true,0);
+                
+              } else if(DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && DICT.needsBackspaceWorkaround() && isAtEndOfSyllable ) {
+                // backspace at end of Tibetan syllable after having typed Tibetan directly
+                // => on old devices: delete whole syllable
+                var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/,'$1');
+                $('#searchTerm').val(adjusted);
+                DICT.search(false,true,0);
               } else {
+                // backspace in all other cases
+                // => just allow regular logic: allow the last character be deleted. This may be the last Unicode character
                 DICT.search(false,true,0);
               }
 
@@ -931,7 +965,7 @@
           }, false); 
           
           // - listen to changes of the URL
-          var hashEventCount = 0;;
+          var hashEventCount = 0;
           $(window).hashchange(function(){
             hashEventCount++;
             
@@ -1085,11 +1119,13 @@
       },
       
       search:function(loadFirstItem,saveState,offset) {
-        var inputText = this.uniToWylie( $('#searchTerm').val() );
+        var inputText = $('#searchTerm').val();
+        inputText = this.uniToWylie(inputText);
         inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
         inputText = inputText.replace(/_/g, ' ');
         inputText = inputText.replace(/\s+/g, ' ');
         inputText = inputText.replace(/[ /]+$/g, '');
+
         
         var settings = SETTINGS.getSettings();
 
@@ -1276,6 +1312,7 @@
 
       readTerm:function(term, saveState){
         this.scrollToTop();
+        term = this._normalizeWylieForLookup(term);
         term = unescape(term).replace(/^\s+|\s+$/g, '');
         if(this.activeTerm != term) {
           this.getDataAccess().readTerm(term, DICT.getLang(), this.settings.activeDictionaries, saveState);
@@ -1297,8 +1334,11 @@
       _escapeRegExp:function(str) {
         return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
       },
-      
+
       _normalizeWylieForLookup:function(wylie) {
+        // remove unwanted characters - especially whitespace stuff
+        if(wylie===' ')
+          return wylie;
         wylie = wylie.replace('/',' ');
         wylie = wylie.replace(/[()]/g,' ');
         wylie = wylie.replace(/\s\s+/g,' ');
@@ -1430,8 +1470,13 @@
               }
               definition = DICT.breakDefinitionIntoSections( definition );
               if(currentDict.containsOnlyTibetan) {
+                // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
+              
                 defStart = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">';
-                definition =  DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+                definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+                //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
+                //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
+                //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );
                 defEnd = '</div>';
               } else if(currentDict.containsOnlySkt) {
                 defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';

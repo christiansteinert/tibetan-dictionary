@@ -342,8 +342,13 @@ $ZLIB_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara v
   } else {
     $dictQuery = 'false';
   }
-  
-  $lang = trim($_POST['lang']);
+
+  if(isset($_POST['lang'])) {
+    $lang = trim($_POST['lang']);
+  } else {
+    $lang = 'bo';
+  }
+
   if($lang == "en") {
     $table = "DICT_EN";
     $lang = "en";

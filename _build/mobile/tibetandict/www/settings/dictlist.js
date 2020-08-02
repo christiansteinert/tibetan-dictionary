@@ -1,5 +1,4 @@
 DICTLIST={
-
 "TsepakRigdzin":{
   label:'Tsepak Rigdzin',
   highlight:'\\[([^\\]]*)\\]',
@@ -26,6 +25,13 @@ DICTLIST={
   about:'The Illuminator Tibetan-English Encyclopaedic Dictionary|Version 5.23, January 2014|Tony Duff 2000-2014, All rights reserved|If you use this dictionary, please buy it at: www.pktc.org/pktc',
   abbreviations:'Illuminator',
   public:"false",
+  listCredits:"true"
+},
+"TibTermProject":{
+  label:'Tibetan Terminology Project: Glossary of Standardised Terms',
+  about:'Tibetan Terminology Project: Glossary of Standardised Terms| Department of Education, Central Tibetan Administation, India, 2013| Chief editor: Acharya Karma Monlam | Assistant editors: Ogyen Tenzin, Yeshi Tenzin, Tsering Dhondup |Database consultant: Pema Zomkyi | Software consultants: ven. Lobsang Monlam, Gedun Dhonyoe | online version: https://tibterminology.net/',
+  abbreviations:'TibTermProject',
+  public:"true",
   listCredits:"true"
 },
 "Hopkins2015":{
@@ -177,6 +183,11 @@ DICTLIST={
   public:"true",
   listCredits:"true"
 },
+"Misc":{
+  label:'Miscellaneous definitions',
+  about:'Mixed definitions from various sources',
+  public:"true"
+},
 "Verbinator":{
   label:'Verbinator Verb Dictionary (Tibetan)',
   highlight:'((?:Past|Present|Future|Imperative|Meaning): )',
@@ -316,6 +327,5 @@ DICTLIST={
   about:'Tibetan-Sanskrit Table of Buddhist Terminology Based on the Yogacarabhumi|MAHONEY, Richard, ed., Tibetan-Sanskrit Buddhist Terminology based on the `Mahāvyutpatti\' and `Yogācārabhūmi\', (Oxford, North Canterbury: Indica et Buddhica, 2004)|See: http://indica-et-buddhica.org/repositorium/dictionaries/tibetan-sanskrit-terms',
   public:"true",
   listCredits:"true"
-},
-
+}
 }
