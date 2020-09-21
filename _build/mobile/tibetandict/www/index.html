@@ -574,6 +574,7 @@
           result += DICT.wylieSyllableToUniSyllable(syllable,strictChecks);
         });
         tokenizer.parse(text);
+        result = result.replace(/ +/g,'་');
         return result;
       },
       
@@ -882,7 +883,7 @@
             }
           });
 
-          $('#searchTerm').on('keypress',function(event){          
+          $('#searchTerm').on('keypress',function(event){                      
             if(event.keyCode == 13){ //enter
               // if enter is pressed in the input field then convert all syllables to unicode
               DICT.lang = DICT.getInputLang();
@@ -906,8 +907,14 @@
           $('#searchTerm').on('keyup mobiletextchange',function(event){
             var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() ),
                 lastUniInput = DICT.lastUniInput,
-                newInput = DICT.uniToWylie(uniInput).replace(/_/g,' '),
+                newInput = uniInput,
                 currentInput = DICT.currentInput;
+
+            if(DICT.getInputLang() === "tib") {
+              newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
+            } else {
+              newInput = newInput.replace(/\s+/,' ');
+            }
 
             if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
               // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
@@ -1124,11 +1131,13 @@
       
       search:function(loadFirstItem,saveState,offset) {
         var inputText = $('#searchTerm').val();
-        inputText = this.uniToWylie(inputText);
-        inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
-        inputText = inputText.replace(/_/g, ' ');
-        inputText = inputText.replace(/\s+/g, ' ');
-        inputText = inputText.replace(/[ /]+$/g, '');
+        if(DICT.getInputLang()==='tib') {
+          inputText = this.uniToWylie(inputText);
+          inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
+          inputText = inputText.replace(/_/g, ' ');
+          inputText = inputText.replace(/\s+/g, ' ');
+          inputText = inputText.replace(/[ /]+$/g, '');
+        }
 
         
         var settings = SETTINGS.getSettings();
