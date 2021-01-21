@@ -810,7 +810,7 @@
         // old versions of Android cannot delete Tibetan script when pressing backspace
         // in that case we need workarounds
         if(this._needsBackspaceWorkaround === null) {
-          this._needsBackspaceWorkaround = /Android [1234]/.test(navigator.userAgent)
+          this._needsBackspaceWorkaround = /Android [1234][^0-9]/.test(navigator.userAgent)
         }
         return this._needsBackspaceWorkaround;
       },

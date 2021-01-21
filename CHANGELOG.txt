@@ -1,5 +1,8 @@
 Changelog:
 
+Version 0.0.16:
+* Correction of backspace behavior for Android 10 and 11
+
 Version 0.0.15:
 * Better handling when characters are deleted: In that case we will now only delete the entire last syllable if we are on really old Android releases and the user had typed directly with a Tibetan keyboard
 * Added new English-Tibetan / Tibetan-English dictionary with modern scientific and economic terms: Tibetan Terminology Project: Glossary of Standardised Terms (Central Tibetan Administration)
