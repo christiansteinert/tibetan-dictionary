@@ -327,5 +327,29 @@ DICTLIST={
   about:'Tibetan-Sanskrit Table of Buddhist Terminology Based on the Yogacarabhumi|MAHONEY, Richard, ed., Tibetan-Sanskrit Buddhist Terminology based on the `Mahāvyutpatti\' and `Yogācārabhūmi\', (Oxford, North Canterbury: Indica et Buddhica, 2004)|See: http://indica-et-buddhica.org/repositorium/dictionaries/tibetan-sanskrit-terms',
   public:"true",
   listCredits:"true"
-}
+},
+"LokeshChandraSkt":{
+  containsOnlySkt:true, 
+  label:'Lokesh Chandra (Tibetan-Sanskrit)',
+  about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
+  public:"true",
+  listCredits:"true"
+},
+
+"LokeshChandraTib":{
+  containsOnlyTibetan:true,
+  label:'Lokesh Chandra (Sanskrit-Tibetan)',
+  about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
+  public:"true",
+  listCredits:"true"
+},
+
+"NegiSkt":{
+  containsOnlySkt:false, 
+  label:'Negi (Tibetan-Sanskrit)',
+  about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
+  public:"true",
+  listCredits:"true"
+}    
+    
 }
