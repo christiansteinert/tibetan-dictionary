@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
 
   <link rel="stylesheet" href="lib/jquery_tooltip/tooltip.css">
+  <link rel="stylesheet" href="lib/photoswipe/photoswipe.css">
+  
 
   <script src="settings/globalsettings.js"></script>
   <script src="lib/jquery/jquery.js"></script>
@@ -18,10 +20,10 @@
   <script src="settings/dictlist.js"></script>
   <script src="settings/abbreviations.js"></script>
   <script src="cordova.js"></script>
+
   <!--<script src="SQLitePlugin.js"></script>-->
   
-  <script>
-  
+  <script>  
     var PhpDataAccess={
       readTerm:function(term, lang, dictionaries, saveState) {
         $.ajax({
@@ -41,7 +43,7 @@
         });
       },
       
-      readTermList:function(inputText, lang, offset, maxResults, dictionaries, callback){
+      readTermList:function(inputText, lang, offset, maxResults, dictionaries, callback){        
         $.ajax({
           type: 'POST',
           url: 'dict.php',
@@ -408,6 +410,9 @@
         if(wylie.match(/[aeiou]'a( |$|\/)/)) // syllables ending with an a-chung should end with ' and not with 'a
           return false;
 
+        if(wylie.match(/^[^aeiou]+'/)) // syllables with an a-chung that is not the prefix must contain another vowel before that
+          return false;
+          
         switch(wylie) {
           case 'm\'i':
             return false;
@@ -1161,6 +1166,21 @@
           this.getDataAccess().readTermList(inputText, lang, offset, settings.listSize + 1, this.settings.activeDictionaries, function(result) {
             var lang = DICT.getInputLang();        
             var tableRows = [];
+
+            // add entry to look up pages in scanned dictionaries
+            var foundTerms = new Set();
+            for(var i=0;i<result.length;i++) {
+              foundTerms.add(result[i][0]);
+            }
+            var dictList = DICT.settings.activeDictionaries;
+            $.each(dictList,function(idx,currentDictName) {        
+              var currentDict = DICTLIST[currentDictName];
+              if(currentDict.scanId && !foundTerms.has(inputText)) {                
+                result.push([inputText]);
+                foundTerms.add(inputText);
+              }
+            });
+
             if(result.length === 0 && offset > 0 )
               return;
           
@@ -1318,6 +1338,11 @@
               this.readTerm(stateInfo.activeTerm,DICT.getLang(), false);
               
             this.setSidebarState(stateInfo.forceLeftSideVisible);
+            
+            if(stateInfo.definitionOnly) {
+                $('body').addClass('definitionOnly');
+            }
+            
             this.currentInput = stateInfo.currentListTerm;
           }
         }
@@ -1445,10 +1470,18 @@
         title = title.replace(/\n/g,' ');
         title = title.replace(/<[^>]*>/g,' ');
         title = title.replace(/  +/g,' ');        
+        title = title.replace(/'/g,"\\'");        
 
         return title;
       },
-      
+
+      htmlEscapeScriptAttr:function(text) {
+        text = this.htmlEscape(text);
+        text = text.replace(/'/g,"\\'");        
+
+        return text;
+      },
+
       htmlEscape:function(text) {
         text = text.replace(/&/g,'&amp;');
         text = text.replace(/</g,'&lt;');
@@ -1457,7 +1490,27 @@
                        
         return text;
       },
+
+      loadScannedPage:function(dictId, termId) {
+        $.ajax({
+          type: 'GET',
+          url: "scanned/"+dictId+"/"+termId,
+          cache: true,
+        }).done(function(pageInfo) { 
+          DICT.openScannedPage(dictId, termId, pageInfo);
+        }).fail(function(xhr,msg,err) {
+          alert(msg + '\n' + err);
+        });
+      },
       
+      openScannedPage:function(dictId, termId, pageInfo) {
+        if(window.openLightbox) {
+          openLightbox('data/scan/'+dictId+'/', pageInfo);
+        } else {
+          alert('Sorry, but your web browser is too old to support this feature :-(');
+        }
+      },
+
       loadTerm:function(term,dictEntries,saveState) {
         $('#definitions *').remove();
         if(DICT.getLang()==="en")
@@ -1467,6 +1520,15 @@
         var definitionTab = '<h1 class="definitionHead definitionHead'+DICT.getLang()+'" title="'+this.htmlEscapeTitle(term)+'">'+termUni+'</h1><table id="definitionList">';
         var definitionNr = 0;
         var dictList = this.settings.activeDictionaries;
+
+        // add "content" to look up pages in scanned dictionaries
+        $.each(DICTLIST, function(dict_id, dict) {
+          var currentDict = DICTLIST[dict_id];
+          if(currentDict.scanId) {
+            dictEntries[dict_id] = '<div><a href="javascript:DICT.loadScannedPage(\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\',\'' + DICT.htmlEscapeScriptAttr(term) + '\')">' + currentDict.linkText+'</a></div>';
+          }
+        });
+
         $.each(dictList,function(idx,currentDictName) {        
           $.each(dictEntries,function(dictName,definition) {
             if(dictName == currentDictName) {
@@ -1495,6 +1557,9 @@
                 defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
                 definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
                 defEnd = '</div>';
+              } else if(currentDict.scanId){ 
+                //scanned dictionary. Do nothing because no escaping of text is needed
+
               } else {
                 definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);
               }
@@ -1543,6 +1608,13 @@
         var isLocalhost = window.location && window.location.hostname && (window.location.hostname.indexOf("localhost")==0);
         var publicOnly = GLOBAL_SETTINGS.publicOnly && (!isLocalhost);
         $.each(DICTLIST,function(currentDictName,dictInfo) {
+          if((dictInfo.webOnly && window.cordova)          // suppress webOnly dictionaries in mobile app
+           || (publicOnly && dictInfo.public != true)) {  // suppress listing of private dictionaries
+            console.log("suppressing:", dictInfo);
+            return;
+          }
+          
+
           if((!publicOnly)||(publicOnly && dictInfo.public == "true")) {
             result.push(currentDictName);
           }
@@ -1889,7 +1961,32 @@
         </span>
       </div>
     </form>
-    
   </div>
+
+  <script type="module">
+    import PhotoSwipeLightbox from './lib/photoswipe/photoswipe-lightbox.esm.min.js';
+    import PhotoSwipe from './lib/photoswipe/photoswipe.esm.min.js';
+
+    window.openLightbox = function(path, pageInfo) {
+      var data = [];
+      
+      for(var i=pageInfo.min_page; i<=pageInfo.max_page; i++) {
+        data.push({ 
+          src: path+i+'.png',
+          width: pageInfo.width,
+          height: pageInfo.height,
+        });
+      };
+
+      const lightbox = new PhotoSwipeLightbox({
+        pswpModule: PhotoSwipe,
+        dataSource: data,
+        loop: false
+      });
+      lightbox.init();
+      lightbox.loadAndOpen(pageInfo.term_page - pageInfo.min_page);
+    }
+  </script>
+
 </body>
 </html>

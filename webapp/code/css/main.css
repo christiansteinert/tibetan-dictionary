@@ -462,3 +462,24 @@ body.dark,.dark .textInput{background-color:#000 !important;color:#eee}
 .dark .settingsinfo {
     color:#eee;
 }
+
+
+/* special mode that only shows a definition*/
+.definitionOnly .mainWrap {
+  padding: 0.25em !important;
+}
+
+.definitionOnly .leftSideBar, .definitionOnly .textInput{
+  display:none !important;
+}
+
+
+/*picture viewer for scanned dictionaries*/
+img.pswp__img{
+  image-rendering: optimizeQuality;
+}
+/*
+.dark img.pswp__img{
+  filter: invert(100%);
+}
+*/

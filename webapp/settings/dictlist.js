@@ -1,4 +1,11 @@
 DICTLIST={
+"LaineAbbreviations":{
+  label:'Tibetan Abbreviations (Tibetan)',
+  about:'Tibetan abbreviations|Compiled, formatted and kindly shared by Bruno Lainé (Version: September 2021)|http://www.rkts.org/',
+  abbreviations:'LaineAbbreviations',
+  public:"true",
+  listCredits:"true"
+},
 "TsepakRigdzin":{
   label:'Tsepak Rigdzin',
   highlight:'\\[([^\\]]*)\\]',
@@ -131,6 +138,24 @@ DICTLIST={
   label:'Richard Barron',
   about:'Richard Barron\'s glossary. © Copyright 2002 by Turquoise Dragon Media Services. Source: Rangjung Yeshe Tibetan-English Dharma Dictionary 3.0 (2003)|online version: http://rywiki.tsadra.org',
   public:"true",
+  listCredits:"true"
+},
+"Jaeschke_Scan":{
+  label:'Jäschke (scanned dictionary)',
+  about:'',
+  public:"true",
+  webOnly:"true",
+  scanId:"jaeschke",
+  linkText:"Open the corresponding page in Jäschke's Tibetan-English dictionary to see if an entry for this term exists.",
+  listCredits:"true"
+},
+"ChandraDas_Scan":{
+  label:'Chandra Das (scanned dictionary)',
+  about:'',
+  public:"true",
+  webOnly:"true",
+  scanId:"das",
+  linkText:"Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
   listCredits:"true"
 },
 "Hopkins-Divisions2015":{
@@ -350,6 +375,6 @@ DICTLIST={
   about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
   public:"true",
   listCredits:"true"
-}    
-    
+}
+
 }

@@ -340,7 +340,7 @@ $ZLIB_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara v
       $dictQuery .= ' DICTNAMES.name="'.$db->escapeString($dict).'"';
     }
   } else {
-    $dictQuery = 'false';
+    $dictQuery = 'true';
   }
 
   if(isset($_POST['lang'])) {
@@ -410,7 +410,7 @@ $ZLIB_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara v
         $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE (( '.$table.'.term LIKE :word ) AND ('.$dictQuery.')) GROUP BY term ORDER BY lower(term), term LIMIT '.$maxresults.' OFFSET '.$offset.';');
 
         $statement->bindValue(':word', str_replace("*","%",$search . "%"), SQLITE3_TEXT);
-    } else if($lang == 'tib') { // regular Tibetan search
+    } else if($lang == 'bo') { // regular Tibetan search
         $statement = $db->prepare('SELECT DISTINCT term FROM '.$table.' inner join DICTNAMES on '.$table.'.dictionary = DICTNAMES.id and DICTNAMES.language = "'.$lang.'" WHERE ((( '.$table.'.term = :word ) OR ( '.$table.'.term > :wordSearch1 AND term < :wordSearch2 )) AND ('.$dictQuery.')) GROUP BY term ORDER BY lower(term), term LIMIT '.$maxresults.' OFFSET '.$offset.';');
         $statement->bindValue(':word', $search, SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1',  $search . ' ', SQLITE3_TEXT);
