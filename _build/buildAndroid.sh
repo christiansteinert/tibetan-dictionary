@@ -51,8 +51,8 @@ find mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steiner
 
 # copy the files of the web application into the cordova project
 mkdir mobile/tibetandict/platforms/android/app/src/main/assets/www
-cp -r ../webapp/index.html ../webapp/code ../webapp/data ../webapp/settings ../webapp/lib mobile/tibetandict/www
-cp -r ../webapp/index.html ../webapp/code ../webapp/data ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/www
+cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
 cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
 cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
 
