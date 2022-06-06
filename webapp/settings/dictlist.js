@@ -142,7 +142,7 @@ DICTLIST={
 },
 "Jaeschke_Scan":{
   label:'Jäschke (scanned dictionary)',
-  about:'',
+  about:'Heinrich August Jäschke|A Tibetan-English dictionary with special reference to the prevailing dialects; to which is added an English-Tibetan vocabulary (1881)||https://archive.org/details/tibetanenglishdi00jsuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary does not have a complete list of all terms so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
   public:"true",
   webOnly:"true",
   scanId:"jaeschke",
@@ -151,7 +151,7 @@ DICTLIST={
 },
 "ChandraDas_Scan":{
   label:'Chandra Das (scanned dictionary)',
-  about:'',
+  about:'Sarat Chandra Das|A Tibetan English Dictionary (1902)||https://archive.org/details/tibetanenglishdi00dassuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary does not have a complete list of all terms so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
   public:"true",
   webOnly:"true",
   scanId:"das",
@@ -217,7 +217,7 @@ DICTLIST={
   label:'Verbinator Verb Dictionary (Tibetan)',
   highlight:'((?:Past|Present|Future|Imperative|Meaning): )',
   abbreviations:'Verbinator',
-  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition. Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)|ISBN 978-3-7696-1004-8|If you want to support the author and the publisher please consider buying this book (regular price: 58 EUR plus shipping). If you have trouble with ordering it, feel free send a mail to dictionary@christian-steinert.de and I will try to help you.',
+  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition.|Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)|ISBN 978-3-7696-1004-8|If you want to support the author and the publisher please consider buying this book (regular price: 58 EUR plus shipping). If you have trouble with ordering it, feel free send a mail to dictionary@christian-steinert.de and I will try to help you.',
   public:"true",
   listCredits:"true"
 },

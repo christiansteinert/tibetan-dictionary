@@ -57,8 +57,8 @@ var TOOLTIPS={
       toolWidth  = $tooltip.width();
 
       // make tooltip wider if it contains a lot but make sure that the width still fits on the page
-      if(titleAttr.length>250) {
-        toolWidth*=1+(titleAttr.length-250)/350;
+      if(toolWidth>350) {
+        toolWidth=350+(titleAttr.length)/2;
       }
 
       if(toolWidth>0.9*bdyWidth) {
