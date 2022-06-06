@@ -1,11 +1,11 @@
 import os
 import re
-import sys
-import traceback
 import json
+from collections import namedtuple
+
+# 3rd party dependencies:
 from pyewts import pyewts
 from tibetan_sort.tibetan_sort import TibetanSort
-from collections import namedtuple
 from flask import Flask
 
 app = Flask(__name__)
