@@ -57,7 +57,7 @@ def find_closest_header_page(query, headers):
         return int(headers[term_idx].page)
     else:
         # The word we search is not contained in the list of headwords.
-        # Return thte page number of the head-word that comes alphabetically
+        # Return the page number of the head-word that comes alphabetically
         # right before the term we search
         nearest_idx = sorter.sort_list(head_words + [query]).index(query)
         return int(headers[nearest_idx - 1].page) 
