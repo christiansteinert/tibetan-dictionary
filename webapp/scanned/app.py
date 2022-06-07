@@ -39,8 +39,7 @@ def load_dictionaries():
         print(e)
 
 def remove_wasur(tib_string):
-    tib_string_bytes = tib_string.encode('utf-8')
-    return tib_string_bytes.replace(b'\xbe\xad\xe0', b'').decode('utf-8')
+    return tib_string.replace(chr(0x0fad),'')
 
 def find_closest_header_page(query, headers):
     '''
@@ -90,6 +89,7 @@ def find_dict_page(dict_id, query):
         
         if dict is not None:
             query = pyewts().toUnicode(query)
+            query = remove_wasur(query)
             page_nr_nominal  = find_closest_header_page(query, dict['headers'])
             page_nr_adjusted = page_nr_nominal + dict['offset']
 

@@ -1609,7 +1609,7 @@
         var publicOnly = GLOBAL_SETTINGS.publicOnly && (!isLocalhost);
         $.each(DICTLIST,function(currentDictName,dictInfo) {
           if((dictInfo.webOnly && window.cordova)          // suppress webOnly dictionaries in mobile app
-           || (publicOnly && dictInfo.public != true)) {  // suppress listing of private dictionaries
+           || (publicOnly && dictInfo.public !== "true")) {  // suppress listing of private dictionaries
             console.log("suppressing:", dictInfo);
             return;
           }
