@@ -40,7 +40,7 @@ def cleanTib(tib): # clean garbage from Tibetan
   
   return tib
 
-def cleanDef(skt): # clean garbage from Tibetan 
+def cleanDef(skt): # clean garbage from Sanskrit
   skt = skt.strip()
   skt = skt.replace('+\'a','A')
   

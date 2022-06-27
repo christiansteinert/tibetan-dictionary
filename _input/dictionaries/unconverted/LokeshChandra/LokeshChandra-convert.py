@@ -1,11 +1,9 @@
 #!/usr/bin/python3
-
-#  -> run  pip install --user devatrans before using this script
-
-
 import xml.etree.ElementTree as ET
 import re
-from devatrans import DevaTrans 
+
+# 3rd party dependencies
+from devatrans import DevaTrans #  -> run  pip install --user devatrans before using this script
 
 
 def hideUnwantedTib(tib): # suppress Tibetan entries with characters that we cannot properly handle
@@ -47,6 +45,14 @@ def cleanSkt(skt): # clean garbage from Sanskrit
   skt = skt.strip()
   return skt
 
+def wrapInBraces(txt): # wrap Tibean or Sanskrit text in curly braces
+  txt = '{' + txt + '}'
+
+  # make sure that numbered list items are not inside braces
+  txt = re.sub('(\s*[0-9]+[)]\s*)',r'}\1{',txt)
+  txt = txt.replace('{}','')
+  return txt
+
 
 f = open("49-LokeshChandraSkt", "w")
 f2 = open("49-LokeshChandraTib", "w")
@@ -66,13 +72,13 @@ for item in root.findall('item'):
       for tib3 in tib2.split(','):
         if '(' in tib3:
           tibWithoutBracketContent = cleanTib( re.sub('\([^)]+\)','',tib3) )
-          f.write("%s|{%s}\n" % ( tibWithoutBracketContent.strip(), sktTrans ) )
+          f.write("%s|%s\n" % ( tibWithoutBracketContent.strip(), wrapInBraces(sktTrans) ) )
 #          tibWithoutBrackets = re.sub('[()]','',tib3)
 #          f.write("%s|%s\n" % ( cleanTib(tibWithoutBrackets), sktTrans ) )
           if not '(' in sktTrans:
             f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
         else:
-          f.write("%s|{%s}\n" % ( cleanTib(tib3), sktTrans ) )
+          f.write("%s|%s\n" % ( cleanTib(tib3), wrapInBraces(sktTrans) ) )
           if not ')' in sktTrans:
             f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
     
