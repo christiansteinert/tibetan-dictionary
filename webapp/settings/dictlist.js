@@ -146,6 +146,7 @@ DICTLIST={
   public:"true",
   webOnly:"true",
   scanId:"jaeschke",
+  language:"tib",
   linkText:"Open the corresponding page in Jäschke's Tibetan-English dictionary to see if an entry for this term exists.",
   listCredits:"true"
 },
@@ -155,6 +156,7 @@ DICTLIST={
   public:"true",
   webOnly:"true",
   scanId:"das",
+  language:"tib",
   linkText:"Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
   listCredits:"true"
 },
