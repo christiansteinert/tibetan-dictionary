@@ -45,14 +45,6 @@ def cleanSkt(skt): # clean garbage from Sanskrit
   skt = skt.strip()
   return skt
 
-def wrapInBraces(txt): # wrap Tibean or Sanskrit text in curly braces
-  txt = '{' + txt + '}'
-
-  # make sure that numbered list items are not inside braces
-  txt = re.sub('(\s*[0-9]+[)]\s*)',r'}\1{',txt)
-  txt = txt.replace('{}','')
-  return txt
-
 
 f = open("49-LokeshChandraSkt", "w")
 f2 = open("49-LokeshChandraTib", "w")
@@ -64,6 +56,7 @@ for item in root.findall('item'):
   tib = item.find('tib').text
   skt = item.find('skt').text
   sktTrans = cleanSkt( dt.transliterate(input_type = "sen", to_convention = "hk", sentence = skt) )
+  sktTransIast = cleanSkt( dt.transliterate(input_type = "sen", to_convention = "iast", sentence = skt) )
   
   tib = hideUnwantedTib( tib )
   
@@ -72,13 +65,11 @@ for item in root.findall('item'):
       for tib3 in tib2.split(','):
         if '(' in tib3:
           tibWithoutBracketContent = cleanTib( re.sub('\([^)]+\)','',tib3) )
-          f.write("%s|%s\n" % ( tibWithoutBracketContent.strip(), wrapInBraces(sktTrans) ) )
-#          tibWithoutBrackets = re.sub('[()]','',tib3)
-#          f.write("%s|%s\n" % ( cleanTib(tibWithoutBrackets), sktTrans ) )
+          f.write("%s|%s\n" % ( tibWithoutBracketContent.strip(), sktTransIast ) )
           if not '(' in sktTrans:
             f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
         else:
-          f.write("%s|%s\n" % ( cleanTib(tib3), wrapInBraces(sktTrans) ) )
+          f.write("%s|%s\n" % ( cleanTib(tib3), sktTransIast ) )
           if not ')' in sktTrans:
             f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
     
