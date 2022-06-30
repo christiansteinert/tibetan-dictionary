@@ -1149,6 +1149,14 @@ ABBREVIATIONS={
         'zool': 'Zoology (srog chags tshan rig)',
         'xx': '(khungs kha gsal med pa)',
         '*': '(\'jug yul mang)'
+    }    
+  },
+  'LaineAbbreviations': {
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'Dzongkha abbreviations': 'Dzongkha Development Commission (2011): A handbook of Dzongkha and Chöké abbreviations, https://www.dzongkha.gov.bt/en/publications/title/a-handbook-of-dzongkha-and-ch-k-abbreviations',
+      'Tibetan Shorthand Contractions': 'Andrew West: Tibetan Shorthand Contractions, https://www.babelstone.co.uk/Tibetan/Contractions.html, Sources: The New Dzongkha Grammar རྫོང་ཁའི་བརྡ་གཞུང་གསར་པ། pp. 241–251 and Шмидтъ, Я., Грамматика Тибетскаго Языка (1859) pp. 289–298',
+      'Bacot écriture cursive Tibétaine': 'Jaques Bacot: L\'écriture cursive Tibétaine (1912), https://www.dropbox.com/s/24jixiw6u81wfck/Bacot%201912.pdf?dl=0'
     }
   }
 }

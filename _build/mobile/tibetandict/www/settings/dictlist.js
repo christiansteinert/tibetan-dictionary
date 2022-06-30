@@ -1,4 +1,11 @@
 DICTLIST={
+"LaineAbbreviations":{
+  label:'Tibetan Abbreviations (Tibetan)',
+  about:'Tibetan abbreviations|Compiled, formatted and kindly shared by Bruno Lainé (Version: September 2021)|http://www.rkts.org/',
+  abbreviations:'LaineAbbreviations',
+  public:"true",
+  listCredits:"true"
+},
 "TsepakRigdzin":{
   label:'Tsepak Rigdzin',
   highlight:'\\[([^\\]]*)\\]',
@@ -133,6 +140,26 @@ DICTLIST={
   public:"true",
   listCredits:"true"
 },
+"Jaeschke_Scan":{
+  label:'Jäschke (scanned dictionary)',
+  about:'Heinrich August Jäschke|A Tibetan-English dictionary with special reference to the prevailing dialects; to which is added an English-Tibetan vocabulary (1881)||https://archive.org/details/tibetanenglishdi00jsuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms  in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
+  public:"true",
+  webOnly:"true",
+  scanId:"jaeschke",
+  language:"tib",
+  linkText:"Open the corresponding page in Jäschke's Tibetan-English dictionary to see if an entry for this term exists.",
+  listCredits:"true"
+},
+"ChandraDas_Scan":{
+  label:'Chandra Das (scanned dictionary)',
+  about:'Sarat Chandra Das|A Tibetan English Dictionary (1902)||https://archive.org/details/tibetanenglishdi00dassuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
+  public:"true",
+  webOnly:"true",
+  scanId:"das",
+  language:"tib",
+  linkText:"Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
+  listCredits:"true"
+},
 "Hopkins-Divisions2015":{
   label:'Hopkins Divi&shy;sions 2015',
   about:'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
@@ -192,7 +219,7 @@ DICTLIST={
   label:'Verbinator Verb Dictionary (Tibetan)',
   highlight:'((?:Past|Present|Future|Imperative|Meaning): )',
   abbreviations:'Verbinator',
-  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition. Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)|ISBN 978-3-7696-1004-8|If you want to support the author and the publisher please consider buying this book (regular price: 58 EUR plus shipping). If you have trouble with ordering it, feel free send a mail to dictionary@christian-steinert.de and I will try to help you.',
+  about:'\'Verbinator\' Tibetan Verb Dictionary (Verbinator 2000)|Taken from: Hill, Nathan (2010)|A Lexicon of Tibetan Verb Stems as Reported by the Grammatical Tradition.|Munich: Bayerische Akademie der Wissenschaften. (Studia Tibetica)|ISBN 978-3-7696-1004-8|If you want to support the author and the publisher please consider buying this book (regular price: 58 EUR plus shipping). If you have trouble with ordering it, feel free send a mail to dictionary@christian-steinert.de and I will try to help you.',
   public:"true",
   listCredits:"true"
 },
@@ -329,7 +356,6 @@ DICTLIST={
   listCredits:"true"
 },
 "LokeshChandraSkt":{
-  containsOnlySkt:true, 
   label:'Lokesh Chandra (Tibetan-Sanskrit)',
   about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
   public:"true",
@@ -345,11 +371,10 @@ DICTLIST={
 },
 
 "NegiSkt":{
-  containsOnlySkt:false, 
   label:'Negi (Tibetan-Sanskrit)',
   about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
   public:"true",
   listCredits:"true"
-}    
-    
+}
+
 }

@@ -1,0 +1,1 @@
+This folder contains original PDF files of scanned dictionaries that were prepared by hand for use in the web application by extracting the image for every single page.

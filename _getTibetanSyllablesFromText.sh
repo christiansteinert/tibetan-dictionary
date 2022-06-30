@@ -2,8 +2,9 @@
 currPath="`pwd`"
 
 
-#extract all syllables from a tibetan text and then generate a list that also contains their Tibetan equivalent
-# this script requires unix tools like perl, sed, grep, and cat
+#extract all syllables from a tibetan text and then generate a list that also contains their Unicode equivalent
+# this script requires unix tools like perl, sed, grep, and cat and the variable $CSV_INPUT must be set 
+# to the folder that contains the CSV files
 echo "-building and converting list of syllables"
 
 cat $CSV_INPUT/* | grep -v "^#" | sed -e "s/[|].*$//g" > /tmp/syllables.1
@@ -22,7 +23,6 @@ cd "$currPath"
 
 echo assembling the result files
 paste -d "|" /tmp/syllables /tmp/syllables-unicode | grep -v "|$" | grep -v "|.*[a-zA-Z\.]"  > _input/tibetan-syllables
-
 
 
 #echo building pronunciation table
