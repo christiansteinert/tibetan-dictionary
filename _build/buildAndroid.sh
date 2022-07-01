@@ -53,8 +53,13 @@ echo === Building full version ===
 
 # copy the files of the web application into the cordova project
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www
-  cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/www
-  cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+  cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
+  cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+  mkdir -p mobile/tibetandict/www/data
+  mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www/data
+  cp -r ../webapp/data/*.js mobile/tibetandict/www/data
+  cp -r ../webapp/data/*.js mobile/tibetandict/platforms/android/app/src/main/assets/www/data
+  
   cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
   cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
 
@@ -110,8 +115,13 @@ echo DB Size: $dbsize
 # in the "about" section and on the settings screen
 echo "GLOBAL_SETTINGS={ publicOnly: true }" > ../webapp/settings/globalsettings.js
 
-cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/www
-cp -r ../webapp/index.html ../webapp/code ../webapp/data/syllablelist.js ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
+cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+mkdir -p mobile/tibetandict/www/data
+mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www/data
+cp -r ../webapp/data/*.js mobile/tibetandict/www/data
+cp -r ../webapp/data/*.js mobile/tibetandict/platforms/android/app/src/main/assets/www/data
+
 cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
 cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
 
