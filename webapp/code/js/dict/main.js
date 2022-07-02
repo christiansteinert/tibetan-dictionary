@@ -282,6 +282,7 @@ var DICT={
     });
     tokenizer.parse(text);
     result = result.replace(/ +/g,'་');
+    result = result.replace(/([༡༢༣༤༥༦༧༨༩༠།).།])་/g,'$1 ');
     return result;
   },
   
