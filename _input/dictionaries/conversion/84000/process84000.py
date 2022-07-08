@@ -3,20 +3,43 @@
 import xml.etree.ElementTree as ET
 import sys
 import re
+import os
+from glob import glob
+from itertools import groupby
+
+# 3rd party libs
+import editdistance
+
+dictData = {
+    'dictTibSynonyms': [],
+    'dictEn': [],
+    'dictEnDefinitions': [],
+    'dictSkt': [],
+}
+
+
+def cleanupHeadword(value):
+    value = cleanupTib(value, removeParens=True)
+    value = value.replace("/", " ")
+    value = re.sub(r'\s+', ' ', value)
+    value = re.sub(r'^ ', '', value)
+    value = re.sub(r' $', '', value)
+    return value
+
 
 def cleanup(value):
     if(not value):
         value = ""
-    
-    value = value.replace("|"," ")
-    value = value.replace("\r\n"," ")
-    value = value.replace("\r"," ")
-    value = value.replace("\n"," ")
-    
 
-    value = re.sub(r"\s+"," ",value)
-    value = re.sub(r"^\s+","",value)
-    value = re.sub(r"\s+$","",value)
+    value = value.replace("|", " ")
+    value = value.replace("\xad", " ")
+    value = value.replace("\r\n", " ")
+    value = value.replace("\r", " ")
+    value = value.replace("\n", " ")
+
+    value = re.sub(r"\s+", " ", value)
+    value = re.sub(r"^\s+", "", value)
+    value = re.sub(r"\s+$", "", value)
 
     return value
 
@@ -24,54 +47,64 @@ def cleanup(value):
 def cleanupTib(value, removeParens):
     if(not value):
         value = ""
-    
-    value = value.replace("|","/")
-    value = value.replace("ī","I")
-    value = value.replace("ā","A")
-    value = value.replace("ū","U")
-    value = value.replace("ṇ","n")
-    value = value.replace("-",".")
-    value = value.replace("’","'")
-    value = value.replace("‘","'")
-    value = value.replace("­","") # delete zero-width non-joiner
-    
+
+    value = value.replace("|", "/")
+    value = value.replace("ī", "I")
+    value = value.replace("ā", "A")
+    value = value.replace("ū", "U")
+    value = value.replace("ṇ", "n")
+    value = value.replace("-", ".")
+    value = value.replace("’", "'")
+    value = value.replace("‘", "'")
+    value = value.replace("­", "")  # delete zero-width non-joiner
+
     if removeParens:
-        value = re.sub(r"\([^)]*\)"," ",value) # remove parentheses
+        value = re.sub(r"\([^)]*\)", " ", value)  # remove parentheses
 
     value = cleanup(value)
     return value
-    
+
 
 def logUnexpected(xmlNode):
-    print("unexpected element in definition: <" + xmlNode.tag + ">   attributes: " + str(xmlNode.attrib))
-    
+    print("unexpected element in definition: <" +
+          xmlNode.tag + ">   attributes: " + str(xmlNode.attrib))
 
-def getDefinitionTxt(rootItem, xmlNode):
+
+def getDefinitionTxt(xmlNode):
+    ns = 'http://www.tei-c.org/ns/1.0'
+
     text = ""
     if xmlNode.text:
         text = xmlNode.text
 
     for child in xmlNode:
-        if child.tag == '{http://read.84000.co/ns/1.0}foreign' or child.tag == '{http://read.84000.co/ns/1.0}term' or child.tag == '{http://www.tei-c.org/ns/1.0}foreign':
+        if child.tag == f'{{{ns}}}foreign' \
+                or child.tag == f'{{{ns}}}term' \
+                or child.tag == f'{{{ns}}}mantra':
             lang = ''
             if '{http://www.w3.org/XML/1998/namespace}lang' in child.attrib:
-                lang = cleanup( child.attrib["{http://www.w3.org/XML/1998/namespace}lang"] ).lower()
-            
+                lang = cleanup(
+                    child.attrib["{http://www.w3.org/XML/1998/namespace}lang"]).lower()
+
             if lang == 'bo-ltn':
-                text += "{" + cleanupTib(getDefinitionTxt(rootItem, child), False) + "}"
-                
+                text += "{" + cleanupTib(getDefinitionTxt(child), False) + "}"
+
             else:
-                text += getDefinitionTxt(rootItem, child)
-        
-        elif child.tag == '{http://read.84000.co/ns/1.0}title' or child.tag == '{http://www.tei-c.org/ns/1.0}emph' or child.tag == '{http://www.tei-c.org/ns/1.0}term':
-            text += getDefinitionTxt(rootItem, child)            
-                        
-        elif child.tag == '{http://www.tei-c.org/ns/1.0}ptr' or child.tag == '{http://www.tei-c.org/ns/1.0}ref' :
-            if 'uri' in rootItem.attrib and 'target' in child.attrib and ( child.attrib['target'].startswith('#UT') or child.attrib['target'].startswith('#chapter')):
-                uri = rootItem.attrib['uri']
-                uri = re.sub("#.*", "", uri)                
-                uri = uri + child.attrib['target']
-                
+                text += getDefinitionTxt(child)
+
+        elif child.tag == f'{{{ns}}}title' \
+                or child.tag == f'{{{ns}}}emph' \
+                or child.tag == f'{{{ns}}}distinct' \
+                or child.tag == f'{{{ns}}}hi' \
+                or child.tag == f'{{{ns}}}term':
+            text += getDefinitionTxt(child)
+
+        elif child.tag == f'{{{ns}}}ptr' or child.tag == f'{{{ns}}}ref':
+            if 'target' in child.attrib and (child.attrib['target'].startswith('#UT')):
+                anchor = child.attrib['target']
+                documentId = re.sub(r'#(UT.*)-[0-9]+$', r'\1', anchor)
+                uri = f'https://read.84000.co/translation/{documentId}.html{anchor}'
+
                 text += uri
 
             elif 'target' in child.attrib and child.attrib['target'].startswith('http'):
@@ -82,108 +115,224 @@ def getDefinitionTxt(rootItem, xmlNode):
 
         else:
             logUnexpected(child)
-            text += getDefinitionTxt(rootItem, child)
-            
+            text += getDefinitionTxt(child)
+
         if child.tail:
             text += child.tail
 
     return text
-#    for childNode in xmlNode.get_elements():
-#        if childNode._name
-        
-    
 
-def main():
-    glossary = ET.parse("cumulative-glossary.xml").getroot()
-    dictEn = open("out/43-84000Dict", 'w') 
-    dictEnDefinitions = open("out/44-84000Definitions", 'w') 
-    dictTibSynonyms = open("out/45-84000Synonyms", 'w') 
-    dictSkt = open("out/46-84000Skt", 'w') 
-    for termGroup in glossary.findall("{http://read.84000.co/ns/1.0}term"):
-        for itemsGroup in termGroup.findall("{http://read.84000.co/ns/1.0}items"):
-            for item in itemsGroup.findall("{http://read.84000.co/ns/1.0}item"):
-                definitionTxt = ""
-                tibTerms = []
-                sktTerms = []
-                engTerms = []
-                
-                for term in item.findall("{http://read.84000.co/ns/1.0}term"):                
-                    lang = cleanup( term.attrib["{http://www.w3.org/XML/1998/namespace}lang"] ).lower()
-                    term = cleanup( term.text )
-                    
-                    if lang == "bo-ltn" and term: 
-                        if not term in tibTerms:
-                            tibTerms.append(cleanupTib(term, True))
-                    
-                    if lang == "sa-ltn" and term:
-                        if not term in sktTerms:
-                            sktTerms.append(term)   
-                        
-                    if lang == "en" and term:                        
-                        if not term in engTerms:
-                            engTerms.append(term)
-            
-                for definitions in item.findall("{http://read.84000.co/ns/1.0}definitions"):      
-                    for definition in definitions.findall("{http://read.84000.co/ns/1.0}definition"):                
-                        if definitionTxt != "":
-                            definitionTxt += "\\n"
-                                
-                        definitionTxt = definitionTxt + cleanup( getDefinitionTxt(item,definition) )
 
-                for alternatives in item.findall("{http://read.84000.co/ns/1.0}alternatives"):                
-                    for alternative in alternatives.findall("{http://read.84000.co/ns/1.0}alternative"):                
-                        if definitionTxt != "":
-                            definitionTxt += "\\n"
-                            
-                        definitionTxt = definitionTxt + cleanup( getDefinitionTxt(item,alternative) )
-                
-                
-                sktTermsTxt = "; ".join(sktTerms)
-                engTermsTxt = "; ".join(engTerms)
+def process_file(glossary_file):
+    ns = 'http://www.tei-c.org/ns/1.0'
+    try:
+        xmlDoc = ET.parse(glossary_file).getroot()
+    except Exception as e:
+        print(f'!!! file parsing error: {e}')
+        return
 
-                for tibTerm in tibTerms:
-                    synonymsTxt = "";
+    extractGlossaryEntries(xmlDoc,
+                           f".//{{{ns}}}titleStmt",
+                           f".//{{{ns}}}title")
 
-                    for altTibTerm in tibTerms:
-                        if altTibTerm != tibTerm:
-                            if synonymsTxt :
-                                synonymsTxt += "; "
-                            synonymsTxt += "{" + altTibTerm + "}"
-                    
-                    if synonymsTxt:
-                        dictTibSynonyms.write("{0}|{1}\n".format(tibTerm, synonymsTxt))
-                    
-                    if engTermsTxt:
-                        dictEn.write("{0}|{1}\n".format(tibTerm, engTermsTxt))
-                        #print("{0}|{1}".format(tibTerm, engTermsTxt));
-                        
-                    if definitionTxt:
-                        dictEnDefinitions.write("{0}|{1}\n".format(tibTerm, definitionTxt))
+    extractGlossaryEntries(xmlDoc,
+                           f".//{{{ns}}}list[@type='glossary']//{{{ns}}}item",
+                           f"./{{{ns}}}gloss/{{{ns}}}term")
 
-                    if sktTermsTxt:
-                        dictSkt.write("{0}|{1}\n".format(tibTerm, sktTermsTxt))
-                
-    dictEn.close()
-    dictEnDefinitions.close()
-    dictTibSynonyms.close()
-    dictSkt.close()
-                
-    '''
-    #line = cleanupValue(line)
-    if ( not line.startswith("#") ) and ( "|" in line ):
-        tibetanOriginal, englishOriginal = line.split("|");
-        tibetan = cleanupValueMinimal(tibetanOriginal)
-        englishTerms = cleanupValue(englishOriginal)
-        englishTermList = englishTerms.split(";")
-        for english in englishTermList:
-            english = cleanupValue(english)
-            if english != "" and tibetan != "" and ( "/" not in english ) and ("." not in english) and ("," not in english) and (")" not in english) and ("=" not in english):
-                #print(r"{0}|{{{1}}}: {2}".format(english,tibetan,englishOriginal))
-                out.write(r"{0}|{{{1}}}: {2}".format(english,tibetan,englishOriginal))
-                english2 = getAlternativeValue(english)
-                if english != english2:
-                    out.write(r"{0}|{{{1}}}: {2}".format(english2,tibetan,englishOriginal))
 
-    '''
+def extractGlossaryEntries(xmlDoc, parentSelect, childSelect):
+    for parentEl in xmlDoc.findall(parentSelect):
+        tibTerms = []
+        sktTerms = []
+        engTerms = []
+        definitionTxt = ''
 
-main()
+        for childEl in parentEl.findall(childSelect):
+            lang = getLang(childEl)
+            titleText = cleanup(childEl.text)
+
+            if lang == "bo-ltn" and titleText and not '་' in titleText:
+                if not titleText in tibTerms:
+                    tibTerms.append(cleanupTib(titleText, True))
+
+            elif lang == "sa-ltn" and titleText:
+                if not titleText in sktTerms:
+                    sktTerms.append(titleText)
+
+            elif lang == "en":
+                if f'type' in childEl.attrib and childEl.attrib[f'type'] == "definition":
+                    if definitionTxt != "":
+                        definitionTxt += "\\n"
+                    definitionTxt = definitionTxt + \
+                        cleanup(getDefinitionTxt(childEl))
+
+                elif titleText and (not titleText in engTerms):
+                    engTerms.append(titleText)
+
+        addEntries(tibTerms, engTerms, definitionTxt, sktTerms)
+
+
+def getLang(xmlElem):
+    """
+    Get the language from the lang attribute of an xml element
+    """
+    if '{http://www.w3.org/XML/1998/namespace}lang' in xmlElem.attrib:
+        lang = cleanup(
+            xmlElem.attrib["{http://www.w3.org/XML/1998/namespace}lang"]).lower()
+        if lang == 'la':
+            lang = 'en'
+    else:
+        lang = 'en'
+
+    return lang
+
+def appendTerm(dictData, tibTerm, definition):
+    if re.match('.*[^a-zA-Z\' /]', tibTerm):
+        return
+
+    for headword in tibTerm.split(','):
+        dictData.append((cleanupHeadword(headword), definition))
+
+def addEntries(tibTerms, engTerms, definitionTxt, sktTerms):
+    for tibTerm in tibTerms:
+        for altTibTerm in tibTerms:
+            if altTibTerm != tibTerm:
+                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+
+        for engTermsTxt in engTerms:
+            appendTerm(dictData['dictEn'], tibTerm, engTermsTxt)
+
+        if definitionTxt:
+            appendTerm(dictData['dictEnDefinitions'], tibTerm, definitionTxt)
+
+        for sktTermsTxt in sktTerms:
+            appendTerm(dictData['dictSkt'], tibTerm, sktTermsTxt)
+
+
+def writeDictData(dictEntries, fileName):
+    dictFile = open(fileName, 'w')
+    for entry in dictEntries:
+        dictFile.write(f'{entry[0]}|{entry[1]}\n')
+
+    dictFile.close()
+
+def filterEntries(entries, suppress_similar_entries=False):
+    print('removing duplicate entries', end='')
+
+    filtered_entries = []
+    prev_entry = ('', '')
+    prev_entry_text = ''
+
+    # Sort entries based on key, lowercase value, regular case value
+    # This will group identical entries together but will also but capitalized entries before lowercase ones
+    # so that capitalized writing is preferred
+    for entry in sorted(entries, key=lambda entry: entry[0] + '|' + entry[1].lower() + entry[1]):
+        print('.', end='')
+
+        entry_text = entry[1].lower()
+        length = max(len(entry_text), len(prev_entry_text))
+        min_length = min(len(entry_text), len(prev_entry_text))
+
+        if entry_text.lower().startswith('see ') or entry_text.lower().startswith('also translated here'):
+            continue
+
+        if entry_text.lower() != prev_entry_text.lower():
+
+            # If one entry is just a pluralized version of the other then suppress the non-pluralized one
+            s_added = abs(len(entry_text) - len(prev_entry_text)) == 1 \
+                and (entry_text.endswith('s') and not prev_entry_text.endswith('s')) \
+
+            # keep entries only if the definitions differ,
+            # and if the edit distance is relatively small
+            if suppress_similar_entries:
+                max_distance = length / 3
+                substring_distance = min_length / 3
+
+            if s_added or \
+                (suppress_similar_entries
+                 and entry[0] == prev_entry[0]
+                 and ((editdistance.eval(entry_text.lower(), prev_entry_text.lower()) <= max_distance)
+                      or editdistance.eval(entry_text[:min_length].lower(), prev_entry_text[:min_length].lower()) <= substring_distance)):
+
+                # if two entries are similar then keep the longer one
+                if len(entry_text) > len(prev_entry_text):
+                    filtered_entries[-1] = entry
+                else:
+                    entry = prev_entry
+            else:
+                filtered_entries.append(entry)
+
+        prev_entry = entry
+        prev_entry_text = entry[1]
+
+    print('')
+    return filtered_entries
+
+def concat_def_lines(dictData, prefix=None, separator='; '):
+    """
+    group all entries with the same headword into a single entry
+    """
+    result = []
+
+    for key, values in groupby(dictData, lambda item: item[0]):
+        definitions = list(map(lambda item: item[1], values))
+        definitionsText = separator.join(sorted(definitions))
+
+        if prefix and len(definitions) == 1: #add prefix if there are multiple entries
+            definitionsText = prefix[0] + definitionsText
+        elif prefix: #add prefix if there are multiple entry
+            definitionsText = prefix[1] + definitionsText
+
+        result.append((key, definitionsText))
+    return result
+
+def remove_excessive_defs(dictData, max_definitions=6):
+    """
+    if more entries exist for a term than desired then keep the N longest ones
+    """
+    result = []
+
+    for key, values in groupby(dictData, lambda item: item[0]):
+        definitions = list(map(lambda item: item[1], values))
+
+        if len(definitions) > max_definitions:
+            definitions = sorted(definitions, key = lambda d: -len(d))
+            definitions = definitions[:max_definitions]
+            definitions = reversed(definitions)
+        else:
+            definitions = sorted(definitions, key = lambda d: len(d))
+
+        for definition in definitions:
+            result.append((key, definition))
+    return result
+
+
+def main(path_name):
+    # process input files
+    for file_name in glob(path_name, recursive=True):
+        print(file_name)
+        process_file(file_name)
+
+    writeDictData(concat_def_lines(
+        filterEntries(dictData['dictEn'])), 'out/43-84000Dict')
+
+    writeDictData(
+        remove_excessive_defs(
+            filterEntries(dictData['dictEnDefinitions'], suppress_similar_entries=True), 
+        ),
+        'out/44-84000Definitions')
+
+    writeDictData(
+        concat_def_lines(
+            filterEntries(dictData['dictTibSynonyms']),
+            prefix=['Synonym: ', 'Synonyms: '], 
+            separator=', '), 
+        'out/45-84000Synonyms')
+
+    writeDictData(
+        concat_def_lines(
+            filterEntries(dictData['dictSkt'])), 
+        'out/46-84000Skt')
+
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+main('git/data-tei/translations/**/*.xml')
