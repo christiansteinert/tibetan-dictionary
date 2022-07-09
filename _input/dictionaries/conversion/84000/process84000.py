@@ -286,7 +286,7 @@ def concat_def_lines(dictData, prefix=None, separator='; '):
         result.append((key, definitionsText))
     return result
 
-def remove_excessive_defs(dictData, max_definitions=6):
+def remove_excessive_defs(dictData, max_definitions=8):
     """
     if more entries exist for a term than desired then keep the N longest ones
     """

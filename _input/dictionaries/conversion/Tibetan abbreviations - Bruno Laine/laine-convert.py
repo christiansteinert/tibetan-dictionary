@@ -46,7 +46,7 @@ for item in root.findall('item'):
   for srcNr in sources:
       src = src.replace(str(srcNr), sources[srcNr])
 
-  f.write("%s|Abbreviation for {%s}.\\nSource: %s\n" % ( cleanTib(abbr), cleanTib(tib), src ) )    
-  f.write("%s|Also abbreviated as {%s}.\\nSource: %s\n" % ( cleanTib(tib), cleanTib(abbr), src ) )    
+  f.write("%s|Abbreviation for {%s}. (Source: %s)\n" % ( cleanTib(abbr), cleanTib(tib), src ) )    
+  f.write("%s|Also abbreviated as {%s}. (Source: %s)\n" % ( cleanTib(tib), cleanTib(abbr), src ) )    
 
 f.close()

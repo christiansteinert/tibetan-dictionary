@@ -1,11 +1,4 @@
 DICTLIST={
-"LaineAbbreviations":{
-  label:'Tibetan Abbreviations (Tibetan)',
-  about:'Tibetan abbreviations|Compiled, formatted and kindly shared by Bruno Lainé (Version: September 2021)|http://www.rkts.org/',
-  abbreviations:'LaineAbbreviations',
-  public:"true",
-  listCredits:"true"
-},
 "TsepakRigdzin":{
   label:'Tsepak Rigdzin',
   highlight:'\\[([^\\]]*)\\]',
@@ -142,7 +135,7 @@ DICTLIST={
 },
 "Jaeschke_Scan":{
   label:'Jäschke (scanned dictionary)',
-  about:'Heinrich August Jäschke|A Tibetan-English dictionary with special reference to the prevailing dialects; to which is added an English-Tibetan vocabulary (1881)||https://archive.org/details/tibetanenglishdi00jsuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms  in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
+  about:'Heinrich August Jäschke|A Tibetan-English dictionary with special reference to the prevailing dialects; to which is added an English-Tibetan vocabulary (1881)||https://archive.org/details/tibetanenglishdi00jsuoft/||By opening a dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms  in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
   public:"true",
   webOnly:"true",
   scanId:"jaeschke",
@@ -248,6 +241,13 @@ DICTLIST={
   label:'84000 Tibetan Synonyms (Tibetan)',
   about:'Synonymous Tibetan terms from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true"
+},
+"LaineAbbreviations":{
+  label:'Tibetan Abbreviations (Tibetan)',
+  about:'Tibetan abbreviations|Compiled, formatted and kindly shared by Bruno Lainé (Version: September 2021)|http://www.rkts.org/',
+  abbreviations:'LaineAbbreviations',
+  public:"true",
+  listCredits:"true"
 },
 "Sera-Textbook-Definitions":{
   label:'Sera Textbook Definitions (Tibetan)',
@@ -369,12 +369,10 @@ DICTLIST={
   public:"true",
   listCredits:"true"
 },
-
 "NegiSkt":{
   label:'Negi (Tibetan-Sanskrit)',
   about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
   public:"true",
   listCredits:"true"
 }
-
 }
