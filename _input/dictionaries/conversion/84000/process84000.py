@@ -20,7 +20,7 @@ dictData = {
 
 def cleanupHeadword(value):
     value = cleanupTib(value, removeParens=True)
-    value = value.replace("/", " ")
+    value = value.replace("xx/", " ")
     value = re.sub(r'\s+', ' ', value)
     value = re.sub(r'^ ', '', value)
     value = re.sub(r' $', '', value)
@@ -103,7 +103,7 @@ def getDefinitionTxt(xmlNode):
             if 'target' in child.attrib and (child.attrib['target'].startswith('#UT')):
                 anchor = child.attrib['target']
                 documentId = re.sub(r'#(UT.*)-[0-9]+$', r'\1', anchor)
-                uri = f'https://read.84000.co/translation/{documentId}.html{anchor}'
+                uri = f' https://read.84000.co/translation/{documentId}.html{anchor} '
 
                 text += uri
 
@@ -286,7 +286,7 @@ def concat_def_lines(dictData, prefix=None, separator='; '):
         result.append((key, definitionsText))
     return result
 
-def remove_excessive_defs(dictData, max_definitions=8):
+def remove_excessive_defs(dictData, max_definitions=6):
     """
     if more entries exist for a term than desired then keep the N longest ones
     """

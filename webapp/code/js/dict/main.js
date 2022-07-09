@@ -1160,8 +1160,9 @@ var DICT={
     definition = definition.replace(/\\/g,''); 
     definition = definition.replace(/([a-zA-Z0-9\.]){/g,'$1 {');
     definition = definition.replace(/}([a-zA-Z0-9])/g,'} $1');
-    definition = definition.replace(/:/g,': ');
+    definition = definition.replace(/:[^\/]/g,': $1');
     definition = definition.replace(/ - /g,' &ndash; ');
+    definition = definition.replace(/(https?:\/\/)([-0-9a-zA-Z\/\.#%_]+)/g, '<a href="$1$2">$2</a>');
 
     return '<p>' + definition + '</p>';
   },

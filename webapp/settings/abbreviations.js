@@ -58,8 +58,6 @@ ABBREVIATIONS={
   },
   'Hopkins': {
     match: ['([(]|[(][^)"]*[^A-Za-z0-9)>"])(TERM)([^A-Za-z0-9<(][^>)]*[)]|[^A-Za-z0-9<)][^>)]*<[^/)][^)]*[)]|[)])', '([\\[]|[\\[](?:<[^>]*>[^<>]*</[^>]*>[^<>,]*,?)*[^A-Za-z0-9])(TERM)([^A-Za-z0-9<)][^>\\]]*[\\]]|(?:,?<[^>]*>[^<>]*</[^>]*>[^<>,]*)*[\\]]|[\\]])'], 
-    //match: ['([(]|[(][^)"]*[^A-Za-z0-9)>"])(TERM)([^A-Za-z0-9<(][^>)]*[)]|[^A-Za-z0-9<)][^>)]*<[^/)][^)]*[)]|[)])', '([{]|[{](?:<[^>]*>[^<>]*</[^>]*>[^<>,]*,?)*[^A-Za-z0-9])(TERM)([^A-Za-z0-9<)][^>}]*[}]|(?:,?<[^>]*>[^<>]*</[^>]*>[^<>,]*)*[}]|[}])'], 
-    //match: '([{]|[{][^}]*[^A-Za-z0-9>])(TERM)([^A-Za-z0-9<][^>}]*[}]|[^A-Za-z0-9<][^>}]*<[^/][^}]*[}]|[}])'], 
     items: {
         'B-7': '(standing for “bsdus grwa Part 1”)| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Explanation of the Lesser Path of Reasoning (rigs lam chung ngu\'i rnam par bshad pa), Chapter Two on Established Bases, debate 7.',
         'BJ': '(standing for “Pal-jor-lhün-drub”)| Pal-jor-lhun-drub (dpal \'byor lhun grub). legs bshad snying po\'i dka\' \'grel bstan pa\'i sgron me. Buxaduor: Sera Monastery, 1968.',
