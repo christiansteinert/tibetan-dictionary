@@ -618,6 +618,9 @@ var DICT={
             newInput = uniInput,
             currentInput = DICT.currentInput;
 
+        if(DICT.lastUniInput == uniInput)
+          return;
+
         if(DICT.getInputLang() === "tib") {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
         } else {
@@ -838,6 +841,8 @@ var DICT={
   },
   
   search:function(loadFirstItem,saveState,offset) {
+    console.log('list offset:', offset)
+
     var inputText = $('#searchTerm').val();
     if(DICT.getInputLang()==='tib') {
       inputText = this.uniToWylie(inputText);
@@ -854,7 +859,6 @@ var DICT={
       offset=0;
     }
     
-    
     if(!inputText) {
       DICT.setSidebarState(true);
       return;
@@ -865,10 +869,10 @@ var DICT={
     if(this.currentListTerm != inputText   //this term wasn't loaded yet
        || this._offset != offset           //jumping to a different offset in the result list
       ) {
-      
       this.getDataAccess().readTermList(inputText, lang, offset, settings.listSize + 1, this.settings.activeDictionaries, function(result) {
         var lang = DICT.getInputLang();        
         var tableRows = [];
+        this._offset = offset;
 
         // add entry to look up pages in scanned dictionaries
         var foundTerms = new Set();
@@ -1008,7 +1012,6 @@ var DICT={
           // do nothing - this is handled by the hashchange event.
           return;
       } else { 
-      
         //load a term 
         if(DICT.getCurrentState() === state)
           return;
@@ -1021,12 +1024,15 @@ var DICT={
         if(stateInfo.inputLang)
             DICT.inputLang = stateInfo.inputLang;
         
+        
         DICT.setInputLang( DICT.inputLang );
                     
         if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
-          $('#searchTerm').val(this.tibetanOutput(stateInfo.currentListTerm));
+          DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm)
+          $('#searchTerm').val(DICT.lastUniInput);
         } else {
-          $('#searchTerm').val(stateInfo.currentListTerm);
+          DICT.lastUniInput = stateInfo.currentListTerm;
+          $('#searchTerm').val(DICT.lastUniInput);
         }
         
         $('.selected').removeClass('selected');
