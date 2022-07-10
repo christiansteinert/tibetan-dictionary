@@ -657,7 +657,7 @@ var DICT={
             DICT.search(false,true,0);
           }
 
-        } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) { 
+        } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
           //space at the end of the text or typing in English
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
@@ -1019,19 +1019,19 @@ var DICT={
             DICT.lang = stateInfo.lang;
 
         if(stateInfo.inputLang)
-            DICT.inputLang = stateInfo.inputLang;
-        
+            DICT.inputLang = stateInfo.inputLang;        
         
         DICT.setInputLang( DICT.inputLang );
                     
         if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
-          DICT.currentInput = DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm)
-          $('#searchTerm').val(DICT.lastUniInput);
+          DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm);
         } else {
-          DICT.currentInput = DICT.lastUniInput = stateInfo.currentListTerm;
-          $('#searchTerm').val(DICT.lastUniInput);
+          DICT.lastUniInput = stateInfo.currentListTerm;
         }
-        
+        DICT.currentInput = stateInfo.currentListTerm;
+        window.mobiletextCurrentVal = DICT.lastUniInput;
+        $('#searchTerm').val(DICT.lastUniInput);
+      
         $('.selected').removeClass('selected');
 
         if(stateInfo.offset)
