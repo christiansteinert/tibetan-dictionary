@@ -618,9 +618,6 @@ var DICT={
             newInput = uniInput,
             currentInput = DICT.currentInput;
 
-        if(DICT.lastUniInput == uniInput)
-          return;
-
         if(DICT.getInputLang() === "tib") {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
         } else {
@@ -661,7 +658,7 @@ var DICT={
           }
 
         } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) { 
-           //space at the end of the text or typing in English
+          //space at the end of the text or typing in English
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
             newInput = newInput.replace(/[ \/།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
@@ -1028,10 +1025,10 @@ var DICT={
         DICT.setInputLang( DICT.inputLang );
                     
         if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
-          DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm)
+          DICT.currentInput = DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm)
           $('#searchTerm').val(DICT.lastUniInput);
         } else {
-          DICT.lastUniInput = stateInfo.currentListTerm;
+          DICT.currentInput = DICT.lastUniInput = stateInfo.currentListTerm;
           $('#searchTerm').val(DICT.lastUniInput);
         }
         
