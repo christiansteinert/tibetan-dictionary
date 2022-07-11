@@ -1299,7 +1299,7 @@ var DICT={
     });
     definitionTab += '</table>';
     $(definitionTab).appendTo('#definitions');
-    $('#definitions a').click(
+    $('#definitions').find('a[href^="http"]').click(
       function(){DICT.openLink($(this).attr('href'));} 
     );
     TOOLTIPS.bindTooltipHandlers();

@@ -208,6 +208,8 @@ def addEntries(tibTerms, engTerms, definitionTxt, sktTerms):
         for sktTermsTxt in sktTerms:
             appendTerm(dictData['dictSkt'], tibTerm, sktTermsTxt)
 
+def simplifyForCompare(txt):
+    return re.sub(r'[\.,‟”“I,\'‘’]', '', txt).lower()
 
 def writeDictData(dictEntries, fileName):
     dictFile = open(fileName, 'w')
@@ -226,17 +228,17 @@ def filterEntries(entries, suppress_similar_entries=False):
     # Sort entries based on key, lowercase value, regular case value
     # This will group identical entries together but will also but capitalized entries before lowercase ones
     # so that capitalized writing is preferred
-    for entry in sorted(entries, key=lambda entry: entry[0] + '|' + entry[1].lower() + entry[1]):
+    for entry in sorted(entries, key=lambda entry: entry[0] + '|' + simplifyForCompare(entry[1]) + entry[1]):
         print('.', end='')
 
-        entry_text = entry[1].lower()
+        entry_text = entry[1]
         length = max(len(entry_text), len(prev_entry_text))
         min_length = min(len(entry_text), len(prev_entry_text))
 
         if entry_text.lower().startswith('see ') or entry_text.lower().startswith('also translated here'):
             continue
 
-        if entry_text.lower() != prev_entry_text.lower():
+        if simplifyForCompare(entry_text) != simplifyForCompare(prev_entry_text):
 
             # If one entry is just a pluralized version of the other then suppress the non-pluralized one
             s_added = abs(len(entry_text) - len(prev_entry_text)) == 1 \
