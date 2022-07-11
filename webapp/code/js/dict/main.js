@@ -522,17 +522,23 @@ var DICT={
     }
     return this._needsBackspaceWorkaround;
   },
+
+  openLink(href) {
+    if(window.cordova && href.startsWith('http')) { 
+      var handle = cordova.InAppBrowser.open(href, '_system', 'location=yes');
+      handle.close();
+
+      return false;
+    } else {
+      return true;
+    }
+  },
   
   doInit:function($) {
     try{
-      //if(window.cordova) { 
-        $('a[href^="http"]').click(function() {
-          var handle = cordova.InAppBrowser.open($(this).attr('href'), '_system', 'location=yes');
-          handle.close();
-          
-          return false;
-        });
-      //}
+      $('a[href^="http"]').click(
+        function(){DICT.openLink($(this).attr('href'));} 
+      );
     
       this.settings = SETTINGS.getSettings();
       if(!window.localStorage)
@@ -838,8 +844,6 @@ var DICT={
   },
   
   search:function(loadFirstItem,saveState,offset) {
-    console.log('list offset:', offset)
-
     var inputText = $('#searchTerm').val();
     if(DICT.getInputLang()==='tib') {
       inputText = this.uniToWylie(inputText);
@@ -1289,12 +1293,15 @@ var DICT={
             tooltipStart = '<span class="tooltip" title="'+currentDict.about+'">';
             tooltipEnd   = '</span>';
           }
-          definitionTab += '<tr><td class="dictName">'+tooltipStart+currentDict.label/*.replace(/ /g,'<br>')*/+tooltipEnd+'</td><td class="definition">'+definition+'</td></tr>';
+          definitionTab += '<tr><td class="dictName">'+tooltipStart+currentDict.label+tooltipEnd+'</td><td class="definition">'+definition+'</td></tr>';
         }
       });
     });
     definitionTab += '</table>';
     $(definitionTab).appendTo('#definitions');
+    $('#definitions').find('a[href^="http"]').click(
+      function(){DICT.openLink($(this).attr('href'));} 
+    );
     TOOLTIPS.bindTooltipHandlers();
     
     if(saveState) {

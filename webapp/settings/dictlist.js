@@ -367,7 +367,7 @@ DICTLIST={
   label:'Lokesh Chandra (Sanskrit-Tibetan)',
   about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
   public:"true",
-  listCredits:"true"
+  listCredits:"false"
 },
 "NegiSkt":{
   label:'Negi (Tibetan-Sanskrit)',
