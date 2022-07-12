@@ -4,7 +4,7 @@ if [ -z "$ANDROID_HOME" ]
 then
   # Default path for ANDROID_HOME if the variable is not set
   #export ANDROID_HOME="/home/christian/bin/android-sdk/sdk/"
-  export ANDROID_HOME="~/Android/Sdk/"
+  export ANDROID_HOME="$HOME/Android/Sdk/"
 fi
 
 cd _build/; ./buildAndroid.sh; cd ..

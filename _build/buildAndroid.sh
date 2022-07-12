@@ -9,12 +9,16 @@ fi
 
 if [ -z "$ANDROID_HOME" ]
 then
-  export ANDROID_HOME="~/Android/Sdk/"
+  export ANDROID_HOME="$HOME/Android/Sdk"
 fi
 
+export ANDROID_TOOLS_VERSION=`ls -1 $ANDROID_HOME/build-tools/ |tail -n 1 `
+export ANDROID_TOOLS_PATH="$ANDROID_HOME/build-tools/$ANDROID_TOOLS_VERSION"
 export JAVA_TOOL_OPTIONS="-Xmx2048m -XX:ReservedCodeCacheSize=1024m"
 
 echo ANDROID_HOME: $ANDROID_HOME
+echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
+
 
 # copy the customized Java class for the cordova database plugin
 cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLitePlugin.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
@@ -85,8 +89,13 @@ echo === Building full version ===
 
   cd "$currpath"
   cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-FULL.apk
-  echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-FULL.apk android_release_key
+
   zipalign -v 4 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
+
+  #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-FULL.apk android_release_key
+  echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk
+  echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk
+
   mv ../TibetanDictionary-FULL_.apk ../TibetanDictionary-FULL.apk
 
 fi
@@ -148,10 +157,14 @@ cd mobile/tibetandict/platforms/android/cordova
 #   keytool -genkey -v -keystore my-release-key.keystore -alias android_release_key -keyalg RSA -keysize 2048 -validity 10000
 cd "$currpath"
 cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-PUBLIC.apk
-echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-PUBLIC.apk android_release_key
-zipalign -v 4 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
-mv ../TibetanDictionary-PUBLIC_.apk ../TibetanDictionary-PUBLIC.apk
 
+zipalign -v 4 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
+
+#echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-PUBLIC.apk android_release_key
+echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk
+echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk
+mv ../TibetanDictionary-PUBLIC_.apk ../TibetanDictionary-PUBLIC.apk
+rm ../*.apk.idsig
 
 # clean up temporary Cordova files
 echo CLEANING UP
