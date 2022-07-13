@@ -523,8 +523,8 @@ var DICT={
     return this._needsBackspaceWorkaround;
   },
 
-  openLink(href) {
-    if(window.cordova && href.startsWith('http')) { 
+  openLink:function(href) {
+    if(window.cordova && href.indexOf('http') === 0) { 
       var handle = cordova.InAppBrowser.open(href, '_system', 'location=yes');
       handle.close();
 
@@ -876,18 +876,20 @@ var DICT={
         this._offset = offset;
 
         // add entry to look up pages in scanned dictionaries
-        var foundTerms = new Set();
-        for(var i=0;i<result.length;i++) {
-          foundTerms.add(result[i][0]);
-        }
-        var dictList = DICT.settings.activeDictionaries;
-        $.each(dictList,function(idx,currentDictName) {        
-          var currentDict = DICTLIST[currentDictName];
-          if(lang==currentDict.language && currentDict.scanId && !foundTerms.has(inputText)) {                
-            result.push([inputText]);
-            foundTerms.add(inputText);
+        if(window.Set && !window.cordova) {
+          var foundTerms = new Set();
+          for(var i=0;i<result.length;i++) {
+            foundTerms.add(result[i][0]);
           }
-        });
+          var dictList = DICT.settings.activeDictionaries;
+          $.each(dictList,function(idx,currentDictName) {        
+            var currentDict = DICTLIST[currentDictName];
+            if(lang==currentDict.language && currentDict.scanId && !foundTerms.has(inputText)) {                
+              result.push([inputText]);
+              foundTerms.add(inputText);
+            }
+          });
+        }
 
         if(result.length === 0 && offset > 0 )
           return;
