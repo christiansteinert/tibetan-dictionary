@@ -90,7 +90,7 @@ echo === Building full version ===
   cd "$currpath"
   cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-FULL.apk
 
-  zipalign -v 4 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
+  $ANDROID_TOOLS_PATH/zipalign -v 4 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
 
   #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-FULL.apk android_release_key
   echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk

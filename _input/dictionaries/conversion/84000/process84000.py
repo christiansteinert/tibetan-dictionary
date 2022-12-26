@@ -191,7 +191,8 @@ def appendTerm(dictData, tibTerm, definition):
         return
 
     for headword in tibTerm.split(','):
-        dictData.append((cleanupHeadword(headword), definition))
+        if len(tibTerm) <= 85:
+            dictData.append((cleanupHeadword(headword), definition))
 
 def addEntries(tibTerms, engTerms, definitionTxt, sktTerms):
     for tibTerm in tibTerms:
