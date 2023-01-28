@@ -62,6 +62,9 @@ def cleanSkt(skt): # clean garbage from Sanskrit
     skt = re.sub('^\\n','',skt) 
     skt = re.sub('^\\n','',skt) 
 
+    # Fix specific mistakes
+    skt = skt.replace('vajraghapraṭāpādaḥ','vajraghaṇṭāpādaḥ')
+
     return skt
   else: 
     return ''
