@@ -814,10 +814,12 @@ var DICT={
 
     if(DICT.getInputLang()==="en") {
         $("#searchTerm").attr("placeholder","Enter an English term...")
+        $("#searchTerm").attr("lang","en")
         $("#switchBtnEnTib").show();
         $("#switchBtnTibEn").hide();
     } else {
         $("#searchTerm").attr("placeholder","Enter a Tibetan term...")
+        $("#searchTerm").attr("lang","bo")
         $("#switchBtnEnTib").hide();
         $("#switchBtnTibEn").show();
     }
@@ -1182,8 +1184,9 @@ var DICT={
     title = title.replace(/}/g,'&#125;');
     title = title.replace(/\n/g,' ');
     title = title.replace(/<[^>]*>/g,' ');
-    title = title.replace(/  +/g,' ');        
-    title = title.replace(/'/g,"\\'");        
+    title = title.replace(/  +/g,' ');
+    title = title.replace(/"/g,"&quot;");
+    title = title.replace(/'/g,"&#39;");
 
     return title;
   },
