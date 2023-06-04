@@ -1,8 +1,11 @@
 Changelog:
 
 Version 0.0.20:
-* Fix erroroneous wazur characters and a few other mistakes in Bod rgya tshig mdzod chen mo. Huge thanks to Valery Ushakov for contributing all these corrections!
-
+* Added ITLR (Indo-Tibetan Lexical Resources) as new dictionary. Many thanks go to Dr. Orna Almogi, Prof. Kiyonori Nagasaki, and to all contributors of the ITLR project.
+* Fixed erroroneous wazur characters and a few other mistakes in Bod rgya tshig mdzod chen mo. Huge thanks to Valery Ushakov for contributing all these corrections!
+* Fixes of individual entries. Many thanks to James Hartzell and Valery Ushakov
+* Changed all Sanskrit entries to use proper Harvard-Kyoto transliteration while searching. For example, jñāna must now be searched as jJAna while before it was a mix jNAna and jJAna depending on the source.
+ 
 Version 0.0.19:
 * Bugfixes for better backwards compatibility
 

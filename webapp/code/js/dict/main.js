@@ -1167,13 +1167,13 @@ var DICT={
   htmlEscapeDefinition:function(definition) {
     definition = this.htmlEscape(definition);
     
+    definition = definition.replace(/(https?:\/\/)([-0-9a-zA-Z\/\.#%_:&;]+)/g, '<a target="_blank" href="$1$2">$2</a>');
     definition = definition.replace(/\\+n/g,'\n'); 
     definition = definition.replace(/\\/g,''); 
     definition = definition.replace(/([a-zA-Z0-9\.]){/g,'$1 {');
     definition = definition.replace(/}([a-zA-Z0-9])/g,'} $1');
-    definition = definition.replace(/:([^\/])/g,': $1');
+    definition = definition.replace(/:([^\/0-9])/g,': $1');
     definition = definition.replace(/ - /g,' &ndash; ');
-    definition = definition.replace(/(https?:\/\/)([-0-9a-zA-Z\/\.#%_]+)/g, '<a target="_blank" href="$1$2">$2</a>');
 
     return '<p>' + definition + '</p>';
   },
@@ -1259,7 +1259,9 @@ var DICT={
               definition = definition.replace(/\n/gm,'; ');
               definition = definition.replace(/\\n/gm,'; ');
           }
-          definition = DICT.breakDefinitionIntoSections( definition );
+          if(!currentDict.preformattedLinebreaks) {
+            definition = DICT.breakDefinitionIntoSections( definition );
+          }
           if(currentDict.containsOnlyTibetan) {
             // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
           
