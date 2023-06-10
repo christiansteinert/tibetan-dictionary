@@ -380,6 +380,7 @@ DICTLIST={
 "NegiSkt":{
   label:'Negi (Tibetan-Sanskrit)',
   about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
+  abbreviations:'Negi',
   public:"true",
   listCredits:"true"
 }

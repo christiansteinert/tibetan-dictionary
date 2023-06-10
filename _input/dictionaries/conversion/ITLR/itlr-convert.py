@@ -12,13 +12,18 @@ def cleanString(txt): # clean any piece of Text
   txt = txt.replace('&amp;','&')
   return txt
 
-def cleanTibDef(tib): # clean Tibetan definition
+def cleanTibDef(tib): # clean Tibetan entry when used as definition
   tib = cleanTib(tib)
-  tib = re.sub(r'\s/.*','', tib)
   return tib
 
-def cleanTib(tib): # clean Tibetan 
-  tib = cleanString(tib)
+def cleanTibTerm(tib): # clean Tibetan entry when used as headword
+  tib = cleanTib(tib)
+  tib = re.sub(r'\s*/.*','', tib) # remve everything after the first slash
+  return tib
+
+def cleanTib(tib): # clean Tibetan text
+  tib = cleanString(tib) # ITLR capitalizes the root letter within their Wylie
+  tib = tib.lower()
   tib = tib.strip()
   tib = tib.replace('’','\'')
   tib = tib.replace('°','')
@@ -108,7 +113,7 @@ def process_entry_skt(f, entry):
     for tibTerm in tibTerms:
       if not isFirst:
         f.write(', ')  
-      tibTerm = cleanTib(tibTerm)
+      tibTerm = cleanTibDef(tibTerm)
       f.write('{'+tibTerm+'/}')
       isFirst = False
     f.write('\\n\\n')
@@ -162,7 +167,7 @@ def process_entry_en(f, entry):
         for tibTerm in tibTerms:
           if not isFirst:
             f.write(', ')  
-          tibTerm = cleanTib(tibTerm)
+          tibTerm = cleanTibDef(tibTerm)
           f.write('{'+tibTerm+'/}')
           isFirst = False
         f.write('\\n\\n')
@@ -189,7 +194,7 @@ def process_entry_tib(f, entry):
 
   if tibTerms:
     for tibTerm in tibTerms:
-      tibTerm = cleanTibDef(tibTerm)
+      tibTerm = cleanTibTerm(tibTerm)
       f.write(tibTerm+'|')
 
       f.write('Sanskrit: ' + skt)
@@ -203,7 +208,7 @@ def process_entry_tib(f, entry):
         for tibTerm in tibTerms:
           if not isFirst:
             f.write(', ')  
-          tibTerm = cleanTib(tibTerm)
+          tibTerm = cleanTibDef(tibTerm)
           f.write('{'+tibTerm+'/}')
           isFirst = False
         f.write('\\n\\n')
