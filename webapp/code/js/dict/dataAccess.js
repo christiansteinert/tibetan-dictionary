@@ -119,7 +119,7 @@ var CordovaDataAccess={
               var row = results.rows.item(i);
               
               if(definitions[row.dictionary]) {
-                definitions[row.dictionary]+='\\n\\n'+row.definition;
+                definitions[row.dictionary]+='\\n-----\\n'+row.definition;
               } else {
                 definitions[row.dictionary]=row.definition;
               }

@@ -110,6 +110,12 @@ a{
 .definition p{
   margin:0 0 0.45em 0;
 }
+.definition p.separator{
+  background-color:#888;
+  height:1px;
+  width:4em;
+  margin:0.5em 0;
+}
 #mainScreen {
   position:absolute;
   top:0;

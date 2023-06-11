@@ -1284,6 +1284,7 @@ var DICT={
             
           definition = definition.replace(/\n/g,'</p>\n<p>');
           definition = definition.replace(/\\n/g,'</p>\n<p>');
+          definition = definition.replace(/<p>-----<\/p>/g,'<p class="separator"></p>');
 
           if(currentDict.highlight) {
             definition = definition.replace(new RegExp(currentDict.highlight,'g'),'<b>$1</b>');
