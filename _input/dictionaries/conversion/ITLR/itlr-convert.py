@@ -125,7 +125,7 @@ def process_entry_skt(f, entry):
       engTerm = cleanEnTerm(engTerm)
 
       if not isFirst:
-        f.write(',')
+        f.write(', ')
       f.write(engTerm)
       isFirst = False
     f.write('\\n')
@@ -220,7 +220,7 @@ def process_entry_tib(f, entry):
           engTerm = cleanEnTerm(engTerm)
 
           if not isFirst:
-            f.write(',')
+            f.write(', ')
           f.write(engTerm)
           isFirst = False
         f.write('\\n')

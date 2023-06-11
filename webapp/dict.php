@@ -377,7 +377,7 @@ $ZLIB_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara v
     while ($row = $results->fetchArray()) {
       $definition = str_replace( '"', '\\"', inflate( $row['definition'] ) );
       if( $prevDict == $row['dictionary'] && $prevTerm == $row['term'] ) {
-        print('\\n' . $definition);
+        print('\\n\\n' . $definition);
       } else {
         if( $prevDict != '' ) {
           print('",');
