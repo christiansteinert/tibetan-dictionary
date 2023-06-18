@@ -8,6 +8,12 @@ from devatrans import DevaTrans #  -> run  pip install --user devatrans before u
 
 dt = DevaTrans()
 
+def remove_duplicates(items):
+  if items:
+    return list(dict.fromkeys(items))
+  else:
+    return
+
 def cleanString(txt): # clean any piece of Text
   txt = txt.replace('&amp;','&')
   return txt
@@ -88,8 +94,8 @@ def cleanUrl(url): # fix URLs
 def process_entry_skt(f, entry):
   entryType = entry.get('type')
   skt = cleanSkt(entry.get('skt',''))
-  tibTerms = entry.get('bod')
-  engTerms = entry.get('eng')
+  tibTerms = remove_duplicates(entry.get('bod'))
+  engTerms = remove_duplicates(entry.get('eng'))
   keyinfos = entry.get('keyinfo')
   url = cleanUrl(entry.get('url',''))
 
@@ -145,8 +151,8 @@ def process_entry_skt(f, entry):
 def process_entry_en(f, entry):
   entryType = entry.get('type')
   skt = cleanSkt(entry.get('skt',''))
-  tibTerms = entry.get('bod')
-  engTerms = entry.get('eng')
+  tibTerms = remove_duplicates(entry.get('bod'))
+  engTerms = remove_duplicates(entry.get('eng'))
   keyinfos = entry.get('keyinfo')
   url = cleanUrl(entry.get('url',''))
 
@@ -187,8 +193,8 @@ def process_entry_en(f, entry):
 def process_entry_tib(f, entry):
   entryType = entry.get('type')
   skt = cleanSkt(entry.get('skt',''))
-  tibTerms = entry.get('bod')
-  engTerms = entry.get('eng')
+  tibTerms = remove_duplicates(entry.get('bod'))
+  engTerms = remove_duplicates(entry.get('eng'))
   keyinfos = entry.get('keyinfo')
   url = cleanUrl(entry.get('url',''))
 
