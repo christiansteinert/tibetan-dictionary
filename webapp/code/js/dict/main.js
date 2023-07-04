@@ -210,6 +210,8 @@ var DICT={
         return true;
       case 'pad+ma':
         return true;
+      case 'bsa':
+        return false;
     }
     return /^[gdbm']?[rls]?(?:k|kh|g|ng|c|ch|j|ny|t|th|d|n|p|ph|b|m|ts|tsh|dz|w|zh|z|'|y|r|l|sh|s|h|)[yrlw]?[aeiou](?:'[aeiou]?)?(?:g|ng|d|n|b|m|r|l|s|)?[sd]?$/.test(wylie);  
   },
@@ -471,6 +473,26 @@ var DICT={
   },
   
   init:function($) {
+    $.fn.selectRange = function(start, end) {
+      if(end === undefined) {
+          end = start;
+      }
+      return this.each(function() {
+          if('selectionStart' in this) {
+              this.selectionStart = start;
+              this.selectionEnd = end;
+          } else if(this.setSelectionRange) {
+              this.setSelectionRange(start, end);
+          } else if(this.createTextRange) {
+              var range = this.createTextRange();
+              range.collapse(true);
+              range.moveEnd('character', end);
+              range.moveStart('character', start);
+              range.select();
+          }
+      });
+    };
+    
     this.getDataAccess().initDB( function() { DICT.doInit($) } );
   },
   
@@ -604,7 +626,7 @@ var DICT={
           var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
           
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-             uniInput = uniInput.replace(/[ _/།]+/g,' ');
+             uniInput = uniInput.replace(/[\- _/།\.]+/g,' ');
              uniInput = DICT.normalizeWylie(uniInput);
              var newInput = DICT.uniToWylie(uniInput);
              var inputText = DICT.tibetanOutput( newInput );
@@ -618,7 +640,8 @@ var DICT={
           DICT.search(true,true,0);
         }
       });
-      $('#searchTerm').on('keyup mobiletextchange',function(event){
+      
+      $('#searchTerm').on('keyup mobiletextchange input',function(event){
         var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() ),
             lastUniInput = DICT.lastUniInput,
             newInput = uniInput,
@@ -636,8 +659,20 @@ var DICT={
           DICT.wasTypedInWylie = true;
         }
             
-        if(event.keyCode == 8 ||(newInput.length < currentInput.length && currentInput.indexOf(newInput)===0)
-                              ||(uniInput.length < lastUniInput.length && lastUniInput.indexOf(uniInput)===0)){ // backspace
+        if(event.keyCode == 32 || (/[\- \/་།\s\.]$/.test(uniInput) && uniInput.startsWith(lastUniInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
+          //space at the end of the text or typing in English
+          // => convert all syllables to unicode and fill the word list
+          if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
+            newInput = DICT.normalizeWylie(newInput);
+            newInput = newInput.replace(/[\-_ \/་།\s\.]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
+            var inputText = DICT.tibetanOutput( newInput );
+          } else {
+            var inputText = newInput;
+          }
+          $('#searchTerm').val(inputText);
+          DICT.search(false,true,0);
+          
+        } else if(event.keyCode == 8||(uniInput.length < lastUniInput.length && lastUniInput.startsWith(uniInput))) { // backspace
           var isAtEndOfSyllable = /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
           if(DICT.wasTypedInWylie && DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && isAtEndOfSyllable ) {
             // backspace at end of Tibetan syllable after having typed some part of the input in Wylie
@@ -662,22 +697,14 @@ var DICT={
             // => just allow regular logic: allow the last character be deleted. This may be the last Unicode character
             DICT.search(false,true,0);
           }
-
-        } else if(event.keyCode == 32 || (/ $/.test(newInput) && !/ $/.test(currentInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
-          //space at the end of the text or typing in English
-          // => convert all syllables to unicode and fill the word list
-          if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-            newInput = newInput.replace(/[ \/།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
-            newInput = DICT.normalizeWylie(newInput);
-            var inputText = DICT.tibetanOutput( newInput );
-          } else {
-            var inputText = newInput;
-          }
-          $('#searchTerm').val(inputText);
-          DICT.search(false,true,0);
+          
+          window.setTimeout(function(){
+            var $input=$('#searchTerm');
+            $input.selectRange($input.val().length);
+          },10)
         }
-        DICT.currentInput = DICT.uniToWylie($('#searchTerm').val());
-        DICT.lastUniInput = uniInput;
+        DICT.lastUniInput = $('#searchTerm').val();
+        DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
 
       });
 
@@ -1327,26 +1354,6 @@ if(window.cordova) {
   //phonegap-based initialization for mobile app
   document.addEventListener("deviceready", function(){
       jQuery(function($){
-      $.fn.selectRange = function(start, end) {
-        if(end === undefined) {
-            end = start;
-        }
-        return this.each(function() {
-            if('selectionStart' in this) {
-                this.selectionStart = start;
-                this.selectionEnd = end;
-            } else if(this.setSelectionRange) {
-                this.setSelectionRange(start, end);
-            } else if(this.createTextRange) {
-                var range = this.createTextRange();
-                range.collapse(true);
-                range.moveEnd('character', end);
-                range.moveStart('character', start);
-                range.select();
-            }
-        });
-      };
-    
       DICT.init($);
     });
   }, false);
