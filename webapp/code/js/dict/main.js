@@ -626,14 +626,20 @@ var DICT={
           var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
           
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-             uniInput = uniInput.replace(/[\- _/།\.]+/g,' ');
-             uniInput = DICT.normalizeWylie(uniInput);
-             var newInput = DICT.uniToWylie(uniInput);
-             var inputText = DICT.tibetanOutput( newInput );
+            uniInput = uniInput.replace(/[\- _/།\.]+/g,' ');
+            uniInput = DICT.normalizeWylie(uniInput);
+            var newInput = DICT.uniToWylie(uniInput);
+            var inputText = DICT.tibetanOutput( newInput );
+
+            if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
+              // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
+              // in this case we will later convert the input back to Wylie when backspace is pressed.
+              DICT.wasTypedInWylie = true;
+            }             
           } else {
-             uniInput = uniInput.replace(/[-\s\.\/]+/g,' ');
-             var newInput = uniInput;
-             var inputText = newInput;
+            uniInput = uniInput.replace(/[-\s\.\/]+/g,' ');
+            var newInput = uniInput;
+            var inputText = newInput;
           }
           
           $('#searchTerm').val(inputText).blur();
