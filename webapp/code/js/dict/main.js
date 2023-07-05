@@ -631,6 +631,7 @@ var DICT={
              var newInput = DICT.uniToWylie(uniInput);
              var inputText = DICT.tibetanOutput( newInput );
           } else {
+             uniInput = uniInput.replace(/[-\s\.\/]+/g,' ');
              var newInput = uniInput;
              var inputText = newInput;
           }
