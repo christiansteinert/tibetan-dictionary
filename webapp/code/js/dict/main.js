@@ -650,7 +650,7 @@ var DICT={
         if(DICT.getInputLang() === "tib" && DICT.useUnicodeTibetan===true) {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
         } else {
-          newInput = newInput.replace(/[\s]+/g,' ');
+          newInput = newInput.replace(/[-\s\.\/]+/g,' ');
         }
 
         if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
