@@ -626,7 +626,7 @@ var DICT={
           var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
           
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-            uniInput = uniInput.replace(/[\- _/།\.]+/g,' ');
+            uniInput = uniInput.replace(/[\- _/།]+/g,' ');
             uniInput = DICT.normalizeWylie(uniInput);
             var newInput = DICT.uniToWylie(uniInput);
             var inputText = DICT.tibetanOutput( newInput );
@@ -637,7 +637,7 @@ var DICT={
               DICT.wasTypedInWylie = true;
             }             
           } else {
-            uniInput = uniInput.replace(/[-\s\.\/]+/g,' ');
+            uniInput = uniInput.replace(/[-\s\/]+/g,' ');
             var newInput = uniInput;
             var inputText = newInput;
           }
@@ -657,7 +657,7 @@ var DICT={
         if(DICT.getInputLang() === "tib" && DICT.useUnicodeTibetan===true) {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
         } else {
-          newInput = newInput.replace(/[-\s\.\/]+/g,' ');
+          newInput = newInput.replace(/[-\s\/]+/g,' ');
         }
 
         if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
@@ -666,12 +666,12 @@ var DICT={
           DICT.wasTypedInWylie = true;
         }
             
-        if(event.keyCode == 32 || (/[\- \/་།\s\.]$/.test(uniInput) && uniInput.startsWith(lastUniInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
+        if(event.keyCode == 32 || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
           //space at the end of the text or typing in English
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
             newInput = DICT.normalizeWylie(newInput);
-            newInput = newInput.replace(/[\-_ \/་།\s\.]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
+            newInput = newInput.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
             var inputText = DICT.tibetanOutput( newInput );
           } else {
             var inputText = newInput;
