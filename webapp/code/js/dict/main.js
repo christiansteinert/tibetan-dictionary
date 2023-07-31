@@ -624,9 +624,15 @@ var DICT={
       });
 
       $('#searchTerm').on('focus click',function(e) {
+        var $st = $('#searchTerm');
+        if($st.get(0).selectionStart != $st.get(0).selectionEnd) {
+          //a range is selected. Keep it that way
+          return;
+        }
+
         if(DICT.useUnicodeTibetan === true && (DICT.getInputLang() === "tib")) {
-          if($('#searchTerm').selectRange)
-            $('#searchTerm').selectRange($('#searchTerm').val().length);
+          if($st.selectRange)
+            $st.selectRange($st.val().length);
         }
       });
 
@@ -717,7 +723,6 @@ var DICT={
             // => just allow regular logic: allow the last character be deleted. This may be the last Unicode character
             DICT.search(false,true,0);
           }          
-          isCursorAtTheEnd
         }
         DICT.lastUniInput = $('#searchTerm').val();
         DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
