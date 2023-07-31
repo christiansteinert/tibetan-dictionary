@@ -492,7 +492,18 @@ var DICT={
           }
       });
     };
-    
+
+    $.fn.selectRangeStart = function() {
+      return this.each(function() {
+          if('selectionStart' in this) {
+              return this.selectionStart;
+          } else {
+            return -1;
+          }
+
+      });
+    };    
+
     this.getDataAccess().initDB( function() { DICT.doInit($) } );
   },
   
@@ -649,10 +660,12 @@ var DICT={
       });
       
       $('#searchTerm').on('keyup mobiletextchange input',function(event){
-        var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() ),
+        var $st = $('#searchTerm'),
+            uniInput = DICT.inputToLowerIfNeeded( $st.val() ),
             lastUniInput = DICT.lastUniInput,
             newInput = uniInput,
-            currentInput = DICT.currentInput;
+            currentInput = DICT.currentInput,
+            isCursorAtTheEnd = ($st.get(0).selectionStart == uniInput.length);
 
         if(DICT.getInputLang() === "tib" && DICT.useUnicodeTibetan===true) {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
@@ -680,7 +693,7 @@ var DICT={
           DICT.search(false,true,0);
           
         } else if(event.keyCode == 8||(uniInput.length < lastUniInput.length && lastUniInput.startsWith(uniInput))) { // backspace
-          var isAtEndOfSyllable = /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
+          var isAtEndOfSyllable = isCursorAtTheEnd && /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
           if(DICT.wasTypedInWylie && DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && isAtEndOfSyllable ) {
             // backspace at end of Tibetan syllable after having typed some part of the input in Wylie
             // => convert the last syllable back to Wylie
@@ -703,16 +716,19 @@ var DICT={
             // backspace in all other cases
             // => just allow regular logic: allow the last character be deleted. This may be the last Unicode character
             DICT.search(false,true,0);
-          }
-          
+          }          
+          isCursorAtTheEnd
+        }
+        DICT.lastUniInput = $('#searchTerm').val();
+        DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
+
+        if(isCursorAtTheEnd) {
+          // put cursor at the end if it was at the end before
           window.setTimeout(function(){
             var $input=$('#searchTerm');
             $input.selectRange($input.val().length);
           },10)
         }
-        DICT.lastUniInput = $('#searchTerm').val();
-        DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
-
       });
 
       // handle navigation events
