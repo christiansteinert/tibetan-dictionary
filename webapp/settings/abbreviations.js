@@ -1160,6 +1160,10 @@ ABBREVIATIONS={
   'Negi': {
     match: '(^| )(TERM)([ 0-9]|$)',
     items: {
+      'vi.': 'viśeṣaṇam',
+      'nā.': 'nāma',
+      'kri.': 'kriyā',
+
       'a.ka.':'avadānakalpalatā|Mithila Institute, Darbhanga, Bihar. 1959',
       'a.ko.':'amarakośaḥ|Adyar Library and Research Centre, Adyar, Madras 1971',
       'a.kra.':'acintyakramopadeśaḥ|Central Institute of Higher Tibetan Studies, Sarnath, Varanasi 1988',
