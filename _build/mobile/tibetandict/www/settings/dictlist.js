@@ -341,6 +341,14 @@ DICTLIST={
   about:'Sanskrit terms from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true"
 },
+"ITLR": {
+  highlight:'(&lt;[^ ]*&gt;|Sanskrit: |English: |See also:)',
+  label:'Indo-Tibetan Lexical Resource [ITLR] (Tibetan-Sanskrit-English)',
+  about:'The Indo-Tibetan Lexical Resource (https://www.itlr.net) is a collaborative lexical project built around Sanskrit Headwords. It involves a number of scholars from around the world and cooperates with several institutions.|Many thanks go to Dr. Orna Almogi for allowing the ITLR resources to be included in this application, to Prof. Kiyonori Nagasaki for implementing a data export and making the ITLR data available, and to all contributors of the ITLR project.',
+  public:"true",
+  preformattedLinebreaks: "true",
+  listCredits:"true"
+},
 "Mahavyutpatti-Skt":{
   containsOnlySkt:true, 
   label:'Maha&shy;vyutpatti (Tibetan-Sanskrit)',
@@ -372,7 +380,9 @@ DICTLIST={
 "NegiSkt":{
   label:'Negi (Tibetan-Sanskrit)',
   about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
+  abbreviations:'Negi',
   public:"true",
   listCredits:"true"
 }
+
 }
