@@ -673,6 +673,13 @@ var DICT={
             currentInput = DICT.currentInput,
             isCursorAtTheEnd = ($st.get(0).selectionStart == uniInput.length);
 
+        if(event.type === "input" && !/.*['a-zA-Z].*/.test(uniInput + lastUniInput)) {
+          // skip our handling of the input event if input so far has not contained wylie-relevant
+          // characters because our event handling for the input event can interfere with 
+          // Tibetan Unicode input on iPhones
+          return;
+        }
+
         if(DICT.getInputLang() === "tib" && DICT.useUnicodeTibetan===true) {
           newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
         } else {
