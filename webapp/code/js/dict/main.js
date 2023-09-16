@@ -686,19 +686,27 @@ var DICT={
           newInput = newInput.replace(/[-\s\/]+/g,' ');
         }
 
-        if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
+        if (DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput)) {
           // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
           // in this case we will later convert the input back to Wylie when backspace is pressed.
           DICT.wasTypedInWylie = true;
+          var currentInputContainsWylie = true;
+        } else if(uniInput === "") {
+          DICT.wasTypedInWylie = false;
+          var currentInputContainsWylie = false;
         }
-            
+
         if(event.keyCode == 32 || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
           //space at the end of the text or typing in English
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-            newInput = DICT.normalizeWylie(newInput);
-            newInput = newInput.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
-            var inputText = DICT.tibetanOutput( newInput );
+            if (currentInputContainsWylie) {
+              newInput = DICT.normalizeWylie(newInput);
+              newInput = newInput.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
+              var inputText = DICT.tibetanOutput( newInput );
+            } else {
+              var inputText = uniInput.replace(/[\-_ \/་།\s]+/g,'་'); // get rid of shad; turn into tseg; prevent double-tsegs
+            }
           } else {
             var inputText = newInput;
           }
