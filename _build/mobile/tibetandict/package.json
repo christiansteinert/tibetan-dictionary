@@ -1,6 +1,6 @@
 {
   "name": "de.christian_steinert.tibetandict",
-  "version": "0.0.17",
+  "version": "0.0.20",
   "displayName": "TibetanDictionary",
   "cordova": {
     "platforms": [
@@ -13,7 +13,10 @@
     }
   },
   "dependencies": {
-    "cordova-android": "^8.1.0",
+    "cordova": "^12.0.0",
     "cordova-android-support-gradle-release": "^2.0.1"
+  },
+  "devDependencies": {
+    "cordova-android": "^12.0.0"
   }
 }

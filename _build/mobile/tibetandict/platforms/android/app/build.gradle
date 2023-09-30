@@ -19,51 +19,69 @@
 
 apply plugin: 'com.android.application'
 
+if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-android-extensions'
+}
+
 buildscript {
-    repositories {
-        mavenCentral()
-        maven {
-            url "https://maven.google.com"
+    apply from: '../CordovaLib/cordova.gradle'
+
+    // Checks if the kotlin version format is valid.
+    if(cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
+        if(!cdvHelpers.isVersionValid(cordovaConfig.KOTLIN_VERSION)) {
+            throw new GradleException("The defined Kotlin version (${cordovaConfig.KOTLIN_VERSION}) does not appear to be a valid version.")
         }
-        jcenter()
     }
 
+    apply from: 'repositories.gradle'
+    repositories repos
+
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath "com.android.tools.build:gradle:${cordovaConfig.AGP_VERSION}"
+
+        if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
+            classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:${cordovaConfig.KOTLIN_VERSION}"
+        }
+
+        if(cordovaConfig.IS_GRADLE_PLUGIN_GOOGLE_SERVICES_ENABLED) {
+            // Checks if the kotlin version format is valid.
+            if(!cdvHelpers.isVersionValid(cordovaConfig.GRADLE_PLUGIN_GOOGLE_SERVICES_VERSION)) {
+                throw new GradleException("The defined Google Services plugin version (${cordovaConfig.GRADLE_PLUGIN_GOOGLE_SERVICES_VERSION}) does not appear to be a valid version.")
+            }
+
+            // Create the Google Services classpath and set it.
+            String gradlePluginGoogleServicesClassPath = "com.google.gms:google-services:${cordovaConfig.GRADLE_PLUGIN_GOOGLE_SERVICES_VERSION}"
+            println "Adding classpath: ${gradlePluginGoogleServicesClassPath}"
+            classpath gradlePluginGoogleServicesClassPath
+        }
     }
 }
 
 // Allow plugins to declare Maven dependencies via build-extras.gradle.
 allprojects {
-    repositories {
-        mavenCentral();
-        jcenter()
+    def hasRepositoriesGradle = file('repositories.gradle').exists()
+    if (hasRepositoriesGradle) {
+        apply from: 'repositories.gradle'
+    } else {
+        apply from: "${project.rootDir}/repositories.gradle"
     }
+
+    repositories repos
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '4.1.0'
+    gradleVersion = cordovaConfig.GRADLE_VERSION
 }
 
 // Configuration properties. Set these via environment variables, build-extras.gradle, or gradle.properties.
 // Refer to: http://www.gradle.org/docs/current/userguide/tutorial_this_and_that.html
 ext {
     apply from: '../CordovaLib/cordova.gradle'
-    // The value for android.compileSdkVersion.
-    if (!project.hasProperty('cdvCompileSdkVersion')) {
-        cdvCompileSdkVersion = null;
-    }
-    // The value for android.buildToolsVersion.
-    if (!project.hasProperty('cdvBuildToolsVersion')) {
-        cdvBuildToolsVersion = null;
-    }
+
     // Sets the versionCode to the given value.
     if (!project.hasProperty('cdvVersionCode')) {
         cdvVersionCode = null
-    }
-    // Sets the minSdkVersion to the given value.
-    if (!project.hasProperty('cdvMinSdkVersion')) {
-        cdvMinSdkVersion = null
     }
     // Whether to build architecture-specific APKs.
     if (!project.hasProperty('cdvBuildMultipleApks')) {
@@ -104,15 +122,10 @@ if (hasBuildExtras2) {
     apply from: '../build-extras.gradle'
 }
 
+// Apply updates that might come from build-extra.
+privateHelpers.applyCordovaConfigCustomization()
+
 // Set property defaults after extension .gradle files.
-if (ext.cdvCompileSdkVersion == null) {
-    ext.cdvCompileSdkVersion = privateHelpers.getProjectTarget()
-    //ext.cdvCompileSdkVersion = project.ext.defaultCompileSdkVersion
-}
-if (ext.cdvBuildToolsVersion == null) {
-    ext.cdvBuildToolsVersion = privateHelpers.findLatestInstalledBuildTools()
-    //ext.cdvBuildToolsVersion = project.ext.defaultBuildToolsVersion
-}
 if (ext.cdvDebugSigningPropertiesFile == null && file('../debug-signing.properties').exists()) {
     ext.cdvDebugSigningPropertiesFile = '../debug-signing.properties'
 }
@@ -123,7 +136,6 @@ if (ext.cdvReleaseSigningPropertiesFile == null && file('../release-signing.prop
 // Cast to appropriate types.
 ext.cdvBuildMultipleApks = cdvBuildMultipleApks == null ? false : cdvBuildMultipleApks.toBoolean();
 ext.cdvVersionCodeForceAbiDigit = cdvVersionCodeForceAbiDigit == null ? false : cdvVersionCodeForceAbiDigit.toBoolean();
-ext.cdvMinSdkVersion = cdvMinSdkVersion == null ? defaultMinSdkVersion : Integer.parseInt('' + cdvMinSdkVersion)
 ext.cdvVersionCode = cdvVersionCode == null ? null : Integer.parseInt('' + cdvVersionCode)
 
 def computeBuildTargetName(debugBuild) {
@@ -146,39 +158,47 @@ cdvBuildRelease.dependsOn {
     return computeBuildTargetName(false)
 }
 
-task cdvPrintProps << {
-    println('cdvCompileSdkVersion=' + cdvCompileSdkVersion)
-    println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
-    println('cdvVersionCode=' + cdvVersionCode)
-    println('cdvVersionCodeForceAbiDigit=' + cdvVersionCodeForceAbiDigit)
-    println('cdvMinSdkVersion=' + cdvMinSdkVersion)
-    println('cdvBuildMultipleApks=' + cdvBuildMultipleApks)
-    println('cdvReleaseSigningPropertiesFile=' + cdvReleaseSigningPropertiesFile)
-    println('cdvDebugSigningPropertiesFile=' + cdvDebugSigningPropertiesFile)
-    println('cdvBuildArch=' + cdvBuildArch)
-    println('computedVersionCode=' + android.defaultConfig.versionCode)
-    android.productFlavors.each { flavor ->
-        println('computed' + flavor.name.capitalize() + 'VersionCode=' + flavor.versionCode)
+task cdvPrintProps {
+    doLast {
+        println('cdvBuildToolsVersion=' + cdvBuildToolsVersion)
+        println('cdvVersionCode=' + cdvVersionCode)
+        println('cdvVersionCodeForceAbiDigit=' + cdvVersionCodeForceAbiDigit)
+        println('cdvSdkVersion=' + cdvSdkVersion)
+        println('cdvMinSdkVersion=' + cdvMinSdkVersion)
+        println('cdvMaxSdkVersion=' + cdvMaxSdkVersion)
+        println('cdvBuildMultipleApks=' + cdvBuildMultipleApks)
+        println('cdvReleaseSigningPropertiesFile=' + cdvReleaseSigningPropertiesFile)
+        println('cdvDebugSigningPropertiesFile=' + cdvDebugSigningPropertiesFile)
+        println('cdvBuildArch=' + cdvBuildArch)
+        println('computedVersionCode=' + android.defaultConfig.versionCode)
+        println('cdvAndroidXAppCompatVersion=' + cdvAndroidXAppCompatVersion)
+        println('cdvAndroidXWebKitVersion=' + cdvAndroidXWebKitVersion)
+        android.productFlavors.each { flavor ->
+            println('computed' + flavor.name.capitalize() + 'VersionCode=' + flavor.versionCode)
+        }
     }
 }
 
 android {
+    namespace cordovaConfig.PACKAGE_NAMESPACE
 
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
-        applicationId privateHelpers.extractStringFromManifest("package")
+        applicationId cordovaConfig.PACKAGE_NAMESPACE
 
-        if (cdvMinSdkVersion != null) {
-            minSdkVersion cdvMinSdkVersion
+        minSdkVersion cordovaConfig.MIN_SDK_VERSION
+        if (cordovaConfig.MAX_SDK_VERSION != null) {
+            maxSdkVersion cordovaConfig.MAX_SDK_VERSION
         }
+        targetSdkVersion cordovaConfig.SDK_VERSION
+        compileSdkVersion cordovaConfig.COMPILE_SDK_VERSION
     }
 
     lintOptions {
-      abortOnError false;
+      abortOnError false
     }
 
-    compileSdkVersion cdvCompileSdkVersion
-    buildToolsVersion cdvBuildToolsVersion
+    buildToolsVersion cordovaConfig.BUILD_TOOLS_VERSION
 
     // This code exists for Crosswalk and other Native APIs.
     // By default, we multiply the existing version code in the
@@ -238,9 +258,9 @@ android {
             release {
                 // These must be set or Gradle will complain (even if they are overridden).
                 keyAlias = ""
-                keyPassword = "__unset" // And these must be set to non-empty in order to have the signing step added to the task graph.
+                keyPassword = ""
                 storeFile = null
-                storePassword = "__unset"
+                storePassword = ""
             }
         }
         buildTypes {
@@ -250,8 +270,13 @@ android {
         }
         addSigningProps(cdvReleaseSigningPropertiesFile, signingConfigs.release)
     }
+
     if (cdvDebugSigningPropertiesFile) {
         addSigningProps(cdvDebugSigningPropertiesFile, signingConfigs.debug)
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
     }
 }
 
@@ -264,29 +289,16 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: '*.jar')
+    implementation "androidx.appcompat:appcompat:${cordovaConfig.ANDROIDX_APP_COMPAT_VERSION}"
+    implementation "androidx.core:core-splashscreen:${cordovaConfig.ANDROIDX_CORE_SPLASHSCREEN_VERSION}"
+
+    if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${cordovaConfig.KOTLIN_VERSION}"
+    }
+
     // SUB-PROJECT DEPENDENCIES START
     implementation(project(path: ":CordovaLib"))
     // SUB-PROJECT DEPENDENCIES END
-}
-
-def promptForReleaseKeyPassword() {
-    if (!cdvReleaseSigningPropertiesFile) {
-        return;
-    }
-    if ('__unset'.equals(android.signingConfigs.release.storePassword)) {
-        android.signingConfigs.release.storePassword = privateHelpers.promptForPassword('Enter key store password: ')
-    }
-    if ('__unset'.equals(android.signingConfigs.release.keyPassword)) {
-        android.signingConfigs.release.keyPassword = privateHelpers.promptForPassword('Enter key password: ');
-    }
-}
-
-gradle.taskGraph.whenReady { taskGraph ->
-    taskGraph.getAllTasks().each() { task ->
-      if(['validateReleaseSigning', 'validateSigningRelease', 'validateSigningArmv7Release', 'validateSigningX76Release'].contains(task.name)) {
-         promptForReleaseKeyPassword()
-      }
-    }
 }
 
 def addSigningProps(propsFilePath, signingConfig) {
@@ -309,7 +321,7 @@ def addSigningProps(propsFilePath, signingConfig) {
     signingConfig.storePassword = props.get('storePassword', props.get('key.store.password', signingConfig.storePassword))
     def storeType = props.get('storeType', props.get('key.store.type', ''))
     if (!storeType) {
-        def filename = storeFile.getName().toLowerCase();
+        def filename = storeFile.getName().toLowerCase()
         if (filename.endsWith('.p12') || filename.endsWith('.pfx')) {
             storeType = 'pkcs12'
         } else {
@@ -327,4 +339,8 @@ for (def func : cdvPluginPostBuildExtras) {
 //     ext.postBuildExtras = { ... code here ... }
 if (hasProperty('postBuildExtras')) {
     postBuildExtras()
+}
+
+if (cordovaConfig.IS_GRADLE_PLUGIN_GOOGLE_SERVICES_ENABLED) {
+    apply plugin: 'com.google.gms.google-services'
 }

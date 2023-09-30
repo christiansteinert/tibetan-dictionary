@@ -3,7 +3,7 @@ currpath="`pwd`"
 
 if [ -z "$JAVA_HOME" ]
 then
-  export JAVA_HOME=/usr/lib/jvm/java-1.8.0/
+  export JAVA_HOME=/usr/lib/jvm/java-11/
   $JAVA_HOME/bin/javac -version
 fi
 
@@ -16,12 +16,15 @@ export ANDROID_TOOLS_VERSION=`ls -1 $ANDROID_HOME/build-tools/ |tail -n 1 `
 export ANDROID_TOOLS_PATH="$ANDROID_HOME/build-tools/$ANDROID_TOOLS_VERSION"
 export JAVA_TOOL_OPTIONS="-Xmx2048m -XX:ReservedCodeCacheSize=1024m"
 
+export PATH=$ANDROID_TOOLS_PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
+
+
 echo ANDROID_HOME: $ANDROID_HOME
 echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
 
 
-# copy the customized Java class for the cordova database plugin
-cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/SQLitePlugin.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
+# copy the customized Java classes for the cordova database plugin
+cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
 
 ############################################################################################################################################
 #### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)
@@ -146,8 +149,8 @@ cp -r ../_assets/res.normal/* mobile/tibetandict/platforms/android/app/src/main/
 find mobile/tibetandict/platforms/android/src/ -iname *.java -exec touch {} \;
 
 # kick of the actual cordova build process
-cd mobile/tibetandict/platforms/android/cordova
-./build --release
+cd mobile/tibetandict
+cordova build --release
 
 
 # move and sign the APK file

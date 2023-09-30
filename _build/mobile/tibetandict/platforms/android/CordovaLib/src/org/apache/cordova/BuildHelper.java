@@ -51,7 +51,8 @@ public class BuildHelper {
     {
         try
         {
-            Class<?> clazz = Class.forName(ctx.getPackageName() + ".BuildConfig");
+            String packageName = ctx.getApplicationInfo().packageName;
+            Class<?> clazz = Class.forName(packageName + ".BuildConfig");
             Field field = clazz.getField(key);
             return field.get(null);
         } catch (ClassNotFoundException e) {
@@ -61,6 +62,9 @@ public class BuildHelper {
             LOG.d(TAG, key + " is not a valid field. Check your build.gradle");
         } catch (IllegalAccessException e) {
             LOG.d(TAG, "Illegal Access Exception: Let's print a stack trace.");
+            e.printStackTrace();
+        } catch (NullPointerException e) {
+            LOG.d(TAG, "Null Pointer Exception: Let's print a stack trace.");
             e.printStackTrace();
         }
 

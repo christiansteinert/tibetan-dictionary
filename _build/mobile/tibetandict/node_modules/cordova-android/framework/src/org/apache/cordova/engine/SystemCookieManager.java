@@ -19,8 +19,6 @@
 
 package org.apache.cordova.engine;
 
-import android.annotation.TargetApi;
-import android.os.Build;
 import android.webkit.CookieManager;
 import android.webkit.WebView;
 
@@ -31,18 +29,16 @@ class SystemCookieManager implements ICordovaCookieManager {
     protected final WebView webView;
     private final CookieManager cookieManager;
 
-    //Added because lint can't see the conditional RIGHT ABOVE this
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SystemCookieManager(WebView webview) {
         webView = webview;
         cookieManager = CookieManager.getInstance();
 
-        //REALLY? Nobody has seen this UNTIL NOW?
-        cookieManager.setAcceptFileSchemeCookies(true);
+        cookieManager.setAcceptThirdPartyCookies(webView, true);
+    }
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            cookieManager.setAcceptThirdPartyCookies(webView, true);
-        }
+    @SuppressWarnings("deprecation")
+    public void setAcceptFileSchemeCookies() {
+        cookieManager.setAcceptFileSchemeCookies(true);
     }
 
     public void setCookiesEnabled(boolean accept) {
@@ -57,18 +53,11 @@ class SystemCookieManager implements ICordovaCookieManager {
         return cookieManager.getCookie(url);
     }
 
-    @SuppressWarnings("deprecation")
     public void clearCookies() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            cookieManager.removeAllCookies(null);
-        } else {
-            cookieManager.removeAllCookie();
-        }
+        cookieManager.removeAllCookies(null);
     }
 
     public void flush() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            cookieManager.flush();
-        }
+        cookieManager.flush();
     }
 };

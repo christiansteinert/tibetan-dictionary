@@ -20,6 +20,7 @@
 package de.christian_steinert.tibetandict.full;
 
 import android.os.Bundle;
+
 import org.apache.cordova.*;
 
 public class MainActivity extends CordovaActivity

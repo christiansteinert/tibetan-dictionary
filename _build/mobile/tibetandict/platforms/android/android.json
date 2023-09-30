@@ -22,14 +22,14 @@
     }
   },
   "installed_plugins": {
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
+    },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "de.christian_steinert.tibetandict"
     },
     "cordova-sqlite-storage": {
-      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
-    },
-    "cordova-android-support-gradle-release": {
-      "ANDROID_SUPPORT_VERSION": "27.+",
       "PACKAGE_NAME": "de.christian_steinert.tibetandict"
     }
   },
@@ -54,8 +54,8 @@
     }
   ],
   "plugin_metadata": {
+    "cordova-android-support-gradle-release": "2.0.1",
     "cordova-plugin-inappbrowser": "1.2.1",
-    "cordova-sqlite-storage": "1.4.5",
-    "cordova-android-support-gradle-release": "2.0.1"
+    "cordova-sqlite-storage": "1.4.5"
   }
 }

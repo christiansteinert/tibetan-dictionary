@@ -10,7 +10,7 @@ var exec = require('child_process').exec;
 var package_name = 'cordova-sqlite-storage';
 
 module.exports = function (context) {
-    var Q = context.requireCordovaModule('q');
+    var Q = require('q');
     var deferral = new Q.defer();
 
     console.log('installing external dependencies via npm');
