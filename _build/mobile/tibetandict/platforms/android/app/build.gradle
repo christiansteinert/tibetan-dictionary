@@ -344,3 +344,7 @@ if (hasProperty('postBuildExtras')) {
 if (cordovaConfig.IS_GRADLE_PLUGIN_GOOGLE_SERVICES_ENABLED) {
     apply plugin: 'com.google.gms.google-services'
 }
+
+android {
+    namespace = "de.christian_steinert.tibetandict"
+}

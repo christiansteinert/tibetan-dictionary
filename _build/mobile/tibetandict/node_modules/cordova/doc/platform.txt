@@ -1,0 +1,49 @@
+Synopsis
+
+    cordova-cli platform <command> [options]
+
+Manage project platforms
+
+    add <plat-spec> [...].............. Add specified platforms and save platforms
+                                        into config.xml & package.json after installing them
+
+        --nosave ...................... Prevent saving platforms into
+                                        config.xml & package.json after installing them
+
+        --link ........................ When <plat-spec> is a local path, links the platform
+                                        library directly instead of making a copy of it (support
+                                        varies by platform; useful for platform development)
+        
+    remove <platform> [...] ........... Remove specified platforms
+
+        --nosave ...................... Prevent deleting specified platforms from 
+                                        config.xml & package.json after removing them
+
+    update <plat-spec> ................ Update the version of Cordova used for a specific platform;
+                                        update to the latest <version> if no <plat-spec> is specified
+
+    list .............................. List all installed and available platforms
+    nosave ............................ Prevents saving version of all platforms added to 
+                                        config.xml & package.json
+Syntax
+    <plat-spec> : <platform>[@<version>]|<path>|<url>[#<commit-ish>]
+
+    <platform> ........................ Platform name e.g. android, ios, windows etc.
+    <version> ......................... Major.minor.patch version specifier using semver
+    <path> ............................ Path to a directory containing a platform
+    <url> ............................. Url to a git repository containing a platform
+    <commit-ish> ...................... Commit/tag/bramch reference. If none is specified, 'master' is used
+    
+Aliases
+    platforms -> platform
+    rm -> remove
+    ls -> list
+
+Examples
+    cordova-cli platform add android ios
+    cordova-cli platform add android@^5.0.0
+    cordova-cli platform add https://github.com/myfork/cordova-android.git#4.0.0
+    cordova-cli platform add ../android
+    cordova-cli platform add ../cordova-android.tgz
+    cordova-cli platform rm android --nosave
+    cordova-cli platform ls

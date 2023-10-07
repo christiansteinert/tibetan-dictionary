@@ -26,6 +26,9 @@ echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
 # copy the customized Java classes for the cordova database plugin
 cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
 
+# copy the splash screen image
+cp ../_assets/logo512_vectorized.xml mobile/tibetandict/platforms/android/app/src/main/res/drawable/ic_dict_splashscreen.xml
+
 ############################################################################################################################################
 #### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)
 ############################################################################################################################################
@@ -51,7 +54,10 @@ echo === Building full version ===
 
 
 # use a different Android Application ID for the private version of the app than for the public version
-  find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict"/package="de.christian_steinert.tibetandict.full"/' {} \;
+#  find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict"/package="de.christian_steinert.tibetandict.full"/' {} \;
+#  find mobile/tibetandict/ -iname build.gradle -exec sed -i 's/namespace="de.christian_steinert.tibetandict"/namespace="de.christian_steinert.tibetandict.full"/' {} \;
+find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict"/id="de.christian_steinert.tibetandict.full"/' {} \;
+
   rm -rf mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
   mkdir mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
   cp mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/*.java mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
@@ -79,7 +85,7 @@ echo === Building full version ===
 
 # kick of the actual cordova build process
   cd mobile/tibetandict/platforms/android/cordova
-  ./build --release
+  cordova build android --release -- --packageType=apk
 
 
 
@@ -139,7 +145,9 @@ cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetand
 
 
 # use a different Android Application ID for the public version of the app than for the private version
-find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict.full"/package="de.christian_steinert.tibetandict"/' {} \;
+#find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict.full"/package="de.christian_steinert.tibetandict"/' {} \;
+#find mobile/tibetandict/ -iname build.gradle -exec sed -i 's/namespace="de.christian_steinert.tibetandict.full"/namespace="de.christian_steinert.tibetandict"/' {} \;
+find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict.full"/id="de.christian_steinert.tibetandict"/' {} \;
 
 cp -r ../_assets/res.normal/* mobile/tibetandict/platforms/android/app/src/main/res/
 
@@ -150,7 +158,7 @@ find mobile/tibetandict/platforms/android/src/ -iname *.java -exec touch {} \;
 
 # kick of the actual cordova build process
 cd mobile/tibetandict
-cordova build --release
+cordova build android --release -- --packageType=apk
 
 
 # move and sign the APK file
@@ -161,7 +169,7 @@ cordova build --release
 cd "$currpath"
 cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-PUBLIC.apk
 
-zipalign -v 4 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
+$ANDROID_TOOLS_PATH/zipalign -v 4 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
 
 #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-PUBLIC.apk android_release_key
 echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk
