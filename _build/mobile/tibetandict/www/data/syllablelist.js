@@ -2593,7 +2593,6 @@ SYLLABLELIST={
 "'brasen":"འབྲསེན",
 "'braseno":"འབྲསེནོ",
 "'brasil":"འབྲསིལ",
-"b.rasprul":"བརསྤྲུལ",
 "'braspungs":"འབྲསྤུངས",
 "brass":"བྲསས",
 "'brasu":"འབྲསུ",
