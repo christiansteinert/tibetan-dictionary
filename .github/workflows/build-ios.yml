@@ -1,0 +1,89 @@
+     
+
+name: Build Cordova App for iOS
+
+on:
+  push:
+    branches: [ main, github-actions-test]
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:https://iceportal.de/
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: '15.0.1' #latest-stable
+
+#    - name: Make sure that xcode is installed
+#      run: xcode-select --install
+
+    - name: Install Node.js and npm
+      uses: actions/setup-node@v2
+      with:
+        node-version: '18.x'
+
+    - name: Install Cordova
+      run: |
+        npm install -g cordova@12.0.0
+
+
+    - name: Cache dependencies
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.npm
+          ~/.cache
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: Build Cordova App for iOS
+      run: |
+        cd _build/mobile/tibetandict/
+        npm install
+        cordova platform remove ios
+        cordova platform add ios
+        cordova build ios
+
+#export APP_IDENTIFIER=com.example.myapp
+#export PROVISIONING_PROFILE=/path/to/my.mobileprovision
+#export CERTIFICATE_NAME="iPhone Distribution: My Company (ABCD1234)"
+#export CERTIFICATE_FILE=$(cat ${{ secrets.CERTIFICATE_FILE_PATH }})
+#cat "$CERTIFICATE_FILE" > certificate.p12
+
+# OR
+# - name: Write certificate to file
+#  run: |
+#    echo ${{ secrets.CERTIFICATE_NAME }} | base64 --decode > certificate.p12
+#
+#
+#security create-keychain -p mypassword build.keychain
+#security import certificate.p12 -k ~/Library/Keychains/build.keychain -P "" -T /usr/bin/codesign
+#security set-key-partition-list -S apple-tool:,apple: -s -k mypassword build.keychain
+#codesign --force --sign "$CERTIFICATE_NAME" --entitlements entitlements.plist --timestamp=none MyApp.app
+#
+
+
+
+# CODE_SIGN_IDENTITY="${{ secrets.APPLE_CERTIFICATE }}
+#codesign --force --sign "iPhone Developer" --verbose --entitlements entitlements.plist /path/to/YourApp.app --identifier com.yourcompany.yourapp --provisioning-profile /path/to/YourProfile.mobileprovision
+# 
+#Here, replace Developer ID Application: Your Name with your own signing identity. You can find your signing identity by running the following command:
+#security find-identity -v -p codesigning
+#    - name: Sign and upload app
+#      run: xcrun altool --upload-app -f MyApp.xcarchive/Products/Applications/MyApp.ipa -u $APP_STORE_USERNAME -p $APP_STORE_PASSWORD
+
+
+
+#- name: Publish artifact
+#  uses: actions/upload-artifact@v2
+#  with:
+#    name: my-artifact
+#    path: |
+#      ./
+#      !./certificate.p12
