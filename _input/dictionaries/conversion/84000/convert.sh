@@ -1,14 +1,8 @@
 #!/bin/bash
-# checkout the latest 84000 translations from github
-if [ -d git/data-tei ] 
-then
-  cd git/data-tei
-  git pull
-  cd ../..
-else
-  mkdir -p git
-  git clone https://github.com/84000/data-tei.git git/data-tei
-fi
+
+# get the latest master glossary file
+# this can also be downloaded manually from https://read.84000.co/glossary/downloads.html
+wget https://read.84000.co/glossary-download.xml
 
 # Extract entries from 84000 glossary
 rm -rf out

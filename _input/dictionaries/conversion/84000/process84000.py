@@ -10,6 +10,8 @@ from itertools import groupby
 # 3rd party libs
 import editdistance
 
+ns = 'http://read.84000.co/ns/1.0'
+
 dictData = {
     'dictTibSynonyms': [],
     'dictEn': [],
@@ -20,7 +22,7 @@ dictData = {
 
 def cleanupHeadword(value):
     value = cleanupTib(value, removeParens=True)
-    value = value.replace("xx/", " ")
+    value = value.replace("/", " ")
     value = re.sub(r'\s+', ' ', value)
     value = re.sub(r'^ ', '', value)
     value = re.sub(r' $', '', value)
@@ -69,82 +71,93 @@ def logUnexpected(xmlNode):
     print("unexpected element in definition: <" +
           xmlNode.tag + ">   attributes: " + str(xmlNode.attrib))
 
-
-def getDefinitionTxt(xmlNode):
-    ns = 'http://www.tei-c.org/ns/1.0'
-
-    text = ""
-    if xmlNode.text:
-        text = xmlNode.text
-
-    for child in xmlNode:
-        if child.tag == f'{{{ns}}}foreign' \
-                or child.tag == f'{{{ns}}}term' \
-                or child.tag == f'{{{ns}}}mantra':
-            lang = ''
-            if '{http://www.w3.org/XML/1998/namespace}lang' in child.attrib:
-                lang = cleanup(
-                    child.attrib["{http://www.w3.org/XML/1998/namespace}lang"]).lower()
-
-            if lang == 'bo-ltn':
-                text += "{" + cleanupTib(getDefinitionTxt(child), False) + "}"
-
-            else:
-                text += getDefinitionTxt(child)
-
-        elif child.tag == f'{{{ns}}}title' \
-                or child.tag == f'{{{ns}}}emph' \
-                or child.tag == f'{{{ns}}}distinct' \
-                or child.tag == f'{{{ns}}}hi' \
-                or child.tag == f'{{{ns}}}term':
-            text += getDefinitionTxt(child)
-
-        elif child.tag == f'{{{ns}}}ptr' or child.tag == f'{{{ns}}}ref':
-            if 'target' in child.attrib and (child.attrib['target'].startswith('#UT')):
-                anchor = child.attrib['target']
-                documentId = re.sub(r'#(UT.*)-[0-9]+$', r'\1', anchor)
-                uri = f' https://read.84000.co/translation/{documentId}.html{anchor} '
-
-                text += uri
-
-            elif 'target' in child.attrib and child.attrib['target'].startswith('http'):
-                text += child.attrib['target']
-
-            else:
-                logUnexpected(child)
-
-        else:
-            logUnexpected(child)
-            text += getDefinitionTxt(child)
-
-        if child.tail:
-            text += child.tail
-
-    return text
-
-
 def process_file(glossary_file):
-    ns = 'http://www.tei-c.org/ns/1.0'
     try:
         xmlDoc = ET.parse(glossary_file).getroot()
     except Exception as e:
         print(f'!!! file parsing error: {e}')
         return
 
-    extractGlossaryEntries(xmlDoc,
-                           f".//{{{ns}}}titleStmt",
+    # extract text titles
+    extractTextTitles(xmlDoc,
+                           f".//{{{ns}}}ref",
                            f".//{{{ns}}}title")
 
+
+    # extract actual glossary entries
     extractGlossaryEntries(xmlDoc,
-                           f".//{{{ns}}}list[@type='glossary']//{{{ns}}}item",
-                           f"./{{{ns}}}gloss/{{{ns}}}term")
+                           f".//{{{ns}}}term")
+
+def cleanupEntryType(text):
+    return text.replace('eft:','')
+    
+def extractGlossaryEntries(xmlDoc, entrySelect):
+#    1. how to deal with multiple stuff that has the same entity ID -> consider as synonyms?! Probably synonyms are better
+#e.g. entity-29044"
+#
+#    => translation can be multiple
+#84000 Glossary vs Glossary Definitions => combine the two?! Otherwise, no way to group definitions and content!
 
 
-def extractGlossaryEntries(xmlDoc, parentSelect, childSelect):
+    #<term entity="http://purl.84000.co/resource/core/entity-44294" href="https://read.84000.co/glossary/entity-44294.html" sort-key="la ba can">
+    #    <tibetan>ལ་བ་ཅན།</tibetan>
+    #    <wylie>la ba can</wylie>
+    #    <type>eft:person</type>
+    #    <translation>Kambala</translation>
+    #    <sanskrit>kambala</sanskrit>
+    for parentEl in xmlDoc.findall(entrySelect):
+        tibTerms = []
+        tibTermSynonyms = []
+        sktTerms = []
+        engTerms = []
+        entryTypes = []
+        definitions = []
+
+        entityId = parentEl.attrib['entity']
+
+        for wylie in parentEl.findall(f"{{{ns}}}wylie"):
+            tibTerms.append(cleanupTib(wylie.text, removeParens=True))
+
+        for sktTerm in parentEl.findall(f"{{{ns}}}sanskrit"):
+            sktTerms.append(sktTerm.text)
+
+        for engTerm in parentEl.findall(f"{{{ns}}}translation"):
+            engTerms.append(cleanup(engTerm.text))
+
+        for entryType in parentEl.findall(f"{{{ns}}}type"):
+            entryTypes.append(entryType.text)
+
+        # prefer definition on the term level (this is the preferred definition)
+        for primaryDefinition in parentEl.findall(f"{{{ns}}}definition"):
+            definitions = addEntryIfDissimilar(cleanup(primaryDefinition.text), definitions)
+
+        # if no definition was present on the term level then look for definitions in the ref sections, which may be text-specific
+        if len(definitions) == 0: 
+            for definition in parentEl.findall(f"{{{ns}}}ref/{{{ns}}}definition"):
+                definitions = addEntryIfDissimilar(cleanup(definition.text), definitions)
+        
+        for synonym in xmlDoc.findall(f"{{{ns}}}term[@entity='{entityId}']/{{{ns}}}wylie"):
+            if not synonym.text in tibTerms:
+                tibTermSynonyms.append(cleanupTib(synonym.text, removeParens=True))
+
+        # fixme:
+        # 1) combine similar definitions for same lemma 
+        # 2) use entry type
+        # 3) combine definitions and entries and add seperate entries for each variant of a term
+        if len(definitions) > 0:
+            for definitionTxt in definitions:
+                addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms)
+        else:
+            addEntries(tibTerms, tibTermSynonyms, engTerms, '', sktTerms)
+
+
+
+def extractTextTitles(xmlDoc, parentSelect, childSelect):
     for parentEl in xmlDoc.findall(parentSelect):
         tibTerms = []
         sktTerms = []
         engTerms = []
+        tibTermSynonyms = []
         definitionTxt = ''
 
         for childEl in parentEl.findall(childSelect):
@@ -160,27 +173,25 @@ def extractGlossaryEntries(xmlDoc, parentSelect, childSelect):
                     sktTerms.append(titleText)
 
             elif lang == "en":
-                if f'type' in childEl.attrib and childEl.attrib[f'type'] == "definition":
+                if 'type' in childEl.attrib and childEl.attrib[f'type'] == "definition":
                     if definitionTxt != "":
                         definitionTxt += "\\n"
                     definitionTxt = definitionTxt + \
-                        cleanup(getDefinitionTxt(childEl))
+                        cleanup(childEl.text)
 
                 elif titleText and (not titleText in engTerms):
                     engTerms.append(titleText)
 
-        addEntries(tibTerms, engTerms, definitionTxt, sktTerms)
+        addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms)
 
 
 def getLang(xmlElem):
     """
-    Get the language from the lang attribute of an xml element
+    Get the language from the xml:lang attribute of an xml element
     """
     if '{http://www.w3.org/XML/1998/namespace}lang' in xmlElem.attrib:
         lang = cleanup(
             xmlElem.attrib["{http://www.w3.org/XML/1998/namespace}lang"]).lower()
-        if lang == 'la':
-            lang = 'en'
     else:
         lang = 'en'
 
@@ -194,9 +205,12 @@ def appendTerm(dictData, tibTerm, definition):
         if len(tibTerm) <= 85:
             dictData.append((cleanupHeadword(headword), definition))
 
-def addEntries(tibTerms, engTerms, definitionTxt, sktTerms):
+def addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms):
     for tibTerm in tibTerms:
         for altTibTerm in tibTerms:
+            if altTibTerm != tibTerm:
+                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+        for altTibTerm in tibTermSynonyms:
             if altTibTerm != tibTerm:
                 appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
 
@@ -271,6 +285,36 @@ def filterEntries(entries, suppress_similar_entries=False):
     print('')
     return filtered_entries
 
+
+def isPluralVersionOfSameText(regular, possible_plural):
+    return abs(len(possible_plural) - len(regular)) == 1 and (possible_plural.endswith('s') and not regular.endswith('s'))
+        
+def addEntryIfDissimilar(text, entries):
+    if text.lower().startswith('see ') or text.lower().startswith('also translated here'):
+        return entries
+
+    for index, entry in enumerate(entries):
+        length = max(len(text), len(entry))
+        min_length = min(len(text), len(entry))
+        max_distance = length / 5
+        substring_distance = min_length / 5
+
+        if simplifyForCompare(text) == simplifyForCompare(entry):
+            return entries  # an identical entry already exist - nothing do do
+
+        if isPluralVersionOfSameText(entry, text):
+            return entries # in the case of singular vs plural prefer the singular form of the term
+
+        if ((editdistance.eval(text.lower(), entry.lower()) <= max_distance) or (editdistance.eval(text[:min_length].lower(), entry[:min_length].lower()) <= substring_distance)):
+                if len(text) > len(entry): # if two entries are similar then keep the longer one
+                    entries[index] = text
+                    return entries
+    
+    entries.append(text)
+
+    return entries    
+
+
 def concat_def_lines(dictData, prefix=None, separator='; '):
     """
     group all entries with the same headword into a single entry
@@ -338,4 +382,4 @@ def main(path_name):
         'out/46-84000Skt')
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-main('git/data-tei/translations/**/*.xml')
+main('./*.xml')
