@@ -7,6 +7,8 @@ wget https://read.84000.co/glossary-download.xml
 # Extract entries from 84000 glossary
 rm -rf out
 mkdir -p out
+mkdir -p out/Tib_EnSkt
+mkdir -p out/EnSkt_Tib
 ./process84000.py
 
 # copy output to dictionary folder

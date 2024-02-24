@@ -14,18 +14,34 @@ ns = 'http://read.84000.co/ns/1.0'
 
 dictData = {
     'dictTibSynonyms': [],
-    'dictEn': [],
-    'dictEnDefinitions': [],
-    'dictSkt': [],
+    'dictTibEn': [],
+    'dictTibEnDefinitions': [],
+    'dictTibSkt': [],
+
+    'dictSktTib': [],
+    'dictEnTib': [],
+    'dictEnEnDefinitions': [], # FIXME: is this necessary ???
+
+    # FIXME: generate plain wordlists Tib -> EN, Tib -> Skt, Skt -> En
 }
+# FIXME: add abbreviation for "(<Toh> .*)" = -> Tohoku Catalogue for the Dergé Kangyur and Dergé Tengyur
 
-
-def cleanupHeadword(value):
+def cleanupTibHeadword(value):
     value = cleanupTib(value, removeParens=True)
     value = value.replace("/", " ")
+
+    return cleanupHeadword(value)
+
+def cleanupHeadword(value):
+    value = cleanup(value)
+    value = value.replace('*','')
     value = re.sub(r'\s+', ' ', value)
     value = re.sub(r'^ ', '', value)
     value = re.sub(r' $', '', value)
+    value = value.replace('“','')
+    value = value.replace('"','')
+    value = value.replace('”','')
+    
     return value
 
 
@@ -38,6 +54,13 @@ def cleanup(value):
     value = value.replace("\r\n", " ")
     value = value.replace("\r", " ")
     value = value.replace("\n", " ")
+    value = value.replace("ī", "I")
+    value = value.replace("ā", "A")
+    value = value.replace("ū", "U")
+    value = value.replace("ṇ", "n")
+    value = value.replace("’", "'")
+    value = value.replace("‘", "'")
+    value = value.replace("­", "")  # delete zero-width non-joiner
 
     value = re.sub(r"\s+", " ", value)
     value = re.sub(r"^\s+", "", value)
@@ -51,14 +74,7 @@ def cleanupTib(value, removeParens):
         value = ""
 
     value = value.replace("|", "/")
-    value = value.replace("ī", "I")
-    value = value.replace("ā", "A")
-    value = value.replace("ū", "U")
-    value = value.replace("ṇ", "n")
     value = value.replace("-", ".")
-    value = value.replace("’", "'")
-    value = value.replace("‘", "'")
-    value = value.replace("­", "")  # delete zero-width non-joiner
 
     if removeParens:
         value = re.sub(r"\([^)]*\)", " ", value)  # remove parentheses
@@ -91,14 +107,19 @@ def process_file(glossary_file):
 def cleanupEntryType(text):
     return text.replace('eft:','')
     
+def getEntryType(entryTypeInfo):
+    if entryTypeInfo == 'eft:person':
+        return 'person'
+    if entryTypeInfo == 'eft:term':
+        return ''
+    if entryTypeInfo == 'eft:place':
+        return 'place'
+    if entryTypeInfo == 'eft:text':
+        return 'text'
+    
+    print('unknown entry type ' + entryTypeInfo)
+
 def extractGlossaryEntries(xmlDoc, entrySelect):
-#    1. how to deal with multiple stuff that has the same entity ID -> consider as synonyms?! Probably synonyms are better
-#e.g. entity-29044"
-#
-#    => translation can be multiple
-#84000 Glossary vs Glossary Definitions => combine the two?! Otherwise, no way to group definitions and content!
-
-
     #<term entity="http://purl.84000.co/resource/core/entity-44294" href="https://read.84000.co/glossary/entity-44294.html" sort-key="la ba can">
     #    <tibetan>ལ་བ་ཅན།</tibetan>
     #    <wylie>la ba can</wylie>
@@ -110,7 +131,7 @@ def extractGlossaryEntries(xmlDoc, entrySelect):
         tibTermSynonyms = []
         sktTerms = []
         engTerms = []
-        entryTypes = []
+        entryType = ''
         definitions = []
 
         entityId = parentEl.attrib['entity']
@@ -121,11 +142,11 @@ def extractGlossaryEntries(xmlDoc, entrySelect):
         for sktTerm in parentEl.findall(f"{{{ns}}}sanskrit"):
             sktTerms.append(sktTerm.text)
 
+        for entryTypeInfo in parentEl.findall(f"{{{ns}}}type"):
+            entryType = getEntryType(entryTypeInfo.text)
+
         for engTerm in parentEl.findall(f"{{{ns}}}translation"):
             engTerms.append(cleanup(engTerm.text))
-
-        for entryType in parentEl.findall(f"{{{ns}}}type"):
-            entryTypes.append(entryType.text)
 
         # prefer definition on the term level (this is the preferred definition)
         for primaryDefinition in parentEl.findall(f"{{{ns}}}definition"):
@@ -146,43 +167,40 @@ def extractGlossaryEntries(xmlDoc, entrySelect):
         # 3) combine definitions and entries and add seperate entries for each variant of a term
         if len(definitions) > 0:
             for definitionTxt in definitions:
-                addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms)
+                addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms, entryType)
         else:
-            addEntries(tibTerms, tibTermSynonyms, engTerms, '', sktTerms)
+            addEntries(tibTerms, tibTermSynonyms, engTerms, '', sktTerms, entryType)
 
 
 
 def extractTextTitles(xmlDoc, parentSelect, childSelect):
     for parentEl in xmlDoc.findall(parentSelect):
-        tibTerms = []
-        sktTerms = []
-        engTerms = []
-        tibTermSynonyms = []
-        definitionTxt = ''
+        tibTitle = ''
+        sktTitle = ''
+        engTitle = ''
+        sourceReference = ''
+        textLink = ''
 
         for childEl in parentEl.findall(childSelect):
             lang = getLang(childEl)
             titleText = cleanup(childEl.text)
 
             if lang == "bo-ltn" and titleText and not '་' in titleText:
-                if not titleText in tibTerms:
-                    tibTerms.append(cleanupTib(titleText, True))
+                tibTitle = cleanupTib(titleText, True)
 
             elif lang == "sa-ltn" and titleText:
-                if not titleText in sktTerms:
-                    sktTerms.append(titleText)
+                sktTitle = titleText
 
             elif lang == "en":
-                if 'type' in childEl.attrib and childEl.attrib[f'type'] == "definition":
-                    if definitionTxt != "":
-                        definitionTxt += "\\n"
-                    definitionTxt = definitionTxt + \
-                        cleanup(childEl.text)
+                engTitle = titleText
 
-                elif titleText and (not titleText in engTerms):
-                    engTerms.append(titleText)
+        for tohReference in parentEl.findall(f'{{{ns}}}toh'):
+            sourceReference = 'Toh ' + tohReference.text
 
-        addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms)
+        for link in parentEl.findall(f'{{{ns}}}link'):
+            textLink = re.sub('#.*', '', link.attrib['href'])
+
+        addTextTitle(tibTitle, engTitle, sktTitle, sourceReference, textLink)
 
 
 def getLang(xmlElem):
@@ -197,31 +215,71 @@ def getLang(xmlElem):
 
     return lang
 
-def appendTerm(dictData, tibTerm, definition):
+def appendTibTerm(dictData, tibTerm, definition):
     if re.match('.*[^a-zA-Z\' /]', tibTerm):
         return
 
     for headword in tibTerm.split(','):
         if len(tibTerm) <= 85:
+            dictData.append((cleanupTibHeadword(headword), definition))
+
+def appendTerm(dictData, term, definition):
+    for headword in term.split(','):
+        if len(term) <= 85:
             dictData.append((cleanupHeadword(headword), definition))
 
-def addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms):
+
+def addEntries(tibTerms, tibTermSynonyms, engTerms, definitionTxt, sktTerms, entryType):
+# fixme: use entryType
+# FIXME: create separate output lists from en/skt -> Tib!!! 
+# Fixme: add link to their glossary    
     for tibTerm in tibTerms:
         for altTibTerm in tibTerms:
             if altTibTerm != tibTerm:
-                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+                appendTibTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
         for altTibTerm in tibTermSynonyms:
             if altTibTerm != tibTerm:
-                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+                appendTibTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
 
         for engTermsTxt in engTerms:
-            appendTerm(dictData['dictEn'], tibTerm, engTermsTxt)
+            appendTibTerm(dictData['dictTibEn'], tibTerm, f'<{entryType}> {engTermsTxt}')
+            appendTerm(dictData['dictEnTib'], engTermsTxt, f'<{entryType}> {tibTerm}')
 
         if definitionTxt:
-            appendTerm(dictData['dictEnDefinitions'], tibTerm, definitionTxt)
+            appendTibTerm(dictData['dictTibEnDefinitions'], tibTerm, f'<{entryType}> {definitionTxt}')
 
         for sktTermsTxt in sktTerms:
-            appendTerm(dictData['dictSkt'], tibTerm, sktTermsTxt)
+            appendTibTerm(dictData['dictTibSkt'], tibTerm, f'<{entryType}> {sktTermsTxt}')
+            appendTerm(dictData['dictSktTib'], sktTermsTxt, f'<{entryType}> {tibTerm}')
+
+def addTextTitle(tibTitle, engTitle, sktTitle, sourceReference, textLink):
+        tibEntry = f'<text title> "{{{tibTitle}}}"'
+        if sktTitle != '':
+            tibEntry += f', Sanskrit: "{sktTitle}"'
+        if engTitle != '':        
+            tibEntry += f', English: "{engTitle}"'
+        if sourceReference != '':
+            tibEntry += f' ({sourceReference})'
+        if textLink != '': 
+            tibEntry += f' {textLink}'
+
+        if tibTitle != '' and engTitle != '':
+            engEntry = f'<text title> "{engTitle}"'
+            if sourceReference != '':
+                engEntry += f' ({sourceReference})'
+            if textLink != '': 
+                engEntry += f' {textLink}'
+            appendTerm(dictData['dictTibEn'], tibTitle, engEntry)
+            appendTerm(dictData['dictEnTib'], engTitle, tibEntry)
+
+        if tibTitle != '' and sktTitle != '':
+            sktEntry = f'<text title> "{sktTitle}"'
+            if sourceReference != '':
+                sktEntry += f' ({sourceReference})'
+            if textLink != '': 
+                sktEntry += f' {textLink}'
+            appendTerm(dictData['dictTibSkt'], tibTitle, sktEntry)
+            appendTerm(dictData['dictSktTib'], sktTitle, tibEntry)
 
 def simplifyForCompare(txt):
     return re.sub(r'[\.,‟”“I,\'‘’]', '', txt).lower()
@@ -361,25 +419,38 @@ def main(path_name):
         process_file(file_name)
 
     writeDictData(concat_def_lines(
-        filterEntries(dictData['dictEn'])), 'out/43-84000Dict')
+        filterEntries(dictData['dictTibEn'])), 'out/Tib_EnSkt/43-84000Dict')
 
     writeDictData(
         remove_excessive_defs(
-            filterEntries(dictData['dictEnDefinitions'], suppress_similar_entries=True), 
+            filterEntries(dictData['dictTibEnDefinitions'], suppress_similar_entries=True), 
         ),
-        'out/44-84000Definitions')
+        'out/Tib_EnSkt/44-84000Definitions')
 
     writeDictData(
         concat_def_lines(
             filterEntries(dictData['dictTibSynonyms']),
             prefix=['Synonym: ', 'Synonyms: '], 
             separator=', '), 
-        'out/45-84000Synonyms')
+        'out/Tib_EnSkt/45-84000Synonyms')
 
     writeDictData(
         concat_def_lines(
-            filterEntries(dictData['dictSkt'])), 
-        'out/46-84000Skt')
+            filterEntries(dictData['dictTibSkt'])), 
+        'out/Tib_EnSkt/46-84000Skt')
+
+    writeDictData(
+        concat_def_lines(
+            filterEntries(dictData['dictEnTib'])), 
+        'out/EnSkt_Tib/43-84000Dict')
+
+    writeDictData(
+        concat_def_lines(
+            filterEntries(dictData['dictSktTib'])), 
+        'out/EnSkt_Tib/46-84000Skt')
+
+
+
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 main('./*.xml')
