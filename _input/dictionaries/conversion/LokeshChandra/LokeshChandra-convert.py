@@ -8,9 +8,9 @@ from devatrans import DevaTrans #  -> run  pip install --user devatrans before u
 
 def hideUnwantedTib(tib): # suppress Tibetan entries with characters that we cannot properly handle
   if tib:
-    tib = re.sub('.*[\.,/|].*','',tib) 
-    tib = re.sub('^[^()]*\([^()]*','',tib)  # Remove words with brackets that only open 
-    tib = re.sub('^[^()]*\)[^()]*','',tib)  # Remove words with brackets that only close
+    tib = re.sub(r'.*[\.,/|].*','',tib) 
+    tib = re.sub(r'^[^()]*\([^()]*','',tib)  # Remove words with brackets that only open 
+    tib = re.sub(r'^[^()]*\)[^()]*','',tib)  # Remove words with brackets that only close
     return tib
   else:
     return ''
@@ -29,8 +29,8 @@ def cleanTib(tib): # clean garbage from Tibetan
   tib = tib.replace('-','')
   tib = tib.replace('\\n',' ')
   tib = tib.replace('\n',' ')
-  tib = re.sub('[,;=/].*',' ', tib)
-  tib = re.sub('\s+',' ', tib)
+  tib = re.sub(r'[,;=/].*',' ', tib)
+  tib = re.sub(r'\s+',' ', tib)
   tib = tib.strip()
   return tib
 
@@ -41,7 +41,7 @@ def cleanSkt(skt): # clean garbage from Sanskrit
   skt = skt.replace('|','\\n')
   skt = skt.replace('।','\\n')
   skt = skt.replace('ॐ','OM')
-  skt = re.sub('\s+',' ', skt)
+  skt = re.sub(r'\s+',' ', skt)
   skt = skt.strip()
   return skt
 
@@ -64,7 +64,7 @@ for item in root.findall('item'):
     for tib2 in tib.split('='):
       for tib3 in tib2.split(','):
         if '(' in tib3:
-          tibWithoutBracketContent = cleanTib( re.sub('\([^)]+\)','',tib3) )
+          tibWithoutBracketContent = cleanTib( re.sub(r'\([^)]+\)','',tib3) )
           f.write("%s|%s\n" % ( tibWithoutBracketContent.strip(), sktTransIast ) )
           if not '(' in sktTrans:
             f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
