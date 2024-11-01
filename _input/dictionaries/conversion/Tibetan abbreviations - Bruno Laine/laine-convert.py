@@ -19,8 +19,10 @@ def cleanTib(tib): # clean garbage from Tibetan
   tib = tib.replace('+\'a','A')
   tib = tib.replace('*','')
   tib = tib.replace('\n',' ')
-  tib = re.sub('\s+',' ', tib)
-  
+  tib = re.sub(r'\s+',' ', tib)
+  tib = tib.replace('ba[󲀱]da','bak+dod')
+  tib = tib.replace('phra[􀴙]d','phrod')
+
   return tib
 
 
