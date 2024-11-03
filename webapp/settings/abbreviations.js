@@ -1,6 +1,6 @@
 ABBREVIATIONS={
   '84000': {
-    match: '\b(TERM)\b',
+    match: '\\b(TERM)\\b',
     items: {
       'Toh.': 'Tōhoku catalogue for the Dergé Kangyur and Dergé Tengyur'
     }
@@ -1153,7 +1153,7 @@ ABBREVIATIONS={
         'zool': 'Zoology (srog chags tshan rig)',
         'xx': '(khungs kha gsal med pa)',
         '*': '(\'jug yul mang)'
-    }    
+    }
   },
   'LaineAbbreviations': {
     match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
@@ -1289,7 +1289,6 @@ ABBREVIATIONS={
       'pra.vā.':'pramāṇavārtikam|Bouddha Bharati, P.B. 49. Varanasi. 1968',
       'pra.si.':'prajñopāyaviniścayasiddhiḥ|Central Institute of Higher Tibetan Studies, Sarnath, Varanasi 1988',
 
-
       'aka.':'akarmakakriyā',
       'avi.':'avikārikriyā',
       'āda.':'ādarasūcakaśabdaḥ',
@@ -1315,10 +1314,10 @@ ABBREVIATIONS={
       'vi.':'viśeṣaṇam',
       'pā.':'pāribhāṣikaśabdaḥ',
       'pu.':'puṃliṅgaḥ',
-      'ta.':'tantram'
+      'ta.':'tantram',
       'ni.':'nipātaḥ(tshig phrad/)',
       'na.':'napusakam',
-      'nā.':'nāma (vyattivācakasaṃjñā)',
+      'nā.':'nāma (vyattivācakasaṃjñā)'
     }
   }
-}
+};
