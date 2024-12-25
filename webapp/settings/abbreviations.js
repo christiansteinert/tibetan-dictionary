@@ -1164,7 +1164,7 @@ ABBREVIATIONS={
     }
   },
   'Negi': {
-    match: '(^|[^A-Za-z0-9āīūṛṝḷḹṃḥḥĪŪṚṜḶḸṂḤṭṬḍḌṇṆśŚṣṢḻḺ\.])(TERM)([^<][^<]*<[^/]|[^<][^<]*$|[^<][^<]*</p>|</p>|$)',
+    match: '(^|[^A-Za-z0-9āīūṛṝḷḹṃḥḥĪŪṚṜḶḸṂḤṭṬḍḌṇṆśŚṣṢḻḺ\.])(TERM)([^<][^<]*<[^/]|[^<][^<]*$|[^<][^<]*</p>|</p>| |$)',
     items: {
       'a.ka.':'avadānakalpalatā|Mithila Institute, Darbhanga, Bihar. 1959',
       'a.ko.':'amarakośaḥ|Adyar Library and Research Centre, Adyar, Madras 1971',
@@ -1317,7 +1317,10 @@ ABBREVIATIONS={
       'ta.':'tantram',
       'ni.':'nipātaḥ(tshig phrad/)',
       'na.':'napusakam',
-      'nā.':'nāma (vyattivācakasaṃjñā)'
+      'nā.':'nāma (vyattivācakasaṃjñā)',
+      'sa.':'saṃjñā',
+      'saṃ.':'saṃjñā',
+      'avya.':'avyaya'
     }
   }
 };

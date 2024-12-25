@@ -1,27 +1,24 @@
 #!/bin/bash
-# checkout the latest 84000 translations from github
-if [ -d git/data-tei ] 
-then
-  cd git/data-tei
-  git pull
-  cd ../..
-else
-  mkdir -p git
-  git clone https://github.com/84000/data-tei.git git/data-tei
-fi
+# download the latest glossary
+#mv glossary-download.xml glossary-download.xml.bak
+#curl -O https://84000.co/glossary-download.xml
+
 
 # Extract entries from 84000 glossary
 rm -rf out
 mkdir -p out
+mkdir -p out/Tib_EnSkt
+mkdir -p out/EnSkt_Tib
+mkdir -p out/wordlists
+
 ./process84000.py
 
 # copy output to dictionary folder
-cp out/* ../../public
+cp out/Tib_EnSkt/* ../../public
+cp out/EnSkt_Tib/* ../../public_en
+
 if [ -d ../../private ] 
 then
-  cp out/* ../../private
+  cp out/Tib_EnSkt/* ../../private
+  cp out/EnSkt_Tib/* ../../private_en
 fi
-
-# Convert Tib->Skt to Skt->Tib and Tib->En to En->Tib
-cd ../generate_english_dicts
-./convert.sh

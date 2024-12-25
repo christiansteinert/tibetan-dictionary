@@ -16,8 +16,8 @@ export CSV_INPUT_PRIVATE="$DICT_FOLDER/private"
 ./create_english_dict.py $DICT_FOLDER/public/23-GatewayToKnowledge $DICT_FOLDER/public_en/23-GatewayToKnowledge
 ./create_english_dict.py $DICT_FOLDER/public/35-ThomasDoctor $DICT_FOLDER/public_en/35-ThomasDoctor
 ./create_english_dict.py $DICT_FOLDER/public/36-ComputerTerms $DICT_FOLDER/public_en/36-ComputerTerms
-./create_english_dict.py $DICT_FOLDER/public/43-84000Dict $DICT_FOLDER/public_en/43-84000Dict
-./create_english_dict.py $DICT_FOLDER/public/46-84000Skt $DICT_FOLDER/public_en/46-84000Skt
+#./create_english_dict.py $DICT_FOLDER/public/43-84000Dict $DICT_FOLDER/public_en/43-84000Dict
+#./create_english_dict.py $DICT_FOLDER/public/46-84000Skt $DICT_FOLDER/public_en/46-84000Skt
 #./create_english_dict.py $DICT_FOLDER/en_input/38-Gaeng,Wetzel $DICT_FOLDER/public_en/38-Gaeng,Wetzel
 
 if [ -d $CSV_INPUT_PRIVATE ]
@@ -34,8 +34,8 @@ then
 ./create_english_dict.py $DICT_FOLDER/private/28-FPMT-middling-lamrim $DICT_FOLDER/private_en/28-FPMT-middling-lamrim
 ./create_english_dict.py $DICT_FOLDER/private/35-ThomasDoctor $DICT_FOLDER/private_en/35-ThomasDoctor
 ./create_english_dict.py $DICT_FOLDER/private/36-ComputerTerms $DICT_FOLDER/private_en/36-ComputerTerms
-./create_english_dict.py $DICT_FOLDER/private/43-84000Dict $DICT_FOLDER/private_en/43-84000Dict
-./create_english_dict.py $DICT_FOLDER/private/46-84000Skt $DICT_FOLDER/private_en/46-84000Skt
+#./create_english_dict.py $DICT_FOLDER/private/43-84000Dict $DICT_FOLDER/private_en/43-84000Dict
+#./create_english_dict.py $DICT_FOLDER/private/46-84000Skt $DICT_FOLDER/private_en/46-84000Skt
 #./create_english_dict.py $DICT_FOLDER/en_input/38-Gaeng,Wetzel $DICT_FOLDER/private_en/38-Gaeng,Wetzel
 #./create_english_dict.py $DICT_FOLDER/en_input_private/30-Illuminator_x $DICT_FOLDER/private_en/30-Illuminator_x
 fi
