@@ -187,6 +187,8 @@ def extractGlossaryEntries(xmlDoc, parentSelect):
 
         entityId = parentEl.attrib['entity']
         href = parentEl.attrib['href']
+        if href is not None and href != '':
+            href = '(Original glossary entry: ' + href + ')'
 
         for wylie in parentEl.findall(f"{{{ns}}}wylie"):
             tibTerms.append(cleanupTib(wylie.text, removeParens=True))
@@ -255,7 +257,7 @@ def extractTextTitles(xmlDoc, parentSelect):
             engDefinitions.append(sourceReference)
 
         for linkEl in parentEl.findall(f'{{{ns}}}link'):
-            href = linkEl.attrib['href']
+            href = '(Read the text at:' + linkEl.attrib['href'] + ')'
 
         addEntries(tibTerms, [], engTerms, engDefinitions, sktTerms, "text", href)
 
@@ -295,23 +297,24 @@ def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entry
         entryType = f'<{entryType}> '
 
     for tibTerm in tibTerms:
-        for altTibTerm in tibTerms:
+        altTibTerms = []
+        for altTibTerm in (tibTerms + tibTermSynonyms):
             if altTibTerm != tibTerm:
-                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
-        for altTibTerm in tibTermSynonyms:
-            if altTibTerm != tibTerm:
-                appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+                altTibTerms.append(altTibTerm)
 
-        for engTermsTxt in engTerms:
+        for altTibTerm in altTibTerms:
+            appendTerm(dictData['dictTibSynonyms'], tibTerm, f'{{{altTibTerm}}}')
+
+        if len(engTerms) > 0:
+            engTermsTxt = ', '.join(engTerms)
             appendTerm(dictData['dictTibEn'], tibTerm, f'{entryType}{engTermsTxt}')
             appendTerm(dictData['wordlistTibEn'], tibTerm, engTermsTxt)
 
             for sktTermsTxt in sktTerms:
                 appendTerm(dictData['wordlistSktEn'], sktTermsTxt, engTermsTxt)
 
-
-
-        for sktTermsTxt in sktTerms:
+        if len(sktTerms) > 0:
+            sktTermsTxt = ', '.join(sktTerms)
             appendTerm(dictData['dictTibSkt'], tibTerm, f'{entryType}{sktTermsTxt}')
             appendTerm(dictData['wordlistTibSkt'], tibTerm, sktTermsTxt)
 
@@ -330,13 +333,21 @@ def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entry
                 definitionTxt = f'{entryType}{engTermsTxt}: '
             
             if len(definitions) == 1: 
-                    definitionTxt += definitions[0]
+                definitionTxt += definitions[0]
+                definitionTxt += ' ' + entryLink
+
             else: #len(definitions) > 1
                 for idx, definition in enumerate(definitions):
                     idxOut = idx + 1
                     definitionTxt += f'\\n{idxOut}) {definition}'
+                definitionTxt += '\\n\\n' + entryLink
 
-            definitionTxt += '\\n\\n' + entryLink
+
+            if len(altTibTerms) == 1:
+                definitionTxt += '\\n\\nSynonym: ' + '{' + altTibTerms[0] + '}'
+            if len(altTibTerms) > 1:
+                definitionTxt += '\\n\\nSynonyms: ' + '{' + ('}, {'.join(altTibTerms)) + '}'
+
             appendTerm(dictData['dictTibEnDefinitions'], tibTerm, definitionTxt)
 
 
@@ -388,8 +399,6 @@ def writeDictData(dictEntries, fileName):
     dictFile.close()
 
 def filterEntries(entries, suppress_similar_entries=False):
-    print('removing duplicate entries', end='')
-
     filtered_entries = []
     prev_entry = ('', '')
     prev_entry_text = ''
@@ -398,8 +407,6 @@ def filterEntries(entries, suppress_similar_entries=False):
     # This will group identical entries together but will also but capitalized entries before lowercase ones
     # so that capitalized writing is preferred
     for entry in sorted(entries, key=lambda entry: entry[0] + '|' + simplifyForCompare(entry[1]) + entry[1]):
-        print('.', end='')
-
         entry_text = entry[1]
         length = max(len(entry_text), len(prev_entry_text))
         min_length = min(len(entry_text), len(prev_entry_text))
@@ -520,19 +527,14 @@ def main(path_name):
         remove_excessive_defs(
             filterEntries(dictData['dictTibEnDefinitions'], suppress_similar_entries=True),
         ),
-        'out/44-84000Definitions')
+        'out/Tib_EnSkt/44-84000Definitions')
 
     writeDictData(
         concat_def_lines(
             filterEntries(dictData['dictTibSynonyms']),
             prefix=['Synonym: ', 'Synonyms: '], 
             separator=', '), 
-        'out/45-84000Synonyms')
-
-#    writeDictData(
-#        concat_def_lines(
-#            filterEntries(dictData['dictSkt'])),
-#        'out/46-84000Skt')
+        'out/Tib_EnSkt/45-84000Synonyms')
 
     writeDictData(filterEntries(dictData['dictTibSkt']), 'out/Tib_EnSkt/46-84000Skt')
 
