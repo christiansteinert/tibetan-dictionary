@@ -21,7 +21,7 @@ mkdir -p out/wordlists
 cp out/Tib_EnSkt/* ../../public
 cp out/EnSkt_Tib/* ../../public_en
 
-if [ -d ../../private ] 
+if [ -d ../../private ]
 then
   cp out/Tib_EnSkt/* ../../private
   cp out/EnSkt_Tib/* ../../private_en
