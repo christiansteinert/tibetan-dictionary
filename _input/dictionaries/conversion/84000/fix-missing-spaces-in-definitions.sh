@@ -1,0 +1,4 @@
+cd out/Tib_EnSkt
+llm-doc gemma3:12b "The following CSV document may contain cases where a space is missing between two words. Whenever you encounter a situation where two works occur directly behind each other without a space in between then you should insert a single space. You are no allowed to change anything else from the source document. The text, capitalization, line breaks, special chacters, and everything else must remain identical! If there is no situation where a space is missing then you have to print the input document exactly as you received it without changing anything at all and without leaving anything out! Do not print anything else except the document with the corrected spaces if changes were made or the original document if no changes were necessary. Here is the document:" 44-84000Definitions
+mv 44-84000Definitions 44-84000Definitions.bak
+mv 44-84000Definitions.txt 44-84000Definitions

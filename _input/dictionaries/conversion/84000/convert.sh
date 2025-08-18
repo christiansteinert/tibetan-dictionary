@@ -1,8 +1,12 @@
 #!/bin/bash
-# download the latest glossary
-#mv glossary-download.xml glossary-download.xml.bak
-#curl -O https://84000.co/glossary-download.xml
 
+# download the latest glossary if the downloaded file is older than one day
+yesterday=$(date -d 'now - 1 days' +%s)
+file_time=$(date -r "84000-glossary.xml" +%s)
+
+#if (( file_time <= yesterday )); then
+#    curl  https://84000.co/glossary-embedded/glossary-download.xml > glossary-download.zip && mv 84000-glossary.xml 84000-glossary.xml.bak && unzip glossary-download.zip && rm glossary-download.zip
+#fi
 
 # Extract entries from 84000 glossary
 rm -rf out

@@ -88,11 +88,15 @@ DICTLIST={
   label:'84000 Glossary',
   about:'84000 Glossary|English terms from the Glossary of the 84000 translation project. http://www.84000.co/',
   public:"true",
+  abbreviations:'84000',
+  highlight:'(&lt;[^ ]*&gt;)',
   listCredits:"true"
 },
 "84000Definitions":{
   label:'84000 Glossary-Definitions',
   about:'English definitions from the Glossary of the 84000 translation project. http://www.84000.co/',
+  abbreviations:'84000',
+  highlight:'(&lt;[^ ]*&gt;)',
   public:"true"
 },
 "ChandraDas_x":{
@@ -240,6 +244,8 @@ DICTLIST={
 "84000Synonyms":{
   label:'84000 Tibetan Synonyms (Tibetan)',
   about:'Synonymous Tibetan terms from the Glossary of the 84000 translation project. http://www.84000.co/',
+  abbreviations:'84000',
+  highlight:'(&lt;[^ ]*&gt;)',
   public:"true"
 },
 "LaineAbbreviations":{
@@ -339,6 +345,8 @@ DICTLIST={
 "84000Skt":{
   label:'84000 Glossary, Sans&shy;krit (Tibetan-Sanskrit)',
   about:'Sanskrit terms from the Glossary of the 84000 translation project. http://www.84000.co/',
+  abbreviations:'84000',
+  highlight:'(&lt;[^ ]*&gt;)',
   public:"true"
 },
 "ITLR": {

@@ -1,6 +1,6 @@
 ABBREVIATIONS={
   '84000': {
-    match: '\\b(TERM)\\b',
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z<][^<]*<[^/]|[^-A-Za-z<][^<]*$|[^-A-Za-z<][^<]*</p>|</p>|$)',
     items: {
       'Toh.': 'Tōhoku catalogue for the Dergé Kangyur and Dergé Tengyur'
     }

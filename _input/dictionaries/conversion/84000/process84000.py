@@ -3,12 +3,28 @@ import xml.etree.ElementTree as ET
 import sys
 import re
 import os
+import time
 from glob import glob
 from itertools import groupby
+from collections import defaultdict
+
+#from langchain_community.llms import OllamaLLM
+from langchain_ollama import OllamaLLM
 
 # 3rd party dependencies
 from devatrans import DevaTrans #  -> run  pip install --user devatrans before using this script
 import editdistance
+
+
+# language model for fixing whitespace errors in the definitions
+llm = OllamaLLM(
+    base_url="http://localhost:11434",
+    #model="gemma3:12b",
+    model="qwen3:8b",
+
+    #model="qwen2.5-coder:7b",
+    #model="qwen2.5:7b",
+)
 
 ns = 'http://read.84000.co/ns/1.0'
 dt = DevaTrans()
@@ -46,14 +62,19 @@ def cleanupHeadword(value):
 
     return value
 
+def cleanupDef(definition):
+    definition = cleanup(definition)
+    definition = fixSpacesInDefinition(definition)
+    return definition
+
 
 def cleanup(value, removeParens=False):
     if(not value):
         return ''
 
     if removeParens:
-        value = re.sub(r"\([^)]*\)", " ", value)  # remove parentheses
-        value = re.sub(r"\[[^\]]*\]-?", " ", value)  # remove square brackets
+        value = re.sub(r"\([^)]*\)", "", value)  # remove parentheses
+        value = re.sub(r"\[[^\]]*\]-?", "", value)  # remove square brackets
 
     value = value.replace("|", " ")
     value = value.replace("\xad", "") # remove soft hyphen
@@ -72,6 +93,16 @@ def cleanup(value, removeParens=False):
       value = ''
 
 
+    return value
+
+def cleanupSkt(value):
+    if(not value):
+        value = ""
+
+    value = value.replace("|", "")
+    value = value.replace("’", "'")
+    value = value.replace("‘", "'")
+    value = value.replace("­", "")  # delete zero-width non-joiner
     return value
 
 
@@ -96,58 +127,6 @@ def cleanupTib(value, removeParens):
 def logUnexpected(xmlNode):
     print("unexpected element in definition: <" +
           xmlNode.tag + ">   attributes: " + str(xmlNode.attrib))
-
-
-def getDefinitionTxt(xmlNode):
-    text = ""
-    if xmlNode.text:
-        text = xmlNode.text
-
-    for child in xmlNode:
-        if child.tag == f'{{{ns}}}foreign' \
-                or child.tag == f'{{{ns}}}term' \
-                or child.tag == f'{{{ns}}}mantra':
-            lang = ''
-            if '{http://www.w3.org/XML/1998/namespace}lang' in child.attrib:
-                lang = cleanup(
-                    child.attrib["{http://www.w3.org/XML/1998/namespace}lang"]).lower()
-
-            if lang == 'bo-ltn':
-                text += "{" + cleanupTib(getDefinitionTxt(child), False) + "}"
-
-            else:
-                text += getDefinitionTxt(child)
-
-        elif child.tag == f'{{{ns}}}title' \
-                or child.tag == f'{{{ns}}}emph' \
-                or child.tag == f'{{{ns}}}distinct' \
-                or child.tag == f'{{{ns}}}hi' \
-                or child.tag == f'{{{ns}}}term':
-            text += getDefinitionTxt(child)
-
-        elif child.tag == f'{{{ns}}}ptr' or child.tag == f'{{{ns}}}ref':
-            if 'target' in child.attrib and (child.attrib['target'].startswith('#UT')):
-                anchor = child.attrib['target']
-                documentId = re.sub(r'#(UT.*)-[0-9]+$', r'\1', anchor)
-                uri = f' https://read.84000.co/translation/{documentId}.html{anchor} '
-
-                text += uri
-
-            elif 'target' in child.attrib and child.attrib['target'].startswith('http'):
-                text += child.attrib['target']
-
-            else:
-                logUnexpected(child)
-
-        else:
-            logUnexpected(child)
-            text += getDefinitionTxt(child)
-
-        if child.tail:
-            text += child.tail
-
-    return text
-
 
 def process_file(glossary_file):
     try:
@@ -176,7 +155,12 @@ def getEntryType(entryTypeInfo):
     return '';
 
 def extractGlossaryEntries(xmlDoc, parentSelect):
-    for parentEl in xmlDoc.findall(parentSelect):
+    elements = xmlDoc.findall(parentSelect)
+    i = 0
+    started = time.time_ns()
+    elementCount = len(elements)
+    for parentEl in elements:
+        i += 1
         tibTerms = []
         sktTerms = []
         engTerms = []
@@ -194,7 +178,7 @@ def extractGlossaryEntries(xmlDoc, parentSelect):
             tibTerms.append(cleanupTib(wylie.text, removeParens=True))
 
         for sktTerm in parentEl.findall(f"{{{ns}}}sanskrit"):
-            sktTerms.append(sktTerm.text)
+            sktTerms.append(cleanupSkt(sktTerm.text))
 
         for entryTypeInfo in parentEl.findall(f"{{{ns}}}type"):
             entryType = getEntryType(entryTypeInfo.text)
@@ -204,13 +188,13 @@ def extractGlossaryEntries(xmlDoc, parentSelect):
 
         # prefer definition on the term level (this is the preferred definition)
         for primaryDefinition in parentEl.findall(f"{{{ns}}}definition"):
-            definitions = addEntryIfDissimilar(cleanup(primaryDefinition.text), definitions)
+            definitions = addEntryIfDissimilar(cleanupDef(primaryDefinition.text), definitions)
 
         # if no definition was present on the term level then look for definitions in the ref sections, which may be text-specific
         if len(definitions) == 0:
             for definition in parentEl.findall(f"{{{ns}}}ref/{{{ns}}}definition"):
                 if len(definitions) < 10:
-                    definitions = addEntryIfDissimilar(cleanup(definition.text), definitions)
+                    definitions = addEntryIfDissimilar(cleanupDef(definition.text), definitions)
 
         for synonym in xmlDoc.findall(f"{{{ns}}}term[@entity='{entityId}']/{{{ns}}}wylie"):
             if not synonym.text in tibTerms:
@@ -221,7 +205,26 @@ def extractGlossaryEntries(xmlDoc, parentSelect):
         else:
             addEntries(tibTerms, tibTermSynonyms, engTerms, [], sktTerms, entryType, href)
 
-        print(tibTerms[0])
+        now = time.time_ns()
+        progress = getProgress(started, now, i, elementCount)
+        print(f'{progress}: {tibTerms[0]}')
+
+def getProgress(started, now, alreadyDone, totalItems):
+    secondsElapsed = int((now - started) / 1000000000)
+    if secondsElapsed == 0:
+        secondsElapsed = 1
+    remainingItems = totalItems - alreadyDone
+    secondsRemaining = int(secondsElapsed * remainingItems / alreadyDone)
+
+    return f'{alreadyDone}/{totalItems} {formatDuration(secondsElapsed)}/{formatDuration(secondsRemaining)}'
+
+def formatDuration(seconds):
+
+    hours = seconds // 3600
+    minutes = (seconds % 3600) // 60
+    seconds = seconds % 60
+
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
 
 
 def extractTextTitles(xmlDoc, parentSelect):
@@ -286,9 +289,26 @@ def appendTerm(dictData, term, definition):
             if headword != '' and definition != '':
                 dictData.append((headword, definition))
 
+def appendTermWithCategory(dictData, term, category, definition):
+    for headword in term.split(','):
+#        if re.match('.*[^a-zA-Z\' /]', headword):
+#            print(f"skipping entry {headword}")
+#            continue
+
+        if len(term) <= 85:
+            headword = cleanupHeadword(headword)
+            if headword != '' and definition != '':
+                newEntry = (headword, category, definition)
+                if not any(newEntry == existingEntry for existingEntry in dictData):
+                    dictData.append(newEntry)
+
+
 def sktToIast(term):
     term = cleanupHeadword(term)
-    return dt.inter_transliterate(input_type = "sen", from_convention = "iast", to_convention = "hk", sentence = term)
+    skt = dt.inter_transliterate(input_type = "sen", from_convention = "iast", to_convention = "hk", sentence = term)
+    skt = skt.replace("z ", "z");
+    skt = skt.replace("Z ", "Z");
+    return skt;
 
 def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entryType, entryLink):
     definitionTxt = ''
@@ -307,7 +327,7 @@ def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entry
 
         if len(engTerms) > 0:
             engTermsTxt = ', '.join(engTerms)
-            appendTerm(dictData['dictTibEn'], tibTerm, f'{entryType}{engTermsTxt}')
+            appendTermWithCategory(dictData['dictTibEn'], tibTerm, entryType, engTermsTxt)
             appendTerm(dictData['wordlistTibEn'], tibTerm, engTermsTxt)
 
             for sktTermsTxt in sktTerms:
@@ -315,12 +335,12 @@ def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entry
 
         if len(sktTerms) > 0:
             sktTermsTxt = ', '.join(sktTerms)
-            appendTerm(dictData['dictTibSkt'], tibTerm, f'{entryType}{sktTermsTxt}')
+            appendTermWithCategory(dictData['dictTibSkt'], tibTerm, entryType, sktTermsTxt)
             appendTerm(dictData['wordlistTibSkt'], tibTerm, sktTermsTxt)
 
         if len(engTerms) > 0:
             engTermsTxt = ', '.join(engTerms)
-            appendTerm(dictData['dictEnTib'], engTermsTxt, f'{entryType}{{{tibTerm}}}')
+            appendTermWithCategory(dictData['dictEnTib'], engTermsTxt, entryType, f'{{{tibTerm}}}')
 
         if len(definitions) > 0:
             definitionTxt = ''
@@ -353,7 +373,7 @@ def addEntries(tibTerms, tibTermSynonyms, engTerms, definitions, sktTerms, entry
 
         if len(sktTerms) > 0:
             sktTermsTxt = ', '.join(sktTerms)
-            appendTerm(dictData['dictSktTib'], sktToIast(sktTermsTxt), f'{entryType}{{{tibTerm}}}')
+            appendTermWithCategory(dictData['dictSktTib'], sktToIast(sktTermsTxt), entryType, f'{{{tibTerm}}}')
 
 
 def addTextTitle(tibTitle, engTitle, sktTitle, sourceReference, textLink):
@@ -397,6 +417,7 @@ def writeDictData(dictEntries, fileName):
         dictFile.write(f'{entry[0]}|{entry[1]}\n')
 
     dictFile.close()
+
 
 def filterEntries(entries, suppress_similar_entries=False):
     filtered_entries = []
@@ -445,11 +466,25 @@ def filterEntries(entries, suppress_similar_entries=False):
 
     return filtered_entries
 
+def filterEntriesWithCategory(entries, suppress_similar_entries=False):
+
+    # Group terms with equal term and equal entryType  
+    grouped_terms = defaultdict(list)
+    for sourceTerm, entryType, translatedTerm in entries:
+        grouped_terms[(sourceTerm, entryType)].append(translatedTerm)
+
+    # create an output list
+    grouped_output = [(sourceTerm,f"{entryType}{', '.join(translatedTerms)}")
+            for (sourceTerm, entryType), translatedTerms in grouped_terms.items()]
+
+    return filterEntries(grouped_output, suppress_similar_entries)
 
 def isPluralVersionOfSameText(regular, possible_plural):
     return abs(len(possible_plural) - len(regular)) == 1 and (possible_plural.endswith('s') and not regular.endswith('s'))
         
 def addEntryIfDissimilar(text, entries):
+    text = text.replace('|', '/')
+
     if text.lower().startswith('see ') or text.lower().startswith('also translated here'):
         return entries
 
@@ -514,6 +549,45 @@ def remove_excessive_defs(dictData, max_definitions=6):
     return result
 
 
+def fixSpacesInDefinition(definition):
+    print(f"Definition: {definition}\n")
+
+
+    basePrompt="/no_think You are a missing spaces corrector for text that inserts missing spaces between words and changes nothing else.\nFollow these instructions precisely: Echo the input text EXACTLY as it was entered without adding or removing anything and without modifying the spelling.\n If you encounter two words that are missing a space between them then you must insert a space between them. Otherwise your output must EXACTLY MATCH THE INPUT.\n LEAVE UNCHANGED all capitalization, spelling, special characters, quotation marks and punctuation as you encounter it!!! Do not print any messages about your work - you can only print a copy of the input data into which possibly missing spaces have been inserted. The input that you should process follows after the line of dashes:\n-----------------------------------\n'"
+
+    original = definition
+    fixed = llm.invoke(basePrompt + definition)
+
+    fixed = fixed.replace('<think>\n\n</think>\n', '')
+    fixed = fixed.replace('-----------------------------------\n','')
+    fixed = fixed.strip()
+
+    if fixed.endswith('\n.'):
+        fixed = fixed.replace('\n.', '');
+
+    fixed = re.sub(r"""^'(.*)'\.?$""", r'\1', fixed)
+    fixed = re.sub(r"""^"(.*)"\.?$""", r'\1', fixed)
+    fixed = re.sub(r"""^[-']""", '', fixed)
+
+    if original.endswith(".") and not fixed.endswith("."):
+        fixed = fixed + "."
+
+    originalWithoutSpaces = re.sub(' +', '', original)
+    fixedWithoutSpaces = re.sub(' +', '', fixed)
+
+    if fixed != original:
+        if fixedWithoutSpaces == originalWithoutSpaces and len(fixed) > len(original):
+            # some whitespace difference was introduced
+            print(f"FixedDef.:  {fixed}\n\n")
+            return fixed
+        else:
+            print(f"BORKED:  >>>{fixed}<<<\n\n")
+            return original #the language model messed up. better return the original definition!
+    else:
+        # no change was introduced. Return the original text
+        return original
+
+
 def main(path_name):
     # process input files
     for file_name in glob(path_name, recursive=True):
@@ -521,7 +595,7 @@ def main(path_name):
         process_file(file_name)
 
     # write Tibetan -> * files
-    writeDictData(filterEntries(dictData['dictTibEn']), 'out/Tib_EnSkt/43-84000Dict')
+    writeDictData(filterEntriesWithCategory(dictData['dictTibEn']), 'out/Tib_EnSkt/43-84000Dict')
 
     writeDictData(
         remove_excessive_defs(
@@ -536,12 +610,12 @@ def main(path_name):
             separator=', '), 
         'out/Tib_EnSkt/45-84000Synonyms')
 
-    writeDictData(filterEntries(dictData['dictTibSkt']), 'out/Tib_EnSkt/46-84000Skt')
+    writeDictData(filterEntriesWithCategory(dictData['dictTibSkt']), 'out/Tib_EnSkt/46-84000Skt')
 
     # write En/Skt -> Tib files
-    writeDictData(filterEntries(dictData['dictEnTib']), 'out/EnSkt_Tib/43-84000Dict')
+    writeDictData(filterEntriesWithCategory(dictData['dictEnTib']), 'out/EnSkt_Tib/43-84000Dict')
 
-    writeDictData(filterEntries(dictData['dictSktTib']), 'out/EnSkt_Tib/46-84000Skt')
+    writeDictData(filterEntriesWithCategory(dictData['dictSktTib']), 'out/EnSkt_Tib/46-84000Skt')
 
 
     # Write wordlists
@@ -552,4 +626,4 @@ def main(path_name):
     writeDictData(filterEntries(dictData['wordlistSktEn']), 'out/wordlists/84000_Skt_En')
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
-main('glossary-download.xml')
+main('84000-glossary.xml')
