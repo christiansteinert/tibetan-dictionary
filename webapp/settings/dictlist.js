@@ -41,6 +41,13 @@ DICTLIST={
   public:"true",
   listCredits:"true"
 },
+"Bialek":{
+  label:'Bialek',
+  about:'Glossary entries from Joanna Bialek: A Textbook in Classical Tibetan|Routledge (2022)|Book available at https://www.routledge.com/A-Textbook-in-Classical-Tibetan/Bialek/p/book/9781032123561',
+  public:"true",
+  listCredits:"true",
+  abbreviations:"Bialek"
+},
 "CommonTerms-Lin":{
   label:'Chung-An Lin',
   about:'Common Chinese-Tibetan-Sanskrit-English Buddhist Terminology|Compiled by Chung-An Lin, assisted by Hou-Wha Wang|2008|www.insights.org.tw',

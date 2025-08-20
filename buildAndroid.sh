@@ -5,7 +5,7 @@ then
   #export ANDROID_HOME="/home/christian/bin/android-sdk/sdk/"
   export ANDROID_HOME="$HOME/Android/Sdk/"
   export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
-  export PATH=$ANDROID_HOME/build-tools/33.0.2:$PATH
+  export PATH=$ANDROID_HOME/build-tools/35.0.0:$PATH
 fi
 
 cd _build/; ./buildAndroid.sh; cd ..
