@@ -132,19 +132,47 @@ SETTINGS={
           if($.inArray(currentDictName, settings.activeDictionaries)>=0) {
             checked = 'checked';
           } else {
+            checked = '';
           }
-          dictList += '<div class="dictsettings-line" id="dict_wrap_'+currentDictName+'"><span>';
+
+          var tooltipIcon = ""; 
+          if(dictInfo.about) {
+            tooltipIcon = ' <span class="tooltip dict-info" title="'+dictInfo.about+'"></span>';
+          }
+
+          dictList += '<div class="dictsettings-item" id="dict_wrap_'+currentDictName+'">';
+          dictList += '<div class="dictsettings-line"><span>';
+          dictList += '<span class="drag-handle" title="drag here to change the order"></span>';
           dictList += '<input type="checkbox" '+checked+' name="dict_'+currentDictName+'" id="dict_'+currentDictName+'"  />';
-          dictList += '<label for="dict_'+currentDictName+'">'+dictInfo.label+'</label>';
+          dictList += '<label for="dict_'+currentDictName+'">'+dictInfo.label+'</label>' + tooltipIcon;
           dictList += '</span>';
-          dictList += '<a href="javascript:SETTINGS.btnMoveDictSettingUp(\'dict_wrap_'+currentDictName+'\')"><img src="code/css/up.png" width="25" height="25"></a>';
-          dictList += '<a href="javascript:SETTINGS.btnMoveDictSettingDown(\'dict_wrap_'+currentDictName+'\')"><img src="code/css/down.png" width="25" height="25"></a>';
-          dictList += '</div>'
+          dictList += '</div>';
+          dictList += '<div class="dictsettings-move">';
+          dictList += '<a class="dict-move-up" href="javascript:SETTINGS.btnMoveDictSettingUp(\'dict_wrap_'+currentDictName+'\')"></a>';
+          dictList += '<a class="dict-move-down" href="javascript:SETTINGS.btnMoveDictSettingDown(\'dict_wrap_'+currentDictName+'\')"></a>';
+          dictList += '<span class="drag-handle" title="drag here to change the order"></span>';
+          dictList += '</div></div>';
         });
         
         $('#mainScreen').hide();
         $('#select-dict').html(dictList);
         $('#settingsScreen').show();
+        TOOLTIPS.bindTooltipHandlers();
+
+        new Sortable(document.getElementById('select-dict'), {
+          animation: 150, 
+          //ghostClass: 'dragging',
+          handle: '.drag-handle',
+          scroll: true,
+          scrollSensitivity: 45,
+          scrollSpeed: 10,
+          bubbleScroll: true,
+          forceAutoScrollFallback: true,
+          //delayOnTouchOnly: true,
+          onEnd: function (evt) {
+            evt.stopPropagation();
+          }
+        });
     },
     
     storeSettings:function(settings) {

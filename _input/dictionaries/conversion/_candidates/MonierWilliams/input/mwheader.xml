@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<?oxygen RNGSchema="file:tei_corpus.rnc" type="compact"?>-->
+<?oxygen RNGSchema="//www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rnc" type="compact"?>
+<TEI xmlns="//www.tei-c.org/ns/1.0" xmlns:xi="//www.w3.org/2001/XInclude">
+ <teiHeader xml:lang="en-Latn">
+  <fileDesc>
+   <titleStmt>
+    <title type="main">Monier-Williams' Sanskrit-English dictionary</title>
+    <title type="desc">XML edition</title>
+    <title type="key">Monier-Williams 1899</title>
+    <title type="short"><name>Monier-Williams, Monier</name>. <title rend="italic">A Sanskrit-English dictionary</title>. <date>1899</date>.</title>
+    <editor>Jim Funderburk</editor>
+    <editor>Thomas Malten</editor>
+    <editor>Peter M. Scharf</editor>
+    <principal>Peter M. Scharf</principal>
+    <funder>United States National Science Foundation</funder>
+    <funder>United States National Endowment for the Humanities</funder>
+    <principal>Thomas Malten</principal>
+    <funder>Deutsche Forschungsgemeinschaft</funder>
+   </titleStmt>
+   <editionStmt>
+    <edition>xml version, <date when="2014-06-30">30 June 2014</date></edition>
+     <respStmt>
+       <resp>supplement integration</resp>
+       <name>Sharon Ben-Dor</name>
+     </respStmt>
+     <respStmt>
+       <resp>supplement integration, accent revision, homophony regularization, hierarchical display revision, linking of Sanskrit words within entries to headwords</resp>
+       <name>Pawan Goyal</name>
+     </respStmt>
+     <respStmt>
+       <resp>markup analysis</resp>
+       <name>Malcolm D. Hyman</name>
+     </respStmt>
+     <respStmt>
+       <resp>tagging of the list of works and authors, and association of abbreviations actually used with those in the list</resp>
+       <name>Susan J. Moore</name>
+     </respStmt>
+     <respStmt>
+       <resp>lexical categorization of nominals, and feminine stem analysis</resp>
+       <name>Ramaswamy Chandrashekar</name>
+     </respStmt>
+     <respStmt>
+       <resp>Greek data entry</resp>
+       <name>Wendy Teo</name>
+     </respStmt>
+    <respStmt>
+     <resp>Error correction, parenthetical headword hierarchical placement</resp>
+     <name>Dr. Sampada Savardekar Thomas</name>
+    </respStmt>
+     <respStmt>
+       <resp>Insertion of Arabic text</resp>
+       <name>Jason Lyle Reeder</name>
+     </respStmt>
+   </editionStmt>
+   <extent>69.5 MB</extent>
+   <publicationStmt>
+    <publisher>The Sanskrit Library</publisher>
+    <pubPlace>Providence, RI</pubPlace>
+    <publisher>Institut für Südasien- und Südostasienstudien (SASOA)</publisher>
+    <pubPlace>Köln</pubPlace>
+    <date when="2014-06-30">30 June 2014</date>
+    <availability>
+     <p>Copyright © 2014 The Sanskrit Library and Thomas Malten</p>
+     <p>All rights reserved other than those granted under the Creative Commons Attribution Non-Commercial Share Alike license available in full at <ref target="//creativecommons.org/licenses/by-nc-sa/3.0/legalcode">//creativecommons.org/licenses/by-nc-sa/3.0/legalcode</ref>, and summarized at <ref target="//creativecommons.org/licenses/by-nc-sa/3.0/">//creativecommons.org/licenses/by-nc-sa/3.0/</ref>.  Permission is granted to build upon this work non-commercially, as long as credit is explicitly acknowledged exactly as described herein, and derivative work is distributed under the same license.</p>
+    </availability>
+    <distributor>
+     <ptr target="//www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/web/index.php"/>
+    </distributor>
+   </publicationStmt>
+   <seriesStmt>
+    <title level="s">Sanskrit Library Lexical Sources</title>
+    <respStmt>
+     <resp>edited by</resp>
+     <name>Peter M. Scharf</name>
+    </respStmt>
+    <idno>1</idno>
+   </seriesStmt>
+   <sourceDesc>
+    <biblStruct type="original" xml:id="MW">
+     <monogr>
+      <author>Monier-Williams, Monier</author>
+      <author>Ernst Leumann</author>
+      <author>Carl Cappeller</author>
+      <title type="main" level="m">A Sanskrit-English Dictionary</title>
+      <title type="subordinate" level="m">Etymologically and philologically arranged with special reference to cognate Indo-European languages</title>
+      <edition>new edition, greatly enlarged and improved</edition>
+      <imprint>
+        <pubPlace>Oxford</pubPlace>
+        <publisher>The Clarendon Press</publisher>
+        <date>1899</date>
+      </imprint>
+      <extent>
+       <measure unit="pages" quantity="1369">xxxiv, [2], 1333 p.</measure>
+      </extent>
+     </monogr>
+    </biblStruct>
+    <biblStruct xml:id="MWK">
+     <monogr>
+      <editor>Thomas Malten</editor>
+      <title type="main" level="m">The digital Monier-Williams Sanskrit-English dictionary</title>
+      <edition>First digital edition</edition>
+      <imprint>
+       <pubPlace>Köln</pubPlace>
+       <publisher>Köln Universität</publisher>
+       <date>1997</date>
+      </imprint>
+      <extent>
+       <measure unit="megabytes" quantity="26.4">26.4 MB</measure>
+      </extent>
+     </monogr>
+    </biblStruct>
+   </sourceDesc>
+  </fileDesc>
+  <encodingDesc>
+   <projectDesc>
+    <p>See <ptr target="//sanskritlibrary.org/NSF2005.html"/>.</p>
+    <p>This work was supported in part by the United States National Science Foundation (NSF) under grant no. 0535207. Any opinions, findings, and conclusions or recommendations expressed are those of the authors and do not necessarily reflect the views of the NSF.</p>
+   </projectDesc>
+   <projectDesc>
+    <p>See <ptr target="//sanskritlibrary.org/NEHDFG2009.html"/>.</p>
+    <p>This material is based upon work supported by the <ref target="//www.neh.gov">National Endowment for the Humanities</ref> under Grant No. HG-50022-10. Any views, findings, conclusions, or recommendations expressed in this material do not necessarily represent those of the National Endowment for the Humanities.</p>
+   </projectDesc>
+   <projectDesc>
+    <p>The Cologne Digital Sanskrit Lexicon (CDSL) project undertakes to digitize and merge all published Sanskrit dictionaries. Its aim is to create a basic lexical corpus that provides easy access to all available meanings of Sanskrit words and allows the creation of a number of computer programs that will help to analyze Sanskrit texts.</p>
+    <p>See <ptr target="//www.sanskrit-lexicon.uni-koeln.de/CDSL.pdf"/>.</p>
+   </projectDesc>
+   <editorialDecl>
+    <p>xml version <date>2008</date> includes the designation of the fourth line of headwords; segregation of lexically significant sense text-extents between semicolons from those not lexically significant; designation of loanwords; designation of Sanskrit words in Anglicized Sanskrit encoding; markup of botanical and scientific terms; addition of lexical information required for proper inflection such as designation as indeclinable, pronoun, or comparative adjective; distinction of inflectional data from lexical data; specification of the scope of lexical and literary source tags; data-entry of Greek cognates; tagging of the list of works and authors, and association of abbreviations actually used with those in the list.  See <ptr target="//www.sanskrit-lexicon.uni-koeln.de/talkMay2008/markingMonier.html"/>.</p>
+   </editorialDecl>
+   <tagsDecl>
+    <!--"//www.sanskrit-lexicon.uni-koeln.de/talkMay2008/mwtags.html"-->
+    <!--"//www.sanskrit-lexicon.uni-koeln.de" documentation-->
+   </tagsDecl>
+   <classDecl>
+    <taxonomy xml:id="lcsh">
+     <bibl>Library of Congress Subject Headings</bibl>
+    </taxonomy>
+   </classDecl>
+  </encodingDesc>
+  <profileDesc>
+      <creation>The original digital Monier Williams was created under the direction of Thomas Malten and entered by typists in <placeName>Azhivaikkal</placeName> in <placeName>Thanjavur district</placeName>, <placeName>Tamilnadu</placeName>, with character codes partially marking divisions in the text.  <persName>Scharf</persName> and <persName>Funderburk</persName>, with the assistance of <persName>Hyman</persName> and <persName>Chandrashekar</persName>, analyzed the existing markup, transformed it to xml, disambiguated it, and extended it.  Corrections were evaluated by <persName>Malten</persName>, <persName>Scharf</persName>, or <persName>Chandrashekar</persName> and implemented by <persName>Funderburk</persName>.</creation>
+   <langUsage>
+    <language ident="en-Latn">English</language>
+    <language ident="sa-Latn-x-AS">Sanskrit</language>
+    <language ident="sa-Latn-x-SLP1">Sanskrit in Sanskrit Library Phonetic Basic encoding, a phonetic Romanization using only ASCII characters</language>
+    <language ident="grc-Latn-x-beta">Greek</language>
+   </langUsage>
+   <textClass>
+    <keywords scheme="#lcsh">
+     <list>
+      <item>Sanskrit language -- Dictionaries -- English.</item>
+     </list>
+    </keywords>
+    <!-- Library of congress call number. -->
+    <classCode scheme="#lccn">PK933 .M6 1899</classCode>
+    <!--Sanskrit Library Indic Subject Classification-->
+    <!--referenced items by a catRef-->
+    <catRef target="../../Publication/tei/IndicSubjectClassification.xml#koSa"/>
+   </textClass>
+  </profileDesc>
+  <revisionDesc>
+   <change>Revisions documented by Jim Funderburk.  See <ptr target="//www.sanskrit-lexicon.uni-koeln.de/talkMay2008/mwtags.html"/></change>
+  </revisionDesc>
+ </teiHeader>
+ <facsimile>
+  <graphic url="//www.sanskrit-lexicon.uni-koeln.de/scans/MWScan/2014/downloads/mw_bookmark.pdf"/>
+ </facsimile>
+ <text>
+  <front>
+   <titlePage>
+    <docTitle>
+     <titlePart>A
+      <lb/>Sanskrit-English dictionary
+      <lb/>etymologically and philologically arranged
+      <lb/>with special reference to
+      <lb/>cognate Indo-European languages</titlePart>
+    </docTitle>
+    <docAuthor>by Sir Monier Monier-Williams, M.A., K.C.I.E.
+     <lb/>Boden Professor of Sanskṛit
+     <lb/>Hon. D.C.L. Oxon, Hon. L.L.D. Calcutta, Hon. Ph.D. Göttingen
+     <lb/>Hon. fellow of University College and sometime fellow of Balliol College, Oxford</docAuthor>
+    <docEdition>new edition, greatly enlarged and improved
+     <lb/>with the collaboration of
+     <lb/><persName>Professor E. Leumann, Ph.D.</persName>
+     <lb/>of the University of Strassburg
+     <cb/>
+     <lb/><persName>Professor C. Cappeller, Ph.D.</persName>
+     <lb/>of the University of Jena
+     <lb/>and other scholars
+    </docEdition>
+    <docImprint>
+     <pubPlace>
+      <address>
+       <addrLine>Oxford</addrLine>
+      </address>
+     </pubPlace>
+     <publisher>at the Clarendon Press</publisher>
+    </docImprint>
+   </titlePage>
+  </front>
+  <body>
+   <xi:include href="mw.xml">
+    <xi:fallback>
+     <p>See the file mw.xml downloadable from <ref target="//www.sanskrit-lexicon.uni-koeln.de">//www.sanskrit-lexicon.uni-koeln.de</ref>.</p>
+    </xi:fallback>
+   </xi:include>
+  </body>
+ </text>
+</TEI>

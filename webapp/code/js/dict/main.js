@@ -591,6 +591,9 @@ var DICT={
       var conflicts=[];        
       $.each(this.SYLLABLELIST,function(wylie,uni){
         var existingSyllable = DICT.UNICODE_SYLLABLELIST[uni];
+        if(!existingSyllable) {
+          existingSyllable = uni;
+        }
         var oldValid = DICT.isValidSyllable(existingSyllable);
         var newValid = DICT.isValidSyllable(wylie);
         if(DICT.isValidSeparator(wylie)
@@ -625,20 +628,6 @@ var DICT={
           }
       });
 
-      /*
-      $('#searchTerm').on('focus click',function(e) {
-        var $st = $('#searchTerm');
-        if($st.get(0).selectionStart != $st.get(0).selectionEnd) {
-          //a range is selected. Keep it that way
-          return;
-        }
-
-        if(DICT.useUnicodeTibetan === true && (DICT.getInputLang() === "tib")) {
-          if($st.selectRange)
-            $st.selectRange($st.val().length);
-        }
-      });
--*/
       $('#searchTerm').on('keypress',function(event){                      
         if(event.keyCode == 13){ //enter
           // if enter is pressed in the input field then convert all syllables to unicode
@@ -775,7 +764,7 @@ var DICT={
         if(isCursorAtTheEnd) {
           // put cursor at the end if it was at the end before
           window.setTimeout(function(){
-            $('#searchTerm').selectRange($input.val().length);
+            $('#searchTerm').selectRange($('#searchTerm').val().length);
           },10)
         }
       });
@@ -1367,9 +1356,16 @@ var DICT={
           }
           if(currentDict.containsOnlyTibetan) {
             // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
-          
+
             defStart = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">';
-            definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+            if (definition.indexOf("-----")) {
+              // ensure that separator lines are working also in Tibetan-only dictionaries
+              definition = definition.replace("-----", "}\n-----\n{");
+              definition = "{" + definition + "}";
+              definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
+            } else {
+              definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+            }
             //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
             //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
             //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );

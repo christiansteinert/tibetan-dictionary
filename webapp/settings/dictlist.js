@@ -201,6 +201,12 @@ DICTLIST={
   public:"false",
   listCredits:"true"
 },
+"sgra_bye_brag_tu_rtogs_byed_chen_mo":{
+  label:'sgra bye brag tu rtogs byed chen mo skad bzhi shan sbyar ma (Tibetan-Sanskrit-English version of Maha&shy;vyutpatti)',
+  about:"Tibetan-Sanskrit-English-Chinese Dictionary of Buddhism: An Edition and Translation of the Mahavyutpatti|Author: bu chung tshe ring|Lhasa: Xizang renmin chubanshe 西藏人民出版社 / bod ljongs mi dmangs dpe skrun khang (Tibetan People's Publishing House), 2015. ISBN 9787223046312.|Scan available at archive.org: https://archive.org/details/bdrc-W3CN6915/",
+  public:"true",
+  listCredits:"true"
+},
 "FPMT-middling-lamrim":{
   label:'FPMT Glossary for Middling Lamrim (work in progress)',
   mergeLines:true,
@@ -219,6 +225,14 @@ DICTLIST={
   about:'Mixed definitions from various sources',
   public:"true"
 },
+"LobsangMonlam":{
+  label:'Lobsang Monlam (English)',
+  about:'Lobsang Monlam Dictionary (English)|These entries were taken from the (Tibetan) portion Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database.',
+  public:"false",
+},
+
+
+
 "Verbinator":{
   label:'Verbinator Verb Dictionary (Tibetan)',
   highlight:'((?:Past|Present|Future|Imperative|Meaning): )',
@@ -282,11 +296,6 @@ DICTLIST={
   abbreviations:'Hopkins',
   public:"true"
 },
-"LobsangMonlam":{
-  label:'Lobsang Monlam (English)',
-  about:'Lobsang Monlam Dictionary (English)|These entries were taken from the (Tibetan) portion Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database.',
-  public:"false",
-},
 "GesheChodrak-Tib_x":{
   containsOnlyTibetan:true,
   label:'Geshe Chödrak (Tibetan) - Please only use this dictionary if you bought the original version from www.pktc.org!',
@@ -296,22 +305,70 @@ DICTLIST={
 },
 "tshig-mdzod-chen-mo-Tib":{
   containsOnlyTibetan:true,
-  label:'bod-rgya tshig-mdzod chen-mo (Tibetan)',
-  about:'Bod rgya tshig mdzod chen mo|1985, Mi dmangs dpe skrun khang, Beijing.',
+  label:'bod rgya tshig mdzod chen mo (Tibetan)',
+  about:'Bod rgya tshig mdzod chen mo / 藏汉大辞典|Author: Zhang Yisun|Beijing: Mi dmangs dpe skrun khang, 1985',
   public:"true",
   listCredits:"true"
 },
 "dung-dkar-tshig-mdzod-chen-mo-Tib":{
   containsOnlyTibetan:true,
-  label:'dung-dkar tshig-mdzod chen-mo (Tibetan)',
-  about:'Dung dkar tshig mdzod chen mo|Dung dkar blo bzang \'phrin las|Beijing: Krung go\'i bod rig pa dpe skrun khang 2002',
+  label:'dung dkar tshig mdzod chen mo (Tibetan)',
+  about: "Dung dkar tshig mdzod chen mo|author: dung dkar blo bzang 'phrin las|Beijing: zhongguo zangxue chubanshe 中国藏学出版社 / krung go'i bod rig pa dpe skrun khang (China’s Tibetology Publishing House), 2002",
   public:"true",
   listCredits:"true"
 },
 "dag_tshig_gsar_bsgrigs-Tib":{
   containsOnlyTibetan:true,
-  label:'dag-yig gsar-bsgrigs (Tibetan)',
-  about:'Dag yig gsar bsgrigs|Delhi: Sherig Parkhang, Tibetan Cultural & Religious Publication Centre, 2008.',
+  label:'dag yig gsar bsgrigs (Tibetan)',
+  about:'dag yig gsar bsgrigs (New orthography)|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1979.',
+  public:"true",
+  listCredits:"true"
+},
+"sgom_sde_tshig_mdzod_chen_mo":{
+  label:'sgom sde tshig mdzod chen mo (Tibetan)',
+  about:"sgom sde tshig mdzod chen mo|Author: sgom sde lha rams pa dge bshes thub bstan bsam grub|Sera Jey Monastery, Bylakuppe, Karnataka, India (2005-2016, 4 volumes)||Scan available at archive.org:|- Volume 1: https://archive.org/details/20240428_20240428_0750|- Volume 2: https://archive.org/details/20240428_20240428_0753|- Volume 3: https://archive.org/details/20240428_20240428_0755|- Volume 4: https://archive.org/details/20240428_20240428_0758||- All volumes: https://archive.org/details/bdrc-W2KG209991/bdrc-W2KG209991-1/",
+  public:"true",
+  listCredits:"true"
+},
+"brda_dkrol_gser_gyi_me_long":{
+  label:"brda dkrol gser gyi me long (Tibetan)",
+  about:"brda dkrol gser gyi me long (Golden Mirror for the Elucidation of Words)|Authors: btsan lha ngag dbang tshul khrims|Beijing: Minzu chubanshe 民族出版社 / mi rigs dpe skrun khang (Ethnic Publishing House), 1997. 1,063 pages. ISBN 7105022337.||Scan available at archive.org: https://archive.org/details/bdrc-W28966",
+  public:"true",
+  listCredits:"true"
+},
+"chos_rnam_kun_btus":{
+  label:'chos rnam kun btus (Tibetan)',
+  about:"chos rnam kun btus: gangs can rig brgya'i chos kyi rnam grangs mthong tshad kun las btus pa ngo mtshar 'phrul gyi lde mig chen po (A Wondrous Great Magical Key: A Comprehensive Compilation of Enumerations of Dharma Terms from the Snow Land’s Hundreds of Fields of Knowledge)|Author: nor brang o rgyan|Beijing: Zhongguo Zangxue chubanshe 中国藏学出版社 / krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2008, 3 volumes.|Scan available at BDRC: https://library.bdrc.io/show/bdr:MW1KG2733",
+  public:"true",
+  listCredits:"true"
+},
+"bod_rgya_nang_don_rig_pai_tshig_mdzod":{
+  label:"bod rgya nang don rig pa’i tshig mdzod (Tibetan)",
+  about:"bod rgya nang don rig pa’i tshig mdzod (Tibetan–Chinese Dictionary of Buddhist Terminology)|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 1993 (2 volumes).",
+  public:"true",
+  listCredits:"true"
+},
+"sngas_rgyas_chos_gzhung_tshig_mdzod":{
+  label:'bod rgya sangs rgyas chos gzhung gi tshig mdzod (Tibetan)',
+  about:'Zang Han fo xue ci dian 藏汉佛学词典 = bod rgya sangs rgyas chos gzhung gi tshig mdzod.|(Chinese-Tibetan dictionary of Buddhist Terms).|Author:  Wang Yinuan and ’jam dpal phun tshogs.|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1986 (reprint: 1988). 534 pages.|Scan available at archive.org: https://archive.org/details/bdrc-W22164',
+  public:"true",
+  listCredits:"true"
+},
+"gangs_can_mkhas_grub_rim_byon_ming_mdzod":{
+  label:"gangs can mkhas grub rim byon ming mdzod (Tibetan)",
+  about:"gangs can mkhas grub rim byon ming mdzod (Dictionary of the Generations of Scholars and Accomplished Ones of the Glacier Land)|Lanzhou: Gansu minzu chubanshe 甘肃民族出版社 / kan su'u mi rigs dpe skrun khang (Gansu Ethnic Publishing House), 1992, ISBN 7542102001, 1933 pages",
+  public:"true",
+  listCredits:"true"
+},
+"bod_yig_tshig_gter_rgya_mtsho":{
+  label:"bod yig tshig gter rgya mtsho (Tibetan)",
+  about:"bod yig tshig gter rgya mtsho (Ocean of Treasure of Tibetan Letters)|Author: thub bstan phun tshogs|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 2012, ISBN 7540949422, 3 volumes (4013 pages)",
+  public:"true",
+  listCredits:"true"
+},
+"li_shii_gur_khang":{
+  label:"li shi'i gur khang (Tibetan)",
+  about:"li shi'i gur khang|Author: skyogs ston rin chen bkra shis (born ca. 1400)||Scan available at archive.org: https://archive.org/details/bdrc-W3CN1669",
   public:"true",
   listCredits:"true"
 },
@@ -323,7 +380,6 @@ DICTLIST={
   public:"true"
 },
 "LobsangMonlam-Tibetan":{
-  containsOnlyTibetan:true,
   label:'Lobsang Monlam (Tibetan)',
   about:'Lobsang Monlam Dictionary|These entries were taken from the Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database..',
   public:"false",
@@ -380,7 +436,7 @@ DICTLIST={
 },
 "LokeshChandraSkt":{
   label:'Lokesh Chandra (Tibetan-Sanskrit)',
-  about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
+  about:'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992)|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
   public:"true",
   listCredits:"true"
 },
@@ -388,13 +444,13 @@ DICTLIST={
 "LokeshChandraTib":{
   containsOnlyTibetan:true,
   label:'Lokesh Chandra (Sanskrit-Tibetan)',
-  about:'Tibetan to Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (May 2001)',
+  about:'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992), ISBN 8185689113|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
   public:"true",
   listCredits:"false"
 },
 "NegiSkt":{
   label:'Negi (Tibetan-Sanskrit)',
-  about:'Tibetan-Sanskrit dictionary|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath (January 1993)',
+  about:'Tibetan-Sanskrit dictionary|bod skad dang legs sbyar gyi tshig mdzod chen mo|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath',
   abbreviations:'Negi',
   public:"true",
   listCredits:"true"

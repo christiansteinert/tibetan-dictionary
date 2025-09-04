@@ -1,0 +1,93 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import re
+import sys
+import xml.etree.ElementTree as ET
+from typing import Optional
+
+def strip_ns(tag: str) -> str:
+    """Remove XML namespace from a tag name."""
+    if '}' in tag:
+        return tag.split('}', 1)[1]
+    return tag
+
+def render_body_text(node: ET.Element) -> str:
+    """
+    Build text from <body> according to the rules, WITHOUT mutating the tree.
+      - Drop <hom> entirely (ignore its text and children).
+      - <ab n="foo">...</ab> -> 'foo' (use attribute, ignore inner text).
+      - <ab>...</ab> (no n) -> '[inner_text]'.
+      - All other tags are stripped but their text (and tails) are kept.
+    """
+    tag = strip_ns(node.tag)
+
+    # 1) Remove hom completely (but keep its tail)
+    if tag == 'hom':
+        return node.tail or ''
+
+    # 2) ab handling
+    if tag == 'ab':
+        if 'n' in node.attrib:
+            replacement = node.attrib['n']
+        else:
+            # Collect inner text of <ab> (including its children's tails)
+            inner = node.text or ''
+            for child in list(node):
+                inner += render_body_text(child)
+            replacement = f'[{inner}]'
+        # Add this element's tail after replacement
+        return replacement + (node.tail or '')
+
+    # 3) All other tags: keep text, recurse into children, keep tail
+    out = node.text or ''
+    for child in list(node):
+        out += render_body_text(child)
+    out += node.tail or ''
+    return out
+
+def process_body(body_elem: ET.Element) -> str:
+    text = render_body_text(body_elem)
+    # Normalize whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+def xml_to_pipe_csv(xml_path: str, csv_path: str, merge_by_key1: bool = False) -> None:
+    tree = ET.parse(xml_path)
+    root = tree.getroot()
+
+    if not merge_by_key1:
+        with open(csv_path, 'w', encoding='utf-8') as out_f:
+            for child in root:
+                key1 = child.find('./h/key1')
+                body = child.find('./body')
+                if key1 is None or body is None:
+                    continue
+                k = (key1.text or '').strip()
+                b = process_body(body)
+                out_f.write(f"{k}|{b}\n")
+    else:
+        # Optional: one line per unique key1, concatenating bodies in document order
+        from collections import OrderedDict
+        collected = OrderedDict()
+        for child in root:
+            key1 = child.find('./h/key1')
+            body = child.find('./body')
+            if key1 is None or body is None:
+                continue
+            k = (key1.text or '').strip()
+            b = process_body(body)
+            collected.setdefault(k, []).append(b)
+        with open(csv_path, 'w', encoding='utf-8') as out_f:
+            for k, parts in collected.items():
+                out_f.write(f"{k}|{' '.join(parts)}\n")
+
+if __name__ == "__main__":
+    # Minimal CLI: python script.py input.xml output.csv [--merge]
+    if len(sys.argv) < 3:
+        print("Usage: python script.py input.xml output.csv [--merge]")
+        sys.exit(1)
+    xml_in = sys.argv[1]
+    csv_out = sys.argv[2]
+    merge = len(sys.argv) > 3 and sys.argv[3] == "--merge"
+    xml_to_pipe_csv(xml_in, csv_out, merge_by_key1=merge)

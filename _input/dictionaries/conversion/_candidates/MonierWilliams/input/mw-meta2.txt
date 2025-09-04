@@ -1,0 +1,475 @@
+mw-meta2.txt
+Jun 18, 2018
+
+This supercedes mw-meta.txt as a description of 
+ the current digitization mw.txt.
+
+The digitization is in the utf-8 encoding.
+
+The pseudo-xml <> style of coding is in two forms:
+a) pseudo-xml coding in 'meta' lines
+b) normal xml coding in the entries between the meta-lines.
+
+---------------------------------------------------------------------------
+Meta lines: 
+---------------------------------------------------------------------------
+<L>,<e>,<h>,<k1>,<k2>,<pc>,<LEND> are used in the 'meta lines':
+
+Each entry of the digitization is contained within a beginning and ending
+markup. As example,
+
+<L>3<pc>1,1<k1>a<k2>a<h>2<e>1
+<hom>2.</hom> <s>a</s> ¦ (<s>pragfhya</s> <ab>q.v.</ab>), a vocative particle ([<s>a ananta</s>, O <s1 slp1="vizRu">Viṣṇu</s1>]), <ls>T.</ls>
+<LEND>
+
+The ending markup is <LEND>.
+The beginning markup contains various identifying fields, expressed in
+a <fieldname>fieldvalue format. The fields are:
+required fields
+  L Cologne record identifier
+  pc page-col reference to scanned image
+  k1 key1. The headword spelling, in slp1 coding for Sanskrit headwords
+  k2 key2. The original headword spelling in slp1 
+  h The homonym number (usually a digit; letters are used for
+    'synthetic' homonyms added by the Cologne digitization.)
+  e Either a number 1-4, indicating one of the four 'lines' of words 
+    described by Monier-Williams in the preface. The Cologne digitization
+    typically breaks up entries for nominals into several pieces, and for
+    these additional 'subentries', a letter (A,B,C or E) is appended to the
+    number. The first subentry has only a number.
+    Subsequent entries which have the same gender specification as the first
+    entry are coded with A.  
+    B indicates a different gender specification; for new feminine gender
+    specifications, the headword will also be changed to the feminine form.
+    C indicates an inflected form of the main entry; for instance  'agram'
+    has a code of 1C; it is an accusative used as indeclineable.
+    E indicates an 'etymology' section.  See for instance under headword
+    'hari'
+ 
+
+---------------------------------------------------------------------------
+XML tags within entries
+---------------------------------------------------------------------------
+
+Numerous xml tags are introduced as markup within the body of entries.
+
+<ab>X</ab>  general abbreviation. The expansion is from a separate table in
+            the pywork/mwab directory.
+<ab n="Y">X</ab> local abbreviation. Y is the expansion of X.
+<ab n="Y" slp1="Z">X°</ab>  Abbreviation of a Sanskrit word. 
+            Y is the IAST spelling and Z is the slp1 spelling
+<s1 slp1="Z>Y</s1>  Y is given in the print as an IAST spelling of a 
+            Sanskrit word; Z is the corresponding slp1 spelling. Y is
+            typically normal (non-italic) text, usually a proper name.
+<s>Z</s>    Sanskrit word in slp1 spelling; this is typically from
+            italic IAST text in the print.
+<shortlong/> Used within <s>Z</s> following a vowel which may be long or short
+<srs/>      Used within <s>Z</s> following a long vowel which is a sandhi
+            of two other vowels.  In the print, the vowel is represented
+            with a circumflex diacritic.
+
+<ns>Y</ns>  Y is a non-Sanskrit word presented in IAST spelling.
+<i>x</i>    Italic text.  Only about 100 usages.
+<etym>x</etym> markup of cognate words from other languages.
+<lang n="greek">x</lang> Usually cognate word from Greek.
+Words in Arabic script can be from several languages:
+<lang script="Arabic" n="Arabic">x</lang>
+<lang script="Arabic" n="Hindustani">x</lang>
+<lang script="Arabic" n="Persian">x</lang>
+<lang script="Arabic" n="Turkish">x</lang>
+
+<bot>X</bot> X is a plant name, usually in the Linnaean hierarchy.
+<bio>X</bio> X is an animal name, usually in the Linnaean hierarchy.
+<ls>X</ls>   X is a literary source reference. In most cases, the reference
+             can be linked to a separate table of 'Works and authors' (mwauth)
+<pb n="p,c"/> A page break in the printed text; p is the page, c (1,2,3) is
+             column.  The <pc> meta-field indicates the page and column at
+             which the (sub)-entry begins in the printed edition.
+<pcol>X</pcol> An internal reference to a different Page,Column.
+<hom>X</hom>  A homonym number.  For an entry with a homonym number,
+             the first sub-entry has the homonym in the <h> meta-tag.
+             The text for this sub-entry will use the <hom> tag.  This
+             <hom> tag also appears in cross-references. For examples:
+               <L>1<pc>1,1<k1>a<k2>a<h>1<e>1
+               <hom>1.</hom> <s>a</s> ¦ the first letter of the alphabet
+               <LEND>
+              ...See <hom>3.</hom> <s>a</s>  (under headword akupya)
+<lex>G</lex> and <lex type="X>G</lex> tags enclose gender information for
+            substantives and indeclineables.
+            The <lex>G</lex> form is used for the primary gender information.
+            The 'type' attribute makes some distinctions, not always clear,
+            about non-primary gender specifications:
+              hw : for a second gender specification
+              hwalt : similar to hw
+              hwifc : gender information when word is used at end of compound
+              hwinfo : additional gender information
+              nhw : gender information about some word different from the
+                    headword of the entry
+              part : gender information about a participle form, usually
+                     appearing within the entry for a root.
+              phw  : gender information about a headword mentioned 
+                     parenthetically.
+
+<div n="X"/>  used to indicate logical breaks; currently used mostly within
+            entries for verbs. Significance of X:
+            to : a new sense (e.g., to be lighted)
+            vp : ('verb paragraph') before verb subsections for Passive,
+                 Causal, etc.
+            p :  ('paragraph') experimental, only 4 instances currently;
+                 within entry for 'iti'
+<info [various attributes]/>  Used to summarize certain inferences regarding
+            entries.
+    <info n="rev"/> or <info n="sup"/>  The entry is from the supplement;
+            and is either a revision of an existing entry, or a new 
+            supplementary word.  Although the printed edition has these
+            entries in a separate section after the body of the dictionary,
+            the Cologne digitization has merged these entries into the body.
+    <info or="L1,X1;L2,X2"/> The headword for the entry has alternate spellings;
+          one entry has cologne record ID L1 and headword X1, and the
+          other is L2,X2.  This 'or' attribute appears in both entries.
+    <info and="L1,X1;L2,X2"/>  similar to 'or'; but the text used the word 'and'
+          to indicate the alternates.
+    <info orsl="L1,X1;L2,X2"/> similar to 'or'; but the alternates arise
+          due to a vowel which may be short or long.
+    <info orwr="L1,X1;L2,X2"/> similar to 'or', but with a 'w.r.'
+          (wrong reading)
+<info phwchild="LC"/>, <info phwparent="LP,HWP"/>  An artifact of the Cologne
+     digitization as a way to get additional headword entries which occur
+     parenthetically within the printed text.  For headword X that occurs
+     parenthetically within the entry having cologne id LP and citation HWP,
+     the Cologne digitization manufactured an entry for X at record id LC;
+     the <info phwchild="LC"/> appears within record LP, and the
+     parent info appears within record LC; this ties the child X to its parent.
+ 
+<info lex="Y"/>  Y provides summary gender information, in a standardized form.
+    Y is a colon-separated list of gender specifications; e.g. 'm:f:n'. 
+    Sometimes, the text provides additionaly stem information for a gender;
+    for example that a feminine form ends in 'I'.  The standard form
+    uses f#I for this example. So 'm:f#I' might be occur.
+    For indeclineables, <info lex="ind"/>.
+    For many sub-entries (e.g. those providing alternate senses), there is
+    no explicit mention of gender information; in these cases, the assumption
+    is that the gender information is 'inherited' from a previous sub-entry;
+    this is coded as <info lex="inh"/>.
+
+<info lexcat="Y"/>  This 'lexical category' attribute provides additional
+    information for a small number of substantives; this information would
+    be relevant when constructing inflected forms.
+    The current forms of attribute value 'Y':
+    LEXID=pron,STEM=X   pronoun. e.g., X=asmad occurs under headwords:
+         asma, asmat, asmad, aham, Ava, nO, ma (hom 3), mat, mad, man, vayam
+    LEXID=card,STEM=X   cardinal numbers; e.g. X=Sata, daSan
+    LEXID=prap,STEM=X,ROOTCLASS=Y  present active participle.
+               e.g., X=Barat, Y=Bf-1  (1st homonym of Bf)
+    LEXID=fap,STEM=X,ROOTCLASS=Y  future active participle
+               e.g.  X=Akzyat, Y=akz
+    loan  : loan words from other languages; only three instances under
+            headwords sAheb-rAm, sArisTA-KA, humAuM
+    INFLECTID=X,STEM=Y A few entries have an inflected form as headword,
+            instead of the usual stem form. 
+            X indicates the gender-case-number of the headword; 
+              Example: f1d = feminine nominative dual 
+                       (aSanAyA—pipAse = hunder and thirst)
+            Y = the stem from which headword is inflected; e.g. aSanAyApipAsA
+
+<info verb="X" .../> Summarize several details regarding verb entries.
+    The are several forms of X and of the additional attributes.
+    X = genuineroot, cp="Y" . The text identifies about 750 roots as 'genuine';
+       these appear in large Devanagari in the print.
+       'cp' = class-pada summary derived from the entry, a comma-separated list 
+              Examples: (empty), 0P (no class, parasmaipada),
+                        0Ā,0P  , (no class, both parasmaipada and atmanepada)
+                        1,10P  (class 1 no pada, class 10 parasmaipada)
+    X = root, cp="Y"  The non-genuine roots.
+    X = pre,  cp="Y", parse="P+R".  Prefixed roots.  parse separates out
+        the underlying prefix and root forms in a sandhi-analyzed form.
+        Examples: Akamp = A+kamp,  ude = ud+A+i
+    X = gati, cp="Y", parse="P+R".  roots with an affix formed from 
+        prefixes other than the standard upasargas.
+        Example: urarIkf = urarI+kf
+        Note:  These need to be examined and corrected.
+    X = nom, cp="Y"  Denominative verbs (verbs formed from nouns). Text 
+        identifies these with the abbreviation 'Nom.'.
+
+<info westergaard="X,Y,Z"/> Monier-Williams provides many links to
+     the Westergaard Dhatupatha.  The attribute value contains
+     X =  the Westergaard DP spelling of root in slp1.
+     Y =  Westergaard section.item reference
+     Z =  Reference in Sāyaṇa's Mādhavīya Dhātuvṛtti.
+     Example: headword BAz (भाष्), BAza,16.11,01.0396
+<info whitneyroots="R,p"/> A reference to the root in W.D. Whitney's
+     "The Roots, Verb-forms and Primary Derivatives of the Sanskrit Language".
+     'R' is the root spelling in slp1(possibly with homonym suffix),
+     'p' is the page number.
+     Example: headword BAZ, BAz,110.
+  These links are subject to correction.
+  Heavy use was made of the digitizations of Sāyaṇa's Mādhavīya Dhātuvṛtti and
+  Whitney's Roots prepared under the direction of Peter Scharf; these 
+  digitizations are available at //sanskritlibrary.org/referenceWorks.html.
+
+
+Words using diacritics with the Latin alphabet are represented in Unicode 
+characters.  
+For Sanskrit words, the spelling of such words aims to be modern IAST unicode,
+generally as described in https://en.wikipedia.org/wiki/International_Alphabet_of_Sanskrit_Transliteration
+The usage of diacritics in the printed text has many differences from
+the modern IAST appearing in this version of the digitization.
+We have intentionally retained a couple of the peculiarities of the printed IAST.
+
+There are about 200 different non-ascii Unicode characters used in the
+digitization.  The following provides some contextual guidance as to where
+these characters occur.
+
+---------------------------------------------------------------------
+Punctuation and special purpose
+---------------------------------------------------------------------
+¦  (\u00a6) 287433 := BROKEN BAR  (Demarcates the headword part of an entry)
+
+¯  (\u00af)    53 := MACRON  Long in metric pattern
+˘  (\u02d8)    48 := BREVE   Short in metric pattern
+
+°  (\u00b0) 53813 := DEGREE SIGN  continuation sign in abbreviation
+
+—  (\u2014) 257560 := EM DASH  separate parts of a Sanskrit compound; also '-' 
+‘  (\u2018) 20692 := LEFT SINGLE QUOTATION MARK  
+’  (\u2019) 20692 := RIGHT SINGLE QUOTATION MARK
+√  (\u221a) 15532 := SQUARE ROOT  indicates following word is a Sanskrit root
+
+---------------------------------------------------------------------
+Diacritics used in Sanskrit IAST. 
+Some characters appear also in spelling of cognate words in <etym> tags.
+---------------------------------------------------------------------
+
+á  (\u00e1)   101 := LATIN SMALL LETTER A WITH ACUTE   [also etym]
+Â  (\u00c2)    11 := LATIN CAPITAL LETTER A WITH CIRCUMFLEX [also etym]
+â  (\u00e2)  4121 := LATIN SMALL LETTER A WITH CIRCUMFLEX [a few etym]
+é  (\u00e9)    43 := LATIN SMALL LETTER E WITH ACUTE [also etym]
+ê  (\u00ea)   326 := LATIN SMALL LETTER E WITH CIRCUMFLEX [a few etym]
+í  (\u00ed)    32 := LATIN SMALL LETTER I WITH ACUTE [also etym]
+î  (\u00ee)   141 := LATIN SMALL LETTER I WITH CIRCUMFLEX [a few etym]
+ñ  (\u00f1)  7314 := LATIN SMALL LETTER N WITH TILDE
+ó  (\u00f3)    34 := LATIN SMALL LETTER O WITH ACUTE [a few etym]
+ô  (\u00f4)   225 := LATIN SMALL LETTER O WITH CIRCUMFLEX [a few etym]
+ú  (\u00fa)    50 := LATIN SMALL LETTER U WITH ACUTE [also etym]
+û  (\u00fb)    31 := LATIN SMALL LETTER U WITH CIRCUMFLEX [also etym]
+Ā  (\u0100) 12562 := LATIN CAPITAL LETTER A WITH MACRON
+ā  (\u0101) 76719 := LATIN SMALL LETTER A WITH MACRON
+ā́  (\u0101\u0301)     3 := LATIN SMALL LETTER A WITH MACRON + COMBINING ACUTE ACCENT
+ā̆  (\u0101\u0306)     2 := LATIN SMALL LETTER A WITH MACRON + COMBINING BREVE
+ă  (\u0103)    75 := LATIN SMALL LETTER A WITH BREVE [also etym]
+Ī  (\u012a)    49 := LATIN CAPITAL LETTER I WITH MACRON
+ī  (\u012b)  7680 := LATIN SMALL LETTER I WITH MACRON
+Ś  (\u015a) 26404 := LATIN CAPITAL LETTER S WITH ACUTE
+ś  (\u015b) 18912 := LATIN SMALL LETTER S WITH ACUTE
+Ū  (\u016a)    32 := LATIN CAPITAL LETTER U WITH MACRON
+ū  (\u016b)  2645 := LATIN SMALL LETTER U WITH MACRON
+Ḍ  (\u1e0c)    17 := LATIN CAPITAL LETTER D WITH DOT BELOW
+ḍ  (\u1e0d)  2867 := LATIN SMALL LETTER D WITH DOT BELOW
+ḥ  (\u1e25)   125 := LATIN SMALL LETTER H WITH DOT BELOW
+ḻ  (\u1e3b)     5 := LATIN SMALL LETTER L WITH LINE BELOW
+ṃ  (\u1e43)  2476 := LATIN SMALL LETTER M WITH DOT BELOW
+ṅ  (\u1e45)  3569 := LATIN SMALL LETTER N WITH DOT ABOVE
+ṇ  (\u1e47) 19197 := LATIN SMALL LETTER N WITH DOT BELOW
+ṉ  (\u1e49)   802 := LATIN SMALL LETTER N WITH LINE BELOW
+Ṛ  (\u1e5a)  1120 := LATIN CAPITAL LETTER R WITH DOT BELOW
+ṛ  (\u1e5b) 11993 := LATIN SMALL LETTER R WITH DOT BELOW
+Ṣ  (\u1e62)   222 := LATIN CAPITAL LETTER S WITH DOT BELOW
+ṣ  (\u1e63)  9887 := LATIN SMALL LETTER S WITH DOT BELOW
+Ṭ  (\u1e6c)    13 := LATIN CAPITAL LETTER T WITH DOT BELOW
+ṭ  (\u1e6d)  6158 := LATIN SMALL LETTER T WITH DOT BELOW
+
+---------------------------------------------------------------------
+Characters used in spelling of cognate words (usu. within <etym> tag)
+---------------------------------------------------------------------
+à  (\u00e0)     2 := LATIN SMALL LETTER A WITH GRAVE
+á  (\u00e1)   101 := LATIN SMALL LETTER A WITH ACUTE   [also Sanskrit]
+Â  (\u00c2)    11 := LATIN CAPITAL LETTER A WITH CIRCUMFLEX [also Sanskrit]
+â  (\u00e2)  4121 := LATIN SMALL LETTER A WITH CIRCUMFLEX [mainly Sanskrit]
+ä  (\u00e4)     9 := LATIN SMALL LETTER A WITH DIAERESIS
+é  (\u00e9)    43 := LATIN SMALL LETTER E WITH ACUTE [also Sanskrit]
+ê  (\u00ea)   326 := LATIN SMALL LETTER E WITH CIRCUMFLEX [mainly Sanskrit]
+ë  (\u00eb)    35 := LATIN SMALL LETTER E WITH DIAERESIS
+í  (\u00ed)    32 := LATIN SMALL LETTER I WITH ACUTE [also Sanskrit]
+î  (\u00ee)   141 := LATIN SMALL LETTER I WITH CIRCUMFLEX [mainly Sanskrit]
+ï  (\u00ef)    15 := LATIN SMALL LETTER I WITH DIAERESIS
+ð  (\u00f0)     1 := LATIN SMALL LETTER ETH
+ó  (\u00f3)    34 := LATIN SMALL LETTER O WITH ACUTE [mainly Sanskrit]
+ô  (\u00f4)   225 := LATIN SMALL LETTER O WITH CIRCUMFLEX [mainly Sanskrit]
+ö  (\u00f6)    14 := LATIN SMALL LETTER O WITH DIAERESIS
+ù  (\u00f9)     1 := LATIN SMALL LETTER U WITH GRAVE
+ú  (\u00fa)    50 := LATIN SMALL LETTER U WITH ACUTE [also Sanskrit]
+û  (\u00fb)    31 := LATIN SMALL LETTER U WITH CIRCUMFLEX [also Sanskrit]
+ü  (\u00fc)     2 := LATIN SMALL LETTER U WITH DIAERESIS
+ý  (\u00fd)     6 := LATIN SMALL LETTER Y WITH ACUTE
+ă  (\u0103)    75 := LATIN SMALL LETTER A WITH BREVE [also Sanskrit, Brahmă]
+č  (\u010d)     3 := LATIN SMALL LETTER C WITH CARON
+ē  (\u0113)    28 := LATIN SMALL LETTER E WITH MACRON
+ḗ  (\u0113\u0301)     8 := LATIN SMALL LETTER E WITH MACRON + COMBINING ACUTE ACCENT
+ĕ  (\u0115)    27 := LATIN SMALL LETTER E WITH BREVE
+ė  (\u0117)     1 := LATIN SMALL LETTER E WITH DOT ABOVE
+ī̆  (\u012b\u0306)     1 := LATIN SMALL LETTER I WITH MACRON + COMBINING BREVE
+ĭ  (\u012d)    12 := LATIN SMALL LETTER I WITH BREVE
+ō  (\u014d)    23 := LATIN SMALL LETTER O WITH MACRON
+ō̆  (\u014d\u0306)     1 := LATIN SMALL LETTER O WITH MACRON + COMBINING BREVE
+ŏ  (\u014f)     1 := LATIN SMALL LETTER O WITH BREVE
+š  (\u0161)     6 := LATIN SMALL LETTER S WITH CARON
+ū́  (\u016b\u0301)     3 := LATIN SMALL LETTER U WITH MACRON + COMBINING ACUTE ACCENT
+ŭ  (\u016d)    39 := LATIN SMALL LETTER U WITH BREVE
+ů  (\u016f)     3 := LATIN SMALL LETTER U WITH RING ABOVE
+ŷ  (\u0177)     2 := LATIN SMALL LETTER Y WITH CIRCUMFLEX
+ż  (\u017c)     8 := LATIN SMALL LETTER Z WITH DOT ABOVE
+ž  (\u017e)     3 := LATIN SMALL LETTER Z WITH CARON
+ȩ  (\u0229)     1 := LATIN SMALL LETTER E WITH CEDILLA
+ṡ  (\u1e61)     5 := LATIN SMALL LETTER S WITH DOT ABOVE
+ẓ  (\u1e93)     1 := LATIN SMALL LETTER Z WITH DOT BELOW
+
+
+---------------------------------------------------------------------
+Greek Unicode
+---------------------------------------------------------------------
+ΐ  (\u0390)     1 := GREEK SMALL LETTER IOTA WITH DIALYTIKA AND TONOS
+Α  (\u0391)     2 := GREEK CAPITAL LETTER ALPHA
+Β  (\u0392)     4 := GREEK CAPITAL LETTER BETA
+Δ  (\u0394)     1 := GREEK CAPITAL LETTER DELTA
+Ε  (\u0395)     1 := GREEK CAPITAL LETTER EPSILON
+Ζ  (\u0396)     3 := GREEK CAPITAL LETTER ZETA
+Κ  (\u039a)     3 := GREEK CAPITAL LETTER KAPPA
+Λ  (\u039b)     1 := GREEK CAPITAL LETTER LAMDA
+Μ  (\u039c)     3 := GREEK CAPITAL LETTER MU
+Ν  (\u039d)     1 := GREEK CAPITAL LETTER NU
+Ο  (\u039f)     1 := GREEK CAPITAL LETTER OMICRON
+Π  (\u03a0)     4 := GREEK CAPITAL LETTER PI
+Σ  (\u03a3)     3 := GREEK CAPITAL LETTER SIGMA
+Τ  (\u03a4)     5 := GREEK CAPITAL LETTER TAU
+Φ  (\u03a6)     3 := GREEK CAPITAL LETTER PHI
+ά  (\u03ac)    97 := GREEK SMALL LETTER ALPHA WITH TONOS
+έ  (\u03ad)   172 := GREEK SMALL LETTER EPSILON WITH TONOS
+ή  (\u03ae)    76 := GREEK SMALL LETTER ETA WITH TONOS
+ί  (\u03af)   135 := GREEK SMALL LETTER IOTA WITH TONOS
+α  (\u03b1)   364 := GREEK SMALL LETTER ALPHA
+β  (\u03b2)    45 := GREEK SMALL LETTER BETA
+γ  (\u03b3)   139 := GREEK SMALL LETTER GAMMA
+δ  (\u03b4)   172 := GREEK SMALL LETTER DELTA
+ε  (\u03b5)   234 := GREEK SMALL LETTER EPSILON
+ζ  (\u03b6)    32 := GREEK SMALL LETTER ZETA
+η  (\u03b7)   104 := GREEK SMALL LETTER ETA
+θ  (\u03b8)    98 := GREEK SMALL LETTER THETA
+ι  (\u03b9)   230 := GREEK SMALL LETTER IOTA
+κ  (\u03ba)   255 := GREEK SMALL LETTER KAPPA
+λ  (\u03bb)   175 := GREEK SMALL LETTER LAMDA
+μ  (\u03bc)   258 := GREEK SMALL LETTER MU
+ν  (\u03bd)   386 := GREEK SMALL LETTER NU
+ξ  (\u03be)    37 := GREEK SMALL LETTER XI
+ο  (\u03bf)   401 := GREEK SMALL LETTER OMICRON
+π  (\u03c0)   190 := GREEK SMALL LETTER PI
+ρ  (\u03c1)   350 := GREEK SMALL LETTER RHO
+ς  (\u03c2)   418 := GREEK SMALL LETTER FINAL SIGMA
+σ  (\u03c3)   198 := GREEK SMALL LETTER SIGMA
+τ  (\u03c4)   252 := GREEK SMALL LETTER TAU
+υ  (\u03c5)   106 := GREEK SMALL LETTER UPSILON
+φ  (\u03c6)    89 := GREEK SMALL LETTER PHI
+χ  (\u03c7)    81 := GREEK SMALL LETTER CHI
+ψ  (\u03c8)     6 := GREEK SMALL LETTER PSI
+ω  (\u03c9)   228 := GREEK SMALL LETTER OMEGA
+ϊ  (\u03ca)     3 := GREEK SMALL LETTER IOTA WITH DIALYTIKA
+ϋ  (\u03cb)     2 := GREEK SMALL LETTER UPSILON WITH DIALYTIKA
+ό  (\u03cc)   171 := GREEK SMALL LETTER OMICRON WITH TONOS
+ύ  (\u03cd)   108 := GREEK SMALL LETTER UPSILON WITH TONOS
+ώ  (\u03ce)    27 := GREEK SMALL LETTER OMEGA WITH TONOS
+ϝ  (\u03dd)    33 := GREEK SMALL LETTER DIGAMMA
+
+ἀ  (\u1f00)    45 := GREEK SMALL LETTER ALPHA WITH PSILI
+ἁ  (\u1f01)     5 := GREEK SMALL LETTER ALPHA WITH DASIA
+ἄ  (\u1f04)    35 := GREEK SMALL LETTER ALPHA WITH PSILI AND OXIA
+ἅ  (\u1f05)     5 := GREEK SMALL LETTER ALPHA WITH DASIA AND OXIA
+ἐ  (\u1f10)    38 := GREEK SMALL LETTER EPSILON WITH PSILI
+ἑ  (\u1f11)     7 := GREEK SMALL LETTER EPSILON WITH DASIA
+ἔ  (\u1f14)    29 := GREEK SMALL LETTER EPSILON WITH PSILI AND OXIA
+ἕ  (\u1f15)     8 := GREEK SMALL LETTER EPSILON WITH DASIA AND OXIA
+ἠ  (\u1f20)     5 := GREEK SMALL LETTER ETA WITH PSILI
+ἡ  (\u1f21)     5 := GREEK SMALL LETTER ETA WITH DASIA
+ἤ  (\u1f24)     1 := GREEK SMALL LETTER ETA WITH PSILI AND OXIA
+ἥ  (\u1f25)     6 := GREEK SMALL LETTER ETA WITH DASIA AND OXIA
+ἧ  (\u1f27)     3 := GREEK SMALL LETTER ETA WITH DASIA AND PERISPOMENI
+ἰ  (\u1f30)    23 := GREEK SMALL LETTER IOTA WITH PSILI
+ἱ  (\u1f31)     6 := GREEK SMALL LETTER IOTA WITH DASIA
+ἴ  (\u1f34)    12 := GREEK SMALL LETTER IOTA WITH PSILI AND OXIA
+ἵ  (\u1f35)     2 := GREEK SMALL LETTER IOTA WITH DASIA AND OXIA
+ἶ  (\u1f36)     9 := GREEK SMALL LETTER IOTA WITH PSILI AND PERISPOMENI
+ἷ  (\u1f37)     1 := GREEK SMALL LETTER IOTA WITH DASIA AND PERISPOMENI
+ὀ  (\u1f40)    24 := GREEK SMALL LETTER OMICRON WITH PSILI
+ὁ  (\u1f41)     9 := GREEK SMALL LETTER OMICRON WITH DASIA
+ὄ  (\u1f44)    20 := GREEK SMALL LETTER OMICRON WITH PSILI AND OXIA
+ὅ  (\u1f45)     4 := GREEK SMALL LETTER OMICRON WITH DASIA AND OXIA
+ὐ  (\u1f50)    14 := GREEK SMALL LETTER UPSILON WITH PSILI
+ὑ  (\u1f51)    18 := GREEK SMALL LETTER UPSILON WITH DASIA
+ὔ  (\u1f54)     1 := GREEK SMALL LETTER UPSILON WITH PSILI AND OXIA
+ὕ  (\u1f55)     6 := GREEK SMALL LETTER UPSILON WITH DASIA AND OXIA
+ὖ  (\u1f56)     6 := GREEK SMALL LETTER UPSILON WITH PSILI AND PERISPOMENI
+ὗ  (\u1f57)     1 := GREEK SMALL LETTER UPSILON WITH DASIA AND PERISPOMENI
+ὠ  (\u1f60)     7 := GREEK SMALL LETTER OMEGA WITH PSILI
+ὡ  (\u1f61)     1 := GREEK SMALL LETTER OMEGA WITH DASIA
+ὤ  (\u1f64)     2 := GREEK SMALL LETTER OMEGA WITH PSILI AND OXIA
+ὥ  (\u1f65)     2 := GREEK SMALL LETTER OMEGA WITH DASIA AND OXIA
+ὦ  (\u1f66)     2 := GREEK SMALL LETTER OMEGA WITH PSILI AND PERISPOMENI
+ὲ  (\u1f72)     1 := GREEK SMALL LETTER EPSILON WITH VARIA
+ᾶ  (\u1fb6)     6 := GREEK SMALL LETTER ALPHA WITH PERISPOMENI
+᾽  (\u1fbd)     3 := GREEK KORONIS
+᾿  (\u1fbf)     6 := GREEK PSILI
+ῆ  (\u1fc6)    13 := GREEK SMALL LETTER ETA WITH PERISPOMENI
+῎  (\u1fce)     1 := GREEK PSILI AND OXIA
+ῖ  (\u1fd6)    26 := GREEK SMALL LETTER IOTA WITH PERISPOMENI
+῞  (\u1fde)     1 := GREEK DASIA AND OXIA
+ῦ  (\u1fe6)    17 := GREEK SMALL LETTER UPSILON WITH PERISPOMENI
+ῶ  (\u1ff6)    10 := GREEK SMALL LETTER OMEGA WITH PERISPOMENI
+῾  (\u1ffe)    10 := GREEK DASIA
+
+---------------------------------------------------------------------
+Arabic Unicode
+---------------------------------------------------------------------
+
+آ  (\u0622)     1 := ARABIC LETTER ALEF WITH MADDA ABOVE
+إ  (\u0625)     4 := ARABIC LETTER ALEF WITH HAMZA BELOW
+ا  (\u0627)    51 := ARABIC LETTER ALEF
+ب  (\u0628)    18 := ARABIC LETTER BEH
+ة  (\u0629)     4 := ARABIC LETTER TEH MARBUTA
+ت  (\u062a)    17 := ARABIC LETTER TEH
+ث  (\u062b)     2 := ARABIC LETTER THEH
+ج  (\u062c)     4 := ARABIC LETTER JEEM
+ح  (\u062d)    11 := ARABIC LETTER HAH
+خ  (\u062e)     6 := ARABIC LETTER KHAH
+د  (\u062f)    25 := ARABIC LETTER DAL
+ذ  (\u0630)     1 := ARABIC LETTER THAL
+ر  (\u0631)    32 := ARABIC LETTER REH
+ز  (\u0632)     7 := ARABIC LETTER ZAIN
+س  (\u0633)     9 := ARABIC LETTER SEEN
+ش  (\u0634)    17 := ARABIC LETTER SHEEN
+ص  (\u0635)     6 := ARABIC LETTER SAD
+ع  (\u0639)     8 := ARABIC LETTER AIN
+غ  (\u063a)     4 := ARABIC LETTER GHAIN
+ف  (\u0641)     7 := ARABIC LETTER FEH
+ق  (\u0642)     9 := ARABIC LETTER QAF
+ك  (\u0643)     7 := ARABIC LETTER KAF
+ل  (\u0644)    23 := ARABIC LETTER LAM
+م  (\u0645)    39 := ARABIC LETTER MEEM
+ن  (\u0646)    29 := ARABIC LETTER NOON
+ه  (\u0647)    28 := ARABIC LETTER HEH
+و  (\u0648)    19 := ARABIC LETTER WAW
+ى  (\u0649)     3 := ARABIC LETTER ALEF MAKSURA
+ي  (\u064a)    21 := ARABIC LETTER YEH
+ٍ  (\u064d)     1 := ARABIC KASRATAN
+َ  (\u064e)     3 := ARABIC FATHA
+ُ  (\u064f)     2 := ARABIC DAMMA
+ِ  (\u0650)    10 := ARABIC KASRA
+ّ  (\u0651)     2 := ARABIC SHADDA
+ْ  (\u0652)     6 := ARABIC SUKUN
+پ  (\u067e)     9 := ARABIC LETTER PEH
+ٿ  (\u067f)     1 := ARABIC LETTER TEHEH
+گ  (\u06af)     2 := ARABIC LETTER GAF
+ۀ  (\u06c0)     1 := ARABIC LETTER HEH WITH YEH ABOVE
+
+-----------------------------------------------------------------------------
+Devanagari Unicode
+ँ  (\u0901)     2 := DEVANAGARI SIGN CANDRABINDU
+ᳲ  (\u1cf2)     1 := VEDIC SIGN ARDHAVISARGA
+-----------------------------------------------------------------------------

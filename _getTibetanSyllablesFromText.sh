@@ -9,8 +9,8 @@ echo "-building and converting list of syllables"
 
 cat $CSV_INPUT/* | grep -v "^#" | sed -e "s/[|].*$//g" > /tmp/syllables.1
 cat $CSV_INPUT/*Tib*  | grep -v "^#"| sed -e "s/^.*[|]//g" > /tmp/syllables.2
-cat $CSV_INPUT/* | grep -v "^#"|grep '[{].*[}]' | sed "s/[{]/\n{/g" | sed "s/[}]/}\n/g" |grep '[{].*[}]' |sed 's/[{}]//g' |grep "[aeiou]" > /tmp/syllables.3
-cat /tmp/syllables.* |sed -e 's#[]["—… \#/(){}<>:,;!?‘’`《》（）０１２３４５６７８９_*=]#\n#g' |sed 's#[0-9]\.*#\n#g' |sed 's#\.\.\.*#\n#g'| sed 's#^\.*##g'|sed 's#\.*$##g'|grep "[aeiouAEIOU]"|sed "s/\([aeiou]'\)\([bcdfghjklmnpqrstvwxyz]\)/\1a\2/ig" |sort >/tmp/syllable_list
+cat $CSV_INPUT/* | grep -v "^#"|grep '[{].*[}]' | sed "s/[{]/\n{/g" | sed "s/[}]/}\n/g" |grep '[{].*[}]' |sed 's/[{}]//g' |grep "[aeiou]"  > /tmp/syllables.3
+cat /tmp/syllables.* |sed -e 's#[]["—… \#/(){}<>:,;!?‘’`《》（）０１２３４５６７８９_*=]#\n#g' |sed 's#[0-9]\.*#\n#g' |sed 's#\.\.\.*#\n#g'| sed 's#^\.*##g'|sed 's#\.*$##g'|grep "[aeiouAEIOU]"|sed "s/\([aeiou]'\)\([bcdfghjklmnpqrstvwxyz]\)/\1a\2/ig"  |sort >/tmp/syllable_list
 cat /tmp/syllable_list |uniq >/tmp/syllables 
 cat /tmp/syllables.1|sort|uniq --repeated >/tmp/syllables.multiple
 
@@ -22,7 +22,7 @@ cd _build/util/Lingua-BO-Wylie/bin/
 cd "$currPath"
 
 echo assembling the result files
-paste -d "|" /tmp/syllables /tmp/syllables-unicode | grep -v "|$" | grep -v "|.*[a-zA-Z\.]"  > _input/tibetan-syllables
+paste -d "|" /tmp/syllables /tmp/syllables-unicode | grep -v "|$" | grep -v "|.*[ʼa-zA-Z\.]" |tr -d '\r' > _input/tibetan-syllables
 
 
 #echo building pronunciation table
