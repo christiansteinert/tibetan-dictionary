@@ -9,7 +9,9 @@ var TOOLTIPS={
       if(window.cordova || TOOLTIPS.isTouchScreen) { 
         return; //ignore hover events on touch devices.
       }
-
+      if(!e || !e.target) {
+        return;
+      }
         
       var offsY        =16,    //how far below the mouse should the tooltip appear
           ttTimeout    =200,   //delay after which the tooltip should be shown
@@ -102,6 +104,9 @@ var TOOLTIPS={
       if(window.cordova || TOOLTIPS.isTouchScreen) { 
         return; //ignore hover events on touch devices.
       }
+      if(!e || !e.target) {
+        return;
+      }
       
       tooltipShowTime  = 0;             //prevent a possibly waiting tooltip from still being shown
 
@@ -123,6 +128,10 @@ var TOOLTIPS={
       $eventTarget.unbind("mousemove");
     }
     var handleClick = function(e){
+      if(!e || !e.target) {
+        return;
+      }
+
       var $eventTarget           = $(e.target);
 
       while(!$eventTarget.hasClass("tooltip")) {
