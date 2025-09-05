@@ -474,8 +474,6 @@ var DICT={
   
   init:function($) {
     $.fn.selectRange = function(start, end) {
-      DICT.log("selectRange(" + start + ")");
-      
       if(end === undefined) {
           end = start;
       }
