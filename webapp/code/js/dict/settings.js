@@ -1,5 +1,6 @@
 SETTINGS={
     isMobileDevice: /iPhone|iPad|iPod|Android|BlackBerry|IEMobile/i.test(navigator.userAgent),
+    dictListSortableJsInstance: null, 
   
     getAllDictionaries:function() {
       var result = [];
@@ -159,7 +160,16 @@ SETTINGS={
         $('#settingsScreen').show();
         TOOLTIPS.bindTooltipHandlers();
 
-        new Sortable(document.getElementById('select-dict'), {
+
+        // ### init sorting for the list of dictionaries
+        
+        // destroy old Sortable instance before creating a new one 
+        if(this.dictListSortableJsInstance && this.dictListSortableJsInstance.destroy) {
+          this.dictListSortableJsInstance.destroy();
+        }
+
+        // make dictionary list sortable
+        this.dictListSortableJsInstance = new Sortable(document.getElementById('select-dict'), {
           animation: 150, 
           //ghostClass: 'dragging',
           handle: '.drag-handle',
