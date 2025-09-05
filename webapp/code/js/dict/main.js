@@ -702,8 +702,8 @@ var DICT={
           var newCursorPos = matches[1].length + insertedSyllable.length; 
           
           //inputText = inputText.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
-          console.log(matches);
-          console.log(inputText);
+          DICT.log(matches);
+          DICT.log(inputText);
 
           $('#searchTerm').val(inputText);
           DICT.search(false,true,0);

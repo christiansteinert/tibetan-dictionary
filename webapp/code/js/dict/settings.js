@@ -9,7 +9,6 @@ SETTINGS={
       $.each(DICTLIST,function(currentDictName,dictInfo) {
         if((dictInfo.webOnly && window.cordova)          // suppress webOnly dictionaries in mobile app
          || (publicOnly && dictInfo.public !== "true")) {  // suppress listing of private dictionaries
-          DICT.log("suppressing:", dictInfo);
           return;
         }
         
