@@ -61,17 +61,25 @@ GROUPED_DICTLIST = {
     public: "true",
     listCredits: "true"
   },
-  "Berzin": {
+  "_Berzin": {
+    type: 'group',
     label: 'Berzin',
-    mergeLines: true,
     about: 'Dr. Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
     public: "true",
-    listCredits: "true"
-  },
-  "Berzin-Def": {
-    label: 'Berzin Defi&shy;nitions',
-    about: 'Source: Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
-    public: "true"
+    listCredits: "true",
+    items: {
+      "Berzin": {
+      label: 'Berzin',
+      mergeLines: true,
+      about: 'Dr. Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
+      public: "true",
+    },
+    "Berzin-Def": {
+      label: 'Berzin Defi&shy;nitions',
+      about: 'Source: Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
+      public: "true"
+    }
+  }
   },
   "_Hopkins-Definitions-English": {
     type: 'group',
@@ -455,18 +463,25 @@ GROUPED_DICTLIST = {
     public: "true",
     listCredits: "true"
   },
-  "LokeshChandraSkt": {
+  "_LokeshChandra": {
+    type: 'group',
     label: 'Lokesh Chandra (Tibetan-Sanskrit)',
     about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992)|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
     public: "true",
-    listCredits: "true"
-  },
-  "LokeshChandraTib": {
-    containsOnlyTibetan: true,
-    label: 'Lokesh Chandra (Sanskrit-Tibetan)',
-    about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992), ISBN 8185689113|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
-    public: "true",
-    listCredits: "false"
+    listCredits: "true",
+    items: {
+      "LokeshChandraSkt": {
+        label: 'Lokesh Chandra (Tibetan-Sanskrit)',
+        about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992)|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
+        public: "true"
+      },
+      "LokeshChandraTib": {
+        containsOnlyTibetan: true,
+        label: 'Lokesh Chandra (Sanskrit-Tibetan)',
+        about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992), ISBN 8185689113|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
+        public: "true"
+      }
+    }
   },
   "NegiSkt": {
     label: 'Negi (Tibetan-Sanskrit)',
