@@ -54,25 +54,40 @@ GROUPED_DICTLIST = {
     public: "true",
     listCredits: "true"
   },
-  "RangjungYeshe": {
+  "_RangjungYeshe": {
+    type: 'group',
     label: 'Rangjung Yeshe',
     about: 'Rangjung Yeshe Dictionary|Rangjung Yeshe Tibetan-English Dharma Dictionary 3.0 by Erik Pema Kunsang (2003)|online version: http://rywiki.tsadra.org',
-    abbreviations: 'RangjungYeshe',
     public: "true",
-    listCredits: "true"
+    items: {
+      "RangjungYeshe": {
+        label: 'Rangjung Yeshe',
+        about: 'Rangjung Yeshe Dictionary|Rangjung Yeshe Tibetan-English Dharma Dictionary 3.0 by Erik Pema Kunsang (2003)|online version: http://rywiki.tsadra.org',
+        abbreviations: 'RangjungYeshe',
+        public: "true",
+        listCredits: "true",
+      },
+      "GatewayToKnowledge": {
+        label: 'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1 (Rangjung Yeshe)',
+        mergeLines: true,
+        about: 'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1|Rangjung Yeshe Publications|Source: www.rangjung.com/gateway/KJ-main.htm',
+        public: "true",
+        listCredits: "true"
+      }
+    }
   },
   "_Berzin": {
     type: 'group',
     label: 'Berzin',
     about: 'Dr. Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
     public: "true",
-    listCredits: "true",
     items: {
       "Berzin": {
       label: 'Berzin',
       mergeLines: true,
       about: 'Dr. Alexander Berzin\'s English-Tibetan-Sanskrit Glossary|These entries are from the glossary of www.berzinarchives.com',
       public: "true",
+      listCredits: "true"
     },
     "Berzin-Def": {
       label: 'Berzin Defi&shy;nitions',
@@ -202,13 +217,6 @@ GROUPED_DICTLIST = {
     scanId: "das",
     language: "tib",
     linkText: "Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
-    listCredits: "true"
-  },
-  "GatewayToKnowledge": {
-    label: 'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1 (Rangjung Yeshe)',
-    mergeLines: true,
-    about: 'Glossary for Mipham Rinpoche\'s Gateway to Knowledge, Vol. 1|Rangjung Yeshe Publications|Source: www.rangjung.com/gateway/KJ-main.htm',
-    public: "true",
     listCredits: "true"
   },
   "MastersProgramGlossary": {
@@ -404,7 +412,7 @@ GROUPED_DICTLIST = {
     label: 'Lobsang Monlam (Tibetan)',
     about: 'Lobsang Monlam Dictionary|These entries were taken from the Lobsang Monlam\'s dictionary. See http://www.monlamit.org/ for the original program and https://github.com/iamironrabbit/monlam-dictionary for the code and database..',
     public: "false",
-    listCredits: "true"
+    listCredits: "false"
   },
   "FPMT-middling-lamrim-Def": {
     label: 'FPMT Glossary for Middling Lamrim (work in progress): Definitions (Tibetan)',
@@ -468,12 +476,12 @@ GROUPED_DICTLIST = {
     label: 'Lokesh Chandra (Tibetan-Sanskrit)',
     about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992)|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
     public: "true",
-    listCredits: "true",
     items: {
       "LokeshChandraSkt": {
         label: 'Lokesh Chandra (Tibetan-Sanskrit)',
         about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992)|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
-        public: "true"
+        public: "true",
+        listCredits: "true"
       },
       "LokeshChandraTib": {
         containsOnlyTibetan: true,
@@ -490,7 +498,6 @@ GROUPED_DICTLIST = {
     public: "true",
     listCredits: "true"
   }
-
 }
 
 

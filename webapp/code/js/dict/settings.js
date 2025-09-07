@@ -6,8 +6,8 @@ SETTINGS={
       var result = [];
       var isLocalhost = window.location && window.location.hostname && (window.location.hostname.indexOf("localhost")==0);
       var publicOnly = GLOBAL_SETTINGS.publicOnly && (!isLocalhost);
-      
-      dicts = flattenGroups?DICTLIST:GROUPED_DICTLIST;
+
+      dicts = (flattenGroups ? GROUPED_DICTLIST : DICTLIST);
 
       $.each(dicts,function(currentDictName,dictInfo) {
         if((dictInfo.webOnly && window.cordova)          // suppress webOnly dictionaries in mobile app
@@ -89,7 +89,7 @@ SETTINGS={
           
           // check if any dictionaries have been added since last time when the settings were saved by the user
           var newDictionaries = [];
-          $.each(this.getAllDictionaries(true),function(index,currentDictName) {
+          $.each(this.getAllDictionaries(false),function(index,currentDictName) {
             if($.inArray(currentDictName,settings.activeDictionaries)<0 && $.inArray(currentDictName,settings.inactiveDictionaries)<0 ) {
               newDictionaries.push(currentDictName);
               DICT.log("added new dict" + currentDictName);
@@ -169,7 +169,6 @@ SETTINGS={
         // that weren't in settings.activeDictionaries
         $.each(this.getAllDictionaries(true), function(index, dictId) {
           var dictInfo = GROUPED_DICTLIST[dictId];
-          if (!dictInfo) return;
           
           // Skip if already processed
           if (processedGroups[dictId]) return;

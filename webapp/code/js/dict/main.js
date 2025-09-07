@@ -526,9 +526,9 @@ var DICT={
   initCreditsInformation:function() {
     var credits = "";
     $.each(SETTINGS.getAllDictionaries(false),function(index,currentDictName) {
-        var currentDict = GROUPED_DICTLIST[currentDictName];
+        var currentDict = DICTLIST[currentDictName];
             
-        if(currentDict.listCredits && currentDict.listCredits === "true") {
+        if(currentDict && currentDict.listCredits === "true") {
             var title = "";
             var description = "";
                     

@@ -37,10 +37,10 @@ a{
 .leftSideBar,.mainWrap{
   padding-top:4em;
 }
-.mainWrap{
-  width:auto;
+.mainWrap {
+  width: auto;
+  padding: 0 2px;
 }
-
 #wordList {
   font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   border:1px solid #ccc;
@@ -304,6 +304,7 @@ a{
   margin: 0 auto;
   display:table;
   max-width: 100%;
+  padding: 0 2px;
 }
 .settings>*{
   display:table-row;
