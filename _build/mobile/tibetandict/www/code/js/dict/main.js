@@ -525,10 +525,10 @@ var DICT={
   
   initCreditsInformation:function() {
     var credits = "";
-    $.each(SETTINGS.getAllDictionaries(),function(index,currentDictName) {
+    $.each(SETTINGS.getAllDictionaries(false),function(index,currentDictName) {
         var currentDict = DICTLIST[currentDictName];
             
-        if(currentDict.listCredits && currentDict.listCredits === "true") {
+        if(currentDict && currentDict.listCredits === "true") {
             var title = "";
             var description = "";
                     
@@ -589,6 +589,9 @@ var DICT={
       var conflicts=[];        
       $.each(this.SYLLABLELIST,function(wylie,uni){
         var existingSyllable = DICT.UNICODE_SYLLABLELIST[uni];
+        if(!existingSyllable) {
+          existingSyllable = uni;
+        }
         var oldValid = DICT.isValidSyllable(existingSyllable);
         var newValid = DICT.isValidSyllable(wylie);
         if(DICT.isValidSeparator(wylie)
@@ -621,19 +624,6 @@ var DICT={
           language: {
             emptyTable: " "
           }
-      });
-
-      $('#searchTerm').on('focus click',function(e) {
-        var $st = $('#searchTerm');
-        if($st.get(0).selectionStart != $st.get(0).selectionEnd) {
-          //a range is selected. Keep it that way
-          return;
-        }
-
-        if(DICT.useUnicodeTibetan === true && (DICT.getInputLang() === "tib")) {
-          if($st.selectRange)
-            $st.selectRange($st.val().length);
-        }
       });
 
       $('#searchTerm').on('keypress',function(event){                      
@@ -691,12 +681,39 @@ var DICT={
           // in this case we will later convert the input back to Wylie when backspace is pressed.
           DICT.wasTypedInWylie = true;
           var currentInputContainsWylie = true;
+          var matchFullWylieSyllableInTheMiddleOfTibetan = uniInput.match(/(^|^[^ ]*་)([^་ ]+) ([^ ]+$|$)/);
         } else if(uniInput === "") {
           DICT.wasTypedInWylie = false;
           var currentInputContainsWylie = false;
+          var matchFullWylieSyllableInTheMiddleOfTibetan = null;
         }
 
-        if(event.keyCode == 32 || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput)) || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
+        if(DICT.useUnicodeTibetan===true 
+          && uniInput.length > lastUniInput.length
+          && matchFullWylieSyllableInTheMiddleOfTibetan) {
+          // partial editing within Tibetan editing where a syllable in Wylie was added into a piece of Tibetan
+          var charactersBehindCursor = newInput.length - $st.get(0).selectionStart || 0;
+          var matches = matchFullWylieSyllableInTheMiddleOfTibetan;
+          var insertedSyllable = DICT.normalizeWylie(matches[2]);
+          insertedSyllable = DICT.wylieToUni(insertedSyllable);
+          var inputText = matches[1] + insertedSyllable + matches[3];
+          var newCursorPos = matches[1].length + insertedSyllable.length; 
+          
+          //inputText = inputText.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
+          DICT.log(matches);
+          DICT.log(inputText);
+
+          $('#searchTerm').val(inputText);
+          DICT.search(false,true,0);
+          isCursorAtTheEnd = false;          
+          $('#searchTerm').selectRange(newCursorPos);
+  
+
+
+        } else if(event.keyCode == 32 
+            || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput) && !/[a-zA-Z'].*་/.test(lastUniInput)) // syllable  end char present and no latin letters before Tibetan stuff
+            || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
+          
           //space at the end of the text or typing in English
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
@@ -712,7 +729,7 @@ var DICT={
           }
           $('#searchTerm').val(inputText);
           DICT.search(false,true,0);
-          
+                    
         } else if(event.keyCode == 8||(uniInput.length < lastUniInput.length && lastUniInput.startsWith(uniInput))) { // backspace
           var isAtEndOfSyllable = isCursorAtTheEnd && /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
           if(DICT.wasTypedInWylie && DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && isAtEndOfSyllable ) {
@@ -745,8 +762,7 @@ var DICT={
         if(isCursorAtTheEnd) {
           // put cursor at the end if it was at the end before
           window.setTimeout(function(){
-            var $input=$('#searchTerm');
-            $input.selectRange($input.val().length);
+            $('#searchTerm').selectRange($('#searchTerm').val().length);
           },10)
         }
       });
@@ -868,7 +884,6 @@ var DICT={
       var searchValue = this.tibetanOutput(this.activeTerm);
       
     $('#wordList td').filter(function(){ return $(this).text() === searchValue || (DICT.getInputLang()=="en" && $(this).text().toLowerCase() === searchValue.toLowerCase() ); }).addClass('selected');
-    DICT.log(searchValue);
   },
 
   setInputLang:function(targetLang){
@@ -1108,8 +1123,11 @@ var DICT={
         }
         DICT.currentInput = stateInfo.currentListTerm;
         window.mobiletextCurrentVal = DICT.lastUniInput;
-        $('#searchTerm').val(DICT.lastUniInput);
-      
+        if ($('#searchTerm').val() != DICT.lastUniInput) {  
+          $('#searchTerm').val(DICT.lastUniInput);
+          DICT.log("input changed based on URL hash. New value: " + DICT.lastUniInput)
+        }
+
         $('.selected').removeClass('selected');
 
         if(stateInfo.offset)
@@ -1336,9 +1354,16 @@ var DICT={
           }
           if(currentDict.containsOnlyTibetan) {
             // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
-          
+
             defStart = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">';
-            definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+            if (definition.indexOf("-----")) {
+              // ensure that separator lines are working also in Tibetan-only dictionaries
+              definition = definition.replace("-----", "}\n-----\n{");
+              definition = "{" + definition + "}";
+              definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
+            } else {
+              definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
+            }
             //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
             //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
             //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );
@@ -1357,6 +1382,7 @@ var DICT={
           definition = definition.replace(/\n/g,'</p>\n<p>');
           definition = definition.replace(/\\n/g,'</p>\n<p>');
           definition = definition.replace(/<p>-----<\/p>/g,'<p class="separator"></p>');
+          definition = definition.replace(/; -----;/g,'</p><p class="separator"></p><p>');
 
           if(currentDict.highlight) {
             definition = definition.replace(new RegExp(currentDict.highlight,'g'),'<b>$1</b>');

@@ -18,18 +18,22 @@
 */
 package org.apache.cordova.engine;
 
+import java.io.IOException;
+import java.io.File;
 import java.util.Arrays;
-import android.annotation.TargetApi;
+import java.util.ArrayList;
+import java.util.List;
 import android.app.Activity;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
-import android.os.Build;
+import android.provider.MediaStore;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.webkit.ConsoleMessage;
 import android.webkit.GeolocationPermissions.Callback;
 import android.webkit.JsPromptResult;
 import android.webkit.JsResult;
@@ -41,6 +45,7 @@ import android.webkit.PermissionRequest;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
+import androidx.core.content.FileProvider;
 
 import org.apache.cordova.CordovaDialogsHelper;
 import org.apache.cordova.CordovaPlugin;
@@ -114,8 +119,8 @@ public class SystemWebChromeClient extends WebChromeClient {
      * If the client returns true, WebView will assume that the client will
      * handle the prompt dialog and call the appropriate JsPromptResult method.
      *
-     * Since we are hacking prompts for our own purposes, we should not be using them for
-     * this purpose, perhaps we should hack console.log to do this instead!
+     * <p>Since we are hacking prompts for our own purposes, we should not be using them for
+     * this purpose, perhaps we should hack console.log to do this instead!</p>
      */
     @Override
     public boolean onJsPrompt(WebView view, String origin, String message, String defaultValue, final JsPromptResult result) {
@@ -150,15 +155,15 @@ public class SystemWebChromeClient extends WebChromeClient {
         quotaUpdater.updateQuota(MAX_QUOTA);
     }
 
-    @Override
     /**
      * Instructs the client to show a prompt to ask the user to set the Geolocation permission state for the specified origin.
      *
-     * This also checks for the Geolocation Plugin and requests permission from the application  to use Geolocation.
+     * <p>This also checks for the Geolocation Plugin and requests permission from the application  to use Geolocation.</p>
      *
      * @param origin
      * @param callback
      */
+    @Override
     public void onGeolocationPermissionsShowPrompt(String origin, Callback callback) {
         super.onGeolocationPermissionsShowPrompt(origin, callback);
         callback.invoke(origin, true, false);
@@ -183,12 +188,13 @@ public class SystemWebChromeClient extends WebChromeClient {
         parentEngine.getCordovaWebView().hideCustomView();
     }
 
-    @Override
     /**
      * Ask the host application for a custom progress view to show while
      * a <video> is loading.
+     *
      * @return View The progress view.
      */
+    @Override
     public View getVideoLoadingProgressView() {
         if (mVideoProgressView == null) {
             // Create a new Loading view programmatically.
@@ -199,7 +205,7 @@ public class SystemWebChromeClient extends WebChromeClient {
             RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             layoutParams.addRule(RelativeLayout.CENTER_IN_PARENT);
             layout.setLayoutParams(layoutParams);
-            // the proress bar
+            // the progress bar
             ProgressBar bar = new ProgressBar(parentEngine.getView().getContext());
             LinearLayout.LayoutParams barLayoutParams = new LinearLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
             barLayoutParams.gravity = Gravity.CENTER;
@@ -212,50 +218,108 @@ public class SystemWebChromeClient extends WebChromeClient {
     }
 
     @Override
-    public boolean onShowFileChooser(WebView webView, final ValueCallback<Uri[]> filePathsCallback, final WebChromeClient.FileChooserParams fileChooserParams) {
+    public boolean onShowFileChooser(WebView webView, final ValueCallback<Uri[]> filePathsCallback,
+            final WebChromeClient.FileChooserParams fileChooserParams) {
+        Intent fileIntent = fileChooserParams.createIntent();
+
         // Check if multiple-select is specified
         Boolean selectMultiple = false;
         if (fileChooserParams.getMode() == WebChromeClient.FileChooserParams.MODE_OPEN_MULTIPLE) {
             selectMultiple = true;
         }
-        Intent intent = fileChooserParams.createIntent();
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, selectMultiple);
-        
+        fileIntent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, selectMultiple);
+
         // Uses Intent.EXTRA_MIME_TYPES to pass multiple mime types.
         String[] acceptTypes = fileChooserParams.getAcceptTypes();
         if (acceptTypes.length > 1) {
-            intent.setType("*/*"); // Accept all, filter mime types by Intent.EXTRA_MIME_TYPES.
-            intent.putExtra(Intent.EXTRA_MIME_TYPES, acceptTypes);
+            fileIntent.setType("*/*"); // Accept all, filter mime types by Intent.EXTRA_MIME_TYPES.
+            fileIntent.putExtra(Intent.EXTRA_MIME_TYPES, acceptTypes);
         }
+
+        // Image from camera intent
+        Uri tempUri = null;
+        Intent captureIntent = null;
+        if (fileChooserParams.isCaptureEnabled()) {
+            captureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            Context context = parentEngine.getView().getContext();
+            if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA_ANY)
+                    && captureIntent.resolveActivity(context.getPackageManager()) != null) {
+                try {
+                    File tempFile = createTempFile(context);
+                    LOG.d(LOG_TAG, "Temporary photo capture file: " + tempFile);
+                    tempUri = createUriForFile(context, tempFile);
+                    LOG.d(LOG_TAG, "Temporary photo capture URI: " + tempUri);
+                    captureIntent.putExtra(MediaStore.EXTRA_OUTPUT, tempUri);
+                } catch (IOException e) {
+                    LOG.e(LOG_TAG, "Unable to create temporary file for photo capture", e);
+                    captureIntent = null;
+                }
+            } else {
+                LOG.w(LOG_TAG, "Device does not support photo capture");
+                captureIntent = null;
+            }
+        }
+        final Uri captureUri = tempUri;
+
+        // Chooser intent
+        Intent chooserIntent = Intent.createChooser(fileIntent, null);
+        if (captureIntent != null) {
+            chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, new Intent[] { captureIntent });
+        }
+
         try {
+            LOG.i(LOG_TAG, "Starting intent for file chooser");
             parentEngine.cordova.startActivityForResult(new CordovaPlugin() {
                 @Override
                 public void onActivityResult(int requestCode, int resultCode, Intent intent) {
+                    // Handle result
                     Uri[] result = null;
-                    if (resultCode ==  Activity.RESULT_OK && intent != null) {
-                        if (intent.getClipData() != null) {
-                            // handle multiple-selected files
-                            final int numSelectedFiles = intent.getClipData().getItemCount();
-                            result = new Uri[numSelectedFiles];
-                            for (int i = 0; i < numSelectedFiles; i++) {
-                                result[i] = intent.getClipData().getItemAt(i).getUri();
-                                LOG.d(LOG_TAG, "Receive file chooser URL: " + result[i]);
+                    if (resultCode == Activity.RESULT_OK) {
+                        List<Uri> uris = new ArrayList<Uri>();
+
+                        if (intent != null && intent.getData() != null) { // single file
+                            LOG.v(LOG_TAG, "Adding file (single): " + intent.getData());
+                            uris.add(intent.getData());
+                        } else if (captureUri != null) { // camera
+                            LOG.v(LOG_TAG, "Adding camera capture: " + captureUri);
+                            uris.add(captureUri);
+                        } else if (intent != null && intent.getClipData() != null) { // multiple files
+                            ClipData clipData = intent.getClipData();
+                            int count = clipData.getItemCount();
+                            for (int i = 0; i < count; i++) {
+                                Uri uri = clipData.getItemAt(i).getUri();
+                                LOG.v(LOG_TAG, "Adding file (multiple): " + uri);
+                                if (uri != null) {
+                                    uris.add(uri);
+                                }
                             }
                         }
-                        else if (intent.getData() != null) {
-                            // handle single-selected file
-                            result = WebChromeClient.FileChooserParams.parseResult(resultCode, intent);
-                            LOG.d(LOG_TAG, "Receive file chooser URL: " + result);
+
+                        if (!uris.isEmpty()) {
+                            LOG.d(LOG_TAG, "Receive file chooser URL: " + uris.toString());
+                            result = uris.toArray(new Uri[uris.size()]);
                         }
                     }
                     filePathsCallback.onReceiveValue(result);
                 }
-            }, intent, FILECHOOSER_RESULTCODE);
+            }, chooserIntent, FILECHOOSER_RESULTCODE);
         } catch (ActivityNotFoundException e) {
-            LOG.w("No activity found to handle file chooser intent.", e);
+            LOG.w(LOG_TAG, "No activity found to handle file chooser intent.", e);
             filePathsCallback.onReceiveValue(null);
         }
         return true;
+    }
+
+    private File createTempFile(Context context) throws IOException {
+        // Create an image file name
+        File tempFile = File.createTempFile("temp", ".jpg", context.getCacheDir());
+        return tempFile;
+    }
+
+    private Uri createUriForFile(Context context, File tempFile) throws IOException {
+        String appId = context.getPackageName();
+        Uri uri = FileProvider.getUriForFile(context, appId + ".cdv.core.file.provider", tempFile);
+        return uri;
     }
 
     @Override

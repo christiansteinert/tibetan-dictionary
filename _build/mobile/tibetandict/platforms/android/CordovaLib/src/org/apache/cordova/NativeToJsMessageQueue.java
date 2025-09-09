@@ -124,12 +124,10 @@ public class NativeToJsMessageQueue {
     }
 
     /**
-     * Combines and returns queued messages combined into a single string.
-     *
      * Combines as many messages as possible, without exceeding
      * COMBINED_RESPONSE_CUTOFF in case of multiple response messages.
      *
-     * Returns null if the queue is empty.
+     * @return a string of queued messages combined or null if the queue is empty.
      */
     public String popAndEncode(boolean fromOnlineEvent) {
         synchronized (this) {
@@ -302,6 +300,7 @@ public class NativeToJsMessageQueue {
         @Override
         public void onNativeToJsMessageAvailable(final NativeToJsMessageQueue queue) {
             cordova.getActivity().runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     String js = queue.popAndEncodeAsJs();
                     if (js != null) {
@@ -330,6 +329,7 @@ public class NativeToJsMessageQueue {
         @Override
         public void reset() {
             delegate.runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     online = false;
                     // If the following call triggers a notifyOfFlush, then ignore it.
@@ -342,6 +342,7 @@ public class NativeToJsMessageQueue {
         @Override
         public void onNativeToJsMessageAvailable(final NativeToJsMessageQueue queue) {
             delegate.runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     if (!queue.isEmpty()) {
                         ignoreNextFlush = false;
@@ -372,6 +373,7 @@ public class NativeToJsMessageQueue {
         @Override
         public void onNativeToJsMessageAvailable(final NativeToJsMessageQueue queue) {
             cordova.getActivity().runOnUiThread(new Runnable() {
+                @Override
                 public void run() {
                     String js = queue.popAndEncodeAsJs();
                     if (js != null) {

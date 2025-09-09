@@ -135,7 +135,9 @@ public class CordovaInterfaceImpl implements CordovaInterface {
     }
 
     /**
-     * Routes the result to the awaiting plugin. Returns false if no plugin was waiting.
+     * Routes the result to the awaiting plugin.
+     *
+     * @return false if no plugin was waiting.
      */
     public boolean onActivityResult(int requestCode, int resultCode, Intent intent) {
         CordovaPlugin callback = activityResultCallback;
@@ -223,18 +225,21 @@ public class CordovaInterfaceImpl implements CordovaInterface {
         }
     }
 
+    @Override
     public void requestPermission(CordovaPlugin plugin, int requestCode, String permission) {
         String[] permissions = new String [1];
         permissions[0] = permission;
         requestPermissions(plugin, requestCode, permissions);
     }
 
-        @SuppressLint("NewApi")
+    @SuppressLint("NewApi")
+    @Override
     public void requestPermissions(CordovaPlugin plugin, int requestCode, String [] permissions) {
         int mappedRequestCode = permissionResultCallbacks.registerCallback(plugin, requestCode);
         getActivity().requestPermissions(permissions, mappedRequestCode);
     }
 
+    @Override
     public boolean hasPermission(String permission)
     {
         return PackageManager.PERMISSION_GRANTED == activity.checkSelfPermission(permission);

@@ -16,6 +16,8 @@
   <script src="lib/jquery_textchange/jquery.textchange.js"></script>
   <script src="lib/tokenizer/tokenizer-1.0.1.js"></script>
   <script src="lib/jquery_tooltip/tooltip.js"></script>
+  <script src="lib/sortable_js/sortable.min.js"></script>
+  
   <script src="data/syllablelist.js"></script>
   <script src="settings/dictlist.js"></script>
   <script src="settings/abbreviations.js"></script>
@@ -44,7 +46,7 @@
       <a id="clearBtn"       href="javascript:DICT.clearInput();"><img title="Clear input" src="code/css/clear.png" width="32" height="43"></a>
       <a id="switchBtnTibEn" href="javascript:DICT.switchInputLang();" class="switchBtn"><img title="Switch input language" src="code/css/tib-en.png" width="23" height="43"></a>
       <a id="switchBtnEnTib" href="javascript:DICT.switchInputLang();" style="display:none" class="switchBtn"><img title="Switch input language" src="code/css/en-tib.png" width="23" height="43"></a>
-      <a id="settingsBtn"    href="javascript:SETTINGS.btnShowSettings();"><img title="Settings" src="code/css/settings.png" width="32" height="43"></a>
+      <a id="settingsBtn"    href="#settings"><img title="Settings" src="code/css/settings.png" width="32" height="43"></a>
     </div>
     <div class="page">
       <div class="contentArea">
@@ -128,7 +130,7 @@
       </div>
       
       <div>
-        <span class="label"><strong>Active Dictio&shy;naries</strong> (select the dictionaries that you want to use  and change their order if you like):</span>
+        <span class="label"><strong>Active Dictio&shy;naries</strong> (select and change the order of the dictionaries that you want to use. You can move dictionaries up and down by dragging the dotted area at the beginning and end of each line):</span>
         <p id="select-dict"></p>
       </div>
       

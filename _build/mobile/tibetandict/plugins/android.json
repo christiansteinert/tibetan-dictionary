@@ -7,14 +7,14 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-android-support-gradle-release": {
-      "ANDROID_SUPPORT_VERSION": "27.+",
-      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
-    },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "de.christian_steinert.tibetandict"
     },
     "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "de.christian_steinert.tibetandict"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
       "PACKAGE_NAME": "de.christian_steinert.tibetandict"
     }
   },

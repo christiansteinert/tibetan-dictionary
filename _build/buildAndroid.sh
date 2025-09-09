@@ -3,7 +3,7 @@ currpath="`pwd`"
 
 if [ -z "$JAVA_HOME" ]
 then
-  export JAVA_HOME=/usr/lib/jvm/java-11/
+  export JAVA_HOME=/usr/lib/jvm/java-17/
   $JAVA_HOME/bin/javac -version
 fi
 
@@ -23,11 +23,11 @@ echo ANDROID_HOME: $ANDROID_HOME
 echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
 
 
+cordova prepare android
+
 # copy the customized Java classes for the cordova database plugin
 cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
 
-# copy the splash screen image
-cp ../_assets/logo512_vectorized.xml mobile/tibetandict/platforms/android/app/src/main/res/drawable/ic_dict_splashscreen.xml
 
 ############################################################################################################################################
 #### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)
@@ -85,8 +85,8 @@ find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_stei
 
 # kick of the actual cordova build process
   cd mobile/tibetandict/platforms/android/cordova
+  
   cordova build android --release -- --packageType=apk
-
 
 
 
@@ -99,7 +99,7 @@ find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_stei
   cd "$currpath"
   cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-FULL.apk
 
-  $ANDROID_TOOLS_PATH/zipalign -v 4 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
+  $ANDROID_TOOLS_PATH/zipalign 16 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
 
   #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-FULL.apk android_release_key
   echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk
@@ -169,7 +169,7 @@ cordova build android --release -- --packageType=apk
 cd "$currpath"
 cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-PUBLIC.apk
 
-$ANDROID_TOOLS_PATH/zipalign -v 4 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
+$ANDROID_TOOLS_PATH/zipalign 16 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
 
 #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-PUBLIC.apk android_release_key
 echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk

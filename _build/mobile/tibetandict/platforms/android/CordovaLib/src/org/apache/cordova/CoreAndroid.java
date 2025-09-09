@@ -69,10 +69,12 @@ public class CoreAndroid extends CordovaPlugin {
      * Executes the request and returns PluginResult.
      *
      * @param action            The action to execute.
-     * @param args              JSONArry of arguments for the plugin.
+     * @param args              JSONArray of arguments for the plugin.
      * @param callbackContext   The callback context from which we were invoked.
+     *
      * @return                  A PluginResult object with a status and message.
      */
+    @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         PluginResult.Status status = PluginResult.Status.OK;
         String result = "";
@@ -82,10 +84,11 @@ public class CoreAndroid extends CordovaPlugin {
                 this.clearCache();
             }
             else if (action.equals("show")) {
-                // This gets called from JavaScript onCordovaReady to show the webview.
+                // This gets called from JavaScript onCordovaReady to show the WebView.
                 // I recommend we change the name of the Message as spinner/stop is not
-                // indicative of what this actually does (shows the webview).
+                // indicative of what this actually does (shows the WebView).
                 cordova.getActivity().runOnUiThread(new Runnable() {
+                    @Override
                     public void run() {
                         webView.getPluginManager().postMessage("spinner", "stop");
                     }
@@ -144,6 +147,7 @@ public class CoreAndroid extends CordovaPlugin {
      */
     public void clearCache() {
         cordova.getActivity().runOnUiThread(new Runnable() {
+            @Override
             public void run() {
                 webView.clearCache();
             }
@@ -151,7 +155,7 @@ public class CoreAndroid extends CordovaPlugin {
     }
 
     /**
-     * Load the url into the webview.
+     * Load the url into the WebView.
      *
      * @param url
      * @param props			Properties that can be passed in to the Cordova activity (i.e. loadingDialog, wait, ...)
@@ -215,6 +219,7 @@ public class CoreAndroid extends CordovaPlugin {
      */
     public void clearHistory() {
         cordova.getActivity().runOnUiThread(new Runnable() {
+            @Override
             public void run() {
                 webView.clearHistory();
             }
@@ -227,6 +232,7 @@ public class CoreAndroid extends CordovaPlugin {
      */
     public void backHistory() {
         cordova.getActivity().runOnUiThread(new Runnable() {
+            @Override
             public void run() {
                 webView.backHistory();
             }
@@ -349,10 +355,10 @@ public class CoreAndroid extends CordovaPlugin {
         }
     }
 
-    /*
+    /**
      * Unregister the receiver
-     *
      */
+    @Override
     public void onDestroy()
     {
         webView.getContext().unregisterReceiver(this.telephonyReceiver);

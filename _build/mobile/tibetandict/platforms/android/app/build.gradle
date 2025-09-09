@@ -21,7 +21,11 @@ apply plugin: 'com.android.application'
 
 if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
     apply plugin: 'kotlin-android'
-    apply plugin: 'kotlin-android-extensions'
+
+    if(!cdvHelpers.isVersionGreaterThanEqual(cordovaConfig.KOTLIN_VERSION, '1.8.0')) {
+        println "Kotlin version < 1.8.0 detected. Applying kotlin-android-extensions plugin."
+        apply plugin: 'kotlin-android-extensions'
+    }
 }
 
 buildscript {
@@ -182,6 +186,10 @@ task cdvPrintProps {
 android {
     namespace cordovaConfig.PACKAGE_NAMESPACE
 
+    buildFeatures {
+        buildConfig true
+    }
+
     defaultConfig {
         versionCode cdvVersionCode ?: new BigInteger("" + privateHelpers.extractIntFromManifest("versionCode"))
         applicationId cordovaConfig.PACKAGE_NAMESPACE
@@ -249,8 +257,19 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_SOURCE_COMPATIBILITY)
+        targetCompatibility JavaLanguageVersion.of(cordovaConfig.JAVA_TARGET_COMPATIBILITY)
+    }
+
+    if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
+        // If KOTLIN_JVM_TARGET is null, fallback to JAVA_TARGET_COMPATIBILITY,
+        // as they generally should be equal
+        cordovaConfig.KOTLIN_JVM_TARGET = cordovaConfig.KOTLIN_JVM_TARGET ?:
+                cordovaConfig.JAVA_TARGET_COMPATIBILITY
+
+        kotlinOptions {
+            jvmTarget = JavaLanguageVersion.of(cordovaConfig.KOTLIN_JVM_TARGET)
+        }
     }
 
     if (cdvReleaseSigningPropertiesFile) {
@@ -293,7 +312,16 @@ dependencies {
     implementation "androidx.core:core-splashscreen:${cordovaConfig.ANDROIDX_CORE_SPLASHSCREEN_VERSION}"
 
     if (cordovaConfig.IS_GRADLE_PLUGIN_KOTLIN_ENABLED) {
-        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${cordovaConfig.KOTLIN_VERSION}"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib:${cordovaConfig.KOTLIN_VERSION}"
+    }
+
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:${cordovaConfig.KOTLIN_VERSION}") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:${cordovaConfig.KOTLIN_VERSION}") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
     }
 
     // SUB-PROJECT DEPENDENCIES START
@@ -343,8 +371,4 @@ if (hasProperty('postBuildExtras')) {
 
 if (cordovaConfig.IS_GRADLE_PLUGIN_GOOGLE_SERVICES_ENABLED) {
     apply plugin: 'com.google.gms.google-services'
-}
-
-android {
-    namespace = "de.christian_steinert.tibetandict"
 }
