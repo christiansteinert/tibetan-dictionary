@@ -1452,17 +1452,39 @@ var DICT={
    * Show options for searching shared text
    */
   showShareSearchOptions: function(text) {
-    // Simple approach - detect if text contains mainly Tibetan characters or English
+    // Auto-detect the most likely search type
     var containsTibetan = /[\u0F00-\u0FFF]/.test(text);
-    var containsWylie = /[kKgGcCjJtTdDpPbBmnrlwvyszhfqx]/.test(text);
     
-    // If it contains Tibetan unicode, search as Tibetan
-    if (containsTibetan || containsWylie) {
-      DICT.searchSharedText(text, "tib");
-    } else {
-      // Otherwise, assume English and search English->Tibetan
-      DICT.searchSharedText(text, "en");
+    // Conservative Wylie detection - only very distinctive patterns
+    var containsWylie = false;
+    if (!containsTibetan) {
+      // Check for very specific Tibetan patterns
+      var wyliePatterns = [
+        /\b(sngags|rdzogs|byang|gzigs|brtags|phyogs|sgyu|spyod|thabs|ye shes|bde ba|dbang po)\b/i,  // Common Tibetan terms
+        /\b[kg]?[rnl]?[dgbptc][rnl][aiou][ng]?\b/,  // Typical Tibetan syllable with consonant clusters
+        /(tsh|dz|zh)/  // Very distinctive Wylie combinations
+      ];
+      
+      for (var i = 0; i < wyliePatterns.length; i++) {
+        if (wyliePatterns[i].test(text)) {
+          containsWylie = true;
+          break;
+        }
+      }
     }
+    
+    // Auto-detect the most likely search type, but be conservative
+    var selectedInputLang;
+    if (containsTibetan || containsWylie) {
+      selectedInputLang = "tib";
+      DICT.log("Detected Tibetan/Wylie text, searching as Tibetan");
+    } else {
+      // Default to English for ambiguous cases
+      selectedInputLang = "en";  
+      DICT.log("Detected English text (or ambiguous), searching as English");
+    }
+    
+    DICT.searchSharedText(text, selectedInputLang);
   },
 
   /**
