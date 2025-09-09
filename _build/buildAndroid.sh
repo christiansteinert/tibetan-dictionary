@@ -28,6 +28,10 @@ cordova prepare android
 # copy the customized Java classes for the cordova database plugin
 cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
 
+# copy the share text plugin Java class
+mkdir -p mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/
+cp mobile/tibetandict/plugins/share-text-plugin/src/android/ShareTextPlugin.java mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/  
+
 
 ############################################################################################################################################
 #### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)

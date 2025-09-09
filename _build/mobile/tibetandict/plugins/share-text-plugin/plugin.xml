@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="share-text-plugin"
+    version="1.0.0">
+
+    <name>Share Text Plugin</name>
+    <description>Plugin to handle shared text from other Android applications</description>
+    <license>GPL v2/v3</license>
+    <author>Christian Steinert</author>
+
+    <js-module src="www/ShareTextPlugin.js" name="ShareTextPlugin">
+        <clobbers target="ShareTextPlugin" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ShareTextPlugin">
+                <param name="android-package" value="de.christian_steinert.tibetandict.ShareTextPlugin"/>
+            </feature>
+        </config-file>
+
+        <!-- Add intent filter for receiving shared text -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity[@android:name='MainActivity']">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/*" />
+            </intent-filter>
+        </config-file>
+
+        <source-file src="src/android/ShareTextPlugin.java" target-dir="src/de/christian_steinert/tibetandict"/>
+    </platform>
+
+</plugin>

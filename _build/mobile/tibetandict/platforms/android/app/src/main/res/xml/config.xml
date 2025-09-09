@@ -6,6 +6,9 @@
     <feature name="SQLitePlugin">
         <param name="android-package" value="io.sqlc.SQLitePlugin" />
     </feature>
+    <feature name="ShareTextPlugin">
+        <param name="android-package" value="de.christian_steinert.tibetandict.ShareTextPlugin" />
+    </feature>
     <name>TibetanDictionary</name>
     <description>A Tibetan Dictionary app that supports Wylie input, uses Tibetan script and comes with various dictionaries.</description>
     <author email="dictionary@christian-steinert.de" href="http://www.christian-steinert.de">Christian Steinert</author>

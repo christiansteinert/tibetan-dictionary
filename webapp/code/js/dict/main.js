@@ -1416,6 +1416,73 @@ var DICT={
     }
     this.highlightListItem();
     this.scrollToTop();
+  },
+
+  /**
+   * Handle shared text from other Android apps
+   */
+  handleSharedText: function() {
+    if (window.ShareTextPlugin) {
+      ShareTextPlugin.getSharedText(
+        function(sharedText) {
+          if (sharedText && sharedText.trim().length > 0) {
+            DICT.log("Shared text received: " + sharedText);
+            
+            // Clean up the shared text - remove extra whitespace and limit length
+            sharedText = sharedText.trim();
+            if (sharedText.length > 200) {
+              sharedText = sharedText.substring(0, 200);
+            }
+            
+            // Show user a dialog to choose search type
+            DICT.showShareSearchOptions(sharedText);
+            
+            // Clear the shared text so it doesn't interfere with subsequent app usage
+            ShareTextPlugin.clearSharedText(function() {}, function() {});
+          }
+        },
+        function(error) {
+          DICT.log("Error getting shared text: " + error);
+        }
+      );
+    }
+  },
+
+  /**
+   * Show options for searching shared text
+   */
+  showShareSearchOptions: function(text) {
+    // Simple approach - detect if text contains mainly Tibetan characters or English
+    var containsTibetan = /[\u0F00-\u0FFF]/.test(text);
+    var containsWylie = /[kKgGcCjJtTdDpPbBmnrlwvyszhfqx]/.test(text);
+    
+    // If it contains Tibetan unicode, search as Tibetan
+    if (containsTibetan || containsWylie) {
+      DICT.searchSharedText(text, "tib");
+    } else {
+      // Otherwise, assume English and search English->Tibetan
+      DICT.searchSharedText(text, "en");
+    }
+  },
+
+  /**
+   * Search for shared text in the dictionary
+   */
+  searchSharedText: function(text, inputLang) {
+    // Create state object for navigation
+    var state = {
+      activeTerm: text,
+      lang: "tib",  // Always search in Tibetan dictionary
+      inputLang: inputLang,
+      currentListTerm: text,
+      forceLeftSideVisible: inputLang === "en",  // Show sidebar for English searches
+      offset: 0
+    };
+    
+    // Navigate to the search results
+    var stateStr = JSON.stringify(state);
+    var encodedState = encodeURIComponent(stateStr);
+    window.location.hash = encodedState;
   }
 };
 
@@ -1426,6 +1493,11 @@ if(window.cordova) {
   document.addEventListener("deviceready", function(){
       jQuery(function($){
       DICT.init($);
+      
+      // Handle shared text after initialization
+      setTimeout(function() {
+        DICT.handleSharedText();
+      }, 1000);
     });
   }, false);
 } else {
