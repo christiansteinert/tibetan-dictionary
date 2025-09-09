@@ -1423,6 +1423,7 @@ var DICT={
    */
   handleSharedText: function() {
     if (window.ShareTextPlugin) {
+      DICT.log("Checking for shared text...");
       ShareTextPlugin.getSharedText(
         function(sharedText) {
           if (sharedText && sharedText.trim().length > 0) {
@@ -1432,19 +1433,27 @@ var DICT={
             sharedText = sharedText.trim();
             if (sharedText.length > 200) {
               sharedText = sharedText.substring(0, 200);
+              DICT.log("Truncated long shared text to 200 characters");
             }
             
             // Show user a dialog to choose search type
             DICT.showShareSearchOptions(sharedText);
             
             // Clear the shared text so it doesn't interfere with subsequent app usage
-            ShareTextPlugin.clearSharedText(function() {}, function() {});
+            ShareTextPlugin.clearSharedText(
+              function(result) { DICT.log("Shared text cleared: " + result); },
+              function(error) { DICT.log("Error clearing shared text: " + error); }
+            );
+          } else {
+            DICT.log("No shared text found");
           }
         },
         function(error) {
           DICT.log("Error getting shared text: " + error);
         }
       );
+    } else {
+      DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
     }
   },
 
@@ -1491,6 +1500,8 @@ var DICT={
    * Search for shared text in the dictionary
    */
   searchSharedText: function(text, inputLang) {
+    DICT.log("Searching for shared text: '" + text + "' with input language: " + inputLang);
+    
     // Create state object for navigation
     var state = {
       activeTerm: text,
@@ -1504,6 +1515,13 @@ var DICT={
     // Navigate to the search results
     var stateStr = JSON.stringify(state);
     var encodedState = encodeURIComponent(stateStr);
+    
+    DICT.log("Generated hash URL: #" + encodedState);
+    
+    // Set a flag to indicate this is a shared search (could be used for UI feedback)
+    DICT._isSharedSearch = true;
+    
+    // Navigate to the search results
     window.location.hash = encodedState;
   }
 };
