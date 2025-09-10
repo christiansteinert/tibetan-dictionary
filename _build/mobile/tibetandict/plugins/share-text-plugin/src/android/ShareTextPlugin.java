@@ -1,11 +1,13 @@
 package de.christian_steinert.tibetandict;
 
 import android.content.Intent;
+import android.content.ComponentName;
 import android.util.Log;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ShareTextPlugin extends CordovaPlugin {
     private static final String TAG = "ShareTextPlugin";
@@ -15,9 +17,6 @@ public class ShareTextPlugin extends CordovaPlugin {
         try {
             if ("getSharedText".equals(action)) {
                 getSharedText(callbackContext);
-                return true;
-            } else if ("clearSharedText".equals(action)) {
-                clearSharedText(callbackContext);
                 return true;
             }
         } catch (Exception e) {
@@ -29,7 +28,7 @@ public class ShareTextPlugin extends CordovaPlugin {
     }
 
     /**
-     * Check for shared text and return it if available
+     * Check for shared text and return it with language preference if available
      */
     private void getSharedText(CallbackContext callbackContext) {
         try {
@@ -44,8 +43,38 @@ public class ShareTextPlugin extends CordovaPlugin {
                     String text = intent.getStringExtra(Intent.EXTRA_TEXT);
                     if (text != null && !text.trim().isEmpty()) {
                         String cleanedText = text.trim();
-                        Log.d(TAG, "Shared text found: " + cleanedText);
-                        callbackContext.success(cleanedText);
+                        
+                        // Determine search language based on which activity alias was used
+                        String searchLanguage = "en"; // Default to English
+                        ComponentName componentName = intent.getComponent();
+                        if (componentName != null) {
+                            String activityName = componentName.getClassName();
+                            Log.d(TAG, "Activity component: " + activityName);
+                            
+                            if (activityName.contains("ShareTibetanActivity")) {
+                                searchLanguage = "tib";
+                                Log.d(TAG, "Detected Tibetan -> English share target");
+                            } else if (activityName.contains("ShareEnglishActivity")) {
+                                searchLanguage = "en";
+                                Log.d(TAG, "Detected English -> Tibetan share target");
+                            }
+                        }
+                        
+                        // Create JSON response with text and language
+                        JSONObject result = new JSONObject();
+                        result.put("text", cleanedText);
+                        result.put("language", searchLanguage);
+                        
+                        Log.d(TAG, "Shared text found: " + cleanedText + " with language: " + searchLanguage);
+                        
+                        // Clear the intent immediately after reading to prevent re-processing
+                        Intent newIntent = new Intent(intent);
+                        newIntent.setAction(Intent.ACTION_MAIN);
+                        newIntent.removeExtra(Intent.EXTRA_TEXT);
+                        cordova.getActivity().setIntent(newIntent);
+                        Log.d(TAG, "Cleared shared text from intent");
+                        
+                        callbackContext.success(result);
                         return;
                     } else {
                         Log.d(TAG, "Intent contains no text content");
@@ -62,28 +91,6 @@ public class ShareTextPlugin extends CordovaPlugin {
         } catch (Exception e) {
             Log.e(TAG, "Error getting shared text", e);
             callbackContext.error("Error getting shared text: " + e.getMessage());
-        }
-    }
-
-    /**
-     * Clear any stored shared text
-     */
-    private void clearSharedText(CallbackContext callbackContext) {
-        try {
-            // Clear the intent action to prevent re-processing
-            Intent intent = cordova.getActivity().getIntent();
-            if (intent != null && Intent.ACTION_SEND.equals(intent.getAction())) {
-                // Create a new intent to replace the current one
-                Intent newIntent = new Intent(intent);
-                newIntent.setAction(Intent.ACTION_MAIN);
-                newIntent.removeExtra(Intent.EXTRA_TEXT);
-                cordova.getActivity().setIntent(newIntent);
-                Log.d(TAG, "Cleared shared text from intent");
-            }
-            callbackContext.success("Shared text cleared");
-        } catch (Exception e) {
-            Log.e(TAG, "Error clearing shared text", e);
-            callbackContext.error("Error clearing shared text: " + e.getMessage());
         }
     }
 }
