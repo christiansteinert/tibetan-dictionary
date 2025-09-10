@@ -2,31 +2,51 @@
 
 ## Overview
 
-This implementation adds the ability for the Tibetan Dictionary Android app to receive shared text from other applications. When users share text from any app on Android, they will see "Search in Tibetan Dictionary" as an option.
+This implementation adds the ability for the Tibetan Dictionary Android app to receive shared text from other applications. When users share text from any app on Android, they will see two separate sharing options: "Tibetan -> English" and "English -> Tibetan".
 
 ## Features
 
-- **Intent Filter Registration**: The app registers itself as a target for `ACTION_SEND` intents with `text/plain` MIME type
-- **Automatic Language Detection**: Intelligently detects whether shared text is Tibetan/Wylie or English
-- **URL Hash Navigation**: Automatically constructs the correct hash URL format for dictionary searches
+- **Separate Share Targets**: Two distinct sharing options in Android's share menu
+- **No Auto-Detection**: The language direction is determined by user choice, not automatic text analysis
+- **Immediate Text Clearing**: Shared text is cleared automatically after being read to prevent re-processing
+- **Language Specification**: The plugin provides both the shared text and the selected language direction
 - **Clean Integration**: Seamlessly integrates with existing Cordova application architecture
 
 ## Implementation Details
 
 ### Android Components
 
-1. **Intent Filter** (`AndroidManifest.xml`):
+1. **Activity Aliases** (`plugin.xml`):
    ```xml
-   <intent-filter android:label="Search in Tibetan Dictionary">
-       <action android:name="android.intent.action.SEND" />
-       <category android:name="android.intent.category.DEFAULT" />
-       <data android:mimeType="text/plain" />
-   </intent-filter>
+   <activity-alias android:name=".ShareTibetanActivity"
+                  android:targetActivity="MainActivity"
+                  android:exported="true"
+                  android:label="Tibetan -> English">
+       <intent-filter android:label="Tibetan -> English">
+           <action android:name="android.intent.action.SEND" />
+           <category android:name="android.intent.category.DEFAULT" />
+           <data android:mimeType="text/plain" />
+       </intent-filter>
+       <meta-data android:name="searchLanguage" android:value="tib" />
+   </activity-alias>
+   <activity-alias android:name=".ShareEnglishActivity"
+                  android:targetActivity="MainActivity"
+                  android:exported="true"
+                  android:label="English -> Tibetan">
+       <intent-filter android:label="English -> Tibetan">
+           <action android:name="android.intent.action.SEND" />
+           <category android:name="android.intent.category.DEFAULT" />
+           <data android:mimeType="text/plain" />
+       </intent-filter>
+       <meta-data android:name="searchLanguage" android:value="en" />
+   </activity-alias>
    ```
 
 2. **ShareTextPlugin.java**: Cordova plugin that handles incoming share intents
+   - Detects which activity alias was used based on component name
    - Extracts shared text from Android Intent
-   - Provides JavaScript interface via `cordova.exec()`
+   - Returns JSON object with both text and language: `{text: string, language: string}`
+   - Automatically clears shared text after reading to prevent re-processing
    - Handles error cases gracefully
 
 3. **Cordova Configuration**: Plugin properly registered in `config.xml` and `res/xml/config.xml`
@@ -34,30 +54,27 @@ This implementation adds the ability for the Tibetan Dictionary Android app to r
 ### JavaScript Components
 
 1. **ShareTextPlugin.js**: JavaScript interface for the native plugin
-   - `getSharedText()`: Retrieves shared text from native layer
-   - `clearSharedText()`: Clears processed text to prevent re-processing
+   - `getSharedText()`: Retrieves shared text and language from native layer
+   - No `clearSharedText()` function needed (handled automatically in Java)
 
-2. **Enhanced main.js**: Added functions to handle shared text workflow
+2. **Enhanced main.js**: Simplified shared text workflow
    - `handleSharedText()`: Called on app startup to check for shared text
-   - `showShareSearchOptions()`: Detects language and chooses search type
-   - `searchSharedText()`: Creates proper hash URL for dictionary navigation
+   - Removed `showShareSearchOptions()`: No more auto-detection logic
+   - `searchSharedText()`: Creates proper hash URL for dictionary navigation using provided language
 
-### Language Detection Logic
+### Language Handling
 
-The app uses a conservative approach to detect text language:
+The app no longer attempts to detect the language of shared text. Instead:
 
-- **Tibetan Unicode**: Checks for Tibetan Unicode characters (U+0F00-U+0FFF)
-- **Wylie Transliteration**: Looks for distinctive patterns:
-  - Common Tibetan terms: `sngags`, `rdzogs`, `byang`, `phyogs`, etc.
-  - Tibetan consonant clusters: `tsh`, `dz`, `zh`
-  - Syllable patterns typical of Tibetan transliteration
-- **English**: Default fallback for ambiguous cases
+- **User Choice**: Language direction is determined by which sharing option the user selects
+- **"Tibetan -> English"**: Text is treated as Tibetan/Wylie input (`inputLang: "tib"`)
+- **"English -> Tibetan"**: Text is treated as English input (`inputLang: "en"`)
 
 ### Hash URL Format
 
-Generated hash URLs follow the expected format from the issue:
+Generated hash URLs follow the expected format:
 
-**For Tibetan text:**
+**For Tibetan -> English search:**
 ```json
 {
   "activeTerm": "<TERM>",
@@ -69,7 +86,7 @@ Generated hash URLs follow the expected format from the issue:
 }
 ```
 
-**For English text:**
+**For English -> Tibetan search:**
 ```json
 {
   "activeTerm": "<TERM>",
@@ -89,33 +106,28 @@ Generated hash URLs follow the expected format from the issue:
 
 ### Test Scenarios
 
-1. **Share Tibetan Unicode Text**:
-   - Open any app with Tibetan text (e.g., browser, notes)
-   - Select Tibetan text like "རིན་པོ་ཆེ།"
-   - Tap "Share" → Choose "Search in Tibetan Dictionary"
-   - App should open and search as Tibetan term
+1. **Share Any Text for Tibetan Search**:
+   - Open any app with text (e.g., browser, notes)
+   - Select any text
+   - Tap "Share" → Choose "Tibetan -> English"
+   - App should open and search the text as Tibetan input
 
-2. **Share Wylie Text**:
-   - Select text like "byang chub" or "rdzogs chen"
-   - Share → "Search in Tibetan Dictionary"
-   - Should be detected as Tibetan and searched accordingly
+2. **Share Any Text for English Search**:
+   - Select any text from any app
+   - Share → "English -> Tibetan"
+   - App should open and search the text as English input
 
-3. **Share English Text**:
-   - Select English text like "enlightenment" or "meditation"
-   - Share → "Search in Tibetan Dictionary"
-   - Should be detected as English and search English→Tibetan
-
-4. **Share Mixed/Ambiguous Text**:
-   - Text that could be either language
-   - Should default to English search (conservative approach)
+3. **Multiple Options Available**:
+   - Both "Tibetan -> English" and "English -> Tibetan" should appear in the share menu
+   - Each option should work correctly regardless of the actual text content
 
 ### Expected Behavior
 
-1. When sharing text, "Search in Tibetan Dictionary" appears in the share menu
-2. Selecting it opens the Tibetan Dictionary app
-3. The app automatically navigates to search results for the shared text
-4. The sidebar visibility and search direction depend on detected language
-5. No manual language selection required (auto-detection)
+1. When sharing text, both "Tibetan -> English" and "English -> Tibetan" appear in the share menu
+2. Selecting either option opens the Tibetan Dictionary app
+3. The app automatically navigates to search results using the selected language direction
+4. The sidebar visibility depends on the selected option (visible for English searches)
+5. No language detection occurs - user choice determines search behavior
 
 ## Build Integration
 
@@ -133,7 +145,7 @@ This ensures the plugin is properly included in both public and private builds.
 
 ```
 _build/mobile/tibetandict/plugins/share-text-plugin/
-├── plugin.xml                 # Plugin configuration
+├── plugin.xml                 # Plugin configuration with activity aliases
 ├── package.json              # NPM package metadata
 ├── src/android/
 │   └── ShareTextPlugin.java  # Native Android implementation
@@ -148,15 +160,15 @@ webapp/
 
 ## Troubleshooting
 
-- **App doesn't appear in share menu**: Check that intent filter is properly added to AndroidManifest.xml
+- **App doesn't appear in share menu**: Check that activity aliases are properly added to AndroidManifest.xml
+- **Only one option appears**: Verify both activity aliases have unique names and labels
 - **Share doesn't work**: Verify ShareTextPlugin.java is compiled and plugin is registered in config.xml
-- **Wrong language detection**: Review the text patterns - may need refinement of detection logic
 - **Navigation issues**: Check that hash URL format matches expected structure in main.js
 
-## Future Enhancements
+## Changes from Previous Version
 
-- Manual language selection dialog for ambiguous text
-- Support for multiple share entries (separate Tibetan/English options)
-- Improved Wylie detection patterns
-- Share history or recent shared terms
-- Custom share result formatting
+1. **Removed auto-detection**: No longer attempts to detect whether text is Tibetan or English
+2. **Separate share targets**: Two distinct options in the Android share menu
+3. **Automatic text clearing**: Shared text is cleared immediately when read, eliminating the need for `clearSharedText()`
+4. **Language in response**: Plugin now returns both text and language preference
+5. **Simplified workflow**: Removed `showShareSearchOptions()` function and associated logic
