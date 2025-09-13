@@ -1425,25 +1425,23 @@ var DICT={
     if (window.ShareTextPlugin) {
       DICT.log("Checking for shared text...");
       ShareTextPlugin.getSharedText(
-        function(sharedText) {
-          if (sharedText && sharedText.trim().length > 0) {
-            DICT.log("Shared text received: " + sharedText);
+        function(sharedData) {
+          if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
+            DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
             
             // Clean up the shared text - remove extra whitespace and limit length
-            sharedText = sharedText.trim();
+            var sharedText = sharedData.text.trim();
             if (sharedText.length > 200) {
               sharedText = sharedText.substring(0, 200);
               DICT.log("Truncated long shared text to 200 characters");
             }
             
-            // Show user a dialog to choose search type
-            DICT.showShareSearchOptions(sharedText);
+            // Use the language provided by the plugin (no auto-detection)
+            var inputLang = sharedData.language || "en"; // Default to English if not specified
+            DICT.log("Using search language: " + inputLang);
             
-            // Clear the shared text so it doesn't interfere with subsequent app usage
-            ShareTextPlugin.clearSharedText(
-              function(result) { DICT.log("Shared text cleared: " + result); },
-              function(error) { DICT.log("Error clearing shared text: " + error); }
-            );
+            // Search immediately with the provided language
+            DICT.searchSharedText(sharedText, inputLang);
           } else {
             DICT.log("No shared text found");
           }
@@ -1455,45 +1453,6 @@ var DICT={
     } else {
       DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
     }
-  },
-
-  /**
-   * Show options for searching shared text
-   */
-  showShareSearchOptions: function(text) {
-    // Auto-detect the most likely search type
-    var containsTibetan = /[\u0F00-\u0FFF]/.test(text);
-    
-    // Conservative Wylie detection - only very distinctive patterns
-    var containsWylie = false;
-    if (!containsTibetan) {
-      // Check for very specific Tibetan patterns
-      var wyliePatterns = [
-        /\b(sngags|rdzogs|byang|gzigs|brtags|phyogs|sgyu|spyod|thabs|ye shes|bde ba|dbang po)\b/i,  // Common Tibetan terms
-        /\b[kg]?[rnl]?[dgbptc][rnl][aiou][ng]?\b/,  // Typical Tibetan syllable with consonant clusters
-        /(tsh|dz|zh)/  // Very distinctive Wylie combinations
-      ];
-      
-      for (var i = 0; i < wyliePatterns.length; i++) {
-        if (wyliePatterns[i].test(text)) {
-          containsWylie = true;
-          break;
-        }
-      }
-    }
-    
-    // Auto-detect the most likely search type, but be conservative
-    var selectedInputLang;
-    if (containsTibetan || containsWylie) {
-      selectedInputLang = "tib";
-      DICT.log("Detected Tibetan/Wylie text, searching as Tibetan");
-    } else {
-      // Default to English for ambiguous cases
-      selectedInputLang = "en";  
-      DICT.log("Detected English text (or ambiguous), searching as English");
-    }
-    
-    DICT.searchSharedText(text, selectedInputLang);
   },
 
   /**

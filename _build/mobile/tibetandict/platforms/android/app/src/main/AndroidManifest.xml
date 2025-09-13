@@ -8,12 +8,29 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            <intent-filter android:label="Search in Tibetan Dictionary">
+        </activity>
+        <activity-alias android:name=".ShareTibetanActivity"
+                       android:targetActivity="MainActivity"
+                       android:exported="true"
+                       android:label="Tibetan -> English">
+            <intent-filter android:label="Tibetan -> English">
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />
                 <data android:mimeType="text/plain" />
             </intent-filter>
-        </activity>
+            <meta-data android:name="searchLanguage" android:value="tib" />
+        </activity-alias>
+        <activity-alias android:name=".ShareEnglishActivity"
+                       android:targetActivity="MainActivity"
+                       android:exported="true"
+                       android:label="English -> Tibetan">
+            <intent-filter android:label="English -> Tibetan">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data android:name="searchLanguage" android:value="en" />
+        </activity-alias>
         <provider android:authorities="${applicationId}.cdv.core.file.provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/cdv_core_file_provider_paths" />
         </provider>

@@ -21,13 +21,30 @@
             </feature>
         </config-file>
 
-        <!-- Add intent filter for receiving shared text -->
-        <config-file target="AndroidManifest.xml" parent="/manifest/application/activity[@android:name='MainActivity']">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:mimeType="text/*" />
-            </intent-filter>
+        <!-- Add activity aliases for different share targets -->
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity-alias android:name=".ShareTibetanActivity"
+                           android:targetActivity="MainActivity"
+                           android:exported="true"
+                           android:label="Tibetan -> English">
+                <intent-filter android:label="Tibetan -> English">
+                    <action android:name="android.intent.action.SEND" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="text/plain" />
+                </intent-filter>
+                <meta-data android:name="searchLanguage" android:value="tib" />
+            </activity-alias>
+            <activity-alias android:name=".ShareEnglishActivity"
+                           android:targetActivity="MainActivity"
+                           android:exported="true"
+                           android:label="English -> Tibetan">
+                <intent-filter android:label="English -> Tibetan">
+                    <action android:name="android.intent.action.SEND" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="text/plain" />
+                </intent-filter>
+                <meta-data android:name="searchLanguage" android:value="en" />
+            </activity-alias>
         </config-file>
 
         <source-file src="src/android/ShareTextPlugin.java" target-dir="src/de/christian_steinert/tibetandict"/>
