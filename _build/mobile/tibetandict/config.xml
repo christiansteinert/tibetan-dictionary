@@ -8,6 +8,7 @@
     <plugin name="cordova-android-support-gradle-release" spec="^2.0.1">
         <variable name="ANDROID_SUPPORT_VERSION" value="16.+" />
     </plugin>
+    <plugin name="share-text-plugin" spec="plugins/share-text-plugin" />
     <preference name="android-minSdkVersion" value="24" />
     <preference name="android-targetSdkVersion" value="35" />
     <framework src="androidx.core:core:1.12.0" />
@@ -25,5 +26,14 @@
         <!-- android application icon-->
         <application android:icon="@mipmap/icon" /> 
     </edit-config>
+
+    <!-- Share text intent filter -->
+    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity[@android:name='MainActivity']">
+        <intent-filter>
+            <action android:name="android.intent.action.SEND" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <data android:mimeType="text/*" />
+        </intent-filter>
+    </config-file>
 
 </widget>

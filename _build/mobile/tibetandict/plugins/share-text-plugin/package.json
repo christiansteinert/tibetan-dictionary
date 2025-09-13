@@ -1,0 +1,24 @@
+{
+  "name": "share-text-plugin",
+  "version": "1.0.0",
+  "description": "Plugin to handle shared text from other Android applications",
+  "main": "www/ShareTextPlugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "android",
+    "share",
+    "text",
+    "intent"
+  ],
+  "author": "Christian Steinert",
+  "license": "GPL-2.0 OR GPL-3.0",
+  "cordova": {
+    "id": "share-text-plugin",
+    "platforms": [
+      "android"
+    ]
+  }
+}

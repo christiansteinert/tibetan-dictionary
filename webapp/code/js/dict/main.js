@@ -1416,6 +1416,72 @@ var DICT={
     }
     this.highlightListItem();
     this.scrollToTop();
+  },
+
+  /**
+   * Handle shared text from other Android apps
+   */
+  handleSharedText: function() {
+    if (window.ShareTextPlugin) {
+      DICT.log("Checking for shared text...");
+      ShareTextPlugin.getSharedText(
+        function(sharedData) {
+          if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
+            DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
+            
+            // Clean up the shared text - remove extra whitespace and limit length
+            var sharedText = sharedData.text.trim();
+            if (sharedText.length > 200) {
+              sharedText = sharedText.substring(0, 200);
+              DICT.log("Truncated long shared text to 200 characters");
+            }
+            
+            // Use the language provided by the plugin (no auto-detection)
+            var inputLang = sharedData.language || "en"; // Default to English if not specified
+            DICT.log("Using search language: " + inputLang);
+            
+            // Search immediately with the provided language
+            DICT.searchSharedText(sharedText, inputLang);
+          } else {
+            DICT.log("No shared text found");
+          }
+        },
+        function(error) {
+          DICT.log("Error getting shared text: " + error);
+        }
+      );
+    } else {
+      DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
+    }
+  },
+
+  /**
+   * Search for shared text in the dictionary
+   */
+  searchSharedText: function(text, inputLang) {
+    DICT.log("Searching for shared text: '" + text + "' with input language: " + inputLang);
+    
+    // Create state object for navigation
+    var state = {
+      activeTerm: text,
+      lang: "tib",  // Always search in Tibetan dictionary
+      inputLang: inputLang,
+      currentListTerm: text,
+      forceLeftSideVisible: inputLang === "en",  // Show sidebar for English searches
+      offset: 0
+    };
+    
+    // Navigate to the search results
+    var stateStr = JSON.stringify(state);
+    var encodedState = encodeURIComponent(stateStr);
+    
+    DICT.log("Generated hash URL: #" + encodedState);
+    
+    // Set a flag to indicate this is a shared search (could be used for UI feedback)
+    DICT._isSharedSearch = true;
+    
+    // Navigate to the search results
+    window.location.hash = encodedState;
   }
 };
 
@@ -1426,6 +1492,11 @@ if(window.cordova) {
   document.addEventListener("deviceready", function(){
       jQuery(function($){
       DICT.init($);
+      
+      // Handle shared text after initialization
+      setTimeout(function() {
+        DICT.handleSharedText();
+      }, 1000);
     });
   }, false);
 } else {
