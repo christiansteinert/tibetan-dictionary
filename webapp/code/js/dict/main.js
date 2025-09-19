@@ -466,7 +466,7 @@ var DICT={
       DICT._touch = true;
       $('body').addClass('mobile');
       return CordovaDataAccess;
-    } else /*if (location.href.indexOf('http')==0)*/ {
+    } else {
       $('body').addClass('desktop');
       return PhpDataAccess;
     }
@@ -606,8 +606,7 @@ var DICT={
       });
       
       DICT.log(conflicts.length + " conflicting syllables.");
-      //DICT.log(conflicts);
-      
+    
       $.each(this.SEPARATORLIST,function(idx,value){
         DICT.UNICODE_SEPARATORLIST.push( DICT.wylieToUni(value) );
       });
@@ -807,11 +806,14 @@ var DICT={
         DICT.setState(state);
       });
 
-      if(window.location.hash!=='#home') {
-        if(location.hash == '' || location.hash == '#')
-          location.hash = 'home';
-        else
-          $(window).hashchange();
+      // Handle shared text
+      if(location.hash == '' || location.hash == '#') {
+        location.hash = 'home';
+      }
+      
+      var sharedTextPluginAvailable = DICT.handleSharedText();     
+      if (!sharedTextPluginAvailable) {
+        $(window).hashchange();
       }
     } catch(e) {
       alert('error initializing:'+e.message);
@@ -1419,7 +1421,7 @@ var DICT={
    * Handle shared text from other Android apps
    */
   handleSharedText: function() {
-    if (window.ShareTextPlugin) {
+    if (window.cordova && window.ShareTextPlugin) {
       ShareTextPlugin.getSharedText(
         function(sharedData) {
           if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
@@ -1433,23 +1435,23 @@ var DICT={
             }
             // Use the language provided by the plugin
             var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
-
+            DICT.lang = inputLang;
             DICT.setInputLang(inputLang);
 
-            sharedText = sharedText.replace(/[-\s\/།]+/g,' ');
-            if (inputLang === "tib") {
+            // cleanup text and search for the entered term
+            sharedText = sharedText.replace(/[-\s\/།()\[]{}]+,?:-/g,' ');
+            if(inputLang === "tib") {
               sharedText = DICT.uniToWylie(sharedText);
+              sharedText = DICT.tibetanOutput(sharedText);              
+            } else {
+              sharedText = sharedText.replace(/[\.]+/g,' ');
             }
+            sharedText = sharedText.trim();
+            $('#searchTerm').val(sharedText);
 
-            var state = {
-              activeTerm:sharedText,
-              lang:inputLang,
-              inputLang:inputLang,
-              currentListTerm:sharedText,
-              forceLeftSideVisible:false,
-              offset:0
-            };
-            window.location.hash = JSON.stringify(state);
+            DICT.log("Set input field to shared text: " + sharedText);
+            DICT.search(true,true,0);
+            $('#searchTerm').focus();
           } else {
             DICT.log("No shared text found");
           }
@@ -1458,8 +1460,10 @@ var DICT={
           DICT.log("Error getting shared text: " + error);
         }
       );
+      return true;
     } else {
       DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
+      return false;
     }
   },
 };
@@ -1472,10 +1476,6 @@ if(window.cordova) {
       jQuery(function($){
       DICT.init($);
       
-      // Handle shared text after initialization
-      setTimeout(function() {
-        DICT.handleSharedText();
-      }, 1000);
     });
   }, false);
 } else {
