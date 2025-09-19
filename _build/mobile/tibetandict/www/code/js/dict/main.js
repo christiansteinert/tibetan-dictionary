@@ -466,7 +466,7 @@ var DICT={
       DICT._touch = true;
       $('body').addClass('mobile');
       return CordovaDataAccess;
-    } else /*if (location.href.indexOf('http')==0)*/ {
+    } else {
       $('body').addClass('desktop');
       return PhpDataAccess;
     }
@@ -606,8 +606,7 @@ var DICT={
       });
       
       DICT.log(conflicts.length + " conflicting syllables.");
-      //DICT.log(conflicts);
-      
+    
       $.each(this.SEPARATORLIST,function(idx,value){
         DICT.UNICODE_SEPARATORLIST.push( DICT.wylieToUni(value) );
       });
@@ -807,11 +806,15 @@ var DICT={
         DICT.setState(state);
       });
 
-      if(window.location.hash!=='#home') {
-        if(location.hash == '' || location.hash == '#')
+        if(location.hash == '' || location.hash == '#') {
           location.hash = 'home';
-        else
-          $(window).hashchange();
+        }
+      
+      var sharedTextPluginAvailable = DICT.handleSharedText();     
+      if (!sharedTextPluginAvailable) {
+        // If the shared text plugin is not available then just trigger the hashchange event to load the state 
+        // of the app from the URL hash in case somebody has opened a bookmark or reloaded the page 
+        $(window).hashchange();
       }
     } catch(e) {
       alert('error initializing:'+e.message);
@@ -1364,9 +1367,6 @@ var DICT={
             } else {
               definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
             }
-            //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
-            //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
-            //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );
             defEnd = '</div>';
           } else if(currentDict.containsOnlySkt) {
             defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
@@ -1416,7 +1416,57 @@ var DICT={
     }
     this.highlightListItem();
     this.scrollToTop();
-  }
+  },
+
+  /**
+   * Handle shared text from other Android apps
+   */
+  handleSharedText: function() {
+    if (window.cordova && window.ShareTextPlugin) {
+      ShareTextPlugin.getSharedText(
+        function(sharedData) {
+          if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
+            DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
+
+            // Clean up the shared text - remove extra whitespace and limit length
+            var sharedText = sharedData.text.trim();
+            if (sharedText.length > 200) {
+              sharedText = sharedText.substring(0, 200);
+              DICT.log("Truncated long shared text to 200 characters");
+            }
+            // Use the language provided by the plugin
+            var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
+            DICT.lang = inputLang;
+            DICT.setInputLang(inputLang);
+
+            // cleanup text and search for the entered term
+            if(inputLang === "tib") {
+              sharedText = sharedText.replace(/[\s\-\/()\[\]{},།:–—!.?]+/g, ' ');
+              sharedText = DICT.uniToWylie(sharedText);
+              sharedText = DICT.tibetanOutput(sharedText);
+            } else {
+              sharedText = sharedText.replace(/[\.]+/g,' ');
+            }
+            sharedText = sharedText.trim();
+            $('#searchTerm').val(sharedText);
+
+            DICT.log("Set input field to shared text: " + sharedText);
+            DICT.search(true,true,0);
+            $('#searchTerm').focus();
+          } else {
+            DICT.log("No shared text found");
+          }
+        },
+        function(error) {
+          DICT.log("Error getting shared text: " + error);
+        }
+      );
+      return true;
+    } else {
+      DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
+      return false;
+    }
+  },
 };
 
 
@@ -1426,6 +1476,7 @@ if(window.cordova) {
   document.addEventListener("deviceready", function(){
       jQuery(function($){
       DICT.init($);
+      
     });
   }, false);
 } else {
