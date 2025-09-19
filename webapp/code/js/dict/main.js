@@ -806,13 +806,14 @@ var DICT={
         DICT.setState(state);
       });
 
-      // Handle shared text
-      if(location.hash == '' || location.hash == '#') {
-        location.hash = 'home';
-      }
+        if(location.hash == '' || location.hash == '#') {
+          location.hash = 'home';
+        }
       
       var sharedTextPluginAvailable = DICT.handleSharedText();     
       if (!sharedTextPluginAvailable) {
+        // If the shared text plugin is not available then just trigger the hashchange event to load the state 
+        // of the app from the URL hash in case somebody has opened a bookmark or reloaded the page 
         $(window).hashchange();
       }
     } catch(e) {
@@ -1439,10 +1440,10 @@ var DICT={
             DICT.setInputLang(inputLang);
 
             // cleanup text and search for the entered term
-            sharedText = sharedText.replace(/[-\s\/།()\[]{}]+,?:-/g,' ');
             if(inputLang === "tib") {
+              sharedText = sharedText.replace(/[\s\-\/()\[\]{},།:–—!.?]+/g, ' ');
               sharedText = DICT.uniToWylie(sharedText);
-              sharedText = DICT.tibetanOutput(sharedText);              
+              sharedText = DICT.tibetanOutput(sharedText);
             } else {
               sharedText = sharedText.replace(/[\.]+/g,' ');
             }

@@ -39,17 +39,14 @@ public class ShareTextPlugin extends CordovaPlugin {
         // Remove one or more trailing URLs appended by browsers (e.g. Chrome)
         // Loop in case there are multiple appended URLs
         while (result.matches("(?s).*(\\s+)https?://\\S+\\s*$")) {
-            result = result.replaceFirst("(\\s+)https?://\\S+$", "").trim();
+            result = result.replaceFirst("(\\s+)https?://\\S+\\s*$", "").trim();
         }
-        // Remove wrapping quotes (straight or curly) if entire remaining text is quoted
-        if (result.length() >= 2) {
-            if ((result.startsWith("\"") && result.endsWith("\"")) ||
-                (result.startsWith("'") && result.endsWith("'")) ||
-                (result.startsWith("“") && result.endsWith("”")) ||
-                (result.startsWith("‘") && result.endsWith("’"))) {
-                result = result.substring(1, result.length() - 1).trim();
-            }
-        }
+
+        // remove everything after a line break
+        result = result.replaceAll("[\\r\\n].*", "");
+
+        // remove all quote characters
+        result = result.replaceAll("[\"'“”‘’]", "").trim();
         return result;
     }
 
