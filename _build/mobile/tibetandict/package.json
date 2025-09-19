@@ -9,7 +9,8 @@
     "plugins": {
       "cordova-android-support-gradle-release": {
         "ANDROID_SUPPORT_VERSION": "27.+"
-      }
+      },
+      "share-text-plugin": {}
     }
   },
   "dependencies": {
@@ -17,6 +18,7 @@
     "cordova-android-support-gradle-release": "^2.0.1"
   },
   "devDependencies": {
+    "add": "^2.0.6",
     "share-text-plugin": "file:plugins/share-text-plugin"
   }
 }

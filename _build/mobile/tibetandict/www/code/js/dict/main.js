@@ -1364,9 +1364,6 @@ var DICT={
             } else {
               definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
             }
-            //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
-            //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
-            //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );
             defEnd = '</div>';
           } else if(currentDict.containsOnlySkt) {
             defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
@@ -1416,7 +1413,55 @@ var DICT={
     }
     this.highlightListItem();
     this.scrollToTop();
-  }
+  },
+
+  /**
+   * Handle shared text from other Android apps
+   */
+  handleSharedText: function() {
+    if (window.ShareTextPlugin) {
+      ShareTextPlugin.getSharedText(
+        function(sharedData) {
+          if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
+            DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
+
+            // Clean up the shared text - remove extra whitespace and limit length
+            var sharedText = sharedData.text.trim();
+            if (sharedText.length > 200) {
+              sharedText = sharedText.substring(0, 200);
+              DICT.log("Truncated long shared text to 200 characters");
+            }
+            // Use the language provided by the plugin
+            var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
+
+            DICT.setInputLang(inputLang);
+
+            sharedText = sharedText.replace(/[-\s\/།]+/g,' ');
+            if (inputLang === "tib") {
+              sharedText = DICT.uniToWylie(sharedText);
+            }
+
+            var state = {
+              activeTerm:sharedText,
+              lang:inputLang,
+              inputLang:inputLang,
+              currentListTerm:sharedText,
+              forceLeftSideVisible:false,
+              offset:0
+            };
+            window.location.hash = JSON.stringify(state);
+          } else {
+            DICT.log("No shared text found");
+          }
+        },
+        function(error) {
+          DICT.log("Error getting shared text: " + error);
+        }
+      );
+    } else {
+      DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
+    }
+  },
 };
 
 
@@ -1426,6 +1471,11 @@ if(window.cordova) {
   document.addEventListener("deviceready", function(){
       jQuery(function($){
       DICT.init($);
+      
+      // Handle shared text after initialization
+      setTimeout(function() {
+        DICT.handleSharedText();
+      }, 10000);
     });
   }, false);
 } else {

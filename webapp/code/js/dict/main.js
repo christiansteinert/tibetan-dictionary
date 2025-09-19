@@ -1364,9 +1364,6 @@ var DICT={
             } else {
               definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
             }
-            //definition = definition.replace(/(\s*)([^/_,\.\n()*\]\[]{2,}\/?)/g,"$1{$2}"); // split definition at various characters
-            //definition = definition.replace(/(}[^{]*?|^)([\]\[0-9\.\/]+)/g,"$1{$2}"); // split definition at various characters
-            //definition = DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition( definition, true ), definitionNr++ );
             defEnd = '</div>';
           } else if(currentDict.containsOnlySkt) {
             defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
@@ -1423,25 +1420,36 @@ var DICT={
    */
   handleSharedText: function() {
     if (window.ShareTextPlugin) {
-      DICT.log("Checking for shared text...");
       ShareTextPlugin.getSharedText(
         function(sharedData) {
           if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
             DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
-            
+
             // Clean up the shared text - remove extra whitespace and limit length
             var sharedText = sharedData.text.trim();
             if (sharedText.length > 200) {
               sharedText = sharedText.substring(0, 200);
               DICT.log("Truncated long shared text to 200 characters");
             }
-            
-            // Use the language provided by the plugin (no auto-detection)
-            var inputLang = sharedData.language || "en"; // Default to English if not specified
-            DICT.log("Using search language: " + inputLang);
-            
-            // Search immediately with the provided language
-            DICT.searchSharedText(sharedText, inputLang);
+            // Use the language provided by the plugin
+            var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
+
+            DICT.setInputLang(inputLang);
+
+            sharedText = sharedText.replace(/[-\s\/།]+/g,' ');
+            if (inputLang === "tib") {
+              sharedText = DICT.uniToWylie(sharedText);
+            }
+
+            var state = {
+              activeTerm:sharedText,
+              lang:inputLang,
+              inputLang:inputLang,
+              currentListTerm:sharedText,
+              forceLeftSideVisible:false,
+              offset:0
+            };
+            window.location.hash = JSON.stringify(state);
           } else {
             DICT.log("No shared text found");
           }
@@ -1454,35 +1462,6 @@ var DICT={
       DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
     }
   },
-
-  /**
-   * Search for shared text in the dictionary
-   */
-  searchSharedText: function(text, inputLang) {
-    DICT.log("Searching for shared text: '" + text + "' with input language: " + inputLang);
-    
-    // Create state object for navigation
-    var state = {
-      activeTerm: text,
-      lang: "tib",  // Always search in Tibetan dictionary
-      inputLang: inputLang,
-      currentListTerm: text,
-      forceLeftSideVisible: inputLang === "en",  // Show sidebar for English searches
-      offset: 0
-    };
-    
-    // Navigate to the search results
-    var stateStr = JSON.stringify(state);
-    var encodedState = encodeURIComponent(stateStr);
-    
-    DICT.log("Generated hash URL: #" + encodedState);
-    
-    // Set a flag to indicate this is a shared search (could be used for UI feedback)
-    DICT._isSharedSearch = true;
-    
-    // Navigate to the search results
-    window.location.hash = encodedState;
-  }
 };
 
 

@@ -22,12 +22,13 @@
         </config-file>
 
         <!-- Add activity aliases for different share targets -->
+        <!--
         <config-file target="AndroidManifest.xml" parent="/manifest/application">
             <activity-alias android:name=".ShareTibetanActivity"
                            android:targetActivity="MainActivity"
                            android:exported="true"
-                           android:label="Tibetan -> English">
-                <intent-filter android:label="Tibetan -> English">
+                           android:label="Tib -> Eng">
+                <intent-filter android:label="Tib -> Eng">
                     <action android:name="android.intent.action.SEND" />
                     <category android:name="android.intent.category.DEFAULT" />
                     <data android:mimeType="text/plain" />
@@ -37,8 +38,8 @@
             <activity-alias android:name=".ShareEnglishActivity"
                            android:targetActivity="MainActivity"
                            android:exported="true"
-                           android:label="English -> Tibetan">
-                <intent-filter android:label="English -> Tibetan">
+                           android:label="Eng -> Tib">
+                <intent-filter android:label="Eng -> Tib">
                     <action android:name="android.intent.action.SEND" />
                     <category android:name="android.intent.category.DEFAULT" />
                     <data android:mimeType="text/plain" />
@@ -46,6 +47,7 @@
                 <meta-data android:name="searchLanguage" android:value="en" />
             </activity-alias>
         </config-file>
+        -->
 
         <source-file src="src/android/ShareTextPlugin.java" target-dir="src/de/christian_steinert/tibetandict"/>
     </platform>

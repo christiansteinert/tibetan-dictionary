@@ -8,9 +8,14 @@ import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 
 public class ShareTextPlugin extends CordovaPlugin {
     private static final String TAG = "ShareTextPlugin";
+    private static final String CAT_TIB = "de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_TIB";
+    private static final String CAT_EN  = "de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_EN";
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -25,6 +30,55 @@ public class ShareTextPlugin extends CordovaPlugin {
             return true;
         }
         return false;
+    }
+
+    /** Strip trailing URLs and wrapping quotes */
+    private String normalizeSharedText(String input) {
+        if (input == null) return null;
+        String result = input.trim();
+        // Remove one or more trailing URLs appended by browsers (e.g. Chrome)
+        // Loop in case there are multiple appended URLs
+        while (result.matches("(?s).*(\\s+)https?://\\S+\\s*$")) {
+            result = result.replaceFirst("(\\s+)https?://\\S+$", "").trim();
+        }
+        // Remove wrapping quotes (straight or curly) if entire remaining text is quoted
+        if (result.length() >= 2) {
+            if ((result.startsWith("\"") && result.endsWith("\"")) ||
+                (result.startsWith("'") && result.endsWith("'")) ||
+                (result.startsWith("“") && result.endsWith("”")) ||
+                (result.startsWith("‘") && result.endsWith("’"))) {
+                result = result.substring(1, result.length() - 1).trim();
+            }
+        }
+        return result;
+    }
+
+    private String detectLanguageFromIntent(Intent intent) {
+        // Prefer reading meta-data from the resolved (alias) component
+        try {
+            PackageManager pm = cordova.getContext().getPackageManager();
+            ComponentName comp = intent.getComponent();
+            if (comp == null) {
+                ResolveInfo ri = pm.resolveActivity(intent, 0);
+                if (ri != null) {
+                    comp = new ComponentName(ri.activityInfo.packageName, ri.activityInfo.name);
+                }
+            }
+            if (comp != null) {
+                ActivityInfo ai = pm.getActivityInfo(comp, PackageManager.GET_META_DATA);
+                if (ai != null && ai.metaData != null) {
+                    String lang = ai.metaData.getString("searchLanguage");
+                    if (lang != null) return lang;
+                }
+                // Fallback on alias name pattern
+                String cls = comp.getClassName();
+                if (cls.contains("ShareTibetanActivity")) return "tib";
+                if (cls.contains("ShareEnglishActivity")) return "en";
+            }
+        } catch (Exception e) {
+            Log.w(TAG, "Unable to detect language from intent meta-data", e);
+        }
+        return "tib"; // default
     }
 
     /**
@@ -42,23 +96,15 @@ public class ShareTextPlugin extends CordovaPlugin {
                 if (type.startsWith("text/")) {
                     String text = intent.getStringExtra(Intent.EXTRA_TEXT);
                     if (text != null && !text.trim().isEmpty()) {
-                        String cleanedText = text.trim();
-                        
-                        // Determine search language based on which activity alias was used
-                        String searchLanguage = "en"; // Default to English
-                        ComponentName componentName = intent.getComponent();
-                        if (componentName != null) {
-                            String activityName = componentName.getClassName();
-                            Log.d(TAG, "Activity component: " + activityName);
-                            
-                            if (activityName.contains("ShareTibetanActivity")) {
-                                searchLanguage = "tib";
-                                Log.d(TAG, "Detected Tibetan -> English share target");
-                            } else if (activityName.contains("ShareEnglishActivity")) {
-                                searchLanguage = "en";
-                                Log.d(TAG, "Detected English -> Tibetan share target");
-                            }
+                        String cleanedText = normalizeSharedText(text);
+                        if (cleanedText == null || cleanedText.isEmpty()) {
+                            Log.d(TAG, "Shared text became empty after normalization");
+                            callbackContext.success((String) null);
+                            return;
                         }
+                        
+                        // Use intent categories to detect language
+                        String searchLanguage = detectLanguageFromIntent(intent);
                         
                         // Create JSON response with text and language
                         JSONObject result = new JSONObject();

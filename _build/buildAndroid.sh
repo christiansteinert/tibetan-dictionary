@@ -1,3 +1,6 @@
+#!/bin/bash
+# This script builds the Android application using Cordova.
+# Note: the buildDictionaries.sh script must be run first to create the database file that is needed for the app
 currpath="`pwd`"
 
 
@@ -22,53 +25,57 @@ export PATH=$ANDROID_TOOLS_PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 echo ANDROID_HOME: $ANDROID_HOME
 echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
 
+buildAndroidApplication() {
+  # use a different Android Application ID for the private version of the app than for the public version
+  local IS_PUBLIC_DICTIONARY=$1
 
-cordova prepare android
+  if (( $IS_PUBLIC_DICTIONARY )); then
+    local IS_PUBLIC=true
+    local DICT_TYPE="PUBLIC"  
+    local ASSETS="res.normal"
+    local DICT_FILE="../webapp/TibetanDictionary.db"
+  else
+    local IS_PUBLIC=false
+    local DICT_TYPE="FULL"
+    local ASSETS="res.full"
+    local DICT_FILE="../webapp/TibetanDictionary_private.db"
+  fi
 
-# copy the customized Java classes for the cordova database plugin
-cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
+  echo === Building $DICT_TYPE version ===
+  
+  if ! (( $IS_PUBLIC_DICTIONARY )); then
+    find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict"/id="de.christian_steinert.tibetandict.full"/g' {} \;
+  fi
 
-# copy the share text plugin Java class
-mkdir -p mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/
-cp mobile/tibetandict/plugins/share-text-plugin/src/android/ShareTextPlugin.java mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/  
+  cd mobile/tibetandict
+  cordova platform rm android
+  cordova platform add android
+  cd ../..
 
+  # copy the customized Java classes for the cordova database plugin
+  cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
 
-############################################################################################################################################
-#### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)
-############################################################################################################################################
-if [ -f ../webapp/TibetanDictionary_private.db ]
-then
+  # copy the share text plugin Java class
+  mkdir -p mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/
+  cp mobile/tibetandict/plugins/share-text-plugin/src/android/ShareTextPlugin.java mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/  
 
-echo === Building full version ===
-# copy dictionary
-  cp ../webapp/TibetanDictionary_private.db mobile/tibetandict/platforms/android/app/src/main/assets/TibetanDictionary.db
-                                          
-# generate a simple Java class that contains the size of the dictionary DB file as constant. This is important at runtime so that the application can 
-# check easily if the DB file has been extracted correctly onto the android device
-  dbsize="`du -b mobile/tibetandict/platforms/android/app/src/main/assets/TibetanDictionary.db | cut -f1`"
+  # copy dictionary db file
+  cp "$DICT_FILE" mobile/tibetandict/platforms/android/app/src/main/assets/TibetanDictionary.db
+                                         
+  # generate a simple Java class that contains the size of the dictionary DB file as constant. This is important at runtime so that the application can 
+  # check easily if the DB file has been extracted correctly onto the android device
+  dbsize="`du -b "$DICT_FILE" | cut -f1`"
 
   classfile="mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/Constants.java"
   echo "package de.christian_steinert.tibetandict;" > $classfile
   echo "public class Constants{ public static long DICT_SIZE() { return $dbsize; } }" >> $classfile
   echo DB Size: $dbsize
 
-# generate a simple global settings file that tells the application which dictionaries from the dictionary list should be listed
-# in the "about" section and on the settings screen 
-  echo "GLOBAL_SETTINGS={ publicOnly: false }" > ../webapp/settings/globalsettings.js
+  # generate a simple global settings file that tells the application which dictionaries from the dictionary list should be listed
+  # in the "about" section and on the settings screen 
+  echo "GLOBAL_SETTINGS={ publicOnly: $IS_PUBLIC }" > ../webapp/settings/globalsettings.js
 
-
-# use a different Android Application ID for the private version of the app than for the public version
-#  find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict"/package="de.christian_steinert.tibetandict.full"/' {} \;
-#  find mobile/tibetandict/ -iname build.gradle -exec sed -i 's/namespace="de.christian_steinert.tibetandict"/namespace="de.christian_steinert.tibetandict.full"/' {} \;
-find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict"/id="de.christian_steinert.tibetandict.full"/' {} \;
-
-  rm -rf mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
-  mkdir mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
-  cp mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/*.java mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full
-  find mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/full/*java -exec sed -i 's/de.christian_steinert.tibetandict/de.christian_steinert.tibetandict.full/' {} \;
-
-
-# copy the files of the web application into the cordova project
+  # copy the files of the web application into the cordova project
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www
   cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
   cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
@@ -80,111 +87,55 @@ find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_stei
   cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
   cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
 
-  cp -r ../_assets/res.full/* mobile/tibetandict/platforms/android/app/src/main/res/
+  cp -r ../_assets/${ASSETS}/* mobile/tibetandict/platforms/android/app/src/main/res/
 
 
-
-# touch all java files to force recompiling
-#find mobile/tibetandict/platforms/android/src/ -iname *.java -exec touch {} \;
-
-# kick of the actual cordova build process
-  cd mobile/tibetandict/platforms/android/cordova
+  # kick off the actual cordova build process
+  cd mobile/tibetandict
   
+  #cordova prepare android
   cordova build android --release -- --packageType=apk
 
+  # move and sign the APK file
 
-
-# move and sign the APK file
-
-
-# command for generating a new self-signed key if none is present yet (Java's keytool must be in the PATH):
-#   keytool -genkey -v -keystore my-release-key.keystore -alias android_release_key -keyalg RSA -keysize 2048 -validity 10000
+  # command for generating a new self-signed key if none is present yet (Java's keytool must be in the PATH):
+  #   keytool -genkey -v -keystore my-release-key.keystore -alias android_release_key -keyalg RSA -keysize 2048 -validity 10000
 
   cd "$currpath"
-  cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-FULL.apk
+  cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-${DICT_TYPE}.apk
 
-  $ANDROID_TOOLS_PATH/zipalign 16 ../TibetanDictionary-FULL.apk ../TibetanDictionary-FULL_.apk
+  $ANDROID_TOOLS_PATH/zipalign 16 ../TibetanDictionary-${DICT_TYPE}.apk ../TibetanDictionary-${DICT_TYPE}_.apk
 
-  #echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-FULL.apk android_release_key
-  echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk
-  echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-FULL_.apk
+  echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-${DICT_TYPE}_.apk
+  echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-${DICT_TYPE}_.apk
 
-  mv ../TibetanDictionary-FULL_.apk ../TibetanDictionary-FULL.apk
+  mv ../TibetanDictionary-${DICT_TYPE}_.apk ../TibetanDictionary-${DICT_TYPE}.apk
+  rm ../*.apk.idsig
 
+  if ! (( $IS_PUBLIC_DICTIONARY )); then
+    # revert the changes to config.xml to prepare for building the public version
+    find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict.full"/id="de.christian_steinert.tibetandict"/g' {} \;
+  fi
+
+  # clean up temporary Cordova files
+  echo CLEANING UP
+  cd "$currpath"
+  cd mobile/tibetandict
+  cordova clean
+  cd $currpath
+}
+
+
+
+###############################################################################################################
+#### BUILD PRIVATE VERSION IF ADDITIONAL DICTIONARIES ARE PRESENT (not available on Github, sorry!)
+############################################################################################################################################
+if [ -f ../webapp/TibetanDictionary_private.db ]
+then
+  buildAndroidApplication 0
 fi
-
 
 ############################################################################################################################################
 #### BUILD PUBLIC VERSION
 ############################################################################################################################################
-echo === Building public version ===
-
-cd "$currpath"
-
-
-#cp ../webapp/TibetanDictionary.db mobile/tibetandict/platforms/android/assets/TibetanDictionary.db
-cp ../webapp/TibetanDictionary.db mobile/tibetandict/platforms/android/app/src/main/assets/TibetanDictionary.db
-
-
-# generate a simple Java class that contains the size of the dictionary DB file as constant. This is important at runtime so that the application can 
-# check easily if the DB file has been extracted correctly onto the android device
-dbsize="`du -b mobile/tibetandict/platforms/android/app/src/main/assets/TibetanDictionary.db | cut -f1`"
-echo "package de.christian_steinert.tibetandict;" > $classfile
-echo "public class Constants{ public static long DICT_SIZE() { return $dbsize; } }" >> $classfile
-echo DB Size: $dbsize
-
-# generate a simple global settings file that tells the application which dictionaries from the dictionary list should be listed
-# in the "about" section and on the settings screen
-echo "GLOBAL_SETTINGS={ publicOnly: true }" > ../webapp/settings/globalsettings.js
-
-cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
-cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
-mkdir -p mobile/tibetandict/www/data
-mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www/data
-cp -r ../webapp/data/*.js mobile/tibetandict/www/data
-cp -r ../webapp/data/*.js mobile/tibetandict/platforms/android/app/src/main/assets/www/data
-
-cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
-cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
-
-
-# use a different Android Application ID for the public version of the app than for the private version
-#find mobile/tibetandict/ -iname AndroidManifest.xml -exec sed -i 's/package="de.christian_steinert.tibetandict.full"/package="de.christian_steinert.tibetandict"/' {} \;
-#find mobile/tibetandict/ -iname build.gradle -exec sed -i 's/namespace="de.christian_steinert.tibetandict.full"/namespace="de.christian_steinert.tibetandict"/' {} \;
-find mobile/tibetandict/ -iname config.xml -exec sed -i 's/id="de.christian_steinert.tibetandict.full"/id="de.christian_steinert.tibetandict"/' {} \;
-
-cp -r ../_assets/res.normal/* mobile/tibetandict/platforms/android/app/src/main/res/
-
-
-
-# touch all java files to force recompiling
-find mobile/tibetandict/platforms/android/src/ -iname *.java -exec touch {} \;
-
-# kick of the actual cordova build process
-cd mobile/tibetandict
-cordova build android --release -- --packageType=apk
-
-
-# move and sign the APK file
-
-
-# command for generating a new self-signed key if none is present yet (Java's keytool must be in the PATH):
-#   keytool -genkey -v -keystore my-release-key.keystore -alias android_release_key -keyalg RSA -keysize 2048 -validity 10000
-cd "$currpath"
-cp mobile/tibetandict/platforms/android/app/build/outputs/apk/release/*unsigned.apk ../TibetanDictionary-PUBLIC.apk
-
-$ANDROID_TOOLS_PATH/zipalign 16 ../TibetanDictionary-PUBLIC.apk ../TibetanDictionary-PUBLIC_.apk
-
-#echo xxxxxxxx|jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore "$currpath/my-release-key.keystore" ../TibetanDictionary-PUBLIC.apk android_release_key
-echo $ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk
-echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$currpath/my-release-key.keystore" --ks-key-alias android_release_key ../TibetanDictionary-PUBLIC_.apk
-mv ../TibetanDictionary-PUBLIC_.apk ../TibetanDictionary-PUBLIC.apk
-rm ../*.apk.idsig
-
-# clean up temporary Cordova files
-echo CLEANING UP
-cd "$currpath"
-cd mobile/tibetandict
-cordova clean
-cd $currpath
-
+buildAndroidApplication 1
