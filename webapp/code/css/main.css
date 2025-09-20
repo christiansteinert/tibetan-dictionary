@@ -42,6 +42,9 @@ a{
   padding-left: 2px;
   padding-right: 2px;
 }
+.mainWrap * {
+  max-width: 100vw;
+}
 #wordList {
   font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   border:1px solid #ccc;
