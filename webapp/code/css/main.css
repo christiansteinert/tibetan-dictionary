@@ -329,6 +329,7 @@ a{
   position:relative;
   background:none;
   width:1em;
+  min-width: 1em;
   height:auto; /* allow flex stretch */
   cursor:move;
 }
