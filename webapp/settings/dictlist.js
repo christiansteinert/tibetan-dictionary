@@ -464,7 +464,7 @@ GROUPED_DICTLIST = {
   },
   "li_shii_gur_khang": {
     label: "li shi'i gur khang",
-    about: "li shi'i gur khang|Author: skyogs ston rin chen bkra shis (born ca. 1400)||Scan available at archive.org: https://archive.org/details/bdrc-W3CN1669",
+    about: 'brda gsar rnying gi rnam gzhag li shi\'i gur khang (Presentation of Old and New Terminology: House of Cloves)|Author: skyogs ston rin chen bkra shis (born ca. 1400)||Scan available at archive.org: https://archive.org/details/bdrc-W3CN1669',
     public: "true",
     listCredits: "true",
     language: ["tib"]
