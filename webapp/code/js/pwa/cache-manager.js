@@ -5,7 +5,7 @@
 
 class CacheManager {
   constructor() {
-    this.CACHE_NAME = 'tibetan-dict-v0b39b810';
+    this.CACHE_NAME = 'tibetan-dict-vcf855f91';
     this.UPDATE_CHECK_INTERVAL = 24 * 60 * 60 * 1000; // 24 hours in milliseconds
     this.LAST_UPDATE_KEY = 'tibetan-dict-last-update';
     
