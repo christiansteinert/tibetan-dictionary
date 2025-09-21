@@ -1441,9 +1441,15 @@ var DICT={
 
             // cleanup text and search for the entered term
             if(inputLang === "tib") {
+              if (/.*['a-zA-Z].*/.test(uniInput) ) {
+                // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
+                // in this case we will later convert the input back to Wylie when backspace is pressed.
+                DICT.wasTypedInWylie = true;
+              }
+
               sharedText = sharedText.replace(/[\s\-\/()\[\]{},།:–—!.?]+/g, ' ');
               sharedText = DICT.uniToWylie(sharedText);
-              sharedText = DICT.tibetanOutput(sharedText);
+              sharedText = DICT.tibetanOutput(sharedText + ' ');            
             } else {
               sharedText = sharedText.replace(/[\.]+/g,' ');
             }
@@ -1452,6 +1458,10 @@ var DICT={
 
             DICT.log("Set input field to shared text: " + sharedText);
             DICT.search(true,true,0);
+
+            DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
+            DICT.lastUniInput = sharedText;
+
             $('#searchTerm').focus();
           } else {
             DICT.log("No shared text found");

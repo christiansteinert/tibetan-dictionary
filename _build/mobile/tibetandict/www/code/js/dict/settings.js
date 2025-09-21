@@ -215,23 +215,29 @@ SETTINGS={
             checked = 'checked';
           }
 
-          var tooltipIcon = ""; 
+          var infoIconWithTooltip = ""; 
           if(dictInfo.about) {
-            tooltipIcon = ' <span class="tooltip dict-info" title="'+dictInfo.about+'"></span>';
+            infoIconWithTooltip = ' <span class="tooltip dict-info" title="'+dictInfo.about+'"></span>';
           }
+          var langTags = SETTINGS.getLangTags(dictInfo);
 
-          dictList += '<div class="dictsettings-item" id="dict_wrap_'+currentDictName+'">';
-          dictList += '<div class="dictsettings-line"><span>';
+          dictList += '<div class="dictsettings-line" id="dict_wrap_'+currentDictName+'">';
+
           dictList += '<span class="drag-handle" title="drag here to change the order"></span>';
-          dictList += '<input type="checkbox" '+checked+' name="dict_'+currentDictName+'" id="dict_'+currentDictName+'"  />';
-          dictList += '<label for="dict_'+currentDictName+'">'+dictInfo.label+'</label>' + tooltipIcon;
+          
+          dictList += '<span class="dictsettings-checkbox"><input type="checkbox" '+checked+' name="dict_'+currentDictName+'" id="dict_'+currentDictName+'"  /></span>';
+          
+          dictList += '<span class="dictsettings-label">';
+          dictList += '<label for="dict_'+currentDictName+'">'+dictInfo.label+'</label><span class="dictionaryTagsBlock">' +langTags + infoIconWithTooltip + '</span>';
           dictList += '</span>';
-          dictList += '</div>';
-          dictList += '<div class="dictsettings-move">';
+
+          dictList += '<span class="dictsettings-move">';
           dictList += '<a class="dict-move-up" href="javascript:SETTINGS.btnMoveDictSettingUp(\'dict_wrap_'+currentDictName+'\')"></a>';
           dictList += '<a class="dict-move-down" href="javascript:SETTINGS.btnMoveDictSettingDown(\'dict_wrap_'+currentDictName+'\')"></a>';
+          dictList += '</span>';
+
           dictList += '<span class="drag-handle" title="drag here to change the order"></span>';
-          dictList += '</div></div>';
+          dictList += '</div>';
         });
         
         $('#mainScreen').hide();
@@ -259,6 +265,49 @@ SETTINGS={
             evt.stopPropagation();
           }
         });
+    },
+
+    getLangTags:function(dictInfo) {
+      var tooltips={
+        "tib":"Tibetan",
+        "skt":"Sanskrit",
+        "en":"English",
+        "->":"→",
+        "<->":"↔"
+      }
+
+      var tooltipText = '';
+      var langTagHtml = '';
+      if(dictInfo.language) {
+        for(var i = 0; i < dictInfo.language.length; i++) {
+          var languageItem = dictInfo.language[i];
+          console.log(languageItem);
+          var languages = languageItem.split(',');
+          if (i > 0) {
+            tooltipText += ' '
+          } 
+          
+          for(var j = 0; j < languages.length; j++) {
+            language = languages[j].trim();
+            if (j > 0) {
+              tooltipText += ', '
+            }
+            if(dictInfo.language.length==1 && languages.length==1) {
+              tooltipText = tooltips[language] + " -> " + tooltips[language];
+            } else {
+              tooltipText += tooltips[language];
+            }
+            if(language=='->' || language=='<->') {
+              langTagHtml += '<span class="langtag-arrow">' + tooltips[language] + '</span>';
+            } else {
+              langTagHtml += '<span class="langtag langtag-' + language + '">'+language+'</span>';
+            }
+          }
+        }
+
+        langTagHtml = ' <span class="langtags tooltip" title="'+tooltipText+'">' + langTagHtml + '</span>';
+      }
+      return langTagHtml
     },
     
     storeSettings:function(settings) {

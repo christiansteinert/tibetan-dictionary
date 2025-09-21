@@ -42,6 +42,9 @@ a{
   padding-left: 2px;
   padding-right: 2px;
 }
+.mainWrap * {
+  max-width: 99vw;
+}
 #wordList {
   font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
   border:1px solid #ccc;
@@ -323,27 +326,93 @@ a{
 }
 
 .drag-handle{
-  background-image: url("data:image/svg+xml;utf8,<svg width='800px' height='800px' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'><path fill='%23888' fill-rule='evenodd' clip-rule='evenodd' d='M9.5 8C10.3284 8 11 7.32843 11 6.5C11 5.67157 10.3284 5 9.5 5C8.67157 5 8 5.67157 8 6.5C8 7.32843 8.67157 8 9.5 8ZM9.5 14C10.3284 14 11 13.3284 11 12.5C11 11.6716 10.3284 11 9.5 11C8.67157 11 8 11.6716 8 12.5C8 13.3284 8.67157 14 9.5 14ZM11 18.5C11 19.3284 10.3284 20 9.5 20C8.67157 20 8 19.3284 8 18.5C8 17.6716 8.67157 17 9.5 17C10.3284 17 11 17.6716 11 18.5ZM15.5 8C16.3284 8 17 7.32843 17 6.5C17 5.67157 16.3284 5 15.5 5C14.6716 5 14 5.67157 14 6.5C14 7.32843 14.6716 8 15.5 8ZM17 12.5C17 13.3284 16.3284 14 15.5 14C14.6716 14 14 13.3284 14 12.5C14 11.6716 14.6716 11 15.5 11C16.3284 11 17 11.6716 17 12.5ZM15.5 20C16.3284 20 17 19.3284 17 18.5C17 17.6716 16.3284 17 15.5 17C14.6716 17 14 17.6716 14 18.5C14 19.3284 14.6716 20 15.5 20Z'/></svg>");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(128, 128, 128, 0.03);
-
-  width: 1em;
-  height: 1.5em;
-  vertical-align: text-bottom;
-  display: inline-block;
-  content: " ";
-  margin: 0 0.2em 0 0.2em;
-  cursor: move;
+  position:relative;
+  background:none;
+  width:1em;
+  min-width: 1em;
+  height:auto; /* allow flex stretch */
+  cursor:move;
+}
+.drag-handle::after{
+  content:"";
+  /* use absolute positionng to create a blank space above and below the background */
+  position:absolute;
+  top:0.3em;  
+  bottom:0.3em;
+  left:0;
+  right:0;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 9'><circle cx='9.5' cy='4.5' r='1.5' fill='%23888'/><circle cx='15.5' cy='4.5' r='1.5' fill='%23888'/></svg>") center top repeat-y;
+  background-size: contain;
+  pointer-events:none;
 }
 .dragging {
   opacity: 0.6;
 }
-.dictsettings-item .drag-handle{
-  position:relative;
-  top: 0.1em;
+.langtags{
+  display:inline-block;
+  vertical-align: middle;
+  margin-left:0.5em;
+  border-radius: 3px;
+  border: none;
 }
+.dictionaryTagsBlock {
+  white-space: nowrap;
+  position:relative;
+  top:-0.2em;
+}
+
+.langtag {
+  border: 1px solid rgba(128, 128, 128, 0.9);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.8em;
+  margin-right: 0.3em;
+  display: inline-block;
+  font-variant:small-caps;
+  min-width:1.5em;
+  text-align:center;
+}
+.langtag + .langtag {
+  margin-left: 0.3em;
+}
+.langtag-tib {
+  background-color: rgba(231, 82, 13, 0.1);
+}
+.langtag-en {
+  background-color: rgba(0, 120, 255, 0.1);
+}
+.langtag-skt {
+  background-color: rgba(30, 250, 100, 0.1);
+}
+.langtag-arrow {
+  display:inline-block;
+  text-align: center;
+  font-size:0.8em;
+  padding: 0 0.2em;
+}
+.langtag, .langtag-arrow {
+  color: #222;
+  margin:0;
+}
+.dark .langtag, .dark .langtag-arrow {
+  color: #ddd;
+}
+
+.dictsettings-label {
+  flex:1;
+  padding-left:0.3em;
+}
+
+.dictsettings-move {
+  width: 3.5em;
+  text-align: right;
+  align-self: center;
+}
+
+.dictsettings-checkbox {
+  align-self: center;
+}
+
 
 .dict-move-up {
   background-image: url("data:image/svg+xml;utf8,<svg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path opacity='0.1' d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' fill='%23888'/><path d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%23888' stroke-width='2'/><path d='M12 8L12 16' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M15 11L12.087 8.08704V8.08704C12.039 8.03897 11.961 8.03897 11.913 8.08704V8.08704L9 11' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
@@ -384,7 +453,7 @@ a{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(128, 128, 128, 0.03);
+  background-color: rgba(128, 128, 128, 0.1);
 
   width: 1.5em;
   height: 1.5em;
@@ -392,48 +461,38 @@ a{
   cursor:help;
   
   position:relative;
-  top:0.1em;
+  top:0.2em;
+  margin-left: 0.3em;
   vertical-align: text-bottom;
   content: " ";
 
   display: inline-block;
+  border-radius: 3em;
 }
 
 #select-dict {
   padding-left: 2px;
   max-width: 96vw;
+  padding-right: 1.25em;
+  padding-left: 0.5em;
 }
-.dictsettings-item {
-  position:relative;
-  padding:4px 5em 4px 2px;
+.dictsettings-line {
+  display: flex;
+  align-items:stretch;
+  width: 100%;
+
+  margin-bottom: 1em;
+  padding:4px 2px 4px 2px;
   border: 1px solid rgba(128, 128, 128, 0.6);
   margin: 4px 0;
   border-radius: 5px;
   background-color:#eee;
 }
-.dark .dictsettings-item {
+.dark .dictsettings-line {
   background-color:#111;
 }
-
-
-.dictsettings-move {
-position:absolute;
-right:0.3em;
-bottom:0.45em;
-}
-.dictsettings-line{
-  padding-right:3em;
-  display:inline-block;
-  width: 100%;
-}
-
-.dictsettings-line>*{
-  display:table-cell;
-}
-
-
 .disabled{
-    visibility:hidden;
+  visibility:hidden;
 }
 
 .settings .settingsinfo {

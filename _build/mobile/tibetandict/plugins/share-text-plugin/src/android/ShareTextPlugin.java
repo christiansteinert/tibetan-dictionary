@@ -46,7 +46,7 @@ public class ShareTextPlugin extends CordovaPlugin {
         result = result.replaceAll("[\\r\\n].*", "");
 
         // remove all quote characters
-        result = result.replaceAll("[\"'“”‘’]", "").trim();
+        result = result.replaceAll("[\"“”]", "").trim();
         return result;
     }
 
