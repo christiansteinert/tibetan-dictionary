@@ -974,7 +974,7 @@ var DICT={
           var dictList = DICT.settings.activeDictionaries;
           $.each(dictList,function(idx,currentDictName) {        
             var currentDict = DICTLIST[currentDictName];
-            if(lang==currentDict.language && currentDict.scanId && !foundTerms.has(inputText)) {                
+            if(currentDict.language && lang==currentDict.language[0] && currentDict.scanId && !foundTerms.has(inputText)) {                
               result.push([inputText]);
               foundTerms.add(inputText);
             }
@@ -1333,7 +1333,7 @@ var DICT={
     // add "content" to look up pages in scanned dictionaries
     $.each(DICTLIST, function(dict_id, dict) {
       var currentDict = DICTLIST[dict_id];
-      if(DICT.getInputLang()==currentDict.language && currentDict.scanId) {
+      if(currentDict.language && DICT.getInputLang()==currentDict.language[0] && currentDict.scanId) {
         dictEntries[dict_id] = '<div><a href="javascript:DICT.loadScannedPage(\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\',\'' + DICT.htmlEscapeScriptAttr(term) + '\')">' + currentDict.linkText+'</a></div>';
       }
     });
