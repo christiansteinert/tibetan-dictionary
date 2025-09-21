@@ -328,8 +328,8 @@ a{
 .drag-handle{
   position:relative;
   background:none;
-  width:1em;
-  min-width: 1em;
+  width: 1.5em;
+  min-width: 1.5em;
   height:auto; /* allow flex stretch */
   cursor:move;
 }
@@ -339,8 +339,8 @@ a{
   position:absolute;
   top:0.3em;  
   bottom:0.3em;
-  left:0;
-  right:0;
+  left:0.25em;
+  right:0.25em;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 9'><circle cx='9.5' cy='4.5' r='1.5' fill='%23888'/><circle cx='15.5' cy='4.5' r='1.5' fill='%23888'/></svg>") center top repeat-y;
   background-size: contain;
   pointer-events:none;

@@ -1441,7 +1441,7 @@ var DICT={
 
             // cleanup text and search for the entered term
             if(inputLang === "tib") {
-              if (/.*['a-zA-Z].*/.test(uniInput) ) {
+              if (/.*['a-zA-Z].*/.test(sharedText) ) {
                 // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
                 // in this case we will later convert the input back to Wylie when backspace is pressed.
                 DICT.wasTypedInWylie = true;

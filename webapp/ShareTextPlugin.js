@@ -9,4 +9,4 @@ var ShareTextPlugin = {
     }
 };
 
-module.exports = ShareTextPlugin;
+//module.exports = ShareTextPlugin;
