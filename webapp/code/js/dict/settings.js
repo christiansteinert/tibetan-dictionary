@@ -281,7 +281,6 @@ SETTINGS={
       if(dictInfo.language) {
         for(var i = 0; i < dictInfo.language.length; i++) {
           var languageItem = dictInfo.language[i];
-          console.log(languageItem);
           var languages = languageItem.split(',');
           if (i > 0) {
             tooltipText += ' '
@@ -379,12 +378,12 @@ SETTINGS={
     },
     
     btnMoveDictSettingDown:function(id) {
-      var $el = $('#'+id);
-      $el.before($($el.next()));
+      var $el = $('[id="'+id+'"]');
+      $el.before($el.next());
     },
     
     btnMoveDictSettingUp:function(id) {
-      var $el = $('#'+id);
-      $el.after($($el.prev()));
+      var $el = $('[id="'+id+'"]');
+      $el.after($el.prev());
     }
 }
