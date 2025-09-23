@@ -19,6 +19,8 @@ var DICT={
   inputLang:"tib",
   lastUniInput:"",
   currentListTerm:"",
+  lastHomeBackButtonTime:0,
+  homepageContent:"",
 
   getAbbreviations:function(id) {
     if(!this.ABBREV[id]) {
@@ -473,6 +475,8 @@ var DICT={
   },
   
   init:function($) {
+    DICT.homepageContent = $('#definitions').html();
+
     $.fn.selectRange = function(start, end) {
       if(end === undefined) {
           end = start;
@@ -768,48 +772,74 @@ var DICT={
 
       // handle navigation events
       // - listen to the "back" button on android
-      document.addEventListener("backbutton", function(){
-        if(window.location.hash !== 'home') {
+      document.addEventListener("backbutton", function(event){
+
+        // If we are on cordova, exit the app if the user presses back twice on the home screen
+        if (window.cordova) {
+          if (window.location.hash === '#home') {
+            var now = Date.now();
+            if(now - DICT.lastHomeBackButtonTime < 1500) {
+              if(navigator.app && navigator.app.exitApp) {
+                navigator.app.exitApp();
+              }
+            }
+            DICT.lastHomeBackButtonTime = now;
+          }
+
+          // Prevent Cordova / Android default (which would finish the Activity)
+          if (event.preventDefault) { event.preventDefault(); }
+          if (event.stopPropagation) { event.stopPropagation(); }
+        }
+
+        // Navigate back inside the app if we are not already at the home state
+        if(window.location.hash && window.location.hash !== '#home') {
           history.back();
         }
-      }, false); 
+
+      }, false);
       
       // - listen to changes of the URL
       var hashEventCount = 0;
-      $(window).hashchange(function(){
+      $(window).hashchange(function(event){
         hashEventCount++;
         
         if(new Date().getTime() - DICT._lastHashEvent < 300) 
           return; //ignore hashchange events that are very quick after a user action
           
-        var state = decodeURIComponent(location.hash);
-        if(state.indexOf('#')==0) {
+        var state = location.hash;
+
+        if(state.indexOf('#') === 0) {
           state = state.substring(1);
-        } else {
+        }
+        try {
+          state = decodeURIComponent(state);
+        } catch(e) {
           state = '';
+          DICT.log('Failed to decode state hash: '+e.message);
         }
 
         if(state === 'home') {
+          // restore the homepage content
+          // but don't refresh the homepage right away again when hitting the home page upon startup
           if(hashEventCount > 1) {
-            location.reload(); // don't reload right away again when hitting the home page upon startup 
+            DICT.clearInput();
+            DICT.scrollToTop();
+
+            $('#definitions').html(DICT.homepageContent);
+
+            DICT.setSidebarState(false);
+            $('.leftSideBar').hide();
           }
           return;
-        }
-        
-        if(state === ''){
-          DICT.log('leaving App');
-          if(navigator.app && navigator.app.exitApp) {
-            navigator.app.exitApp();
-          }
         }
 
         DICT.setState(state);
       });
 
         if(location.hash == '' || location.hash == '#') {
-          location.hash = 'home';
+          location.hash = '#home';
         }
-      
+
       var sharedTextPluginAvailable = DICT.handleSharedText();     
       if (!sharedTextPluginAvailable) {
         // If the shared text plugin is not available then just trigger the hashchange event to load the state 
@@ -822,7 +852,7 @@ var DICT={
   },
   
   prev:function() {
-    if(window.location.hash === 'home') {
+    if(window.location.hash === '#home') {
       return;
     }
   
@@ -840,7 +870,7 @@ var DICT={
   },
 
   next:function() {
-    if(window.location.hash === 'home') {
+    if(window.location.hash === '#home') {
       return;
     }
 
@@ -1095,16 +1125,10 @@ var DICT={
       if(state==='settings') {
         // show settings if requested
         SETTINGS.btnShowSettings();
-      } else if($('.settings').is(':visible')) {
-        // close settings, if active
-        if(state!=='settings') {
-          location.reload(true);
-          return;
-        }
       } else if(state==='home') {
           // do nothing - this is handled by the hashchange event.
           return;
-      } else { 
+      } else {
         //load a term 
         if(DICT.getCurrentState() === state)
           return;
@@ -1156,7 +1180,7 @@ var DICT={
   readTerm:function(term, saveState){
     this.scrollToTop();
     term = this._normalizeWylieForLookup(term);
-    term = unescape(term).replace(/^\s+|\s+$/g, '');
+    term = decodeURIComponent(term).replace(/^\s+|\s+$/g, '');
     if(this.activeTerm != term) {
       this.getDataAccess().readTerm(term, DICT.getLang(), this.settings.activeDictionaries, saveState);
       this.activeTerm = term;
@@ -1171,7 +1195,7 @@ var DICT={
   
   storeNavigationState:function() {
     this._lastHashEvent = new Date().getTime();
-    window.location.hash = escape(DICT.getCurrentState());
+    window.location.hash = encodeURIComponent(DICT.getCurrentState());
   },
   
   _escapeRegExp:function(str) {
@@ -1481,6 +1505,16 @@ var DICT={
 
 
 /* ============== Initialization ============== */
+
+// initialize the PWA service worker
+if ('serviceWorker' in navigator && !window.cordova) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('code/js/pwa/service-worker.js')
+      .catch(function(err){ console.warn('SW registration failed', err); });
+  });
+}
+
+// initialize the actual app
 if(window.cordova) {
   //phonegap-based initialization for mobile app
   document.addEventListener("deviceready", function(){

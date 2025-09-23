@@ -1,49 +1,70 @@
 {
+  "id": "/",
   "name": "TibetanDictionary",
   "short_name": "TibetanDictionary",
   "description": "Tibetan-English Dictionary",
-  "start_url": "./",
+  "start_url": "./index.html#home",
   "display": "standalone",
   "orientation": "portrait-primary",
   "theme_color": "#ffffff",
   "background_color": "#ffffff",
-  "scope": "./",
+  "scope": "/",
   "icons": [
     {
-      "src": "icons/icon-48x48.png",
-      "sizes": "48x48",
+      "src": "dicticons/icon-flat-192x192.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "dicticons/icon-flat-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "dicticons/icon-flat-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+
+    {
+      "src": "dicticons/icon-48x48.png",
+      "sizes": "16x16",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-72x72.png",
+      "src": "dicticons/icon-72x72.png",
       "sizes": "72x72",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-96x96.png",
+      "src": "dicticons/icon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-144x144.png",
+      "src": "dicticons/icon-144x144.png",
       "sizes": "144x144",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-192x192.png",
+      "src": "dicticons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "icons/icon-512x512.png",
+      "src": "dicticons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     }
+
   ]
 }

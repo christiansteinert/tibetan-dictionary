@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="306" id="de.christian_steinert.tibetandict" version="0.0.23" versionCode="303" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget android-versionCode="307" versionCode="307" id="de.christian_steinert.tibetandict" version="0.0.24" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
     <name>TibetanDictionary</name>
     <description>A Tibetan Dictionary app that supports Wylie input, uses Tibetan script and comes with various dictionaries.</description>
     <author email="dictionary@christian-steinert.de" href="http://www.christian-steinert.de">Christian Steinert</author>
@@ -23,7 +23,7 @@
      </config-file>
 
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:icon="@mipmap/icon" android:enableOnBackInvokedCallback="true" /> 
+        <application android:icon="@mipmap/icon" android:enableOnBackInvokedCallback="false" /> 
     </edit-config>
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
