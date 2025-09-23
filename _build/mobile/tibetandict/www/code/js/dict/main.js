@@ -822,6 +822,7 @@ var DICT={
           // restore the homepage content
           // but don't refresh the homepage right away again when hitting the home page upon startup
           if(hashEventCount > 1) {
+            /*
             DICT.clearInput();
             DICT.scrollToTop();
 
@@ -829,6 +830,8 @@ var DICT={
 
             DICT.setSidebarState(false);
             $('.leftSideBar').hide();
+            */
+            location.reload();
           }
           return;
         }

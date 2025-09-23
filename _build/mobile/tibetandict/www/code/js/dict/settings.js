@@ -366,7 +366,6 @@ SETTINGS={
   
       this.storeSettings(settings);
       history.back();
-      location.reload();
     },
     
     btnCancelSettings:function() {
