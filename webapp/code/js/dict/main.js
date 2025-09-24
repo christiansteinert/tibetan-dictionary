@@ -801,42 +801,7 @@ var DICT={
       // - listen to changes of the URL
       var hashEventCount = 0;
       $(window).hashchange(function(event){
-        hashEventCount++;
-        
-        if(new Date().getTime() - DICT._lastHashEvent < 300) 
-          return; //ignore hashchange events that are very quick after a user action
-          
-        var state = location.hash;
-
-        if(state.indexOf('#') === 0) {
-          state = state.substring(1);
-        }
-        try {
-          state = decodeURIComponent(state);
-        } catch(e) {
-          state = '';
-          DICT.log('Failed to decode state hash: '+e.message);
-        }
-
-        if(state === 'home') {
-          // restore the homepage content
-          // but don't refresh the homepage right away again when hitting the home page upon startup
-          if(hashEventCount > 1) {
-            /*
-            DICT.clearInput();
-            DICT.scrollToTop();
-
-            $('#definitions').html(DICT.homepageContent);
-
-            DICT.setSidebarState(false);
-            $('.leftSideBar').hide();
-            */
-            location.reload();
-          }
-          return;
-        }
-
-        DICT.setState(state);
+        DICT._handleUrlFragmentChange(++hashEventCount);
       });
 
         if(location.hash == '' || location.hash == '#') {
@@ -1123,6 +1088,46 @@ var DICT={
     return JSON.stringify(state);
   },
 
+  getCurrentStateObject:function() {
+    return {
+      activeTerm:this.activeTerm,
+      lang:this.getLang(),
+      inputLang:this.getInputLang(),
+      currentListTerm:this.currentListTerm,
+      forceLeftSideVisible:this.getSidebarState(),
+      offset:this._offset
+    };
+  },
+
+  _compareStateObjects:function(state1, state2) {
+    if (!state1 || !state2) {
+      return state1 === state2;
+    }
+    
+    // Compare all relevant properties
+    return state1.activeTerm === state2.activeTerm &&
+           state1.lang === state2.lang &&
+           state1.inputLang === state2.inputLang &&
+           state1.currentListTerm === state2.currentListTerm &&
+           state1.forceLeftSideVisible === state2.forceLeftSideVisible &&
+           state1.offset === state2.offset;
+  },
+
+  _isStateEquivalentToCurrent:function(stateString) {
+    if (!stateString || stateString === "") {
+      return false;
+    }
+    
+    try {
+      var incomingState = JSON.parse(stateString);
+      var currentState = this.getCurrentStateObject();
+      return this._compareStateObjects(currentState, incomingState);
+    } catch(e) {
+      this.log('Error comparing states: ' + e.message);
+      return false;
+    }
+  },
+
   setState:function(state) {
     if(state && state != "") {
       if(state==='settings') {
@@ -1133,7 +1138,7 @@ var DICT={
           return;
       } else {
         //load a term 
-        if(DICT.getCurrentState() === state)
+        if(this._isStateEquivalentToCurrent(state))
           return;
         
         var stateInfo = JSON.parse(state);
@@ -1197,8 +1202,31 @@ var DICT={
   },
   
   storeNavigationState:function() {
-    this._lastHashEvent = new Date().getTime();
-    window.location.hash = encodeURIComponent(DICT.getCurrentState());
+    this._updateUrlFragmentFromCurrentState();
+  },
+
+  _updateUrlFragmentFromCurrentState:function() {
+    var currentStateString = this.getCurrentState();
+    var currentUrlState = this._getStateFromCurrentUrl();
+    
+    // Only update URL if the state has actually changed
+    if (!this._isStateEquivalentToCurrent(currentUrlState)) {
+      this._lastHashEvent = new Date().getTime();
+      window.location.hash = encodeURIComponent(currentStateString);
+    }
+  },
+
+  _getStateFromCurrentUrl:function() {
+    var hash = location.hash;
+    if(hash.indexOf('#') === 0) {
+      hash = hash.substring(1);
+    }
+    try {
+      return decodeURIComponent(hash);
+    } catch(e) {
+      this.log('Failed to decode URL hash: ' + e.message);
+      return '';
+    }
   },
   
   _escapeRegExp:function(str) {
@@ -1504,6 +1532,40 @@ var DICT={
       return false;
     }
   },
+
+  _handleUrlFragmentChange:function(eventCount) {
+    // Prevent rapid-fire hashchange events that could cause loops
+    var timeSinceLastUpdate = new Date().getTime() - this._lastHashEvent;
+    if(timeSinceLastUpdate < 300) {
+      this.log('Ignoring hashchange - too quick after user action (' + timeSinceLastUpdate + 'ms)');
+      return;
+    }
+      
+    var urlState = this._getStateFromCurrentUrl();
+
+    if(urlState === 'home') {
+      // restore the homepage content
+      // but don't refresh the homepage right away again when hitting the home page upon startup
+      if(eventCount > 1) {
+        /*
+        DICT.clearInput();
+        DICT.scrollToTop();
+
+        $('#definitions').html(DICT.homepageContent);
+
+        DICT.setSidebarState(false);
+        $('.leftSideBar').hide();
+        */
+        location.reload();
+      }
+      return;
+    }
+
+    // Only call setState if the URL state is actually different from current state
+    if(!this._isStateEquivalentToCurrent(urlState)) {
+      this.setState(urlState);
+    }
+  }
 };
 
 
