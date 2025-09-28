@@ -2,6 +2,7 @@ var DICT={
   _needsBackspaceWorkaround:null,
   _touch:false,
   _offset:0,
+  _lastStoredNavigationState:{},
   dataAccess:{},
   useUnicodeTibetan:true,
   wasTypedInWylie:false,
@@ -776,7 +777,7 @@ var DICT={
 
         // If we are on cordova, exit the app if the user presses back twice on the home screen
         if (window.cordova) {
-          if (window.location.hash === '#home') {
+          if (DICT._getCurrentHash() === '#home') {
             var now = Date.now();
             if(now - DICT.lastHomeBackButtonTime < 1500) {
               if(navigator.app && navigator.app.exitApp) {
@@ -792,7 +793,7 @@ var DICT={
         }
 
         // Navigate back inside the app if we are not already at the home state
-        if(window.location.hash && window.location.hash !== '#home') {
+        if(tDICT._getCurrentHash() !== '#home') {
           history.back();
         }
 
@@ -806,7 +807,7 @@ var DICT={
         if(new Date().getTime() - DICT._lastHashEvent < 300) 
           return; //ignore hashchange events that are very quick after a user action
           
-        var state = location.hash;
+        var state = DICT._getCurrentHash();
 
         if(state.indexOf('#') === 0) {
           state = state.substring(1);
@@ -835,13 +836,8 @@ var DICT={
           }
           return;
         }
-
         DICT.setState(state);
       });
-
-        if(location.hash == '' || location.hash == '#') {
-          location.hash = '#home';
-        }
 
       var sharedTextPluginAvailable = DICT.handleSharedText();     
       if (!sharedTextPluginAvailable) {
@@ -855,7 +851,7 @@ var DICT={
   },
   
   prev:function() {
-    if(window.location.hash === '#home') {
+    if(this._getCurrentHash() === '#home') {
       return;
     }
   
@@ -873,7 +869,7 @@ var DICT={
   },
 
   next:function() {
-    if(window.location.hash === '#home') {
+    if(this._getCurrentHash() === '#home') {
       return;
     }
 
@@ -948,7 +944,7 @@ var DICT={
   },
   
   switchInputLang:function() {
-    DICT.setState(DICT.getCurrentState());
+    DICT.setState(DICT.getCurrentStateAsString());
     DICT.setInputLang();
     DICT.setSidebarState(false);
     $('.leftSideBar').css('display','none');
@@ -1120,7 +1116,11 @@ var DICT={
       forceLeftSideVisible:this.getSidebarState(),
       offset:this._offset
     };
-    return JSON.stringify(state);
+    return state;
+  },
+
+  getCurrentStateAsString:function() {
+    return JSON.stringify(this.getCurrentState());
   },
 
   setState:function(state) {
@@ -1128,12 +1128,18 @@ var DICT={
       if(state==='settings') {
         // show settings if requested
         SETTINGS.btnShowSettings();
+      } else if($('.settings').is(':visible')) {
+        // close settings, if active
+        if(state!=='settings') {
+          location.reload(true);
+          return;
+        }
       } else if(state==='home') {
           // do nothing - this is handled by the hashchange event.
           return;
       } else {
         //load a term 
-        if(DICT.getCurrentState() === state)
+        if(DICT.getCurrentStateAsString() === state)
           return;
         
         var stateInfo = JSON.parse(state);
@@ -1195,10 +1201,50 @@ var DICT={
     }
     
   },
+
+  _getCurrentHash:function() {
+    if (window.location.hash === '' || window.location.hash === '#') {
+      return '#home';
+    }
+    return window.location.hash;
+  },
   
   storeNavigationState:function() {
     this._lastHashEvent = new Date().getTime();
-    window.location.hash = encodeURIComponent(DICT.getCurrentState());
+    var currentState = this.getCurrentState();
+    var currentHash = this._getCurrentHash();
+    var previousState = this._lastStoredNavigationState;
+
+    var newUrlHash = encodeURIComponent(JSON.stringify(currentState));
+
+
+    if (this.isSmallScreen() && currentState.forceLeftSideVisible !== previousState.forceLeftSideVisible) {
+      this.log("sidebbar change: setting hash");
+      window.location.hash = newUrlHash;
+
+    } else if (currentState.lang !== previousState.lang 
+       || currentState.inputLang !== previousState.lang
+       || currentState.activeTerm !== previousState.activeTerm
+       || currentState.offset !== previousState.offset) {
+
+      if (currentState.activeTerm || previousState.activeTerm || (currentState.inputLang !== previousState.lang)) {
+        this.log("setting hash");
+        window.location.hash = newUrlHash;
+      }
+
+    } else {
+      var oldUrl = window.location.href;
+      if(oldUrl.indexOf('#')) {
+        var newUrl = oldUrl.replace(window.location.hash, '#' + newUrlHash)
+      } else {
+        var newUrl = oldUrl += '#' + newUrlHash;
+      }
+      if (currentHash !== '#home') {
+        this.log("replacing url");
+        window.location.replace(newUrl);
+      }
+    }
+    this._lastStoredNavigationState = currentState;
   },
   
   _escapeRegExp:function(str) {
