@@ -588,8 +588,7 @@ var DICT={
       this.SYLLABLELIST = SYLLABLELIST;
       this.setTibetanOutput(this.settings.unicode);
       this.initCreditsInformation();
-      $('#mainScreen').show();
-      $('#init').hide();
+      $('body').removeClass('cordovaInitializing');
 
       var conflicts=[];        
       $.each(this.SYLLABLELIST,function(wylie,uni){

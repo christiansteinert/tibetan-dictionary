@@ -279,6 +279,19 @@ a{
 
 /* initialization screen*/
 #init {
+  display:none;
+}
+
+.cordovaInitializing #init {
+  display:block;
+}
+
+.cordovaInitializing #mainScreen {
+  display:none;
+}
+
+
+#init {
     background-color: #fff;
     height: 100%;
     position: absolute;

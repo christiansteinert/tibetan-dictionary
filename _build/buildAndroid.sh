@@ -76,9 +76,19 @@ buildAndroidApplication() {
   echo "GLOBAL_SETTINGS={ publicOnly: $IS_PUBLIC }" > ../webapp/settings/globalsettings.js
 
   # copy the files of the web application into the cordova project
+  # for the index page, add a cordovaInitializing class so that an init message gets shown
+  # while the app initializes itself
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www
-  cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
-  cp -r ../webapp/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+  
+  mkdir -p /tmp/dict
+  cp -rf ../webapp/index.html /tmp/dict/index.html
+  sed -i 's/<body/<body class="cordovaInitializing"/g' /tmp/dict/index.html
+
+  cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
+  cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
+  rm -rf /tmp/dict/
+
+
   mkdir -p mobile/tibetandict/www/data
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www/data
   cp -r ../webapp/data/*.js mobile/tibetandict/www/data
