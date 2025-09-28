@@ -793,7 +793,7 @@ var DICT={
         }
 
         // Navigate back inside the app if we are not already at the home state
-        if(tDICT._getCurrentHash() !== '#home') {
+        if(DICT._getCurrentHash() !== '#home') {
           history.back();
         }
 
