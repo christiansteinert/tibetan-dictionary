@@ -82,7 +82,7 @@ buildAndroidApplication() {
   
   mkdir -p /tmp/dict
   cp -rf ../webapp/index.html /tmp/dict/index.html
-  sed -i 's/<body/<body class="cordovaInitializing"/g' /tmp/dict/index.html
+  sed -i 's/<body class="/<body class="cordovaInitializing mobile /g' /tmp/dict/index.html
 
   cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
   cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
