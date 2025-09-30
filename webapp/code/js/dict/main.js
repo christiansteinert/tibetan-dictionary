@@ -590,6 +590,9 @@ var DICT={
       this.initCreditsInformation();
       $('body').removeClass('cordovaInitializing');
 
+      // attach clear-input behavior
+      $('#clearInputBtn').on('click', function(e){ e.preventDefault(); DICT.clearInput(); });
+
       var conflicts=[];        
       $.each(this.SYLLABLELIST,function(wylie,uni){
         var existingSyllable = DICT.UNICODE_SYLLABLELIST[uni];
@@ -711,8 +714,6 @@ var DICT={
           isCursorAtTheEnd = false;          
           $('#searchTerm').selectRange(newCursorPos);
   
-
-
         } else if(event.keyCode == 32 
             || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput) && !/[a-zA-Z'].*་/.test(lastUniInput)) // syllable  end char present and no latin letters before Tibetan stuff
             || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
@@ -1016,9 +1017,9 @@ var DICT={
           //result[i][0] = DICT.tibetanOutput(result[i][0]);
           tableRows[i]=[];
           if(lang === "en")
-            tableRows[i][0]='<span data-wylie="'+result[i][0]+'">'+result[i][0]+'</span>';
+            tableRows[i][0]='<a href="#" data-wylie="'+result[i][0]+'">'+result[i][0]+'</a>';
           else
-            tableRows[i][0]='<span data-wylie="'+result[i][0]+'">'+DICT.tibetanOutput(result[i][0])+'</span>';
+            tableRows[i][0]='<a href="#" data-wylie="'+result[i][0]+'">'+DICT.tibetanOutput(result[i][0])+'</a>';
         }
         
         DICT.dataTable.clear();
@@ -1037,9 +1038,10 @@ var DICT={
             $('.selected').removeClass('selected'); 
             $(this).addClass('selected');
             
-            var wylie = $(this).children('span').attr('data-wylie');
+            var wylie = $(this).children('a').attr('data-wylie');
             DICT.lang=DICT.getInputLang();
             DICT.readTerm(wylie, DICT.getInputLang(), true);
+            return false; 
           });
           DICT._offset = offset;
           $('.paginate_info').text('Showing results ' + (offset+1) + ' to ' + (offset+(result.length>settings.listSize?settings.listSize:result.length)) + '.');
@@ -1073,7 +1075,7 @@ var DICT={
     } else if(loadFirstItem) {
       //the list in the sidebar was already loaded before but we need to activate the first term
       var $firstRow;
-      $('#wordList tr td span').each(function(count, elem) {
+      $('#wordList tr td a').each(function(count, elem) {
         if($(elem).attr('data-wylie') === inputText  || ( DICT.getInputLang()=="en" && $(elem).attr('data-wylie').toLowerCase() === inputText.toLowerCase() )  )
           $firstRow = $(elem)
       });
@@ -1527,7 +1529,7 @@ var DICT={
             }
             sharedText = sharedText.trim();
             $('#searchTerm').val(sharedText);
-
+      
             DICT.log("Set input field to shared text: " + sharedText);
             DICT.search(true,true,0);
 

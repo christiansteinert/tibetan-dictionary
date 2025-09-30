@@ -57,24 +57,33 @@ a{
 #wordList td {
     padding: 0.1em 0.2em;
 }
-#wordList td:hover{
+#wordList a{
+  text-decoration: none;
+}
+
+#wordList td:hover a{
   text-decoration:underline;
 }
 .even td{
   background-color: #e8e8f8;    
 }
-#wordList .selected{
+#wordList .selected, #wordList .selected a {
   background-color:#77779a;
   color:#fff;
 }
     
 #searchTerm{
+  width: 100%;
+  box-sizing: border-box;
   font-size:1.2em;
-  padding: 0.3em 0.2em;
-  width:100%;
   font-family:"Droid Sans", sans-serif;
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0.8);
+  padding: 0.3em 25px 0.3em 0.2em;
+  margin: 0 10px 0 7px;
+}
+.unicodeTibInput #searchTerm{
+  padding: 0.1em 25px 0.1em 0.2em;
 }
 
 #definitions{
@@ -147,43 +156,21 @@ a{
   vertical-align:top;
 }
 .textInput{
+  width: 100%;
   padding: 0.5em 0;
   border-bottom: 1px solid #ccc;
   position:fixed;
   -webkit-backface-visibility: hidden; /* position:fixed-workaround for older android versions */
   top:0;
   z-index:1;
-  width: 100%;
+  display: flex;
+  align-items: top;
+  flex-direction: row;
 }
 .textInputWrap{
-  padding-right:130px;
-  padding-left: 0.3em;
-}
-#settingsBtn{
-  position:absolute;
-  top:0.4em;
-  right:3px;
-}
-.unicodeTibInput #settingsBtn{
-  top:0.8em;
-}
-#clearBtn{
-  position:absolute;
-  top:0.4em;
-  right:70px;
-}
-.unicodeTibInput #clearBtn{
-  top:0.8em;
-  right:70px;
-}
-
-.switchBtn {
-  position:absolute;
-  top:0.4em;
-  right:42px;
-}
-.unicodeTibInput .switchBtn {
-  top:0.8em;
+  position: relative;
+  flex-grow: 1;
+  display: flex;
 }
 
 .unicodeTibInput .leftSideBar,.unicodeTibInput .mainWrap{
@@ -273,9 +260,64 @@ a{
   margin:0 0 0 3px;
 }
 
-.unicodeTibInput #searchTerm{
-  padding: 0.2em 0 0 0.2em;
+/* Embedded clear button inside the search input */
+.clear-input {
+  position: absolute;
+  right: 17px; /* place inside input’s own right padding area */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3; /* keep above input and not hidden under other controls */
 }
+.clear-input::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10' opacity='0.5'/><path d='M15 9L9 15M9 9l6 6' stroke='%23333'  /></svg>");
+}
+.clear-input:hover { opacity: 0.95; background-color: rgba(0,0,0,0.04); }
+.clear-input:active { background-color: rgba(0,0,0,0.08); }
+
+/* Show the clear button when there is content */
+#searchTerm:not(:placeholder-shown) + .clear-input { opacity: 0.8; pointer-events: auto; }
+
+#settingsBtn, .switchBtn{
+  position:relative;
+}
+#settingsBtn img, .switchBtn img{
+  position: absolute;
+}
+#settingsBtn {
+  width: 35px;
+  height: 10px;
+}
+.switchBtn {
+  width: 30px;
+  height: 10px;
+}
+
+.unicodeTibInput #settingsBtn, .unicodeTibInput .switchBtn{
+  top:0.2em;
+}
+
+
+/* Dark theme tweaks for the clear icon */
+.dark .clear-input::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ddd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10' opacity='0.5'/><path d='M15 9L9 15M9 9l6 6'/></svg>");
+}
+
 
 /* initialization screen*/
 #init {
@@ -362,7 +404,6 @@ a{
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   outline: none;
 }
-
 
 .drag-handle{
   position:relative;
@@ -605,7 +646,9 @@ body{
   
   .dictName{width:auto;padding:0.5em 0.3em}
   #definitions,.textInput{left:0;margin:0;padding:0}
+  
   #searchTerm{
+    margin-left: 0;
     border-left: 0 none;
     margin-top: -1px;  
     border-radius: 0;
@@ -614,6 +657,7 @@ body{
   }
   .textInputWrap{
     padding: 0;
+  
   }
   
   .settings {
@@ -639,16 +683,16 @@ body{
     text-align:center;
   }
 
-  #settingsBtn, #clearBtn, .switchBtn{
+  #settingsBtn, .switchBtn{
     top:-0.15em;
+    display:inline-block;
+    position:relative;
   }
-
-  .unicodeTibInput #settingsBtn, .unicodeTibInput #clearBtn, .unicodeTibInput .switchBtn{
+  .unicodeTibInput #settingsBtn, .unicodeTibInput .switchBtn{
     top:0.2em;
   }
-
   .textInputWrap{
-    padding-right:115px;
+    padding:0;
   }
 
 }
@@ -687,9 +731,10 @@ a img {
 body.dark,.dark .textInput{background-color:#000 !important;color:#eee !important}
 .dark .paginate_info{color:#ccc}
 
-.dark .settings select, .dark .settings input:not([type="checkbox"]) {
+.dark #searchTerm, .dark .settings select, .dark .settings input:not([type="checkbox"]) {
   background-color:#333 !important;color:#eee !important}
 
+.dark #searchTerm:hover, .dark #searchTerm:active, .dark #searchTerm:focus,
 .dark .settings select:hover, .dark .settings select:active, .dark .settings select:focus,
 .dark .settings input:not([type="checkbox"]):hover, .dark .settings input:not([type="checkbox"]):active, .dark .settings input:not([type="checkbox"]):focus {
   background-color:#555 !important;}
@@ -698,7 +743,7 @@ body.dark,.dark .textInput{background-color:#000 !important;color:#eee !importan
 .dark .paginate a{border-color:#ccc;}
 .dark #wordList .even td{background-color:#333}
 .dark a{color:#ddd}
-.dark #wordList .selected{background-color:#668 !important;color:#ff7;}
+.dark #wordList .selected, .dark #wordList .selected a{background-color:#668 !important;color:#ff7;}
 .dark #init{background-color:#000;}
 .dark .dictName {border-right:1px solid #aaa;color:#a8a8a8;}
 .dark #settingsScreen{background:#000}
