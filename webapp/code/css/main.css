@@ -79,11 +79,11 @@ a{
   font-family:"Droid Sans", sans-serif;
   border-radius: 6px;
   border: 1px solid rgba(128, 128, 128, 0.8);
-  padding: 0.3em 25px 0.3em 0.2em;
+  padding: 0.3em 40px 0.3em 0.2em;
   margin: 0 10px 0 7px;
 }
 .unicodeTibInput #searchTerm{
-  padding: 0.1em 25px 0.1em 0.2em;
+  padding: 0.1em 40px 0.1em 0.2em;
 }
 
 #definitions{
@@ -263,7 +263,7 @@ a{
 /* Embedded clear button inside the search input */
 .clear-input {
   position: absolute;
-  right: 17px; /* place inside input’s own right padding area */
+  right: 19px;
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -294,18 +294,20 @@ a{
 #searchTerm:not(:placeholder-shown) + .clear-input { opacity: 0.8; pointer-events: auto; }
 
 #settingsBtn, .switchBtn{
-  position:relative;
+  position:relative;  
 }
 #settingsBtn img, .switchBtn img{
   position: absolute;
+  right: 5px;
+}
+#settingsBtn img {
+  top:-0.1em;
 }
 #settingsBtn {
-  width: 35px;
-  height: 10px;
+  width: 45px;
 }
 .switchBtn {
-  width: 30px;
-  height: 10px;
+  width: 32px;
 }
 
 .unicodeTibInput #settingsBtn, .unicodeTibInput .switchBtn{
@@ -684,12 +686,12 @@ body{
   }
 
   #settingsBtn, .switchBtn{
-    top:-0.15em;
+    margin-top:-0.15em;
     display:inline-block;
     position:relative;
   }
   .unicodeTibInput #settingsBtn, .unicodeTibInput .switchBtn{
-    top:0.2em;
+    margin-top:0.05em;
   }
   .textInputWrap{
     padding:0;
