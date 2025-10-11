@@ -1003,7 +1003,7 @@ var DICT={
           var dictList = DICT.settings.activeDictionaries;
           $.each(dictList,function(idx,currentDictName) {        
             var currentDict = DICTLIST[currentDictName];
-            if(currentDict.language && lang==currentDict.language[0] && currentDict.scanId && !foundTerms.has(inputText)) {                
+            if(currentDict.language && lang==currentDict.language[0] && currentDict.scanId && !foundTerms.has(inputText) && !currentDict.exactPageNumbersAvailable) {                
               result.push([inputText]);
               foundTerms.add(inputText);
             }
@@ -1041,7 +1041,7 @@ var DICT={
             var wylie = $(this).children('a').attr('data-wylie');
             DICT.lang=DICT.getInputLang();
             DICT.readTerm(wylie, DICT.getInputLang(), true);
-            return false; 
+            return false;
           });
           DICT._offset = offset;
           $('.paginate_info').text('Showing results ' + (offset+1) + ' to ' + (offset+(result.length>settings.listSize?settings.listSize:result.length)) + '.');
@@ -1407,7 +1407,7 @@ var DICT={
     // add "content" to look up pages in scanned dictionaries
     $.each(DICTLIST, function(dict_id, dict) {
       var currentDict = DICTLIST[dict_id];
-      if(currentDict.language && DICT.getInputLang()==currentDict.language[0] && currentDict.scanId) {
+      if(currentDict.language && DICT.getInputLang()==currentDict.language[0] && currentDict.scanId && !currentDict.exactPageNumbersAvailable) {
         dictEntries[dict_id] = '<div><a href="javascript:DICT.loadScannedPage(\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\',\'' + DICT.htmlEscapeScriptAttr(term) + '\')">' + currentDict.linkText+'</a></div>';
       }
     });
@@ -1447,8 +1447,20 @@ var DICT={
             definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
             defEnd = '</div>';
           } else if(currentDict.scanId){ 
-            //scanned dictionary. Do nothing because no escaping of text is needed
+            //scanned dictionary. If we have an exact page number, we link to it
+            if(currentDict.exactPageNumbersAvailable) {
+              var pageNr = definition.replace(/[^0-9]/g,'');
+              var pageInfo = {
+                term_page: pageNr,
+                ...currentDict.scanInfo
+              }
 
+              definition = '<div><a href="javascript:DICT.openScannedPage(' 
+                + '\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\','
+                + '\'' + DICT.htmlEscapeScriptAttr(term) + '\','
+                +  DICT.htmlEscapeScriptAttr(JSON.stringify(pageInfo))
+                + ')">' + currentDict.linkText+'</a></div>';
+            }
           } else {
             definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);
           }
@@ -1529,7 +1541,7 @@ var DICT={
             }
             sharedText = sharedText.trim();
             $('#searchTerm').val(sharedText);
-      
+
             DICT.log("Set input field to shared text: " + sharedText);
             DICT.search(true,true,0);
 

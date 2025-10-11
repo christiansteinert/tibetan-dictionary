@@ -272,6 +272,7 @@ SETTINGS={
         "tib":"Tibetan",
         "skt":"Sanskrit",
         "en":"English",
+        "mn":"Mongolian",
         "->":"→",
         "<->":"↔"
       }

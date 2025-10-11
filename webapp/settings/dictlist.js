@@ -236,6 +236,7 @@ GROUPED_DICTLIST = {
     public: "true",
     webOnly: "true",
     scanId: "jaeschke",
+    exactPageNumbersAvailable: false,
     linkText: "Open the corresponding page in Jäschke's Tibetan-English dictionary to see if an entry for this term exists.",
     listCredits: "true",
     language: ["tib", "<->", "en"]
@@ -246,6 +247,7 @@ GROUPED_DICTLIST = {
     public: "true",
     webOnly: "true",
     scanId: "das",
+    exactPageNumbersAvailable: false,
     linkText: "Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
     listCredits: "true",
     language: ["tib", "<->", "en"]
@@ -258,8 +260,8 @@ GROUPED_DICTLIST = {
     language: ["tib", "<->", "en"]
   },
   "sgra_bye_brag_tu_rtogs_byed_chen_mo": {
-    label: 'sgra bye brag tu rtogs byed chen mo skad bzhi shan sbyar ma (Maha&shy;vyutpatti with added English)',
-    about: "Tibetan-Sanskrit-English-Chinese Dictionary of Buddhism: An Edition and Translation of the Mahavyutpatti|Author: bu chung tshe ring|Lhasa: Xizang renmin chubanshe 西藏人民出版社 / bod ljongs mi dmangs dpe skrun khang (Tibetan People's Publishing House), 2015. ISBN 9787223046312.|Scan available at archive.org: https://archive.org/details/bdrc-W3CN6915/",
+    label: 'sgra bye brag tu rtogs byed chen mo skad bzhi shan sbyar ma (Mahā&shy;vyutpatti with added English)',
+    about: "Tibetan-Sanskrit-English-Chinese Dictionary of Buddhism: An Edition and Translation of the Mahāvyutpatti|Author: bu chung tshe ring|Lhasa: Xizang renmin chubanshe 西藏人民出版社 / bod ljongs mi dmangs dpe skrun khang (Tibetan People's Publishing House), 2015. ISBN 9787223046312.|Scan available at archive.org: https://archive.org/details/bdrc-W3CN6915/",
     public: "true",
     listCredits: "true",
     language: ["tib", "<->", "en", "<->", "skt"]
@@ -529,11 +531,29 @@ GROUPED_DICTLIST = {
   },
   "Mahavyutpatti-Skt": {
     containsOnlySkt: true,
-    label: 'Maha&shy;vyutpatti',
-    about: 'Mahavyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
+    label: 'Mahā&shy;vyutpatti',
+    about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
     public: "true",
     listCredits: "true",
     language: ["tib", "<->", "skt"]
+  },
+  "Mahavyutpatti-Scan-1989": {
+    label: 'Mahā&shy;vyutpatti Critical Edition (scanned dictionary)',
+    about: "Ishihama, Yumiko & Fukuda, Yoichi (1989). 'A New Critical Edition of the Mahāvyutpatti - |Sanskrit-Tibetan-Mongolian Dictionary of Buddhist Terminology (新訂翻訳名義大集 Shintei hon'yaku myogi taishu)'.|Studia Tibetica No. 16. Materials for Tibetan-Mongolian Dictionaries Vol. 1.|Tokyo, Japan: The Toyo Bunko Foundation (東洋文庫). |Scan available at archive.org: https://archive.org/details/ishihama-yumiko-fukuda-yoichi-1989.-a-new-critical-edition-of-the-mahavyutpatti-/||By opening a dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. There may be inaccuracies, however, due to problems with text recognition so you still have to check yourself if the term is present or not any you may sometimes have to jump a few pages ahead or back to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.",
+    public: "true",
+    webOnly: "true",
+    scanId: "mvp1989",
+    exactPageNumbersAvailable: true,
+    scanInfo: {
+      offset: 0,
+      min_page: 1,
+      max_page: 503,
+      width: 1250,
+      height: 1760
+    },
+    linkText: "Open scanned page.",
+    listCredits: "true",
+    language: ["tib", "->", "skt", "mn"]
   },
   "Yoghacharabhumi-glossary": {
     containsOnlySkt: true,
