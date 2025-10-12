@@ -1449,17 +1449,25 @@ var DICT={
           } else if(currentDict.scanId){ 
             //scanned dictionary. If we have an exact page number, we link to it
             if(currentDict.exactPageNumbersAvailable) {
-              var pageNr = definition.replace(/[^0-9].*/g,'');
-              var pageInfo = {
-                term_page: pageNr,
-                ...currentDict.scanInfo
-              }
+              definitionParts = definition.split('-----');
+              definition = '';
+              console.log(definition);
+              for(var i=0;i<definitionParts.length;i++) {
+                var pageNr = definitionParts[i].replace(/[^0-9]/g,'');
+                var pageInfo = {
+                  term_page: pageNr,
+                  ...currentDict.scanInfo
+                }
 
-              definition = '<div><a href="javascript:DICT.openScannedPage(' 
-                + '\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\','
-                + '\'' + DICT.htmlEscapeScriptAttr(term) + '\','
-                +  DICT.htmlEscapeScriptAttr(JSON.stringify(pageInfo))
-                + ')">' + currentDict.linkText+'</a></div>';
+                if (definition != '') {
+                  definition += '<div class="separator"></div>';
+                }
+                definition += '<div><a href="javascript:DICT.openScannedPage(' 
+                  + '\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\','
+                  + '\'' + DICT.htmlEscapeScriptAttr(term) + '\','
+                  +  DICT.htmlEscapeScriptAttr(JSON.stringify(pageInfo))
+                  + ')">' + currentDict.linkText +'</a></div>';
+              }
             }
           } else {
             definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);

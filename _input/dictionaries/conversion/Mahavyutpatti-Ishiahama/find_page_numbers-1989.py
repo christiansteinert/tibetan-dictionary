@@ -485,8 +485,33 @@ class TibetanPageNumberFinder:
                 final_results.append((word, interpolated_page, True))
             else:
                 final_results.append((word, page, False))
-        
-        return final_results
+
+        # Resolve duplicates by preferring non-interpolated and lowest-page matches
+        deduped_lookup: Dict[str, Tuple[int, int, bool]] = {}
+        for idx, (word, page, is_interpolated) in enumerate(final_results):
+            if word not in deduped_lookup:
+                deduped_lookup[word] = (idx, page, is_interpolated)
+                continue
+
+            best_idx, best_page, best_interp = deduped_lookup[word]
+
+            if best_interp and not is_interpolated:
+                deduped_lookup[word] = (idx, page, is_interpolated)
+                continue
+
+            if best_interp == is_interpolated:
+                if page < best_page:
+                    deduped_lookup[word] = (idx, page, is_interpolated)
+                    continue
+                if page == best_page and idx < best_idx:
+                    deduped_lookup[word] = (idx, page, is_interpolated)
+
+        return [
+            (word, page, is_interpolated)
+            for word, (idx, page, is_interpolated) in sorted(
+                deduped_lookup.items(), key=lambda item: item[1][0]
+            )
+        ]
     
     def write_results(self, results: List[Tuple[str, int, bool]]):
         """Write results to CSV file in original order."""
