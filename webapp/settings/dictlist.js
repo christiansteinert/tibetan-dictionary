@@ -529,31 +529,58 @@ GROUPED_DICTLIST = {
     listCredits: "true",
     language: ["tib", "<->", "en", "<->", "skt"]
   },
-  "Mahavyutpatti-Skt": {
-    containsOnlySkt: true,
+  "_Mahavyutpatti": {
+    type: 'group',
     label: 'Mahā&shy;vyutpatti',
-    about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
+    about: 'Multiple resources related to the Mahāvyutpatti:|- A digital Edition of the Mahāvyutpatti by Dharma Drum Buddhist College|- Scan of the critical edition by Ishihama and Fukuda (1989)|- A critical edition of the sGra-sbyor bam-po gnis-pa, edited by Mie Ishikawa (1990)',
     public: "true",
-    listCredits: "true",
-    language: ["tib", "<->", "skt"]
-  },
-  "Mahavyutpatti-Scan-1989": {
-    label: 'Mahā&shy;vyutpatti Critical Edition (scanned dictionary)',
-    about: "Ishihama, Yumiko & Fukuda, Yoichi (1989). 'A New Critical Edition of the Mahāvyutpatti - |Sanskrit-Tibetan-Mongolian Dictionary of Buddhist Terminology (新訂翻訳名義大集 Shintei hon'yaku myogi taishu)'.|Studia Tibetica No. 16. Materials for Tibetan-Mongolian Dictionaries Vol. 1.|Tokyo, Japan: The Toyo Bunko Foundation (東洋文庫). |Scan available at archive.org: https://archive.org/details/ishihama-yumiko-fukuda-yoichi-1989.-a-new-critical-edition-of-the-mahavyutpatti-/||By opening a dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. There may be inaccuracies, however, due to problems with text recognition so you still have to check yourself if the term is present or not any you may sometimes have to jump a few pages ahead or back to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.",
-    public: "true",
-    webOnly: "true",
-    scanId: "mvp1989",
-    exactPageNumbersAvailable: true,
-    scanInfo: {
-      offset: 0,
-      min_page: 1,
-      max_page: 503,
-      width: 1250,
-      height: 1760
-    },
-    linkText: "Open scanned page.",
-    listCredits: "true",
-    language: ["tib", "->", "skt", "mn"]
+    language: ["tib", "<->", "skt"],
+    items: {
+      "Mahavyutpatti-Skt": {
+        containsOnlySkt: true,
+        label: 'Mahā&shy;vyutpatti',
+        about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
+        public: "true",
+        listCredits: "true",
+        language: ["tib", "<->", "skt"]
+      },
+      "Mahavyutpatti-Scan-1989": {
+        label: 'Mahā&shy;vyutpatti Critical Edition (scanned dictionary)',
+        about: "Ishihama, Yumiko & Fukuda, Yoichi (1989). 'A New Critical Edition of the Mahāvyutpatti:|Sanskrit-Tibetan-Mongolian Dictionary of Buddhist Terminology (新訂翻訳名義大集 Shintei hon'yaku myogi taishu)'.|Studia Tibetica No. 16. Materials for Tibetan-Mongolian Dictionaries Vol. 1.|Tokyo, Japan: The Toyo Bunko Foundation (東洋文庫). |Scan available at archive.org: https://archive.org/details/ishihama-yumiko-fukuda-yoichi-1989.-a-new-critical-edition-of-the-mahavyutpatti-/||By opening a dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. There may be inaccuracies, however, due to problems with text recognition so you still have to check yourself if the term is present or not any you may sometimes have to jump a few pages ahead or back to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.",
+        public: "true",
+        webOnly: "true",
+        scanId: "mvp1989",
+        exactPageNumbersAvailable: true,
+        scanInfo: {
+          offset: 0,
+          min_page: 1,
+          max_page: 503,
+          width: 1250,
+          height: 1760
+        },
+        linkText: "Open scanned page.",
+        listCredits: "true",
+        language: ["tib", "->", "skt", "mn"]
+      },
+      "sgra-sbyor-bam-po-gnyis-pa": {
+        label: 'sGra sbyor bam po gnyis pa (scanned dictionary)',
+        about: "Mie Ishikawa, A Critical Edition of the sGra sbyor bam po gnyis pa:|An old and basic commentary on the Mahāvyutpatti|Studia Tibetica no. 18, The Toyo Bunko, 1990.",
+        public: "true",
+        webOnly: "true",
+        scanId: "mvp-comm-1990",
+        exactPageNumbersAvailable: true,
+        scanInfo: {
+          offset: 0,
+          min_page: 1,
+          max_page: 78,
+          width: 1755,
+          height: 1241
+        },
+        linkText: "Open scanned page.",
+        listCredits: "true",
+        language: ["tib", "->", "skt"]
+      },
+      }
   },
   "Yoghacharabhumi-glossary": {
     containsOnlySkt: true,
