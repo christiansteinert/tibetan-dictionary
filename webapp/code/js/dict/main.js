@@ -1449,7 +1449,7 @@ var DICT={
           } else if(currentDict.scanId){ 
             //scanned dictionary. If we have an exact page number, we link to it
             if(currentDict.exactPageNumbersAvailable) {
-              var pageNr = definition.replace(/[^0-9]/g,'');
+              var pageNr = definition.replace(/[^0-9].*/g,'');
               var pageInfo = {
                 term_page: pageNr,
                 ...currentDict.scanInfo
