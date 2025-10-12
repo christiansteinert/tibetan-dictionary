@@ -13,6 +13,7 @@ from typing import Dict, Iterable, Iterator, List, Optional, Sequence, Tuple
 from xml.etree import ElementTree as ET
 
 from PyPDF2 import PdfReader
+from devatrans import DevaTrans
 
 XML_NS = "http://www.tei-c.org/ns/1.0"
 XML_LANG_NS = "http://www.w3.org/XML/1998/namespace"
@@ -25,12 +26,14 @@ END_PAGE = 485
 class Entry:
     key: str
     term: str
+    sanskrit: Optional[str]
 
 
 @dataclass
 class PageAssignment:
     key: str
     term: str
+    sanskrit: Optional[str]
     page: Optional[int]
     interpolated: bool
 
@@ -65,13 +68,19 @@ def expand_parenthetical_variants(term: str) -> List[str]:
 def iter_entries(xml_path: Path) -> Iterator[Entry]:
     tree = ET.parse(xml_path)
     root = tree.getroot()
-    ns = {"tei": XML_NS}
+    ns = {"tei": XML_NS, "xml": XML_LANG_NS}
     lang_attr = f"{{{XML_LANG_NS}}}lang"
 
     for entry in root.findall(".//tei:entry", ns):
         key = entry.get("key")
         if not key:
             continue
+
+        sanskrit_node = entry.find("tei:form/tei:orth[@xml:lang='san-Latn']", ns)
+        sanskrit = None
+        if sanskrit_node is not None:
+            sanskrit_text = normalize_whitespace("".join(sanskrit_node.itertext()))
+            sanskrit = sanskrit_text or None
 
         translation = None
         for cit in entry.findall("tei:cit", ns):
@@ -92,7 +101,7 @@ def iter_entries(xml_path: Path) -> Iterator[Entry]:
                     continue
                 variants = expand_parenthetical_variants(cleaned_part)
                 for variant in variants:
-                    yield Entry(key=key.strip(), term=variant)
+                    yield Entry(key=key.strip(), term=variant, sanskrit=sanskrit)
 
 
 def build_search_regex(pattern_template: str) -> re.Pattern[str]:
@@ -168,7 +177,7 @@ def assign_pages(
             page = key_to_page.get(entry.key)
             if page is None:
                 continue
-            results.append(PageAssignment(entry.key, entry.term, page, False))
+            results.append(PageAssignment(entry.key, entry.term, entry.sanskrit, page, False))
         return results
 
     assignments: List[PageAssignment] = []
@@ -180,7 +189,7 @@ def assign_pages(
 
         if page is None:
             if previous_page is not None:
-                assignments.append(PageAssignment(entry.key, entry.term, previous_page, True))
+                assignments.append(PageAssignment(entry.key, entry.term, entry.sanskrit, previous_page, True))
             else:
                 pending.append(entry)
             continue
@@ -188,16 +197,16 @@ def assign_pages(
         if pending:
             for pending_entry in pending:
                 assignments.append(
-                    PageAssignment(pending_entry.key, pending_entry.term, page, True)
+                    PageAssignment(pending_entry.key, pending_entry.term, pending_entry.sanskrit, page, True)
                 )
             pending.clear()
 
-        assignments.append(PageAssignment(entry.key, entry.term, page, False))
+        assignments.append(PageAssignment(entry.key, entry.term, entry.sanskrit, page, False))
         previous_page = page
 
     if pending:
         for pending_entry in pending:
-            assignments.append(PageAssignment(pending_entry.key, pending_entry.term, None, True))
+            assignments.append(PageAssignment(pending_entry.key, pending_entry.term, pending_entry.sanskrit, None, True))
 
     return assignments
 
@@ -214,6 +223,55 @@ def write_assignments(output_path: Path, assignments: Iterable[PageAssignment]) 
                 continue
             suffix = "?" if entry.interpolated else ""
             writer.writerow([entry.term, f"{entry.page}{suffix}"])
+
+
+def write_sanskrit_assignments(
+    output_path: Path,
+    assignments: Iterable[PageAssignment],
+    transliterator: DevaTrans,
+) -> None:
+    seen: set[Tuple[str, int, bool]] = set()
+    with output_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.writer(handle, delimiter="|", lineterminator="\n")
+        for entry in assignments:
+            if not entry.sanskrit:
+                continue
+            if entry.page is None:
+                print(
+                    f"Warning: No page found for key {entry.key} (Skt '{entry.sanskrit}'), skipping.",
+                    file=sys.stderr,
+                )
+                continue
+            # Remove parenthetical content and alternatives after slashes
+            cleaned_skt = re.sub(r"\([^)]*\)", " ", entry.sanskrit)
+            cleaned_skt = cleaned_skt.split("/", 1)[0]
+            cleaned_skt = normalize_whitespace(cleaned_skt)
+            if not cleaned_skt:
+                continue
+            try:
+
+                hk = transliterator.inter_transliterate(
+                    input_type="sen",
+                    from_convention="iast",
+                    to_convention="hk",
+                    sentence=cleaned_skt,
+                )
+                hk = hk.replace("z ", "z")  # remove additional space that is added by the transliterator
+            except Exception as exc:
+                print(
+                    f"Warning: Failed to transliterate Sanskrit term '{entry.sanskrit}': {exc}",
+                    file=sys.stderr,
+                )
+                continue
+            hk = normalize_whitespace(hk)
+            if not hk:
+                continue
+            key = (hk, entry.page, entry.interpolated)
+            #if key in seen:
+            #    continue
+            seen.add(key)
+            suffix = "?" if entry.interpolated else ""
+            writer.writerow([hk, f"{entry.page}{suffix}"])
 
 
 def parse_args() -> argparse.Namespace:
@@ -304,7 +362,12 @@ def main() -> int:
 
     assignments = assign_pages(entries, key_to_page, skip_missing=args.skip_missing)
     write_assignments(args.output, assignments)
-    print(f"Wrote {args.output}")
+
+    transliterator = DevaTrans()
+    skt_output = args.output.with_name(f"{args.output.stem}-skt.csv")
+    write_sanskrit_assignments(skt_output, assignments, transliterator)
+
+    print(f"Wrote {args.output} and {skt_output}")
     return 0
 
 

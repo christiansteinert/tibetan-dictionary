@@ -41,3 +41,6 @@ python3 "${SCRIPT_DIR}/find_page_numbers.py" \
 
 cat page_numbers_ishikawa_1990a.csv page_numbers_ishikawa_1990b.csv | sort -u > page_numbers_ishikawa_1990.csv
 rm page_numbers_ishikawa_1990a.csv page_numbers_ishikawa_1990b.csv
+
+cat page_numbers_ishikawa_1990a-skt.csv page_numbers_ishikawa_1990b-skt.csv | sort -u > page_numbers_ishikawa_1990-skt.csv
+rm page_numbers_ishikawa_1990a-skt.csv page_numbers_ishikawa_1990b-skt.csv

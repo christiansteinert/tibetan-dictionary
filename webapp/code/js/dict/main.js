@@ -1449,11 +1449,12 @@ var DICT={
           } else if(currentDict.scanId){ 
             //scanned dictionary. If we have an exact page number, we link to it
             if(currentDict.exactPageNumbersAvailable) {
-              definitionParts = definition.split('-----');
+              var definitionParts = definition.split('-----');
               definition = '';
               console.log(definition);
               for(var i=0;i<definitionParts.length;i++) {
-                var pageNr = definitionParts[i].replace(/[^0-9]/g,'');
+                var pageNr = Number(definitionParts[i].replace(/[^0-9]/g,''));
+                var pageTxt = "";
                 var pageInfo = {
                   term_page: pageNr,
                   ...currentDict.scanInfo
@@ -1462,11 +1463,18 @@ var DICT={
                 if (definition != '') {
                   definition += '<div class="separator"></div>';
                 }
+
+                if (definitionParts.length > 1) {
+                  var adjust = currentDict?.scanInfo?.display_pageadjust || 0;
+                  var adjustedPage = pageNr + adjust;
+                  pageTxt = ' (p. ' + adjustedPage + ')';
+                }
+
                 definition += '<div><a href="javascript:DICT.openScannedPage(' 
                   + '\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\','
                   + '\'' + DICT.htmlEscapeScriptAttr(term) + '\','
                   +  DICT.htmlEscapeScriptAttr(JSON.stringify(pageInfo))
-                  + ')">' + currentDict.linkText +'</a></div>';
+                  + ')">' + currentDict.linkText + pageTxt +'</a></div>';
               }
             }
           } else {

@@ -553,14 +553,15 @@ GROUPED_DICTLIST = {
         exactPageNumbersAvailable: true,
         scanInfo: {
           offset: 0,
+          display_pageadjust: -42,
           min_page: 1,
           max_page: 503,
           width: 1250,
           height: 1760
         },
-        linkText: "Open scanned page.",
+        linkText: "Open scanned page",
         listCredits: "true",
-        language: ["tib", "->", "skt", "mn"]
+        language: ["tib", "<->", "skt", "mn"]
       },
       "sgra-sbyor-bam-po-gnyis-pa": {
         label: 'sGra sbyor bam po gnyis pa (scanned dictionary)',
@@ -573,14 +574,15 @@ GROUPED_DICTLIST = {
           offset: 0,
           min_page: 1,
           max_page: 78,
+          display_pageadjust: -10,
           width: 1755,
           height: 1241
         },
-        linkText: "Open scanned page.",
+        linkText: "Open scanned page",
         listCredits: "true",
-        language: ["tib", "->", "skt"]
-      },
+        language: ["tib", "<->", "skt"]
       }
+    }
   },
   "Yoghacharabhumi-glossary": {
     containsOnlySkt: true,
