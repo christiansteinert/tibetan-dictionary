@@ -243,12 +243,20 @@ GROUPED_DICTLIST = {
   },
   "ChandraDas_Scan": {
     label: 'Chandra Das (scanned dictionary)',
-    about: 'Sarat Chandra Das|A Tibetan English Dictionary (1902)||https://archive.org/details/tibetanenglishdi00dassuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
+    about: 'Sarat Chandra Das|A Tibetan English Dictionary (1902)||https://archive.org/details/tibetanenglishdi00dassuoft/||By opening an dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. ||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the head-words in the dictionaries by Jäschke and Chandra Das.',
     public: "true",
     webOnly: "true",
     scanId: "das",
-    exactPageNumbersAvailable: false,
-    linkText: "Open the corresponding page in Chandra Das's Tibetan-English dictionary to see if an entry for this term exists.",
+    exactPageNumbersAvailable: true,
+    scanInfo: {
+      offset: 40,
+      display_pageadjust: 0,
+      min_page: 1,
+      max_page: 1393,
+      width: 1157,
+      height: 1482
+    },
+    linkText: "Open the corresponding page in Chandra Das's Tibetan-English dictionary.",
     listCredits: "true",
     language: ["tib", "<->", "en"]
   },

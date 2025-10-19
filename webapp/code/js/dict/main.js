@@ -1455,8 +1455,10 @@ var DICT={
               for(var i=0;i<definitionParts.length;i++) {
                 var pageNr = Number(definitionParts[i].replace(/[^0-9]/g,''));
                 var pageTxt = "";
+                var offset = currentDict?.scanInfo?.offset || 0;
+
                 var pageInfo = {
-                  term_page: pageNr,
+                  term_page: pageNr + offset,
                   ...currentDict.scanInfo
                 }
 
