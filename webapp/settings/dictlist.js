@@ -240,8 +240,8 @@ GROUPED_DICTLIST = {
     scanInfo: {
       offset: 0,
       display_pageadjust: -26,
-      min_page: 1,
-      max_page: 702,
+      min_page: 3,
+      max_page: 697,
       width: 907,
       height: 1407
     },
@@ -259,10 +259,10 @@ GROUPED_DICTLIST = {
     scanInfo: {
       offset: 40,
       display_pageadjust: 0,
-      min_page: 1,
+      min_page: 5,
       max_page: 1393,
-      width: 1157,
-      height: 1482
+      width: Math.round(1157 * 1.25),
+      height: Math.round(1482 * 1.25)
     },
     linkText: "Open the corresponding page in Chandra Das's Tibetan-English dictionary.",
     listCredits: "true",
