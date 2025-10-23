@@ -245,7 +245,7 @@ GROUPED_DICTLIST = {
       width: 907,
       height: 1407
     },
-    linkText: "Open the corresponding page in Jäschke's Tibetan-English dictionary to see if an entry for this term exists.",
+    linkText: "Open the corresponding page in Jäschke's Tibetan-English Dictionary to display the headword or, if applicable, a subentry.",
     listCredits: "true",
     language: ["tib", "<->", "en"]
   },
