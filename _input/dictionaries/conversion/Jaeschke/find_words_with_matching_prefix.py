@@ -57,6 +57,7 @@ def format_output(entry: str, number: str, question: bool = False) -> str:
 def collect_matches(
     toc_heads: list[tuple[str, str]], allowed_words: list[str]
 ) -> list[str]:
+    alreadyAddedTocEntries: set[str] = set()
     matches: list[str] = []
     i = 0
     j = 0
@@ -65,15 +66,21 @@ def collect_matches(
         next_head = toc_heads[i + 1] if i + 1 < len(toc_heads) else None
         current_allowed = allowed_words[j]
 
-        #print(f"toc: {current_head} / {next_head}, allowed: {current_allowed}")
         if current_allowed == current_head:
-            matches.append(format_output(current_allowed, current_number, question=False))
+            matches.append(format_output(current_head, current_number, question=False))
+            alreadyAddedTocEntries.add(current_head)
             j += 1
             continue
 
         if next_head is not None:
             if next_head[0] == current_allowed:
-                i += 1
+                if(not current_head in alreadyAddedTocEntries):
+                    # even if the current toc entry is not in the list of known words from other dictionaries, 
+                    # still add it to the output
+                    matches.append(format_output(current_head, current_number, question=False))
+                    alreadyAddedTocEntries.add(current_head)
+
+                i += 1 # re-sync toc index to next entry in list of known words
                 continue
 
             if next_head[0] == current_head:
@@ -88,6 +95,12 @@ def collect_matches(
 
         if next_head is not None:
             if is_less_than(next_head[0], current_allowed):
+                if(not current_head in alreadyAddedTocEntries):
+                    # even if the current toc entry is not in the list of known words from other dictionaries, 
+                    # still add it to the output
+                    matches.append(format_output(current_head, current_number, question=False))
+                    alreadyAddedTocEntries.add(current_head)
+                
                 i += 1
                 continue
 
