@@ -53,11 +53,20 @@ def format_output(entry: str, number: str, question: bool = False) -> str:
         return f"{entry}|{suffix}"
     return entry
 
+def addMatch(
+    alreadyAddedResults: set[str], matches: list[str], term: str, number: str, question: bool = False
+) -> None:
+    entry = format_output(term, number, question)
+    entryWithoutQuestionmark = format_output(term, number, False)
+    if not entryWithoutQuestionmark in alreadyAddedResults:
+        matches.append(entry)
+        alreadyAddedResults.add(entryWithoutQuestionmark)
+
 
 def collect_matches(
     toc_heads: list[tuple[str, str]], allowed_words: list[str]
 ) -> list[str]:
-    alreadyAddedTocEntries: set[str] = set()
+    alreadyAddedResults: set[str] = set()
     matches: list[str] = []
     i = 0
     j = 0
@@ -67,18 +76,15 @@ def collect_matches(
         current_allowed = allowed_words[j]
 
         if current_allowed == current_head:
-            matches.append(format_output(current_head, current_number, question=False))
-            alreadyAddedTocEntries.add(current_head)
+            addMatch(alreadyAddedResults, matches, current_head, current_number, question=False)
             j += 1
             continue
 
         if next_head is not None:
             if next_head[0] == current_allowed:
-                if(not current_head in alreadyAddedTocEntries):
-                    # even if the current toc entry is not in the list of known words from other dictionaries, 
-                    # still add it to the output
-                    matches.append(format_output(current_head, current_number, question=False))
-                    alreadyAddedTocEntries.add(current_head)
+                # even if the current toc entry is not in the list of known words from other dictionaries, 
+                # still add it to the output
+                addMatch(alreadyAddedResults, matches, current_head, current_number, question=False)
 
                 i += 1 # re-sync toc index to next entry in list of known words
                 continue
@@ -89,17 +95,15 @@ def collect_matches(
 
 
         if current_allowed.lower().startswith(current_head.lower() + ' '):
-            matches.append(format_output(current_allowed, current_number, question=True))
+            addMatch(alreadyAddedResults, matches, current_allowed, current_number, question=True)
             j += 1
             continue
 
         if next_head is not None:
             if is_less_than(next_head[0], current_allowed):
-                if(not current_head in alreadyAddedTocEntries):
-                    # even if the current toc entry is not in the list of known words from other dictionaries, 
-                    # still add it to the output
-                    matches.append(format_output(current_head, current_number, question=False))
-                    alreadyAddedTocEntries.add(current_head)
+                # even if the current toc entry is not in the list of known words from other dictionaries, 
+                # still add it to the output
+                addMatch(alreadyAddedResults, matches, current_head, current_number, question=False)
                 
                 i += 1
                 continue
