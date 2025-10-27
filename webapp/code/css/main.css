@@ -774,3 +774,11 @@ img.pswp__img{
   filter: invert(100%);
 }
 */
+
+/* audio player */
+.definition audio {
+    border-radius: 12px;
+    vertical-align: middle;
+    height: 1.6em;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+}

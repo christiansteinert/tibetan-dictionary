@@ -90,6 +90,7 @@ def iter_entries(xml_path: Path) -> Iterator[Entry]:
                 continue
             text = "".join(cit.itertext())
             text = normalize_whitespace(text)
+            text = text.replace("-", ".")
             if text:
                 translation = text
                 break

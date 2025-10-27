@@ -14,6 +14,39 @@ GROUPED_DICTLIST = {
     listCredits: "true",
     language: ["tib", "<->", "en"]
   },
+  "_HeartOfTibetanLanguage": {
+    type: 'group',
+    label: 'Heart of Tibetan Language',
+    about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+    public: "true",
+    language: ["tib", "<->", "en"],
+    items: {
+      "hotl1": {
+        label: 'Heart of Tibetan Language 1',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 1|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        public: "true",
+        listCredits: "true",
+        audioId: "hotl1",
+        language: ["tib", "<->", "en"]
+      },
+      "hotl2": {
+        label: 'Heart of Tibetan Language 2',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 2|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)||Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        public: "true",
+        listCredits: "true",
+        audioId: "hotl2",
+        language: ["tib", "<->", "en"]
+      },
+      "hotl3": {
+        label: 'Heart of Tibetan Language 3',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 3|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        public: "true",
+        listCredits: "true",
+        audioId: "hotl3",
+        language: ["tib", "<->", "en"]
+      }
+    }
+  },
   "Drungtso": {
     label: 'Drungtso - Medical &amp; Astro Terms',
     highlight: '(&lt;[^&]*&gt;)',

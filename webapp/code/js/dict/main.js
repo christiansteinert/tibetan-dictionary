@@ -1394,6 +1394,20 @@ var DICT={
     }
   },
 
+  addAudioLinks:function(currentDict, definition) {
+    if(currentDict.audioId){
+      var replacement = '';
+
+      if (!window.cordova) {
+        // in browser (rather than on mobile): insert audio tag
+        var audioPath = "audio/" + currentDict.audioId + "/";
+        var replacement = '<audio controls preload="none"><source src="' + audioPath + '$1" type="audio/mpeg"></audio>';
+      }
+      definition = definition.replace(/\[sound:([^\]]+)\]/g, replacement);
+    }
+    return definition;
+  },
+
   loadTerm:function(term,dictEntries,saveState) {
     $('#definitions *').remove();
     if(DICT.getLang()==="en")
@@ -1482,6 +1496,8 @@ var DICT={
           } else {
             definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);
           }
+
+          definition = DICT.addAudioLinks(currentDict, definition);
             
           definition = definition.replace(/\n/g,'</p>\n<p>');
           definition = definition.replace(/\\n/g,'</p>\n<p>');
