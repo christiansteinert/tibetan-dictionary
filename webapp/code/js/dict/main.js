@@ -596,19 +596,29 @@ var DICT={
       var conflicts=[];        
       $.each(this.SYLLABLELIST,function(wylie,uni){
         var existingSyllable = DICT.UNICODE_SYLLABLELIST[uni];
+        var newValid;
+        var oldValid;
         if(!existingSyllable) {
           existingSyllable = uni;
+          newValid = true;
+          oldValid = false;
+        } else {
+          newValid = DICT.isValidSyllable(wylie);
+          oldValid = DICT.isValidSyllable(existingSyllable);
         }
-        var oldValid = DICT.isValidSyllable(existingSyllable);
-        var newValid = DICT.isValidSyllable(wylie);
-        if(DICT.isValidSeparator(wylie)
-          ||DICT.isValidSyllable(wylie)
-          ||(!existingSyllable && /[a-zA-Z]/.test(wylie))
-          ||(oldValid == newValid && existingSyllable.length < wylie.length)                ) {
+
+        if (newValid && !oldValid) {
           DICT.UNICODE_SYLLABLELIST[uni] = wylie;
-        }
-        if(existingSyllable && oldValid == newValid) {
-          conflicts.push(uni + " -> " + existingSyllable + " / " + wylie );
+        } else {
+          if(DICT.isValidSeparator(wylie)
+            ||DICT.isValidSyllable(wylie)
+            ||(!existingSyllable && /[a-zA-Z]/.test(wylie))
+            ||(oldValid == newValid && existingSyllable.length < wylie.length)                ) {
+            DICT.UNICODE_SYLLABLELIST[uni] = wylie;
+          }
+          if(oldValid == newValid) {
+            conflicts.push(uni + " -> " + existingSyllable + " / " + wylie );
+          }
         }
       });
       
