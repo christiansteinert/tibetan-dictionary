@@ -599,7 +599,6 @@ var DICT={
         var newValid;
         var oldValid;
         if(!existingSyllable) {
-          existingSyllable = uni;
           newValid = true;
           oldValid = false;
         } else {
