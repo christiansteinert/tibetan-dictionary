@@ -263,6 +263,13 @@ GROUPED_DICTLIST = {
     listCredits: "true",
     language: ["tib", "<->", "en"]
   },
+  "tibetanlanguage-school": {
+    label: 'Tibetan Language School: Supplementary Vocabulary',
+    about: 'Vocabulary from the Tibetan Language School website|https://tibetanlanguage.school/resources/vocabulary-supplement/|by Nick Prior|This vocabulary contains additional colloquial terms that are not available from other sources in this dictionary application. Many thanks to Nick Prior for compiling of this vocabulary and making it available.', 
+    public: "true",
+    listCredits: "true",
+    language: ["tib", "->", "en"]
+  },
   "Jaeschke_Scan": {
     label: 'Jäschke (scanned dictionary)',
     about: 'Heinrich August Jäschke|A Tibetan-English dictionary with special reference to the prevailing dialects; to which is added an English-Tibetan vocabulary (1881)||https://archive.org/details/tibetanenglishdi00jsuoft/||By opening a dictionary entry, the program will try to bring you to the scanned page which most likely will contain that term. The dictionary application does not have a complete list of all terms  in the scanned document so you have to check yourself if the term is present or not. Also, since the sort order in the printed dictionary is not always perfect, you sometimes have to jump a few pages back or ahead to find the desired term. Nevertheless this hopefully helps a lot with making the data of this dictionary available.||Huge thanks go to Octave Boczkowski who came up with this wonderful idea for integrating scanned dictionaries, provided the code for determining the most likely page number for a term, and went through the work of mediculously indexing the first and last head-words on each page in the dictionaries by Jäschke and Chandra Das.|Furthermore, sincere thanks go to mKhan po sKal bzang for indexing all the headwords in Jäschke, thereby further improving the accuracy of the integration',
