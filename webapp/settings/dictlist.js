@@ -448,7 +448,6 @@ GROUPED_DICTLIST = {
     language: ["tib"]
   },
   "tshig-mdzod-chen-mo-Tib": {
-    containsOnlyTibetan: true,
     label: 'bod rgya tshig mdzod chen mo',
     about: 'Bod rgya tshig mdzod chen mo / 藏汉大辞典|Author: Zhang Yisun|Beijing: Mi dmangs dpe skrun khang, 1985',
     public: "true",

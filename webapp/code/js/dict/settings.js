@@ -92,7 +92,6 @@ SETTINGS={
           $.each(this.getAllDictionaries(false),function(index,currentDictName) {
             if($.inArray(currentDictName,settings.activeDictionaries)<0 && $.inArray(currentDictName,settings.inactiveDictionaries)<0 ) {
               newDictionaries.push(currentDictName);
-              DICT.log("added new dict" + currentDictName);
             }
           });
           

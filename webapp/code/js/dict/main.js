@@ -9,10 +9,6 @@ var DICT={
   DICTLIST:{},
   WORDLIST:[],
   ABBREV:[],
-  SEPARATORLIST:[',',';','"','#','/',' ',':','_','\n','1','2','3','4','5','6','7','8','9','0','０','１','２','３','４','５','６','７','８','９','<','>','(',')','（','）','[',']','{','}','*','—','=','《','》'],
-  UNICODE_SEPARATORLIST:[], 
-  SYLLABLELIST:{},
-  UNICODE_SYLLABLELIST:{},
   dataTable:{},
   activeTerm:"",
   currentInput:"",
@@ -22,6 +18,11 @@ var DICT={
   currentListTerm:"",
   lastHomeBackButtonTime:0,
   homepageContent:"",
+
+  // initialized during module loading:
+  wylieConverter:null, 
+  sanskritConverter:null,
+  dataAccess:null,
 
   getAbbreviations:function(id) {
     if(!this.ABBREV[id]) {
@@ -104,325 +105,30 @@ var DICT={
     }
   },
 
-  isValidSeparator:function(wylie) {
-    return jQuery.inArray( wylie, this.SEPARATORLIST) >= 0 || jQuery.inArray( wylie, this.UNICODE_SEPARATORLIST) >= 0;  
-  },
-
-  isValidSyllable:function(wylie) {
-    if(!wylie)
-      return false;
-
-    if(wylie.match(/[aeiou]'a( |$|\/)/)) // syllables ending with an a-chung should end with ' and not with 'a
-      return false;
-
-    if(wylie.match(/^[^aeiou]+'/)) // syllables with an a-chung that is not the prefix must contain another vowel before that
-      return false;
-      
-    switch(wylie) {
-      case 'm\'i':
-        return false;
-      case 'gans':
-        return false;
-      case 'dabs':
-        return false;
-      case 'dgas':
-        return false;
-      case 'dams':
-        return false;
-      case 'badg':
-        return false;
-      case 'dga':
-        return false;
-      case 'mna':
-        return false;
-      case 'bga':
-        return false;
-      case 'lsa':
-        return false;
-      case '\'ags':
-        return false;
-      case 'mngas':
-        return false;
-      case 'bgas':
-        return false;
-      case 'gYogs':
-        return false;
-      case 'ada':
-        return false;
-      case '\'ba':
-        return false;
-      case '\'ad ':
-        return false;
-      case 'dba':
-        return false;
-      case 'dda':
-        return false;
-      case '':
-        return false;
-      case 'ba\'':
-        return false;
-      case 'banga':
-        return false;
-      case 'bachu':
-        return false;
-      case 'bda':
-        return false;
-      case 'bdzra':
-        return false;
-      case 'gma':
-        return false;
-      case 'gna':
-        return false;
-      case 'gand':
-        return false;
-      case 'gsa':
-        return false;
-      case 'kka':
-        return false;
-      case '\'ma':
-        return false;
-      case 'mba':
-        return false;
-      case 'mda':
-        return false;
-      case 'mga':
-        return false;
-      case 'mnga':
-        return false;
-      case '\'nga':
-        return false;
-      case 'tta':
-        return false;
-      case 'uta':
-        return false;
-      case 'ppa':
-        return false;
-      case 'bngas':
-        return false;
-      case 'gda':
-        return false;
-      case 'dna':
-        return false;
-      case 'dma':
-        return false;
-      case 'kka':
-        return false;
-      case '\'an':
-        return false;
-      case 'padma':
-        return true;
-      case 'pad+ma':
-        return true;
-      case 'bsa':
-        return false;
-    }
-    return /^[gdbm']?[rls]?(?:k|kh|g|ng|c|ch|j|ny|t|th|d|n|p|ph|b|m|ts|tsh|dz|w|zh|z|'|y|r|l|sh|s|h|)[yrlw]?[aeiou](?:'[aeiou]?)?(?:g|ng|d|n|b|m|r|l|s|)?[sd]?$/.test(wylie);  
-  },
-
-  /**
-   * normalize a piece of Wylie text by fixing common mistakes
-   */
-  normalizeWylie:function(text) {
-    text = text.replace(/v/,'w');
-    text = text.replace(/[\u0009\u000B\u000C\u0020\u0085\u00A0\u1680\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200A\u2028\u2029\u202F\u205F\u3000\u180E\u200B\u200C\u200D\u2060\uFEFF\u00B7]+/g,' ');
-    text = text.replace(/\s*་\s*/g,'་');
-    text = text.replace(/^ *[/]/mg,'_');
-    text = text.replace(/^ +|[ _]+$/,'');
-    if(text != '' && !/.*(?: |\+|\/|་|།)$/.test(text))
-      text += ' '; // add a tseg at the end if the text neither ends with a tseg nor a shad
-    //text = text.replace(/\s*[-=]\s*/g,' '); //remove special characters
-    text = text.replace(/ *(\.\.\.|…) */g,'_…_'); //add spaces before and after "..."
-    text = text.replace(/ +([\.\/,;])/g,'$1'); //prevent space before . or shad or , or ;
-    text = text.replace(/([]\)}\/\.;,\-=]+) +/g,'$1_'); //space rather than tseg after certain characters
-    text = text.replace(/ng\//g,'ng /'); // tseg between nga and shad
-    text = text.replace(/[ _]+([-\[\(\{])/g,'_$1'); // add space before certain characters
-    text = text.replace(/(\/+|[0-9]\.)[ _]*/g,'$1_'); // add space after shad and other characters
-    text = text.replace(/  +/g,' _'); //two spaces -> tseg space
-    text = text.replace(/([^a-zA-Z']) +([^\s])/g,'$1_$2'); //space rather than tseg between a non-syllable and a syllable
-    text = text.replace(/([a-zA-Z'])([,;])/g,'$1 $2'); //tseg between syllable and various punctuation marks
-    text = text.replace(/([^a-zA-Z'])[ _]+$/mg,'$1'); //prevent tsegs after non-word charcters at the end of a line
-    text = text.replace(/([aeiou]')([bcdfghjklmnpqrstvwxyz])/ig,'$1a$2'); //enforce a vowel after a-chung
-    text = text.replace(/\.( |\/)|\.$/g,'//$1'); //a dot at the end of a syllable cannot be part of the syllable. Convert it to a double-shad
-
-    
-    //prevent spaces after certain character combinations (this is a cleanup rule that removes some spaces 
-    // that may have been introduced by one of the previous rules but are not desired)
-    text = text.replace(/(\/)[ _]([\]\)}])/mg,'$1$2');
-
-    return text;
-  },
-
-  wylieSyllableToUniSyllable:function(syllable,strictChecks) {
-    if(this.SYLLABLELIST[syllable] && (!strictChecks || this.isValidSeparator(syllable) || this.isValidSyllable(syllable)) ) {
-      return this.SYLLABLELIST[syllable];
-    }
-      
-    return syllable;
-  },
-
-  /**
-   * convert a chunk of text from Wylie to Tibetan unicode
-   * @param text (string) a piece of text in Wylie transliteration 
-   * @param strictChecks (boolean) if true, then the syllable will be 
-   *        checked more thoroughly and will only be converted, if it 
-   *        matches the usual Tibetan writing rules
-   * @return the same piece of text but converted to unicode
-   */
-  wylieToUni:function(text,strictChecks) {
-    result = "";
-     //remove dashes that connect syllables inside of wylie chunks but keep "-i" which stands  for a reversed gigu
-    text = text.replace(/([^ ])-([^ i])/g,'$1 $2');
-
-    // Tokenize and convert each syllable / token to Unicode
-    var separators = [], tokenizer;
-    var squigglyBracketsActive = false;
-    separators = this.SEPARATORLIST;
-    separators = separators.concat(this.UNICODE_SEPARATORLIST);
-
-    if(jQuery.inArray( text, this.SEPARATORLIST)<0)
-      text = this.normalizeWylie(text);
-
-    tokenizer = new jQuery.tokenizer( separators, function( syllable, isSeparator ) {
-      result += DICT.wylieSyllableToUniSyllable(syllable,strictChecks);
-    });
-    tokenizer.parse(text);
-    result = result.replace(/ +/g,'་');
-    result = result.replace(/([༡༢༣༤༥༦༧༨༩༠།).།])་/g,'$1 ');
-    return result;
-  },
-  
-  _sktToUniChunk:function(skt) {
-    transliterate = {
-      'Oṃ':['oM','OM','AUM'],
-      'ṛ':['RRi','R^i','R'],
-      'ḷ':['LLi','L^i','lR'],
-      'ch':['Ch'],
-      'ñ':['J','~n','JN'],
-      'ṭh':['Th'],
-      'ḍh':['Dh'],
-      'ṭ':['T'],
-      'ḍ':['D'],
-      'ṇ':['N'],
-      'v':['w'],
-      'ṃ':['M','\\.n','\\.m'],
-      'ḥ':['H','\\.h'],
-      'ṣ':['Sh','shh','S'],
-      'ś':['z','sh'],
-      'ṅ':['G','~N'],
-      'ū':['U','uu'],
-      'ī':['I','ii'],
-      'ā':['A','aa'],
-      'â':['\\^a'],
-      'ô':['\\^o'],
-      'û':['\\^u'],
-      'ê':['\\^e'],
-      'î':['\\^i'],
-    };
-  
-    if(skt.toUpperCase() == skt)
-      return skt; // don't adjust text that is only comprised of upper case characters
-  
-    $.each(transliterate,function(uni, transliterations) {
-      for(i=0;i<transliterations.length;i++) {
-        var transliteration = transliterations[i];
-        var replacer = new RegExp(transliteration,"g");
-        skt = skt.replace(replacer,uni);
-      }
-    });
-    return skt;
-  },
-  
-  sktToUni:function(skt) {
-    var result = "";
-    var separators = ['{','}','[',']', ' ', '='];
-    var bracketActive;
-    var currentTibChunk = "";
-    
-    tokenizer = new jQuery.tokenizer( separators, function( chunk, isSeparator ) {
-      if(isSeparator && ( chunk === '{' || chunk === '[' ) ) {
-        bracketActive = true;
-      }
-      if(isSeparator && ( chunk === '}' || chunk === ']' ) ) {
-        bracketActive = false;
-      }
-        
-      if(bracketActive)
-        result += chunk;
-      else
-        result += DICT._sktToUniChunk(chunk);
-    });
-    tokenizer.parse(skt);
-    
-    return result;
-  },
-
-  uniSyllableToWylieSyllable:function(syllable) {
-    syllable = this._normalizeWylieForLookup(syllable);
-    if(this.UNICODE_SYLLABLELIST[syllable]) {
-      var result = this.UNICODE_SYLLABLELIST[syllable];
-      result = result.replace(/([aeiou]')([bcdfghjklmnpqrstvwxyz])/g,"$1a$2");
-      return result;
-    } else {
-      return syllable;
-    }
-  },
-
   uniToWylie:function(text) {
     if(this.useUnicodeTibetan) {
-      result = "";
-      var tokenizer = new jQuery.tokenizer( this.UNICODE_SEPARATORLIST,
-        function( syllable, isSeparator ) {
-          result += DICT.uniSyllableToWylieSyllable(syllable);
-        }
-      );
-      tokenizer.parse(text);
-
-      return result;
+      return this.wylieConverter.uniToWylie(text);
     } else {
       return text;
     }
-  },
-  
-  normalizeInlineEnglish:function(text) {
-    text = text.replace(/([,\.]) */g,'$1 ');
-    text = text.replace(/ *- */g,' - ');
-    return text;
   },
   
   /**
    * convert a chunk of text from Wylie to Tibetan unicode, if unicode is active.
    * Otherwise, simply return the Wylie text.
    * @param text (string) a piece of text in Wylie transliteration 
-   * @param strictChecks (boolean) if true, then the syllable will be 
-   *        checked more thoroughly and will only be converted, if it 
-   *        matches the usual Tibetan writing rules
    * @param ignoreBracketedSections don't change sections in squiggly brackets
    * @return the same piece of text but converted to unicode
    */
   tibetanOutput:function(text,ignoreBracketedSections) {
     if(this.useUnicodeTibetan) {
       if(ignoreBracketedSections) {
-        var result = "";
-        var bracketActive = false;
-        var tokenizer = new jQuery.tokenizer( ['{','}'],
-          function( syllable, isSeparator ) {
-            if(syllable === '{') {
-              result += ' ';
-              bracketActive = true;
-            } else if(syllable === '}') {
-              result += ' ';
-              bracketActive = false;
-            } else if(bracketActive) {
-              result += DICT.normalizeInlineEnglish(syllable);
-            } else {
-              result += DICT.wylieToUni(syllable,false);
-            }
-          }
+        return this.wylieConverter.wylieToUniExceptBracketedSections(
+          text, 
+          DICT.normalizeInlineEnglish
         );
-        tokenizer.parse(text);
-        return result;
       } else {
-        var result = this.wylieToUni(text,false);
+        var result = this.wylieConverter.wylieToUni(text);
         return result;
       }
     } else {
@@ -465,18 +171,21 @@ var DICT={
   },
   
   getDataAccess:function() {   
+    return this.dataAccess;
+  },
+  
+  init:function($, dataAccess, wylieConverter, sanskritConverter) {
+    this.dataAccess = dataAccess;
+    this.wylieConverter = wylieConverter;
+    this.sanskritConverter = sanskritConverter;
+    this.homepageContent = $('#definitions').html();
+
     if(window.cordova) {
       DICT._touch = true;
       $('body').addClass('mobile');
-      return CordovaDataAccess;
     } else {
       $('body').addClass('desktop');
-      return PhpDataAccess;
     }
-  },
-  
-  init:function($) {
-    DICT.homepageContent = $('#definitions').html();
 
     $.fn.selectRange = function(start, end) {
       if(end === undefined) {
@@ -585,47 +294,12 @@ var DICT={
       if(this.settings.layout == 'layout_black') {
       $('body').addClass('dark');
       }
-      this.SYLLABLELIST = SYLLABLELIST;
       this.setTibetanOutput(this.settings.unicode);
       this.initCreditsInformation();
       $('body').removeClass('cordovaInitializing');
 
       // attach clear-input behavior
       $('#clearInputBtn').on('click', function(e){ e.preventDefault(); DICT.clearInput(); });
-
-      var conflicts=[];        
-      $.each(this.SYLLABLELIST,function(wylie,uni){
-        var existingSyllable = DICT.UNICODE_SYLLABLELIST[uni];
-        var newValid;
-        var oldValid;
-        if(!existingSyllable) {
-          newValid = true;
-          oldValid = false;
-        } else {
-          newValid = DICT.isValidSyllable(wylie);
-          oldValid = DICT.isValidSyllable(existingSyllable);
-        }
-
-        if (newValid && !oldValid) {
-          DICT.UNICODE_SYLLABLELIST[uni] = wylie;
-        } else {
-          if(DICT.isValidSeparator(wylie)
-            ||DICT.isValidSyllable(wylie)
-            ||(!existingSyllable && /[a-zA-Z]/.test(wylie))
-            ||(oldValid == newValid && existingSyllable.length < wylie.length)                ) {
-            DICT.UNICODE_SYLLABLELIST[uni] = wylie;
-          }
-          if(oldValid == newValid) {
-            conflicts.push(uni + " -> " + existingSyllable + " / " + wylie );
-          }
-        }
-      });
-      
-      DICT.log(conflicts.length + " conflicting syllables.");
-    
-      $.each(this.SEPARATORLIST,function(idx,value){
-        DICT.UNICODE_SEPARATORLIST.push( DICT.wylieToUni(value) );
-      });
 
       this.dataTable = $("#wordList").DataTable({
           processing:false,
@@ -649,7 +323,7 @@ var DICT={
           
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
             uniInput = uniInput.replace(/[\- _/།]+/g,' ');
-            uniInput = DICT.normalizeWylie(uniInput);
+            uniInput = DICT.wylieConverter.normalizeWylie(uniInput);
             var newInput = DICT.uniToWylie(uniInput);
             var inputText = DICT.tibetanOutput( newInput );
 
@@ -709,8 +383,8 @@ var DICT={
           // partial editing within Tibetan editing where a syllable in Wylie was added into a piece of Tibetan
           var charactersBehindCursor = newInput.length - $st.get(0).selectionStart || 0;
           var matches = matchFullWylieSyllableInTheMiddleOfTibetan;
-          var insertedSyllable = DICT.normalizeWylie(matches[2]);
-          insertedSyllable = DICT.wylieToUni(insertedSyllable);
+          var insertedSyllable = DICT.wylieConverter.normalizeWylie(matches[2]);
+          insertedSyllable = DICT.wylieConverter.wylieToUni(insertedSyllable);
           var inputText = matches[1] + insertedSyllable + matches[3];
           var newCursorPos = matches[1].length + insertedSyllable.length; 
           
@@ -731,7 +405,7 @@ var DICT={
           // => convert all syllables to unicode and fill the word list
           if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
             if (currentInputContainsWylie) {
-              newInput = DICT.normalizeWylie(newInput);
+              newInput = DICT.wylieConverter.normalizeWylie(newInput);
               newInput = newInput.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
               var inputText = DICT.tibetanOutput( newInput );
             } else {
@@ -751,7 +425,7 @@ var DICT={
             var adjusted = DICT.uniToWylie(uniInput).replace(/[_  ]*$/, '');
             var splitPos = adjusted.lastIndexOf(' ');
             if (splitPos>0) {
-                adjusted = DICT.wylieToUni(adjusted.substring(0,splitPos + 1)) + adjusted.substring(splitPos+1);
+                adjusted = DICT.wylieConverter.wylieToUni(adjusted.substring(0,splitPos + 1)) + adjusted.substring(splitPos+1);
             }
             
             $('#searchTerm').val(adjusted);
@@ -1198,7 +872,7 @@ var DICT={
 
   readTerm:function(term, saveState){
     this.scrollToTop();
-    term = this._normalizeWylieForLookup(term);
+    term = this.wylieConverter.normalizeWylieWhitespace(term);
     term = decodeURIComponent(term).replace(/^\s+|\s+$/g, '');
     if(this.activeTerm != term) {
       this.getDataAccess().readTerm(term, DICT.getLang(), this.settings.activeDictionaries, saveState);
@@ -1261,19 +935,6 @@ var DICT={
     return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
   },
 
-  _normalizeWylieForLookup:function(wylie) {
-    // remove unwanted characters - especially whitespace stuff
-    if(wylie===' ')
-      return wylie;
-    wylie = wylie.replace('/',' ');
-    wylie = wylie.replace(/[()]/g,' ');
-    wylie = wylie.replace(/\s\s+/g,' ');
-    wylie = wylie.replace(/^\s+|\s+$/g,'');
-    wylie = wylie.replace(/[’‘`´]/g,"'");
-
-    return wylie;
-  },
-
   convertInlineTibetanSections:function(definition, definitionNr) {
     var chunks = definition.match(/[{][^{}]+[}]/g);
 
@@ -1286,9 +947,9 @@ var DICT={
     for(var i=0;i<chunks.length;i++) {
       var chunk = chunks[i];
       chunk.replace(/\\/g,"\\\\");
-      var chunkContents = this.normalizeWylie(chunk).replace(/[{}]/g,'').replace(/^\s+|\s+$/g,'');
-      var out = this.tibetanOutput(chunkContents,false); //,true
-      var lookup = this._normalizeWylieForLookup(chunkContents);
+      var chunkContents = this.wylieConverter.normalizeWylie(chunk).replace(/[{}]/g,'').replace(/^\s+|\s+$/g,'');
+      var out = this.tibetanOutput(chunkContents, false);
+      var lookup = this.wylieConverter.normalizeWylieWhitespace(chunkContents);
 
       if((!this.useUnicodeTibetan) ||(/.*[a-z].*/.test(chunkContents) && !/^.*[a-zA-Z0-9].*$/.test(out))) {
         var sectionId = 'tibSection' + definitionNr + '_' + i;
@@ -1460,14 +1121,14 @@ var DICT={
               // ensure that separator lines are working also in Tibetan-only dictionaries
               definition = definition.replace("-----", "}\n-----\n{");
               definition = "{" + definition + "}";
-              definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
+              definition = DICT.convertInlineTibetanSections( DICT.sanskritConverter.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
             } else {
               definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
             }
             defEnd = '</div>';
           } else if(currentDict.containsOnlySkt) {
             defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
-            definition = DICT.convertInlineTibetanSections( DICT.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
+            definition = DICT.convertInlineTibetanSections( DICT.sanskritConverter.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
             defEnd = '</div>';
           } else if(currentDict.scanId){ 
             //scanned dictionary. If we have an exact page number, we link to it
@@ -1608,7 +1269,6 @@ var DICT={
   },
 };
 
-
 /* ============== Initialization ============== */
 
 // initialize the PWA service worker
@@ -1620,17 +1280,26 @@ if ('serviceWorker' in navigator && !window.cordova) {
 }
 
 // initialize the actual app
-if(window.cordova) {
-  //phonegap-based initialization for mobile app
-  document.addEventListener("deviceready", function(){
-      jQuery(function($){
-      DICT.init($);
-      
+Promise.all([
+  import('../language-io/tibetan.mjs'),
+  import('../language-io/sanskrit.mjs'),
+  import('../db/dataAccess.mjs')
+]).then(([{ WylieConverter }, { SanskritConverter }, { PhpDataAccess, CordovaDataAccess }]) => {
+
+  var wylieConverter = new WylieConverter(jQuery.tokenizer);
+  var sanskritConverter = new SanskritConverter(jQuery.tokenizer);
+
+  if(window.cordova) {
+    //phonegap-based initialization for mobile app
+    document.addEventListener("deviceready", function(){
+        jQuery(function($){
+          DICT.init($, new CordovaDataAccess(), wylieConverter, sanskritConverter);        
+      });
+    }, false);
+  } else {
+    //regular initialization for web app
+    jQuery(function($){
+      DICT.init($, new PhpDataAccess(), wylieConverter, sanskritConverter);
     });
-  }, false);
-} else {
-  //regular initialization for web app
-  jQuery(function($){
-    DICT.init($);
-  });
-}
+  }
+});

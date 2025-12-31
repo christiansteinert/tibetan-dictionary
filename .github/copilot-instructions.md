@@ -13,7 +13,6 @@ Both share the same JavaScript codebase (`webapp/`) and use an SQLite database g
 1. **Dictionary Build** (`buildDictionaries.sh` → `_buildDict.py`):
    - Reads CSV files from `_input/dictionaries/public/` (and `private/` if present)
    - Generates `webapp/TibetanDictionary.db` (SQLite database)
-   - Extracts Tibetan syllables → generates `webapp/data/syllablelist.js` lookup table
    - Uses Perl library (`_build/util/Lingua-BO-Wylie`) for Wylie→Unicode conversion
    - Applies zlib compression with custom dictionary (`DEFLATE_DICT`) for space efficiency
 
@@ -21,12 +20,6 @@ Both share the same JavaScript codebase (`webapp/`) and use an SQLite database g
    - Copies webapp files into Cordova project (`_build/mobile/tibetandict/`)
    - Injects database size constant into Java (`Constants.java`)
    - Builds separate PUBLIC and FULL (private) APKs with different Android app IDs
-
-### Key Wylie Transliteration Pattern
-The app does **NOT** perform runtime Wylie conversion. Instead:
-- All Wylie→Unicode conversion uses pre-generated lookup table in `data/syllablelist.js`
-- Lookup is syllable-by-syllable, not algorithmic
-- Generated during build from actual dictionary terms via `_getTibetanSyllablesFromText.sh`
 
 ### Dual Data Access Strategy
 JavaScript uses polymorphic `dataAccess` object (set at runtime):
@@ -39,8 +32,7 @@ See `webapp/code/js/dict/dataAccess.js` for implementation.
 
 ### Building Dictionaries
 ```bash
-./buildDictionaries.sh  # Requires: python3, perl, sqlite3, bash tools
-# Generates: webapp/TibetanDictionary.db + webapp/data/syllablelist.js
+./buildDictionaries.sh  # Requires: python3, sqlite3, bash tools
 ```
 
 ### Building Android APK

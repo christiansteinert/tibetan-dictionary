@@ -2,9 +2,6 @@
 
 import sqlite3, sys, re, os, zlib
 
-#WORDLIST="data/wordlist.js"
-#DICTLIST="data/dictionaries.js"
-#SYLLABLELIST="data/syllablelist.js"
 DB="webapp/TibetanDictionary.db"
 DB_PRIVATE="webapp/TibetanDictionary_private.db"
 CSV_INPUT="_input/dictionaries/public"

@@ -10,14 +10,13 @@
 #   * python 3
 # - java and a current version of the Android SDK
 
-export SYLLABLELIST=data/syllablelist.js
 export CSV_INPUT=`pwd`/_input/dictionaries/public
 export CSV_INPUT_PRIVATE=`pwd`/_input/dictionaries/private
 
 DIR=`pwd`
 
 
-# If private folder exists, copy stuff from private to public
+# If private folder exists, copy stuff from public to private
 if [ -d $CSV_INPUT_PRIVATE ]
 then
   cd _input/dictionaries/public
@@ -31,21 +30,6 @@ then
   export CSV_INPUT=$CSV_INPUT_PRIVATE
   cd "$DIR"
 fi
-
-
-./_getTibetanSyllablesFromText.sh
-cd webapp
-rm $SYLLABLELIST 2>/dev/null
-mkdir data 2>/dev/null
-
-echo bulding syllable list
-echo 'SYLLABLELIST={' > $SYLLABLELIST
-cat ../_input/tibetan-punctuation ../_input/tibetan-syllables |grep "\|" | sed "s/\(.*\)[\|]\(.*\)/\"\1\":\"\2\",/g" >> $SYLLABLELIST
-
-echo '};' >> $SYLLABLELIST
-
-
-cd "$DIR"
 
 ./_buildDict.py
 

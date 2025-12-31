@@ -15,7 +15,10 @@ const ASSETS = [
   './lib/jquery_tooltip/tooltip.css',
   './lib/photoswipe/photoswipe.css',
   // App code
-  './code/js/dict/dataAccess.js',
+  './code/js/db/dataAccess.mjs',
+  './code/js/ewts-js/src/EwtsConverter.mjs',
+  './code/js/language-io/sanskrit.mjs',
+  './code/js/language-io/tibetan.mjs',
   './code/js/dict/settings.js',
   './code/js/dict/main.js',
   './code/js/dict/lightbox.js',
@@ -31,7 +34,6 @@ const ASSETS = [
   './lib/jquery_tooltip/tooltip.js',
   './lib/sortable_js/sortable.min.js',
   // Data
-  './data/syllablelist.js',
   './settings/dictlist.js',
   './settings/abbreviations.js',
   // Cordova-related (optional in web mode)
@@ -39,6 +41,7 @@ const ASSETS = [
   './ShareTextPlugin.js',
   // Fonts
   './code/css/DDC_Uchen-webfont.woff',
+  './code/css/DDC_Uchen-webfont.ttf',
   // UI images referenced in index.html
   './code/css/clear.png',
   './code/css/tib-en.png',
