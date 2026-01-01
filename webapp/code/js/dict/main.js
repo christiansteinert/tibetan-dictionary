@@ -1,17 +1,12 @@
 var DICT={
-  _needsBackspaceWorkaround:null,
   _offset:0,
   _lastStoredNavigationState:{},
   dataAccess:{},
   useUnicodeTibetan:true,
-  wasTypedInWylie:false,
   DICTLIST:{},
   dataTable:{},
   activeTerm:"",
-  currentInput:"",
   lang:"tib",
-  inputLang:"tib",
-  lastUniInput:"",
   currentListTerm:"",
   lastHomeBackButtonTime:0,
   homepageContent:"",
@@ -20,12 +15,8 @@ var DICT={
   wylieConverter:null, 
   dataAccess:null,
   DefinitionFormatter:null,
-  
-  log:function(x) {
-    if(typeof console === "object" && typeof console.log === "function" ) {
-      console.log(x);
-    }
-  },
+  InputHandler: null, // InputHandler class reference
+  inputHandler:null, // InputHandler instance
 
   uniToWylie:function(text) {
     if(this.useUnicodeTibetan) {
@@ -96,10 +87,11 @@ var DICT={
     return this.dataAccess;
   },
   
-  init:function($, dataAccess, wylieConverter, DefinitionFormatter) {
+  init:function($, dataAccess, wylieConverter, DefinitionFormatter, InputHandler) {
     this.dataAccess = dataAccess;
     this.wylieConverter = wylieConverter;
     this.DefinitionFormatter = DefinitionFormatter;
+    this.InputHandler = InputHandler;
     this.homepageContent = $('#definitions').html();
 
     if(window.cordova) {
@@ -151,6 +143,8 @@ var DICT={
     }
   },
   
+  // Note: inputToLowerIfNeeded is now handled by InputHandler
+  // Kept here for backward compatibility with any external code
   inputToLowerIfNeeded:function(input) {
     if(SETTINGS.getSettings().lowercase && DICT.getInputLang() === "tib") {
       input = input.toLowerCase();
@@ -182,15 +176,6 @@ var DICT={
     
   },
 
-  needsBackspaceWorkaround:function() {
-    // old versions of Android cannot delete Tibetan script when pressing backspace
-    // in that case we need workarounds
-    if(this._needsBackspaceWorkaround === null) {
-      this._needsBackspaceWorkaround = /Android [1234][^0-9]/.test(navigator.userAgent)
-    }
-    return this._needsBackspaceWorkaround;
-  },
-
   openLink:function(href) {
     if(window.cordova && href.indexOf('http') === 0) { 
       var handle = cordova.InAppBrowser.open(href, '_system', 'location=yes');
@@ -209,6 +194,22 @@ var DICT={
       );
     
       this.settings = SETTINGS.getSettings();
+      
+      // Initialize input handler for the search field
+      var inputHandlerOptions = {
+        useUnicodeTibetan: this.settings.unicode === true,
+        lowercaseSetting: SETTINGS.getSettings().lowercase
+      };
+      var inputHandlerCallbacks = {
+        onSearch: (loadFirstItem, saveState, offset) => {
+          if(loadFirstItem) {
+            DICT.scrollToTop();
+          }
+          DICT.search(loadFirstItem, saveState, offset)
+        }
+      };
+      this.inputHandler = new this.InputHandler('#searchTerm', jQuery.tokenizer, inputHandlerCallbacks, inputHandlerOptions);
+
       if(!window.localStorage)
         $('#settingsBtn').hide();
       
@@ -236,144 +237,6 @@ var DICT={
           }
       });
 
-      $('#searchTerm').on('keypress',function(event){                      
-        if(event.keyCode == 13){ //enter
-          // if enter is pressed in the input field then convert all syllables to unicode
-          DICT.lang = DICT.getInputLang();
-          var uniInput = DICT.inputToLowerIfNeeded( $('#searchTerm').val() );
-          
-          if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-            uniInput = uniInput.replace(/[\- _/།]+/g,' ');
-            uniInput = DICT.wylieConverter.normalizeWylie(uniInput);
-            var newInput = DICT.uniToWylie(uniInput);
-            var inputText = DICT.tibetanOutput( newInput );
-
-            if ( DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput) ) {
-              // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
-              // in this case we will later convert the input back to Wylie when backspace is pressed.
-              DICT.wasTypedInWylie = true;
-            }             
-          } else {
-            uniInput = uniInput.replace(/[-\s\/]+/g,' ');
-            var newInput = uniInput;
-            var inputText = newInput;
-          }
-          
-          $('#searchTerm').val(inputText).blur();
-          DICT.scrollToTop(),
-          DICT.search(true,true,0);
-        }
-      });
-      
-      $('#searchTerm').on('keyup mobiletextchange input',function(event){
-        var $st = $('#searchTerm'),
-            uniInput = DICT.inputToLowerIfNeeded( $st.val() ),
-            lastUniInput = DICT.lastUniInput,
-            newInput = uniInput,
-            currentInput = DICT.currentInput,
-            isCursorAtTheEnd = ($st.get(0).selectionStart == uniInput.length);
-
-        if(event.type === "input" && !/.*['a-zA-Z].*/.test(uniInput + lastUniInput)) {
-          // skip our handling of the input event if input so far has not contained wylie-relevant
-          // characters because our event handling for the input event can interfere with 
-          // Tibetan Unicode input on iPhones
-          return;
-        }
-
-        if(DICT.getInputLang() === "tib" && DICT.useUnicodeTibetan===true) {
-          newInput = DICT.uniToWylie(uniInput).replace(/_/g,' ');
-        } else {
-          newInput = newInput.replace(/[-\s\/]+/g,' ');
-        }
-
-        if (DICT.getInputLang() === "tib" && /.*['a-zA-Z].*/.test(uniInput)) {
-          // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
-          // in this case we will later convert the input back to Wylie when backspace is pressed.
-          DICT.wasTypedInWylie = true;
-          var currentInputContainsWylie = true;
-          var matchFullWylieSyllableInTheMiddleOfTibetan = uniInput.match(/(^|^[^ ]*་)([^་ ]+) ([^ ]+$|$)/);
-        } else if(uniInput === "") {
-          DICT.wasTypedInWylie = false;
-          var currentInputContainsWylie = false;
-          var matchFullWylieSyllableInTheMiddleOfTibetan = null;
-        }
-
-        if(DICT.useUnicodeTibetan===true 
-          && uniInput.length > lastUniInput.length
-          && matchFullWylieSyllableInTheMiddleOfTibetan) {
-          // partial editing within Tibetan editing where a syllable in Wylie was added into a piece of Tibetan
-          var charactersBehindCursor = newInput.length - $st.get(0).selectionStart || 0;
-          var matches = matchFullWylieSyllableInTheMiddleOfTibetan;
-          var insertedSyllable = DICT.wylieConverter.normalizeWylie(matches[2]);
-          insertedSyllable = DICT.wylieConverter.wylieToUni(insertedSyllable);
-          var inputText = matches[1] + insertedSyllable + matches[3];
-          var newCursorPos = matches[1].length + insertedSyllable.length; 
-          
-          //inputText = inputText.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
-          DICT.log(matches);
-          DICT.log(inputText);
-
-          $('#searchTerm').val(inputText);
-          DICT.search(false,true,0);
-          isCursorAtTheEnd = false;          
-          $('#searchTerm').selectRange(newCursorPos);
-  
-        } else if(event.keyCode == 32 
-            || (/[\- \/་།\s]$/.test(uniInput) && uniInput.startsWith(lastUniInput) && !/[a-zA-Z'].*་/.test(lastUniInput)) // syllable  end char present and no latin letters before Tibetan stuff
-            || (newInput.length >= 3 && DICT.getInputLang() == 'en') ) {
-          
-          //space at the end of the text or typing in English
-          // => convert all syllables to unicode and fill the word list
-          if(DICT.useUnicodeTibetan===true && (DICT.getInputLang() === "tib")) {
-            if (currentInputContainsWylie) {
-              newInput = DICT.wylieConverter.normalizeWylie(newInput);
-              newInput = newInput.replace(/[\-_ \/་།\s]+/g,' '); // get rid of shad; turn into tseg; prevent double-tsegs
-              var inputText = DICT.tibetanOutput( newInput );
-            } else {
-              var inputText = uniInput.replace(/[\-_ \/་།\s]+/g,'་'); // get rid of shad; turn into tseg; prevent double-tsegs
-            }
-          } else {
-            var inputText = newInput;
-          }
-          $('#searchTerm').val(inputText);
-          DICT.search(false,true,0);
-                    
-        } else if(event.keyCode == 8||(uniInput.length < lastUniInput.length && lastUniInput.startsWith(uniInput))) { // backspace
-          var isAtEndOfSyllable = isCursorAtTheEnd && /(^|[_ /་།])[^a-zA-Z'_ /་།]+$/.test(uniInput);
-          if(DICT.wasTypedInWylie && DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && isAtEndOfSyllable ) {
-            // backspace at end of Tibetan syllable after having typed some part of the input in Wylie
-            // => convert the last syllable back to Wylie
-            var adjusted = DICT.uniToWylie(uniInput).replace(/[_  ]*$/, '');
-            var splitPos = adjusted.lastIndexOf(' ');
-            if (splitPos>0) {
-                adjusted = DICT.wylieConverter.wylieToUni(adjusted.substring(0,splitPos + 1)) + adjusted.substring(splitPos+1);
-            }
-            
-            $('#searchTerm').val(adjusted);
-            DICT.search(false,true,0);
-            
-          } else if(DICT.useUnicodeTibetan===true  &&  (DICT.getInputLang() === "tib") && DICT.needsBackspaceWorkaround() && isAtEndOfSyllable ) {
-            // backspace at end of Tibetan syllable after having typed Tibetan directly
-            // => on old devices: delete whole syllable
-            var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/,'$1');
-            $('#searchTerm').val(adjusted);
-            DICT.search(false,true,0);
-          } else {
-            // backspace in all other cases
-            // => just allow regular logic: allow the last character be deleted. This may be the last Unicode character
-            DICT.search(false,true,0);
-          }          
-        }
-        DICT.lastUniInput = $('#searchTerm').val();
-        DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
-
-        if(isCursorAtTheEnd) {
-          // put cursor at the end if it was at the end before
-          window.setTimeout(function(){
-            $('#searchTerm').selectRange($('#searchTerm').val().length);
-          },10)
-        }
-      });
 
       // handle navigation events
       // - listen to the "back" button on android
@@ -420,22 +283,13 @@ var DICT={
           state = decodeURIComponent(state);
         } catch(e) {
           state = '';
-          DICT.log('Failed to decode state hash: '+e.message);
+          console.log('Failed to decode state hash: '+e.message);
         }
 
         if(state === 'home') {
           // restore the homepage content
           // but don't refresh the homepage right away again when hitting the home page upon startup
           if(hashEventCount > 1) {
-            /*
-            DICT.clearInput();
-            DICT.scrollToTop();
-
-            $('#definitions').html(DICT.homepageContent);
-
-            DICT.setSidebarState(false);
-            $('.leftSideBar').hide();
-            */
             location.reload();
           }
           return;
@@ -460,11 +314,11 @@ var DICT={
     }
   
     if(DICT._offset > 0) {
-      if($('#searchTerm').val() === '' ) {
+      if(DICT.inputHandler.getValue() === '' ) {
         if( DICT.useUnicodeTibetan === true ) {
-          $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+          DICT.inputHandler.setValue(DICT.tibetanOutput(this.currentListTerm));
         } else {
-          $('#searchTerm').val(this.currentListTerm);
+          DICT.inputHandler.setValue(this.currentListTerm);
         }
       }
       var settings = SETTINGS.getSettings();
@@ -477,11 +331,11 @@ var DICT={
       return;
     }
 
-    if($('#searchTerm').val() === '' ) {
+    if(DICT.inputHandler.getValue() === '' ) {
         if( DICT.useUnicodeTibetan === true ) {
-          $('#searchTerm').val(DICT.tibetanOutput(this.currentListTerm));
+          DICT.inputHandler.setValue(DICT.tibetanOutput(this.currentListTerm));
         } else {
-          $('#searchTerm').val(this.currentListTerm);
+          DICT.inputHandler.setValue(this.currentListTerm);
         }
     }
     
@@ -490,10 +344,10 @@ var DICT={
   },
   
   clearInput:function() {
-    $('#searchTerm').val('');
+    DICT.inputHandler.clear();
+    DICT.inputHandler.focus();
     DICT.scrollToTop();
     DICT.search(false,true,0);
-    $('#searchTerm').focus();
   },
   
   updateButtonState:function(disablePrev,disableNext) {
@@ -523,24 +377,24 @@ var DICT={
   },
 
   setInputLang:function(targetLang){
-    if(targetLang)
-        DICT.inputLang = targetLang;
-    else if(DICT.getInputLang() == "tib")
-        DICT.inputLang = "en";
-    else 
-        DICT.inputLang = "tib";
+    // Determine the new language
+    var newLang;
+    if(targetLang) {
+        newLang = targetLang;
+    } else if(DICT.getInputLang() == "tib") {
+        newLang = "en";
+    } else {
+        newLang = "tib";
+    }
 
+    DICT.inputHandler.setInputLang(newLang);
     DICT.setTibetanOutput(DICT.useUnicodeTibetan);
     DICT.clearInput();
 
-    if(DICT.getInputLang()==="en") {
-        $("#searchTerm").attr("placeholder","Enter an English term...")
-        $("#searchTerm").attr("lang","en")
+    if(newLang === "en") {
         $("#switchBtnEnTib").show();
         $("#switchBtnTibEn").hide();
     } else {
-        $("#searchTerm").attr("placeholder","Enter a Tibetan term...")
-        $("#searchTerm").attr("lang","bo")
         $("#switchBtnEnTib").hide();
         $("#switchBtnTibEn").show();
     }
@@ -561,13 +415,11 @@ var DICT={
   },
 
   getInputLang:function(){
-    if(DICT.inputLang)
-        return DICT.inputLang;
-    return "tib";
+    return DICT.inputHandler.getInputLang();
   },
   
   search:function(loadFirstItem,saveState,offset) {
-    var inputText = $('#searchTerm').val();
+    var inputText = DICT.inputHandler.getValue();
     if(DICT.getInputLang()==='tib') {
       inputText = this.uniToWylie(inputText);
       inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
@@ -575,7 +427,6 @@ var DICT={
       inputText = inputText.replace(/\s+/g, ' ');
       inputText = inputText.replace(/[ /]+$/g, '');
     }
-
     
     var settings = SETTINGS.getSettings();
 
@@ -618,7 +469,6 @@ var DICT={
           return;
       
         for(var i=0;i<result.length && i<settings.listSize;i++) {
-          //result[i][0] = DICT.tibetanOutput(result[i][0]);
           tableRows[i]=[];
           if(lang === "en")
             tableRows[i][0]='<a href="#" data-wylie="'+result[i][0]+'">'+result[i][0]+'</a>';
@@ -752,21 +602,24 @@ var DICT={
         if(stateInfo.lang)
             DICT.lang = stateInfo.lang;
 
-        if(stateInfo.inputLang)
-            DICT.inputLang = stateInfo.inputLang;        
-        
-        DICT.setInputLang( DICT.inputLang );
-                    
-        if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
-          DICT.lastUniInput = this.tibetanOutput(stateInfo.currentListTerm);
-        } else {
-          DICT.lastUniInput = stateInfo.currentListTerm;
+        if(stateInfo.inputLang) {
+            DICT.setInputLang(stateInfo.inputLang);
         }
-        DICT.currentInput = stateInfo.currentListTerm;
-        window.mobiletextCurrentVal = DICT.lastUniInput;
-        if ($('#searchTerm').val() != DICT.lastUniInput) {  
-          $('#searchTerm').val(DICT.lastUniInput);
-          DICT.log("input changed based on URL hash. New value: " + DICT.lastUniInput)
+        
+        var lastUniInput;
+        if( DICT.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
+          lastUniInput = this.tibetanOutput(stateInfo.currentListTerm);
+        } else {
+          lastUniInput = stateInfo.currentListTerm;
+        }
+        
+        DICT.inputHandler.setLastUniInput(lastUniInput);
+        DICT.inputHandler.setCurrentInput(stateInfo.currentListTerm);
+        
+        window.mobiletextCurrentVal = lastUniInput;
+        if (DICT.inputHandler.getValue() != lastUniInput) {  
+          DICT.inputHandler.setValue(lastUniInput);
+          console.log("input changed based on URL hash. New value: " + lastUniInput)
         }
 
         $('.selected').removeClass('selected');
@@ -785,18 +638,17 @@ var DICT={
         if(stateInfo.definitionOnly) {
             $('body').addClass('definitionOnly');
         }
-        
-        this.currentInput = stateInfo.currentListTerm;
       }
     }
   },
 
-  readTerm:function(term, saveState){
+  readTerm:function(term, lang, saveState){
     this.scrollToTop();
+    this.lang = lang;
     term = this.wylieConverter.normalizeWylieWhitespace(term);
     term = decodeURIComponent(term).replace(/^\s+|\s+$/g, '');
     if(this.activeTerm != term) {
-      this.getDataAccess().readTerm(term, DICT.getLang(), this.settings.activeDictionaries, saveState);
+      this.getDataAccess().readTerm(term, lang, this.settings.activeDictionaries, saveState);
       this.activeTerm = term;
     } else {
       if(this.isSmallScreen() && this.getSidebarState()) {
@@ -824,7 +676,7 @@ var DICT={
 
 
     if (this.isSmallScreen() && currentState.forceLeftSideVisible !== previousState.forceLeftSideVisible) {
-      this.log("sidebbar change: setting hash");
+      console.log("sidebbar change: setting hash");
       window.location.hash = newUrlHash;
 
     } else if (currentState.lang !== previousState.lang 
@@ -833,7 +685,7 @@ var DICT={
        || currentState.offset !== previousState.offset) {
 
       if (currentState.activeTerm || previousState.activeTerm || (currentState.inputLang !== previousState.lang)) {
-        this.log("setting hash");
+        console.log("setting hash");
         window.location.hash = newUrlHash;
       }
 
@@ -845,7 +697,7 @@ var DICT={
         var newUrl = oldUrl += '#' + newUrlHash;
       }
       if (currentHash !== '#home') {
-        this.log("replacing url");
+        console.log("replacing url");
         window.location.replace(newUrl);
       }
     }
@@ -938,13 +790,13 @@ var DICT={
       ShareTextPlugin.getSharedText(
         function(sharedData) {
           if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
-            DICT.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
+            console.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
 
             // Clean up the shared text - remove extra whitespace and limit length
             var sharedText = sharedData.text.trim();
             if (sharedText.length > 200) {
               sharedText = sharedText.substring(0, 200);
-              DICT.log("Truncated long shared text to 200 characters");
+              console.log("Truncated long shared text to 200 characters");
             }
             // Use the language provided by the plugin
             var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
@@ -956,7 +808,7 @@ var DICT={
               if (/.*['a-zA-Z].*/.test(sharedText) ) {
                 // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
                 // in this case we will later convert the input back to Wylie when backspace is pressed.
-                DICT.wasTypedInWylie = true;
+                DICT.inputHandler.setWasTypedInWylie(true);
               }
 
               sharedText = sharedText.replace(/[\s\-\/()\[\]{},།:–—!.?]+/g, ' ');
@@ -966,26 +818,24 @@ var DICT={
               sharedText = sharedText.replace(/[\.]+/g,' ');
             }
             sharedText = sharedText.trim();
-            $('#searchTerm').val(sharedText);
+            
+            // Set input field value
+            DICT.inputHandler.setValue(sharedText);
+            DICT.inputHandler.focus();
 
-            DICT.log("Set input field to shared text: " + sharedText);
+            console.log("Set input field to shared text: " + sharedText);
             DICT.search(true,true,0);
-
-            DICT.currentInput = DICT.uniToWylie(DICT.lastUniInput);
-            DICT.lastUniInput = sharedText;
-
-            $('#searchTerm').focus();
           } else {
-            DICT.log("No shared text found");
+            console.log("No shared text found");
           }
         },
         function(error) {
-          DICT.log("Error getting shared text: " + error);
+          console.log("Error getting shared text: " + error);
         }
       );
       return true;
     } else {
-      DICT.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
+      console.log("ShareTextPlugin not available (running in web mode or plugin not loaded)");
       return false;
     }
   },
@@ -1005,8 +855,9 @@ if ('serviceWorker' in navigator && !window.cordova) {
 Promise.all([
   import('../language-io/tibetanConverter.mjs'),
   import('../db/dataAccess.mjs'),
-  import('../formatting/definitionFormatter.mjs')
-]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { DefinitionFormatter }]) => {
+  import('../formatting/definitionFormatter.mjs'),
+  import('../language-io/inputHandler.mjs')
+]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { DefinitionFormatter }, { InputHandler }]) => {
 
   var wylieConverter = new WylieConverter(jQuery.tokenizer);
   DefinitionFormatter.initialize(jQuery.tokenizer);
@@ -1015,13 +866,13 @@ Promise.all([
     //phonegap-based initialization for mobile app
     document.addEventListener("deviceready", function(){
         jQuery(function($){
-          DICT.init($, new CordovaDataAccess(DICT), wylieConverter, DefinitionFormatter);        
+          DICT.init($, new CordovaDataAccess(DICT), wylieConverter, DefinitionFormatter, InputHandler);        
       });
     }, false);
   } else {
     //regular initialization for web app
     jQuery(function($){
-      DICT.init($, new PhpDataAccess(DICT), wylieConverter, DefinitionFormatter);
+      DICT.init($, new PhpDataAccess(DICT), wylieConverter, DefinitionFormatter, InputHandler);
     });
   }
 });

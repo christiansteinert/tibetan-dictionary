@@ -18,6 +18,7 @@ const ASSETS = [
   './code/js/db/dataAccess.mjs',
   './code/js/ewts-js/src/EwtsConverter.mjs',
   './code/js/formatting/definitionFormatter.mjs',
+  './code/js/language-io/inputHandler.mjs',
   './code/js/language-io/sanskritConverter.mjs',
   './code/js/language-io/tibetanConverter.mjs',
   './code/js/dict/settings.js',
