@@ -17,8 +17,9 @@ const ASSETS = [
   // App code
   './code/js/db/dataAccess.mjs',
   './code/js/ewts-js/src/EwtsConverter.mjs',
-  './code/js/language-io/sanskrit.mjs',
-  './code/js/language-io/tibetan.mjs',
+  './code/js/formatting/definitionFormatter.mjs',
+  './code/js/language-io/sanskritConverter.mjs',
+  './code/js/language-io/tibetanConverter.mjs',
   './code/js/dict/settings.js',
   './code/js/dict/main.js',
   './code/js/dict/lightbox.js',

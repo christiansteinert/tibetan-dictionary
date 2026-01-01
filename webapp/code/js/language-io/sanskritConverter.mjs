@@ -41,8 +41,9 @@ export class SanskritConverter {
      * Convert a chunk of Sanskrit transliteration to Unicode
      * @param {string} skt - A piece of text in Sanskrit transliteration
      * @returns {string} The same text with Unicode characters
+     * @private
      */
-    _sktToUniChunk(skt) {
+    #sktToUniChunk(skt) {
         if (skt.toUpperCase() === skt) {
             return skt; // don't adjust text that is only comprised of upper case characters
         }
@@ -77,7 +78,7 @@ export class SanskritConverter {
             if (bracketActive) {
                 result += chunk;
             } else {
-                result += this._sktToUniChunk(chunk);
+                result += this.#sktToUniChunk(chunk);
             }
         });
         tok.parse(skt);

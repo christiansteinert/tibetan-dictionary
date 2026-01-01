@@ -1,14 +1,11 @@
 var DICT={
   _needsBackspaceWorkaround:null,
-  _touch:false,
   _offset:0,
   _lastStoredNavigationState:{},
   dataAccess:{},
   useUnicodeTibetan:true,
   wasTypedInWylie:false,
   DICTLIST:{},
-  WORDLIST:[],
-  ABBREV:[],
   dataTable:{},
   activeTerm:"",
   currentInput:"",
@@ -21,83 +18,8 @@ var DICT={
 
   // initialized during module loading:
   wylieConverter:null, 
-  sanskritConverter:null,
   dataAccess:null,
-
-  getAbbreviations:function(id) {
-    if(!this.ABBREV[id]) {
-      var abbrev = ABBREVIATIONS[id];
-      var searchPattern = abbrev.match;
-      var searchList = [];
-      
-      if ((typeof searchPattern) === "string") {
-        searchPattern = [searchPattern];
-      }
-
-      for(var i in searchPattern) {
-        var search = searchPattern[i];
-        
-        for (abbr in abbrev.items) {
-          var abbrEscaped = abbr.replace(/([\[\]\.\*\+\{\}])/g,'\\$1');
-          var termSearch = search.replace("TERM",abbrEscaped);
-
-          if(!searchList[abbr])
-            searchList[abbr] = [];
-          
-          searchList[abbr].push({
-            search:new RegExp(termSearch, "mg"),
-            explanation:abbrev.items[abbr]
-          });
-        
-          if(termSearch.indexOf(' ')>-1) {
-            var abbrCondensed = abbrEscaped.replace(/ /g,'');
-            var termSearch2 = search.replace("TERM",abbrCondensed);
-            
-            var abbrNoSpace = abbr.replace(/ /g,'')
-            if(!searchList[abbrNoSpace])
-                searchList[abbrNoSpace] = [];
-            
-            searchList[abbrNoSpace].push({
-              search:new RegExp(termSearch2, "mg"),
-              explanation:abbrev.items[abbr]
-            });
-          }
-        }
-      }
-      
-      this.ABBREV[id] = searchList;
-    }
-    return this.ABBREV[id];
-  },
-  
-  processAbbreviations:function(id, text) {
-    var abbrevs = DICT.getAbbreviations(id);
-    var changed = true;
-    while(changed) {
-      var t = text;
-      for(var abbr in abbrevs) {
-        var items = abbrevs[abbr];
-      
-        for(var itemIds in items) {
-          var item = items[itemIds];
-          var oldText = "";
-          var i = 0;
-          while(text != oldText) {
-              oldText = text;
-              text = text.replace(item.search, '$1<span class="tooltip" title="'+abbr+': '+item.explanation+'">$2</span>$3');
-              if(i++>10) {
-                DICT.log("trouble with replacing "+abbr+" in: "+text);
-                break;
-              }
-          }
-        }
-      }
-      if(t===text) {
-        changed=false;
-      }
-    }
-    return text;
-  },
+  DefinitionFormatter:null,
   
   log:function(x) {
     if(typeof console === "object" && typeof console.log === "function" ) {
@@ -120,7 +42,7 @@ var DICT={
    * @param ignoreBracketedSections don't change sections in squiggly brackets
    * @return the same piece of text but converted to unicode
    */
-  tibetanOutput:function(text,ignoreBracketedSections) {
+  tibetanOutput:function(text, ignoreBracketedSections) {
     if(this.useUnicodeTibetan) {
       if(ignoreBracketedSections) {
         return this.wylieConverter.wylieToUniExceptBracketedSections(
@@ -174,14 +96,13 @@ var DICT={
     return this.dataAccess;
   },
   
-  init:function($, dataAccess, wylieConverter, sanskritConverter) {
+  init:function($, dataAccess, wylieConverter, DefinitionFormatter) {
     this.dataAccess = dataAccess;
     this.wylieConverter = wylieConverter;
-    this.sanskritConverter = sanskritConverter;
+    this.DefinitionFormatter = DefinitionFormatter;
     this.homepageContent = $('#definitions').html();
 
     if(window.cordova) {
-      DICT._touch = true;
       $('body').addClass('mobile');
     } else {
       $('body').addClass('desktop');
@@ -935,113 +856,24 @@ var DICT={
     return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
   },
 
-  convertInlineTibetanSections:function(definition, definitionNr) {
-    var chunks = definition.match(/[{][^{}]+[}]/g);
-
-    if(!chunks)
-      return definition;
-
-    var sections={};
-    var sectionCount=0;
-
-    for(var i=0;i<chunks.length;i++) {
-      var chunk = chunks[i];
-      chunk.replace(/\\/g,"\\\\");
-      var chunkContents = this.wylieConverter.normalizeWylie(chunk).replace(/[{}]/g,'').replace(/^\s+|\s+$/g,'');
-      var out = this.tibetanOutput(chunkContents, false);
-      var lookup = this.wylieConverter.normalizeWylieWhitespace(chunkContents);
-
-      if((!this.useUnicodeTibetan) ||(/.*[a-z].*/.test(chunkContents) && !/^.*[a-zA-Z0-9].*$/.test(out))) {
-        var sectionId = 'tibSection' + definitionNr + '_' + i;
-        var title = chunk.replace(/\n/g,' ');
-
-        out = out.replace(/\n/g,'<br />');
-        out = out.replace(/\\n/g,'<br />');
-        out = out.replace(/([()]|&gt;|&lt;)/g,'<span class="paren">$1</span>');
-
-        definition = definition.replace(chunk,'<span id="'+sectionId+'" class="tib inlineTib" title="'+DICT.htmlEscapeTitle(title)+'">'+out+'</span>');
-
-        sections[sectionId] = {
-          wylie:lookup
-        };
-        sectionCount++;
-
-      }
-    }
-    if(sectionCount>0) {
-      DICT.getDataAccess().checkTibetanSectionsForLinks(sections);
-    }
-
-    return definition;
-  },
-
   /**
-   * make all Tibetan sections into "links" where we can do so...
+   * Activate inline Tibetan sections as clickable links
+   * Called by dataAccess after checking which sections have dictionary entries
+   * @param {Object} availableSections - Map of sectionId to section content in Wylie
    */
   activateInlineTibetanSections:function(availableSections) {
-    $.each(availableSections,function(sectionId, sectionInfo){
-      if(DICT.activeTerm != sectionInfo.wylie) {
-        $('#'+sectionId)
+    var activeTerm = this.activeTerm;
+    $.each(availableSections, function(sectionId, sectionInfo) {
+      if (activeTerm !== sectionInfo.wylie) {
+        $('#' + sectionId)
           .addClass('link')
-          .attr('data-wylie',sectionInfo.wylie)
-          .click( function() { 
-            DICT.lang="tib";
-            DICT.readTerm( $(this).attr('data-wylie'), "tib", true );
+          .attr('data-wylie', sectionInfo.wylie)
+          .click(function() {
+            DICT.lang = "tib";
+            DICT.readTerm($(this).attr('data-wylie'), "tib", true);
           });
       }
     });
-  },
-
-  breakDefinitionIntoSections:function(definition) {
-    if(definition.match(/([^0-9]|^)1[\.)]/)&&definition.match(/([^0-9]|^)2[\.)]/)) {
-      // break before numbers like "1." or "1)"
-      definition = definition.replace(/([^-0-9(])([(]?[1-9][0-9]?[\.)] ?)([^0-9])/mg,'$1\n$2 $3');
-      definition = definition.replace(/^([(]?[1-9][0-9]?[\.)] ?)([^0-9])/mg,'$1 $2');
-    }
-    return definition;
-  },
-
-  htmlEscapeDefinition:function(definition) {
-    definition = this.htmlEscape(definition);
-    
-    definition = definition.replace(/(https?:\/\/)([-0-9a-zA-Z\/\.#%_:&;]+)/g, '<a target="_blank" href="$1$2">$2</a>');
-    definition = definition.replace(/\\+n/g,'\n'); 
-    definition = definition.replace(/\\/g,''); 
-    definition = definition.replace(/([a-zA-Z0-9\.]){/g,'$1 {');
-    definition = definition.replace(/}([a-zA-Z0-9])/g,'} $1');
-    definition = definition.replace(/:([^\/0-9])/g,': $1');
-    definition = definition.replace(/ - /g,' &ndash; ');
-
-    return '<p>' + definition + '</p>';
-  },
-
-  htmlEscapeTitle:function(title) {
-    title = this.htmlEscape(title);
-    title = title.replace(/{/g,'&#123;');
-    title = title.replace(/}/g,'&#125;');
-    title = title.replace(/\n/g,' ');
-    title = title.replace(/<[^>]*>/g,' ');
-    title = title.replace(/  +/g,' ');
-    title = title.replace(/"/g,"&quot;");
-    title = title.replace(/'/g,"&#39;");
-
-    return title;
-  },
-
-  htmlEscapeScriptAttr:function(text) {
-    text = this.htmlEscape(text);
-    text = text.replace(/'/g,"\\'");        
-
-    return text;
-  },
-
-  htmlEscape:function(text) {
-    text = text.replace(/&/g,'&amp;');
-    text = text.replace(/</g,'&lt;');
-    text = text.replace(/>/g,'&gt;');
-    text = text.replace(/"/g,'&quot;');
-                   
-    return text;
   },
 
   loadScannedPage:function(dictId, termId) {
@@ -1064,137 +896,27 @@ var DICT={
     }
   },
 
-  addAudioLinks:function(currentDict, definition) {
-    if(currentDict.audioId){
-      var replacement = '';
-
-      if (!window.cordova) {
-        // in browser (rather than on mobile): insert audio tag
-        var audioPath = "audio/" + currentDict.audioId + "/";
-        var replacement = '<audio controls preload="none"><source src="' + audioPath + '$1" type="audio/mpeg"></audio>';
-      }
-      definition = definition.replace(/\[sound:([^\]]+)\]/g, replacement);
-    }
-    return definition;
-  },
-
   loadTerm:function(term,dictEntries,saveState) {
     $('#definitions *').remove();
-    if(DICT.getLang()==="en")
-      var termUni = term;
-    else
-      var termUni = this.tibetanOutput( term );
-    var definitionTab = '<h1 class="definitionHead definitionHead'+DICT.getLang()+'" title="'+this.htmlEscapeTitle(term)+'">'+termUni+'</h1><table id="definitionList">';
-    var definitionNr = 0;
+
+    // Filter DICTLIST to only include active dictionaries, preserving order
     var dictList = this.settings.activeDictionaries;
-
-    // add "content" to look up pages in scanned dictionaries
-    $.each(DICTLIST, function(dict_id, dict) {
-      var currentDict = DICTLIST[dict_id];
-      if(currentDict.language && DICT.getInputLang()==currentDict.language[0] && currentDict.scanId && !currentDict.exactPageNumbersAvailable) {
-        dictEntries[dict_id] = '<div><a href="javascript:DICT.loadScannedPage(\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\',\'' + DICT.htmlEscapeScriptAttr(term) + '\')">' + currentDict.linkText+'</a></div>';
+    var dictionaries = {};
+    for (var i = 0; i < dictList.length; i++) {
+      var dictId = dictList[i];
+      if (DICTLIST[dictId]) {
+        dictionaries[dictId] = DICTLIST[dictId];
       }
-    });
+    }
 
-    $.each(dictList,function(idx,currentDictName) {        
-      $.each(dictEntries,function(dictName,definition) {
-        if(dictName == currentDictName) {
-          var currentDict = DICTLIST[dictName];
-          if(!currentDict) {
-            DICT.log("received result for unknown dictionary '" +dictName+ "'. skipping");
-            return;
-          } 
-          var defStart = "", defEnd = "";
-          
-          if(currentDict.mergeLines) {
-              definition = definition.replace(/\n/gm,'; ');
-              definition = definition.replace(/\\n/gm,'; ');
-          }
-          if(!currentDict.preformattedLinebreaks) {
-            definition = DICT.breakDefinitionIntoSections( definition );
-          }
-          if(currentDict.containsOnlyTibetan) {
-            // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
+    var result = DICT.DefinitionFormatter.formatDefinitionList(dictionaries, dictEntries, term, DICT.getLang(), DICT.useUnicodeTibetan, ABBREVIATIONS);
+    
+    // Check for links in Tibetan sections
+    if (Object.keys(result.allInlineSections).length > 0) {
+      DICT.getDataAccess().checkTibetanSectionsForLinks(result.allInlineSections);
+    }
 
-            defStart = '<div class="tib" title="'+DICT.htmlEscapeTitle(definition)+'">';
-            if (definition.indexOf("-----")) {
-              // ensure that separator lines are working also in Tibetan-only dictionaries
-              definition = definition.replace("-----", "}\n-----\n{");
-              definition = "{" + definition + "}";
-              definition = DICT.convertInlineTibetanSections( DICT.sanskritConverter.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
-            } else {
-              definition = DICT.htmlEscapeDefinition( DICT.tibetanOutput( definition, true ) );
-            }
-            defEnd = '</div>';
-          } else if(currentDict.containsOnlySkt) {
-            defStart = '<div class="skt" title="'+DICT.htmlEscapeTitle(definition)+'">';
-            definition = DICT.convertInlineTibetanSections( DICT.sanskritConverter.sktToUni( DICT.htmlEscapeDefinition( definition ) ), definitionNr++ );
-            defEnd = '</div>';
-          } else if(currentDict.scanId){ 
-            //scanned dictionary. If we have an exact page number, we link to it
-            if(currentDict.exactPageNumbersAvailable) {
-              var definitionParts = definition.split('-----');
-              definition = '';
-              console.log(definition);
-              for(var i=0;i<definitionParts.length;i++) {
-                var pageNr = Number(definitionParts[i].replace(/[^0-9]/g,''));
-                var pageTxt = "";
-                var offset = currentDict?.scanInfo?.offset || 0;
-
-                var pageInfo = {
-                  term_page: pageNr + offset,
-                  ...currentDict.scanInfo
-                }
-
-                if (definition != '') {
-                  definition += '<div class="separator"></div>';
-                }
-
-                if (definitionParts.length > 1) {
-                  var adjust = currentDict?.scanInfo?.display_pageadjust || 0;
-                  var adjustedPage = pageNr + adjust;
-                  pageTxt = ' (p. ' + adjustedPage + ')';
-                }
-
-                definition += '<div><a href="javascript:DICT.openScannedPage(' 
-                  + '\'' + DICT.htmlEscapeScriptAttr(currentDict.scanId) + '\','
-                  + '\'' + DICT.htmlEscapeScriptAttr(term) + '\','
-                  +  DICT.htmlEscapeScriptAttr(JSON.stringify(pageInfo))
-                  + ')">' + currentDict.linkText + pageTxt +'</a></div>';
-              }
-            }
-          } else {
-            definition =  DICT.convertInlineTibetanSections( DICT.htmlEscapeDefinition(definition), definitionNr++);
-          }
-
-          definition = DICT.addAudioLinks(currentDict, definition);
-            
-          definition = definition.replace(/\n/g,'</p>\n<p>');
-          definition = definition.replace(/\\n/g,'</p>\n<p>');
-          definition = definition.replace(/<p>-----<\/p>/g,'<p class="separator"></p>');
-          definition = definition.replace(/; -----;/g,'</p><p class="separator"></p><p>');
-
-          if(currentDict.highlight) {
-            definition = definition.replace(new RegExp(currentDict.highlight,'g'),'<b>$1</b>');
-          }
-
-          if(currentDict.abbreviations) {             
-            definition = DICT.processAbbreviations(currentDict.abbreviations,definition);
-          }
-          
-          definition = defStart + definition + defEnd;
-
-          var tooltipStart = "", tooltipEnd = ""; 
-          if(currentDict.about) {
-            tooltipStart = '<span class="tooltip" title="'+currentDict.about+'">';
-            tooltipEnd   = '</span>';
-          }
-          definitionTab += '<tr><td class="dictName">'+tooltipStart+currentDict.label+tooltipEnd+'</td><td class="definition">'+definition+'</td></tr>';
-        }
-      });
-    });
-    definitionTab += '</table>';
-    $(definitionTab).appendTo('#definitions');
+    $(result.definitionTableHtml).appendTo('#definitions');
     $('#definitions').find('a[href^="http"]').click(
       function(){DICT.openLink($(this).attr('href'));} 
     );
@@ -1281,25 +1003,25 @@ if ('serviceWorker' in navigator && !window.cordova) {
 
 // initialize the actual app
 Promise.all([
-  import('../language-io/tibetan.mjs'),
-  import('../language-io/sanskrit.mjs'),
-  import('../db/dataAccess.mjs')
-]).then(([{ WylieConverter }, { SanskritConverter }, { PhpDataAccess, CordovaDataAccess }]) => {
+  import('../language-io/tibetanConverter.mjs'),
+  import('../db/dataAccess.mjs'),
+  import('../formatting/definitionFormatter.mjs')
+]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { DefinitionFormatter }]) => {
 
   var wylieConverter = new WylieConverter(jQuery.tokenizer);
-  var sanskritConverter = new SanskritConverter(jQuery.tokenizer);
+  DefinitionFormatter.initialize(jQuery.tokenizer);
 
   if(window.cordova) {
     //phonegap-based initialization for mobile app
     document.addEventListener("deviceready", function(){
         jQuery(function($){
-          DICT.init($, new CordovaDataAccess(), wylieConverter, sanskritConverter);        
+          DICT.init($, new CordovaDataAccess(DICT), wylieConverter, DefinitionFormatter);        
       });
     }, false);
   } else {
     //regular initialization for web app
     jQuery(function($){
-      DICT.init($, new PhpDataAccess(), wylieConverter, sanskritConverter);
+      DICT.init($, new PhpDataAccess(DICT), wylieConverter, DefinitionFormatter);
     });
   }
 });

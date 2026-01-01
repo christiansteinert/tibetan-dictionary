@@ -6,7 +6,16 @@
  */
 
 export class PhpDataAccess {
+    /**
+     * Create a PhpDataAccess instance
+     * @param {Object} dict - The DICT application object (used for callbacks)
+     */
+    constructor(dict) {
+        this.dict = dict;
+    }
+
     readTerm(term, lang, dictionaries, saveState) {
+        const dict = this.dict;
         $.ajax({
             type: 'POST',
             url: "dict.php",
@@ -18,7 +27,7 @@ export class PhpDataAccess {
             },
             cache: true,
         }).done(function(data) {
-            DICT.loadTerm(term, data, saveState);
+            dict.loadTerm(term, data, saveState);
         }).fail(function(xhr, msg, err) {
             alert(msg + '\n' + err);
         });
@@ -45,6 +54,7 @@ export class PhpDataAccess {
     }
 
     checkTibetanSectionsForLinks(sections) {
+        const dict = this.dict;
         $.ajax({
             type: 'POST',
             url: 'dict.php',
@@ -54,7 +64,7 @@ export class PhpDataAccess {
             },
             cache: true,
         }).done(function(data) {
-            DICT.activateInlineTibetanSections(data);
+            dict.activateInlineTibetanSections(data);
         }).fail(function(xhr, msg, err) {
             alert(msg + '\n' + err);
         });
@@ -67,7 +77,12 @@ export class PhpDataAccess {
 
 
 export class CordovaDataAccess {
-    constructor() {
+    /**
+     * Create a CordovaDataAccess instance
+     * @param {Object} dict - The DICT application object
+     */
+    constructor(dict) {
+        this.dict = dict;
         this.DB_NAME = "TibetanDictionary";
         this.db = null;
     }
@@ -107,6 +122,7 @@ export class CordovaDataAccess {
     }
 
     readTerm(term, lang, dictionaries, saveState) {
+        const dict = this.dict;
         const db = this._openDB();
         db.transaction((tx) => {
             try {
@@ -133,7 +149,7 @@ export class CordovaDataAccess {
                         //                db.close();
                     } catch (ex) {}
 
-                    DICT.loadTerm(term, definitions, saveState);
+                    dict.loadTerm(term, definitions, saveState);
 
                 }, function(tx, error) {
                     alert('SQL error while reading term "' + term + '" from DB:' + error.message);
@@ -148,6 +164,7 @@ export class CordovaDataAccess {
     }
 
     checkTibetanSectionsForLinks(sections) {
+        const dict = this.dict;
         setTimeout(() => {
             const wylieSections = [];
             $.each(sections, function(sectionId, sectionInfo) {
@@ -171,7 +188,7 @@ export class CordovaDataAccess {
                         try {
                             //                    db.close();
                         } catch (ex) {}
-                        DICT.activateInlineTibetanSections(availableSections);
+                        dict.activateInlineTibetanSections(availableSections);
                     }, function(tx, error) {
                         alert('SQL error while checking existence of terms:' + error.message);
                         try {

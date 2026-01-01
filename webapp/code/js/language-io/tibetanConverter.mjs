@@ -12,13 +12,13 @@ export class WylieConverter {
     /**
      * Create a new WylieConverter instance
      * @param {function} tokenizer - jQuery tokenizer constructor for parsing text
-     * @param {Object} [options] - Optional configuration options
+     * @param {Object} [options] - Optional configuration options for the Wylie converter
      * @param {boolean} [options.check=true] - Generate warnings for illegal consonant sequences
      * @param {boolean} [options.check_strict=true] - Stricter checking, examine the whole stack
      * @param {boolean} [options.fix_spacing=true] - Remove spaces after newlines, collapse multiple tseks, fix case
-     * @param {boolean} [options.sloppy=false] - Silently fix common Wylie mistakes when converting to Unicode
+     * @param {boolean} [options.sloppy=true] - Silently fix common Wylie mistakes when converting to Unicode
      * @param {boolean} [options.leave_dubious=false] - Leave dubious syllables unprocessed between [brackets]
-     * @param {boolean} [options.pass_through=false] - Pass through non-Tibetan characters instead of converting to [comments]
+     * @param {boolean} [options.pass_through=true] - Pass through non-Tibetan characters instead of converting to [comments]
      */
     constructor(tokenizer, options = {}) {
         this.tokenizer = tokenizer;
@@ -26,9 +26,9 @@ export class WylieConverter {
             check: options.check ?? true,
             check_strict: options.check_strict ?? true,
             fix_spacing: options.fix_spacing ?? true,
-            sloppy: options.sloppy ?? false,
+            sloppy: options.sloppy ?? true,
             leave_dubious: options.leave_dubious ?? false,
-            pass_through: options.pass_through ?? false
+            pass_through: options.pass_through ?? true
         });
     }
 
@@ -144,7 +144,7 @@ export class WylieConverter {
                 result += ' ';
                 bracketActive = false;
             } else if (bracketActive) {
-                result += this._normalizeInlineEnglish(syllable);
+                result += this.#normalizeInlineEnglish(syllable);
             } else {
                 result += this.wylieToUni(syllable);
             }
@@ -154,7 +154,13 @@ export class WylieConverter {
         return result;
     }
 
-    _normalizeInlineEnglish(text) {
+    /**
+     * Normalize inline English text by fixing spacing around punctuation
+     * @param {string} text the text to be normalized
+     * @returns {string} The normalized text
+     * @private
+     */
+    #normalizeInlineEnglish(text) {
         text = text.replace(/([,\.]) */g,'$1 ');
         text = text.replace(/ *- */g,' - ');
         return text;
