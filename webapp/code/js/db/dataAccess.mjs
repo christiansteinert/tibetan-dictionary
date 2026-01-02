@@ -87,7 +87,7 @@ export class CordovaDataAccess {
         this.db = null;
     }
 
-    _openDB() {
+    #openDB() {
         try {
             if (!this.db) {
                 const db = window.sqlitePlugin.openDatabase({
@@ -112,7 +112,7 @@ export class CordovaDataAccess {
     }
 
     /** build an SQL WHERE-clause for an array of values */
-    _mergeOrClauses(paramName, paramValues) {
+    #mergeOrClauses(paramName, paramValues) {
         const clauses = [];
         $.each(paramValues, function(index, value) {
             const sqlEscape = value.replace(/"/g, '""').replace(/\\/g, '\\\\');
@@ -123,7 +123,7 @@ export class CordovaDataAccess {
 
     readTerm(term, lang, dictionaries, saveState) {
         const dict = this.dict;
-        const db = this._openDB();
+        const db = this.#openDB();
         db.transaction((tx) => {
             try {
                 const tab = this.getTabName(lang);
@@ -170,8 +170,8 @@ export class CordovaDataAccess {
             $.each(sections, function(sectionId, sectionInfo) {
                 wylieSections.push(sectionInfo.wylie);
             });
-            const termQuery = this._mergeOrClauses('term', wylieSections);
-            const db = this._openDB();
+            const termQuery = this.#mergeOrClauses('term', wylieSections);
+            const db = this.#openDB();
             db.transaction(function(tx) {
                 try {
                     tx.executeSql('SELECT DISTINCT term FROM DICT WHERE ' + termQuery, [], function(tx, results) {
@@ -205,7 +205,7 @@ export class CordovaDataAccess {
     initDB(callback) {
         setTimeout(() => {
             // open the db to make sure that it is available by selecting one record from it.
-            const db = this._openDB();
+            const db = this.#openDB();
             db.transaction(function(tx) {
                 try {
                     tx.executeSql('SELECT * FROM DICT WHERE term="chos" LIMIT 1', [], function(tx, results) {
@@ -236,12 +236,12 @@ export class CordovaDataAccess {
     }
 
     readTermList(term, lang, offset, maxResults, dictionaries, callback) {
-        const db = this._openDB();
+        const db = this.#openDB();
         term = term.replace(/\s*[/]\s*$/, '');
 
         db.transaction((tx) => {
             try {
-                const dictQuery = this._mergeOrClauses('DICTNAMES.name', dictionaries);
+                const dictQuery = this.#mergeOrClauses('DICTNAMES.name', dictionaries);
                 const tab = this.getTabName(lang);
                 let query;
                 let queryParams;

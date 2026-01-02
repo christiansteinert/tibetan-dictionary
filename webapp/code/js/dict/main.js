@@ -362,7 +362,10 @@ var DICT={
   },
 
   getInputLang:function(){
-    return DICT.inputHandler.getInputLang();
+    if(DICT.inputHandler) { // Guard against calling before inputHandler is initialized
+      return DICT.inputHandler.getInputLang();
+    }
+    return "tib"; // Default to Tibetan before initialization
   },
   
   search:function(loadFirstItem,saveState,offset) {
@@ -394,7 +397,7 @@ var DICT={
       this.getDataAccess().readTermList(inputText, lang, offset, settings.listSize + 1, this.settings.activeDictionaries, function(result) {
         var lang = DICT.getInputLang();        
         var tableRows = [];
-        this._offset = offset;
+        DICT._offset = offset;
 
         // add entry to look up pages in scanned dictionaries
         if(window.Set && !window.cordova) {
@@ -592,6 +595,9 @@ var DICT={
   readTerm:function(term, lang, saveState){
     this.scrollToTop();
     this.lang = lang;
+    if(!term) {
+      return; // Don't process undefined/null terms
+    }
     term = this.wylieConverter.normalizeWylieWhitespace(term);
     term = decodeURIComponent(term).replace(/^\s+|\s+$/g, '');
     if(this.activeTerm != term) {

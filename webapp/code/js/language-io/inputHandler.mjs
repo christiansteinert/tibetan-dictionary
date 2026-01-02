@@ -34,8 +34,6 @@ export class InputHandler {
     #lastUniInput;
     #currentInput;
     #wasTypedInWylie;
-    #boundKeypress;
-    #boundKeyupInput;
     #needsBackspaceWorkaround = null;
 
     /**
@@ -59,10 +57,6 @@ export class InputHandler {
         this.#lastUniInput = '';
         this.#currentInput = '';
         this.#wasTypedInWylie = false;
-
-        // Bound event handlers (for removal)
-        this.#boundKeypress = this.#handleKeypress.bind(this);
-        this.#boundKeyupInput = this.#handleKeyupInput.bind(this);
 
         // Attach events
         this.#attachEvents();
@@ -165,13 +159,13 @@ export class InputHandler {
      * @private
      */
     #attachEvents() {
-        this.#inputElement.addEventListener('keypress', this.#boundKeypress);
-        this.#inputElement.addEventListener('keyup', this.#boundKeyupInput);
-        this.#inputElement.addEventListener('input', this.#boundKeyupInput);
+        this.#inputElement.addEventListener('keypress',() => this.#handleKeypress(this));
+        this.#inputElement.addEventListener('keyup', () => this.#handleKeyupInput(this));
+        this.#inputElement.addEventListener('input', () => this.#handleKeyupInput(this));   
 
         // use jQuery mobiletextchange event (if jQuery is available)
         if (typeof jQuery !== 'undefined' && jQuery.fn && jQuery.fn.on) {
-            jQuery(this.#inputElement).on('mobiletextchange', this.#boundKeyupInput);
+            jQuery(this.#inputElement).on('mobiletextchange', () => this.#handleKeyupInput(this));
         }
     }
 

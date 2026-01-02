@@ -79,6 +79,9 @@ export class WylieConverter {
     }
 
     normalizeWylieWhitespace(wylie) {
+        if(!wylie) {
+            return '';
+        }
         if(wylie===' ') {
             return wylie;
         }
