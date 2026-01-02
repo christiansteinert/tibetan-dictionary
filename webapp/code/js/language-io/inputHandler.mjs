@@ -21,7 +21,7 @@ import { WylieConverter } from './tibetanConverter.mjs';
 /**
  * @typedef {Object} InputHandlerOptions
  * @property {boolean} useUnicodeTibetan - Returns whether Unicode Tibetan output is enabled
- * @property {boolean} lowercaseSetting - Returns whether lowercase input is enabled
+ * @property {boolean} lowercaseSetting - Returns whether automatic conversion to lowercase is enabled during Wylie input
  */
 export class InputHandler {
     // Private fields

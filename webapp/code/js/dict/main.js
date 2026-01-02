@@ -1,15 +1,12 @@
 var DICT={
   _offset:0,
   _lastStoredNavigationState:{},
-  dataAccess:{},
   useUnicodeTibetan:true,
-  DICTLIST:{},
   dataTable:{},
   activeTerm:"",
   lang:"tib",
   currentListTerm:"",
   lastHomeBackButtonTime:0,
-  homepageContent:"",
 
   // initialized during module loading:
   wylieConverter:null, 
@@ -30,20 +27,11 @@ var DICT={
    * convert a chunk of text from Wylie to Tibetan unicode, if unicode is active.
    * Otherwise, simply return the Wylie text.
    * @param text (string) a piece of text in Wylie transliteration 
-   * @param ignoreBracketedSections don't change sections in squiggly brackets
    * @return the same piece of text but converted to unicode
    */
-  tibetanOutput:function(text, ignoreBracketedSections) {
+  tibetanOutput:function(text) {
     if(this.useUnicodeTibetan) {
-      if(ignoreBracketedSections) {
-        return this.wylieConverter.wylieToUniExceptBracketedSections(
-          text, 
-          DICT.normalizeInlineEnglish
-        );
-      } else {
-        var result = this.wylieConverter.wylieToUni(text);
-        return result;
-      }
+        return this.wylieConverter.wylieToUni(text);
     } else {
       return text;
     }
@@ -92,44 +80,12 @@ var DICT={
     this.wylieConverter = wylieConverter;
     this.DefinitionFormatter = DefinitionFormatter;
     this.InputHandler = InputHandler;
-    this.homepageContent = $('#definitions').html();
 
     if(window.cordova) {
       $('body').addClass('mobile');
     } else {
       $('body').addClass('desktop');
     }
-
-    $.fn.selectRange = function(start, end) {
-      if(end === undefined) {
-          end = start;
-      }
-      return this.each(function() {
-          if('selectionStart' in this) {
-              this.selectionStart = start;
-              this.selectionEnd = end;
-          } else if(this.setSelectionRange) {
-              this.setSelectionRange(start, end);
-          } else if(this.createTextRange) {
-              var range = this.createTextRange();
-              range.collapse(true);
-              range.moveEnd('character', end);
-              range.moveStart('character', start);
-              range.select();
-          }
-      });
-    };
-
-    $.fn.selectRangeStart = function() {
-      return this.each(function() {
-          if('selectionStart' in this) {
-              return this.selectionStart;
-          } else {
-            return -1;
-          }
-
-      });
-    };    
 
     this.getDataAccess().initDB( function() { DICT.doInit($) } );
   },
@@ -141,15 +97,6 @@ var DICT={
     if($('html').scrollTop() > 0) {
       $('html').animate({ scrollTop: 0 }, 'fast');
     }
-  },
-  
-  // Note: inputToLowerIfNeeded is now handled by InputHandler
-  // Kept here for backward compatibility with any external code
-  inputToLowerIfNeeded:function(input) {
-    if(SETTINGS.getSettings().lowercase && DICT.getInputLang() === "tib") {
-      input = input.toLowerCase();
-    }
-    return input;
   },
   
   initCreditsInformation:function() {
@@ -702,10 +649,6 @@ var DICT={
       }
     }
     this._lastStoredNavigationState = currentState;
-  },
-  
-  _escapeRegExp:function(str) {
-    return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
   },
 
   /**

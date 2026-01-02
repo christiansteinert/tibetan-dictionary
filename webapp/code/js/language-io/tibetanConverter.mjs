@@ -132,7 +132,7 @@ export class WylieConverter {
      * @param {string} text - Text in Wylie/EWTS transliteration
      * @returns {string} Text with Tibetan Unicode, bracketed sections preserved
      */
-    wylieToUniExceptBracketedSections(text, normalizeInlineEnglish) {
+    wylieToUniExceptBracketedSections(text) {
         let result = '';
         let bracketActive = false;
 
