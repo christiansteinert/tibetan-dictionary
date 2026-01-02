@@ -143,14 +143,6 @@ export class InputHandler {
     }
 
     /**
-     * Get the current Wylie input value (for state persistence)
-     * @returns {string}
-     */
-    getCurrentInput() {
-        return this.#currentInput;
-    }
-
-    /**
      * Set the current Wylie input value (for state restoration)
      * @param {string} value
      */
@@ -326,7 +318,8 @@ export class InputHandler {
             uniInput.length > lastUniInput.length &&
             matchFullWylieSyllableInTheMiddleOfTibetan) {
             // Wylie syllable inserted in the middle of Tibetan text
-            this.#handleWylieSyllableInMiddle(uniInput, matchFullWylieSyllableInTheMiddleOfTibetan);
+            var matches = matchFullWylieSyllableInTheMiddleOfTibetan;
+            this.#handleWylieSyllableInMiddle(matches[1], matches[2], matches[3]);
             isCursorAtTheEnd = false;
 
         } else if (event.keyCode === 32 ||
@@ -355,18 +348,15 @@ export class InputHandler {
 
     /**
      * Handle Wylie syllable typed in the middle of Tibetan text
-     * @param {string} uniInput
-     * @param {Array} matches - Regex match result (group 1: existing text before inserted syllable, group 2: inserted syllable, group 3: existing text after inserted syllable)
      * @private
      */
-    #handleWylieSyllableInMiddle(uniInput, matches) {
-        var insertedSyllable = this.#wylieConverter.normalizeWylie(matches[2]);
+    #handleWylieSyllableInMiddle(textBeforeInsertion, insertedText, textAfterInsertion) {
+        var insertedSyllable = this.#wylieConverter.normalizeWylie(insertedText);
         insertedSyllable = this.#wylieConverter.wylieToUni(insertedSyllable);
-        var inputText = matches[1] + insertedSyllable + matches[3];
-        var newCursorPos = matches[1].length + insertedSyllable.length;
+        var inputText = textBeforeInsertion + insertedSyllable + textAfterInsertion;
+        var newCursorPos = textBeforeInsertion.length + insertedSyllable.length;
 
-        console.log(matches);
-        console.log(inputText);
+        console.log(insertedText);
 
         this.#inputElement.value = inputText;
         this.#callbacks.onSearch(false, true, 0);
