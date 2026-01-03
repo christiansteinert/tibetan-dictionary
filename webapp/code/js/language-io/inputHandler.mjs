@@ -159,13 +159,13 @@ export class InputHandler {
      * @private
      */
     #attachEvents() {
-        this.#inputElement.addEventListener('keypress',() => this.#handleKeypress(this));
-        this.#inputElement.addEventListener('keyup', () => this.#handleKeyupInput(this));
-        this.#inputElement.addEventListener('input', () => this.#handleKeyupInput(this));   
+        this.#inputElement.addEventListener('keypress', (event) => this.#handleKeypress(event));
+        this.#inputElement.addEventListener('keyup', (event) => this.#handleKeyupInput(event));
+        this.#inputElement.addEventListener('input', (event) => this.#handleKeyupInput(event));   
 
         // use jQuery mobiletextchange event (if jQuery is available)
         if (typeof jQuery !== 'undefined' && jQuery.fn && jQuery.fn.on) {
-            jQuery(this.#inputElement).on('mobiletextchange', () => this.#handleKeyupInput(this));
+            jQuery(this.#inputElement).on('mobiletextchange', (event) => this.#handleKeyupInput(event));
         }
     }
 
