@@ -157,6 +157,14 @@ export class WylieConverter {
         return result;
     }
 
+    trimWylie(wylie) {
+        wylie = wylie.replace(/^\s+|\s*\/?\s*$/g, '');
+        wylie = wylie.replace(/_/g, ' ');
+        wylie = wylie.replace(/\s+/g, ' ');
+        wylie = wylie.replace(/[ /]+$/g, '');
+        return wylie;
+    }
+
     /**
      * Normalize inline English text by fixing spacing around punctuation
      * @param {string} text the text to be normalized

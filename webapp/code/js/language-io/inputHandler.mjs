@@ -10,12 +10,12 @@
  * Communication with the main application happens through callbacks.
  */
 
-import { WylieConverter } from './tibetanConverter.mjs';
+import { WylieConverter } from './wylieConverter.mjs';
 
 /**
  * @typedef {Object} InputHandlerCallbacks
- * @property {function(boolean, boolean, number): void} onSearch - Called when search should be triggered.
- *           Parameters: (loadFirstItem, saveState, offset)
+ * @property {function(): void} onInputChange - called when input value changes in a way that should trigger an update (e.g. after Tibetan syllable completion, English >= 3 letters, or backspace)
+ * @property {function(): void} onEnter - called when enter key is pressed
  */
 
 /**
@@ -267,8 +267,7 @@ export class InputHandler {
         }
 
         this.#inputElement.value = inputText;
-        this.#inputElement.blur();
-        this.#callbacks.onSearch(true, true, 0);
+        this.#callbacks.onEnter();
     }
 
     /**
@@ -353,7 +352,7 @@ export class InputHandler {
         console.log(insertedText);
 
         this.#inputElement.value = inputText;
-        this.#callbacks.onSearch(false, true, 0);
+        this.#callbacks.onInputChange();
         this.#selectRange(newCursorPos);
     }
 
@@ -380,7 +379,7 @@ export class InputHandler {
         }
 
         this.#inputElement.value = inputText;
-        this.#callbacks.onSearch(false, true, 0);
+        this.#callbacks.onInputChange();
     }
 
     /**
@@ -402,17 +401,17 @@ export class InputHandler {
             }
 
             this.#inputElement.value = adjusted;
-            this.#callbacks.onSearch(false, true, 0);
+            this.#callbacks.onInputChange();
 
         } else if (this.#useUnicodeTibetan && this.getInputLang() === 'tib' && this.#getNeedsBackspaceWorkaround() && isAtEndOfSyllable) {
             // Backspace on old Android devices - delete whole syllable
             var adjusted = uniInput.replace(/(^|[_ /་།])[^a-zA-Z'_ /་།]+$/, '$1');
             this.#inputElement.value = adjusted;
-            this.#callbacks.onSearch(false, true, 0);
+            this.#callbacks.onInputChange();
 
         } else {
             // Normal backspace - just trigger search
-            this.#callbacks.onSearch(false, true, 0);
+            this.#callbacks.onInputChange();
         }
     }
 

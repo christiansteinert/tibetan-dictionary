@@ -4,7 +4,7 @@
  */
 
 import { SanskritConverter } from '../language-io/sanskritConverter.mjs';
-import { WylieConverter } from '../language-io/tibetanConverter.mjs';
+import { WylieConverter } from '../language-io/wylieConverter.mjs';
 
 /**
  * Class for formatting dictionary definitions.
@@ -319,36 +319,35 @@ export class DefinitionFormatter {
             defEnd = '</div>';
         } else if (currentDict.scanId) {
             //scanned dictionary. If we have an exact page number, we link to it
-            if (currentDict.exactPageNumbersAvailable) {
-                var definitionParts = definition.split('-----');
-                definition = '';
-                for (var i = 0; i < definitionParts.length; i++) {
-                    var pageNr = Number(definitionParts[i].replace(/[^0-9]/g, ''));
-                    var pageTxt = "";
-                    var offset = currentDict?.scanInfo?.offset || 0;
+            var definitionParts = definition.split('-----');
+            definition = '';
+            for (var i = 0; i < definitionParts.length; i++) {
+                var pageNr = Number(definitionParts[i].replace(/[^0-9]/g, ''));
+                var pageTxt = "";
+                var offset = currentDict?.scanInfo?.offset || 0;
 
-                    var pageInfo = {
-                        term_page: pageNr + offset,
-                        ...currentDict.scanInfo
-                    }
-
-                    if (definition != '') {
-                        definition += '<div class="separator"></div>';
-                    }
-
-                    if (definitionParts.length > 1) {
-                        var adjust = currentDict?.scanInfo?.display_pageadjust || 0;
-                        var adjustedPage = pageNr + adjust;
-                        pageTxt = ' (p. ' + adjustedPage + ')';
-                    }
-
-                    definition += '<div><a href="javascript:DICT.openScannedPage('
-                        + '\'' + DefinitionFormatter.#htmlEscapeScriptAttr(currentDict.scanId) + '\',' 
-                        + '\'' + DefinitionFormatter.#htmlEscapeScriptAttr(term) + '\','
-                        + DefinitionFormatter.#htmlEscapeScriptAttr(JSON.stringify(pageInfo))
-                        + ')">' + currentDict.linkText + pageTxt + '</a></div>';
+                var pageInfo = {
+                    term_page: pageNr + offset,
+                    ...currentDict.scanInfo
                 }
+
+                if (definition != '') {
+                    definition += '<div class="separator"></div>';
+                }
+
+                if (definitionParts.length > 1) {
+                    var adjust = currentDict?.scanInfo?.display_pageadjust || 0;
+                    var adjustedPage = pageNr + adjust;
+                    pageTxt = ' (p. ' + adjustedPage + ')';
+                }
+
+                definition += '<div><a href="javascript:DICT.openScannedPage('
+                    + '\'' + DefinitionFormatter.#htmlEscapeScriptAttr(currentDict.scanId) + '\',' 
+                    + '\'' + DefinitionFormatter.#htmlEscapeScriptAttr(term) + '\','
+                    + DefinitionFormatter.#htmlEscapeScriptAttr(JSON.stringify(pageInfo))
+                    + ')">' + currentDict.linkText + pageTxt + '</a></div>';
             }
+        
         } else {
             var result = this.#convertInlineTibetanSections(this.#htmlEscapeDefinition(definition), useUnicodeTibetan);
             definition = result.definition;
@@ -406,14 +405,6 @@ export class DefinitionFormatter {
 
         // Build definition table with header
         var definitionTableHtml = '<h1 class="definitionHead definitionHead' + lang + '" title="' + DefinitionFormatter.#htmlEscapeTitle(term) + '">' + termUni + '</h1><table id="definitionList">';
-
-        // Add "content" to look up pages in scanned dictionaries
-        for (var dict_id in dictionaries) {
-            var currentDict = dictionaries[dict_id];
-            if (currentDict.language && lang === currentDict.language[0] && currentDict.scanId && !currentDict.exactPageNumbersAvailable) {
-                dictEntries[dict_id] = '<div><a href="javascript:DICT.loadScannedPage(\'' + DefinitionFormatter.#htmlEscapeScriptAttr(currentDict.scanId) + '\',\'' + DefinitionFormatter.#htmlEscapeScriptAttr(term) + '\')">' + currentDict.linkText + '</a></div>';
-            }
-        }
 
         for (var dictName in dictionaries) {
             if (dictEntries.hasOwnProperty(dictName)) {

@@ -17,10 +17,11 @@ const ASSETS = [
   // App code
   './code/js/db/dataAccess.mjs',
   './code/js/ewts-js/src/EwtsConverter.mjs',
-  './code/js/formatting/definitionFormatter.mjs',
+  './code/js/ui/definitionFormatter.mjs',
+  './code/js/ui/scannedDictionaryViewer.mjs',
   './code/js/language-io/inputHandler.mjs',
   './code/js/language-io/sanskritConverter.mjs',
-  './code/js/language-io/tibetanConverter.mjs',
+  './code/js/language-io/wylieConverter.mjs',
   './code/js/dict/settings.js',
   './code/js/dict/main.js',
   './code/js/dict/lightbox.js',

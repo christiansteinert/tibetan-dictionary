@@ -7,6 +7,7 @@ var DICT={
   wylieConverter:null, 
   dataAccess:null,
   DefinitionFormatter:null,
+  scannedDictionaryViewer:null,
   InputHandler: null, // InputHandler class reference
   inputHandler:null, // InputHandler instance
   appState: null,
@@ -52,10 +53,11 @@ var DICT={
     return this.dataAccess;
   },
   
-  init:function($, dataAccess, wylieConverter, DefinitionFormatter, InputHandler, appState) {
+  init:function($, dataAccess, wylieConverter, DefinitionFormatter, scannedDictionaryViewer, InputHandler, appState) {
     this.dataAccess = dataAccess;
     this.wylieConverter = wylieConverter;
     this.DefinitionFormatter = DefinitionFormatter;
+    this.scannedDictionaryViewer = scannedDictionaryViewer;
     this.InputHandler = InputHandler;
     this.appState = appState;
 
@@ -79,7 +81,7 @@ var DICT={
   
   initCreditsInformation:function() {
     var credits = "";
-    $.each(SETTINGS.getAllDictionaries(false),function(index,currentDictName) {
+    for (const currentDictName of SETTINGS.getAllDictionaries(false)) {
         var currentDict = DICTLIST[currentDictName];
             
         if(currentDict && currentDict.listCredits === "true") {
@@ -96,7 +98,7 @@ var DICT={
             credits += "<dt>" + title + "</dt>";
             credits += "<dd>" + description + "</dd>";
         }
-    });
+    }
     $("#credits").html(credits)
     
   },
@@ -127,12 +129,11 @@ var DICT={
         lowercaseSetting: SETTINGS.getSettings().lowercase
       };
       var inputHandlerCallbacks = {
-        onSearch: (loadFirstItem, saveState, offset) => {
-          if(loadFirstItem) {
-            DICT.scrollToTop();
-          }
-          DICT.search(loadFirstItem, saveState, offset)
-        }
+        onInputChange: () => DICT.search(false, true, 0),
+        onEnter: () => {
+          DICT.scrollToTop();
+          DICT.search(true, true, 0);
+        },
       };
       this.inputHandler = new this.InputHandler('#searchTerm', jQuery.tokenizer, inputHandlerCallbacks, inputHandlerOptions);
 
@@ -340,10 +341,7 @@ var DICT={
     var inputText = DICT.inputHandler.getValue();
     if(DICT.getInputLang()==='tib') {
       inputText = this.uniToWylie(inputText);
-      inputText = inputText.replace(/^\s+|\s*\/?\s*$/g, '');
-      inputText = inputText.replace(/_/g, ' ');
-      inputText = inputText.replace(/\s+/g, ' ');
-      inputText = inputText.replace(/[ /]+$/g, '');
+      inputText = this.wylieConverter.trimWylie(inputText);
     }
     
     var settings = SETTINGS.getSettings();
@@ -367,21 +365,6 @@ var DICT={
         var tableRows = [];
         DICT.appState.offset = offset;
 
-        // add entry to look up pages in scanned dictionaries
-        if(window.Set && !window.cordova) {
-          var foundTerms = new Set();
-          for(var i=0;i<result.length;i++) {
-            foundTerms.add(result[i][0]);
-          }
-          var dictList = DICT.settings.activeDictionaries;
-          $.each(dictList,function(idx,currentDictName) {        
-            var currentDict = DICTLIST[currentDictName];
-            if(currentDict.language && lang==currentDict.language[0] && currentDict.scanId && !foundTerms.has(inputText) && !currentDict.exactPageNumbersAvailable) {                
-              result.push([inputText]);
-              foundTerms.add(inputText);
-            }
-          });
-        }
 
         if(result.length === 0 && offset > 0 )
           return;
@@ -566,7 +549,6 @@ var DICT={
         this.setSidebarState(false);
       }
     }
-    
   },
 
   _getCurrentHash:function() {
@@ -620,7 +602,7 @@ var DICT={
    */
   activateInlineTibetanSections:function(availableSections) {
     var activeTerm = this.appState.activeTerm;
-    $.each(availableSections, function(sectionId, sectionInfo) {
+    for (const [sectionId, sectionInfo] of Object.entries(availableSections)) {
       if (activeTerm !== sectionInfo.wylie) {
         $('#' + sectionId)
           .addClass('link')
@@ -630,27 +612,11 @@ var DICT={
             DICT.readTerm($(this).attr('data-wylie'), "tib", true);
           });
       }
-    });
+    }
   },
 
-  loadScannedPage:function(dictId, termId) {
-    $.ajax({
-      type: 'GET',
-      url: "scanned/"+dictId+"/"+termId,
-      cache: true,
-    }).done(function(pageInfo) { 
-      DICT.openScannedPage(dictId, termId, pageInfo);
-    }).fail(function(xhr,msg,err) {
-      alert(msg + '\n' + err);
-    });
-  },
-  
   openScannedPage:function(dictId, termId, pageInfo) {
-    if(window.openLightbox) {
-      openLightbox('data/scan/'+dictId+'/', pageInfo);
-    } else {
-      alert('Sorry, but your web browser is too old to support this feature :-(');
-    }
+    this.scannedDictionaryViewer.viewScan('data/scan/'+dictId+'/', pageInfo);
   },
 
   loadTerm:function(term,dictEntries,saveState) {
@@ -758,28 +724,30 @@ if ('serviceWorker' in navigator && !window.cordova) {
 
 // initialize the actual app
 Promise.all([
-  import('../language-io/tibetanConverter.mjs'),
+  import('../language-io/wylieConverter.mjs'),
   import('../db/dataAccess.mjs'),
-  import('../formatting/definitionFormatter.mjs'),
+  import('../ui/definitionFormatter.mjs'),
+  import('../ui/scannedDictionaryViewer.mjs'),
   import('../language-io/inputHandler.mjs'),
-  import('./appState.mjs')
-]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { DefinitionFormatter }, { InputHandler }, { AppState }]) => {
+  import('./appState.mjs'),
+]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { DefinitionFormatter }, { ScannedDictionaryViewer }, { InputHandler }, { AppState }]) => {
 
   var appState = new AppState();
   var wylieConverter = new WylieConverter(jQuery.tokenizer);
+  var scanViewer = new ScannedDictionaryViewer(jQuery);
   DefinitionFormatter.initialize(jQuery.tokenizer);
 
   if(window.cordova) {
     //phonegap-based initialization for mobile app
     document.addEventListener("deviceready", function(){
         jQuery(function($){
-          DICT.init($, new CordovaDataAccess(DICT), wylieConverter, DefinitionFormatter, InputHandler, appState);        
+          DICT.init($, new CordovaDataAccess(DICT), wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState);        
       });
     }, false);
   } else {
     //regular initialization for web app
     jQuery(function($){
-      DICT.init($, new PhpDataAccess(DICT), wylieConverter, DefinitionFormatter, InputHandler, appState);
+      DICT.init($, new PhpDataAccess(DICT), wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState);
     });
   }
 });

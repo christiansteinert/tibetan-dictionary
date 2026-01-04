@@ -276,7 +276,6 @@ GROUPED_DICTLIST = {
     public: "true",
     webOnly: "true",
     scanId: "jaeschke",
-    exactPageNumbersAvailable: true,
     scanInfo: {
       offset: 0,
       display_pageadjust: -26,
@@ -295,7 +294,6 @@ GROUPED_DICTLIST = {
     public: "true",
     webOnly: "true",
     scanId: "das",
-    exactPageNumbersAvailable: true,
     scanInfo: {
       offset: 40,
       display_pageadjust: 0,
@@ -605,7 +603,6 @@ GROUPED_DICTLIST = {
         public: "true",
         webOnly: "true",
         scanId: "mvp1989",
-        exactPageNumbersAvailable: true,
         scanInfo: {
           offset: 0,
           display_pageadjust: -42,
@@ -624,7 +621,6 @@ GROUPED_DICTLIST = {
         public: "true",
         webOnly: "true",
         scanId: "mvp-comm-1990",
-        exactPageNumbersAvailable: true,
         scanInfo: {
           offset: 0,
           min_page: 1,
