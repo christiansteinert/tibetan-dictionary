@@ -8,10 +8,6 @@
  */
 
 export class PhpDataAccess {
-    constructor() {
-        // No dict dependency needed - we return Promises instead of using callbacks
-    }
-
     /**
      * Serialize an object to URL-encoded form data
      * @param {Object} obj - The object to serialize
