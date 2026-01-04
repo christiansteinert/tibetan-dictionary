@@ -3,86 +3,116 @@
  * Provides two implementations:
  * - PhpDataAccess: AJAX calls to PHP backend (web deployment)
  * - CordovaDataAccess: Direct SQLite access via Cordova plugin (Android)
+ * 
+ * All methods return Promises for consistent async handling.
  */
 
 export class PhpDataAccess {
+    constructor() {
+        // No dict dependency needed - we return Promises instead of using callbacks
+    }
+
     /**
-     * Create a PhpDataAccess instance
-     * @param {Object} dict - The DICT application object (used for callbacks)
+     * Serialize an object to URL-encoded form data
+     * @param {Object} obj - The object to serialize
+     * @param {string} [prefix] - Prefix for nested keys
+     * @returns {string} URL-encoded string
      */
-    constructor(dict) {
-        this.dict = dict;
+    #serialize(obj, prefix = '') {
+        const params = [];
+        for (const [key, value] of Object.entries(obj)) {
+            const paramKey = prefix ? `${prefix}[${key}]` : key;
+            if (Array.isArray(value)) {
+                for (const item of value) {
+                    params.push(encodeURIComponent(paramKey + '[]') + '=' + encodeURIComponent(item));
+                }
+            } else if (typeof value === 'object' && value !== null) {
+                params.push(this.#serialize(value, paramKey));
+            } else {
+                params.push(encodeURIComponent(paramKey) + '=' + encodeURIComponent(value));
+            }
+        }
+        return params.join('&');
     }
 
-    readTerm(term, lang, dictionaries, saveState) {
-        const dict = this.dict;
-        $.ajax({
-            type: 'POST',
-            url: "dict.php",
-            dataType: 'json',
-            data: {
-                term: term,
-                lang: lang,
-                dictionaries: dictionaries
-            },
-            cache: true,
-        }).done(function(data) {
-            dict.loadTerm(term, data, saveState);
-        }).fail(function(xhr, msg, err) {
-            alert(msg + '\n' + err);
+    /**
+     * Send a POST request and return a Promise with the JSON response
+     * @param {Object} data - The data to send
+     * @returns {Promise<any>}
+     */
+    #post(data) {
+        const body = this.#serialize(data);
+        return new Promise((resolve, reject) => {
+            const xhr = new XMLHttpRequest();
+            xhr.open('POST', 'dict.php', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    resolve(JSON.parse(xhr.responseText));
+                } else {
+                    reject(new Error(`HTTP ${xhr.status}: ${xhr.statusText}`));
+                }
+            };
+            xhr.onerror = function() {
+                reject(new Error('Network error'));
+            };
+            xhr.send(body);
         });
     }
 
-    readTermList(inputText, lang, offset, maxResults, dictionaries, callback) {
-        $.ajax({
-            type: 'POST',
-            url: 'dict.php',
-            dataType: 'json',
-            data: {
-                search: inputText,
-                lang: lang,
-                offset: offset,
-                maxresults: maxResults,
-                dictionaries: dictionaries
-            },
-            cache: true,
-        }).done(function(data) {
-            callback(data);
-        }).fail(function(xhr, msg, err) {
-            alert(msg + '\n' + err);
+    /**
+     * Read definitions for a term
+     * @param {string} term - The term to look up
+     * @param {string} lang - Language ('tib' or 'en')
+     * @param {string[]} dictionaries - List of dictionary IDs to search
+     * @returns {Promise<{term: string, definitions: Object}>}
+     */
+    readTerm(term, lang, dictionaries) {
+        return this.#post({ term, lang, dictionaries })
+            .then(data => ({ term, definitions: data }));
+    }
+
+    /**
+     * Search for terms matching input
+     * @param {string} inputText - Search text
+     * @param {string} lang - Language ('tib' or 'en')
+     * @param {number} offset - Pagination offset
+     * @param {number} maxResults - Maximum results to return
+     * @param {string[]} dictionaries - List of dictionary IDs to search
+     * @returns {Promise<Array>} Array of matching terms
+     */
+    readTermList(inputText, lang, offset, maxResults, dictionaries) {
+        return this.#post({
+            search: inputText,
+            lang,
+            offset,
+            maxresults: maxResults,
+            dictionaries
         });
     }
 
+    /**
+     * Check which Tibetan sections have dictionary entries
+     * @param {Object} sections - Map of sectionId to section info
+     * @returns {Promise<Object>} Map of available sections
+     */
     checkTibetanSectionsForLinks(sections) {
-        const dict = this.dict;
-        $.ajax({
-            type: 'POST',
-            url: 'dict.php',
-            dataType: 'json',
-            data: {
-                checkTerms: sections
-            },
-            cache: true,
-        }).done(function(data) {
-            dict.activateInlineTibetanSections(data);
-        }).fail(function(xhr, msg, err) {
-            alert(msg + '\n' + err);
-        });
+        return this.#post({ checkTerms: sections });
     }
 
-    initDB(callback) {
-        callback(); // no need to initialize the DB if the PHP backend on the server is used for data access. The app is ready right away
+    /**
+     * Initialize the database connection
+     * @returns {Promise<void>}
+     */
+    initDB() {
+        // No initialization needed for PHP backend
+        return Promise.resolve();
     }
 }
 
 
 export class CordovaDataAccess {
-    /**
-     * Create a CordovaDataAccess instance
-     * @param {Object} dict - The DICT application object
-     */
-    constructor(dict) {
-        this.dict = dict;
+    constructor() {
         this.DB_NAME = "TibetanDictionary";
         this.db = null;
     }
@@ -107,192 +137,202 @@ export class CordovaDataAccess {
             }
             return this.db;
         } catch (e) {
-            alert('error while opening DB:' + e.message);
+           throw 'error while opening DB:' + e.message;
         }
     }
 
     /** build an SQL WHERE-clause for an array of values */
     #mergeOrClauses(paramName, paramValues) {
         const clauses = [];
-        $.each(paramValues, function(index, value) {
+        for (const value of paramValues) {
             const sqlEscape = value.replace(/"/g, '""').replace(/\\/g, '\\\\');
             clauses.push(paramName + '="' + sqlEscape + '"');
-        });
+        }
         return '(' + clauses.join(' OR ') + ')';
     }
 
-    readTerm(term, lang, dictionaries, saveState) {
-        const dict = this.dict;
-        const db = this.#openDB();
-        db.transaction((tx) => {
-            try {
-                const tab = this.getTabName(lang);
-                let tabLang = "";
-                if (lang == "en")
-                    tabLang = "en";
-                else
-                    tabLang = "bo";
-
-                tx.executeSql('SELECT ' + tab + '.term as term, ' + tab + '.definition as definition, DICTNAMES.name as dictionary FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "' + tabLang + '" WHERE term=?', [term], function(tx, results) {
-                    const len = results.rows.length;
-                    const definitions = {};
-                    for (let i = 0; i < len; i++) {
-                        const row = results.rows.item(i);
-
-                        if (definitions[row.dictionary]) {
-                            definitions[row.dictionary] += '\\n-----\\n' + row.definition;
-                        } else {
-                            definitions[row.dictionary] = row.definition;
-                        }
-                    }
-                    try {
-                        //                db.close();
-                    } catch (ex) {}
-
-                    dict.loadTerm(term, definitions, saveState);
-
-                }, function(tx, error) {
-                    alert('SQL error while reading term "' + term + '" from DB:' + error.message);
-                    try {
-                        //                db.close();
-                    } catch (ex) {}
-                });
-            } catch (e) {
-                alert('error while reading term "' + term + '" from DB:' + e.message);
-            }
-        });
-    }
-
-    checkTibetanSectionsForLinks(sections) {
-        const dict = this.dict;
-        setTimeout(() => {
-            const wylieSections = [];
-            $.each(sections, function(sectionId, sectionInfo) {
-                wylieSections.push(sectionInfo.wylie);
-            });
-            const termQuery = this.#mergeOrClauses('term', wylieSections);
-            const db = this.#openDB();
-            db.transaction(function(tx) {
-                try {
-                    tx.executeSql('SELECT DISTINCT term FROM DICT WHERE ' + termQuery, [], function(tx, results) {
-                        const availableSections = {};
-                        const len = results.rows.length;
-                        for (let i = 0; i < len; i++) {
-                            const row = results.rows.item(i);
-                            $.each(sections, function(sectionId, sectionInfo) {
-                                if (sectionInfo.wylie === row.term) {
-                                    availableSections[sectionId] = sectionInfo;
-                                }
-                            });
-                        }
-                        try {
-                            //                    db.close();
-                        } catch (ex) {}
-                        dict.activateInlineTibetanSections(availableSections);
-                    }, function(tx, error) {
-                        alert('SQL error while checking existence of terms:' + error.message);
-                        try {
-                            //                  db.close();
-                        } catch (ex) {}
-                    });
-                } catch (e) {
-                    alert('error while checking existence of terms:' + e.message);
-                }
-            });
-        }, 10);
-    }
-
-    initDB(callback) {
-        setTimeout(() => {
-            // open the db to make sure that it is available by selecting one record from it.
-            const db = this.#openDB();
-            db.transaction(function(tx) {
-                try {
-                    tx.executeSql('SELECT * FROM DICT WHERE term="chos" LIMIT 1', [], function(tx, results) {
-                        if (results.rows.length) {
-                            try {
-                                //                    db.close();
-                            } catch (ex) {}
-                            callback();
-                        }
-                    }, function(tx, error) {
-                        alert('SQL error while trying to read from the database:' + error.message);
-                        try {
-                            //                    db.close();
-                        } catch (ex) {}
-                    });
-                } catch (e) {
-                    alert('error while trying to read from the database:' + e.message);
-                }
-            });
-        }, 100);
-    }
-
-    getTabName(lang) {
+    #getTabName(lang) {
         if (lang === 'en')
             return 'DICT_EN';
         else
             return 'DICT';
     }
 
-    readTermList(term, lang, offset, maxResults, dictionaries, callback) {
-        const db = this.#openDB();
-        term = term.replace(/\s*[/]\s*$/, '');
-
-        db.transaction((tx) => {
+    /**
+     * Read definitions for a term
+     * @param {string} term - The term to look up
+     * @param {string} lang - Language ('tib' or 'en')
+     * @param {string[]} dictionaries - List of dictionary IDs to search
+     * @returns {Promise<{term: string, definitions: Object}>}
+     */
+    readTerm(term, lang, dictionaries) {
+        return new Promise((resolve, reject) => {
             try {
-                const dictQuery = this.#mergeOrClauses('DICTNAMES.name', dictionaries);
-                const tab = this.getTabName(lang);
-                let query;
-                let queryParams;
-
-                if (term.indexOf("*") >= 0) { // wildcard search
-                    const likeSearch = term.replace(/[*]/g, '%') + '%';
-                    let langId;
-
-                    if (lang === "tib")
-                        langId = "bo";
-                    else
-                        langId = "en";
-
-                    query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "' + langId + '" WHERE ( ( term LIKE ? ) AND ( ' + dictQuery + ' ) ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
-
-                    queryParams = [likeSearch];
-
-                } else if (lang === "tib") { // regular Tibetan search
-                    const termSearch1 = term + ' ';
-                    const termSearch2 = term + ' zzzzz';
-
-                    query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE ( (( term = ? ) OR ( term > ? AND term < ? )) AND ' + dictQuery + ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
-                    queryParams = [term, termSearch1, termSearch2];
-                } else { // regular English search
-                    const termSearch1 = term;
-                    const termSearch2 = term + 'zzzzz';
-
-                    query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "en" WHERE ( (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE )) AND ' + dictQuery + ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
-                    queryParams = [term, termSearch1, termSearch2];
-                }
-
-                tx.executeSql(query, queryParams, function(tx, results) {
-                    const result = [];
-                    const len = results.rows.length;
-                    for (let i = 0; i < len; i++) {
-                        const row = results.rows.item(i);
-                        result.push([row.term]);
-                    }
-                    try {
-                        //                db.close();
-                    } catch (ex) {}
-                    callback(result);
-                }, function(tx, error) {
-                    alert('SQL error while reading termlist for input "' + term + '" from DB:' + error.message);
-                    try {
-                        //                db.close();
-                    } catch (ex) {}
-                });
+                const db = this.#openDB();
             } catch (e) {
-                alert('error while reading termlist for input "' + term + '" from DB:' + e.message);
+                reject(new Error(e.message));
+                return;
             }
+
+            db.transaction((tx) => {
+                try {
+                    const tab = this.#getTabName(lang);
+                    const tabLang = (lang === "en") ? "en" : "bo";
+                    tx.executeSql(
+                        'SELECT ' + tab + '.term as term, ' + tab + '.definition as definition, DICTNAMES.name as dictionary FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "' + tabLang + '" WHERE term=?',
+                        [term],
+                        function(tx, results) {
+                            const len = results.rows.length;
+                            const definitions = {};
+                            for (let i = 0; i < len; i++) {
+                                const row = results.rows.item(i);
+                                if (definitions[row.dictionary]) {
+                                    definitions[row.dictionary] += '\\n-----\\n' + row.definition;
+                                } else {
+                                    definitions[row.dictionary] = row.definition;
+                                }
+                            }
+                            resolve({ term, definitions });
+                        },
+                        function(tx, error) {
+                            alert('SQL error while reading term "' + term + '" from DB:' + error.message);
+                            reject(new Error('SQL error while reading term "' + term + '" from DB: ' + error.message));
+                        }
+                    );
+                } catch (e) {
+                    alert('error while checking existence of terms:' + e.message);
+                    reject(new Error('Error while reading term "' + term + '" from DB: ' + e.message));
+                }
+            });
+        });
+    }
+
+
+    /**
+     * Check which Tibetan sections have dictionary entries
+     * @param {Object} sections - Map of sectionId to section info
+     * @returns {Promise<Object>} Map of available sections
+     */
+    checkTibetanSectionsForLinks(sections) {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                const wylieSections = [];
+                for (const [sectionId, sectionInfo] of Object.entries(sections)) {
+                    wylieSections.push(sectionInfo.wylie);
+                }
+                const termQuery = this.#mergeOrClauses('term', wylieSections);
+                const db = this.#openDB();
+
+                db.transaction(function(tx) {
+                    try {
+                        tx.executeSql('SELECT DISTINCT term FROM DICT WHERE ' + termQuery, [], function(tx, results) {
+                            const availableSections = {};
+                            const len = results.rows.length;
+                            for (let i = 0; i < len; i++) {
+                                const row = results.rows.item(i);
+                                for (const [sectionId, sectionInfo] of Object.entries(sections)) {
+                                    if (sectionInfo.wylie === row.term) {
+                                        availableSections[sectionId] = sectionInfo;
+                                    }
+                                }
+                            }
+                            resolve(availableSections);
+                        }, function(tx, error) {
+                            reject(new Error('SQL error while checking existence of terms: ' + error.message));
+                        });
+                    } catch (e) {
+                        reject(new Error('Error while checking existence of terms: ' + e.message));
+                    }
+                });
+            }, 10);
+        });
+    }
+
+
+    /**
+     * Initialize the database connection
+     * @returns {Promise<void>}
+     */
+    initDB() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // open the db and make sure that it is available by selecting one record from it.
+                const db = this.#openDB();
+                db.transaction(function(tx) {
+                    try {
+                        tx.executeSql('SELECT * FROM DICT WHERE term="chos" LIMIT 1', [], function(tx, results) {
+                            if (results.rows.length) {
+                                resolve();
+                            }
+                        }, function(tx, error) {
+                            reject(new Error('SQL error while trying to read from the database: ' + error.message));
+                        });
+                    } catch (e) {
+                        reject(new Error('Error while trying to read from the database: ' + e.message));
+                    }
+                });
+            }, 100);
+        });
+    }
+
+    /**
+     * Search for terms matching input
+     * @param {string} term - Search text
+     * @param {string} lang - Language ('tib' or 'en')
+     * @param {number} offset - Pagination offset
+     * @param {number} maxResults - Maximum results to return
+     * @param {string[]} dictionaries - List of dictionary IDs to search
+     * @returns {Promise<Array>} Array of matching terms
+     */
+    readTermList(term, lang, offset, maxResults, dictionaries) {
+        return new Promise((resolve, reject) => {
+            const db = this.#openDB();
+            term = term.replace(/\s*[/]\s*$/, '');
+
+            db.transaction((tx) => {
+                try {
+                    const dictQuery = this.#mergeOrClauses('DICTNAMES.name', dictionaries);
+                    const tab = this.#getTabName(lang);
+                    let query;
+                    let queryParams;
+
+                    if (term.indexOf("*") >= 0) { // wildcard search
+                        const likeSearch = term.replace(/[*]/g, '%') + '%';
+                        const langId = (lang === "tib") ? "bo" : "en";
+
+                        query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "' + langId + '" WHERE ( ( term LIKE ? ) AND ( ' + dictQuery + ' ) ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
+                        queryParams = [likeSearch];
+
+                    } else if (lang === "tib") { // regular Tibetan search
+                        const termSearch1 = term + ' ';
+                        const termSearch2 = term + ' zzzzz';
+
+                        query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "bo" WHERE ( (( term = ? ) OR ( term > ? AND term < ? )) AND ' + dictQuery + ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
+                        queryParams = [term, termSearch1, termSearch2];
+
+                    } else { // regular English search
+                        const termSearch1 = term;
+                        const termSearch2 = term + 'zzzzz';
+
+                        query = 'SELECT DISTINCT ' + tab + '.term as term FROM ' + tab + ' inner join DICTNAMES on ' + tab + '.dictionary = DICTNAMES.id and DICTNAMES.language = "en" WHERE ( (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE )) AND ' + dictQuery + ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' + maxResults + ' OFFSET ' + offset;
+                        queryParams = [term, termSearch1, termSearch2];
+                    }
+
+                    tx.executeSql(query, queryParams, function(tx, results) {
+                        const result = [];
+                        const len = results.rows.length;
+                        for (let i = 0; i < len; i++) {
+                            const row = results.rows.item(i);
+                            result.push([row.term]);
+                        }
+                        resolve(result);
+                    }, function(tx, error) {
+                        reject(new Error('SQL error while reading termlist for input "' + term + '" from DB: ' + error.message));
+                    });
+                } catch (e) {
+                    reject(new Error('Error while reading termlist for input "' + term + '" from DB: ' + e.message));
+                }
+            });
         });
     }
 }

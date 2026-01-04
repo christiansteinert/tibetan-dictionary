@@ -16,6 +16,7 @@ const ASSETS = [
   './lib/photoswipe/photoswipe.css',
   // App code
   './code/js/db/dataAccess.mjs',
+  './code/js/db/searchController.mjs',
   './code/js/ewts-js/src/EwtsConverter.mjs',
   './code/js/ui/definitionFormatter.mjs',
   './code/js/ui/scannedDictionaryViewer.mjs',
