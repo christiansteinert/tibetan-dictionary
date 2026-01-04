@@ -69,7 +69,7 @@ var DICT = {
       $('body').addClass('desktop');
     }
 
-    this.getDataAccess().initDB().then(() => DICT.doInit($));
+    this.getDataAccess().initDB().then(() => this.doInit($));
   },
 
   scrollToTop: function () {
@@ -119,7 +119,7 @@ var DICT = {
   doInit: function ($) {
     try {
       $('a[href^="http"]').click(
-        (event) => { DICT.openLink($(event.currentTarget).attr('href')); }
+        (event) => { this.openLink($(event.currentTarget).attr('href')); }
       );
 
       this.settings = SETTINGS.getSettings();
@@ -131,10 +131,10 @@ var DICT = {
         lowercaseSetting: SETTINGS.getSettings().lowercase
       };
       var inputHandlerCallbacks = {
-        onInputChange: () => DICT.search(false, true, 0),
+        onInputChange: () => this.search(false, true, 0),
         onEnter: () => {
-          DICT.scrollToTop();
-          DICT.search(true, true, 0);
+          this.scrollToTop();
+          this.search(true, true, 0);
         },
       };
       this.inputHandler = new this.InputHandler('#searchTerm', jQuery.tokenizer, inputHandlerCallbacks, inputHandlerOptions);
@@ -150,7 +150,7 @@ var DICT = {
       $('body').removeClass('cordovaInitializing');
 
       // attach clear-input behavior
-      $('#clearInputBtn').on('click', function (e) { e.preventDefault(); DICT.clearInput(); });
+      $('#clearInputBtn').on('click', (e) => { e.preventDefault(); this.clearInput(); });
 
       this.dataTable = $("#wordList").DataTable({
         processing: false,
@@ -169,18 +169,18 @@ var DICT = {
 
       // handle navigation events
       // - listen to the "back" button on android
-      document.addEventListener("backbutton", function (event) {
+      document.addEventListener("backbutton", (event) => {
 
         // If we are on cordova, exit the app if the user presses back twice on the home screen
         if (window.cordova) {
-          if (DICT._getCurrentHash() === '#home') {
+          if (this._getCurrentHash() === '#home') {
             var now = Date.now();
-            if (now - DICT.lastHomeBackButtonTime < 1500) {
+            if (now - this.lastHomeBackButtonTime < 1500) {
               if (navigator.app && navigator.app.exitApp) {
                 navigator.app.exitApp();
               }
             }
-            DICT.lastHomeBackButtonTime = now;
+            this.lastHomeBackButtonTime = now;
           }
 
           // Prevent Cordova / Android default (which would finish the Activity)
@@ -189,7 +189,7 @@ var DICT = {
         }
 
         // Navigate back inside the app if we are not already at the home state
-        if (DICT._getCurrentHash() !== '#home') {
+        if (this._getCurrentHash() !== '#home') {
           history.back();
         }
 
@@ -200,10 +200,10 @@ var DICT = {
       $(window).hashchange((event) => {
         hashEventCount++;
 
-        if (new Date().getTime() - DICT._lastHashEvent < 300)
+        if (new Date().getTime() - this._lastHashEvent < 300)
           return; //ignore hashchange events that are very quick after a user action
 
-        var state = DICT._getCurrentHash();
+        var state = this._getCurrentHash();
 
         if (state.indexOf('#') === 0) {
           state = state.substring(1);
@@ -223,10 +223,10 @@ var DICT = {
           }
           return;
         }
-        DICT.setState(state);
+        this.setState(state);
       });
 
-      var sharedTextPluginAvailable = DICT.handleSharedText();
+      var sharedTextPluginAvailable = this.handleSharedText();
       if (!sharedTextPluginAvailable) {
         // If the shared text plugin is not available then just trigger the hashchange event to load the state 
         // of the app from the URL hash in case somebody has opened a bookmark or reloaded the page 
@@ -242,16 +242,16 @@ var DICT = {
       return;
     }
 
-    if (DICT.appState.offset > 0) {
-      if (DICT.inputHandler.getValue() === '') {
-        if (DICT.appState.useUnicodeTibetan === true) {
-          DICT.inputHandler.setValue(DICT.tibetanOutput(this.appState.currentListTerm));
+    if (this.appState.offset > 0) {
+      if (this.inputHandler.getValue() === '') {
+        if (this.appState.useUnicodeTibetan === true) {
+          this.inputHandler.setValue(this.tibetanOutput(this.appState.currentListTerm));
         } else {
-          DICT.inputHandler.setValue(this.appState.currentListTerm);
+          this.inputHandler.setValue(this.appState.currentListTerm);
         }
       }
       var settings = SETTINGS.getSettings();
-      DICT.search(false, true, DICT.appState.offset - settings.listSize);
+      this.search(false, true, this.appState.offset - settings.listSize);
     }
   },
 
@@ -260,23 +260,23 @@ var DICT = {
       return;
     }
 
-    if (DICT.inputHandler.getValue() === '') {
-      if (DICT.appState.useUnicodeTibetan === true) {
-        DICT.inputHandler.setValue(DICT.tibetanOutput(this.appState.currentListTerm));
+    if (this.inputHandler.getValue() === '') {
+      if (this.appState.useUnicodeTibetan === true) {
+        this.inputHandler.setValue(this.tibetanOutput(this.appState.currentListTerm));
       } else {
-        DICT.inputHandler.setValue(this.appState.currentListTerm);
+        this.inputHandler.setValue(this.appState.currentListTerm);
       }
     }
 
     var settings = SETTINGS.getSettings();
-    DICT.search(false, true, DICT.appState.offset + settings.listSize);
+    this.search(false, true, this.appState.offset + settings.listSize);
   },
 
   clearInput: function () {
-    DICT.inputHandler.clear();
-    DICT.inputHandler.focus();
-    DICT.scrollToTop();
-    DICT.search(false, true, 0);
+    this.inputHandler.clear();
+    this.inputHandler.focus();
+    this.scrollToTop();
+    this.search(false, true, 0);
   },
 
   updateButtonState: function (disablePrev, disableNext) {
@@ -288,13 +288,13 @@ var DICT = {
 
   highlightListItem: function () {
     $('.selected').removeClass('selected');
-    if (DICT.getInputLang() == "en")
+    if (this.getInputLang() == "en")
       var searchValue = this.appState.activeTerm;
     else
       var searchValue = this.tibetanOutput(this.appState.activeTerm);
 
     $('#wordList td')
-      .filter((index, element) => $(element).text() === searchValue || (DICT.getInputLang() == "en" && $(element).text().toLowerCase() === searchValue.toLowerCase()))
+      .filter((index, element) => $(element).text() === searchValue || (this.getInputLang() == "en" && $(element).text().toLowerCase() === searchValue.toLowerCase()))
       .addClass('selected');
   },
 
@@ -303,16 +303,16 @@ var DICT = {
     var newLang;
     if (targetLang) {
       newLang = targetLang;
-    } else if (DICT.getInputLang() == "tib") {
+    } else if (this.getInputLang() == "tib") {
       newLang = "en";
     } else {
       newLang = "tib";
     }
 
-    DICT.inputHandler.setInputLang(newLang);
-    DICT.appState.inputLang = newLang;
-    DICT.setTibetanOutput(DICT.appState.useUnicodeTibetan);
-    DICT.clearInput();
+    this.inputHandler.setInputLang(newLang);
+    this.appState.inputLang = newLang;
+    this.setTibetanOutput(this.appState.useUnicodeTibetan);
+    this.clearInput();
 
     if (newLang === "en") {
       $("#switchBtnEnTib").show();
@@ -324,27 +324,27 @@ var DICT = {
   },
 
   switchInputLang: function () {
-    DICT.setState(DICT.getCurrentStateAsString());
-    DICT.setInputLang();
-    DICT.setSidebarState(false);
+    this.setState(this.getCurrentStateAsString());
+    this.setInputLang();
+    this.setSidebarState(false);
     $('.leftSideBar').css('display', 'none');
   },
 
   getLang: function () {
-    return DICT.appState.lang;
+    return this.appState.lang;
   },
 
   getInputLang: function () {
-    if (DICT.inputHandler) { // Guard against calling before inputHandler is initialized
-      return DICT.inputHandler.getInputLang();
+    if (this.inputHandler) { // Guard against calling before inputHandler is initialized
+      return this.inputHandler.getInputLang();
     }
     return "tib"; // Default to Tibetan before initialization
   },
 
   search: function (loadFirstItem, saveState, offset) {
-    var inputText = DICT.inputHandler.getValue();
+    var inputText = this.inputHandler.getValue();
     var settings = SETTINGS.getSettings();
-    var lang = DICT.getInputLang();
+    var lang = this.getInputLang();
 
     if (offset < 0) {
       offset = 0;
@@ -364,14 +364,14 @@ var DICT = {
     };
 
     if (!normalizedTerm) {
-      DICT.setSidebarState(true);
+      this.setSidebarState(true);
       return;
     }
 
     // Check if we need to fetch new results into the result list
     if (this.appState.currentListTerm !== normalizedTerm || this.appState.offset !== offset) {
       this.searchController.searchTermList(searchParams).then((searchResult) => {
-        DICT._processSearchResults(searchResult, loadFirstItem, saveState, settings);
+        this._processSearchResults(searchResult, loadFirstItem, saveState, settings);
       });
     } else if (loadFirstItem) {
       // The list in the sidebar was already loaded but we need to activate the first term
@@ -387,10 +387,10 @@ var DICT = {
     var result = searchResult.results;
     var offset = searchResult.offset;
     var inputText = searchResult.searchTerm;
-    var lang = DICT.getInputLang();
+    var lang = this.getInputLang();
     var tableRows = [];
 
-    DICT.appState.offset = offset;
+    this.appState.offset = offset;
 
     if (result.length === 0 && offset > 0) {
       return;
@@ -402,66 +402,66 @@ var DICT = {
       if (lang === "en") {
         tableRows[i][0] = '<a href="#" data-wylie="' + result[i][0] + '">' + result[i][0] + '</a>';
       } else {
-        tableRows[i][0] = '<a href="#" data-wylie="' + result[i][0] + '">' + DICT.tibetanOutput(result[i][0]) + '</a>';
+        tableRows[i][0] = '<a href="#" data-wylie="' + result[i][0] + '">' + this.tibetanOutput(result[i][0]) + '</a>';
       }
     }
 
     // Update DataTable
-    DICT.dataTable.clear();
+    this.dataTable.clear();
     $('.leftSideBar').css('display', 'table-cell');
 
     if (result.length === 0) {
-      DICT.dataTable.rows.add(tableRows);
-      DICT.dataTable.draw();
+      this.dataTable.rows.add(tableRows);
+      this.dataTable.draw();
       $('#wordList').off('click');
       $('#wordList,.paginate').hide();
       $('.paginate_info').text('No results found.');
     } else {
-      DICT.dataTable.rows.add(tableRows);
-      DICT.dataTable.draw();
+      this.dataTable.rows.add(tableRows);
+      this.dataTable.draw();
       $('#wordList,.paginate,#wordListContainer').show();
       $('#wordList').on('click', 'td', (event) => {
         $('.selected').removeClass('selected');
         $(event.currentTarget).addClass('selected');
         var wylie = $(event.currentTarget).children('a').attr('data-wylie');
-        DICT.appState.lang = DICT.getInputLang();
-        DICT.readTerm(wylie, DICT.getInputLang(), true);
+        this.appState.lang = this.getInputLang();
+        this.readTerm(wylie, this.getInputLang(), true);
         return false;
       });
-      DICT.appState.offset = offset;
+      this.appState.offset = offset;
       var endIndex = offset + (result.length > settings.listSize ? settings.listSize : result.length);
       $('.paginate_info').text('Showing results ' + (offset + 1) + ' to ' + endIndex + '.');
     }
 
-    DICT.appState.currentListTerm = inputText;
+    this.appState.currentListTerm = inputText;
 
     if (saveState) {
       if (!loadFirstItem) {
-        DICT.setSidebarState(true);
+        this.setSidebarState(true);
       }
-      DICT.storeNavigationState();
+      this.storeNavigationState();
     }
 
     if (loadFirstItem) {
       var termFound = false;
       for (var i = 0; i < result.length; i++) {
         for (var j = 0; j < result[i].length; j++) {
-          if (result[i][j] === inputText || (DICT.getInputLang() === "en" && result[i][j].toLowerCase() === inputText.toLowerCase())) {
+          if (result[i][j] === inputText || (this.getInputLang() === "en" && result[i][j].toLowerCase() === inputText.toLowerCase())) {
             termFound = true;
           }
         }
       }
 
       if (result.length > 0 && termFound) {
-        DICT.readTerm(inputText, DICT.getInputLang(), saveState);
+        this.readTerm(inputText, this.getInputLang(), saveState);
         $('#wordList tr:first-child').addClass('selected');
       } else {
         $('#definitions').html('');
       }
     }
 
-    DICT.highlightListItem();
-    DICT.updateButtonState(offset === 0, result.length <= settings.listSize);
+    this.highlightListItem();
+    this.updateButtonState(offset === 0, result.length <= settings.listSize);
   },
 
   /**
@@ -472,7 +472,7 @@ var DICT = {
     var $firstRow;
     $('#wordList tr td a').each((count, elem) => {
       if ($(elem).attr('data-wylie') === inputText ||
-        (DICT.getInputLang() === "en" && $(elem).attr('data-wylie').toLowerCase() === inputText.toLowerCase())) {
+        (this.getInputLang() === "en" && $(elem).attr('data-wylie').toLowerCase() === inputText.toLowerCase())) {
         $firstRow = $(elem);
       }
     });
@@ -481,7 +481,7 @@ var DICT = {
       var firstResult = $firstRow.attr('data-wylie');
       if (firstResult.toLowerCase() === inputText.toLowerCase()) {
         $('#wordList tr:first-child').addClass('selected');
-        DICT.readTerm(inputText, lang, saveState);
+        this.readTerm(inputText, lang, saveState);
       }
     } else {
       $('#definitions').html('');
@@ -525,31 +525,31 @@ var DICT = {
         return;
       } else {
         //load a term 
-        if (DICT.getCurrentStateAsString() === state)
+        if (this.getCurrentStateAsString() === state)
           return;
 
         var stateInfo = JSON.parse(state);
 
         if (stateInfo.lang)
-          DICT.appState.lang = stateInfo.lang;
+          this.appState.lang = stateInfo.lang;
 
         if (stateInfo.inputLang) {
-          DICT.setInputLang(stateInfo.inputLang);
+          this.setInputLang(stateInfo.inputLang);
         }
 
         var lastUniInput;
-        if (DICT.appState.useUnicodeTibetan === true && DICT.getInputLang() === "tib") {
+        if (this.appState.useUnicodeTibetan === true && this.getInputLang() === "tib") {
           lastUniInput = this.tibetanOutput(stateInfo.currentListTerm);
         } else {
           lastUniInput = stateInfo.currentListTerm;
         }
 
-        DICT.inputHandler.setLastUniInput(lastUniInput);
-        DICT.inputHandler.setCurrentInput(stateInfo.currentListTerm);
+        this.inputHandler.setLastUniInput(lastUniInput);
+        this.inputHandler.setCurrentInput(stateInfo.currentListTerm);
 
         window.mobiletextCurrentVal = lastUniInput;
-        if (DICT.inputHandler.getValue() != lastUniInput) {
-          DICT.inputHandler.setValue(lastUniInput);
+        if (this.inputHandler.getValue() != lastUniInput) {
+          this.inputHandler.setValue(lastUniInput);
           console.log("input changed based on URL hash. New value: " + lastUniInput)
         }
 
@@ -562,7 +562,7 @@ var DICT = {
 
 
         if ((!stateInfo.forceLeftSideVisible) || (!this.isSmallScreen()))
-          this.readTerm(stateInfo.activeTerm, DICT.getLang(), false);
+          this.readTerm(stateInfo.activeTerm, this.getLang(), false);
 
         this.setSidebarState(stateInfo.forceLeftSideVisible);
 
@@ -584,7 +584,7 @@ var DICT = {
     if (this.appState.activeTerm != term) {
       this.getDataAccess().readTerm(term, lang, this.settings.activeDictionaries)
         .then(result => {
-          DICT.loadTerm(result.term, result.definitions, saveState);
+          this.loadTerm(result.term, result.definitions, saveState);
         });
       this.appState.activeTerm = term;
     } else {
@@ -651,7 +651,7 @@ var DICT = {
         $('#' + sectionId)
           .addClass('link')
           .attr('data-wylie', sectionInfo.wylie)
-          .click((event) => { DICT.readTerm($(event.currentTarget).attr('data-wylie'), "tib", true); });
+          .click((event) => { this.readTerm($(event.currentTarget).attr('data-wylie'), "tib", true); });
       }
     }
   },
@@ -673,23 +673,23 @@ var DICT = {
       }
     }
 
-    var result = DICT.DefinitionFormatter.formatDefinitionList(dictionaries, dictEntries, term, DICT.getLang(), DICT.appState.useUnicodeTibetan, ABBREVIATIONS);
+    var result = this.DefinitionFormatter.formatDefinitionList(dictionaries, dictEntries, term, this.getLang(), this.appState.useUnicodeTibetan, ABBREVIATIONS);
 
     // Check for links in Tibetan sections
     if (Object.keys(result.allInlineSections).length > 0) {
-      DICT.getDataAccess().checkTibetanSectionsForLinks(result.allInlineSections)
-        .then(availableSections => DICT.activateInlineTibetanSections(availableSections));
+      this.getDataAccess().checkTibetanSectionsForLinks(result.allInlineSections)
+        .then(availableSections => this.activateInlineTibetanSections(availableSections));
     }
 
     $(result.definitionTableHtml).appendTo('#definitions');
     $('#definitions').find('a[href^="http"]').click(
-      (event) => { DICT.openLink($(event.currentTarget).attr('href')); }
+      (event) => { this.openLink($(event.currentTarget).attr('href')); }
     );
     TOOLTIPS.bindTooltipHandlers();
 
     if (saveState) {
-      DICT.setSidebarState(false);
-      DICT.storeNavigationState();
+      this.setSidebarState(false);
+      this.storeNavigationState();
     }
     this.highlightListItem();
     this.scrollToTop();
@@ -701,7 +701,7 @@ var DICT = {
   handleSharedText: function () {
     if (window.cordova && window.ShareTextPlugin) {
       ShareTextPlugin.getSharedText(
-        function (sharedData) {
+        (sharedData) => {
           if (sharedData && sharedData.text && sharedData.text.trim().length > 0) {
             console.log("Shared text received: " + sharedData.text + " with language: " + sharedData.language);
 
@@ -713,36 +713,36 @@ var DICT = {
             }
             // Use the language provided by the plugin
             var inputLang = sharedData.language || "tib"; // Default to Tibetan if not specified
-            DICT.appState.lang = inputLang;
-            DICT.setInputLang(inputLang);
+            this.appState.lang = inputLang;
+            this.setInputLang(inputLang);
 
             // cleanup text and search for the entered term
             if (inputLang === "tib") {
               if (/.*['a-zA-Z].*/.test(sharedText)) {
                 // remember the fact that something was typed in Wylie rather than in Tibetan unicode;
                 // in this case we will later convert the input back to Wylie when backspace is pressed.
-                DICT.inputHandler.setWasTypedInWylie(true);
+                this.inputHandler.setWasTypedInWylie(true);
               }
 
               sharedText = sharedText.replace(/[\s\-\/()\[\]{},།:–—!.?]+/g, ' ');
-              sharedText = DICT.uniToWylie(sharedText);
-              sharedText = DICT.tibetanOutput(sharedText + ' ');
+              sharedText = this.uniToWylie(sharedText);
+              sharedText = this.tibetanOutput(sharedText + ' ');
             } else {
               sharedText = sharedText.replace(/[\.]+/g, ' ');
             }
             sharedText = sharedText.trim();
 
             // Set input field value
-            DICT.inputHandler.setValue(sharedText);
-            DICT.inputHandler.focus();
+            this.inputHandler.setValue(sharedText);
+            this.inputHandler.focus();
 
             console.log("Set input field to shared text: " + sharedText);
-            DICT.search(true, true, 0);
+            this.search(true, true, 0);
           } else {
             console.log("No shared text found");
           }
         },
-        function (error) {
+        (error) => {
           console.log("Error getting shared text: " + error);
         }
       );
