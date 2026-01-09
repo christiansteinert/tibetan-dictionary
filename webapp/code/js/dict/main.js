@@ -1,12 +1,12 @@
 var DICT = {
   _lastHashEvent: 0,
-  dataTable: {},
   lastHomeBackButtonTime: 0,
 
   // initialized during module loading:
   wylieConverter: null,
   dataAccess: null,
   searchController: null,
+  resultListRenderer: null,
   DefinitionFormatter: null,
   scannedDictionaryViewer: null,
   InputHandler: null, // InputHandler class reference
@@ -54,10 +54,11 @@ var DICT = {
     return this.dataAccess;
   },
 
-  init: function ($, dataAccess, wylieConverter, DefinitionFormatter, scannedDictionaryViewer, InputHandler, appState, searchController) {
+  init: function ($, dataAccess, wylieConverter, DefinitionFormatter, scannedDictionaryViewer, InputHandler, appState, searchController, resultListRenderer) {
     this.dataAccess = dataAccess;
     this.wylieConverter = wylieConverter;
     this.searchController = searchController;
+    this.resultListRenderer = resultListRenderer;
     this.DefinitionFormatter = DefinitionFormatter;
     this.scannedDictionaryViewer = scannedDictionaryViewer;
     this.InputHandler = InputHandler;
@@ -137,7 +138,7 @@ var DICT = {
           this.search(true, true, 0);
         },
       };
-      this.inputHandler = new this.InputHandler('#searchTerm', jQuery.tokenizer, inputHandlerCallbacks, inputHandlerOptions);
+      this.inputHandler = new this.InputHandler('#searchTerm', inputHandlerCallbacks, inputHandlerOptions);
 
       if (!window.localStorage)
         $('#settingsBtn').hide();
@@ -152,20 +153,7 @@ var DICT = {
       // attach clear-input behavior
       $('#clearInputBtn').on('click', (e) => { e.preventDefault(); this.clearInput(); });
 
-      this.dataTable = $("#wordList").DataTable({
-        processing: false,
-        deferRender: false,
-        pagingType: "simple",
-        searching: false,
-        ordering: false,
-        dom: 't',
-        paging: false,
-        columns: columnHeaders = [{ "title": "Term" }],
-        language: {
-          emptyTable: " "
-        }
-      });
-
+      this.resultListRenderer.initDataTable('#wordList');
 
       // handle navigation events
       // - listen to the "back" button on android
@@ -279,25 +267,6 @@ var DICT = {
     this.search(false, true, 0);
   },
 
-  updateButtonState: function (disablePrev, disableNext) {
-    $('#wordList_prev').prop("disable", disablePrev);
-    $('#wordList_prev').toggleClass("disabled", disablePrev);
-    $('#wordList_next').prop("disable", disableNext);
-    $('#wordList_next').toggleClass("disabled", disableNext);
-  },
-
-  highlightListItem: function () {
-    $('.selected').removeClass('selected');
-    if (this.getInputLang() == "en")
-      var searchValue = this.appState.activeTerm;
-    else
-      var searchValue = this.tibetanOutput(this.appState.activeTerm);
-
-    $('#wordList td')
-      .filter((index, element) => $(element).text() === searchValue || (this.getInputLang() == "en" && $(element).text().toLowerCase() === searchValue.toLowerCase()))
-      .addClass('selected');
-  },
-
   setInputLang: function (targetLang) {
     // Determine the new language
     var newLang;
@@ -388,7 +357,6 @@ var DICT = {
     var offset = searchResult.offset;
     var inputText = searchResult.searchTerm;
     var lang = this.getInputLang();
-    var tableRows = [];
 
     this.appState.offset = offset;
 
@@ -396,42 +364,14 @@ var DICT = {
       return;
     }
 
-    // Build table rows
-    for (var i = 0; i < result.length && i < settings.listSize; i++) {
-      tableRows[i] = [];
-      if (lang === "en") {
-        tableRows[i][0] = '<a href="#" data-wylie="' + result[i][0] + '">' + result[i][0] + '</a>';
-      } else {
-        tableRows[i][0] = '<a href="#" data-wylie="' + result[i][0] + '">' + this.tibetanOutput(result[i][0]) + '</a>';
-      }
-    }
-
-    // Update DataTable
-    this.dataTable.clear();
-    $('.leftSideBar').css('display', 'table-cell');
-
-    if (result.length === 0) {
-      this.dataTable.rows.add(tableRows);
-      this.dataTable.draw();
-      $('#wordList').off('click');
-      $('#wordList,.paginate').hide();
-      $('.paginate_info').text('No results found.');
-    } else {
-      this.dataTable.rows.add(tableRows);
-      this.dataTable.draw();
-      $('#wordList,.paginate,#wordListContainer').show();
-      $('#wordList').on('click', 'td', (event) => {
-        $('.selected').removeClass('selected');
-        $(event.currentTarget).addClass('selected');
-        var wylie = $(event.currentTarget).children('a').attr('data-wylie');
-        this.appState.lang = this.getInputLang();
-        this.readTerm(wylie, this.getInputLang(), true);
-        return false;
-      });
-      this.appState.offset = offset;
-      var endIndex = offset + (result.length > settings.listSize ? settings.listSize : result.length);
-      $('.paginate_info').text('Showing results ' + (offset + 1) + ' to ' + endIndex + '.');
-    }
+    // Render results using the ResultListRenderer
+    this.resultListRenderer.renderResults({
+      results: result,
+      offset: offset,
+      listSize: settings.listSize,
+      lang: lang,
+      useUnicodeTibetan: this.appState.useUnicodeTibetan
+    });
 
     this.appState.currentListTerm = inputText;
 
@@ -443,25 +383,34 @@ var DICT = {
     }
 
     if (loadFirstItem) {
-      var termFound = false;
-      for (var i = 0; i < result.length; i++) {
-        for (var j = 0; j < result[i].length; j++) {
-          if (result[i][j] === inputText || (this.getInputLang() === "en" && result[i][j].toLowerCase() === inputText.toLowerCase())) {
-            termFound = true;
-          }
-        }
-      }
+      var termFound = this._isTermInResults(result, inputText, lang);
 
       if (result.length > 0 && termFound) {
-        this.readTerm(inputText, this.getInputLang(), saveState);
-        $('#wordList tr:first-child').addClass('selected');
+        this.readTerm(inputText, lang, saveState);
+        this.resultListRenderer.selectFirstRow();
       } else {
         $('#definitions').html('');
       }
     }
 
-    this.highlightListItem();
-    this.updateButtonState(offset === 0, result.length <= settings.listSize);
+    this.resultListRenderer.highlightTerm(this.appState.activeTerm, lang);
+    this.resultListRenderer.updatePaginationButtons(offset === 0, result.length <= settings.listSize);
+  },
+
+  /**
+   * Check if a search term exists in the search results list
+   * @private
+   */
+  _isTermInResults: function (results, inputText, lang) {
+    for (var i = 0; i < results.length; i++) {
+      for (var j = 0; j < results[i].length; j++) {
+        if (results[i][j] === inputText || 
+            (lang === "en" && results[i][j].toLowerCase() === inputText.toLowerCase())) {
+          return true;
+        }
+      }
+    }
+    return false;
   },
 
   /**
@@ -469,20 +418,11 @@ var DICT = {
    * @private
    */
   _activateFirstMatchingTerm: function (inputText, lang, saveState) {
-    var $firstRow;
-    $('#wordList tr td a').each((count, elem) => {
-      if ($(elem).attr('data-wylie') === inputText ||
-        (this.getInputLang() === "en" && $(elem).attr('data-wylie').toLowerCase() === inputText.toLowerCase())) {
-        $firstRow = $(elem);
-      }
-    });
+    var matchedWylie = this.resultListRenderer.findMatchingTerm(inputText, lang);
 
-    if ($firstRow && $firstRow.length) {
-      var firstResult = $firstRow.attr('data-wylie');
-      if (firstResult.toLowerCase() === inputText.toLowerCase()) {
-        $('#wordList tr:first-child').addClass('selected');
-        this.readTerm(inputText, lang, saveState);
-      }
+    if (matchedWylie && matchedWylie.toLowerCase() === inputText.toLowerCase()) {
+      this.resultListRenderer.selectFirstRow();
+      this.readTerm(inputText, lang, saveState);
     } else {
       $('#definitions').html('');
     }
@@ -691,7 +631,7 @@ var DICT = {
       this.setSidebarState(false);
       this.storeNavigationState();
     }
-    this.highlightListItem();
+    this.resultListRenderer.highlightTerm(term, this.getLang());
     this.scrollToTop();
   },
 
@@ -771,30 +711,38 @@ Promise.all([
   import('../db/searchController.mjs'),
   import('../ui/definitionFormatter.mjs'),
   import('../ui/scannedDictionaryViewer.mjs'),
+  import('../ui/resultListRenderer.mjs'),
   import('../language-io/inputHandler.mjs'),
   import('./appState.mjs'),
-]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { SearchController }, { DefinitionFormatter }, { ScannedDictionaryViewer }, { InputHandler }, { AppState }]) => {
+]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { SearchController }, { DefinitionFormatter }, { ScannedDictionaryViewer }, { ResultListRenderer }, { InputHandler }, { AppState }]) => {
 
   var appState = new AppState();
-  var wylieConverter = new WylieConverter(jQuery.tokenizer);
+  var wylieConverter = new WylieConverter();
   var scanViewer = new ScannedDictionaryViewer(jQuery);
-  DefinitionFormatter.initialize(jQuery.tokenizer);
+  DefinitionFormatter.initialize();
+
+  var resultListRenderer = new ResultListRenderer(jQuery, {
+    onTermSelected: (wylie, lang) => {
+      DICT.appState.lang = lang;
+      DICT.readTerm(wylie, lang, true);
+    }
+  });
 
   if (window.cordova) {
     //phonegap-based initialization for mobile app
     document.addEventListener("deviceready", () => {
       jQuery(($) => {
         var dataAccess = new CordovaDataAccess();
-        var searchController = new SearchController(dataAccess, jQuery.tokenizer);
-        DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController);
+        var searchController = new SearchController(dataAccess);
+        DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer);
       });
     }, false);
   } else {
     //regular initialization for web app
     jQuery(($) => {
       var dataAccess = new PhpDataAccess();
-      var searchController = new SearchController(dataAccess, jQuery.tokenizer);
-      DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController);
+      var searchController = new SearchController(dataAccess);
+      DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer);
     });
   }
 });

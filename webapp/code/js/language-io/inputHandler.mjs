@@ -39,14 +39,13 @@ export class InputHandler {
     /**
      * Create a new InputHandler instance
      * @param {HTMLInputElement|string} inputElement - Input element or selector
-     * @param {function} tokenizer - Tokenizer constructor for WylieConverter (jQuery.tokenizer)
      * @param {InputHandlerCallbacks} callbacks - Callback functions for app communication
      * @param {InputHandlerOptions} options - Configuration options
      */
-    constructor(inputElement, tokenizer, callbacks, options) {
+    constructor(inputElement, callbacks, options) {
         this.#inputElement = document.querySelector(inputElement);
         this.#callbacks = callbacks;
-        this.#wylieConverter = new WylieConverter(tokenizer);
+        this.#wylieConverter = new WylieConverter();
 
         // Store options/dependencies
         this.#useUnicodeTibetan = options.useUnicodeTibetan;

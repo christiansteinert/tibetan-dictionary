@@ -4,6 +4,7 @@
  */
 
 import { EwtsConverter } from '../ewts-js/src/EwtsConverter.mjs';
+import { Tokenizer } from './tokenizer.mjs';
 
 /**
  * Class for converting between Wylie/EWTS transliteration and Tibetan Unicode
@@ -11,7 +12,6 @@ import { EwtsConverter } from '../ewts-js/src/EwtsConverter.mjs';
 export class WylieConverter {
     /**
      * Create a new WylieConverter instance
-     * @param {function} tokenizer - jQuery tokenizer constructor for parsing text
      * @param {Object} [options] - Optional configuration options for the Wylie converter
      * @param {boolean} [options.check=true] - Generate warnings for illegal consonant sequences
      * @param {boolean} [options.check_strict=true] - Stricter checking, examine the whole stack
@@ -20,8 +20,7 @@ export class WylieConverter {
      * @param {boolean} [options.leave_dubious=false] - Leave dubious syllables unprocessed between [brackets]
      * @param {boolean} [options.pass_through=true] - Pass through non-Tibetan characters instead of converting to [comments]
      */
-    constructor(tokenizer, options = {}) {
-        this.tokenizer = tokenizer;
+    constructor(options = {}) {
         this.converter = new EwtsConverter({
             check: options.check ?? true,
             check_strict: options.check_strict ?? true,
@@ -139,7 +138,7 @@ export class WylieConverter {
         let result = '';
         let bracketActive = false;
 
-        const tok = new this.tokenizer(['{', '}'], (syllable, isSeparator) => {
+        const tok = new Tokenizer(['{', '}'], (syllable, isSeparator) => {
             if (syllable === '{') {
                 result += ' ';
                 bracketActive = true;

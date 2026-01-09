@@ -13,11 +13,10 @@ export class SearchController {
     /**
      * Create a SearchController instance
      * @param {Object} dataAccess - The data access layer (PhpDataAccess or CordovaDataAccess)
-     * @param {Object} tokenizer - jQuery tokenizer for WylieConverter
      */
-    constructor(dataAccess, tokenizer) {
+    constructor(dataAccess) {
         this.dataAccess = dataAccess;
-        this.wylieConverter = new WylieConverter(tokenizer);
+        this.wylieConverter = new WylieConverter();
     }
 
     /**

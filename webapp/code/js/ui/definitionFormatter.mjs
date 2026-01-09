@@ -22,11 +22,10 @@ export class DefinitionFormatter {
 
     /**
      * Initialize static converters (must be called once before creating instances)
-     * @param {function} tokenizer - jQuery tokenizer constructor for Sanskrit and Wylie conversion
      */
-    static initialize(tokenizer) {
-        DefinitionFormatter.#sanskritConverter = new SanskritConverter(tokenizer);
-        DefinitionFormatter.#wylieConverter = new WylieConverter(tokenizer);
+    static initialize() {
+        DefinitionFormatter.#sanskritConverter = new SanskritConverter();
+        DefinitionFormatter.#wylieConverter = new WylieConverter();
     }
 
     /**

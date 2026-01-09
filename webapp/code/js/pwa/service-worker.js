@@ -23,6 +23,7 @@ const ASSETS = [
   './code/js/language-io/inputHandler.mjs',
   './code/js/language-io/sanskritConverter.mjs',
   './code/js/language-io/wylieConverter.mjs',
+  './code/js/language-io/tokenizer.mjs',
   './code/js/dict/settings.js',
   './code/js/dict/main.js',
   './code/js/dict/lightbox.js',
@@ -34,7 +35,6 @@ const ASSETS = [
   './lib/photoswipe/photoswipe.esm.min.js',
   './lib/jquery_bbq/jquery.ba-hashchange.min.js',
   './lib/jquery_textchange/jquery.textchange.js',
-  './lib/tokenizer/tokenizer-1.0.1.js',
   './lib/jquery_tooltip/tooltip.js',
   './lib/sortable_js/sortable.min.js',
   // Data

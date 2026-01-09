@@ -2,13 +2,12 @@
  * Sanskrit transliteration module
  * Converts Sanskrit transliteration to Unicode characters
  */
+import { Tokenizer } from './tokenizer.mjs';
 export class SanskritConverter {
     /**
      * Create a new SanskritConverter instance
-     * @param {function} tokenizer - jQuery tokenizer constructor
      */
-    constructor(tokenizer) {
-        this.tokenizer = tokenizer;
+    constructor() {
         this.transliterate = {
             'Oṃ': ['oM', 'OM', 'AUM'],
             'ṛ': ['RRi', 'R^i', 'R'],
@@ -67,7 +66,7 @@ export class SanskritConverter {
         const separators = ['{', '}', '[', ']', ' ', '='];
         let bracketActive = false;
 
-        const tok = new this.tokenizer(separators, (chunk, isSeparator) => {
+        const tok = new Tokenizer(separators, (chunk, isSeparator) => {
             if (isSeparator && (chunk === '{' || chunk === '[')) {
                 bracketActive = true;
             }
