@@ -1,5 +1,5 @@
 /**
- * useWylieInput – React hook that replicates the InputHandler logic.
+ * useWylieInput – React hook that handles input event for Wylie input and English input
  *
  * It manages:
  *  - Wylie → Unicode conversion as the user types
@@ -9,27 +9,39 @@
  *
  * Returns a ref to attach to the <input> element and helper functions.
  */
-import { useRef, useCallback, useEffect } from 'react';
+import { useRef, useCallback, useEffect, RefObject } from 'react';
 import { WylieConverter } from '../utils/wylieConverter';
+import type { Language } from '../types';
 
 const wylieConverter = new WylieConverter();
 
-/**
- * @param {Object} options
- * @param {boolean} options.useUnicodeTibetan – whether to convert Wylie to Unicode
- * @param {boolean} options.lowercase – auto-lowercase Wylie input
- * @param {string}  options.inputLang – 'tib' or 'en'
- * @param {(value: string) => void} options.onInputChange – called after meaningful input change
- * @param {() => void} options.onEnter – called when Enter is pressed
- */
+interface UseWylieInputOptions {
+  useUnicodeTibetan: boolean;
+  lowercase: boolean;
+  inputLang: Language;
+  onInputChange?: (value: string) => void;
+  onEnter?: () => void;
+}
+
+interface UseWylieInputReturn {
+  inputRef: RefObject<HTMLInputElement | null>;
+  getValue: () => string;
+  setValue: (v: string) => void;
+  clear: () => void;
+  focus: () => void;
+  setLastUniInput: (v: string) => void;
+  setCurrentInput: (v: string) => void;
+  setWasTypedInWylie: (v: boolean) => void;
+}
+
 export default function useWylieInput({
   useUnicodeTibetan,
   lowercase,
   inputLang,
   onInputChange,
   onEnter,
-}) {
-  const inputRef = useRef(null);
+}: UseWylieInputOptions): UseWylieInputReturn {
+  const inputRef = useRef<HTMLInputElement>(null);
   const lastUniInput = useRef('');
   const currentInput = useRef('');
   const wasTypedInWylie = useRef(false);
@@ -37,19 +49,19 @@ export default function useWylieInput({
   // --- conversion helpers (stable, don't depend on state) ---------------
 
   const uniToWylie = useCallback(
-    (text) =>
+    (text: string) =>
       useUnicodeTibetan ? wylieConverter.uniToWylie(text) : text,
     [useUnicodeTibetan]
   );
 
   const tibetanOutput = useCallback(
-    (text) =>
+    (text: string) =>
       useUnicodeTibetan ? wylieConverter.wylieToUni(text) : text,
     [useUnicodeTibetan]
   );
 
   const toLowerIfNeeded = useCallback(
-    (text) =>
+    (text: string) =>
       lowercase && inputLang === 'tib' ? text.toLowerCase() : text,
     [lowercase, inputLang]
   );
@@ -59,7 +71,7 @@ export default function useWylieInput({
   const getValue = useCallback(() => inputRef.current?.value ?? '', []);
 
   const setValue = useCallback(
-    (v) => {
+    (v: string) => {
       if (!inputRef.current) return;
       inputRef.current.value = v;
       lastUniInput.current = v;
@@ -103,7 +115,7 @@ export default function useWylieInput({
   }, [useUnicodeTibetan, inputLang, toLowerIfNeeded, uniToWylie, tibetanOutput, onEnter]);
 
   const handleKeyupInput = useCallback(
-    (event) => {
+    (event: KeyboardEvent) => {
       // Don't process Enter key — that is handled exclusively by handleEnterKey
       // to prevent the keyup firing after keypress from overwriting the
       // sidebar=false navigation with sidebar=true.
@@ -134,7 +146,7 @@ export default function useWylieInput({
 
       // Track Wylie input
       let currentInputContainsWylie = false;
-      let matchMiddle = null;
+      let matchMiddle: RegExpMatchArray | null = null;
 
       if (inputLang === 'tib' && /.*['a-zA-Z].*/.test(uniInput)) {
         wasTypedInWylie.current = true;
@@ -179,7 +191,7 @@ export default function useWylieInput({
 
       // --- syllable complete (space / separator) ---
       if (isSpace || isSeparatorAppended || isEnglishThreeChars) {
-        let inputText;
+        let inputText: string;
         if (useUnicodeTibetan && inputLang === 'tib') {
           if (currentInputContainsWylie) {
             let n = wylieConverter.normalizeWylie(newInput);
@@ -249,20 +261,20 @@ export default function useWylieInput({
     const el = inputRef.current;
     if (!el) return;
 
-    const onKeypress = (e) => {
+    const onKeypress = (e: KeyboardEvent) => {
       if (e.keyCode === 13) handleEnterKey();
     };
-    const onKeyup = (e) => handleKeyupInput(e);
-    const onInput = (e) => handleKeyupInput(e);
+    const onKeyup = (e: KeyboardEvent) => handleKeyupInput(e);
+    const onInput = (e: KeyboardEvent) => handleKeyupInput(e);
 
-    el.addEventListener('keypress', onKeypress);
-    el.addEventListener('keyup', onKeyup);
-    el.addEventListener('input', onInput);
+    el.addEventListener('keypress', onKeypress as EventListener);
+    el.addEventListener('keyup', onKeyup as EventListener);
+    el.addEventListener('input', onInput as EventListener);
 
     return () => {
-      el.removeEventListener('keypress', onKeypress);
-      el.removeEventListener('keyup', onKeyup);
-      el.removeEventListener('input', onInput);
+      el.removeEventListener('keypress', onKeypress as EventListener);
+      el.removeEventListener('keyup', onKeyup as EventListener);
+      el.removeEventListener('input', onInput as EventListener);
     };
   }, [handleEnterKey, handleKeyupInput]);
 
@@ -272,9 +284,8 @@ export default function useWylieInput({
     setValue,
     clear,
     focus,
-    /** Expose for state-restoration (legacy URL redirect) */
-    setLastUniInput: (v) => { lastUniInput.current = v; },
-    setCurrentInput: (v) => { currentInput.current = v; },
-    setWasTypedInWylie: (v) => { wasTypedInWylie.current = v; },
+    setLastUniInput: (v: string) => { lastUniInput.current = v; },
+    setCurrentInput: (v: string) => { currentInput.current = v; },
+    setWasTypedInWylie: (v: boolean) => { wasTypedInWylie.current = v; },
   };
 }

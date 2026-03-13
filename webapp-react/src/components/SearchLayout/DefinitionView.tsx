@@ -10,12 +10,21 @@ import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import { bindTooltips } from '../../utils/tooltip';
 
-export default function DefinitionView({ onTermClick, onScanClick }) {
-  const containerRef = useRef(null);
-  const definitionHtml = useSelector((s) => s.search.definitions);
-  const inlineSections = useSelector((s) => s.search.inlineSections);
-  const activeTerm = useSelector((s) => s.search.activeTerm);
-  const isLoading = useSelector((s) => s.search.isLoadingDefinition);
+interface Props {
+  onTermClick?: (wylie: string, lang: string) => void;
+  onScanClick?: (dictId: string, termId: string, pageInfo: unknown) => void;
+}
+
+interface InlineSection {
+  wylie?: string;
+}
+
+export default function DefinitionView({ onTermClick, onScanClick }: Props) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const definitionHtml = useSelector((s: any) => s.search.definitions);
+  const inlineSections = useSelector((s: any) => s.search.inlineSections) as Record<string, InlineSection>;
+  const activeTerm = useSelector((s: any) => s.search.activeTerm);
+  const isLoading = useSelector((s: any) => s.search.isLoadingDefinition);
 
   /**
    * After HTML is injected, attach click handlers for:
@@ -28,24 +37,24 @@ export default function DefinitionView({ onTermClick, onScanClick }) {
     if (!el || !definitionHtml) return;
 
     // Click handler delegation
-    const handleClick = (e) => {
+    const handleClick = (e: MouseEvent) => {
       // Inline Tibetan link (data-wylie) — takes priority over tooltip click
-      const target = e.target.closest('[data-wylie]');
+      const target = (e.target as Element).closest<HTMLElement>('[data-wylie]');
       if (target) {
         e.preventDefault();
         e.stopPropagation();
-        onTermClick?.(target.dataset.wylie, 'tib');
+        onTermClick?.(target.dataset.wylie!, 'tib');
         return;
       }
 
       // Scan link
-      const scanTarget = e.target.closest('[data-scan-dict]');
+      const scanTarget = (e.target as Element).closest<HTMLElement>('[data-scan-dict]');
       if (scanTarget) {
         e.preventDefault();
         const { scanDict, scanTerm, scanPages } = scanTarget.dataset;
         if (scanDict && scanPages) {
           try {
-            onScanClick?.(scanDict, scanTerm, JSON.parse(scanPages));
+            onScanClick?.(scanDict, scanTerm ?? '', JSON.parse(scanPages));
           } catch (err) {
             console.error('Error parsing scan data:', err);
           }
@@ -54,10 +63,10 @@ export default function DefinitionView({ onTermClick, onScanClick }) {
       }
 
       // External links: open in system browser on Cordova
-      const link = e.target.closest('a[href^="http"]');
-      if (link && window.cordova) {
+      const link = (e.target as Element).closest<HTMLAnchorElement>('a[href^="http"]');
+      if (link && (window as any).cordova) {
         e.preventDefault();
-        const handle = cordova.InAppBrowser.open(link.href, '_system', 'location=yes');
+        const handle = (window as any).cordova.InAppBrowser.open(link.href, '_system', 'location=yes');
         handle?.close();
       }
     };
@@ -85,10 +94,10 @@ export default function DefinitionView({ onTermClick, onScanClick }) {
     if (!el || !inlineSections || Object.keys(inlineSections).length === 0) return;
 
     for (const sectionId of Object.keys(inlineSections)) {
-      const sectionWylie = inlineSections[sectionId].wylie || '';
+      const sectionWylie = inlineSections[sectionId].wylie ?? '';
       // Don't make the currently-displayed term clickable
       if (sectionWylie && sectionWylie !== activeTerm) {
-        const span = el.querySelector('#' + sectionId);
+        const span = el.querySelector<HTMLElement>('#' + sectionId);
         if (span) {
           span.classList.add('link');
           span.dataset.wylie = sectionWylie;

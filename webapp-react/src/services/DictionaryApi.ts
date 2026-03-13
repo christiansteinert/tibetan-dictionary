@@ -13,8 +13,13 @@
  * @param {string} [prefix] - Prefix for nested keys
  * @returns {string} URL-encoded string
  */
-function serialize(obj, prefix = '') {
-  const params = [];
+type SerializeValue = string | number | string[] | Record<string, string | number>;
+
+function serialize(
+  obj: Record<string, SerializeValue>,
+  prefix = ''
+): string {
+  const params: string[] = [];
   for (const [key, value] of Object.entries(obj)) {
     const paramKey = prefix ? `${prefix}[${key}]` : key;
     if (Array.isArray(value)) {
@@ -37,9 +42,11 @@ function serialize(obj, prefix = '') {
 /**
  * Send a POST request to the dict.php backend.
  * @param {Object} data - The data to send
- * @returns {Promise<any>} Parsed JSON response
+ * @returns {Promise<T>} Parsed JSON response
  */
-async function post(data) {
+async function post<T>(
+  data: Record<string, SerializeValue>
+): Promise<T> {
   const body = serialize(data);
   const response = await fetch('dict.php', {
     method: 'POST',
@@ -58,15 +65,24 @@ async function post(data) {
 // Public API functions
 // ---------------------------------------------------------------------------
 
+interface ReadTermResult {
+  term: string;
+  definitions: Record<string, string>;
+}
+
 /**
  * Read definitions for a specific term.
  * @param {string} term - The term to look up (Wylie for Tibetan)
  * @param {string} lang - Language code ('tib' or 'en')
  * @param {string[]} dictionaries - Dictionary IDs to search
- * @returns {Promise<{term: string, definitions: Object}>}
+ * @returns {Promise<ReadTermResult>}
  */
-export async function readTerm(term, lang, dictionaries) {
-  const data = await post({ term, lang, dictionaries });
+export async function readTerm(
+  term: string,
+  lang: string,
+  dictionaries: string[]
+): Promise<ReadTermResult> {
+  const data = await post<Record<string, string>>({ term, lang, dictionaries });
   return { term, definitions: data };
 }
 
@@ -77,10 +93,16 @@ export async function readTerm(term, lang, dictionaries) {
  * @param {number} offset - Pagination offset
  * @param {number} maxResults - Maximum number of results
  * @param {string[]} dictionaries - Dictionary IDs to search
- * @returns {Promise<Array>} Array of matching terms (each item is [termString])
+ * @returns {Promise<string[][]>} Array of matching terms (each item is [termString])
  */
-export async function readTermList(search, lang, offset, maxResults, dictionaries) {
-  return post({
+export async function readTermList(
+  search: string,
+  lang: string,
+  offset: number,
+  maxResults: number,
+  dictionaries: string[]
+): Promise<string[][]> {
+  return post<string[][]>({
     search,
     lang,
     offset,
@@ -89,12 +111,20 @@ export async function readTermList(search, lang, offset, maxResults, dictionarie
   });
 }
 
+interface InlineSection {
+  id: string;
+  content: string;
+  title: string;
+}
+
 /**
  * Check which Tibetan sections (syllables within a definition) have
  * their own dictionary entries, so they can be rendered as clickable links.
  * @param {Object} sections - Map of sectionId → { wylie, ... }
- * @returns {Promise<Object>} Map of sections that have entries
+ * @returns {Promise<Record<string, InlineSection>>} Map of sections that have entries
  */
-export async function checkTibetanSectionsForLinks(sections) {
-  return post({ checkTerms: sections });
+export async function checkTibetanSectionsForLinks(
+  sections: Record<string, InlineSection>
+): Promise<Record<string, InlineSection>> {
+  return post<Record<string, InlineSection>>({ checkTerms: sections as unknown as SerializeValue });
 }

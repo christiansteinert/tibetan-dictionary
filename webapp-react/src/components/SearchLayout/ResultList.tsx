@@ -49,7 +49,7 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
         <div id="wordListContainer">
           <table id="wordList" className="dataTable">
             <tbody>
-              {visibleResults.map((row: any) => {
+              {visibleResults.map((row: string[]) => {
                 const term = row[0];
                 const isSelected =
                   term === effectiveSelected ||

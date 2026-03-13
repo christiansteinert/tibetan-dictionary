@@ -54,9 +54,13 @@ a{
 }
 #wordList {
   font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
-  border:1px solid #ccc;
+  border: 1px solid #ccc;
   width:100%;
   cursor:pointer;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 5px;
 }
 #wordList th{
   display:none;
@@ -71,12 +75,25 @@ a{
 #wordList td:hover a{
   text-decoration:underline;
 }
-.even td{
+#wordList tbody tr:nth-child(even) td {
   background-color: #e8e8f8;    
 }
-#wordList .selected, #wordList .selected a {
-  background-color:#77779a;
+#wordList tbody tr.selected td,
+#wordList tbody tr.selected a {
+  background-color:#77779a !important;
   color:#fff;
+}
+#wordList tbody tr:first-child td:first-child {
+  border-top-left-radius: 5px; 
+}
+#wordList tbody tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+#wordList tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 5px; 
+}
+#wordList tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
 }
     
 #searchTerm{
@@ -220,21 +237,6 @@ a{
 
 #wordList{
   font-size: 1.1em;
-  border-radius: 5px;
-  border: 1px solid rgba(128,128,128,0.5) !important;
-  border-spacing: 0;
-}
-
-#wordList td {
-  border: 1px solid rgba(0,0,0,0) !important;
-}
-#wordList tr:first-child td {
-  border-top-left-radius: 5px; 
-  border-top-right-radius: 5px;
-}
-#wordList tr:last-child td {
-  border-bottom-left-radius: 5px !important; 
-  border-bottom-right-radius: 5px !important;
 }
 
 .sidebarTib #wordList, .unicodeTibInput #searchTerm, .unicodeTib .tib{

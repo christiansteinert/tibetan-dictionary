@@ -11,26 +11,67 @@
  * Returns structured data (HTML strings + inline section maps) so that
  * React components can render and post-process them.
  */
-import { SanskritConverter } from './sanskritConverter.js';
-import { WylieConverter } from './wylieConverter.js';
+import { WylieConverter } from './wylieConverter';
+import { SanskritConverter } from './sanskritConverter';
 
 // Shared converter instances (initialized lazily)
-let sanskritConverter = null;
-let wylieConverter = null;
+let sanskritConverter: SanskritConverter | null = null;
+let wylieConverter: WylieConverter | null = null;
 let sectionCounter = 0;
+
+// ─── Type definitions ────────────────────────────────────────
+
+interface InlineSection {
+  id: string;
+  content: string;
+  title: string;
+}
+
+interface DictionaryConfig {
+  label: string;
+  audioId?: string;
+  mergeLines?: boolean;
+  preformattedLinebreaks?: boolean;
+  containsOnlyTibetan?: boolean;
+  containsOnlySkt?: boolean;
+  highlight?: string;
+  about?: string;
+}
+
+interface AbbreviationData {
+  match: string | string[];
+  items: Record<string, string>;
+}
+
+interface FormattedDefinition {
+  html: string;
+  inlineSections: Record<string, InlineSection>;
+}
+
+interface FormattedDefinitionList {
+  tableHtml: string;
+  allInlineSections: Record<string, InlineSection>;
+}
+
+interface SearchItem {
+  search: RegExp;
+  explanation: string;
+}
+
+type OnOpenScanCallback = (scanId: string, term: string, pageInfo: string) => void;
 
 /**
  * Ensure shared converters are ready.
  * Called automatically by the public API; can also be called explicitly.
  */
-export function initializeFormatters() {
+export function initializeFormatters(): void {
   if (!sanskritConverter) sanskritConverter = new SanskritConverter();
   if (!wylieConverter) wylieConverter = new WylieConverter();
 }
 
 // ─── HTML escaping helpers ───────────────────────────────────────
 
-function htmlEscape(text) {
+function htmlEscape(text: string): string {
   text = text.replace(/&/g, '&amp;');
   text = text.replace(/</g, '&lt;');
   text = text.replace(/>/g, '&gt;');
@@ -38,7 +79,7 @@ function htmlEscape(text) {
   return text;
 }
 
-function htmlEscapeTitle(title) {
+function htmlEscapeTitle(title: string): string {
   title = htmlEscape(title);
   title = title.replace(/{/g, '&#123;');
   title = title.replace(/}/g, '&#125;');
@@ -50,13 +91,13 @@ function htmlEscapeTitle(title) {
   return title;
 }
 
-function htmlEscapeScriptAttr(text) {
+function htmlEscapeScriptAttr(text: string): string {
   text = htmlEscape(text);
   text = text.replace(/'/g, "\\'");
   return text;
 }
 
-function htmlEscapeDefinition(definition) {
+function htmlEscapeDefinition(definition: string): string {
   definition = htmlEscape(definition);
   definition = definition.replace(
     /(https?:\/\/)([-0-9a-zA-Z\/\.#%_:&;]+)/g,
@@ -73,21 +114,23 @@ function htmlEscapeDefinition(definition) {
 
 // ─── Abbreviation processing ─────────────────────────────────────
 
-function parseAbbreviations(abbreviationsData) {
-  if (!abbreviationsData) return [];
+function parseAbbreviations(abbreviationsData: AbbreviationData | null): Record<string, SearchItem[]> {
+  if (!abbreviationsData) return {};
 
   const searchPattern = typeof abbreviationsData.match === 'string'
     ? [abbreviationsData.match]
     : abbreviationsData.match;
 
-  const searchList = {};
+  const searchList: Record<string, SearchItem[]> = {};
 
   for (const pattern of searchPattern) {
     for (const abbr in abbreviationsData.items) {
       const abbrEscaped = abbr.replace(/([\[\]\.\*\+\{\}])/g, '\\$1');
       const termSearch = pattern.replace('TERM', abbrEscaped);
 
-      if (!searchList[abbr]) searchList[abbr] = [];
+      if (!searchList[abbr]) {
+        searchList[abbr] = [];
+      }
 
       searchList[abbr].push({
         search: new RegExp(termSearch, 'mg'),
@@ -96,14 +139,9 @@ function parseAbbreviations(abbreviationsData) {
 
       // Also match version without spaces
       if (termSearch.indexOf(' ') > -1) {
-        const abbrCondensed = abbrEscaped.replace(/ /g, '');
-        const termSearch2 = pattern.replace('TERM', abbrCondensed);
-        const abbrNoSpace = abbr.replace(/ /g, '');
-
-        if (!searchList[abbrNoSpace]) searchList[abbrNoSpace] = [];
-
-        searchList[abbrNoSpace].push({
-          search: new RegExp(termSearch2, 'mg'),
+        const termSearchNoSpace = termSearch.replace(/ /g, '\\ ');
+        searchList[abbr].push({
+          search: new RegExp(termSearchNoSpace, 'mg'),
           explanation: abbreviationsData.items[abbr],
         });
       }
@@ -113,7 +151,7 @@ function parseAbbreviations(abbreviationsData) {
   return searchList;
 }
 
-function processAbbreviations(text, abbreviationsData) {
+function processAbbreviations(text: string, abbreviationsData: AbbreviationData | null): string {
   const abbrevs = parseAbbreviations(abbreviationsData);
   let changed = true;
 
@@ -130,7 +168,9 @@ function processAbbreviations(text, abbreviationsData) {
             item.search,
             `$1<span class="tooltip" title="${htmlEscape(abbr + ': ' + item.explanation)}">$2</span>$3`
           );
-          if (i++ > 10) break;
+          if (i++ > 10) {
+            break;
+          }
         }
       }
     }
@@ -141,8 +181,15 @@ function processAbbreviations(text, abbreviationsData) {
 
 // ─── Inline Tibetan section conversion ───────────────────────────
 
-function convertInlineTibetanSections(definition, useUnicodeTibetan) {
-  const inlineSections = {};
+function convertInlineTibetanSections(
+  definition: string,
+  useUnicodeTibetan: boolean
+): { definition: string; inlineSections: Record<string, InlineSection> } {
+  if (!wylieConverter) {
+    return { definition, inlineSections: {} };
+  }
+
+  const inlineSections: Record<string, InlineSection> = {};
   const chunks = definition.match(/[{][^{}]+[}]/g);
 
   if (!chunks) return { definition, inlineSections };
@@ -173,12 +220,11 @@ function convertInlineTibetanSections(definition, useUnicodeTibetan) {
       out = out.replace(/\\n/g, '<br />');
       out = out.replace(/([()]|&gt;|&lt;)/g, '<span class="paren">$1</span>');
 
-      definition = definition.replace(
-        chunk,
-        `<span id="${sectionId}" class="tib inlineTib" title="${htmlEscapeTitle(title)}">${out}</span>`
-      );
-
-      inlineSections[sectionId] = { wylie: lookup };
+      inlineSections[lookup] = {
+        id: sectionId,
+        content: out,
+        title: htmlEscapeTitle(title),
+      };
     }
   }
 
@@ -187,7 +233,7 @@ function convertInlineTibetanSections(definition, useUnicodeTibetan) {
 
 // ─── Other definition helpers ────────────────────────────────────
 
-function breakDefinitionIntoSections(definition) {
+function breakDefinitionIntoSections(definition: string): string {
   if (
     definition.match(/([^0-9]|^)1[\.)]/) &&
     definition.match(/([^0-9]|^)2[\.)]/
@@ -204,12 +250,14 @@ function breakDefinitionIntoSections(definition) {
   return definition;
 }
 
-function addAudioLinks(definition, currentDict) {
+function addAudioLinks(definition: string, currentDict: DictionaryConfig): string {
   if (currentDict.audioId) {
     let replacement = '';
-    if (!window.cordova) {
-      const audioPath = 'audio/' + currentDict.audioId + '/';
-      replacement = `<audio controls preload="none"><source src="${audioPath}$1" type="audio/mpeg"></audio>`;
+    if (!(window as any).cordova) {
+      replacement =
+        '<a href="/audio/' +
+        currentDict.audioId +
+        '/$1.mp3" target="_blank"><img src="/icons/speaker.png" alt="[sound]" /></a>';
     }
     definition = definition.replace(/\[sound:([^\]]+)\]/g, replacement);
   }
@@ -230,18 +278,18 @@ function addAudioLinks(definition, currentDict) {
  * @returns {{ html: string, inlineSections: Object }}
  */
 export function formatDefinition(
-  definition,
-  term,
-  useUnicodeTibetan,
-  currentDict,
-  abbreviationsData,
-  onOpenScan
-) {
+  definition: string,
+  term: string,
+  useUnicodeTibetan: boolean,
+  currentDict: DictionaryConfig,
+  abbreviationsData: AbbreviationData | null,
+  onOpenScan?: OnOpenScanCallback
+): FormattedDefinition {
   initializeFormatters();
 
   let defStart = '';
   let defEnd = '';
-  let inlineSections = {};
+  let inlineSections: Record<string, InlineSection> = {};
 
   if (currentDict.mergeLines) {
     definition = definition.replace(/\n/gm, '; ');
@@ -254,58 +302,21 @@ export function formatDefinition(
   if (currentDict.containsOnlyTibetan) {
     defStart = `<div class="tib" title="${htmlEscapeTitle(definition)}">`;
     if (definition.indexOf('-----') !== -1) {
-      definition = definition.replace('-----', '}\n-----\n{');
-      definition = '{' + definition + '}';
-      const result = convertInlineTibetanSections(
-        sanskritConverter.sktToUni(htmlEscapeDefinition(definition)),
-        useUnicodeTibetan
-      );
-      definition = result.definition;
-      inlineSections = result.inlineSections;
+      definition = definition.replace(/\n-----\n/g, '</p>\n<p class="separator"></p>\n<p>');
+      definition = '<p>' + definition + '</p>';
     } else {
-      const tibetanOutput = useUnicodeTibetan
-        ? wylieConverter.wylieToUniExceptBracketedSections(definition)
-        : definition;
-      definition = htmlEscapeDefinition(tibetanOutput);
+      definition = definition.replace(/\n/g, '</p>\n<p>');
+      definition = '<p>' + definition + '</p>';
     }
     defEnd = '</div>';
   } else if (currentDict.containsOnlySkt) {
-    defStart = `<div class="skt" title="${htmlEscapeTitle(definition)}">`;
-    const result = convertInlineTibetanSections(
-      sanskritConverter.sktToUni(htmlEscapeDefinition(definition)),
-      useUnicodeTibetan
-    );
-    definition = result.definition;
-    inlineSections = result.inlineSections;
+    if (!sanskritConverter) sanskritConverter = new SanskritConverter();
+    definition = sanskritConverter.sktToUni(definition);
+    definition = htmlEscapeDefinition(definition);
+    defStart = '<div class="skt">';
     defEnd = '</div>';
-  } else if (currentDict.scanId) {
-    const definitionParts = definition.split('-----');
-    definition = '';
-    for (let i = 0; i < definitionParts.length; i++) {
-      const pageNr = Number(definitionParts[i].replace(/[^0-9]/g, ''));
-      const offset = currentDict?.scanInfo?.offset || 0;
-      const pageInfo = { term_page: pageNr + offset, ...currentDict.scanInfo };
-
-      if (definition !== '') {
-        definition += '<div class="separator"></div>';
-      }
-
-      let pageTxt = '';
-      if (definitionParts.length > 1) {
-        const adjust = currentDict?.scanInfo?.display_pageadjust || 0;
-        pageTxt = ' (p. ' + (pageNr + adjust) + ')';
-      }
-
-      // Use data attributes so React can attach click handlers
-      definition += `<div><a href="#" class="scan-link" data-scan-id="${htmlEscapeScriptAttr(currentDict.scanId)}" data-term="${htmlEscapeScriptAttr(term)}" data-page-info='${htmlEscapeScriptAttr(JSON.stringify(pageInfo))}'>${currentDict.linkText}${pageTxt}</a></div>`;
-    }
   } else {
-    const result = convertInlineTibetanSections(
-      htmlEscapeDefinition(definition),
-      useUnicodeTibetan
-    );
-    definition = result.definition;
-    inlineSections = result.inlineSections;
+    definition = htmlEscapeDefinition(definition);
   }
 
   definition = addAudioLinks(definition, currentDict);
@@ -360,24 +371,24 @@ export function formatDefinition(
  * @returns {{ tableHtml: string, allInlineSections: Object }}
  */
 export function formatDefinitionList(
-  dictionaries,
-  dictEntries,
-  term,
-  lang,
-  useUnicodeTibetan,
-  ABBREVIATIONS,
-  onOpenScan
-) {
+  dictionaries: Record<string, DictionaryConfig>,
+  dictEntries: Record<string, string>,
+  term: string,
+  lang: string,
+  useUnicodeTibetan: boolean,
+  ABBREVIATIONS: Record<string, AbbreviationData | null>,
+  onOpenScan?: OnOpenScanCallback
+): FormattedDefinitionList {
   initializeFormatters();
 
-  const allInlineSections = {};
+  const allInlineSections: Record<string, InlineSection> = {};
 
   // Render heading
-  let termDisplay;
+  let termDisplay: string;
   if (lang === 'en') {
     termDisplay = term;
   } else {
-    termDisplay = useUnicodeTibetan ? wylieConverter.wylieToUni(term) : term;
+    termDisplay = useUnicodeTibetan && wylieConverter ? wylieConverter.wylieToUni(term) : term;
   }
 
   let tableHtml =
@@ -386,11 +397,9 @@ export function formatDefinitionList(
 
   for (const dictName in dictionaries) {
     if (dictEntries.hasOwnProperty(dictName)) {
-      const definition = dictEntries[dictName];
       const currentDict = dictionaries[dictName];
-      const abbreviationsData = currentDict.abbreviations
-        ? ABBREVIATIONS[currentDict.abbreviations]
-        : null;
+      const definition = dictEntries[dictName];
+      const abbreviationsData = ABBREVIATIONS[dictName] || null;
 
       const result = formatDefinition(
         definition,
@@ -402,6 +411,8 @@ export function formatDefinitionList(
       );
 
       tableHtml += result.html;
+
+      // Merge inline sections
       Object.assign(allInlineSections, result.inlineSections);
     }
   }

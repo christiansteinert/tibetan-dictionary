@@ -4,9 +4,18 @@
  * Persisted to localStorage so they survive page reloads.
  * Includes dictionary selection, layout, unicode mode, etc.
  */
-import { createSlice } from '@reduxjs/toolkit';
-import { DICTLIST, GROUPED_DICTLIST } from '../config/dictlist';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { DICTLIST, GROUPED_DICTLIST, type DictEntry } from '../config/dictlist';
 import { GLOBAL_SETTINGS } from '../config/globalSettings';
+
+interface SettingsState {
+  unicode: boolean | 'output';
+  lowercase: boolean;
+  listSize: number;
+  layout: string;
+  activeDictionaries: string[];
+  inactiveDictionaries: string[];
+}
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -20,14 +29,14 @@ const isMobileDevice =
  * Filters out private dictionaries when running in public-only mode and
  * webOnly dictionaries when running inside Cordova.
  */
-function getAllDictionaryIds() {
+function getAllDictionaryIds(): string[] {
   const isLocalhost =
     window.location?.hostname?.startsWith('localhost');
   const publicOnly = GLOBAL_SETTINGS.publicOnly && !isLocalhost;
 
   return Object.keys(DICTLIST).filter((id) => {
-    const info = DICTLIST[id];
-    if (info.webOnly && window.cordova) return false;
+    const info = DICTLIST[id] as DictEntry;
+    if (info.webOnly && !!(window as any).cordova) return false;
     if (publicOnly && info.public !== 'true') return false;
     return true;
   });
@@ -36,7 +45,7 @@ function getAllDictionaryIds() {
 /**
  * Build the default settings object.
  */
-function getDefaultSettings() {
+function getDefaultSettings(): SettingsState {
   return {
     layout: 'layout_white',
     unicode: true,
@@ -51,14 +60,14 @@ function getDefaultSettings() {
  * Load settings from localStorage, merging with defaults so that
  * newly-added dictionaries are automatically included.
  */
-function loadSettings() {
+function loadSettings(): SettingsState {
   if (!window.localStorage) return getDefaultSettings();
 
   const raw = localStorage.getItem('settings');
   if (!raw) return getDefaultSettings();
 
   try {
-    const saved = JSON.parse(raw);
+    const saved: Record<string, unknown> = JSON.parse(raw);
 
     // Normalise legacy string booleans
     if (saved.unicode === 'true') saved.unicode = true;
@@ -66,18 +75,21 @@ function loadSettings() {
 
     if (!saved.inactiveDictionaries) saved.inactiveDictionaries = [];
     if (!saved.listSize) saved.listSize = 10;
-    if (saved.listSize > 500) saved.listSize = 500;
+    if (typeof saved.listSize === 'number' && saved.listSize > 500) saved.listSize = 500;
 
     // Add any dictionaries that were added since the user last saved
     const allIds = getAllDictionaryIds();
+    const savedActiveDicts = Array.isArray(saved.activeDictionaries) ? saved.activeDictionaries : [];
+    const savedInactiveDicts = Array.isArray(saved.inactiveDictionaries) ? saved.inactiveDictionaries : [];
+    
     const newDicts = allIds.filter(
       (id) =>
-        !saved.activeDictionaries?.includes(id) &&
-        !saved.inactiveDictionaries?.includes(id)
+        !savedActiveDicts.includes(id as never) &&
+        !savedInactiveDicts.includes(id as never)
     );
-    saved.activeDictionaries = (saved.activeDictionaries || []).concat(newDicts);
+    saved.activeDictionaries = (savedActiveDicts as string[]).concat(newDicts);
 
-    return saved;
+    return saved as unknown as SettingsState;
   } catch {
     return getDefaultSettings();
   }
@@ -89,7 +101,7 @@ function loadSettings() {
 
 const loaded = loadSettings();
 
-const initialState = {
+const initialState: SettingsState = {
   unicode: loaded.unicode,
   lowercase: loaded.lowercase,
   listSize: loaded.listSize,
@@ -102,25 +114,25 @@ const settingsSlice = createSlice({
   name: 'settings',
   initialState,
   reducers: {
-    setUnicode(state, action) {
-      let v = action.payload;
+    setUnicode(state, action: PayloadAction<boolean | 'output' | string>) {
+      let v: boolean | 'output' | string = action.payload;
       if (v === 'true') v = true;
       if (v === 'false') v = false;
       if (v === true || v === false || v === 'output') {
         state.unicode = v;
       }
     },
-    setLowercase(state, action) {
+    setLowercase(state, action: PayloadAction<boolean>) {
       state.lowercase = !!action.payload;
     },
-    setListSize(state, action) {
+    setListSize(state, action: PayloadAction<number>) {
       const n = Number(action.payload);
       if (n > 0 && n <= 500) state.listSize = n;
     },
-    setLayout(state, action) {
+    setLayout(state, action: PayloadAction<string>) {
       state.layout = action.payload;
     },
-    setDictionaries(state, action) {
+    setDictionaries(state, action: PayloadAction<{ active: string[]; inactive: string[] }>) {
       const { active, inactive } = action.payload;
       state.activeDictionaries = active;
       state.inactiveDictionaries = inactive;
@@ -131,7 +143,7 @@ const settingsSlice = createSlice({
       Object.assign(state, defaults);
     },
     /** Restore settings from a previously-captured snapshot (e.g. on Cancel) */
-    restoreSettings(state, action) {
+    restoreSettings(state, action: PayloadAction<SettingsState>) {
       Object.assign(state, action.payload);
     },
   },

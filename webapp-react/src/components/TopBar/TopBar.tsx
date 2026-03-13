@@ -7,7 +7,7 @@
 import { useRef, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import WylieInputField from './WylieInputField';
+import WylieInputField, { WylieInputHandle } from './WylieInputField';
 import LanguageSwitchButton from './LanguageSwitchButton';
 import ClearButton from './ClearButton';
 import { setInputLang, setSidebarVisible } from '../../store/searchSlice';
@@ -16,10 +16,10 @@ import settingsImg from '../../assets/images/settings.png';
 export default function TopBar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const inputRef = useRef(null);
+  const inputRef = useRef<WylieInputHandle>(null);
 
-  const inputLang = useSelector((s) => s.search.inputLang);
-  const { unicode, lowercase } = useSelector((s) => s.settings);
+  const inputLang = useSelector((s: any) => s.search.inputLang);
+  const { unicode, lowercase } = useSelector((s: any) => s.settings);
 
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)
   const useUnicodeTibetan = unicode === true;
@@ -53,7 +53,6 @@ export default function TopBar() {
     const raw = inputRef.current?.getValue() ?? '';
     if (!raw.trim()) return;
 
-    // Build the search URL
     const params = new URLSearchParams({
       offset: '0',
       sidebar: 'false',

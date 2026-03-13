@@ -2,43 +2,41 @@
  * Sanskrit transliteration module.
  * Converts Sanskrit transliteration to Unicode characters.
  */
-import { Tokenizer } from './tokenizer.js';
+import { Tokenizer } from './tokenizer';
 
 export class SanskritConverter {
-  constructor() {
-    this.transliterate = {
-      'Oṃ': ['oM', 'OM', 'AUM'],
-      'ṛ': ['RRi', 'R^i', 'R'],
-      'ḷ': ['LLi', 'L^i', 'lR'],
-      'ch': ['Ch'],
-      'ñ': ['J', '~n', 'JN'],
-      'ṭh': ['Th'],
-      'ḍh': ['Dh'],
-      'ṭ': ['T'],
-      'ḍ': ['D'],
-      'ṇ': ['N'],
-      'v': ['w'],
-      'ṃ': ['M', '\\.n', '\\.m'],
-      'ḥ': ['H', '\\.h'],
-      'ṣ': ['Sh', 'shh', 'S'],
-      'ś': ['z', 'sh'],
-      'ṅ': ['G', '~N'],
-      'ū': ['U', 'uu'],
-      'ī': ['I', 'ii'],
-      'ā': ['A', 'aa'],
-      'â': ['\\^a'],
-      'ô': ['\\^o'],
-      'û': ['\\^u'],
-      'ê': ['\\^e'],
-      'î': ['\\^i'],
-    };
-  }
+  private transliterate: Record<string, string[]> = {
+    'Oṃ': ['oM', 'OM', 'AUM'],
+    'ṛ': ['RRi', 'R^i', 'R'],
+    'ḷ': ['LLi', 'L^i', 'lR'],
+    'ch': ['Ch'],
+    'ñ': ['J', '~n', 'JN'],
+    'ṭh': ['Th'],
+    'ḍh': ['Dh'],
+    'ṭ': ['T'],
+    'ḍ': ['D'],
+    'ṇ': ['N'],
+    'v': ['w'],
+    'ṃ': ['M', '\\.n', '\\.m'],
+    'ḥ': ['H', '\\.h'],
+    'ṣ': ['Sh', 'shh', 'S'],
+    'ś': ['z', 'sh'],
+    'ṅ': ['G', '~N'],
+    'ū': ['U', 'uu'],
+    'ī': ['I', 'ii'],
+    'ā': ['A', 'aa'],
+    'â': ['\\^a'],
+    'ô': ['\\^o'],
+    'û': ['\\^u'],
+    'ê': ['\\^e'],
+    'î': ['\\^i'],
+  };
 
   /**
    * Convert a single chunk of Sanskrit transliteration to Unicode.
    * @private
    */
-  #sktToUniChunk(skt) {
+  #sktToUniChunk(skt: string): string {
     if (skt.toUpperCase() === skt) return skt;
 
     for (const [uni, transliterations] of Object.entries(this.transliterate)) {
@@ -54,12 +52,12 @@ export class SanskritConverter {
    * @param {string} skt - Text in Sanskrit transliteration
    * @returns {string} Text with Unicode Sanskrit characters
    */
-  sktToUni(skt) {
+  sktToUni(skt: string): string {
     let result = '';
     const separators = ['{', '}', '[', ']', ' ', '='];
     let bracketActive = false;
 
-    const tok = new Tokenizer(separators, (chunk, isSeparator) => {
+    const tok = new Tokenizer(separators, (chunk: string, isSeparator: boolean) => {
       if (isSeparator && (chunk === '{' || chunk === '[')) {
         bracketActive = true;
       }

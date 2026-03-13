@@ -3,12 +3,23 @@
  * Wraps the ewts-js library for Wylie/EWTS to Unicode conversion.
  */
 import { EwtsConverter } from './ewts-js/src/EwtsConverter.mjs';
-import { Tokenizer } from './tokenizer.js';
+import { Tokenizer } from './tokenizer';
+
+interface WylieConverterOptions {
+  check?: boolean;
+  check_strict?: boolean;
+  fix_spacing?: boolean;
+  sloppy?: boolean;
+  leave_dubious?: boolean;
+  pass_through?: boolean;
+}
 
 /**
  * Converter between Wylie/EWTS transliteration and Tibetan Unicode.
  */
 export class WylieConverter {
+  private converter: EwtsConverter;
+
   /**
    * @param {Object} [options] - Configuration options
    * @param {boolean} [options.check=true] - Generate warnings for illegal consonant sequences
@@ -18,7 +29,7 @@ export class WylieConverter {
    * @param {boolean} [options.leave_dubious=false] - Leave dubious syllables in [brackets]
    * @param {boolean} [options.pass_through=true] - Pass through non-Tibetan characters
    */
-  constructor(options = {}) {
+  constructor(options: WylieConverterOptions = {}) {
     this.converter = new EwtsConverter({
       check: options.check ?? true,
       check_strict: options.check_strict ?? true,
@@ -34,7 +45,7 @@ export class WylieConverter {
    * @param {string} wylie - Text in Wylie/EWTS transliteration
    * @returns {string} Text in Tibetan Unicode
    */
-  wylieToUni(wylie) {
+  wylieToUni(wylie: string): string {
     if (!wylie) return '';
 
     // Return original if it contains HTML-sensitive characters
@@ -63,7 +74,7 @@ export class WylieConverter {
    * @param {string} unicode - Text in Tibetan Unicode
    * @returns {string} Text in Wylie/EWTS transliteration
    */
-  uniToWylie(unicode) {
+  uniToWylie(unicode: string): string {
     let result = this.converter.to_ewts(unicode);
     result = result.replace(/[[\]]/g, '');
     return result;
@@ -74,7 +85,7 @@ export class WylieConverter {
    * @param {string} wylie - Wylie text
    * @returns {string} Normalized Wylie
    */
-  normalizeWylieWhitespace(wylie) {
+  normalizeWylieWhitespace(wylie: string): string {
     if (!wylie) return '';
     if (wylie === ' ') return wylie;
 
@@ -91,7 +102,7 @@ export class WylieConverter {
    * @param {string} text - The Wylie text to normalize
    * @returns {string} The normalized text
    */
-  normalizeWylie(text) {
+  normalizeWylie(text: string): string {
     text = this.normalizeWylieWhitespace(text);
 
     text = text.replace(/v/g, 'w');
@@ -126,11 +137,11 @@ export class WylieConverter {
    * @param {string} text - Text in Wylie/EWTS
    * @returns {string} Converted text with bracketed sections preserved
    */
-  wylieToUniExceptBracketedSections(text) {
+  wylieToUniExceptBracketedSections(text: string): string {
     let result = '';
     let bracketActive = false;
 
-    const tok = new Tokenizer(['{', '}'], (syllable, isSeparator) => {
+    const tok = new Tokenizer(['{', '}'], (syllable: string, isSeparator: boolean) => {
       if (syllable === '{') {
         result += ' ';
         bracketActive = true;
@@ -153,7 +164,7 @@ export class WylieConverter {
    * @param {string} wylie - Wylie text
    * @returns {string} Trimmed text
    */
-  trimWylie(wylie) {
+  trimWylie(wylie: string): string {
     wylie = wylie.replace(/^\s+|\s*\/?\s*$/g, '');
     wylie = wylie.replace(/_/g, ' ');
     wylie = wylie.replace(/\s+/g, ' ');
@@ -165,7 +176,7 @@ export class WylieConverter {
    * Normalize inline English text by fixing spacing around punctuation.
    * @private
    */
-  #normalizeInlineEnglish(text) {
+  #normalizeInlineEnglish(text: string): string {
     text = text.replace(/([,\.]) */g, '$1 ');
     text = text.replace(/ *- */g, ' - ');
     return text;

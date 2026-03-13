@@ -1,0 +1,198 @@
+interface AbbreviationSet {
+  match: string | string[];
+  items: { [key: string]: string };
+}
+
+interface AbbreviationsType {
+  [key: string]: AbbreviationSet;
+}
+
+export const ABBREVIATIONS: AbbreviationsType = {
+  '84000': {
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'Toh.': 'Tōhoku catalogue for the Dergé Kangyur and Dergé Tengyur'
+    }
+  },
+  'RangjungYeshe': {
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'SA': 'see also:',
+      'sm.': 'similar to:',
+      'sm': 'similar to:',
+      'Sm': 'similar to:',
+      'opp': 'opposite of:',
+      'Opp': 'opposite of:',
+      'abbr': 'abbreviation of:',
+      'Abbr': 'abbreviation of:',
+      'ex': 'for example:',
+      'Ex': 'for example:',
+      'syn': 'synonym:',
+      'Syn': 'synonym:',
+      'trans. v': 'transitive verb',
+      'trans': 'transitive',
+      'intr. v': 'intransitive verb',
+      'intr': 'transitive',
+      'ggd': 'Geshe Georges Dreyfus',
+      'ft': 'future',
+      'pf': 'perfect',
+      'x': 'for example:',
+      'Def': 'definition',
+      'jv': 'James Valby',
+      'gd': 'Gyurme Dorje',
+      'iw': 'Ives Waldo',
+      'mss': 'Mark S. Seibold',
+      'mr': 'Matthieu Ricard',
+      'ntc': 'Nalanda Translation Committee',
+      'ry': 'Rangjung Yeshe compilation',
+      'rb': 'Richard Barron',
+      'thd': 'Thomas Hove Doctor',
+      'tsd': 'Thomas Roth (Sherab Drime)'
+    }
+  },
+  'Verbinator': {
+    match: '(^|[^A-Z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Z0-9<][^<]*$|[^-A-Z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'KYT': 'A kya yoṅs ḥdzin dbyaṅs can dgaḥ baḥi blo gros.|"Rtags kyi ḥjug paḥi dkaḥ gnas bdag gźan daṅ bya byed las gsum gyi khyad par źib tu phye ba ñuṅ gsal ḥphrul gyi lde mig."|Tillemans: 39-60 [a critical edition of The Collected Works of: 434-446 and Sde Srid: 223-233]',
+      'KYN': 'A kya yoṅs ḥdzin dbyaṅs can dgaḥ baḥi blo gros.|"Rnam dbye brgya daṅ ṅa bya bye las sogs kyi khyad par mdo tsam brjod pa dkaḥ gnad gsal baḥi me loṅ"|The Collected Works of [C] 447-460 and Sde srid [Z] 209-222.',
+      'TD' : 'Ṅag dbaṅ Bstan dar lha rams pa.|"Sum cu pa daṅ rtags ḥjug gi don go sla bar bsdus paḥi bśad pa skal ldan yid kyi pa dam ḥbyed paḥi snaṅ paḥi mdod bya ba."|Collected gSung \'bum of Bstan-dar lha-ram of a-lag-sha|vol. Kha. New Delhi: Lama Guru Deva,1971. 155-214.',
+      'LZ' : 'Blo bzaṅ tshul khrims rgya mtsho. "Bya byed las gsum dus gsum daṅ bcas dper brjod."|Bod kyi brdaḥ sprod sum cu pa daṅ rtags kyi ḥjug paḥi mchan ḥgrel mdor bsdus te brjod ba do mtshar ḥphrul gyi lde mig.|Beijing: Mi rigs dpe skrun khaṅ, 1957. 192-249.',
+      'CD' : 'Das, Sarat Chandra. A Tibetan English Dictionary with Sanskrit Synonyms. Eds. Graham Sandberg and A. William Hyde.|Calcutta: Bengal Secretariat Book Depôt, 1902.',
+      'ND' : 'Ḥjigs med nam mkhaḥi rdo rje. "Bod kyi sprod brda dus gsum skul tshig reḥu mig ḥdzad med rig paḥi mdzod chen."|Bod kyi brda skad |[A]: 223-258 and Phuntshok |[B]: 81-108.',
+      'DK' : 'Kharto, Dorrje Wangchuk|Mkhar stod, Rdo rje dbaṅ phyug.|Thumi dgongs gter: the complete Tibetan verb forms|Dus gsum reḥu mig Thu-miḥi dgoṅs gter.|Delhi: C.T. Charto, 1979.',
+      'DS' : 'Bsam gtan. Dag yig gsar bsgrigs.|Xining: Mtsho sṅon mi rigs dpe skrun khan, 1979.',
+      'TC' : 'Zhang Yisun.|Bod rgya tshig mdzod chen mo|Zang Han Da|Cidian. Beijing: Mi rigs dpe skrun kaṅ|Minzu Chubanshe, 1985.',
+      'Erg.': 'ergative',
+      'Abs.': 'absolutive',
+      'Instr.': 'instrumental',
+      'Ela.': 'elative',
+      'Abl.': 'ablative',
+      'Obl.': 'dative',
+      'Ass.': 'associative'
+    }
+  },
+  'Hopkins': {
+    match: ['([(]|[(][^)"]*[^A-Za-z0-9)>"])(TERM)([^A-Za-z0-9<(][^>)]*[)]|[^A-Za-z0-9<)][^>)]*<[^/)][^)]*[)]|[)])', '([\\[]|[\\[](?:<[^>]*>[^<>]*</[^>]*>[^<>,]*,?)*[^A-Za-z0-9])(TERM)([^A-Za-z0-9<)][^>\\]]*[\\]]|(?:,?<[^>]*>[^<>]*</[^>]*>[^<>,]*)*[\\]]|[\\]])'], 
+    items: {
+        'B-7': '(standing for "bsdus grwa Part 1")| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Explanation of the Lesser Path of Reasoning (rigs lam chung ngu\'i rnam par bshad pa), Chapter Two on Established Bases, debate 7.',
+        'BJ': '(standing for "Pal-jor-lhün-drub")| Pal-jor-lhun-drub (dpal \'byor lhun grub). legs bshad snying po\'i dka\' \'grel bstan pa\'i sgron me. Buxaduor: Sera Monastery, 1968.',
+        'BR': '(standing for "blo bzang rgya mtsho blo rig")| Lo-sang-gya-tsho (blo bzang rgya mtsho; 1928-1997). Presentation of Awareness and Knowledge (blo rig).',
+        'C': '(standing for "Conze")| Edward Conze. Materials for a Dictionary of the Prajñāpāramitā Literature. Tokyo: Suzuki Research Foundation, 1967.',
+        'col.': 'colloquial.',
+        'D1': '(standing for "bsdus grwa Part 1")| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Explanation of the Lesser Path of Reasoning (rigs lam chung ngu\'i rnam par bshad pa), Chapter Four on opposite-from-being-something and opposite-from-not-being-something, debate 1.',
+        'D2': '(standing for "bsdus grwa Part 1")| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Explanation of the Lesser Path of Reasoning (rigs lam chung ngu\'i rnam par bshad pa), Chapter Four on Opposite-from-Being-Something and Opposite-from-Not-Being-Something, debate 1.',
+        'DASI': '(standing for "Decisive Analysis of Special Insight")| Lo-sang-dor-je (blo bzang rdo rje). Ship for Entering into the Ocean of Textual Systems: Decisive Analysis of (Tsong-kha-pa\'s) "Stages of the Path to Enlightenment."',
+        'DG': 'David Germano. Poetic Thought, the Intelligent Universe, and the Mystery of Self: the Tantric Synthesis of rDzogs Chen in Fourteenth Century Tibet. Ph.D. dissertation, University of Wisconsin, Madison, WI, 1992. Gan-dan-tri-pa: Oral commentary of Gan-dan-tri-pa Jam-pal-shan-pan.',
+        'GCT': '(standing for "Go-mang Collected Topics")| Ngag-wang-tra-shi (ngag dbang bkra shis). Collected Topics by a Spiritual Son of Jam-yang-shay-pa (sgo mang sras bsdus grwa).',
+        'GD': 'Georges Dreyfus. Ontology, Philosophy of Language, and Epistemology in Buddhist Tradition. Ph.D. dissertation. Religious Studies, University of Virginia, Charlottesville, VA, 1991.',
+        'Jang': 'Jang-kya (lcang skya rol pa\'i rdo rje). Clear Exposition of the Presentations of Tenets: Beautiful Ornament for the Meru of the Subduer\'s Teaching (grub mtha\'i rnam bzhag / grub pa\'i mtha\'i rnam par bzhag pa gsal bar bshad pa thub bstan lhun po\'i mdzes rgyan). Varanasi, India: Pleasure of Elegant Sayings Printing Press, 1970.',
+        'Kön-chog': 'Kön-chog-jig-may-wang-po (dkon mchog \'jigs med dbang po). Precious Garland of Tenets (grub mtha\' rin chen phreng ba).',
+        'KS': 'Khetsun Sangpo, Biographical Dictionary of Tibet and Tibetan Buddhism. (LTWA: Dharamsala, H.P.)',
+        'L': 'Étienne Lamotte. Saṃdhinirmocanasūtra: L\'Explication des mystères. Louvain: Université de Louvain, 1935.',
+        'LAK': '(standing for "Lo-sel-ling Awareness and Knowledge")| Jam-pal-sam-pel (\'jam dpal bsam \'phel). Presentation of Awareness and Knowledge (blo rig gi rnam bzhag).',
+        'Lati': 'Lati Jang-chub-tshul-trim oral commentary.',
+        'LCh': 'Lokesh Chandra. Tibetan-Sanskrit Dictionary. New Delhi, 1987.',
+        'LG': 'Lo-sang-gya-tsho (blo bzang rgya mtsho). Compendium of the Important Points in the Presentation of Types of Awarenesses, [An Internal Division of] the Greater Path of Reasoning.',
+        'LR': '(standing for "lam rim")| Jeffrey Hopkins. Glossary for gsung rab kun gyi snying po lam gyi gtso bo rnam pa gsum kyi khrid yid gzhan phan snying po by the Fourth Paṇ-chen Lama, Lo-sang-pal-dan-tan-pay-nyi-ma (blo bzang dpal ldan bstan pa\'i nyi ma).',
+        'LSR': '(standing for "Lo-sel-ling Signs and Reasonings")| Tsül-trim-nam-gyal (tshul khrims rnam rgyal). Presentation of Signs and Reasonings, Mirror Illuminating All Phenomena (rtags rigs kyi rnam bzhag chos kun gsal ba\'i me long). In: The First Magic Key Opening a Hundred Doors to the Path of Reasoning (rigs lam sgo brgya \'byed pa\'i \'phrul gyi lde mig dang po). Mundgod, India: Drepung Loseling Library, 1979.',
+        'LWT': '(standing for "Lo-sang-kön-chog\'s Word-Commentary on Tenets)| Lo-sang-kön-chog (blo bzang dkon mchog; 1742/1743-1803/1804). Word-Commentary on the Root Text of (Jam-yang-shay-pa\'s) "Tenets": Clear Crystal Mirror (grub mtha\' rtsa ba\'i tshig ṭik shel dkar me long). In Three Commentaries on the grub mtha\' rtsa ba gdong nga\'i sgra dbyaṅs of \'jam dbyangs-bźad-pa\'i-rdo-rje ngag-dbang-brtson-\'grus. Delhi: Chophel Legden, 1978.',
+        'ME': '(standing for "Meditation on Emptiness")| Jeffrey Hopkins. Meditation on Emptiness. London: Wisdom Publications, 1983; rev. ed., Boston, Ma.: Wisdom Publications, 1996. ',
+        'MGP': '(standing for "Mantric Grounds and Paths")| Ngag-wang-pal-dan (ngag dbang dpal ldan), also known as Pel-den-chö-jay (dpal ldan chos rje). Commentary on Presentation of the Four Great Secret Tantra Sets: Illuminator of the Tantric Texts (sngags kyi sa lam/). rgyud smad par khang edition, no other data.',
+        'MSA': '(standing for "Mahayānasūtrālaṅkāra")| Gadjin Nagao. Index to the Mahayānasūtrālaṅkāra. Tokyo: Nippon Gakujutsu Shinkvo-kai, 1958.',
+        'MSI': '(standing for "Medium-length Special Insight")| Tsong-kha-pa. "Medium-Length Exposition of Special Insight" in Medium-Length Exposition of the Stages of the Path to Enlightenment to be Practiced by Beings of the Three Capacities (skyes bu gsum gyis nyams su blang ba\'i byang chub lam gyi rim pa).',
+        'MV': '(standing for "Madhyānta-vibhāga")| Gadjin Nagao. Index to the Madhyāntavibhāga. Tokyo: 1961.',
+        'N': '(standing for "Nakamura")| Zuiryu NAKAMURA. Index to the Ratnagotravibhāga-mahayānottaratantra-śāstra. Tokyo: 1961.',
+        'P': '(standing for "Peking edition")| Tibetan Tripiṭaka. Tokyo-Kyoto: Tibetan Tripiṭaka Research Foundation, 1955-1962.',
+        'PGP': '(standing for "Prāsaṅgika Grounds and Paths")| Lo-sang-ta-yang (blo bzang rta dbyangs, also known as blo bzang rta mgrin). Brief Expression of the  Presentation of the Grounds and Paths of the Three Vehicles According to the System of the Perfection Vehicle, Essence of the Ocean of Profound Meaning (phar phyin theg pa\'i lugs kyi theg pa gsum gyi sa dang lam gyi rnam bzhag pa mdo tsam du brjod pa zab don rgya mtsho\'i snying po). The Collected Works of Rje-Btsun Blo-Bzang-Rta-Mgrin, vol. 4, 65-190. New Delhi: Guru Deva, 1975.',
+        'PH': 'Paul Hackett.',
+        'PP': '(standing for "prasannapadā)| Chandrakīrti. Clear Words: Commentary on Nāgārjuna\'s "Treatise on the Middle." Sanskrit: Louis de La Vallée Poussin. Mūlamadhyamakakārikās de Nāgārjuna avec la Prasannapadā commentaire de Candrakīrti. Bibliotheca Buddhica 4. Osnabrück, Germany: Biblio Verlag, 1970. Also, J.W. de Jong. "Text-critical Notes on the Prasannapadā." Indo-Iranian Journal 20, nos. 1/2 (1978): 25-59 and nos. 3/4 (1978): 217-252. Also, Sanskrit, Tibetan, and French translation of the Madhyamakaśāstrastuti that concludes Clear Words: J.W. de Jong. "La Madhyamakaśāstrastuti de Candrakīrti." Oriens Extremus 9 (1962): 47-56.',
+        'S': '(standing for "Saṃdhinirmocana")| Saṃdhinirmocanasūtra. Tok Palace version, 160 pp. Leh, Ladakh: Shesrig Dpemzod, 1975-1980, vol. ja. ',
+        'TAK': '(standing for "Tutor\'s Awareness and Knowledge")| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Explanation of the Presentation of Objects and Object-Possessors as well as Awareness and Knowledge [from within] "The Greater Path of Reasoning" [section] of The Magical Key to the Path of Reasoning, Presentation of the Collected Topics Revealing the Meaning of the Treatises on Prime Cognition (tshad ma\'i gzhung don \'byed pa\'i bsdus grva\'i rnam bzhag rigs lam \'phrul gyi sde mig las yul yul can dang blo rig gi rnam par bshad pa).',
+        'TCT': '(standing for "Tutor\'s Collected Topics")| Pur-bu-jog (phur bu lcog byams pa rgya mtsho). Magical Key to the Path of Reasoning, Presentation of the Collected Topics Revealing the Meaning of the Treatises on Valid Cognition (tshad ma\'i gzhung don \'byed pa\'i bsdus grva\'i rnam bzhag rigs lam \'phrul gyi sde mig/ yongs \'dzin bsdus grwa). Buxa India: n.p., 1965.',
+        'TGP': '(standing for "Tantric Grounds and Paths")| Ngag-wang-pal-dan (ngag dbang dpal ldan), also known as Pal-den-chö-jay (dpal ldan chos rje). Presentation of the Grounds and Paths of the Four Great Secret Tantra Sets: Illumination of the Texts of Tantra (gsang chen rgyud sde bzhi\'i sa lam gyi rnam bzhag rgyud gzhung gsal byed/ sngags kyi sa lam). rgyud smad par khang edition, no other data.',
+        'TK': '(standing for "Tsong-kha-pa")| Tsong-kha-pa (tsong kha pa blo bzang grags pa). drang ba dang nges pa\'i don rnam par phye ba\'i bstan bcos legs bshad snying po. Sarnath: Pleasure of Elegant Sayings Press, 1979.',
+        'TN': '(standing for "trisvabhāvanirdeśa")| Vasubandhu. Trisvabhāvanirdeśa.',
+        'VM': '(standing for "Vajra Maṇḍala")| Bu-tön Rin-chen-drub (bu ston rin chen grub). The Practice of "The Rite of the Vajra-Element Maṇḍala: The Source of All Vajras": A Precious Enhancer of Thought (rdo rje dbyings kyi dkyil \'khor gyi cho ga rdo rje thams cad \'byung ba zhes bya ba\'i lag len rin chen bsam \'phel), in Collected Works, Part 12 na. Lhasa: Zhol Printing House, 1990.',
+        'Y': '(standing for "Yamaguchi")| Susumu Yamaguchi. Index to the Prasannapadā Madhyamakavṛtti. Kyoto: Heirakuji-Shoten, 1974.',
+        'YT': 'Ye-shay-thub-tan (ye shes thub bstan) oral commentary.',
+        'DK': 'Dzong-ka-ba|Tsong-kha-pa (tsong kha pa blo bzang grags pa). drang ba dang nges pa\'i don rnam par phye ba\'i bstan bcos legs bshad snying po (Sarnath: Pleasure of Elegant Sayings Press, 1979).',
+        'JKA': 'Paul Hackett: ???, see mngon sum (definition)'
+    } 
+  },
+  'Illuminator': {
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'acc.': 'according to',
+      'altern.': 'alternative',
+      'abbrev.': 'abbreviation',
+      '[Bon]': 'Bon terminology',
+      'cf.': 'compare with',
+      '[Chinese]': 'Chinese language',
+      '[Communist]': 'Communist Chinese way of talking or Communist terminology',
+      'coll.': 'colloquial, colloquially',
+      '[Dialect]': 'local usage in a particular area',
+      'e. g.': 'for example',
+      'etc.': 'etcetera',
+      '[Exp]': 'myong-tshig - experiential term',
+      'freq.': 'frequently',
+      'fut.': 'future tense',
+      '[Hon]': 'honorific form of a term',
+      'i. e.': 'that is',
+      'imp.': 'imperative',
+      'infreq.': 'infrequently',
+      'lit.': 'literally',
+      '[Mngon]': 'mngon brjod - synonymy (alliteration, metaphor, synonyms, etc.)',
+      '[Modern]': 'new terminology that has been introduced in recent times, which is not part of the classical vocabulary.',
+      '[Mongolian]': 'A term from Mongolia introduced into Tibetan language.',
+      '[Non-Hon]': 'non-honorific form of a term',
+      '[Old]': 'Terms from the original formulation of the language (called brda rnying \'old signs\' prior to the skad gsar bcad language revisions that affected to the spelling and/or usage of words)',
+      '[Onomat]': 'onomatoptic term, representing the sound of something.',
+      'opp.': 'opposite',
+      'past': 'past tense',
+      '[Poetic]': 'snyan ngag - poetic usage',
+      'pres.': 'present tense',
+      'Pron.': 'pronounced / pronunciation',
+      'q. v.': 'que vide, i.e., see that entry just mentioned.',
+      'sim.': 'similar in meaning to',
+      '[Syn]': 'synonyms which includes other terms of the same meaning derived from the [Mngon] literature',
+      'Tib.': 'Tibetan',
+      'v. i.': 'intransitive verb',
+      'v. t.': 'transitive verb',
+      '[Zhang Zhung]': 'terminology from Shang Shung',      
+      
+      //REFERENCES CITED
+      '[ADR]': 'Adeu Rinpoche, various writings, letters, translated by Tony Duff.',
+      '[AKR]': 'Andreas Kretschmar, principal translator to Tulku Urgyen Rinpoche, private communication.',
+      '[BCA]': '{byang chub sems dpa\'i spyod pa la \'jug pa} Bodhicaryāvatāra by Śhāntideva',
+      '[BKN]': '{bla ma\'i thugs sgrub bar chad kun sel gyi sngon \'gro\'i khrid yig bla med byang chub sgrub pa\'i sgo chen zhes bya ba bzhugs so/} Accomplishing the Mind of the Guru, Dispeller of All Obstacles\' Written Instructions on the Preliminaries called \'The Great Doorway to the Accomplishment of Unsurpassed Enlightenment\'. From the {mchog gling gter gsar} Chogling Tersar. The edition used is the new electronic edition published by Chogling Rinpoche using Tony Duff\'s TibetD Reader system called the {mchog gling zab gter} Chogling Zabter.',
+      '[BKM]': 'Any of the texts in the {mi g-yo ba} section of the {bla ma\'i thugs sgrub bar chad kun sel} Accomplishing the Mind of the Guru, Dispeller of All Obstacles cycle of the {mchog gling gter gsar} Chogling Tersar. The edition used is the new electronic edition published by Chogling Rinpoche using Tony Duff\'s TibetD Reader system called the {mchog gling zab gter} Chogling Zabter.',
+      '[BYT]': '{bod yig gi gnas dang byed rtsol ngos \'dzin tshul gsar bu\'i gtam gyi myu gu zhes bya ba bzhugs so/} by {dbyangs can grub pa\'i rdo rje} Yangchen Druppa\'i Dorje.',
+      '[CHR]': 'Personal communication from Dr. Charles Ramble at Oxford University who spent many years living in the East.',
+      '[CSG]': '{drin chen chos rje\'i skyes rabs rnam thar gsal byed shel gyi me long bzhugs/} \'The Glass Mirror that Shows Clearly the Life Examples of the Successive Births of the Kind Dharma Lord\'. A text detailing the histories of the various incarnations of Chagdud Tulku provided by Olover Boldizar.',
+    }
+  },
+  'DanMartin': {
+    match: '(^|[^-A-Za-z0-9\.])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      'abbr.':'abbreviation',
+      'Ch.':'Chinese',
+      'coll.':'Colloquial',
+      'fut.':'future',
+      'hon.':'honorific',
+      'impv.':'imperative',
+      'lit.':'literal meaning, literally',
+      'med.':'medical',
+      'Mong.':'Mongolian',
+      'obs.':'obsolete',
+      'O. T.':'Old Tibetan (both Dunhuang and brda\'-rnying [early Phyi-dar] vocabulary, nota bene)',
+      'pf.':'perfect (past tense)',
+      'q. v.':'quod vide (which one should have a look at)',
+      'Skt.':'Sanskrit',
+      'ZZ':'Zhang-zhung language [ZZ means Zhang-zhung Snyan-brgyud--nota bene].',
+    }
+  },
+  'TibTermProject': {
+    match: ['([(]|[(][^)"]*[^A-Za-z0-9)>"])(TERM)([^A-Za-z0-9<(][^>)]*[)]|[^A-Za-z0-9<)][^>)]*<[^/)][^)]*[)]|[)])', '([(]|[(](?:<[^>]*>[^<>]*</[^>]*>[^<>,]*,?)*[^A-Za-z0-9])(TERM)([^A-Za-z0-9<)][^>)]*[)]|(?:,?<[^>]*>[^<>]*</[^>]*>[^<>,]*)*[)]|[)])'], 
+    items: {}
+  }
+};

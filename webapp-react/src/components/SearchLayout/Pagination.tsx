@@ -1,7 +1,7 @@
 /**
  * Pagination – prev / next buttons and result-count info.
  */
-interface Props {
+interface PaginationProps {
   offset: number;
   resultCount: number;
   listSize: number;
@@ -15,7 +15,7 @@ export default function Pagination({
   listSize,
   onPrev,
   onNext,
-}: Props) {
+}: PaginationProps) {
   const isFirstPage = offset === 0;
   const isLastPage = resultCount <= listSize;
 

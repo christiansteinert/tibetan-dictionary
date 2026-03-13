@@ -12,7 +12,7 @@ import settingsReducer from './settingsSlice';
  * Middleware that saves the settings slice to localStorage
  * whenever an action in the "settings/" namespace is dispatched.
  */
-const localStorageMiddleware = (store) => (next) => (action) => {
+const localStorageMiddleware = (store: any) => (next: any) => (action: any) => {
   const result = next(action);
 
   if (action.type?.startsWith('settings/')) {
@@ -35,5 +35,8 @@ const store = configureStore({
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(localStorageMiddleware),
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
 
 export default store;

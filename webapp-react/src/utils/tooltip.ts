@@ -14,14 +14,14 @@ let isTouchScreen = false;
 
 // Detect touch once – then stop listening
 if (typeof window !== 'undefined') {
-  const setHasTouch = () => {
+  const setHasTouch = (): void => {
     isTouchScreen = true;
     window.removeEventListener('touchstart', setHasTouch);
   };
   window.addEventListener('touchstart', setHasTouch, false);
 }
 
-function getTooltipText(el) {
+function getTooltipText(el: HTMLElement): string {
   return (
     el.getAttribute('data-tooltip-html') ||
     el.getAttribute('title') ||
@@ -30,8 +30,8 @@ function getTooltipText(el) {
   );
 }
 
-function closestTooltip(target) {
-  let el = target;
+function closestTooltip(target: EventTarget | null): HTMLElement | null {
+  let el = target as HTMLElement | null;
   while (el && !el.classList?.contains('tooltip')) {
     el = el.parentElement;
   }
@@ -40,8 +40,8 @@ function closestTooltip(target) {
 
 // ─── Hover tooltip (desktop only) ─────────────────────────────
 
-function handleMouseOver(e) {
-  if (window.cordova || isTouchScreen) return;
+function handleMouseOver(e: MouseEvent): void {
+  if ((window as any).cordova || isTouchScreen) return;
   const tooltipEl = closestTooltip(e.target);
   if (!tooltipEl) return;
 
@@ -79,7 +79,7 @@ function handleMouseOver(e) {
     offsY = -toolHeight - 25;
   }
 
-  const moveTT = (ev) => {
+  const moveTT = (ev: MouseEvent): void => {
     let x = ev.pageX;
     if (x + toolWidth > bodyWidth - 15) x = bodyWidth - toolWidth - 15;
     tip.style.top = ev.pageY + offsY + 'px';
@@ -90,12 +90,12 @@ function handleMouseOver(e) {
   tip.style.opacity = '1';
 
   // Follow mouse
-  tooltipEl._ttMove = moveTT;
+  (tooltipEl as any)._ttMove = moveTT;
   tooltipEl.addEventListener('mousemove', moveTT);
 }
 
-function handleMouseOut(e) {
-  if (window.cordova || isTouchScreen) return;
+function handleMouseOut(e: MouseEvent): void {
+  if ((window as any).cordova || isTouchScreen) return;
   const tooltipEl = closestTooltip(e.target);
   if (!tooltipEl) return;
 
@@ -109,15 +109,15 @@ function handleMouseOut(e) {
   // Remove tooltip element + handler
   const tip = document.getElementById('tooltip');
   if (tip) tip.remove();
-  if (tooltipEl._ttMove) {
-    tooltipEl.removeEventListener('mousemove', tooltipEl._ttMove);
-    delete tooltipEl._ttMove;
+  if ((tooltipEl as any)._ttMove) {
+    tooltipEl.removeEventListener('mousemove', (tooltipEl as any)._ttMove);
+    delete (tooltipEl as any)._ttMove;
   }
 }
 
 // ─── Click popup (works on all devices) ────────────────────────
 
-function handleClick(e) {
+function handleClick(e: MouseEvent): void {
   const tooltipEl = closestTooltip(e.target);
   if (!tooltipEl) return;
 
@@ -138,16 +138,21 @@ function handleClick(e) {
     '</div></div>';
   document.body.appendChild(container);
 
-  container.querySelector('#tooltip-close-btn').addEventListener('click', (ev) => {
-    ev.preventDefault();
-    container.remove();
-  });
+  const closeBtn = container.querySelector('#tooltip-close-btn') as HTMLAnchorElement | null;
+  if (closeBtn) {
+    closeBtn.addEventListener('click', (ev: MouseEvent) => {
+      ev.preventDefault();
+      container.remove();
+    });
+  }
 
   // Also hide the hover tooltip
   handleMouseOut(e);
 }
 
 // ─── Public API ────────────────────────────────────────────────
+
+type TooltipCleanup = () => void;
 
 /**
  * Bind tooltip handlers to all `.tooltip` elements inside a container.
@@ -156,17 +161,17 @@ function handleClick(e) {
  * @param {HTMLElement} container – the parent element to delegate from
  * @returns {Function} cleanup – call this to unbind
  */
-export function bindTooltips(container) {
+export function bindTooltips(container: HTMLElement | null): TooltipCleanup {
   if (!container) return () => {};
 
-  const onOver = (e) => {
-    if (closestTooltip(e.target)) handleMouseOver(e);
+  const onOver = (e: Event): void => {
+    if (closestTooltip((e as MouseEvent).target)) handleMouseOver(e as MouseEvent);
   };
-  const onOut = (e) => {
-    if (closestTooltip(e.target)) handleMouseOut(e);
+  const onOut = (e: Event): void => {
+    if (closestTooltip((e as MouseEvent).target)) handleMouseOut(e as MouseEvent);
   };
-  const onClick = (e) => {
-    if (closestTooltip(e.target)) handleClick(e);
+  const onClick = (e: Event): void => {
+    if (closestTooltip((e as MouseEvent).target)) handleClick(e as MouseEvent);
   };
 
   container.addEventListener('mouseover', onOver);

@@ -7,18 +7,24 @@ import { useMemo } from 'react';
 import { DICTLIST } from '../../config/dictlist';
 import { GLOBAL_SETTINGS } from '../../config/globalSettings';
 
+interface CreditEntry {
+  id: string;
+  title: string;
+  description: string;
+}
+
 export default function WelcomePage() {
   // Build credits list from dictionaries that have listCredits: "true"
-  const credits = useMemo(() => {
+  const credits = useMemo<CreditEntry[]>(() => {
     const isLocalhost = window.location?.hostname?.startsWith('localhost');
     const publicOnly = GLOBAL_SETTINGS.publicOnly && !isLocalhost;
 
     return Object.entries(DICTLIST)
-      .filter(([, info]) => {
+      .filter(([, info]: [string, any]) => {
         if (publicOnly && info.public !== 'true') return false;
         return info.listCredits === 'true';
       })
-      .map(([id, info]) => {
+      .map(([id, info]: [string, any]) => {
         let title = '';
         let description = '';
 

@@ -6,7 +6,11 @@
  * .textInputWrap so the CSS selector `#searchTerm:not(:placeholder-shown) + .clear-input`
  * can show/hide it based on input content.
  */
-export default function ClearButton({ onClick }) {
+interface Props {
+  onClick: () => void;
+}
+
+export default function ClearButton({ onClick }: Props) {
   return (
     <button
       id="clearInputBtn"

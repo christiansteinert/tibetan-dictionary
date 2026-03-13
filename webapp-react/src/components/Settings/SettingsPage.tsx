@@ -33,8 +33,8 @@ export default function SettingsPage() {
   } = useSettings();
 
   // Snapshot settings on mount so we can restore them on cancel
-  const currentSettings = useSelector((s) => s.settings);
-  const snapshot = useRef(null);
+  const currentSettings = useSelector((s: any) => s.settings);
+  const snapshot = useRef<Record<string, unknown> | null>(null);
   useEffect(() => {
     // Capture only once when the page mounts
     if (!snapshot.current) {
@@ -61,7 +61,7 @@ export default function SettingsPage() {
   }, [resetSettings, navigate]);
 
   const handleDictionaryChange = useCallback(
-    (active, inactive) => {
+    (active: string[], inactive: string[]) => {
       updateDictionaries(active, inactive);
     },
     [updateDictionaries]

@@ -15,26 +15,42 @@ import {
 import { readTerm, checkTibetanSectionsForLinks } from '../services/DictionaryApi';
 import { formatDefinitionList } from '../utils/definitionFormatter';
 import { DICTLIST } from '../config/dictlist';
+import type { DictEntry } from '../config/dictlist';
 import { ABBREVIATIONS } from '../config/abbreviations';
 import { WylieConverter } from '../utils/wylieConverter';
+import type { Language } from '../types';
+
+interface InlineSection {
+  id: string;
+  content: string;
+  title: string;
+}
 
 const wylieConverter = new WylieConverter();
 
-export default function useDictionaryLookup() {
+interface LookupResult {
+  html: string;
+  inlineSections: Record<string, InlineSection>;
+}
+
+interface UseDictionaryLookupReturn {
+  lookupTerm: (term: string, termLang?: Language) => Promise<LookupResult | null>;
+}
+
+export default function useDictionaryLookup(): UseDictionaryLookupReturn {
   const dispatch = useDispatch();
-  const { activeDictionaries } = useSelector((s) => s.settings);
-  const { unicode } = useSelector((s) => s.settings);
-  const lang = useSelector((s) => s.search.lang);
+  const { activeDictionaries } = useSelector((s: { settings: { activeDictionaries: string[] } }) => s.settings);
+  const { unicode } = useSelector((s: any) => s.settings);
+  const lang = useSelector((s: any) => s.search.lang);
 
   /**
    * Look up a term's definitions and produce formatted HTML.
    *
-   * @param {string} term  – the term in Wylie (for Tibetan) or plain text (English)
-   * @param {string} termLang – 'tib' or 'en'
-   * @returns {Promise<{ html: string, inlineSections: Object } | null>}
+   * @param term – the term in Wylie (for Tibetan) or plain text (English)
+   * @param termLang – 'tib' or 'en'
    */
   const lookupTerm = useCallback(
-    async (term, termLang) => {
+    async (term: string, termLang?: Language): Promise<LookupResult | null> => {
       if (!term) return null;
 
       const normalized = wylieConverter.normalizeWylieWhitespace(term);
@@ -52,7 +68,7 @@ export default function useDictionaryLookup() {
         );
 
         // Build ordered dictionary map based on the user's active order
-        const orderedDicts = {};
+        const orderedDicts: Record<string, DictEntry> = {};
         for (const id of activeDictionaries) {
           if (DICTLIST[id]) {
             orderedDicts[id] = DICTLIST[id];
@@ -73,9 +89,9 @@ export default function useDictionaryLookup() {
 
         // Check for inline Tibetan sections that might be clickable
         if (Object.keys(result.allInlineSections).length > 0) {
-          const available = await checkTibetanSectionsForLinks(
+          const available = (await checkTibetanSectionsForLinks(
             result.allInlineSections
-          );
+          )) as Record<string, InlineSection>;
           // Dispatch available sections so DefinitionView can activate links
           dispatch(setInlineSections(available));
           return {
@@ -88,7 +104,7 @@ export default function useDictionaryLookup() {
         return { html: result.tableHtml, inlineSections: {} };
       } catch (err) {
         console.error('Lookup error:', err);
-        dispatch(setError(err.message));
+        dispatch(setError(err instanceof Error ? err.message : String(err)));
         dispatch(setIsLoadingDefinition(false));
         return null;
       }

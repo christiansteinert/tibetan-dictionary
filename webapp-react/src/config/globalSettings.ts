@@ -3,6 +3,11 @@
  * In the build pipeline, this file is generated with publicOnly: true/false
  * depending on whether private dictionaries are included.
  */
-export const GLOBAL_SETTINGS = {
+
+interface GlobalSettings {
+  publicOnly: boolean;
+}
+
+export const GLOBAL_SETTINGS: GlobalSettings = {
   publicOnly: true,
 };

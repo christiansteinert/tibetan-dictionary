@@ -7,7 +7,25 @@
 import { useEffect, forwardRef, useImperativeHandle } from 'react';
 import useWylieInput from '../../hooks/useWylieInput';
 
-const WylieInputField = forwardRef(function WylieInputField(
+interface Props {
+  inputLang: string;
+  useUnicodeTibetan: boolean;
+  lowercase: boolean;
+  onInputChange: () => void;
+  onEnter: () => void;
+}
+
+export interface WylieInputHandle {
+  getValue: () => string;
+  setValue: (v: string) => void;
+  clear: () => void;
+  focus: () => void;
+  setLastUniInput: (v: string) => void;
+  setCurrentInput: (v: string) => void;
+  setWasTypedInWylie: (v: boolean) => void;
+}
+
+const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputField(
   { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter },
   ref
 ) {

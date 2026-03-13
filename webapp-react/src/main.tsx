@@ -23,7 +23,7 @@ redirectLegacyHash();
 // Initialize the definition formatter (loads abbreviation patterns, etc.)
 initializeFormatters();
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={store}>
       <HashRouter>

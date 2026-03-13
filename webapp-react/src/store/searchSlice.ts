@@ -4,43 +4,64 @@
  * Tracks the current search term, language, pagination offset,
  * sidebar visibility, and the list of results.
  */
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
-const initialState = {
+interface InlineSection {
+  id: string;
+  content: string;
+  title: string;
+}
+
+interface SearchState {
   /** The currently active/displayed term (Wylie for Tibetan) */
-  activeTerm: '',
+  activeTerm: string;
 
   /** The search language: 'tib' or 'en' */
-  lang: 'tib',
+  lang: 'tib' | 'en';
 
   /** The input language (may differ from lang during transitions) */
-  inputLang: 'tib',
+  inputLang: 'tib' | 'en';
 
   /** The last search term that was sent to the API */
-  currentListTerm: '',
+  currentListTerm: string;
 
   /** Whether the sidebar (result list) is visible on small screens */
-  sidebarVisible: false,
+  sidebarVisible: boolean;
 
   /** Pagination offset for search results */
-  offset: 0,
+  offset: number;
 
-  /** Current search results — array of [term] arrays */
-  results: [],
+  /** Current search results — array of term string arrays */
+  results: string[][];
 
-  /** Definitions for the active term — { dictId: htmlString, ... } */
-  definitions: null,
+  /** Definitions for the active term — the rendered HTML table */
+  definitions: string | null;
 
   /** Inline Tibetan sections that have been confirmed as clickable links */
-  inlineSections: {},
+  inlineSections: Record<string, InlineSection>;
 
   /** Whether a search request is in flight */
-  isSearching: false,
+  isSearching: boolean;
 
   /** Whether a definition-read request is in flight */
-  isLoadingDefinition: false,
+  isLoadingDefinition: boolean;
 
   /** Any error message from the last failed request */
+  error: string | null;
+}
+
+const initialState: SearchState = {
+  activeTerm: '',
+  lang: 'tib',
+  inputLang: 'tib',
+  currentListTerm: '',
+  sidebarVisible: false,
+  offset: 0,
+  results: [],
+  definitions: null,
+  inlineSections: {},
+  isSearching: false,
+  isLoadingDefinition: false,
   error: null,
 };
 
@@ -48,40 +69,40 @@ const searchSlice = createSlice({
   name: 'search',
   initialState,
   reducers: {
-    setActiveTerm(state, action) {
+    setActiveTerm(state, action: PayloadAction<string>) {
       state.activeTerm = action.payload || '';
     },
-    setLang(state, action) {
+    setLang(state, action: PayloadAction<'tib' | 'en'>) {
       if (action.payload) state.lang = action.payload;
     },
-    setInputLang(state, action) {
+    setInputLang(state, action: PayloadAction<'tib' | 'en'>) {
       if (action.payload) state.inputLang = action.payload;
     },
-    setCurrentListTerm(state, action) {
+    setCurrentListTerm(state, action: PayloadAction<string>) {
       state.currentListTerm = action.payload || '';
     },
-    setSidebarVisible(state, action) {
+    setSidebarVisible(state, action: PayloadAction<boolean>) {
       state.sidebarVisible = !!action.payload;
     },
-    setOffset(state, action) {
-      state.offset = Math.max(0, parseInt(action.payload, 10) || 0);
+    setOffset(state, action: PayloadAction<number | string>) {
+      state.offset = Math.max(0, parseInt(String(action.payload), 10) || 0);
     },
-    setResults(state, action) {
+    setResults(state, action: PayloadAction<string[][]>) {
       state.results = action.payload || [];
     },
-    setDefinitions(state, action) {
-      state.definitions = action.payload;
+    setDefinitions(state, action: PayloadAction<string | null>) {
+      state.definitions = action.payload || null;
     },
-    setInlineSections(state, action) {
+    setInlineSections(state, action: PayloadAction<Record<string, InlineSection>>) {
       state.inlineSections = action.payload || {};
     },
-    setIsSearching(state, action) {
+    setIsSearching(state, action: PayloadAction<boolean>) {
       state.isSearching = !!action.payload;
     },
-    setIsLoadingDefinition(state, action) {
+    setIsLoadingDefinition(state, action: PayloadAction<boolean>) {
       state.isLoadingDefinition = !!action.payload;
     },
-    setError(state, action) {
+    setError(state, action: PayloadAction<string | null>) {
       state.error = action.payload || null;
     },
     /** Reset the search state back to the initial values */

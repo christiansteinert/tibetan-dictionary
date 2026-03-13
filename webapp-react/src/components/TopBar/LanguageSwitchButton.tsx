@@ -6,7 +6,12 @@
 import tibEnImg from '../../assets/images/tib-en.png';
 import enTibImg from '../../assets/images/en-tib.png';
 
-export default function LanguageSwitchButton({ inputLang, onSwitch }) {
+interface Props {
+  inputLang: string;
+  onSwitch: () => void;
+}
+
+export default function LanguageSwitchButton({ inputLang, onSwitch }: Props) {
   const isTibetan = inputLang === 'tib';
 
   return (

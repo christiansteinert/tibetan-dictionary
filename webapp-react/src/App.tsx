@@ -11,9 +11,9 @@ import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
 
 export default function App() {
-  const { layout, unicode } = useSelector((s) => s.settings);
-  const inputLang = useSelector((s) => s.search.inputLang);
-  const sidebarVisible = useSelector((s) => s.search.sidebarVisible);
+  const { layout, unicode } = useSelector((s: any) => s.settings);
+  const inputLang = useSelector((s: any) => s.search.inputLang);
+  const sidebarVisible = useSelector((s: any) => s.search.sidebarVisible);
 
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {
@@ -30,8 +30,8 @@ export default function App() {
     body.classList.toggle('enInput', inputLang === 'en');
 
     // Platform class
-    body.classList.toggle('mobile', !!window.cordova);
-    body.classList.toggle('desktop', !window.cordova);
+    body.classList.toggle('mobile', !!(window as any).cordova);
+    body.classList.toggle('desktop', !(window as any).cordova);
   }, [layout, unicode, inputLang]);
 
   const mainScreenClass = sidebarVisible ? 'forceLeftSideVisible' : '';
