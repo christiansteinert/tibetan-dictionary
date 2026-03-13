@@ -1,0 +1,51 @@
+/**
+ * App – root component.
+ *
+ * Applies global CSS classes based on settings (dark theme, unicode mode)
+ * and renders the TopBar + routed content.
+ */
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import TopBar from './components/TopBar/TopBar';
+import AppRoutes from './routes/AppRoutes';
+import ErrorBoundary from './components/common/ErrorBoundary';
+
+export default function App() {
+  const { layout, unicode } = useSelector((s) => s.settings);
+  const inputLang = useSelector((s) => s.search.inputLang);
+  const sidebarVisible = useSelector((s) => s.search.sidebarVisible);
+
+  // Apply global CSS classes to <body> based on settings
+  useEffect(() => {
+    const body = document.body;
+
+    // Theme
+    body.classList.toggle('dark', layout === 'layout_black');
+
+    // Unicode classes
+    const isUnicode = unicode === true || unicode === 'output';
+    body.classList.toggle('unicodeTib', isUnicode);
+    body.classList.toggle('sidebarTib', isUnicode && inputLang === 'tib');
+    body.classList.toggle('unicodeTibInput', unicode === true && inputLang === 'tib');
+    body.classList.toggle('enInput', inputLang === 'en');
+
+    // Platform class
+    body.classList.toggle('mobile', !!window.cordova);
+    body.classList.toggle('desktop', !window.cordova);
+  }, [layout, unicode, inputLang]);
+
+  const mainScreenClass = sidebarVisible ? 'forceLeftSideVisible' : '';
+
+  return (
+    <ErrorBoundary>
+      <div id="mainScreen" className={mainScreenClass}>
+        <TopBar />
+        <div className="page">
+          <div className="contentArea">
+            <AppRoutes />
+          </div>
+        </div>
+      </div>
+    </ErrorBoundary>
+  );
+}
