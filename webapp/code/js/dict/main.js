@@ -1,7 +1,4 @@
 var DICT = {
-  _lastHashEvent: 0,
-  lastHomeBackButtonTime: 0,
-
   // initialized during module loading:
   wylieConverter: null,
   dataAccess: null,
@@ -54,7 +51,7 @@ var DICT = {
     return this.dataAccess;
   },
 
-  init: function ($, dataAccess, wylieConverter, DefinitionFormatter, scannedDictionaryViewer, InputHandler, appState, searchController, resultListRenderer) {
+  init: function ($, dataAccess, wylieConverter, DefinitionFormatter, scannedDictionaryViewer, InputHandler, appState, searchController, resultListRenderer, navHistoryHandler) {
     this.dataAccess = dataAccess;
     this.wylieConverter = wylieConverter;
     this.searchController = searchController;
@@ -63,6 +60,7 @@ var DICT = {
     this.scannedDictionaryViewer = scannedDictionaryViewer;
     this.InputHandler = InputHandler;
     this.appState = appState;
+    this.navHistoryHandler = navHistoryHandler;
 
     if (window.cordova) {
       $('body').addClass('mobile');
@@ -155,70 +153,11 @@ var DICT = {
 
       this.resultListRenderer.initDataTable('#wordList');
 
-      // handle navigation events
-      // - listen to the "back" button on android
-      document.addEventListener("backbutton", (event) => {
-
-        // If we are on cordova, exit the app if the user presses back twice on the home screen
-        if (window.cordova) {
-          if (this._getCurrentHash() === '#home') {
-            var now = Date.now();
-            if (now - this.lastHomeBackButtonTime < 1500) {
-              if (navigator.app && navigator.app.exitApp) {
-                navigator.app.exitApp();
-              }
-            }
-            this.lastHomeBackButtonTime = now;
-          }
-
-          // Prevent Cordova / Android default (which would finish the Activity)
-          if (event.preventDefault) { event.preventDefault(); }
-          if (event.stopPropagation) { event.stopPropagation(); }
-        }
-
-        // Navigate back inside the app if we are not already at the home state
-        if (this._getCurrentHash() !== '#home') {
-          history.back();
-        }
-
-      }, false);
-
-      // - listen to changes of the URL
-      var hashEventCount = 0;
-      $(window).hashchange((event) => {
-        hashEventCount++;
-
-        if (new Date().getTime() - this._lastHashEvent < 300)
-          return; //ignore hashchange events that are very quick after a user action
-
-        var state = this._getCurrentHash();
-
-        if (state.indexOf('#') === 0) {
-          state = state.substring(1);
-        }
-        try {
-          state = decodeURIComponent(state);
-        } catch (e) {
-          state = '';
-          console.log('Failed to decode state hash: ' + e.message);
-        }
-
-        if (state === 'home') {
-          // restore the homepage content
-          // but don't refresh the homepage right away again when hitting the home page upon startup
-          if (hashEventCount > 1) {
-            location.reload();
-          }
-          return;
-        }
-        this.setState(state);
-      });
-
       var sharedTextPluginAvailable = this.handleSharedText();
       if (!sharedTextPluginAvailable) {
         // If the shared text plugin is not available then just trigger the hashchange event to load the state 
         // of the app from the URL hash in case somebody has opened a bookmark or reloaded the page 
-        $(window).hashchange();
+        this.navHistoryHandler.triggerHashChange();
       }
     } catch (e) {
       alert('error initializing:' + e.message);
@@ -226,7 +165,7 @@ var DICT = {
   },
 
   prev: function () {
-    if (this._getCurrentHash() === '#home') {
+    if (this.navHistoryHandler.getCurrentHash() === '#home') {
       return;
     }
 
@@ -244,7 +183,7 @@ var DICT = {
   },
 
   next: function () {
-    if (this._getCurrentHash() === '#home') {
+    if (this.navHistoryHandler.getCurrentHash() === '#home') {
       return;
     }
 
@@ -535,24 +474,17 @@ var DICT = {
     }
   },
 
-  _getCurrentHash: function () {
-    if (window.location.hash === '' || window.location.hash === '#') {
-      return '#home';
-    }
-    return window.location.hash;
-  },
-
   storeNavigationState: function () {
-    this._lastHashEvent = new Date().getTime();
+    this.navHistoryHandler.recordHashEvent();
     var currentState = this.getCurrentState();
-    var currentHash = this._getCurrentHash();
+    var currentHash = this.navHistoryHandler.getCurrentHash();
     var previousState = this.appState.getLastStoredState();
 
     var newUrlHash = encodeURIComponent(JSON.stringify(currentState));
 
     if (this.isSmallScreen() && currentState.forceLeftSideVisible !== previousState.forceLeftSideVisible) {
       console.log("sidebar change: setting hash");
-      window.location.hash = newUrlHash;
+      this.navHistoryHandler.setHash(newUrlHash);
 
     } else if (currentState.lang !== previousState.lang
       || currentState.inputLang !== previousState.inputLang
@@ -561,19 +493,13 @@ var DICT = {
 
       if (currentState.activeTerm || previousState.activeTerm || (currentState.inputLang !== previousState.inputLang)) {
         console.log("setting hash");
-        window.location.hash = newUrlHash;
+        this.navHistoryHandler.setHash(newUrlHash);
       }
 
     } else {
-      var oldUrl = window.location.href;
-      if (oldUrl.indexOf('#')) {
-        var newUrl = oldUrl.replace(window.location.hash, '#' + newUrlHash)
-      } else {
-        var newUrl = oldUrl += '#' + newUrlHash;
-      }
       if (currentHash !== '#home') {
         console.log("replacing url");
-        window.location.replace(newUrl);
+        this.navHistoryHandler.replaceUrl(newUrlHash);
       }
     }
     this.appState.markStateAsStored();
@@ -713,12 +639,14 @@ Promise.all([
   import('../ui/scannedDictionaryViewer.mjs'),
   import('../ui/resultListRenderer.mjs'),
   import('../language-io/inputHandler.mjs'),
-  import('./appState.mjs'),
-]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { SearchController }, { DefinitionFormatter }, { ScannedDictionaryViewer }, { ResultListRenderer }, { InputHandler }, { AppState }]) => {
+  import('../state/appState.mjs'),
+  import('../state/navHistoryHandler.mjs'),
+]).then(([{ WylieConverter }, { PhpDataAccess, CordovaDataAccess }, { SearchController }, { DefinitionFormatter }, { ScannedDictionaryViewer }, { ResultListRenderer }, { InputHandler }, { AppState }, { NavHistoryHandler }]) => {
 
   var appState = new AppState();
   var wylieConverter = new WylieConverter();
   var scanViewer = new ScannedDictionaryViewer(jQuery);
+  var navHistoryHandler = new NavHistoryHandler(appState);
   DefinitionFormatter.initialize();
 
   var resultListRenderer = new ResultListRenderer(jQuery, {
@@ -728,13 +656,18 @@ Promise.all([
     }
   });
 
+  // Listen for hash change events and update state
+  document.addEventListener('nav-state-change', (event) => {
+    DICT.setState(event.detail.state);
+  });
+
   if (window.cordova) {
     //phonegap-based initialization for mobile app
     document.addEventListener("deviceready", () => {
       jQuery(($) => {
         var dataAccess = new CordovaDataAccess();
         var searchController = new SearchController(dataAccess);
-        DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer);
+        DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer, navHistoryHandler);
       });
     }, false);
   } else {
@@ -742,7 +675,7 @@ Promise.all([
     jQuery(($) => {
       var dataAccess = new PhpDataAccess();
       var searchController = new SearchController(dataAccess);
-      DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer);
+      DICT.init($, dataAccess, wylieConverter, DefinitionFormatter, scanViewer, InputHandler, appState, searchController, resultListRenderer, navHistoryHandler);
     });
   }
 });

@@ -3,9 +3,18 @@
  * Keeps all application state and allows subscribing to update events for reactive updates.
  */
 export class AppState {
+  UIState = {
+    HOME: {},
+    SETTINGS: {},
+    SEARCH_RESULTS: {},
+  };
+
   #state = {
     // state based on user preferences
     useUnicodeTibetan: true,
+
+    // active navigation step
+    uiState: this.UIState.HOME,
 
     // dynamic state
     activeTerm: '',
@@ -16,7 +25,7 @@ export class AppState {
     offset: 0,
     searchMode: 'standard',
   };
-  
+
   #listeners = {};
   #lastStoredState = {};
 
@@ -32,25 +41,25 @@ export class AppState {
   // Property accessors with validation
   get activeTerm() { return this.#state.activeTerm; }
   set activeTerm(v) { this.#set('activeTerm', v || ''); }
-  
+
   get lang() { return this.#state.lang; }
   set lang(v) { if (v) this.#set('lang', v); }
-  
+
   get inputLang() { return this.#state.inputLang; }
   set inputLang(v) { if (v) this.#set('inputLang', v); }
-  
+
   get currentListTerm() { return this.#state.currentListTerm; }
   set currentListTerm(v) { this.#set('currentListTerm', v || ''); }
-  
+
   get sidebarVisible() { return this.#state.sidebarVisible; }
   set sidebarVisible(v) { this.#set('sidebarVisible', !!v); }
-  
+
   get offset() { return this.#state.offset; }
   set offset(v) { this.#set('offset', Math.max(0, parseInt(v, 10) || 0)); }
-  
+
   get searchMode() { return this.#state.searchMode; }
   set searchMode(v) { if (v === 'standard' || v === 'extended') this.#set('searchMode', v); }
-  
+
   get useUnicodeTibetan() { return this.#state.useUnicodeTibetan; }
   set useUnicodeTibetan(v) {
     if (v === 'true') v = true;
@@ -70,9 +79,9 @@ export class AppState {
     (this.#listeners[event] ||= []).push(cb);
     return () => { this.#listeners[event] = this.#listeners[event].filter(f => f !== cb); };
   }
-  
+
   #emit(event, data) {
-    (this.#listeners[event] || []).forEach(cb => { try { cb(data); } catch(e) { console.error(e); } });
+    (this.#listeners[event] || []).forEach(cb => { try { cb(data); } catch (e) { console.error(e); } });
   }
 
   // State snapshots for URL hash serialization
@@ -88,9 +97,9 @@ export class AppState {
     };
     return snapshot;
   }
-  
+
   getSnapshotAsString() { return JSON.stringify(this.getSnapshot()); }
-  
+
   restoreFromSnapshot(s) {
     if (!s) return;
     ['activeTerm', 'lang', 'inputLang', 'currentListTerm', 'offset', 'searchMode'].forEach(k => {

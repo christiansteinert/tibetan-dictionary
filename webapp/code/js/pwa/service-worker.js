@@ -15,11 +15,14 @@ const ASSETS = [
   './lib/jquery_tooltip/tooltip.css',
   './lib/photoswipe/photoswipe.css',
   // App code
+  './code/js/state/appState.mjs',
+  './code/js/state/navHistoryHandler.mjs',
   './code/js/db/dataAccess.mjs',
   './code/js/db/searchController.mjs',
   './code/js/ewts-js/src/EwtsConverter.mjs',
   './code/js/ui/definitionFormatter.mjs',
   './code/js/ui/scannedDictionaryViewer.mjs',
+  './code/js/ui/resultListRenderer.mjs',
   './code/js/language-io/inputHandler.mjs',
   './code/js/language-io/sanskritConverter.mjs',
   './code/js/language-io/wylieConverter.mjs',
@@ -73,9 +76,9 @@ async function listCachesSortedNewestFirst() {
   const keys = await caches.keys();
   return keys
     .filter(k => k.startsWith(CACHE_PREFIX))
-    .sort((a,b) => {
-      const ta = parseInt(a.substring(CACHE_PREFIX.length),10) || 0;
-      const tb = parseInt(b.substring(CACHE_PREFIX.length),10) || 0;
+    .sort((a, b) => {
+      const ta = parseInt(a.substring(CACHE_PREFIX.length), 10) || 0;
+      const tb = parseInt(b.substring(CACHE_PREFIX.length), 10) || 0;
       return tb - ta; // newest first
     });
 }
@@ -87,21 +90,21 @@ async function getLatestCacheName() {
 
 async function writeInstallTime(cache, ts) {
   try {
-    await cache.put('__meta_install_time__', new Response(String(ts), { headers: { 'content-type': 'text/plain' }}));
-  } catch(e) {
+    await cache.put('__meta_install_time__', new Response(String(ts), { headers: { 'content-type': 'text/plain' } }));
+  } catch (e) {
     console.warn('[SW] Failed to write install time meta', e);
   }
 }
 async function readInstallTime(cacheName) {
-  if(!cacheName) return 0;
+  if (!cacheName) return 0;
   try {
     const cache = await caches.open(cacheName);
     const res = await cache.match('__meta_install_time__');
-    if(!res) return 0;
+    if (!res) return 0;
     const text = await res.text();
     const num = parseInt(text, 10);
     return isNaN(num) ? 0 : num;
-  } catch(e) {
+  } catch (e) {
     console.warn('[SW] Failed to read install time meta', e);
     return 0;
   }
@@ -111,15 +114,15 @@ async function precacheAsset(cache, url, required) {
   try {
     const req = new Request(url, { cache: 'no-cache' });
     const resp = await fetch(req);
-    if(!resp.ok) {
-      if(required) throw new Error('Required asset failed ' + url + ' status=' + resp.status);
+    if (!resp.ok) {
+      if (required) throw new Error('Required asset failed ' + url + ' status=' + resp.status);
       console.warn('[SW] Optional asset not cached (status ' + resp.status + '):', url);
       return false;
     }
     await cache.put(req, resp);
     return true;
-  } catch(e) {
-    if(required) throw e;
+  } catch (e) {
+    if (required) throw e;
     console.warn('[SW] Skipping optional asset due to error:', url, e);
     return false;
   }
@@ -135,7 +138,7 @@ async function createNewStaticCache() {
   }
   // Then attempt optional assets (non-fatal)
   for (const url of ASSETS) {
-    if(REQUIRED_ASSETS.includes(url)) continue; // already cached
+    if (REQUIRED_ASSETS.includes(url)) continue; // already cached
     await precacheAsset(cache, url, false);
   }
   await writeInstallTime(cache, timestamp);
@@ -146,34 +149,34 @@ async function purgeOldCaches(keepName) {
   try {
     const keys = await caches.keys();
     await Promise.all(keys.filter(k => k.startsWith(CACHE_PREFIX) && k !== keepName).map(k => caches.delete(k)));
-  } catch(e) {
+  } catch (e) {
     console.warn('[SW] Failed purging old caches', e);
   }
 }
 
 async function ensureInitialCache() {
-  if(!activeCacheName) activeCacheName = await getLatestCacheName();
-  if(!activeCacheName) {
+  if (!activeCacheName) activeCacheName = await getLatestCacheName();
+  if (!activeCacheName) {
     try {
       activeCacheName = await createNewStaticCache();
       await purgeOldCaches(activeCacheName);
-    } catch(e) {
+    } catch (e) {
       console.error('[SW] Initial cache population failed (continuing with network-only):', e);
     }
   }
 }
 
 async function maybeUpdateCache() {
-  if(updatingPromise) return updatingPromise;
+  if (updatingPromise) return updatingPromise;
   const installTime = await readInstallTime(activeCacheName);
-  if(Date.now() - installTime < ONE_DAY_MS) return; // still fresh
+  if (Date.now() - installTime < ONE_DAY_MS) return; // still fresh
   updatingPromise = (async () => {
     try {
       const newName = await createNewStaticCache();
       activeCacheName = newName; // atomic switch
       await purgeOldCaches(newName);
       console.log('[SW] Static assets updated');
-    } catch(e) {
+    } catch (e) {
       console.warn('[SW] Update failed, will retry later:', e);
     } finally {
       updatingPromise = null;
@@ -200,32 +203,32 @@ self.addEventListener('activate', event => {
 });
 
 function normalizePath(pathname) {
-  if(pathname === '/' || pathname === '') return './index.html';
+  if (pathname === '/' || pathname === '') return './index.html';
   return pathname.startsWith('/') ? '.' + pathname : pathname;
 }
 
 function isCoreRequest(request) {
-  if(request.method !== 'GET') return false;
+  if (request.method !== 'GET') return false;
   const url = new URL(request.url);
-  if(location.origin !== url.origin) return false;
+  if (location.origin !== url.origin) return false;
   const path = normalizePath(url.pathname);
   return ASSETS.includes(path);
 }
 
 self.addEventListener('fetch', event => {
   const { request } = event;
-  if(request.mode === 'navigate') {
+  if (request.mode === 'navigate') {
     event.respondWith((async () => {
       try {
         const net = await fetch(request);
         maybeUpdateCache();
         return net;
-      } catch(e) {
+      } catch (e) {
         try {
           const cache = activeCacheName ? await caches.open(activeCacheName) : null;
           const cached = cache && await cache.match('./index.html');
-          if(cached) return cached;
-        } catch(inner) {
+          if (cached) return cached;
+        } catch (inner) {
           console.warn('[SW] Offline fallback failed', inner);
         }
         return Response.error();
@@ -234,19 +237,19 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  if(isCoreRequest(request)) {
+  if (isCoreRequest(request)) {
     event.respondWith((async () => {
       try {
         const cache = activeCacheName ? await caches.open(activeCacheName) : null;
         const cached = cache && await cache.match(request, { ignoreVary: true });
-        if(cached) {
+        if (cached) {
           maybeUpdateCache();
           return cached;
         }
         const net = await fetch(request, { cache: 'no-cache' });
         // Do not mutate existing version cache (immutability); rely on update cycle
         return net;
-      } catch(e) {
+      } catch (e) {
         console.warn('[SW] Fetch failed for core asset', request.url, e);
         return Response.error();
       }
@@ -255,9 +258,9 @@ self.addEventListener('fetch', event => {
 });
 
 self.addEventListener('message', event => {
-  if(event.data === 'skipWaiting') {
+  if (event.data === 'skipWaiting') {
     self.skipWaiting();
-  } else if(event.data === 'checkForUpdate') {
+  } else if (event.data === 'checkForUpdate') {
     maybeUpdateCache();
   }
 });

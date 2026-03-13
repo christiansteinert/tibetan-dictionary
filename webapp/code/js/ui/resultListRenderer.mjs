@@ -101,14 +101,14 @@ export class ResultListRenderer {
    */
   #bindClickHandler(lang) {
     this.#$('#wordList')
-    .off('click')
-    .on('click', 'td', (event) => {
-      this.#$('.selected').removeClass('selected');
-      this.#$(event.currentTarget).addClass('selected');
-      const term = this.#$(event.currentTarget).children('a').attr('data-term');
-      this.#onTermSelected(term, lang);
-      return false;
-    });
+      .off('click')
+      .on('click', 'td', (event) => {
+        this.#$('.selected').removeClass('selected');
+        this.#$(event.currentTarget).addClass('selected');
+        const term = this.#$(event.currentTarget).children('a').attr('data-term');
+        this.#onTermSelected(term, lang);
+        return false;
+      });
   }
 
   /**
@@ -123,7 +123,7 @@ export class ResultListRenderer {
     this.#$('#wordList td')
       .filter((index, element) => {
         const listTerm = this.#$(element).find('a').attr('data-term');
-        return listTerm === termToHighlight || 
+        return listTerm === termToHighlight ||
           (lang === "en" && listTerm.toLowerCase() === termToHighlight.toLowerCase());
       })
       .addClass('selected');
@@ -147,15 +147,15 @@ export class ResultListRenderer {
    */
   findMatchingTerm(searchTerm, lang) {
     var matchedTerm = null;
-    
+
     this.#$('#wordList tr td a').each((count, elem) => {
       const term = this.#$(elem).attr('data-term');
-      if (term === searchTerm || 
-          (lang === "en" && term.toLowerCase() === searchTerm.toLowerCase())) {
+      if (term === searchTerm ||
+        (lang === "en" && term.toLowerCase() === searchTerm.toLowerCase())) {
         matchedTerm = term;
       }
     });
-    
+
     return matchedTerm;
   }
 

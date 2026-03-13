@@ -9,9 +9,9 @@ export class ScannedDictionaryViewer {
 
   viewScan(path, pageInfo) {
     const data = [];
-    
+
     for (let i = pageInfo.min_page; i <= pageInfo.max_page; i++) {
-      data.push({ 
+      data.push({
         src: path + i + '.png',
         width: pageInfo.width,
         height: pageInfo.height,

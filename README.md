@@ -57,7 +57,7 @@ Since the application is implemented almost exclusively in Javascript, the appli
 * TibetanDictionary.db is the sqlite 3 database file
 * code/ folder
     * code/css This folder contains css files, icons and a Tibetan web font
-    * code/js/wylie.js This is a javascript-based converter between Wylie transliteration and Unicode. Note: this code is not currently used by the application!
+    * code/js This is the javascript code for the application
 * settings/ folder 
     * settings/abbreviations.js contains the abbreviations and search patterns for applying them to the text for various dictionaries. The content of this file is maintained by hand, i.e., it is not auto-generated. The settings in this file are referenced by settings/dictlist.js since one set of abbreviations may be referenced by more than one dictionary
     * settings/dictlist.js contains the list of known dictionaries together with some settings. Note that not all dictionaries are publically available.
