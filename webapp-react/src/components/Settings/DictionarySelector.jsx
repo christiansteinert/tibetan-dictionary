@@ -7,6 +7,7 @@
 import { useEffect, useRef } from 'react';
 import Sortable from 'sortablejs';
 import { GROUPED_DICTLIST, DICTLIST } from '../../config/dictlist';
+import { bindTooltips } from '@/utils/tooltip';
 
 /**
  * Build language tag HTML for a dictionary entry.
@@ -71,6 +72,11 @@ export default function DictionarySelector({
   // Build the ordered list of dictionary entries (groups + standalone)
   // Active first (in user order), then inactive
   const entries = buildOrderedEntries(activeDictionaries, inactiveDictionaries);
+
+  // Bind custom tooltips to the list container
+  useEffect(() => {
+    return bindTooltips(listRef.current);
+  }, [entries.length]);
 
   // Init Sortable.js on the container
   useEffect(() => {
@@ -163,7 +169,7 @@ export default function DictionarySelector({
             </span>
 
             <span className="dictsettings-label">
-              <label htmlFor={`dict_${id}`}>{info.label}</label>
+              <label htmlFor={`dict_${id}`} dangerouslySetInnerHTML={{ __html: info.label }} />
               <span className="dictionaryTagsBlock">
                 {langTagHtml && (
                   <span
@@ -174,8 +180,8 @@ export default function DictionarySelector({
                 )}
                 {info.about && (
                   <span
-                    className="dict-info"
-                    title={info.about.replace(/[|]/g, '\n')}
+                    className="dict-info tooltip"
+                    title={info.about}
                   />
                 )}
               </span>

@@ -22,6 +22,7 @@ import {
   setLang,
   setSidebarVisible,
 } from '@/store/searchSlice';
+import { WylieConverter } from '@/utils/wylieConverter';
 
 type Language = 'tib' | 'en';
 

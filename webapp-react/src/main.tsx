@@ -13,18 +13,33 @@ import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import store from './store/store';
 import App from './App';
-import { redirectLegacyHash } from './routes/legacyRedirect';
+import { redirectLegacyHash } from '@/routes/legacyRedirect';
+import { handleSharedText } from '@/routes/handleSharedText';
 import './index.css';
 
 // Redirect legacy JSON-based URL hashes to new format before React mounts
 redirectLegacyHash();
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Provider store={store}>
-      <HashRouter>
-        <App />
-      </HashRouter>
-    </Provider>
-  </StrictMode>
-);
+// Handle shared text if running in Cordova environment
+handleSharedText();
+
+// Start the React app
+function startApp() {
+  createRoot(document.getElementById('root')!).render(
+    <StrictMode>
+      <Provider store={store}>
+        <HashRouter>
+          <App />
+        </HashRouter>
+      </Provider>
+    </StrictMode>
+  );
+}
+
+  if ((window as any).cordova) {
+    //phonegap-based initialization for mobile app
+    document.addEventListener("deviceready", startApp);
+  } else {
+    //normal initialization for web
+    startApp();
+  }

@@ -12,6 +12,7 @@ import WylieInputField, { WylieInputHandle } from './WylieInputField';
 import LanguageSwitchButton from './LanguageSwitchButton';
 import ClearButton from './ClearButton';
 import { setInputLang, setSidebarVisible } from '@/store/searchSlice';
+import { WylieConverter } from '@/utils/wylieConverter';
 import settingsImg from '~assets/images/settings.png';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
@@ -30,6 +31,11 @@ export default function TopBar() {
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)
   const useUnicodeTibetan = unicode === true;
 
+  // Stable converter instance for converting display value → Wylie for the URL.
+  // We need this because useWylieInput writes Unicode Tibetan into el.value when
+  // unicode mode is on, but the URL must always use Wylie as the lookup key.
+  const wylieConverter = useRef(new WylieConverter());
+
   /**
    * Triggered when the input changes (syllable complete, backspace, etc.)
    * Navigates to the search route with sidebar=true (soft search).
@@ -42,13 +48,19 @@ export default function TopBar() {
         navigate('/');
         return;
       }
+      // The input field contains Unicode Tibetan when unicode mode is on.
+      // Convert back to Wylie so the URL always uses the Wylie lookup key.
+      const urlTerm =
+        inputLang === 'tib' && useUnicodeTibetan
+          ? wylieConverter.current.uniToWylie(raw).trim()
+          : raw.trim;
       const params = new URLSearchParams({
         offset: '0',
         sidebar: 'true',
       });
-      navigate(`/search/${inputLang}/${encodeURIComponent(raw)}?${params}`, { replace: true });
+      navigate(`/search/${inputLang}/${encodeURIComponent(urlTerm)}?${params}`, { replace: true });
     },
-    [navigate, inputLang]
+    [navigate, inputLang, useUnicodeTibetan]
   );
 
   /**
@@ -59,12 +71,18 @@ export default function TopBar() {
     const raw = inputRef.current?.getValue() ?? '';
     if (!raw.trim()) return;
 
+    // Same Wylie conversion as handleInputChange.
+    const urlTerm =
+      inputLang === 'tib' && useUnicodeTibetan
+        ? wylieConverter.current.uniToWylie(raw).trim()
+        : raw.trim();
+
     const params = new URLSearchParams({
       offset: '0',
       sidebar: 'false',
     });
-    navigate(`/search/${inputLang}/${encodeURIComponent(raw)}?${params}`);
-  }, [navigate, inputLang]);
+    navigate(`/search/${inputLang}/${encodeURIComponent(urlTerm)}?${params}`);
+  }, [navigate, inputLang, useUnicodeTibetan]);
 
   /**
    * Switch between Tibetan and English input.
