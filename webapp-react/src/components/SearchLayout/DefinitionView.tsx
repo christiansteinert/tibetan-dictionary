@@ -16,7 +16,10 @@ interface Props {
 }
 
 interface InlineSection {
-  wylie?: string;
+  id: string;
+  wylie: string;
+  content: string;
+  title: string;
 }
 
 export default function DefinitionView({ onTermClick, onScanClick }: Props) {
@@ -93,14 +96,14 @@ export default function DefinitionView({ onTermClick, onScanClick }: Props) {
     const el = containerRef.current;
     if (!el || !inlineSections || Object.keys(inlineSections).length === 0) return;
 
-    for (const sectionId of Object.keys(inlineSections)) {
-      const sectionWylie = inlineSections[sectionId].wylie ?? '';
+    // inlineSections is keyed by section DOM id; each value has the wylie term
+    for (const section of Object.values(inlineSections)) {
       // Don't make the currently-displayed term clickable
-      if (sectionWylie && sectionWylie !== activeTerm) {
-        const span = el.querySelector<HTMLElement>('#' + sectionId);
+      if (section.wylie && section.wylie !== activeTerm) {
+        const span = el.querySelector<HTMLElement>('#' + section.id);
         if (span) {
-          span.classList.add('link');
-          span.dataset.wylie = sectionWylie;
+          span.classList.add('inlineTib', 'link');
+          span.dataset.wylie = section.wylie;
         }
       }
     }

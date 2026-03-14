@@ -22,6 +22,7 @@ import type { Language } from '../types';
 
 interface InlineSection {
   id: string;
+  wylie: string;
   content: string;
   title: string;
 }

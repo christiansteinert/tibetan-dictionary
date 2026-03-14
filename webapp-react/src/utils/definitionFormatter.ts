@@ -23,6 +23,7 @@ let sectionCounter = 0;
 
 interface InlineSection {
   id: string;
+  wylie: string;
   content: string;
   title: string;
 }
@@ -101,7 +102,7 @@ function htmlEscapeDefinition(definition: string): string {
   definition = htmlEscape(definition);
   definition = definition.replace(
     /(https?:\/\/)([-0-9a-zA-Z\/\.#%_:&;]+)/g,
-    '<a target="_blank" rel="noopener noreferrer" href="$1$2">$2</a>'
+    '<a target="_blank" rel="noopener noreferrer" class="link" href="$1$2">$2</a>'
   );
   definition = definition.replace(/\\+n/g, '\n');
   definition = definition.replace(/\\/g, '');
@@ -195,6 +196,7 @@ function convertInlineTibetanSections(
   if (!chunks) return { definition, inlineSections };
 
   const sectionBase = sectionCounter++;
+  let modifiedDefinition = definition; // Track modified copy
 
   for (let i = 0; i < chunks.length; i++) {
     const chunk = chunks[i];
@@ -209,26 +211,31 @@ function convertInlineTibetanSections(
 
     const lookup = wylieConverter.normalizeWylieWhitespace(chunkContents);
 
-    if (
-      !useUnicodeTibetan ||
-      (/.*[a-z].*/.test(chunkContents) && !/^.*[a-zA-Z0-9].*$/.test(out))
-    ) {
-      const sectionId = 'tibSection' + sectionBase + '_' + i;
-      const title = chunk.replace(/\n/g, ' ');
+    const sectionId = 'tibSection' + sectionBase + '_' + i;
+    const title = chunk.replace(/\n/g, ' ');
 
-      out = out.replace(/\n/g, '<br />');
-      out = out.replace(/\\n/g, '<br />');
-      out = out.replace(/([()]|&gt;|&lt;)/g, '<span class="paren">$1</span>');
+    out = out.replace(/\n/g, '<br />');
+    out = out.replace(/\\n/g, '<br />');
+    out = out.replace(/([()]|&gt;|&lt;)/g, '<span class="paren">$1</span>');
 
-      inlineSections[lookup] = {
-        id: sectionId,
-        content: out,
-        title: htmlEscapeTitle(title),
-      };
-    }
+    // Always register the section so the backend can check if it's a real entry.
+    // Keyed by sectionId (what PHP iterates over) with wylie as a sub-field.
+    inlineSections[sectionId] = {
+      id: sectionId,
+      wylie: lookup,
+      content: out,
+      title: htmlEscapeTitle(title),
+    };
+
+    // Emit a plain span — DefinitionView will add .link + data-wylie after
+    // the backend confirms this Wylie term has a dictionary entry
+    modifiedDefinition = modifiedDefinition.replace(
+      chunk,
+      `<span id="${sectionId}" class="tib">${out}</span>`
+    );
   }
 
-  return { definition, inlineSections };
+  return { definition: modifiedDefinition, inlineSections };
 }
 
 // ─── Other definition helpers ────────────────────────────────────
@@ -254,10 +261,8 @@ function addAudioLinks(definition: string, currentDict: DictionaryConfig): strin
   if (currentDict.audioId) {
     let replacement = '';
     if (!(window as any).cordova) {
-      replacement =
-        '<a href="/audio/' +
-        currentDict.audioId +
-        '/$1.mp3" target="_blank"><img src="/icons/speaker.png" alt="[sound]" /></a>';
+      const audioPath = 'audio/' + currentDict.audioId + '/';
+      replacement = '<audio controls preload="none"><source src="' + audioPath + '$1" type="audio/mpeg"></audio>';
     }
     definition = definition.replace(/\[sound:([^\]]+)\]/g, replacement);
   }
@@ -317,6 +322,12 @@ export function formatDefinition(
     defEnd = '</div>';
   } else {
     definition = htmlEscapeDefinition(definition);
+
+    // Convert inline Tibetan sections after escaping of other HTML code
+    const converted = convertInlineTibetanSections(definition, useUnicodeTibetan);
+    definition = converted.definition;
+    inlineSections = converted.inlineSections;
+
   }
 
   definition = addAudioLinks(definition, currentDict);

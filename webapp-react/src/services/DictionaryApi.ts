@@ -13,10 +13,10 @@
  * @param {string} [prefix] - Prefix for nested keys
  * @returns {string} URL-encoded string
  */
-type SerializeValue = string | number | string[] | Record<string, string | number>;
+type SerializeValue = string | number | string[] | Record<string, unknown>;
 
 function serialize(
-  obj: Record<string, SerializeValue>,
+  obj: Record<string, unknown>,
   prefix = ''
 ): string {
   const params: string[] = [];
@@ -25,14 +25,14 @@ function serialize(
     if (Array.isArray(value)) {
       for (const item of value) {
         params.push(
-          encodeURIComponent(paramKey + '[]') + '=' + encodeURIComponent(item)
+          encodeURIComponent(paramKey + '[]') + '=' + encodeURIComponent(String(item))
         );
       }
     } else if (typeof value === 'object' && value !== null) {
-      params.push(serialize(value, paramKey));
+      params.push(serialize(value as Record<string, unknown>, paramKey));
     } else {
       params.push(
-        encodeURIComponent(paramKey) + '=' + encodeURIComponent(value)
+        encodeURIComponent(paramKey) + '=' + encodeURIComponent(String(value ?? ''))
       );
     }
   }
@@ -45,9 +45,9 @@ function serialize(
  * @returns {Promise<T>} Parsed JSON response
  */
 async function post<T>(
-  data: Record<string, SerializeValue>
+  data: Record<string, unknown>
 ): Promise<T> {
-  const body = serialize(data);
+  const body = serialize(data as Record<string, unknown>);
   const response = await fetch('dict.php', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -113,6 +113,7 @@ export async function readTermList(
 
 interface InlineSection {
   id: string;
+  wylie: string;
   content: string;
   title: string;
 }
@@ -126,5 +127,5 @@ interface InlineSection {
 export async function checkTibetanSectionsForLinks(
   sections: Record<string, InlineSection>
 ): Promise<Record<string, InlineSection>> {
-  return post<Record<string, InlineSection>>({ checkTerms: sections as unknown as SerializeValue });
+  return post<Record<string, InlineSection>>({ checkTerms: sections });
 }

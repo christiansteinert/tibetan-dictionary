@@ -38,11 +38,15 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      devOptions: {
+        enabled: false, // Disable PWA in dev mode to prevent service worker caching issues
+      },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
         // Exclude large on-demand assets from precaching
         globIgnores: ['audio/**', 'data/**'],
         navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/audio\//, /^\/data\//],
         runtimeCaching: [
           {
             urlPattern: /dict\.php/,
@@ -61,12 +65,19 @@ export default defineConfig({
     }),
   ],
   server: {
+    middlewareMode: false,
     proxy: {
       '/dict.php': {
         target: 'http://localhost/TibetanDictionary/dict.php',
         changeOrigin: true,
       },
     },
+    fs: {
+      allow: ['..'], // Allow serving from parent directories (for symlinks)
+    },
+  },
+  resolve: {
+    preserveSymlinks: false, // Allow Vite to follow symlinks 
   },
   build: {
     // The app includes large config files (dictlist, abbreviations) that

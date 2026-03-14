@@ -8,6 +8,7 @@
  *   #/                      → WelcomePage
  *   #/search/:lang/:term    → SearchLayout (results + definitions)
  *   #/settings              → SettingsPage
+ *   ?sidebar=true           → Show sidebar on small screens (SearchLayout)
  */
 import { Routes, Route, Navigate } from 'react-router-dom';
 import SearchLayout from '../components/SearchLayout/SearchLayout';

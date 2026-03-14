@@ -6,14 +6,15 @@
  */
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import type { RootState } from './store/store';
 import TopBar from './components/TopBar/TopBar';
 import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
 
 export default function App() {
-  const { layout, unicode } = useSelector((s: any) => s.settings);
-  const inputLang = useSelector((s: any) => s.search.inputLang);
-  const sidebarVisible = useSelector((s: any) => s.search.sidebarVisible);
+  const { layout, unicode } = useSelector((s: RootState) => s.settings);
+  const inputLang = useSelector((s: RootState) => s.search.inputLang);
+  const sidebarVisible = useSelector((s: RootState) => s.search.sidebarVisible);
 
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {

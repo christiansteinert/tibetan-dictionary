@@ -11,6 +11,7 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import type { RootState } from '../../store/store';
 import ResultList from './ResultList';
 import DefinitionView from './DefinitionView';
 import { viewScan } from './scannedPageViewer';
@@ -22,22 +23,26 @@ import {
   setSidebarVisible,
 } from '../../store/searchSlice';
 
+type Language = 'tib' | 'en';
+
 export default function SearchLayout() {
-  const { lang: urlLangParam, term } = useParams();
+  const { lang: urlLangParam, term } = useParams<{ lang: string; term: string }>();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { search } = useSearch();
   const { lookupTerm } = useDictionaryLookup();
 
-  const { listSize } = useSelector((s) => s.settings);
-  const { offset, inputLang, results: storeResults } = useSelector((s) => s.search);
+  const { listSize } = useSelector((s: RootState) => s.settings);
+  const { offset, inputLang, results: storeResults } = useSelector((s: RootState) => s.search);
 
   // Parse URL parameters
-  const urlLang = urlLangParam || inputLang;
+  const urlLang = (urlLangParam || inputLang) as Language;
   const urlOffset = parseInt(searchParams.get('offset') || '0', 10);
   const urlSidebar = searchParams.get('sidebar') === 'true';
-  const urlSelected = searchParams.get('selected') ? decodeURIComponent(searchParams.get('selected')) : null;
+  const urlSelected = searchParams.get('selected')
+    ? decodeURIComponent(searchParams.get('selected')!)
+    : null;
 
   // Track whether the initial search has been triggered for this term
   const lastSearchedTerm = useRef('');
@@ -90,13 +95,13 @@ export default function SearchLayout() {
    * The URL reflects the active selection and works correctly on reload.
    */
   const handleTermSelected = useCallback(
-    (wylieTerm) => {
+    (wylieTerm: string) => {
       const params = new URLSearchParams({
         offset: String(urlOffset),
         sidebar: 'false',
         selected: encodeURIComponent(wylieTerm),
       });
-      navigate(`/search/${urlLang}/${encodeURIComponent(term)}?${params}`);
+      navigate(`/search/${urlLang}/${encodeURIComponent(term!)}?${params}`);
     },
     [navigate, urlLang, urlOffset, term]
   );
@@ -110,7 +115,7 @@ export default function SearchLayout() {
       offset: String(newOffset),
       sidebar: String(urlSidebar),
     });
-    navigate(`/search/${urlLang}/${encodeURIComponent(term)}?${params}`, { replace: true });
+    navigate(`/search/${urlLang}/${encodeURIComponent(term!)}?${params}`, { replace: true });
   }, [navigate, term, offset, listSize, urlLang, urlSidebar]);
 
   /**
@@ -122,14 +127,14 @@ export default function SearchLayout() {
       offset: String(newOffset),
       sidebar: String(urlSidebar),
     });
-    navigate(`/search/${urlLang}/${encodeURIComponent(term)}?${params}`, { replace: true });
+    navigate(`/search/${urlLang}/${encodeURIComponent(term!)}?${params}`, { replace: true });
   }, [navigate, term, offset, listSize, urlLang, urlSidebar]);
 
   /**
    * Handle clicking an inline Tibetan term inside a definition.
    */
   const handleInlineTermClick = useCallback(
-    (wylie, termLang) => {
+    (wylie: string, termLang?: string) => {
       const params = new URLSearchParams({
         offset: '0',
         sidebar: 'false',
@@ -142,8 +147,8 @@ export default function SearchLayout() {
   /**
    * Handle clicking a "view scan" link.
    */
-  const handleScanClick = useCallback((dictId, termId, pageInfo) => {
-    viewScan(dictId, termId, pageInfo);
+  const handleScanClick = useCallback((dictId: string, termId: string, pageInfo?: unknown) => {
+    viewScan(dictId, termId, pageInfo as any);
   }, []);
 
   return (
