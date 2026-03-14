@@ -22,7 +22,7 @@ let wylieConverter: WylieConverter | null = null;
 let sectionCounter = 0;
 
 // ─── Type definitions ────────────────────────────────────────
-interface InlineSection {
+interface InlineTibetanSection {
   id: string;
   wylie: string;
   content: string;
@@ -31,12 +31,12 @@ interface InlineSection {
 
 interface FormattedDefinition {
   html: string;
-  inlineSections: Record<string, InlineSection>;
+  inlineSections: Record<string, InlineTibetanSection>;
 }
 
 interface FormattedDefinitionList {
   tableHtml: string;
-  allInlineSections: Record<string, InlineSection>;
+  allInlineSections: Record<string, InlineTibetanSection>;
 }
 
 interface SearchItem {
@@ -101,8 +101,17 @@ function htmlEscapeDefinition(definition: string): string {
   return '<p>' + definition + '</p>';
 }
 
-// ─── Abbreviation processing ─────────────────────────────────────
+//  ─── Abbreviation processing ─────────────────────────────────────
 
+/**
+ * Build a lookup table of search/replace rules for a single abbreviation set.
+ * We use this to find occurrences of abbreviations in a definition string and wrap them in tooltip spans
+ * (see processAbbreviations()).
+ *
+ * @param abbreviationsData - a single dictionary's abbreviation config (match + items)
+ * @returns a map from abbreviation key → list of SearchItem objects containing
+ *          the RegExp to match and the explanatory tooltip text.
+ */
 function parseAbbreviations(abbreviationsData: AbbreviationSet | null): Record<string, SearchItem[]> {
   if (!abbreviationsData) return {};
 
@@ -173,12 +182,12 @@ function processAbbreviations(text: string, abbreviationsData: AbbreviationSet |
 function convertInlineTibetanSections(
   definition: string,
   useUnicodeTibetan: boolean
-): { definition: string; inlineSections: Record<string, InlineSection> } {
+): { definition: string; inlineSections: Record<string, InlineTibetanSection> } {
   if (!wylieConverter) {
     return { definition, inlineSections: {} };
   }
 
-  const inlineSections: Record<string, InlineSection> = {};
+  const inlineSections: Record<string, InlineTibetanSection> = {};
   const chunks = definition.match(/[{][^{}]+[}]/g);
 
   if (!chunks) return { definition, inlineSections };
@@ -402,7 +411,7 @@ export function formatDefinitionList(
   abbreviations: AbbreviationsType,
   onOpenScan?: OnOpenScanCallback
 ): FormattedDefinitionList {
-  const allInlineSections: Record<string, InlineSection> = {};
+  const allInlineSections: Record<string, InlineTibetanSection> = {};
 
   // Render heading
   let termDisplay: string;

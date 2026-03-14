@@ -7,13 +7,19 @@
 import { useRef, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import clsx from 'clsx';
 import WylieInputField, { WylieInputHandle } from './WylieInputField';
 import LanguageSwitchButton from './LanguageSwitchButton';
 import ClearButton from './ClearButton';
 import { setInputLang, setSidebarVisible } from '../../store/searchSlice';
 import settingsImg from '../../assets/images/settings.png';
+import styles from './TopBar.module.css';
+import type { RootState } from '../../store/store';
 
 export default function TopBar() {
+  const { layout } = useSelector((s: RootState) => s.settings);
+  const isLightMode = layout !== 'layout_black';
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const inputRef = useRef<WylieInputHandle>(null);
@@ -81,35 +87,43 @@ export default function TopBar() {
   }, [navigate]);
 
   return (
-    <div className="textInput">
-      <div className="textInputWrap">
-        <WylieInputField
-          ref={inputRef}
+    <>
+      <div 
+      className={clsx(
+        styles.topbar,
+        isLightMode ? styles.light : styles.dark,
+        'py-0 sm:py-2'
+      )}>
+        <div className={styles.textInputWrap}>
+          <WylieInputField
+            ref={inputRef}
+            inputLang={inputLang}
+            useUnicodeTibetan={useUnicodeTibetan}
+            lowercase={lowercase}
+            onInputChange={handleInputChange}
+            onEnter={handleEnter}
+          />
+          <ClearButton onClick={handleClear} />
+        </div>
+
+        <LanguageSwitchButton
           inputLang={inputLang}
-          useUnicodeTibetan={useUnicodeTibetan}
-          lowercase={lowercase}
-          onInputChange={handleInputChange}
-          onEnter={handleEnter}
+          onSwitch={handleLanguageSwitch}
         />
-        <ClearButton onClick={handleClear} />
+
+        <a
+          href="#/settings"
+          id="settingsBtn"
+          title="Settings"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate('/settings');
+          }}
+        >
+          <img src={settingsImg} alt="Settings" width="32" height="43" />
+        </a>
       </div>
-
-      <LanguageSwitchButton
-        inputLang={inputLang}
-        onSwitch={handleLanguageSwitch}
-      />
-
-      <a
-        href="#/settings"
-        id="settingsBtn"
-        title="Settings"
-        onClick={(e) => {
-          e.preventDefault();
-          navigate('/settings');
-        }}
-      >
-        <img src={settingsImg} alt="Settings" width="32" height="43" />
-      </a>
-    </div>
+      <div className={styles.topbarUnderlay}></div>
+    </>
   );
 }

@@ -14,7 +14,7 @@
   font-style: normal;  
 }
 
-body,.textInput{
+body{
   color:#000;
   background-color:#fff;
 }
@@ -40,9 +40,6 @@ a{
 .sideBarInnerWrap{
   padding:0 0.3em;
   position:relative;
-}
-.leftSideBar,.mainWrap{
-  padding-top:4em;
 }
 .mainWrap {
   width: auto;
@@ -78,6 +75,12 @@ a{
 #wordList tbody tr:nth-child(even) td {
   background-color: #e8e8f8;    
 }
+.dark #wordList tbody tr:nth-child(even) td {
+  background-color: #333;
+}
+
+
+
 #wordList tbody tr.selected td,
 #wordList tbody tr.selected a {
   background-color:#77779a !important;
@@ -179,27 +182,7 @@ a{
   display:table-cell;
   vertical-align:top;
 }
-.textInput{
-  width: 100%;
-  padding: 0.5em 0;
-  border-bottom: 1px solid #ccc;
-  position:fixed;
-  -webkit-backface-visibility: hidden; /* position:fixed-workaround for older android versions */
-  top:0;
-  z-index:1;
-  display: flex;
-  align-items: top;
-  flex-direction: row;
-}
-.textInputWrap{
-  position: relative;
-  flex-grow: 1;
-  display: flex;
-}
 
-.unicodeTibInput .leftSideBar,.unicodeTibInput .mainWrap{
-  padding-top:5em;
-}
 
 .desktop.sidebarTib #wordList, .desktop.unicodeTibInput #searchTerm, .desktop.unicodeTib .definitionHead,.desktop.unicodeTib .tib{
   font-family: "Droid Sans","Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
@@ -656,7 +639,7 @@ body{
   .forceLeftSideVisible .mainWrap{display:none !important}
   
   .dictName{width:auto;padding:0.5em 0.3em}
-  #definitions,.textInput{left:0;margin:0;padding:0}
+  #definitions{left:0;margin:0;padding:0}
   
   #searchTerm{
     margin-left: 0;
@@ -665,10 +648,6 @@ body{
     border-radius: 0;
     border-bottom-right-radius: 6px;
     border-top-right-radius: 6px;
-  }
-  .textInputWrap{
-    padding: 0;
-  
   }
   
   .settings {
@@ -739,7 +718,7 @@ a img {
 }
 
 /*dark layout*/
-body.dark,.dark .textInput{background-color:#000 !important;color:#eee !important}
+body.dark{background-color:#000 !important;color:#eee !important}
 .dark .paginate_info{color:#ccc}
 
 .dark #searchTerm, .dark .settings select, .dark .settings input:not([type="checkbox"]) {
@@ -754,7 +733,7 @@ body.dark,.dark .textInput{background-color:#000 !important;color:#eee !importan
 .dark .paginate button{border-color:#ccc;}
 .dark #wordList .even td{background-color:#333}
 .dark a{color:#ddd}
-.dark #wordList .selected, .dark #wordList .selected a{background-color:#668 !important;color:#ff7;}
+.dark #wordList .selected td, .dark #wordList .selected a{background-color:#668 !important;color:#ff7;}
 .dark #init{background-color:#000;}
 .dark .dictName {border-right:1px solid #aaa;color:#a8a8a8;}
 .dark #settingsScreen{background:#000}
@@ -769,7 +748,7 @@ body.dark,.dark .textInput{background-color:#000 !important;color:#eee !importan
   padding: 0.25em !important;
 }
 
-.definitionOnly .leftSideBar, .definitionOnly .textInput{
+.definitionOnly .leftSideBar{
   display:none !important;
 }
 

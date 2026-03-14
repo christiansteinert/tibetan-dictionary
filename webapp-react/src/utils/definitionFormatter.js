@@ -14,7 +14,6 @@
 import { SanskritConverter } from './sanskritConverter.js';
 import { WylieConverter } from './wylieConverter.js';
 
-
 // Shared converter instances (initialized lazily)
 let sanskritConverter = null;
 let wylieConverter = null;
@@ -351,17 +350,17 @@ export function formatDefinition(
 /**
  * Format all definitions for a term into an HTML table.
  *
- * @param {Object} dictionaries - Map of dictId → dictionary config (in display order)
- * @param {Object} dictEntries - Map of dictName → raw definition text
- * @param {string} term - The term being looked up
- * @param {string} lang - Language ('tib' or 'en')
- * @param {boolean} useUnicodeTibetan - Whether Unicode output is active
- * @param {Object} ABBREVIATIONS - Global abbreviations data
- * @param {function} [onOpenScan] - Callback for scan links
+ * @param dictionaries - Map of dictId → dictionary config (in display order)
+ * @param dictEntries - Map of dictName → raw definition text
+ * @param term - The term being looked up
+ * @param lang - Language ('tib' or 'en')
+ * @param useUnicodeTibetan - Whether Unicode output is active
+ * @param ABBREVIATIONS - Global abbreviations data
+ * @param [onOpenScan] - Callback for scan links
  * @returns {{ tableHtml: string, allInlineSections: Object }}
  */
 export function formatDefinitionList(
-  dictionaries,
+  dictionaries ,
   dictEntries,
   term,
   lang,
