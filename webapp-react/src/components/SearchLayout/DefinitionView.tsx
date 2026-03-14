@@ -109,14 +109,6 @@ export default function DefinitionView({ onTermClick, onScanClick }: Props) {
     }
   }, [inlineSections, definitionHtml, activeTerm]);
 
-  if (isLoading) {
-    return (
-      <div id="definitions" className="definitions">
-        <div className="loading">Loading…</div>
-      </div>
-    );
-  }
-
   if (!definitionHtml) {
     return <div id="definitions" className="definitions" />;
   }

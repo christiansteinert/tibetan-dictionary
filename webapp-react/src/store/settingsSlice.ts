@@ -37,7 +37,7 @@ function getAllDictionaryIds(): string[] {
   return Object.keys(DICTLIST).filter((id) => {
     const info = DICTLIST[id] as DictEntry;
     if (info.webOnly && !!(window as any).cordova) return false;
-    if (publicOnly && info.public !== 'true') return false;
+    if (publicOnly && info.public) return false;
     return true;
   });
 }

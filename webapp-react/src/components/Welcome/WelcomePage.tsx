@@ -21,8 +21,8 @@ export default function WelcomePage() {
 
     return Object.entries(DICTLIST)
       .filter(([, info]: [string, any]) => {
-        if (publicOnly && info.public !== 'true') return false;
-        return info.listCredits === 'true';
+        if (publicOnly && info.public) return false;
+        return info.listCredits;
       })
       .map(([id, info]: [string, any]) => {
         let title = '';

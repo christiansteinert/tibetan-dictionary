@@ -1,9 +1,9 @@
-interface AbbreviationSet {
+export interface AbbreviationSet {
   match: string | string[];
   items: { [key: string]: string };
 }
 
-interface AbbreviationsType {
+export interface AbbreviationsType {
   [key: string]: AbbreviationSet;
 }
 
@@ -285,7 +285,6 @@ export const ABBREVIATIONS: AbbreviationsType = {
       'pf.':'perfect (past tense)',
       'q. v.':'quod vide (which one should have a look at)',
       'Skt.':'Sanskrit',
-      'ZZ':'Zhang-zhung language [ZZ means Zhang-zhung Snyan-brgyud--nota bene].',
       '4': 'Rje-btsun Mi-la-ras-pa\'i Rnam-thar Rgyas-par Phye-ba Mgur-\'bum,  woodblock print from recently carved blocks in Kulu Manali at Monastery of Ci-ta-ri.',
       '4A': 'Rnal-\'byor-gyi Dbang-phyug Dam-pa Rje-btsun Mi-la-ras-pa\'i Rnam-thar Thar-pa dang Thams-cad Mkhyen-pa\'i Lam-ston.  Same printing as 4.',
       '4X': 'Rnal-\'byor-gyi Dbang-phyug Mi-la Bzhad-pa\'i-rdo-rje\'i Gsung Mgur:  Mdzod Nag-ma, edited & arranged by Zhwa-nag III Rang-byung-rdo-rje (1284-1339), Damchoe Sangpo (Dalhousie 1978), in  2 vols.',
@@ -658,22 +657,22 @@ export const ABBREVIATIONS: AbbreviationsType = {
       'TR': 'Tibetan Review (New Delhi).  Issued monthly.',
       'TS5': 'Tibetan Studies: Proceedings of the 5th Seminar of the International Association for Tibetan Studies, Narita 1989, Naritasan Shinshoji (Narita 1992), in 2 vols.',
       'TS6': 'Per Kvaerne, ed., Tibetan Studies: Proceedings of the 6th Seminar of the International Association for Tibetan Studies, Fagernes 1992, The Institute for Comparative Research in Human Culture (Oslo 1994), in 2 vols.',
-      'TS7': 'Helmut Krasser, Michael T. Much, Ernst Steinkellner, Helmut Tauscher, eds., Tibetan Studies I & II: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995, Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997), vols. 1 and 2.  The other volumes have editors and titles as follows:  ',
-      'vol. 3': 'Helmut Eimer, ed., Transmission of the Tibetan Canon: Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).',
-      'vol. 4': 'Frank J. Korom, ed., Tibetan Culture in the Diaspora: Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).',
-      'vol. 5': 'Graham E. Clarke, ed., Development, Society, and Environment in Tibet:  Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).',
-      'vol. 6': 'Anne-Marie Blondeau, ed., Tibetan Mountain Deities, Their Cults and Representations: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1998).',
-      'vol. 7': 'Deborah Klimburg-Salter & Eva Allinger, eds., The Middle Asian International Style, 12th-14th Century: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1998).',
-      'TS9': 'vol. 1:  Henk Blezer, ed., Tibet, Past and Present: Tibetan Studies I, Brill (Leiden 2002).',
-      'vol. 2': 'Henk Blezer, ed., Religion & Secular Culture in Tibet (Tibetan Studies II), Brill (Leiden 2002).',
-      'vol. 3': 'John Ardussi & Henk Blezer, eds., Impressions of Bhutan & Tibetan Art (Tibetan Studies III), Brill (Leiden 2002).',
-      'vol. 4': 'Lawrence Epstein, ed., Khams pa Histories: Visions of People, Place & Authority, Brill (Leiden 2002).',
-      'vol. 5': 'Toni Huber, ed., Amdo Tibetans in Transition: Society & Culture in the Post-Mao Era, Brill (Leiden 2002).',
-      'vol. 6': 'Christopher I. Beckwith, ed., Medieval Tibeto-Burman Languages, Brill (Leiden 2002).',
-      'vol. 7': 'Deborah Klimburg-Salter & Eva Allinger, eds., Buddhist Art & Tibetan Patronage: Ninth to Fourteenth Centuries, Brill (Leiden 2002).',
-      'vol. 8': 'P. Christiaan Klieger, ed., Tibet, Self, and the Tibetan Diaspora: Voices of Difference, Brill (Leiden 2002).',
-      'vol. 9': 'Katia Buffetrille & Hildegard Diemberger, eds., Territory & Identity in Tibet and the Himalayas, Brill (Leiden 2002).',
-      'vol. 10': 'Helmut Eimer & David Germano, eds., The Many Canons of Tibetan Buddhism, Brill (Leiden 2002).',
+      'TS7': 'Helmut Krasser, Michael T. Much, Ernst Steinkellner, Helmut Tauscher, eds., Tibetan Studies I & II: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995, Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997), vols. 1 and 2.|The other volumes have editors and titles as follows: '
+      + '|vol. 3 Helmut Eimer, ed., Transmission of the Tibetan Canon: Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).'
+      + '|vol. 4: Frank J. Korom, ed., Tibetan Culture in the Diaspora: Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).'
+      + '|vol. 5: Graham E. Clarke, ed., Development, Society, and Environment in Tibet:  Papers Presented at a Panel of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1997).'
+      + '|vol. 6: Anne-Marie Blondeau, ed., Tibetan Mountain Deities, Their Cults and Representations: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1998).'
+      + '|vol. 7: Deborah Klimburg-Salter & Eva Allinger, eds., The Middle Asian International Style, 12th-14th Century: Proceedings of the 7th Seminar of the International Association for Tibetan Studies, Graz 1995 Verlag der Österreichischen Akademie der Wissenschaften (Wien 1998).',
+      'TS9': 'vol. 1:  Henk Blezer, ed., Tibet, Past and Present: Tibetan Studies I, Brill (Leiden 2002).'
+      + '|vol. 2: Henk Blezer, ed., Religion & Secular Culture in Tibet (Tibetan Studies II), Brill (Leiden 2002).'
+      + '|vol. 3: John Ardussi & Henk Blezer, eds., Impressions of Bhutan & Tibetan Art (Tibetan Studies III), Brill (Leiden 2002).'
+      + '|vol. 4: Lawrence Epstein, ed., Khams pa Histories: Visions of People, Place & Authority, Brill (Leiden 2002).'
+      + '|vol. 5: Toni Huber, ed., Amdo Tibetans in Transition: Society & Culture in the Post-Mao Era, Brill (Leiden 2002).'
+      + '|vol. 6: Christopher I. Beckwith, ed., Medieval Tibeto-Burman Languages, Brill (Leiden 2002).'
+      + '|vol. 7: Deborah Klimburg-Salter & Eva Allinger, eds., Buddhist Art & Tibetan Patronage: Ninth to Fourteenth Centuries, Brill (Leiden 2002).'
+      + '|vol. 8: P. Christiaan Klieger, ed., Tibet, Self, and the Tibetan Diaspora: Voices of Difference, Brill (Leiden 2002).'
+      + '|vol. 9: Katia Buffetrille & Hildegard Diemberger, eds., Territory & Identity in Tibet and the Himalayas, Brill (Leiden 2002).'
+      + '|vol. 10: Helmut Eimer & David Germano, eds., The Many Canons of Tibetan Buddhism, Brill (Leiden 2002).',
       'TSB': 'Tibet Society Bulletin (periodical, Bloomington).',
       'Tsering Shakya, Dragon': 'Tsering Shakya, The Dragon in the Land of Snows: A History of Modern Tibet since 1947, Columbia University Press (New York 1999).',
       'Tshad Rig': 'Bod Rgya Tshad-ma Rig-pa\'i Tshig-mdzod, Si-khron Mi-rigs Dpe-skrun-khang (Chengdu 1987). Dictionary of Buddhist logic. This is little more than a set of extracts from Yisun, and so hasn\'t been of very much use.',
@@ -710,7 +709,7 @@ export const ABBREVIATIONS: AbbreviationsType = {
       'Zangpo, Sacred Ground': 'Ngwang Zangpo, Sacred Ground: Jamgon Kongtrul on Pilgrimage and Sacred Geography, Snow Lion (Ithaca 2001).',
       'ZAS': 'Zentralasiatische Studien(Bonn).',
       'Zhi-byed Coll.': 'Kun-dga\', et al., The Tradition of Pha Dampa Sangyas: A Treasured Collection of His Teachings Transmitted by T[h]ug[s]-sras Kun-dga\', Kunsang Tobgey (Thimphu, Bhutan), in 5 volumes, with English preface by Barbara N. Aziz.',
-      'ZZ': 'Zhang-zhung Snyan-brgyud.  Lost reference to the actual source used.'
+      'ZZ': 'Zhang-zhung language [ZZ means Zhang-zhung Snyan-brgyud]. Lost reference to the actual source used .'
     }
   },
   ChandraDas:{
@@ -789,8 +788,7 @@ export const ABBREVIATIONS: AbbreviationsType = {
       'lit.': 'literally, also literature.',
       'long.': 'longitude.',
       'mase.': 'masculine gender.',
-      'med.': 'medical works.',
-      'med.': 'medio, about the middle of a longer article.',
+      'med.': 'medical works. or: medio, about the middle of a longer article.',
       'metaph.': 'metaphorical, metaphorically.',
       'met.': 'or meton. metonymical, metonymically.',
       'myst.': 'mystical or mystically.',

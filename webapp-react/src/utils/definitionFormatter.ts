@@ -13,6 +13,8 @@
  */
 import { WylieConverter } from './wylieConverter';
 import { SanskritConverter } from './sanskritConverter';
+import type { DictListType, DictEntry } from '../config/dictlist';
+import type { AbbreviationsType, AbbreviationSet } from '../config/abbreviations';
 
 // Shared converter instances (initialized lazily)
 let sanskritConverter: SanskritConverter | null = null;
@@ -20,28 +22,11 @@ let wylieConverter: WylieConverter | null = null;
 let sectionCounter = 0;
 
 // ─── Type definitions ────────────────────────────────────────
-
 interface InlineSection {
   id: string;
   wylie: string;
   content: string;
   title: string;
-}
-
-interface DictionaryConfig {
-  label: string;
-  audioId?: string;
-  mergeLines?: boolean;
-  preformattedLinebreaks?: boolean;
-  containsOnlyTibetan?: boolean;
-  containsOnlySkt?: boolean;
-  highlight?: string;
-  about?: string;
-}
-
-interface AbbreviationData {
-  match: string | string[];
-  items: Record<string, string>;
 }
 
 interface FormattedDefinition {
@@ -61,17 +46,20 @@ interface SearchItem {
 
 type OnOpenScanCallback = (scanId: string, term: string, pageInfo: string) => void;
 
-/**
- * Ensure shared converters are ready.
- * Called automatically by the public API; can also be called explicitly.
- */
-export function initializeFormatters(): void {
+
+// ─── Converters ───────────────────────────────────────
+function getSanskritConverter(): SanskritConverter {
   if (!sanskritConverter) sanskritConverter = new SanskritConverter();
-  if (!wylieConverter) wylieConverter = new WylieConverter();
+  return sanskritConverter;
 }
 
-// ─── HTML escaping helpers ───────────────────────────────────────
+function getWylieConverter(): WylieConverter {
+  if (!wylieConverter) wylieConverter = new WylieConverter();
+  return wylieConverter;
+}
 
+
+// ─── HTML escaping helpers ───────────────────────────────────────
 function htmlEscape(text: string): string {
   text = text.replace(/&/g, '&amp;');
   text = text.replace(/</g, '&lt;');
@@ -115,16 +103,16 @@ function htmlEscapeDefinition(definition: string): string {
 
 // ─── Abbreviation processing ─────────────────────────────────────
 
-function parseAbbreviations(abbreviationsData: AbbreviationData | null): Record<string, SearchItem[]> {
+function parseAbbreviations(abbreviationsData: AbbreviationSet | null): Record<string, SearchItem[]> {
   if (!abbreviationsData) return {};
+
 
   const searchPattern = typeof abbreviationsData.match === 'string'
     ? [abbreviationsData.match]
     : abbreviationsData.match;
 
   const searchList: Record<string, SearchItem[]> = {};
-
-  for (const pattern of searchPattern) {
+  for (const pattern in searchPattern) {
     for (const abbr in abbreviationsData.items) {
       const abbrEscaped = abbr.replace(/([\[\]\.\*\+\{\}])/g, '\\$1');
       const termSearch = pattern.replace('TERM', abbrEscaped);
@@ -135,7 +123,7 @@ function parseAbbreviations(abbreviationsData: AbbreviationData | null): Record<
 
       searchList[abbr].push({
         search: new RegExp(termSearch, 'mg'),
-        explanation: abbreviationsData.items[abbr],
+        explanation: abbreviationsData.items[abbr] || ''
       });
 
       // Also match version without spaces
@@ -152,7 +140,7 @@ function parseAbbreviations(abbreviationsData: AbbreviationData | null): Record<
   return searchList;
 }
 
-function processAbbreviations(text: string, abbreviationsData: AbbreviationData | null): string {
+function processAbbreviations(text: string, abbreviationsData: AbbreviationSet | null): string {
   const abbrevs = parseAbbreviations(abbreviationsData);
   let changed = true;
 
@@ -206,10 +194,10 @@ function convertInlineTibetanSections(
       .replace(/^\s+|\s+$/g, '');
 
     let out = useUnicodeTibetan
-      ? wylieConverter.wylieToUni(chunkContents)
+      ? getWylieConverter().wylieToUni(chunkContents)
       : chunkContents;
 
-    const lookup = wylieConverter.normalizeWylieWhitespace(chunkContents);
+    const lookup = getWylieConverter().normalizeWylieWhitespace(chunkContents);
 
     const sectionId = 'tibSection' + sectionBase + '_' + i;
     const title = chunk.replace(/\n/g, ' ');
@@ -244,7 +232,7 @@ function breakDefinitionIntoSections(definition: string): string {
   if (
     definition.match(/([^0-9]|^)1[\.)]/) &&
     definition.match(/([^0-9]|^)2[\.)]/
-  )) {
+    )) {
     definition = definition.replace(
       /([^-0-9(])([(]?[1-9][0-9]?[\.)] ?)([^0-9])/mg,
       '$1\n$2 $3'
@@ -257,7 +245,7 @@ function breakDefinitionIntoSections(definition: string): string {
   return definition;
 }
 
-function addAudioLinks(definition: string, currentDict: DictionaryConfig): string {
+function addAudioLinks(definition: string, currentDict: DictEntry): string {
   if (currentDict.audioId) {
     let replacement = '';
     if (!(window as any).cordova) {
@@ -274,27 +262,25 @@ function addAudioLinks(definition: string, currentDict: DictionaryConfig): strin
 /**
  * Format a single dictionary definition entry.
  *
- * @param {string} definition - Raw definition text
- * @param {string} term - The term being looked up
- * @param {boolean} useUnicodeTibetan - Whether to render Tibetan Unicode
- * @param {Object} currentDict - Dictionary configuration object
- * @param {Object|null} abbreviationsData - Abbreviations for this dictionary
- * @param {function} [onOpenScan] - Callback signature: (scanId, term, pageInfo) => void
- * @returns {{ html: string, inlineSections: Object }}
+ * @param definition - Raw definition text
+ * @param term - The term being looked up
+ * @param useUnicodeTibetan - Whether to render Tibetan Unicode
+ * @param currentDict - Dictionary configuration object
+ * @param abbreviationsData - Abbreviations for this dictionary
+ * @param onOpenScan - Callback signature: (scanId, term, pageInfo) => void
+ * @returns formatted HTML for this definition and any inline Tibetan sections found for potential linking
  */
 export function formatDefinition(
   definition: string,
   term: string,
   useUnicodeTibetan: boolean,
-  currentDict: DictionaryConfig,
-  abbreviationsData: AbbreviationData | null,
+  currentDict: DictEntry,
+  abbreviationsData: AbbreviationSet | null,
   onOpenScan?: OnOpenScanCallback
 ): FormattedDefinition {
-  initializeFormatters();
-
-  let defStart = '';
-  let defEnd = '';
-  let inlineSections: Record<string, InlineSection> = {};
+  let defStart = "";
+  let defEnd = "";
+  let inlineSections = {};
 
   if (currentDict.mergeLines) {
     definition = definition.replace(/\n/gm, '; ');
@@ -303,31 +289,66 @@ export function formatDefinition(
   if (!currentDict.preformattedLinebreaks) {
     definition = breakDefinitionIntoSections(definition);
   }
-
   if (currentDict.containsOnlyTibetan) {
-    defStart = `<div class="tib" title="${htmlEscapeTitle(definition)}">`;
-    if (definition.indexOf('-----') !== -1) {
-      definition = definition.replace(/\n-----\n/g, '</p>\n<p class="separator"></p>\n<p>');
-      definition = '<p>' + definition + '</p>';
+    // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
+
+    defStart = '<div class="tib" title="' + htmlEscapeTitle(definition) + '">';
+    if (definition.indexOf("-----")) {
+      // ensure that separator lines are working also in Tibetan-only dictionaries
+      definition = definition.replace("-----", "}\n-----\n{");
+      definition = "{" + definition + "}";
+      let skt = getSanskritConverter().sktToUni(htmlEscapeDefinition(definition));
+      var result = convertInlineTibetanSections(skt, useUnicodeTibetan);
+      definition = result.definition;
+      inlineSections = result.inlineSections;
     } else {
-      definition = definition.replace(/\n/g, '</p>\n<p>');
-      definition = '<p>' + definition + '</p>';
+      var tibetanOutput = useUnicodeTibetan
+        ? wylieConverter?.wylieToUniExceptBracketedSections(definition) || ''
+        : definition;
+      definition = htmlEscapeDefinition(tibetanOutput);
     }
     defEnd = '</div>';
   } else if (currentDict.containsOnlySkt) {
-    if (!sanskritConverter) sanskritConverter = new SanskritConverter();
-    definition = sanskritConverter.sktToUni(definition);
-    definition = htmlEscapeDefinition(definition);
-    defStart = '<div class="skt">';
+    defStart = '<div class="skt" title="' + htmlEscapeTitle(definition) + '">';
+    var result = convertInlineTibetanSections(getSanskritConverter().sktToUni(htmlEscapeDefinition(definition)), useUnicodeTibetan);
+    definition = result.definition;
+    inlineSections = result.inlineSections;
     defEnd = '</div>';
+  } else if (currentDict.scanId) {
+    //scanned dictionary. If we have an exact page number, we link to it
+    var definitionParts = definition.split('-----');
+    definition = '';
+    for (var i = 0; i < definitionParts.length; i++) {
+      var pageNr = Number(definitionParts[i].replace(/[^0-9]/g, ''));
+      var pageTxt = "";
+      var offset = currentDict?.scanInfo?.offset || 0;
+
+      var pageInfo = {
+        term_page: pageNr + offset,
+        ...currentDict.scanInfo
+      }
+
+      if (definition != '') {
+        definition += '<div class="separator"></div>';
+      }
+
+      if (definitionParts.length > 1) {
+        var adjust = currentDict?.scanInfo?.display_pageadjust || 0;
+        var adjustedPage = pageNr + adjust;
+        pageTxt = ' (p. ' + adjustedPage + ')';
+      }
+
+      definition += '<div><a href="javascript:DICT.openScannedPage('
+        + '\'' + htmlEscapeScriptAttr(currentDict.scanId) + '\','
+        + '\'' + htmlEscapeScriptAttr(term) + '\','
+        + htmlEscapeScriptAttr(JSON.stringify(pageInfo))
+        + ')">' + currentDict.linkText + pageTxt + '</a></div>';
+    }
+
   } else {
-    definition = htmlEscapeDefinition(definition);
-
-    // Convert inline Tibetan sections after escaping of other HTML code
-    const converted = convertInlineTibetanSections(definition, useUnicodeTibetan);
-    definition = converted.definition;
-    inlineSections = converted.inlineSections;
-
+    var result = convertInlineTibetanSections(htmlEscapeDefinition(definition), useUnicodeTibetan);
+    definition = result.definition;
+    inlineSections = result.inlineSections;
   }
 
   definition = addAudioLinks(definition, currentDict);
@@ -347,24 +368,15 @@ export function formatDefinition(
 
   definition = defStart + definition + defEnd;
 
-  // Build tooltip for dict name
-  let tooltipStart = '';
-  let tooltipEnd = '';
+  var tooltipStart = "", tooltipEnd = "";
   if (currentDict.about) {
-    tooltipStart = `<span class="tooltip" data-tooltip-html="${htmlEscape(currentDict.about)}">`;
+    tooltipStart = '<span class="tooltip" title="' + currentDict.about + '">';
     tooltipEnd = '</span>';
   }
 
-  const html =
-    '<tr><td class="dictName">' +
-    tooltipStart +
-    currentDict.label +
-    tooltipEnd +
-    '</td><td class="definition">' +
-    definition +
-    '</td></tr>';
+  var formattedDefinition = '<tr><td class="dictName">' + tooltipStart + currentDict.label + tooltipEnd + '</td><td class="definition">' + definition + '</td></tr>';
+  return { html: formattedDefinition, inlineSections };
 
-  return { html, inlineSections };
 }
 
 // ─── Full definition list formatting ─────────────────────────────
@@ -372,26 +384,24 @@ export function formatDefinition(
 /**
  * Format all definitions for a term into an HTML table.
  *
- * @param {Object} dictionaries - Map of dictId → dictionary config (in display order)
- * @param {Object} dictEntries - Map of dictName → raw definition text
- * @param {string} term - The term being looked up
- * @param {string} lang - Language ('tib' or 'en')
- * @param {boolean} useUnicodeTibetan - Whether Unicode output is active
- * @param {Object} ABBREVIATIONS - Global abbreviations data
- * @param {function} [onOpenScan] - Callback for scan links
- * @returns {{ tableHtml: string, allInlineSections: Object }}
+ * @param dictionaries - Map of dictId → dictionary config (in display order)
+ * @param dictEntries - Map of dictName → raw definition text
+ * @param term - The term being looked up
+ * @param lang - Language ('tib' or 'en')
+ * @param useUnicodeTibetan - Whether Unicode output is active
+ * @param abbreviations - Global abbreviations data
+ * @param onOpenScan - Callback when a scanned page link is clicked
+ * @returns the generated html code and a map of inline Tibetan sections for potential linking
  */
 export function formatDefinitionList(
-  dictionaries: Record<string, DictionaryConfig>,
+  dictionaries: DictListType,
   dictEntries: Record<string, string>,
   term: string,
   lang: string,
   useUnicodeTibetan: boolean,
-  ABBREVIATIONS: Record<string, AbbreviationData | null>,
+  abbreviations: AbbreviationsType,
   onOpenScan?: OnOpenScanCallback
 ): FormattedDefinitionList {
-  initializeFormatters();
-
   const allInlineSections: Record<string, InlineSection> = {};
 
   // Render heading
@@ -399,7 +409,7 @@ export function formatDefinitionList(
   if (lang === 'en') {
     termDisplay = term;
   } else {
-    termDisplay = useUnicodeTibetan && wylieConverter ? wylieConverter.wylieToUni(term) : term;
+    termDisplay = useUnicodeTibetan ? getWylieConverter().wylieToUni(term) : term;
   }
 
   let tableHtml =
@@ -410,7 +420,7 @@ export function formatDefinitionList(
     if (dictEntries.hasOwnProperty(dictName)) {
       const currentDict = dictionaries[dictName];
       const definition = dictEntries[dictName];
-      const abbreviationsData = ABBREVIATIONS[dictName] || null;
+      const abbreviationsData = abbreviations[dictName] || null;
 
       const result = formatDefinition(
         definition,
