@@ -5,8 +5,8 @@
  * Includes dictionary selection, layout, unicode mode, etc.
  */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { DICTLIST, GROUPED_DICTLIST, type DictEntry } from '../config/dictlist';
-import { GLOBAL_SETTINGS } from '../config/globalSettings';
+import { DICTLIST, GROUPED_DICTLIST, type DictEntry } from '@/config/dictlist';
+import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 
 interface SettingsState {
   unicode: boolean | 'output';

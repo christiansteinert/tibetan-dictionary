@@ -11,7 +11,7 @@
 import { useCallback, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import useSettings from '../../hooks/useSettings';
+import useSettings from '@/hooks/useSettings';
 import DictionarySelector from './DictionarySelector';
 
 export default function SettingsPage() {

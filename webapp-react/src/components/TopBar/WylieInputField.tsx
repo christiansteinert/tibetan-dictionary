@@ -5,7 +5,7 @@
  * triggers search on syllable completion / Enter.
  */
 import { useEffect, forwardRef, useImperativeHandle } from 'react';
-import useWylieInput from '../../hooks/useWylieInput';
+import useWylieInput from '@/hooks/useWylieInput';
 
 interface Props {
   inputLang: string;

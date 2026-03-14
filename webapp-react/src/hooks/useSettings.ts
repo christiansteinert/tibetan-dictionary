@@ -14,7 +14,7 @@ import {
   setDictionaries,
   resetSettings,
   restoreSettings,
-} from '../store/settingsSlice';
+} from '@/store/settingsSlice';
 
 interface UseSettingsReturn {
   unicode: boolean | string;

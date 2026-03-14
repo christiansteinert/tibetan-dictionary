@@ -11,10 +11,10 @@ import clsx from 'clsx';
 import WylieInputField, { WylieInputHandle } from './WylieInputField';
 import LanguageSwitchButton from './LanguageSwitchButton';
 import ClearButton from './ClearButton';
-import { setInputLang, setSidebarVisible } from '../../store/searchSlice';
-import settingsImg from '../../assets/images/settings.png';
+import { setInputLang, setSidebarVisible } from '@/store/searchSlice';
+import settingsImg from '~assets/images/settings.png';
 import styles from './TopBar.module.css';
-import type { RootState } from '../../store/store';
+import type { RootState } from '@/store/store';
 
 export default function TopBar() {
   const { layout } = useSelector((s: RootState) => s.settings);

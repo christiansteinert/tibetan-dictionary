@@ -11,17 +11,17 @@
 import { useEffect, useCallback, useRef } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import type { RootState } from '../../store/store';
+import type { RootState } from '@/store/store';
 import ResultList from './ResultList';
 import DefinitionView from './DefinitionView';
 import { viewScan } from './scannedPageViewer';
-import useSearch from '../../hooks/useSearch';
-import useDictionaryLookup from '../../hooks/useDictionaryLookup';
+import useSearch from '@/hooks/useSearch';
+import useDictionaryLookup from '@/hooks/useDictionaryLookup';
 import {
   setInputLang,
   setLang,
   setSidebarVisible,
-} from '../../store/searchSlice';
+} from '@/store/searchSlice';
 
 type Language = 'tib' | 'en';
 

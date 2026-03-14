@@ -1,7 +1,7 @@
 /**
  * ResultItem – a single row in the result list sidebar.
  */
-import { WylieConverter } from '../../utils/wylieConverter';
+import { WylieConverter } from '@/utils/wylieConverter';
 
 const wylieConverter = new WylieConverter();
 

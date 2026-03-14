@@ -78,6 +78,10 @@ export default defineConfig({
   },
   resolve: {
     preserveSymlinks: false, // Allow Vite to follow symlinks 
+    alias: {
+      '@': '/src',
+      '~assets': '/src/assets',
+    },
   },
   build: {
     // The app includes large config files (dictlist, abbreviations) that

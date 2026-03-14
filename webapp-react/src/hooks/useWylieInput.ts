@@ -10,8 +10,8 @@
  * Returns a ref to attach to the <input> element and helper functions.
  */
 import { useRef, useCallback, useEffect, RefObject } from 'react';
-import { WylieConverter } from '../utils/wylieConverter';
-import type { Language } from '../types';
+import { WylieConverter } from '@/utils/wylieConverter';
+import type { Language } from '@/types';
 
 const wylieConverter = new WylieConverter();
 

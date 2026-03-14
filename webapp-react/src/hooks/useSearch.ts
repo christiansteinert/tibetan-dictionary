@@ -4,7 +4,7 @@
  */
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from '../store/store';
+import type { RootState } from '@/store/store';
 import {
   setResults,
   setCurrentListTerm,
@@ -12,10 +12,10 @@ import {
   setIsSearching,
   setError,
   setSidebarVisible,
-} from '../store/searchSlice';
-import { readTermList } from '../services/DictionaryApi';
-import { WylieConverter } from '../utils/wylieConverter';
-import type { Language } from '../types';
+} from '@/store/searchSlice';
+import { readTermList } from '@/services/DictionaryApi';
+import { WylieConverter } from '@/utils/wylieConverter';
+import type { Language } from '@/types';
 
 const wylieConverter = new WylieConverter();
 

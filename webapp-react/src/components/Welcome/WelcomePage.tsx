@@ -4,8 +4,8 @@
  * Displays credits for the included dictionaries and a brief intro.
  */
 import { useMemo } from 'react';
-import { DICTLIST } from '../../config/dictlist';
-import { GLOBAL_SETTINGS } from '../../config/globalSettings';
+import { DICTLIST } from '@/config/dictlist';
+import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 
 interface CreditEntry {
   id: string;

@@ -3,8 +3,8 @@
  *
  * Displays tib→en or en→tib icon depending on current language.
  */
-import tibEnImg from '../../assets/images/tib-en.png';
-import enTibImg from '../../assets/images/en-tib.png';
+import tibEnImg from '~assets/images/tib-en.png';
+import enTibImg from '~assets/images/en-tib.png';
 
 interface Props {
   inputLang: string;

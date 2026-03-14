@@ -11,9 +11,9 @@
  *   ?sidebar=true           → Show sidebar on small screens (SearchLayout)
  */
 import { Routes, Route, Navigate } from 'react-router-dom';
-import SearchLayout from '../components/SearchLayout/SearchLayout';
-import SettingsPage from '../components/Settings/SettingsPage';
-import WelcomePage from '../components/Welcome/WelcomePage';
+import SearchLayout from '@/components/SearchLayout/SearchLayout';
+import SettingsPage from '@/components/Settings/SettingsPage';
+import WelcomePage from '@/components/Welcome/WelcomePage';
 
 export default function AppRoutes() {
   return (

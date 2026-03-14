@@ -13,8 +13,8 @@
  */
 import { WylieConverter } from './wylieConverter';
 import { SanskritConverter } from './sanskritConverter';
-import type { DictListType, DictEntry } from '../config/dictlist';
-import type { AbbreviationsType, AbbreviationSet } from '../config/abbreviations';
+import type { DictListType, DictEntry } from '@/config/dictlist';
+import type { AbbreviationsType, AbbreviationSet } from '@/config/abbreviations';
 
 // Shared converter instances (initialized lazily)
 let sanskritConverter: SanskritConverter | null = null;
