@@ -101,6 +101,11 @@ function htmlEscapeDefinition(definition: string): string {
   return '<p>' + definition + '</p>';
 }
 
+// Escape a string so it can be safely inserted into a RegExp pattern.
+function escapeRegexLiteral(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 //  ─── Abbreviation processing ─────────────────────────────────────
 
 /**
@@ -115,7 +120,6 @@ function htmlEscapeDefinition(definition: string): string {
 function parseAbbreviations(abbreviationsData: AbbreviationSet | null): Record<string, SearchItem[]> {
   if (!abbreviationsData) return {};
 
-
   const searchPattern = typeof abbreviationsData.match === 'string'
     ? [abbreviationsData.match]
     : abbreviationsData.match;
@@ -123,23 +127,40 @@ function parseAbbreviations(abbreviationsData: AbbreviationSet | null): Record<s
   const searchList: Record<string, SearchItem[]> = {};
   for (const pattern of searchPattern) {
     for (const abbr in abbreviationsData.items) {
-      const abbrEscaped = abbr.replace(/([\[\]\.\*\+\{\}])/g, '\\$1');
+      // Use a robust regex-escape for the abbreviation text
+      const abbrEscaped = escapeRegexLiteral(abbr);
+
+      // Base pattern: insert the literal escaped abbreviation into the pattern template
       const termSearch = pattern.replace('TERM', abbrEscaped);
 
       if (!searchList[abbr]) {
         searchList[abbr] = [];
       }
 
+      // Primary (exact) variant
       searchList[abbr].push({
         search: new RegExp(termSearch, 'mg'),
         explanation: abbreviationsData.items[abbr] || ''
       });
 
-      // Also match version without spaces
-      if (termSearch.indexOf(' ') > -1) {
-        const termSearchNoSpace = termSearch.replace(/ /g, '\\ ');
+      // If the abbreviation contains whitespace, also add variants to match
+      // condensed forms (no spaces) and flexible whitespace (\s*) between parts.
+      if (/\s/.test(abbr)) {
+        // condensed: remove spaces from the raw abbreviation and escape
+        const abbrCondensedRaw = abbr.replace(/\s+/g, '');
+        const abbrCondensedEscaped = escapeRegexLiteral(abbrCondensedRaw);
+        const termSearchCondensed = pattern.replace('TERM', abbrCondensedEscaped);
         searchList[abbr].push({
-          search: new RegExp(termSearchNoSpace, 'mg'),
+          search: new RegExp(termSearchCondensed, 'mg'),
+          explanation: abbreviationsData.items[abbr],
+        });
+
+        // flexible: allow arbitrary (including none) whitespace between parts
+        // we replace runs of whitespace in the escaped abbreviation with a '\\s*' fragment
+        const flexibleFragment = escapeRegexLiteral(abbr).replace(/\s+/g, '\\\\s*');
+        const termSearchFlexible = pattern.replace('TERM', flexibleFragment);
+        searchList[abbr].push({
+          search: new RegExp(termSearchFlexible, 'mg'),
           explanation: abbreviationsData.items[abbr],
         });
       }
@@ -358,7 +379,7 @@ export function formatDefinition(
         + ' data-scan-id="' + htmlEscapeScriptAttr(currentDict.scanId) + '"'
         + ' data-term="' + htmlEscapeScriptAttr(term) + '"'
         + ' data-page-info=\'' + htmlEscapeScriptAttr(JSON.stringify(pageInfo)) + '\''
-        + '>' + currentDict.linkText + pageTxt + '</a></div>';       
+        + '>' + currentDict.linkText + pageTxt + '</a></div>';
     }
 
   } else {
@@ -436,7 +457,8 @@ export function formatDefinitionList(
     if (dictEntries.hasOwnProperty(dictName)) {
       const currentDict = dictionaries[dictName];
       const definition = dictEntries[dictName];
-      const abbreviationsData = abbreviations[dictName] || null;
+
+      const abbreviationsData = currentDict.abbreviations ? abbreviations[currentDict.abbreviations] || null : null;
 
       const result = formatDefinition(
         definition,
