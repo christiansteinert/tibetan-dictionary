@@ -25,7 +25,11 @@ import {
 
 type Language = 'tib' | 'en';
 
-export default function SearchLayout() {
+interface SearchLayoutProps {
+  definitionOnly?: boolean;
+} 
+
+export default function SearchLayout(props: SearchLayoutProps) {
   const { lang: urlLangParam, term } = useParams<{ lang: string; term: string }>();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();

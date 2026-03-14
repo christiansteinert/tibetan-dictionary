@@ -121,7 +121,7 @@ function parseAbbreviations(abbreviationsData: AbbreviationSet | null): Record<s
     : abbreviationsData.match;
 
   const searchList: Record<string, SearchItem[]> = {};
-  for (const pattern in searchPattern) {
+  for (const pattern of searchPattern) {
     for (const abbr in abbreviationsData.items) {
       const abbrEscaped = abbr.replace(/([\[\]\.\*\+\{\}])/g, '\\$1');
       const termSearch = pattern.replace('TERM', abbrEscaped);
@@ -215,20 +215,22 @@ function convertInlineTibetanSections(
     out = out.replace(/\\n/g, '<br />');
     out = out.replace(/([()]|&gt;|&lt;)/g, '<span class="paren">$1</span>');
 
+    const escapedTitle = htmlEscapeTitle(title);
+
     // Always register the section so the backend can check if it's a real entry.
     // Keyed by sectionId (what PHP iterates over) with wylie as a sub-field.
     inlineSections[sectionId] = {
       id: sectionId,
       wylie: lookup,
       content: out,
-      title: htmlEscapeTitle(title),
+      title: escapedTitle,
     };
 
     // Emit a plain span — DefinitionView will add .link + data-wylie after
     // the backend confirms this Wylie term has a dictionary entry
     modifiedDefinition = modifiedDefinition.replace(
       chunk,
-      `<span id="${sectionId}" class="tib">${out}</span>`
+      `<span id="${sectionId}" class="tib inlineTib" title="${escapedTitle}">${out}</span>`
     );
   }
 
@@ -302,7 +304,7 @@ export function formatDefinition(
     // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
 
     defStart = '<div class="tib" title="' + htmlEscapeTitle(definition) + '">';
-    if (definition.indexOf("-----")) {
+    if (definition.indexOf("-----") !== -1) {
       // ensure that separator lines are working also in Tibetan-only dictionaries
       definition = definition.replace("-----", "}\n-----\n{");
       definition = "{" + definition + "}";
@@ -337,7 +339,7 @@ export function formatDefinition(
         ...currentDict.scanInfo
       }
 
-      if (definition != '') {
+      if (definition !== '') {
         definition += '<div class="separator"></div>';
       }
 
@@ -347,11 +349,16 @@ export function formatDefinition(
         pageTxt = ' (p. ' + adjustedPage + ')';
       }
 
-      definition += '<div><a href="javascript:DICT.openScannedPage('
-        + '\'' + htmlEscapeScriptAttr(currentDict.scanId) + '\','
-        + '\'' + htmlEscapeScriptAttr(term) + '\','
-        + htmlEscapeScriptAttr(JSON.stringify(pageInfo))
-        + ')">' + currentDict.linkText + pageTxt + '</a></div>';
+      // Emit an anchor with data attributes. The caller (DefinitionView)
+      // should attach a click handler that calls the provided `onOpenScan`
+      // callback with (scanId, term, pageInfo).
+      definition += '<div><a'
+        + ' class="scan-link"'
+        + ' href="#"'
+        + ' data-scan-id="' + htmlEscapeScriptAttr(currentDict.scanId) + '"'
+        + ' data-term="' + htmlEscapeScriptAttr(term) + '"'
+        + ' data-page-info=\'' + htmlEscapeScriptAttr(JSON.stringify(pageInfo)) + '\''
+        + '>' + currentDict.linkText + pageTxt + '</a></div>';       
     }
 
   } else {

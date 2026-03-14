@@ -15,11 +15,15 @@ import SearchLayout from '@/components/SearchLayout/SearchLayout';
 import SettingsPage from '@/components/Settings/SettingsPage';
 import WelcomePage from '@/components/Welcome/WelcomePage';
 
-export default function AppRoutes() {
+interface AppRoutesProps {
+  definitionOnly?: boolean;
+}
+
+export default function AppRoutes(props: AppRoutesProps) {
   return (
     <Routes>
       <Route path="/" element={<WelcomePage />} />
-      <Route path="/search/:lang/:term" element={<SearchLayout />} />
+      <Route path="/search/:lang/:term" element={<SearchLayout definitionOnly={props.definitionOnly} />} />
       <Route path="/settings" element={<SettingsPage />} />
       {/* Fallback: redirect unknown routes to home */}
       <Route path="*" element={<Navigate to="/" replace />} />

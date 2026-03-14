@@ -10,13 +10,14 @@
  *
  * Call once at app startup before the router mounts.
  */
-
 interface LegacyState {
+  searchMode?: string;
   activeTerm?: string;
   currentListTerm?: string;
   lang?: string;
   inputLang?: string;
   forceLeftSideVisible?: boolean;
+  definitionOnly?: boolean;
   offset?: number;
 }
 
@@ -43,7 +44,8 @@ export function redirectLegacyHash(): void {
       // Not a JSON hash — nothing to redirect
       return;
     }
-  } catch {
+  } catch(e) {
+    console.error('Failed to parse legacy URL hash:', e);
     // Parsing failed — not a legacy hash
     return;
   }
@@ -87,6 +89,10 @@ export function redirectLegacyHash(): void {
     state.activeTerm !== state.currentListTerm
   ) {
     params.set('selected', state.activeTerm);
+  }
+
+  if (state.definitionOnly) {
+    params.set('definitionOnly', 'true');
   }
 
   window.location.replace(
