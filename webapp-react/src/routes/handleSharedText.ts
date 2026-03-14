@@ -149,14 +149,8 @@ export function handleSharedText(): boolean {
       console.log(`Share handler: lang=${lang} display="${displayTerm}" lookup="${lookupTerm}"`);
 
       // Navigate to the search route and the searched term should also be opened if possible
-      const params = new URLSearchParams({
-        offset: '0',
-        selected: displayTerm,
-        sidebar: 'false',
-      });
-
       window.location.replace(
-        `#/search/${lang}/${encodeURIComponent(lookupTerm)}?${params}`
+        `#/search/${lang}/${encodeURIComponent(lookupTerm)}`
       );
     },
     (error: string) => {

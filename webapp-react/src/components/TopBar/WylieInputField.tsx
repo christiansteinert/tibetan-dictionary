@@ -4,8 +4,10 @@
  * Handles Wylie transliteration via the useWylieInput hook and
  * triggers search on syllable completion / Enter.
  */
-import { useEffect, forwardRef, useImperativeHandle } from 'react';
+import { useEffect, forwardRef, useImperativeHandle, useRef } from 'react';
 import useWylieInput from '@/hooks/useWylieInput';
+import { WylieConverter } from '@/utils/wylieConverter';
+import type { Language } from '@/types';
 
 interface Props {
   inputLang: string;
@@ -13,6 +15,8 @@ interface Props {
   lowercase: boolean;
   onInputChange: () => void;
   onEnter: () => void;
+  /** Pre-fill the input with a Wylie/English term (e.g. from the URL on first load) */
+  initialValue?: string;
 }
 
 export interface WylieInputHandle {
@@ -26,7 +30,7 @@ export interface WylieInputHandle {
 }
 
 const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputField(
-  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter },
+  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue },
   ref
 ) {
   const {
@@ -41,7 +45,7 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
   } = useWylieInput({
     useUnicodeTibetan,
     lowercase,
-    inputLang,
+    inputLang: inputLang as Language,
     onInputChange,
     onEnter,
   });
@@ -64,8 +68,19 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
       : 'Enter a Tibetan term...';
   const lang = inputLang === 'en' ? 'en' : 'bo';
 
-  // Focus on mount
+  // Stable converter for initial-value Wylie → Unicode conversion.
+  const wylieConverter = useRef(new WylieConverter());
+
+  // On mount: populate the field with the initial value supplied by the parent.
+  // Convert Wylie → Unicode when unicode mode is on.
   useEffect(() => {
+    if (initialValue) {
+      const display =
+        useUnicodeTibetan && inputLang === 'tib'
+          ? wylieConverter.current.wylieToUni(initialValue)
+          : initialValue;
+      setValue(display);
+    }
     focus();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 

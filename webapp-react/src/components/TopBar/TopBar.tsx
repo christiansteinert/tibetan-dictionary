@@ -4,7 +4,7 @@
  * Contains the search input, language switch button, clear button,
  * and settings gear icon.
  */
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
@@ -16,6 +16,18 @@ import { WylieConverter } from '@/utils/wylieConverter';
 import settingsImg from '~assets/images/settings.png';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
+
+/**
+ * Parse the search term from the current URL hash so the input field
+ * can be pre-filled on a hard reload or shared-link load.
+ * Returns the Wylie/English term and its language, or empty strings.
+ */
+function getTermFromHash(): { term: string; lang: string } {
+  const hash = window.location.hash; // e.g. "#/search/tib/rangs?offset=0&sidebar=false"
+  const match = hash.match(/^#\/search\/([^/]+)\/([^?]+)/);
+  if (!match) return { term: '', lang: '' };
+  return { lang: match[1], term: decodeURIComponent(match[2]) };
+}
 
 export default function TopBar() {
   const { layout } = useSelector((s: RootState) => s.settings);
@@ -30,6 +42,14 @@ export default function TopBar() {
 
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)
   const useUnicodeTibetan = unicode === true;
+
+  // Derive the initial input value from the URL hash once (stable across renders).
+  // This ensures the field is pre-filled on hard reload / shared link before Redux
+  // has been populated by SearchLayout.
+  const initialValue = useMemo(() => {
+    const { term, lang } = getTermFromHash();
+    return lang === inputLang ? term : '';
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Stable converter instance for converting display value → Wylie for the URL.
   // We need this because useWylieInput writes Unicode Tibetan into el.value when
@@ -53,7 +73,7 @@ export default function TopBar() {
       const urlTerm =
         inputLang === 'tib' && useUnicodeTibetan
           ? wylieConverter.current.uniToWylie(raw).trim()
-          : raw.trim;
+          : raw.trim();
       const params = new URLSearchParams({
         offset: '0',
         sidebar: 'true',
@@ -120,6 +140,7 @@ export default function TopBar() {
             lowercase={lowercase}
             onInputChange={handleInputChange}
             onEnter={handleEnter}
+            initialValue={initialValue || undefined}
           />
           <ClearButton onClick={handleClear} />
         </div>
