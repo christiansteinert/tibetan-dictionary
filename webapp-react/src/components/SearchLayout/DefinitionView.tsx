@@ -102,7 +102,7 @@ export default function DefinitionView({ onTermClick, onScanClick }: Props) {
       if (section.wylie && section.wylie !== activeTerm) {
         const span = el.querySelector<HTMLElement>('#' + section.id);
         if (span) {
-          span.classList.add('inlineTib', 'link');
+          span.classList.add('link');
           span.dataset.wylie = section.wylie;
         }
       }

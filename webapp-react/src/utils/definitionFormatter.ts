@@ -374,11 +374,11 @@ export function formatDefinition(
       // should attach a click handler that calls the provided `onOpenScan`
       // callback with (scanId, term, pageInfo).
       definition += '<div><a'
-        + ' class="scan-link"'
+        + ' class="scan-link link"'
         + ' href="#"'
-        + ' data-scan-id="' + htmlEscapeScriptAttr(currentDict.scanId) + '"'
-        + ' data-term="' + htmlEscapeScriptAttr(term) + '"'
-        + ' data-page-info=\'' + htmlEscapeScriptAttr(JSON.stringify(pageInfo)) + '\''
+        + ' data-scan-dict="' + htmlEscapeScriptAttr(currentDict.scanId) + '"'
+        + ' data-scan-term="' + htmlEscapeScriptAttr(term) + '"'
+        + ' data-scan-pages=\'' + htmlEscapeScriptAttr(JSON.stringify(pageInfo)) + '\''
         + '>' + currentDict.linkText + pageTxt + '</a></div>';
     }
 
