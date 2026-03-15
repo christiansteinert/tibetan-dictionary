@@ -4,6 +4,7 @@
  * Displays credits for the included dictionaries and a brief intro.
  */
 import { useMemo } from 'react';
+import styles from './WelcomePage.module.css';
 import { DICTLIST } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 
@@ -44,7 +45,7 @@ export default function WelcomePage() {
   return (
     <div className="mainWrap">
       <div id="definitions">
-        <h1>Welcome to the Tibetan-English Dictionary!</h1>
+        <h1 className="title">Welcome to the Tibetan-English Dictionary!</h1>
         <p>
           <strong><em>Please enter a Tibetan term above.</em></strong>{' '}
           You can either type in Wylie transliteration or you can use a Tibetan keyboard layout.
@@ -62,28 +63,28 @@ export default function WelcomePage() {
 
         {credits.length > 0 && (
           <details className="mt-10">
-            <summary><span className="link">Click here for more information about this application...</span></summary>
-            <h2>About this application</h2>
+            <summary><span className="link">More information about this application...</span></summary>
+            <h2 className="subtitle">About this application</h2>
             <p>
               This application is available both as{' '}
               <a href="https://dictionary.christian-steinert.de" className="link">online application</a> and as{' '}
               <a href="https://www.christian-steinert.de/home/buddhist-apps/tibetan-dictionary" className="link">android app</a>.{' '}
               <a href="https://github.com/christiansteinert/tibetan-dictionary" className="link">
-                The source code of this app is available on github.
+                The source code is available on github.
               </a>
             </p>
 
-            <h2>Contained Dictionaries</h2>
+              <h2 className="subtitle">Contained Dictionaries</h2>
             <p>
               This application contains dictionaries and glossaries by the following
               authors. The copyright of the included material remains with the
               original authors:
             </p>
-            <dl id="credits">
+            <dl className={styles.credits}>
               {credits.map(({ id, title, description }) => (
                 <div key={id}>
-                  <dt>{title}</dt>
-                  <dd dangerouslySetInnerHTML={{ __html: description }} />
+                  <dt className={styles.creditTitle}>{title}</dt>
+                  <dd className={styles.creditDescription} dangerouslySetInnerHTML={{ __html: description }} />
                 </div>
               ))}
             </dl>

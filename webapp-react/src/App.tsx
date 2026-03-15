@@ -11,6 +11,7 @@ import TopBar from './components/TopBar/TopBar';
 import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import '@/styles/shared.module.css';
 
 export default function App() {
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
