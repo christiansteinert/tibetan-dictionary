@@ -6,6 +6,7 @@
 import { useSelector } from 'react-redux';
 import ResultItem from './ResultItem';
 import Pagination from './Pagination';
+import styles from './ResultList.module.css';
 
 interface Props {
   onTermSelected: (term: string) => void;
@@ -20,8 +21,8 @@ interface Props {
 }
 
 export default function ResultList({ onTermSelected, onPrev, onNext, selectedTerm }: Props) {
-  const { results, activeTerm, offset } = useSelector((s: any) => s.search);
-  const inputLang = useSelector((s: any) => s.search.inputLang);
+  const { results, activeTerm, offset, resultsLang } = useSelector((s: any) => s.search);
+  const inputLang = resultsLang;
   const { unicode, listSize } = useSelector((s: any) => s.settings);
   const useUnicodeTibetan = unicode === true || unicode === 'output';
 
@@ -47,7 +48,13 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
     <div className="leftSideBar">
       <div className="sideBarInnerWrap">
         <div id="wordListContainer">
-          <table id="wordList" className="dataTable">
+          <table
+            id="wordList"
+            className={[
+              styles.wordList,
+              useUnicodeTibetan && resultsLang === 'tib' ? styles.tibWordList : '',
+            ].join(' ')}
+          >
             <tbody>
               {visibleResults.map((row: string[]) => {
                 const term = row[0];

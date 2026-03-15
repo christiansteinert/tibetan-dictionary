@@ -1,6 +1,7 @@
 /**
  * ResultItem – a single row in the result list sidebar.
  */
+import { memo } from 'react';
 import { WylieConverter } from '@/utils/wylieConverter';
 
 const wylieConverter = new WylieConverter();
@@ -13,7 +14,7 @@ interface Props {
   onClick: (term: string) => void;
 }
 
-export default function ResultItem({
+const ResultItem = memo(function ResultItem({
   term,
   lang,
   useUnicodeTibetan,
@@ -41,4 +42,6 @@ export default function ResultItem({
       </td>
     </tr>
   );
-}
+});
+
+export default ResultItem;

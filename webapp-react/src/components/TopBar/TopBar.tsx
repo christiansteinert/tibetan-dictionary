@@ -9,11 +9,10 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import clsx from 'clsx';
 import WylieInputField, { WylieInputHandle } from './WylieInputField';
-import LanguageSwitchButton from './LanguageSwitchButton';
 import ClearButton from './ClearButton';
+import HamburgerMenu from './HamburgerMenu';
 import { setInputLang, setSidebarVisible } from '@/store/searchSlice';
 import { WylieConverter } from '@/utils/wylieConverter';
-import settingsImg from '~assets/images/settings.png';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
 
@@ -105,11 +104,11 @@ export default function TopBar() {
   }, [navigate, inputLang, useUnicodeTibetan]);
 
   /**
-   * Switch between Tibetan and English input.
+   * Switch to a specific input language (called from HamburgerMenu).
    */
-  const handleLanguageSwitch = useCallback(() => {
-    const newLang = inputLang === 'tib' ? 'en' : 'tib';
-    dispatch(setInputLang(newLang));
+  const handleSelectLanguage = useCallback((lang: 'tib' | 'en') => {
+    if (lang === inputLang) return;
+    dispatch(setInputLang(lang));
     inputRef.current?.clear();
     inputRef.current?.focus();
     dispatch(setSidebarVisible(false));
@@ -126,12 +125,12 @@ export default function TopBar() {
 
   return (
     <>
-      <div 
-      className={clsx(
-        styles.topbar,
-        isLightMode ? styles.light : styles.dark,
-        'py-0 sm:py-2'
-      )}>
+      <div
+        className={clsx(
+          styles.topbar,
+          isLightMode ? styles.light : styles.dark,
+          'py-0 sm:py-2'
+        )}>
         <div className={styles.textInputWrap}>
           <WylieInputField
             ref={inputRef}
@@ -145,24 +144,17 @@ export default function TopBar() {
           <ClearButton onClick={handleClear} />
         </div>
 
-        <LanguageSwitchButton
-          inputLang={inputLang}
-          onSwitch={handleLanguageSwitch}
-        />
-
-        <a
-          href="#/settings"
-          id="settingsBtn"
-          title="Settings"
-          onClick={(e) => {
-            e.preventDefault();
-            navigate('/settings');
-          }}
-        >
-          <img src={settingsImg} alt="Settings" width="32" height="43" />
-        </a>
+        <span className="mr-3" title="Open menu">
+          <HamburgerMenu
+            inputLang={inputLang}
+            isLightMode={isLightMode}
+            onSelectLanguage={handleSelectLanguage}
+            onOpenSettings={() => navigate('/settings')}
+          />
+        </span>
       </div>
       <div className={styles.topbarUnderlay}></div>
+
     </>
   );
 }

@@ -34,6 +34,9 @@ interface SearchState {
   /** Current search results — array of term string arrays */
   results: string[][];
 
+  /** The inputLang that was active when results were last fetched */
+  resultsLang: 'tib' | 'en';
+
   /** Definitions for the active term — the rendered HTML table */
   definitions: string | null;
 
@@ -58,6 +61,7 @@ const initialState: SearchState = {
   sidebarVisible: false,
   offset: 0,
   results: [],
+  resultsLang: 'tib',
   definitions: null,
   inlineSections: {},
   isSearching: false,
@@ -89,6 +93,7 @@ const searchSlice = createSlice({
     },
     setResults(state, action: PayloadAction<string[][]>) {
       state.results = action.payload || [];
+      state.resultsLang = state.inputLang;
     },
     setDefinitions(state, action: PayloadAction<string | null>) {
       state.definitions = action.payload || null;
