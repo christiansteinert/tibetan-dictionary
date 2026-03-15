@@ -12,7 +12,7 @@ Both share the same JavaScript codebase (`webapp/`) and use an SQLite database g
 ### Build Pipeline (Critical)
 1. **Dictionary Build** (`buildDictionaries.sh` → `_buildDict.py`):
    - Reads CSV files from `_input/dictionaries/public/` (and `private/` if present)
-   - Generates `webapp/TibetanDictionary.db` (SQLite database)
+   - Generates `backend/TibetanDictionary.db` (SQLite database)
    - Uses Perl library (`_build/util/Lingua-BO-Wylie`) for Wylie→Unicode conversion
    - Applies zlib compression with custom dictionary (`DEFLATE_DICT`) for space efficiency
 
@@ -82,10 +82,10 @@ Some dictionaries are proprietary. Build system handles both:
 
 Build dependencies (must be in PATH):
 - **Python 3**: Dictionary build script
-- **Perl 5**: Wylie conversion library
 - **SQLite 3 CLI**: Database operations
 - **Bash/dash**: Build scripts
-- **Node.js/npm + Cordova CLI**: Android builds only
+- **Node.js/npm**: For react builds and Cordova Android builds
+- **Cordova CLI**: Android builds only
 - **Android SDK + JDK**: Set `ANDROID_HOME`, `JAVA_HOME`
 
 ## Common Pitfalls

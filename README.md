@@ -18,7 +18,7 @@ These two scripts call other helper scripts along the way.
 
 
 ## Building the dictionaries
-The script buildDictionaries.sh generates the dictionary database file that is used both by the web applicatipon and the android app (i.e., the sqlite database file at webapp/TibetanDictionary.db).
+The script buildDictionaries.sh generates the dictionary database file that is used both by the web applicatipon and the android app (i.e., the sqlite database file at backend/TibetanDictionary.db).
 
 For this process it uses CSV files as input that are located in the folder _input/dictionaries. These files are expected to have a term in Wylie-transliterated Tibetan in the first column and a dictionary entry for that term in the second column. It is permitted that a single CSV file contains more than one entry for the same term.
 
@@ -43,7 +43,7 @@ Furthermore, the JAVA_HOME and ANDROID_HOME environment variables should be set.
 
 
 # Folder structure
-* webapp/ This folder contains all code that is needed to run the dictionary as a web application. In order to use the web application the sqlite dictionary db (file webapp/TibetanDictionary.db) must have been generated before by the script buildDictionaries.sh. Other than that the web application folder is self-contained and should run on any server that supports PHP5 or PHP6 togetherwith the SQLite module for PHP. 
+* webapp/ This folder contains all code that is needed to run the dictionary as a web application. In order to use the web application the sqlite dictionary db (file backend/TibetanDictionary.db) must have been generated before by the script buildDictionaries.sh. Other than that the web application folder is self-contained and should run on any server that supports PHP5 or PHP6 togetherwith the SQLite module for PHP. 
 * _assets: a few images that have been created for this project
 * _build/util/Lingua-BO-Wylie perl library for converting Tibetan text with Wylie transliteration into Unicode. This library is used to generate the lookup table that is used for converting from Wylie to Unicode
 * _build/mobile This folder contains the Cordova project for generating the Android app. As usual with Cordova projects this folder is a mix of source code, configuration and intermediate build artifacts. The buildAndroid.sh script automatically copies the web application files and the dictionary database from the webapp/ folder into the correct location inside of the Cordova project folder so that these resources are packaged into the Android application

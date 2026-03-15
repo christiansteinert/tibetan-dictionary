@@ -33,12 +33,12 @@ buildAndroidApplication() {
     local IS_PUBLIC=true
     local DICT_TYPE="PUBLIC"  
     local ASSETS="res.normal"
-    local DICT_FILE="../webapp/TibetanDictionary.db"
+    local DICT_FILE="../backend/TibetanDictionary.db"
   else
     local IS_PUBLIC=false
     local DICT_TYPE="FULL"
     local ASSETS="res.full"
-    local DICT_FILE="../webapp/TibetanDictionary_private.db"
+    local DICT_FILE="../backend/TibetanDictionary_private.db"
   fi
 
   echo === Building $DICT_TYPE version ===

@@ -2,8 +2,8 @@
 
 import sqlite3, sys, re, os, zlib
 
-DB="webapp/TibetanDictionary.db"
-DB_PRIVATE="webapp/TibetanDictionary_private.db"
+DB="backend/TibetanDictionary.db"
+DB_PRIVATE="backend/TibetanDictionary_private.db"
 CSV_INPUT="_input/dictionaries/public"
 CSV_INPUT_EN="_input/dictionaries/public_en"
 CSV_INPUT_PRIVATE="_input/dictionaries/private"

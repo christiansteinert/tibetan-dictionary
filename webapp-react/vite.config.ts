@@ -1,4 +1,11 @@
 import { defineConfig } from 'vite';
+// Node built-ins used only for build-time copying; ignore type errors when node types are not installed.
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import path from 'path';
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { promises as fs } from 'fs';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 import { VitePWA } from 'vite-plugin-pwa';
@@ -36,6 +43,32 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    // Copy backend assets into the build output so they are available alongside the frontend.
+    {
+      name: 'copy-backend-to-dist',
+      async closeBundle() {
+        const __dirname = path.dirname(new URL(import.meta.url).pathname);
+        const backendDir = path.resolve(__dirname, '../backend');
+        const distDir = path.resolve(__dirname, 'dist');
+
+        // Only copy if backend folder exists
+        try {
+          const stat = await fs.stat(backendDir);
+          if (!stat.isDirectory()) return;
+        } catch (e) {
+          return;
+        }
+
+        const entries = await fs.readdir(backendDir, { withFileTypes: true });
+        await Promise.all(
+          entries.map((entry: any) => {
+            const src = path.join(backendDir, entry.name);
+            const dest = path.join(distDir, entry.name);
+            return fs.cp(src, dest, { recursive: true });
+          })
+        );
+      },
+    },
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
@@ -68,7 +101,7 @@ export default defineConfig({
     middlewareMode: false,
     proxy: {
       '/dict.php': {
-        target: 'http://localhost/TibetanDictionary/dict.php',
+        target: 'http://localhost/TibetanDictionary-react/dict.php',
         changeOrigin: true,
       },
     },

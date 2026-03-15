@@ -55,19 +55,20 @@ export default function WelcomePage() {
         </p>
         <p>
           If you are unfamiliar with Wylie transliteration, see{' '}
-          <a href="https://resources.christian-steinert.de/download/WylieTransliteration.pdf">
+          <a href="https://resources.christian-steinert.de/download/WylieTransliteration.pdf" className="link">
             this short summary
           </a>.
         </p>
 
         {credits.length > 0 && (
-          <>
+          <details className="mt-10">
+            <summary><span className="link">Click here for more information about this application...</span></summary>
             <h2>About this application</h2>
             <p>
               This application is available both as{' '}
-              <a href="https://dictionary.christian-steinert.de">online application</a> and as{' '}
-              <a href="https://www.christian-steinert.de/home/buddhist-apps/tibetan-dictionary">android app</a>.{' '}
-              <a href="https://github.com/christiansteinert/tibetan-dictionary">
+              <a href="https://dictionary.christian-steinert.de" className="link">online application</a> and as{' '}
+              <a href="https://www.christian-steinert.de/home/buddhist-apps/tibetan-dictionary" className="link">android app</a>.{' '}
+              <a href="https://github.com/christiansteinert/tibetan-dictionary" className="link">
                 The source code of this app is available on github.
               </a>
             </p>
@@ -86,7 +87,7 @@ export default function WelcomePage() {
                 </div>
               ))}
             </dl>
-          </>
+          </details>
         )}
       </div>
     </div>

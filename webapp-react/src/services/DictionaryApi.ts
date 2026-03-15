@@ -1,74 +1,23 @@
-/**
- * Dictionary API service
- * 
- * Handles all communication with the dict.php backend via fetch().
- * For Cordova (Android), a separate CordovaApi implementation
- * would use the SQLite plugin directly.
- */
+import { CordovaDictionaryApi } from './CordovaDictionaryApi';
+import { PhpDictionaryApi } from './PhpDictionaryApi';
 
-/**
- * Serialize an object to URL-encoded form data (for POST body).
- * Handles nested objects and arrays.
- * @param {Object} obj - The object to serialize
- * @param {string} [prefix] - Prefix for nested keys
- * @returns {string} URL-encoded string
- */
-type SerializeValue = string | number | string[] | Record<string, unknown>;
-
-function serialize(
-  obj: Record<string, unknown>,
-  prefix = ''
-): string {
-  const params: string[] = [];
-  for (const [key, value] of Object.entries(obj)) {
-    const paramKey = prefix ? `${prefix}[${key}]` : key;
-    if (Array.isArray(value)) {
-      for (const item of value) {
-        params.push(
-          encodeURIComponent(paramKey + '[]') + '=' + encodeURIComponent(String(item))
-        );
-      }
-    } else if (typeof value === 'object' && value !== null) {
-      params.push(serialize(value as Record<string, unknown>, paramKey));
-    } else {
-      params.push(
-        encodeURIComponent(paramKey) + '=' + encodeURIComponent(String(value ?? ''))
-      );
-    }
-  }
-  return params.join('&');
-}
-
-/**
- * Send a POST request to the dict.php backend.
- * @param {Object} data - The data to send
- * @returns {Promise<T>} Parsed JSON response
- */
-async function post<T>(
-  data: Record<string, unknown>
-): Promise<T> {
-  const body = serialize(data as Record<string, unknown>);
-  const response = await fetch('dict.php', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body,
-  });
-
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-  }
-
-  return response.json();
-}
-
-// ---------------------------------------------------------------------------
-// Public API functions
-// ---------------------------------------------------------------------------
-
-interface ReadTermResult {
+export interface ReadTermResult {
   term: string;
   definitions: Record<string, string>;
 }
+
+export interface InlineSection {
+  id: string;
+  wylie: string;
+  content: string;
+  title: string;
+}
+
+// The backend is chosen dynamically depending on whether we are running inside
+// Cordova (Android) or in a regular browser.
+const backend = (window as any).cordova
+  ? new CordovaDictionaryApi()
+  : new PhpDictionaryApi();
 
 /**
  * Read definitions for a specific term.
@@ -82,8 +31,7 @@ export async function readTerm(
   lang: string,
   dictionaries: string[]
 ): Promise<ReadTermResult> {
-  const data = await post<Record<string, string>>({ term, lang, dictionaries });
-  return { term, definitions: data };
+  return backend.readTerm(term, lang, dictionaries);
 }
 
 /**
@@ -102,20 +50,20 @@ export async function readTermList(
   maxResults: number,
   dictionaries: string[]
 ): Promise<string[][]> {
-  return post<string[][]>({
-    search,
-    lang,
-    offset,
-    maxresults: maxResults,
-    dictionaries,
-  });
+  return backend.readTermList(search, lang, offset, maxResults, dictionaries);
 }
 
-interface InlineSection {
-  id: string;
-  wylie: string;
-  content: string;
-  title: string;
+/**
+ * Initialize the selected backend.
+ *
+ * For Cordova this is used to validate that the SQLite database is accessible.
+ * For the PHP backend this is a no-op.
+ */
+export async function initDB(): Promise<void> {
+  if (typeof backend.initDB === 'function') {
+    return backend.initDB();
+  }
+  return;
 }
 
 /**
@@ -127,5 +75,9 @@ interface InlineSection {
 export async function checkTibetanSectionsForLinks(
   sections: Record<string, InlineSection>
 ): Promise<Record<string, InlineSection>> {
-  return post<Record<string, InlineSection>>({ checkTerms: sections });
+  // `checkTibetanSectionsForLinks` is used to show links in definitions. For
+  // the Cordova backend the query is executed against the local SQLite database.
+  return backend.checkTibetanSectionsForLinks(sections) as Promise<
+    Record<string, InlineSection>
+  >;
 }
