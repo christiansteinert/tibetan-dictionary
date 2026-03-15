@@ -1,8 +1,6 @@
 /**
- * Custom tooltip system – replaces react-tooltip.
- *
- * Replicates the original jQuery tooltip behaviour:
- *  - Desktop: follows the mouse, fades in after a short delay
+ * Custom tooltip system (rewritten based on older jQuery code):
+ *  - Desktop: follows the mouse
  *  - Touch / Cordova: ignores hover; click shows a fullscreen popup overlay
  *  - Pipe characters (|) in tooltip text are converted to <br> line breaks
  *

@@ -12,8 +12,10 @@ import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import '@/styles/shared.module.css';
+import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 
 export default function App() {
+  useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
   const inputLang = useSelector((s: RootState) => s.search.inputLang);
   const sidebarVisible = useSelector((s: RootState) => s.search.sidebarVisible);
