@@ -2,14 +2,20 @@
 
 import sqlite3, sys, re, os, zlib
 
-DB="backend/TibetanDictionary.db"
-DB_PRIVATE="backend/TibetanDictionary_private.db"
-CSV_INPUT="_input/dictionaries/public"
-CSV_INPUT_EN="_input/dictionaries/public_en"
-CSV_INPUT_PRIVATE="_input/dictionaries/private"
-CSV_INPUT_PRIVATE_EN="_input/dictionaries/private_en"
+# --- Output paths ---
+# Each base name produces TWO databases:
+#   <base>.db             - uncompressed (text definitions, FTS5 indexes) for web/PHP
+#   <base>_compressed.db  - compressed (blob definitions, no FTS5) for Cordova/mobile
+DB_BASE = "backend/TibetanDictionary"
+DB_PRIVATE_BASE = "backend/TibetanDictionary_private"
 
-# 32KB "dictionary" with frequent words to optimize deflate compression 
+CSV_INPUT = "_input/dictionaries/public"
+CSV_INPUT_EN = "_input/dictionaries/public_en"
+CSV_INPUT_PRIVATE = "_input/dictionaries/private"
+CSV_INPUT_PRIVATE_EN = "_input/dictionaries/private_en"
+
+# 32KB "dictionary" with frequent words to optimize deflate compression
+# (used only for the compressed/mobile database)
 DEFLATE_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara voidness (1998) adorned battle bright, "+ \
 "byung} clouds coemergent confused, deal Def.: dull fell formed got hairs ham learning, leg (lha life. "+ \
 "limits (lit. MG: now, preliminary purity, relaxed rgyags {rta smell, state; statue tail thirty-two thunder "+ \
@@ -328,37 +334,58 @@ DEFLATE_DICT = " perfections pupil ru. skom Sumeru summary treat tshi vidyadhara
 
 DEFLATE_DICT_BYTES = DEFLATE_DICT.encode("utf-8")
 
+
+# ---------------------------------------------------------------------------
+# Compression (for mobile/Cordova database only)
+# ---------------------------------------------------------------------------
 def deflate(text):
     textBytes = text.encode("utf-8")
-    co=zlib.compressobj(9,zlib.DEFLATED,-15,9,zlib.Z_DEFAULT_STRATEGY, DEFLATE_DICT_BYTES) 
-    data=co.compress(textBytes)
-    data=data + co.flush()
-    
+    co = zlib.compressobj(9, zlib.DEFLATED, -15, 9, zlib.Z_DEFAULT_STRATEGY, DEFLATE_DICT_BYTES)
+    data = co.compress(textBytes)
+    data = data + co.flush()
     return data
 
 
-def createDb(path):
+# ---------------------------------------------------------------------------
+# Database creation
+# ---------------------------------------------------------------------------
+def createDatabasePair(basePath):
+    """Create both an uncompressed and a compressed database, returning (uncompressedDb, compressedDb)."""
+    uncompressedPath = basePath + ".db"
+    compressedPath = basePath + "_compressed.db"
 
-    if os.path.exists(path):
-        os.remove(path)    
-    
-    db = sqlite3.connect(path)
-    db.execute("create table DICTNAMES(id int, language text, name text)")
-    db.execute("create table DICT(term text, dictionary int, definition blob)")
-    db.execute("create table DICT_EN(term text COLLATE NOCASE, dictionary int, definition blob)")
-    db.execute("create table \"android_metadata\" (\"locale\" TEXT DEFAULT 'en_US')")
-    
-    return db
+    for path in [uncompressedPath, compressedPath]:
+        if os.path.exists(path):
+            os.remove(path)
+
+    uncompressedDb = sqlite3.connect(uncompressedPath)
+    compressedDb = sqlite3.connect(compressedPath)
+
+    # --- Compressed database: same schema as the original (blob definitions) ---
+    compressedDb.execute("CREATE TABLE DICTNAMES(id int, language text, name text)")
+    compressedDb.execute("CREATE TABLE DICT(term text, dictionary int, definition blob)")
+    compressedDb.execute("CREATE TABLE DICT_EN(term text COLLATE NOCASE, dictionary int, definition blob)")
+    compressedDb.execute('CREATE TABLE "android_metadata" ("locale" TEXT DEFAULT \'en_US\')')
+
+    # --- Uncompressed database: text definitions, plus FTS5 virtual tables for full text search ---
+    uncompressedDb.execute("CREATE TABLE DICTNAMES(id int, language text, name text)")
+    uncompressedDb.execute("CREATE TABLE DICT(term text, dictionary int, definition text)")
+    uncompressedDb.execute("CREATE TABLE DICT_EN(term text COLLATE NOCASE, dictionary int, definition text)")
+
+    return uncompressedDb, compressedDb
 
 
+# ---------------------------------------------------------------------------
+# Text cleanup helpers (unchanged from original)
+# ---------------------------------------------------------------------------
 def cleanupTerm(value, isTibetan):
-    value = value.replace("\""," ")
-    value = value.replace("-"," ")
-    value = re.sub(r"^\s+","",value)
-    value = re.sub(r"\s+$","",value)
-    value = value.replace("\\n"," ")
-    value = re.sub(r"\s+"," ",value)
-    value = value.replace("­","") # delete zero-width non-joiner
+    value = value.replace("\"", " ")
+    value = value.replace("-", " ")
+    value = re.sub(r"^\s+", "", value)
+    value = re.sub(r"\s+$", "", value)
+    value = value.replace("\\n", " ")
+    value = re.sub(r"\s+", " ", value)
+    value = value.replace("\u00AD", "")  # delete soft hyphen
 
     if isTibetan:
         value = value.replace("v", "w")
@@ -366,110 +393,159 @@ def cleanupTerm(value, isTibetan):
     return value
 
 
-def cleanupDef(value):
-    value = value.replace("\"","\\\"")
-    value = re.sub(r"^\s+","",value)
-    value = re.sub(r"\s+$","",value)
-    value = re.sub('"','\\"',value)
+def cleanupDefinition(value):
+    value = value.replace("\"", "\\\"")
+    value = re.sub(r"^\s+", "", value)
+    value = re.sub(r"\s+$", "", value)
+    value = re.sub('"', '\\"', value)
     value = value.rstrip("\r\n")
     value = value.rstrip("\r")
     value = value.rstrip("\n")
-    
     return value
 
+
 def getDictNameFromFile(dictFile):
-    return re.sub("^.*[0-9][0-9]-","",dictFile)
+    return re.sub("^.*[0-9][0-9]-", "", dictFile)
 
 
+# ---------------------------------------------------------------------------
+# CSV processing — inserts into BOTH databases simultaneously
+# ---------------------------------------------------------------------------
+def processFile(dictFile, uncompressedDb, compressedDb, dictNr, isTibetan):
+    language = "bo" if isTibetan else "en"
+    tableName = "DICT" if isTibetan else "DICT_EN"
 
-def processFile(dictFile, db, dictNr, isTibetan):
-    if isTibetan:
-        language = "bo"
-    else:
-        language = "en"
-        
-    
-    sqlQuery = 'insert into DICTNAMES values({0},"{1}","{2}");'.format(dictNr, language, getDictNameFromFile(dictFile))
-    db.execute(sqlQuery)
+    dictName = getDictNameFromFile(dictFile)
+    uncompressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, language, dictName))
+    compressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, language, dictName))
 
-    if isTibetan:
-        tableName = "DICT"
-    else:
-        tableName = "DICT_EN"
-        
-    
     existingTerms = {}
     with open(dictFile, 'r') as inp:
-        
         for line in inp:
-            if ( not line.startswith("#") ) and ( "|" in line ):
-                term, definition = line.split("|");
-                
+            if (not line.startswith("#")) and ("|" in line):
+                term, definition = line.split("|")
+
                 term = cleanupTerm(term, isTibetan)
-                definition = cleanupDef(definition)
-                
-                
+                definition = cleanupDefinition(definition)
+
                 lineContents = term + "|" + definition
                 if (term != "") and (definition != "") and (lineContents not in existingTerms):
-                    # todo Check, if same entry was already seen before!
-                    definitionBlob = deflate(definition)
-                    sqlQuery = 'insert into {0} values("{1}",{2},X\'{3}\');'.format(tableName, term, dictNr, definitionBlob.hex())
-                    db.execute(sqlQuery)
-                    existingTerms[lineContents] = 1
-                
-                #tibetan = cleanupValueMinimal(tibetanOriginal)
-                #englishTerms = cleanupValue(englishOriginal)
-            
+                    # Uncompressed DB: plain text definition
+                    uncompressedDb.execute(
+                        "INSERT INTO {0} VALUES(?,?,?)".format(tableName),
+                        (term, dictNr, definition)
+                    )
 
-def processFolder(db, srcFolder, isTibetan):
+                    # Compressed DB: zlib-compressed blob definition
+                    definitionBlob = deflate(definition)
+                    compressedDb.execute(
+                        "INSERT INTO {0} VALUES(?,?,?)".format(tableName),
+                        (term, dictNr, definitionBlob)
+                    )
+
+                    existingTerms[lineContents] = 1
+
+
+def processFolder(uncompressedDb, compressedDb, srcFolder, isTibetan):
     dictNr = 1
-    for dictFile in os.listdir(srcFolder):
+    for dictFile in sorted(os.listdir(srcFolder)):
         dictFileWithPath = os.path.join(srcFolder, dictFile)
         if not os.path.isdir(dictFileWithPath):
             print(dictFileWithPath)
-            
-            
-            processFile(dictFileWithPath, db, dictNr, isTibetan)
-            db.commit()
-            dictNr+=1
-            
+            processFile(dictFileWithPath, uncompressedDb, compressedDb, dictNr, isTibetan)
+            uncompressedDb.commit()
+            compressedDb.commit()
+            dictNr += 1
+
+    uncompressedDb.commit()
+    compressedDb.commit()
+
+
+# ---------------------------------------------------------------------------
+# FTS5 virtual table creation (uncompressed database only)
+# ---------------------------------------------------------------------------
+def createFts5Tables(db):
+    """Create FTS5 external-content virtual tables for fulltext search.
+
+    The FTS5 tables reference the regular DICT / DICT_EN tables via
+    content= so that the definition text is not duplicated on disk.
+    We use the implicit rowid of the content tables as content_rowid.
+    """
+    db.execute("""
+        CREATE VIRTUAL TABLE DICT_FTS USING fts5(
+            term,
+            definition,
+            content='DICT',
+            content_rowid='rowid'
+        )
+    """)
+
+    db.execute("""
+        CREATE VIRTUAL TABLE DICT_EN_FTS USING fts5(
+            term,
+            definition,
+            content='DICT_EN',
+            content_rowid='rowid'
+        )
+    """)
+
+    # Populate the FTS indexes from the content tables
+    db.execute("INSERT INTO DICT_FTS(DICT_FTS) VALUES('rebuild')")
+    db.execute("INSERT INTO DICT_EN_FTS(DICT_EN_FTS) VALUES('rebuild')")
 
     db.commit()
 
-def closeDb(db):
-    db.execute("create index i1 on DICT(term, dictionary);")
-    db.execute("create index i2 on DICT_EN(term COLLATE NOCASE, dictionary);")
-    db.execute("create index i3 on DICTNAMES(language, name, id);")
-    
-    db.commit()
-    db.close()
-    
+
+# ---------------------------------------------------------------------------
+# Finalization: indexes, FTS5, close
+# ---------------------------------------------------------------------------
+def closeDatabasePair(uncompressedDb, compressedDb):
+    """Create indexes, build FTS5 tables (uncompressed only), and close both databases."""
+
+    # B-tree indexes on both databases
+    for db in [uncompressedDb, compressedDb]:
+        db.execute("CREATE INDEX i1 ON DICT(term, dictionary);")
+        db.execute("CREATE INDEX i2 ON DICT_EN(term COLLATE NOCASE, dictionary);")
+        db.execute("CREATE INDEX i3 ON DICTNAMES(language, name, id);")
+        db.commit()
+
+    # FTS5 virtual tables — uncompressed database only
+    print("- Building FTS5 fulltext indexes")
+    createFts5Tables(uncompressedDb)
+
+    uncompressedDb.close()
+    compressedDb.close()
 
 
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 def main():
     print("=== PUBLIC DICTIONARIES ===")
 
-    db = createDb(DB)
-    
+    uncompressedDb, compressedDb = createDatabasePair(DB_BASE)
+
     print("- Processing Tibetan-English Dictionaries")
-    processFolder(db, CSV_INPUT, True)
-    
+    processFolder(uncompressedDb, compressedDb, CSV_INPUT, True)
+
     print("- Processing English-Tibetan Dictionaries")
-    processFolder(db, CSV_INPUT_EN, False)
-    
-    closeDb(db)
+    processFolder(uncompressedDb, compressedDb, CSV_INPUT_EN, False)
+
+    closeDatabasePair(uncompressedDb, compressedDb)
 
 
     if os.path.exists(CSV_INPUT_PRIVATE):
         print("=== PRIVATE DICTIONARIES ===")
-        db = createDb(DB_PRIVATE)
-    
+
+        uncompressedDb, compressedDb = createDatabasePair(DB_PRIVATE_BASE)
+
         print("- Processing Tibetan-English Dictionaries")
-        processFolder(db, CSV_INPUT_PRIVATE, True)
-    
+        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE, True)
+
         print("- Processing English-Tibetan Dictionaries")
-        processFolder(db, CSV_INPUT_PRIVATE_EN, False)
-    
-        closeDb(db)
+        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE_EN, False)
+
+        closeDatabasePair(uncompressedDb, compressedDb)
+
 
 main()
