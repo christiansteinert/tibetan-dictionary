@@ -271,4 +271,19 @@ export class CordovaDictionaryApi {
       }, 100);
     });
   }
+
+  /**
+   * Fulltext search — not yet implemented for the Cordova backend.
+   * The mobile app uses the compressed database which has no FTS5 tables.
+   */
+  async fulltextSearch(
+    _query: string,
+    _lang: string,
+    _offset: number,
+    _maxResults: number,
+    _dictionaries: string[]
+  ): Promise<{ term: string; dictionary: string; dictionaryId: number; snippet: string }[]> {
+    console.warn('fulltextSearch is not available in the Cordova backend');
+    return [];
+  }
 }

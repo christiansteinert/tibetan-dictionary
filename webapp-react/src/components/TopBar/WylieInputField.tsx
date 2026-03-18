@@ -77,7 +77,7 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     if (initialValue) {
       const display =
         useUnicodeTibetan && inputLang === 'tib'
-          ? wylieConverter.current.wylieToUni(initialValue)
+          ? wylieConverter.current.wylieToUni(initialValue, true)
           : initialValue;
       setValue(display);
     }

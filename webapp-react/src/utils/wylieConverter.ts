@@ -45,7 +45,52 @@ export class WylieConverter {
    * @param {string} wylie - Text in Wylie/EWTS transliteration
    * @returns {string} Text in Tibetan Unicode
    */
-  wylieToUni(wylie: string): string {
+  wylieToUni(wylie: string, preserveWildcards: boolean = false): string {
+    if (wylie.indexOf('?') !== -1 || wylie.indexOf('*') !== -1) {
+      // Preserve wildcard characters and convert the rest. This is used to handle interactive inputs that contain wildcards.
+      // It is accomplished by:
+      // - splitting the input into individual syllables and converting each syllable individually to Tibetan Unicode. 
+      // - preserving any wildcards
+      // - if splitting at a wildcard generates a fragment without vowel then unicode conversion is ignored because the converter
+      //   would introduce an 'a' vowel that we do not want to have and it may even be an invalid syllable fragment that cannot be properly represented
+      let result = '';
+      let previousSyllable = '';
+      
+      const tok = new Tokenizer(['*', '?', ' '], (syllable: string, isSeparator: boolean) => {
+        if (syllable === '*' || syllable === '?') {
+          if (!previousSyllable.endsWith(' ')) {
+            // The Wylie converter introduces a tseg after every syllable, so if the previous syllable.
+            // If the previous syllable ended with a wildcard, then we remove that tseg again
+            result = result.replace(/་$/, '');
+          }
+
+          result += syllable; // preserve wildcards and spaces
+        } else if (syllable === ' ') {
+          result += '་';
+        } else if (/[aeiouAEIOU]/.test(syllable) || /[^a-zA-Z']/.test(syllable)) {
+          result += this.doWylieToUni(syllable); // convert syllables and non-syllable fragments (e.g. punctuation)
+        } else {
+          result += syllable; // preserve syllable fragments (i.e. consonants without vowels) and do not convert them
+        }
+        previousSyllable = syllable;
+      });
+  
+      tok.parse(wylie);
+
+      result = result.replace(/་+/g, '་');
+      if (!result.endsWith('་')) {
+        result += '་';
+      }
+
+      return result;
+    
+    } else {
+      return this.doWylieToUni(wylie);
+    }
+
+  }
+
+  doWylieToUni(wylie: string): string {
     if (!wylie) return '';
 
     // Return original if it contains HTML-sensitive characters

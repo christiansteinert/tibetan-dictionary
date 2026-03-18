@@ -13,6 +13,14 @@ export interface InlineSection {
   title: string;
 }
 
+/** A single result row from fulltext / wildcard search. */
+export interface ExtendedSearchResult {
+  term: string;
+  dictionary: string;
+  dictionaryId: number;
+  snippet: string;
+}
+
 // The backend is chosen dynamically depending on whether we are running inside
 // Cordova (Android) or in a regular browser.
 const backend = (window as any).cordova
@@ -80,4 +88,22 @@ export async function checkTibetanSectionsForLinks(
   return backend.checkTibetanSectionsForLinks(sections) as Promise<
     Record<string, InlineSection>
   >;
+}
+
+/**
+ * FTS5-based fulltext search across definitions and/or terms.
+ * @param query    – space-separated keywords (AND-ed by FTS5)
+ * @param lang     – 'tib' or 'en'
+ * @param offset   – pagination offset
+ * @param maxResults – page size
+ * @param dictionaries – active dictionary IDs
+ */
+export async function fulltextSearch(
+  query: string,
+  lang: string,
+  offset: number,
+  maxResults: number,
+  dictionaries: string[]
+): Promise<ExtendedSearchResult[]> {
+  return backend.fulltextSearch(query, lang, offset, maxResults, dictionaries);
 }

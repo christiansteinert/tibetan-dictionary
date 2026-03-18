@@ -94,8 +94,8 @@ function htmlEscapeDefinition(definition: string): string {
   );
   definition = definition.replace(/\\+n/g, '\n');
   definition = definition.replace(/\\/g, '');
-  definition = definition.replace(/([a-zA-Z0-9\.]){/g, '$1 {');
-  definition = definition.replace(/}([a-zA-Z0-9])/g, '} $1');
+  definition = definition.replace(/([a-zA-Z'0-9\.]){/g, '$1 {');
+  definition = definition.replace(/}([a-zA-Z'0-9])/g, '} $1');
   definition = definition.replace(/:([^\/0-9])/g, ': $1');
   definition = definition.replace(/ - /g, ' &ndash; ');
   return '<p>' + definition + '</p>';
@@ -321,6 +321,9 @@ export function formatDefinition(
   if (!currentDict.preformattedLinebreaks) {
     definition = breakDefinitionIntoSections(definition);
   }
+
+
+  // FIXME: clean up all source files with containsOnlyTibetan = true and remove the special case handling here!
   if (currentDict.containsOnlyTibetan) {
     // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
 

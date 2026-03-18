@@ -10,54 +10,69 @@
   border-spacing: 0;
   overflow: hidden;
   border-radius: 5px;
+}
 
-  & :global(th) { display: none; }
+.wordList :global(th) {
+  display: none;
+}
 
-  & :global(td) { padding: 0.1em 0.2em; }
+.wordList :global(td) {
+  padding: 0.1em 0.2em;
+}
 
-  & :global(a) { text-decoration: none; }
+.wordList :global(a) {
+  text-decoration: none;
+}
 
-  & :global(td:hover a) { text-decoration: underline; }
+.wordList :global(td:hover a) {
+  text-decoration: underline;
+}
 
-  & :global(tbody tr:nth-child(even) td) { background-color: #e8e8f8; }
+.wordList :global(tbody tr:nth-child(even) td) {
+  background-color: #e8e8f8;
+}
 
-  :global(.dark) & :global(tbody tr:nth-child(even) td) { background-color: #333; }
+:global(.dark) .wordList :global(tbody tr:nth-child(even) td) {
+  background-color: #333;
+}
 
-  & :global(tbody tr.selected td),
-  & :global(tbody tr.selected a) {
-    background-color: #77779a !important;
-    color: #fff;
-  }
+.wordList :global(tbody tr.selected td),
+.wordList :global(tbody tr.selected a) {
+  background-color: #77779a !important;
+  color: #fff;
+}
 
-  :global(.dark) & :global(tbody tr.selected td),
-  :global(.dark) & :global(tbody tr.selected a) {
-    background-color: #668 !important;
-    color: #ff7;
-  }
+:global(.dark) .wordList :global(tbody tr.selected td),
+:global(.dark) .wordList :global(tbody tr.selected a) {
+  background-color: #668 !important;
+  color: #ff7;
+}
 
-  & :global(tbody tr:first-child td:first-child) { border-top-left-radius: 5px; }
-  & :global(tbody tr:first-child td:last-child)  { border-top-right-radius: 5px; }
-  & :global(tbody tr:last-child td:first-child)  { border-bottom-left-radius: 5px; }
-  & :global(tbody tr:last-child td:last-child)   { border-bottom-right-radius: 5px; }
+.wordList :global(tbody tr:first-child td:first-child) {
+  border-top-left-radius: 5px;
+}
+.wordList :global(tbody tr:first-child td:last-child) {
+  border-top-right-radius: 5px;
+}
+.wordList :global(tbody tr:last-child td:first-child) {
+  border-bottom-left-radius: 5px;
+}
+.wordList :global(tbody tr:last-child td:last-child) {
+  border-bottom-right-radius: 5px;
 }
 
 /* ── Tibetan Unicode result list ─────────────────────────────── */
 
-/*
- * Applied when resultsLang === 'tib' (the language the current results are in),
- * NOT when inputLang changes, so toggling the TopBar language does not resize
- * the list.
- */
 .tibWordList {
   font-size: 1.4em;
   line-height: 180%;
+}
 
-  :global(.desktop) & {
-    font-family: "Droid Sans","Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
-    text-rendering: optimizeLegibility;
-  }
+:global(.desktop) .tibWordList {
+  font-family: "Droid Sans","Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
+  text-rendering: optimizeLegibility;
+}
 
-  :global(.mobile) & {
-    font-family: "DDC Uchen";
-  }
+:global(.mobile) .tibWordList {
+  font-family: "DDC Uchen";
 }

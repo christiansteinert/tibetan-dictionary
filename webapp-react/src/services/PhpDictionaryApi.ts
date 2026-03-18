@@ -71,6 +71,22 @@ export class PhpDictionaryApi {
     return post<Record<string, unknown>>({ checkTerms: sections });
   }
 
+  async fulltextSearch(
+    query: string,
+    lang: string,
+    offset: number,
+    maxResults: number,
+    dictionaries: string[]
+  ) {
+    return post<{ term: string; dictionary: string; dictionaryId: number; snippet: string }[]>({
+      fulltextSearch: query,
+      lang,
+      offset,
+      maxresults: maxResults,
+      dictionaries,
+    });
+  }
+
   /**
    * Initialize the backend (no-op for PHP).
    */
