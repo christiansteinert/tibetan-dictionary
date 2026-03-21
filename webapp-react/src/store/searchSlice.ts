@@ -5,6 +5,7 @@
  * sidebar visibility, and the list of results.
  */
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { Language } from '@/types';
 
 interface InlineSection {
   id: string;
@@ -13,35 +14,7 @@ interface InlineSection {
 }
 
 interface SearchState {
-  /** The currently active/displayed term (Wylie for Tibetan) */
-  activeTerm: string;
-
-  /** The search language: 'tib' or 'en' */
-  lang: 'tib' | 'en';
-
-  /** The input language (may differ from lang during transitions) */
-  inputLang: 'tib' | 'en';
-
-  /** The last search term that was sent to the API */
-  currentListTerm: string;
-
-  /** Whether the sidebar (result list) is visible on small screens */
-  sidebarVisible: boolean;
-
-  /** Pagination offset for search results */
-  offset: number;
-
-  /** Current search results — array of term string arrays */
-  results: string[][];
-
-  /** The inputLang that was active when results were last fetched */
-  resultsLang: 'tib' | 'en';
-
-  /** Definitions for the active term — the rendered HTML table */
-  definitions: string | null;
-
-  /** Inline Tibetan sections that have been confirmed as clickable links */
-  inlineSections: Record<string, InlineSection>;
+  /* --- Loading state --- */
 
   /** Whether a search request is in flight */
   isSearching: boolean;
@@ -51,6 +24,43 @@ interface SearchState {
 
   /** Any error message from the last failed request */
   error: string | null;
+
+
+  /* --- Input settings --- */
+
+  /** The search language: 'tib' or 'en' */
+  lang: Language;
+
+  /** The input language (may differ from lang during transitions) */
+  inputLang: Language;
+
+  /* --- Active Results --- */
+
+  /** The last search term that was sent to the API */
+  currentListTerm: string; // TODO: rename to query
+
+  /** The inputLang that was active when results were last fetched */
+  resultsLang: Language;
+
+  /** Pagination offset for search results */
+  offset: number;
+
+  /** Whether the sidebar (result list) is visible on small screens */
+  sidebarVisible: boolean;
+
+  /** Current search results — array of term string arrays */
+  results: string[][];
+
+  /* --- Definition area --- */
+
+  /** The currently active/displayed term (Wylie for Tibetan) */
+  activeTerm: string;
+
+  /** Definitions for the active term — the rendered HTML table */
+  definitions: string | null;
+
+  /** Inline Tibetan sections that have been confirmed as clickable links */
+  inlineSections: Record<string, InlineSection>;
 }
 
 const initialState: SearchState = {
@@ -76,10 +86,10 @@ const searchSlice = createSlice({
     setActiveTerm(state, action: PayloadAction<string>) {
       state.activeTerm = action.payload || '';
     },
-    setLang(state, action: PayloadAction<'tib' | 'en'>) {
+    setLang(state, action: PayloadAction<Language>) {
       if (action.payload) state.lang = action.payload;
     },
-    setInputLang(state, action: PayloadAction<'tib' | 'en'>) {
+    setInputLang(state, action: PayloadAction<Language>) {
       if (action.payload) state.inputLang = action.payload;
     },
     setCurrentListTerm(state, action: PayloadAction<string>) {

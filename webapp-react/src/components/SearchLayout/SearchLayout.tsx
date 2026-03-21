@@ -23,8 +23,7 @@ import {
   setSidebarVisible,
 } from '@/store/searchSlice';
 import { WylieConverter } from '@/utils/wylieConverter';
-
-type Language = 'tib' | 'en';
+import { Language } from '@/types';
 
 interface SearchLayoutProps {
   definitionOnly?: boolean;

@@ -484,14 +484,18 @@ def createFts5Tables(db):
         CREATE VIRTUAL TABLE DICT_EN_FTS USING fts5(
             term,
             definition,
+            tokenize='porter unicode61 remove_diacritics 1',
             content='DICT_EN',
             content_rowid='rowid'
         )
-    """)
+    """) # use Porter stemming for English
 
     # Populate the FTS indexes from the content tables
     db.execute("INSERT INTO DICT_FTS(DICT_FTS) VALUES('rebuild')")
     db.execute("INSERT INTO DICT_EN_FTS(DICT_EN_FTS) VALUES('rebuild')")
+
+    db.execute("INSERT INTO DICT_FTS(DICT_FTS) VALUES('optimize')")
+    db.execute("INSERT INTO DICT_EN_FTS(DICT_EN_FTS) VALUES('optimize')")
 
     db.commit()
 
@@ -513,8 +517,21 @@ def closeDatabasePair(uncompressedDb, compressedDb):
     print("- Building FTS5 fulltext indexes")
     createFts5Tables(uncompressedDb)
 
+    optimizeDb(uncompressedDb)
+    optimizeDb(compressedDb)
+
     uncompressedDb.close()
     compressedDb.close()
+
+def optimizeDb(db):
+    """ Optimize the database for storage consumption, performance, and read-only use."""
+    db.execute("PRAGMA page_size = 8192;")
+    db.execute("PRAGMA journal_mode = OFF;")
+    db.execute("PRAGMA synchronous = OFF;")
+    db.execute("ANALYZE;") 
+    db.execute("VACUUM;")
+    db.execute("PRAGMA optimize;")
+    db.commit()
 
 
 # ---------------------------------------------------------------------------

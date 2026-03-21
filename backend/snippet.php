@@ -2,7 +2,7 @@
 // =============================================================================
 // Snippet generation for search result excerpts
 // =============================================================================
-// Shared by the fulltextSearch and wildcardSearch endpoints in dict.php.
+// Used by the fulltextSearch endpoint in dict.php.
 //
 // Provides:
 //   - generateSnippet()          Main entry point: extract & highlight a snippet

@@ -322,8 +322,6 @@ export function formatDefinition(
     definition = breakDefinitionIntoSections(definition);
   }
 
-
-  // FIXME: clean up all source files with containsOnlyTibetan = true and remove the special case handling here!
   if (currentDict.containsOnlyTibetan) {
     // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
 

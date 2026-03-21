@@ -2,6 +2,8 @@
  * Radix UI DropdownMenu for language selection, settings, etc.
  */
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
+import { Language } from '@/types';
+
 import {
   HamburgerMenuIcon,
   MagnifyingGlassIcon,
@@ -12,9 +14,9 @@ import {
 import styles from './HamburgerMenu.module.css';
 
 interface Props {
-  inputLang: string;
+  inputLang: Language;
   isLightMode: boolean;
-  onSelectLanguage: (lang: 'tib' | 'en') => void;
+  onSelectLanguage: (lang: Language) => void;
   onOpenSettings: () => void;
   onOpenExtendedSearch?: () => void;
 }
@@ -50,7 +52,7 @@ export default function HamburgerMenu({
 
           <DropdownMenu.RadioGroup
             value={inputLang}
-            onValueChange={(val) => onSelectLanguage(val as 'tib' | 'en')}
+            onValueChange={(val) => onSelectLanguage(val as Language)}
           >
             <DropdownMenu.RadioItem value="tib" className={styles.radioItem}>
               <DropdownMenu.ItemIndicator className={styles.indicator}>
@@ -80,7 +82,6 @@ export default function HamburgerMenu({
             className={`${styles.item} ${!onOpenExtendedSearch ? styles.disabled : ''}`}
             disabled={!onOpenExtendedSearch}
             onSelect={onOpenExtendedSearch}
-            hidden={true} // disabled for now until the extended search is implemented
           >
             <MagnifyingGlassIcon className={styles.itemIcon} />
             Extended Search
