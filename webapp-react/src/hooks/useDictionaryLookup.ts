@@ -11,6 +11,7 @@ import {
   setInlineSections,
   setIsLoadingDefinition,
   setDefinitionError,
+  type InlineSection,
 } from '@/store/searchSlice';
 import { readTerm, checkTibetanSectionsForLinks } from '@/services/DictionaryApi';
 import { formatDefinitionList } from '@/utils/definitionFormatter';
@@ -19,13 +20,6 @@ import type { DictEntry } from '@/config/dictlist';
 import { ABBREVIATIONS } from '@/config/abbreviations';
 import { WylieConverter } from '@/utils/wylieConverter';
 import type { Language } from '@/types';
-
-interface InlineSection {
-  id: string;
-  wylie: string;
-  content: string;
-  title: string;
-}
 
 const wylieConverter = new WylieConverter();
 

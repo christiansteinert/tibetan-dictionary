@@ -12,6 +12,7 @@ import { useEffect, useCallback, useRef } from 'react';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '@/store/store';
+import TopBar from '@/components/TopBar/TopBar';
 import ResultList from './ResultList';
 import DefinitionView from './DefinitionView';
 import { viewScan } from './scannedPageViewer';
@@ -21,12 +22,11 @@ import {
   setInputLang,
   setSidebarVisible,
 } from '@/store/searchSlice';
-import { WylieConverter } from '@/utils/wylieConverter';
 import { Language } from '@/types';
 
 interface SearchLayoutProps {
   definitionOnly?: boolean;
-} 
+}
 
 export default function SearchLayout(props: SearchLayoutProps) {
   const { lang: urlLangParam, term } = useParams<{ lang: string; term: string }>();
@@ -159,17 +159,22 @@ export default function SearchLayout(props: SearchLayoutProps) {
 
   return (
     <>
-      <ResultList
-        onTermSelected={handleTermSelected}
-        onPrev={handlePrev}
-        onNext={handleNext}
-        selectedTerm={urlSelected}
-      />
-      <div className="mainWrap">
-        <DefinitionView
-          onTermClick={handleInlineTermClick}
-          onScanClick={handleScanClick}
-        />
+      {!props.definitionOnly && <TopBar />}
+      <div className="page">
+        <div className="contentArea">
+          <ResultList
+            onTermSelected={handleTermSelected}
+            onPrev={handlePrev}
+            onNext={handleNext}
+            selectedTerm={urlSelected}
+          />
+          <div className="mainWrap">
+            <DefinitionView
+              onTermClick={handleInlineTermClick}
+              onScanClick={handleScanClick}
+            />
+          </div>
+        </div>
       </div>
     </>
   );

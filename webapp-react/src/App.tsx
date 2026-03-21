@@ -47,12 +47,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <div id="mainScreen" className={mainScreenClass}>
-        {!definitionOnly && <TopBar />}
-        <div className="page">
-          <div className="contentArea">
-            <AppRoutes definitionOnly={definitionOnly} />
-          </div>
-        </div>
+        <AppRoutes definitionOnly={definitionOnly} />
       </div>
     </ErrorBoundary>
   );
