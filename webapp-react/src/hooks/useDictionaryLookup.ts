@@ -10,7 +10,7 @@ import {
   setDefinitions,
   setInlineSections,
   setIsLoadingDefinition,
-  setError,
+  setDefinitionError,
 } from '@/store/searchSlice';
 import { readTerm, checkTibetanSectionsForLinks } from '@/services/DictionaryApi';
 import { formatDefinitionList } from '@/utils/definitionFormatter';
@@ -42,7 +42,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
   const dispatch = useDispatch();
   const { activeDictionaries } = useSelector((s: { settings: { activeDictionaries: string[] } }) => s.settings);
   const { unicode } = useSelector((s: any) => s.settings);
-  const lang = useSelector((s: any) => s.search.lang);
+  const lang = useSelector((s: any) => s.search.input.inputLang);
 
   /**
    * Look up a term's definitions and produce formatted HTML.
@@ -59,7 +59,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
 
       dispatch(setActiveTerm(decoded));
       dispatch(setIsLoadingDefinition(true));
-      dispatch(setError(null));
+      dispatch(setDefinitionError(null));
 
       try {
         const { definitions } = await readTerm(
@@ -105,7 +105,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
         return { html: result.tableHtml, inlineSections: {} };
       } catch (err) {
         console.error('Lookup error:', err);
-        dispatch(setError(err instanceof Error ? err.message : String(err)));
+        dispatch(setDefinitionError(err instanceof Error ? err.message : String(err)));
         dispatch(setIsLoadingDefinition(false));
         return null;
       }

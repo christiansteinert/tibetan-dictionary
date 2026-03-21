@@ -13,6 +13,11 @@ export interface InlineSection {
   title: string;
 }
 
+/** A single row returned by the term-list (prefix search) API. */
+export interface TermListRow {
+  term: string;
+}
+
 /** A single result row from fulltext / wildcard search. */
 export interface ExtendedSearchResult {
   term: string;
@@ -49,7 +54,7 @@ export async function readTerm(
  * @param {number} offset - Pagination offset
  * @param {number} maxResults - Maximum number of results
  * @param {string[]} dictionaries - Dictionary IDs to search
- * @returns {Promise<string[][]>} Array of matching terms (each item is [termString])
+ * @returns {Promise<TermListRow[]>} Array of matching term objects
  */
 export async function readTermList(
   search: string,
@@ -57,7 +62,7 @@ export async function readTermList(
   offset: number,
   maxResults: number,
   dictionaries: string[]
-): Promise<string[][]> {
+): Promise<TermListRow[]> {
   return backend.readTermList(search, lang, offset, maxResults, dictionaries);
 }
 

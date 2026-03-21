@@ -36,7 +36,7 @@ export default function TopBar() {
   const navigate = useNavigate();
   const inputRef = useRef<WylieInputHandle>(null);
 
-  const inputLang = useSelector((s: any) => s.search.inputLang);
+  const inputLang = useSelector((s: any) => s.search.input.inputLang);
   const { unicode, lowercase } = useSelector((s: any) => s.settings);
 
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)

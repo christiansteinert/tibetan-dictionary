@@ -7,13 +7,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import {
   setResults,
-  setCurrentListTerm,
+  setResultListQuery,
   setOffset,
   setIsSearching,
-  setError,
+  setSearchError,
   setSidebarVisible,
 } from '@/store/searchSlice';
 import { readTermList } from '@/services/DictionaryApi';
+import type { TermListRow } from '@/services/DictionaryApi';
 import { WylieConverter } from '@/utils/wylieConverter';
 import type { Language } from '@/types';
 
@@ -41,15 +42,15 @@ export function normalizeSearchTerm(
 interface UseSearchReturn {
   search: (rawInput: string, lang: Language, offset?: number) => Promise<{
     searchTerm: string;
-    results: string[][];
+    results: TermListRow[];
   }>;
   normalizeSearchTerm: (raw: string, lang: Language) => string;
 }
 
 export default function useSearch(): UseSearchReturn {
   const dispatch = useDispatch();
-  const { currentListTerm, offset: storeOffset } = useSelector(
-    (s: RootState) => s.search
+  const { query: currentListTerm, offset: storeOffset } = useSelector(
+    (s: RootState) => s.search.resultList
   );
   const { activeDictionaries, listSize, unicode } = useSelector(
     (s: RootState) => s.settings
@@ -83,7 +84,7 @@ export default function useSearch(): UseSearchReturn {
       }
 
       dispatch(setIsSearching(true));
-      dispatch(setError(null));
+      dispatch(setSearchError(null));
 
       try {
         const results = await readTermList(
@@ -95,14 +96,14 @@ export default function useSearch(): UseSearchReturn {
         );
 
         dispatch(setResults(results));
-        dispatch(setCurrentListTerm(searchTerm));
+        dispatch(setResultListQuery(searchTerm));
         dispatch(setOffset(offset));
         dispatch(setIsSearching(false));
 
         return { searchTerm, results };
       } catch (err) {
         console.error('Search error:', err);
-        dispatch(setError(err instanceof Error ? err.message : String(err)));
+        dispatch(setSearchError(err instanceof Error ? err.message : String(err)));
         dispatch(setIsSearching(false));
         return { searchTerm, results: [] };
       }

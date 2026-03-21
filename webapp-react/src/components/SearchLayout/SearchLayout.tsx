@@ -19,7 +19,6 @@ import useSearch from '@/hooks/useSearch';
 import useDictionaryLookup from '@/hooks/useDictionaryLookup';
 import {
   setInputLang,
-  setLang,
   setSidebarVisible,
 } from '@/store/searchSlice';
 import { WylieConverter } from '@/utils/wylieConverter';
@@ -38,7 +37,11 @@ export default function SearchLayout(props: SearchLayoutProps) {
   const { lookupTerm } = useDictionaryLookup();
 
   const { listSize } = useSelector((s: RootState) => s.settings);
-  const { offset, inputLang, results: storeResults } = useSelector((s: RootState) => s.search);
+  const { offset, inputLang } = useSelector((s: RootState) => ({
+    offset: s.search.resultList.offset,
+    inputLang: s.search.input.inputLang,
+  }));
+  const storeResults = useSelector((s: RootState) => s.search.resultList.results);
 
   // Parse URL parameters
   const urlLang = (urlLangParam || inputLang) as Language;
@@ -54,7 +57,6 @@ export default function SearchLayout(props: SearchLayoutProps) {
   // Sync URL params → Redux on mount / URL change
   useEffect(() => {
     dispatch(setInputLang(urlLang));
-    dispatch(setLang(urlLang));
     dispatch(setSidebarVisible(urlSidebar));
   }, [dispatch, urlLang, urlSidebar]);
 
@@ -84,10 +86,10 @@ export default function SearchLayout(props: SearchLayoutProps) {
       } else if (searchTerm) {
         const exactMatch = resultList.find(
           (r) =>
-            r[0] === searchTerm ||
-            (urlLang === 'en' && r[0].toLowerCase() === searchTerm.toLowerCase())
+            r.term === searchTerm ||
+            (urlLang === 'en' && r.term.toLowerCase() === searchTerm.toLowerCase())
         );
-        await lookupTerm(exactMatch ? exactMatch[0] : resultList[0][0], urlLang);
+        await lookupTerm(exactMatch ? exactMatch.term : resultList[0].term, urlLang);
       }
     })();
   }, [term, urlOffset, urlLang, urlSidebar, urlSelected, search, lookupTerm, storeResults]);

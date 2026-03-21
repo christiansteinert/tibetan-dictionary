@@ -14,6 +14,7 @@
  */
 
 import { WylieConverter } from '@/utils/wylieConverter';
+import { Language } from '@/types';
 
 // ─── Cordova plugin type stubs ────────────────────────────────────────────────
 // These types are not supplied by any @types package, so we declare minimal
@@ -23,7 +24,7 @@ interface ShareData {
   /** The raw shared text */
   text: string;
   /** Language hint from the plugin: 'tib' | 'en' | undefined */
-  language?: string;
+  language?: Language;
 }
 
 interface ShareTextPluginStatic {

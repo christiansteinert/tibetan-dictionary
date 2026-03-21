@@ -101,7 +101,7 @@ export class CordovaDictionaryApi {
     maxResults: number,
     dictionaries: string[]
   ) {
-    return new Promise<string[][]>((resolve, reject) => {
+    return new Promise<{ term: string }[]>((resolve, reject) => {
       term = term.replace(/\s*[\/]\s*$/, '');
       const db = this.openDB();
 
@@ -171,11 +171,11 @@ export class CordovaDictionaryApi {
             query,
             queryParams,
             function (_tx: any, results: any) {
-              const result: string[][] = [];
+              const result: { term: string }[] = [];
               const len = results.rows.length;
               for (let i = 0; i < len; i += 1) {
                 const row = results.rows.item(i);
-                result.push([row.term]);
+                result.push({ term: row.term });
               }
               resolve(result);
             },

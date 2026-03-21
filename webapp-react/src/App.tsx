@@ -17,8 +17,8 @@ import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 export default function App() {
   useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
-  const inputLang = useSelector((s: RootState) => s.search.inputLang);
-  const sidebarVisible = useSelector((s: RootState) => s.search.sidebarVisible);
+  const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
+  const sidebarVisible = useSelector((s: RootState) => s.search.input.sidebarVisible);
   const [searchParams] = useSearchParams();
   const definitionOnly = searchParams.get('definitionOnly') === 'true';
 

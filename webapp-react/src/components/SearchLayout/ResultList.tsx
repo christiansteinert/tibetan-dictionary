@@ -4,6 +4,7 @@
  * Replaces the old jQuery DataTable with a plain <table>.
  */
 import { useSelector } from 'react-redux';
+import type { TermListRow } from '@/services/DictionaryApi';
 import ResultItem from './ResultItem';
 import Pagination from './Pagination';
 import styles from './ResultList.module.css';
@@ -21,9 +22,12 @@ interface Props {
 }
 
 export default function ResultList({ onTermSelected, onPrev, onNext, selectedTerm }: Props) {
-  const { results, activeTerm, offset, resultsLang } = useSelector((s: any) => s.search);
+  const results = useSelector((s: any) => s?.search?.resultList?.results) as TermListRow[];
+  const activeTerm = useSelector((s: any) => s?.search?.definition?.term);
+  const offset = useSelector((s: any) => s?.search?.resultList?.offset);
+  const resultsLang = useSelector((s: any) => s?.search?.resultList?.lang);
   const inputLang = resultsLang;
-  const { unicode, listSize } = useSelector((s: any) => s.settings);
+  const { unicode, listSize } = useSelector((s: any) => s?.settings);
   const useUnicodeTibetan = unicode === true || unicode === 'output';
 
   // The effective selected term: URL param wins for instant feedback,
@@ -56,8 +60,8 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
             ].join(' ')}
           >
             <tbody>
-              {visibleResults.map((row: string[]) => {
-                const term = row[0];
+              {visibleResults.map((row: TermListRow) => {
+                const term = row.term;
                 const isSelected =
                   term === effectiveSelected ||
                   (inputLang === 'en' &&

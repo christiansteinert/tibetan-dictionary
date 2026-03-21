@@ -165,7 +165,7 @@ if (isset($_POST['term'])) {
 
     $rows = [];
     while ($row = $results->fetchArray()) {
-        $rows[] = [$row['term']];
+        $rows[] = ['term' => $row['term']];
     }
     print(json_encode($rows));
 

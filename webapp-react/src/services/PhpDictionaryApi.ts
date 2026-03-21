@@ -58,7 +58,7 @@ export class PhpDictionaryApi {
     maxResults: number,
     dictionaries: string[]
   ) {
-    return post<string[][]>({
+    return post<{ term: string }[]>({
       search,
       lang,
       offset,
