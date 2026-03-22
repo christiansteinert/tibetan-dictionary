@@ -23,7 +23,11 @@ export default function AppRoutes(props: AppRoutesProps) {
   return (
     <Routes>
       <Route path="/" element={<WelcomePage />} />
-      <Route path="/search/:lang/:term" element={<SearchLayout definitionOnly={props.definitionOnly} />} />
+      <Route path="/search/:lang/:term" element={<SearchLayout mode="term" />} />
+      <Route path="/search" element={<SearchLayout mode="term" />} />
+      <Route path="/fts-search/:lang/:term" element={<SearchLayout mode="fulltext" />} />
+      <Route path="/fts-search" element={<SearchLayout mode="fulltext" />} />
+
       <Route path="/settings" element={<SettingsPage />} />
       {/* Fallback: redirect unknown routes to home */}
       <Route path="*" element={<Navigate to="/" replace />} />

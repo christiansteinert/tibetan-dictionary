@@ -10,20 +10,17 @@ import { useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import { bindTooltips } from '@/utils/tooltip';
+import { Language } from '@/types';
 
 interface Props {
-  onTermClick?: (wylie: string, lang: string) => void;
+  onTermClick?: (wylie: string, lang: Language) => void;
   onScanClick?: (dictId: string, termId: string, pageInfo: unknown) => void;
 }
 
-import type { InlineSection } from '@/store/searchSlice';
 
 export default function DefinitionView({ onTermClick, onScanClick }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const definitionHtml = useSelector((s: RootState) => s.search.definition.html ?? '');
-  const inlineSections = useSelector((s: RootState) => s.search.definition.inlineSections);
-  const activeTerm = useSelector((s: RootState) => s.search.definition.term);
-  const isLoading = useSelector((s: RootState) => s.search.definition.isLoading);
+  const { html: definitionHtml, inlineSections, term: activeTerm, isLoading } = useSelector((s: RootState) => s.search.definition);
 
   /**
    * After HTML is injected, attach click handlers for:

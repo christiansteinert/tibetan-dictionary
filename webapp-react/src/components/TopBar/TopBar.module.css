@@ -27,3 +27,106 @@
   flex-grow: 1;
   display: flex;
 }
+
+/* ── Extended search options bar ─────────────────────────────── */
+
+.optionsBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.3em 0.5em;
+  border-top: 1px solid #ddd;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+  font-size: 0.85em;
+}
+
+.optionsBarLight {
+  background: #f4f4fa;
+  border-top-color: #ccc;
+}
+
+.optionsBarDark {
+  background: #1a1a1a;
+  border-top-color: #444;
+}
+
+.optionsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+  white-space: nowrap;
+}
+
+/* Thin separator between groups */
+.optionsGroup + .optionsGroup {
+  border-left: 1px solid #ccc;
+  padding-left: 0.6em;
+}
+
+.optionsBarDark .optionsGroup + .optionsGroup {
+  border-left-color: #555;
+}
+
+.optionsLabel {
+  font-weight: 600;
+  color: #555;
+}
+
+.optionsBarDark .optionsLabel {
+  color: #bbb;
+}
+
+.optionsRadio {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  cursor: pointer;
+}
+
+.optionsCloseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.optionsCloseBtn:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.optionsBarDark .optionsCloseBtn {
+  color: #ccc;
+  border-color: #666;
+}
+
+.optionsBarDark .optionsCloseBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* Extra underlay height when options bar is visible */
+.topbarUnderlayExtended {
+  height: 7.5em;
+}
+
+@media (max-width: 600px) {
+  .optionsBar {
+    gap: 0.3em;
+    font-size: 0.78em;
+    padding: 0.2em 0.3em;
+  }
+
+  .optionsGroup + .optionsGroup {
+    border-left: none;
+    padding-left: 0;
+  }
+}

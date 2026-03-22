@@ -8,6 +8,7 @@ import type { TermListRow } from '@/services/DictionaryApi';
 import ResultItem from './ResultItem';
 import Pagination from './Pagination';
 import styles from './ResultList.module.css';
+import { RootState } from '@/store/store';
 
 interface Props {
   onTermSelected: (term: string) => void;
@@ -22,13 +23,10 @@ interface Props {
 }
 
 export default function ResultList({ onTermSelected, onPrev, onNext, selectedTerm }: Props) {
-  const results = useSelector((s: any) => s?.search?.resultList?.results) as TermListRow[];
-  const activeTerm = useSelector((s: any) => s?.search?.definition?.term);
-  const offset = useSelector((s: any) => s?.search?.resultList?.offset);
-  const resultsLang = useSelector((s: any) => s?.search?.resultList?.lang);
-  const inputLang = resultsLang;
-  const { unicode, listSize } = useSelector((s: any) => s?.settings);
-  const useUnicodeTibetan = unicode === true || unicode === 'output';
+  const { results, offset, lang: resultsLang } = useSelector((s: RootState) => s.search.resultList);
+  const { unicode, listSize } = useSelector((s: RootState) => s.settings);
+  const { term: activeTerm } = useSelector((s: RootState) => s.search.definition);
+  const useUnicodeTibetan = (unicode !== false);
 
   // The effective selected term: URL param wins for instant feedback,
   // Redux activeTerm is the settled value once the definition has loaded.
@@ -64,13 +62,13 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
                 const term = row.term;
                 const isSelected =
                   term === effectiveSelected ||
-                  (inputLang === 'en' &&
+                  (resultsLang === 'en' &&
                     term.toLowerCase() === effectiveSelected?.toLowerCase());
                 return (
                   <ResultItem
                     key={term}
                     term={term}
-                    lang={inputLang}
+                    lang={resultsLang}
                     useUnicodeTibetan={useUnicodeTibetan}
                     isSelected={isSelected}
                     onClick={onTermSelected}

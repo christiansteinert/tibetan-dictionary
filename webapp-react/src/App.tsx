@@ -7,7 +7,6 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import type { RootState } from './store/store';
-import TopBar from './components/TopBar/TopBar';
 import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
@@ -17,10 +16,9 @@ import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 export default function App() {
   useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
-  const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
-  const sidebarVisible = useSelector((s: RootState) => s.search.input.sidebarVisible);
+  const { inputLang } = useSelector((s: RootState) => s.search.input);
+  const { sidebarVisible } = useSelector((s: RootState) => s.search.resultList);
   const [searchParams] = useSearchParams();
-  const definitionOnly = searchParams.get('definitionOnly') === 'true';
 
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {
@@ -28,7 +26,6 @@ export default function App() {
 
     // Theme
     body.classList.toggle('dark', layout === 'layout_black');
-    body.classList.toggle('definitionOnly', definitionOnly);
 
     // Unicode classes
     const isUnicode = unicode === true || unicode === 'output';
@@ -47,7 +44,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <div id="mainScreen" className={mainScreenClass}>
-        <AppRoutes definitionOnly={definitionOnly} />
+        <AppRoutes />
       </div>
     </ErrorBoundary>
   );

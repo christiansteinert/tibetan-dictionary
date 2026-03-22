@@ -1,3 +1,5 @@
+import { encodeQueryParam } from '@/utils/escape';
+
 /**
  * Legacy URL redirect utility.
  *
@@ -96,6 +98,6 @@ export function redirectLegacyHash(): void {
   }
 
   window.location.replace(
-    `#/search/${lang}/${encodeURIComponent(searchTerm)}?${params}`
+    `#/search/${lang}/${encodeQueryParam(searchTerm)}?${params}`
   );
 }

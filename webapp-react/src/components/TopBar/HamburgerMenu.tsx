@@ -79,8 +79,7 @@ export default function HamburgerMenu({
 
           {/* ── Extended Search ── */}
           <DropdownMenu.Item
-            className={`${styles.item} ${!onOpenExtendedSearch ? styles.disabled : ''}`}
-            disabled={!onOpenExtendedSearch}
+            className={`${styles.item}`}
             onSelect={onOpenExtendedSearch}
           >
             <MagnifyingGlassIcon className={styles.itemIcon} />

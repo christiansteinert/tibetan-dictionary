@@ -34,7 +34,7 @@ interface UseSettingsReturn {
 
 export default function useSettings(): UseSettingsReturn {
   const dispatch = useDispatch();
-  const settings = useSelector((s: any) => s.settings);
+  const { settings } = useSelector((s: any) => s);
 
   const updateUnicode = useCallback((v: boolean | string) => dispatch(setUnicode(v)), [dispatch]);
   const updateLowercase = useCallback((v: boolean) => dispatch(setLowercase(v)), [dispatch]);

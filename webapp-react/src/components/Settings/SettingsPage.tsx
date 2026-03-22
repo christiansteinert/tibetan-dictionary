@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import useSettings from '@/hooks/useSettings';
 import DictionarySelector from './DictionarySelector';
+import { RootState } from '@/store/store';
 
 export default function SettingsPage() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ export default function SettingsPage() {
   } = useSettings();
 
   // Snapshot settings on mount so we can restore them on cancel
-  const currentSettings = useSelector((s: any) => s.settings);
+  const currentSettings = useSelector((s: RootState) => s.settings);
   const snapshot = useRef<Record<string, unknown> | null>(null);
   useEffect(() => {
     // Capture only once when the page mounts
@@ -78,7 +79,7 @@ export default function SettingsPage() {
     <div className="mainWrap">
       <div id="settingsScreen">
         <form className="settings">
-          <h2>Settings</h2>
+          <h2 className="heading">Settings</h2>
 
           {/* Unicode Tibetan */}
           <div>
@@ -129,7 +130,7 @@ export default function SettingsPage() {
               <select
                 id="setting_list_size"
                 value={String(listSize)}
-                onChange={(e) => updateListSize(e.target.value)}
+                onChange={(e) => updateListSize(parseInt(e.target.value, 10))}
               >
                 <option value="10">10</option>
                 <option value="25">25</option>

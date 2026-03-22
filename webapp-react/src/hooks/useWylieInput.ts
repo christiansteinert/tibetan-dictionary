@@ -20,7 +20,7 @@ interface UseWylieInputOptions {
   lowercase: boolean;
   inputLang: Language;
   onInputChange?: (value: string) => void;
-  onEnter?: () => void;
+  onEnter?: (value: string) => void;
 }
 
 interface UseWylieInputReturn {
@@ -111,7 +111,7 @@ export default function useWylieInput({
       el.value = uniInput;
     }
 
-    onEnter?.();
+    onEnter?.(uniInput);
   }, [useUnicodeTibetan, inputLang, toLowerIfNeeded, uniToWylie, tibetanOutput, onEnter]);
 
   const handleKeyupInput = useCallback(

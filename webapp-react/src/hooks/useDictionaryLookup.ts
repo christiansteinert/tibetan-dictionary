@@ -1,13 +1,11 @@
 /**
  * useDictionaryLookup – fetches and formats definitions for a single term.
- *
- * Encapsulates the logic that was formerly in DICT.readTerm() / DICT.loadTerm().
  */
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   setActiveTerm,
-  setDefinitions,
+  setDefinitionHtml,
   setInlineSections,
   setIsLoadingDefinition,
   setDefinitionError,
@@ -20,6 +18,7 @@ import type { DictEntry } from '@/config/dictlist';
 import { ABBREVIATIONS } from '@/config/abbreviations';
 import { WylieConverter } from '@/utils/wylieConverter';
 import type { Language } from '@/types';
+import { RootState } from '@/store/store';
 
 const wylieConverter = new WylieConverter();
 
@@ -34,9 +33,8 @@ interface UseDictionaryLookupReturn {
 
 export default function useDictionaryLookup(): UseDictionaryLookupReturn {
   const dispatch = useDispatch();
-  const { activeDictionaries } = useSelector((s: { settings: { activeDictionaries: string[] } }) => s.settings);
-  const { unicode } = useSelector((s: any) => s.settings);
-  const lang = useSelector((s: any) => s.search.input.inputLang);
+  const { unicode, activeDictionaries } = useSelector((s: RootState) => s.settings);
+  const lang = useSelector((s: RootState) => s.search.input.inputLang);
 
   /**
    * Look up a term's definitions and produce formatted HTML.
@@ -79,7 +77,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
           ABBREVIATIONS
         );
 
-        dispatch(setDefinitions(result.tableHtml));
+        dispatch(setDefinitionHtml(result.tableHtml));
         dispatch(setIsLoadingDefinition(false));
 
         // Check for inline Tibetan sections that might be clickable

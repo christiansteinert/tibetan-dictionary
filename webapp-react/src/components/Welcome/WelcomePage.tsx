@@ -3,11 +3,12 @@
  *
  * Displays credits for the included dictionaries and a brief intro.
  */
-import { useMemo } from 'react';
+import { useCallback, useMemo } from 'react';
 import styles from './WelcomePage.module.css';
 import { DICTLIST } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
-import TopBar from '@/components/TopBar/TopBarExtended';
+import TopBar from '@/components/TopBar/TopBar';
+import { useDictNavigation } from '@/hooks/useDictNavigation';
 
 interface CreditEntry {
   id: string;
@@ -16,6 +17,8 @@ interface CreditEntry {
 }
 
 export default function WelcomePage() {
+  const navigation = useDictNavigation();
+
   // Build credits list from dictionaries that have listCredits: "true"
   const credits = useMemo<CreditEntry[]>(() => {
     const isLocalhost = window.location?.hostname?.startsWith('localhost');
@@ -43,9 +46,13 @@ export default function WelcomePage() {
       });
   }, []);
 
+  const handleOpenExtendedSearch = useCallback(() => {
+    navigation.setExtSearchEnabled(true);
+  }, [navigation]);
+
   return (
     <>
-      <TopBar />
+      <TopBar onOpenExtendedSearch={handleOpenExtendedSearch} />
       <div className="page">
         <div className="contentArea">
           <div className="mainWrap">

@@ -13,8 +13,8 @@ interface Props {
   inputLang: string;
   useUnicodeTibetan: boolean;
   lowercase: boolean;
-  onInputChange: () => void;
-  onEnter: () => void;
+  onInputChange: (v: string) => void;
+  onEnter: (v: string) => void;
   /** Pre-fill the input with a Wylie/English term (e.g. from the URL on first load) */
   initialValue?: string;
 }

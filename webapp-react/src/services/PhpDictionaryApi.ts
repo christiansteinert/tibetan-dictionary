@@ -1,3 +1,5 @@
+import type { InlineSection } from '@/store/searchSlice';
+
 /**
  * PHP backend for the Tibetan Dictionary app.
  *
@@ -67,8 +69,12 @@ export class PhpDictionaryApi {
     });
   }
 
-  async checkTibetanSectionsForLinks(sections: Record<string, unknown>) {
-    return post<Record<string, unknown>>({ checkTerms: sections });
+  async checkTibetanSectionsForLinks(sections: Record<string, InlineSection>) {
+    const termsToCheck = Object.fromEntries(
+      Object.entries(sections).map(([id, { wylie }]) => [id, { id, wylie }])
+    );
+
+    return post({ checkTerms: termsToCheck });
   }
 
   async fulltextSearch(

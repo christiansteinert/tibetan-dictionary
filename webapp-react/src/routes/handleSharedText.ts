@@ -15,6 +15,7 @@
 
 import { WylieConverter } from '@/utils/wylieConverter';
 import { Language } from '@/types';
+import { encodeQueryParam } from '@/utils/escape';
 
 // ─── Cordova plugin type stubs ────────────────────────────────────────────────
 // These types are not supplied by any @types package, so we declare minimal
@@ -151,7 +152,7 @@ export function handleSharedText(): boolean {
 
       // Navigate to the search route and the searched term should also be opened if possible
       window.location.replace(
-        `#/search/${lang}/${encodeURIComponent(lookupTerm)}`
+        `#/search/${lang}/${encodeQueryParam(lookupTerm)}`
       );
     },
     (error: string) => {

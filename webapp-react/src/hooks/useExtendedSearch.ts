@@ -1,20 +1,20 @@
 /**
  * useExtendedSearch – orchestrates fulltext search operations.
  *
- * Reads from the PHP backend and writes to the Redux extendedSearchSlice.
+ * Reads from the PHP backend and writes to the Redux searchSlice. 
  * Converts Tibetan Unicode input to Wylie before sending to the backend.
  */
 import { useCallback } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import {
-  setExtResults,
-  setExtIsSearching,
-  setExtError,
-  setExtOffset,
-  setExtQuery,
-  type ExtendedSearchMode,
-} from '@/store/extendedSearchSlice';
+  setFtsResults,
+  setFtsIsSearching,
+  setFtsError,
+  setFtsOffset,
+  setFtsResultListQuery,
+  type SearchMode,
+} from '@/store/searchSlice';
 import { fulltextSearch } from '@/services/DictionaryApi';
 import { WylieConverter } from '@/utils/wylieConverter';
 import type { Language } from '@/types';
@@ -25,27 +25,24 @@ interface UseExtendedSearchReturn {
   search: (
     query: string,
     lang: Language,
-    mode: ExtendedSearchMode,
+    mode: SearchMode,
     offset?: number
   ) => Promise<void>;
 }
 
 export default function useExtendedSearch(): UseExtendedSearchReturn {
   const dispatch = useDispatch();
-  const { activeDictionaries, listSize } = useSelector(
-    (s: RootState) => s.settings
-  );
-  const unicode = useSelector((s: RootState) => s.settings.unicode);
+  const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
 
   const search = useCallback(
     async (
       query: string,
       lang: Language,
-      mode: ExtendedSearchMode,
+      mode: SearchMode,
       offset = 0
     ) => {
       if (!query.trim()) {
-        dispatch(setExtResults([]));
+        dispatch(setFtsResults([]));
         return;
       }
 
@@ -57,14 +54,14 @@ export default function useExtendedSearch(): UseExtendedSearchReturn {
       }
 
       if (!backendQuery) {
-        dispatch(setExtResults([]));
+        dispatch(setFtsResults([]));
         return;
       }
 
-      dispatch(setExtQuery(query));
-      dispatch(setExtOffset(offset));
-      dispatch(setExtIsSearching(true));
-      dispatch(setExtError(null));
+      dispatch(setFtsResultListQuery(query));
+      dispatch(setFtsOffset(offset));
+      dispatch(setFtsIsSearching(true));
+      dispatch(setFtsError(null));
 
       try {
         const fn = fulltextSearch;
@@ -75,14 +72,14 @@ export default function useExtendedSearch(): UseExtendedSearchReturn {
           listSize + 1, // fetch one extra to detect "has next page"
           activeDictionaries
         );
-        dispatch(setExtResults(results));
-        dispatch(setExtIsSearching(false));
+        dispatch(setFtsResults(results));
+        dispatch(setFtsIsSearching(false));
       } catch (err) {
         console.error('Extended search error:', err);
         dispatch(
-          setExtError(err instanceof Error ? err.message : String(err))
+          setFtsError(err instanceof Error ? err.message : String(err))
         );
-        dispatch(setExtIsSearching(false));
+        dispatch(setFtsIsSearching(false));
       }
     },
     [dispatch, activeDictionaries, listSize, unicode]

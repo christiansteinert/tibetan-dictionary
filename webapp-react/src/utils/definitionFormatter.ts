@@ -204,10 +204,6 @@ function convertInlineTibetanSections(
   definition: string,
   useUnicodeTibetan: boolean
 ): { definition: string; inlineSections: Record<string, InlineTibetanSection> } {
-  if (!wylieConverter) {
-    return { definition, inlineSections: {} };
-  }
-
   const inlineSections: Record<string, InlineTibetanSection> = {};
   const chunks = definition.match(/[{][^{}]+[}]/g);
 
@@ -218,7 +214,7 @@ function convertInlineTibetanSections(
 
   for (let i = 0; i < chunks.length; i++) {
     const chunk = chunks[i];
-    const chunkContents = wylieConverter
+    const chunkContents = getWylieConverter()
       .normalizeWylie(chunk)
       .replace(/[{}]/g, '')
       .replace(/^\s+|\s+$/g, '');
@@ -229,7 +225,7 @@ function convertInlineTibetanSections(
 
     const lookup = getWylieConverter().normalizeWylieWhitespace(chunkContents);
 
-    const sectionId = 'tibSection' + sectionBase + '_' + i;
+    const sectionId = 'tibSection' + sectionBase + '-' + i;
     const title = chunk.replace(/\n/g, ' ');
 
     out = out.replace(/\n/g, '<br />');
@@ -313,7 +309,6 @@ export function formatDefinition(
   let defStart = "";
   let defEnd = "";
   let inlineSections = {};
-
   if (currentDict.mergeLines) {
     definition = definition.replace(/\n/gm, '; ');
     definition = definition.replace(/\\n/gm, '; ');
@@ -336,7 +331,7 @@ export function formatDefinition(
       inlineSections = result.inlineSections;
     } else {
       var tibetanOutput = useUnicodeTibetan
-        ? wylieConverter?.wylieToUniExceptBracketedSections(definition) || ''
+        ? getWylieConverter().wylieToUniExceptBracketedSections(definition) || ''
         : definition;
       definition = htmlEscapeDefinition(tibetanOutput);
     }

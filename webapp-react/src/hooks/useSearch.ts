@@ -7,8 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import {
   setResults,
-  setResultListQuery,
-  setOffset,
+  setResultListState,
   setIsSearching,
   setSearchError,
   setSidebarVisible,
@@ -49,12 +48,7 @@ interface UseSearchReturn {
 
 export default function useSearch(): UseSearchReturn {
   const dispatch = useDispatch();
-  const { query: currentListTerm, offset: storeOffset } = useSelector(
-    (s: RootState) => s.search.resultList
-  );
-  const { activeDictionaries, listSize, unicode } = useSelector(
-    (s: RootState) => s.settings
-  );
+  const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
 
   /**
    * Run a search. Updates Redux with the results.
@@ -68,7 +62,7 @@ export default function useSearch(): UseSearchReturn {
       const searchTerm = normalizeSearchTerm(
         rawInput,
         lang,
-        typeof unicode === 'boolean' ? unicode : false
+        unicode !== false
       );
       if (offset < 0) offset = 0;
 
@@ -76,11 +70,6 @@ export default function useSearch(): UseSearchReturn {
         dispatch(setResults([]));
         dispatch(setSidebarVisible(true));
         return { searchTerm: '', results: [] };
-      }
-
-      // Skip API call if the list is already showing the same term & offset
-      if (searchTerm === currentListTerm && offset === storeOffset) {
-        return { searchTerm, results: [] };
       }
 
       dispatch(setIsSearching(true));
@@ -95,20 +84,26 @@ export default function useSearch(): UseSearchReturn {
           activeDictionaries
         );
 
-        dispatch(setResults(results));
-        dispatch(setResultListQuery(searchTerm));
-        dispatch(setOffset(offset));
-        dispatch(setIsSearching(false));
-
+        dispatch(setResultListState({
+          query: searchTerm,
+          lang: lang,
+          offset: offset,
+          results: results,
+          sidebarVisible: true,
+          isSearching: false,
+          error: null,
+        }));
+    
         return { searchTerm, results };
       } catch (err) {
         console.error('Search error:', err);
         dispatch(setSearchError(err instanceof Error ? err.message : String(err)));
         dispatch(setIsSearching(false));
+        dispatch(setResults([]));
         return { searchTerm, results: [] };
       }
     },
-    [dispatch, currentListTerm, storeOffset, activeDictionaries, listSize, unicode]
+    [dispatch]
   );
 
   return {
