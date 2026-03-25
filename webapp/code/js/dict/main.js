@@ -368,8 +368,9 @@ var DICT={
   },
 
   uniToWylie:function(text) {
-    if(this.useUnicodeTibetan) {
-      result = "";
+    if(!text) return text;
+    if(this.useUnicodeTibetan || /[\u0F00-\u0FFF]/.test(text)) {
+      var result = "";
       var tokenizer = new jQuery.tokenizer( this.UNICODE_SEPARATORLIST,
         function( syllable, isSeparator ) {
           result += DICT.uniSyllableToWylieSyllable(syllable);
@@ -1153,6 +1154,13 @@ var DICT={
           return;
         
         var stateInfo = JSON.parse(state);
+
+        if (stateInfo.activeTerm && /[\u0F00-\u0FFF]/.test(stateInfo.activeTerm)) {
+          stateInfo.activeTerm = DICT.uniToWylie(stateInfo.activeTerm);
+        }
+        if (stateInfo.currentListTerm && /[\u0F00-\u0FFF]/.test(stateInfo.currentListTerm)) {
+          stateInfo.currentListTerm = DICT.uniToWylie(stateInfo.currentListTerm);
+        }
 
         if(stateInfo.lang)
             DICT.lang = stateInfo.lang;
