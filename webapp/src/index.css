@@ -1,0 +1,913 @@
+@import "tailwindcss";
+
+/* ==================================================================
+   Font paths for Vite asset pipeline
+   ================================================================== */
+@font-face {
+  font-family: 'DDC Uchen';
+  src: local('DDC Uchen'),
+    url('./assets/fonts/DDC_Uchen-webfont.woff') format('woff'),
+    url('./assets/fonts/DDC_Uchen-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scrollbar-gutter: stable; /* Reserve space for scrollbar */
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+}
+
+html,
+body,
+.page {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: #222;
+}
+
+.link {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.leftSideBar {
+  width: 20em;
+  border-right: 1px solid #ccc;
+}
+
+.sideBarInnerWrap {
+  padding: 0 0.3em;
+  position: relative;
+}
+
+.mainWrap {
+  width: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 0.5em;
+}
+
+.mainWrap * {
+  max-width: 99vw;
+}
+
+
+#searchTerm {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  font-family: "Droid Sans", sans-serif;
+  border-radius: 6px;
+  border: 1px solid rgba(128, 128, 128, 0.8);
+  padding: 0.3em 40px 0.3em 0.2em;
+  margin: 0 10px 0 7px;
+}
+
+.unicodeTibInput #searchTerm {
+  padding: 0.1em 40px 0.1em 0.2em;
+}
+
+#definitions {
+  left: 1em;
+  margin-right: 2em;
+  position: relative;
+}
+
+#definitionList {
+  border: 1px solid #ccc;
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 98vw;
+  border-radius: 10px;
+}
+
+#definitionList td {
+  border-top: 1px solid #ccc;
+  vertical-align: top;
+}
+
+#definitionList tr:first-child td {
+  border-top: none;
+}
+
+.definitionHead {
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
+  margin: 0 0 0.5em 0;
+  font-size: 2em;
+}
+
+.dictName {
+  color: #666;
+  font-weight: bold;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, Sans-serif;
+  padding: 0.6em 0.9em 0.6em 0.3em;
+  /*border-right:1px solid #eee;*/
+  width: 12em;
+}
+
+.definition {
+  font-size: 1.2em;
+  padding: 0.3em 0.3em 0.3em 0.7em;
+  font-family: "Droid Serif", "DejaVu Serif", Verdana, Georgia, serif;
+}
+
+.definition p {
+  margin: 0 0 0.45em 0;
+}
+
+.definition p.separator {
+  background-color: #888;
+  height: 1px;
+  width: 4em;
+  margin: 0.5em 0;
+}
+
+#mainScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.page {
+  display: table;
+  display: table;
+  width: 100%;
+}
+
+.contentArea {
+  display: table-row;
+}
+
+.leftSideBar,
+.mainWrap {
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+.desktop.unicodeTibInput #searchTerm,
+.desktop.unicodeTib .definitionHead,
+.desktop.unicodeTib .tib {
+  font-family: "Droid Sans", "Jomolhari", "Jomolhari ID", "DDC Uchen", "Kailasa", "DDC Rinzin", "Uchen_05", "Qomolangma-Uchen Sarchung", "Qomolangma-Uchen Sutung", "Narthang", "CTRC-Uchen", "Monlam Uni OuChan2", "Monlam Uni OuChan1", "XenoType Tibetan New", "TCRC Youtso Unicode", "Tibetan Machine Uni", "DDCRinzin-webfont", "SambhotaDege", "Microsoft Himalaya", "Tib-US Unicode";
+  text-rendering: optimizeLegibility;
+}
+
+.mobile.unicodeTibInput #searchTerm,
+.mobile.unicodeTib .definitionHead,
+.mobile.unicodeTib .tib {
+  font-family: "DDC Uchen";
+  /*  text-rendering: optimizeLegibility;*/
+}
+
+.paginate {
+  margin: 0.5em 0;
+  text-align: center;
+}
+
+.paginate button {
+  border: 1px solid #ccc;
+  padding: 0.1em 2%;
+  width: 40%;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+.paginate button+button {
+  margin-left: 5%;
+}
+
+.paginate_info {
+  color: #444;
+  font-size: 1em;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+
+.unicodeTibInput #searchTerm,
+.unicodeTib .tib {
+  font-size: 1.4em;
+  line-height: 180%;
+}
+
+.unicodeTib .inlineTib {
+  font-size: 1.4em;
+  line-height: 170%;
+}
+
+.tib .tib {
+  font-size: 1em !important;
+}
+
+.unicodeTib .tib .paren {
+  font-family: "Droid Sans", sans-serif;
+}
+
+.unicodeTib .definitionHeaden {
+  font-weight: normal;
+  font-size: 1.6em;
+  line-height: 130%;
+  margin: 0 0 0 3px;
+}
+
+.unicodeTib .definitionHeadtib {
+  font-weight: normal;
+  font-size: 2.2em;
+  line-height: 160%;
+  margin: 0 0 0 3px;
+}
+
+/* Embedded clear button inside the search input */
+.clear-input {
+  position: absolute;
+  right: 19px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+  /* keep above input and not hidden under other controls */
+}
+
+.clear-input::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10' opacity='0.5'/><path d='M15 9L9 15M9 9l6 6' stroke='%23333'  /></svg>");
+}
+
+.clear-input:hover {
+  opacity: 0.95;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.clear-input:active {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Show the clear button when there is content */
+#searchTerm:not(:placeholder-shown)+.clear-input {
+  opacity: 0.8;
+  pointer-events: auto;
+}
+
+#settingsBtn,
+.switchBtn {
+  position: relative;
+}
+
+#settingsBtn img,
+.switchBtn img {
+  position: absolute;
+  right: 5px;
+}
+
+#settingsBtn img {
+  top: -0.1em;
+}
+
+#settingsBtn {
+  width: 45px;
+}
+
+.switchBtn {
+  width: 32px;
+}
+
+.unicodeTibInput #settingsBtn,
+.unicodeTibInput .switchBtn {
+  top: 0.2em;
+}
+
+
+/* Dark theme tweaks for the clear icon */
+.dark .clear-input::before {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ddd' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='10' opacity='0.5'/><path d='M15 9L9 15M9 9l6 6'/></svg>");
+}
+
+
+/* initialization screen*/
+#init {
+  display: none;
+}
+
+.cordovaInitializing #init {
+  display: block;
+}
+
+.cordovaInitializing #mainScreen {
+  display: none;
+}
+
+
+#init {
+  background-color: #fff;
+  height: 100%;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+}
+
+#initMsg {
+  padding: 5em 0 0 0;
+}
+
+.loader {
+  margin: 2em;
+  background: #fff;
+}
+
+#settingsScreen {
+  z-index: 99 !important;
+  background: #fff;
+}
+
+#setting_unicode,
+#setting_layout {
+  max-width: 75%;
+}
+
+.settings h2.heading {
+  display: table-cell;
+  font-size: 1.3em;
+  padding-left: 0.3rem;
+  font-weight: bold;
+}
+
+.settings {
+  margin: 0 auto;
+  display: table;
+  max-width: 100%;
+  padding: 0 2px;
+}
+
+.settings>* {
+  display: table-row;
+}
+
+.settings>*>* {
+  display: table-cell;
+  padding: 1em 0.3em;
+}
+
+.settings .label {
+  max-width: 14em;
+}
+
+.settings .buttons {
+  padding-top: 2.25em;
+  padding-bottom: 1em;
+}
+
+.settings .buttons input+input {
+  margin-left: 0.3em;
+}
+
+.settings select,
+.settings input:not([type="checkbox"]) {
+  background-color: #eee;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  color: #222;
+  border-radius: 5px;
+  padding: 0.5em 0.6em;
+  line-height: 1.4;
+  font-family: "Droid Sans", sans-serif;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.settings select:hover,
+.settings select:active,
+.settings select:focus,
+.settings input:not([type="checkbox"]):hover,
+.settings input:not([type="checkbox"]):active,
+.settings input:not([type="checkbox"]):focus {
+  color: #000;
+  background-color: #fff;
+  border-color: rgba(128, 128, 128, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.drag-handle {
+  position: relative;
+  background: none;
+  width: 1.5em;
+  min-width: 1.5em;
+  height: auto;
+  /* allow flex stretch */
+  cursor: move;
+}
+
+.drag-handle::after {
+  content: "";
+  /* use absolute positionng to create a blank space above and below the background */
+  position: absolute;
+  top: 0.3em;
+  bottom: 0.3em;
+  left: 0.25em;
+  right: 0.25em;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 9'><circle cx='9.5' cy='4.5' r='1.5' fill='%23888'/><circle cx='15.5' cy='4.5' r='1.5' fill='%23888'/></svg>") center top repeat-y;
+  background-size: contain;
+  pointer-events: none;
+}
+
+.dragging {
+  opacity: 0.6;
+}
+
+.langtags {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.5em;
+  border-radius: 3px;
+  border: none;
+}
+
+.dictionaryTagsBlock {
+  white-space: nowrap;
+  position: relative;
+  top: -0.2em;
+}
+
+.langtag {
+  border: 1px solid rgba(128, 128, 128, 0.9);
+  border-radius: 3px;
+  padding: 0.1em 0.3em;
+  font-size: 0.8em;
+  margin-right: 0.3em;
+  display: inline-block;
+  font-variant: small-caps;
+  min-width: 1.5em;
+  text-align: center;
+}
+
+.langtag+.langtag {
+  margin-left: 0.3em;
+}
+
+.langtag-tib {
+  background-color: rgba(231, 82, 13, 0.1);
+}
+
+.langtag-en {
+  background-color: rgba(0, 120, 255, 0.1);
+}
+
+.langtag-skt {
+  background-color: rgba(30, 250, 100, 0.1);
+}
+
+.langtag-arrow {
+  display: inline-block;
+  text-align: center;
+  font-size: 0.8em;
+  padding: 0 0.2em;
+}
+
+.langtag,
+.langtag-arrow {
+  color: #222;
+  margin: 0;
+}
+
+.dark .langtag,
+.dark .langtag-arrow {
+  color: #ddd;
+}
+
+.dictsettings-label {
+  flex: 1;
+  padding-left: 0.3em;
+}
+
+.dictsettings-move {
+  width: 3.5em;
+  text-align: right;
+  align-self: center;
+}
+
+.dictsettings-checkbox {
+  align-self: center;
+}
+
+
+.dict-move-up {
+  background-image: url("data:image/svg+xml;utf8,<svg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path opacity='0.1' d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' fill='%23888'/><path d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%23888' stroke-width='2'/><path d='M12 8L12 16' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M15 11L12.087 8.08704V8.08704C12.039 8.03897 11.961 8.03897 11.913 8.08704V8.08704L9 11' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(128, 128, 128, 0.03);
+
+
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  top: 0.1em;
+  vertical-align: text-bottom;
+  content: " ";
+
+  display: inline-block;
+}
+
+.dict-move-down {
+  background-image: url("data:image/svg+xml;utf8,<svg width='800px' height='800px' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'><path opacity='0.1' d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' fill='%23888'/><path d='M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z' stroke='%23888' stroke-width='2'/><path d='M12 16L12 8' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/><path d='M9 13L11.913 15.913V15.913C11.961 15.961 12.039 15.961 12.087 15.913V15.913L15 13' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(128, 128, 128, 0.03);
+
+
+  width: 1.5em;
+  height: 1.5em;
+  position: relative;
+  top: 0.1em;
+  vertical-align: text-bottom;
+  content: " ";
+
+  display: inline-block;
+}
+
+.dict-info {
+  background-image: url("data:image/svg+xml;utf8,<svg width='800px' height='800px' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'><title/><g id='Complete'><g id='info-circle'><g><circle cx='12' cy='12' data-name='--Circle' fill='none' id='_--Circle' r='10' stroke='%23888' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/><line fill='none' stroke='%23888' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' x1='12' x2='12' y1='12' y2='16'/><line fill='none' stroke='%23888' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' x1='12' x2='12' y1='8' y2='8'/></g></g></g></svg>");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(128, 128, 128, 0.1);
+
+  width: 1.5em;
+  height: 1.5em;
+  border: none;
+  cursor: help;
+
+  position: relative;
+  top: 0.2em;
+  margin-left: 0.3em;
+  vertical-align: text-bottom;
+  content: " ";
+
+  display: inline-block;
+  border-radius: 3em;
+}
+
+#select-dict {
+  padding-left: 2px;
+  max-width: 96vw;
+  padding-right: 1.25em;
+  padding-left: 0.5em;
+}
+
+.dictsettings-line {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+
+  margin-bottom: 1em;
+  padding: 4px 2px 4px 2px;
+  border: 1px solid rgba(128, 128, 128, 0.6);
+  margin: 4px 0;
+  border-radius: 5px;
+  background-color: #eee;
+}
+
+.dark .dictsettings-line {
+  background-color: #111;
+}
+
+.disabled {
+  visibility: hidden;
+}
+
+.settings .settingsinfo {
+  max-width: 40em;
+  font-size: 0.9em;
+  color: #606060;
+}
+
+h1 {
+  font-size: 1.3em;
+  font-family: "Droid Sans", sans-serif;
+}
+
+body {
+  font-family: "Droid Sans", sans-serif;
+}
+
+/*medium screens*/
+@media only all and (max-width: 1000px) {
+  .leftSideBar {
+    width: 14em;
+  }
+
+  #definitionList {
+    border: none;
+    border-collapse: none;
+  }
+
+  #definitionList,
+  #definitionList tbody,
+  #definitionList tr,
+  #definitionList td {
+    display: block;
+  }
+
+  #definitionList {
+    width: 100%;
+  }
+
+  #definitionList .dictName {
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    padding: 0.35em 0.2em 0 0.25em;
+    width: auto;
+  }
+
+  #definitionList .definition {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+}
+
+@media only all and (max-width: 800px) {
+  .leftSideBar {
+    width: 12em;
+  }
+}
+
+@media only all and (max-width: 700px) {
+  .leftSideBar {
+    width: 11em;
+  }
+
+  .paginate button {
+    width: auto;
+  }
+}
+
+
+/*small screens*/
+@media only all and (max-width: 600px) {
+  .leftSideBar {
+    display: none !important
+  }
+
+  .forceLeftSideVisible .leftSideBar {
+    display: table-cell !important
+  }
+
+  .forceLeftSideVisible .mainWrap {
+    display: none !important
+  }
+
+  .dictName {
+    width: auto;
+    padding: 0.5em 0.3em
+  }
+
+  #definitions {
+    left: 0;
+    margin: 0;
+    padding: 0
+  }
+
+  #searchTerm {
+    margin-left: 0;
+    border-left: 0 none;
+    margin-top: -1px;
+    border-radius: 0;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+
+  .settings {
+    margin: 0;
+    display: block;
+  }
+
+  .settings>* {
+    display: block;
+    padding-top: 1.5em;
+  }
+
+  .settings>*>* {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .settings .label {
+    max-width: 100%;
+  }
+
+  #setting_unicode,
+  #setting_layout {
+    max-width: 99%;
+  }
+
+  .settings .buttons {
+    text-align: center;
+  }
+
+  #settingsBtn,
+  .switchBtn {
+    margin-top: -0.15em;
+    display: inline-block;
+    position: relative;
+  }
+
+  .unicodeTibInput #settingsBtn,
+  .unicodeTibInput .switchBtn {
+    margin-top: 0.05em;
+  }
+
+  .textInputWrap {
+    padding: 0;
+  }
+
+}
+
+
+* {
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+a img {
+  max-width: none;
+}
+
+/*dark layout*/
+body.dark {
+  background-color: #000 !important;
+  color: #eee !important
+}
+
+.dark .paginate_info {
+  color: #ccc
+}
+
+.dark #searchTerm,
+.dark .settings select,
+.dark .settings input:not([type="checkbox"]) {
+  background-color: #333 !important;
+  color: #eee !important
+}
+
+.dark #searchTerm:hover,
+.dark #searchTerm:active,
+.dark #searchTerm:focus,
+.dark .settings select:hover,
+.dark .settings select:active,
+.dark .settings select:focus,
+.dark .settings input:not([type="checkbox"]):hover,
+.dark .settings input:not([type="checkbox"]):active,
+.dark .settings input:not([type="checkbox"]):focus {
+  background-color: #555 !important;
+}
+
+.dark .dictName {
+  color: #aaa
+}
+
+.dark .paginate button {
+  border-color: #ccc;
+}
+
+.dark a {
+  color: #ddd
+}
+
+.dark #init {
+  background-color: #000;
+}
+
+.dark .dictName {
+  border-right: 1px solid #aaa;
+  color: #a8a8a8;
+}
+
+.dark #settingsScreen {
+  background: #000
+}
+
+.dark .settingsinfo {
+  color: #eee;
+}
+
+
+/* special mode that only shows a definition*/
+.definitionOnly .mainWrap {
+  padding: 0.25em !important;
+}
+
+.definitionOnly .leftSideBar {
+  display: none !important;
+}
+
+
+/*picture viewer for scanned dictionaries*/
+img.pswp__img {
+  image-rendering: optimizeQuality;
+}
+
+/*
+.dark img.pswp__img{
+  filter: invert(100%);
+}
+*/
+
+/* audio player */
+.definition audio {
+  border-radius: 12px;
+  vertical-align: middle;
+  height: 1.6em;
+  border: 1px solid rgba(128, 128, 128, 0.4);
+}
+
+/* ─── Tooltip styles ─────────────────────────────────────────── */
+.tooltip {
+  border-bottom: 1px dashed #888;
+  cursor: pointer;
+}
+
+#tooltip {
+  position: absolute;
+  z-index: 9999;
+  color: #fff;
+  font-size: 0.9em;
+  max-width: 60em;
+  min-width: 100px;
+  background-color: rgba(0, 0, 0, 0.95);
+  opacity: 0.7;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#tooltip-container a {
+  color: #fff;
+  background: #666;
+  border: 2px solid #bbb;
+  text-decoration: none;
+  padding: 0.3em 0.4em 0 0.3em;
+}
+
+#tooltip-background {
+  padding-top: 1em;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  text-align: center;
+}
+
+#tooltip-fullscreen {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 100%;
+  z-index: 100;
+  text-align: center;
+}
+
+#tooltip-fullscreen-text {
+  background-color: #000;
+  border-radius: 7px;
+  color: #fff;
+  display: inline-block;
+  margin: auto;
+  max-width: 40em;
+  padding: 0.7em 0.2em;
+  vertical-align: middle;
+  width: 90vw;
+  overflow-y: auto;
+  max-height: 95vh;
+}

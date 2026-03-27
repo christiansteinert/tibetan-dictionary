@@ -1,0 +1,126 @@
+# ── Tibetan Dictionary – Docker Compose ───────────────────────────────────────
+#
+# Three independent build services + one runtime service:
+#
+#   build-db      Build the SQLite dictionary database from CSV sources.
+#                 Output: ./backend/TibetanDictionary*.db
+#
+#   build-react   Compile the Vite/React frontend.
+#                 Output: ./webapp/dist/  (bind-mounted)
+#
+#   build-android Build the Android APK.
+#                 Output: TibetanDictionary-PUBLIC.apk in the project root.
+#                 Requires backend/*.db to exist first (run build-db beforehand).
+# 
+#   app           Runtime: serve the finished application.
+#                 Depends on build-db and build-react having been run at least once.
+
+# ── Common workflows ──────────────────────────────────────────────────────────
+#
+#   # Build everything and start the web app:
+#   docker compose run --rm build-db
+#   docker compose run --rm build-react
+#   docker compose up app
+#
+#   # Rebuild only the database (e.g. after changing CSV files):
+#   docker compose run --rm build-db
+#   docker compose restart app
+#
+#   # Build the Android APK (heavy toolchain):
+#   docker compose run --rm build-android
+#
+#   # Build a self-contained portable image (for deployment / registry push):
+#   docker build -f buildscripts/docker/deploy/Dockerfile -t tibetan-dict .
+# ──────────────────────────────────────────────────────────────────────────────
+
+services:
+
+  # Build dictionary databases
+  build-db:
+    image: python:3.13-slim
+    working_dir: /app
+    environment:
+      DEBIAN_FRONTEND: noninteractive
+    command: >-
+      sh -c "
+        apt-get update -qq &&
+        apt-get install -y --no-install-recommends sqlite3 dash > /dev/null &&
+        sh buildscripts/buildDictionaries.sh
+      "
+    volumes:
+      - ./backend:/app/backend
+      - ./_input:/app/_input:ro
+      - ./buildscripts:/app/buildscripts:ro
+
+  # Build react frontend
+  build-react:
+    image: node:22-alpine
+    working_dir: /app/webapp
+    command: sh -c "npm ci --legacy-peer-deps && npm run build"
+    volumes:
+      - ./webapp:/app/webapp:ro
+      - ./webapp/dist:/app/webapp/dist
+      - ./backend/audio:/app/webapp/public/audio:ro
+      - ./backend/data:/app/webapp/public/data:ro
+      - react_node_modules:/app/webapp/node_modules
+
+
+  # Android APK builder
+  # Requirements:
+  #   - Run build-db first so backend/TibetanDictionary.db exists.
+  #   - Place your APK signing keystore at _build/my-release-key.keystore
+  #     (see the comment in _build/buildAndroid.sh for keytool instructions).
+  build-android:
+    build:
+      context: .
+      dockerfile: buildscripts/docker/android/Dockerfile
+    volumes:
+      # APK output lands in the project root
+      - .:/app
+      # backend DB is read-only input for the Android build
+      - ./backend:/app/backend:ro
+    environment:
+      # Override these if your SDK is installed in a non-standard location
+      # inside the container (the Dockerfile sets ANDROID_HOME=/opt/android-sdk)
+      - ANDROID_HOME=/opt/android-sdk
+      - JAVA_HOME=/opt/java/openjdk
+
+  # Run the application
+  # This should be executed after the builders:
+  #   docker compose run --rm build-db && docker compose run --rm build-react
+  #   docker compose up app
+  app:
+    image: php:8.3-fpm-alpine
+    working_dir: /var/www/html
+    command: >-
+      sh -c "
+        apk add --no-cache nginx &&
+        sed -i 's|^listen = .*|listen = 127.0.0.1:9000|' /usr/local/etc/php-fpm.d/www.conf &&
+        php-fpm -D &&
+        nginx -c /etc/nginx/tibetandict.conf -g 'daemon off;'
+      "
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      # Pre-built frontend (from build-react) — static files
+      - ./webapp/dist:/var/www/html:ro
+      # PHP backend + database in a separate directory so they are not hidden
+      # by the dist directory mount above
+      - ./backend/dict.php:/var/www/backend/dict.php:ro
+      - ./backend/snippet.php:/var/www/backend/snippet.php:ro
+      - ./backend/TibetanDictionary.db:/var/www/backend/TibetanDictionary.db:ro
+      # nginx config
+      - ./buildscripts/docker/deploy/nginx.conf:/etc/nginx/tibetandict.conf:ro
+    depends_on:
+      build-db:
+        condition: service_completed_successfully
+      build-react:
+        condition: service_completed_successfully
+
+
+volumes:
+  # Persists node_modules across build-react runs so npm ci is fast after
+  # the first run (only re-installs when package-lock.json changes).
+  react_node_modules:
+

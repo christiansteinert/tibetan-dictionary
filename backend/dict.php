@@ -11,10 +11,10 @@ require_once 'snippet.php';
 
 // --- Database connection -----------------------------------------------------
 
-if (file_exists('TibetanDictionary_private.db')) {
-    $db = new SQLite3('TibetanDictionary_private.db');
+if (file_exists(__DIR__ . '/TibetanDictionary_private.db')) {
+    $db = new SQLite3(__DIR__ . '/TibetanDictionary_private.db');
 } else {
-    $db = new SQLite3('TibetanDictionary.db');
+    $db = new SQLite3(__DIR__ . '/TibetanDictionary.db');
 }
 
 
