@@ -101,14 +101,16 @@
   line-height: 1.5;
 }
 
-/* Make the <b> highlights stand out */
-.colSnippet :global(b) {
+/* Make the <em> highlights stand out */
+.colSnippet :global(em), .colTerm :global(em) {
+    font-style: normal;
   background-color: #ffa;
   border-radius: 2px;
   padding: 0 1px;
 }
 
-:global(.dark) .colSnippet :global(b) {
+:global(.dark) .colSnippet :global(em), :global(.dark) .colTerm :global(em) {
+  font-style: normal;
   background-color: #553;
   color: #ff7;
 }
@@ -187,7 +189,7 @@
 .collapsibleArrow {
   display: inline-block;
   flex-shrink: 0;
-  margin-top: 0.25em;
+  align-self: center;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;

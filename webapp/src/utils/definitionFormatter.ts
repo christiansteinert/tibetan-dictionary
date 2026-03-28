@@ -309,10 +309,12 @@ export function formatDefinition(
   let defStart = "";
   let defEnd = "";
   let inlineSections = {};
+  
   if (currentDict.mergeLines) {
     definition = definition.replace(/\n/gm, '; ');
     definition = definition.replace(/\\n/gm, '; ');
   }
+
   if (!currentDict.preformattedLinebreaks) {
     definition = breakDefinitionIntoSections(definition);
   }
@@ -401,14 +403,42 @@ export function formatDefinition(
 
   definition = defStart + definition + defEnd;
 
+  return { html: definition, inlineSections };
+}
+
+/**
+ * Format a single dictionary definition entry for being added to the result page.
+ *
+ * @param definition - Raw definition text
+ * @param term - The term being looked up
+ * @param useUnicodeTibetan - Whether to render Tibetan Unicode
+ * @param currentDict - Dictionary configuration object
+ * @param abbreviationsData - Abbreviations for this dictionary
+ * @param onOpenScan - Callback signature: (scanId, term, pageInfo) => void
+ * @returns formatted HTML for this definition and any inline Tibetan sections found for potential linking
+ */
+function formatDefinitionForDefinitionPage(
+  definition: string,
+  term: string,
+  useUnicodeTibetan: boolean,
+  currentDict: DictEntry,
+  abbreviationsData: AbbreviationSet | null,
+  onOpenScan?: OnOpenScanCallback
+): FormattedDefinition {
+  let defStart = "";
+  let defEnd = "";
+
+  const definitionBody = formatDefinition(definition, term, useUnicodeTibetan, currentDict, abbreviationsData, onOpenScan);
+
+
   var tooltipStart = "", tooltipEnd = "";
   if (currentDict.about) {
     tooltipStart = '<span class="tooltip" title="' + currentDict.about + '">';
     tooltipEnd = '</span>';
   }
 
-  var formattedDefinition = '<tr><td class="dictName">' + tooltipStart + currentDict.label + tooltipEnd + '</td><td class="definition">' + definition + '</td></tr>';
-  return { html: formattedDefinition, inlineSections };
+  var formattedDefinition = '<tr><td class="dictName">' + tooltipStart + currentDict.label + tooltipEnd + '</td><td class="definition">' + definitionBody.html + '</td></tr>';
+  return { html: formattedDefinition, inlineSections: definitionBody.inlineSections };
 
 }
 
@@ -456,7 +486,7 @@ export function formatDefinitionList(
 
       const abbreviationsData = currentDict.abbreviations ? abbreviations[currentDict.abbreviations] || null : null;
 
-      const result = formatDefinition(
+      const result = formatDefinitionForDefinitionPage(
         definition,
         term,
         useUnicodeTibetan,

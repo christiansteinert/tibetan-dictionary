@@ -14,7 +14,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import SettingsPage from '@/components/Settings/SettingsPage';
 import WelcomePage from '@/components/Welcome/WelcomePage';
 import SearchLayout from '@/components/SearchLayout/SearchLayout';
-import ExtendedSearchLayout from '@/components/ExtendedSearch/ExtendedSearchLayout';
+import ExtendedSearchLayout from '@/components/FulltextSearchLayout/FulltextSearchLayout';
 
 interface AppRoutesProps {
   definitionOnly?: boolean;

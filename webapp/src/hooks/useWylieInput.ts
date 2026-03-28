@@ -2,15 +2,22 @@
  * useWylieInput – React hook that handles input event for Wylie input and English input
  *
  * It manages:
- *  - Wylie → Unicode conversion as the user types
+ *  - Wylie → Unicode conversion as the user types (via an InputProcessor)
  *  - Backspace handling (converting the last syllable back to Wylie)
  *  - Syllable-boundary detection (space triggers conversion)
  *  - Language switching between Tibetan and English
+ *
+ * The actual Wylie↔Unicode conversion is delegated to an `InputProcessor`
+ * function.  In term-search mode this is a plain wylieToUni; in fulltext
+ * mode it splits on FTS operators, converts each segment individually, and
+ * applies operator-spacing rules — preventing characters like `!` from
+ * being fed into the Wylie converter.
  *
  * Returns a ref to attach to the <input> element and helper functions.
  */
 import { useRef, useCallback, useEffect, RefObject } from 'react';
 import { WylieConverter } from '@/utils/wylieConverter';
+import { type InputProcessor, ftsSegmentConvert, hasFtsOperators } from '@/utils/fts/ftsInputDecorator';
 import type { Language } from '@/types';
 
 const wylieConverter = new WylieConverter();
@@ -21,6 +28,20 @@ interface UseWylieInputOptions {
   inputLang: Language;
   onInputChange?: (value: string) => void;
   onEnter?: (value: string) => void;
+  /**
+   * Converts normalised Wylie text into display text.
+   * In term mode: plain wylieToUni.
+   * In FTS mode: segment-aware conversion + operator spacing.
+   * When undefined, a plain identity function is used (Wylie-as-is).
+   */
+  inputProcessor?: InputProcessor;
+  /**
+   * Converts display text back to Wylie.  Must be the inverse of the
+   * processor's conversion.  In FTS mode this splits on operators and
+   * converts each segment individually.
+   * When undefined, the built-in uniToWylie is used.
+   */
+  reverseProcessor?: (text: string) => string;
 }
 
 interface UseWylieInputReturn {
@@ -40,23 +61,38 @@ export default function useWylieInput({
   inputLang,
   onInputChange,
   onEnter,
+  inputProcessor,
+  reverseProcessor,
 }: UseWylieInputOptions): UseWylieInputReturn {
   const inputRef = useRef<HTMLInputElement>(null);
   const lastUniInput = useRef('');
   const currentInput = useRef('');
   const wasTypedInWylie = useRef(false);
 
+  // Store processors in refs so event handlers always see the latest version
+  // without needing to re-register listeners.
+  const processorRef = useRef(inputProcessor);
+  processorRef.current = inputProcessor;
+  const reverseRef = useRef(reverseProcessor);
+  reverseRef.current = reverseProcessor;
+
   // --- conversion helpers (stable, don't depend on state) ---------------
 
+  /** Display→Wylie: uses reverseProcessor if available, else built-in uniToWylie. */
   const uniToWylie = useCallback(
-    (text: string) =>
-      useUnicodeTibetan ? wylieConverter.uniToWylie(text) : text,
+    (text: string) => {
+      if (reverseRef.current) return reverseRef.current(text);
+      return useUnicodeTibetan ? wylieConverter.uniToWylie(text) : text;
+    },
     [useUnicodeTibetan]
   );
 
+  /** Wylie→Display: uses inputProcessor if available, else built-in wylieToUni. */
   const tibetanOutput = useCallback(
-    (text: string) =>
-      useUnicodeTibetan ? wylieConverter.wylieToUni(text) : text,
+    (text: string) => {
+      if (processorRef.current) return processorRef.current(text);
+      return useUnicodeTibetan ? wylieConverter.wylieToUni(text) : text;
+    },
     [useUnicodeTibetan]
   );
 
@@ -64,6 +100,21 @@ export default function useWylieInput({
     (text: string) =>
       lowercase && inputLang === 'tib' ? text.toLowerCase() : text,
     [lowercase, inputLang]
+  );
+
+  /**
+   * Normalise Wylie text, respecting FTS operators when a processor is active.
+   * In FTS mode each segment between operators is normalised individually so
+   * that `normalizeWylie` never sees operator characters like `!`.
+   */
+  const normalizeWylie = useCallback(
+    (text: string) => {
+      if (processorRef.current && hasFtsOperators(text)) {
+        return ftsSegmentConvert(text, seg => wylieConverter.normalizeWylie(seg));
+      }
+      return wylieConverter.normalizeWylie(text);
+    },
+    []
   );
 
   // --- public helpers ---------------------------------------------------
@@ -99,7 +150,7 @@ export default function useWylieInput({
 
     if (useUnicodeTibetan && inputLang === 'tib') {
       uniInput = uniInput.replace(/[-_ /།]+/g, ' ');
-      uniInput = wylieConverter.normalizeWylie(uniInput);
+      uniInput = normalizeWylie(uniInput);
       const newInput = uniToWylie(uniInput);
       el.value = tibetanOutput(newInput);
 
@@ -112,7 +163,7 @@ export default function useWylieInput({
     }
 
     onEnter?.(uniInput);
-  }, [useUnicodeTibetan, inputLang, toLowerIfNeeded, uniToWylie, tibetanOutput, onEnter]);
+  }, [useUnicodeTibetan, inputLang, toLowerIfNeeded, uniToWylie, tibetanOutput, normalizeWylie, onEnter]);
 
   const handleKeyupInput = useCallback(
     (event: KeyboardEvent) => {
@@ -129,10 +180,12 @@ export default function useWylieInput({
       let newInput = uniInput;
       const isCursorAtEnd = el.selectionStart === uniInput.length;
 
-      // Skip if no Wylie-relevant chars (avoids interfering with native keyboards)
+      // Skip if no Wylie-relevant chars (avoids interfering with native keyboards).
+      // In FTS mode, operator characters (& | !) also count as relevant.
       if (
         event.type === 'input' &&
-        !/.*['a-zA-Z].*/.test(uniInput + prev)
+        !/.*['a-zA-Z].*/.test(uniInput + prev) &&
+        !(processorRef.current && hasFtsOperators(uniInput + prev))
       ) {
         return;
       }
@@ -147,8 +200,11 @@ export default function useWylieInput({
       // Track Wylie input
       let currentInputContainsWylie = false;
       let matchMiddle: RegExpMatchArray | null = null;
+      // In FTS mode, operators (& | !) count as "Wylie-like" content so that
+      // the Wylie conversion branch is taken instead of the native-Tibetan branch.
+      const hasFtsOps = processorRef.current && hasFtsOperators(uniInput);
 
-      if (inputLang === 'tib' && /.*['a-zA-Z].*/.test(uniInput)) {
+      if (inputLang === 'tib' && (/.*['a-zA-Z].*/.test(uniInput) || hasFtsOps)) {
         wasTypedInWylie.current = true;
         currentInputContainsWylie = true;
         matchMiddle = uniInput.match(
@@ -159,10 +215,21 @@ export default function useWylieInput({
       }
 
       const isSpace = event.keyCode === 32;
+      // In FTS mode, operators (& | ! *) also act as separators that trigger
+      // syllable conversion — just like space or tseg.
+      // Only when text actually grew: otherwise a backspace that lands on an
+      // operator would immediately re-trigger decoration, making the operator
+      // impossible to delete.
+      const isFtsOperatorAppended =
+        !!processorRef.current &&
+        /[&|!*]$/.test(uniInput) &&
+        uniInput.length > prev.length &&
+        uniInput.startsWith(prev);
       const isSeparatorAppended =
-        /[-  /་།\s]$/.test(uniInput) &&
-        uniInput.startsWith(prev) &&
-        !/[a-zA-Z'].*་/.test(prev);
+        (/[-  /་།\s]$/.test(uniInput) &&
+          uniInput.startsWith(prev) &&
+          !/[a-zA-Z'].*་/.test(prev)) ||
+        isFtsOperatorAppended;
       const isEnglishThreeChars =
         newInput.length >= 3 && inputLang === 'en';
       const isBackspace =
@@ -175,9 +242,18 @@ export default function useWylieInput({
         uniInput.length > prev.length &&
         matchMiddle
       ) {
-        const insertedSyllable = wylieConverter.wylieToUni(
-          wylieConverter.normalizeWylie(matchMiddle[2])
-        );
+        // In FTS mode, if the "syllable" contains an operator (& | !)
+        // use segment-aware conversion so the operator isn't fed into the
+        // Wylie converter (which would turn `!` into `༈` and `|` into `༑`).
+        const rawMiddle = matchMiddle[2];
+        const insertedSyllable =
+          processorRef.current && hasFtsOperators(rawMiddle)
+            ? ftsSegmentConvert(rawMiddle, seg =>
+                wylieConverter.wylieToUni(wylieConverter.normalizeWylie(seg))
+              )
+            : wylieConverter.wylieToUni(
+                wylieConverter.normalizeWylie(rawMiddle)
+              );
         const result =
           matchMiddle[1] + insertedSyllable + matchMiddle[3];
         const cursorPos = matchMiddle[1].length + insertedSyllable.length;
@@ -194,7 +270,7 @@ export default function useWylieInput({
         let inputText: string;
         if (useUnicodeTibetan && inputLang === 'tib') {
           if (currentInputContainsWylie) {
-            let n = wylieConverter.normalizeWylie(newInput);
+            let n = normalizeWylie(newInput);
             n = n.replace(/[-_ /་།\s]+/g, ' ');
             inputText = tibetanOutput(n);
           } else {
@@ -222,8 +298,15 @@ export default function useWylieInput({
           let adjusted = uniToWylie(uniInput).replace(/[_  ]*$/, '');
           const splitPos = adjusted.lastIndexOf(' ');
           if (splitPos > 0) {
+            const beforeLastSyllable = adjusted.substring(0, splitPos + 1);
+            // In FTS mode, use the processor so operators aren't fed directly
+            // into the Wylie converter (which would turn `!` into `༈`).
+            const convertedPrefix =
+              processorRef.current
+                ? tibetanOutput(beforeLastSyllable)
+                : wylieConverter.wylieToUni(beforeLastSyllable);
             adjusted =
-              wylieConverter.wylieToUni(adjusted.substring(0, splitPos + 1)) +
+              convertedPrefix +
               adjusted.substring(splitPos + 1);
           }
           el.value = adjusted;
@@ -251,6 +334,7 @@ export default function useWylieInput({
       toLowerIfNeeded,
       uniToWylie,
       tibetanOutput,
+      normalizeWylie,
       onInputChange,
     ]
   );

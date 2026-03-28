@@ -13,7 +13,7 @@ import { WylieConverter } from '@/utils/wylieConverter';
 import { DICTLIST } from '@/config/dictlist';
 import { bindTooltips } from '@/utils/tooltip';
 import type { FTSSearchResult } from '@/store/searchSlice';
-import styles from './ExtendedSearch.module.css';
+import styles from './FulltextSearch.module.css';
 import { Language } from '@/types';
 import { formatDefinition } from '@/utils/definitionFormatter';
 import * as Collapsible from '@radix-ui/react-collapsible';
@@ -35,7 +35,7 @@ interface Props {
  * Strategy: process the plain-text portions only (not inside HTML tags).
  * Within those plain-text portions, find {…} blocks and convert them.
  */
-function convertSnippetCurlyBraces(snippetHtml: string): string {
+function convertCurlyBraceSections(snippetHtml: string): string {
   // Split on HTML tags to avoid touching content inside tags
   const parts = snippetHtml.split(/(<[^>]*>)/);
   for (let i = 0; i < parts.length; i++) {
@@ -50,6 +50,15 @@ function convertSnippetCurlyBraces(snippetHtml: string): string {
   return parts.join('');
 }
 
+
+function handleHighlightedSectionsForTibOnly(definition: string): string {
+  // For Tibetan-only dictionaries we need to wrap Tibetan sections ourselves in curly braces and interrupt this 
+  // for the <em> / </em> tags used for highlighting because the backend does understand that such dictionaries contain wylie
+  let adjustedDef = '{' + definition.replace(/<em>/g, "}<em>{").replace(/<\/em>/g, "}</em>{") + '}';
+  adjustedDef = adjustedDef.replace(/\{\}/g, '');
+  return adjustedDef;
+}
+
 const FtsResultItem = memo(function FtsResultItem({
   result,
   lang,
@@ -59,11 +68,15 @@ const FtsResultItem = memo(function FtsResultItem({
 }: Props) {
   const dictCellRef = useRef<HTMLTableCellElement>(null);
 
-  // Display term: convert Wylie → Unicode if applicable
-  const displayTerm =
-    lang === 'tib' && useUnicodeTibetan
-      ? wylieConverter.wylieToUni(result.term)
-      : result.term;
+  // Display term: handle <em>/</em> highlights inside Tibetan correctly
+  let highlightedTerm = result.highlightedTerm;
+  if (lang === 'tib' && useUnicodeTibetan) {
+    highlightedTerm = handleHighlightedSectionsForTibOnly(highlightedTerm);
+    console.log("Highlighted term with tib-only handling:", highlightedTerm);
+    highlightedTerm = convertCurlyBraceSections(highlightedTerm);
+  } else {
+    highlightedTerm = result.term
+  }
 
   // Dictionary label and about info for tooltip
   const dictEntry = DICTLIST[result.dictionary];
@@ -80,10 +93,16 @@ const FtsResultItem = memo(function FtsResultItem({
   );
 
   // Process snippet: convert {curly brace} sections if in Unicode mode
+  let snippet = result.snippet;
+  if (dictEntry.containsOnlyTibetan && lang === 'tib' && useUnicodeTibetan) {
+    snippet = handleHighlightedSectionsForTibOnly(result.snippet)
+  }
+
+
   const snippetHtml =
     useUnicodeTibetan
-      ? convertSnippetCurlyBraces(result.snippet)
-      : result.snippet;
+      ? convertCurlyBraceSections(snippet)
+      : snippet;
 
   // Bind tooltip system to the dictionary name cell
   useEffect(() => {
@@ -93,14 +112,23 @@ const FtsResultItem = memo(function FtsResultItem({
   }, [dictLabel]);
 
   const isTib = lang === 'tib' && useUnicodeTibetan;
-  const formattedDefinition = formatDefinition(
-    result.definition,
-    "",
-    useUnicodeTibetan,
-    dictEntry,
-    null,
-    () => { }
-  )?.html || '';
+
+  let definition = result.definition || '';
+
+  let formattedDefinition = '';
+  if (dictEntry.scanId) {
+    // scanned dictionaries have no definition text, skiup showing definition here
+    formattedDefinition = '';
+  } else {
+    formattedDefinition = formatDefinition(
+      definition,
+      "",
+      useUnicodeTibetan,
+      dictEntry,
+      null,
+      () => { }
+    )?.html || '';
+  }
 
   return (
     <tr>
@@ -112,17 +140,15 @@ const FtsResultItem = memo(function FtsResultItem({
             e.preventDefault();
             onTermClick(result.term, lang);
           }}
-        >
-          {displayTerm}
-        </a>
+          dangerouslySetInnerHTML={{ __html: highlightedTerm }} 
+        />
       </td>
       <td className={styles.colDict} ref={dictCellRef}>
         <span
           className={`tooltip ${styles.dictNameTooltip}`}
           title={dictAbout}
-        >
-          {dictLabel}
-        </span>
+          dangerouslySetInnerHTML={{ __html: dictLabel}}
+        />
       </td>
       <td
         className={[

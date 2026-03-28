@@ -7,6 +7,7 @@
 import { useEffect, forwardRef, useImperativeHandle, useRef } from 'react';
 import useWylieInput from '@/hooks/useWylieInput';
 import { WylieConverter } from '@/utils/wylieConverter';
+import type { InputProcessor } from '@/utils/fts/ftsInputDecorator';
 import type { Language } from '@/types';
 
 interface Props {
@@ -17,6 +18,10 @@ interface Props {
   onEnter: (v: string) => void;
   /** Pre-fill the input with a Wylie/English term (e.g. from the URL on first load) */
   initialValue?: string;
+  /** Wylie→Display processor (term-mode default or FTS segment-aware). */
+  inputProcessor?: InputProcessor;
+  /** Display→Wylie reverse processor (must match inputProcessor). */
+  reverseProcessor?: (text: string) => string;
 }
 
 export interface WylieInputHandle {
@@ -30,7 +35,7 @@ export interface WylieInputHandle {
 }
 
 const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputField(
-  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue },
+  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue, inputProcessor, reverseProcessor },
   ref
 ) {
   const {
@@ -48,6 +53,8 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     inputLang: inputLang as Language,
     onInputChange,
     onEnter,
+    inputProcessor,
+    reverseProcessor,
   });
 
   // Expose imperative methods so parent components can control the input

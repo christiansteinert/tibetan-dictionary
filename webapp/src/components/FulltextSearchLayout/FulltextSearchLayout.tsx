@@ -6,15 +6,13 @@ import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '@/store/store';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
-import useDictionaryLookup from '@/hooks/useDictionaryLookup';
-import { useSearchHandlers } from '@/hooks/useSearchHandlers';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
-import styles from './ExtendedSearch.module.css';
+import styles from './FulltextSearch.module.css';
 
 import {
   type SearchMode,
 } from '@/store/searchSlice';
-import ExtendedResultList from './ExtendedResultList';
+import ExtendedResultList from './FtsResultList';
 import useFulltextSearch from '@/hooks/useFulltextSearch';
 
 interface Props {
@@ -29,7 +27,6 @@ export default function SearchLayout(props: Props) {
 
   const dispatch = useDispatch();
   const navigation = useDictNavigation();
-  const handlers = useSearchHandlers();
 
   const settings = useSelector((s: RootState) => s.settings);
   const { input: searchInput, resultList: result, definition } = useSelector((s: RootState) => s.search);
@@ -50,7 +47,7 @@ export default function SearchLayout(props: Props) {
    */
   const handleTermSelected = useCallback(
     (wylieTerm: string) => {
-      navigation.fulltextSearch(result.query, result.lang, result.offset, false, searchInput.extendedSettingsVisible, wylieTerm);
+      navigation.termSearch(wylieTerm, result.lang, result.offset, false, searchInput.extendedSettingsVisible, wylieTerm);
     }, [navigation, result.query, result.lang, result.offset, searchInput.extendedSettingsVisible]
   );
 

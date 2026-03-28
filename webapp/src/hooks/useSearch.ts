@@ -2,7 +2,7 @@
  * useSearch – orchestrates search operations.
  * Reads from backend and writes to the Redux search slice.
  */
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import {
@@ -49,9 +49,11 @@ interface UseSearchReturn {
 export default function useSearch(): UseSearchReturn {
   const dispatch = useDispatch();
   const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   /**
    * Run a search. Updates Redux with the results.
+   * Aborts any previous in-flight request before starting a new one.
    *
    * @param rawInput – raw text from the input field
    * @param lang – 'tib' or 'en'
@@ -72,6 +74,12 @@ export default function useSearch(): UseSearchReturn {
         return { searchTerm: '', results: [] };
       }
 
+      // Cancel any previous in-flight request so stale responses never
+      // overwrite the results of a newer query.
+      abortControllerRef.current?.abort();
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+
       dispatch(setIsSearching(true));
       dispatch(setSearchError(null));
 
@@ -81,7 +89,8 @@ export default function useSearch(): UseSearchReturn {
           lang,
           offset,
           listSize + 1, // fetch one extra to detect "has next page"
-          activeDictionaries
+          activeDictionaries,
+          controller.signal
         );
 
         dispatch(setResultListState({
@@ -96,6 +105,9 @@ export default function useSearch(): UseSearchReturn {
     
         return { searchTerm, results };
       } catch (err) {
+        if (err instanceof Error && err.name === 'AbortError') {
+          return { searchTerm, results: [] }; // stale request — silently discard
+        }
         console.error('Search error:', err);
         dispatch(setSearchError(err instanceof Error ? err.message : String(err)));
         dispatch(setIsSearching(false));

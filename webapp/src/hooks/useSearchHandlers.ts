@@ -10,6 +10,7 @@ import type { RootState } from '@/store/store';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
 import useSearch from '@/hooks/useSearch';
 import { WylieConverter } from '@/utils/wylieConverter';
+import { ftsUniToWylie } from '@/utils/fts/ftsInputDecorator';
 import {
   type SearchMode,
   setDefinitionHtml,
@@ -43,10 +44,15 @@ export function useSearchHandlers() {
         return;
       }
       // Convert Unicode Tibetan back to Wylie so the URL always uses the Wylie lookup key.
-      const inputTerm =
-        inputLang === 'tib' && unicode === true
-          ? wylieConverter.current.uniToWylie(rawInput).trim()
-          : rawInput.trim();
+      // In fulltext mode, convert each segment between operators individually.
+      let inputTerm: string;
+      if (inputLang === 'tib' && unicode === true) {
+        inputTerm = mode === 'fulltext'
+          ? ftsUniToWylie(rawInput, wylieConverter.current).trim()
+          : wylieConverter.current.uniToWylie(rawInput).trim();
+      } else {
+        inputTerm = rawInput.trim();
+      }
       if (mode === 'fulltext') {
         navigation.fulltextSearch(inputTerm, inputLang, 0, true, extendedSettingsVisible);
       } else {

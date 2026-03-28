@@ -4,9 +4,9 @@
  */
 import { useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
-import FtsResultItem from './ExtendedResultItem';
+import FtsResultItem from './FtsResultItem';
 import Pagination from '@/components/SearchLayout/Pagination';
-import styles from './ExtendedSearch.module.css';
+import styles from './FulltextSearch.module.css';
 
 interface Props {
   onTermClick: (term: string, lang: string) => void;

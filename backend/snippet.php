@@ -71,11 +71,12 @@ function buildSnippetRows($results, $snippetRegex) {
         }
 
         $rows[] = [
-            'term'         => $row['term'],
-            'dictionary'   => $row['dictionary'],
-            'dictionaryId' => $row['dictionaryId'],
-            'snippet'      => $snippet,
-            'definition'   => $row['definition'], 
+            'term'            => $row['term'],
+            'highlightedTerm' => highlightTerm($row['term'], $snippetRegex),
+            'dictionary'      => $row['dictionary'],
+            'dictionaryId'    => $row['dictionaryId'],
+            'snippet'         => $snippet,
+            'definition'      => $row['definition'], 
         ];
     }
     return $rows;
@@ -94,6 +95,9 @@ function generateSnippet($haystack, $regexPattern) {
     if (!preg_match($regexPattern, $haystack, $matches, PREG_OFFSET_CAPTURE)) {
         return snippetFallback($haystack);
     }
+
+    $haystack = preg_replace('/\[sound:[^\]]*\]/', "", $haystack);  // Remove embedded audio tags
+    $haystack = preg_replace('/-----/', ' ', $haystack);            // Remove separator lines
 
     $matchText   = $matches[1][0];
     $matchOffset = $matches[1][1];
@@ -125,7 +129,15 @@ function generateSnippet($haystack, $regexPattern) {
         if ($insideBraces) {
           // Close the Tibetan block before <em>, reopen it inside, close inside, reopen after.
           // Then strip any empty {}-fragments left at the edges.
-          $result = '}' . '<em>{' . $result . '}</em>' . '{';
+          //
+          // Special case: if the match is at the very start of the excerpt (matchPos === 0
+          // inside a brace block that opened before the excerpt), there is no leading text
+          // to close before the <em>, so we omit the dangling '}'.
+          if ($matchPos === 0) {
+            return '<em>{' . $result . '}</em>' . '{';
+          } else {
+            return '}' . '<em>{' . $result . '}</em>' . '{';
+          }
         } else {
           return '<em>' . $result . '</em>';
         }
@@ -133,13 +145,29 @@ function generateSnippet($haystack, $regexPattern) {
 
 
     $excerpt = preg_replace('/\{\s*\}/', '', $excerpt);   // remove empty {} pairs
+    $excerpt = preg_replace('/^\s*\}/', '', $excerpt);    // remove leading stray }
+    $excerpt = preg_replace('/\{\s*$/', '', $excerpt);    // remove trailing stray {
     $excerpt = preg_replace('/\\\\n/', ' ', $excerpt);   // remove newlines
-
+    
     return ($isAtStart ? '' : '…') . $excerpt . ($isAtEnd ? '' : '…');
 }
 
 
 // --- Internal helpers --------------------------------------------------------
+
+/**
+ * Highlight matching words in a term by wrapping them in <em>…</em>.
+ *
+ * Unlike snippet generation this doesn't need brace handling — terms are
+ * plain Wylie text.  All occurrences of the pattern are highlighted.
+ *
+ * @param string $term          The raw term text.
+ * @param string $regexPattern  Highlight regex (from fulltextQueryToRegex).
+ * @return string  The term with matched portions wrapped in <em>.
+ */
+function highlightTerm($term, $regexPattern) {
+    return preg_replace($regexPattern, '<em>$1</em>', $term);
+}
 
 /**
  * Fallback when the regex doesn't match: return the beginning of the text,

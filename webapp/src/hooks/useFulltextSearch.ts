@@ -4,7 +4,7 @@
  * Reads from the PHP backend and writes to the Redux searchSlice. 
  * Converts Tibetan Unicode input to Wylie before sending to the backend.
  */
-import { useCallback } from 'react';
+import { useCallback, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import type { RootState } from '@/store/store';
 import {
@@ -17,6 +17,8 @@ import {
 } from '@/store/searchSlice';
 import { fulltextSearch } from '@/services/DictionaryApi';
 import { WylieConverter } from '@/utils/wylieConverter';
+import { buildFtsQuery } from '@/utils/fts/ftsQueryBuilder';
+import { ftsUniToWylie } from '@/utils/fts/ftsInputDecorator';
 import type { Language } from '@/types';
 
 const wylieConverter = new WylieConverter();
@@ -32,6 +34,7 @@ interface UseFulltextSearchReturn {
 export default function useFulltextSearch(): UseFulltextSearchReturn {
   const dispatch = useDispatch();
   const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   const search = useCallback(
     async (
@@ -44,12 +47,15 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
         return;
       }
 
-      // Convert Tibetan Unicode input → Wylie for the backend
+      // Convert Tibetan Unicode → Wylie per segment (preserving operators)
       let backendQuery = query.trim();
       if (lang === 'tib' && (unicode === true || unicode === 'output')) {
-        backendQuery = wylieConverter.uniToWylie(backendQuery);
+        backendQuery = ftsUniToWylie(backendQuery, wylieConverter);
         backendQuery = wylieConverter.trimWylie(backendQuery);
       }
+
+      // Translate user operators (& | ! *) into FTS5 syntax
+      backendQuery = buildFtsQuery(backendQuery);
 
       if (!backendQuery) {
         dispatch(setFtsResults([]));
@@ -61,6 +67,12 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
       dispatch(setFtsIsSearching(true));
       dispatch(setFtsError(null));
 
+      // Cancel any previous in-flight request so stale responses never
+      // overwrite the results of a newer query.
+      abortControllerRef.current?.abort();
+      const controller = new AbortController();
+      abortControllerRef.current = controller;
+
       try {
         const fn = fulltextSearch;
         const results = await fn(
@@ -68,11 +80,15 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
           lang,
           offset,
           listSize + 1, // fetch one extra to detect "has next page"
-          activeDictionaries
+          activeDictionaries,
+          controller.signal
         );
         dispatch(setFtsResults(results));
         dispatch(setFtsIsSearching(false));
       } catch (err) {
+        if (err instanceof Error && err.name === 'AbortError') {
+          return; // stale request — silently discard
+        }
         console.error('Fulltext search error:', err);
         dispatch(
           setFtsError(err instanceof Error ? err.message : String(err))

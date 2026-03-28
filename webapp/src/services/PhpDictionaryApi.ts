@@ -34,9 +34,9 @@ function buildQuery(params: Record<string, string | number | string[]>): string 
   return parts.length ? '?' + parts.join('&') : '';
 }
 
-async function getJson<T>(path: string, params: Record<string, string | number | string[]> = {}): Promise<T> {
+async function getJson<T>(path: string, params: Record<string, string | number | string[]> = {}, signal?: AbortSignal): Promise<T> {
   const url = `${API_BASE}/${path}${buildQuery(params)}`;
-  const response = await fetch(url, { method: 'GET' });
+  const response = await fetch(url, { method: 'GET', signal });
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
   }
@@ -69,7 +69,8 @@ export class PhpDictionaryApi {
     lang: string,
     offset: number,
     maxResults: number,
-    dictionaries: string[]
+    dictionaries: string[],
+    signal?: AbortSignal
   ) {
     return getJson<{ term: string }[]>('terms', {
       search,
@@ -77,7 +78,7 @@ export class PhpDictionaryApi {
       offset,
       maxResults,
       dictionaries,
-    });
+    }, signal);
   }
 
   async checkTibetanSectionsForLinks(
@@ -95,7 +96,8 @@ export class PhpDictionaryApi {
     lang: string,
     offset: number,
     maxResults: number,
-    dictionaries: string[]
+    dictionaries: string[],
+    signal?: AbortSignal
   ) {
     return getJson<FtsSearchResult[]>('fulltext', {
       q: query,
@@ -103,7 +105,7 @@ export class PhpDictionaryApi {
       offset,
       maxResults,
       dictionaries,
-    });
+    }, signal);
   }
 
   /** Initialize the backend (no-op for PHP). */

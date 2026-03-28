@@ -4,15 +4,22 @@
  * Contains the search input, language switch button, clear button,
  * and settings gear icon.
  */
-import { useRef, useCallback, useEffect } from 'react';
+import { useRef, useCallback, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import clsx from 'clsx';
 import WylieInputField, { WylieInputHandle } from './WylieInputField';
 import ClearButton from './ClearButton';
 import HamburgerMenu from './HamburgerMenu';
-import ExtendedSearchOptionsBar from './ExtendedSearchOptionsBar';
+import ExtendedSearchOptionsBar from '@/components/TopBar/ExtendedSearchOptionsBar';
 import { type SearchMode } from '@/store/searchSlice';
+import {
+  makeDefaultInputProcessor,
+  makeFtsInputProcessor,
+  stripFtsOperators,
+  ftsUniToWylie,
+} from '@/utils/fts/ftsInputDecorator';
+import { WylieConverter } from '@/utils/wylieConverter';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
 import { Language } from '@/types';
@@ -49,6 +56,40 @@ export default function TopBar(props: Props) {
   // before Redux has been populated by SearchLayout.
   const { lang: urlLang, term: urlTerm } = useParams<{ lang: string; term: string }>();
   const initialValue = (urlLang === inputLang) ? decodeURIComponent(urlTerm || '') : '';
+
+  // Stable WylieConverter for the creation of processors.
+  const converter = useRef(new WylieConverter());
+
+  // Build the correct input processor pair based on the current search mode.
+  // useMemo ensures stable references unless the mode or unicode setting changes.
+  const { inputProcessor, reverseProcessor } = useMemo(() => {
+    if (searchMode === 'fulltext') {
+      return {
+        inputProcessor: makeFtsInputProcessor(converter.current, useUnicodeTibetan),
+        reverseProcessor: (text: string) =>
+          useUnicodeTibetan ? ftsUniToWylie(text, converter.current) : text,
+      };
+    }
+    return {
+      inputProcessor: makeDefaultInputProcessor(converter.current, useUnicodeTibetan),
+      reverseProcessor: undefined,
+    };
+  }, [searchMode, useUnicodeTibetan]);
+
+  // Track previous mode to detect mode switches.
+  const prevModeRef = useRef(searchMode);
+  useEffect(() => {
+    if (prevModeRef.current !== searchMode) {
+      const wasFulltext = prevModeRef.current === 'fulltext';
+      prevModeRef.current = searchMode;
+      // When leaving fulltext → term: strip operators from input
+      if (wasFulltext && inputRef.current) {
+        const raw = inputRef.current.getValue();
+        const cleaned = stripFtsOperators(raw);
+        if (cleaned !== raw) inputRef.current.setValue(cleaned);
+      }
+    }
+  }, [searchMode]);
 
   useEffect(() => { // clear input field when user actively changes language
     if (!isLangInitialized.current) {
@@ -89,6 +130,8 @@ export default function TopBar(props: Props) {
               onInputChange={(input) => props.onInputChange?.(input)}
               onEnter={(term) => props.onEnter?.(term)}
               initialValue={initialValue || undefined}
+              inputProcessor={inputProcessor}
+              reverseProcessor={reverseProcessor}
             />
             <ClearButton onClick={handleClear} />
           </div>

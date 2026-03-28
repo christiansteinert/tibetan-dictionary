@@ -62,9 +62,10 @@ export async function readTermList(
   lang: string,
   offset: number,
   maxResults: number,
-  dictionaries: string[]
+  dictionaries: string[],
+  signal?: AbortSignal
 ): Promise<TermListRow[]> {
-  return backend.readTermList(search, lang, offset, maxResults, dictionaries);
+  return backend.readTermList(search, lang, offset, maxResults, dictionaries, signal);
 }
 
 /**
@@ -111,7 +112,8 @@ export async function fulltextSearch(
   lang: string,
   offset: number,
   maxResults: number,
-  dictionaries: string[]
+  dictionaries: string[],
+  signal?: AbortSignal
 ): Promise<FtsSearchResult[]> {
-  return backend.fulltextSearch(query, lang, offset, maxResults, dictionaries);
+  return backend.fulltextSearch(query, lang, offset, maxResults, dictionaries, signal);
 }

@@ -57,6 +57,8 @@ interface ResultListState {
 export interface FTSSearchResult {
   /** The Wylie term that matched */
   term: string;
+  /** The Wylie term with highlighted matches */
+  highlightedTerm: string;
   /** The dictionary key (e.g. "RangjungYeshe") */
   dictionary: string;
   /** The numeric dictionary ID */
