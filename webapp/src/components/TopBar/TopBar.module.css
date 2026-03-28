@@ -114,6 +114,33 @@
   background: rgba(255,255,255,0.1);
 }
 
+.optionsHelpBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 3px 8px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 0.85em;
+  cursor: pointer;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.optionsHelpBtn:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.optionsBarDark .optionsHelpBtn {
+  color: #ccc;
+  border-color: #666;
+}
+
+.optionsBarDark .optionsHelpBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
 /* Extra underlay height when options bar is visible */
 .topbarUnderlayExtended {
   height: 7.5em;

@@ -1,6 +1,7 @@
 /**
  * Radix UI DropdownMenu for language selection, settings, etc.
  */
+import { useState } from 'react';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { Language } from '@/types';
 
@@ -10,8 +11,10 @@ import {
   GearIcon,
   CheckCircledIcon,
   CircleIcon,
+  QuestionMarkCircledIcon,
 } from '@radix-ui/react-icons';
 import styles from './HamburgerMenu.module.css';
+import HelpDialog from './HelpDialog';
 
 interface Props {
   inputLang: Language;
@@ -28,7 +31,10 @@ export default function HamburgerMenu({
   onOpenSettings,
   onOpenExtendedSearch,
 }: Props) {
+  const [helpOpen, setHelpOpen] = useState(false);
+
   return (
+    <>
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button
@@ -88,6 +94,17 @@ export default function HamburgerMenu({
 
           <DropdownMenu.Separator className={styles.separator} />
 
+          {/* ── Help ── */}
+          <DropdownMenu.Item
+            className={styles.item}
+            onSelect={() => setHelpOpen(true)}
+          >
+            <QuestionMarkCircledIcon className={styles.itemIcon} />
+            Search Help
+          </DropdownMenu.Item>
+
+          <DropdownMenu.Separator className={styles.separator} />
+
           {/* ── Settings ── */}
           <DropdownMenu.Item className={styles.item} onSelect={onOpenSettings}>
             <GearIcon className={styles.itemIcon} />
@@ -96,5 +113,12 @@ export default function HamburgerMenu({
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>
+
+    <HelpDialog
+      open={helpOpen}
+      isLightMode={isLightMode}
+      onOpenChange={setHelpOpen}
+    />
+    </>
   );
 }

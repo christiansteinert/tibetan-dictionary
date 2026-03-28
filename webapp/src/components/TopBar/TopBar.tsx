@@ -17,6 +17,7 @@ import {
   makeDefaultInputProcessor,
   makeFtsInputProcessor,
   stripFtsOperators,
+  stripTermOperators,
   ftsUniToWylie,
 } from '@/utils/fts/ftsInputDecorator';
 import { WylieConverter } from '@/utils/wylieConverter';
@@ -82,13 +83,24 @@ export default function TopBar(props: Props) {
     if (prevModeRef.current !== searchMode) {
       const wasFulltext = prevModeRef.current === 'fulltext';
       prevModeRef.current = searchMode;
-      // When leaving fulltext → term: strip operators from input
-      if (wasFulltext && inputRef.current) {
+      if (inputRef.current) {
         const raw = inputRef.current.getValue();
-        const cleaned = stripFtsOperators(raw);
-        if (cleaned !== raw) inputRef.current.setValue(cleaned);
+        // fulltext → term: remove &, |, !, ~ operators
+        // term → fulltext: remove *, ? wildcards
+        const cleaned = wasFulltext
+          ? stripFtsOperators(raw)
+          : stripTermOperators(raw);
+        if (cleaned !== raw) {
+          inputRef.current.setValue(cleaned);
+        }
+        // Re-trigger the search with the (possibly cleaned) value
+        const current = inputRef.current.getValue();
+        if (current.trim()) {
+          props.onInputChange?.(current);
+        }
       }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchMode]);
 
   useEffect(() => { // clear input field when user actively changes language

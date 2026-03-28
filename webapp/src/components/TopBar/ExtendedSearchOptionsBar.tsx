@@ -6,12 +6,17 @@
  *  - Mode toggle (Fulltext / Wildcard)
  *  - Search-in selector (All / Terms / Definitions)
  *  - Language switcher (Tibetan→English / English→Tibetan)
- *  - Search button
+ *  - Help button
  *  - Close (×) button to return to normal search
  */
 import type { SearchMode } from '@/store/searchSlice';
 import styles from './TopBar.module.css';
 import { Language } from '@/types';
+import { QuestionMarkCircledIcon } from '@radix-ui/react-icons';
+import HelpDialog from './HelpDialog';
+import { useState } from 'react';
+
+
 
 interface Props {
   mode: SearchMode;
@@ -32,12 +37,16 @@ export default function ExtendedSearchOptionsBar({
   onLangChange,
   onClose,
 }: Props) {
+  const [helpOpen, setHelpOpen] = useState(false);
+
   return (
+    <>
     <div className={`${styles.optionsBar} ${isLightMode ? styles.optionsBarLight : styles.optionsBarDark}`}>
       {/* ── Mode ── */}
       <span className={styles.optionsGroup}>
         <span className={styles.optionsLabel}>Mode:</span>
-        <label className={styles.optionsRadio}>
+        <label className={styles.optionsRadio}
+          title="Search only in dictionary headwords (terms)">
           <input
             type="radio"
             name="extMode"
@@ -46,7 +55,8 @@ export default function ExtendedSearchOptionsBar({
           />
           Terms
         </label>
-        <label className={styles.optionsRadio}>
+        <label className={styles.optionsRadio} 
+        title="Search both in dictionary headwords and dictionary definitions (fulltext search)">
           <input
             type="radio"
             name="extMode"
@@ -66,6 +76,7 @@ export default function ExtendedSearchOptionsBar({
             name="extLang"
             checked={lang === 'tib'}
             onChange={() => onLangChange && onLangChange('tib')}
+            title="Search the Tibetan–English dictionary"
           />
           Tib → En
         </label>
@@ -75,9 +86,16 @@ export default function ExtendedSearchOptionsBar({
             name="extLang"
             checked={lang === 'en'}
             onChange={() => onLangChange && onLangChange('en')}
+            title="Search the English–Tibetan dictionary"
           />
           En → Tib
         </label>
+      </span>
+
+      <span className={styles.optionsGroup}>
+        <button type="button" title="Help" className={styles.optionsHelpBtn} onClick={() => setHelpOpen(true)}>
+          <QuestionMarkCircledIcon /> Help
+        </button>
       </span>
 
       {/* ── Close button ── */}
@@ -91,5 +109,11 @@ export default function ExtendedSearchOptionsBar({
         ✕
       </button>
     </div>
+        <HelpDialog
+          open={helpOpen}
+          isLightMode={isLightMode}
+          onOpenChange={setHelpOpen}
+        />
+        </>
   );
 }

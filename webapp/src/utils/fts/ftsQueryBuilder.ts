@@ -5,15 +5,15 @@
  *   &   → AND
  *   |   → OR
  *   !   → NOT
- *   *   → suffix/prefix search (trailing wildcard)
+ *   ~   → suffix/prefix search (trailing wildcard, appended to preceding word)
  *
  * Plain text segments are wrapped in "quotes".
- * Words preceding a trailing * are joined with + (FTS5 phrase proximity)
- * so that  `buddha dharm*`  becomes  `buddha+dharm*`.
+ * Words preceding a trailing ~ are joined with + (FTS5 phrase proximity)
+ * so that  `buddha dharm~`  becomes  `buddha+dharm*`.
  */
 
 /** Operator tokens recognised in user input. */
-const OPERATOR_RE = /[&|!]/;
+const OPERATOR_RE = /[&|!~]/;
 
 /** Split input into alternating text-segments and operator tokens. */
 function tokenize(input: string): string[] {
@@ -34,14 +34,15 @@ function tokenize(input: string): string[] {
 
 const OP_MAP: Record<string, string> = { '&': 'AND', '|': 'OR', '!': 'NOT' };
 
-/** Wrap a plain text segment for FTS5: quoted or joined with + when it contains *. */
+/** Wrap a plain text segment for FTS5: quoted, or joined with + and trailing * when it ends with ~. */
 function wrapSegment(seg: string): string {
   const trimmed = seg.trim();
   if (!trimmed) return '';
 
-  if (trimmed.includes('*')) {
-    // Join all words with + so FTS5 treats them as an adjacent phrase with a trailing wildcard
-    return trimmed.split(/\s+/).filter(Boolean).join('+');
+  if (trimmed.endsWith('~')) {
+    // Strip trailing ~ and join all words with + so FTS5 treats them as an adjacent phrase with a trailing wildcard
+    const withoutTilde = trimmed.slice(0, -1).trim();
+    return withoutTilde.split(/\s+/).filter(Boolean).join('+') + '*';
   }
   return `"${trimmed}"`;
 }

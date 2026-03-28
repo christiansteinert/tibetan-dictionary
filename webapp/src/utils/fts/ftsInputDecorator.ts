@@ -17,10 +17,10 @@
  *     conversion preserving operators
  *   - `stripFtsOperators` — remove operators for fulltext→term mode switch
  */
-import { WylieConverter } from './wylieConverter';
+import { WylieConverter } from '../wylieConverter';
 
 /** Characters that are FTS operators in user input. */
-const FTS_OPS = /[&|!]/;
+const FTS_OPS = /[&|!~]/;
 
 // ─── InputProcessor type ─────────────────────────────────────────────────────
 
@@ -69,19 +69,21 @@ export function makeFtsInputProcessor(
  * Apply operator-spacing rules to raw input text.
  *
  * - `&`, `|`, `!` → ensure exactly one space on each side
- * - `*`           → remove any preceding whitespace, ensure one trailing space
+ * - `~`           → remove any preceding whitespace (must be glued to word),
+ *                   ensure one space after (unless at end of string)
  *
  * Does NOT add quotes — those are only added by ftsQueryBuilder before
  * calling the backend.
  */
 export function decorateFtsInput(text: string): string {
-  // Normalise operators: ensure spaces around & | !
+  // Normalise boolean operators: ensure spaces around & | !
   let result = text.replace(/\s*([&|!])\s*/g, ' $1 ');
-  // Normalise asterisk: no space before, one space after (unless at end)
-  result = result.replace(/\s*\*\s*/g, '* ');
+  // Normalise suffix wildcard ~: strip spaces before, add one space after (unless at end)
+  result = result.replace(/\s*~/g, '~');       // remove any space before ~
+  result = result.replace(/~(?!\s|$)/g, '~ '); // add space after ~ when not already there
   // Collapse multiple spaces into one
   result = result.replace(/ {2,}/g, ' ');
-  return result;
+  return result.trim();
 }
 
 /**
@@ -96,13 +98,17 @@ export function ftsSegmentConvert(
   text: string,
   convert: (segment: string) => string,
 ): string {
+  // Boolean operators (&|!) split the input into independent segments that are
+  // each converted separately.  ~ is a suffix wildcard that must stay glued to
+  // the preceding word, so we keep it inside the buffer and only split on &|!.
+  const BOOL_OPS = /[&|!]/;
+
   const parts: string[] = [];
   let buf = '';
   for (const ch of text) {
-    if (FTS_OPS.test(ch)) {
-      if (buf) parts.push(buf);
+    if (BOOL_OPS.test(ch)) {
+      if (buf) { parts.push(buf); buf = ''; }
       parts.push(ch);
-      buf = '';
     } else {
       buf += ch;
     }
@@ -110,7 +116,7 @@ export function ftsSegmentConvert(
   if (buf) parts.push(buf);
 
   return parts
-    .map(p => (FTS_OPS.test(p) ? p : convert(p)))
+    .map(p => (BOOL_OPS.test(p) ? p : convert(p)))
     .join('');
 }
 
@@ -135,18 +141,28 @@ export function ftsWylieToUni(
 }
 
 /**
- * Strip FTS operators when switching from fulltext → term search.
+ * Strip FTS-only operators when switching from fulltext → term search.
  * Retains only the first segment (before the first & | ! operator).
- * The * wildcard is kept since it's valid for term search.
+ * ~ (suffix wildcard) is removed; * and ? are valid in term search and kept.
  */
 export function stripFtsOperators(text: string): string {
+  // Cut at the first boolean operator
   const match = text.match(/[&|!]/);
   const firstPart = match?.index != null ? text.substring(0, match.index) : text;
-  return firstPart.trim();
+  // Remove ~ (suffix wildcard not valid in term search)
+  return firstPart.replace(/~/g, '').replace(/ {2,}/g, ' ').trim();
 }
 
 /**
- * Check whether `text` contains any FTS operator characters (& | !).
+ * Strip term-search wildcards (* ?) when switching from term → fulltext search.
+ * These characters have no meaning in FTS mode.
+ */
+export function stripTermOperators(text: string): string {
+  return text.replace(/[*?]/g, '').replace(/ {2,}/g, ' ').trim();
+}
+
+/**
+ * Check whether `text` contains any FTS operator characters (& | ! ~).
  */
 export function hasFtsOperators(text: string): boolean {
   return FTS_OPS.test(text);
