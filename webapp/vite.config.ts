@@ -43,10 +43,7 @@ export default defineConfig({
       },
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
-        // Exclude large on-demand assets from precaching
-        globIgnores: ['audio/**', 'data/**'],
         navigateFallback: 'index.html',
-        navigateFallbackDenylist: [/^\/audio\//, /^\/data\//],
         runtimeCaching: [
           {
             urlPattern: /dict\.php/,
@@ -67,17 +64,16 @@ export default defineConfig({
   server: {
     middlewareMode: false,
     proxy: {
-      '/dict.php': {
-        target: 'http://localhost/TibetanDictionary-react/dict.php',
+      '^/backend': {
+        target: process.env.BACKEND_URL || 'http://backend-dev:80',
         changeOrigin: true,
       },
-    },
+    },   
     fs: {
       allow: ['..'], // Allow serving from parent directories (for symlinks)
     },
   },
   resolve: {
-    preserveSymlinks: false, // Allow Vite to follow symlinks 
     alias: {
       '@': '/src',
       '~assets': '/src/assets',

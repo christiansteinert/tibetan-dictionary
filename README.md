@@ -1,78 +1,149 @@
 # Tibetan-English dictionary application
-This application is written mostly in Javascript. 
-It currently comes in two flavors:
-* as a web application with a simple PHP backend for data retrieval
-* as an android app that is packaged with Apache Cordova. In that case data retrieval is done through a Cordova plugin that is implemented in Java. This plugin is derived from an existing Cordova database plugin but is slightly modified for this application in order to extract an existing database from the APK file onto the device upon first access and in order to allow read-only access to the database.
 
-Both the web application and the android app use an SQLite database for data storage. This database is generated from vertical-bar separated CSV files during the build process
+This is a Tibetan <-> English dictionary application. 
 
+You can find an online version of this application at [https://dictionary.christian-steinert.de] to understand what it does. There is also an android version of this app, available at [https://play.google.com/store/apps/details?id=de.christian_steinert.tibetandict].
+
+
+The application comes in two flavors:
+
+* as a web application 
+* as an Android app 
+
+Most of the application is written in typescript with react + vite. 
+
+Both the web application and the android app use an SQLite database for data storage. This database is generated from vertical-bar separated CSV files during the build process. 
+
+The Android app shares its react-based UI implementation with the web applicaton but uses a different database access layer and is packaged with Apache Cordova.
+
+
+# Database access
+The web application uses a REST API to talk to a simple PHP backend for data retrieval.
+
+The Android app uses a Cordova plugin that is implemented in Java to access the dictionary database. This plugin is derived from an existing Cordova database plugin but is slightly modified for this application in order to extract an existing database from the APK file onto the device upon first access and in order to allow read-only access to the database.
+
+
+# License
 
 Any code that is my own is licensed under GPL v2 and GPL v3 (you can choose whichever you prefer). Note that the dictionary data is not my own and thus *THE COPYRIGHT OF THE DICTIONARY DATA IS WITH THE RESPECTIVE AUTHORS*. Also note that that some of the contained code (e.g. some of the javascript libraries) is licensed unter different licenses, e.g. Apache License 2.0).
 
-You may also be interested in my homepage www.christian-steinert.de where you can find a running version of the web application.
+# Build process and local execution
 
-# Build process
-The build process is somewhat messy and will only run in a Linux environment. The main build scripts are buildDictionaries.sh which generates the dictionary database file and buildAndroid.sh which expects the database file to be present already and generates an android APK file containing the Android app.
+The build process and local execution environment are Docker-based and defined in `docker-compose.yml`. 
 
-These two scripts call other helper scripts along the way.
+There are three build services and two runtime services in the compose file:
 
+| Service | What it does | Output |
+|---|---|---|
+| `build-db` | Builds the SQLite database from CSV source files | `backend/TibetanDictionary.db` |
+| `build-webapp` | Compiles the Vite/React frontend | `webapp/dist/` |
+| `build-android` | Builds the Android APK (optional, slow) | `TibetanDictionary-PUBLIC.apk` |
+| `backend-dev` | Serves the web application backend for development purposes (nginx + PHP-FPM) | — |
+| `frontend-dev` | Serves the web application frontend for development purposes (npm + vite) | — |
 
-## Building the dictionaries
-The script buildDictionaries.sh generates the dictionary database file that is used both by the web applicatipon and the android app (i.e., the sqlite database file at backend/TibetanDictionary.db).
+# Building and running the web app
 
-For this process it uses CSV files as input that are located in the folder _input/dictionaries. These files are expected to have a term in Wylie-transliterated Tibetan in the first column and a dictionary entry for that term in the second column. It is permitted that a single CSV file contains more than one entry for the same term.
+## Running the stack for local development
+The app can be run locally as follows
 
-## Building the Android application (APK file)
-The script buildAndroid.sh builds the Apache Cordova project and thereby generates the APK file for the android app. For this it copies the application data and dictionary database from the webapp/ folder into the cordova project and then triggers the actual build process.
+Build the dictionary database with
+```bash
+docker compose run --rm build-db
+```
 
+Then start the local environment with
 
-## Build dependencies
-Apart from the things that are inside the project folder the following dependencies are required for the build process. It could well be that the following list is incomplete (did I mention yet that the build process is a bit of a mess?)
+```bash
+docker compose up -d backend-dev frontend-dev
+```
 
-The respective tools must all be included in the PATH variable
-* the following unix command line tools:
-    * bash, grep, sed, cat, paste, sort, uniq, etc.
-    * perl 5
-* Apache Cordova which itself again requires node JS and npm to be installed
-* java and a current version of the Android SDK
-* sqlite 3 (more specifically, the sqlite3 commandline program)
-* python 3
+The frontend is now available at http://localhost:5173. The backend is now available at http://localhost:8080/backend/api.
 
-Furthermore, the JAVA_HOME and ANDROID_HOME environment variables should be set.
+Shutdown can be done with "docker compose down"
 
+## Rebuilding during development after changes
 
+After changing CSV dictionary files rebuild the database and restart as follows:
+
+```bash
+docker compose run --rm build-db && docker compose restart backend-dev
+```
+
+After changing frontend code (only needed if hot reload fails):
+
+```bash
+docker compose restart frontend-dev
+```
+
+## Building the Android APK (work in progress)
+
+Requires a signing keystore at `_build/my-release-key.keystore`. Run `docker compose run --rm build-db` first, then:
+
+```bash
+docker compose run --rm build-android
+```
+
+The finished APK is written to the project root.
+
+# Deployment
+
+## Docker deployment image
+
+To build a self-contained image for deployment or pushing to a registry, do the following:
+
+```bash
+docker-compose run --rm build-db
+docker-compose run --rm build-webapp
+docker build -f buildscripts/docker/deploy/Dockerfile -t tibetan-dict .
+```
+
+then run the image with 
+```bash
+docker run -p "1234:80" --rm tibetan-dict
+```
+
+This makes the dictionary available at [http://localhost:1234]
+
+## Manual deployment to a webserver
+
+To deploy to a webserver, first build everything with:
+
+```bash
+docker-compose run --rm build-db
+docker-compose run --rm build-webapp
+```
+
+The `webapp/dist` folder will then contain the frontend application and should become the root folder of the application on the webserver. 
+
+The `backend` folder will contain the backend components and data and should be placed in the subfolder `.../backend`  within the web root folder of the application on the webserver.
+
+Note that the webserver must be configured in such a way that /backend/api/... points to /backend/api.php/...
+
+For Apache webservers this should be handled by the settings in `backend/.htaccess`.
 
 # Folder structure
-* webapp/ This folder contains all code that is needed to run the dictionary as a web application. In order to use the web application the sqlite dictionary db (file backend/TibetanDictionary.db) must have been generated before by the script buildDictionaries.sh. Other than that the web application folder is self-contained and should run on any server that supports PHP5 or PHP6 togetherwith the SQLite module for PHP. 
-* _assets: a few images that have been created for this project
-* _build/util/Lingua-BO-Wylie perl library for converting Tibetan text with Wylie transliteration into Unicode. This library is used to generate the lookup table that is used for converting from Wylie to Unicode
-* _build/mobile This folder contains the Cordova project for generating the Android app. As usual with Cordova projects this folder is a mix of source code, configuration and intermediate build artifacts. The buildAndroid.sh script automatically copies the web application files and the dictionary database from the webapp/ folder into the correct location inside of the Cordova project folder so that these resources are packaged into the Android application
-* _input This folder contains dictionary data that serves as basis for generating the dictionary DB
 
-# Application structure (folder webapp/)
-Since the application is implemented almost exclusively in Javascript, the application code for the web application and the android application is identical.
-* The main application code is contained in the file index.html
-* cordova.js and SQLiteplugin.js are only dummy files if the application is run as a web application but will be replaced with the real cordova code if the application is packaged into an android app.
-* dict.php this file offers a simple PHP backend which allows the application to query the database if it is run as a web application
-* TibetanDictionary.db is the sqlite 3 database file
-* code/ folder
-    * code/css This folder contains css files, icons and a Tibetan web font
-    * code/js This is the javascript code for the application
-* settings/ folder 
-    * settings/abbreviations.js contains the abbreviations and search patterns for applying them to the text for various dictionaries. The content of this file is maintained by hand, i.e., it is not auto-generated. The settings in this file are referenced by settings/dictlist.js since one set of abbreviations may be referenced by more than one dictionary
-    * settings/dictlist.js contains the list of known dictionaries together with some settings. Note that not all dictionaries are publically available.
-    * settings/globalsettings.js contains a flag that tells the application should list all dictionaries or only those that are publically available. This file is auto-generated by the build process
-* lib/ folder - this folder contains javascript libraries
-    * lib/datatables/ a jQuery plugin for tabular data output
-    * lib/jquery/ the jQuery javascript library 
-    * lib/jquery_bbq/ a jQuery plugin for detecting and handling the use of the back- and forward- button of the browser
-    * lib/jquery_inputposition/ a jQuery plugin for getting the cursor plugin in an input field
-    * lib/jquery_textchange/ a jQuery plugin for handling typing events in an input field
-    * lib/jquery_textchange/ a self-written set of functions (not really a jQuery plugin although it uses jQuery) for showing floating tooltips that move around with the mouse
-    * lib/tokenizer/ a jQuery plugin for tokenizing text
+* `backend/` — PHP backend (`api.php`) and the generated SQLite database (`TibetanDictionary.db`). Also holds `audio/` and `data/` assets served by the app.
+* `webapp/` — Vite/React frontend (TypeScript, Tailwind CSS). `webapp/dist/` is the build output served by nginx.
+* `_input/` — CSV dictionary source files and Tibetan syllable/punctuation data used by the database build.
+* `buildscripts/` — Shell scripts and Docker configurations that are used for the build process.
+* `_build/mobile/` — Apache Cordova project for building and android version of the dictionary app.
+* `_assets/` — Source image files (xcf, xml) for app icons and store graphics.
+
+## backend/
+
+The PHP backend exposes a single endpoint (`api.php`) that queries the SQLite database and returns JSON results to the frontend. The database is generated by `build-db` from CSV files in `_input/dictionaries/`. Dictionary abbreviation metadata lives in `webapp/src/config/`.
+
+## webapp/
+
+A standard Vite + React + TypeScript application. Some important folders are:
+
+* `src/components/` — UI components.
+* `src/services/` — data access layer; switches between PHP AJAX (for web app) and the Cordova SQLite plugin (for Android aoo) at runtime.
+* `src/config/dictlist.js` and `abbreviations.js` — dictionary metadata and abbreviation expansion rules, maintained by hand.
 
 
 # Public and private version
 In the build script you will see that two versions of the dictionary are built on my machine - a private version and a public version. The private version contains additional dictionary data that I, sadly, cannot distribute publically. The build script should recognize if only the public data is available and should then only build the public version of the app that contains fewer dictionaries. 
 
-So as far as the build process is concerned everything should be fine even if you don't have the data for the additional private version of the application. Just don't be surprised when you read the commands in the build script and see that some files that are referenced are missing and that due to that some steps in the build process are skipped.
+As far as the build process is concerned everything should be fine even if you don't have the data for the additional private version of the application. Just don't be surprised when you read the commands in the build script and see that some files that are referenced are missing and that due to that some steps in the build process are skipped.

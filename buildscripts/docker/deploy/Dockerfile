@@ -3,7 +3,7 @@
 # This is a PACKAGING-ONLY image. It does not build anything.
 # All artefacts must already exist on the host before building this image:
 #
-#   webapp/dist/                  ← produced by: docker compose run --rm build-react
+#   webapp/dist/                  ← produced by: docker compose run --rm build-webapp
 #   backend/TibetanDictionary.db  ← produced by: docker compose run --rm build-db
 #
 # Build & run standalone:
@@ -19,23 +19,14 @@ FROM php:8.3-fpm-alpine
 RUN apk add --no-cache nginx
 
 # Copy nginx config
-COPY buildscripts/docker/nginx.conf /etc/nginx/nginx.conf
+COPY buildscripts/docker/deploy/nginx.conf /etc/nginx/tibetandict.conf
 
 # Create web root
 RUN mkdir -p /var/www/html
 
-# ── Pre-built frontend (from build-react) ─────────────────────────────────
+# ── Pre-built webapp with frontend and backend (from build-webapp) ─────────────────────────────────
 COPY webapp/dist/ /var/www/html/
-
-# ── Database (from build-db) ──────────────────────────────────────────────
-# The private DB takes priority if present (same logic as dict.php).
-COPY backend/TibetanDictionary.db /var/www/html/
-# Optional – only copied when it exists (docker ignores missing COPY sources
-# only with BuildKit; see compose file for how we handle the conditional).
-
-# ── PHP backend ───────────────────────────────────────────────────────────
-COPY backend/dict.php    /var/www/html/
-COPY backend/snippet.php /var/www/html/
+COPY backend/ /var/www/html/backend/
 
 # php-fpm listens on 9000/tcp (127.0.0.1 is fine inside the container)
 RUN sed -i 's/^listen = .*/listen = 127.0.0.1:9000/' /usr/local/etc/php-fpm.d/www.conf
@@ -43,4 +34,4 @@ RUN sed -i 's/^listen = .*/listen = 127.0.0.1:9000/' /usr/local/etc/php-fpm.d/ww
 EXPOSE 80
 
 # Start php-fpm in the background, then nginx in the foreground
-CMD ["sh", "-c", "php-fpm -D && nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "php-fpm -D && nginx -c /etc/nginx/tibetandict.conf -g 'daemon off;'"]

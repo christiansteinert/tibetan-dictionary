@@ -83,14 +83,16 @@ export async function initDB(): Promise<void> {
 /**
  * Check which Tibetan sections (syllables within a definition) have
  * their own dictionary entries, so they can be rendered as clickable links.
- * @param {Object} sections - Map of sectionId → { wylie, ... }
+ *
+ * Sends only the wylie terms to the backend; the returned filtered map
+ * is reconstructed client-side from the original sections.
+ *
+ * @param {Object} sections - Map of sectionId → InlineSection
  * @returns {Promise<Record<string, InlineSection>>} Map of sections that have entries
  */
 export async function checkTibetanSectionsForLinks(
   sections: Record<string, InlineSection>
 ): Promise<Record<string, InlineSection>> {
-  // `checkTibetanSectionsForLinks` is used to show links in definitions. For
-  // the Cordova backend the query is executed against the local SQLite database.
   return backend.checkTibetanSectionsForLinks(sections) as Promise<
     Record<string, InlineSection>
   >;

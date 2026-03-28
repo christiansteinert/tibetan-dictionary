@@ -26,7 +26,7 @@ let lightbox: PhotoSwipeLightbox | null = null;
  * @param pageInfo – page range and dimensions
  */
 export function viewScan(dictId: string, termId: string, pageInfo: PageInfo): void {
-  const path = `data/scan/${dictId}/`;
+  const path = `backend/data/scan/${dictId}/`;
   const slides = [];
 
   for (let i = pageInfo.min_page; i <= pageInfo.max_page; i++) {

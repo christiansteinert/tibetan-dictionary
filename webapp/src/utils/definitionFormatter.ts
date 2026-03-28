@@ -277,7 +277,7 @@ function addAudioLinks(definition: string, currentDict: DictEntry): string {
   if (currentDict.audioId) {
     let replacement = '';
     if (!(window as any).cordova) {
-      const audioPath = 'audio/' + currentDict.audioId + '/';
+      const audioPath = 'backend/audio/' + currentDict.audioId + '/';
       replacement = '<audio controls preload="none"><source src="' + audioPath + '$1" type="audio/mpeg"></audio>';
     }
     definition = definition.replace(/\[sound:([^\]]+)\]/g, replacement);

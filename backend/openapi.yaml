@@ -1,0 +1,260 @@
+openapi: 3.1.0
+
+info:
+  title: Tibetan Dictionary API
+  description: >
+    REST backend for the Tibetan-English Dictionary application.
+    All endpoints are served by `api.php` and routed by the `/api/` prefix.
+  version: 1.0.0
+
+servers:
+  - url: /api
+    description: Served by nginx → PHP-FPM (see docker-compose.yml)
+
+# ---------------------------------------------------------------------------
+# Shared parameter definitions
+# ---------------------------------------------------------------------------
+components:
+  parameters:
+    lang:
+      name: lang
+      in: query
+      description: Language direction. `bo` = Tibetan→English (default), `en` = English→English.
+      required: false
+      schema:
+        type: string
+        enum: [bo, en]
+        default: bo
+
+    offset:
+      name: offset
+      in: query
+      description: Zero-based pagination offset.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+
+    maxResults:
+      name: maxResults
+      in: query
+      description: Maximum number of results to return (clamped to 10–500).
+      required: false
+      schema:
+        type: integer
+        minimum: 10
+        maximum: 500
+        default: 50
+
+    dictionaries:
+      name: dictionaries
+      in: query
+      description: >
+        Comma-separated list of dictionary names to restrict results to.
+        Each name is URL-encoded, so literal commas in names appear as `%2C`.
+        Example: `dictionaries=Rangjung%20Yeshe,Berzin`
+        Omit entirely to search all dictionaries.
+      required: false
+      schema:
+        type: string
+
+  schemas:
+    TermResult:
+      type: object
+      description: >
+        Map of dictionary name → definition text.
+        Multiple entries for the same dictionary are separated by `\n-----\n`.
+      additionalProperties:
+        type: string
+      example:
+        Rangjung Yeshe: "bde ba: happiness, bliss"
+        Berzin: "happiness"
+
+    TermListRow:
+      type: object
+      required: [term]
+      properties:
+        term:
+          type: string
+          description: A matching term in the dictionary.
+      example:
+        term: "bde ba"
+
+    FtsSearchResult:
+      type: object
+      required: [term, dictionary, dictionaryId, snippet, definition]
+      properties:
+        term:
+          type: string
+        dictionary:
+          type: string
+          description: Human-readable dictionary name.
+        dictionaryId:
+          type: integer
+        snippet:
+          type: string
+          description: >
+            Short excerpt from the definition with matched words wrapped in
+            `<em>…</em>` tags and surrounding context. May start/end with `…`.
+        definition:
+          type: string
+          description: Full definition text.
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Human-readable error message.
+
+# ---------------------------------------------------------------------------
+# Endpoints
+# ---------------------------------------------------------------------------
+paths:
+
+  /term/{term}:
+    get:
+      operationId: getTerm
+      summary: Look up definitions for a specific term
+      description: >
+        Returns all definitions for the given term across the selected
+        dictionaries. Multiple entries from the same dictionary are
+        concatenated with `\n-----\n`.
+      parameters:
+        - name: term
+          in: path
+          required: true
+          description: The term to look up (Wylie transliteration for Tibetan).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Map of dictionary name → definition text (may be empty if no entries found).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TermResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /terms:
+    get:
+      operationId: searchTerms
+      summary: Prefix-based term search (auto-complete)
+      description: >
+        Returns a paginated list of terms that start with or match the given
+        search string. Supports wildcards (`*` = any sequence, `?` = one
+        character). For Tibetan a range query is used; for English a
+        case-insensitive prefix match.
+      parameters:
+        - name: search
+          in: query
+          required: true
+          description: Search string (Wylie for Tibetan, plain text for English). Supports `*` and `?` wildcards.
+          schema:
+            type: string
+          example: "bde"
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/maxResults'
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Array of matching terms.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TermListRow'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /check-terms:
+    post:
+      operationId: checkTerms
+      summary: Check which inline Tibetan sections have dictionary entries
+      description: >-
+        Accepts a map of section ID → Wylie term strings.
+        Returns the IDs of those sections whose Wylie term exists in the
+        dictionary. The caller uses the returned IDs to filter its own
+        local section objects and decide which syllables to render as
+        clickable links.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Map of sectionId → wylie term string.
+              additionalProperties:
+                type: string
+            example:
+              section_1: "bde ba"
+              section_2: "xyz_nonexistent"
+      responses:
+        '200':
+          description: Array of section IDs whose wylie term exists in the dictionary.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example: ["section_1"]
+        '400':
+          description: Invalid or missing request body.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /fulltext:
+    get:
+      operationId: fulltextSearch
+      summary: FTS5-based fulltext search across definitions
+      description: >
+        Searches definitions (and terms) using SQLite FTS5. Supports FTS5
+        query syntax: `AND`, `OR`, `NOT`, `NEAR`, quoted phrases, and
+        prefix matching. Results are ordered by FTS5 relevance rank.
+        Each result includes a highlighted snippet.
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: FTS5 query string.
+          schema:
+            type: string
+          example: "emptiness AND awareness"
+        - $ref: '#/components/parameters/lang'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/maxResults'
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Array of fulltext search results with snippets.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FtsSearchResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'

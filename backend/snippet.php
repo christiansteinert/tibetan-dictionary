@@ -2,7 +2,7 @@
 // =============================================================================
 // Snippet generation for search result excerpts
 // =============================================================================
-// Used by the fulltextSearch endpoint in dict.php.
+// Used by the fulltextSearch endpoint in api.php.
 //
 // Provides:
 //   - generateSnippet()          Main entry point: extract & highlight a snippet
@@ -83,7 +83,7 @@ function buildSnippetRows($results, $snippetRegex) {
 
 /**
  * Generate a short text snippet around the first match of $regexPattern inside
- * $haystack, with the matched portion wrapped in <b>…</b>.
+ * $haystack, with the matched portion wrapped in <em>…</em>.
  *
  * Guarantees:
  *  - The snippet never breaks in the middle of a word.
@@ -123,11 +123,11 @@ function generateSnippet($haystack, $regexPattern) {
 
         $result = $m[1];
         if ($insideBraces) {
-          // Close the Tibetan block before <b>, reopen it inside, close inside, reopen after.
+          // Close the Tibetan block before <em>, reopen it inside, close inside, reopen after.
           // Then strip any empty {}-fragments left at the edges.
-          $result = '}' . '<b>{' . $result . '}</b>' . '{';
+          $result = '}' . '<em>{' . $result . '}</em>' . '{';
         } else {
-          return '<b>' . $result . '</b>';
+          return '<em>' . $result . '</em>';
         }
     }, $excerpt, 1);
 

@@ -82,9 +82,9 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
 
         // Check for inline Tibetan sections that might be clickable
         if (Object.keys(result.allInlineSections).length > 0) {
-          const available = (await checkTibetanSectionsForLinks(
+          const available = await checkTibetanSectionsForLinks(
             result.allInlineSections
-          )) as Record<string, InlineSection>;
+          );
           // Dispatch available sections so DefinitionView can activate links
           dispatch(setInlineSections(available));
           return {

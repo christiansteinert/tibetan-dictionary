@@ -192,16 +192,10 @@ export class CordovaDictionaryApi {
     });
   }
 
-  async checkTibetanSectionsForLinks(sections: Record<string, unknown>): Promise<Record<string, InlineSection>> {
+  async checkTibetanSectionsForLinks(sections: Record<string, InlineSection>): Promise<Record<string, InlineSection>> {
     return new Promise<Record<string, InlineSection>>((resolve, reject) => {
       setTimeout(() => {
-        const wylieSections: string[] = [];
-        for (const sectionInfo of Object.values(sections)) {
-          if (sectionInfo && typeof sectionInfo === 'object' && 'wylie' in sectionInfo) {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            wylieSections.push((sectionInfo as any).wylie);
-          }
-        }
+        const wylieSections: string[] = Object.values(sections).map(s => s.wylie);
         const termQuery = this.mergeOrClauses('term', wylieSections);
         const db = this.openDB();
 
@@ -211,18 +205,17 @@ export class CordovaDictionaryApi {
               'SELECT DISTINCT term FROM DICT WHERE ' + termQuery,
               [],
               function (_tx: any, results: any) {
-                const availableSections: Record<string, unknown> = {};
-                const len = results.rows.length;
-                for (let i = 0; i < len; i += 1) {
-                  const row = results.rows.item(i);
-                  for (const [sectionId, sectionInfo] of Object.entries(sections)) {
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    if ((sectionInfo as any).wylie === row.term) {
-                      availableSections[sectionId] = sectionInfo;
-                    }
+                const foundTerms = new Set<string>();
+                for (let i = 0; i < results.rows.length; i++) {
+                  foundTerms.add(results.rows.item(i).term);
+                }
+                const available: Record<string, InlineSection> = {};
+                for (const [id, section] of Object.entries(sections)) {
+                  if (foundTerms.has(section.wylie)) {
+                    available[id] = section;
                   }
                 }
-                resolve(availableSections);
+                resolve(available);
               },
               function (_tx: any, error: any) {
                 reject(new Error('SQL error while checking existence of terms: ' + error.message));

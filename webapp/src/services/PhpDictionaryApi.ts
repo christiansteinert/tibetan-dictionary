@@ -2,55 +2,65 @@ import type { InlineSection } from '@/store/searchSlice';
 import { FtsSearchResult } from './DictionaryApi';
 
 /**
- * PHP backend for the Tibetan Dictionary app.
+ * PHP REST backend for the Tibetan Dictionary app.
  *
- * Uses the `dict.php` endpoint and POST form-encoded requests.
+ * All requests go to /api/<resource> with JSON bodies where applicable.
+ *
+ * The base path can be overridden by changing `API_BASE`, e.g. to `api.php`
+ * for servers that do not have the clean /api/ rewrite rule configured.
  */
 
-function serialize(
-  obj: Record<string, unknown>,
-  prefix = ''
-): string {
-  const params: string[] = [];
-  for (const [key, value] of Object.entries(obj)) {
-    const paramKey = prefix ? `${prefix}[${key}]` : key;
+/**
+ * Base path for all API requests.
+ * - `'api'`     → clean URL style:  /api/term/bde+ba   (requires nginx rewrite)
+ * - `'api.php'` → script path style: /api.php/term/bde+ba (works on any PHP server)
+ */
+export let API_BASE = 'backend/api';
+
+/** Build a query string from a params object. Dictionary arrays are joined as comma-separated encoded strings. */
+function buildQuery(params: Record<string, string | number | string[]>): string {
+  const parts: string[] = [];
+  for (const [key, value] of Object.entries(params)) {
     if (Array.isArray(value)) {
-      for (const item of value) {
-        params.push(
-          encodeURIComponent(paramKey + '[]') + '=' + encodeURIComponent(String(item))
-        );
+      // Join array values with commas (each value is already URL-encoded)
+      const encoded = value.map(v => encodeURIComponent(v)).join(',');
+      if (encoded) {
+        parts.push(`${encodeURIComponent(key)}=${encoded}`);
       }
-    } else if (typeof value === 'object' && value !== null) {
-      params.push(serialize(value as Record<string, unknown>, paramKey));
-    } else {
-      params.push(
-        encodeURIComponent(paramKey) + '=' + encodeURIComponent(String(value ?? ''))
-      );
+    } else if (value !== '' && value !== 0) {
+      parts.push(`${encodeURIComponent(key)}=${encodeURIComponent(String(value))}`);
     }
   }
-  return params.join('&');
+  return parts.length ? '?' + parts.join('&') : '';
 }
 
-async function post<T>(
-  data: Record<string, unknown>
-): Promise<T> {
-  const body = serialize(data as Record<string, unknown>);
-  const response = await fetch('dict.php', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body,
-  });
-
+async function getJson<T>(path: string, params: Record<string, string | number | string[]> = {}): Promise<T> {
+  const url = `${API_BASE}/${path}${buildQuery(params)}`;
+  const response = await fetch(url, { method: 'GET' });
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}: ${response.statusText}`);
   }
+  return response.json();
+}
 
+async function postJson<T>(path: string, body: unknown): Promise<T> {
+  const response = await fetch(`${API_BASE}/${path}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+  }
   return response.json();
 }
 
 export class PhpDictionaryApi {
   async readTerm(term: string, lang: string, dictionaries: string[]) {
-    const data = await post<Record<string, string>>({ term, lang, dictionaries });
+    const data = await getJson<Record<string, string>>(
+      `term/${encodeURIComponent(term)}`,
+      { lang, dictionaries },
+    );
     return { term, definitions: data };
   }
 
@@ -61,21 +71,23 @@ export class PhpDictionaryApi {
     maxResults: number,
     dictionaries: string[]
   ) {
-    return post<{ term: string }[]>({
+    return getJson<{ term: string }[]>('terms', {
       search,
       lang,
       offset,
-      maxresults: maxResults,
+      maxResults,
       dictionaries,
     });
   }
 
-  async checkTibetanSectionsForLinks(sections: Record<string, InlineSection>): Promise<Record<string, InlineSection>> {
-    const termsToCheck = Object.fromEntries(
-      Object.entries(sections).map(([id, { wylie }]) => [id, { id, wylie }])
+  async checkTibetanSectionsForLinks(
+    sections: Record<string, InlineSection>
+  ): Promise<Record<string, InlineSection>> {
+    const request: Record<string, string> = Object.fromEntries(
+      Object.entries(sections).map(([id, s]) => [id, s.wylie])
     );
-
-    return post({ checkTerms: termsToCheck });
+    const matchingIds = await postJson<string[]>('check-terms', request);
+    return Object.fromEntries(matchingIds.map(id => [id, sections[id]]));
   }
 
   async fulltextSearch(
@@ -85,18 +97,16 @@ export class PhpDictionaryApi {
     maxResults: number,
     dictionaries: string[]
   ) {
-    return post<FtsSearchResult[]>({
-      fulltextSearch: query,
+    return getJson<FtsSearchResult[]>('fulltext', {
+      q: query,
       lang,
       offset,
-      maxresults: maxResults,
+      maxResults,
       dictionaries,
     });
   }
 
-  /**
-   * Initialize the backend (no-op for PHP).
-   */
+  /** Initialize the backend (no-op for PHP). */
   async initDB(): Promise<void> {
     return;
   }
