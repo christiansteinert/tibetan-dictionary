@@ -247,8 +247,16 @@ if ($resource === 'terms' && $method === 'GET') {
         . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';';
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
+        $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
         $statement = $db->prepare(sprintf($baseSql, $table . '.term LIKE :word'));
-        $statement->bindValue(':word', str_replace(['*', '?'], ['%', '_'], $search . '%'), SQLITE3_TEXT);
+        $statement->bindValue(':word', $likePattern, SQLITE3_TEXT);
+
+        // Build a regex to post-filter LIKE results: '?' must not match a space,
+        // '*' may match anything including spaces.
+        $placeholder = "\x00";
+        $regexBody = preg_quote(str_replace('?', $placeholder, $search), '/');
+        $regexBody = str_replace([preg_quote($placeholder, '/'), '\\*'], ['[^ ]', '.*'], $regexBody);
+        $filterRegex = '/^' . $regexBody . '/iu';
     } elseif ($lang === 'bo') {
         $statement = $db->prepare(sprintf($baseSql,
             '(' . $table . '.term = :word '
@@ -271,6 +279,7 @@ if ($resource === 'terms' && $method === 'GET') {
 
     $rows = [];
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        if (isset($filterRegex) && !preg_match($filterRegex, $row['term'])) continue;
         $rows[] = ['term' => $row['term']];
     }
     jsonResponse($rows);

@@ -87,7 +87,9 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
               <section>
                 <h3 className={styles.sectionTitle}>Fulltext Search</h3>
                 <p className={styles.intro}>
-                  The fulltext search searches inside headwords and definition texts. In addition to typing the term you are looking for, you may use the following operators in this search mode:
+                  The fulltext search searches inside headwords and definition texts. 
+                  To use the fulltext search, open the extended search in the menu and then select "Fulltext".
+                  In addition to typing the term you are looking for, you may use the following operators in this search mode:
                 </p>
                 <table className={styles.table}>
                   <thead>
