@@ -9,7 +9,9 @@ import { useSelector } from 'react-redux';
 import type { RootState } from './store/store';
 import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
-import { useParams, useSearchParams, useNavigate } from 'react-router-dom';
+import TopBar from '@/components/TopBar/TopBar';
+import { useSearchHandlers } from '@/hooks/useSearchHandlers';
+import { useLocation } from 'react-router-dom';
 import '@/styles/shared.module.css';
 import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 
@@ -18,7 +20,11 @@ export default function App() {
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
   const { inputLang } = useSelector((s: RootState) => s.search.input);
   const { sidebarVisible } = useSelector((s: RootState) => s.search.resultList);
-  const [searchParams] = useSearchParams();
+  const isDefinitionOnly = useSelector((s: RootState) => s.search.definition.isDefinitionOnly);
+  const location = useLocation();
+  const handlers = useSearchHandlers();
+
+  const hideTopBar = isDefinitionOnly || location.pathname === '/settings';
 
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {
@@ -44,6 +50,16 @@ export default function App() {
   return (
     <ErrorBoundary>
       <div id="mainScreen" className={mainScreenClass}>
+        {!hideTopBar && (
+          <TopBar
+            onInputChange={handlers.handleInputChange}
+            onOpenExtendedSearch={handlers.handleOpenExtendedSearch}
+            onCloseExtendedSearch={handlers.handleCloseExtendedSearch}
+            onModeChange={handlers.handleModeChange}
+            onLangChange={handlers.handleLangChange}
+            onEnter={handlers.handleEnter}
+          />
+        )}
         <AppRoutes />
       </div>
     </ErrorBoundary>

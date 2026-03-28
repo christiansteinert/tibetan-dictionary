@@ -5,7 +5,6 @@
 import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '@/store/store';
-import TopBar from '@/components/TopBar/TopBar';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
 import useDictionaryLookup from '@/hooks/useDictionaryLookup';
 import { useSearchHandlers } from '@/hooks/useSearchHandlers';
@@ -69,14 +68,6 @@ export default function SearchLayout(props: Props) {
 
   return (
     <>
-      {!definition.isDefinitionOnly && <TopBar
-        onInputChange={handlers.handleInputChange}
-        onOpenExtendedSearch={handlers.handleOpenExtendedSearch}
-        onCloseExtendedSearch={handlers.handleCloseExtendedSearch}
-        onModeChange={handlers.handleModeChange}
-        onLangChange={handlers.handleLangChange}
-        onEnter={handlers.handleEnter}
-      />}
       <div className="page">
         <div className="contentArea">
           <div className={styles.ftsSearchWrap}>

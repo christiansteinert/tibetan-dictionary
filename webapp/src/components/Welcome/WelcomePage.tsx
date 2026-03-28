@@ -3,13 +3,10 @@
  *
  * Displays credits for the included dictionaries and a brief intro.
  */
-import { useCallback, useMemo } from 'react';
+import { useMemo } from 'react';
 import styles from './WelcomePage.module.css';
 import { DICTLIST } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
-import TopBar from '@/components/TopBar/TopBar';
-import { useDictNavigation } from '@/hooks/useDictNavigation';
-import { useSearchHandlers } from '@/hooks/useSearchHandlers';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 
 interface CreditEntry {
@@ -20,9 +17,6 @@ interface CreditEntry {
 
 export default function WelcomePage() {
   useSyncStateFromUrl();
-  
-  const navigation = useDictNavigation();
-  const handlers = useSearchHandlers();
 
   // Build credits list from dictionaries that have listCredits: "true"
   const credits = useMemo<CreditEntry[]>(() => {
@@ -53,14 +47,6 @@ export default function WelcomePage() {
 
   return (
     <>
-      <TopBar
-              onInputChange={handlers.handleInputChange}
-              onOpenExtendedSearch={handlers.handleOpenExtendedSearch}
-              onCloseExtendedSearch={handlers.handleCloseExtendedSearch}
-              onModeChange={handlers.handleModeChange}
-              onLangChange={handlers.handleLangChange}
-              onEnter={handlers.handleEnter}
-            />
       <div className="page">
         <div className="contentArea">
           <div className="mainWrap">

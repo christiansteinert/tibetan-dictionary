@@ -268,7 +268,7 @@ export const {
   setInputState,
   setSearchMode,
   setExtendedSettingsVisible,
-  setInputLang,  
+  setInputLang,
 
   setResultListState,
   setSidebarVisible,

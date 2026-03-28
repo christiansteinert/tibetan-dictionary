@@ -61,13 +61,6 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     setWasTypedInWylie,
   }));
 
-  // Update placeholder when language changes
-  const placeholder =
-    inputLang === 'en'
-      ? 'Enter an English term...'
-      : 'Enter a Tibetan term...';
-  const lang = inputLang === 'en' ? 'en' : 'bo';
-
   // Stable converter for initial-value Wylie → Unicode conversion.
   const wylieConverter = useRef(new WylieConverter());
 
@@ -83,6 +76,12 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     }
     focus();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  const placeholder =
+    inputLang === 'en'
+      ? 'Enter an English term...'
+      : 'Enter a Tibetan term...';
+  const lang = inputLang === 'en' ? 'en' : 'bo';
 
   return (
     <input

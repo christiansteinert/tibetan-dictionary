@@ -16,7 +16,6 @@ import { type SearchMode } from '@/store/searchSlice';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
 import { Language } from '@/types';
-import { useDictNavigation } from '@/hooks/useDictNavigation';
 
 interface Props {
   onInputChange?: (input: string) => void;
@@ -28,7 +27,6 @@ interface Props {
 }
 
 export default function TopBar(props: Props) {
-  const navigation = useDictNavigation()
   const layout = useSelector((s: RootState) => s.settings.layout);
   const unicode = useSelector((s: RootState) => s.settings.unicode);
   const lowercase = useSelector((s: RootState) => s.settings.lowercase);
