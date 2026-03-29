@@ -14,12 +14,12 @@
 // =============================================================================
 
 require_once __DIR__ . '/snippet.php';
-
+ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
 
 // --- Helpers -----------------------------------------------------------------
 
 /** Send a JSON response and exit. */
-function jsonResponse(mixed $data, int $status = 200): never {
+function jsonResponse($data, int $status = 200) {
     http_response_code($status);
     header('Content-Type: application/json; charset=utf-8');
     header('Expires: ' . gmdate('D, d M Y H:i:s', strtotime('+1 hours')) . ' GMT');
@@ -28,12 +28,12 @@ function jsonResponse(mixed $data, int $status = 200): never {
 }
 
 /** Send a JSON error response and exit. */
-function errorResponse(string $message, int $status = 400): never {
+function errorResponse(string $message, int $status = 400) {
     jsonResponse(['error' => $message], $status);
 }
 
 /** Parse and return the decoded JSON request body, or abort with 400. */
-function jsonBody(): mixed {
+function jsonBody() {
     $raw = file_get_contents('php://input');
     if ($raw === false || $raw === '') {
         errorResponse('Request body is empty');
@@ -46,11 +46,11 @@ function jsonBody(): mixed {
 }
 
 /**
- * Clamp and sanitise an integer value.
+ * Clamp and sanitise an number-string and convert it to an integer value.
  */
-function clampInt(mixed $value, int $min, int $max, int $default = 0): int {
+function clampIntParam(?string $value, int $min, int $max, int $default = 0): int {
     if ($value === null || $value === '') return $default;
-    $int = intval(preg_replace('/[^0-9]/', '', (string) $value));
+    $int = intval('0' + preg_replace('/[^0-9]/', '', (string) $value));
     return max($min, min($max, $int));
 }
 
@@ -70,7 +70,7 @@ function parseDictionaries(): array {
         return [];
     }
     // Split by comma and URL-decode each name
-    $dict_names = array_map('urldecode', explode(',', $raw));
+    $dict_names = explode(',', $raw);
     
     // Filter out empty strings and reindex the array
     return array_values(array_filter(
@@ -236,8 +236,8 @@ if ($resource === 'terms' && $method === 'GET') {
     $table        = $langInfo['table'];
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampInt($_GET['maxResults'] ?? null, 10, 500, 50);
-    $offset       = clampInt($_GET['offset'] ?? null, 0, PHP_INT_MAX);
+    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
+    $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
 
     $baseSql = 'SELECT DISTINCT term FROM ' . $table . ' '
         . 'INNER JOIN DICTNAMES ON ' . $table . '.dictionary = DICTNAMES.id '
@@ -352,8 +352,8 @@ if ($resource === 'fulltext' && $method === 'GET') {
     $ftsTable     = $langInfo['ftsTable'];
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampInt($_GET['maxResults'] ?? null, 10, 500, 50);
-    $offset       = clampInt($_GET['offset'] ?? null, 0, PHP_INT_MAX);
+    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
+    $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
 
     $sql = 'SELECT '
         . $table . '.term AS term, '

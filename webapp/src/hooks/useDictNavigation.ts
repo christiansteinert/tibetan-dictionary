@@ -2,7 +2,7 @@
  * useNavigation – URL navigation helpers for search routes.
  */
 import { useCallback } from 'react';
-import { useLocation, useNavigate, useParams, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { Language } from '@/types';
 import { encodeQueryParam } from '@/utils/escape';
 
@@ -20,7 +20,6 @@ export function useDictNavigation() {
       const isOnSearchPath = location.hash.startsWith('#/search') || location.hash.startsWith('#/fts-search');
 
       if (!isOnSearchPath) { // if we're not on a search path, switch to standard search with the extended search enabled/disabled
-        console.log('Not on search path, navigating to search with ext=' + enabled);
         navigate('/search' + (enabled ? '?ext=true' : ''));
         return;
       }

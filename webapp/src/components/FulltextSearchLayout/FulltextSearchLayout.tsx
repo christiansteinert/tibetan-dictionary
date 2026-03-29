@@ -1,5 +1,5 @@
 /**
- * ExtendedSearchLayout – the component for fulltext search.
+ * FulltextSearchLayout – the component for fulltext search.
  *
  */
 import { useEffect, useCallback } from 'react';
@@ -9,17 +9,10 @@ import { useDictNavigation } from '@/hooks/useDictNavigation';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 import styles from './FulltextSearch.module.css';
 
-import {
-  type SearchMode,
-} from '@/store/searchSlice';
-import ExtendedResultList from './FtsResultList';
+import FtsResultList from './FtsResultList';
 import useFulltextSearch from '@/hooks/useFulltextSearch';
 
-interface Props {
-  mode: SearchMode;
-}
-
-export default function SearchLayout(props: Props) {
+export default function FulltextSearchLayout() {
 
   useSyncStateFromUrl();
 
@@ -48,7 +41,7 @@ export default function SearchLayout(props: Props) {
   const handleTermSelected = useCallback(
     (wylieTerm: string) => {
       navigation.termSearch(wylieTerm, result.lang, result.offset, false, searchInput.extendedSettingsVisible, wylieTerm);
-    }, [navigation, result.query, result.lang, result.offset, searchInput.extendedSettingsVisible]
+    }, [navigation, result.lang, result.offset, searchInput.extendedSettingsVisible]
   );
 
   /** Navigate to previous page of results. */
@@ -68,7 +61,7 @@ export default function SearchLayout(props: Props) {
       <div className="page">
         <div className="contentArea">
           <div className={styles.ftsSearchWrap}>
-            <ExtendedResultList
+            <FtsResultList
               onTermClick={handleTermSelected}
               onPrev={handlePaginationPrev}
               onNext={handlePaginationNext}

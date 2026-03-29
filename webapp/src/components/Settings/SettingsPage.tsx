@@ -46,8 +46,9 @@ export default function SettingsPage() {
   // --- handlers ---------------------------------------------------------
 
   const handleSave = useCallback(() => {
-    navigate("/"); // go back
-  }, [navigate]);
+    updateDictionaries(activeDictionaries, inactiveDictionaries);
+    navigate("/");
+  }, [updateDictionaries, activeDictionaries, inactiveDictionaries, navigate]);
 
   const handleCancel = useCallback(() => {
     if (snapshot.current) {

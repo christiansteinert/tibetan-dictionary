@@ -23,10 +23,14 @@ interface Props {
 }
 
 export default function ResultList({ onTermSelected, onPrev, onNext, selectedTerm }: Props) {
-  const { results, offset, lang: resultsLang } = useSelector((s: RootState) => s.search.resultList);
+  const { results, offset, lang: resultsLang, query } = useSelector((s: RootState) => s.search.resultList);
   const { unicode, listSize } = useSelector((s: RootState) => s.settings);
   const { term: activeTerm } = useSelector((s: RootState) => s.search.definition);
   const useUnicodeTibetan = (unicode !== false);
+
+  if (!query) {
+    return null; // No search performed yet
+  }
 
   // The effective selected term: URL param wins for instant feedback,
   // Redux activeTerm is the settled value once the definition has loaded.

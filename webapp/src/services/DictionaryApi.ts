@@ -21,6 +21,7 @@ export interface TermListRow {
 /** A single result row from fulltext search. */
 export interface FtsSearchResult {
   term: string;
+  highlightedTerm: string;
   dictionary: string;
   dictionaryId: number;
   snippet: string;

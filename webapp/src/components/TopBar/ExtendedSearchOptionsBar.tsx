@@ -16,12 +16,9 @@ import { QuestionMarkCircledIcon } from '@radix-ui/react-icons';
 import HelpDialog from './HelpDialog';
 import { useState } from 'react';
 
-
-
 interface Props {
   mode: SearchMode;
   lang: Language;
-  isSearching: boolean;
   isLightMode: boolean;
   onModeChange?: (mode: SearchMode) => void;
   onLangChange?: (lang: Language) => void;
@@ -31,7 +28,6 @@ interface Props {
 export default function ExtendedSearchOptionsBar({
   mode,
   lang,
-  isSearching,
   isLightMode,
   onModeChange,
   onLangChange,
@@ -70,23 +66,23 @@ export default function ExtendedSearchOptionsBar({
       {/* ── Language ── */}
       <span className={styles.optionsGroup}>
         <span className={styles.optionsLabel}>Direction:</span>
-        <label className={styles.optionsRadio}>
+        <label className={styles.optionsRadio}
+            title="Search the Tibetan–English dictionary">
           <input
             type="radio"
             name="extLang"
             checked={lang === 'tib'}
             onChange={() => onLangChange && onLangChange('tib')}
-            title="Search the Tibetan–English dictionary"
           />
           Tib → En
         </label>
-        <label className={styles.optionsRadio}>
+        <label className={styles.optionsRadio}
+            title="Search the English–Tibetan dictionary">
           <input
             type="radio"
             name="extLang"
             checked={lang === 'en'}
             onChange={() => onLangChange && onLangChange('en')}
-            title="Search the English–Tibetan dictionary"
           />
           En → Tib
         </label>

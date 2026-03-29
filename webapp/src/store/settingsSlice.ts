@@ -35,9 +35,13 @@ function getAllDictionaryIds(): string[] {
   const publicOnly = GLOBAL_SETTINGS.publicOnly && !isLocalhost;
 
   return Object.keys(DICTLIST).filter((id) => {
-    const info = DICTLIST[id] as DictEntry;
-    if (info.webOnly && !!(window as any).cordova) return false;
-    if (publicOnly && info.public) return false;
+    const dictInfo= DICTLIST[id] as DictEntry;
+    if (dictInfo.webOnly && !!(window as any).cordova) {
+      return false;  // Hide web-only dictionaries when running inside Cordova 
+    }
+    if (publicOnly && !dictInfo.public) {
+      return false; // Hide private dictionaries when in public-only mode
+    }
     return true;
   });
 }
@@ -163,7 +167,7 @@ export const {
 // Selectors
 // ---------------------------------------------------------------------------
 
-export const selectAllDictionaryIds = () => getAllDictionaryIds();
+export const selectAllDictionaryIds = (): string[] => getAllDictionaryIds();
 export const selectGroupedDictlist = () => GROUPED_DICTLIST;
 export const selectDictlist = () => DICTLIST;
 

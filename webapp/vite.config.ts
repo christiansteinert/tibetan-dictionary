@@ -83,5 +83,7 @@ export default defineConfig({
     // The app includes large config files (dictlist, abbreviations) that
     // inflate the main chunk. This is expected and acceptable.
     chunkSizeWarningLimit: 700,
+    sourcemap: true,
+    // minify: false, // Disable minification to preserve variable names for easier debugging
   },
 });

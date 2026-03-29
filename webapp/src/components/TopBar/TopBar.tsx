@@ -169,7 +169,6 @@ export default function TopBar(props: Props) {
           <ExtendedSearchOptionsBar
             mode={searchMode}
             lang={inputLang}
-            isSearching={isFtsSearching}
             isLightMode={isLightMode}
             onModeChange={props.onModeChange}
             onLangChange={props.onLangChange}

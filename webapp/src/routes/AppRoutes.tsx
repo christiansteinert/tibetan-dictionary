@@ -14,7 +14,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import SettingsPage from '@/components/Settings/SettingsPage';
 import WelcomePage from '@/components/Welcome/WelcomePage';
 import SearchLayout from '@/components/SearchLayout/SearchLayout';
-import ExtendedSearchLayout from '@/components/FulltextSearchLayout/FulltextSearchLayout';
+import FulltextSearchLayout from '@/components/FulltextSearchLayout/FulltextSearchLayout';
 
 interface AppRoutesProps {
   definitionOnly?: boolean;
@@ -25,7 +25,7 @@ export default function AppRoutes(props: AppRoutesProps) {
     <Routes>
       <Route path="/" element={<WelcomePage />} />
       <Route path="/search/:lang?/:term?" element={<SearchLayout mode="term" />}/>
-      <Route path="/fts-search/:lang?/:term?" element={<ExtendedSearchLayout mode="fulltext" />}/>
+      <Route path="/fts-search/:lang?/:term?" element={<FulltextSearchLayout />}/>
       
       <Route path="/settings" element={<SettingsPage />} />
       {/* Fallback: redirect unknown routes to home */}

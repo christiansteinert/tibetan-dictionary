@@ -8,6 +8,7 @@ import { useEffect, useRef } from 'react';
 import Sortable from 'sortablejs';
 import { GROUPED_DICTLIST, DICTLIST } from '../../config/dictlist';
 import { bindTooltips } from '@/utils/tooltip';
+import { selectAllDictionaryIds } from '@/store/settingsSlice';
 
 /**
  * Build language tag HTML for a dictionary entry.
@@ -145,6 +146,9 @@ export default function DictionarySelector({
     collectStateRef.current?.();
   }
 
+    let now = new Date().toISOString();
+          
+
   return (
     <div id="select-dict" ref={listRef}>
       {entries.map(({ id, info, isActive }) => {
@@ -163,7 +167,7 @@ export default function DictionarySelector({
                 type="checkbox"
                 name={`dict_${id}`}
                 id={`dict_${id}`}
-                defaultChecked={isActive}
+                checked={isActive}
                 onChange={collectStateFromDom}
               />
             </span>
@@ -186,7 +190,6 @@ export default function DictionarySelector({
                 )}
               </span>
             </span>
-
             <span className="drag-handle" title="Drag to reorder" />
           </div>
         );
@@ -207,13 +210,19 @@ function buildOrderedEntries(activeDictionaries, inactiveDictionaries) {
   const processedGroups = new Set();
   const activeEntries = [];
   const inactiveEntries = [];
+  const availableDictIds = selectAllDictionaryIds();
 
   // Process active dictionaries in order
   for (const dictId of activeDictionaries) {
+    if (!availableDictIds.includes(dictId)) {
+      continue; // Skip if the dictionary is unavailable
+    }
     let info = GROUPED_DICTLIST[dictId];
     if (!info) {
       info = DICTLIST[dictId];
-      if (!info) continue;
+      if (!info) {
+        continue;
+      }
     }
 
     const groupId = info.groupId;
@@ -232,6 +241,9 @@ function buildOrderedEntries(activeDictionaries, inactiveDictionaries) {
   // Process remaining entries from GROUPED_DICTLIST that weren't in active
   for (const [dictId, dictInfo] of Object.entries(GROUPED_DICTLIST)) {
     if (processedGroups.has(dictId)) continue;
+    if (!availableDictIds.includes(dictId)) {
+      continue; // Skip if the dictionary is unavailable
+    }
 
     if (dictInfo.type === 'group') {
       const isActive = isAnyInGroupActive(dictId, activeDictionaries);

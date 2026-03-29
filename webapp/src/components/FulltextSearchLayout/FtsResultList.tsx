@@ -14,7 +14,7 @@ interface Props {
   onNext: () => void;
 }
 
-export default function ExtendedResultList({
+export default function FtsResultList({
   onTermClick,
   onPrev,
   onNext,

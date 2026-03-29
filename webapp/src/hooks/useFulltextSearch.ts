@@ -13,7 +13,6 @@ import {
   setFtsError,
   setFtsOffset,
   setFtsResultListQuery,
-  type SearchMode,
 } from '@/store/searchSlice';
 import { fulltextSearch } from '@/services/DictionaryApi';
 import { WylieConverter } from '@/utils/wylieConverter';
@@ -74,8 +73,7 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
       abortControllerRef.current = controller;
 
       try {
-        const fn = fulltextSearch;
-        const results = await fn(
+        const results = await fulltextSearch(
           backendQuery,
           lang,
           offset,

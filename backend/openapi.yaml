@@ -87,6 +87,13 @@ components:
       properties:
         term:
           type: string
+          description: The searched headword as stored in the dictionary.
+        highlightedTerm:
+          type: string
+          description: >
+            The term with matched words wrapped in `<em>…</em>` tags for
+            highlighting. May be the same as `term` if no highlights are
+            available.
         dictionary:
           type: string
           description: Human-readable dictionary name.

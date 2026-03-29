@@ -67,7 +67,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     listCredits: true,
     language: ["tib", "<->", "en"]
   },
-  "Gaeng,Wetzel": {
+  "GaengWetzel": {
     label: 'Gäng / Wetzel',
     about: 'Buddhist Terms|Multilingual Version|Edited by Peter Gäng and Sylvia Wetzel|Buddhist Academy Berlin Brandenburg|June 2004|Source:  http://www.buddhistische-akademie-bb.de/pdf/BuddhistTerms.pdf',
     public: true,
@@ -246,7 +246,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         public: true,
         language: ["tib", "<->", "en"]
       },
-      "Hopkins-others'English2015": {
+      "Hopkins-othersEnglish2015": {
         label: 'Hopkins others\' English 2015',
         about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
         abbreviations: 'Hopkins',
@@ -456,7 +456,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         public: true,
         language: ["tib"]
       },
-      "Hopkins-Divisions,Tib2015": {
+      "Hopkins-DivisionsTib2015": {
         containsOnlyTibetan: true,
         label: 'Hopkins Divi&shy;sions 2015 ',
         about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
@@ -464,7 +464,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         public: true,
         language: ["tib"]
       },
-      "Hopkins-Examples,Tib": {
+      "Hopkins-ExamplesTib": {
         containsOnlyTibetan: true,
         label: 'Hopkins Examples 1992',
         about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',

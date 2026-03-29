@@ -42,7 +42,7 @@ function convertCurlyBraceSections(snippetHtml: string): string {
     // Only process non-tag parts
     if (!parts[i].startsWith('<')) {
       parts[i] = parts[i].replace(/\{([^{}]+)\}/g, (_match, wylie: string) => {
-        const unicode = wylieConverter.wylieToUni(wylie.trim());
+        const unicode = "<span class='tib inlineTib'>" + wylieConverter.wylieToUni(wylie.trim()) + "</span>";
         return unicode;
       });
     }
@@ -72,7 +72,6 @@ const FtsResultItem = memo(function FtsResultItem({
   let highlightedTerm = result.highlightedTerm;
   if (lang === 'tib' && useUnicodeTibetan) {
     highlightedTerm = handleHighlightedSectionsForTibOnly(highlightedTerm);
-    console.log("Highlighted term with tib-only handling:", highlightedTerm);
     highlightedTerm = convertCurlyBraceSections(highlightedTerm);
   } else {
     highlightedTerm = result.term
@@ -83,14 +82,6 @@ const FtsResultItem = memo(function FtsResultItem({
   const dictLabel = dictEntry?.label || result.dictionary;
   const dictAbout = dictEntry?.about || '';
 
-  formatDefinition(
-    result.snippet,
-    "",
-    useUnicodeTibetan,
-    dictEntry,
-    null,
-    () => { }
-  );
 
   // Process snippet: convert {curly brace} sections if in Unicode mode
   let snippet = result.snippet;

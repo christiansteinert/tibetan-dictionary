@@ -24,9 +24,11 @@ export default function WelcomePage() {
     const publicOnly = GLOBAL_SETTINGS.publicOnly && !isLocalhost;
 
     return Object.entries(DICTLIST)
-      .filter(([, info]: [string, any]) => {
-        if (publicOnly && info.public) return false;
-        return info.listCredits;
+      .filter(([, dictInfo]: [string, any]) => {  
+        if (publicOnly && !dictInfo.public) {
+          return false; // Hide private dictionaries when in public-only mode
+        }
+        return dictInfo.listCredits;
       })
       .map(([id, info]: [string, any]) => {
         let title = '';

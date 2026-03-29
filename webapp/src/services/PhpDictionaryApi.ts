@@ -22,8 +22,8 @@ function buildQuery(params: Record<string, string | number | string[]>): string 
   const parts: string[] = [];
   for (const [key, value] of Object.entries(params)) {
     if (Array.isArray(value)) {
-      // Join array values with commas (each value is already URL-encoded)
-      const encoded = value.map(v => encodeURIComponent(v)).join(',');
+      // Join array values with commas
+      const encoded = encodeURIComponent(value.join(',')); 
       if (encoded) {
         parts.push(`${encodeURIComponent(key)}=${encoded}`);
       }

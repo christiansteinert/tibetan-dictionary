@@ -7,7 +7,7 @@ GROUPED_DICTLIST = {
     listCredits: "true",
     language: ["tib", "<->", "en"]
   },
-  "Gaeng,Wetzel": {
+  "GaengWetzel": {
     label: 'Gäng / Wetzel',
     about: 'Buddhist Terms|Multilingual Version|Edited by Peter Gäng and Sylvia Wetzel|Buddhist Academy Berlin Brandenburg|June 2004|Source:  http://www.buddhistische-akademie-bb.de/pdf/BuddhistTerms.pdf',
     public: "true",

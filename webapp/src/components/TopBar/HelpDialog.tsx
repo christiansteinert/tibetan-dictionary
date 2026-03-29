@@ -19,7 +19,10 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
         <Dialog.Overlay className={styles.overlay} />
-        <Dialog.Content className={`${styles.content} ${theme}`}>
+        <Dialog.Content
+          className={`${styles.content} ${theme}`}
+          style={{ height: '95vh', width: 'min(95vw, 70rem)' }}
+        >
 
           <div className={styles.header}>
             <Dialog.Title className={styles.title}>Search Help</Dialog.Title>
@@ -63,11 +66,11 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                     <tr>
                       <td rowSpan={2}>Also matches in the middle</td>
                       <td><code className={styles.example}>sangs * chos</code></td>
-                      <td>sangs rgyas chos, sangs chos, …</td>
+                      <td>sangs rgyas kyi chos, …</td>
                     </tr>
                     <tr>
                       <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་ * ཆོས་</code></td>
-                      <td className={`${styles.tibExample} tib`}>སངས་རྒྱས་ཆོས་, སངས་ཆོས་, …</td>
+                      <td className={`${styles.tibExample} tib`}>སངས་རྒྱས་ཀྱི་ཆོས་, …</td>
                     </tr>
                     <tr>
                       <td rowSpan={2}><code className={styles.op}>?</code></td>
@@ -133,7 +136,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                     </tr>
                     <tr>
                       <td rowSpan={2}><code className={styles.op}>~</code></td>
-                      <td rowSpan={2}>Suffix wildcard – matches zero or more characters at the end of that word</td>
+                      <td rowSpan={2}>Suffix wildcard – matches zero or more characters at the end of a word</td>
                       <td><code className={styles.example}>sang~</code></td>
                       <td>containing any word starting with <em>sang</em></td>
                     </tr>
