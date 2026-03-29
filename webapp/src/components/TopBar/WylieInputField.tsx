@@ -22,6 +22,11 @@ interface Props {
   inputProcessor?: InputProcessor;
   /** Display→Wylie reverse processor (must match inputProcessor). */
   reverseProcessor?: (text: string) => string;
+  // Keyboard navigation handlers: move selection / paginate without leaving focus
+  onArrowUp?: () => void;
+  onArrowDown?: () => void;
+  onPageUp?: () => void;
+  onPageDown?: () => void;
 }
 
 export interface WylieInputHandle {
@@ -35,7 +40,7 @@ export interface WylieInputHandle {
 }
 
 const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputField(
-  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue, inputProcessor, reverseProcessor },
+  { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue, inputProcessor, reverseProcessor,  onArrowUp, onArrowDown, onPageUp, onPageDown },
   ref
 ) {
   const {
@@ -55,6 +60,10 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     onEnter,
     inputProcessor,
     reverseProcessor,
+    onArrowUp,
+    onArrowDown,
+    onPageUp,
+    onPageDown,
   });
 
   // Expose imperative methods so parent components can control the input

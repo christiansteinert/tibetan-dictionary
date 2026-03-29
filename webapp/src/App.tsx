@@ -58,6 +58,10 @@ export default function App() {
             onModeChange={handlers.handleModeChange}
             onLangChange={handlers.handleLangChange}
             onEnter={handlers.handleEnter}
+            onArrowUp={handlers.handleSelectPrevTerm}
+            onArrowDown={handlers.handleSelectNextTerm}
+            onPageUp={handlers.handleSelectPrevPage}
+            onPageDown={handlers.handleSelectNextPage}
           />
         )}
         <AppRoutes />

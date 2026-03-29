@@ -42,6 +42,12 @@ interface UseWylieInputOptions {
    * When undefined, the built-in uniToWylie is used.
    */
   reverseProcessor?: (text: string) => string;
+  // Keyboard navigation handlers: used to move selection / paginate while
+  // keeping focus inside the input box.
+  onArrowUp?: () => void;
+  onArrowDown?: () => void;
+  onPageUp?: () => void;
+  onPageDown?: () => void;
 }
 
 interface UseWylieInputReturn {
@@ -63,6 +69,10 @@ export default function useWylieInput({
   onEnter,
   inputProcessor,
   reverseProcessor,
+  onArrowUp,
+  onArrowDown,
+  onPageUp,
+  onPageDown,
 }: UseWylieInputOptions): UseWylieInputReturn {
   const inputRef = useRef<HTMLInputElement>(null);
   const lastUniInput = useRef('');
@@ -167,6 +177,11 @@ export default function useWylieInput({
 
   const handleKeyupInput = useCallback(
     (event: KeyboardEvent) => {
+      // Ignore navigation keys handled (ArrowUp/Down, PageUp/Down) since those are handled separately in a keydown handler
+      if (event.key === 'Shift' || event.key === 'ArrowUp' || event.key === 'ArrowDown' || event.key === 'PageUp' || event.key === 'PageDown') {
+        return;
+      }
+
       // Don't process Enter key — that is handled exclusively by handleEnterKey
       // to prevent the keyup firing after keypress from overwriting the
       // sidebar=false navigation with sidebar=true.
@@ -249,11 +264,11 @@ export default function useWylieInput({
         const insertedSyllable =
           processorRef.current && hasFtsOperators(rawMiddle)
             ? ftsSegmentConvert(rawMiddle, seg =>
-                wylieConverter.wylieToUni(wylieConverter.normalizeWylie(seg))
-              )
+              wylieConverter.wylieToUni(wylieConverter.normalizeWylie(seg))
+            )
             : wylieConverter.wylieToUni(
-                wylieConverter.normalizeWylie(rawMiddle)
-              );
+              wylieConverter.normalizeWylie(rawMiddle)
+            );
         const result =
           matchMiddle[1] + insertedSyllable + matchMiddle[3];
         const cursorPos = matchMiddle[1].length + insertedSyllable.length;
@@ -350,15 +365,36 @@ export default function useWylieInput({
     };
     const onKeyup = (e: KeyboardEvent) => handleKeyupInput(e);
     const onInput = (e: KeyboardEvent) => handleKeyupInput(e);
+    const onKeydown = (e: KeyboardEvent) => {
+      // Arrow keys and Page keys should move selection / paginate but keep
+      // focus inside the input field. Prevent default so the caret doesn't move.
+      if (e.key === 'ArrowUp') {
+        e.getModifierState('Shift') ? onPageUp?.() : onArrowUp?.();
+        e.preventDefault();
+      } else if (e.key === 'ArrowDown') {
+        e.getModifierState('Shift') ? onPageDown?.() : onArrowDown?.();
+        e.preventDefault();
+      } else if (e.key === 'PageUp') {
+        const scrollAmount = window.innerHeight * 0.9;
+        e.preventDefault();
+        window.scrollBy(0, -scrollAmount);
+      } else if (e.key === 'PageDown') {
+        const scrollAmount = window.innerHeight * 0.9;
+        e.preventDefault();
+        window.scrollBy(0, scrollAmount);
+      }
+    };
 
     el.addEventListener('keypress', onKeypress as EventListener);
     el.addEventListener('keyup', onKeyup as EventListener);
     el.addEventListener('input', onInput as EventListener);
+    el.addEventListener('keydown', onKeydown as EventListener);
 
     return () => {
       el.removeEventListener('keypress', onKeypress as EventListener);
       el.removeEventListener('keyup', onKeyup as EventListener);
       el.removeEventListener('input', onInput as EventListener);
+      el.removeEventListener('keydown', onKeydown as EventListener);
     };
   }, [handleEnterKey, handleKeyupInput]);
 

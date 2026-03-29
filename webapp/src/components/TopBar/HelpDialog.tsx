@@ -151,6 +151,51 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 </p>
               </section>
 
+
+
+              {/* ── Keyboard Navigation ── */}
+              <section>
+                <h3 className={styles.sectionTitle}>Keyboard Navigation</h3>
+                <p className={styles.intro}>
+                  There is a simple keyboard navigation mode that allows you to search and look at different results
+                  by only using the keyboard.
+                </p>
+                <p className={styles.intro}>
+                  Keyboard navigation is available only in <em>Terms Search</em> mode (not during Fulltext Search mode).
+                  Furthermore, it is only available when the cursor is focused inside the search input field.
+                </p>
+                <table className={styles.table}>
+                  <thead>
+                    <tr>
+                      <th>Keys</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code className={styles.op}>Enter</code></td>
+                      <td>Opens the definitions for the entered term while keeping the keyboard focus inside the input field.</td>
+                    </tr>
+                    <tr>
+                      <td><code className={styles.op}>Arrow Up</code> / <code className={styles.op}>Arrow Down</code></td>
+                      <td>Move one position up / down in the result list</td>
+                    </tr>
+                    <tr>
+                      <td><code className={styles.op}>Shift + Arrow Up</code> / <code className={styles.op}>Shift + Arrow Down</code></td>
+                      <td>Move one page up / down in the result list</td>
+                    </tr>
+                    <tr>
+                      <td><code className={styles.op}>Page Up</code> / <code className={styles.op}>Page Down</code></td>
+                      <td>Scroll up / down inside the definition (if the definition is longer than the visible area.)</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p className={styles.note}>
+                  <strong>Note:</strong> These keys only change the selected term in the result list.
+                  The keyboard focus remains inside the input field so you can continue typing.
+                </p>
+              </section>
+
             </div>
           </Dialog.Description>
 

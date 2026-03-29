@@ -32,6 +32,11 @@ interface Props {
   onEnter?: (term: string) => void;
   onOpenExtendedSearch?: () => void;
   onCloseExtendedSearch?: () => void;
+  // Keyboard navigation handlers
+  onArrowUp?: () => void;
+  onArrowDown?: () => void;
+  onPageUp?: () => void;
+  onPageDown?: () => void;
 }
 
 export default function TopBar(props: Props) {
@@ -141,6 +146,10 @@ export default function TopBar(props: Props) {
               lowercase={lowercase}
               onInputChange={(input) => props.onInputChange?.(input)}
               onEnter={(term) => props.onEnter?.(term)}
+              onArrowUp={props.onArrowUp}
+              onArrowDown={props.onArrowDown}
+              onPageUp={props.onPageUp}
+              onPageDown={props.onPageDown}
               initialValue={initialValue || undefined}
               inputProcessor={inputProcessor}
               reverseProcessor={reverseProcessor}
