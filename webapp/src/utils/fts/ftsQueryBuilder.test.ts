@@ -21,11 +21,11 @@ describe('buildFtsQuery', () => {
   });
 
   it('joins words with + for suffix wildcard search', () => {
-    expect(buildFtsQuery('buddha dharm*')).toBe('buddha+dharm*');
+    expect(buildFtsQuery('buddha dharm~')).toBe('buddha+dharm*');
   });
 
   it('handles suffix wildcard combined with operator', () => {
-    expect(buildFtsQuery('buddha dharm*|sangha')).toBe('buddha+dharm* OR "sangha"');
+    expect(buildFtsQuery('buddha dharm~|sangha')).toBe('buddha+dharm* OR "sangha"');
   });
 
   it('handles multiple operators', () => {
@@ -38,11 +38,11 @@ describe('buildFtsQuery', () => {
   });
 
   it('handles lone operator gracefully', () => {
-    expect(buildFtsQuery('&')).toBe('AND');
+    expect(buildFtsQuery('buddha &')).toBe('buddha');
   });
 
   it('handles wildcard only', () => {
-    expect(buildFtsQuery('dharm*')).toBe('dharm*');
+    expect(buildFtsQuery('dharm~')).toBe('dharm*');
   });
 
   it('handles NOT at start', () => {
