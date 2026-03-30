@@ -11,6 +11,7 @@ on:
     branches:
       - main
       - master
+      - feature/react-migration
     types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
 
