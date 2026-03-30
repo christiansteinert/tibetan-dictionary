@@ -4,9 +4,13 @@ on:
   push:
     tags:
       - '*'
+    branches:
+      # temp
+      - fix/tibetan_input
   pull_request:
     branches:
       - main
+      - master
     types: [opened, synchronize, reopened, labeled]
   workflow_dispatch:
 
