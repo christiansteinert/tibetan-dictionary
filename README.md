@@ -44,12 +44,12 @@ There are three build services and two runtime services in the compose file:
 # Building and running the web app
 
 
-## Check ewts-js
-The ewts-js library is added as a git submodule which points to the original repository.
+## Checkout ewts-js submodule
+The [ewts-js](https://github.com/rogerespel/ewts-js) library is added as a git submodule which points to the original repository.
 
-After cloning the repository you must therefore once execute 
+After cloning this repository you must therefore once execute 
 ```bash
-git submodule update
+git submodule update --init
 ``` 
 to pull the external dependency. Without this, the local build will fail.
 
