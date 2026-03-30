@@ -5,8 +5,7 @@ on:
     tags:
       - '*'
     branches:
-      # temp
-      - fix/tibetan_input
+      - '**'
   pull_request:
     branches:
       - main
