@@ -27,6 +27,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
 
       - name: Remove Label
         if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests')
