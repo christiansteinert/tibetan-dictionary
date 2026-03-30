@@ -195,13 +195,15 @@ export default function useWylieInput({
       let newInput = uniInput;
       const isCursorAtEnd = el.selectionStart === uniInput.length;
 
-      // Skip if no Wylie-relevant chars (avoids interfering with native keyboards).
-      // In FTS mode, operator characters (& | !) also count as relevant.
-      if (
-        event.type === 'input' &&
-        !/.*['a-zA-Z].*/.test(uniInput + prev) &&
-        !(processorRef.current && hasFtsOperators(uniInput + prev))
-      ) {
+      const isOnlyTibetan = !/.*['a-zA-Z].*/.test(uniInput + prev) && !(processorRef.current && hasFtsOperators(uniInput + prev));
+      const endsWithTseg = /[-  /་།\s]$/.test(uniInput);
+      const isBackspaceEvent = event.keyCode === 8 || (uniInput.length < prev.length && prev.startsWith(uniInput));
+
+      // Skip Wylie logic if typing pure Tibetan without syllable completion or backspace.
+      // Crucial: do this for BOTH input AND keyup so we don't interrupt native IME composition with setSelectionRange!
+      if (isOnlyTibetan && !endsWithTseg && !isBackspaceEvent) {
+        lastUniInput.current = el.value;
+        currentInput.current = uniToWylie(el.value);
         return;
       }
 

@@ -1,0 +1,54 @@
+name: Test Suite
+
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      # temp
+      - fix/tibetan_input
+  pull_request:
+    branches:
+      - main
+      - master
+      - feature/react-migration
+    types: [opened, synchronize, reopened, labeled]
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests'))
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Remove Label
+        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} --remove-label "run_tests"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: 'webapp/package-lock.json'
+
+      - name: Install Dependencies
+        working-directory: webapp
+        run: npm ci
+
+      - name: Run Tests
+        working-directory: webapp
+        run: npm run test
