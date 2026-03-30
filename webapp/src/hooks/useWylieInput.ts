@@ -377,11 +377,11 @@ export default function useWylieInput({
         e.getModifierState('Shift') ? onPageDown?.() : onArrowDown?.();
         e.preventDefault();
       } else if (e.key === 'PageUp') {
-        const scrollAmount = window.innerHeight * 0.9;
+        const scrollAmount = window.innerHeight * 0.8;
         e.preventDefault();
         window.scrollBy(0, -scrollAmount);
       } else if (e.key === 'PageDown') {
-        const scrollAmount = window.innerHeight * 0.9;
+        const scrollAmount = window.innerHeight * 0.8;
         e.preventDefault();
         window.scrollBy(0, scrollAmount);
       }
