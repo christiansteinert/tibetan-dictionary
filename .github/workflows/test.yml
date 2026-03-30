@@ -7,13 +7,29 @@ on:
   pull_request:
     branches:
       - main
+    types: [opened, synchronize, reopened, labeled]
+  workflow_dispatch:
+
+permissions:
+  pull-requests: write
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests'))
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Remove Label
+        if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr edit ${{ github.event.pull_request.number }} --remove-label "run_tests"
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
