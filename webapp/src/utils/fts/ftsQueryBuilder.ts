@@ -13,7 +13,7 @@
  */
 
 /** Operator tokens recognised in user input. */
-const OPERATOR_RE = /[&|!~]/;
+const OPERATOR_RE = /[&|!]/;
 
 /** Split input into alternating text-segments and operator tokens. */
 function tokenize(input: string): string[] {

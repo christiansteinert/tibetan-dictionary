@@ -38,7 +38,7 @@ describe('buildFtsQuery', () => {
   });
 
   it('handles lone operator gracefully', () => {
-    expect(buildFtsQuery('buddha &')).toBe('buddha');
+    expect(buildFtsQuery('buddha &')).toBe('"buddha"');
   });
 
   it('handles wildcard only', () => {
