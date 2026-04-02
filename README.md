@@ -36,7 +36,7 @@ There are three build services and two runtime services in the compose file:
 | Service | What it does | Output |
 |---|---|---|
 | `build-db` | Builds the SQLite database from CSV source files | `backend/TibetanDictionary.db` |
-| `build-webapp` | Compiles the Vite/React frontend | `webapp/dist/` |
+| `build-webapp` | Compiles the Vite/React frontend and runs automated frontend tests | `webapp/dist/` |
 | `build-android` | Builds the Android APK (optional, slow) | `TibetanDictionary-PUBLIC.apk` |
 | `backend-dev` | Serves the web application backend for development purposes (nginx + PHP-FPM) | — |
 | `frontend-dev` | Serves the web application frontend for development purposes (npm + vite) | — |

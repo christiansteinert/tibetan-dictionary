@@ -28,7 +28,8 @@ services:
       sh -c " 
         rm -rf /app/webapp/dist/* 2>/dev/null;
         npm ci --legacy-peer-deps &&
-        npm run build"
+        npm run build &&
+        npm run test"
     volumes:
       - ./webapp:/app/webapp:ro
       - ./webapp/dist:/app/webapp/dist

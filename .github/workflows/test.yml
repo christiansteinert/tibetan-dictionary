@@ -1,11 +1,6 @@
 name: Test Suite
 
 on:
-  push:
-    tags:
-      - '*'
-    branches:
-      - '**'
   pull_request:
     branches:
       - main
@@ -21,10 +16,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     if: |
+      contains(github.event.pull_request.labels.*.name, 'run_tests') ||
       github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'push' ||
-      (github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests'))
-
+      github.actor != 'dependabot[bot]'
     steps:
       - uses: actions/checkout@v4
         with:
@@ -32,6 +26,7 @@ jobs:
 
       - name: Remove Label
         if: github.event_name == 'pull_request' && contains(github.event.pull_request.labels.*.name, 'run_tests')
+        continue-on-error: true  # fork PRs have a read-only token; label removal will fail silently
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
