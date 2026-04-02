@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { WylieConverter } from './wylieConverter';
+import { WylieConverter } from '../wylieConverter';
 import { ftsSegmentConvert, hasFtsOperators, makeFtsInputProcessor, ftsUniToWylie } from './ftsInputDecorator';
 
 const c = new WylieConverter();

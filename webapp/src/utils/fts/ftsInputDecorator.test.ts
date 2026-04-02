@@ -6,7 +6,7 @@ import {
   makeDefaultInputProcessor,
   makeFtsInputProcessor,
 } from './ftsInputDecorator';
-import { WylieConverter } from './wylieConverter';
+import { WylieConverter } from '../wylieConverter';
 
 const converter = new WylieConverter();
 
@@ -27,12 +27,12 @@ describe('decorateFtsInput', () => {
     expect(decorateFtsInput('buddha  &   sangha')).toBe('buddha & sangha');
   });
 
-  it('removes space before * and adds one after', () => {
-    expect(decorateFtsInput('dharm *')).toBe('dharm* ');
+  it('removes space before ~ and adds one after', () => {
+    expect(decorateFtsInput('dharm ~')).toBe('dharm~');
   });
 
-  it('ensures one space after * when followed by text', () => {
-    expect(decorateFtsInput('dharm*sangha')).toBe('dharm* sangha');
+  it('ensures one space after ~ when followed by text', () => {
+    expect(decorateFtsInput('dharm~sangha')).toBe('dharm~ sangha');
   });
 
   it('collapses multiple spaces', () => {
@@ -40,7 +40,7 @@ describe('decorateFtsInput', () => {
   });
 
   it('handles combined operators and wildcard', () => {
-    expect(decorateFtsInput('buddha dharm*|sangha')).toBe('buddha dharm* | sangha');
+    expect(decorateFtsInput('buddha dharm~|sangha')).toBe('buddha dharm~ | sangha');
   });
 
   it('passes through plain text unchanged (except space collapse)', () => {
@@ -136,7 +136,7 @@ describe('makeFtsInputProcessor', () => {
 
   it('handles wildcard correctly', () => {
     const proc = makeFtsInputProcessor(converter, false);
-    expect(proc('dharm*')).toBe('dharm* ');
+    expect(proc('dharm~')).toBe('dharm~');
   });
 
   it('returns Wylie with operator spacing when unicode is off', () => {
