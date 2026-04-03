@@ -100,21 +100,18 @@ function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
 }
 
 /**
- * Determine the language, main content table, and FTS table from the 'lang'
- * query parameter. Defaults to Tibetan ('bo').
+ * Determine the requested language from the 'lang' query parameter.
+ * Defaults to Tibetan ('bo').
  *
- * The returned table names are chosen exclusively from a hard-coded allowlist
- * so they are safe to interpolate directly into SQL statements.
+ * Allowed values are 'bo' (Tibetan), 'en' (English), 'sa' (Sanskrit).
+ * The returned string is safe to bind as a SQL parameter value.
  *
- * @return array{lang: string, table: string, ftsTable: string}
+ * @return string
  */
-function resolveLanguageAndTables(): array {
-    $allowed = [
-        'bo' => ['lang' => 'bo', 'table' => 'DICT',    'ftsTable' => 'DICT_FTS'],
-        'en' => ['lang' => 'en', 'table' => 'DICT_EN', 'ftsTable' => 'DICT_EN_FTS'],
-    ];
+function resolveLanguage(): string {
+    $allowed = ['bo', 'en', 'sa'];
     $lang = isset($_GET['lang']) ? trim($_GET['lang']) : 'bo';
-    return $allowed[$lang] ?? $allowed['bo'];
+    return in_array($lang, $allowed, true) ? $lang : 'bo';
 }
 
 
@@ -175,23 +172,22 @@ if ($resource === 'term' && $method === 'GET') {
         errorResponse('Missing term in path: /api/term/{term}');
     }
 
-    $langInfo     = resolveLanguageAndTables();
-    $lang         = $langInfo['lang'];
-    $table        = $langInfo['table'];
+    $lang         = resolveLanguage();
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
 
     $statement = $db->prepare(
-        'SELECT ' . $table . '.term AS term, '
-        . $table . '.definition AS definition, '
+        'SELECT DICT.term AS term, '
+        . 'DICT.definition AS definition, '
         . 'DICTNAMES.name AS dictionary '
-        . 'FROM ' . $table . ' '
-        . 'INNER JOIN DICTNAMES ON ' . $table . '.dictionary = DICTNAMES.id '
-        .   'AND DICTNAMES.language = "' . $lang . '" '
-        . 'WHERE ' . $table . '.term = :term '
+        . 'FROM DICT '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
+        . 'WHERE DICT.lang = :lang '
+        .   'AND DICT.term = :term '
         .   'AND (' . $dictQuery . ') '
         . 'ORDER BY DICTNAMES.name;'
     );
+    $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
     $statement->bindValue(':term', $param, SQLITE3_TEXT);
     $results = $statement->execute();
     if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
@@ -231,24 +227,22 @@ if ($resource === 'terms' && $method === 'GET') {
         errorResponse('Missing required query parameter: search');
     }
 
-    $langInfo     = resolveLanguageAndTables();
-    $lang         = $langInfo['lang'];
-    $table        = $langInfo['table'];
+    $lang         = resolveLanguage();
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
     $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
 
-    $baseSql = 'SELECT DISTINCT term FROM ' . $table . ' '
-        . 'INNER JOIN DICTNAMES ON ' . $table . '.dictionary = DICTNAMES.id '
-        .   'AND DICTNAMES.language = "' . $lang . '" '
-        . 'WHERE (%s AND (' . $dictQuery . ')) '
+    $baseSql = 'SELECT DISTINCT term FROM DICT '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
+        . 'WHERE (DICT.lang = :lang AND %s AND (' . $dictQuery . ')) '
         . 'GROUP BY term ORDER BY lower(term), term '
         . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';';
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
-        $statement = $db->prepare(sprintf($baseSql, $table . '.term LIKE :word'));
+        $statement = $db->prepare(sprintf($baseSql, 'DICT.term LIKE :word'));
+        $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
         $statement->bindValue(':word', $likePattern, SQLITE3_TEXT);
 
         // Build a regex to post-filter LIKE results: '?' must not match a space,
@@ -259,16 +253,18 @@ if ($resource === 'terms' && $method === 'GET') {
         $filterRegex = '/^' . $regexBody . '/iu';
     } elseif ($lang === 'bo') {
         $statement = $db->prepare(sprintf($baseSql,
-            '(' . $table . '.term = :word '
-            . 'OR (' . $table . '.term > :wordSearch1 AND term < :wordSearch2))'));
+            '(DICT.term = :word '
+            . 'OR (DICT.term > :wordSearch1 AND term < :wordSearch2))'));
+        $statement->bindValue(':lang',        $lang,              SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,            SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search . ' ',      SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
     } else {
         $statement = $db->prepare(sprintf($baseSql,
-            '(' . $table . '.term = :word COLLATE NOCASE '
-            . 'OR (' . $table . '.term > :wordSearch1 COLLATE NOCASE '
+            '(DICT.term = :word COLLATE NOCASE '
+            . 'OR (DICT.term > :wordSearch1 COLLATE NOCASE '
             .     'AND term < :wordSearch2 COLLATE NOCASE))'));
+        $statement->bindValue(':lang',        $lang,             SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . 'zzzzz', SQLITE3_TEXT);
@@ -299,8 +295,7 @@ if ($resource === 'terms' && $method === 'GET') {
 // =============================================================================
 
 if ($resource === 'check-terms' && $method === 'POST') {
-    $langInfo = resolveLanguageAndTables();
-    $table    = $langInfo['table'];
+    $lang = resolveLanguage();
 
     $sections = jsonBody();
     if (!is_array($sections)) {
@@ -312,8 +307,9 @@ if ($resource === 'check-terms' && $method === 'POST') {
         if (!is_string($wylie) || $wylie === '') continue;
 
         $statement = $db->prepare(
-            'SELECT 1 FROM ' . $table . ' WHERE term = :word LIMIT 1;'
+            'SELECT 1 FROM DICT WHERE lang = :lang AND term = :word LIMIT 1;'
         );
+        $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
         $statement->bindValue(':word', $wylie, SQLITE3_TEXT);
         $queryResult = $statement->execute();
 
@@ -346,31 +342,29 @@ if ($resource === 'fulltext' && $method === 'GET') {
         errorResponse('Missing required query parameter: q');
     }
 
-    $langInfo     = resolveLanguageAndTables();
-    $lang         = $langInfo['lang'];
-    $table        = $langInfo['table'];
-    $ftsTable     = $langInfo['ftsTable'];
+    $lang         = resolveLanguage();
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
     $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
 
     $sql = 'SELECT '
-        . $table . '.term AS term, '
-        . $table . '.definition AS definition, '
+        . 'DICT.term AS term, '
+        . 'DICT.definition AS definition, '
         . 'DICTNAMES.name AS dictionary, '
         . 'DICTNAMES.id AS dictionaryId '
-        . 'FROM ' . $ftsTable . ' '
-        . 'INNER JOIN ' . $table . ' ON ' . $table . '.rowid = ' . $ftsTable . '.rowid '
-        . 'INNER JOIN DICTNAMES ON ' . $table . '.dictionary = DICTNAMES.id '
-        .   'AND DICTNAMES.language = "' . $lang . '" '
-        . 'WHERE ' . $ftsTable . ' MATCH :query '
+        . 'FROM DICT_FTS '
+        . 'INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
+        . 'WHERE DICT_FTS MATCH :query '
+        .   'AND DICT.lang = :lang '
         .   'AND (' . $dictQuery . ') '
         . 'ORDER BY rank '
         . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';';
 
     $statement = $db->prepare($sql);
     $statement->bindValue(':query', $search, SQLITE3_TEXT);
+    $statement->bindValue(':lang',  $lang,   SQLITE3_TEXT);
     $results = $statement->execute();
     if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 

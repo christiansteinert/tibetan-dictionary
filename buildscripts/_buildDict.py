@@ -11,8 +11,10 @@ DB_PRIVATE_BASE = "backend/TibetanDictionary_private"
 
 CSV_INPUT = "_input/dictionaries/public"
 CSV_INPUT_EN = "_input/dictionaries/public_en"
+CSV_INPUT_SA = "_input/dictionaries/public_sa"
 CSV_INPUT_PRIVATE = "_input/dictionaries/private"
 CSV_INPUT_PRIVATE_EN = "_input/dictionaries/private_en"
+CSV_INPUT_PRIVATE_SA = "_input/dictionaries/private_sa"
 
 # 32KB "dictionary" with frequent words to optimize deflate compression
 # (used only for the compressed/mobile database)
@@ -361,16 +363,14 @@ def createDatabasePair(basePath):
     uncompressedDb = sqlite3.connect(uncompressedPath)
     compressedDb = sqlite3.connect(compressedPath)
 
-    # --- Compressed database: same schema as the original (blob definitions) ---
+    # --- Compressed database: single DICT table with lang column (blob definitions) ---
     compressedDb.execute("CREATE TABLE DICTNAMES(id int, language text, name text)")
-    compressedDb.execute("CREATE TABLE DICT(term text, dictionary int, definition blob)")
-    compressedDb.execute("CREATE TABLE DICT_EN(term text COLLATE NOCASE, dictionary int, definition blob)")
+    compressedDb.execute("CREATE TABLE DICT(term text, lang text, dictionary int, definition blob)")
     compressedDb.execute('CREATE TABLE "android_metadata" ("locale" TEXT DEFAULT \'en_US\')')
 
-    # --- Uncompressed database: text definitions, plus FTS5 virtual tables for full text search ---
+    # --- Uncompressed database: single DICT table with lang column, plus FTS5 virtual table ---
     uncompressedDb.execute("CREATE TABLE DICTNAMES(id int, language text, name text)")
-    uncompressedDb.execute("CREATE TABLE DICT(term text, dictionary int, definition text)")
-    uncompressedDb.execute("CREATE TABLE DICT_EN(term text COLLATE NOCASE, dictionary int, definition text)")
+    uncompressedDb.execute("CREATE TABLE DICT(term text, lang text, dictionary int, definition text)")
 
     return uncompressedDb, compressedDb
 
@@ -411,13 +411,12 @@ def getDictNameFromFile(dictFile):
 # ---------------------------------------------------------------------------
 # CSV processing — inserts into BOTH databases simultaneously
 # ---------------------------------------------------------------------------
-def processFile(dictFile, uncompressedDb, compressedDb, dictNr, isTibetan):
-    language = "bo" if isTibetan else "en"
-    tableName = "DICT" if isTibetan else "DICT_EN"
+def processFile(dictFile, uncompressedDb, compressedDb, dictNr, lang):
+    isTibetan = (lang == "bo")
 
     dictName = getDictNameFromFile(dictFile)
-    uncompressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, language, dictName))
-    compressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, language, dictName))
+    uncompressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, lang, dictName))
+    compressedDb.execute("INSERT INTO DICTNAMES VALUES(?,?,?)", (dictNr, lang, dictName))
 
     existingTerms = {}
     with open(dictFile, 'r') as inp:
@@ -432,27 +431,29 @@ def processFile(dictFile, uncompressedDb, compressedDb, dictNr, isTibetan):
                 if (term != "") and (definition != "") and (lineContents not in existingTerms):
                     # Uncompressed DB: plain text definition
                     uncompressedDb.execute(
-                        "INSERT INTO {0} VALUES(?,?,?)".format(tableName),
-                        (term, dictNr, definition)
+                        "INSERT INTO DICT VALUES(?,?,?,?)",
+                        (term, lang, dictNr, definition)
                     )
 
                     # Compressed DB: zlib-compressed blob definition
                     definitionBlob = deflate(definition)
                     compressedDb.execute(
-                        "INSERT INTO {0} VALUES(?,?,?)".format(tableName),
-                        (term, dictNr, definitionBlob)
+                        "INSERT INTO DICT VALUES(?,?,?,?)",
+                        (term, lang, dictNr, definitionBlob)
                     )
 
                     existingTerms[lineContents] = 1
 
 
-def processFolder(uncompressedDb, compressedDb, srcFolder, isTibetan):
+def processFolder(uncompressedDb, compressedDb, srcFolder, lang):
+    if not os.path.exists(srcFolder):
+        return
     dictNr = 1
     for dictFile in sorted(os.listdir(srcFolder)):
         dictFileWithPath = os.path.join(srcFolder, dictFile)
         if not os.path.isdir(dictFileWithPath):
             print(dictFileWithPath)
-            processFile(dictFileWithPath, uncompressedDb, compressedDb, dictNr, isTibetan)
+            processFile(dictFileWithPath, uncompressedDb, compressedDb, dictNr, lang)
             uncompressedDb.commit()
             compressedDb.commit()
             dictNr += 1
@@ -465,37 +466,27 @@ def processFolder(uncompressedDb, compressedDb, srcFolder, isTibetan):
 # FTS5 virtual table creation (uncompressed database only)
 # ---------------------------------------------------------------------------
 def createFts5Tables(db):
-    """Create FTS5 external-content virtual tables for fulltext search.
+    """Create a single FTS5 external-content virtual table for fulltext search.
 
-    The FTS5 tables reference the regular DICT / DICT_EN tables via
-    content= so that the definition text is not duplicated on disk.
-    We use the implicit rowid of the content tables as content_rowid.
+    The FTS5 table references the DICT table via content= so that the
+    definition text is not duplicated on disk.  The lang column is included
+    so that queries can restrict the search to a specific language.
+    Porter stemming is enabled; it is a no-op for non-English tokens.
     """
     db.execute("""
         CREATE VIRTUAL TABLE DICT_FTS USING fts5(
             term,
+            lang,
             definition,
+            tokenize='porter unicode61 remove_diacritics 1',
             content='DICT',
             content_rowid='rowid'
         )
     """)
 
-    db.execute("""
-        CREATE VIRTUAL TABLE DICT_EN_FTS USING fts5(
-            term,
-            definition,
-            tokenize='porter unicode61 remove_diacritics 1',
-            content='DICT_EN',
-            content_rowid='rowid'
-        )
-    """) # use Porter stemming for English
-
-    # Populate the FTS indexes from the content tables
+    # Populate the FTS index from the content table
     db.execute("INSERT INTO DICT_FTS(DICT_FTS) VALUES('rebuild')")
-    db.execute("INSERT INTO DICT_EN_FTS(DICT_EN_FTS) VALUES('rebuild')")
-
     db.execute("INSERT INTO DICT_FTS(DICT_FTS) VALUES('optimize')")
-    db.execute("INSERT INTO DICT_EN_FTS(DICT_EN_FTS) VALUES('optimize')")
 
     db.commit()
 
@@ -508,8 +499,7 @@ def closeDatabasePair(uncompressedDb, compressedDb):
 
     # B-tree indexes on both databases
     for db in [uncompressedDb, compressedDb]:
-        db.execute("CREATE INDEX i1 ON DICT(term, dictionary);")
-        db.execute("CREATE INDEX i2 ON DICT_EN(term COLLATE NOCASE, dictionary);")
+        db.execute("CREATE INDEX i1 ON DICT(lang, term, dictionary);")
         db.execute("CREATE INDEX i3 ON DICTNAMES(language, name, id);")
         db.commit()
 
@@ -542,11 +532,14 @@ def main():
 
     uncompressedDb, compressedDb = createDatabasePair(DB_BASE)
 
-    print("- Processing Tibetan-English Dictionaries")
-    processFolder(uncompressedDb, compressedDb, CSV_INPUT, True)
+    print("- Processing Tibetan (bo) Dictionaries")
+    processFolder(uncompressedDb, compressedDb, CSV_INPUT, "bo")
 
-    print("- Processing English-Tibetan Dictionaries")
-    processFolder(uncompressedDb, compressedDb, CSV_INPUT_EN, False)
+    print("- Processing English (en) Dictionaries")
+    processFolder(uncompressedDb, compressedDb, CSV_INPUT_EN, "en")
+
+    print("- Processing Sanskrit (sa) Dictionaries")
+    processFolder(uncompressedDb, compressedDb, CSV_INPUT_SA, "sa")
 
     closeDatabasePair(uncompressedDb, compressedDb)
 
@@ -556,11 +549,14 @@ def main():
 
         uncompressedDb, compressedDb = createDatabasePair(DB_PRIVATE_BASE)
 
-        print("- Processing Tibetan-English Dictionaries")
-        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE, True)
+        print("- Processing Tibetan (bo) Dictionaries")
+        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE, "bo")
 
-        print("- Processing English-Tibetan Dictionaries")
-        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE_EN, False)
+        print("- Processing English (en) Dictionaries")
+        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE_EN, "en")
+
+        print("- Processing Sanskrit (sa) Dictionaries")
+        processFolder(uncompressedDb, compressedDb, CSV_INPUT_PRIVATE_SA, "sa")
 
         closeDatabasePair(uncompressedDb, compressedDb)
 

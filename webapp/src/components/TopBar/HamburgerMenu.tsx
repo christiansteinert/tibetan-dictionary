@@ -53,7 +53,7 @@ export default function HamburgerMenu({
         >
           {/* ── Language group ── */}
           <DropdownMenu.Label className={styles.label}>
-            Search Direction
+            Language
           </DropdownMenu.Label>
 
           <DropdownMenu.RadioGroup
@@ -67,7 +67,7 @@ export default function HamburgerMenu({
               <span className={styles.inactiveIcon}>
                 <CircleIcon />
               </span>
-              Tibetan → English
+              Tibetan
             </DropdownMenu.RadioItem>
 
             <DropdownMenu.RadioItem value="en" className={styles.radioItem}>
@@ -77,7 +77,17 @@ export default function HamburgerMenu({
               <span className={styles.inactiveIcon}>
                 <CircleIcon />
               </span>
-              English → Tibetan
+              English
+            </DropdownMenu.RadioItem>
+
+            <DropdownMenu.RadioItem value="skt" className={styles.radioItem}>
+              <DropdownMenu.ItemIndicator className={styles.indicator}>
+                <CheckCircledIcon />
+              </DropdownMenu.ItemIndicator>
+              <span className={styles.inactiveIcon}>
+                <CircleIcon />
+              </span>
+              Sanskrit
             </DropdownMenu.RadioItem>
           </DropdownMenu.RadioGroup>
 

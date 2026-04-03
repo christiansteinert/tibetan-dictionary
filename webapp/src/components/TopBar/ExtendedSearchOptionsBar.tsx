@@ -65,26 +65,36 @@ export default function ExtendedSearchOptionsBar({
 
       {/* ── Language ── */}
       <span className={styles.optionsGroup}>
-        <span className={styles.optionsLabel}>Direction:</span>
+        <span className={styles.optionsLabel}>Language:</span>
         <label className={styles.optionsRadio}
-            title="Search the Tibetan–English dictionary">
+            title="Search for Tibetan terms">
           <input
             type="radio"
             name="extLang"
             checked={lang === 'tib'}
             onChange={() => onLangChange && onLangChange('tib')}
           />
-          Tib → En
+          Tib
         </label>
         <label className={styles.optionsRadio}
-            title="Search the English–Tibetan dictionary">
+            title="Search for English terms">
           <input
             type="radio"
             name="extLang"
             checked={lang === 'en'}
             onChange={() => onLangChange && onLangChange('en')}
           />
-          En → Tib
+          En
+        </label>
+        <label className={styles.optionsRadio}
+            title="Search for Sanskrit terms">
+          <input
+            type="radio"
+            name="extLang"
+            checked={lang === 'skt'}
+            onChange={() => onLangChange && onLangChange('skt')}
+          />
+          Skt
         </label>
       </span>
 

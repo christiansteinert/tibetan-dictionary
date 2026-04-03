@@ -1,5 +1,7 @@
 import type { InlineSection } from '@/store/searchSlice';
 import { FtsSearchResult } from './DictionaryApi';
+import { langToBackend } from '@/types';
+import type { Language } from '@/types';
 
 /**
  * PHP REST backend for the Tibetan Dictionary app.
@@ -56,17 +58,17 @@ async function postJson<T>(path: string, body: unknown): Promise<T> {
 }
 
 export class PhpDictionaryApi {
-  async readTerm(term: string, lang: string, dictionaries: string[]) {
+  async readTerm(term: string, lang: Language, dictionaries: string[]) {
     const data = await getJson<Record<string, string>>(
       `term/${encodeURIComponent(term)}`,
-      { lang, dictionaries },
+      { lang: langToBackend(lang as Language), dictionaries },
     );
     return { term, definitions: data };
   }
 
   async readTermList(
     search: string,
-    lang: string,
+    lang: Language,
     offset: number,
     maxResults: number,
     dictionaries: string[],
@@ -74,7 +76,7 @@ export class PhpDictionaryApi {
   ) {
     return getJson<{ term: string }[]>('terms', {
       search,
-      lang,
+      lang: langToBackend(lang as Language),
       offset,
       maxResults,
       dictionaries,
@@ -93,7 +95,7 @@ export class PhpDictionaryApi {
 
   async fulltextSearch(
     query: string,
-    lang: string,
+    lang: Language,
     offset: number,
     maxResults: number,
     dictionaries: string[],
@@ -101,7 +103,7 @@ export class PhpDictionaryApi {
   ) {
     return getJson<FtsSearchResult[]>('fulltext', {
       q: query,
-      lang,
+      lang: langToBackend(lang as Language),
       offset,
       maxResults,
       dictionaries,

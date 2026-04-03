@@ -96,8 +96,10 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
   const placeholder =
     inputLang === 'en'
       ? 'Enter an English term...'
+      : inputLang === 'skt'
+      ? 'Enter a Sanskrit term...'
       : 'Enter a Tibetan term...';
-  const lang = inputLang === 'en' ? 'en' : 'bo';
+  const lang = inputLang === 'en' ? 'en' : inputLang === 'skt' ? 'sa' : 'bo';
 
   return (
     <input
