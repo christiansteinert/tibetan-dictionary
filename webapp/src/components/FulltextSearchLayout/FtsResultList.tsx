@@ -7,9 +7,10 @@ import type { RootState } from '@/store/store';
 import FtsResultItem from './FtsResultItem';
 import Pagination from '@/components/SearchLayout/Pagination';
 import styles from './FulltextSearch.module.css';
+import type { Language } from '@/types';
 
 interface Props {
-  onTermClick: (term: string, lang: string) => void;
+  onTermClick: (term: string, lang: Language) => void;
   onPrev: () => void;
   onNext: () => void;
 }
@@ -50,13 +51,13 @@ export default function FtsResultList({
   }
 
   return (
-    <>
+    <div className="sm:mx-3 sm:my-2 md:my-4">
       <table className={styles.resultTable}>
         <thead>
           <tr>
             <th>Term</th>
             <th>Dictionary</th>
-            <th>Context</th>
+            <th>Definition</th>
           </tr>
         </thead>
         <tbody>
@@ -65,7 +66,6 @@ export default function FtsResultList({
               key={`${result.term}-${result.dictionary}-${index}`}
               result={result}
               isExpanded={selectedTerm === result.term}
-              lang={lang}
               useUnicodeTibetan={useUnicodeTibetan}
               onTermClick={onTermClick}
             />
@@ -80,6 +80,6 @@ export default function FtsResultList({
         onPrev={onPrev}
         onNext={onNext}
       />
-    </>
+    </div>
   );
 }

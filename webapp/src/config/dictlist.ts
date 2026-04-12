@@ -20,7 +20,6 @@ interface BaseDictEntry {
   webOnly?: boolean;
   groupId?: string; // Added by build process for flat entries
   containsOnlyTibetan?: boolean;
-  containsOnlySkt?: boolean;
   preformattedLinebreaks?: boolean;
   scanId?: string;
   scanInfo?: {
@@ -600,30 +599,12 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
   },
 
   /** Sanskrit */
-  "_Hopkins-Sanskrit": {
-    type: 'group',
+  "Hopkins-Skt2015": {
     label: 'Hopkins Sanskrit 2015',
-    about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
-    public: true,
+    about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
     language: ["tib", "<->", "skt"],
-    items: {
-      "Hopkins-Skt2015": {
-        containsOnlySkt: true,
-        label: 'Hopkins Sans&shy;krit 2015',
-        about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
-        abbreviations: 'Hopkins',
-        public: true,
-        language: ["tib", "<->", "skt"]
-      },
-      "Hopkins-Skt1992": {
-        containsOnlySkt: true,
-        label: 'Hopkins Sans&shy;krit 1992',
-        about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
-        abbreviations: 'Hopkins',
-        public: true,
-        language: ["tib", "<->", "skt"]
-      }
-    }
+    public: true,
+    abbreviations: 'Hopkins',
   },
   "84000Skt": {
     label: '84000 Glossary, Sans&shy;krit',
@@ -650,7 +631,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib", "<->", "skt"],
     items: {
       "Mahavyutpatti-Skt": {
-        containsOnlySkt: true,
         label: 'Mahā&shy;vyutpatti',
         about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
         public: true,
@@ -695,8 +675,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
       }
     }
   },
-  "Yoghacharabhumi-glossary": {
-    containsOnlySkt: true,
+  "Yogacharabhumi-glossary": {
     label: 'Yoga&shy;chara&shy;bhumi Glossary',
     about: 'Tibetan-Sanskrit Table of Buddhist Terminology Based on the Yogacarabhumi|MAHONEY, Richard, ed., Tibetan-Sanskrit Buddhist Terminology based on the `Mahāvyutpatti\' and `Yogācārabhūmi\', (Oxford, North Canterbury: Indica et Buddhica, 2004)|See: http://indica-et-buddhica.org/repositorium/dictionaries/tibetan-sanskrit-terms',
     public: true,
@@ -718,7 +697,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib", "<->", "skt"]
       },
       "LokeshChandraTib": {
-        containsOnlyTibetan: true,
         label: 'Lokesh Chandra (Sanskrit-Tibetan)',
         about: 'Tibetan-Sanskrit Dictionary|Lokesh Chandra|International Academy of Indian Culture and Aditya Prakashan (1992), ISBN 8185689113|A scanned version is available at archive.org: https://archive.org/details/dictionarytibetansanskritdictionarylokeshchandra_78_F',
         public: true,
@@ -732,7 +710,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     abbreviations: 'Negi',
     public: true,
     listCredits: true,
-    language: ["tib", "<->", "skt"]
+    language: ["tib", "->", "skt"]
   }
 } as const;
 

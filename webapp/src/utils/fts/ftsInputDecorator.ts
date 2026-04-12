@@ -1,67 +1,10 @@
 /**
- * ftsInputDecorator – input-field decoration and processing for fulltext search.
- *
- * Core concept: an **InputProcessor** is a function that the input hook calls
- * instead of doing its own Wylie→Unicode conversion.  This allows the FTS
- * processor to split on operators, convert only the text segments, and
- * reassemble with correct spacing — preventing operators like `!` from being
- * fed into the Wylie converter (which would turn `!` into `༈`).
- *
- * Two processors are provided:
- *   - `defaultInputProcessor` — plain Wylie→Unicode (term search mode)
- *   - `makeFtsInputProcessor` — segment-aware conversion + operator spacing
- *
- * Additional helpers:
- *   - `decorateFtsInput` — operator spacing only (pure text transform)
- *   - `ftsSegmentConvert` / `ftsUniToWylie` / `ftsWylieToUni` — segment-aware
- *     conversion preserving operators
- *   - `stripFtsOperators` — remove operators for fulltext→term mode switch
+ * ftsInputDecorator – input-field decoration and processing for fulltext search.#
  */
 import { WylieConverter } from '../wylieConverter';
 
 /** Characters that are FTS operators in user input. */
 const FTS_OPS = /[&|!~]/;
-
-// ─── InputProcessor type ─────────────────────────────────────────────────────
-
-/**
- * An InputProcessor converts raw Wylie (or mixed Wylie/Unicode) text into
- * display text.  The input hook calls this instead of doing its own conversion.
- *
- * @param wylie  The normalised Wylie text (spaces as separators)
- * @returns      Display text (Unicode Tibetan or Wylie, depending on settings)
- */
-export type InputProcessor = (wylie: string) => string;
-
-// ─── Processor factories ─────────────────────────────────────────────────────
-
-/**
- * Default processor for term-search mode.
- * Simply converts the full Wylie string to Tibetan Unicode.
- */
-export function makeDefaultInputProcessor(
-  converter: WylieConverter,
-  useUnicode: boolean,
-): InputProcessor {
-  return (wylie: string) =>
-    useUnicode ? converter.wylieToUni(wylie) : wylie;
-}
-
-/**
- * FTS processor: splits on operators, converts each text segment individually,
- * then reassembles with operator-spacing rules applied.
- */
-export function makeFtsInputProcessor(
-  converter: WylieConverter,
-  useUnicode: boolean,
-): InputProcessor {
-  return (wylie: string) => {
-    const converted = useUnicode
-      ? ftsSegmentConvert(wylie, seg => converter.wylieToUni(seg, true))
-      : wylie;
-    return decorateFtsInput(converted);
-  };
-}
 
 // ─── Public helpers ──────────────────────────────────────────────────────────
 
@@ -71,9 +14,6 @@ export function makeFtsInputProcessor(
  * - `&`, `|`, `!` → ensure exactly one space on each side
  * - `~`           → remove any preceding whitespace (must be glued to word),
  *                   ensure one space after (unless at end of string)
- *
- * Does NOT add quotes — those are only added by ftsQueryBuilder before
- * calling the backend.
  */
 export function decorateFtsInput(text: string): string {
   // Normalise boolean operators: ensure spaces around & | !
@@ -81,9 +21,11 @@ export function decorateFtsInput(text: string): string {
   // Normalise suffix wildcard ~: strip spaces before, add one space after (unless at end)
   result = result.replace(/\s*~/g, '~');       // remove any space before ~
   result = result.replace(/~(?!\s|$)/g, '~ '); // add space after ~ when not already there
-  // Collapse multiple spaces into one
+
+  // Remove initial space and collapse multiple spaces into one
+  result = result.trimStart();
   result = result.replace(/ {2,}/g, ' ');
-  return result.trim();
+  return result;
 }
 
 /**

@@ -181,7 +181,7 @@ if ($resource === 'term' && $method === 'GET') {
         . 'DICT.definition AS definition, '
         . 'DICTNAMES.name AS dictionary '
         . 'FROM DICT '
-        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
         . 'WHERE DICT.lang = :lang '
         .   'AND DICT.term = :term '
         .   'AND (' . $dictQuery . ') '
@@ -232,18 +232,32 @@ if ($resource === 'terms' && $method === 'GET') {
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
     $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
-
-    $baseSql = 'SELECT DISTINCT term FROM DICT '
-        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
-        . 'WHERE (DICT.lang = :lang AND %s AND (' . $dictQuery . ')) '
-        . 'GROUP BY term ORDER BY lower(term), term '
-        . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';';
+    $termQuery = "DICT.term";
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
-        $statement = $db->prepare(sprintf($baseSql, 'DICT.term LIKE :word'));
+        $likePattern2 = $likePattern; 
+
+        if (!(str_ends_with($likePattern, "%") || str_ends_with($likePattern, "_"))) {
+            if ($lang === 'bo') {
+                $likePattern2 = $likePattern . ' %';
+            } else {
+                $likePattern2 = $likePattern . '%';
+            }
+        }
+
+        // No SQL LIMIT/OFFSET here — pagination is applied in PHP after
+        // regex post-filtering so that discarded rows don't reduce the
+        // result count below the requested page size.
+        $statement = $db->prepare(
+            'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'WHERE (DICT.lang = :lang AND (DICT.term LIKE :word OR DICT.term LIKE :word2) AND (' . $dictQuery . ')) '
+            . 'GROUP BY term ORDER BY lower(term), term;'
+        );
         $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
         $statement->bindValue(':word', $likePattern, SQLITE3_TEXT);
+        $statement->bindValue(':word2', $likePattern2, SQLITE3_TEXT);
 
         // Build a regex to post-filter LIKE results: '?' must not match a space,
         // '*' may match anything including spaces.
@@ -251,34 +265,68 @@ if ($resource === 'terms' && $method === 'GET') {
         $regexBody = preg_quote(str_replace('?', $placeholder, $search), '/');
         $regexBody = str_replace([preg_quote($placeholder, '/'), '\\*'], ['[^ ]', '.*'], $regexBody);
         $filterRegex = '/^' . $regexBody . '/iu';
+
+        $results = $statement->execute();
+        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
+
+        // Apply regex post-filter with manual pagination
+        $rows = [];
+        $skipped = 0;
+        while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+            if (!preg_match($filterRegex, $row['term'])) continue;
+            if ($skipped < $offset) { $skipped++; continue; }
+            $rows[] = ['term' => $row['term']];
+            if (count($rows) >= $maxResults) break;
+        }
+        jsonResponse($rows);
     } elseif ($lang === 'bo') {
-        $statement = $db->prepare(sprintf($baseSql,
-            '(DICT.term = :word '
-            . 'OR (DICT.term > :wordSearch1 AND term < :wordSearch2))'));
+        $statement = $db->prepare(
+            'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'WHERE (DICT.lang = :lang AND (DICT.term = :word '
+            .   'OR (DICT.term > :wordSearch1 AND term < :wordSearch2)) '
+            .   'AND (' . $dictQuery . ')) '
+            . 'GROUP BY term ORDER BY lower(term), term '
+            . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
+        );
         $statement->bindValue(':lang',        $lang,              SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,            SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search . ' ',      SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
+
+        $results = $statement->execute();
+        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
+
+        $rows = [];
+        while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+            $rows[] = ['term' => $row['term']];
+        }
+        jsonResponse($rows);
     } else {
-        $statement = $db->prepare(sprintf($baseSql,
-            '(DICT.term = :word COLLATE NOCASE '
-            . 'OR (DICT.term > :wordSearch1 COLLATE NOCASE '
-            .     'AND term < :wordSearch2 COLLATE NOCASE))'));
+        $statement = $db->prepare(
+            'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'WHERE (DICT.lang = :lang AND (DICT.term = :word COLLATE NOCASE '
+            .   'OR (DICT.term > :wordSearch1 COLLATE NOCASE '
+            .       'AND term < :wordSearch2 COLLATE NOCASE)) '
+            .   'AND (' . $dictQuery . ')) '
+            . 'GROUP BY term ORDER BY lower(term), term '
+            . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
+        );
         $statement->bindValue(':lang',        $lang,             SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch2', $search . 'zzzzz', SQLITE3_TEXT);
-    }
 
-    $results = $statement->execute();
-    if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
+        $results = $statement->execute();
+        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
-    $rows = [];
-    while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        if (isset($filterRegex) && !preg_match($filterRegex, $row['term'])) continue;
-        $rows[] = ['term' => $row['term']];
-    }
-    jsonResponse($rows);
+        $rows = [];
+        while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+            $rows[] = ['term' => $row['term']];
+        }
+        jsonResponse($rows);
+   }
 }
 
 
@@ -347,24 +395,36 @@ if ($resource === 'fulltext' && $method === 'GET') {
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
     $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
+    $innerLimit = $maxResults + $offset;
+    // The FTS query must:
+    //  - restrict *term* matches to the requested language
+    //  - search *definitions* across ALL languages
+    $sql = "SELECT * FROM (
+        -- Branch 1: Find matching *terms* that match the selected language)
+        -- We join DICT here just to filter the rowids by language
+        SELECT DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICT.lang, DICT_FTS.rank
+        FROM DICT_FTS
+        INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid
+        INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language AND (" . $dictQuery . ") 
+        WHERE DICT_FTS.term MATCH :query 
+          AND DICT.lang = :lang
 
-    $sql = 'SELECT '
-        . 'DICT.term AS term, '
-        . 'DICT.definition AS definition, '
-        . 'DICTNAMES.name AS dictionary, '
-        . 'DICTNAMES.id AS dictionaryId '
-        . 'FROM DICT_FTS '
-        . 'INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid '
-        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
-        . 'WHERE DICT_FTS MATCH :query '
-        .   'AND DICT.lang = :lang '
-        .   'AND (' . $dictQuery . ') '
-        . 'ORDER BY rank '
-        . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';';
+        UNION ALL
+
+        -- Branch 2: Find matching *Definitions*
+        SELECT DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICT.lang, DICT_FTS.rank
+        FROM DICT_FTS
+        INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid
+        INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language AND (" . $dictQuery . ")
+        WHERE DICT_FTS.definition MATCH :query
+    )
+    ORDER BY rank ASC
+    LIMIT " . $maxResults . " OFFSET " . $offset . ";";
 
     $statement = $db->prepare($sql);
     $statement->bindValue(':query', $search, SQLITE3_TEXT);
     $statement->bindValue(':lang',  $lang,   SQLITE3_TEXT);
+
     $results = $statement->execute();
     if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 

@@ -4,26 +4,26 @@
  * Contains the search input, language switch button, clear button,
  * and settings gear icon.
  */
-import { useRef, useCallback, useEffect, useMemo } from 'react';
+import { useRef, useState, useCallback, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import clsx from 'clsx';
-import WylieInputField, { WylieInputHandle } from './WylieInputField';
+import MultiLangInputField, { WylieInputHandle } from './MultiLangInputField';
 import ClearButton from './ClearButton';
 import HamburgerMenu from './HamburgerMenu';
+import SanskritInputBar from './SanskritInputBar';
 import ExtendedSearchOptionsBar from '@/components/TopBar/ExtendedSearchOptionsBar';
 import { type SearchMode } from '@/store/searchSlice';
 import {
-  makeDefaultInputProcessor,
-  makeFtsInputProcessor,
   stripFtsOperators,
   stripTermOperators,
-  ftsUniToWylie,
 } from '@/utils/fts/ftsInputDecorator';
 import { WylieConverter } from '@/utils/wylieConverter';
+import { KeyboardIcon } from '@radix-ui/react-icons';
 import styles from './TopBar.module.css';
 import type { RootState } from '@/store/store';
 import { Language } from '@/types';
+import useInputProcessor from '@/hooks/useInputProcessor';
 
 interface Props {
   onInputChange?: (input: string) => void;
@@ -49,14 +49,31 @@ export default function TopBar(props: Props) {
   const isFtsSearching = useSelector((s: RootState) => s.search.ftsResultList.isSearching);
   const isLightMode = layout !== 'layout_black';
 
+  // Whether the Sanskrit diacritics bar is shown (only relevant when inputLang === 'skt')
+  const [sanskritBarVisible, setSanskritBarVisible] = useState(false);
+  const isSanskrit = inputLang === 'skt';
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const inputRef = useRef<WylieInputHandle>(null);
+  const topbarRef = useRef<HTMLDivElement>(null);
+  const [topbarHeight, setTopbarHeight] = useState(0);
   // Skip the first inputLang value — that's the URL-driven initialisation, not a user switch.
   const isLangInitialized = useRef(false);
 
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)
   const useUnicodeTibetan = unicode === true;
+
+  // Keep the spacer height in sync with the actual TopBar height.
+  useEffect(() => {
+    const el = topbarRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      setTopbarHeight(entry.borderBoxSize?.[0]?.blockSize ?? entry.target.getBoundingClientRect().height);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   // Pre-fill the input field from the URL on hard reload / shared-link load,
   // before Redux has been populated by SearchLayout.
@@ -66,21 +83,10 @@ export default function TopBar(props: Props) {
   // Stable WylieConverter for the creation of processors.
   const converter = useRef(new WylieConverter());
 
-  // Build the correct input processor pair based on the current search mode.
-  // useMemo ensures stable references unless the mode or unicode setting changes.
+  // Build the correct input processor pair based on the current search mode and language.
   const { inputProcessor, reverseProcessor } = useMemo(() => {
-    if (searchMode === 'fulltext') {
-      return {
-        inputProcessor: makeFtsInputProcessor(converter.current, useUnicodeTibetan),
-        reverseProcessor: (text: string) =>
-          useUnicodeTibetan ? ftsUniToWylie(text, converter.current) : text,
-      };
-    }
-    return {
-      inputProcessor: makeDefaultInputProcessor(converter.current, useUnicodeTibetan),
-      reverseProcessor: undefined,
-    };
-  }, [searchMode, useUnicodeTibetan]);
+    return useInputProcessor(inputLang, useUnicodeTibetan, searchMode === 'fulltext')
+  }, [inputLang, useUnicodeTibetan, searchMode]);
 
   // Track previous mode to detect mode switches.
   const prevModeRef = useRef(searchMode);
@@ -126,20 +132,28 @@ export default function TopBar(props: Props) {
     navigate('/');
   }, [navigate]);
 
+  /**
+   * Insert a Sanskrit diacritical character at the cursor position in the input field.
+   */
+  const handleInsertSanskritChar = useCallback((char: string) => {
+    inputRef.current?.insertAtCursor(char);
+  }, [inputRef]);
+
   return (
     <>
       <div
+        ref={topbarRef}
         className={clsx(
           styles.topbar,
           isLightMode ? styles.light : styles.dark,
-          'py-0 sm:py-2',
+          'sm:pt-2',
         )}
-        style={extendedSettingsVisible ? { flexDirection: 'column' } : undefined}
+        style={(extendedSettingsVisible || (isSanskrit && sanskritBarVisible)) ? { flexDirection: 'column' } : undefined}
       >
-        {/* ── Main row: input + clear + hamburger ── */}
+        {/* ── Main row: input + clear + [sanskrit toggle] + hamburger ── */}
         <div style={{ display: 'flex', alignItems: 'center', width: '100%' }}>
           <div className={styles.textInputWrap}>
-            <WylieInputField
+            <MultiLangInputField
               ref={inputRef}
               inputLang={inputLang}
               useUnicodeTibetan={useUnicodeTibetan}
@@ -157,6 +171,23 @@ export default function TopBar(props: Props) {
             <ClearButton onClick={handleClear} />
           </div>
 
+          {/* Sanskrit keyboard toggle – only shown when input language is Sanskrit */}
+          {isSanskrit && (
+            <button
+              type="button"
+              className={clsx(
+                styles.sanskritToggleBtn,
+                !isLightMode && styles.sanskritToggleBtnDark,
+                sanskritBarVisible && styles.sanskritToggleBtnActive,
+              )}
+              title={sanskritBarVisible ? 'Hide diacritics keyboard' : 'Show diacritics keyboard'}
+              aria-label={sanskritBarVisible ? 'Hide diacritics keyboard' : 'Show diacritics keyboard'}
+              onClick={() => setSanskritBarVisible((v) => !v)}
+            >
+              <KeyboardIcon width={18} height={18} />
+            </button>
+          )}
+
           <span className="mr-3" title="Open menu">
             <HamburgerMenu
               inputLang={inputLang}
@@ -173,6 +204,15 @@ export default function TopBar(props: Props) {
             />
           </span>
         </div>
+
+        {/* ── Sanskrit diacritics bar (toggled via keyboard icon) ── */}
+        {isSanskrit && sanskritBarVisible && (
+          <SanskritInputBar
+            isLightMode={isLightMode}
+            onInsertChar={handleInsertSanskritChar}
+          />
+        )}
+
         {/* ── Options bar (only in extended-search mode) ── */}
         {extendedSettingsVisible && (
           <ExtendedSearchOptionsBar
@@ -186,11 +226,8 @@ export default function TopBar(props: Props) {
         )}
       </div>
 
-      <div
-        className={
-          extendedSettingsVisible ? styles.topbarUnderlayExtended : styles.topbarUnderlay
-        }
-      ></div>
+      {/* Spacer: reserves exactly the same height as the fixed TopBar to push the rest of the content down */}
+      <div style={{ height: topbarHeight }} />
     </>
   );
 }

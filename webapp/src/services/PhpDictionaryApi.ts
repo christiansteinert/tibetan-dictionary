@@ -1,6 +1,6 @@
 import type { InlineSection } from '@/store/searchSlice';
 import { FtsSearchResult } from './DictionaryApi';
-import { langToBackend } from '@/types';
+import { langToBackend, langToFrontend } from '@/types';
 import type { Language } from '@/types';
 
 /**
@@ -18,6 +18,20 @@ import type { Language } from '@/types';
  * - `'api.php'` → script path style: /api.php/term/bde+ba (works on any PHP server)
  */
 export let API_BASE = 'backend/api';
+
+export interface BackendFtsSearchResult {
+  term: string;
+  highlightedTerm: string;
+  dictionary: string;
+  dictionaryId: number;
+  snippet: string;
+  definition: string;
+  /** The language of the headword. */
+  lang: 'bo' | 'en' | 'sa';
+  /** true when the snippet is only a portion of the full definition. */
+  isSnippetAbbreviated: boolean;
+}
+
 
 /** Build a query string from a params object. Dictionary arrays are joined as comma-separated encoded strings. */
 function buildQuery(params: Record<string, string | number | string[]>): string {
@@ -101,13 +115,25 @@ export class PhpDictionaryApi {
     dictionaries: string[],
     signal?: AbortSignal
   ) {
-    return getJson<FtsSearchResult[]>('fulltext', {
+    const backendResults = getJson<BackendFtsSearchResult[]>('fulltext', {
       q: query,
       lang: langToBackend(lang as Language),
       offset,
       maxResults,
       dictionaries,
     }, signal);
+
+    // Map backend results to frontend FtsSearchResult format
+    return (await backendResults).map(result => ({
+      term: result.term,
+      highlightedTerm: result.highlightedTerm,
+      dictionary: result.dictionary,
+      dictionaryId: result.dictionaryId,
+      snippet: result.snippet,
+      definition: result.definition,
+      lang: langToFrontend(result.lang),
+      isSnippetAbbreviated: result.isSnippetAbbreviated,
+    }));
   }
 
   /** Initialize the backend (no-op for PHP). */

@@ -67,6 +67,10 @@ export interface FTSSearchResult {
   snippet: string;
   /** Complete dictionary entry */
   definition: string;
+  /** Language of the headword */
+  lang: Language;
+  /** true when the snippet is only a portion of the full definition */
+  isSnippetAbbreviated: boolean;
 }
 
 /** result list state for fulltext search results */

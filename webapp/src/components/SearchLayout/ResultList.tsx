@@ -53,7 +53,7 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
   return (
     <div className="leftSideBar">
       <div className="sideBarInnerWrap">
-        <div id="wordListContainer">
+        <div id="wordListContainer" className="sm:py-2 md:py-3">
           <table
             id="wordList"
             className={[
@@ -66,7 +66,7 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
                 const term = row.term;
                 const isSelected =
                   term === effectiveSelected ||
-                  (resultsLang === 'en' &&
+                  (resultsLang !== 'tib' &&
                     term.toLowerCase() === effectiveSelected?.toLowerCase());
                 return (
                   <ResultItem

@@ -1,14 +1,14 @@
 /**
- * WylieInputField – the main search input field.
+ * The main search input field.
  *
- * Handles Wylie transliteration via the useWylieInput hook and
- * triggers search on syllable completion / Enter.
+ * Handles input methods and triggers search on syllable completion / Enter.
  */
-import { useEffect, forwardRef, useImperativeHandle, useRef } from 'react';
-import useWylieInput from '@/hooks/useWylieInput';
+import { useCallback, useEffect, forwardRef, useImperativeHandle, useRef } from 'react';
+import useMultiLangInput from '@/hooks/useMultiLangInput';
 import { WylieConverter } from '@/utils/wylieConverter';
-import type { InputProcessor } from '@/utils/fts/ftsInputDecorator';
+import { hkToIast } from '@/utils/harvardKyotoConverter';
 import type { Language } from '@/types';
+import type { InputProcessor } from '@/hooks/useInputProcessor';
 
 interface Props {
   inputLang: string;
@@ -35,11 +35,12 @@ export interface WylieInputHandle {
   clear: () => void;
   focus: () => void;
   setLastUniInput: (v: string) => void;
-  setCurrentInput: (v: string) => void;
   setWasTypedInWylie: (v: boolean) => void;
+  /** Insert text at the current cursor position (or at the end if unknown). */
+  insertAtCursor: (text: string) => void;
 }
 
-const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputField(
+const MultiLangInputField = forwardRef<WylieInputHandle, Props>(function MultiLangInputField(
   { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue, inputProcessor, reverseProcessor,  onArrowUp, onArrowDown, onPageUp, onPageDown },
   ref
 ) {
@@ -50,9 +51,8 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     clear,
     focus,
     setLastUniInput,
-    setCurrentInput,
     setWasTypedInWylie,
-  } = useWylieInput({
+  } = useMultiLangInput({
     useUnicodeTibetan,
     lowercase,
     inputLang: inputLang as Language,
@@ -66,6 +66,31 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     onPageDown,
   });
 
+  /**
+   * Insert text at the current cursor position in the input field.
+   * After insertion, triggers the onInputChange callback so the search updates.
+   */
+  const insertAtCursor = useCallback((text: string) => {
+    const el = inputRef.current;
+    if (!el) return;
+
+    const start = el.selectionStart ?? el.value.length;
+    const end = el.selectionEnd ?? start;
+    const before = el.value.slice(0, start);
+    const after = el.value.slice(end);
+    const newValue = before + text + after;
+    el.value = newValue;
+
+    // Place the cursor right after the inserted text
+    const newPos = start + text.length;
+    el.setSelectionRange(newPos, newPos);
+
+    // Sync internal hook state and trigger search
+    setValue(newValue);
+    onInputChange(newValue);
+    el.focus();
+  }, [setValue, onInputChange]);
+
   // Expose imperative methods so parent components can control the input
   useImperativeHandle(ref, () => ({
     getValue,
@@ -73,21 +98,25 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
     clear,
     focus,
     setLastUniInput,
-    setCurrentInput,
     setWasTypedInWylie,
+    insertAtCursor,
   }));
 
   // Stable converter for initial-value Wylie → Unicode conversion.
   const wylieConverter = useRef(new WylieConverter());
 
   // On mount: populate the field with the initial value supplied by the parent.
-  // Convert Wylie → Unicode when unicode mode is on.
+  // Convert Wylie → Unicode for Tibetan, HK → IAST for Sanskrit.
   useEffect(() => {
     if (initialValue) {
-      const display =
-        useUnicodeTibetan && inputLang === 'tib'
-          ? wylieConverter.current.wylieToUni(initialValue, true)
-          : initialValue;
+      let display: string;
+      if (useUnicodeTibetan && inputLang === 'tib') {
+        display = wylieConverter.current.wylieToUni(initialValue, true);
+      } else if (inputLang === 'skt') {
+        display = hkToIast(initialValue);
+      } else {
+        display = initialValue;
+      }
       setValue(display);
     }
     focus();
@@ -117,4 +146,4 @@ const WylieInputField = forwardRef<WylieInputHandle, Props>(function WylieInputF
   );
 });
 
-export default WylieInputField;
+export default MultiLangInputField;

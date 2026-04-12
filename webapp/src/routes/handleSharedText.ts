@@ -129,7 +129,7 @@ export function handleSharedText(): boolean {
       }
 
       // Language: plugin hint, defaulting to Tibetan
-      const lang: string = sharedData.language || 'tib';
+      const lang: Language = sharedData.language || 'tib';
 
       const converter = new WylieConverter();
 

@@ -1,7 +1,7 @@
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import useWylieInput from './useWylieInput';
+import useMultiLangInput from './useMultiLangInput';
 import { Language } from '@/types';
 import { useRef } from 'react';
 
@@ -17,7 +17,7 @@ function TestInput({
   onEnter?: (v: string) => void;
   onInputChange?: (v: string) => void;
 }) {
-  const { inputRef } = useWylieInput({
+  const { inputRef } = useMultiLangInput({
     useUnicodeTibetan,
     lowercase: true,
     inputLang: initialLanguage,
@@ -28,7 +28,7 @@ function TestInput({
   return <input ref={inputRef} data-testid="wylie-input" type="text" />;
 }
 
-describe('useWylieInput native Tibetan Regression', () => {
+describe('native Tibetan input Regression', () => {
   let user: ReturnType<typeof userEvent.setup>;
 
   beforeEach(() => {
@@ -113,7 +113,7 @@ describe('useWylieInput native Tibetan Regression', () => {
     const input = screen.getByTestId('wylie-input') as HTMLInputElement;
 
     await user.type(input, 'slob phrug ');
-    // useWylieInput treats space as syllable boundary and converts the Wylie automatically.
+    // input handling treats space as syllable boundary and converts the Wylie automatically.
     // Given 'slob phrug ', it converts to 'སློབ་ཕྲུག་ ' or 'སློབ་ཕྲུག ' depending on precise Wylie rules
     expect(input.value).toMatch(/སློབ་ཕྲུག/);
   });

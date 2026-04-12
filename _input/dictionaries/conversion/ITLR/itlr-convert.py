@@ -36,13 +36,14 @@ def cleanTib(tib): # clean Tibetan text
   tib = tib.replace('?','')
   tib = tib.replace('~','')
   tib = tib.replace('ˇ','')
-  tib = tib.replace('-','')
+  #tib = tib.replace('-','')
   tib = tib.replace('+\'a','A')
   tib = tib.replace('*','')
   tib = tib.replace('\n',' ')
   tib = re.sub(r'\s+',' ', tib)
   tib = re.sub(r'\s*\|','/', tib)
-  
+  tib = tib.replace('|','/')
+
   return tib
 
 # add a line break before numbers with a dot behind such as '1. foo 2.bar'
@@ -65,8 +66,29 @@ def cleanEnTerm(txt): # clean English term
   txt = cleanString(txt)
   txt = txt.strip()
   txt = txt.replace('|','/')
-  
   return txt
+
+def cleanEnHeadword(txt):
+  txt = cleanEnTerm(txt)
+  txt = txt.replace('“','')
+  txt = txt.replace('”','')
+  txt = txt.replace('‘','')
+  txt = txt.replace('’','')
+  txt = txt.replace('’','')
+  txt = txt.replace('’','')
+  txt = txt.replace('\'','')
+  txt = txt.replace('…','')
+  txt = txt.replace('à','a')
+  txt = txt.replace('=','')
+
+  txt = re.sub(r'\[.*?\]', '', txt)
+  txt = re.sub(r'\(.*?\)', '', txt)
+  txt = txt.replace('-',' ')
+
+  if ' or ' in txt or '.' in txt or '(' in txt or ')' in txt:
+    return ''
+
+  return txt.strip()
 
 
 def cleanSkt(skt): # clean garbage from Sanskrit
@@ -77,7 +99,7 @@ def cleanSkt(skt): # clean garbage from Sanskrit
     skt = skt.replace('|',r'\n')
     skt = skt.replace('।',r'\n')
     skt = skt.replace('ॐ','OM')
-    skt = re.sub('\s+',' ', skt)
+    skt = re.sub('\\s+',' ', skt)
 
     skt = re.sub('^\\n','',skt) 
     skt = re.sub('^“(.*)”$', r'\1', skt)
@@ -103,7 +125,7 @@ def process_entry_skt(f, entry):
     return
 
   skt = cleanSkt(skt)
-  sktTrans = dt.inter_transliterate(input_type = "sen", from_convention = "iast", to_convention = "hk", sentence = skt)
+  sktTrans = skt  #dt.inter_transliterate(input_type = "sen", from_convention = "iast", to_convention = "hk", sentence = skt)
 
   f.write(sktTrans + '|')
 
@@ -114,7 +136,7 @@ def process_entry_skt(f, entry):
   f.write('\\n\\n')
 
   if tibTerms:
-    f.write('Tibetan renderings of ' + skt + ':')
+    f.write('Tibetan renderings of ' + skt + ': ')
     isFirst = True
     for tibTerm in tibTerms:
       if not isFirst:
@@ -143,7 +165,7 @@ def process_entry_skt(f, entry):
     f.write('\\n')
 
   if url:
-    f.write("See the full entry at:" + url)
+    f.write("See the full entry at: " + url)
 
   f.write('\n')
 
@@ -157,37 +179,43 @@ def process_entry_en(f, entry):
   url = cleanUrl(entry.get('url',''))
 
   if engTerms:
-    for engTerm in engTerms:
-      engTerm = cleanEnTerm(engTerm)
+    for t in engTerms:
+      engTermFull = cleanEnTerm(t)
+      for engTerm in re.split(r'[;,/]', cleanEnHeadword(engTermFull)):
+        engTerm = cleanEnHeadword(engTerm)
 
-      f.write(engTerm + '|')
+        if '.' in engTerm or engTerm == '':
+          continue
 
-      f.write('Sanskrit: ' + skt)
-      if entryType:
-        f.write(' <'+entryType+'>\\n')
-      f.write('\\n\\n')
 
-      if tibTerms:
-        f.write('Tibetan renderings of ' + skt + ':')
-        isFirst = True
-        for tibTerm in tibTerms:
-          if not isFirst:
-            f.write(', ')  
-          tibTerm = cleanTibDef(tibTerm)
-          f.write('{'+tibTerm+'/}')
-          isFirst = False
+        f.write(engTerm + '|')
+        f.write(engTermFull + '\\n')
+        f.write('Sanskrit: ' + skt)
+        if entryType:
+          f.write(' <'+entryType+'>\\n')
         f.write('\\n\\n')
 
-      if keyinfos:
-        for keyinfo in keyinfos:
-          keyinfo = cleanDef(keyinfo)
-          f.write(keyinfo+'\\n')
-        f.write('\\n')
+        if tibTerms:
+          f.write('Tibetan renderings of ' + skt + ': ')
+          isFirst = True
+          for tibTerm in tibTerms:
+            if not isFirst:
+              f.write(', ')
+            tibTerm = cleanTibDef(tibTerm)
+            f.write('{'+tibTerm+'/}')
+            isFirst = False
+          f.write('\\n\\n')
 
-      if url:
-        f.write("See the full entry at:" + url)
+        if keyinfos:
+          for keyinfo in keyinfos:
+            keyinfo = cleanDef(keyinfo)
+            f.write(keyinfo+'\\n')
+          f.write('\\n')
 
-      f.write('\n')
+        if url:
+          f.write("See the full entry at:" + url)
+
+        f.write('\n')
 
 
 def process_entry_tib(f, entry):
@@ -209,7 +237,7 @@ def process_entry_tib(f, entry):
       f.write('\\n\\n')
 
       if tibTerms:
-        f.write('Tibetan renderings of ' + skt + ':')
+        f.write('Tibetan renderings of ' + skt + ': ')
         isFirst = True
         for tibTerm in tibTerms:
           if not isFirst:
@@ -249,10 +277,11 @@ def import_file(file_name):
   data = json.load(file)
   file.close()
     
-  with open('52-ITLREnSkt', 'w') as f_en_skt:  
+  with open('52-ITLRSkt', 'w') as f_en_skt:
     for entry in data['entries']:
         process_entry_skt(f_en_skt, entry)
 
+  with open('52-ITLREn', 'w') as f_en_skt:
     for entry in data['entries']:
         process_entry_en(f_en_skt, entry)
     

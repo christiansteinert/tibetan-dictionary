@@ -3,12 +3,13 @@
  */
 import { memo } from 'react';
 import { WylieConverter } from '@/utils/wylieConverter';
+import { Language } from '@/types';
 
 const wylieConverter = new WylieConverter();
 
 interface Props {
   term: string;
-  lang: string;
+  lang: Language;
   useUnicodeTibetan: boolean;
   isSelected: boolean;
   onClick: (term: string) => void;

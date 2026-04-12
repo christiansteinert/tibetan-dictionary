@@ -38,7 +38,7 @@ export default function App() {
     body.classList.toggle('unicodeTib', isUnicode);
     body.classList.toggle('sidebarTib', isUnicode && inputLang === 'tib');
     body.classList.toggle('unicodeTibInput', unicode === true && inputLang === 'tib');
-    body.classList.toggle('enInput', inputLang === 'en');
+    body.classList.toggle('enInput', inputLang === 'en' || inputLang === 'skt' );
 
     // Platform class
     body.classList.toggle('mobile', !!(window as any).cordova);

@@ -35,7 +35,7 @@ export function useDictNavigation() {
         return next;
       });
     },
-    [setSearchParams],
+    [setSearchParams, location, navigate],
   );
 
   const termSearch = useCallback(

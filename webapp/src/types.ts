@@ -15,3 +15,12 @@ export function langToBackend(lang: Language): string {
   if (lang === 'skt') return 'sa';
   return 'bo';
 }
+
+/**
+ * Map a backend language code to the frontend language 
+ */
+export function langToFrontend(lang: string): Language {
+  if (lang === 'en') return 'en';
+  if (lang === 'sa') return 'skt';
+  return 'tib';
+}

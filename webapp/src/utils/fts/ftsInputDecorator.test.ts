@@ -3,10 +3,9 @@ import {
   decorateFtsInput,
   stripFtsOperators,
   ftsSegmentConvert,
-  makeDefaultInputProcessor,
-  makeFtsInputProcessor,
 } from './ftsInputDecorator';
 import { WylieConverter } from '../wylieConverter';
+import useInputProcessor from '@/hooks/useInputProcessor';
 
 const converter = new WylieConverter();
 
@@ -106,41 +105,41 @@ describe('ftsSegmentConvert', () => {
 
 describe('makeDefaultInputProcessor', () => {
   it('converts Wylie to Unicode when unicode is on', () => {
-    const proc = makeDefaultInputProcessor(converter, true);
-    const result = proc('chos');
+    const { inputProcessor:proc } = useInputProcessor('tib', true, true)
+    const result = proc!('chos');
     // wylieToUni appends a trailing tsheg (་)
     expect(result).toBe('ཆོས་');
   });
 
   it('returns Wylie as-is when unicode is off', () => {
-    const proc = makeDefaultInputProcessor(converter, false);
-    expect(proc('chos')).toBe('chos');
+    const { inputProcessor:proc } = useInputProcessor('tib', false, true)
+    expect(proc!('chos')).toBe('chos');
   });
 });
 
 describe('makeFtsInputProcessor', () => {
   it('converts Wylie segments to Unicode while preserving operators', () => {
-    const proc = makeFtsInputProcessor(converter, true);
-    const result = proc('chos ! yar');
+    const { inputProcessor:proc } = useInputProcessor('tib', true, true)
+    const result = proc!('chos ! yar');
     // Should convert each segment but keep ! as an operator with spacing
     expect(result).toContain('!');
     expect(result).not.toContain('༈');  // ! must NOT become ku ru kha
   });
 
   it('applies operator spacing', () => {
-    const proc = makeFtsInputProcessor(converter, true);
-    const result = proc('chos!yar');
+     const { inputProcessor:proc } = useInputProcessor('tib', true, true)
+   const result = proc!('chos!yar');
     // Should have spaces around !
     expect(result).toMatch(/\S\s+!\s+\S/);
   });
 
   it('handles wildcard correctly', () => {
-    const proc = makeFtsInputProcessor(converter, false);
-    expect(proc('dharm~')).toBe('dharm~');
+    const { inputProcessor:proc } = useInputProcessor('tib', false, true)
+    expect(proc!('dharm~')).toBe('dharm~');
   });
 
   it('returns Wylie with operator spacing when unicode is off', () => {
-    const proc = makeFtsInputProcessor(converter, false);
-    expect(proc('chos&yar')).toBe('chos & yar');
+    const { inputProcessor:proc } = useInputProcessor('tib', false, true)
+    expect(proc!('chos&yar')).toBe('chos & yar');
   });
 });

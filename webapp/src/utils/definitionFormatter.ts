@@ -12,12 +12,11 @@
  * React components can render and post-process them.
  */
 import { WylieConverter } from './wylieConverter';
-import { SanskritConverter } from './sanskritConverter';
 import type { DictListType, DictEntry } from '@/config/dictlist';
 import type { AbbreviationsType, AbbreviationSet } from '@/config/abbreviations';
+import { Language } from '@/types';
 
 // Shared converter instances (initialized lazily)
-let sanskritConverter: SanskritConverter | null = null;
 let wylieConverter: WylieConverter | null = null;
 let sectionCounter = 0;
 
@@ -48,11 +47,6 @@ type OnOpenScanCallback = (scanId: string, term: string, pageInfo: string) => vo
 
 
 // ─── Converters ───────────────────────────────────────
-function getSanskritConverter(): SanskritConverter {
-  if (!sanskritConverter) sanskritConverter = new SanskritConverter();
-  return sanskritConverter;
-}
-
 function getWylieConverter(): WylieConverter {
   if (!wylieConverter) wylieConverter = new WylieConverter();
   return wylieConverter;
@@ -204,6 +198,11 @@ function convertInlineTibetanSections(
   definition: string,
   useUnicodeTibetan: boolean
 ): { definition: string; inlineSections: Record<string, InlineTibetanSection> } {
+//FIXME: handle ------ inside Tibetan blocks!!
+// definition = definition.replace("-----", "}\n-----\n{");
+// -> split
+
+  
   const inlineSections: Record<string, InlineTibetanSection> = {};
   const chunks = definition.match(/[{][^{}]+[}]/g);
 
@@ -327,8 +326,7 @@ export function formatDefinition(
       // ensure that separator lines are working also in Tibetan-only dictionaries
       definition = definition.replace("-----", "}\n-----\n{");
       definition = "{" + definition + "}";
-      let skt = getSanskritConverter().sktToUni(htmlEscapeDefinition(definition));
-      var result = convertInlineTibetanSections(skt, useUnicodeTibetan);
+      var result = convertInlineTibetanSections(definition, useUnicodeTibetan);
       definition = result.definition;
       inlineSections = result.inlineSections;
     } else {
@@ -337,12 +335,6 @@ export function formatDefinition(
         : definition;
       definition = htmlEscapeDefinition(tibetanOutput);
     }
-    defEnd = '</div>';
-  } else if (currentDict.containsOnlySkt) {
-    defStart = '<div class="skt" title="' + htmlEscapeTitle(definition) + '">';
-    var result = convertInlineTibetanSections(getSanskritConverter().sktToUni(htmlEscapeDefinition(definition)), useUnicodeTibetan);
-    definition = result.definition;
-    inlineSections = result.inlineSections;
     defEnd = '</div>';
   } else if (currentDict.scanId) {
     //scanned dictionary. If we have an exact page number, we link to it
@@ -460,7 +452,7 @@ export function formatDefinitionList(
   dictionaries: DictListType,
   dictEntries: Record<string, string>,
   term: string,
-  lang: string,
+  lang: Language,
   useUnicodeTibetan: boolean,
   abbreviations: AbbreviationsType,
   onOpenScan?: OnOpenScanCallback
@@ -469,10 +461,10 @@ export function formatDefinitionList(
 
   // Render heading
   let termDisplay: string;
-  if (lang === 'en') {
-    termDisplay = term;
-  } else {
+  if (lang === 'tib') {
     termDisplay = useUnicodeTibetan ? getWylieConverter().wylieToUni(term) : term;
+  } else {
+    termDisplay = term;
   }
 
   let tableHtml =

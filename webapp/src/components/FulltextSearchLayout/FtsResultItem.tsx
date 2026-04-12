@@ -22,7 +22,6 @@ const wylieConverter = new WylieConverter();
 
 interface Props {
   result: FTSSearchResult;
-  lang: Language;
   useUnicodeTibetan: boolean;
   isExpanded: boolean;
   onTermClick: (term: string, lang: Language) => void;
@@ -61,7 +60,6 @@ function handleHighlightedSectionsForTibOnly(definition: string): string {
 
 const FtsResultItem = memo(function FtsResultItem({
   result,
-  lang,
   useUnicodeTibetan,
   isExpanded,
   onTermClick,
@@ -70,11 +68,11 @@ const FtsResultItem = memo(function FtsResultItem({
 
   // Display term: handle <em>/</em> highlights inside Tibetan correctly
   let highlightedTerm = result.highlightedTerm;
-  if (lang === 'tib' && useUnicodeTibetan) {
+  if (result.lang === 'tib' && useUnicodeTibetan) {
     highlightedTerm = handleHighlightedSectionsForTibOnly(highlightedTerm);
     highlightedTerm = convertCurlyBraceSections(highlightedTerm);
   } else {
-    highlightedTerm = result.term
+    highlightedTerm = result.term;
   }
 
   // Dictionary label and about info for tooltip
@@ -85,7 +83,7 @@ const FtsResultItem = memo(function FtsResultItem({
 
   // Process snippet: convert {curly brace} sections if in Unicode mode
   let snippet = result.snippet;
-  if (dictEntry.containsOnlyTibetan && lang === 'tib' && useUnicodeTibetan) {
+  if (dictEntry.containsOnlyTibetan && result.lang === 'tib' && useUnicodeTibetan) {
     snippet = handleHighlightedSectionsForTibOnly(result.snippet)
   }
 
@@ -102,15 +100,16 @@ const FtsResultItem = memo(function FtsResultItem({
     return bindTooltips(el);
   }, [dictLabel]);
 
-  const isTib = lang === 'tib' && useUnicodeTibetan;
-
+  const isTib = result.lang === 'tib' && useUnicodeTibetan;
   let definition = result.definition || '';
 
+  // Only allow expanding the full definition if it is longer than the snippet 
+  // and also only if we don't deal with a scanned dictionary, for which we have no textual definition  
+  const canExpand = definition && result.isSnippetAbbreviated !== false && !dictEntry.scanId;
+
+
   let formattedDefinition = '';
-  if (dictEntry.scanId) {
-    // scanned dictionaries have no definition text, skiup showing definition here
-    formattedDefinition = '';
-  } else {
+  if (canExpand) {
     formattedDefinition = formatDefinition(
       definition,
       "",
@@ -129,7 +128,7 @@ const FtsResultItem = memo(function FtsResultItem({
           className={isTib ? styles.tibTerm : ''}
           onClick={(e) => {
             e.preventDefault();
-            onTermClick(result.term, lang);
+            onTermClick(result.term, result.lang);
           }}
           dangerouslySetInnerHTML={{ __html: highlightedTerm }} 
         />
@@ -147,17 +146,20 @@ const FtsResultItem = memo(function FtsResultItem({
           isTib ? styles.tibSnippet : '',
         ].join(' ')}
       >
+        {canExpand ? (
+          <Collapsible.Root className={styles.collapsible}>
+            <Collapsible.Trigger className={styles.collapsibleTrigger}>
+              <span className={styles.collapsibleArrow} aria-hidden="true" />
+              <div dangerouslySetInnerHTML={{ __html: snippetHtml }} />
+            </Collapsible.Trigger>
 
-        <Collapsible.Root className={styles.collapsible}>
-          <Collapsible.Trigger className={styles.collapsibleTrigger}>
-            <span className={styles.collapsibleArrow} aria-hidden="true" />
-            <div dangerouslySetInnerHTML={{ __html: snippetHtml }} />
-          </Collapsible.Trigger>
-
-          <Collapsible.Content className={styles.collapsibleContent}>
-            <div className={styles.colDefinition} dangerouslySetInnerHTML={{ __html: formattedDefinition }} />
-          </Collapsible.Content>
-        </Collapsible.Root>
+            <Collapsible.Content className={styles.collapsibleContent}>
+              <div className={styles.colDefinition} dangerouslySetInnerHTML={{ __html: formattedDefinition }} />
+            </Collapsible.Content>
+          </Collapsible.Root>
+        ) : (
+          <div className={styles.snippetOnly} dangerouslySetInnerHTML={{ __html: snippetHtml }} />
+        )}
 
       </td>
     </tr>

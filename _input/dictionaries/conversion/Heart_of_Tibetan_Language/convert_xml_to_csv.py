@@ -77,7 +77,7 @@ def contains_only_tibetan(text: str) -> bool:
 
 
 def convert_tibetan(value: str, converter: pyewts) -> str:
-    """Convert Tibetan Unicode runs to Wylie according to the requirements."""
+    """Convert Tibetan Unicode runs to Wylie."""
 
     if not value:
         return ""
@@ -86,7 +86,7 @@ def convert_tibetan(value: str, converter: pyewts) -> str:
         return text
     if contains_only_tibetan(text):
         converted = converter.toWylie(text)
-        return WHITESPACE_PATTERN.sub(" ", converted).strip()
+        return  "{" + WHITESPACE_PATTERN.sub(" ", converted).strip() + "}"
 
     def replace_segment(match: re.Match[str]) -> str:
         segment = match.group(0)
@@ -114,6 +114,7 @@ def extract_entries(root: ET.Element, converter: pyewts) -> List[EntryData]:
                 continue
             raw_value = "".join(part or "" for part in field.itertext())
             cleaned = clean_text(raw_value)
+            cleaned = cleaned.replace("{", "[").replace("}", "]")
             converted = convert_tibetan(cleaned, converter)
             if converted:
                 record[key] = converted

@@ -46,7 +46,9 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
         return;
       }
 
-      // Convert Tibetan Unicode → Wylie per segment (preserving operators)
+      // Convert Tibetan Unicode → Wylie per segment (preserving operators).
+      // Sanskrit and English queries are already in their lookup form (IAST / plain text)
+      // so no conversion is needed for those languages.
       let backendQuery = query.trim();
       if (lang === 'tib' && (unicode === true || unicode === 'output')) {
         backendQuery = ftsUniToWylie(backendQuery, wylieConverter);

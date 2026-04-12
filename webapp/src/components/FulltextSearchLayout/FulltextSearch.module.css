@@ -3,7 +3,6 @@
 .ftsSearchWrap {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0.8em 1em;
 }
 
 /* ── Result table ───────────────────────────────────────────── */
@@ -170,7 +169,6 @@
   padding: 0.4em 0.5em;
   cursor: pointer;
   background: #f4f4fa;
-  font-weight: 600;
 }
 
 .collapsibleTrigger:hover {
@@ -209,6 +207,12 @@
 
 :global(.dark) .collapsibleContent {
   border-top-color: #555;
+}
+
+/* ── Non-expandable snippet (definition fits entirely in the snippet) ── */
+
+.snippetOnly {
+  padding: 0.4em 0.5em;
 }
 
 /* ── Status messages ────────────────────────────────────────── */

@@ -8,6 +8,7 @@ import type { RootState } from '@/store/store';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 import styles from './FulltextSearch.module.css';
+import type { Language } from '@/types';
 
 import FtsResultList from './FtsResultList';
 import useFulltextSearch from '@/hooks/useFulltextSearch';
@@ -39,9 +40,9 @@ export default function FulltextSearchLayout() {
    * The URL reflects the active selection and works correctly on reload.
    */
   const handleTermSelected = useCallback(
-    (wylieTerm: string) => {
-      navigation.termSearch(wylieTerm, result.lang, result.offset, false, searchInput.extendedSettingsVisible, wylieTerm);
-    }, [navigation, result.lang, result.offset, searchInput.extendedSettingsVisible]
+    (wylieTerm: string, lang: Language) => {
+      navigation.termSearch(wylieTerm, lang, 0, false, searchInput.extendedSettingsVisible, wylieTerm);
+    }, [navigation, searchInput.extendedSettingsVisible]
   );
 
   /** Navigate to previous page of results. */

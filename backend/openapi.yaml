@@ -19,11 +19,11 @@ components:
     lang:
       name: lang
       in: query
-      description: Language direction. `bo` = Tibetan→English (default), `en` = English→English.
+      description: Language direction. `bo` = Tibetan (default), `en` = English, `sa` = Sanskrit.
       required: false
       schema:
         type: string
-        enum: [bo, en]
+        enum: [bo, en, sa]
         default: bo
 
     offset:
@@ -83,7 +83,7 @@ components:
 
     FtsSearchResult:
       type: object
-      required: [term, dictionary, dictionaryId, snippet, definition]
+      required: [term, dictionary, dictionaryId, snippet, definition, lang, isSnippetAbbreviated]
       properties:
         term:
           type: string
@@ -107,6 +107,21 @@ components:
         definition:
           type: string
           description: Full definition text.
+        lang:
+          type: string
+          enum: [bo, en, sa]
+          description: >
+            The language of the dictionary entry's headword. Because
+            fulltext search now returns results across all languages
+            (definitions are searched globally), each row carries the
+            language of its source entry so the frontend can format
+            the term column correctly.
+        isSnippetAbbreviated:
+          type: boolean
+          description: >
+            `true` when the snippet is only a portion of the full
+            definition text. `false` when the snippet already contains
+            the entire definition.
 
     ErrorResponse:
       type: object
@@ -238,6 +253,10 @@ paths:
         query syntax: `AND`, `OR`, `NOT`, `NEAR`, quoted phrases, and
         prefix matching. Results are ordered by FTS5 relevance rank.
         Each result includes a highlighted snippet.
+
+        Term matches are restricted to the requested language, while
+        definition matches are returned from the definitions of all languages.  
+        Each result contains a `lang` field indicating the headword language.
       parameters:
         - name: q
           in: query

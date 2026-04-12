@@ -63,20 +63,22 @@ function fulltextQueryToRegex($query) {
 function buildSnippetRows($results, $snippetRegex) {
     $rows = [];
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-      # // "both" — prefer definition snippet when the definition matches
         if (preg_match($snippetRegex, $row['definition'])) {
-            $snippet = generateSnippet($row['definition'], $snippetRegex);
+            $snippetResult = generateSnippet($row['definition'], $snippetRegex);
         } else {
-            $snippet = generateSnippet($row['term'], $snippetRegex);
+            $snippetResult = generateSnippet($row['term'], $snippetRegex);
+            $snippetResult['isAbbreviated'] = true;  // term matches but definition doesn't — mark as abbreviated
         }
 
         $rows[] = [
-            'term'            => $row['term'],
-            'highlightedTerm' => highlightTerm($row['term'], $snippetRegex),
-            'dictionary'      => $row['dictionary'],
-            'dictionaryId'    => $row['dictionaryId'],
-            'snippet'         => $snippet,
-            'definition'      => $row['definition'], 
+            'term'                 => $row['term'],
+            'highlightedTerm'      => highlightTerm($row['term'], $snippetRegex),
+            'dictionary'           => $row['dictionary'],
+            'dictionaryId'         => $row['dictionaryId'],
+            'snippet'              => $snippetResult['snippet'],
+            'definition'           => $row['definition'],
+            'lang'                 => $row['lang'] ?? 'bo',
+            'isSnippetAbbreviated' => $snippetResult['isAbbreviated'],
         ];
     }
     return $rows;
@@ -90,6 +92,8 @@ function buildSnippetRows($results, $snippetRegex) {
  *  - The snippet never breaks in the middle of a word.
  *  - Tibetan text enclosed in {curly braces} is never left with unmatched
  *    braces (a leading/trailing brace is added when needed).
+ *
+ * @return array{snippet: string, isAbbreviated: bool}
  */
 function generateSnippet($haystack, $regexPattern) {
     if (!preg_match($regexPattern, $haystack, $matches, PREG_OFFSET_CAPTURE)) {
@@ -106,9 +110,10 @@ function generateSnippet($haystack, $regexPattern) {
     $charOffset = mb_strlen(substr($haystack, 0, $matchOffset));
 
     $extracted = extractSnippetText($haystack, $charOffset, mb_strlen($matchText), SNIPPET_CONTEXT_CHARS);
-    $excerpt   = $extracted['text'];
+    $excerpt   = htmlspecialchars($extracted['text'], ENT_NOQUOTES);
     $isAtStart = $extracted['isAtStart'];
     $isAtEnd   = $extracted['isAtEnd'];
+    $isAbbreviated = !($isAtStart && $isAtEnd);
 
     $excerpt = ensureBalancedBraces($excerpt, $isAtStart, $isAtEnd, $haystack);
     $excerpt = preg_replace_callback($regexPattern, function ($m) use ($excerpt) {
@@ -149,7 +154,10 @@ function generateSnippet($haystack, $regexPattern) {
     $excerpt = preg_replace('/\{\s*$/', '', $excerpt);    // remove trailing stray {
     $excerpt = preg_replace('/\\\\n/', ' ', $excerpt);   // remove newlines
     
-    return ($isAtStart ? '' : '…') . $excerpt . ($isAtEnd ? '' : '…');
+    return [
+        'snippet'       => ($isAtStart ? '' : '…') . $excerpt . ($isAtEnd ? '' : '…'),
+        'isAbbreviated' => $isAbbreviated,
+    ];
 }
 
 
@@ -181,7 +189,10 @@ function snippetFallback($haystack) {
     if (!$isAtEnd) {
         $preview .= '…';
     }
-    return $preview;
+    return [
+        'snippet'       => $preview,
+        'isAbbreviated' => !$isAtEnd,
+    ];
 }
 
 /**

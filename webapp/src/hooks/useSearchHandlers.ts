@@ -21,10 +21,10 @@ import type { Language } from '@/types';
 
 interface KeyboardNavState {
   selectedPosition: number;
-} 
+}
 
 export function useSearchHandlers() {
-  const [keyboardNavState, setKeyboardNavState] = useState<KeyboardNavState>({ selectedPosition: 0 });
+  const keyboardNavState = useRef<KeyboardNavState>({ selectedPosition: 0 });
   const isLoading = useRef(false);
 
   const dispatch = useDispatch();
@@ -41,20 +41,23 @@ export function useSearchHandlers() {
   const ftsResultList = useSelector((s: RootState) => s.search.ftsResultList);
   const definitionTerm = useSelector((s: RootState) => s.search.definition.term);
   const listSize = useSelector((s: RootState) => s.settings.listSize);
-  
+
   /**
    * Triggered when the input changes (syllable complete, backspace, etc.)
    * Navigates to the search route with sidebar=true (soft search).
    */
   const handleInputChange = useCallback(
     (rawInput: string) => {
-      setKeyboardNavState({ selectedPosition: -1 }); 
+
+      keyboardNavState.current = { selectedPosition: -1 };
       if (!rawInput.trim()) {
         dispatch(setDefinitionHtml(''));
         return;
       }
-      // Convert Unicode Tibetan back to Wylie so the URL always uses the Wylie lookup key.
-      // In fulltext mode, convert each segment between operators individually.
+
+      // Convert display text back to lookup key for the URL.
+      // Tibetan: Unicode → Wylie because lookup is in Wylie.
+      // English/Sanskrit: use as-is.
       let inputTerm: string;
       if (inputLang === 'tib' && unicode === true) {
         inputTerm = mode === 'fulltext'
@@ -63,16 +66,17 @@ export function useSearchHandlers() {
       } else {
         inputTerm = rawInput.trim();
       }
+
       if (mode === 'fulltext') {
         navigation.fulltextSearch(inputTerm, inputLang, 0, true, extendedSettingsVisible);
       } else {
         navigation.termSearch(inputTerm, inputLang, 0, true, extendedSettingsVisible);
       }
     },
-    [dispatch, navigation, inputLang, unicode, extendedSettingsVisible],
+    [dispatch, navigation, inputLang, unicode, extendedSettingsVisible, mode],
   );
 
-  const searchAndGoToListPosition = async(term: string, inputLang: Language, selectedPosition: number) => {
+  const searchAndGoToListPosition = async (term: string, inputLang: Language, selectedPosition: number) => {
     if (isLoading.current) return; // Prevent race conditions with rapid keyboard navigation
     isLoading.current = true;
 
@@ -80,11 +84,11 @@ export function useSearchHandlers() {
     let selectedPositionInPage = Math.max(0, selectedPosition % listSize);
     const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset);
     if (!searchResults.length) {
-      setKeyboardNavState({ selectedPosition: -1 }); 
+      keyboardNavState.current = { selectedPosition: -1 };
     } else {
       selectedPositionInPage = Math.min(selectedPositionInPage, searchResults.length - 1);
 
-      setKeyboardNavState({ selectedPosition: listOffset + selectedPositionInPage }); 
+      keyboardNavState.current = { selectedPosition: listOffset + selectedPositionInPage };
       const selectedTerm = searchResults[selectedPositionInPage].term;
       navigation.termSearch(searchTerm, inputLang, listOffset, false, extendedSettingsVisible, selectedTerm);
     }
@@ -102,47 +106,47 @@ export function useSearchHandlers() {
         searchAndGoToListPosition(term, inputLang, 0);
       }
     },
-    [navigation, search, inputLang, extendedSettingsVisible],
+    [navigation, mode, inputLang, extendedSettingsVisible, searchAndGoToListPosition],
   );
 
   const handleSelectPrevTerm = useCallback(() => {
     if (mode === 'fulltext') return;
 
-    const idx = keyboardNavState.selectedPosition - 1;    
+    const idx = keyboardNavState.current.selectedPosition - 1;
     searchAndGoToListPosition(resultList.query, resultList.lang, idx);
-  }, [mode, ftsResultList, resultList, definitionTerm, listSize, navigation, extendedSettingsVisible, keyboardNavState]);
+  }, [mode, resultList, listSize, searchAndGoToListPosition]);
 
   const handleSelectPrevPage = useCallback(() => {
     if (mode === 'fulltext') return;
 
-    const idx = keyboardNavState.selectedPosition - listSize;    
+    const idx = keyboardNavState.current.selectedPosition - listSize;
     searchAndGoToListPosition(resultList.query, resultList.lang, idx);
-  }, [mode, ftsResultList, resultList, listSize, navigation, extendedSettingsVisible]);
+  }, [mode, resultList, listSize, searchAndGoToListPosition]);
 
   const handleSelectNextTerm = useCallback(() => {
     if (mode === 'fulltext') return;
 
     const hasAnotherPage = resultList.results.length > listSize;
-    let idx = keyboardNavState.selectedPosition + 1;
+    let idx = keyboardNavState.current.selectedPosition + 1;
 
-    if (idx % listSize >= resultList.offset && !hasAnotherPage) {
+    if (idx >= resultList.offset + resultList.results.length && !hasAnotherPage) {
       idx = resultList.offset + resultList.results.length - 1; // Don't go past the end of the list
     }
 
     searchAndGoToListPosition(resultList.query, resultList.lang, idx);
-  }, [mode, ftsResultList, resultList, definitionTerm, listSize, navigation, extendedSettingsVisible, keyboardNavState]);
+  }, [mode, resultList, listSize, searchAndGoToListPosition]);
 
   const handleSelectNextPage = useCallback(() => {
     if (mode === 'fulltext') return;
 
     const hasAnotherPage = resultList.results.length > listSize;
-    let idx = keyboardNavState.selectedPosition + listSize;
+    let idx = keyboardNavState.current.selectedPosition + listSize;
 
     if (!hasAnotherPage) {
       idx = resultList.offset + resultList.results.length - 1; // Don't go past the end of the list
     }
     searchAndGoToListPosition(resultList.query, resultList.lang, idx);
-  }, [mode, ftsResultList, resultList, definitionTerm, listSize, navigation, extendedSettingsVisible, keyboardNavState]);
+  }, [mode, resultList, listSize, searchAndGoToListPosition]);
 
   /** Open the extended search options bar. */
   const handleOpenExtendedSearch = useCallback(() => {
@@ -163,7 +167,7 @@ export function useSearchHandlers() {
         navigation.fulltextSearch(currentTerm, inputLang, 0, false, extendedSettingsVisible);
       }
     },
-    [navigation],
+    [navigation, currentTerm, inputLang, extendedSettingsVisible],
   );
 
   /** Switch input language and clear the sidebar. */

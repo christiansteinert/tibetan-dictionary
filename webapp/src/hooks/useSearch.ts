@@ -22,7 +22,7 @@ const wylieConverter = new WylieConverter();
 /**
  * Normalize raw input text into a search term.
  * For Tibetan: converts Unicode → Wylie and trims trailing tsheg/spaces.
- * For English: returns text as-is.
+ * For English / Sanskrit: returns text as-is.
  */
 export function normalizeSearchTerm(
   inputText: string,
@@ -35,6 +35,8 @@ export function normalizeSearchTerm(
     }
     inputText = wylieConverter.trimWylie(inputText);
   }
+  // Sanskrit and English: no conversion needed — the term is already in
+  // the correct lookup form (IAST for Sanskrit, plain text for English).
   return inputText;
 }
 

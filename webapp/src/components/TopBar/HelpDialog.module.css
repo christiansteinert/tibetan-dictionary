@@ -201,6 +201,40 @@
   font-size: 1.25em;
 }
 
+/* Sanskrit IAST examples — slightly larger so diacritics are clearly visible */
+.sktExample {
+  font-size: 1.05em;
+  font-family: serif;
+}
+
+/* Sub-section headings inside a section (e.g. "Vowels", "Consonants") */
+.subSectionTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 14px 0 4px;
+}
+
+.content.light .subSectionTitle { color: #555; }
+.content.dark  .subSectionTitle { color: #aaa; }
+
+/* Small label used between alternative HK input sequences */
+.altLabel {
+  font-size: 0.8em;
+  font-weight: normal;
+  opacity: 0.65;
+  margin: 0 2px;
+}
+
+/* Consonant grid: IAST result shown above the HK key in each cell */
+.table td code.op {
+  vertical-align: baseline;
+}
+
+/* Make the consonant table cells more compact */
+.table td .sktExample + code {
+  margin-left: 0;
+}
+
 .content.light .example {
   color: #225522;
   background: #f0f8f0;

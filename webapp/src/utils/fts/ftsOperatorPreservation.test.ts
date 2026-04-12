@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { WylieConverter } from '../wylieConverter';
-import { ftsSegmentConvert, hasFtsOperators, makeFtsInputProcessor, ftsUniToWylie } from './ftsInputDecorator';
+import { ftsSegmentConvert, hasFtsOperators, ftsUniToWylie } from './ftsInputDecorator';
+import useInputProcessor from '@/hooks/useInputProcessor';
 
 const c = new WylieConverter();
 
@@ -26,16 +27,16 @@ describe('FTS operator preservation', () => {
   });
 
   it('makeFtsInputProcessor preserves ! in output', () => {
-    const processor = makeFtsInputProcessor(c, true);
-    const result = processor('chob chob ! yar ');
+    const { inputProcessor } = useInputProcessor('tib', true, true)
+    const result = inputProcessor!('chob chob ! yar ');
     expect(result).not.toContain('༈');
     expect(result).toContain('!');
     expect(result).toContain('ཆོབ');
   });
 
   it('makeFtsInputProcessor preserves | in output', () => {
-    const processor = makeFtsInputProcessor(c, true);
-    const result = processor('chob | yar ');
+    const { inputProcessor } = useInputProcessor('tib', true, true)
+    const result = inputProcessor!('chob | yar ');
     expect(result).not.toContain('༑');
     expect(result).not.toContain('།');
     expect(result).toContain('|');
@@ -66,8 +67,6 @@ describe('FTS operator preservation', () => {
   });
 
   describe('simulated middle-syllable conversion (the bug path)', () => {
-    // This simulates what happens in useWylieInput when matchMiddle[2] = "!"
-    // Before the fix, wylieConverter.wylieToUni("!") would return "༈"
     it('direct wylieToUni("!") returns ༈ (confirms raw conversion is dangerous)', () => {
       expect(c.wylieToUni('!')).toBe('༈');
     });

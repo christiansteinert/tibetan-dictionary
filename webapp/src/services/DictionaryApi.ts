@@ -1,3 +1,4 @@
+import { Language } from '@/types';
 import { CordovaDictionaryApi } from './CordovaDictionaryApi';
 import { PhpDictionaryApi } from './PhpDictionaryApi';
 
@@ -26,6 +27,10 @@ export interface FtsSearchResult {
   dictionaryId: number;
   snippet: string;
   definition: string;
+  /** The language of the headword. */
+  lang: Language;
+  /** true when the snippet is only a portion of the full definition. */
+  isSnippetAbbreviated: boolean;
 }
 
 // The backend is chosen dynamically depending on whether we are running inside
@@ -43,7 +48,7 @@ const backend = (window as any).cordova
  */
 export async function readTerm(
   term: string,
-  lang: string,
+  lang: Language,
   dictionaries: string[]
 ): Promise<ReadTermResult> {
   return backend.readTerm(term, lang, dictionaries);
@@ -60,7 +65,7 @@ export async function readTerm(
  */
 export async function readTermList(
   search: string,
-  lang: string,
+  lang: Language,
   offset: number,
   maxResults: number,
   dictionaries: string[],
@@ -110,7 +115,7 @@ export async function checkTibetanSectionsForLinks(
  */
 export async function fulltextSearch(
   query: string,
-  lang: string,
+  lang: Language,
   offset: number,
   maxResults: number,
   dictionaries: string[],

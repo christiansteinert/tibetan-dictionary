@@ -110,7 +110,7 @@ export default function HamburgerMenu({
             onSelect={() => setHelpOpen(true)}
           >
             <QuestionMarkCircledIcon className={styles.itemIcon} />
-            Search Help
+            Help
           </DropdownMenu.Item>
 
           <DropdownMenu.Separator className={styles.separator} />

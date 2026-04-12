@@ -18,9 +18,7 @@
   color:#eee
 }
 
-.topbarUnderlay {
-  height: 5em;
-}
+
 
 .textInputWrap{
   position: relative;
@@ -141,9 +139,102 @@
   background: rgba(255,255,255,0.1);
 }
 
-/* Extra underlay height when options bar is visible */
-.topbarUnderlayExtended {
-  height: 7.5em;
+
+
+/* ── Sanskrit keyboard toggle button ─────────────────────────── */
+
+.sanskritToggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 0.3em;
+}
+
+.sanskritToggleBtnActive {
+  background: rgba(0, 100, 200, 0.15);
+  border-color: #07c;
+}
+
+.sanskritToggleBtn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sanskritToggleBtnDark {
+  color: #ccc;
+  border-color: #666;
+}
+
+.sanskritToggleBtnDark:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sanskritToggleBtnDark.sanskritToggleBtnActive {
+  background: rgba(80, 160, 255, 0.2);
+  border-color: #59f;
+}
+
+/* ── Sanskrit character bar ──────────────────────────────────── */
+
+.sanskritBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.25em 0.5em;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.sanskritBarLight {
+  background: #f4f4fa;
+  border-top-color: #ccc;
+}
+
+.sanskritBarDark {
+  background: #1a1a1a;
+  border-top-color: #444;
+}
+
+.sanskritCharBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 4px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.95em;
+  cursor: pointer;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+}
+
+.sanskritCharBtnLight {
+  color: #333;
+  border-color: #bbb;
+}
+
+.sanskritCharBtnLight:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sanskritCharBtnDark {
+  color: #ddd;
+  border-color: #666;
+}
+
+.sanskritCharBtnDark:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 @media (max-width: 600px) {
