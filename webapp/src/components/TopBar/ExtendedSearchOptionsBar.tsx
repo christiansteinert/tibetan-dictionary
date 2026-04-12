@@ -12,7 +12,7 @@
 import type { SearchMode } from '@/store/searchSlice';
 import styles from './TopBar.module.css';
 import { Language } from '@/types';
-import { QuestionMarkCircledIcon } from '@radix-ui/react-icons';
+import { QuestionMarkCircledIcon, Cross2Icon } from '@radix-ui/react-icons';
 import HelpDialog from './HelpDialog';
 import { useState } from 'react';
 
@@ -39,7 +39,7 @@ export default function ExtendedSearchOptionsBar({
     <>
     <div className={`${styles.optionsBar} ${isLightMode ? styles.optionsBarLight : styles.optionsBarDark}`}>
       {/* ── Mode ── */}
-      <span className={styles.optionsGroup}>
+      <span className={`${styles.optionsGroup} flex`}>
         <span className={styles.optionsLabel}>Mode:</span>
         <label className={styles.optionsRadio}
           title="Search only in dictionary headwords (terms)">
@@ -64,7 +64,7 @@ export default function ExtendedSearchOptionsBar({
       </span>
 
       {/* ── Language ── */}
-      <span className={styles.optionsGroup}>
+      <span className={`${styles.optionsGroup} flex`}>
         <span className={styles.optionsLabel}>Language:</span>
         <label className={styles.optionsRadio}
             title="Search for Tibetan terms">
@@ -98,7 +98,7 @@ export default function ExtendedSearchOptionsBar({
         </label>
       </span>
 
-      <span className={styles.optionsGroup}>
+      <span className={`${styles.optionsGroup} hidden sm:flex`}>
         <button type="button" title="Help" className={styles.optionsHelpBtn} onClick={() => setHelpOpen(true)}>
           <QuestionMarkCircledIcon /> Help
         </button>
@@ -112,7 +112,7 @@ export default function ExtendedSearchOptionsBar({
         aria-label="Close extended search"
         onClick={onClose}
       >
-        ✕
+        <Cross2Icon width={18} height={18} />
       </button>
     </div>
         <HelpDialog

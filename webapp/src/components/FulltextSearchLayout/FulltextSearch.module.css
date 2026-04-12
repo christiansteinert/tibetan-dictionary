@@ -39,7 +39,17 @@
 .resultTable td {
   padding: 0.35em 0.6em;
   vertical-align: top;
-  border-top: 1px solid #e8e8e8;
+  
+  /* Ensure long words break that would otherwise cause overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .resultTable td {
+    /* On narrow screens, allow word breaks for any word lengths */
+    word-break: break-word;
+  }
 }
 
 :global(.dark) .resultTable td {

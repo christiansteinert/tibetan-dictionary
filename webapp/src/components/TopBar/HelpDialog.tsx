@@ -3,7 +3,7 @@
  * Uses @radix-ui/react-dialog for accessible, focus-trapped overlay.
  */
 import * as Dialog from '@radix-ui/react-dialog';
-import { Cross2Icon } from '@radix-ui/react-icons';
+import { Cross2Icon, ArrowUpIcon, ArrowDownIcon } from '@radix-ui/react-icons';
 import styles from './HelpDialog.module.css';
 
 interface Props {
@@ -21,7 +21,6 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
         <Dialog.Overlay className={styles.overlay} />
         <Dialog.Content
           className={`${styles.content} ${theme}`}
-          style={{ height: '95vh', width: 'min(95vw, 70rem)' }}
         >
 
           <div className={styles.header}>
@@ -50,21 +49,17 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Vowels</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th></tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><code className={styles.op}>a</code></td><td className={`${styles.tibExample} tib`}>ཨ</td>
-                      <td></td>
                       <td><code className={styles.op}>i</code></td><td className={`${styles.tibExample} tib`}>ཨི</td>
-                      <td></td>
                       <td><code className={styles.op}>u</code></td><td className={`${styles.tibExample} tib`}>ཨུ</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>e</code></td><td className={`${styles.tibExample} tib`}>ཨེ</td>
-                      <td></td>
                       <td><code className={styles.op}>o</code></td><td className={`${styles.tibExample} tib`}>ཨོ</td>
-                      <td></td>
                       <td></td><td></td>
                     </tr>
                   </tbody>
@@ -73,95 +68,55 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Consonants</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th><th></th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th></tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><code className={styles.op}>ka</code></td><td className={`${styles.tibExample} tib`}>ཀ</td>
-                      <td></td>
                       <td><code className={styles.op}>kha</code></td><td className={`${styles.tibExample} tib`}>ཁ</td>
-                      <td></td>
                       <td><code className={styles.op}>ga</code></td><td className={`${styles.tibExample} tib`}>ག</td>
-                      <td></td>
                       <td><code className={styles.op}>nga</code></td><td className={`${styles.tibExample} tib`}>ང</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>ca</code></td><td className={`${styles.tibExample} tib`}>ཅ</td>
-                      <td></td>
                       <td><code className={styles.op}>cha</code></td><td className={`${styles.tibExample} tib`}>ཆ</td>
-                      <td></td>
                       <td><code className={styles.op}>ja</code></td><td className={`${styles.tibExample} tib`}>ཇ</td>
-                      <td></td>
                       <td><code className={styles.op}>nya</code></td><td className={`${styles.tibExample} tib`}>ཉ</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>ta</code></td><td className={`${styles.tibExample} tib`}>ཏ</td>
-                      <td></td>
                       <td><code className={styles.op}>tha</code></td><td className={`${styles.tibExample} tib`}>ཐ</td>
-                      <td></td>
                       <td><code className={styles.op}>da</code></td><td className={`${styles.tibExample} tib`}>ད</td>
-                      <td></td>
                       <td><code className={styles.op}>na</code></td><td className={`${styles.tibExample} tib`}>ན</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>pa</code></td><td className={`${styles.tibExample} tib`}>པ</td>
-                      <td></td>
                       <td><code className={styles.op}>pha</code></td><td className={`${styles.tibExample} tib`}>ཕ</td>
-                      <td></td>
                       <td><code className={styles.op}>ba</code></td><td className={`${styles.tibExample} tib`}>བ</td>
-                      <td></td>
                       <td><code className={styles.op}>ma</code></td><td className={`${styles.tibExample} tib`}>མ</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>tsa</code></td><td className={`${styles.tibExample} tib`}>ཙ</td>
-                      <td></td>
                       <td><code className={styles.op}>tsha</code></td><td className={`${styles.tibExample} tib`}>ཚ</td>
-                      <td></td>
                       <td><code className={styles.op}>dza</code></td><td className={`${styles.tibExample} tib`}>ཛ</td>
-                      <td></td>
                       <td><code className={styles.op}>wa</code></td><td className={`${styles.tibExample} tib`}>ཝ</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>zha</code></td><td className={`${styles.tibExample} tib`}>ཞ</td>
-                      <td></td>
                       <td><code className={styles.op}>za</code></td><td className={`${styles.tibExample} tib`}>ཟ</td>
-                      <td></td>
                       <td><code className={styles.op}>&#39;a</code></td><td className={`${styles.tibExample} tib`}>འ</td>
-                      <td></td>
                       <td><code className={styles.op}>ya</code></td><td className={`${styles.tibExample} tib`}>ཡ</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>ra</code></td><td className={`${styles.tibExample} tib`}>ར</td>
-                      <td></td>
                       <td><code className={styles.op}>la</code></td><td className={`${styles.tibExample} tib`}>ལ</td>
-                      <td></td>
                       <td><code className={styles.op}>sha</code></td><td className={`${styles.tibExample} tib`}>ཤ</td>
-                      <td></td>
                       <td><code className={styles.op}>sa</code></td><td className={`${styles.tibExample} tib`}>ས</td>
-                      <td></td>
-                      <td></td><td></td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>ha</code></td><td className={`${styles.tibExample} tib`}>ཧ</td>
-                      <td></td>
                       <td><code className={styles.op}>a</code></td><td className={`${styles.tibExample} tib`}>ཨ</td>
-                      <td></td>
                       <td></td><td></td>
-                      <td></td>
-                      <td></td><td></td>
-                      <td></td>
                       <td></td><td></td>
                     </tr>
                   </tbody>
@@ -224,32 +179,27 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Vowels</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th></tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><code className={styles.op}>a</code></td><td className={styles.sktExample}>a</td>
-                      <td></td>
                       <td><code className={styles.op}>A</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>aa</code></td><td className={styles.sktExample}>ā</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>i</code></td><td className={styles.sktExample}>i</td>
-                      <td></td>
                       <td><code className={styles.op}>I</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>ii</code></td><td className={styles.sktExample}>ī</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>u</code></td><td className={styles.sktExample}>u</td>
-                      <td></td>
                       <td><code className={styles.op}>U</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>uu</code></td><td className={styles.sktExample}>ū</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>R</code></td><td className={styles.sktExample}>ṛ</td>
-                      <td></td>
                       <td><code className={styles.op}>RR</code></td><td className={styles.sktExample}>ṝ</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>lR</code></td><td className={styles.sktExample}>ḷ</td>
-                      <td></td>
                       <td><code className={styles.op}>lRR</code></td><td className={styles.sktExample}>ḹ</td>
                     </tr>
                   </tbody>
@@ -258,7 +208,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Consonants</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th></th><th>unvoiced</th><th>unvcd. asp.</th><th>voiced</th><th>voiced asp.</th><th>nasal</th></tr>
+                    <tr><th></th><th>un&shy;voiced</th><th>unvcd. asp.</th><th>voiced</th><th>voiced asp.</th><th>nasal</th></tr>
                   </thead>
                   <tbody>
                     <tr>
@@ -307,27 +257,23 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Semivowels, Sibilants &amp; Special</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th></tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><code className={styles.op}>ya</code></td><td className={styles.sktExample}>ya</td>
-                      <td></td>
                       <td><code className={styles.op}>ra</code></td><td className={styles.sktExample}>ra</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>la</code></td><td className={styles.sktExample}>la</td>
-                      <td></td>
                       <td><code className={styles.op}>va</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>wa</code></td><td className={styles.sktExample}>va</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>za</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>sha</code></td><td className={styles.sktExample}>śa</td>
-                      <td></td>
                       <td><code className={styles.op}>Sa</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>Sha</code></td><td className={styles.sktExample}>ṣa</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>sa</code></td><td className={styles.sktExample}>sa</td>
-                      <td></td>
                       <td><code className={styles.op}>ha</code></td><td className={styles.sktExample}>ha</td>
                     </tr>
                   </tbody>
@@ -336,7 +282,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Anusvāra, Visarga &amp; Nasals</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th>Description</th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Description</th></tr>
                   </thead>
                   <tbody>
                     <tr><td><code className={styles.op}>M</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>.m</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>.n</code></td><td className={styles.sktExample}>ṃ</td><td>anusvāra</td></tr>
@@ -349,17 +295,15 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <h4 className={styles.subSectionTitle}>Examples</h4>
                 <table className={styles.table}>
                   <thead>
-                    <tr><th>Type</th><th>Result</th><th></th><th>Type</th><th>Result</th></tr>
+                    <tr><th>Type</th><th>Re&shy;sult</th><th>Type</th><th>Re&shy;sult</th></tr>
                   </thead>
                   <tbody>
                     <tr>
                       <td><code className={styles.op}>tRSNA</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>tRSh~Naa</code></td><td className={styles.sktExample}>tṛṣṇā</td>
-                      <td></td>
                       <td><code className={styles.op}>shAstra</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>zaastra</code></td><td className={styles.sktExample}>śāstra</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>saMskRta</code></td><td className={styles.sktExample}>saṃskṛta</td>
-                      <td></td>
                       <td><code className={styles.op}>prajJA</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>praj~nA</code></td><td className={styles.sktExample}>prajñā</td>
                     </tr>
                   </tbody>
@@ -484,7 +428,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
               <section>
                 <h3 className={styles.sectionTitle}>Keyboard Navigation</h3>
                 <p className={styles.intro}>
-                  There is a simple keyboard navigation mode that allows you to search and look at different results
+                  There is a simple keyboard navigation mode that allows you to search and look at different Re&shy;sults
                   by only using the keyboard.
                 </p>
                 <p className={styles.intro}>
@@ -500,16 +444,16 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code className={styles.op}>Enter ↵</code></td>
+                      <td><code className={styles.op}>Enter</code></td>
                       <td>Opens the definitions for the entered term while keeping the keyboard focus inside the input field.</td>
                     </tr>
                     <tr>
-                      <td><code className={styles.op}>🡑</code> / <code className={styles.op}>🡓</code></td>
-                      <td>Move one position up / down in the result list</td>
+                      <td><code className={styles.op}><ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}><ArrowDownIcon className={styles.keyIcon} /></code></td>
+                      <td>Move one position up / down in the Re&shy;sult list</td>
                     </tr>
                     <tr>
-                      <td><code className={styles.op}>Shift + 🡑</code> / <code className={styles.op}>Shift + 🡓</code></td>
-                      <td>Move one page up / down in the result list</td>
+                      <td><code className={styles.op}>Shift + <ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}>Shift + <ArrowDownIcon className={styles.keyIcon} /></code></td>
+                      <td>Move one page up / down in the Re&shy;sult list</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>Page Up</code> / <code className={styles.op}>Page Down</code></td>
@@ -518,7 +462,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                   </tbody>
                 </table>
                 <p className={styles.note}>
-                  <strong>Note:</strong> These keys only change the selected term in the result list.
+                  <strong>Note:</strong> These keys only change the selected term in the Re&shy;sult list.
                   The keyboard focus remains inside the input field so you can continue typing.
                 </p>
               </section>

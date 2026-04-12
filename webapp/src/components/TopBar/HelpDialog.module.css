@@ -19,14 +19,23 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 201;
-  width: min(680px, 95vw);
-  max-height: 85vh;
+  width: min(97vw, 70rem);
+  max-height: 93vh; /* Fallback for older browsers */
+  max-height: 93dvh;
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.12);
   animation: contentIn 0.15s ease;
   overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .content {
+    width: 98vw;
+    max-height: 90vh; /* Fallback for older browsers */
+    max-height: 98dvh;
+  }
 }
 
 @keyframes contentIn {
@@ -101,6 +110,13 @@
   gap: 24px;
 }
 
+@media (max-width: 640px) {
+  .body {
+    padding: 12px 14px 16px;
+    gap: 18px;
+  }
+}
+
 /* ── Section ─────────────────────────────────────────────────── */
 .sectionTitle {
   font-size: 0.95rem;
@@ -108,6 +124,13 @@
   margin: 0 0 6px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 0.85rem;
+    margin: 0 0 4px;
+  }
 }
 
 .content.light .sectionTitle { color: #4a4a6a; }
@@ -119,6 +142,13 @@
   line-height: 1.5;
 }
 
+@media (max-width: 640px) {
+  .intro {
+    font-size: 0.82rem;
+    margin: 0 0 5px;
+  }
+}
+
 .content.light .intro { color: #444; }
 .content.dark  .intro { color: #bbb; }
 
@@ -126,6 +156,13 @@
   margin: 10px 0 0;
   font-size: 0.83rem;
   line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .note {
+    font-size: 0.77rem;
+    margin: 5px 0 0;
+  }
 }
 
 .content.light .note { color: #666; }
@@ -148,6 +185,18 @@
 .table th {
   font-weight: 600;
   white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: 2px 2px;
+    font-size: 0.8rem;
+  }
+
+  .table th {
+    white-space: normal;
+  }
 }
 
 .content.light .table th {
@@ -214,6 +263,13 @@
   margin: 14px 0 4px;
 }
 
+@media (max-width: 640px) {
+  .subSectionTitle {
+    font-size: 0.8rem;
+    margin: 10px 0 3px;
+  }
+}
+
 .content.light .subSectionTitle { color: #555; }
 .content.dark  .subSectionTitle { color: #aaa; }
 
@@ -247,3 +303,15 @@
   padding: 1px 5px;
   border-radius: 3px;
 }
+
+/* Inline icon styling for keyboard shortcuts */
+.keyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 2px;
+  vertical-align: -0.125em;
+}
+

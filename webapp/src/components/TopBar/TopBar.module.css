@@ -50,7 +50,6 @@
 }
 
 .optionsGroup {
-  display: flex;
   align-items: center;
   gap: 0.4em;
   white-space: nowrap;
@@ -58,7 +57,7 @@
 
 /* Thin separator between groups */
 .optionsGroup + .optionsGroup {
-  border-left: 1px solid #ccc;
+  border-left: 1px solid #999;
   padding-left: 0.6em;
 }
 
@@ -98,6 +97,13 @@
   color: #666;
   flex-shrink: 0;
 }
+@media (max-width: 600px) {
+  .optionsCloseBtn {
+    width: 23px;
+    height: 23px;
+  }
+}
+
 
 .optionsCloseBtn:hover {
   background: rgba(0,0,0,0.08);
@@ -245,7 +251,7 @@
   }
 
   .optionsGroup + .optionsGroup {
-    border-left: none;
-    padding-left: 0;
+    padding-left: 4px;
+    padding-right: 4px;
   }
 }
