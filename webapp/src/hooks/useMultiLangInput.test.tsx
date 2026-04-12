@@ -1,31 +1,74 @@
 import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
 import useMultiLangInput from './useMultiLangInput';
 import { Language } from '@/types';
-import { useRef } from 'react';
+import searchReducer from '@/store/searchSlice';
+import settingsReducer from '@/store/settingsSlice';
+import useInputProcessor from './useInputProcessor';
 
-// Wrapper component to provide a test seam
-function TestInput({
+// Create a test store for each test
+function createTestStore() {
+  return configureStore({
+    reducer: {
+      search: searchReducer,
+      settings: settingsReducer,
+    },
+  });
+}
+
+// Inner component that uses the hook (must be inside Provider)
+function InputComponent({
   initialLanguage = 'tib',
   useUnicodeTibetan = true,
   onEnter = vi.fn(),
-  onInputChange = vi.fn()
+  onInputChange = vi.fn(),
 }: {
   initialLanguage?: Language;
   useUnicodeTibetan?: boolean;
   onEnter?: (v: string) => void;
   onInputChange?: (v: string) => void;
 }) {
+  const inputProcessor = useInputProcessor(initialLanguage, useUnicodeTibetan, false);
   const { inputRef } = useMultiLangInput({
     useUnicodeTibetan,
     lowercase: true,
     inputLang: initialLanguage,
     onInputChange,
     onEnter,
+    inputProcessor: inputProcessor.inputProcessor,
+    reverseProcessor: inputProcessor.reverseProcessor,
   });
 
   return <input ref={inputRef} data-testid="wylie-input" type="text" />;
+}
+
+// Wrapper component that provides Redux context
+function TestInput({
+  initialLanguage = 'tib',
+  useUnicodeTibetan = true,
+  onEnter = vi.fn(),
+  onInputChange = vi.fn(),
+  store = createTestStore(),
+}: {
+  initialLanguage?: Language;
+  useUnicodeTibetan?: boolean;
+  onEnter?: (v: string) => void;
+  onInputChange?: (v: string) => void;
+  store?: ReturnType<typeof configureStore>;
+}) {
+  return (
+    <Provider store={store}>
+      <InputComponent
+        initialLanguage={initialLanguage}
+        useUnicodeTibetan={useUnicodeTibetan}
+        onEnter={onEnter}
+        onInputChange={onInputChange}
+      />
+    </Provider>
+  );
 }
 
 describe('native Tibetan input Regression', () => {
