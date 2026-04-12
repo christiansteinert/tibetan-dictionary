@@ -340,7 +340,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                   </thead>
                   <tbody>
                     <tr><td><code className={styles.op}>M</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>.m</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>.n</code></td><td className={styles.sktExample}>ṃ</td><td>anusvāra</td></tr>
-                    <tr><td><code className={styles.op}>H</code></td><td className={styles.sktExample}>ḥ</td><td>visarga</td></tr>
+                    <tr><td><code className={styles.op}>H</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>.h</code></td><td className={styles.sktExample}>ḥ</td><td>visarga</td></tr>
                     <tr><td><code className={styles.op}>G</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>~N</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>N^</code></td><td className={styles.sktExample}>ṅ</td><td>velar nasal</td></tr>
                     <tr><td><code className={styles.op}>J</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>~n</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>JN</code></td><td className={styles.sktExample}>ñ</td><td>palatal nasal</td></tr>
                   </tbody>
@@ -353,14 +353,14 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                   </thead>
                   <tbody>
                     <tr>
-                      <td><code className={styles.op}>dharma</code></td><td className={styles.sktExample}>dharma</td>
+                      <td><code className={styles.op}>tRSNA</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>tRSh~Naa</code></td><td className={styles.sktExample}>tṛṣṇā</td>
                       <td></td>
-                      <td><code className={styles.op}>zAstra</code></td><td className={styles.sktExample}>śāstra</td>
+                      <td><code className={styles.op}>shAstra</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>zaastra</code></td><td className={styles.sktExample}>śāstra</td>
                     </tr>
                     <tr>
                       <td><code className={styles.op}>saMskRta</code></td><td className={styles.sktExample}>saṃskṛta</td>
                       <td></td>
-                      <td><code className={styles.op}>prajJA</code></td><td className={styles.sktExample}>prajñā</td>
+                      <td><code className={styles.op}>prajJA</code> <span className={styles.altLabel}>or</span> <code className={styles.op}>praj~nA</code></td><td className={styles.sktExample}>prajñā</td>
                     </tr>
                   </tbody>
                 </table>

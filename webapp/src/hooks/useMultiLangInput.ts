@@ -149,14 +149,17 @@ export default function useMultiLangInput({
 
   // --- core event handlers ----------------------------------------------
   
-  /// Remove unsupported search operators and other special chars that may cause trouble
-  const removeUnsupportedOperators = (text: string) => {
+  /** Remove unsupported search operators and other special chars that may cause trouble */
+  const removeUnsupportedOperators = (lang: Language, text: string) => {
     if (searchMode === 'term') {
-      text = text.replace(/[&|!~]/g, ''); // remove FTS operators when in term search mode
+      text = text.replace(/[&|!]/g, ''); // remove FTS operators when in term search mode
+      if (lang != 'skt') {
+        text = text.replace(/[~]/g, ''); // ~ must always be allowed for sanskrit for sequences like ~n = ñ
+      }
     } else {
       text = text.replace(/[*?]/g, ''); // remove term search operators when in FTS mode
     }
-    text = text.replace(/[%"^,]/g, ''); // remove other characters that may cause trouble 
+    text = text.replace(/[%",]/g, ''); // remove other characters that may cause trouble
     text = text.replace(/[\u0000-\u001F\u007F]/g, ''); // Remove other non-printable characters
 
     return text;
@@ -336,8 +339,6 @@ export default function useMultiLangInput({
       const el = inputRef.current;
       if (!el) return;
 
-      el.value = removeUnsupportedOperators(el.value);
-
       const uniInput = toLowerIfNeeded(el.value);
       const prev = lastUniInput.current;
 
@@ -347,7 +348,9 @@ export default function useMultiLangInput({
       // Sanskrit + English doesn't use syllable-boundary logic — just run the
       // input processor on every keystroke and trigger search on every change.
       if (inputLang === 'en' || inputLang === 'skt') { // English or Skt
-        const converted = processorRef.current?.(uniInput) ?? uniInput;
+        let converted = processorRef.current?.(uniInput) ?? uniInput;
+        converted = removeUnsupportedOperators(inputLang, converted);
+
         el.value = converted;
         if ((uniInput.length >= 3 && converted != prev)  
           || (converted.length < prev.length)) {
@@ -367,6 +370,7 @@ export default function useMultiLangInput({
       }
 
       // --- syllable completion handling ---
+      el.value = removeUnsupportedOperators(inputLang, el.value);
       if (handleTibSpaceOrOperatorAtEnd(event) || handleTibMidSyllableCompletion(event)) {
         if (/.*['a-zA-Z].*/.test(uniInput)) {
           wasTypedInWylie.current = true;

@@ -17,10 +17,10 @@ const FTS_OPS = /[&|!~]/;
  */
 export function decorateFtsInput(text: string): string {
   // Normalise boolean operators: ensure spaces around & | !
-  let result = text.replace(/\s*([&|!])\s*/g, ' $1 ');
+  let result = text.replace(/\s*([&|!])\s*([^\s])/g, ' $1 $2');
   // Normalise suffix wildcard ~: strip spaces before, add one space after (unless at end)
-  result = result.replace(/\s*~/g, '~');       // remove any space before ~
-  result = result.replace(/~(?!\s|$)/g, '~ '); // add space after ~ when not already there
+  result = result.replace(/\s*~/g, '~');      // remove any space before ~
+  result = result.replace(/~([^\s])/g, '~ $1');   // add space after ~ when not already there
 
   // Remove initial space and collapse multiple spaces into one
   result = result.trimStart();

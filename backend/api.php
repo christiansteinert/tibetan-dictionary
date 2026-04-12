@@ -238,7 +238,7 @@ if ($resource === 'terms' && $method === 'GET') {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
         $likePattern2 = $likePattern; 
 
-        // PHP 7.4 compatible: check if string ends with % or _
+        // check if string ends with % or _
         $endsWithPercent = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '%';
         $endsWithUnderscore = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '_';
         
