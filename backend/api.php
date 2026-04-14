@@ -181,7 +181,7 @@ if ($resource === 'term' && $method === 'GET') {
         . 'DICT.definition AS definition, '
         . 'DICTNAMES.name AS dictionary '
         . 'FROM DICT '
-        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
         . 'WHERE DICT.lang = :lang '
         .   'AND DICT.term = :term '
         .   'AND (' . $dictQuery . ') '
@@ -221,7 +221,7 @@ if ($resource === 'term' && $method === 'GET') {
 // Response: Array<{ term: string }>
 // =============================================================================
 
-if ($resource === 'terms' && $method === 'GET') {
+  if ($resource === 'terms' && $method === 'GET') {
     $search = isset($_GET['search']) ? trim($_GET['search']) : '';
     if ($search === '') {
         errorResponse('Missing required query parameter: search');
@@ -255,9 +255,9 @@ if ($resource === 'terms' && $method === 'GET') {
         // result count below the requested page size.
         $statement = $db->prepare(
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
-            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
             . 'WHERE (DICT.lang = :lang AND (DICT.term LIKE :word OR DICT.term LIKE :word2) AND (' . $dictQuery . ')) '
-            . 'GROUP BY term ORDER BY lower(term), term;'
+            . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term;'
         );
         $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
         $statement->bindValue(':word', $likePattern, SQLITE3_TEXT);
@@ -286,11 +286,11 @@ if ($resource === 'terms' && $method === 'GET') {
     } elseif ($lang === 'bo') {
         $statement = $db->prepare(
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
-            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
             . 'WHERE (DICT.lang = :lang AND (DICT.term = :word '
-            .   'OR (DICT.term > :wordSearch1 AND term < :wordSearch2)) '
+            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2)) '
             .   'AND (' . $dictQuery . ')) '
-            . 'GROUP BY term ORDER BY lower(term), term '
+            . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
             . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
         );
         $statement->bindValue(':lang',        $lang,              SQLITE3_TEXT);
@@ -309,12 +309,12 @@ if ($resource === 'terms' && $method === 'GET') {
     } else {
         $statement = $db->prepare(
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
-            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language '
+            . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
             . 'WHERE (DICT.lang = :lang AND (DICT.term = :word COLLATE NOCASE '
             .   'OR (DICT.term > :wordSearch1 COLLATE NOCASE '
-            .       'AND term < :wordSearch2 COLLATE NOCASE)) '
+            .       'AND DICT.term < :wordSearch2 COLLATE NOCASE)) '
             .   'AND (' . $dictQuery . ')) '
-            . 'GROUP BY term ORDER BY lower(term), term '
+            . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
             . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
         );
         $statement->bindValue(':lang',        $lang,             SQLITE3_TEXT);
