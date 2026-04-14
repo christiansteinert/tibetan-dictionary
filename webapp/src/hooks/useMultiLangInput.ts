@@ -352,8 +352,7 @@ export default function useMultiLangInput({
         converted = removeUnsupportedOperators(inputLang, converted);
 
         el.value = converted;
-        if ((uniInput.length >= 3 && converted != prev)  
-          || (converted.length < prev.length)) {
+        if (converted != prev){
           lastUniInput.current = converted;
           onInputChange?.(el.value);
         }

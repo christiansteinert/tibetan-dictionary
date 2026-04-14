@@ -47,6 +47,8 @@ export default defineConfig({
         // Backend resources (/backend/*) require network access.
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
         navigateFallback: 'index.html',
+        navigateFallbackDenylist: [/^\/backend/],
+
         // Ensure all frontend assets are cached, even if large
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB per file
         runtimeCaching: [

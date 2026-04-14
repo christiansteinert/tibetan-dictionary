@@ -234,6 +234,10 @@ if ($resource === 'term' && $method === 'GET') {
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
     $termQuery = "DICT.term";
 
+    if ($lang !== 'bo') {
+        $lang = mb_strtolower($lang, 'UTF-8');
+    }
+
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
         $likePattern2 = $likePattern; 
@@ -310,13 +314,13 @@ if ($resource === 'term' && $method === 'GET') {
         $statement = $db->prepare(
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
             . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
-            . 'WHERE (DICT.lang = :lang AND (DICT.term = :word COLLATE NOCASE '
-            .   'OR (DICT.term > :wordSearch1 COLLATE NOCASE '
-            .       'AND DICT.term < :wordSearch2 COLLATE NOCASE)) '
+            . 'WHERE (DICT.lang = :lang AND (DICT.term = :word '
+            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2)) '
             .   'AND (' . $dictQuery . ')) '
             . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
             . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
         );
+              
         $statement->bindValue(':lang',        $lang,             SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search,           SQLITE3_TEXT);
