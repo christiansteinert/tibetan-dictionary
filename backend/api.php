@@ -162,7 +162,7 @@ $param    = isset($segments[1]) ? urldecode($segments[1]) : '';
 //
 // Query params:
 //   lang          - 'bo' (default) or 'en'
-//   dictionaries  - repeated param, e.g. dictionaries[]=Rangjung+Yeshe
+//   dictionaries  - comma separate list
 //
 // Response: { [dictionaryName: string]: string }
 // =============================================================================
@@ -216,7 +216,7 @@ if ($resource === 'term' && $method === 'GET') {
 //   lang          - 'bo' (default) or 'en'
 //   offset        - pagination offset (default 0)
 //   maxResults    - page size, 10–500 (default 50)
-//   dictionaries  - repeated param
+//   dictionaries  - comma separate list
 //
 // Response: Array<{ term: string }>
 // =============================================================================
@@ -423,7 +423,7 @@ if ($resource === 'fulltext' && $method === 'GET') {
         SELECT DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICT.lang, DICT_FTS.rank
         FROM DICT_FTS
         INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid
-        INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICT.lang = DICTNAMES.language AND (" . $dictQuery . ")
+        INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND (" . $dictQuery . ")
         WHERE DICT_FTS.definition MATCH :query
     )
     ORDER BY rank ASC

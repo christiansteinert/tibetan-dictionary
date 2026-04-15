@@ -17,23 +17,29 @@ DIR=`pwd`
 
 
 # If private folder exists, copy stuff from public to private
+echo "private dir $CSV_INPUT_PRIVATE"
 if [ -d $CSV_INPUT_PRIVATE ]
 then
+  echo "Copying public dictionaries to private folder..."
+
+  cd "$DIR"
   cd _input/dictionaries/public
-  cp * ../private 2>/dev/null
+  echo $PWD
+  cp * ../private
 
   cd "$DIR"
   cd _input/dictionaries/public_en
-  cp * ../private_en 2>/dev/null
+  echo $PWD
+  cp * ../private_en
 
   cd "$DIR"
   cd _input/dictionaries/public_skt
-  cp * ../private_skt 2>/dev/null
+  echo $PWD
+  cp * ../private_skt
 
 
-# 28? 29? 33? 39? 41?
-  export CSV_INPUT=$CSV_INPUT_PRIVATE
-  cd "$DIR"
+  #export CSV_INPUT=$CSV_INPUT_PRIVATE
 fi
 
+cd "$DIR"
 python3 buildscripts/_buildDict.py

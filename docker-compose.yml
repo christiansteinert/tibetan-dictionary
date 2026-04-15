@@ -17,7 +17,7 @@ services:
       "
     volumes:
       - ./backend:/app/backend
-      - ./_input:/app/_input:ro
+      - ./_input:/app/_input
       - ./buildscripts:/app/buildscripts:ro
 
   # Build react frontend and it into ./webapp/dist
