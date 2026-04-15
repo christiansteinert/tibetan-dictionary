@@ -150,13 +150,18 @@ export function useSearchHandlers() {
 
   /** Open the extended search options bar. */
   const handleOpenExtendedSearch = useCallback(() => {
-    navigation.setExtSearchEnabled(true);
-  }, [navigation]);
+    if (mode === 'fulltext') {
+      navigation.fulltextSearch(currentTerm, inputLang, 0, true, true);
+    } else {
+      navigation.termSearch(currentTerm, inputLang, 0, true, true);
+    }
+  }, [navigation, mode, currentTerm, inputLang, extendedSettingsVisible]);
 
   /** Close the extended search options bar. */
   const handleCloseExtendedSearch = useCallback(() => {
-    navigation.setExtSearchEnabled(false);
-  }, [navigation]);
+    // If closing extended search while in fulltext mode, also switch back to term mode. This means that we always switch to term search mode
+    navigation.termSearch(currentTerm, inputLang, 0, true, false);
+  }, [navigation, mode, currentTerm, inputLang, extendedSettingsVisible]);
 
   /** Change the search mode (term / fulltext). */
   const handleModeChange = useCallback(
