@@ -14,8 +14,8 @@ import type { Language } from '@/types';
 
 /**
  * Base path for all API requests.
- * - `'api'`     → clean URL style:  /api/term/bde+ba   (requires nginx rewrite)
- * - `'api.php'` → script path style: /api.php/term/bde+ba (works on any PHP server)
+ * - `'api'`     → clean URL style:  /api/term/bo/bde+ba   (requires nginx rewrite)
+ * - `'api.php'` → script path style: /api.php/term/bo/bde+ba (works on any PHP server)
  */
 export let API_BASE = 'backend/api';
 
@@ -74,8 +74,8 @@ async function postJson<T>(path: string, body: unknown): Promise<T> {
 export class PhpDictionaryApi {
   async readTerm(term: string, lang: Language, dictionaries: string[]) {
     const data = await getJson<Record<string, string>>(
-      `term/${encodeURIComponent(term)}`,
-      { lang: langToBackend(lang as Language), dictionaries },
+      `term/${encodeURIComponent(langToBackend(lang))}/${encodeURIComponent(term)}`,
+      { dictionaries },
     );
     return { term, definitions: data };
   }
@@ -88,9 +88,7 @@ export class PhpDictionaryApi {
     dictionaries: string[],
     signal?: AbortSignal
   ) {
-    return getJson<{ term: string }[]>('terms', {
-      search,
-      lang: langToBackend(lang as Language),
+    return getJson<{ term: string }[]>(`terms/${encodeURIComponent(langToBackend(lang))}/${encodeURIComponent(search)}`, {
       offset,
       maxResults,
       dictionaries,
@@ -115,9 +113,7 @@ export class PhpDictionaryApi {
     dictionaries: string[],
     signal?: AbortSignal
   ) {
-    const backendResults = getJson<BackendFtsSearchResult[]>('fulltext', {
-      q: query,
-      lang: langToBackend(lang as Language),
+    const backendResults = getJson<BackendFtsSearchResult[]>(`fulltext/${encodeURIComponent(langToBackend(lang))}/${encodeURIComponent(query)}`, {
       offset,
       maxResults,
       dictionaries,

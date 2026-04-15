@@ -5,10 +5,10 @@
 //
 // Routes (dispatched via PATH_INFO or REQUEST_URI):
 //
-//   GET  /api/term/{term}     Look up definitions for a specific term.
-//   GET  /api/terms           Prefix-based term search (auto-complete).
-//   POST /api/check-terms     Check which Tibetan sections have dictionary entries.
-//   GET  /api/fulltext        FTS5-based fulltext search.
+//   GET  /api/term/{lang}/{term}      Look up definitions for a specific term.
+//   GET  /api/terms/{lang}/{term}     Prefix-based term search (auto-complete).
+//   POST /api/check-terms             Check which Tibetan sections have dictionary entries.
+//   GET  /api/fulltext/{lang}/{query} FTS5-based fulltext search.
 //
 // All responses are JSON. Request bodies (where applicable) are JSON.
 // =============================================================================
@@ -109,8 +109,12 @@ function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
  * @return string
  */
 function resolveLanguage(): string {
-    $allowed = ['bo', 'en', 'sa'];
     $lang = isset($_GET['lang']) ? trim($_GET['lang']) : 'bo';
+    return ensureLanguageValid($lang);
+}
+
+function ensureLanguageValid($lang): string {
+    $allowed = ['bo', 'en', 'sa'];
     return in_array($lang, $allowed, true) ? $lang : 'bo';
 }
 
@@ -128,14 +132,14 @@ if (file_exists(__DIR__ . '/TibetanDictionary_private.db')) {
 //
 // Supports two URL conventions:
 //
-//   /api.php/term/{term}   – classic PHP path-info style; PATH_INFO is set
-//                            automatically by PHP-FPM, mod_php (Apache with
-//                            AcceptPathInfo On), and most other PHP servers.
+//   /api.php/term/{lang}/{term}  – classic PHP path-info style; PATH_INFO is set
+//                                  automatically by PHP-FPM, mod_php (Apache with
+//                                  AcceptPathInfo On), and most other PHP servers.
 //
-//   /api/term/{term}       – clean REST URL; requires a server rewrite rule
-//                            (see nginx.conf). PATH_INFO is not set in this
-//                            case, so the /api prefix is stripped from
-//                            REQUEST_URI instead.
+//   /api/term/{lang}/{term} – clean REST URL; requires a server rewrite rule
+//                             (see nginx.conf and .htaccess). PATH_INFO is not set 
+//                             in this case, so the /api prefix is stripped from
+//                             REQUEST_URI instead.
 //
 if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] !== '') {
     // Called as /api.php/<resource>/... — PHP-FPM sets PATH_INFO for us.
@@ -149,19 +153,18 @@ if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] !== '') {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Split path into segments, e.g. "term/bde+ba" → ['term', 'bde ba']
-$segments = explode('/', $path, 2);
+// Split path into segments, e.g. "term/lang/bde+ba" → ['term', 'lang', 'bde ba']
+$segments = explode('/', $path, 3);
 $resource = $segments[0] ?? '';
-$param    = isset($segments[1]) ? urldecode($segments[1]) : '';
-
+$lang    = isset($segments[1]) ? urldecode($segments[1]) : '';
+$param   = isset($segments[2]) ? urldecode($segments[2]) : '';
 
 // =============================================================================
-// GET /api/term/{term}
+// GET /api/term/{lang}/{term}
 //
 // Look up the full definition(s) for a specific term.
 //
 // Query params:
-//   lang          - 'bo' (default) or 'en'
 //   dictionaries  - comma separate list
 //
 // Response: { [dictionaryName: string]: string }
@@ -169,10 +172,14 @@ $param    = isset($segments[1]) ? urldecode($segments[1]) : '';
 
 if ($resource === 'term' && $method === 'GET') {
     if ($param === '') {
-        errorResponse('Missing term in path: /api/term/{term}');
+        errorResponse('Missing term in path: /api/term/{lang}/{term}');
     }
 
-    $lang         = resolveLanguage();
+    if ($lang === '') {
+        errorResponse('Missing language in path: /api/term/{lang}/{term}');
+    }
+
+    $lang         = ensureLanguageValid($lang);
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
 
@@ -207,36 +214,34 @@ if ($resource === 'term' && $method === 'GET') {
 
 
 // =============================================================================
-// GET /api/terms
+// GET /api/terms/{lang}/{term}
 //
 // Prefix-based term list (search-bar auto-complete).
 //
 // Query params:
-//   search        - the search string (required)
-//   lang          - 'bo' (default) or 'en'
 //   offset        - pagination offset (default 0)
-//   maxResults    - page size, 10–500 (default 50)
+//   maxResults    - page size, 1–500 (default 50)
 //   dictionaries  - comma separate list
 //
 // Response: Array<{ term: string }>
 // =============================================================================
 
   if ($resource === 'terms' && $method === 'GET') {
-    $search = isset($_GET['search']) ? trim($_GET['search']) : '';
-    if ($search === '') {
-        errorResponse('Missing required query parameter: search');
+    if ($param === '') {
+        errorResponse('Missing term in path: /api/terms/{lang}/{term}');
     }
 
-    $lang         = resolveLanguage();
+    if ($lang === '') {
+        errorResponse('Missing language in path: /api/terms/{lang}/{term}');
+    }
+
+    $lang         = ensureLanguageValid($lang);
+    $search       = trim($param);
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
+    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 1, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
     $termQuery = "DICT.term";
-
-    if ($lang !== 'bo') {
-        $lang = mb_strtolower($lang, 'UTF-8');
-    }
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
@@ -378,30 +383,32 @@ if ($resource === 'check-terms' && $method === 'POST') {
 
 
 // =============================================================================
-// GET /api/fulltext
+// GET /api/fulltext/{lang}/{query}
 //
 // FTS5-based fulltext search across definitions.
 //
 // Query params:
-//   q             - search query (required)
-//   lang          - 'bo' (default) or 'en'
 //   offset        - pagination offset (default 0)
-//   maxResults    - page size, 10–500 (default 50)
+//   maxResults    - page size, 1–500 (default 50)
 //   dictionaries  - repeated param
 //
 // Response: Array<{ term, dictionary, dictionaryId, snippet, definition }>
 // =============================================================================
 
 if ($resource === 'fulltext' && $method === 'GET') {
-    $search = isset($_GET['q']) ? trim($_GET['q']) : '';
-    if ($search === '') {
-        errorResponse('Missing required query parameter: q');
+    if ($param === '') {
+        errorResponse('Missing term in path: /api/fulltext/{lang}/{term}');
     }
 
-    $lang         = resolveLanguage();
+    if ($lang === '') {
+        errorResponse('Missing language in path: /api/fulltext/{lang}/{term}');
+    }
+
+    $lang         = ensureLanguageValid($lang);
+    $search       = trim($param);
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 10, 500, 50);
+    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 1, 500, 50);
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
     $innerLimit = $maxResults + $offset;
     // The FTS query must:

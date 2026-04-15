@@ -16,16 +16,6 @@ servers:
 # ---------------------------------------------------------------------------
 components:
   parameters:
-    lang:
-      name: lang
-      in: query
-      description: Language direction. `bo` = Tibetan (default), `en` = English, `sa` = Sanskrit.
-      required: false
-      schema:
-        type: string
-        enum: [bo, en, sa]
-        default: bo
-
     offset:
       name: offset
       in: query
@@ -136,23 +126,28 @@ components:
 # ---------------------------------------------------------------------------
 paths:
 
-  /term/{term}:
+  /term/{lang}/{term}:
     get:
       operationId: getTerm
       summary: Look up definitions for a specific term
       description: >
-        Returns all definitions for the given term across the selected
-        dictionaries. Multiple entries from the same dictionary are
-        concatenated with `\n-----\n`.
+        Returns all definitions for the given term across the selected dictionaries.
       parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
         - name: term
           in: path
           required: true
-          description: The term to look up (Wylie transliteration for Tibetan).
+          description: The term to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
           schema:
             type: string
           example: "bde ba"
-        - $ref: '#/components/parameters/lang'
         - $ref: '#/components/parameters/dictionaries'
       responses:
         '200':
@@ -168,24 +163,31 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 
-  /terms:
+  /terms/{lang}/{term}:
     get:
       operationId: searchTerms
       summary: Prefix-based term search (auto-complete)
       description: >
         Returns a paginated list of terms that start with or match the given
         search string. Supports wildcards (`*` = any sequence, `?` = one
-        character). For Tibetan a range query is used; for English a
-        case-insensitive prefix match.
+        character). For English and Sanskrit the search is case-insensitive.
       parameters:
-        - name: search
-          in: query
+        - name: lang
+          in: path
           required: true
-          description: Search string (Wylie for Tibetan, plain text for English). Supports `*` and `?` wildcards.
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
           schema:
             type: string
-          example: "bde"
-        - $ref: '#/components/parameters/lang'
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/dictionaries'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/maxResults'
         - $ref: '#/components/parameters/dictionaries'
@@ -244,7 +246,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 
-  /fulltext:
+  /fulltext/{lang}/{term}:
     get:
       operationId: fulltextSearch
       summary: FTS5-based fulltext search across definitions
@@ -254,18 +256,66 @@ paths:
         prefix matching. Results are ordered by FTS5 relevance rank.
         Each result includes a highlighted snippet.
 
+        `xyz*` = any characters at the end of the word, 
+        `"abc def"` = phrase search
+
         Term matches are restricted to the requested language, while
         definition matches are returned from the definitions of all languages.  
         Each result contains a `lang` field indicating the headword language.
       parameters:
-        - name: q
-          in: query
+        - name: lang
+          in: path
           required: true
-          description: FTS5 query string.
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
           schema:
             type: string
-          example: "emptiness AND awareness"
-        - $ref: '#/components/parameters/lang'
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Map of dictionary name → definition text (may be empty if no entries found).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TermResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /terms/{lang}/{term}:
+    get:
+      operationId: searchTerms
+      summary: Prefix-based term search (auto-complete)
+      description: >
+        Returns a paginated list of terms that start with or match the given
+        search string. Supports wildcards (`*` = any sequence, `?` = one character).
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query string to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/maxResults'
         - $ref: '#/components/parameters/dictionaries'
