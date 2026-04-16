@@ -310,10 +310,10 @@ export default function useMultiLangInput({
         } else {
           inputText = uniInput.replace(/[་།/-_]+/g, '་');
         }
+        inputText = inputText.replace(/[\s]+$/g, '');
       } else {
         inputText = newInputAsWylie;
       }
-      inputText = inputText.replace(/[\s]+$/g, '');
 
       el.value = inputText;
       lastUniInput.current = inputText;

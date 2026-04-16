@@ -109,7 +109,7 @@ export default function SearchLayout(props: Props) {
             onNext={handlePaginationNext}
             selectedTerm={definition.term}
           />}
-          <div className="mainWrap">
+          <div className="mainWrap wrapDefinitionView">
             <DefinitionView
               onTermClick={handleInlineTermClick}
               onScanClick={handleScanClick}

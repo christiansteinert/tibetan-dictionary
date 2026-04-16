@@ -148,7 +148,7 @@ a {
 }
 
 .leftSideBar,
-.mainWrap {
+.wrapDefinitionView {
   display: table-cell;
   vertical-align: top;
 }
@@ -680,7 +680,7 @@ body {
     display: table-cell !important
   }
 
-  .forceLeftSideVisible .mainWrap {
+  .forceLeftSideVisible .wrapDefinitionView {
     display: none !important
   }
 
@@ -822,7 +822,7 @@ body.dark {
 
 
 /* special mode that only shows a definition*/
-.definitionOnly .mainWrap {
+.definitionOnly .wrapDefinitionView {
   padding: 0.25em !important;
 }
 
