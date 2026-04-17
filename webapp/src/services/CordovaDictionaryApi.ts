@@ -98,6 +98,7 @@ export class CordovaDictionaryApi {
       const db = this.openDB();
 
       db.transaction((tx: any) => {
+        // FIXME use same queries like PHP backend!!!
         try {
           const backendLang = langToBackend(lang as Language);
           const dictQuery = this.mergeOrClauses('DICTNAMES.name', dictionaries);
@@ -118,11 +119,11 @@ export class CordovaDictionaryApi {
             queryParams = [backendLang, likeSearch];
           } else if (lang === 'tib') {
             const termSearch1 = term + ' ';
-            const termSearch2 = term + ' zzzzz';
+            const termSearch2 = term + ' ';
             query =
               'SELECT DISTINCT DICT.term as term FROM DICT ' +
               'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-              'WHERE DICT.lang = ? AND ( (( term = ? ) OR ( term > ? AND term < ? )) AND ' +
+              'WHERE DICT.lang = ? AND ( (( term = ? ) OR ( term > ? AND term < ?  || char(0xFFFF) )) AND ' +
               dictQuery +
               ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
               maxResults +
@@ -131,11 +132,11 @@ export class CordovaDictionaryApi {
             queryParams = [backendLang, term, termSearch1, termSearch2];
           } else {
             const termSearch1 = term;
-            const termSearch2 = term + 'zzzzz';
+            const termSearch2 = term;
             query =
               'SELECT DISTINCT DICT.term as term FROM DICT ' +
               'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-              'WHERE DICT.lang = ? AND ( (( term = ? COLLATE NOCASE ) OR ( term > ? COLLATE NOCASE AND term < ?  COLLATE NOCASE )) AND ' +
+              'WHERE DICT.lang = ? AND ( (( term = ? ) OR ( term > ? CAND term < ? || char(0xFFFF) )) AND ' +
               dictQuery +
               ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
               maxResults +

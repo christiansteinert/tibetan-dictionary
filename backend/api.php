@@ -297,7 +297,7 @@ if ($resource === 'term' && $method === 'GET') {
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
             . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
             . 'WHERE (DICT.lang = :lang AND (DICT.term = :word '
-            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2)) '
+            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) )) '
             .   'AND (' . $dictQuery . ')) '
             . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
             . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
@@ -305,8 +305,8 @@ if ($resource === 'term' && $method === 'GET') {
         $statement->bindValue(':lang',        $lang,              SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,            SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search . ' ',      SQLITE3_TEXT);
-        $statement->bindValue(':wordSearch2', $search . ' zzzzz', SQLITE3_TEXT);
-
+        $statement->bindValue(':wordSearch2', $search . ' ', SQLITE3_TEXT);
+         
         $results = $statement->execute();
         if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
@@ -320,7 +320,7 @@ if ($resource === 'term' && $method === 'GET') {
             'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
             . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
             . 'WHERE (DICT.lang = :lang AND (DICT.term = :word '
-            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2)) '
+            .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) )) '
             .   'AND (' . $dictQuery . ')) '
             . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
             . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
@@ -329,7 +329,7 @@ if ($resource === 'term' && $method === 'GET') {
         $statement->bindValue(':lang',        $lang,             SQLITE3_TEXT);
         $statement->bindValue(':word',        $search,           SQLITE3_TEXT);
         $statement->bindValue(':wordSearch1', $search,           SQLITE3_TEXT);
-        $statement->bindValue(':wordSearch2', $search . 'zzzzz', SQLITE3_TEXT);
+        $statement->bindValue(':wordSearch2', $search, SQLITE3_TEXT);
 
         $results = $statement->execute();
         if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
