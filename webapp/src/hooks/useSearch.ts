@@ -41,7 +41,7 @@ export function normalizeSearchTerm(
 }
 
 interface UseSearchReturn {
-  search: (rawInput: string, lang: Language, offset?: number) => Promise<{
+  search: (rawInput: string, lang: Language, offset?: number, sidebarVisible?: boolean) => Promise<{
     searchTerm: string;
     results: TermListRow[];
   }>;
@@ -60,9 +60,10 @@ export default function useSearch(): UseSearchReturn {
    * @param rawInput – raw text from the input field
    * @param lang – 'tib' or 'en'
    * @param offset – pagination offset (≥ 0)
+   * @param sidebarVisible – whether the sidebar should be visible
    */
   const search = useCallback(
-    async (rawInput: string, lang: Language, offset = 0) => {
+    async (rawInput: string, lang: Language, offset = 0, sidebarVisible = true) => {
       const searchTerm = normalizeSearchTerm(
         rawInput,
         lang,
@@ -100,7 +101,7 @@ export default function useSearch(): UseSearchReturn {
           lang: lang,
           offset: offset,
           results: results,
-          sidebarVisible: true,
+          sidebarVisible: sidebarVisible,
           isSearching: false,
           error: null,
         }));

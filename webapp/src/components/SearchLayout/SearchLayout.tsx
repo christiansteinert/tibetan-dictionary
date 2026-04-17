@@ -16,7 +16,7 @@ import { viewScan } from './scannedPageViewer';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
 import useSearch from '@/hooks/useSearch';
 import useDictionaryLookup from '@/hooks/useDictionaryLookup';
-import { useSearchHandlers } from '@/hooks/useSearchHandlers';
+import { useSearchHandlers, handleInlineTermClick } from '@/hooks/useSearchHandlers';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 
 import {
@@ -45,7 +45,7 @@ export default function SearchLayout(props: Props) {
   // Trigger search + definition load when the URL changes.
   useEffect(() => {
     (async () => {
-      await search(result.query, result.lang, result.offset);
+      await search(result.query, result.lang, result.offset, result.sidebarVisible);
     })();
   }, [dispatch, result.query, result.offset, result.lang, search]);
 
@@ -89,9 +89,9 @@ export default function SearchLayout(props: Props) {
   /** Handle clicking an inline Tibetan term inside a definition. */
   const handleInlineTermClick = useCallback(
     (wylie: string, termLang: Language) => {
-      navigation.termSearch(wylie, termLang, 0, false, searchInput.extendedSettingsVisible, wylie);
+      handlers.handleInlineTermClick(wylie, termLang);
     },
-    [navigation, searchInput.extendedSettingsVisible]
+    [handlers]
   );
 
   /** Handle clicking a "view scan" link. */

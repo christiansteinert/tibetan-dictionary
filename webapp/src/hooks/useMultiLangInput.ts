@@ -292,7 +292,7 @@ export default function useMultiLangInput({
 
     const wasCharAddedAtEnd = uniInput.length > prev.length && uniInput.startsWith(prev);
     const isSearchOperatorAtEnd = /[&|!*?~]$/.test(uniInput);
-    const isSyllableEndCharacterAtEnd = /[-  /་།\s]$/.test(uniInput)
+    const isSyllableEndCharacterAtEnd = /[- /་།\s]$/.test(uniInput)
     const isSeparatorAppended = wasCharAddedAtEnd && (isSyllableEndCharacterAtEnd || isSearchOperatorAtEnd);
 
     const newInputAsWylie = revertOutputToInputFormat(uniInput);

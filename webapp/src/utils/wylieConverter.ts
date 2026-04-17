@@ -46,6 +46,7 @@ export class WylieConverter {
    * @returns {string} Text in Tibetan Unicode
    */
   wylieToUni(wylie: string, preserveWildcards: boolean = false): string {
+    let result = '';
     if (wylie.indexOf('?') !== -1 || wylie.indexOf('*') !== -1) {
       // Preserve wildcard characters and convert the rest. This is used to handle interactive inputs that contain wildcards.
       // It is accomplished by:
@@ -53,13 +54,12 @@ export class WylieConverter {
       // - preserving any wildcards
       // - if splitting at a wildcard generates a fragment without vowel then unicode conversion is ignored because the converter
       //   would introduce an 'a' vowel that we do not want to have and it may even be an invalid syllable fragment that cannot be properly represented
-      let result = '';
       let previousSyllable = '';
       
       const tok = new Tokenizer(['*', '?', ' '], (syllable: string, isSeparator: boolean) => {
         if (syllable === '*' || syllable === '?') {
           if (!previousSyllable.endsWith(' ')) {
-            // The Wylie converter introduces a tseg after every syllable, so if the previous syllable.
+            // The Wylie converter introduces a tseg after every syllable.
             // If the previous syllable ended with a wildcard, then we remove that tseg again
             result = result.replace(/་$/, '');
           }
@@ -81,12 +81,14 @@ export class WylieConverter {
       if (!result.endsWith('་')) {
         result += '་';
       }
-
-      return result;
-    
     } else {
-      return this.doWylieToUni(wylie);
+      result = this.doWylieToUni(wylie);
     }
+
+    result = result.replace(/་་+/g, '་ ');
+    result = result.replace(/([།༽\)\]])་/g, '$1 ');
+
+    return result;
 
   }
 

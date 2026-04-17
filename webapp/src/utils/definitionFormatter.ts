@@ -219,7 +219,7 @@ function convertInlineTibetanSections(
       .replace(/^\s+|\s+$/g, '');
 
     let out = useUnicodeTibetan
-      ? getWylieConverter().wylieToUni(chunkContents)
+      ? getWylieConverter().wylieToUni(chunkContents, true)
       : chunkContents;
 
     const lookup = getWylieConverter().normalizeWylieWhitespace(chunkContents);

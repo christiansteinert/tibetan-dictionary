@@ -162,7 +162,7 @@ const searchSlice = createSlice({
       resultQuery: string;
       offset: number;
       definitionTerm: string;
-    }>) {
+    }>) {      
       state.input.mode = action.payload.mode;
       state.input.extendedSettingsVisible = action.payload.extendedSettingsVisible;
       state.resultList.sidebarVisible = action.payload.sidebarVisible;
@@ -170,6 +170,7 @@ const searchSlice = createSlice({
       state.resultList.query = action.payload.resultQuery;
       state.resultList.offset = action.payload.offset;
       state.definition.term = action.payload.definitionTerm;
+      console.log('State updated from URL:', action.payload);
     },
 
 

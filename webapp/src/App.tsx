@@ -18,14 +18,14 @@ import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 export default function App() {
   useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
-  const { inputLang } = useSelector((s: RootState) => s.search.input);
-  const { sidebarVisible } = useSelector((s: RootState) => s.search.resultList);
+  const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
+  const sidebarVisible = useSelector((s: RootState) => s.search.resultList.sidebarVisible);
   const isDefinitionOnly = useSelector((s: RootState) => s.search.definition.isDefinitionOnly);
   const location = useLocation();
   const handlers = useSearchHandlers();
 
   const hideTopBar = isDefinitionOnly || location.pathname === '/settings';
-
+  
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {
     const body = document.body;
@@ -40,16 +40,19 @@ export default function App() {
     body.classList.toggle('unicodeTibInput', unicode === true && inputLang === 'tib');
     body.classList.toggle('enInput', inputLang === 'en' || inputLang === 'skt' );
 
-    // Platform class
+    // Screen resolution class
     body.classList.toggle('mobile', !!(window as any).cordova);
     body.classList.toggle('desktop', !(window as any).cordova);
-  }, [layout, unicode, inputLang]);
 
-  const mainScreenClass = sidebarVisible ? 'forceLeftSideVisible' : '';
+    // sidebar state class
+    console.log('Toggling sidebar class: ', sidebarVisible);
+    body.classList.toggle('forceLeftSideVisible', sidebarVisible);
+
+  }, [layout, unicode, inputLang, sidebarVisible]);
 
   return (
     <ErrorBoundary>
-      <div id="mainScreen" className={mainScreenClass}>
+      <div id="mainScreen">
         {!hideTopBar && (
           <TopBar
             onInputChange={handlers.handleInputChange}

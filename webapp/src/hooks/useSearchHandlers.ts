@@ -38,8 +38,6 @@ export function useSearchHandlers() {
   const extendedSettingsVisible = useSelector((s: RootState) => s.search.input.extendedSettingsVisible);
   const mode = useSelector((s: RootState) => s.search.input.mode);
   const resultList = useSelector((s: RootState) => s.search.resultList);
-  const ftsResultList = useSelector((s: RootState) => s.search.ftsResultList);
-  const definitionTerm = useSelector((s: RootState) => s.search.definition.term);
   const listSize = useSelector((s: RootState) => s.settings.listSize);
 
   /**
@@ -82,9 +80,10 @@ export function useSearchHandlers() {
 
     const listOffset = Math.max(0, Math.floor(selectedPosition / listSize) * listSize);
     let selectedPositionInPage = Math.max(0, selectedPosition % listSize);
-    const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset);
+    const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset, false);
     if (!searchResults.length) {
       keyboardNavState.current = { selectedPosition: -1 };
+      setSidebarVisible(true);
     } else {
       selectedPositionInPage = Math.min(selectedPositionInPage, searchResults.length - 1);
 
@@ -94,6 +93,13 @@ export function useSearchHandlers() {
     }
     isLoading.current = false;
   }
+
+  const handleInlineTermClick = useCallback(
+    (term: string, termLang: Language) => {
+      searchAndGoToListPosition(term, termLang, 0);
+    },
+    [searchAndGoToListPosition]
+  );
 
   /**
    * Triggered when Enter is pressed — triggers a search and loads the first result.
@@ -150,11 +156,8 @@ export function useSearchHandlers() {
 
   /** Open the extended search options bar. */
   const handleOpenExtendedSearch = useCallback(() => {
-    if (mode === 'fulltext') {
-      navigation.fulltextSearch(currentTerm, inputLang, 0, true, true);
-    } else {
-      navigation.termSearch(currentTerm, inputLang, 0, true, true);
-    }
+    // open extended search and also switch to fulltext search mode
+    navigation.fulltextSearch(currentTerm, inputLang, 0, true, true);
   }, [navigation, mode, currentTerm, inputLang, extendedSettingsVisible]);
 
   /** Close the extended search options bar. */
@@ -191,6 +194,7 @@ export function useSearchHandlers() {
     handleCloseExtendedSearch,
     handleModeChange,
     handleLangChange,
+    handleInlineTermClick,
 
     // Keyboard navigation handlers (when the cursor is in the unput field)
     handleSelectPrevTerm,

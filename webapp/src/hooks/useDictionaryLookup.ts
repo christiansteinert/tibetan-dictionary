@@ -51,7 +51,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
 
       dispatch(setActiveTerm(decoded));
       dispatch(setIsLoadingDefinition(true));
-      dispatch(setDefinitionError(null));
+      dispatch(setDefinitionError(''));
 
       try {
         const { definitions } = await readTerm(
@@ -73,7 +73,7 @@ export default function useDictionaryLookup(): UseDictionaryLookupReturn {
           definitions,
           decoded,
           termLang || lang,
-          unicode,
+          unicode !== false,
           ABBREVIATIONS
         );
 
