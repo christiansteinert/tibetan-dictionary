@@ -45,7 +45,6 @@ export default function App() {
     body.classList.toggle('desktop', !(window as any).cordova);
 
     // sidebar state class
-    console.log('Toggling sidebar class: ', sidebarVisible);
     body.classList.toggle('forceLeftSideVisible', sidebarVisible);
 
   }, [layout, unicode, inputLang, sidebarVisible]);

@@ -170,7 +170,6 @@ const searchSlice = createSlice({
       state.resultList.query = action.payload.resultQuery;
       state.resultList.offset = action.payload.offset;
       state.definition.term = action.payload.definitionTerm;
-      console.log('State updated from URL:', action.payload);
     },
 
 
