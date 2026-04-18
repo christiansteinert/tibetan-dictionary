@@ -170,8 +170,8 @@ const searchSlice = createSlice({
       state.resultList.query = action.payload.resultQuery;
       state.resultList.offset = action.payload.offset;
       state.definition.term = action.payload.definitionTerm;
+      console.log('Set search state from URL:', action.payload);
     },
-
 
     /* --- Input --- */
     setInputState(state, action: PayloadAction<InputState>) {

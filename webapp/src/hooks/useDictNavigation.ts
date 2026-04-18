@@ -57,6 +57,7 @@ export function useDictNavigation() {
       }
 
       if (term) {
+        console.log('Navigating to term search:', { term, lang, offset, sidebar, extendedSearch, definitionTerm });        
         navigate(`/search/${lang}/${encodeQueryParam(term)}?${params}`);
       } else {
         navigate(`/search?${params}`);
@@ -82,6 +83,7 @@ export function useDictNavigation() {
       }
 
       if (term) {
+        console.log('Navigating to fulltext search:', { term, lang, offset, sidebar, extendedSearch, definitionTerm });
         navigate(`/fts-search/${lang}/${encodeQueryParam(term)}?${params}`);
       } else {
         navigate(`/fts-search?${params}`);

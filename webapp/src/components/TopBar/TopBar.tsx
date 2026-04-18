@@ -88,32 +88,6 @@ export default function TopBar(props: Props) {
     return useInputProcessor(inputLang, useUnicodeTibetan, searchMode === 'fulltext')
   }, [inputLang, useUnicodeTibetan, searchMode]);
 
-  // Track previous mode to detect mode switches.
-  const prevModeRef = useRef(searchMode);
-  useEffect(() => {
-    if (prevModeRef.current !== searchMode) {
-      const wasFulltext = prevModeRef.current === 'fulltext';
-      prevModeRef.current = searchMode;
-      if (inputRef.current) {
-        const raw = inputRef.current.getValue();
-        // fulltext → term: remove &, |, !, ~ operators
-        // term → fulltext: remove *, ? wildcards
-        const cleaned = wasFulltext
-          ? stripFtsOperators(raw)
-          : stripTermOperators(raw);
-        if (cleaned !== raw) {
-          inputRef.current.setValue(cleaned);
-        }
-        // Re-trigger the search with the (possibly cleaned) value
-        const current = inputRef.current.getValue();
-        if (current.trim()) {
-          props.onInputChange?.(current);
-        }
-      }
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [searchMode]);
-
   useEffect(() => { // clear input field when user actively changes language
     if (!isLangInitialized.current) {
       isLangInitialized.current = true;

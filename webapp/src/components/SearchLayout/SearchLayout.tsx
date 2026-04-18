@@ -47,7 +47,7 @@ export default function SearchLayout(props: Props) {
     (async () => {
       await search(result.query, result.lang, result.offset, result.sidebarVisible);
     })();
-  }, [dispatch, result.query, result.offset, result.lang, search]);
+  }, [dispatch, result.query, result.offset, result.lang, result.sidebarVisible, search]);
 
   useEffect(() => {
     (async () => {

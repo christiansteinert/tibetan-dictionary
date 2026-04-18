@@ -39,6 +39,9 @@ export function useSearchHandlers() {
   const mode = useSelector((s: RootState) => s.search.input.mode);
   const resultList = useSelector((s: RootState) => s.search.resultList);
   const listSize = useSelector((s: RootState) => s.settings.listSize);
+  const lastDefinitionTerm = useSelector((s: RootState) => s.search.definition.term);
+  const activeDefinitionTerm = mode === 'term' ? lastDefinitionTerm : undefined;
+//const definitionTerm = undefined;
 
   /**
    * Triggered when the input changes (syllable complete, backspace, etc.)
@@ -83,6 +86,7 @@ export function useSearchHandlers() {
     const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset, false);
     if (!searchResults.length) {
       keyboardNavState.current = { selectedPosition: -1 };
+      console.warn('No search results found for:', searchTerm, ' setting sidebar visible');
       setSidebarVisible(true);
     } else {
       selectedPositionInPage = Math.min(selectedPositionInPage, searchResults.length - 1);
@@ -163,7 +167,7 @@ export function useSearchHandlers() {
   /** Close the extended search options bar. */
   const handleCloseExtendedSearch = useCallback(() => {
     // If closing extended search while in fulltext mode, also switch back to term mode. This means that we always switch to term search mode
-    navigation.termSearch(currentTerm, inputLang, 0, true, false);
+    navigation.termSearch(currentTerm, inputLang, 0, true, false, activeDefinitionTerm);
   }, [navigation, mode, currentTerm, inputLang, extendedSettingsVisible]);
 
   /** Change the search mode (term / fulltext). */

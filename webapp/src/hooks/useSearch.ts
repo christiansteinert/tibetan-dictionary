@@ -73,7 +73,7 @@ export default function useSearch(): UseSearchReturn {
 
       if (!searchTerm) {
         dispatch(setResults([]));
-        dispatch(setSidebarVisible(true));
+        dispatch(setSidebarVisible(sidebarVisible));
         return { searchTerm: '', results: [] };
       }
 

@@ -16,6 +16,8 @@ import '@/styles/shared.module.css';
 import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 
 export default function App() {
+console.log('App component rendered');
+
   useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
   const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
@@ -23,6 +25,7 @@ export default function App() {
   const isDefinitionOnly = useSelector((s: RootState) => s.search.definition.isDefinitionOnly);
   const location = useLocation();
   const handlers = useSearchHandlers();
+console.log('App state:', { layout, unicode, inputLang, sidebarVisible });    
 
   const hideTopBar = isDefinitionOnly || location.pathname === '/settings';
   
