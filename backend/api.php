@@ -7,7 +7,7 @@
 //
 //   GET  /api/term/{lang}/{term}      Look up definitions for a specific term.
 //   GET  /api/terms/{lang}/{term}     Prefix-based term search (auto-complete).
-//   POST /api/check-terms             Check which Tibetan sections have dictionary entries.
+//   POST /api/check-terms/{lang}      Check which Tibetan sections have dictionary entries.
 //   GET  /api/fulltext/{lang}/{query} FTS5-based fulltext search.
 //
 // All responses are JSON. Request bodies (where applicable) are JSON.
@@ -100,27 +100,15 @@ function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
 }
 
 /**
- * Determine the requested language from the 'lang' query parameter.
- * Defaults to Tibetan ('bo').
- *
  * Allowed values are 'bo' (Tibetan), 'en' (English), 'sa' (Sanskrit).
  * The returned string is safe to bind as a SQL parameter value.
- *
- * @return string
  */
-function resolveLanguage(): string {
-    $lang = isset($_GET['lang']) ? trim($_GET['lang']) : 'bo';
-    return ensureLanguageValid($lang);
-}
-
 function ensureLanguageValid($lang): string {
     $allowed = ['bo', 'en', 'sa'];
     return in_array($lang, $allowed, true) ? $lang : 'bo';
 }
 
-
 // --- Database connection -----------------------------------------------------
-
 if (file_exists(__DIR__ . '/TibetanDictionary_private.db')) {
     $db = new SQLite3(__DIR__ . '/TibetanDictionary_private.db');
 } else {
@@ -344,7 +332,7 @@ if ($resource === 'term' && $method === 'GET') {
 
 
 // =============================================================================
-// POST /api/check-terms
+// POST /api/check-terms/{lang}
 //
 // Verify which Tibetan inline sections have dictionary entries.
 // Used to decide whether to render them as clickable links.
@@ -356,7 +344,7 @@ if ($resource === 'term' && $method === 'GET') {
 // =============================================================================
 
 if ($resource === 'check-terms' && $method === 'POST') {
-    $lang = resolveLanguage();
+    $lang = ensureLanguageValid($lang);
 
     $sections = jsonBody();
     if (!is_array($sections)) {

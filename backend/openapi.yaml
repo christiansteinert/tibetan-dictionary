@@ -207,23 +207,33 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorResponse'
 
-  /check-terms:
+  /check-terms/{lang}:
     post:
       operationId: checkTerms
-      summary: Check which inline Tibetan sections have dictionary entries
+      summary: Check which terms exist in the dictionary
       description: >-
-        Accepts a map of section ID → Wylie term strings.
-        Returns the IDs of those sections whose Wylie term exists in the
-        dictionary. The caller uses the returned IDs to filter its own
-        local section objects and decide which syllables to render as
-        clickable links.
+        Accepts a map of external ID → term strings.
+        Returns the external IDs of those terms that exist in the
+        dictionary. The frontend uses the returned IDs to filter Tibetan sections in a definition
+        to decide which portions of a definition to render as clickable links.
+        Note: theoretically the caller could use IDs that are identical to the terms to be checked as in 
+        "bde ba" -> "bde ba" if the goal is to simply check which terms exist in the dictionary without 
+        any particular need to tie an external ID to a specific term.
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the terms to be checked (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              description: Map of sectionId → wylie term string.
+              description: Map of external ID → term string.
               additionalProperties:
                 type: string
             example:
@@ -231,7 +241,7 @@ paths:
               section_2: "xyz_nonexistent"
       responses:
         '200':
-          description: Array of section IDs whose wylie term exists in the dictionary.
+          description: Array of external IDs whose term exists in the dictionary.
           content:
             application/json:
               schema:

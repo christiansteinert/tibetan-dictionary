@@ -101,7 +101,7 @@ export class PhpDictionaryApi {
     const request: Record<string, string> = Object.fromEntries(
       Object.entries(sections).map(([id, s]) => [id, s.wylie])
     );
-    const matchingIds = await postJson<string[]>('check-terms', request);
+    const matchingIds = await postJson<string[]>('check-terms/bo', request);
     return Object.fromEntries(matchingIds.map(id => [id, sections[id]]));
   }
 
