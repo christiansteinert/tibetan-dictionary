@@ -86,7 +86,7 @@ export class WylieConverter {
     }
 
     result = result.replace(/་་+/g, '་ ');
-    result = result.replace(/([།༽\)\]])་/g, '$1 ');
+    result = result.replace(/([།༽\)\]\s])་/g, '$1 ');
 
     return result;
 

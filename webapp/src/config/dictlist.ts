@@ -19,7 +19,6 @@ interface BaseDictEntry {
   audioId?: string;
   webOnly?: boolean;
   groupId?: string; // Added by build process for flat entries
-  containsOnlyTibetan?: boolean;
   preformattedLinebreaks?: boolean;
   scanId?: string;
   scanInfo?: {
@@ -424,7 +423,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib"],
     items: {
       "Hopkins-TibetanDefinitions2015": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Defi&shy;nitions 2015',
         about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
         abbreviations: 'Hopkins',
@@ -432,7 +430,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib"]
       },
       "Hopkins-TibetanSynonyms2015": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Synonyms 2015',
         about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
         abbreviations: 'Hopkins',
@@ -440,7 +437,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib"]
       },
       "Hopkins-TibetanSynonyms1992": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Synonyms 1992',
         about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
         abbreviations: 'Hopkins',
@@ -448,7 +444,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib"]
       },
       "Hopkins-TibetanTenses2015": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Tenses 2015',
         about: 'The order of the verb tenses in this dictionary is: future, present, past, imperative|Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
         abbreviations: 'Hopkins',
@@ -456,7 +451,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib"]
       },
       "Hopkins-DivisionsTib2015": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Divi&shy;sions 2015 ',
         about: 'Source: The Uma Institute for Tibetan Studies Tibetan-Sanskrit-English Dictionary (Version: June 2015)|Jeffrey Hopkins, Editor.|Paul Hackett, Contributor and Technical Editor.| Contributors: Nathaniel Garson, William Magee, Andres Montano, John Powers, Craig Preston, Joe Wilson, Jongbok Yi|A PDF version of this dictionary is available for download at: www.uma-tibet.org',
         abbreviations: 'Hopkins',
@@ -464,7 +458,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         language: ["tib"]
       },
       "Hopkins-ExamplesTib": {
-        containsOnlyTibetan: true,
         label: 'Hopkins Examples 1992',
         about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',
         abbreviations: 'Hopkins',
@@ -497,7 +490,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib"]
   },
   "GesheChodrak-Tib_x": {
-    containsOnlyTibetan: true,
     label: 'Geshe Chödrak - Please only use this dictionary if you bought the original version from www.pktc.org!',
     about: 'Geshe Chödrak Dictionary|“Written Signals - Names and Phrases Made Clear”\nGeshe Chodrak\'s (Tibetan) Dictionary\nVersion 1.20 30th September, 2005\nPadma Karpo Translation Committee\n© TONY DUFF 2000-2004. All rights reserved.\nIf you use this dictionary, please buy it at: www.pktc.org/pktc',
     public: false,
@@ -512,7 +504,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib"]
   },
   "dung-dkar-tshig-mdzod-chen-mo-Tib": {
-    containsOnlyTibetan: true,
     label: 'dung dkar tshig mdzod chen mo',
     about: "Dung dkar tshig mdzod chen mo|author: dung dkar blo bzang 'phrin las|Beijing: zhongguo zangxue chubanshe 中国藏学出版社 / krung go'i bod rig pa dpe skrun khang (China’s Tibetology Publishing House), 2002",
     public: true,
@@ -520,7 +511,6 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib"]
   },
   "dag_tshig_gsar_bsgrigs-Tib": {
-    containsOnlyTibetan: true,
     label: 'dag yig gsar bsgrigs',
     about: 'dag yig gsar bsgrigs (New orthography)|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1979.',
     public: true,

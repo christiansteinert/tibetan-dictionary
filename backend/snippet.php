@@ -57,18 +57,25 @@ function fulltextQueryToRegex($query) {
  * definition, dictionary, dictionaryId.
  *
  * @param SQLite3Result $results       The executed query result.
+ * @param string        $lang          The language of the terms.
  * @param string        $snippetRegex  Regex for highlighting (from fulltextQueryToRegex).
  * @return array  JSON-ready rows with keys: term, dictionary, dictionaryId, snippet.
  */
-function buildSnippetRows($results, $snippetRegex) {
+function buildSnippetRows($results, $lang, $snippetRegex) {
     $rows = [];
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
         if (preg_match($snippetRegex, $row['definition'])) {
             $snippetResult = generateSnippet($row['definition'], $snippetRegex);
         } else {
-            $snippetResult = generateSnippet($row['term'], $snippetRegex);
+            $term = $row['term'];
+            if ($lang === 'bo') {
+              $term = "{" . $term. "}";
+            }
+            $snippetResult = generateSnippet($term, $snippetRegex);
             $snippetResult['isAbbreviated'] = true;  // term matches but definition doesn't — mark as abbreviated
         }
+
+        $lang = $row['lang'] ?? 'bo';
 
         $rows[] = [
             'term'                 => $row['term'],
@@ -77,7 +84,7 @@ function buildSnippetRows($results, $snippetRegex) {
             'dictionaryId'         => $row['dictionaryId'],
             'snippet'              => $snippetResult['snippet'],
             'definition'           => $row['definition'],
-            'lang'                 => $row['lang'] ?? 'bo',
+            'lang'                 => $lang,
             'isSnippetAbbreviated' => $snippetResult['isAbbreviated'],
         ];
     }

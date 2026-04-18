@@ -443,7 +443,7 @@ if ($resource === 'fulltext' && $method === 'GET') {
     $results = $statement->execute();
     if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
-    jsonResponse(buildSnippetRows($results, fulltextQueryToRegex($search)));
+    jsonResponse(buildSnippetRows($results, $lang, fulltextQueryToRegex($search)));
 }
 
 

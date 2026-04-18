@@ -318,25 +318,7 @@ export function formatDefinition(
     definition = breakDefinitionIntoSections(definition);
   }
 
-  if (currentDict.containsOnlyTibetan) {
-    // FIXME: split at various characters such as before and after: / whitespace * ( ) .   
-
-    defStart = '<div class="tib" title="' + htmlEscapeTitle(definition) + '">';
-    if (definition.indexOf("-----") !== -1) {
-      // ensure that separator lines are working also in Tibetan-only dictionaries
-      definition = definition.replace("-----", "}\n-----\n{");
-      definition = "{" + definition + "}";
-      var result = convertInlineTibetanSections(definition, useUnicodeTibetan);
-      definition = result.definition;
-      inlineSections = result.inlineSections;
-    } else {
-      var tibetanOutput = useUnicodeTibetan
-        ? getWylieConverter().wylieToUniExceptBracketedSections(definition) || ''
-        : definition;
-      definition = htmlEscapeDefinition(tibetanOutput);
-    }
-    defEnd = '</div>';
-  } else if (currentDict.scanId) {
+  if (currentDict.scanId) {
     //scanned dictionary. If we have an exact page number, we link to it
     var definitionParts = definition.split('-----');
     definition = '';

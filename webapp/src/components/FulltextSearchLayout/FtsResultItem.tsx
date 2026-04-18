@@ -83,10 +83,6 @@ const FtsResultItem = memo(function FtsResultItem({
 
   // Process snippet: convert {curly brace} sections if in Unicode mode
   let snippet = result.snippet;
-  if (dictEntry.containsOnlyTibetan && result.lang === 'tib' && useUnicodeTibetan) {
-    snippet = handleHighlightedSectionsForTibOnly(result.snippet)
-  }
-
 
   const snippetHtml =
     useUnicodeTibetan
