@@ -1,7 +1,7 @@
-# Tibetan-English Dictionary - AI Agent Instructions
+# Tibetan-English-Samslrot Dictionary - AI Agent Instructions
 
 ## Project Overview
-This is a hybrid Tibetan-English dictionary application with two deployment modes:
+This is a hybrid Tibetan-English-Sanskrit dictionary application with two deployment modes:
 - **Web app**: Vite/React/TypeScript frontend + PHP backend (`api.php`) for SQLite queries, served by nginx
 - **Android app**: Cordova-packaged version of the same frontend, with a custom Java SQLite plugin
 

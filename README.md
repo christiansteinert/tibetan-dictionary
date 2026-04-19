@@ -1,6 +1,6 @@
-# Tibetan-English dictionary application
+# Tibetan-English-Sanskrit dictionary application
 
-This is a Tibetan <-> English dictionary application. 
+This is a Tibetan <-> English <-> Sanskrit dictionary application. 
 
 You can find an online version of this application at [https://dictionary.christian-steinert.de] to understand what it does. There is also an android version of this app, available at [https://play.google.com/store/apps/details?id=de.christian_steinert.tibetandict].
 

@@ -35,6 +35,12 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
           <Dialog.Description asChild>
             <div className={styles.body}>
 
+              <section>
+                Welcome to the Tibetan-English-Sanskrit Dictionary! This application allows you to search for terms in various dictionaries and glossaries.
+                Use the input field at the top to enter your query. You can search in Tibetan, English, or Sanskrit by selecting the appropriate language from the dropdown menu next to the search bar.
+                For more detailed explanations on how to type Tibetan or Sanskrit in this application, see the explanations below.
+              </section>
+              
               {/* ── Tibetan Input ── */}
               <section>
                 <h3 className={styles.sectionTitle}>Tibetan Input</h3>
