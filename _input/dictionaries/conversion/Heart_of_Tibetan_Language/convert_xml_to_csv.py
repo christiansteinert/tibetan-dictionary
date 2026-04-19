@@ -26,7 +26,7 @@ from pyewts import pyewts
 
 TIBETAN_BLOCK = re.compile(r"[\u0F00-\u0FFF]+")
 TAG_PATTERN = re.compile(r"<[^>]+>")
-WHITESPACE_PATTERN = re.compile(r"\s+")
+WHITESPACE_PATTERN = re.compile(r"\s+|&nbsp;")
 
 FIELD_ALIASES = {
     "བོད་སྐད།": "Tibetan",
@@ -59,6 +59,7 @@ def clean_text(raw: Optional[str]) -> str:
     text = TAG_PATTERN.sub(" ", text)
     text = text.replace("\xa0", " ")
     text = WHITESPACE_PATTERN.sub(" ", text)
+
     return text.strip()
 
 
@@ -77,7 +78,7 @@ def contains_only_tibetan(text: str) -> bool:
 
 
 def convert_tibetan(value: str, converter: pyewts) -> str:
-    """Convert Tibetan Unicode runs to Wylie according to the requirements."""
+    """Convert Tibetan Unicode runs to Wylie."""
 
     if not value:
         return ""
@@ -86,7 +87,11 @@ def convert_tibetan(value: str, converter: pyewts) -> str:
         return text
     if contains_only_tibetan(text):
         converted = converter.toWylie(text)
-        return WHITESPACE_PATTERN.sub(" ", converted).strip()
+        result =  "{" + WHITESPACE_PATTERN.sub(" ", converted).strip() + "}"
+
+        result = re.sub(r"\{+", "{", result)
+        result = re.sub(r"\}+", "}", result) 
+        return result
 
     def replace_segment(match: re.Match[str]) -> str:
         segment = match.group(0)
@@ -95,6 +100,10 @@ def convert_tibetan(value: str, converter: pyewts) -> str:
         return "{" + converted + "}"
 
     result = TIBETAN_BLOCK.sub(replace_segment, text)
+
+    result = re.sub(r"\{+", "{", result)
+    result = re.sub(r"\}+", "}", result) 
+
     return WHITESPACE_PATTERN.sub(" ", result).strip()
 
 
@@ -108,13 +117,16 @@ def extract_entries(root: ET.Element, converter: pyewts) -> List[EntryData]:
             if not name:
                 continue
             key = FIELD_ALIASES.get(name.strip())
+
             if not key:
-                continue
+                key = name.strip()
             if record.get(key):
                 continue
             raw_value = "".join(part or "" for part in field.itertext())
             cleaned = clean_text(raw_value)
+            cleaned = cleaned.replace("{", "[").replace("}", "]")
             converted = convert_tibetan(cleaned, converter)
+
             if converted:
                 record[key] = converted
         if record:
@@ -148,11 +160,17 @@ def format_example_block(record: EntryData) -> str:
     if example_bits:
         parts.append(" " + " ".join(example_bits))
 
-    return "".join(parts)
+    result = "".join(parts)
+    result = re.sub(r"\{+", "{", result)
+    result = re.sub(r"\}+", "}", result) 
 
+    return result.strip()
 
 def format_other_meanings(record: EntryData) -> str:
     other = record.get("OtherMeanings", "")
+    other = other if other else ""
+    other = re.sub(r"(\s*\(\s*\))+", "", other).strip() # remove empty parentheses
+    
     if not other:
         return ""
     return " (Other meanings: " + other + ")"
@@ -162,7 +180,7 @@ def format_synonyms(record: EntryData) -> str:
     synonyms = record.get("TibetanSynonyms", "")
     if not synonyms:
         return ""
-    return "\\nSynonyms: {" + synonyms + "}"
+    return "\\nSynonyms: " + synonyms
 
 
 def format_syllables(record: EntryData) -> str:
@@ -173,7 +191,7 @@ def format_syllables(record: EntryData) -> str:
 
 
 def build_tibetan_line(record: EntryData) -> Optional[str]:
-    tibetan = record.get("Tibetan", "").replace("{", "").replace("/", "")
+    tibetan = record.get("Tibetan", "").replace("{", "").replace("}", "").replace("/", "")
     tibetan_audio = record.get("TibetanAudio", "")
     english = record.get("English", "")
 
@@ -202,6 +220,10 @@ def build_tibetan_line(record: EntryData) -> Optional[str]:
     pieces.append(format_example_block(record))
 
     line = "".join(part for part in pieces if part)
+
+    line = re.sub(r"\{+", "{", line)
+    line = re.sub(r"\}+", "}", line) 
+
     return line if line else None
 
 
@@ -245,6 +267,8 @@ def build_english_lines(record: EntryData) -> List[str]:
     else:
         variants = english.split(",") if "," in english else ([english] if english else [])
 
+    suffix = re.sub(r"\{+", "{", suffix)
+    suffix = re.sub(r"\}+", "}", suffix)
 
     # build lines
     lines: List[str] = []

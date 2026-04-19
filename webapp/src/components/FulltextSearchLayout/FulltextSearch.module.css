@@ -1,0 +1,290 @@
+/* ── Extended Search layout ──────────────────────────────────── */
+
+.ftsSearchWrap {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ── Result table ───────────────────────────────────────────── */
+
+.resultTable {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+}
+
+:global(.dark) .resultTable {
+  border-color: #555;
+}
+
+.resultTable th {
+  text-align: left;
+  padding: 0.4em 0.6em;
+  font-size: 0.85em;
+  color: #555;
+  background: #eef;
+  border-bottom: 1px solid #ccc;
+}
+
+:global(.dark) .resultTable th {
+  background: #333;
+  color: #bbb;
+  border-bottom-color: #555;
+}
+
+.resultTable td {
+  padding: 0.35em 0.6em;
+  vertical-align: top;
+  
+  /* Ensure long words break that would otherwise cause overflow */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 640px) {
+  .resultTable td {
+    /* On narrow screens, allow word breaks for any word lengths */
+    word-break: break-word;
+  }
+}
+
+:global(.dark) .resultTable td {
+  border-top-color: #444;
+}
+
+.resultTable tbody tr:first-child td {
+  border-top: none;
+}
+
+.resultTable tbody tr:nth-child(even) td {
+  background-color: #f4f4fa;
+}
+
+:global(.dark) .resultTable tbody tr:nth-child(even) td {
+  background-color: #2a2a2a;
+}
+
+.resultTable tbody tr:hover td {
+  background-color: #e0e0f0;
+}
+
+:global(.dark) .resultTable tbody tr:hover td {
+  background-color: #383848;
+}
+
+/* ── Column widths ──────────────────────────────────────────── */
+
+.colTerm {
+  width:25vw;
+  max-width: 15em;
+  font-weight: 500;
+}
+
+.colTerm a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.colTerm a:hover {
+  text-decoration: underline;
+}
+
+.colDict {
+  width:25vw;
+  max-width: 15em;
+  color: #666;
+  font-size: 0.9em;
+}
+
+:global(.dark) .colDict {
+  color: #aaa;
+}
+
+.colSnippet {
+  font-family: "Droid Serif", "DejaVu Serif", Verdana, Georgia, serif;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+
+/* Make the <em> highlights stand out */
+.colSnippet :global(em), .colTerm :global(em) {
+    font-style: normal;
+  background-color: #ffa;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+:global(.dark) .colSnippet :global(em), :global(.dark) .colTerm :global(em) {
+  font-style: normal;
+  background-color: #553;
+  color: #ff7;
+}
+
+/* ── Tibetan term styling ───────────────────────────────────── */
+
+.tibTerm {
+  font-size: 1.25em;
+  line-height: 170%;
+}
+
+:global(.desktop) .tibTerm {
+  font-family: "Droid Sans","Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
+  text-rendering: optimizeLegibility;
+}
+
+:global(.mobile) .tibTerm {
+  font-family: "DDC Uchen";
+}
+
+/* Tibetan inline in snippets */
+.tibSnippet {
+  font-size: 1.15em;
+  line-height: 170%;
+}
+
+:global(.desktop) .tibSnippet {
+  font-family: "Droid Sans","Jomolhari","Jomolhari ID","DDC Uchen","Kailasa","DDC Rinzin","Uchen_05","Qomolangma-Uchen Sarchung","Qomolangma-Uchen Sutung","Narthang","CTRC-Uchen","Monlam Uni OuChan2","Monlam Uni OuChan1","XenoType Tibetan New","TCRC Youtso Unicode","Tibetan Machine Uni","DDCRinzin-webfont","SambhotaDege","Microsoft Himalaya","Tib-US Unicode";
+  text-rendering: optimizeLegibility;
+}
+
+:global(.mobile) .tibSnippet {
+  font-family: "DDC Uchen";
+}
+
+/* ── Collapsible snippet/definition ────────────────────────── */
+
+.collapsible {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+:global(.dark) .collapsible {
+  border-color: #555;
+}
+
+.collapsibleTrigger {
+  /* Reset button defaults */
+  all: unset;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4em;
+  width: 100%;
+  padding: 0.4em 0.5em;
+  cursor: pointer;
+  background: #f4f4fa;
+}
+
+.collapsibleTrigger:hover {
+  background: #e4e4f0;
+}
+
+:global(.dark) .collapsibleTrigger {
+  background: #2a2a3a;
+}
+
+:global(.dark) .collapsibleTrigger:hover {
+  background: #33334a;
+}
+
+/* Arrow: points right when closed, down when open */
+.collapsibleArrow {
+  display: inline-block;
+  flex-shrink: 0;
+  align-self: center;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 7px solid currentColor;
+  transition: transform 0.15s ease;
+}
+
+:global([data-state='open']) .collapsibleArrow {
+  transform: rotate(90deg);
+}
+
+.collapsibleContent {
+  padding: 0.5em 0.5em 0.5em calc(0.5em + 7px + 0.4em); /* indent to align with trigger text */
+  border-top: 1px solid #ddd;
+}
+
+:global(.dark) .collapsibleContent {
+  border-top-color: #555;
+}
+
+/* ── Non-expandable snippet (definition fits entirely in the snippet) ── */
+
+.snippetOnly {
+  padding: 0.4em 0.5em;
+}
+
+/* ── Status messages ────────────────────────────────────────── */
+
+.statusMessage {
+  padding: 1em;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+:global(.dark) .statusMessage {
+  color: #999;
+}
+
+.errorMessage {
+  padding: 1em;
+  color: #c00;
+  text-align: center;
+}
+
+:global(.dark) .errorMessage {
+  color: #f66;
+}
+
+/* ── Dictionary name tooltip ────────────────────────────────── */
+
+.dictNameTooltip {
+  cursor: pointer;
+  color: #666;
+  font-weight: bold;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+}
+
+:global(.dark) .dictNameTooltip {
+  color: #aaa;
+}
+
+/* ── Responsive: stack form fields on narrow screens ─────── */
+
+@media (max-width: 600px) {
+  .colTerm {
+    width: 8em;
+    font-size: 0.9em;
+  }
+
+  .colDict {
+    width: 5em;
+    font-size: 0.8em;
+  }
+
+  .colSnippet {
+    font-size: 0.85em;
+  }
+  
+  .ftsSearchWrap {
+    padding: 0;
+    margin: 0;
+  }
+
+  .resultTable {
+    border: none;
+    border-radius: 0;
+  }
+}

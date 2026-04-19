@@ -1,0 +1,125 @@
+/**
+ * ExtendedSearchOptionsBar – the options strip that appears in the TopBar
+ * when extended search is active.
+ *
+ * Contains:
+ *  - Mode toggle (Fulltext / Wildcard)
+ *  - Search-in selector (All / Terms / Definitions)
+ *  - Language switcher (Tibetan→English / English→Tibetan)
+ *  - Help button
+ *  - Close (×) button to return to normal search
+ */
+import type { SearchMode } from '@/store/searchSlice';
+import styles from './TopBar.module.css';
+import { Language } from '@/types';
+import { QuestionMarkCircledIcon, Cross2Icon } from '@radix-ui/react-icons';
+import HelpDialog from './HelpDialog';
+import { useState } from 'react';
+
+interface Props {
+  mode: SearchMode;
+  lang: Language;
+  isLightMode: boolean;
+  onModeChange?: (mode: SearchMode) => void;
+  onLangChange?: (lang: Language) => void;
+  onClose?: () => void;
+}
+
+export default function ExtendedSearchOptionsBar({
+  mode,
+  lang,
+  isLightMode,
+  onModeChange,
+  onLangChange,
+  onClose,
+}: Props) {
+  const [helpOpen, setHelpOpen] = useState(false);
+
+  return (
+    <>
+    <div className={`${styles.optionsBar} ${isLightMode ? styles.optionsBarLight : styles.optionsBarDark}`}>
+      {/* ── Mode ── */}
+      <span className={`${styles.optionsGroup} flex`}>
+        <span className={styles.optionsLabel}>Mode:</span>
+        <label className={styles.optionsRadio}
+          title="Search only in dictionary headwords (terms)">
+          <input
+            type="radio"
+            name="extMode"
+            checked={mode === 'term'}
+            onChange={() => onModeChange && onModeChange('fulltext')}
+          />
+          Terms
+        </label>
+        <label className={styles.optionsRadio} 
+        title="Search both in dictionary headwords and dictionary definitions (fulltext search)">
+          <input
+            type="radio"
+            name="extMode"
+            checked={mode === 'fulltext'}
+            onChange={() => onModeChange && onModeChange('term')}
+          />
+          Fulltext
+        </label>
+      </span>
+
+      {/* ── Language ── */}
+      <span className={`${styles.optionsGroup} flex`}>
+        <span className={styles.optionsLabel}>Language:</span>
+        <label className={styles.optionsRadio}
+            title="Search for Tibetan terms">
+          <input
+            type="radio"
+            name="extLang"
+            checked={lang === 'tib'}
+            onChange={() => onLangChange && onLangChange('tib')}
+          />
+          Tib
+        </label>
+        <label className={styles.optionsRadio}
+            title="Search for English terms">
+          <input
+            type="radio"
+            name="extLang"
+            checked={lang === 'en'}
+            onChange={() => onLangChange && onLangChange('en')}
+          />
+          En
+        </label>
+        <label className={styles.optionsRadio}
+            title="Search for Sanskrit terms">
+          <input
+            type="radio"
+            name="extLang"
+            checked={lang === 'skt'}
+            onChange={() => onLangChange && onLangChange('skt')}
+          />
+          Skt
+        </label>
+      </span>
+
+      <span className={`${styles.optionsGroup} hidden sm:flex`}>
+        <button type="button" title="Help" className={styles.optionsHelpBtn} onClick={() => setHelpOpen(true)}>
+          <QuestionMarkCircledIcon /> Help
+        </button>
+      </span>
+
+      {/* ── Close button ── */}
+      <button
+        type="button"
+        className={styles.optionsCloseBtn}
+        title="Close extended search"
+        aria-label="Close extended search"
+        onClick={onClose}
+      >
+        <Cross2Icon width={18} height={18} />
+      </button>
+    </div>
+        <HelpDialog
+          open={helpOpen}
+          isLightMode={isLightMode}
+          onOpenChange={setHelpOpen}
+        />
+        </>
+  );
+}

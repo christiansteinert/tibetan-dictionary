@@ -1,0 +1,40 @@
+# ── Docker build context exclusions ──────────────────────────────────────────
+# Keep the build context small by excluding files that are never needed inside
+# a container image.
+
+# ── Node.js dependencies (reinstalled inside the image) ──────────────────────
+node_modules
+webapp/node_modules
+**/node_modules
+
+# ── Vite output (rebuilt inside the image) ───────────────────────────────────
+webapp/dist
+
+# ── Android build artefacts (large, platform-specific) ───────────────────────
+_build/mobile/tibetandict/platforms
+_build/mobile/tibetandict/plugins/*/node_modules
+*.apk
+*.apk.idsig
+
+# ── Generated databases (rebuilt inside the image) ───────────────────────────
+backend/*.db
+
+# ── Old / archive files ───────────────────────────────────────────────────────
+old releases/
+webapp-old/
+
+# ── Version control ───────────────────────────────────────────────────────────
+.git
+.gitmodules
+.gitattributes
+
+# ── IDE and OS noise ──────────────────────────────────────────────────────────
+.vscode
+.idea
+*.DS_Store
+Thumbs.db
+
+# ── Local secrets (never bake into an image!) ─────────────────────────────────
+**/*.keystore
+**/*.jks
+__deployscripts/passwords.txt

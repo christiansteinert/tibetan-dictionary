@@ -1387,7 +1387,7 @@ var DICT={
   
   openScannedPage:function(dictId, termId, pageInfo) {
     if(window.openLightbox) {
-      openLightbox('data/scan/'+dictId+'/', pageInfo);
+      openLightbox('backend/data/scan/'+dictId+'/', pageInfo);
     } else {
       alert('Sorry, but your web browser is too old to support this feature :-(');
     }

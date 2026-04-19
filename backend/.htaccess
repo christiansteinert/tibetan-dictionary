@@ -1,0 +1,26 @@
+# Tibetan Dictionary — Apache rewrite rules
+#
+# Maps clean REST URLs to the api.php script, mirroring the nginx /api/ location.
+#
+#   /api/term/bde+ba  →  /api.php/term/bde+ba
+#
+# Requirements:
+#   - mod_rewrite enabled
+#   - AllowOverride FileInfo (or All) for this directory
+#   - AcceptPathInfo On  (required for PATH_INFO to be populated in api.php)
+#
+# If your PHP is served via php-fpm / mod_proxy_fcgi rather than mod_php,
+# also ensure your <FilesMatch "\.php$"> proxy block passes PATH_INFO through.
+
+Options -Indexes
+AcceptPathInfo On
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Rewrite /api/<path> → /api.php/<path>
+    # Condition: the request is NOT already targeting api.php itself
+    RewriteCond %{REQUEST_URI} !^/backend/api\.php
+    RewriteRule ^api/(.+)$ api.php/$1 [L,QSA]
+
+</IfModule>

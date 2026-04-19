@@ -1,0 +1,343 @@
+openapi: 3.1.0
+
+info:
+  title: Tibetan Dictionary API
+  description: >
+    REST backend for the Tibetan-English Dictionary application.
+  version: 1.0.0
+
+servers:
+  - url: https://dictionary.christian-steinert.de/backend/api
+    description: Production server for the dictionary backend.
+# Shared parameter definitions
+# ---------------------------------------------------------------------------
+components:
+  parameters:
+    offset:
+      name: offset
+      in: query
+      description: Zero-based pagination offset.
+      required: false
+      schema:
+        type: integer
+        minimum: 0
+        default: 0
+
+    maxResults:
+      name: maxResults
+      in: query
+      description: Maximum number of results to return (clamped to 10–500).
+      required: false
+      schema:
+        type: integer
+        minimum: 10
+        maximum: 500
+        default: 50
+
+    dictionaries:
+      name: dictionaries
+      in: query
+      description: >
+        Comma-separated list of dictionary names to restrict results to.
+        Each name is URL-encoded, so literal commas in names appear as `%2C`.
+        Example: `dictionaries=Rangjung%20Yeshe,Berzin`
+        Omit entirely to search all dictionaries.
+      required: false
+      schema:
+        type: string
+
+  schemas:
+    TermResult:
+      type: object
+      description: >
+        Map of dictionary name → definition text.
+        Multiple entries for the same dictionary are separated by `\n-----\n`.
+      additionalProperties:
+        type: string
+      example:
+        Rangjung Yeshe: "bde ba: happiness, bliss"
+        Berzin: "happiness"
+
+    TermListRow:
+      type: object
+      required: [term]
+      properties:
+        term:
+          type: string
+          description: A matching term in the dictionary.
+      example:
+        term: "bde ba"
+
+    FtsSearchResult:
+      type: object
+      required: [term, dictionary, dictionaryId, snippet, definition, lang, isSnippetAbbreviated]
+      properties:
+        term:
+          type: string
+          description: The searched headword as stored in the dictionary.
+        highlightedTerm:
+          type: string
+          description: >
+            The term with matched words wrapped in `<em>…</em>` tags for
+            highlighting. May be the same as `term` if no highlights are
+            available.
+        dictionary:
+          type: string
+          description: Human-readable dictionary name.
+        dictionaryId:
+          type: integer
+        snippet:
+          type: string
+          description: >
+            Short excerpt from the definition with matched words wrapped in
+            `<em>…</em>` tags and surrounding context. May start/end with `…`.
+        definition:
+          type: string
+          description: Full definition text.
+        lang:
+          type: string
+          enum: [bo, en, sa]
+          description: >
+            The language of the dictionary entry's headword. Because
+            fulltext search now returns results across all languages
+            (definitions are searched globally), each row carries the
+            language of its source entry so the frontend can format
+            the term column correctly.
+        isSnippetAbbreviated:
+          type: boolean
+          description: >
+            `true` when the snippet is only a portion of the full
+            definition text. `false` when the snippet already contains
+            the entire definition.
+
+    ErrorResponse:
+      type: object
+      required: [error]
+      properties:
+        error:
+          type: string
+          description: Human-readable error message.
+
+# ---------------------------------------------------------------------------
+# Endpoints
+# ---------------------------------------------------------------------------
+paths:
+
+  /term/{lang}/{term}:
+    get:
+      operationId: getTerm
+      summary: Look up definitions for a specific term
+      description: >
+        Returns all definitions for the given term across the selected dictionaries.
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The term to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Map of dictionary name → definition text (may be empty if no entries found).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TermResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /terms/{lang}/{term}:
+    get:
+      operationId: searchTerms
+      summary: Prefix-based term search (auto-complete)
+      description: >
+        Returns a paginated list of terms that start with or match the given
+        search string. Supports wildcards (`*` = any sequence, `?` = one
+        character). For English and Sanskrit the search is case-insensitive.
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/dictionaries'
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/maxResults'
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Array of matching terms.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TermListRow'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /check-terms/{lang}:
+    post:
+      operationId: checkTerms
+      summary: Check which terms exist in the dictionary
+      description: >-
+        Accepts a map of external ID → term strings.
+        Returns the external IDs of those terms that exist in the
+        dictionary. The frontend uses the returned IDs to filter Tibetan sections in a definition
+        to decide which portions of a definition to render as clickable links.
+        Note: theoretically the caller could use IDs that are identical to the terms to be checked as in 
+        "bde ba" -> "bde ba" if the goal is to simply check which terms exist in the dictionary without 
+        any particular need to tie an external ID to a specific term.
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the terms to be checked (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Map of external ID → term string.
+              additionalProperties:
+                type: string
+            example:
+              section_1: "bde ba"
+              section_2: "xyz_nonexistent"
+      responses:
+        '200':
+          description: Array of external IDs whose term exists in the dictionary.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+              example: ["section_1"]
+        '400':
+          description: Invalid or missing request body.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /fulltext/{lang}/{term}:
+    get:
+      operationId: fulltextSearch
+      summary: FTS5-based fulltext search across definitions
+      description: >
+        Searches definitions (and terms) using SQLite FTS5. Supports FTS5
+        query syntax: `AND`, `OR`, `NOT`, `NEAR`, quoted phrases, and
+        prefix matching. Results are ordered by FTS5 relevance rank.
+        Each result includes a highlighted snippet.
+
+        `xyz*` = any characters at the end of the word, 
+        `"abc def"` = phrase search
+
+        Term matches are restricted to the requested language, while
+        definition matches are returned from the definitions of all languages.  
+        Each result contains a `lang` field indicating the headword language.
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Map of dictionary name → definition text (may be empty if no entries found).
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TermResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+  /terms/{lang}/{term}:
+    get:
+      operationId: searchTerms
+      summary: Prefix-based term search (auto-complete)
+      description: >
+        Returns a paginated list of terms that start with or match the given
+        search string. Supports wildcards (`*` = any sequence, `?` = one character).
+      parameters:
+        - name: lang
+          in: path
+          required: true
+          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
+          schema:
+            type: string
+            enum: [bo, en, sa]
+          example: "bo"
+        - name: term
+          in: path
+          required: true
+          description: The query string to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
+          schema:
+            type: string
+          example: "bde ba"
+        - $ref: '#/components/parameters/offset'
+        - $ref: '#/components/parameters/maxResults'
+        - $ref: '#/components/parameters/dictionaries'
+      responses:
+        '200':
+          description: Array of fulltext search results with snippets.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FtsSearchResult'
+        '400':
+          description: Missing or invalid parameters.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'

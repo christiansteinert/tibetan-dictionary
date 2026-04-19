@@ -26,13 +26,37 @@ def cleanTib(tib): # clean garbage from Tibetan
   tib = tib.replace(':','')
   tib = tib.replace('?','')
   tib = tib.replace('ß','')
-  tib = tib.replace('-','')
+  #tib = tib.replace('-','')
   tib = tib.replace('\\n',' ')
   tib = tib.replace('\n',' ')
   tib = re.sub(r'[,;=/].*',' ', tib)
   tib = re.sub(r'\s+',' ', tib)
   tib = tib.strip()
   return tib
+
+def cleanSktHeadword(skt): # clean garbage from Sanskrit headwords
+  skt = skt.strip()
+  skt = skt.replace('°','')
+  skt = skt.replace('.','')
+  skt = skt.replace('[','')
+  skt = skt.replace(']','')
+  skt = skt.replace('~','')
+  skt = skt.replace('*','')
+  skt = skt.replace(':','')
+  skt = skt.replace('?','')
+  skt = skt.replace('+','')
+  skt = skt.replace('ß','')
+  skt = skt.replace('\\n',' ')
+  skt = skt.replace('\n',' ')
+  skt = re.sub(r'[,;=/].*',' ', skt)
+
+  skt = skt.replace('-','')
+  skt = skt.replace('+','')
+  skt = skt.replace('^','')
+
+  skt = re.sub(r'\s+',' ', skt)
+  skt = skt.strip()
+  return skt
 
 
 def cleanSkt(skt): # clean garbage from Sanskrit
@@ -55,9 +79,10 @@ dt = DevaTrans()
 for item in root.findall('item'):
   tib = item.find('tib').text
   skt = item.find('skt').text
-  sktTrans = cleanSkt( dt.transliterate(input_type = "sen", to_convention = "hk", sentence = skt) )
   sktTransIast = cleanSkt( dt.transliterate(input_type = "sen", to_convention = "iast", sentence = skt) )
-  
+  #sktTrans = cleanSkt( dt.transliterate(input_type = "sen", to_convention = "hk", sentence = skt) )
+  sktTrans = sktTransIast
+    
   tib = hideUnwantedTib( tib )
   
   if tib and sktTrans:
@@ -67,11 +92,11 @@ for item in root.findall('item'):
           tibWithoutBracketContent = cleanTib( re.sub(r'\([^)]+\)','',tib3) )
           f.write("%s|%s\n" % ( tibWithoutBracketContent.strip(), sktTransIast ) )
           if not '(' in sktTrans:
-            f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
+            f2.write("%s|{%s}\n" % ( cleanSktHeadword(sktTrans), tib3.strip() ) )
         else:
           f.write("%s|%s\n" % ( cleanTib(tib3), sktTransIast ) )
           if not ')' in sktTrans:
-            f2.write("%s|%s\n" % ( cleanTib(sktTrans), tib3 ) )
+            f2.write("%s|{%s}\n" % ( cleanSktHeadword(sktTrans), tib3.strip() ) )
     
 
 f.close()

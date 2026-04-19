@@ -1,0 +1,257 @@
+.topbar{
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  position:fixed;
+  -webkit-backface-visibility: hidden; /* position:fixed-workaround for older android versions */
+  top:0;
+  z-index:1;
+  display: flex;
+  align-items: top;
+  flex-direction: row;
+}
+.light{
+  color:#000;
+  background-color:#fff;
+}
+.dark{
+  background-color:#000;
+  color:#eee
+}
+
+
+
+.textInputWrap{
+  position: relative;
+  flex-grow: 1;
+  display: flex;
+}
+
+/* ── Extended search options bar ─────────────────────────────── */
+
+.optionsBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.3em 0.5em 0 0.5em;
+  border-top: 1px solid #ddd;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+  font-size: 0.85em;
+}
+
+.optionsBarLight {
+  background: #f4f4fa;
+  border-top-color: #ccc;
+}
+
+.optionsBarDark {
+  background: #1a1a1a;
+  border-top-color: #444;
+}
+
+.optionsGroup {
+  align-items: center;
+  gap: 0.4em;
+  white-space: nowrap;
+}
+
+/* Thin separator between groups */
+.optionsGroup + .optionsGroup {
+  border-left: 1px solid #999;
+  padding-left: 0.6em;
+}
+
+.optionsBarDark .optionsGroup + .optionsGroup {
+  border-left-color: #555;
+}
+
+.optionsLabel {
+  font-weight: 600;
+  color: #555;
+}
+
+.optionsBarDark .optionsLabel {
+  color: #bbb;
+}
+
+.optionsRadio {
+  display: flex;
+  align-items: center;
+  gap: 0.2em;
+  cursor: pointer;
+}
+
+.optionsCloseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+  color: #666;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  .optionsCloseBtn {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+
+.optionsCloseBtn:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.optionsBarDark .optionsCloseBtn {
+  color: #ccc;
+  border-color: #666;
+}
+
+.optionsBarDark .optionsCloseBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.optionsHelpBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  padding: 3px 8px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 0.85em;
+  cursor: pointer;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.optionsHelpBtn:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+.optionsBarDark .optionsHelpBtn {
+  color: #ccc;
+  border-color: #666;
+}
+
+.optionsBarDark .optionsHelpBtn:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+
+
+/* ── Sanskrit keyboard toggle button ─────────────────────────── */
+
+.sanskritToggleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background: transparent;
+  font-size: 1.1em;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 0.3em;
+}
+
+.sanskritToggleBtnActive {
+  background: rgba(0, 100, 200, 0.15);
+  border-color: #07c;
+}
+
+.sanskritToggleBtn:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sanskritToggleBtnDark {
+  color: #ccc;
+  border-color: #666;
+}
+
+.sanskritToggleBtnDark:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sanskritToggleBtnDark.sanskritToggleBtnActive {
+  background: rgba(80, 160, 255, 0.2);
+  border-color: #59f;
+}
+
+/* ── Sanskrit character bar ──────────────────────────────────── */
+
+.sanskritBar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.25em 0.5em;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
+.sanskritBarLight {
+  background: #f4f4fa;
+  border-top-color: #ccc;
+}
+
+.sanskritBarDark {
+  background: #1a1a1a;
+  border-top-color: #444;
+}
+
+.sanskritCharBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  padding: 0 4px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 0.95em;
+  cursor: pointer;
+  font-family: "Droid Sans", "DejaVu Sans", LiberationSans, Arial, sans-serif;
+}
+
+.sanskritCharBtnLight {
+  color: #333;
+  border-color: #bbb;
+}
+
+.sanskritCharBtnLight:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.sanskritCharBtnDark {
+  color: #ddd;
+  border-color: #666;
+}
+
+.sanskritCharBtnDark:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 600px) {
+  .optionsBar {
+    gap: 0.3em;
+    font-size: 0.78em;
+    padding: 0.2em 0.3em 0 0.3em;
+  }
+
+  .optionsGroup + .optionsGroup {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

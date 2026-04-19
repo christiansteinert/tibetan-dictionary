@@ -1,118 +1,91 @@
-# Tibetan-English Dictionary - AI Agent Instructions
+# Tibetan-English-Samslrot Dictionary - AI Agent Instructions
 
 ## Project Overview
-This is a hybrid Tibetan-English dictionary application with two deployment modes:
-- **Web app**: JavaScript frontend + PHP backend (`dict.php`) for SQLite queries
-- **Android app**: Cordova-packaged JavaScript with custom Java SQLite plugin
+This is a hybrid Tibetan-English-Sanskrit dictionary application with two deployment modes:
+- **Web app**: Vite/React/TypeScript frontend + PHP backend (`api.php`) for SQLite queries, served by nginx
+- **Android app**: Cordova-packaged version of the same frontend, with a custom Java SQLite plugin
 
-Both share the same JavaScript codebase (`webapp/`) and use an SQLite database generated from CSV dictionaries.
+Both share the same frontend codebase (`webapp/src/`) and use an SQLite database generated from CSV source files.
 
 ## Architecture & Data Flow
 
-### Build Pipeline (Critical)
-1. **Dictionary Build** (`buildDictionaries.sh` → `_buildDict.py`):
-   - Reads CSV files from `_input/dictionaries/public/` (and `private/` if present)
-   - Generates `webapp/TibetanDictionary.db` (SQLite database)
-   - Extracts Tibetan syllables → generates `webapp/data/syllablelist.js` lookup table
-   - Uses Perl library (`_build/util/Lingua-BO-Wylie`) for Wylie→Unicode conversion
-   - Applies zlib compression with custom dictionary (`DEFLATE_DICT`) for space efficiency
+### Key directories
+- `backend/` — PHP backend (`api.php`, `snippet.php`), generated SQLite DB (`TibetanDictionary.db`), and static assets (`audio/`, `data/`)
+- `webapp/` — Vite + React + TypeScript frontend. Build output goes to `webapp/dist/`
+- `_input/dictionaries/` — CSV source files (`public/` and optionally `private/`) used to generate the database
+- `buildscripts/` — Shell scripts and Docker configurations (`docker/deploy/`, `docker/android/`)
+- `_build/mobile/` — Apache Cordova project for the Android build
 
-2. **Android Build** (`buildAndroid.sh`):
-   - Copies webapp files into Cordova project (`_build/mobile/tibetandict/`)
-   - Injects database size constant into Java (`Constants.java`)
-   - Builds separate PUBLIC and FULL (private) APKs with different Android app IDs
+### Build pipeline (Docker Compose)
+All build and runtime services are defined in `docker-compose.yml`:
 
-### Key Wylie Transliteration Pattern
-The app does **NOT** perform runtime Wylie conversion. Instead:
-- All Wylie→Unicode conversion uses pre-generated lookup table in `data/syllablelist.js`
-- Lookup is syllable-by-syllable, not algorithmic
-- Generated during build from actual dictionary terms via `_getTibetanSyllablesFromText.sh`
+| Service | Image | What it does | Output |
+|---|---|---|---|
+| `build-db` | `python:3.13-slim` | Runs `buildscripts/buildDictionaries.sh` → `buildscripts/_buildDict.py` | `backend/TibetanDictionary.db` |
+| `build-webapp` | `node:22-alpine` | `npm ci && npm run build` in `webapp/`; builds the react resources| `webapp/dist/` |
+| `build-android` | custom (see `buildscripts/docker/android/Dockerfile`) | Cordova build inside container | `TibetanDictionary-PUBLIC.apk` |
+| `backend-dev` | `php:8.3-fpm-alpine` | nginx + PHP-FPM serving `backend/` for development | runtime on port 8080 |
+| `frontend-dev` | `node:22-alpine` | Vite dev server with hot reload, proxying API/audio/data to `backend-dev` | runtime on port 5173 |
 
-### Dual Data Access Strategy
-JavaScript uses polymorphic `dataAccess` object (set at runtime):
-- **PhpDataAccess**: AJAX calls to `dict.php` (web deployment)
-- **CordovaDataAccess**: Direct SQLite via `window.sqlitePlugin` (Android)
-
-See `webapp/code/js/dict/dataAccess.js` for implementation.
-
-## Development Workflows
-
-### Building Dictionaries
+### Common workflows
 ```bash
-./buildDictionaries.sh  # Requires: python3, perl, sqlite3, bash tools
-# Generates: webapp/TibetanDictionary.db + webapp/data/syllablelist.js
+# Full build + run:
+docker compose run --rm build-db
+docker compose up -d backend-dev frontend-dev   # http://localhost:5173 (frontend), http://localhost:8080 (backend)
+
+# Rebuild DB only (after CSV changes):
+docker compose run --rm build-db && docker compose restart backend-dev
+
+# Rebuild frontend only (only needed if hot reload fails):
+docker compose restart frontend-dev
+
+# Build a react frontend:
+docker compose run --rm build-webapp
+
+# Android APK (requires keystore at _build/my-release-key.keystore):
+docker compose run --rm build-android
 ```
 
-### Building Android APK
-```bash
-./buildAndroid.sh  # Requires: ANDROID_HOME, JAVA_HOME, Cordova CLI
-# Produces: TibetanDictionary-PUBLIC.apk
-```
-Must run `buildDictionaries.sh` first.
+### Dual data access strategy
+The frontend uses a polymorphic API interface defined in `webapp/src/services/DictionaryApi.ts`:
+- **`PhpDictionaryApi`**: AJAX calls to `api.php` (web deployment)
+- **`CordovaDictionaryApi`**: Direct SQLite via `window.sqlitePlugin` (Android)
 
-### Testing Web Version
-Serve `webapp/` directory with PHP support. Requires `TibetanDictionary.db` to exist.
+The correct implementation is selected at runtime based on whether `window.cordova` is present.
 
-## Code Conventions
+## Frontend structure (`webapp/src/`)
+Standard Vite + React + TypeScript app. Key folders:
+- `components/` — UI components
+- `services/` — Data access layer (`DictionaryApi.ts`, `PhpDictionaryApi.ts`, `CordovaDictionaryApi.ts`)
+- `config/` — Hand-maintained dictionary metadata: `dictlist.ts` (known dictionaries), `abbreviations.ts` (abbreviation expansion rules), `globalSettings.ts` (auto-generated by build — public-only flag)
+- `store/` — Application state
+- `hooks/`, `utils/` — Shared logic
 
-### Dictionary Data Format
-CSV files in `_input/dictionaries/public/`:
-- Format: `WylieTerm|DefinitionText`
-- Multiple entries per term allowed
-- Dictionary metadata in `webapp/settings/dictlist.js` (references abbreviation sets)
+## Dictionary data format
+CSV files in `_input/dictionaries/public/` (and `private/` if present):
+- Format: `WylieTerm|DefinitionText` (pipe-separated)
+- Multiple entries per term are allowed
+- The build script converts Wylie transliteration to Unicode using the Perl library in `_build/util/Lingua-BO-Wylie`
+- Entries are stored compressed in the SQLite DB (zlib with a shared `DEFLATE_DICT` constant — must stay in sync between `buildscripts/_buildDict.py` and `backend/api.php`)
 
-### Abbreviation System
-- Abbreviations defined in `webapp/settings/abbreviations.js`
-- Applied via `DICT.processAbbreviations()` during rendering
-- Uses regex patterns with `TERM` placeholder (see `main.js` line ~30-90)
+## Public vs private versions
+Some dictionaries are proprietary and not publicly distributed. The build detects whether `_input/dictionaries/private/` exists and builds accordingly:
+- `webapp/src/config/globalSettings.ts` is auto-generated with a `publicOnly` flag
+- Android uses different app IDs: `de.christian_steinert.tibetandict` (public) vs `.full` (private)
 
-### JavaScript Structure
-Main app namespace: `DICT` object in `webapp/code/js/dict/main.js`
-- Entry point: `index.html` loads all dependencies in order
-- No module bundler - plain script tags
-- jQuery-based (legacy pattern)
+## When modifying
 
-### Public vs Private Versions
-Some dictionaries are proprietary. Build system handles both:
-- Check for `_input/dictionaries/private/` existence
-- `settings/globalsettings.js` generated with `publicOnly` flag
-- Android uses different app IDs: `de.christian_steinert.tibetandict` vs `.full`
+- **Add a dictionary**: Place CSV in `_input/dictionaries/public/`, add entry to `webapp/src/config/dictlist.ts`, rebuild with `build-db`
+- **Change UI**: Edit files under `webapp/src/`
+- **Fix data access**: Update both `PhpDictionaryApi.ts` and `CordovaDictionaryApi.ts`
+- **Change build logic**: Edit `buildscripts/_buildDict.py` or the shell scripts, then re-run `build-db`
+- **nginx / PHP config**: `buildscripts/docker/deploy/nginx.conf`
 
-## Critical Files
+## Common pitfalls
 
-- `_buildDict.py`: Core build logic - CSV parsing, database generation, compression
-- `webapp/index.html`: Single-page app, all UI structure
-- `webapp/code/js/dict/main.js`: Main application logic (1500+ lines)
-- `webapp/settings/dictlist.js`: Dictionary metadata registry
-- `buildDictionaries.sh`, `buildAndroid.sh`: Top-level build orchestration
+1. `webapp/dist/` may be owned by root after a Docker build — run `sudo chown -R $USER webapp/dist/` if local `npm run build` fails with permission errors
+2. `DEFLATE_DICT` constant must stay in sync between `buildscripts/_buildDict.py` and the custom Cordova SQLite plugin
+3. The Cordova SQLite plugin is custom — it extracts the bundled DB from the APK on first access and is not the standard community plugin
+4. Build scripts assume Linux/Unix — not Windows-compatible. Use WSL or Docker for Windows if developing on Windows.
+5. The `frontend-dev` Vite dev server uses `BACKEND_URL` (set in docker-compose.yml) to proxy API, audio, and data requests to `backend-dev`
 
-## Environment Requirements
-
-Build dependencies (must be in PATH):
-- **Python 3**: Dictionary build script
-- **Perl 5**: Wylie conversion library
-- **SQLite 3 CLI**: Database operations
-- **Bash/dash**: Build scripts
-- **Node.js/npm + Cordova CLI**: Android builds only
-- **Android SDK + JDK**: Set `ANDROID_HOME`, `JAVA_HOME`
-
-## Common Pitfalls
-
-1. **Syllable list must be regenerated** when dictionaries change
-2. **Build scripts assume Linux/Unix** - not Windows-compatible
-3. **Custom Cordova SQLite plugin** - not stock plugin, has extraction logic for bundled DB
-4. **Compression dictionary constant** (`DEFLATE_DICT`) synced between Python and PHP
-5. **No runtime Wylie converter** - lookup table only covers dictionary terms
-
-## When Modifying
-
-- **Add dictionary**: Place CSV in `_input/dictionaries/public/`, add entry to `dictlist.js`
-- **Change UI**: Edit `webapp/index.html` or `webapp/code/js/dict/main.js`
-- **Fix data access**: Check both `PhpDataAccess` and `CordovaDataAccess` implementations
-- **Update build**: Modify shell scripts, regenerate with full build (`buildDictionaries.sh` then `buildAndroid.sh`)
-
-
-- **Add dictionary**: Place CSV in `_input/dictionaries/public/`, add entry to `dictlist.js`
-- **Change UI**: Edit `webapp/index.html` or `webapp/code/js/dict/main.js`
-- **Fix data access**: Check both `PhpDataAccess` and `CordovaDataAccess` implementations
-- **Update build**: Modify shell scripts, regenerate with full build (`buildDictionaries.sh` then `buildAndroid.sh`)

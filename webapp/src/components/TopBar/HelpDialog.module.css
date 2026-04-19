@@ -1,0 +1,317 @@
+/* ── Overlay ─────────────────────────────────────────────────── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 200;
+  animation: overlayIn 0.15s ease;
+}
+
+@keyframes overlayIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Dialog panel ────────────────────────────────────────────── */
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 201;
+  width: min(97vw, 70rem);
+  max-height: 93vh; /* Fallback for older browsers */
+  max-height: 93dvh;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.28), 0 2px 6px rgba(0, 0, 0, 0.12);
+  animation: contentIn 0.15s ease;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  .content {
+    width: 98vw;
+    max-height: 90vh; /* Fallback for older browsers */
+    max-height: 98dvh;
+  }
+}
+
+@keyframes contentIn {
+  from { opacity: 0; transform: translate(-50%, -48%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+.content.light {
+  background: #fff;
+  color: #1a1a1a;
+  border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+.content.dark {
+  background: #1e1e1e;
+  color: #e8e8e8;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid transparent;
+  flex-shrink: 0;
+}
+
+.content.light .header { border-bottom-color: #e4e4e4; }
+.content.dark  .header { border-bottom-color: #333; }
+
+.title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ── Close button ────────────────────────────────────────────── */
+.closeBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.12s;
+  flex-shrink: 0;
+}
+
+.closeBtn.light {
+  color: #555;
+  border-color: #ccc;
+}
+.closeBtn.dark {
+  color: #ccc;
+  border-color: #555;
+}
+.closeBtn.light:hover { background: rgba(0, 0, 0, 0.07); }
+.closeBtn.dark:hover  { background: rgba(255, 255, 255, 0.10); }
+
+/* ── Scrollable body ─────────────────────────────────────────── */
+.body {
+  overflow-y: auto;
+  padding: 16px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .body {
+    padding: 12px 14px 16px;
+    gap: 18px;
+  }
+}
+
+/* ── Section ─────────────────────────────────────────────────── */
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+  .sectionTitle {
+    font-size: 0.85rem;
+    margin: 0 0 4px;
+  }
+}
+
+.content.light .sectionTitle { color: #4a4a6a; }
+.content.dark  .sectionTitle { color: #9ab4e8; }
+
+.intro {
+  margin: 0 0 10px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .intro {
+    font-size: 0.82rem;
+    margin: 0 0 5px;
+  }
+}
+
+.content.light .intro { color: #444; }
+.content.dark  .intro { color: #bbb; }
+
+.note {
+  margin: 10px 0 0;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .note {
+    font-size: 0.77rem;
+    margin: 5px 0 0;
+  }
+}
+
+.content.light .note { color: #666; }
+.content.dark  .note { color: #999; }
+
+/* ── Table ───────────────────────────────────────────────────── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.87rem;
+}
+
+.table th,
+.table td {
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.table th {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .table th,
+  .table td {
+    padding: 2px 2px;
+    font-size: 0.8rem;
+  }
+
+  .table th {
+    white-space: normal;
+  }
+}
+
+.content.light .table th {
+  color: #555;
+  border-bottom: 2px solid #e0e0e0;
+}
+.content.dark .table th {
+  color: #aaa;
+  border-bottom: 2px solid #3a3a3a;
+}
+
+.content.light .table td {
+  border-bottom: 1px solid #f0f0f0;
+}
+.content.dark .table td {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.content.light .table tr:last-child td { border-bottom: none; }
+.content.dark  .table tr:last-child td { border-bottom: none; }
+
+/* ── Operator badge ──────────────────────────────────────────── */
+.op {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 1.05em;
+  font-weight: 700;
+  font-family: monospace;
+}
+
+.content.light .op {
+  background: #eef2ff;
+  color: #3344bb;
+}
+.content.dark .op {
+  background: #1e2a44;
+  color: #7aa8f8;
+}
+
+/* ── Example code ────────────────────────────────────────────── */
+.example {
+  font-family: monospace;
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+/* Tibetan Unicode examples need a larger font to be legible.
+   Font family is provided by the global .tib class added alongside this class. */
+.tibExample {
+  font-size: 1.25em;
+}
+
+/* Sanskrit IAST examples — slightly larger so diacritics are clearly visible */
+.sktExample {
+  font-size: 1.05em;
+  font-family: serif;
+}
+
+/* Sub-section headings inside a section (e.g. "Vowels", "Consonants") */
+.subSectionTitle {
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 14px 0 4px;
+}
+
+@media (max-width: 640px) {
+  .subSectionTitle {
+    font-size: 0.8rem;
+    margin: 10px 0 3px;
+  }
+}
+
+.content.light .subSectionTitle { color: #555; }
+.content.dark  .subSectionTitle { color: #aaa; }
+
+/* Small label used between alternative HK input sequences */
+.altLabel {
+  font-size: 0.8em;
+  font-weight: normal;
+  opacity: 0.65;
+  margin: 0 2px;
+}
+
+/* Consonant grid: IAST result shown above the HK key in each cell */
+.table td code.op {
+  vertical-align: baseline;
+}
+
+/* Make the consonant table cells more compact */
+.table td .sktExample + code {
+  margin-left: 0;
+}
+
+.content.light .example {
+  color: #225522;
+  background: #f0f8f0;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+.content.dark .example {
+  color: #7ecb7e;
+  background: #1a2a1a;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+/* Inline icon styling for keyboard shortcuts */
+.keyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0 2px;
+  vertical-align: -0.125em;
+}
+

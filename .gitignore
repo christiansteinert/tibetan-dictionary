@@ -8,10 +8,7 @@ bugs.txt
 TibetanDictionary_private.db
 TibetanDictionary-FULL.apk
 
-_input/dictionaries/private
-_input/dictionaries/private_en
-_input/dictionaries/en_input_private
-_input/dictionaries/en_input_prepared_private
+_input/dictionaries/*private*
 _input/dictionaries/old
 _input/dictionaries/_old
 _build/desktop
@@ -22,3 +19,6 @@ __gitscripts
 __deployscripts
 git
 prompt.txt
+.node_modules/
+dist/
+*.db
