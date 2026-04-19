@@ -158,13 +158,13 @@ export class WylieConverter {
     text = text.replace(/^ *[/]/mg, '_');
     text = text.replace(/^ +|[ _]+$/, '');
 
-    if (text !== '' && !/.*(?: |\+|\/|་|།)$/.test(text)) {
+    if (text && !/.*(?: |\+|\/|་|།)$/.test(text)) {
       text += ' '; // add a tseg at the end
     }
 
     text = text.replace(/ *(\.\.\.|…) */g, '_…_');
     text = text.replace(/ +([\.\/,;])/g, '$1');
-    text = text.replace(/([]\)}\/\.;,\-=]+) +/g, '$1_');
+    text = text.replace(/([-\]\)}\/\.;,=]+) +/g, '$1_');
     text = text.replace(/ng\//g, 'ng /');
     text = text.replace(/[ _]+([-\[\(\{])/g, '_$1');
     text = text.replace(/(\/+|[0-9]\.)[ _]*/g, '$1_');

@@ -29,7 +29,7 @@ interface Props {
   onPageDown?: () => void;
 }
 
-export interface WylieInputHandle {
+export interface MultiLangInputHandle {
   getValue: () => string;
   setValue: (v: string) => void;
   clear: () => void;
@@ -40,7 +40,7 @@ export interface WylieInputHandle {
   insertAtCursor: (text: string) => void;
 }
 
-const MultiLangInputField = forwardRef<WylieInputHandle, Props>(function MultiLangInputField(
+const MultiLangInputField = forwardRef<MultiLangInputHandle, Props>(function MultiLangInputField(
   { inputLang, useUnicodeTibetan, lowercase, onInputChange, onEnter, initialValue, inputProcessor, reverseProcessor,  onArrowUp, onArrowDown, onPageUp, onPageDown },
   ref
 ) {

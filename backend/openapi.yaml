@@ -4,14 +4,11 @@ info:
   title: Tibetan Dictionary API
   description: >
     REST backend for the Tibetan-English Dictionary application.
-    All endpoints are served by `api.php` and routed by the `/api/` prefix.
   version: 1.0.0
 
 servers:
-  - url: /api
-    description: Served by nginx → PHP-FPM (see docker-compose.yml)
-
-# ---------------------------------------------------------------------------
+  - url: https://dictionary.christian-steinert.de/backend/api
+    description: Production server for the dictionary backend.
 # Shared parameter definitions
 # ---------------------------------------------------------------------------
 components:

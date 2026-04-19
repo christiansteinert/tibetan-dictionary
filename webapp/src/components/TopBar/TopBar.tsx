@@ -8,7 +8,7 @@ import { useRef, useState, useCallback, useEffect, useMemo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import clsx from 'clsx';
-import MultiLangInputField, { WylieInputHandle } from './MultiLangInputField';
+import MultiLangInputField, { MultiLangInputHandle } from './MultiLangInputField';
 import ClearButton from './ClearButton';
 import HamburgerMenu from './HamburgerMenu';
 import SanskritInputBar from './SanskritInputBar';
@@ -55,7 +55,7 @@ export default function TopBar(props: Props) {
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const inputRef = useRef<WylieInputHandle>(null);
+  const inputRef = useRef<MultiLangInputHandle>(null);
   const topbarRef = useRef<HTMLDivElement>(null);
   const [topbarHeight, setTopbarHeight] = useState(0);
   // Skip the first inputLang value — that's the URL-driven initialisation, not a user switch.

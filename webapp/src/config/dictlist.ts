@@ -81,7 +81,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     items: {
       "hotl1": {
         label: 'Heart of Tibetan Language 1',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 1|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 1|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: 978-0-89800-382-6',
         public: true,
         listCredits: true,
         audioId: "hotl1",
@@ -89,7 +89,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
       },
       "hotl2": {
         label: 'Heart of Tibetan Language 2',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 2|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)||Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 2|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)||Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: |Volume 3: 978-0-89800-382-6',
         public: true,
         listCredits: true,
         audioId: "hotl2",
@@ -97,7 +97,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
       },
       "hotl3": {
         label: 'Heart of Tibetan Language 3',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 3|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 3|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: 978-0-89800-382-6',
         public: true,
         listCredits: true,
         audioId: "hotl3",

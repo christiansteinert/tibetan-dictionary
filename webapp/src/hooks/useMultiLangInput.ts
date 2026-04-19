@@ -272,7 +272,8 @@ export default function useMultiLangInput({
       lastUniInput.current = result;
       onInputChange?.(result);
       el.setSelectionRange(newCursorPos, newCursorPos);
- 
+
+
       return true;
     }
     return false;
@@ -285,6 +286,7 @@ export default function useMultiLangInput({
     const el = inputRef.current;
     if (!el) return false;
     const uniInput = toLowerIfNeeded(el.value);
+console.log('Handling space/operator at end for Tibetan input: ', { uniInput, eventKey: event.key, eventKeyCode: event.keyCode });    
     const isCursorAtEnd = el.selectionStart === uniInput.length;
     const prev = lastUniInput.current;
     const isSpace = event.keyCode === 32;
@@ -308,7 +310,7 @@ export default function useMultiLangInput({
           inputText = convertInputToOutputFormat(n);
           inputText = inputText.replace(/[་།]+/g, '་');
         } else {
-          inputText = uniInput.replace(/[་།/-_]+/g, '་');
+          inputText = uniInput.replace(/[-་།/_]+/g, '་');
         }
         inputText = inputText.replace(/[\s]+$/g, '');
       } else {
