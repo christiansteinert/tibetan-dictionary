@@ -95,6 +95,18 @@ docker compose run --rm build-android
 
 The finished APK is written to the project root.
 
+## Running test cases
+
+The backend tests are executed with 
+```bash
+docker compose run --rm backend-test
+``` 
+
+The frontend tests are executed with 
+```bash
+docker compose run --rm frontend-test
+``` 
+
 
 ### Database access for Android app 
 

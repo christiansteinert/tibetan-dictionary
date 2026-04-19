@@ -75,6 +75,41 @@ services:
       # nginx config
       - ./buildscripts/docker/deploy/nginx.conf:/etc/nginx/tibetandict.conf:ro
 
+  # Run the backend tests
+  backend-test:
+    image: python:3.12-slim
+    working_dir: /backend-tests
+    depends_on:
+      - backend-dev
+    command: >-
+      sh -c "
+        pip install --no-cache-dir requests && 
+        sleep 10 &&  # Wait for backend-dev to be up and running
+        python3 ./backend-test.py
+      "
+    expose: 
+      - "80"
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    volumes:
+      - ./backend/tests/:/backend-tests:ro
+
+
+
+  # Run the frontend tests 
+  frontend-test:
+    image: node:22-alpine
+    working_dir: /app/webapp
+    command: sh -c "npm ci --legacy-peer-deps && npm run test"
+    ports:
+      - "5173:5173"
+    volumes:
+      - ./webapp:/app/webapp:ro
+      - react_node_modules:/app/webapp/node_modules
+    environment:
+      - BACKEND_URL=http://backend-dev:80
+
 
   # Run the frontend part of the application with hot reload for development
   frontend-dev:
