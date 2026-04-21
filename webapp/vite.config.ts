@@ -13,7 +13,7 @@ interface ManifestIcon {
 
 const manifest: Record<string, unknown> = {
   id: '/',
-  name: 'Tibetan-English Dictionary',
+  name: 'Tibetan-English-Sanskrit Dictionary',
   short_name: 'TibetanDictionary',
   start_url: './',
   display: 'standalone',

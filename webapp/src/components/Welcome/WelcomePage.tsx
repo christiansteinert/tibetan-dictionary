@@ -53,10 +53,10 @@ export default function WelcomePage() {
         <div className="contentArea">
           <div className="mainWrap">
             <div id="definitions">
-              <h1 className="title">Welcome to the Tibetan-English Dictionary!</h1>
+              <h1 className="title">Welcome to the Tibetan-English-Sanskrit Dictionary!</h1>
               <p>
                 <strong><em>Please enter a Tibetan term above.</em></strong>{' '}
-                You can either type in Wylie transliteration or you can use a Tibetan keyboard layout.
+                You can either type in Wylie transliteration or you can use a Tibetan keyboard layout. Use the menu in the top right corner to change the search language.
               </p>
               <p>
                 After typing a term, click on one of the suggestions in the list or
