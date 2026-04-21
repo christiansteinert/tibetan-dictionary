@@ -85,6 +85,7 @@ export class WylieConverter {
       result = this.doWylieToUni(wylie);
     }
 
+    result = result.replace(/^་+/g, '');
     result = result.replace(/་་+/g, '་ ');
     result = result.replace(/([།༽\)\]\s])་/g, '$1 ');
 
