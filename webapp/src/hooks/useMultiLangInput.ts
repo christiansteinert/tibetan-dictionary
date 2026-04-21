@@ -171,7 +171,7 @@ export default function useMultiLangInput({
     let uniInput = toLowerIfNeeded(el.value);
 
     if (useUnicodeTibetan && inputLang === 'tib') {
-      uniInput = uniInput.replace(/[-_ /།]+/g, ' ');
+      uniInput = uniInput.replace(/[_ /།]+/g, ' ');
       uniInput = normalizeWylie(uniInput);
 
       const newInput = revertOutputToInputFormat(uniInput);
@@ -294,7 +294,7 @@ console.log('Handling space/operator at end for Tibetan input: ', { uniInput, ev
 
     const wasCharAddedAtEnd = uniInput.length > prev.length && uniInput.startsWith(prev);
     const isSearchOperatorAtEnd = /[&|!*?~]$/.test(uniInput);
-    const isSyllableEndCharacterAtEnd = /[- /་།\s]$/.test(uniInput)
+    const isSyllableEndCharacterAtEnd = /[ /་།\s]$/.test(uniInput)
     const isSeparatorAppended = wasCharAddedAtEnd && (isSyllableEndCharacterAtEnd || isSearchOperatorAtEnd);
 
     const newInputAsWylie = revertOutputToInputFormat(uniInput);
@@ -306,11 +306,11 @@ console.log('Handling space/operator at end for Tibetan input: ', { uniInput, ev
         if (!isOnlyTibetan) {
           let n = normalizeWylie(newInputAsWylie);
           //n = newInputAsWylie;
-          n = n.replace(/[-_ /\s]+/g, ' ');
+          n = n.replace(/[_ /\s]+/g, ' ');
           inputText = convertInputToOutputFormat(n);
           inputText = inputText.replace(/[་།]+/g, '་');
         } else {
-          inputText = uniInput.replace(/[-་།/_]+/g, '་');
+          inputText = uniInput.replace(/[་།/_]+/g, '་');
         }
         inputText = inputText.replace(/[\s]+$/g, '');
       } else {

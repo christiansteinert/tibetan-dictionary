@@ -102,7 +102,7 @@ function makeTibetanReverseInputProcessor(
   useUnicode: boolean,
 ): InputProcessor {
   return (wylie: string) =>
-    useUnicode ? converter.uniToWylie(wylie).replace(/_/g, ' ') : wylie.replace(/[-\s/]+/g, ' ');
+    useUnicode ? converter.uniToWylie(wylie).replace(/_/g, ' ') : wylie.replace(/[\s/]+/g, ' ');
 }
 
 

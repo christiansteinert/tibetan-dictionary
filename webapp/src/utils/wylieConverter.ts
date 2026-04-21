@@ -165,9 +165,9 @@ export class WylieConverter {
 
     text = text.replace(/ *(\.\.\.|…) */g, '_…_');
     text = text.replace(/ +([\.\/,;])/g, '$1');
-    text = text.replace(/([-\]\)}\/\.;,=]+) +/g, '$1_');
+    text = text.replace(/([\]\)}\/\.;,=]+) +/g, '$1_');
     text = text.replace(/ng\//g, 'ng /');
-    text = text.replace(/[ _]+([-\[\(\{])/g, '_$1');
+    text = text.replace(/[ _]+([\[\(\{])/g, '_$1');
     text = text.replace(/(\/+|[0-9]\.)[ _]*/g, '$1_');
     text = text.replace(/  +/g, ' _');
     text = text.replace(/([^a-zA-Z']) +([^\s])/g, '$1_$2');
