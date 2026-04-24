@@ -8,6 +8,7 @@ import styles from './WelcomePage.module.css';
 import { DICTLIST } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
+import TopBarWrapper from '@/components/TopBar/TopBarWrapper';
 
 interface CreditEntry {
   id: string;
@@ -49,6 +50,7 @@ export default function WelcomePage() {
 
   return (
     <>
+      <TopBarWrapper />
       <div className="page">
         <div className="contentArea">
           <div className="mainWrap">

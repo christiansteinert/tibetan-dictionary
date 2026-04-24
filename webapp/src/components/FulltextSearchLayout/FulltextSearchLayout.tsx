@@ -10,6 +10,7 @@ import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 import styles from './FulltextSearch.module.css';
 import type { Language } from '@/types';
 
+import TopBarWrapper from '../TopBar/TopBarWrapper';
 import FtsResultList from './FtsResultList';
 import useFulltextSearch from '@/hooks/useFulltextSearch';
 
@@ -59,6 +60,7 @@ export default function FulltextSearchLayout() {
 
   return (
     <>
+      <TopBarWrapper />
       <div className="page">
         <div className="contentArea">
           <div className={styles.ftsSearchWrap}>

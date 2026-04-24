@@ -9,26 +9,18 @@ import { useSelector } from 'react-redux';
 import type { RootState } from './store/store';
 import AppRoutes from './routes/AppRoutes';
 import ErrorBoundary from './components/common/ErrorBoundary';
-import TopBar from '@/components/TopBar/TopBar';
-import { useSearchHandlers } from '@/hooks/useSearchHandlers';
 import { useLocation } from 'react-router-dom';
 import '@/styles/shared.module.css';
 import { useCordovaBackButton } from './hooks/useCordovaBackButton';
 
 export default function App() {
-console.log('App component rendered');
 
   useCordovaBackButton();
   const { layout, unicode } = useSelector((s: RootState) => s.settings);
   const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
   const sidebarVisible = useSelector((s: RootState) => s.search.resultList.sidebarVisible);
-  const isDefinitionOnly = useSelector((s: RootState) => s.search.definition.isDefinitionOnly);
   const location = useLocation();
-  const handlers = useSearchHandlers();
-console.log('App state:', { layout, unicode, inputLang, sidebarVisible });    
 
-  const hideTopBar = isDefinitionOnly || location.pathname === '/settings';
-  
   // Apply global CSS classes to <body> based on settings
   useEffect(() => {
     const body = document.body;
@@ -55,20 +47,6 @@ console.log('App state:', { layout, unicode, inputLang, sidebarVisible });
   return (
     <ErrorBoundary>
       <div id="mainScreen">
-        {!hideTopBar && (
-          <TopBar
-            onInputChange={handlers.handleInputChange}
-            onOpenExtendedSearch={handlers.handleOpenExtendedSearch}
-            onCloseExtendedSearch={handlers.handleCloseExtendedSearch}
-            onModeChange={handlers.handleModeChange}
-            onLangChange={handlers.handleLangChange}
-            onEnter={handlers.handleEnter}
-            onArrowUp={handlers.handleSelectPrevTerm}
-            onArrowDown={handlers.handleSelectNextTerm}
-            onPageUp={handlers.handleSelectPrevPage}
-            onPageDown={handlers.handleSelectNextPage}
-          />
-        )}
         <AppRoutes />
       </div>
     </ErrorBoundary>

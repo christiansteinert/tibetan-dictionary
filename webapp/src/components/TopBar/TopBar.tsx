@@ -14,10 +14,6 @@ import HamburgerMenu from './HamburgerMenu';
 import SanskritInputBar from './SanskritInputBar';
 import ExtendedSearchOptionsBar from '@/components/TopBar/ExtendedSearchOptionsBar';
 import { type SearchMode } from '@/store/searchSlice';
-import {
-  stripFtsOperators,
-  stripTermOperators,
-} from '@/utils/fts/ftsInputDecorator';
 import { WylieConverter } from '@/utils/wylieConverter';
 import { KeyboardIcon } from '@radix-ui/react-icons';
 import styles from './TopBar.module.css';
@@ -46,7 +42,6 @@ export default function TopBar(props: Props) {
   const extendedSettingsVisible = useSelector((s: RootState) => s.search.input.extendedSettingsVisible);
   const searchMode = useSelector((s: RootState) => s.search.input.mode);
   const inputLang = useSelector((s: RootState) => s.search.input.inputLang);
-  const isFtsSearching = useSelector((s: RootState) => s.search.ftsResultList.isSearching);
   const isLightMode = layout !== 'layout_black';
 
   // Whether the Sanskrit diacritics bar is shown (only relevant when inputLang === 'skt')
@@ -77,6 +72,7 @@ export default function TopBar(props: Props) {
 
   // Pre-fill the input field from the URL on hard reload / shared-link load,
   // before Redux has been populated by SearchLayout.
+
   const { lang: urlLang, term: urlTerm } = useParams<{ lang: string; term: string }>();
   const initialValue = (urlLang === inputLang) ? decodeURIComponent(urlTerm || '') : '';
 

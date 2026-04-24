@@ -10,13 +10,14 @@
 import { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import type { RootState } from '@/store/store';
+import TopBarWrapper from '@/components/TopBar/TopBarWrapper';
 import ResultList from './ResultList';
 import DefinitionView from './DefinitionView';
 import { viewScan } from './scannedPageViewer';
 import { useDictNavigation } from '@/hooks/useDictNavigation';
 import useSearch from '@/hooks/useSearch';
 import useDictionaryLookup from '@/hooks/useDictionaryLookup';
-import { useSearchHandlers, handleInlineTermClick } from '@/hooks/useSearchHandlers';
+import { useSearchHandlers } from '@/hooks/useSearchHandlers';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 
 import {
@@ -25,11 +26,7 @@ import {
 } from '@/store/searchSlice';
 import { Language } from '@/types';
 
-interface Props {
-  mode: SearchMode;
-}
-
-export default function SearchLayout(props: Props) {
+export default function SearchLayout() {
 
   useSyncStateFromUrl();
 
@@ -101,6 +98,7 @@ export default function SearchLayout(props: Props) {
 
   return (
     <>
+      <TopBarWrapper />
       <div className="page">
         <div className="contentArea">
           {!definition.isDefinitionOnly && <ResultList
