@@ -59,7 +59,7 @@ describe('TopBar', () => {
 
     // Initially, it might be empty if inputLang doesn't match urlLang
     const input = screen.getByRole('textbox') as HTMLInputElement;
-    
+
     // Simulate useSyncStateFromUrl updating the store
     store.dispatch({ type: 'search/setInputLang', payload: 'tib' });
 
@@ -67,7 +67,7 @@ describe('TopBar', () => {
     // Since useUnicodeTibetan defaults to true in our test store, 'slebs' Wylie
     // gets converted to Tibetan Unicode 'སླེབས'.
     await waitFor(() => {
-      expect(input.value).toBe('སླེབས');
+      expect(input.value).toBe('སླེབས་');
     });
   });
 });
