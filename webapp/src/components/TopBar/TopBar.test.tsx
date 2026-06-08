@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
@@ -66,6 +66,8 @@ describe('TopBar', () => {
     // The component should update and the input should now reflect 'slebs'
     // Since useUnicodeTibetan defaults to true in our test store, 'slebs' Wylie
     // gets converted to Tibetan Unicode 'སླེབས'.
-    expect(input.value).toBe('སླེབས');
+    await waitFor(() => {
+      expect(input.value).toBe('སླེབས');
+    });
   });
 });
