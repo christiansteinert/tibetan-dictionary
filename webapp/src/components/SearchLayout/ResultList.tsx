@@ -44,13 +44,11 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
     return (
       <div className="leftSideBar">
         <div className="sideBarInnerWrap">
-          <div className="paginate_info text-red-600 font-bold p-4">Network error: {error}</div>
+          <div className="paginate_info !text-red-600 font-bold p-4">Network error: {error}</div>
         </div>
       </div>
     );
-  }
-
-  if (isSearching) {
+  } else if (isSearching) {
     return (
       <div className="leftSideBar">
         <div className="sideBarInnerWrap">
@@ -58,9 +56,7 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
         </div>
       </div>
     );
-  }
-
-  if (!hasResults) {
+  } else if (!hasResults) {
     return (
       <div className="leftSideBar">
         <div className="sideBarInnerWrap">
