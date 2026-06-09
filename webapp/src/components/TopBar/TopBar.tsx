@@ -53,8 +53,6 @@ export default function TopBar(props: Props) {
   const inputRef = useRef<MultiLangInputHandle>(null);
   const topbarRef = useRef<HTMLDivElement>(null);
   const [topbarHeight, setTopbarHeight] = useState(0);
-  // Skip the first inputLang value — that's the URL-driven initialisation, not a user switch.
-  const isLangInitialized = useRef(false);
 
   // Whether Unicode input is active (true means full Unicode, 'output' means display-only)
   const useUnicodeTibetan = unicode === true;
@@ -74,7 +72,7 @@ export default function TopBar(props: Props) {
   // before Redux has been populated by SearchLayout.
 
   const { lang: urlLang, term: urlTerm } = useParams<{ lang: string; term: string }>();
-  const initialValue = (urlLang === inputLang) ? decodeURIComponent(urlTerm || '') : '';
+  const initialValue = (urlLang === inputLang || !urlLang) ? decodeURIComponent(urlTerm || '') : '';
 
   // Stable WylieConverter for the creation of processors.
   const converter = useRef(new WylieConverter());
@@ -84,14 +82,14 @@ export default function TopBar(props: Props) {
     return useInputProcessor(inputLang, useUnicodeTibetan, searchMode === 'fulltext')
   }, [inputLang, useUnicodeTibetan, searchMode]);
 
-  useEffect(() => { // clear input field when user actively changes language
-    if (!isLangInitialized.current) {
-      isLangInitialized.current = true;
-      return;
-    }
+  /**
+   * Change language and clear the search input.
+   */
+  const handleLangChange = useCallback((lang: Language) => {
     inputRef.current?.clear();
     inputRef.current?.focus();
-  }, [inputLang]);
+    props.onLangChange?.(lang);
+  }, [props.onLangChange]);
 
   /**
    * Clear the search input.
@@ -162,7 +160,7 @@ export default function TopBar(props: Props) {
             <HamburgerMenu
               inputLang={inputLang}
               isLightMode={isLightMode}
-              onSelectLanguage={(lang) => props.onLangChange?.(lang)}
+              onSelectLanguage={handleLangChange}
               onOpenExtendedSearch={() => {
                 if (extendedSettingsVisible) {
                   props.onCloseExtendedSearch?.();
@@ -190,7 +188,7 @@ export default function TopBar(props: Props) {
             lang={inputLang}
             isLightMode={isLightMode}
             onModeChange={props.onModeChange}
-            onLangChange={props.onLangChange}
+            onLangChange={handleLangChange}
             onClose={props.onCloseExtendedSearch}
           />
         )}
