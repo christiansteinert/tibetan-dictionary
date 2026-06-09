@@ -23,7 +23,7 @@ interface Props {
 }
 
 export default function ResultList({ onTermSelected, onPrev, onNext, selectedTerm }: Props) {
-  const { results, offset, lang: resultsLang, query } = useSelector((s: RootState) => s.search.resultList);
+  const { results, offset, lang: resultsLang, query, isSearching, error } = useSelector((s: RootState) => s.search.resultList);
   const { unicode, listSize } = useSelector((s: RootState) => s.settings);
   const { term: activeTerm } = useSelector((s: RootState) => s.search.definition);
   const useUnicodeTibetan = (unicode !== false);
@@ -40,11 +40,27 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
   const visibleResults = results.slice(0, listSize);
   const hasResults = results.length > 0;
 
-  if (!hasResults) {
+  if (error) {
     return (
       <div className="leftSideBar">
         <div className="sideBarInnerWrap">
-          <div className="paginate_info">No results found.</div>
+          <div className="paginate_info !text-red-600 font-bold p-4">Network error: {error}</div>
+        </div>
+      </div>
+    );
+  } else if (isSearching) {
+    return (
+      <div className="leftSideBar">
+        <div className="sideBarInnerWrap">
+          <div className="paginate_info p-4">Searching...</div>
+        </div>
+      </div>
+    );
+  } else if (!hasResults) {
+    return (
+      <div className="leftSideBar">
+        <div className="sideBarInnerWrap">
+          <div className="paginate_info p-4">No results found.</div>
         </div>
       </div>
     );
