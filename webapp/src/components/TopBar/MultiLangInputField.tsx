@@ -120,7 +120,7 @@ const MultiLangInputField = forwardRef<MultiLangInputHandle, Props>(function Mul
       setValue(display);
     }
     focus();
-  }, [initialValue]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const placeholder =
     inputLang === 'en'
