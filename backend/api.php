@@ -262,9 +262,9 @@ if ($resource === 'term' && $method === 'GET') {
 
         // Build a regex to post-filter LIKE results: '?' must not match a space,
         // '*' may match anything including spaces.
-        $placeholder = "\x00";
+        $placeholder = '__WILDCARD_SINGLE_CHAR__';
         $regexBody = preg_quote(str_replace('?', $placeholder, $search), '/');
-        $regexBody = str_replace([preg_quote($placeholder, '/'), '\\*'], ['[^ ]', '.*'], $regexBody);
+        $regexBody = str_replace([$placeholder, '\\*'], ['[^ ]', '.*'], $regexBody);
         $filterRegex = '/^' . $regexBody . '/iu';
 
         $results = $statement->execute();

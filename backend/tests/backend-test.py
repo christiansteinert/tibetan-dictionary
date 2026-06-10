@@ -49,6 +49,25 @@ class TestTibetanDictionaryAPI(unittest.TestCase):
         if len(data) > 0:
             self.assertIn("term", data[0], "List items should contain a 'term' key.")
 
+    def test_search_terms_autocomplete_question_mark(self):
+        """Test GET /terms/{lang}/{term} - Single-character wildcard search."""
+        lang = "bo"
+        term = "ch?s"
+        encoded_term = requests.utils.quote(term, safe='')
+        url = f"{BASE_URL}/terms/{lang}/{encoded_term}"
+
+        params = {
+            "offset": 0,
+            "maxResults": 20
+        }
+        response = requests.get(url, params=params)
+
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertIsInstance(data, list, "Expected a list of term objects.")
+        self.assertGreater(len(data), 0, "Expected non-empty result set for wildcard search.")
+        self.assertRegex(data[0]["term"], r'^ch.s', "Expected result to match the single-char wildcard pattern.")
+
     def test_check_terms_bulk(self):
         """Test POST /check-terms/{lang} - Bulk existence check."""
         url = f"{BASE_URL}/check-terms/bo"
