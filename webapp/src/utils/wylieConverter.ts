@@ -71,7 +71,7 @@ export class WylieConverter {
           result += this.doWylieToUni(syllable); // convert syllables and non-syllable fragments (e.g. punctuation)
         } else {
           result += syllable; // preserve syllable fragments (i.e. consonants without vowels) and do not convert them
-        }
+        }        
         previousSyllable = syllable;
       });
   
@@ -89,6 +89,8 @@ export class WylieConverter {
     result = result.replace(/་་+/g, '་ ');
     result = result.replace(/([།༽\)\]\s])་/g, '$1 ');
 
+    // workaround for a bug in the Wylie converter. Avoid doubled a-chung at end of syllables.
+    result = result.replace(/འའ་/g, 'འ་');
     return result;
 
   }
