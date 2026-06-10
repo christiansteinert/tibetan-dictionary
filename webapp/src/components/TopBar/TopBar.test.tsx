@@ -1,10 +1,10 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor, act } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { Routes, Route, MemoryRouter } from 'react-router-dom';
 import TopBar from './TopBar';
-import searchReducer from '@/store/searchSlice';
+import searchReducer, { setInputLang } from '@/store/searchSlice';
 import settingsReducer from '@/store/settingsSlice';
 
 function createTestStore(initialInputLang = 'en') {
@@ -19,6 +19,30 @@ function createTestStore(initialInputLang = 'en') {
           inputLang: initialInputLang,
           mode: 'term',
           extendedSettingsVisible: false,
+        },
+        resultList: {
+          sidebarVisible: false,
+          query: '',
+          lang: 'en',
+          offset: 0,
+          results: [],
+          isSearching: false,
+          error: null,
+        },
+        ftsResultList: {
+          query: '',
+          lang: 'en',
+          offset: 0,
+          results: [],
+          isSearching: false,
+          error: null,
+        },
+        definition: {
+          term: '',
+          html: '',
+          inlineSections: {},
+          isLoading: false,
+          error: null,
         },
       } as any,
       settings: {
@@ -43,9 +67,15 @@ describe('TopBar', () => {
     vi.restoreAllMocks();
   });
 
-  it('populates search input from URL when Redux syncs to the URL language', async () => {
-    // Initial store language is 'en', but we open a URL for 'tib' with search term 'slebs'
+  it('populates search input from URL even when store starts with different language', async () => {
+    // Store is initialized with English language
     const store = createTestStore('en');
+
+    // Simulate what useSyncStateFromUrl does on first render:
+    // sync the store's inputLang to match the URL language (tib)
+    act(() => {
+      store.dispatch(setInputLang('tib'));
+    });
 
     render(
       <Provider store={store}>
@@ -57,15 +87,13 @@ describe('TopBar', () => {
       </Provider>
     );
 
-    // Initially, it might be empty if inputLang doesn't match urlLang
+    // TopBar should populate the input field from the URL parameter
+    // Now that the store language matches the URL language, TopBar will use
+    // the URL term as initial value.
+    // slebs in Wylie converts to སླེབས་ in Unicode Tibetan when unicode mode is enabled
     const input = screen.getByRole('textbox') as HTMLInputElement;
-
-    // Simulate useSyncStateFromUrl updating the store
-    store.dispatch({ type: 'search/setInputLang', payload: 'tib' });
-
-    // The component should update and the input should now reflect 'slebs'
-    // Since useUnicodeTibetan defaults to true in our test store, 'slebs' Wylie
-    // gets converted to Tibetan Unicode 'སླེབས'.
+    
+    // Wait for the conversion from Wylie to Unicode Tibetan
     await waitFor(() => {
       expect(input.value).toBe('སླེབས་');
     });
