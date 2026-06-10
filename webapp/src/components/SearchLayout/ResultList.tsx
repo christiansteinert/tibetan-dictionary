@@ -3,6 +3,7 @@
  *
  * Replaces the old jQuery DataTable with a plain <table>.
  */
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import type { TermListRow } from '@/services/DictionaryApi';
 import ResultItem from './ResultItem';
@@ -27,6 +28,20 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
   const { unicode, listSize } = useSelector((s: RootState) => s.settings);
   const { term: activeTerm } = useSelector((s: RootState) => s.search.definition);
   const useUnicodeTibetan = (unicode !== false);
+  const [showSearching, setShowSearching] = useState(false);
+
+  // Timer that will cause showing of the "Searching..." message if the search takes longer than 2 seconds
+  useEffect(() => {
+    if (isSearching) {
+      let timer = setTimeout(() => setShowSearching(true), 2000);
+      return () => { // cleanup function to dispose of the timer
+        clearTimeout(timer);
+      };
+    } else {
+      setShowSearching(false);
+    }
+
+  }, [isSearching]);
 
   if (!query) {
     return null; // No search performed yet
@@ -48,7 +63,7 @@ export default function ResultList({ onTermSelected, onPrev, onNext, selectedTer
         </div>
       </div>
     );
-  } else if (isSearching) {
+  } else if (isSearching && showSearching) {
     return (
       <div className="leftSideBar">
         <div className="sideBarInnerWrap">

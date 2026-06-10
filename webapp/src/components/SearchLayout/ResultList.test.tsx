@@ -1,4 +1,4 @@
-import { render, screen, cleanup } from '@testing-library/react';
+import { render, screen, cleanup, act } from '@testing-library/react';
 import { describe, it, expect, afterEach, vi } from 'vitest';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
@@ -52,14 +52,35 @@ function renderResultList(initialSearchState: any = {}) {
 }
 
 describe('ResultList Component', () => {
+  beforeEach(() => {
+    vi.useFakeTimers();
+  });
+
   afterEach(() => {
     cleanup();
     vi.clearAllMocks();
+    vi.useRealTimers();
   });
 
-  it('renders "Searching..." when isSearching is true', () => {
+  it('renders "Searching..." when isSearching is true and search takes longer than 2s', () => {
     renderResultList({ isSearching: true, results: [] });
+
+    expect(screen.queryByText('Searching...')).not.toBeInTheDocument();
+
+    act(() => {
+      vi.advanceTimersByTime(2000);
+    });
+
     expect(screen.getByText('Searching...')).toBeInTheDocument();
+  });
+  
+  it('does not render "Searching..." when isSearching is true but search is quick', () => {
+    renderResultList({ isSearching: true, results: [] });
+    act(() => {
+      vi.advanceTimersByTime(1000);
+    });
+
+    expect(screen.queryByText('Searching...')).not.toBeInTheDocument();
   });
 
   it('renders network error message when error is present', () => {
