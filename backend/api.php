@@ -233,12 +233,12 @@ if ($resource === 'term' && $method === 'GET') {
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
-        $likePattern2 = $likePattern; 
+        $likePattern2 = $likePattern;
 
         // check if string ends with % or _
         $endsWithPercent = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '%';
         $endsWithUnderscore = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '_';
-        
+
         if (!($endsWithPercent || $endsWithUnderscore)) {
             if ($lang === 'bo') {
                 $likePattern2 = $likePattern . ' %';
@@ -260,11 +260,12 @@ if ($resource === 'term' && $method === 'GET') {
         $statement->bindValue(':word', $likePattern, SQLITE3_TEXT);
         $statement->bindValue(':word2', $likePattern2, SQLITE3_TEXT);
 
-        // Build a regex to post-filter LIKE results: '?' must not match a space,
-        // '*' may match anything including spaces.
-        $placeholder = '__WILDCARD_SINGLE_CHAR__';
-        $regexBody = preg_quote(str_replace('?', $placeholder, $search), '/');
-        $regexBody = str_replace([$placeholder, '\\*'], ['[^ ]', '.*'], $regexBody);
+        // Build a regex to post-filter LIKE results
+        $phQ = '__WILDCARD_SINGLE_CHAR__';
+        $phS = '__WILDCARD_STAR__';
+        $tmp = str_replace(['?', '*'], [$phQ, $phS], $search);
+        $regexBody = preg_quote($tmp, '/');
+        $regexBody = str_replace([$phQ, $phS], ['[^\\s]', '.*'], $regexBody);
         $filterRegex = '/^' . $regexBody . '/iu';
 
         $results = $statement->execute();

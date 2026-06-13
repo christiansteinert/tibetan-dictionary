@@ -21,6 +21,6 @@ AcceptPathInfo On
     # Rewrite /api/<path> → /api.php/<path>
     # Condition: the request is NOT already targeting api.php itself
     RewriteCond %{REQUEST_URI} !^/backend/api\.php
-    RewriteRule ^api/(.+)$ api.php/$1 [L,QSA]
+    RewriteRule ^api/(.+)$ api.php/$1 [L,QSA,B=#?;,NE]
 
 </IfModule>
