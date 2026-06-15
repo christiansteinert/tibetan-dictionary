@@ -94,9 +94,11 @@ function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
     }
     $parts = [];
     foreach ($dictionaries as $dict) {
-        $parts[] = 'DICTNAMES.name="' . $db->escapeString($dict) . '"';
+        $parts[] = '"' . $db->escapeString($dict) . '"';
     }
-    return implode(' OR ', $parts);
+    // The + before DICTNAMES.name is a workaround against a bug in SQLITE 3.3s query planner.
+    // With sqlite 3.5 or higher this + can be removed again
+    return '+DICTNAMES.name IN (' . implode(', ', $parts) . ')';
 }
 
 /**
@@ -231,6 +233,9 @@ if ($resource === 'term' && $method === 'GET') {
     $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
     $termQuery = "DICT.term";
 
+    error_log("searching for: " . $search);
+    error_log($maxResults . " results, offset " . $offset);
+
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
         $likePattern2 = $likePattern;
@@ -239,7 +244,7 @@ if ($resource === 'term' && $method === 'GET') {
         $endsWithPercent = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '%';
         $endsWithUnderscore = strlen($likePattern) > 0 && $likePattern[strlen($likePattern) - 1] === '_';
 
-        if (!($endsWithPercent || $endsWithUnderscore)) {
+        if (!($endsWithPercent)) {
             if ($lang === 'bo') {
                 $likePattern2 = $likePattern . ' %';
             } else {
@@ -265,7 +270,7 @@ if ($resource === 'term' && $method === 'GET') {
         $phS = '__WILDCARD_STAR__';
         $tmp = str_replace(['?', '*'], [$phQ, $phS], $search);
         $regexBody = preg_quote($tmp, '/');
-        $regexBody = str_replace([$phQ, $phS], ['[^\\s]', '.*'], $regexBody);
+        $regexBody = str_replace([$phQ, $phS], ['[^\\s].*', '.*'], $regexBody);
         $filterRegex = '/^' . $regexBody . '/iu';
 
         $results = $statement->execute();

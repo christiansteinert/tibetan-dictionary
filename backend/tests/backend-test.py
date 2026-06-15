@@ -65,7 +65,7 @@ class TestTibetanDictionaryAPI(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         data = response.json()
         self.assertIsInstance(data, list, "Expected a list of term objects.")
-        self.assertGreater(len(data), 0, "Expected non-empty result set for wildcard search.")
+        self.assertGreater(len(data), 10, "Expected non-empty result set for wildcard search.")
         self.assertRegex(data[0]["term"], r'^ch.s', "Expected result to match the single-char wildcard pattern.")
 
     def test_check_terms_bulk(self):
