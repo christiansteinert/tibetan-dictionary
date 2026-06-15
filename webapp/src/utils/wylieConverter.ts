@@ -139,7 +139,7 @@ export class WylieConverter {
     if (!wylie) return '';
     if (wylie === ' ') return wylie;
 
-    wylie = wylie.replace('/', ' ');
+    wylie = wylie.replace(/(['a-zA-Z])\/(['a-zA-Z])/g, '$1/ $2');
     wylie = wylie.replace(/[()]/g, ' ');
     wylie = wylie.replace(/\s\s+/g, ' ');
     wylie = wylie.replace(/^\s+|\s+$/g, '');
@@ -153,6 +153,7 @@ export class WylieConverter {
    * @returns {string} The normalized text
    */
   normalizeWylie(text: string): string {
+
     text = this.normalizeWylieWhitespace(text);
 
     text = text.replace(/v/g, 'w');
@@ -160,10 +161,6 @@ export class WylieConverter {
     text = text.replace(/\s*་\s*/g, '་');
     text = text.replace(/^ *[/]/mg, '_');
     text = text.replace(/^ +|[ _]+$/, '');
-
-    if (text && !/.*(?: |\+|\/|་|།)$/.test(text)) {
-      text += ' '; // add a tseg at the end
-    }
 
     text = text.replace(/ *(\.\.\.|…) */g, '_…_');
     text = text.replace(/ +([\.\/,;])/g, '$1');

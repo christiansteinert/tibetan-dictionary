@@ -7,4 +7,10 @@ describe('WylieConverter', () => {
     const result = converter.wylieToUni("dga'");
     expect(result).toBe('དགའ་');
   });
+
+   it('correctly handles a shad even without surronding spaces', () => {
+    const converter = new WylieConverter();
+    const result = converter.wylieToUni(converter.normalizeWylieWhitespace("tshogs yod/bam po ni"));
+    expect(result).toBe('ཚོགས་ཡོད། བམ་པོ་ནི་');
+  });
 });
