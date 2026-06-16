@@ -146,8 +146,8 @@ $method = $_SERVER['REQUEST_METHOD'];
 // Split path into segments, e.g. "term/lang/bde+ba" → ['term', 'lang', 'bde ba']
 $segments = explode('/', $path, 3);
 $resource = $segments[0] ?? '';
-$lang    = isset($segments[1]) ? urldecode($segments[1]) : '';
-$param   = isset($segments[2]) ? urldecode($segments[2]) : '';
+$lang    = isset($segments[1]) ? rawurldecode($segments[1]) : '';
+$param   = isset($segments[2]) ? rawurldecode($segments[2]) : '';
 
 // =============================================================================
 // GET /api/term/{lang}/{term}
