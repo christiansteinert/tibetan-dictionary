@@ -5,16 +5,10 @@ services:
 
   # Build dictionary databases
   build-db:
-    image: python:3.13-slim
-    working_dir: /app
-    environment:
-      DEBIAN_FRONTEND: noninteractive
-    command: >-
-      sh -c "
-        apt-get update -qq &&
-        apt-get install -y --no-install-recommends sqlite3 dash > /dev/null &&
-        sh buildscripts/buildDictionaries.sh
-      "
+    build:
+      context: .
+      dockerfile: buildscripts/docker/build-db/Dockerfile
+    command: sh buildscripts/buildDictionaries.sh
     volumes:
       - ./backend:/app/backend
       - ./_input:/app/_input
@@ -44,25 +38,22 @@ services:
   build-android:
     build:
       context: .
-      dockerfile: buildscripts/docker/android/Dockerfile
+      dockerfile: buildscripts/docker/build-android/Dockerfile
     volumes:
       # APK output lands in the project root
       - .:/app
       # backend DB is read-only input for the Android build to make database files available
       - ./backend:/app/backend:ro
-    environment:
-      # Override these if your SDK is installed in a non-standard location
-      # inside the container (the Dockerfile sets ANDROID_HOME=/opt/android-sdk)
-      - ANDROID_HOME=/opt/android-sdk
-      - JAVA_HOME=/opt/java/openjdk
+
 
   # run the backend part of the app for development
   backend-dev:
-    image: php:8.3-fpm-alpine
+    build:
+      context: .
+      dockerfile: buildscripts/docker/backend-dev/Dockerfile
     working_dir: /var/www/html
     command: >-
       sh -c "
-        apk add --no-cache nginx &&
         sed -i 's|^listen = .*|listen = 127.0.0.1:9000|' /usr/local/etc/php-fpm.d/www.conf &&
         php-fpm -D &&
         nginx -c /etc/nginx/tibetandict.conf -g 'daemon off;'

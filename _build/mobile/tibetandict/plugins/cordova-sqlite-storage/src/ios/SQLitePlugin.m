@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2016: Christopher J. Brody (aka Chris Brody)
+ * Copyright (c) 2012-present Christopher J. Brody (aka Chris Brody)
  * Copyright (C) 2011 Davide Bertola
  *
  * This library is available under the terms of the MIT License (2008).
@@ -10,18 +10,23 @@
 
 #import "sqlite3.h"
 
-// FUTURE TBD (in another version branch):
-//#define READ_BLOB_AS_BASE64
-
-// FUTURE TBD (in another version branch & TBD subjet to change):
-//#define INCLUDE_SQL_BLOB_BINDING
-
 // Defines Macro to only log lines when in DEBUG mode
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
 #   define DLog(...)
 #endif
+
+#if !__has_feature(objc_arc)
+#   error "Missing objc_arc feature"
+#endif
+
+// CustomPSPDFThreadSafeMutableDictionary interface copied from
+// CustomPSPDFThreadSafeMutableDictionary.m:
+//
+// Dictionary-Subclasss whose primitive operations are thread safe.
+@interface CustomPSPDFThreadSafeMutableDictionary : NSMutableDictionary
+@end
 
 @implementation SQLitePlugin
 
@@ -33,12 +38,8 @@
     DLog(@"Initializing SQLitePlugin");
 
     {
-        openDBs = [NSMutableDictionary dictionaryWithCapacity:0];
+        openDBs = [CustomPSPDFThreadSafeMutableDictionary dictionaryWithCapacity:0];
         appDBPaths = [NSMutableDictionary dictionaryWithCapacity:0];
-#if !__has_feature(objc_arc)
-        [openDBs retain];
-        [appDBPaths retain];
-#endif
 
         NSString *docs = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex: 0];
         DLog(@"Detected docs path: %@", docs);
@@ -50,28 +51,47 @@
 
         NSString *nosync = [libs stringByAppendingPathComponent:@"LocalDatabase"];
         NSError *err;
+
+        // GENERAL NOTE: no `nosync` directory path entry to be added
+        // to appDBPaths map in case of any isses creating the
+        // required directory or setting the resource value for
+        // NSURLIsExcludedFromBackupKey
+        //
+        // This is to avoid potential for issue raised here:
+        // https://github.com/xpbrew/cordova-sqlite-storage/issues/907
+
         if ([[NSFileManager defaultManager] fileExistsAtPath: nosync])
         {
-            DLog(@"no cloud sync at path: %@", nosync);
-            [appDBPaths setObject: nosync forKey:@"nosync"];
+            DLog(@"no cloud sync directory already exists at path: %@", nosync);
         }
         else
         {
             if ([[NSFileManager defaultManager] createDirectoryAtPath: nosync withIntermediateDirectories:NO attributes: nil error:&err])
             {
-                NSURL *nosyncURL = [ NSURL fileURLWithPath: nosync];
-                if (![nosyncURL setResourceValue: [NSNumber numberWithBool: YES] forKey: NSURLIsExcludedFromBackupKey error: &err])
-                {
-                    DLog(@"IGNORED: error setting nobackup flag in LocalDatabase directory: %@", err);
-                }
-                DLog(@"no cloud sync at path: %@", nosync);
-                [appDBPaths setObject: nosync forKey:@"nosync"];
+                DLog(@"no cloud sync directory created with path: %@", nosync);
             }
             else
             {
-                // fallback:
-                DLog(@"WARNING: error adding LocalDatabase directory: %@", err);
-                [appDBPaths setObject: libs forKey:@"nosync"];
+                // STOP HERE & LOG WITH INTERNAL PLUGIN ERROR:
+                NSLog(@"INTERNAL PLUGIN ERROR: could not create no cloud sync directory at path: %@", nosync);
+                return;
+            }
+        }
+
+        {
+            {
+                // Set the resource value for NSURLIsExcludedFromBackupKey
+                NSURL *nosyncURL = [ NSURL fileURLWithPath: nosync];
+                if (![nosyncURL setResourceValue: [NSNumber numberWithBool: YES] forKey: NSURLIsExcludedFromBackupKey error: &err])
+                {
+                    // STOP HERE & LOG WITH INTERNAL PLUGIN ERROR:
+                    NSLog(@"INTERNAL PLUGIN ERROR: error setting nobackup flag in LocalDatabase directory: %@", err);
+                    return;
+                }
+
+                // now ready to add `nosync` entry to appDBPaths:
+                DLog(@"no cloud sync at path: %@", nosync);
+                [appDBPaths setObject: nosync forKey:@"nosync"];
             }
         }
     }
@@ -83,6 +103,11 @@
     }
 
     NSString *dbdir = [appDBPaths objectForKey:atkey];
+    if (dbdir == NULL) {
+        // INTERNAL PLUGIN ERROR:
+        return NULL;
+    }
+
     NSString *dbPath = [dbdir stringByAppendingPathComponent: dbFile];
     return dbPath;
 }
@@ -120,17 +145,31 @@
 
     NSString *dbname = [self getDBPath:dbfilename at:dblocation];
 
-    if (dbname == NULL) {
-        DLog(@"No db name specified for open");
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"You must specify database name"];
-    }
-    else {
+    if (!sqlite3_threadsafe()) {
+        // INTERNAL PLUGIN ERROR:
+        NSLog(@"INTERNAL PLUGIN ERROR: sqlite3_threadsafe() returns false value");
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"INTERNAL PLUGIN ERROR: sqlite3_threadsafe() returns false value"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+        return;
+    } else if (dbname == NULL) {
+        // INTERNAL PLUGIN ERROR - NOT EXPECTED:
+        NSLog(@"INTERNAL PLUGIN ERROR (NOT EXPECTED): open with database name missing");
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"INTERNAL PLUGIN ERROR: open with database name missing"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+        return;
+    } else {
         NSValue *dbPointer = [openDBs objectForKey:dbfilename];
 
         if (dbPointer != NULL) {
-            DLog(@"Reusing existing database connection for db name %@", dbfilename);
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:@"Database opened"];
-        } else {
+            // NO LONGER EXPECTED due to BUG 666 workaround solution:
+            // DLog(@"Reusing existing database connection for db name %@", dbfilename);
+            NSLog(@"INTERNAL PLUGIN ERROR: database already open for db name: %@ (db file name: %@)", dbname, dbfilename);
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"INTERNAL PLUGIN ERROR: database already open"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+            return;
+        }
+
+        @synchronized(self) {
             const char *name = [dbname UTF8String];
             sqlite3 *db;
 
@@ -138,8 +177,11 @@
 
             if (sqlite3_open(name, &db) != SQLITE_OK) {
                 pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Unable to open DB"];
+                [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
                 return;
             } else {
+                sqlite3_db_config(db, SQLITE_DBCONFIG_DEFENSIVE, 1, NULL);
+
                 // for SQLCipher version:
                 // NSString *dbkey = [options objectForKey:@"key"];
                 // const char *key = NULL;
@@ -157,13 +199,6 @@
                 }
             }
         }
-    }
-
-    if (sqlite3_threadsafe()) {
-        DLog(@"Good news: SQLite is thread safe!");
-    }
-    else {
-        DLog(@"Warning: SQLite is not thread safe.");
     }
 
     [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
@@ -188,7 +223,7 @@
     if (dbFileName == NULL) {
         // Should not happen:
         DLog(@"No db name specified for close");
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"You must specify database path"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: You must specify database path"];
     } else {
         NSValue *val = [openDBs objectForKey:dbFileName];
         sqlite3 *db = [val pointerValue];
@@ -196,7 +231,7 @@
         if (db == NULL) {
             // Should not happen:
             DLog(@"close: db name was not open: %@", dbFileName);
-            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"Specified db was not open"];
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: Specified db was not open"];
         }
         else {
             DLog(@"close db name: %@", dbFileName);
@@ -229,9 +264,17 @@
     if (dbFileName==NULL) {
         // Should not happen:
         DLog(@"No db name specified for delete");
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"You must specify database path"];
+        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: You must specify database path"];
     } else {
         NSString *dbPath = [self getDBPath:dbFileName at:dblocation];
+
+        if (dbPath == NULL) {
+            // INTERNAL PLUGIN ERROR - NOT EXPECTED:
+            NSLog(@"INTERNAL PLUGIN ERROR (NOT EXPECTED): delete with no valid database path found");
+            pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString: @"INTERNAL PLUGIN ERROR: delete with no valid database path found"];
+            [self.commandDelegate sendPluginResult:pluginResult callbackId: command.callbackId];
+            return;
+        }
 
         if ([[NSFileManager defaultManager]fileExistsAtPath:dbPath]) {
             DLog(@"delete full db path: %@", dbPath);
@@ -263,7 +306,7 @@
 
     CDVPluginResult* pluginResult;
 
-    @synchronized(self) {
+    {
         for (NSMutableDictionary *dict in executes) {
             CDVPluginResult *result = [self executeSqlWithDict:dict andArgs:dbargs];
             if ([result.status intValue] == CDVCommandStatus_ERROR) {
@@ -288,23 +331,14 @@
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
--(void) backgroundExecuteSql: (CDVInvokedUrlCommand*)command
-{
-    [self.commandDelegate runInBackground:^{
-        [self executeSql:command];
-    }];
-}
-
 -(void) executeSql: (CDVInvokedUrlCommand*)command
 {
     NSMutableDictionary *options = [command.arguments objectAtIndex:0];
     NSMutableDictionary *dbargs = [options objectForKey:@"dbargs"];
     NSMutableDictionary *ex = [options objectForKey:@"ex"];
 
-    CDVPluginResult* pluginResult;
-    @synchronized (self) {
-        pluginResult = [self executeSqlWithDict: ex andArgs: dbargs];
-    }
+    CDVPluginResult * pluginResult = [self executeSqlWithDict: ex andArgs: dbargs];
+
     [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
 }
 
@@ -312,20 +346,20 @@
 {
     NSString *dbFileName = [dbargs objectForKey:@"dbname"];
     if (dbFileName == NULL) {
-        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"You must specify database path"];
+        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: You must specify database path"];
     }
 
     NSMutableArray *params = [options objectForKey:@"params"]; // optional
 
     NSValue *dbPointer = [openDBs objectForKey:dbFileName];
     if (dbPointer == NULL) {
-        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"No such database, you must open it first"];
+        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: No such database, you must open it first"];
     }
     sqlite3 *db = [dbPointer pointerValue];
 
     NSString *sql = [options objectForKey:@"sql"];
     if (sql == NULL) {
-        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"You must specify a sql query to execute"];
+        return [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"INTERNAL PLUGIN ERROR: You must specify a sql query to execute"];
     }
 
     const char *sql_stmt = [sql UTF8String];
@@ -353,7 +387,12 @@
         keepGoing = NO;
     } else if (params != NULL) {
         for (int b = 0; b < params.count; b++) {
-            [self bindStatement:statement withArg:[params objectAtIndex:b] atIndex:(b+1)];
+            result = [self bindStatement:statement withArg:[params objectAtIndex:b] atIndex:(b+1)];
+            if (result != SQLITE_OK) {
+                error = [SQLitePlugin captureSQLiteErrorFromDb:db];
+                keepGoing = NO;
+                break;
+            }
         }
     }
 
@@ -379,21 +418,10 @@
                             columnValue = [NSNumber numberWithDouble: sqlite3_column_double(statement, i)];
                             break;
                         case SQLITE_BLOB:
-#ifdef READ_BLOB_AS_BASE64
-                            columnValue = [SQLitePlugin getBlobAsBase64String: sqlite3_column_blob(statement, i)
-                                                        withLength: sqlite3_column_bytes(statement, i)];
-#ifdef INCLUDE_SQL_BLOB_BINDING // TBD subjet to change:
-                            columnValue = [@"sqlblob:;base64," stringByAppendingString:columnValue];
-#endif
-                            break;
-#endif // else
                         case SQLITE_TEXT:
                             columnValue = [[NSString alloc] initWithBytes:(char *)sqlite3_column_text(statement, i)
                                                                    length:sqlite3_column_bytes(statement, i)
                                                                  encoding:NSUTF8StringEncoding];
-#if !__has_feature(objc_arc)
-                            [columnValue autorelease];
-#endif
                             break;
                         case SQLITE_NULL:
                         // just in case (should not happen):
@@ -416,7 +444,7 @@
                 diffRowsAffected = nowRowsAffected - previousRowsAffected;
                 rowsAffected = [NSNumber numberWithInt:diffRowsAffected];
                 nowInsertId = sqlite3_last_insert_rowid(db);
-                if (nowRowsAffected > 0 && nowInsertId != 0) {
+                if (diffRowsAffected > 0 && nowInsertId != 0) {
                     hasInsertId = YES;
                     insertId = [NSNumber numberWithLongLong:sqlite3_last_insert_rowid(db)];
                 }
@@ -443,22 +471,27 @@
     return [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:resultSet];
 }
 
--(void)bindStatement:(sqlite3_stmt *)statement withArg:(NSObject *)arg atIndex:(int)argIndex
+-(int)bindStatement:(sqlite3_stmt *)statement withArg:(NSObject *)arg atIndex:(int)argIndex
 {
+    int bindResult = SQLITE_ERROR;
+
     if ([arg isEqual:[NSNull null]]) {
-        sqlite3_bind_null(statement, argIndex);
+        // bind null:
+        bindResult = sqlite3_bind_null(statement, argIndex);
     } else if ([arg isKindOfClass:[NSNumber class]]) {
+        // bind NSNumber (int64 or double):
         NSNumber *numberArg = (NSNumber *)arg;
         const char *numberType = [numberArg objCType];
+
+        // Bind each number as INTEGER (long long int) or REAL (double):
         if (strcmp(numberType, @encode(int)) == 0 ||
             strcmp(numberType, @encode(long long int)) == 0) {
-            sqlite3_bind_int64(statement, argIndex, [numberArg longLongValue]);
-        } else if (strcmp(numberType, @encode(double)) == 0) {
-            sqlite3_bind_double(statement, argIndex, [numberArg doubleValue]);
+            bindResult = sqlite3_bind_int64(statement, argIndex, [numberArg longLongValue]);
         } else {
-            sqlite3_bind_text(statement, argIndex, [[arg description] UTF8String], -1, SQLITE_TRANSIENT);
+            bindResult = sqlite3_bind_double(statement, argIndex, [numberArg doubleValue]);
         }
-    } else { // NSString
+    } else {
+        // bind NSString (text):
         NSString *stringArg;
 
         if ([arg isKindOfClass:[NSString class]]) {
@@ -467,28 +500,12 @@
             stringArg = [arg description]; // convert to text
         }
 
-#ifdef INCLUDE_SQL_BLOB_BINDING // TBD subjet to change:
-        // If the string is a sqlblob URI then decode it and store the binary directly.
-        //
-        // A sqlblob URI is formatted similar to a data URI which makes it easy to convert:
-        //   sqlblob:[<mime type>][;charset=<charset>][;base64],<encoded data>
-        //
-        // The reason the `sqlblob` prefix is used instead of `data` is because
-        // applications may want to use data URI strings directly, so the
-        // `sqlblob` prefix disambiguates the desired behavior.
-        if ([stringArg hasPrefix:@"sqlblob:"]) {
-            // convert to data URI, decode, store as blob
-            stringArg = [stringArg stringByReplacingCharactersInRange:NSMakeRange(0,7) withString:@"data"];
-            NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:stringArg]];
-            sqlite3_bind_blob(statement, argIndex, data.bytes, data.length, SQLITE_TRANSIENT);
-        }
-        else
-#endif
-        {
-            NSData *data = [stringArg dataUsingEncoding:NSUTF8StringEncoding];
-            sqlite3_bind_text(statement, argIndex, data.bytes, (int)data.length, SQLITE_TRANSIENT);
-        }
+        // always bind text string as UTF-8 (sqlite does internal conversion if necessary):
+        NSData *data = [stringArg dataUsingEncoding:NSUTF8StringEncoding];
+        bindResult = sqlite3_bind_text(statement, argIndex, data.bytes, (int)data.length, SQLITE_TRANSIENT);
     }
+
+    return bindResult;
 }
 
 -(void)dealloc
@@ -506,12 +523,6 @@
         db = [pointer pointerValue];
         sqlite3_close (db);
     }
-
-#if !__has_feature(objc_arc)
-    [openDBs release];
-    [appDBPaths release];
-    [super dealloc];
-#endif
 }
 
 +(NSDictionary *)captureSQLiteErrorFromDb:(struct sqlite3 *)db
@@ -543,7 +554,7 @@
     // the websql error code
     switch(code) {
         case SQLITE_ERROR:
-            return SYNTAX_ERR;
+            return SYNTAX_ERR_;
         case SQLITE_FULL:
             return QUOTA_ERR;
         case SQLITE_CONSTRAINT:
@@ -552,18 +563,5 @@
             return UNKNOWN_ERR;
     }
 }
-
-#ifdef READ_BLOB_AS_BASE64
-+(NSString*)getBlobAsBase64String:(const char*)blob_chars
-                       withLength:(int)blob_length
-{
-    // THANKS for guidance: http://stackoverflow.com/a/8354941/1283667
-    NSData * data = [NSData dataWithBytes: (const void *)blob_chars length: blob_length];
-
-    // THANKS for guidance:
-    // https://github.com/apache/cordova-ios/blob/master/guides/API%20changes%20in%204.0.md#nsdatabase64h-removed
-    return [data base64EncodedStringWithOptions:0];
-}
-#endif
 
 @end /* vim: set expandtab : */

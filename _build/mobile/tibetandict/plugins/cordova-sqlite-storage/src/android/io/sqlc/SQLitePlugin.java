@@ -1,27 +1,22 @@
- /*
- * Copyright (c) 2012-2016: Christopher J. Brody (aka Chris Brody)
+/*
+ * Copyright (c) 2012-present Christopher J. Brody (aka Chris Brody)
  * Copyright (c) 2005-2010, Nitobi Software Inc.
  * Copyright (c) 2010, IBM Corporation
  */
 
 package io.sqlc;
 
-import io.sqlc.ExternalStorage;
-
-import android.annotation.SuppressLint;
-import android.graphics.Point;
-import android.view.WindowManager;
 import android.util.Log;
 
 import java.io.File;
+
 import java.lang.IllegalArgumentException;
-import java.lang.Number;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
-import java.util.Locale;
+
 import java.util.Map;
 
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.LinkedBlockingQueue;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -30,98 +25,24 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.IOException;
-
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.os.Build;
-
-
-
 public class SQLitePlugin extends CordovaPlugin {
-    static StringBuilder log = new StringBuilder();
 
-    static void logError(String msg, Exception e) {
-      Log.e(SQLitePlugin.class.getSimpleName(), msg, e);
-      log.append("Error: " + msg + " "+ e + "\n");
-    }
-
-    static void logError(String msg) {
-      Log.e(SQLitePlugin.class.getSimpleName(), msg);
-      log.append("Error: " + msg + "\n");
-    }
-    
-    
-    static void logInfo(String msg) {
-      Log.i(SQLitePlugin.class.getSimpleName(), msg);
-      log.append(msg + "\n");
-    }
-
-    static void logVerbose(String msg) {
-      Log.v(SQLitePlugin.class.getSimpleName(), msg);
-      log.append(msg + "\n");
-    }
-    
-    String completeDBName;
-    String dbname;
-    
-
-    public boolean isWriteStoragePermissionGranted() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (cordova.hasPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-                return true;
-            } else {
-                cordova.requestPermissions(this, 1, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
-                return false;
-            }
-        }
-        else { //permission is automatically granted on sdk<23 upon installation
-            return true;
-        }
-    }
-
-    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
-        onRequestPermissionResult(requestCode, permissions, grantResults);
-    }
-
-    public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) {
-        if (requestCode ==1 ) {
-            //resume tasks needing this permission
-            deleteOldDbFile();
-        }
-    }    
-    
-    void deleteOldDbFile() {
-        // DB Location 1 (outdated): Try to determine the location of the external SD card and write there directly if possible (allowed until Android 4.3)
-
-        try {
-            Map<String, File> externalLocations = ExternalStorage.getAllStorageLocations(this.cordova.getActivity());
-            File externalSdCard = externalLocations.get(ExternalStorage.EXTERNAL_SD_CARD);
-            File customPath = new File(externalSdCard, dbname);
-            File dbfile1 = new File(customPath, completeDBName);
-            // delete old DB file from a location where previous versions of the app put it - it is better to use the app-specific folders rather than going to the external SD card directly
-            if(dbfile1.exists()) {
-                dbfile1.delete();
-                logInfo("Deleted old DB file from external memory card location");
-            }
-        } catch (Exception e) {
-            logError("Error while trying to delete file from old file location");
-        }
-
-
-    }    
-    
-    
-    
     /**
-     * Multiple database runner map (static).
-     * NOTE: no public static accessor to db (runner) map since it would not work with db threading.
-     * FUTURE put DBRunner into a public class that can provide external accessor.
+     * Concurrent database runner map.
+     *
+     * NOTE: no public static accessor to db (runner) map since it is not
+     * expected to work properly with db threading.
+     *
+     * FUTURE TBD put DBRunner into a public class that can provide external accessor.
+     *
+     * ADDITIONAL NOTE: Storing as Map<String, DBRunner> to avoid portabiity issue
+     * between Java 6/7/8 as discussed in:
+     * https://gist.github.com/AlainODea/1375759b8720a3f9f094
+     *
+     * THANKS to @NeoLSN (Jason Yang/楊朝傑) for giving the pointer in:
+     * https://github.com/litehelpers/Cordova-sqlite-storage/issues/727
      */
-    static Map<String, DBRunner> dbrmap = new ConcurrentHashMap<String, DBRunner>();
+    private Map<String, DBRunner> dbrmap = new ConcurrentHashMap<String, DBRunner>();
 
     /**
      * NOTE: Using default constructor, no explicit constructor.
@@ -143,7 +64,7 @@ public class SQLitePlugin extends CordovaPlugin {
             action = Action.valueOf(actionAsString);
         } catch (IllegalArgumentException e) {
             // shouldn't ever happen
-            logError("unexpected error", e);
+            Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error", e);
             return false;
         }
 
@@ -151,7 +72,7 @@ public class SQLitePlugin extends CordovaPlugin {
             return executeAndPossiblyThrow(action, args, cbc);
         } catch (JSONException e) {
             // TODO: signal JSON problem to JS
-            logError("unexpected error", e);
+            Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error", e);
             return false;
         }
     }
@@ -178,11 +99,6 @@ public class SQLitePlugin extends CordovaPlugin {
                 this.startDatabase(dbname, o, cbc);
                 break;
 
-            case getLog:
-                cbc.success(log.toString());
-                break;
-                
-                
             case close:
                 o = args.getJSONObject(0);
                 dbname = o.getString("path");
@@ -206,7 +122,7 @@ public class SQLitePlugin extends CordovaPlugin {
                 JSONArray txargs = allargs.getJSONArray("executes");
 
                 if (txargs.isNull(0)) {
-                    cbc.error("missing executes list");
+                    cbc.error("INTERNAL PLUGIN ERROR: missing executes list");
                 } else {
                     int len = txargs.length();
                     String[] queries = new String[len];
@@ -225,11 +141,11 @@ public class SQLitePlugin extends CordovaPlugin {
                         try {
                             r.q.put(q);
                         } catch(Exception e) {
-                            logError("couldn't add to queue", e);
-                            cbc.error("couldn't add to queue");
+                            Log.e(SQLitePlugin.class.getSimpleName(), "couldn't add to queue", e);
+                            cbc.error("INTERNAL PLUGIN ERROR: couldn't add to queue");
                         }
                     } else {
-                        cbc.error("database not open");
+                        cbc.error("INTERNAL PLUGIN ERROR: database not open");
                     }
                 }
                 break;
@@ -253,7 +169,7 @@ public class SQLitePlugin extends CordovaPlugin {
                 // stop the db runner thread:
                 r.q.put(new DBQuery());
             } catch(Exception e) {
-                logError("couldn't stop db thread", e);
+                Log.e(SQLitePlugin.class.getSimpleName(), "INTERNAL PLUGIN CLEANUP ERROR: could not stop db thread due to exception", e);
             }
             dbrmap.remove(dbname);
         }
@@ -264,281 +180,46 @@ public class SQLitePlugin extends CordovaPlugin {
     // --------------------------------------------------------------------------
 
     private void startDatabase(String dbname, JSONObject options, CallbackContext cbc) {
-        // TODO: is it an issue that we can orphan an existing thread?  What should we do here?
-        // If we re-use the existing DBRunner it might be in the process of closing...
         DBRunner r = dbrmap.get(dbname);
 
-        // Brody TODO: It may be better to terminate the existing db thread here & start a new one, instead.
         if (r != null) {
-            // don't orphan the existing thread; just re-open the existing database.
-            // In the worst case it might be in the process of closing, but even that's less serious
-            // than orphaning the old DBRunner.
-            cbc.success();
+            // NO LONGER EXPECTED due to BUG 666 workaround solution:
+            cbc.error("INTERNAL ERROR: database already open for db name: " + dbname);
         } else {
             r = new DBRunner(dbname, options, cbc);
             dbrmap.put(dbname, r);
             this.cordova.getThreadPool().execute(r);
         }
     }
-    
-    private void deleteFileIfSizeDiffers(File file, long expectedSize) { //ChSt
-        if (file.exists()) {
-            long fileSize = file.length();
-
-            if( fileSize != expectedSize ) {
-                logInfo("DB file has the size " + fileSize + " instead of the expected size " + expectedSize + ". File will be deleted and copied again.");                
-                file.delete();
-            } else {
-                logVerbose("DB file has the expected size " + fileSize);
-            }
-        }
-    }    
-
-    
-    
-
-    /**
-     * If a prepopulated DB file exists in the assets folder it is copied to the dbPath.
-     * Only runs the first time the app runs.
-     */
-    private void copyPrepopulatedDatabase(String completeDBName, File dbfile) { //ChSt
-        InputStream in = null;
-        OutputStream out = null;
-        try {
-            in = this.cordova.getActivity().getAssets().open(completeDBName);
-            String dbPath = dbfile.getAbsolutePath();
-            dbPath = dbPath.substring(0, dbPath.lastIndexOf("/") + 1);
-            File dbPathFile = new File(dbPath);
-            if (!dbPathFile.exists())
-                dbPathFile.mkdirs();
-
-            File newDbFile = new File(dbPath + completeDBName);
-            out = new FileOutputStream(newDbFile);
-
-            byte[] buf = new byte[1024];
-            int len;
-            while ((len = in.read(buf)) > 0)
-                out.write(buf, 0, len);
-
-            logInfo("Copied prepopulated DB content to: " + newDbFile.getAbsolutePath());
-        } catch (IOException e) {
-            logError("No prepopulated DB found or error encountered", e);
-        } finally {
-            if (in != null) {
-                try {
-                    in.close();
-                } catch (IOException ignored) {
-                }
-            }
-
-            if (out != null) {
-                try {
-                    out.close();
-                } catch (IOException ignored) {
-                }
-            }
-        }
-    }
-    
-    
-    
-    
-    /**
-     * copy the prepopulated database to an external folder
-     * @return true if copying succeeded
-     */
-    private boolean copyDbFileToFolder(String completeDBName, File dbfile, long expectedDbSize) {
-        boolean externalCardOk;
-    
-        deleteFileIfSizeDiffers(dbfile,expectedDbSize);
-        
-        if(!dbfile.exists())
-                copyPrepopulatedDatabase(completeDBName, dbfile);
-
-        // write failed silently -> Try internal SD card
-        if(dbfile.exists() ) {
-            if(dbfile.length() != expectedDbSize) {
-                logError("Wrong file size. Copied file is " + dbfile.length() + " bytes big instead of expected " +expectedDbSize+ "bytes! Not enough memory on device? Deleting file again.");
-                dbfile.delete();
-                externalCardOk = false;
-            } else {
-                logVerbose("Success. File copied.");
-                externalCardOk = true;
-            }
-        } else {
-                logError("Error. Copy failed.");
-                externalCardOk = false;
-        }
-    
-        return externalCardOk;
-    }
-    
-    /** 
-     * check a number of possible database locations to see if a db file with the right size exists there already 
-     */
-    private File searchForExistingDbFile(long expectedDbSize, File... candidates) {
-        logVerbose("Checking for existing DB.");    
-        // clean up old stuff having the wrong size
-        for(File dbfile:candidates) {
-            if(dbfile!=null) {
-                if(dbfile.exists()) {
-                    deleteFileIfSizeDiffers(dbfile,expectedDbSize);        
-                }
-            }
-        }
-        
-        // check if there is anything left
-        for(File dbfile:candidates) {
-            if(dbfile!=null) {
-                if(dbfile.exists()) {
-                    logVerbose("Suitable file found at: " + dbfile.getAbsolutePath() + " (size: "+dbfile.length()+")");    
-                    return dbfile;
-                }
-            }
-        }
-        
-        logVerbose("No suitable file found.");
-        return null;
-    }
-    
-    
-    
     /**
      * Open a database.
      *
      * @param dbName   The name of the database file
      */
-    private SQLiteAndroidDatabase openDatabase(String dbname, CallbackContext cbc, boolean old_impl) throws Exception { //ChSt
+    private SQLiteAndroidDatabase openDatabase(String dbname, CallbackContext cbc, boolean old_impl) throws Exception {
         try {
             // ASSUMPTION: no db (connection/handle) is already stored in the map
             // [should be true according to the code in DBRunner.run()]
 
-            String completeDBName = dbname + ".db";
-            this.completeDBName = completeDBName;
-            this.dbname = dbname;
+            File dbfile = this.cordova.getActivity().getDatabasePath(dbname);
 
-            long expectedDbSize = de.christian_steinert.tibetandict.Constants.DICT_SIZE();
-            boolean externalCardOk = false;
-            File dbfile;
-            
-            logVerbose("Initializing database.");
-            
-            try{
-                String deviceInfo="Device information:";
-                deviceInfo += "\n OS Version: " + System.getProperty("os.version") + "(" + android.os.Build.VERSION.INCREMENTAL + ")";
-                deviceInfo += "\n OS API Level: " + android.os.Build.VERSION.SDK_INT;
-                deviceInfo += "\n Device: " + android.os.Build.DEVICE;
-                deviceInfo += "\n Manufacturer: " + android.os.Build.MANUFACTURER;
-                deviceInfo += "\n Model (and Product): " + android.os.Build.MODEL + " ("+ android.os.Build.PRODUCT + ")";
-                deviceInfo += "\n Language: " + Locale.getDefault().getDisplayLanguage() + " (Locale:" +Locale.getDefault().getISO3Country() + ")";
-                
-                logVerbose(deviceInfo);
-            } catch(Exception e) {
-            }
-            
-            // delete DB file from original old location
-            if(isWriteStoragePermissionGranted()) {
-              deleteOldDbFile();
+            if (!dbfile.exists()) {
+                dbfile.getParentFile().mkdirs();
             }
 
-            // DB Location 2: Use external data directory (MIGHT be on external SD card or on emulated SD card)
-            File externalAppFolder = this.cordova.getActivity().getExternalFilesDir(null);
-            File dbfile2 = null;
-            if(externalAppFolder!=null) {
-                if(externalAppFolder!=null) {
-                    dbfile2 = new File(externalAppFolder, completeDBName);
-                }
-            }
-            
-            // DB Location 3: User default database path for the application (usually on internal memory)
-            File dbfile3 = this.cordova.getActivity().getDatabasePath(completeDBName);
+            Log.v("info", "Open sqlite db: " + dbfile.getAbsolutePath());
 
-            
-            // --- CHECK IF THE DB FILE WAS ALREADY EXTRACTED ---
-            dbfile = searchForExistingDbFile(expectedDbSize, dbfile2, dbfile3);
-	    
-            if(dbfile != null) {
-                externalCardOk = true; // DB found - no more copying necessary
-            }
-            
-            /*
-            // --- COPY DB FILE IF NECESSARY ---
-            if(dbfile1 != null && !externalCardOk) {
-                try {
-                        
-                        logVerbose("Trying to copy sqlite db from "+completeDBName+" to: " + dbfile1.getAbsolutePath());
-                        externalCardOk = copyDbFileToFolder(completeDBName, dbfile1, expectedDbSize);
-                        if(externalCardOk) {
-                            dbfile = dbfile1;
-                        }
-                        
-                                
-                } catch (Exception e) {
-                        // access to external sd card failed. Try internal SD card
-                        logError("Caught exception while trying to copy file. Trying other locations.");
-                }
-            }
-            */
+            SQLiteAndroidDatabase mydb = old_impl ? new SQLiteAndroidDatabase() : new SQLiteConnectorDatabase();
+            mydb.open(dbfile);
 
-
-
-            // if write failed silently -> continue trying
-            // for Android 4.4 and higher: application directory which MIGHT be on external SD
-            if(dbfile2 != null && !externalCardOk) {
-                    try{
-                            logVerbose("2nd attempt: Trying to copy sqlite db from "+completeDBName+" to: " + dbfile2.getAbsolutePath());
-                            externalCardOk = copyDbFileToFolder(completeDBName, dbfile2, expectedDbSize);
-                            if(externalCardOk) {
-                                dbfile = dbfile2;
-                            }
-
-                            
-                    } catch(Exception e) {
-                            // access to external sd card failed. Try internal SD card
-                            logError("Caught exception while trying to copy file. Trying other locations.");
-                    }
-                    
-            }
-
-
-            // if write failed silently -> continue trying
-            // final fallback: store the database in the DB folder for our app, which will almost certainly be on the internal, simulated "SD" card
-            if(dbfile3 != null && !externalCardOk) {
-                    // external SD card access failed. Use internal sd card location!
-                    logVerbose("Fallback (3rd and final attempt): Trying to copy sqlite db from " + completeDBName + " to: " + dbfile3.getAbsolutePath());
-                    externalCardOk = copyDbFileToFolder(completeDBName, dbfile3, expectedDbSize);
-                    if(externalCardOk) {
-                      dbfile = dbfile3;
-                    }
-                            
-            }
-            
-            // --- IF COPYING SUCCESSFUL: OPEN DB ---
-            if(externalCardOk) {
-                logVerbose("Open sqlite db: " + dbfile.getAbsolutePath());
-
-                SQLiteAndroidDatabase mydb = old_impl ? new SQLiteAndroidDatabase() : new SQLiteConnectorDatabase();
-                mydb.open(dbfile);
-
-                if (cbc != null) // XXX Android locking/closing BUG workaround
-                    cbc.success(log.toString());
-
-                logVerbose("DB opened successful: " + dbfile.getAbsolutePath());
-
-                return mydb;
-                
-            } else {
-                logError("Error opening db: " + dbfile.getAbsolutePath());
-                cbc.error(log.toString());
-                
-                return null;
-            }
-                
-        } catch (Exception e) {
-            logError("Error opening db: " + e);
             if (cbc != null) // XXX Android locking/closing BUG workaround
-                cbc.error(log.toString());
-            return null;
+                cbc.success();
+
+            return mydb;
+        } catch (Exception e) {
+            if (cbc != null) // XXX Android locking/closing BUG workaround
+                cbc.error("can't open database " + e);
+            throw e;
         }
     }
 
@@ -556,7 +237,7 @@ public class SQLitePlugin extends CordovaPlugin {
                 if (cbc != null) {
                     cbc.error("couldn't close database" + e);
                 }
-                logError("couldn't close database", e);
+                Log.e(SQLitePlugin.class.getSimpleName(), "couldn't close database", e);
             }
         } else {
             if (cbc != null) {
@@ -590,14 +271,14 @@ public class SQLitePlugin extends CordovaPlugin {
                 if (cbc != null) {
                     cbc.error("couldn't close database" + e);
                 }
-                logError("couldn't close database", e);
+                Log.e(SQLitePlugin.class.getSimpleName(), "couldn't close database", e);
             }
         } else {
             boolean deleteResult = this.deleteDatabaseNow(dbname);
             if (deleteResult) {
                 cbc.success();
             } else {
-                cbc.error("couldn't delete database " + dbname);
+                cbc.error("couldn't delete database");
             }
         }
     }
@@ -615,7 +296,7 @@ public class SQLitePlugin extends CordovaPlugin {
         try {
             return cordova.getActivity().deleteDatabase(dbfile.getAbsolutePath());
         } catch (Exception e) {
-            logError("couldn't delete database", e);
+            Log.e(SQLitePlugin.class.getSimpleName(), "couldn't delete database", e);
             return false;
         }
     }
@@ -633,10 +314,10 @@ public class SQLitePlugin extends CordovaPlugin {
         DBRunner(final String dbname, JSONObject options, CallbackContext cbc) {
             this.dbname = dbname;
             this.oldImpl = options.has("androidOldDatabaseImplementation");
-            logVerbose("Android db implementation: built-in android.database.sqlite package");
+            Log.v(SQLitePlugin.class.getSimpleName(), "Android db implementation: built-in android.database.sqlite package");
             this.bugWorkaround = this.oldImpl && options.has("androidBugWorkaround");
             if (this.bugWorkaround)
-                logVerbose("Android db closing/locking workaround applied");
+                Log.v(SQLitePlugin.class.getSimpleName(), "Android db closing/locking workaround applied");
 
             this.q = new LinkedBlockingQueue<DBQuery>();
             this.openCbc = cbc;
@@ -646,7 +327,7 @@ public class SQLitePlugin extends CordovaPlugin {
             try {
                 this.mydb = openDatabase(dbname, this.openCbc, this.oldImpl);
             } catch (Exception e) {
-                logError("unexpected error, stopping db thread", e);
+                Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error, stopping db thread", e);
                 dbrmap.remove(dbname);
                 return;
             }
@@ -665,7 +346,7 @@ public class SQLitePlugin extends CordovaPlugin {
                     dbq = q.take();
                 }
             } catch (Exception e) {
-                logError("unexpected error", e);
+                Log.e(SQLitePlugin.class.getSimpleName(), "unexpected error", e);
             }
 
             if (dbq != null && dbq.close) {
@@ -685,12 +366,12 @@ public class SQLitePlugin extends CordovaPlugin {
                                 dbq.cbc.error("couldn't delete database");
                             }
                         } catch (Exception e) {
-                            logError("couldn't delete database", e);
+                            Log.e(SQLitePlugin.class.getSimpleName(), "couldn't delete database", e);
                             dbq.cbc.error("couldn't delete database: " + e);
                         }
-                    }                    
+                    }
                 } catch (Exception e) {
-                    logError("couldn't close database", e);
+                    Log.e(SQLitePlugin.class.getSimpleName(), "couldn't close database", e);
                     if (dbq.cbc != null) {
                         dbq.cbc.error("couldn't close database: " + e);
                     }
@@ -739,7 +420,6 @@ public class SQLitePlugin extends CordovaPlugin {
 
     private static enum Action {
         echoStringValue,
-        getLog,
         open,
         close,
         delete,

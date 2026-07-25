@@ -2,30 +2,16 @@
 # This script builds the Android application using Cordova.
 # Note: the buildDictionaries.sh script must be run first to create the database file that is needed for the app
 currpath="`pwd`"
-
-
-if [ -z "$JAVA_HOME" ]
-then
-  export JAVA_HOME=/usr/lib/jvm/java-17/
-  $JAVA_HOME/bin/javac -version
-fi
-
-if [ -z "$ANDROID_HOME" ]
-then
-  export ANDROID_HOME="$HOME/Android/Sdk"
-fi
-
-export ANDROID_TOOLS_VERSION=`ls -1 $ANDROID_HOME/build-tools/ |tail -n 1 `
-export ANDROID_TOOLS_PATH="$ANDROID_HOME/build-tools/$ANDROID_TOOLS_VERSION"
-export JAVA_TOOL_OPTIONS="-Xmx2048m -XX:ReservedCodeCacheSize=1024m"
-
-export PATH=$ANDROID_TOOLS_PATH:$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
-
-
+ 
+ 
 echo ANDROID_HOME: $ANDROID_HOME
 echo ANDROID_TOOLS_PATH: $ANDROID_TOOLS_PATH
 
+export JAVA_TOOL_OPTIONS="-Xmx2048m -XX:ReservedCodeCacheSize=1024m"
+export CORDOVA_TELEMETRY_DISABLED=1
+
 buildAndroidApplication() {
+
   # use a different Android Application ID for the private version of the app than for the public version
   local IS_PUBLIC_DICTIONARY=$1
 
@@ -33,12 +19,12 @@ buildAndroidApplication() {
     local IS_PUBLIC=true
     local DICT_TYPE="PUBLIC"  
     local ASSETS="res.normal"
-    local DICT_FILE="../backend/TibetanDictionary.db"
+    local DICT_FILE="../backend/TibetanDictionary_compressed.db"
   else
     local IS_PUBLIC=false
     local DICT_TYPE="FULL"
     local ASSETS="res.full"
-    local DICT_FILE="../backend/TibetanDictionary_private.db"
+    local DICT_FILE="../backend/TibetanDictionary_private_compressed.db"
   fi
 
   echo === Building $DICT_TYPE version ===
@@ -48,12 +34,21 @@ buildAndroidApplication() {
   fi
 
   cd mobile/tibetandict
-  cordova platform rm android
-  cordova platform add android
+  cordova telemetry off
+#  cordova platform rm android
+  cordova platform add android@15.0.0
+
   cd ../..
 
-  # copy the customized Java classes for the cordova database plugin
-  cp mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/*.java  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
+  # avoid the gradlew script that is shipped with Cordova and instead use the gradle binary that is installed in the Docker image
+  rm mobile/tibetandict/platforms/android/gradlew
+  ln -s $GRADLE_HOME/bin/gradle mobile/tibetandict/platforms/android/gradlew
+
+
+  # copy the customized classes for the cordova database plugin
+  cp -r mobile/tibetandict/plugins/cordova-sqlite-storage/src/android/io/sqlc/  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/  
+  cp mobile/tibetandict/plugins/cordova-sqlite-storage-custom/plugin.xml mobile/tibetandict/plugins/cordova-sqlite-storage/plugin.xml
+  cp -r mobile/tibetandict/plugins/cordova-sqlite-storage-custom/src/android/io/sqlc/custom/  mobile/tibetandict/platforms/android/app/src/main/java/io/sqlc/custom/  
 
   # copy the share text plugin Java class
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/java/de/christian_steinert/tibetandict/
@@ -71,28 +66,22 @@ buildAndroidApplication() {
   echo "public class Constants{ public static long DICT_SIZE() { return $dbsize; } }" >> $classfile
   echo DB Size: $dbsize
 
-  # generate a simple global settings file that tells the application which dictionaries from the dictionary list should be listed
-  # in the "about" section and on the settings screen 
-  echo "GLOBAL_SETTINGS={ publicOnly: $IS_PUBLIC }" > ../webapp/settings/globalsettings.js
+  # Build the React app
+  echo "Building React app..."
+  (
+    cd ../webapp
+    VITE_PUBLIC_ONLY=$IS_PUBLIC BUILD_TARGET=android npm install && npm run build
+  )
 
-  # copy the files of the web application into the cordova project
-  # for the index page, add a cordovaInitializing class so that an init message gets shown
-  # while the app initializes itself
+  # Update index.html to add cordova classes
+  sed -i 's/<body class="/<body class="cordovaInitializing mobile /g' ../webapp/dist/index.html
+
+  # Sync built assets to Cordova project
   mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www
   
-  mkdir -p /tmp/dict
-  cp -rf ../webapp/index.html /tmp/dict/index.html
-  sed -i 's/<body class="/<body class="cordovaInitializing mobile /g' /tmp/dict/index.html
+  cp -rf ../webapp/dist/* mobile/tibetandict/www/
+  cp -rf ../webapp/dist/* mobile/tibetandict/platforms/android/app/src/main/assets/www/
 
-  cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/www
-  cp -r /tmp/dict/index.html ../webapp/code ../webapp/settings ../webapp/lib mobile/tibetandict/platforms/android/app/src/main/assets/www
-  rm -rf /tmp/dict/
-
-
-  mkdir -p mobile/tibetandict/www/data
-  mkdir -p mobile/tibetandict/platforms/android/app/src/main/assets/www/data
-  cp -r ../webapp/data/*.js mobile/tibetandict/www/data
-  cp -r ../webapp/data/*.js mobile/tibetandict/platforms/android/app/src/main/assets/www/data
   
   cp -r mobile/tibetandict/platforms/android/platform_www/plugins mobile/tibetandict/platforms/android/app/src/main/assets/www/
   cp mobile/tibetandict/platforms/android/platform_www/cordova*.js mobile/tibetandict/platforms/android/app/src/main/assets/www
@@ -155,5 +144,5 @@ buildAndroidApplication 1
 #### CLEANUP
 ############################################################################################################################################
 cd mobile/tibetandict
-cordova platform rm android
+#cordova platform rm android
 cd "$currpath"

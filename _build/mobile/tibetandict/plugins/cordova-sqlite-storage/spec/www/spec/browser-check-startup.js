@@ -2,20 +2,22 @@
 
 var MYTIMEOUT = 12000;
 
-var isAndroid = /Android/.test(navigator.userAgent);
-var isWP8 = /IEMobile/.test(navigator.userAgent); // Matches WP(7/8/8.1)
-//var isWindows = /Windows NT/.test(navigator.userAgent); // Windows [NT] (8.1)
-var isWindows = /Windows /.test(navigator.userAgent); // Windows (8.1)
-//var isWindowsPC = /Windows NT/.test(navigator.userAgent); // Windows [NT] (8.1)
-//var isWindowsPhone_8_1 = /Windows Phone 8.1/.test(navigator.userAgent); // Windows Phone 8.1
-//var isIE = isWindows || isWP8 || isWindowsPhone_8_1;
-var isIE = isWindows || isWP8;
-var isWebKit = !isIE; // TBD [Android or iOS]
+var isWindows = /MSAppHost/.test(navigator.userAgent);
+var isAndroid = !isWindows && /Android/.test(navigator.userAgent);
+var isFirefox = /Firefox/.test(navigator.userAgent);
+var isWebKitBrowser = !isWindows && !isAndroid && /Safari/.test(navigator.userAgent);
+var isBrowser = isWebKitBrowser || isFirefox;
+var isEdgeBrowser = isBrowser && (/Edge/.test(navigator.userAgent));
+var isChromeBrowser = isBrowser && !isEdgeBrowser && (/Chrome/.test(navigator.userAgent));
+var isMac = !isBrowser && /Macintosh/.test(navigator.userAgent);
+var isAppleMobileOS = /iPhone/.test(navigator.userAgent) ||
+      /iPad/.test(navigator.userAgent) || /iPod/.test(navigator.userAgent);
+var hasMobileWKWebView = isAppleMobileOS && !!window.webkit && !!window.webkit.messageHandlers;
 
 window.hasBrowser = true;
-window.hasWebKitBrowser = isWebKit;
+window.hasWebKitWebSQL = isAndroid || isChromeBrowser;
 
-describe('check startup', function() {
+describe('Check startup for navigator.userAgent: ' + navigator.userAgent, function() {
   it('receives deviceready event', function(done) {
     expect(true).toBe(true);
     document.addEventListener("deviceready", function() {
@@ -24,7 +26,7 @@ describe('check startup', function() {
   }, MYTIMEOUT);
 
   it('has openDatabase', function() {
-    if (isWebKit) expect(window.openDatabase).toBeDefined();
+    if (window.hasWebKitWebSQL) expect(window.openDatabase).toBeDefined();
     expect(window.sqlitePlugin).toBeDefined();
     expect(window.sqlitePlugin.openDatabase).toBeDefined();
   });

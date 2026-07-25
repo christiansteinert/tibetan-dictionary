@@ -9,5 +9,5 @@ interface GlobalSettings {
 }
 
 export const GLOBAL_SETTINGS: GlobalSettings = {
-  publicOnly: true,
+  publicOnly: import.meta.env.VITE_PUBLIC_ONLY === 'true',
 };

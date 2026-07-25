@@ -4,6 +4,7 @@ var nextTick = window.setImmediate || function(fun) {
     window.setTimeout(fun, 0);
 };
 
+/* **
 function handle(p, win, fail) {
     if (p)
         p.done(
@@ -18,6 +19,7 @@ function handle(p, win, fail) {
             }
         );
 }
+// */
 
 module.exports = {
 	echoStringValue: function(win, fail, args) {
@@ -29,7 +31,11 @@ module.exports = {
 	    var res;
 
 		function openImmediate(dbname) {
-			//var dbname = options.name;
+			if (!!dbmap[dbname]) {
+				// NO LONGER EXPECTED due to BUG 666 workaround solution:
+				fail("INTERNAL ERROR: database already open for dbname: " + dbname);
+			}
+
 			// from @EionRobb / phonegap-win8-sqlite:
 			var opendbname = Windows.Storage.ApplicationData.current.localFolder.path + "\\" + dbname;
 			console.log("open db name: " + dbname + " at full path: " + opendbname);
@@ -59,20 +65,24 @@ module.exports = {
 	    var options = args[0];
 	    var res;
 		try {
-		    //res = SQLitePluginRT.SQLitePlugin.closeAsync(JSON.stringify(options));
 			var dbname = options.path;
+
 			nextTick(function() {
-				if (!!dbmap[dbname] && dbmap[dbname].close() == 0) {
+				var rc = 0;
+				var db = dbmap[dbname];
+
+				if (!db) {
+					fail("CLOSE ERROR: cannot find db object for dbname: " + dbname);
+				} else if ((rc = db.close()) !== 0) {
+					fail("CLOSE ERROR CODE: " + rc);
+				} else {
 					delete dbmap[dbname];
 					win();
-				} else {
-					fail(); // XXX TODO REPORT ERROR
 				}
 			});
-        } catch (ex) {
+		} catch (ex) {
 			fail(ex);
 		}
-		//handle(res, win, fail);
 	},
 	backgroundExecuteSqlBatch: function(win, fail, args) {
 	    var options = args[0];
@@ -105,7 +115,7 @@ module.exports = {
 				console.log("sql exception error: " + ex.message);
 				results.push({
 					type: "error",
-					result: { code: -1, message: ex.message }
+					result: { message: ex.message, code: 0 }
 				});
 			}
 		}

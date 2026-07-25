@@ -34,6 +34,7 @@ const manifest: Record<string, unknown> = {
 };
 
 export default defineConfig({
+  base: process.env.BUILD_TARGET === 'android' ? './' : '/',
   plugins: [
     react(),
     tailwindcss(),

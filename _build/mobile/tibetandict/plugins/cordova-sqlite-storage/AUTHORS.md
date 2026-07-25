@@ -8,15 +8,20 @@
 - API changes by @brodybits (Chris Brody)
 - Transaction timing fixes to support PouchDB by @nolanlawson
 
+## browser platform
+
+- Using sql-asm-memory-growth.js built from sql.js by @kripken (Alon Zakai)
+
 ## Android version
 
 - Extracted from DroidGap by @brodybits (Chris Brody)
 - Transaction batch processing of Android version by @marcucio
+- Complex NDK response type enhancements to android-sqlite-native-ndk-connector and android-sqlite-ndk-native-driver by @luissilvaos (Luis Silva) of OutSystems
 - Maintained by @brodybits (Chris Brody)
 - Fixes to support old Android versions by @nolanlawson
 - Thanks to Mark Oppenheim <mark.oppenheim@mnetics.co.uk> for fixes to open/close callbacks and repeated open/close/delete operations
 
-## iOS version
+## iOS/macOS version
 
 - Original authors: @davibe (Davide Bertola <dade@dadeb.it>) and @joenoon (Joe Noon <joenoon@gmail.com>)
 - Cordova 2.7+ port with background processing by @j3k0 (Jean-Christophe Hoelt <hoelt@fovea.cc>)

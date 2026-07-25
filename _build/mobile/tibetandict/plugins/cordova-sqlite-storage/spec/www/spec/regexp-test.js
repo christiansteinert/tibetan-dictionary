@@ -2,19 +2,29 @@
 
 var MYTIMEOUT = 12000;
 
-var DEFAULT_SIZE = 5000000; // max to avoid popup in safari/ios
+// NOTE: DEFAULT_SIZE wanted depends on type of browser
 
 // Detect actual platform:
-var isWP8 = /IEMobile/.test(navigator.userAgent); // Matches WP(7/8/8.1)
-var isWindows = /Windows /.test(navigator.userAgent); // Windows
-var isAndroidUA = /Android/.test(navigator.userAgent);
-var isAndroid = (isAndroidUA && !isWindows);
+var isWindows = /MSAppHost/.test(navigator.userAgent);
+var isAndroid = !isWindows && /Android/.test(navigator.userAgent);
+var isFirefox = /Firefox/.test(navigator.userAgent);
+var isWebKitBrowser = !isWindows && !isAndroid && /Safari/.test(navigator.userAgent);
+var isBrowser = isWebKitBrowser || isFirefox;
+var isEdgeBrowser = isBrowser && (/Edge/.test(navigator.userAgent));
+var isChromeBrowser = isBrowser && !isEdgeBrowser && (/Chrome/.test(navigator.userAgent));
+var isSafariBrowser = isWebKitBrowser && !isEdgeBrowser && !isChromeBrowser;
+var isMac = !isBrowser && /Macintosh/.test(navigator.userAgent);
+var isAppleMobileOS = /iPhone/.test(navigator.userAgent) ||
+      /iPad/.test(navigator.userAgent) || /iPod/.test(navigator.userAgent);
+
+// should avoid popups (Safari seems to count 2x)
+var DEFAULT_SIZE = isSafariBrowser ? 2000000 : 5000000;
+// FUTURE TBD: 50MB should be OK on Chrome and some other test browsers.
 
 var scenarioList = [ isAndroid ? 'Plugin-implementation-default' : 'Plugin', 'HTML5', 'Plugin-implementation-2' ];
 
-var scenarioCount = (!!window.hasWebKitBrowser) ? (isAndroid ? 3 : 2) : 1;
+var scenarioCount = (!!window.hasWebKitWebSQL) ? (isAndroid ? 3 : 2) : 1;
 
-// simple tests:
 var mytests = function() {
 
   for (var i=0; i<scenarioCount; ++i) {
@@ -28,23 +38,28 @@ var mytests = function() {
       // NOTE: MUST be defined in function scope, NOT outer scope:
       var openDatabase = function(name, ignored1, ignored2, ignored3) {
         if (isImpl2) {
-          return window.sqlitePlugin.openDatabase({name: name, location: 1, androidDatabaseImplementation: 2});
+          // explicit database location:
+          return window.sqlitePlugin.openDatabase({name: name, location: 'default', androidDatabaseImplementation: 2});
         }
         if (isWebSql) {
           return window.openDatabase(name, "1.0", "Demo", DEFAULT_SIZE);
         } else {
-          return window.sqlitePlugin.openDatabase({name: name, location: 0});
+          // explicit database location:
+          return window.sqlitePlugin.openDatabase({name: name, location: 'default'});
         }
       }
 
       it(suiteName + 'Simple REGEXP test',
         function(done) {
-          // Test for Android Web SQL ONLY
-          if (isWP8) pending('NOT IMPLEMENTED for WP8');
-          if (isWindows) pending('NOT IMPLEMENTED for Windows');
-          //if (!isWebSql && isAndroid && isImpl2 && /Android [1-4]/.test(navigator.userAgent)) pending('BROKEN for android.database (version 1.x-4.x)');
-          if (!isWebSql && isAndroid) pending('SKIP for android.database'); // TBD (SKIP for Android plugin for now)
-          if (!isAndroid && !isWindows && !isWP8) pending('SKIP for iOS');
+          if (isWebSql && isBrowser && !isChromeBrowser) pending('SKIP on (WebKit) Web SQL on non-Chrome desktop browser');
+          if (isWebSql && /Android 4.[1-3]/.test(navigator.userAgent)) pending('SKIP for Android 4.1-4.3 (WebKit) Web SQL');
+          if (isWebSql && isAppleMobileOS) pending('SKIP on iOS (WebKit) Web SQL');
+          if (!isWebSql && isBrowser) pending('SKIP on plugin on browser - NOT IMPLEMENTED');
+          if (!isWebSql && isWindows) pending('SKIP on Windows plugin - NOT IMPLEMENTED');
+          if (!isWebSql && isAndroid && isImpl2 && /Android [2-4]/.test(navigator.userAgent)) pending('TBD SKIP for system android.database provider on Android 2.x-4.x');
+          // TBD REMOVE the following conditions for plugin versions such as cordova-sqlite-ext:
+          if (!isWebSql && isAndroid && !isImpl2) pending('SKIP on Android plugin with default database provider');
+          if (!isWebSql && (isAppleMobileOS || isMac)) pending('SKIP on iOS/macOS plugin');
 
           var db = openDatabase('simple-regexp-test.db', '1.0', 'test', DEFAULT_SIZE);
 

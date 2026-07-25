@@ -2,6 +2,12 @@
 
 var MYTIMEOUT = 12000;
 
+var isWindows = /MSAppHost/.test(navigator.userAgent);
+var isAndroid = !isWindows && /Android/.test(navigator.userAgent);
+var isFirefox = /Firefox/.test(navigator.userAgent);
+var isWebKitBrowser = !isWindows && !isAndroid && /Safari/.test(navigator.userAgent);
+var isBrowser = isWebKitBrowser || isFirefox;
+
 var mytests = function() {
 
   describe('Built-in test(s)', function() {
@@ -21,7 +27,7 @@ var mytests = function() {
           });
         }, MYTIMEOUT);
 
-      it('Self-test: open/populate/read/update/delete database',
+      it('Self-test with CRUD operations & cleanup',
         function(done) {
           window.sqlitePlugin.selfTest(function() {
             // ok:

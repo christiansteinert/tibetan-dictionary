@@ -363,72 +363,73 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 <strong>Note:</strong> The search internally works with Wylie transliteration. If you type incomplete syllables in Tibetan script, then vowels will be added automatically. For example, if you search for <code className={styles.op}>ས*</code> then this will trigger a search for <code className={styles.example}>sa*</code>.
               </p>
 
-              {/* ── Extended / Fulltext Search ── */}
-              <section>
-                <h3 className={styles.sectionTitle}>Fulltext Search</h3>
-                <p className={styles.intro}>
-                  The fulltext search searches inside headwords and definition texts.
-                  To use the fulltext search, open the extended search in the menu and then select "Fulltext".
-                  In addition to typing the term you are looking for, you may use the following operators in this search mode:
-                </p>
-                <table className={styles.table}>
-                  <thead>
-                    <tr>
-                      <th>Ope&shy;rator</th>
-                      <th>Mea&shy;ning</th>
-                      <th>Exam&shy;ple</th>
-                      <th>Finds entries …</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td rowSpan={2}><code className={styles.op}>&amp;</code></td>
-                      <td rowSpan={2}>AND – both terms must appear</td>
-                      <td><code className={styles.example}>sangs rgyas &amp; chos</code></td>
-                      <td>containing <em>sangs rgyas</em> AND <em>chos</em></td>
-                    </tr>
-                    <tr>
-                      <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ &amp; ཆོས་</code></td>
-                      <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> AND <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
-                    </tr>
-                    <tr>
-                      <td rowSpan={2}><code className={styles.op}>|</code></td>
-                      <td rowSpan={2}>OR – at least one term must appear</td>
-                      <td><code className={styles.example}>sangs rgyas | chos</code></td>
-                      <td>containing <em>sangs rgyas</em> OR <em>chos</em></td>
-                    </tr>
-                    <tr>
-                      <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ | ཆོས་</code></td>
-                      <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> OR <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
-                    </tr>
-                    <tr>
-                      <td rowSpan={2}><code className={styles.op}>!</code></td>
-                      <td rowSpan={2}>NOT – term must <em>not</em> appear</td>
-                      <td><code className={styles.example}>sangs rgyas ! chos</code></td>
-                      <td>containing <em>sangs rgyas</em> but NOT <em>chos</em></td>
-                    </tr>
-                    <tr>
-                      <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ ! ཆོས་</code></td>
-                      <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> but NOT <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
-                    </tr>
-                    <tr>
-                      <td rowSpan={2}><code className={styles.op}>~</code></td>
-                      <td rowSpan={2}>Suffix wildcard – matches zero or more characters at the end of a word. <code className={styles.op}>~</code> may only be placed at the <em>end</em> of a word (e.g. <code className={styles.example}>buddh~</code> / <code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱ~</code>), not in the middle or at the start.</td>
-                      <td><code className={styles.example}>sang~</code></td>
-                      <td>containing any word starting with <em>sang</em></td>
-                    </tr>
-                    <tr>
-                      <td><code className={`${styles.example} ${styles.tibExample} tib`}>སང~</code></td>
-                      <td>containing any syllable starting with <em className={`${styles.tibExample} tib`}>སང་</em></td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className={styles.note}>
-                  <strong>Note: </strong> 
-                  The search initernally works with Wylie transliteration. If you type incomplete syllables in Tibetan script, then vowels will be added automatically. For example, if you search for <code className={styles.op}>ས~</code> then this will trigger a search for <code className={styles.example}>sa~</code>.
-                </p>  
-
-              </section>
+              {/* ── Extended / Fulltext Search (not available on mobile) ── */}
+              {typeof (window as any).cordova === 'undefined' && (
+                 <section>
+                   <h3 className={styles.sectionTitle}>Fulltext Search</h3>
+                   <p className={styles.intro}>
+                     The fulltext search searches inside headwords and definition texts.
+                     To use the fulltext search, open the extended search in the menu and then select "Fulltext".
+                     In addition to typing the term you are looking for, you may use the following operators in this search mode:
+                   </p>
+                   <table className={styles.table}>
+                     <thead>
+                       <tr>
+                         <th>Ope&shy;rator</th>
+                         <th>Mea&shy;ning</th>
+                         <th>Exam&shy;ple</th>
+                         <th>Finds entries …</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td rowSpan={2}><code className={styles.op}>&amp;</code></td>
+                         <td rowSpan={2}>AND – both terms must appear</td>
+                         <td><code className={styles.example}>sangs rgyas &amp; chos</code></td>
+                         <td>containing <em>sangs rgyas</em> AND <em>chos</em></td>
+                       </tr>
+                       <tr>
+                         <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ &amp; ཆོས་</code></td>
+                         <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> AND <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
+                       </tr>
+                       <tr>
+                         <td rowSpan={2}><code className={styles.op}>|</code></td>
+                         <td rowSpan={2}>OR – at least one term must appear</td>
+                         <td><code className={styles.example}>sangs rgyas | chos</code></td>
+                         <td>containing <em>sangs rgyas</em> OR <em>chos</em></td>
+                       </tr>
+                       <tr>
+                         <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ | ཆོས་</code></td>
+                         <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> OR <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
+                       </tr>
+                       <tr>
+                         <td rowSpan={2}><code className={styles.op}>!</code></td>
+                         <td rowSpan={2}>NOT – term must <em>not</em> appear</td>
+                         <td><code className={styles.example}>sangs rgyas ! chos</code></td>
+                         <td>containing <em>sangs rgyas</em> but NOT <em>chos</em></td>
+                       </tr>
+                       <tr>
+                         <td><code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱས་ ! ཆོས་</code></td>
+                         <td>containing <em className={`${styles.tibExample} tib`}>སངས་རྒྱས་</em> but NOT <em className={`${styles.tibExample} tib`}>ཆོས་</em></td>
+                       </tr>
+                       <tr>
+                         <td rowSpan={2}><code className={styles.op}>~</code></td>
+                         <td rowSpan={2}>Suffix wildcard – matches zero or more characters at the end of a word. <code className={styles.op}>~</code> may only be placed at the <em>end</em> of a word (e.g. <code className={styles.example}>buddh~</code> / <code className={`${styles.example} ${styles.tibExample} tib`}>སངས་རྒྱ~</code>), not in the middle or at the start.</td>
+                         <td><code className={styles.example}>sang~</code></td>
+                         <td>containing any word starting with <em>sang</em></td>
+                       </tr>
+                       <tr>
+                         <td><code className={`${styles.example} ${styles.tibExample} tib`}>སང~</code></td>
+                         <td>containing any syllable starting with <em className={`${styles.tibExample} tib`}>སང་</em></td>
+                       </tr>
+                     </tbody>
+                   </table>
+                   <p className={styles.note}>
+                     <strong>Note: </strong> 
+                     The search initernally works with Wylie transliteration. If you type incomplete syllables in Tibetan script, then vowels will be added automatically. For example, if you search for <code className={styles.op}>ས~</code> then this will trigger a search for <code className={styles.example}>sa~</code>.
+                   </p>  
+                 </section>
+              )}
 
               {/* ── Keyboard Navigation ── */}
               <section>

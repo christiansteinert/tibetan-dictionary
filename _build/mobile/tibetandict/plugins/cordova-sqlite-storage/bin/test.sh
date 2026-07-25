@@ -8,6 +8,15 @@
 #
 # N.B. if you functionally change this script you _must_ change .\bin\test.sh too.
 #
+# STATUS: UNSUPPORTED
+#
+# A known issue is that this script needs old coffeescript@1 or coffee-script@1
+# to be installed globally while the package script is using locally installed
+# version of coffeescript@1.
+#
+# It is recommended to use the package scripts with npm or yarn tool instead
+# of this script.
+#
 
 platform=$1
 
@@ -43,12 +52,15 @@ fi
 echo "compiled coffeescript to javascript"
 
 # move everything to a temp folder to avoid infinite recursion errors
-rm -fr ../.plugin
-mkdir -p ../.plugin
-cp -r ../scripts ../src ../plugin.xml ../package.json ../www ../.plugin
+rm -fr myplugin
+mkdir -p myplugin
+cp -r ../scripts ../src ../plugin.xml ../package.json ../www myplugin
+
+# cleanup old test
+rm -fr plugins platforms
 
 # update the plugin, run the test app
 cordova platform add $platform
-cordova plugin rm com.brodysoft.sqlitePlugin
-cordova plugin add ../.plugin
+#cordova plugin rm com.brodysoft.sqlitePlugin
+cordova plugin add myplugin
 cordova run $platform
