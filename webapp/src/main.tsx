@@ -43,10 +43,23 @@ async function startApp() {
   );
 }
 
-  if ((window as any).cordova) {
-    //phonegap-based initialization for mobile app
-    document.addEventListener("deviceready", startApp);
-  } else {
-    //normal initialization for web
+// Initialization logic: wait for Cordova if flag is set, otherwise start immediately
+function initialize() {
+  let started = false;
+
+  const run = () => {
+    if (started) return;
+    started = true;
     startApp();
+  };
+
+  if ((window as any).MOBILE_ENABLED) {
+    document.addEventListener("deviceready", run, false);
+    // Safety fallback: if deviceready doesn't fire within 2s, start anyway
+    setTimeout(run, 2000);
+  } else {
+    run();
   }
+}
+
+initialize();

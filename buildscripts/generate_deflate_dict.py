@@ -131,6 +131,6 @@ if __name__ == "__main__":
     # But for our current task, we'll specify both.
     generate_dict(
         "buildscripts/deflate_dict.txt", 
-        java_interface_path="_build/mobile/tibetandict/plugins/cordova-sqlite-storage-custom/src/android/io/sqlc/custom/DeflateDictionary.java"
+        java_interface_path="_build/mobile/plugins-custom/cordova-sqlite-storage-custom/src/android/io/sqlc/custom/DeflateDictionary.java"
     )
 

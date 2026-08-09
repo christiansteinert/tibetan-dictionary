@@ -38,44 +38,48 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    VitePWA({
-      registerType: 'autoUpdate',
-      devOptions: {
-        enabled: false, // Disable PWA in dev mode to prevent service worker caching issues
-      },
-      workbox: {
-        // Precache all frontend assets
-        // Backend resources (/backend/*) require network access.
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
-        navigateFallback: 'index.html',
-        navigateFallbackDenylist: [/^\/backend/],
+    ...(process.env.BUILD_TARGET === 'android'
+      ? []
+      : [
+          VitePWA({
+            registerType: 'autoUpdate',
+            devOptions: {
+              enabled: false, // Disable PWA in dev mode to prevent service worker caching issues
+            },
+            workbox: {
+              // Precache all frontend assets
+              // Backend resources (/backend/*) require network access.
+              globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,ttf,json}'],
+              navigateFallback: 'index.html',
+              navigateFallbackDenylist: [/^\/backend/],
 
-        // Ensure all frontend assets are cached, even if large
-        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB per file
-        runtimeCaching: [
-          {
-            // allow dictionary query responses to be cached a runtime
-            urlPattern: /\/backend\/api\//,
-            handler: 'CacheFirst',
-            options: {
-              cacheName: 'api-cache',
-              expiration: {
-                maxEntries: 200,
-                maxAgeSeconds: 60 * 60 * 24, // 24 hours
-              },
+              // Ensure all frontend assets are cached, even if large
+              maximumFileSizeToCacheInBytes: 5 * 1024 * 1024, // 5MB per file
+              runtimeCaching: [
+                {
+                  // allow dictionary query responses to be cached a runtime
+                  urlPattern: /\/backend\/api\//,
+                  handler: 'CacheFirst',
+                  options: {
+                    cacheName: 'api-cache',
+                    expiration: {
+                      maxEntries: 200,
+                      maxAgeSeconds: 60 * 60 * 24, // 24 hours
+                    },
+                  },
+                },
+                {
+                  urlPattern: /\.(js|css|wasm)$/,
+                  handler: 'StaleWhileRevalidate',
+                  options: {
+                    cacheName: 'asset-cache',
+                  },
+                },
+              ],
             },
-          },
-          {
-            urlPattern: /\.(js|css|wasm)$/,
-            handler: 'StaleWhileRevalidate',
-            options: {
-              cacheName: 'asset-cache',
-            },
-          },
-        ],
-      },
-      manifest,
-    }),
+            manifest,
+          }),
+        ]),
   ],
   server: {
     middlewareMode: false,

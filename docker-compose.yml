@@ -38,13 +38,13 @@ services:
   build-android:
     build:
       context: .
+      network: host 
       dockerfile: buildscripts/docker/build-android/Dockerfile
     volumes:
       # APK output lands in the project root
-      - .:/app
-      # backend DB is read-only input for the Android build to make database files available
-      - ./backend:/app/backend:ro
-
+      - .:/app:rw
+      - ./backend:/app/backend:ro # backend DB is read-only input for the Android build to make database files available
+      - ./_build/cache/gradle:/root/.gradle:rw  # persist downloaded gradle distributions
 
   # run the backend part of the app for development
   backend-dev:

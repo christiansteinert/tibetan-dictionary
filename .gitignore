@@ -15,7 +15,9 @@ _input/dictionaries/_old
 _build/desktop
 _build/mobile/tibetandict/node_modules
 _build/mobile/tibetandict/platforms/android
+_build/mobile/tibetandict/plugins
 _build/mobile/tibetandict/www
+_build/*cache/
 
 __gitscripts
 __deployscripts
@@ -26,3 +28,5 @@ prompt.txt
 dist/
 *.db
 .kilo
+*-debug.apk
+/*.idsig

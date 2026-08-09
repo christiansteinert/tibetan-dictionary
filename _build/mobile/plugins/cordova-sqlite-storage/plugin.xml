@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-sqlite-storage"
+    version="7.0.0">
+
+    <name>Cordova SQLite storage plugin - cordova-sqlite-storage plugin version</name>
+
+    <license>MIT</license>
+
+    <keywords>sqlite</keywords>
+
+    <description>Native interface to SQLite for PhoneGap/Cordova. Allows you to use more storage and provides more flexibility than the standard Web SQL database (window.openDatabase).</description>
+    <author>Litehelpers/Various</author>
+
+    <!-- THANKS to AllJoyn-Cordova / cordova-plugin-alljoyn: -->
+    <hook type="before_plugin_install" src="scripts/beforePluginInstall.js" />
+
+    <js-module src="www/SQLitePlugin.js" name="SQLitePlugin">
+        <clobbers target="SQLitePlugin" />
+    </js-module>
+
+    <platform name="browser">
+        <!-- sql-asm js item must come before SQLiteProxy for SQLiteProxy.js to work on browser -->
+        <js-module src="node_modules/cordova-sqlite-storage-dependencies/sql-asm-memory-growth.js" name="sql">
+          <runs />
+        </js-module>
+
+        <js-module src="src/browser/SQLiteProxy.js" name="SQLiteProxy">
+          <runs />
+        </js-module>
+    </platform>
+
+    <!-- android -->
+    <platform name="android">
+        <!-- Cordova >= 3.0.0 -->
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="SQLitePlugin">
+                <param name="android-package" value="io.sqlc.SQLitePlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/io/sqlc/SQLitePlugin.java" target-dir="src/io/sqlc"/>
+        <source-file src="src/android/io/sqlc/SQLiteAndroidDatabase.java" target-dir="src/io/sqlc"/>
+        <source-file src="src/android/io/sqlc/SQLiteConnectorDatabase.java" target-dir="src/io/sqlc"/>
+
+        <lib-file src="node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-native-ndk-connector.jar" />
+        <lib-file src="node_modules/cordova-sqlite-storage-dependencies/libs/sqlite-ndk-native-driver.jar" />
+    </platform>
+
+    <!-- iOS -->
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SQLitePlugin">
+                <param name="ios-package" value="SQLitePlugin" />
+            </feature>
+        </config-file>
+
+        <!-- Note: the iOS src is based off src/ios implicitly -->
+        <header-file src="src/ios/SQLitePlugin.h" />
+        <source-file src="src/ios/SQLitePlugin.m" />
+
+        <source-file src="src/ios/CustomPSPDFThreadSafeMutableDictionary.m"
+                compiler-flags="-w" />
+
+        <header-file src="node_modules/cordova-sqlite-storage-dependencies/sqlite3.h" />
+        <source-file src="node_modules/cordova-sqlite-storage-dependencies/sqlite3.c"
+                     compiler-flags="-w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=4096" />
+    </platform>
+
+    <!-- macOS (osx) -->
+    <platform name="osx">
+        <config-file target="config.xml" parent="/*">
+            <feature name="SQLitePlugin">
+                <param name="osx-package" value="SQLitePlugin" />
+            </feature>
+        </config-file>
+
+        <!-- Note: the macOS (osx) src is based off src/ios implicitly -->
+        <header-file src="src/ios/SQLitePlugin.h" />
+        <source-file src="src/ios/SQLitePlugin.m" />
+
+        <source-file src="src/ios/CustomPSPDFThreadSafeMutableDictionary.m"
+                compiler-flags="-w" />
+
+        <header-file src="node_modules/cordova-sqlite-storage-dependencies/sqlite3.h" />
+        <source-file src="node_modules/cordova-sqlite-storage-dependencies/sqlite3.c"
+                     compiler-flags="-w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=4096" />
+    </platform>
+
+    <!-- windows -->
+    <platform name="windows">
+        <js-module src="src/windows/sqlite-proxy.js" name="SQLiteProxy">
+            <runs />
+        </js-module>
+
+        <!-- SQLite3 JS module from SQLite3-WinRT/SQLite3JS: -->
+        <js-module src="src/windows/SQLite3-WinRT-sync/SQLite3JS/js/SQLite3.js" name="SQLite3">
+            <runs />
+        </js-module>
+
+        <!-- Thanks to AllJoyn-Cordova / cordova-plugin-alljoyn for guidance: -->
+        <framework src="src/windows/SQLite3-WinRT-sync/SQLite3/SQLite3.UWP.vcxproj" custom="true" type="projectReference" versions="10.*" />
+    </platform>
+
+</plugin>
+
+<!-- vim: set expandtab : -->
