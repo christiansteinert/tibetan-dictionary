@@ -121,8 +121,9 @@ buildAndroidApplication() {
   # 6. Add the share text plugin to the Cordova project
   cordova plugin add --nosave ../plugins-custom/share-text-plugin/
 
-  # 7. Recreate Android platform directory
+  # 7. Recreate Android platform directory and add any other required plugins
   cordova platform add android@15.0.0
+  cordova plugin add cordova-plugin-statusbar
 
   # 8. Add Constants class for the size of the database file
   cp "$DICT_FILE" platforms/android/app/src/main/assets/TibetanDictionary.db

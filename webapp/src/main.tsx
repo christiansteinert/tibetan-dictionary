@@ -54,9 +54,13 @@ function initialize() {
   };
 
   if ((window as any).MOBILE_ENABLED) {
+    console.log('Waiting for Cordova deviceready event...');
     document.addEventListener("deviceready", run, false);
-    // Safety fallback: if deviceready doesn't fire within 2s, start anyway
-    setTimeout(run, 2000);
+    // Safety fallback: if deviceready doesn't fire within 5s, start anyway
+    setTimeout(function() {
+      console.log('Timeout reached, starting app without deviceready event.');
+      run();
+    }, 5000);
   } else {
     run();
   }

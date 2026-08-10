@@ -195,7 +195,7 @@ export default function TopBar(props: Props) {
       </div>
 
       {/* Spacer: reserves exactly the same height as the fixed TopBar to push the rest of the content down */}
-      <div style={{ height: topbarHeight }} />
+      <div style={{ height: topbarHeight, marginTop: "env(safe-area-inset-top)" }} />
     </>
   );
 }

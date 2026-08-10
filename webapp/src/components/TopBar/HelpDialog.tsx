@@ -360,7 +360,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                 </table>
               </section>
               <p className={styles.note}>
-                <strong>Note:</strong> The search internally works with Wylie transliteration. If you type incomplete syllables in Tibetan script, then vowels will be added automatically. For example, if you search for <code className={styles.op}>ས*</code> then this will trigger a search for <code className={styles.example}>sa*</code>.
+                <strong>Note:</strong> The search internally works with Wylie transliteration. If you type an incomplete syllables in Tibetan script that has no explicit vowel, then a vowel will be added automatically. For example, if you search for <code className={styles.op}>ས*</code> then this will trigger a search for <code className={styles.example}>sa*</code>.
               </p>
 
               {/* ── Extended / Fulltext Search (not available on mobile) ── */}
@@ -431,48 +431,50 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                  </section>
               )}
 
-              {/* ── Keyboard Navigation ── */}
-              <section>
-                <h3 className={styles.sectionTitle}>Keyboard Navigation</h3>
-                <p className={styles.intro}>
-                  There is a simple keyboard navigation mode that allows you to search and look at different Re&shy;sults
-                  by only using the keyboard.
-                </p>
-                <p className={styles.intro}>
-                  Keyboard navigation is available only in <em>Terms Search</em> mode (not during Fulltext Search mode).
-                  Furthermore, it is only available when the cursor is focused inside the search input field.
-                </p>
-                <table className={styles.table}>
-                  <thead>
-                    <tr>
-                      <th>Keys</th>
-                      <th>Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><code className={styles.op}>Enter</code></td>
-                      <td>Opens the definitions for the entered term while keeping the keyboard focus inside the input field.</td>
-                    </tr>
-                    <tr>
-                      <td><code className={styles.op}><ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}><ArrowDownIcon className={styles.keyIcon} /></code></td>
-                      <td>Move one position up / down in the Re&shy;sult list</td>
-                    </tr>
-                    <tr>
-                      <td><code className={styles.op}>Shift + <ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}>Shift + <ArrowDownIcon className={styles.keyIcon} /></code></td>
-                      <td>Move one page up / down in the Re&shy;sult list</td>
-                    </tr>
-                    <tr>
-                      <td><code className={styles.op}>Page Up</code> / <code className={styles.op}>Page Down</code></td>
-                      <td>Scroll up / down inside the definition (if the definition is longer than the visible area.)</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <p className={styles.note}>
-                  <strong>Note:</strong> These keys only change the selected term in the Re&shy;sult list.
-                  The keyboard focus remains inside the input field so you can continue typing.
-                </p>
-              </section>
+              {/* ── Keyboard Navigation (not available on mobile) ── */}
+              {typeof (window as any).cordova === 'undefined' && (
+                  <section>
+                    <h3 className={styles.sectionTitle}>Keyboard Navigation</h3>
+                    <p className={styles.intro}>
+                      There is a simple keyboard navigation mode that allows you to search and look at different Re&shy;sults
+                      by only using the keyboard.
+                    </p>
+                    <p className={styles.intro}>
+                      Keyboard navigation is available only in <em>Terms Search</em> mode (not during Fulltext Search mode).
+                      Furthermore, it is only available when the cursor is focused inside the search input field.
+                    </p>
+                    <table className={styles.table}>
+                      <thead>
+                        <tr>
+                          <th>Keys</th>
+                          <th>Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><code className={styles.op}>Enter</code></td>
+                          <td>Opens the definitions for the entered term while keeping the keyboard focus inside the input field.</td>
+                        </tr>
+                        <tr>
+                          <td><code className={styles.op}><ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}><ArrowDownIcon className={styles.keyIcon} /></code></td>
+                          <td>Move one position up / down in the Re&shy;sult list</td>
+                        </tr>
+                        <tr>
+                          <td><code className={styles.op}>Shift + <ArrowUpIcon className={styles.keyIcon} /></code> / <code className={styles.op}>Shift + <ArrowDownIcon className={styles.keyIcon} /></code></td>
+                          <td>Move one page up / down in the Re&shy;sult list</td>
+                        </tr>
+                        <tr>
+                          <td><code className={styles.op}>Page Up</code> / <code className={styles.op}>Page Down</code></td>
+                          <td>Scroll up / down inside the definition (if the definition is longer than the visible area.)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p className={styles.note}>
+                      <strong>Note:</strong> These keys only change the selected term in the Re&shy;sult list.
+                      The keyboard focus remains inside the input field so you can continue typing.
+                    </p>
+                  </section>
+              )}
 
             </div>
           </Dialog.Description>

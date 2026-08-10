@@ -26,7 +26,13 @@ export default function App() {
     const body = document.body;
 
     // Theme
-    body.classList.toggle('dark', layout === 'layout_black');
+    if (layout === 'layout_black') { // dark theme
+      body.classList.add('dark');
+      (window as any)?.StatusBar.styleLightContent(); // request light Android titlebar elements for dark theme
+    } else { // light theme
+      body.classList.remove('dark');
+      (window as any)?.StatusBar.styleDefault(); // request dark Android titlebar elements for light theme
+    }
 
     // Unicode classes
     const isUnicode = unicode === true || unicode === 'output';
