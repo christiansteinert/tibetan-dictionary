@@ -8,8 +8,7 @@
     ],
     "plugins": {
       "share-text-plugin": {},
-      "cordova-sqlite-storage-tibetandict": {},
-      "cordova-plugin-statusbar": {}
+      "cordova-sqlite-storage-tibetandict": {}
     }
   },
   "dependencies": {
@@ -18,7 +17,6 @@
   },
   "devDependencies": {
     "add": "^2.0.6",
-    "cordova-android": "^15.0.0",
-    "cordova-plugin-statusbar": "^4.0.0"
+    "cordova-android": "^15.1.0"
   }
 }

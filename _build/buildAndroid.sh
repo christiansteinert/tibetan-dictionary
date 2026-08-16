@@ -59,7 +59,9 @@ buildAndroidApplication() {
     rm -rf dist/
 
     # BUILD_TARGET=android will disable the PWA mode in vite which would otherwise interfere with resource loading in the Cordova webview.
-    VITE_PUBLIC_ONLY=$IS_PUBLIC BUILD_TARGET=android npm install && npm run build
+    export VITE_PUBLIC_ONLY="$IS_PUBLIC"
+    export BUILD_TARGET=android
+    npm install && npm run build
     cd "$cordovapath"
   )
   
@@ -83,11 +85,8 @@ buildAndroidApplication() {
   # Add cordova classes to body
   sed -i 's/<body>/<body class="mobile">/g' "www/index.html"
 
-  # Inject cordova.js reference
-  sed -i 's|<\/title>|<\/title>\n    <script src="cordova.js"><\/script>\n|' www/index.html
-
-  # Inject environment flag for Cordova
-  sed -i 's/<\/head>/<script>window.MOBILE_ENABLED = true;<\/script>\n<\/head>/' www/index.html
+  # Inject cordova.js reference and flag for mobile build into the HTML head
+  sed -i 's|</title>|</title>\n    <script>window.CORDOVA_ENABLED = true;</script>\n    <script src="cordova.js"><\/script>\n|' www/index.html
 
   # 4. cleanup references to our custom plugins and clear any old Android platform files
   cordova plugin rm share-test-plugin || true
@@ -122,8 +121,7 @@ buildAndroidApplication() {
   cordova plugin add --nosave ../plugins-custom/share-text-plugin/
 
   # 7. Recreate Android platform directory and add any other required plugins
-  cordova platform add android@15.0.0
-  cordova plugin add cordova-plugin-statusbar
+  cordova platform add android@15.1.0
 
   # 8. Add Constants class for the size of the database file
   cp "$DICT_FILE" platforms/android/app/src/main/assets/TibetanDictionary.db

@@ -103,7 +103,6 @@ export class CordovaDictionaryApi {
       const db = this.openDB();
 
       db.transaction((tx: any) => {
-        // FIXME use same queries like PHP backend!!!
         try {
           const backendLang = langToBackend(lang as Language);
           const dictQuery = this.mergeOrClauses('DICTNAMES.name', dictionaries);

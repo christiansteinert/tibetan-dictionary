@@ -18,18 +18,12 @@ import { handleSharedText } from '@/routes/handleSharedText';
 import './index.css';
 import { initDB } from '@/services/DictionaryApi';
 
-// Redirect legacy JSON-based URL hashes to new format before React mounts
-redirectLegacyHash();
-
-// Handle shared text if running in Cordova environment
-handleSharedText();
-
 // Start the React app
 async function startApp() {
   try {
     await initDB(); // Initialize the database before rendering the app (important for Cordova)
   } catch (err) {
-    alert('Failed to initialize the database. The app may not work correctly. Please make sure that there is enough space available (at least 150MB). Error: ' + err);
+    alert('Failed to initialize the database. The app may not work correctly. Error: ' + err);
   }
 
   createRoot(document.getElementById('root')!).render(
@@ -45,25 +39,19 @@ async function startApp() {
 
 // Initialization logic: wait for Cordova if flag is set, otherwise start immediately
 function initialize() {
-  let started = false;
-
-  const run = () => {
-    if (started) return;
-    started = true;
+  if ((window as any).CORDOVA_ENABLED) { // Cordova environment
+    handleSharedText(); // Handle shared text if running in Cordova environment
+    document.addEventListener("deviceready", startApp, false);
+  } else { // web application environment
+    redirectLegacyHash(); // Redirect legacy JSON-based URL hashes to new format before React mounts
     startApp();
-  };
-
-  if ((window as any).MOBILE_ENABLED) {
-    console.log('Waiting for Cordova deviceready event...');
-    document.addEventListener("deviceready", run, false);
-    // Safety fallback: if deviceready doesn't fire within 5s, start anyway
-    setTimeout(function() {
-      console.log('Timeout reached, starting app without deviceready event.');
-      run();
-    }, 5000);
-  } else {
-    run();
   }
 }
 
-initialize();
+if (document.readyState === 'loading') {
+  // DOM is still loading: wait for the event
+  document.addEventListener('DOMContentLoaded', initialize, false);
+} else {
+  // DOMContentLoaded has already fired: execute immediately
+  initialize();
+}

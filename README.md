@@ -95,6 +95,12 @@ docker compose run --rm build-android
 
 The finished APK is written to the project root.
 
+In order to build a debug APK, add the parameter `--debug`. This will create an APK file that supports Chrome remote debugging for the frontend code of the Cordova-based Android application:
+
+```bash
+docker compose run --rm build-android --debug
+```
+
 ## Running test cases
 
 The backend tests are executed with 

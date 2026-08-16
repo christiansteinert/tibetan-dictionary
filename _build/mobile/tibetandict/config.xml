@@ -10,7 +10,6 @@
     <framework src="androidx.core:core:1.12.0" />
     
     <preference name="AndroidWindowSplashScreenAnimatedIcon" value="resources/android/splash/logo512_vectorized.xml" />
-    <preference name="AndroidEdgeToEdge" value="true" />
 
     <config-file parent="/*" target="AndroidManifest.xml">
         <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
@@ -18,7 +17,7 @@
         <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     </config-file>
     <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-        <application android:icon="@mipmap/icon" android:enableOnBackInvokedCallback="false" />
+        <application android:icon="@mipmap/icon" android:enableOnBackInvokedCallback="false"  />
     </edit-config>
     <config-file parent="/manifest/application" target="AndroidManifest.xml">
         <activity-alias android:exported="true" android:label="Tib -&gt; Eng" android:name=".ShareTibetanActivity" android:targetActivity=".MainActivity">

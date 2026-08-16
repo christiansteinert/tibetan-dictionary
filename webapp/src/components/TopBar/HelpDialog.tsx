@@ -178,7 +178,7 @@ export default function HelpDialog({ open, isLightMode, onOpenChange }: Props) {
                   When the language selector is set to <strong>Sanskrit</strong>, you can type search terms using the
                   Harvard-Kyoto (HK) transliteration scheme. In many cases, you may alternatively also use many ITRANS sequences.
                   As you type, each sequence is automatically converted to the corresponding IAST character with
-                  diacritics (e.g.&nbsp;typing <code className={styles.op}>z</code> produces <code className={styles.sktExample}>ś</code>).
+                  diacritics (e.g.&nbsp;typing <code className={styles.op}>z</code> produces <code className={`{${styles.example} ${styles.sktExample}`}>ś</code>).
                   You can also paste text that already contains IAST diacritics — it will be kept as-is.
                 </p>
 
