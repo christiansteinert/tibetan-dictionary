@@ -28,7 +28,7 @@ buildAndroidApplication() {
   #rm -rf platforms www/cordova_plugins.js
 
 
-# use a different Android Application ID for the private version of the app than for the public version
+# use a different Android Application ID for the pri.vate version of the app than for the public version
   local IS_PUBLIC_DICTIONARY=$1
 
   if (( $IS_PUBLIC_DICTIONARY )); then
@@ -89,6 +89,7 @@ buildAndroidApplication() {
   sed -i 's|</title>|</title>\n    <script>window.CORDOVA_ENABLED = true;</script>\n    <script src="cordova.js"><\/script>\n|' www/index.html
 
   # 4. cleanup references to our custom plugins and clear any old Android platform files
+  cordova clean
   cordova plugin rm share-test-plugin || true
   cordova plugin rm cordova-sqlite-storage-tibetandict || true
   cordova platform rm android
@@ -116,6 +117,7 @@ buildAndroidApplication() {
   (cd "$sqlite_plugin_temp" && npm install --ignore-scripts)
   cordova plugin add --nosave "$sqlite_plugin_temp"
   rm -rf "$sqlite_plugin_temp"
+  cd "$cordovapath"
   
   # 6. Add the share text plugin to the Cordova project
   cordova plugin add --nosave ../plugins-custom/share-text-plugin/
@@ -140,18 +142,18 @@ buildAndroidApplication() {
     cordova build android --debug -- --packageType=apk
     apk_name="TibetanDictionary-${DICT_TYPE}-debug.apk"
     # Use wildcard to find the debug APK in case the filename differs (e.g. app-debug.apk or app-debug-unsigned.apk)
-    cp platforms/android/app/build/outputs/apk/debug/*.apk "$buildpath/../$apk_name"
+    cp platforms/android/app/build/outputs/apk/debug/*.apk "$buildpath/../${apk_name}"
   else
 
     echo "Performing RELEASE build..."
     cordova build android --release -- --packageType=apk
     apk_name="TibetanDictionary-${DICT_TYPE}.apk"
     # 10. Sign and align
-    cp platforms/android/app/build/outputs/apk/release/*unsigned.apk "$buildpath/../$apk_name"
-    $ANDROID_TOOLS_PATH/zipalign 16 "$buildpath/../$apk_name" "$buildpath/../${apk_name}_"
+    cp platforms/android/app/build/outputs/apk/release/*unsigned.apk "$buildpath/../${apk_name}"
+    $ANDROID_TOOLS_PATH/zipalign 16 "$buildpath/../${apk_name}" "$buildpath/../${apk_name}_"
     echo xxxxxxxx|$ANDROID_TOOLS_PATH/apksigner sign --verbose --ks "$buildpath/my-release-key.keystore" --ks-key-alias android_release_key "$buildpath/../${apk_name}_"
-    mv "$buildpath/../${apk_name}_" "$buildpath/../$apk_name"
-    rm "$buildpath/"*.apk.idsig
+    mv "$buildpath/../${apk_name}_" "$buildpath/../${apk_name}"
+    rm "$buildpath/../"*.apk*.idsig
   fi
 
 
