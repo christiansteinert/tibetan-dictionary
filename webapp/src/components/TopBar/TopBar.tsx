@@ -97,8 +97,8 @@ export default function TopBar(props: Props) {
   const handleClear = useCallback(() => {
     inputRef.current?.clear();
     inputRef.current?.focus();
-    navigate('/');
-  }, [navigate]);
+    props.onInputChange?.('');
+  }, [props]);
 
   /**
    * Insert a Sanskrit diacritical character at the cursor position in the input field.

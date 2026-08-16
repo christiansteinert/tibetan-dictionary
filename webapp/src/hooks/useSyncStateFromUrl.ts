@@ -9,7 +9,7 @@
  * is driven by the same URL scheme.
  */
 import { useEffect, useRef } from 'react';
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useParams, useSearchParams, useLocation } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   type SearchMode,
@@ -23,6 +23,7 @@ import { WylieConverter } from '@/utils/wylieConverter';
 export function useSyncStateFromUrl() {
   const { lang: urlLangParam, term: urlTermParam } = useParams<{ lang: string; term: string }>();
   const [searchParams] = useSearchParams();
+  const location = useLocation();
   const dispatch = useDispatch();
   const isFirstRender = useRef(true);
   const wylieConverter = useRef(new WylieConverter());
@@ -59,5 +60,5 @@ export function useSyncStateFromUrl() {
       offset: parseInt(searchParams.get('offset') || '0', 10),
       definitionTerm,
     }));
-  }, [dispatch, urlLangParam, urlTermParam, searchParams]);
+  }, [dispatch, urlLangParam, urlTermParam, searchParams, location]);
 }
