@@ -23,7 +23,7 @@ async function startApp() {
   try {
     await initDB(); // Initialize the database before rendering the app (important for Cordova)
   } catch (err) {
-    alert('Failed to initialize the database. The app may not work correctly. Error: ' + err);
+    alert('Failed to initialize the database. The app may not work correctly. Please make sure that there is enough space available (at least 150MB). Error: ' + err);
   }
 
   createRoot(document.getElementById('root')!).render(
