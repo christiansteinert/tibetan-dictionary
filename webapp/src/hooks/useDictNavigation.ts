@@ -17,7 +17,7 @@ export function useDictNavigation() {
    */
   const setExtSearchEnabled = useCallback(
     (enabled: boolean) => {
-      const isOnSearchPath = location.hash.startsWith('#/search') || location.hash.startsWith('#/fts-search');
+      const isOnSearchPath = location.pathname.startsWith('/search') || location.pathname.startsWith('/fts-search');;
 
       if (!isOnSearchPath) { // if we're not on a search path, switch to standard search with the extended search enabled/disabled
         navigate('/search' + (enabled ? '?ext=true' : ''));

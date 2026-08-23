@@ -1,0 +1,124 @@
+# Tibetan-English-Sanskrit Dictionary - AI Agent Instructions
+
+## Project Overview
+This is a hybrid Tibetan-English-Sanskrit dictionary application with two deployment modes:
+- **Web app**: Vite/React/TypeScript frontend + PHP backend (`api.php`) for SQLite queries, served by nginx
+- **Android app**: Cordova-packaged version of the same frontend, with a custom Java SQLite plugin
+
+Both share the same frontend codebase (`webapp/src/`) and use an SQLite database generated from CSV source files.
+
+## Architecture & Data Flow
+
+### Key directories
+- `backend/` — PHP backend for the web application (`api.php`, `snippet.php`), generated SQLite DBs (`TibetanDictionary.db`, `TibetanDictionary_compressed.db`, plus private variants), static assets (`audio/`, `data/`), OpenAPI spec (`openapi.yaml`), and tests (`tests/backend-test.py`)
+- `webapp/` — Vite + React + TypeScript frontend (uses Redux for state). Code is used for both web-based deployment and Cordova Android app. Build output goes to `webapp/dist/`
+- `_input/dictionaries/` — CSV source files (`public/`, `public_en/`, `public_skt/`, and optionally `private/`, `private_en/`, `private_skt/`) used to generate the database
+- `buildscripts/` — Shell scripts, Python database builder, and Docker configurations (`docker/build-db/`, `docker/build-android/`, `docker/backend-dev/`, `docker/deploy/`)
+- `_build/mobile/` — Apache Cordova project for the Android build
+- `_assets/` — App icons, splash screens, and Android resource directories (`res.normal/`, `res.full/`)
+
+### Build pipeline (Docker Compose)
+All build and runtime services are defined in `docker-compose.yml`:
+
+| Service | Image | What it does | Output |
+|---|---|---|---|
+| `build-db` | `python:3.13-slim` | Runs `buildscripts/buildDictionaries.sh` which calls `_buildDict.py` | `backend/TibetanDictionary.db` (uncompressed, with FTS5) + `TibetanDictionary_compressed.db` (zlib-compressed blobs, no FTS5), plus private variants |
+| `build-webapp` | `node:22-alpine` | `npm ci && npm run build && npm run test` in `webapp/` | `webapp/dist/` |
+| `build-android` | custom (see `buildscripts/docker/build-android/Dockerfile`) | Cordova build inside container (uses compressed DB) | `TibetanDictionary-PUBLIC.apk` (and FULL variant if private dicts exist) |
+| `backend-dev` | `php:8.3-fpm-alpine` | nginx + PHP-FPM serving `backend/` for development | runtime on port 8080 |
+| `backend-test` | `python:3.12-slim` | Runs `backend/tests/backend-test.py` against `backend-dev` | test results |
+| `frontend-test` | `node:22-alpine` | Runs Vitest test suite in `webapp/` | test results |
+| `frontend-dev` | `node:22-alpine` | Vite dev server with hot reload, proxying API/audio/data to `backend-dev` | runtime on port 5173 |
+
+### Common workflows
+```bash
+# Full build + run:
+docker compose run --rm build-db
+docker compose up -d backend-dev frontend-dev   # http://localhost:5173 (frontend), http://localhost:8080 (backend)
+
+# Rebuild DB only (after CSV changes):
+docker compose run --rm build-db && docker compose restart backend-dev
+
+# Rebuild frontend only (only needed if hot reload fails):
+docker compose restart frontend-dev
+
+# Build a react frontend:
+docker compose run --rm build-webapp
+
+# Run backend tests (requires backend-dev running):
+docker compose up backend-test
+
+# Run frontend tests:
+docker compose up frontend-test
+
+# Android APK (requires keystore at _build/my-release-key.keystore):
+docker compose run --rm build-android
+```
+
+### Database variants
+Two database formats are produced by the build:
+- **Uncompressed** (`TibetanDictionary.db`, ~283 MB): `definition` stored as TEXT, includes FTS5 virtual table (`DICT_FTS`) with Porter stemming. Used by the **PHP web backend**.
+- **Compressed** (`TibetanDictionary_compressed.db`, ~89 MB): `definition` stored as BLOB (zlib-compressed with custom dictionary), `WITHOUT ROWID`, no FTS5. Used by the **Android app** to keep APK size small.
+- Private variants (`TibetanDictionary_private.db`, `TibetanDictionary_private_compressed.db`) exist when `_input/dictionaries/private/` is present.
+
+### Dual data access strategy
+The frontend uses a polymorphic API interface defined in `webapp/src/services/DictionaryApi.ts`:
+- **`PhpDictionaryApi`**: AJAX calls to `api.php` (web deployment, uses uncompressed DB with FTS5)
+- **`CordovaDictionaryApi`**: Direct SQLite via `window.sqlitePlugin` (Android, uses compressed DB without FTS5)
+
+The correct implementation is selected at runtime based on whether `window.cordova` is present.
+
+## Frontend structure (`webapp/src/`)
+Standard Vite + React + TypeScript app with Redux state management. Key folders:
+- `components/` — UI components
+- `services/` — Data access layer (`DictionaryApi.ts`, `PhpDictionaryApi.ts`, `CordovaDictionaryApi.ts`)
+- `config/` — Hand-maintained dictionary metadata: `dictlist.ts` (known dictionaries), `abbreviations.ts` (abbreviation expansion rules), `globalSettings.ts` (auto-generated by build — `publicOnly` flag from `VITE_PUBLIC_ONLY` env var)
+- `routes/` — App routing (`AppRoutes.tsx`), shared text handling (`handleSharedText.ts`), legacy redirect (`legacyRedirect.ts`)
+- `store/` — Redux state management (`store.ts`, `searchSlice.ts`, `settingsSlice.ts`)
+- `hooks/` — React hooks for dictionary lookup, fulltext search, etc.
+- `utils/` — Shared logic: `ewts-js/` (Wylie transliteration library), `fts/` (FTS5 query builder), `wylieConverter.ts`, `tokenizer.ts` (Tibetan text tokenizer), `harvardKyotoConverter.ts`, `definitionFormatter.ts`, `escape.ts`, `tooltip.ts`
+- `styles/` — Shared CSS modules
+
+## Dictionary data format
+CSV files in `_input/dictionaries/`:
+- Format: `WylieTerm|DefinitionText` (pipe-separated)
+- Multiple entries per term are allowed
+- Input subdirectories: `public/` (Tibetan), `public_en/` (English), `public_skt/` (Sanskrit), and optionally `private/`, `private_en/`, `private_skt/`
+- The Wylie-to-Unicode conversion is handled client-side by the `ewts-js/` JavaScript library in `webapp/src/utils/ewts-js/` (originally based on Perl Lingua::BO::Wylie)
+
+## Compression
+Dictionary definitions are compressed with zlib using a custom 32KB deflate dictionary:
+- Source: `buildscripts/deflate_dict.txt` (read by `_buildDict.py` during DB build)
+- Android decompression: `DictDecompress.java` in the custom Cordova plugin contains the matching `ZLIB_DICT` constant
+- Generation: `buildscripts/generate_deflate_dict.py` can regenerate the Java `ZLIB_DICT` from `deflate_dict.txt`
+- **CRITICAL**: The deflate dictionary must stay in sync between `buildscripts/deflate_dict.txt` (Python builder) and `DictDecompress.java` (Android plugin). Mismatched dictionaries produce garbage output.
+
+## Public vs private versions
+Some dictionaries are proprietary and not publicly distributed. The build detects whether `_input/dictionaries/private/` exists and builds accordingly:
+- `webapp/src/config/globalSettings.ts` is auto-generated with a `publicOnly` flag (from `VITE_PUBLIC_ONLY` env var)
+- Android uses different app IDs: `de.christian_steinert.tibetandict` (public) vs `de.christian_steinert.tibetandict.full` (private)
+- The PHP backend auto-detects: if `TibetanDictionary_private.db` exists, it uses that instead of `TibetanDictionary.db`
+
+## When modifying
+
+- **Add a dictionary**: Place CSV in `_input/dictionaries/public/` (or `public_en/`, `public_skt/`), add entry to `webapp/src/config/dictlist.ts`, rebuild with `build-db`
+- **Change UI**: Edit files under `webapp/src/`
+- **Fix data access**: Update both `PhpDictionaryApi.ts` and `CordovaDictionaryApi.ts`
+- **Change build logic**: Edit `buildscripts/_buildDict.py` or the shell scripts, then re-run `build-db`
+- **Update deflate dictionary**: Modify `buildscripts/deflate_dict.txt`, then regenerate Java constant via `buildscripts/generate_deflate_dict.py`, then rebuild DB and Android app
+- **nginx / PHP config**: `buildscripts/docker/deploy/nginx.conf`
+
+## Testing
+
+- **Frontend tests**: Vitest suite in `webapp/`. Run via `npm run test` in `webapp/`, or `docker compose up frontend-test`.
+- **Backend tests**: Python script at `backend/tests/backend-test.py`. Run via `docker compose up backend-test` (requires `backend-dev` running).
+
+## Common pitfalls
+
+1. `webapp/dist/` may be owned by root after a Docker build — run `sudo chown -R $USER webapp/dist/` if local `npm run build` fails with permission errors
+2. The deflate dictionary (`buildscripts/deflate_dict.txt`) must stay in sync with `DictDecompress.java` (`ZLIB_DICT` constant) in the custom Cordova SQLite plugin. Mismatched dictionaries produce decompression errors.
+3. The Cordova SQLite plugin is custom (`_build/mobile/plugins-custom/cordova-sqlite-storage-custom/`) — it extracts the bundled DB from the APK on first access and is not the standard community plugin. The base `cordova-sqlite-storage` plugin does NOT handle BLOB columns correctly.
+4. The Android app uses the **compressed** database (BLOB definitions, no FTS5), while the web backend uses the **uncompressed** database (TEXT definitions, with FTS5). FTS5 fulltext search is NOT available on Android.
+5. Build scripts assume Linux/Unix — not Windows-compatible. Use WSL or Docker for Windows if developing on Android.
+6. The `frontend-dev` Vite dev server uses `BACKEND_URL` (set in docker-compose.yml) to proxy API, audio, and data requests to `backend-dev`.
+7. The Android build merges the base `cordova-sqlite-storage` plugin with custom code at build time via `_build/buildAndroid.sh` — do not modify the base plugin directly.

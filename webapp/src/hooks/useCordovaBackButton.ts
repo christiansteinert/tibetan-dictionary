@@ -14,28 +14,31 @@ export function useCordovaBackButton() {
   const navigate = useNavigate();
   const lastBackPress = useRef(0);
 
-  // Keep refs to the current location and navigator so the event handler
-  // can remain stable (and avoid re-registering) even when React rerenders.
+  // Keep refs synchronized with the latest router state on every render
   const locationRef = useRef(location);
   const navigateRef = useRef(navigate);
-  locationRef.current = location;
-  navigateRef.current = navigate;
+  
+  useEffect(() => {
+    locationRef.current = location;
+    navigateRef.current = navigate;
+  });
 
   useEffect(() => {
     if (!(window as any).cordova) return;
 
     const onBackButton = (event: any) => {
       const now = Date.now();
+      const currentPath = locationRef.current.pathname;
 
-      // If we are not on the home route, navigate back within the app.
-      if (location.pathname !== '/') {
+      // 1) Navigate back within the app if not on home
+      if (currentPath !== '/') {
         event.preventDefault?.();
         event.stopPropagation?.();
-        navigate(-1);
+        navigateRef.current(-1);
         return;
       }
 
-      // If we are on home, only exit the app if back is pressed twice quickly.
+      // 2) Require two presses within 1500ms to exit when on home
       if (now - lastBackPress.current < 1500) {
         const navAny = navigator as any;
         if (navAny.app?.exitApp) {
@@ -50,6 +53,9 @@ export function useCordovaBackButton() {
     };
 
     document.addEventListener('backbutton', onBackButton, false);
-    return () => document.removeEventListener('backbutton', onBackButton, false);
+
+    return () => {
+      document.removeEventListener('backbutton', onBackButton, false);
+    };
   }, []);
 }

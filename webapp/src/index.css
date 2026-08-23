@@ -19,6 +19,7 @@ html {
 body {
   color: #000;
   background-color: #fff;
+  /*padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);*/
 }
 
 html,
@@ -311,15 +312,6 @@ a {
 #init {
   display: none;
 }
-
-.cordovaInitializing #init {
-  display: block;
-}
-
-.cordovaInitializing #mainScreen {
-  display: none;
-}
-
 
 #init {
   background-color: #fff;

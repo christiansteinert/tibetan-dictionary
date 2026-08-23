@@ -16,11 +16,11 @@ const localStorageMiddleware = (store: any) => (next: any) => (action: any) => {
   const result = next(action);
 
   if (action.type?.startsWith('settings/')) {
-    const { settings } = store.getState();
+    const settings = store.getState().settings;
     try {
       localStorage.setItem('settings', JSON.stringify(settings));
-    } catch {
-      // localStorage may be unavailable (private browsing, quota exceeded)
+    } catch (e) {
+      console.error('Failed to save settings to localStorage:', e);
     }
   }
 

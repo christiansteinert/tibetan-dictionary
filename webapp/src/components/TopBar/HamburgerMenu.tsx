@@ -93,14 +93,16 @@ export default function HamburgerMenu({
 
           <DropdownMenu.Separator className={styles.separator} />
 
-          {/* ── Extended Search ── */}
-          <DropdownMenu.Item
-            className={`${styles.item}`}
-            onSelect={onOpenExtendedSearch}
-          >
-            <MagnifyingGlassIcon className={styles.itemIcon} />
-            Extended Search
-          </DropdownMenu.Item>
+           {/* ── Extended Search (not available on mobile) ── */}
+           {typeof (window as any).cordova === 'undefined' && (
+             <DropdownMenu.Item
+               className={`${styles.item}`}
+               onSelect={onOpenExtendedSearch}
+             >
+               <MagnifyingGlassIcon className={styles.itemIcon} />
+               Extended Search
+             </DropdownMenu.Item>
+           )}
 
           <DropdownMenu.Separator className={styles.separator} />
 

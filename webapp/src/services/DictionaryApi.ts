@@ -35,9 +35,12 @@ export interface FtsSearchResult {
 
 // The backend is chosen dynamically depending on whether we are running inside
 // Cordova (Android) or in a regular browser.
-const backend = (window as any).cordova
+let isCordova = (window as any).cordova !== undefined;
+console.log(`Creating backend: ${isCordova ? 'CordovaDictionaryApi' : 'PhpDictionaryApi'}`);
+const backend = isCordova
   ? new CordovaDictionaryApi()
   : new PhpDictionaryApi();
+
 
 /**
  * Read definitions for a specific term.

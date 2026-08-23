@@ -2,10 +2,10 @@
  * Android share-intent handler for the Tibetan Dictionary PWA / Cordova app.
  *
  * When another Android app shares text to this app, the Cordova
- * ShareTextPlugin delivers the raw text and a detected language.
- * This module receives that payload, normalises the term exactly as
- * the old `handleSharedText()` in main.js did, and then navigates
- * to the appropriate React-Router hash URL:
+ * ShareTextPlugin delivers the raw text and a detected language
+ * ('tib' | 'en' | 'skt'). This module receives that payload,
+ * normalises the term, and then navigates to the appropriate
+ * React-Router hash URL:
  *
  *   #/search/{lang}/{encodedTerm}?offset=0&selected=term&sidebar=false
  *
@@ -24,7 +24,7 @@ import { encodeQueryParam } from '@/utils/escape';
 interface ShareData {
   /** The raw shared text */
   text: string;
-  /** Language hint from the plugin: 'tib' | 'en' | undefined */
+  /** Language hint from the plugin: 'tib' | 'en' | 'skt' | undefined */
   language?: Language;
 }
 
@@ -78,16 +78,21 @@ function normaliseTibetanShareText(raw: string, converter: WylieConverter): stri
 }
 
 /**
- * Normalise an English share payload.
+ * Normalise a Latin-script share payload (English or IAST Sanskrit).
  * Strips full-stops used as sentence separators (as done in main.js).
+ * The text is otherwise passed through unchanged, matching the search
+ * input behaviour for these languages (IAST for Sanskrit).
  */
-function normaliseEnglishShareText(raw: string): string {
-  return raw.replace(/[.]+/g, ' ').trim();
+function normalisePlainShareText(raw: string): string {
+  raw = raw.replace(/[.]+/g, ' ')
+  raw = raw.trim();
+  raw = raw.toLowerCase();
+  return raw;
 }
 
 /**
  * Derive the Wylie lookup key from a (possibly Unicode) Tibetan term.
- * For English terms the term itself is the lookup key.
+ * For English and Sanskrit terms the term itself is the lookup key.
  */
 function toLookupTerm(displayTerm: string, lang: string, converter: WylieConverter): string {
   if (lang !== 'tib') return displayTerm;
@@ -138,7 +143,8 @@ export function handleSharedText(): boolean {
       if (lang === 'tib') {
         displayTerm = normaliseTibetanShareText(sharedText, converter);
       } else {
-        displayTerm = normaliseEnglishShareText(sharedText);
+        // 'en' and 'skt' are Latin-script lookups (plain text / IAST)
+        displayTerm = normalisePlainShareText(sharedText);
       }
 
       if (!displayTerm) {

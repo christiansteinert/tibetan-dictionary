@@ -3,20 +3,20 @@
   "version": "0.0.20",
   "displayName": "TibetanDictionary",
   "cordova": {
-    "platforms": [],
+    "platforms": [
+      "android"
+    ],
     "plugins": {
-      "cordova-android-support-gradle-release": {
-        "ANDROID_SUPPORT_VERSION": "27.+"
-      },
-      "share-text-plugin": {}
+      "share-text-plugin": {},
+      "cordova-sqlite-storage-tibetandict": {}
     }
   },
   "dependencies": {
     "cordova": "^12.0.0",
-    "cordova-android-support-gradle-release": "^2.0.1"
+    "tmp": "^0.2.7"
   },
   "devDependencies": {
     "add": "^2.0.6",
-    "share-text-plugin": "file:plugins/share-text-plugin"
+    "cordova-android": "^15.1.0"
   }
 }

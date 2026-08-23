@@ -39,6 +39,9 @@ export class CordovaDictionaryApi {
   }
 
   private mergeOrClauses(paramName: string, paramValues: string[]): string {
+    if (paramValues.length === 0) {
+      return '1=1';
+    }
     const clauses: string[] = [];
     for (const value of paramValues) {
       const sqlEscape = value.replace(/"/g, '""').replace(/\\/g, '\\\\');
@@ -54,11 +57,13 @@ export class CordovaDictionaryApi {
       db.transaction((tx: any) => {
         try {
           const backendLang = langToBackend(lang as Language);
+          const dictQuery = this.mergeOrClauses('DICTNAMES.name', dictionaries);
           const query =
             'SELECT DICT.term as term, DICT.definition as definition, DICTNAMES.name as dictionary ' +
             'FROM DICT ' +
-            'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-            'WHERE DICT.lang = ? AND term = ?';
+            'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+            'WHERE term = ? AND ' + dictQuery + ' ' +
+            'ORDER BY DICTNAMES.name';
           tx.executeSql(
             query,
             [backendLang, term],
@@ -98,52 +103,82 @@ export class CordovaDictionaryApi {
       const db = this.openDB();
 
       db.transaction((tx: any) => {
-        // FIXME use same queries like PHP backend!!!
         try {
           const backendLang = langToBackend(lang as Language);
           const dictQuery = this.mergeOrClauses('DICTNAMES.name', dictionaries);
           let query: string;
           let queryParams: any[];
 
-          if (term.indexOf('*') >= 0) {
-            const likeSearch = term.replace(/\*/g, '%') + '%';
-            query =
-              'SELECT DISTINCT DICT.term as term FROM DICT ' +
-              'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-              'WHERE DICT.lang = ? AND ( ( term LIKE ? ) AND ( ' +
-              dictQuery +
-              ' ) ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
-              maxResults +
-              ' OFFSET ' +
-              offset;
-            queryParams = [backendLang, likeSearch];
+          if (term.indexOf('*') >= 0 || term.indexOf('?') >= 0) {
+            const likeSearch = term.replace(/\*/g, '%').replace(/\?/g, '_');
+            let likeSearch2 = likeSearch;
+            if (!term.endsWith('*') && !term.endsWith('?')) {
+              likeSearch2 = (lang === 'tib') ? likeSearch + ' %' : likeSearch + '%';
+            }
+              query =
+                'SELECT DISTINCT DICT.term as term FROM DICT ' +
+                'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+                'WHERE ( term LIKE ? OR term LIKE ? ) AND ( ' +
+                dictQuery +
+                ' ) GROUP BY term ORDER by lower(term), term';
+              queryParams = [backendLang, likeSearch, likeSearch2];
+
+
+            tx.executeSql(
+              query,
+              queryParams,
+              function (_tx: any, results: any) {
+                const allTerms: string[] = [];
+                const len = results.rows.length;
+                for (let i = 0; i < len; i += 1) {
+                  allTerms.push(results.rows.item(i).term);
+                }
+
+                const regexStr = term
+                  .replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+                  .replace(/\\\*/g, '.*')
+                  .replace(/\\\?/g, '[^\\s]');
+
+                const filterRegex = new RegExp('^' + regexStr, 'i');
+                const filteredTerms = allTerms.filter(t => filterRegex.test(t));
+
+                const paginated = filteredTerms.slice(offset, offset + maxResults);
+                resolve(paginated.map(t => ({ term: t })));
+              },
+              function (_tx: any, error: any) {
+                reject(new Error('SQL error while reading termlist for input "' + term + '" from DB: ' + error.message));
+              }
+            );
+            return;
           } else if (lang === 'tib') {
-            const termSearch1 = term + ' ';
-            const termSearch2 = term + ' ';
-            query =
-              'SELECT DISTINCT DICT.term as term FROM DICT ' +
-              'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-              'WHERE DICT.lang = ? AND ( (( term = ? ) OR ( term > ? AND term < ?  || char(0xFFFF) )) AND ' +
-              dictQuery +
-              ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
-              maxResults +
-              ' OFFSET ' +
-              offset;
-            queryParams = [backendLang, term, termSearch1, termSearch2];
-          } else {
-            const termSearch1 = term;
-            const termSearch2 = term;
-            query =
-              'SELECT DISTINCT DICT.term as term FROM DICT ' +
-              'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id ' +
-              'WHERE DICT.lang = ? AND ( (( term = ? ) OR ( term > ? CAND term < ? || char(0xFFFF) )) AND ' +
-              dictQuery +
-              ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
-              maxResults +
-              ' OFFSET ' +
-              offset;
-            queryParams = [backendLang, term, termSearch1, termSearch2];
-          }
+             const termSearch1 = term + ' ';
+             const termSearch2 = term + ' ';
+              query =
+                'SELECT DISTINCT DICT.term as term FROM DICT ' +
+                'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+                'WHERE ( (( term = ? ) OR ( term > ? AND term < ?  || char(0xFFFF) )) AND ' +
+                dictQuery +
+                ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
+                maxResults +
+                ' OFFSET ' +
+                offset;
+              queryParams = [backendLang, term, termSearch1, termSearch2];
+
+           } else {
+             const termSearch1 = term;
+             const termSearch2 = term;
+              query =
+                'SELECT DISTINCT DICT.term as term FROM DICT ' +
+                'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+                'WHERE ( (( term = ? ) OR ( term > ? AND term < ? || char(0xFFFF) )) AND ' +
+                dictQuery +
+                ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
+                maxResults +
+                ' OFFSET ' +
+                offset;
+              queryParams = [backendLang, term, termSearch1, termSearch2];
+
+           }
 
           tx.executeSql(
             query,

@@ -65,10 +65,11 @@ function getDefaultSettings(): SettingsState {
  * newly-added dictionaries are automatically included.
  */
 function loadSettings(): SettingsState {
-  if (!window.localStorage) return getDefaultSettings();
+  const defaults = getDefaultSettings();
+  if (!window.localStorage) return defaults;
 
   const raw = localStorage.getItem('settings');
-  if (!raw) return getDefaultSettings();
+  if (!raw) return defaults;
 
   try {
     const saved: Record<string, unknown> = JSON.parse(raw);
@@ -77,27 +78,34 @@ function loadSettings(): SettingsState {
     if (saved.unicode === 'true') saved.unicode = true;
     if (saved.unicode === 'false') saved.unicode = false;
 
-    if (!saved.inactiveDictionaries) saved.inactiveDictionaries = [];
-    if (!saved.listSize) saved.listSize = 10;
-    if (typeof saved.listSize === 'number' && saved.listSize > 500) saved.listSize = 500;
-
+    const savedActiveDicts = Array.isArray(saved.activeDictionaries) ? (saved.activeDictionaries as string[]) : [];
+    const savedInactiveDicts = Array.isArray(saved.inactiveDictionaries) ? (saved.inactiveDictionaries as string[]) : [];
+    
     // Add any dictionaries that were added since the user last saved
     const allIds = getAllDictionaryIds();
-    const savedActiveDicts = Array.isArray(saved.activeDictionaries) ? saved.activeDictionaries : [];
-    const savedInactiveDicts = Array.isArray(saved.inactiveDictionaries) ? saved.inactiveDictionaries : [];
-    
     const newDicts = allIds.filter(
       (id) =>
-        !savedActiveDicts.includes(id as never) &&
-        !savedInactiveDicts.includes(id as never)
+        !savedActiveDicts.includes(id) &&
+        !savedInactiveDicts.includes(id)
     );
-    saved.activeDictionaries = (savedActiveDicts as string[]).concat(newDicts);
+    
+    const activeDictionaries = savedActiveDicts.concat(newDicts);
+    const inactiveDictionaries = savedInactiveDicts;
 
-    return saved as unknown as SettingsState;
-  } catch {
-    return getDefaultSettings();
+    return {
+      layout: typeof saved.layout === 'string' ? saved.layout : defaults.layout,
+      unicode: (saved.unicode === true || saved.unicode === false || saved.unicode === 'output') ? saved.unicode : defaults.unicode,
+      lowercase: typeof saved.lowercase === 'boolean' ? saved.lowercase : defaults.lowercase,
+      listSize: (typeof saved.listSize === 'number' && saved.listSize > 0 && saved.listSize <= 500) ? saved.listSize : defaults.listSize,
+      activeDictionaries: activeDictionaries.length > 0 ? activeDictionaries : allIds,
+      inactiveDictionaries: inactiveDictionaries,
+    };
+  } catch (e) {
+    console.error('Error loading settings from localStorage:', e);
+    return defaults;
   }
 }
+
 
 // ---------------------------------------------------------------------------
 // Slice

@@ -7,6 +7,7 @@
 bugs.txt
 TibetanDictionary_private.db
 TibetanDictionary-FULL.apk
+TibetanDictionary-PUBLIC.apk
 
 _input/dictionaries/*private*
 _input/dictionaries/old
@@ -14,11 +15,18 @@ _input/dictionaries/_old
 _build/desktop
 _build/mobile/tibetandict/node_modules
 _build/mobile/tibetandict/platforms/android
+_build/mobile/tibetandict/plugins
+_build/mobile/tibetandict/www
+_build/*cache/
 
 __gitscripts
 __deployscripts
+__temp
 git
 prompt.txt
 .node_modules/
 dist/
 *.db
+.kilo
+*-debug.apk
+/*.idsig
