@@ -42,9 +42,9 @@ export default function SearchLayout() {
   // Trigger search + definition load when the URL changes.
   useEffect(() => {
     (async () => {
-      await search(result.query, result.lang, result.offset, result.sidebarVisible);
+      await search(result.query, result.lang, result.offset);
     })();
-  }, [dispatch, result.query, result.offset, result.lang, result.sidebarVisible, search]);
+  }, [dispatch, result.query, result.offset, result.lang, search]);
 
   useEffect(() => {
     (async () => {

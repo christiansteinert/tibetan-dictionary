@@ -42,7 +42,12 @@ export default function useFulltextSearch(): UseFulltextSearchReturn {
       offset = 0
     ) => {
       if (!query.trim()) {
+        // Clearing the search: abort any in-flight request and reset state
+        // so stale results can never re-populate the list.
+        abortControllerRef.current?.abort();
         dispatch(setFtsResults([]));
+        dispatch(setFtsIsSearching(false));
+        dispatch(setFtsError(null));
         return;
       }
 

@@ -189,8 +189,8 @@ const searchSlice = createSlice({
     },
 
     /* --- Term search results --- */
-    setResultListState(state, action: PayloadAction<ResultListState>) {
-      state.resultList = action.payload;
+    setResultListState(state, action: PayloadAction<Omit<ResultListState, 'sidebarVisible'>>) {
+      state.resultList = { ...state.resultList, ...action.payload };
     },
 
     setSidebarVisible(state, action: PayloadAction<boolean>) {

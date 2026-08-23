@@ -39,7 +39,7 @@ export function useSyncStateFromUrl() {
       }
     }
 
-    const isFts = location.hash.startsWith('#/fts-search');
+    const isFts = location.pathname.startsWith('/fts-search');;
 
     // handle cases where the URL contains Unicode Tibetan (e.g. from a shared link) by converting it back to Wylie
     let resultQuery = decodeURIComponent(urlTermParam || searchParams.get('activeTerm') || '');

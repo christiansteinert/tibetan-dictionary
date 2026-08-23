@@ -10,7 +10,6 @@ import {
   setResultListState,
   setIsSearching,
   setSearchError,
-  setSidebarVisible,
 } from '@/store/searchSlice';
 import { readTermList } from '@/services/DictionaryApi';
 import type { TermListRow } from '@/services/DictionaryApi';
@@ -41,7 +40,7 @@ export function normalizeSearchTerm(
 }
 
 interface UseSearchReturn {
-  search: (rawInput: string, lang: Language, offset?: number, sidebarVisible?: boolean) => Promise<{
+  search: (rawInput: string, lang: Language, offset?: number) => Promise<{
     searchTerm: string;
     results: TermListRow[];
   }>;
@@ -56,14 +55,14 @@ export default function useSearch(): UseSearchReturn {
   /**
    * Run a search. Updates Redux with the results.
    * Aborts any previous in-flight request before starting a new one.
+   * An empty search term clears the result list.
    *
    * @param rawInput – raw text from the input field
    * @param lang – 'tib' or 'en'
    * @param offset – pagination offset (≥ 0)
-   * @param sidebarVisible – whether the sidebar should be visible
    */
   const search = useCallback(
-    async (rawInput: string, lang: Language, offset = 0, sidebarVisible = true) => {
+    async (rawInput: string, lang: Language, offset = 0) => {
       const searchTerm = normalizeSearchTerm(
         rawInput,
         lang,
@@ -72,8 +71,12 @@ export default function useSearch(): UseSearchReturn {
       if (offset < 0) offset = 0;
 
       if (!searchTerm) {
+        // Clearing the search: abort any in-flight request and reset state
+        // so stale results can never re-populate the list.
+        abortControllerRef.current?.abort();
         dispatch(setResults([]));
-        dispatch(setSidebarVisible(sidebarVisible));
+        dispatch(setIsSearching(false));
+        dispatch(setSearchError(null));
         return { searchTerm: '', results: [] };
       }
 
@@ -101,7 +104,6 @@ export default function useSearch(): UseSearchReturn {
           lang: lang,
           offset: offset,
           results: results,
-          sidebarVisible: sidebarVisible,
           isSearching: false,
           error: null,
         }));

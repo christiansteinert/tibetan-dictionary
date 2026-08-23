@@ -38,6 +38,15 @@
             </intent-filter>
             <meta-data android:name="searchLanguage" android:value="en" />
         </activity-alias>
+        <activity-alias android:exported="true" android:label="Skt -&gt; Tib" android:name=".ShareSanskritActivity" android:targetActivity=".MainActivity">
+            <intent-filter android:label="Skt -&gt; Tib">
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_SKT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <meta-data android:name="searchLanguage" android:value="skt" />
+        </activity-alias>
     </config-file>
     <platform name="android">
         <preference name="Debuggable" value="true" />

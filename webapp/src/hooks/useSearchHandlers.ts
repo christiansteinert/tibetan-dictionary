@@ -53,6 +53,15 @@ export function useSearchHandlers() {
       keyboardNavState.current = { selectedPosition: -1 };
       if (!rawInput.trim()) {
         dispatch(setDefinitionHtml(''));
+        if (currentTerm) {
+          // An active search exists – navigate to the empty search route so
+          // the result list is cleared.
+          if (mode === 'fulltext') {
+            navigation.fulltextSearch('', inputLang, 0, true, extendedSettingsVisible);
+          } else {
+            navigation.termSearch('', inputLang, 0, true, extendedSettingsVisible);
+          }
+        }
         return;
       }
 
@@ -74,7 +83,7 @@ export function useSearchHandlers() {
         navigation.termSearch(inputTerm, inputLang, 0, true, extendedSettingsVisible);
       }
     },
-    [dispatch, navigation, inputLang, unicode, extendedSettingsVisible, mode],
+    [dispatch, navigation, inputLang, unicode, extendedSettingsVisible, mode, currentTerm],
   );
 
   const searchAndGoToListPosition = async (term: string, inputLang: Language, selectedPosition: number) => {
@@ -83,11 +92,11 @@ export function useSearchHandlers() {
 
     const listOffset = Math.max(0, Math.floor(selectedPosition / listSize) * listSize);
     let selectedPositionInPage = Math.max(0, selectedPosition % listSize);
-    const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset, false);
+    const { searchTerm, results: searchResults } = await search(term, inputLang, listOffset);
     if (!searchResults.length) {
       keyboardNavState.current = { selectedPosition: -1 };
       console.warn('No search results found for:', searchTerm, ' setting sidebar visible');
-      setSidebarVisible(true);
+      dispatch(setSidebarVisible(true));
     } else {
       selectedPositionInPage = Math.min(selectedPositionInPage, searchResults.length - 1);
 

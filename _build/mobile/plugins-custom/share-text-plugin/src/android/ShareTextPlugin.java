@@ -16,6 +16,33 @@ public class ShareTextPlugin extends CordovaPlugin {
     private static final String TAG = "ShareTextPlugin";
     private static final String CAT_TIB = "de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_TIB";
     private static final String CAT_EN  = "de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_EN";
+    private static final String CAT_SKT = "de.christian_steinert.tibetandict.CATEGORY_SHARE_LANG_SKT";
+
+    /**
+     * Share intent captured via onNewIntent() for an already-running activity
+     * instance. When the app is in the background, Android delivers a new
+     * share intent to the existing instance (launchMode singleTop) without
+     * reloading the WebView, and it does NOT update getActivity().getIntent().
+     * Without capturing the intent here, the share would be invisible to JS.
+     */
+    private Intent pendingShareIntent;
+
+    @Override
+    public void onNewIntent(Intent intent) {
+        if (isShareTextIntent(intent)) {
+            Log.d(TAG, "Capturing share intent delivered to running instance");
+            pendingShareIntent = intent;
+        }
+    }
+
+    /** True if the intent carries shared plain text (ACTION_SEND + text/*) */
+    private boolean isShareTextIntent(Intent intent) {
+        return intent != null
+            && Intent.ACTION_SEND.equals(intent.getAction())
+            && intent.getType() != null
+            && intent.getType().startsWith("text/")
+            && intent.getStringExtra(Intent.EXTRA_TEXT) != null;
+    }
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
@@ -71,6 +98,7 @@ public class ShareTextPlugin extends CordovaPlugin {
                 String cls = comp.getClassName();
                 if (cls.contains("ShareTibetanActivity")) return "tib";
                 if (cls.contains("ShareEnglishActivity")) return "en";
+                if (cls.contains("ShareSanskritActivity")) return "skt";
             }
         } catch (Exception e) {
             Log.w(TAG, "Unable to detect language from intent meta-data", e);
@@ -83,7 +111,13 @@ public class ShareTextPlugin extends CordovaPlugin {
      */
     private void getSharedText(CallbackContext callbackContext) {
         try {
-            Intent intent = cordova.getActivity().getIntent();
+            // Prefer the intent captured via onNewIntent() (warm start: app was
+            // already running); fall back to the activity's intent (cold start).
+            Intent intent = pendingShareIntent;
+            pendingShareIntent = null;
+            if (intent == null) {
+                intent = cordova.getActivity().getIntent();
+            }
             String action = intent.getAction();
             String type = intent.getType();
 
