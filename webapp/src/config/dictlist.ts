@@ -223,6 +223,13 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
         public: true,
         language: ["tib", "<->", "en"]
       },
+      "JongbokYi": {
+        label: 'Jongbok Yi',
+        about: 'Definitions by Jongbok Yi',
+        abbreviations: 'Hopkins',
+        public: true,
+        language: ["tib", "->", "en"]
+      },
       "Hopkins-Comment": {
         label: 'Hopkins Comment 1992',
         about: 'Source: Jeffrey Hopkins\' Tibetan-Sanskrit-English Dictionary|Version 2.0.0, 1992|Formulator and Editor: Jeffrey Hopkins|Contributors: Joe Wilson, Craig Preston, John Powers, Nathaniel Garson, Paul Hackett, Andres Montano',

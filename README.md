@@ -178,7 +178,7 @@ A standard Vite + React + TypeScript application. Some important folders are:
 
 * `src/components/` — UI components.
 * `src/services/` — data access layer; switches between PHP AJAX (for web app) and the Cordova SQLite plugin (for Android aoo) at runtime.
-* `src/config/dictlist.js` and `abbreviations.js` — dictionary metadata and abbreviation expansion rules, maintained by hand.
+* `src/config/dictlist.ts` and `abbreviations.ts` — dictionary metadata and abbreviation expansion rules, maintained by hand.
 
 
 # Public and private version
