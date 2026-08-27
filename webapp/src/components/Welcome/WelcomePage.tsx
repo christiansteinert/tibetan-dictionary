@@ -9,6 +9,10 @@ import { DICTLIST } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 import TopBarWrapper from '@/components/TopBar/TopBarWrapper';
+import HelpDialog from '../TopBar/HelpDialog';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import type { RootState } from '../../store/store';
 
 interface CreditEntry {
   id: string;
@@ -18,6 +22,10 @@ interface CreditEntry {
 
 export default function WelcomePage() {
   useSyncStateFromUrl();
+  const [helpOpen, setHelpOpen] = useState(false);
+  const layout = useSelector((s: RootState) => s.settings.layout);
+  const isLightMode = layout !== 'layout_black';
+
 
   // Build credits list from dictionaries that have listCredits: "true"
   const credits = useMemo<CreditEntry[]>(() => {
@@ -66,7 +74,7 @@ export default function WelcomePage() {
               </p>
               <p>
                 If you are unfamiliar with Wylie transliteration, see{' '}
-                <a href="https://resources.christian-steinert.de/download/WylieTransliteration.pdf" className="link">
+                <a onClick={() => setHelpOpen(true)} className="link">
                   this short summary
                 </a>.
               </p>
@@ -104,6 +112,11 @@ export default function WelcomePage() {
           </div>
         </div>
       </div>
+      <HelpDialog
+        open={helpOpen}
+        isLightMode={isLightMode}
+        onOpenChange={setHelpOpen}
+      />
     </>
   );
 }
