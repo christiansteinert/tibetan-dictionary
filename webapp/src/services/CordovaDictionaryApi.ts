@@ -90,15 +90,25 @@ export class CordovaDictionaryApi {
       });
     });
   }
-
   async readTermList(
     term: string,
     lang: Language,
     offset: number,
     maxResults: number,
-    dictionaries: string[]
+    dictionaries: string[],
+    signal?: AbortSignal
   ) {
     return new Promise<{ term: string }[]>((resolve, reject) => {
+      if (signal?.aborted) {
+        return reject(new DOMException('Aborted', 'AbortError'));
+      }
+
+      const onAbort = () => {
+        reject(new DOMException('Aborted', 'AbortError'));
+      };
+
+      signal?.addEventListener('abort', onAbort, { once: true });
+
       term = term.replace(/\s*[\/]\s*$/, '');
       if (lang === 'en' || lang === 'skt') {
         term = term.toLowerCase();
@@ -126,11 +136,14 @@ export class CordovaDictionaryApi {
                 ' ) GROUP BY term ORDER by lower(term), term';
               queryParams = [backendLang, likeSearch, likeSearch2];
 
-
             tx.executeSql(
               query,
               queryParams,
               function (_tx: any, results: any) {
+                if (signal?.aborted) {
+                  signal.removeEventListener('abort', onAbort);
+                  return;
+                }
                 const allTerms: string[] = [];
                 const len = results.rows.length;
                 for (let i = 0; i < len; i += 1) {
@@ -146,60 +159,69 @@ export class CordovaDictionaryApi {
                 const filteredTerms = allTerms.filter(t => filterRegex.test(t));
 
                 const paginated = filteredTerms.slice(offset, offset + maxResults);
+                signal?.removeEventListener('abort', onAbort);
                 resolve(paginated.map(t => ({ term: t })));
               },
               function (_tx: any, error: any) {
+                signal?.removeEventListener('abort', onAbort);
                 reject(new Error('SQL error while reading termlist for input "' + term + '" from DB: ' + error.message));
               }
             );
             return;
           } else if (lang === 'tib') {
-             const termSearch1 = term + ' ';
-             const termSearch2 = term + ' ';
-              query =
-                'SELECT DISTINCT DICT.term as term FROM DICT ' +
-                'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
-                'WHERE ( (( term = ? ) OR ( term > ? AND term < ?  || char(0xFFFF) )) AND ' +
-                dictQuery +
-                ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
-                maxResults +
-                ' OFFSET ' +
-                offset;
-              queryParams = [backendLang, term, termSearch1, termSearch2];
+              const termSearch1 = term + ' ';
+              const termSearch2 = term + ' ';
+               query =
+                 'SELECT DISTINCT DICT.term as term FROM DICT ' +
+                 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+                 'WHERE ( (( term = ? ) OR ( term > ? AND term < ?  || char(0xFFFF) )) AND ' +
+                 dictQuery +
+                 ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
+                 maxResults +
+                 ' OFFSET ' +
+                 offset;
+               queryParams = [backendLang, term, termSearch1, termSearch2];
 
-           } else {
-             const termSearch1 = term;
-             const termSearch2 = term;
-              query =
-                'SELECT DISTINCT DICT.term as term FROM DICT ' +
-                'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
-                'WHERE ( (( term = ? ) OR ( term > ? AND term < ? || char(0xFFFF) )) AND ' +
-                dictQuery +
-                ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
-                maxResults +
-                ' OFFSET ' +
-                offset;
-              queryParams = [backendLang, term, termSearch1, termSearch2];
+            } else {
+              const termSearch1 = term;
+              const termSearch2 = term;
+               query =
+                 'SELECT DISTINCT DICT.term as term FROM DICT ' +
+                 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = ? ' +
+                 'WHERE ( (( term = ? ) OR ( term > ? AND term < ? || char(0xFFFF) )) AND ' +
+                 dictQuery +
+                 ' ) GROUP BY term ORDER BY lower(term), term LIMIT ' +
+                 maxResults +
+                 ' OFFSET ' +
+                 offset;
+               queryParams = [backendLang, term, termSearch1, termSearch2];
 
-           }
-
-          tx.executeSql(
-            query,
-            queryParams,
-            function (_tx: any, results: any) {
-              const result: { term: string }[] = [];
-              const len = results.rows.length;
-              for (let i = 0; i < len; i += 1) {
-                const row = results.rows.item(i);
-                result.push({ term: row.term });
-              }
-              resolve(result);
-            },
-            function (_tx: any, error: any) {
-              reject(new Error('SQL error while reading termlist for input "' + term + '" from DB: ' + error.message));
             }
-          );
+
+           tx.executeSql(
+             query,
+             queryParams,
+             function (_tx: any, results: any) {
+               if (signal?.aborted) {
+                 signal.removeEventListener('abort', onAbort);
+                 return;
+               }
+               const result: { term: string }[] = [];
+               const len = results.rows.length;
+               for (let i = 0; i < len; i += 1) {
+                 const row = results.rows.item(i);
+                 result.push({ term: row.term });
+               }
+               signal?.removeEventListener('abort', onAbort);
+               resolve(result);
+             },
+             function (_tx: any, error: any) {
+               signal?.removeEventListener('abort', onAbort);
+               reject(new Error('SQL error while reading termlist for input "' + term + '" from DB: ' + error.message));
+             }
+           );
         } catch (e: any) {
+          signal?.removeEventListener('abort', onAbort);
           reject(new Error('Error while reading termlist for input "' + term + '" from DB: ' + (e?.message ?? e)));
         }
       });
