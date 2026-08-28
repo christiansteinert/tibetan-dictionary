@@ -30,10 +30,12 @@ interface UseFulltextSearchReturn {
   ) => Promise<void>;
 }
 
+// Use a shared ref outside the hook to prevent race conditions across multiple instances
+const abortControllerRef = { current: null as AbortController | null };
+
 export default function useFulltextSearch(): UseFulltextSearchReturn {
   const dispatch = useDispatch();
   const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
-  const abortControllerRef = useRef<AbortController | null>(null);
 
   const search = useCallback(
     async (

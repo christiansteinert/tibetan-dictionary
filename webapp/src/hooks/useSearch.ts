@@ -47,10 +47,12 @@ interface UseSearchReturn {
   normalizeSearchTerm: (raw: string, lang: Language) => string;
 }
 
+// Use a shared ref outside the hook to prevent race conditions across multiple instances
+const abortControllerRef = { current: null as AbortController | null };
+
 export default function useSearch(): UseSearchReturn {
   const dispatch = useDispatch();
   const { activeDictionaries, listSize, unicode } = useSelector((s: RootState) => s.settings);
-  const abortControllerRef = useRef<AbortController | null>(null);
 
   /**
    * Run a search. Updates Redux with the results.
