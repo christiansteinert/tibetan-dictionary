@@ -100,6 +100,9 @@ export class CordovaDictionaryApi {
   ) {
     return new Promise<{ term: string }[]>((resolve, reject) => {
       term = term.replace(/\s*[\/]\s*$/, '');
+      if (lang === 'en' || lang === 'skt') {
+        term = term.toLowerCase();
+      }
       const db = this.openDB();
 
       db.transaction((tx: any) => {

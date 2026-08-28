@@ -258,7 +258,7 @@ if ($resource === 'term' && $method === 'GET') {
          $statement = $db->prepare(
              'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
              . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
-             . 'WHERE (DICT.term LIKE :word OR DICT.term LIKE :word2) AND (' . $dictQuery . ')) '
+              . 'WHERE (DICT.term LIKE :word OR DICT.term LIKE :word2) AND (' . $dictQuery . ') '
              . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term;'
          );
 
@@ -291,9 +291,9 @@ if ($resource === 'term' && $method === 'GET') {
          $statement = $db->prepare(
              'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
              . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
-             . 'WHERE (DICT.term = :word '
-             .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) ) '
-             .   'AND (' . $dictQuery . ')) '
+              . 'WHERE (DICT.term = :word '
+              .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) ) ) '
+              .   'AND (' . $dictQuery . ') '
              . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
              . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
          );
@@ -315,9 +315,9 @@ if ($resource === 'term' && $method === 'GET') {
          $statement = $db->prepare(
              'SELECT DISTINCT ' . $termQuery . ' FROM DICT '
              . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND DICTNAMES.language = :lang '
-             . 'WHERE (DICT.term = :word '
-             .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) ) '
-             .   'AND (' . $dictQuery . ')) '
+              . 'WHERE (DICT.term = :word '
+              .   'OR (DICT.term > :wordSearch1 AND DICT.term < :wordSearch2 || char(0xFFFF) ) ) '
+              .   'AND (' . $dictQuery . ') '
              . 'GROUP BY DICT.term ORDER BY lower(DICT.term), DICT.term '
              . 'LIMIT ' . $maxResults . ' OFFSET ' . $offset . ';'
          );

@@ -88,6 +88,9 @@ export class PhpDictionaryApi {
     dictionaries: string[],
     signal?: AbortSignal
   ) {
+    if (lang === 'en' || lang === 'skt') {
+      search = search.toLowerCase();
+    }
     return getJson<{ term: string }[]>(`terms/${encodeURIComponent(langToBackend(lang))}/${encodeURIComponent(search)}`, {
       offset,
       maxResults,
