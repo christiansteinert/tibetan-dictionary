@@ -116,6 +116,7 @@ export default function DictionarySelector({
 
     const active = [];
     const inactive = [];
+    const availableDictIds = selectAllDictionaryIds();
 
     listRef.current.querySelectorAll('.dictsettings-line').forEach((el) => {
       const dictId = el.id.replace('dict_wrap_', '');
@@ -125,7 +126,7 @@ export default function DictionarySelector({
       const dictInfo = GROUPED_DICTLIST[dictId];
 
       if (dictInfo?.type === 'group' && dictInfo.items) {
-        const itemIds = Object.keys(dictInfo.items);
+        const itemIds = Object.keys(dictInfo.items).filter((id) => availableDictIds.includes(id));
         if (isChecked) {
           active.push(...itemIds);
         } else {
@@ -241,7 +242,10 @@ function buildOrderedEntries(activeDictionaries, inactiveDictionaries) {
   // Process remaining entries from GROUPED_DICTLIST that weren't in active
   for (const [dictId, dictInfo] of Object.entries(GROUPED_DICTLIST)) {
     if (processedGroups.has(dictId)) continue;
-    if (!availableDictIds.includes(dictId)) {
+    const isAvailable = dictInfo.type === 'group' 
+      ? Object.keys(dictInfo.items || {}).some(id => availableDictIds.includes(id))
+      : availableDictIds.includes(dictId);
+    if (!isAvailable) {
       continue; // Skip if the dictionary is unavailable
     }
 

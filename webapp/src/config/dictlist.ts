@@ -75,13 +75,13 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
   "_HeartOfTibetanLanguage": {
     type: 'group',
     label: 'Heart of Tibetan Language',
-    about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: (forthcoming)',
+    about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: ISBN: 978-0-89800-382-6',
     public: true,
     language: ["tib", "<->", "en"],
     items: {
       "hotl1": {
         label: 'Heart of Tibetan Language 1',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 1|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: 978-0-89800-382-6',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: ISBN: 978-0-89800-382-6',
         public: true,
         listCredits: true,
         audioId: "hotl1",
@@ -89,17 +89,15 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
       },
       "hotl2": {
         label: 'Heart of Tibetan Language 2',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 2|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)||Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: |Volume 3: 978-0-89800-382-6',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: ISBN: 978-0-89800-382-6',
         public: true,
-        listCredits: true,
         audioId: "hotl2",
         language: ["tib", "<->", "en"]
       },
       "hotl3": {
         label: 'Heart of Tibetan Language 3',
-        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language – Volume 3|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: 978-0-89800-382-6',
+        about: 'Vocabulary from the supplementary Anki learning cards for: The Heart of Tibetan Language|by Franziska Oertle|Dharma Publishing (dharmapublishing.com)|Volume 1: ISBN: 978-0-89800-233-1|Volume 2: ISBN: 978-0-89800-308-6|Volume 3: ISBN: 978-0-89800-382-6',
         public: true,
-        listCredits: true,
         audioId: "hotl3",
         language: ["tib", "<->", "en"]
       }
@@ -140,7 +138,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
   },
   "Bialek": {
     label: 'Bialek',
-    about: 'Glossary entries from Joanna Bialek: A Textbook in Classical Tibetan|Routledge (2022)|Book available at https://www.routledge.com/A-Textbook-in-Classical-Tibetan/Bialek/p/book/9781032123561',
+    about: 'Glossary entries from Joanna Bialek: A Textbook in Classical Tibetan|Routledge (2022)|ISBN: 9781032123561|Book available at https://www.routledge.com/A-Textbook-in-Classical-Tibetan/Bialek/p/book/9781032123561',
     public: true,
     listCredits: true,
     abbreviations: "Bialek",
@@ -518,64 +516,64 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     language: ["tib"]
   },
   "dag_tshig_gsar_bsgrigs-Tib": {
-    label: 'dag yig gsar bsgrigs',
-    about: 'dag yig gsar bsgrigs (New orthography)|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1979.',
+    label: 'Dag yig gsar bsgrigs',
+    about: 'Dag yig gsar bsgrigs (New orthography)|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1979.',
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "sgom_sde_tshig_mdzod_chen_mo": {
-    label: 'sgom sde tshig mdzod chen mo',
-    about: "sgom sde tshig mdzod chen mo|Author: sgom sde lha rams pa dge bshes thub bstan bsam grub|Sera Jey Monastery, Bylakuppe, Karnataka, India (2005-2016, 4 volumes)||Scan available at archive.org:|- Volume 1: https://archive.org/details/20240428_20240428_0750|- Volume 2: https://archive.org/details/20240428_20240428_0753|- Volume 3: https://archive.org/details/20240428_20240428_0755|- Volume 4: https://archive.org/details/20240428_20240428_0758||- All volumes: https://archive.org/details/bdrc-W2KG209991/bdrc-W2KG209991-1/",
+    label: 'sGom sde tshig mdzod chen mo',
+    about: "sGom sde tshig mdzod chen mo|Author: sGom sde lha rams pa dge bshes thub bstan bsam grub|Sera Jey Monastery, Bylakuppe, Karnataka, India (2005-2016, 4 volumes)||Scan available at archive.org:|- Volume 1: https://archive.org/details/20240428_20240428_0750|- Volume 2: https://archive.org/details/20240428_20240428_0753|- Volume 3: https://archive.org/details/20240428_20240428_0755|- Volume 4: https://archive.org/details/20240428_20240428_0758||- All volumes: https://archive.org/details/bdrc-W2KG209991/bdrc-W2KG209991-1/",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "brda_dkrol_gser_gyi_me_long": {
-    label: "brda dkrol gser gyi me long",
-    about: "brda dkrol gser gyi me long (Golden Mirror for the Elucidation of Words)|Authors: btsan lha ngag dbang tshul khrims|Beijing: Minzu chubanshe 民族出版社 / mi rigs dpe skrun khang (Ethnic Publishing House), 1997. 1,063 pages. ISBN 7105022337.||Scan available at archive.org: https://archive.org/details/bdrc-W28966",
+    label: "Brda dkrol gser gyi me long",
+    about: "Brda dkrol gser gyi me long (Golden Mirror for the Elucidation of Words)|Authors: btsan lha ngag dbang tshul khrims|Beijing: Minzu chubanshe 民族出版社 / mi rigs dpe skrun khang (Ethnic Publishing House), 1997. 1,063 pages. ISBN 7105022337.||Scan available at archive.org: https://archive.org/details/bdrc-W28966",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "chos_rnam_kun_btus": {
-    label: 'chos rnam kun btus',
-    about: "chos rnam kun btus: gangs can rig brgya'i chos kyi rnam grangs mthong tshad kun las btus pa ngo mtshar 'phrul gyi lde mig chen po (A Wondrous Great Magical Key: A Comprehensive Compilation of Enumerations of Dharma Terms from the Snow Land’s Hundreds of Fields of Knowledge)|Author: nor brang o rgyan|Beijing: Zhongguo Zangxue chubanshe 中国藏学出版社 / krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2008, 3 volumes.|Scan available at BDRC: https://library.bdrc.io/show/bdr:MW1KG2733",
+    label: 'Chos rnam kun btus',
+    about: "Chos rnam kun btus: gangs can rig brgya'i chos kyi rnam grangs mthong tshad kun las btus pa ngo mtshar 'phrul gyi lde mig chen po (A Wondrous Great Magical Key: A Comprehensive Compilation of Enumerations of Dharma Terms from the Snow Land’s Hundreds of Fields of Knowledge)|Author: nor brang o rgyan|Beijing: Zhongguo Zangxue chubanshe 中国藏学出版社 / krung go’i bod rig pa dpe skrun khang (China Tibetology Publishing House), 2008, 3 volumes.|Scan available at BDRC: https://library.bdrc.io/show/bdr:MW1KG2733",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "bod_rgya_nang_don_rig_pai_tshig_mdzod": {
-    label: "bod rgya nang don rig pa’i tshig mdzod",
-    about: "bod rgya nang don rig pa’i tshig mdzod (Tibetan–Chinese Dictionary of Buddhist Terminology)|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 1993 (2 volumes).",
+    label: "Bod rgya nang don rig pa’i tshig mdzod",
+    about: "Bod rgya nang don rig pa’i tshig mdzod (Tibetan–Chinese Dictionary of Buddhist Terminology)|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 1993 (2 volumes).",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "sngas_rgyas_chos_gzhung_tshig_mdzod": {
-    label: 'bod rgya sangs rgyas chos gzhung gi tshig mdzod',
+    label: 'Bod rgya sangs rgyas chos gzhung gi tshig mdzod',
     about: 'Zang Han fo xue ci dian 藏汉佛学词典 = bod rgya sangs rgyas chos gzhung gi tshig mdzod.|(Chinese-Tibetan dictionary of Buddhist Terms).|Author:  Wang Yinuan and ’jam dpal phun tshogs.|Xining: Qinghai min zu chu ban she 民族出版社 / mtsho sngon mi rigs dpe skrun khang (Qinghai Ethnic Publishing House), 1986 (reprint: 1988). 534 pages.|Scan available at archive.org: https://archive.org/details/bdrc-W22164',
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "gangs_can_mkhas_grub_rim_byon_ming_mdzod": {
-    label: "gangs can mkhas grub rim byon ming mdzod",
-    about: "gangs can mkhas grub rim byon ming mdzod (Dictionary of the Generations of Scholars and Accomplished Ones of the Glacier Land)|Lanzhou: Gansu minzu chubanshe 甘肃民族出版社 / kan su'u mi rigs dpe skrun khang (Gansu Ethnic Publishing House), 1992, ISBN 7542102001, 1933 pages",
+    label: "Gangs can mkhas grub rim byon ming mdzod",
+    about: "Gangs can mkhas grub rim byon ming mdzod (Dictionary of the Generations of Scholars and Accomplished Ones of the Glacier Land)|Lanzhou: Gansu minzu chubanshe 甘肃民族出版社 / kan su'u mi rigs dpe skrun khang (Gansu Ethnic Publishing House), 1992, ISBN 7542102001, 1933 pages",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "bod_yig_tshig_gter_rgya_mtsho": {
-    label: "bod yig tshig gter rgya mtsho",
-    about: "bod yig tshig gter rgya mtsho (Ocean of Treasure of Tibetan Letters)|Author: thub bstan phun tshogs|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 2012, ISBN 7540949422, 3 volumes (4013 pages)",
+    label: "Bod yig tshig gter rgya mtsho",
+    about: "Bod yig tshig gter rgya mtsho (Ocean of Treasure of Tibetan Letters)|Author: thub bstan phun tshogs|Chengdu: Sichuan minzu chubanshe 四川民族出版社 / si khron mi rigs dpe skrun khang (Sichuan Ethnic Publishing House), 2012, ISBN 7540949422, 3 volumes (4013 pages)",
     public: true,
     listCredits: true,
     language: ["tib"]
   },
   "li_shii_gur_khang": {
-    label: "li shi'i gur khang",
-    about: 'brda gsar rnying gi rnam gzhag li shi\'i gur khang (Presentation of Old and New Terminology: House of Cloves)|Author: skyogs ston rin chen bkra shis (born ca. 1400)||Scan available at archive.org: https://archive.org/details/bdrc-W3CN1669',
+    label: "Li shi'i gur khang",
+    about: 'Brda gsar rnying gi rnam gzhag li shi\'i gur khang (Presentation of Old and New Terminology: House of Cloves)|Author: skyogs ston rin chen bkra shis (born ca. 1400)||Scan available at archive.org: https://archive.org/details/bdrc-W3CN1669',
     public: true,
     listCredits: true,
     language: ["tib"]
@@ -623,13 +621,13 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
   "_Mahavyutpatti": {
     type: 'group',
     label: 'Mahā&shy;vyutpatti',
-    about: 'Multiple resources related to the Mahāvyutpatti:|- A digital Edition of the Mahāvyutpatti by Dharma Drum Buddhist College|- Scan of the critical edition by Ishihama and Fukuda (1989)|- Scan of a critical edition of the sGra-sbyor bam-po gnis-pa (Madhyavyutpatti), edited by Mie Ishikawa (1990)',
+    about: 'Multiple resources related to the Mahāvyutpatti:|- A digital Edition of the Mahāvyutpatti by Dharma Drum Buddhist College|- Scan of the critical edition by Ishihama and Fukuda (1989)|- Scan of a critical edition of the sGra-sbyor bam-po gnis-pa (Madhyavyutpatti), edited by Mie Ishikawa (1990)|Note that the scanned versions are not available in the mobile version of this application due to the large file size of the scanned images.',
     public: true,
     language: ["tib", "<->", "skt"],
     items: {
       "Mahavyutpatti-Skt": {
         label: 'Mahā&shy;vyutpatti',
-        about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See http://buddhistinformatics .ddbc.edu.tw/glossaries/ for more information.',
+        about: 'Mahāvyutpatti |This digital edition of the Mahāvyutpatti was created by the Glossaries Team at Dharma Drum Buddhist College|See https://glossaries.dila.edu.tw/ for more information.',
         public: true,
         listCredits: true,
         language: ["tib", "<->", "skt"]
@@ -703,7 +701,7 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
   },
   "NegiSkt": {
     label: 'Negi',
-    about: 'Tibetan-Sanskrit dictionary|bod skad dang legs sbyar gyi tshig mdzod chen mo|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath',
+    about: 'Tibetan-Sanskrit Dictionary|bod skad dang legs sbyar gyi tshig mdzod chen mo|J.S. Negi|Dictionary Unit, Central Institute of Higher Tibetan Studies, Sarnath',
     abbreviations: 'Negi',
     public: true,
     listCredits: true,

@@ -6,12 +6,12 @@
 import { useMemo } from 'react';
 import styles from './WelcomePage.module.css';
 import { DICTLIST } from '@/config/dictlist';
-import { GLOBAL_SETTINGS } from '@/config/globalSettings';
 import { useSyncStateFromUrl } from '@/hooks/useSyncStateFromUrl';
 import TopBarWrapper from '@/components/TopBar/TopBarWrapper';
 import HelpDialog from '../TopBar/HelpDialog';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { selectAllDictionaryIds } from '@/store/settingsSlice';
 import type { RootState } from '../../store/store';
 
 interface CreditEntry {
@@ -29,27 +29,23 @@ export default function WelcomePage() {
 
   // Build credits list from dictionaries that have listCredits: "true"
   const credits = useMemo<CreditEntry[]>(() => {
-    const isLocalhost = window.location?.hostname?.startsWith('localhost');
-    const publicOnly = GLOBAL_SETTINGS.publicOnly && !isLocalhost;
+    const availableIds = selectAllDictionaryIds();
 
     return Object.entries(DICTLIST)
-      .filter(([, dictInfo]: [string, any]) => {  
-        if (publicOnly && !dictInfo.public) {
-          return false; // Hide private dictionaries when in public-only mode
-        }
-        return dictInfo.listCredits;
+      .filter(([id, dictInfo]: [string, any]) => {
+        return availableIds.includes(id) && dictInfo.listCredits;
       })
       .map(([id, info]: [string, any]) => {
         let title = '';
         let description = '';
 
-        if (info.about) {
-          title = info.about.replace(/[|].*/, '');
-          description = info.about
-            .replace(/^[^|]*[|]/, '')
-            .replace(/[|]/g, '<br />');
+        if (info.about && info.about.includes('|')) {
+          const parts = info.about.split('|');
+          title = parts[0];
+          description = parts.slice(1).join('<br />');
         } else {
           title = info.label;
+          description = info.about || '';
         }
 
         return { id, title, description };
@@ -101,7 +97,7 @@ export default function WelcomePage() {
                   <dl className={styles.credits}>
                     {credits.map(({ id, title, description }) => (
                       <div key={id}>
-                        <dt className={styles.creditTitle}>{title}</dt>
+                        <dt className={styles.creditTitle} dangerouslySetInnerHTML={{ __html: title }} />
                         <dd className={styles.creditDescription} dangerouslySetInnerHTML={{ __html: description }} />
                       </div>
                     ))}
