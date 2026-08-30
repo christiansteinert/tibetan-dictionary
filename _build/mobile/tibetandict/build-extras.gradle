@@ -1,0 +1,12 @@
+// enable android R8 minification and resource shrinking
+ext.postBuildExtras = {
+    android {
+        buildTypes {
+            release {
+                minifyEnabled true
+                shrinkResources true
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+        }
+    }
+}

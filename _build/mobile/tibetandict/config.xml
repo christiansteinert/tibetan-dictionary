@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="312" id="de.christian_steinert.tibetandict" version="0.0.27" versionCode="312" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="313" id="de.christian_steinert.tibetandict" version="0.0.28" versionCode="313" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>TibetanDictionary</name>
     <description>A Tibetan Dictionary app that supports Wylie input, uses Tibetan script and comes with various dictionaries.</description>
     <author email="dictionary@christian-steinert.de" href="http://www.christian-steinert.de">Christian Steinert</author>
@@ -50,5 +50,9 @@
     </config-file>
     <platform name="android">
         <preference name="Debuggable" value="true" />
+
+        <!-- Enable R8 minification and resource shrinking -->
+        <resource-file src="proguard-rules.pro" target="app/proguard-rules.pro" />
+        <resource-file src="build-extras.gradle" target="app/build-extras.gradle" />
     </platform>
 </widget>
