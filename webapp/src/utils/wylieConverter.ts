@@ -140,7 +140,6 @@ export class WylieConverter {
     if (wylie === ' ') return wylie;
 
     wylie = wylie.replace(/(['a-zA-Z])\/(['a-zA-Z])/g, '$1/ $2');
-    wylie = wylie.replace(/[()]/g, ' ');
     wylie = wylie.replace(/\s\s+/g, ' ');
     wylie = wylie.replace(/^\s+|\s+$/g, '');
     wylie = wylie.replace(/[''`´]/g, "'");
