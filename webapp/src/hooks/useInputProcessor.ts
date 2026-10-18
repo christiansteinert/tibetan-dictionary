@@ -90,7 +90,7 @@ function makeTibetanInputProcessor(
   useUnicode: boolean,
 ): InputProcessor {
   return (wylie: string) =>
-    useUnicode ? converter.wylieToUni(wylie) : wylie;
+    useUnicode ? converter.wylieToUni(wylie, true) : wylie;
 }
 
 /**

@@ -14,6 +14,9 @@ interface WylieConverterOptions {
   pass_through?: boolean;
 }
 
+/** Private-use placeholder that the EWTS converter passes through unchanged. */
+const LITERAL_QUESTION_MARK = '\uE000';
+
 /**
  * Converter between Wylie/EWTS transliteration and Tibetan Unicode.
  */
@@ -43,11 +46,21 @@ export class WylieConverter {
   /**
    * Convert Wylie/EWTS transliteration to Tibetan Unicode.
    * @param {string} wylie - Text in Wylie/EWTS transliteration
+   * @param {boolean} [preserveWildcards=false] - Treat '?' as a search wildcard (for search input).
+   *   Otherwise a single '?' directly following an inherent vowel 'a' is the EWTS halanta (྄) and any other '?'
+   *   is kept as a literal question mark (a halanta cannot follow any other vowel).
    * @returns {string} Text in Tibetan Unicode
    */
   wylieToUni(wylie: string, preserveWildcards: boolean = false): string {
+    const wildcards = preserveWildcards ? ['*', '?'] : ['*'];
+    if (!preserveWildcards) {
+      // Hide literal question marks (not after 'a', or in runs like "??") from the converter, which would turn them into halantas
+      wylie = wylie.replace(/\?+/g, (match: string, offset: number, text: string) =>
+        match.length === 1 && text[offset - 1] === 'a' ? match : LITERAL_QUESTION_MARK.repeat(match.length));
+    }
+
     let result = '';
-    if (wylie.indexOf('?') !== -1 || wylie.indexOf('*') !== -1) {
+    if (wildcards.some(w => wylie.indexOf(w) !== -1)) {
       // Preserve wildcard characters and convert the rest. This is used to handle interactive inputs that contain wildcards.
       // It is accomplished by:
       // - splitting the input into individual syllables and converting each syllable individually to Tibetan Unicode. 
@@ -56,7 +69,7 @@ export class WylieConverter {
       //   would introduce an 'a' vowel that we do not want to have and it may even be an invalid syllable fragment that cannot be properly represented
       let previousSyllable = '';
       
-      const tok = new Tokenizer(['*', '?', ' '], (syllable: string, isSeparator: boolean) => {
+      const tok = new Tokenizer([...wildcards, ' '], (syllable: string, isSeparator: boolean) => {
         if (syllable === '*' || syllable === '?') {
           if (!previousSyllable.endsWith(' ')) {
             // The Wylie converter introduces a tseg after every syllable.
@@ -91,6 +104,7 @@ export class WylieConverter {
 
     // workaround for a bug in the Wylie converter. Avoid doubled a-chung at end of syllables.
     result = result.replace(/འའ་/g, 'འ་');
+    result = result.replace(new RegExp(LITERAL_QUESTION_MARK, 'g'), '?');
     return result;
 
   }
