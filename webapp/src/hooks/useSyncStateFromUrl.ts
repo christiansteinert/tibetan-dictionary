@@ -10,7 +10,7 @@
  */
 import { useEffect, useRef } from 'react';
 import { useParams, useSearchParams, useLocation } from 'react-router-dom';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useStore } from 'react-redux';
 import {
   type SearchMode,
   setStateFromUrl,
@@ -18,6 +18,7 @@ import {
   setInputLang,
 } from '@/store/searchSlice';
 import type { Language } from '@/types';
+import type { RootState } from '@/store/store';
 import { WylieConverter } from '@/utils/wylieConverter';
 
 export function useSyncStateFromUrl() {
@@ -25,13 +26,16 @@ export function useSyncStateFromUrl() {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const dispatch = useDispatch();
+  const store = useStore<RootState>();
   const isFirstRender = useRef(true);
   const wylieConverter = useRef(new WylieConverter());
 
   useEffect(() => {
     if (isFirstRender.current) {
-      // On first load, initialize input language from the URL (if present).
-      dispatch(setInputLang((urlLangParam || 'tib') as Language));
+      // On first load, initialize input language from the URL, or else
+      // from the language the user last switched to.
+      const lastInputLang = store.getState().settings.lastInputLang;
+      dispatch(setInputLang((urlLangParam || lastInputLang || 'tib') as Language));
       isFirstRender.current = false;
 
       if (searchParams.get('definitionOnly') === 'true') {
@@ -60,5 +64,5 @@ export function useSyncStateFromUrl() {
       offset: parseInt(searchParams.get('offset') || '0', 10),
       definitionTerm,
     }));
-  }, [dispatch, urlLangParam, urlTermParam, searchParams, location]);
+  }, [dispatch, store, urlLangParam, urlTermParam, searchParams, location]);
 }
