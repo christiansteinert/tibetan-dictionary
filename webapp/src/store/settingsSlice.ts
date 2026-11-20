@@ -7,6 +7,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { DICTLIST, GROUPED_DICTLIST, type DictEntry } from '@/config/dictlist';
 import { GLOBAL_SETTINGS } from '@/config/globalSettings';
+import type { Language } from '@/types';
 
 interface SettingsState {
   unicode: boolean | 'output';
@@ -15,11 +16,15 @@ interface SettingsState {
   layout: string;
   activeDictionaries: string[];
   inactiveDictionaries: string[];
+  /** The input language the user last switched to, used when the app opens without one in the URL */
+  lastInputLang: Language;
 }
 
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
+
+const LANGUAGES: Language[] = ['tib', 'en', 'skt'];
 
 const isMobileDevice =
   /iPhone|iPad|iPod|Android|BlackBerry|IEMobile/i.test(navigator.userAgent);
@@ -57,6 +62,7 @@ function getDefaultSettings(): SettingsState {
     activeDictionaries: getAllDictionaryIds(),
     inactiveDictionaries: [],
     listSize: 10,
+    lastInputLang: 'tib',
   };
 }
 
@@ -99,6 +105,7 @@ function loadSettings(): SettingsState {
       listSize: (typeof saved.listSize === 'number' && saved.listSize > 0 && saved.listSize <= 500) ? saved.listSize : defaults.listSize,
       activeDictionaries: activeDictionaries.length > 0 ? activeDictionaries : allIds,
       inactiveDictionaries: inactiveDictionaries,
+      lastInputLang: LANGUAGES.includes(saved.lastInputLang as Language) ? saved.lastInputLang as Language : defaults.lastInputLang,
     };
   } catch (e) {
     console.error('Error loading settings from localStorage:', e);
@@ -120,6 +127,7 @@ const initialState: SettingsState = {
   layout: loaded.layout,
   activeDictionaries: loaded.activeDictionaries,
   inactiveDictionaries: loaded.inactiveDictionaries,
+  lastInputLang: loaded.lastInputLang,
 };
 
 const settingsSlice = createSlice({
@@ -149,6 +157,9 @@ const settingsSlice = createSlice({
       state.activeDictionaries = active;
       state.inactiveDictionaries = inactive;
     },
+    setLastInputLang(state, action: PayloadAction<Language>) {
+      if (LANGUAGES.includes(action.payload)) state.lastInputLang = action.payload;
+    },
     /** Replace the entire settings object (e.g. on "Reset to defaults") */
     resetSettings(state) {
       const defaults = getDefaultSettings();
@@ -167,6 +178,7 @@ export const {
   setListSize,
   setLayout,
   setDictionaries,
+  setLastInputLang,
   resetSettings,
   restoreSettings,
 } = settingsSlice.actions;

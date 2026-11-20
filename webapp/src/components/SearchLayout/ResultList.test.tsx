@@ -35,6 +35,7 @@ function renderResultList(initialSearchState: any = {}) {
         layout: 'layout_white',
         activeDictionaries: [],
         inactiveDictionaries: [],
+        lastInputLang: 'tib' as const,
       }
     }
   });

@@ -17,6 +17,7 @@ import {
   setInputLang,
   setSidebarVisible,
 } from '@/store/searchSlice';
+import { setLastInputLang } from '@/store/settingsSlice';
 import type { Language } from '@/types';
 
 interface KeyboardNavState {
@@ -191,10 +192,11 @@ export function useSearchHandlers() {
     [navigation, currentTerm, inputLang, extendedSettingsVisible],
   );
 
-  /** Switch input language and clear the sidebar. */
+  /** Switch input language, remember it for the next visit and clear the sidebar. */
   const handleLangChange = useCallback(
     (lang: Language) => {
       dispatch(setInputLang(lang));
+      dispatch(setLastInputLang(lang));
       dispatch(setSidebarVisible(false));
     },
     [dispatch],
