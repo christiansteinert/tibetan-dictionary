@@ -20,9 +20,12 @@ define('SNIPPET_CONTEXT_CHARS', 80);
  * Convert an FTS5 fulltext query string into a regex that matches any of the
  * individual search words or quoted phrases.
  *
- * FTS5 operators (AND, OR, NOT, NEAR) and column filters (e.g. "term:") are
- * silently dropped.  Longer phrases are tried first so that a quoted phrase
- * takes priority over its individual words.
+ * FTS5 operators (AND, OR, NOT, NEAR — only in uppercase, as in FTS5
+ * itself) and column filters (e.g. "term:") are silently dropped.  A trailing
+ * `*` (FTS5 prefix query) matches the rest of the word.  Longer phrases are
+ * tried first so that a quoted phrase takes priority over its individual words.
+ *
+ * If nothing highlightable remains, a regex that never matches is returned.
  */
 function fulltextQueryToRegex($query) {
     $phrases = [];
@@ -36,14 +39,18 @@ function fulltextQueryToRegex($query) {
 
     // Remaining words (strip quotes, FTS5 operators, column filters)
     $remaining = preg_replace('/"[^"]*"/', '', $query);
-    $remaining = preg_replace('/\b(AND|OR|NOT|NEAR)\b/i', '', $remaining);
+    // FTS5 operators are case-sensitive: lowercase "not", "and", … are plain words.
+    $remaining = preg_replace('/\b(AND|OR|NOT|NEAR)\b/', '', $remaining);
     foreach (preg_split('/\s+/', trim($remaining), -1, PREG_SPLIT_NO_EMPTY) as $word) {
         if (preg_match('/^\w+:$/', $word)) continue;   // column filter
-        $phrases[] = preg_quote($word, '/');
+        $isPrefix = substr($word, -1) === '*';
+        $word     = rtrim($word, '*');
+        if ($word === '') continue;                     // lone "*" (e.g. after a quoted phrase)
+        $phrases[] = preg_quote($word, '/') . ($isPrefix ? '[\p{L}\p{M}\p{N}]*' : '');
     }
 
     if (empty($phrases)) {
-        return '/()/iu';  // fallback — will show text start
+        return '/((?!))/u';  // never matches → no highlighting, snippet shows text start
     }
 
     // Prefer longer matches
@@ -54,28 +61,33 @@ function fulltextQueryToRegex($query) {
 /**
  * Iterate over a SQLite result set and build an array of rows, each with a
  * generated snippet.  The result set must contain the columns: term,
- * definition, dictionary, dictionaryId.
+ * definition, dictionary, dictionaryId, lang.
  *
  * @param SQLite3Result $results       The executed query result.
- * @param string        $lang          The language of the terms.
+ * @param string        $lang          The requested language; only used as a fallback
+ *                                     when a row has no 'lang' column.
  * @param string        $snippetRegex  Regex for highlighting (from fulltextQueryToRegex).
- * @return array  JSON-ready rows with keys: term, dictionary, dictionaryId, snippet.
+ * @return array  JSON-ready rows with keys: term, highlightedTerm, dictionary,
+ *                dictionaryId, snippet, definition, lang, isSnippetAbbreviated.
  */
 function buildSnippetRows($results, $lang, $snippetRegex) {
     $rows = [];
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
+        // Language of this row's headword (rows can come from any language).
+        // Use a separate variable: overwriting $lang would leak one row's
+        // language into the next iteration.
+        $rowLang = $row['lang'] ?? $lang;
+
         if (preg_match($snippetRegex, $row['definition'])) {
             $snippetResult = generateSnippet($row['definition'], $snippetRegex);
         } else {
             $term = $row['term'];
-            if ($lang === 'bo') {
+            if ($rowLang === 'bo') {
               $term = "{" . $term. "}";
             }
             $snippetResult = generateSnippet($term, $snippetRegex);
             $snippetResult['isAbbreviated'] = true;  // term matches but definition doesn't — mark as abbreviated
         }
-
-        $lang = $row['lang'] ?? 'bo';
 
         $rows[] = [
             'term'                 => $row['term'],
@@ -84,7 +96,7 @@ function buildSnippetRows($results, $lang, $snippetRegex) {
             'dictionaryId'         => $row['dictionaryId'],
             'snippet'              => $snippetResult['snippet'],
             'definition'           => $row['definition'],
-            'lang'                 => $lang,
+            'lang'                 => $rowLang,
             'isSnippetAbbreviated' => $snippetResult['isAbbreviated'],
         ];
     }
@@ -103,12 +115,14 @@ function buildSnippetRows($results, $lang, $snippetRegex) {
  * @return array{snippet: string, isAbbreviated: bool}
  */
 function generateSnippet($haystack, $regexPattern) {
+    // Clean up the text *before* matching, so that the match offset refers to
+    // the same string the snippet is cut from.
+    $haystack = preg_replace('/\[sound:[^\]]*\]/', "", $haystack);  // Remove embedded audio tags
+    $haystack = preg_replace('/-----/', ' ', $haystack);            // Remove separator lines
+
     if (!preg_match($regexPattern, $haystack, $matches, PREG_OFFSET_CAPTURE)) {
         return snippetFallback($haystack);
     }
-
-    $haystack = preg_replace('/\[sound:[^\]]*\]/', "", $haystack);  // Remove embedded audio tags
-    $haystack = preg_replace('/-----/', ' ', $haystack);            // Remove separator lines
 
     $matchText   = $matches[1][0];
     $matchOffset = $matches[1][1];
@@ -175,13 +189,15 @@ function generateSnippet($haystack, $regexPattern) {
  *
  * Unlike snippet generation this doesn't need brace handling — terms are
  * plain Wylie text.  All occurrences of the pattern are highlighted.
+ * The term is HTML-escaped first (like the snippet), so the result is safe
+ * to insert as HTML.
  *
  * @param string $term          The raw term text.
  * @param string $regexPattern  Highlight regex (from fulltextQueryToRegex).
- * @return string  The term with matched portions wrapped in <em>.
+ * @return string  The escaped term with matched portions wrapped in <em>.
  */
 function highlightTerm($term, $regexPattern) {
-    return preg_replace($regexPattern, '<em>$1</em>', $term);
+    return preg_replace($regexPattern, '<em>$1</em>', htmlspecialchars($term, ENT_NOQUOTES));
 }
 
 /**

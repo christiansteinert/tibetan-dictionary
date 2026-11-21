@@ -66,13 +66,12 @@ const FtsResultItem = memo(function FtsResultItem({
 }: Props) {
   const dictCellRef = useRef<HTMLTableCellElement>(null);
 
-  // Display term: handle <em>/</em> highlights inside Tibetan correctly
+  // Display term: the backend delivers it HTML-escaped with <em> highlights.
+  // For Tibetan in Unicode mode, convert the Wylie around the <em> tags.
   let highlightedTerm = result.highlightedTerm;
   if (result.lang === 'tib' && useUnicodeTibetan) {
     highlightedTerm = handleHighlightedSectionsForTibOnly(highlightedTerm);
     highlightedTerm = convertCurlyBraceSections(highlightedTerm);
-  } else {
-    highlightedTerm = result.term;
   }
 
   // Dictionary label and about info for tooltip

@@ -7,23 +7,48 @@
 //
 //   GET  /api/term/{lang}/{term}      Look up definitions for a specific term.
 //   GET  /api/terms/{lang}/{term}     Prefix-based term search (auto-complete).
-//   POST /api/check-terms/{lang}      Check which Tibetan sections have dictionary entries.
+//   POST /api/check-terms/{lang}      Check which of a set of terms exist in the dictionary.
 //   GET  /api/fulltext/{lang}/{query} FTS5-based fulltext search.
 //
 // All responses are JSON. Request bodies (where applicable) are JSON.
 // =============================================================================
 
 require_once __DIR__ . '/snippet.php';
-ini_set('display_errors', 1); ini_set('display_startup_errors', 1); error_reporting(E_ALL);
+
+// Never print PHP warnings/errors into the response body — they corrupt the
+// JSON output and leak server paths. Errors are written to the server log instead.
+ini_set('display_errors', '0');
+ini_set('display_startup_errors', '0');
+ini_set('log_errors', '1');
+error_reporting(E_ALL);
+
+// Any uncaught exception (e.g. a failing SQLite statement) becomes a JSON 500.
+set_exception_handler(function (Throwable $e) {
+    error_log('Uncaught ' . get_class($e) . ': ' . $e->getMessage() . ' in ' . $e->getFile() . ':' . $e->getLine());
+    if (!headers_sent()) {
+        http_response_code(500);
+        header('Content-Type: application/json; charset=utf-8');
+        header('Cache-Control: no-store');
+    }
+    echo json_encode(['error' => 'Internal server error']);
+});
 
 // --- Helpers -----------------------------------------------------------------
 
-/** Send a JSON response and exit. */
+/**
+ * Send a JSON response and exit.
+ * Only successful GET responses may be cached (for one hour); errors and
+ * POST responses must not be, so that e.g. a transient 500 doesn't stick.
+ */
 function jsonResponse($data, int $status = 200) {
     http_response_code($status);
     header('Content-Type: application/json; charset=utf-8');
-    header('Expires: ' . gmdate('D, d M Y H:i:s', strtotime('+1 hours')) . ' GMT');
-    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+    if ($status === 200 && ($_SERVER['REQUEST_METHOD'] ?? '') === 'GET') {
+        header('Expires: ' . gmdate('D, d M Y H:i:s', strtotime('+1 hours')) . ' GMT');
+    } else {
+        header('Cache-Control: no-store');
+    }
+    echo json_encode($data, JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_THROW_ON_ERROR);
     exit;
 }
 
@@ -46,17 +71,25 @@ function jsonBody() {
 }
 
 /**
- * Clamp and sanitise an number-string and convert it to an integer value.
+ * Read a non-negative integer query parameter and clamp it to [$min, $max].
+ * Returns $default when the parameter is absent or empty.
+ * Aborts with 400 when the value is not a plain non-negative integer
+ * (digits only, e.g. "abc", "-5", "1.5" or "maxResults[]=1" are rejected).
  */
-function clampIntParam(?string $value, int $min, int $max, int $default = 0): int {
-    if ($value === null || $value === '') return $default;
-    $int = intval('0' + preg_replace('/[^0-9]/', '', (string) $value));
-    return max($min, min($max, $int));
+function intQueryParam(string $name, int $min, int $max, int $default = 0): int {
+    if (!isset($_GET[$name]) || $_GET[$name] === '') return $default;
+    $value = $_GET[$name];
+    if (!is_string($value) || !preg_match('/^[0-9]+$/', $value)) {
+        errorResponse('Parameter "' . $name . '" must be a non-negative integer');
+    }
+    // intval() saturates at PHP_INT_MAX for overly long digit strings.
+    return max($min, min($max, intval($value)));
 }
 
 /**
  * Validate and return the list of dictionary names from the 'dictionaries'
- * query parameter. Expects a comma-separated string of URL-encoded names.
+ * query parameter. Expects a comma-separated string of names (PHP has
+ * already URL-decoded the query string at this point).
  * Returns an empty array when none are supplied.
  *
  * @return string[]
@@ -69,7 +102,7 @@ function parseDictionaries(): array {
     if ($raw === '') {
         return [];
     }
-    // Split by comma and URL-decode each name
+    // Split by comma
     $dict_names = explode(',', $raw);
     
     // Filter out empty strings and reindex the array
@@ -86,7 +119,7 @@ function parseDictionaries(): array {
  * Dictionary names cannot be bound as parameters (they appear as literal
  * values in a dynamically constructed OR list, not as a single :placeholder).
  * They are therefore escaped with escapeString() and embedded inside
- * double-quoted SQL string literals, which is the correct SQLite approach.
+ * single-quoted SQL string literals.
  */
 function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
     if (empty($dictionaries)) {
@@ -94,28 +127,35 @@ function buildDictionaryFilter(SQLite3 $db, array $dictionaries): string {
     }
     $parts = [];
     foreach ($dictionaries as $dict) {
-        $parts[] = '"' . $db->escapeString($dict) . '"';
+        $parts[] = "'" . $db->escapeString($dict) . "'";
     }
-    // The + before DICTNAMES.name is a workaround against a bug in SQLITE 3.3s query planner.
-    // With sqlite 3.5 or higher this + can be removed again
+    // The + operator before DICTNAMES.name keeps SQLite's query planner from
+    // driving the query via this condition (it disqualifies the column from
+    // index use), so the lookup is driven by the DICT.term condition instead.
     return '+DICTNAMES.name IN (' . implode(', ', $parts) . ')';
 }
 
 /**
  * Allowed values are 'bo' (Tibetan), 'en' (English), 'sa' (Sanskrit).
+ * Aborts with 400 for any other (or missing) value.
  * The returned string is safe to bind as a SQL parameter value.
  */
 function ensureLanguageValid($lang): string {
     $allowed = ['bo', 'en', 'sa'];
-    return in_array($lang, $allowed, true) ? $lang : 'bo';
+    if (!in_array($lang, $allowed, true)) {
+        errorResponse('Unsupported language: "' . $lang . '" (allowed: ' . implode(', ', $allowed) . ')');
+    }
+    return $lang;
 }
 
 // --- Database connection -----------------------------------------------------
 if (file_exists(__DIR__ . '/TibetanDictionary_private.db')) {
-    $db = new SQLite3(__DIR__ . '/TibetanDictionary_private.db');
+    $db = new SQLite3(__DIR__ . '/TibetanDictionary_private.db', SQLITE3_OPEN_READONLY);
 } else {
-    $db = new SQLite3(__DIR__ . '/TibetanDictionary.db');
+    $db = new SQLite3(__DIR__ . '/TibetanDictionary.db', SQLITE3_OPEN_READONLY);
 }
+// Throw exceptions instead of emitting PHP warnings on SQL errors.
+$db->enableExceptions(true);
 
 
 // --- Routing -----------------------------------------------------------------
@@ -133,21 +173,28 @@ if (file_exists(__DIR__ . '/TibetanDictionary_private.db')) {
 //
 if (isset($_SERVER['PATH_INFO']) && $_SERVER['PATH_INFO'] !== '') {
     // Called as /api.php/<resource>/... — PHP-FPM sets PATH_INFO for us.
-    $path = trim($_SERVER['PATH_INFO'], '/');
+    // PATH_INFO is already URL-decoded by the web server.
+    $path        = trim($_SERVER['PATH_INFO'], '/');
+    $pathDecoded = true;
 } else {
     // Called via the /api/ nginx location — strip the /api prefix from REQUEST_URI.
-    $requestUri = $_SERVER['REQUEST_URI'] ?? '/';
-    $uriPath    = parse_url($requestUri, PHP_URL_PATH) ?? '/';
-    $path       = trim(preg_replace('#^(/backend)?/api#', '', $uriPath), '/');
+    // REQUEST_URI is raw, so the segments still need to be URL-decoded.
+    $requestUri  = $_SERVER['REQUEST_URI'] ?? '/';
+    $uriPath     = parse_url($requestUri, PHP_URL_PATH) ?? '/';
+    $path        = trim(preg_replace('#^(/backend)?/api#', '', $uriPath), '/');
+    $pathDecoded = false;
 }
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Split path into segments, e.g. "term/lang/bde+ba" → ['term', 'lang', 'bde ba']
+// Split path into segments, e.g. "term/bo/bde%20ba" → ['term', 'bo', 'bde ba'].
+// Splitting happens before decoding, so an encoded "/" (%2F) stays inside the
+// term. The term is trimmed of surrounding whitespace for all endpoints.
+$decode   = fn(string $s): string => $pathDecoded ? $s : rawurldecode($s);
 $segments = explode('/', $path, 3);
 $resource = $segments[0] ?? '';
-$lang    = isset($segments[1]) ? rawurldecode($segments[1]) : '';
-$param   = isset($segments[2]) ? rawurldecode($segments[2]) : '';
+$lang     = isset($segments[1]) ? $decode($segments[1]) : '';
+$param    = isset($segments[2]) ? trim($decode($segments[2])) : '';
 
 // =============================================================================
 // GET /api/term/{lang}/{term}
@@ -155,7 +202,7 @@ $param   = isset($segments[2]) ? rawurldecode($segments[2]) : '';
 // Look up the full definition(s) for a specific term.
 //
 // Query params:
-//   dictionaries  - comma separate list
+//   dictionaries  - comma-separated list
 //
 // Response: { [dictionaryName: string]: string }
 // =============================================================================
@@ -187,7 +234,6 @@ if ($resource === 'term' && $method === 'GET') {
     $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
     $statement->bindValue(':term', $param, SQLITE3_TEXT);
     $results = $statement->execute();
-    if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
     $definitions  = [];
     $prevDict = '';
@@ -199,7 +245,8 @@ if ($resource === 'term' && $method === 'GET') {
             $prevDict = $row['dictionary'];
         }
     }
-    jsonResponse($definitions);
+    // Cast to object so that an empty result is encoded as {} rather than [], in accordance with the TermResult schema in the openapi spec.
+    jsonResponse((object) $definitions);
 }
 
 
@@ -211,7 +258,7 @@ if ($resource === 'term' && $method === 'GET') {
 // Query params:
 //   offset        - pagination offset (default 0)
 //   maxResults    - page size, 1–500 (default 50)
-//   dictionaries  - comma separate list
+//   dictionaries  - comma-separated list
 //
 // Response: Array<{ term: string }>
 // =============================================================================
@@ -226,15 +273,14 @@ if ($resource === 'term' && $method === 'GET') {
     }
 
     $lang         = ensureLanguageValid($lang);
-    $search       = trim($param);
+    $search       = $param;
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 1, 500, 50);
-    $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
+    $maxResults   = intQueryParam('maxResults', 1, 500, 50);
+    $offset       = intQueryParam('offset', 0, PHP_INT_MAX);
     $termQuery = "DICT.term";
 
-    error_log("searching for: " . $search);
-    error_log($maxResults . " results, offset " . $offset);
+    error_log('terms search: lang=' . $lang . ', term="' . $search . '", maxResults=' . $maxResults . ', offset=' . $offset);
 
     if (strpos($search, '*') !== false || strpos($search, '?') !== false) {
         $likePattern = str_replace(['*', '?'], ['%', '_'], $search);
@@ -275,7 +321,6 @@ if ($resource === 'term' && $method === 'GET') {
         $filterRegex = '/^' . $regexBody . '/iu';
 
         $results = $statement->execute();
-        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
         // Apply regex post-filter with manual pagination
         $rows = [];
@@ -304,7 +349,6 @@ if ($resource === 'term' && $method === 'GET') {
         $statement->bindValue(':wordSearch2', $search . ' ', SQLITE3_TEXT);
          
         $results = $statement->execute();
-        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
         $rows = [];
         while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
@@ -328,7 +372,6 @@ if ($resource === 'term' && $method === 'GET') {
         $statement->bindValue(':wordSearch2', $search, SQLITE3_TEXT);
 
         $results = $statement->execute();
-        if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
 
         $rows = [];
         while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
@@ -342,13 +385,14 @@ if ($resource === 'term' && $method === 'GET') {
 // =============================================================================
 // POST /api/check-terms/{lang}
 //
-// Verify which Tibetan inline sections have dictionary entries.
-// Used to decide whether to render them as clickable links.
+// Check which of the given terms exist in the dictionary for {lang}.
+// The frontend uses this to decide which Tibetan sections of a definition
+// to render as clickable links.
 //
 // Request body (JSON):
-//   { [sectionId: string]: string }   — map of section ID → wylie term
+//   { [id: string]: string }   — map of external ID → term
 //
-// Response (JSON): string[]  — IDs of sections whose wylie term exists in the DB.
+// Response (JSON): string[]  — IDs whose term exists in the DB.
 // =============================================================================
 
 if ($resource === 'check-terms' && $method === 'POST') {
@@ -359,21 +403,23 @@ if ($resource === 'check-terms' && $method === 'POST') {
         errorResponse('Request body must be a JSON object mapping section IDs to wylie strings');
     }
 
+    // Prepared once and re-executed for every term.
+    $statement = $db->prepare(
+        'SELECT 1 FROM DICT '
+        . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
+        . 'WHERE DICTNAMES.language = :lang AND DICT.term = :word LIMIT 1;'
+    );
+    $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
+
     $matchingIds = [];
     foreach ($sections as $sectionId => $wylie) {
         if (!is_string($wylie) || $wylie === '') continue;
 
-         $statement = $db->prepare(
-             'SELECT 1 FROM DICT '
-             . 'INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id '
-             . 'WHERE DICTNAMES.language = :lang AND DICT.term = :word LIMIT 1;'
-         );
-
-        $statement->bindValue(':lang', $lang, SQLITE3_TEXT);
+        $statement->reset();
         $statement->bindValue(':word', $wylie, SQLITE3_TEXT);
         $queryResult = $statement->execute();
 
-        if ($queryResult !== false && $queryResult->fetchArray()) {
+        if ($queryResult->fetchArray()) {
             $matchingIds[] = (string) $sectionId;
         }
     }
@@ -389,9 +435,10 @@ if ($resource === 'check-terms' && $method === 'POST') {
 // Query params:
 //   offset        - pagination offset (default 0)
 //   maxResults    - page size, 1–500 (default 50)
-//   dictionaries  - repeated param
+//   dictionaries  - comma-separated list
 //
-// Response: Array<{ term, dictionary, dictionaryId, snippet, definition }>
+// Response: Array<{ term, highlightedTerm, dictionary, dictionaryId, snippet,
+//                   definition, lang, isSnippetAbbreviated }>
 // =============================================================================
 
 if ($resource === 'fulltext' && $method === 'GET') {
@@ -404,19 +451,22 @@ if ($resource === 'fulltext' && $method === 'GET') {
     }
 
     $lang         = ensureLanguageValid($lang);
-    $search       = trim($param);
+    $search       = $param;
     $dictionaries = parseDictionaries();
     $dictQuery    = buildDictionaryFilter($db, $dictionaries);
-    $maxResults   = clampIntParam($_GET['maxResults'] ?? '', 1, 500, 50);
-    $offset       = clampIntParam($_GET['offset'] ?? '', 0, PHP_INT_MAX);
-    $innerLimit = $maxResults + $offset;
+    $maxResults   = intQueryParam('maxResults', 1, 500, 50);
+    $offset       = intQueryParam('offset', 0, PHP_INT_MAX);
     // The FTS query must:
     //  - restrict *term* matches to the requested language
     //  - search *definitions* across ALL languages
-     $sql = "SELECT * FROM (
+
+    // A row can match in both branches (term AND definition); it is
+     // reported only once (GROUP BY DICT.rowid), using its best rank.
+     // SQLite returns the bare columns from the row holding MIN(rank).
+     $sql = "SELECT term, definition, dictionary, dictionaryId, lang, MIN(rank) AS rank FROM (
          -- Branch 1: Find matching *terms* that match the selected language)
          -- We join DICT here just to filter the rowids by language
-         SELECT DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICTNAMES.language as lang, DICT_FTS.rank
+         SELECT DICT.rowid AS id, DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICTNAMES.language as lang, DICT_FTS.rank
          FROM DICT_FTS
          INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid
          INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND (" . $dictQuery . ") 
@@ -426,12 +476,13 @@ if ($resource === 'fulltext' && $method === 'GET') {
          UNION ALL
  
          -- Branch 2: Find matching *Definitions*
-         SELECT DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICTNAMES.language as lang, DICT_FTS.rank
+         SELECT DICT.rowid AS id, DICT.term, DICT.definition, DICTNAMES.name AS dictionary, DICTNAMES.id AS dictionaryId, DICTNAMES.language as lang, DICT_FTS.rank
          FROM DICT_FTS
          INNER JOIN DICT ON DICT.rowid = DICT_FTS.rowid
          INNER JOIN DICTNAMES ON DICT.dictionary = DICTNAMES.id AND (" . $dictQuery . ")
          WHERE DICT_FTS.definition MATCH :query
      )
+     GROUP BY id
      ORDER BY rank ASC
      LIMIT " . $maxResults . " OFFSET " . $offset . ";";
 
@@ -440,10 +491,17 @@ if ($resource === 'fulltext' && $method === 'GET') {
     $statement->bindValue(':query', $search, SQLITE3_TEXT);
     $statement->bindValue(':lang',  $lang,   SQLITE3_TEXT);
 
-    $results = $statement->execute();
-    if ($results === false) { errorResponse($db->lastErrorMsg(), 500); }
-
-    jsonResponse(buildSnippetRows($results, $lang, fulltextQueryToRegex($search)));
+    // The search string is passed to FTS5 as a query expression; malformed
+    // expressions (unbalanced quotes, dangling operators, unknown column
+    // filters, …) make SQLite fail. This is a client error → 400.
+    try {
+        $results = $statement->execute();
+        $rows    = buildSnippetRows($results, $lang, fulltextQueryToRegex($search));
+        jsonResponse($rows);
+    } catch (Exception $e) {
+        error_log('Fulltext query failed for "' . $search . '": ' . $e->getMessage());
+        errorResponse('Invalid fulltext query: ' . $e->getMessage());
+    }
 }
 
 

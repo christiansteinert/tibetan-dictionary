@@ -1,9 +1,9 @@
 openapi: 3.1.0
 
 info:
-  title: Tibetan Dictionary API
+  title: Tibetan-English-Sanskrit Dictionary API
   description: >
-    REST backend for the Tibetan-English Dictionary application.
+    REST backend for the Tibetan-English-Sanskrit Dictionary application.
   version: 1.0.0
 
 servers:
@@ -26,11 +26,11 @@ components:
     maxResults:
       name: maxResults
       in: query
-      description: Maximum number of results to return (clamped to 10–500).
+      description: Maximum number of results to return (clamped to 1–500).
       required: false
       schema:
         type: integer
-        minimum: 10
+        minimum: 1
         maximum: 500
         default: 50
 
@@ -39,8 +39,7 @@ components:
       in: query
       description: >
         Comma-separated list of dictionary names to restrict results to.
-        Each name is URL-encoded, so literal commas in names appear as `%2C`.
-        Example: `dictionaries=Rangjung%20Yeshe,Berzin`
+        Example: `dictionaries=RangjungYeshe,Berzin`
         Omit entirely to search all dictionaries.
       required: false
       schema:
@@ -52,10 +51,12 @@ components:
       description: >
         Map of dictionary name → definition text.
         Multiple entries for the same dictionary are separated by `\n-----\n`.
+        The definition texts are raw plain text, **not HTML**; see
+        `FtsSearchResult.definition` for the markup they may contain.
       additionalProperties:
         type: string
       example:
-        Rangjung Yeshe: "bde ba: happiness, bliss"
+        RangjungYeshe: "happiness, bliss"
         Berzin: "happiness"
 
     TermListRow:
@@ -70,7 +71,31 @@ components:
 
     FtsSearchResult:
       type: object
-      required: [term, dictionary, dictionaryId, snippet, definition, lang, isSnippetAbbreviated]
+      description: >
+        One fulltext search hit.
+
+
+        Text fields and their markup:
+
+        - `term`, `definition`: raw text from the dictionary, not
+          HTML-escaped — escape before inserting into HTML.
+
+        - `highlightedTerm`, `snippet`: HTML fragments. The text is
+          HTML-escaped and the only tags are `<em>…</em>` highlights,
+          so they can be inserted into HTML as-is.
+
+        - `{…}`: Tibetan (Wylie) passages inside otherwise non-Tibetan text
+          are enclosed in curly braces, in `definition` and `snippet`.
+          In purely Tibetan dictionaries, Wylie text is usually not marked.
+
+
+        Highlighting works only for a plain, case-insensitive text match of the
+        search words; it does not take stemming into account. A row that matched
+        only through stemming (e.g. a search for `teaching` that found
+        `teaches`) therefore has no highlight, and since the search word
+        doesn't literally occur in its definition, its snippet consists of
+        the term only (`isSnippetAbbreviated` is `true`).
+      required: [term, highlightedTerm, dictionary, dictionaryId, snippet, definition, lang, isSnippetAbbreviated]
       properties:
         term:
           type: string
@@ -78,22 +103,38 @@ components:
         highlightedTerm:
           type: string
           description: >
-            The term with matched words wrapped in `<em>…</em>` tags for
-            highlighting. May be the same as `term` if no highlights are
-            available.
+            The term as an HTML fragment: HTML-escaped, with matched words
+            wrapped in `<em>…</em>` tags. Equals the escaped `term` if no
+            words could be highlighted.
         dictionary:
           type: string
           description: Human-readable dictionary name.
         dictionaryId:
           type: integer
+          description: >
+            Internal numeric ID of the dictionary. A dictionary that covers
+            several languages has a separate ID per language (e.g. `Berzin`
+            for `bo` and for `en`). IDs are assigned when the database is
+            built and may change between builds — use `dictionary` to
+            identify a dictionary permanently.
         snippet:
           type: string
           description: >
-            Short excerpt from the definition with matched words wrapped in
-            `<em>…</em>` tags and surrounding context. May start/end with `…`.
+            Short excerpt from the definition as an HTML fragment: the first
+            match with surrounding context, HTML-escaped, with the match
+            wrapped in `<em>…</em>`. May start/end with `…`. `[sound:…]`
+            tags, `-----` separators and literal `\n` sequences are
+            replaced or removed; `{…}` Wylie blocks may be truncated but are kept 
+            balanced. If only the term matched, the snippet is built from the term
+            (wrapped in `{…}` for Tibetan headwords).
         definition:
           type: string
-          description: Full definition text.
+          description: >
+            Full definition text, raw (not HTML-escaped). Besides `{…}`
+            Wylie blocks it may contain line breaks, literal `\n`
+            sequences, `-----` separators between sub-entries, embedded
+            audio references like `[sound:file.mp3]`, and characters such
+            as `<` and `&` used as plain text by some dictionaries.
         lang:
           type: string
           enum: [bo, en, sa]
@@ -165,9 +206,34 @@ paths:
       operationId: searchTerms
       summary: Prefix-based term search (auto-complete)
       description: >
-        Returns a paginated list of terms that start with or match the given
-        search string. Supports wildcards (`*` = any sequence, `?` = one
-        character). For English and Sanskrit the search is case-insensitive.
+        Returns a paginated, alphabetically sorted list of terms that match
+        or start with the given search string.
+
+
+        The matching rules are as follows. **Without wildcards** the comparison is exact and case-sensitive:
+
+        - Tibetan (`bo`): matching is by whole syllables. A term matches if
+          it equals the search string or continues with a space after it,
+          e.g. `cho` finds `cho` and `cho 'brang`, but not `chos`.
+
+        - English (`en`) and Sanskrit (`sa`): plain character prefix, e.g.
+          `compass` finds `compass` and `compassion`. Terms are stored in
+          lowercase, so the search string should be lowercase too.
+
+
+        **With wildcards** (`*` = any sequence of characters, including
+        none; `?` = exactly one character) the search is case-insensitive
+        for ASCII letters. Unless the search string ends with `*`, a match
+        may continue after the end of the pattern:
+
+        - Tibetan: only at a syllable boundary, e.g. `ch?s` finds `chas`,
+          `chos` and `chos sku`, but not `chosx`.
+
+        - English and Sanskrit: with any characters, e.g. `ch?s` finds
+          `chase`, `chasm` and `chasing after`.
+
+
+        `?` must be URL-encoded as `%3F` in the path.
       parameters:
         - name: lang
           in: path
@@ -187,7 +253,6 @@ paths:
         - $ref: '#/components/parameters/dictionaries'
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/maxResults'
-        - $ref: '#/components/parameters/dictionaries'
       responses:
         '200':
           description: Array of matching terms.
@@ -247,7 +312,7 @@ paths:
                   type: string
               example: ["section_1"]
         '400':
-          description: Invalid or missing request body.
+          description: Invalid language, or invalid or missing request body.
           content:
             application/json:
               schema:
@@ -265,6 +330,12 @@ paths:
 
         `xyz*` = any characters at the end of the word, 
         `"abc def"` = phrase search
+
+        Words are compared after reduction by an English stemmer, so
+        inflected forms match each other (e.g. `teaching` also finds
+        `teachings`). The stemmer is applied to all text, including Wylie,
+        which can produce unexpected matches: `compassion` also finds
+        `compass`, and `cho` also finds `chos`.
 
         Term matches are restricted to the requested language, while
         definition matches are returned from the definitions of all languages.  
@@ -286,49 +357,11 @@ paths:
             type: string
           example: "bde ba"
         - $ref: '#/components/parameters/dictionaries'
-      responses:
-        '200':
-          description: Map of dictionary name → definition text (may be empty if no entries found).
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/TermResult'
-        '400':
-          description: Missing or invalid parameters.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ErrorResponse'
-
-  /terms/{lang}/{term}:
-    get:
-      operationId: searchTerms
-      summary: Prefix-based term search (auto-complete)
-      description: >
-        Returns a paginated list of terms that start with or match the given
-        search string. Supports wildcards (`*` = any sequence, `?` = one character).
-      parameters:
-        - name: lang
-          in: path
-          required: true
-          description: The language of the term (`bo` = Tibetan, `en` = English, `sa` = Sanskrit).
-          schema:
-            type: string
-            enum: [bo, en, sa]
-          example: "bo"
-        - name: term
-          in: path
-          required: true
-          description: The query string to look up (Wylie transliteration for Tibetan, IAST for Sanskrit).
-          schema:
-            type: string
-          example: "bde ba"
         - $ref: '#/components/parameters/offset'
         - $ref: '#/components/parameters/maxResults'
-        - $ref: '#/components/parameters/dictionaries'
       responses:
         '200':
-          description: Array of fulltext search results with snippets.
+          description: Array of fulltext search results with snippets, ordered by relevance (may be empty).
           content:
             application/json:
               schema:

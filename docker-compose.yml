@@ -80,9 +80,6 @@ services:
       "
     expose: 
       - "80"
-    ports:
-      - "8080:80"
-    restart: unless-stopped
     volumes:
       - ./backend/tests/:/backend-tests:ro
 
