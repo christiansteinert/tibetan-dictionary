@@ -419,7 +419,16 @@ export const GROUPED_DICTLIST: GroupedDictListType = {
     listCredits: true,
     language: ["tib", "<->", "en"]
   },
-
+  "LIM-Valency": {
+    label: 'LIM Verb Valency',
+    highlight: '(Senses:|LIM Corpus frequency:|Argument patterns:|Examples:|Related verbs:|Homograph [0-9]+ of)',
+    about: 'A Visual Dictionary of Tibetan Verb Valency (2021), Lexicography in Motion, SOAS University of London (AHRC AH/P004644/1): argument patterns of Tibetan verbs with their frequency in Old, Classical and Contemporary Tibetan, example sentences and senses.|Authors: Christian Faggionato, Edward Garrett, Ligeia Lugli, Ulrich Pagel, Samyo Rode, Nikolai Solmsdorf.|The dictionary is available online at: https://bit.ly/VisualDictionary-TibetanValency|Data: https://doi.org/10.5281/zenodo.5596064 (CC BY 4.0).',
+    abbreviations: 'LIM-Valency',
+    public: true,
+    preformattedLinebreaks: true,
+    listCredits: true,
+    language: ["tib", "<->", "en"]
+  },
   "_Hopkins-Tibetan": {
     type: 'group',
     label: 'Hopkins Tibetan 2015',

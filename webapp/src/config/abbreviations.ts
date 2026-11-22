@@ -1374,5 +1374,50 @@ export const ABBREVIATIONS: AbbreviationsType = {
       "EL":"elative case (marked with case clitic nas)",
       "DEL":"delative case (marked with case clitic las)"
     }
+  },
+  'LIM-Valency': {
+    match: '(^|[^A-Za-z0-9])(TERM)([^-A-Za-z0-9<][^<]*<[^/]|[^-A-Za-z0-9<][^<]*$|[^-A-Za-z0-9<][^<]*</p>|</p>|$)',
+    items: {
+      // Explanations taken from LIM_TibetanVerbValencyDictionary_documentation.md (Zenodo 10.5281/zenodo.5596064).
+      // Labels with a subtype ("obl:arg" etc.) are displayed as "obl: arg" because htmlEscapeDefinition
+      // inserts a space after ':'. They must stay before the plain labels so the longer label is matched first.
+      'obl: arg': "required oblique|An oblique marked nominal, which is considered an argument of the verb. obl:arg is used for nominals with oblique case-marking which are nevertheless considered core verbal arguments.",
+      'obl: adv': "adverbial oblique|An oblique marked nominal, which behaves like an adverb. obl:adv is used for nominals marked with oblique case-marking which derive etymologically from verbal nouns but which might commonly be called adverbs, such as nye bar, so sor, and lhag par.",
+      'arg2: hon': "honorific second argument|The second argument of a verb, which makes the verb honorific. Complex honorific verbs in Tibetan are formed by prepending an honorific noun – often a body part noun – to a verb.",
+      'arg2: lvc': "second argument in a light-verb construction|The second argument of a verb, which together with it forms a complex predicate. Tibetan has a wealth of idiomatic light verb constructions. Usually these consist of a noun without any case marking followed by a semantically bleached verb. Some such verbs are used with many different nouns to form different light verb constructions, whereas other verbs are limited to occur with only one or a small number of nouns.",
+      'aux: lvc': "auxiliary in a light-verb construction|A verb which follows the main verb, and together with it forms a complex predicate. In a sequence of two or more adjacent verbs, if the verbs together form a complex predicate, then non-initial verbs depend on the first verb via the aux:lvc relation. In this scenario, all arguments and obliques depend on the first verb.",
+      'aux: redup': "reduplicated verb|A repetition of a verb. Patterns:|• direct repetition, e.g.: ji zhig byed byed nas; yul kun tu song song bas|• repetition with a particle in between, e.g.: snang ba sdud cing sdud cing sgom; shes ni shes; gdams ngag ster rang ster|• alternative questions / concessive constructions, e.g.: sangs e rgya mi rgya; thos yang ma thos; yin min|• occasionally a pair of different verbs with the same meaning instead of a direct repetition, e.g.: myur stabs su phebs 'byon (phebs and 'byon both mean “to come” (honorific))",
+      'arg1': "first argument (agent-like)|The first argument or “subject” of a verb, which may be agentive or unmarked, but not oblique. It is often an agent, or the closest argument there is for a particular verb to an agent. Roughly equivalent to the Universal Dependencies relation nsubj.",
+      'arg2': "second argument|The second argument or “object” of a verb, which cannot be oblique. Roughly equivalent to the Universal Dependencies relation obj. As often as not, arg1 is inferred from the context, leaving arg2 as the only overt argument.",
+      'arg3': "third argument|The third argument or “indirect object” of a verb, which cannot be oblique. When a verb has two unmarked arguments in addition to an arg1, it is classified as a three-place predicate with no obliques, and the third argument is marked arg3 (functionally equivalent to the Universal Dependencies relation iobj). Instances are either a normally oblique argument (e.g. the recipient of a verb of transfer) occurring without its usual oblique marking, or honorific or light verb constructions in which the arg2 is semantically marginalized, e.g. idiomatic constructions with yod such as rgyus yod “to have knowledge of”.",
+      'argcl': "clausal argument|The clausal argument of a verb. It subsumes the Universal Dependencies relations ccomp (clausal complements with overt subjects) and xcomp (clausal complements with obligatorily covert controlled subjects), since Tibetan regularly drops subjects and the distinction is difficult to make.",
+      'obl': "oblique|An oblique nominal that modifies a verb. Used for unmarked nominals that act as adverbials, and for arguments marked with case markers other than the agentive case, regardless of whether or not they are considered to be arguments of the verb.",
+      'aux': "auxiliary|A verb which follows and functionally modifies the main verb (e.g. marking tense or person).",
+      'cop': "copula|A verb which provides support to a non-verbal main predicate. In a copular linking construction, the cop relation links a predicate (e.g. an adjective) to the copula. The copula itself does not have an argument structure.",
+      // Corpus texts (source of the examples), from the LIM documentation ("Corpus" and "Translations" sections).
+      // Old Tibetan subcorpus (https://github.com/tibetan-nlp/old-tibetan-corpus)
+      'old_tibetan_annals': "Old Tibetan Annals (OTA)|Old Tibetan subcorpus. Tibet’s earliest extant history: yearly court records of the Tibetan empire covering the years 650–748 (“civil” version, IOL Tib J750 / Pelliot tibétain 1288), found in Dunhuang.|English translation: Brandon Dotson (2009), The Old Tibetan Annals: An Annotated Translation of Tibet’s First History. VÖAW, Austria.",
+      'old_tibetan_chronicles': "Old Tibetan Chronicle (OTC)|Old Tibetan subcorpus. Manuscript found in Dunhuang (Pelliot tibétain 1286/1287), probably written at the beginning of the 9th century. Historical accounts and songs related to the Yarlung dynasty and the Tibetan empire.|English translation: Brandon Dotson (2013), The Victory Banquet. The Old Tibetan Chronicle and the Rise of Tibetan Historical Narrative. Unpublished Habilitation script, LMU München.",
+      // Classical Tibetan subcorpus (https://github.com/tibetan-nlp/classical-tibetan-corpus)
+      'mdzangs_blun': "mdzangs blun (Sutra of the Wise and the Foolish)|Classical Tibetan subcorpus. མཛངས་བླུན་ཞེས་བྱ་བའི་མདོ་, a translation dating from the 9th–10th century.|English translation: Stanley Frye (1981), The Sutra of the Wise and the Foolish, Library of Tibetan Works and Archives.",
+      'bu_ston': "Bu ston chos ’byung (History of Buddhism)|Classical Tibetan subcorpus. བུ་སྟོན་ཆོས་འབྱུང་, a treatise composed in 1322.",
+      'Milarepa': "The Life of Milarepa|Classical Tibetan subcorpus. མི་ལའི་རྣམ་ཐར་, a prose text interspersed with verses, completed in 1488.|English translation: Andrew Quintman (2010), The Life of Milarepa, Penguin Books.",
+      'Marpa': "The Life of Marpa the Translator|Classical Tibetan subcorpus. མར་པ་ལོ་ཙཱ་བ་རྣམ་ཐར, a prose text interspersed with verses, composed in 1505.|English translation: Chögyam Trungpa (1982), The Life of Marpa the Translator, Prajna Press.",
+      'taranatha': "Tāranātha’s History of Buddhism in India|Classical Tibetan subcorpus. ཙཱ་ར་ནཱ་ཐའི་རྒྱ་གར་ཆོས་འབྱུང་, a treatise composed in 1608.",
+      // Contemporary Tibetan subcorpus (https://github.com/tibetan-nlp/modern-tibetan-corpus)
+      'a_narrow_footpath': "A Narrow Footpath (also: A Threadlike Path)|Contemporary Tibetan subcorpus. རྐང་ལམ་ཕྲ་མོ།, essay written in 1984.|English translation: Mark Stevenson and Lama Choedak T. Yuthok, “A Threadlike Path”, The Tibet Journal (1997): 61–66.",
+      'japanese_people_and_japanese_literature': "Japanese People and Japanese Literature|Contemporary Tibetan subcorpus. ཉི་ཧོང་གི་མི་དང་ཉི་ཧོང་གི་རྩོམ་རིག༼ལྷུག་རྩོམ༽, a blog from 2013.",
+      'conflict_and_resolution': "Conflict and Resolution: A Response to Liu Junning|Contemporary Tibetan subcorpus. འགལ་བ་དང་འདུམ་པ། ལིའུ་ཅུན་ཉིང་ལགས་ལ་བསམ་ཚུལ་ཙམ་བཏོན་པ།, a blog from 2014.|English translation: https://highpeakspureearth.com/conflict-and-resolution-a-response-to-liu-junning-by-shokjang/",
+      'snow_pilgrimage': "Snow Pilgrimage|Contemporary Tibetan subcorpus. གངས་སྐོར, a short story from 2017.|English translation: Tenzin Dickie (ed.), Old Demons, New Deities: Twenty-One Short Stories from Tibet. OR Books, 2017, pp. 209–218.",
+      'access_to_summer_pastures': "Access to Summer Pastures is the Herders’ Right|Contemporary Tibetan subcorpus. དབྱར་ས་བཀོལ་སྤྱོད་བྱེད་པ་ནི་འབྲོག་པ་རྣམས་ཀྱི་ཐོབ་ཐང་ཡིན།, a blog from 2014.|English translation: https://www.savetibet.org/tibetan-nomads-make-rare-appeal-against-removal-from-grasslands/",
+      'a_reflection_on_the_ten_virtues': "A Reflection on the So-Called “Ten Virtues”|Contemporary Tibetan subcorpus. དགེ་བཅུའི་ཁྲིམས་སྲོལ་སྐོར་གྱི་བསམ་ཚུལ།, a blog from 2015.",
+      'should_one_follow_the_party': "Should One Follow the Party’s Instructions?|Contemporary Tibetan subcorpus. ཏང་གི་འཛུབ་སྟོན་ལ་ཉན་འོས་སམ།, essay from 2008.",
+      'tibetcm': "Tibetcm (Chodme Tibetan Literary Website)|Contemporary Tibetan subcorpus. མཆོད་མེ་བོད་ཀྱི་རྩོམ་རིག་དྲ་བ།, interviews and fiction from the Chodme Tibetan Literary Website, 2015–2018.",
+      'tibet_times': "Tibet Times|Contemporary Tibetan subcorpus. བོད་ཀྱི་དུས་བབ།, newspaper articles from 2014–2017.",
+      'vegetarianism': "Vegetarianism (also: Coerced Vegetarianism and the Welfare of Tibetans)|Contemporary Tibetan subcorpus. དམར་ཟས་བཙན་གཅོད་དང་བོད་མིའི་བདེ་ཐང་།, a blog from 2013.|English translation: Katia Buffetrille, “A controversy on vegetarianism”, Trails of the Tibetan Tradition, Papers for Elliot Sperling (2014): 113–128.",
+      'wink': "Wink|Contemporary Tibetan subcorpus. མིག་རྡེབ། (སྒྲུང་ཐུང་ཞིག), a short story from 2012.|English translation: Tenzin Dickie (ed.), Old Demons, New Deities: Twenty-One Short Stories from Tibet. OR Books, 2017, pp. 9–30.",
+      'women_and_their_ornamentation': "Women and their Ornamentation|Contemporary Tibetan subcorpus. འདོགས་ཆ་དང་བུད་མེད་ཀྱི་འབྲེལ་བ།, a blog from 2014.",
+      'solo': "only this argument|The pattern contains only this one argument (no other arguments are expressed)."
+    }
   }
 };
